@@ -8,7 +8,7 @@
  *    - fetchPeers:  https://api.opendota.com/api/players/361606936/peers
  * 
  */
-import * as DotaLogger from '../utility/log'
+import * as DotaLogger from '../../src/utility/log'
 
 
 export class Player {

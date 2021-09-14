@@ -15,11 +15,11 @@
   Second account: 392398375
 */
 
-import * as DotaLogger from '../utility/log'
+import * as DotaLogger from '../../src/utility/log'
 //import { HeroPick } from "../inGame/inGame"
 //import { Big } from "big.js"
 //import { DotaHeroes } from "./dotaHeroes"
-import * as Steam from "../utility/steam"
+import * as Steam from "../../src/utility/steam"
 import { windowNames } from '../../consts'
 
 export class PlayerMatch {

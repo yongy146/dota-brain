@@ -14,7 +14,7 @@ import { counterItemsMidGame } from './counterItemsMidGame'
 import { counterItemsLateGame } from './counterItemsLateGame'
 import { damageType } from './damageType'
 import { Items, Heroes, HeroAbilities, Abilities } from './openDotaData'
-import * as DotaLogger from '../utility/log'
+import * as DotaLogger from '../../src/utility/log'
 import { channeling_interrupts, silence, root, disables } from './disables'
 
 // Colors for radiant & dire
