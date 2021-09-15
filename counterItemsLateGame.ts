@@ -343,7 +343,7 @@ export const counterItemsLateGame =
     "Omniknight": {
         "all": [{"item": "sheepstick"}],
         "support": [],
-        "core": [{"item": "skadi"}, {"item": "shivas_guard"}, {"item": "nullifier", "info": "Dispels Guardian Angel"}, {"item": "bloodthorn", "info": "To burst this tanky hero"}, {"item": "mjollnir", "info": "To be able to do magical damage while Guarding Angel is active"}, {"item": "monkey_king_bar", "info": "To be able to do magical damage while Guarding Angel is active"}]
+        "core": [{"item": "skadi"}, {"item": "shivas_guard"}, {"item": "nullifier", "info": "Dispels Heavenly Grace and Guardian Angel"}, {"item": "bloodthorn", "info": "To burst this tanky hero"}, {"item": "mjollnir", "info": "To be able to do magical damage while Guarding Angel is active"}, {"item": "monkey_king_bar", "info": "To be able to do magical damage while Guarding Angel is active"}]
     },
     "Oracle": {
         "all": [],

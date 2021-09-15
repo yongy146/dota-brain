@@ -643,9 +643,11 @@
 
     // 68. Omniknight | 05.03.2021
     {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_1_Purification", messageTime: (-60), textMessage: "Omniknight's Purification will damage you if you are in melee range of him.", audience: "Lane"},
-    {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_2_Heavenly grace", messageTime: (-50), textMessage: "Omniknight's Heavenly Grace applies strong dispel. Use your spells after it was used.", audience: "All"},
+    /* {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_2_Heavenly grace", messageTime: (-50), textMessage: "Omniknight's Heavenly Grace applies strong dispel. Use your spells after it was used.", audience: "All"},   Changed in 7.30c*/
+    {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_2_Heavenly grace", messageTime: (-50), textMessage: "Omniknight's Heavenly Grace applies strong dispel. Use your disables after it expires.", audience: "All"},
     {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_3_Focus", messageTimes: [(10*60+10), (20*60+10), (30*60+10)], textMessage: "Focus Omniknight in the fights as he provides saves and sustain for his team.", audience: "All"},
-    {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_4_Guardian angel dispel", messageTime: (12*60), textMessage: "Spell and items that apply dispel on enemy heroes, are great again Omniknight's Guardian Angel.", audience: "All"},
+    /* {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_4_Guardian angel dispel", messageTime: (12*60), textMessage: "Spell and items that apply dispel on enemy heroes, are great again Omniknight's Guardian Angel.", audience: "All"},    Changed in 7.30c*/
+    {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_4_Guardian angel dispel", messageTime: (12*60), textMessage: "Spell and items that apply dispel on enemy heroes, are great again Omniknight's Guardian Angel and Heavenly Grace.", audience: "All"},
     {category: "EnemyHero", hero: "Omniknight", audioFile: "heroes/Omniknight_5_Magical damage items", messageTime: (12*60+10), textMessage: "Items that do magical damage are great against Guardian Angel.", audience: "All"},
 
     // 69. Oracle | 05.03.2021
