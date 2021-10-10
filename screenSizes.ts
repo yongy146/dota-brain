@@ -160,57 +160,40 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 1062,
       heroesHeight: 39,
       heroesWidth: 308,
-      tracker: {
+      tracker: {   // REVIEW AND OPTIMIZE LOGIC, OK???
         fontSize: 13.5,
-        //letterSpacing: -0.5,
-        //letterSpacingValues: 1.7,
-        widthSeparator: 2,
-
+        widthSeparator: 2, // Width of seperator between both goals
         performance: {
           // Overall window
-          yPos: 60,
-          xPosStats: 10,
-
-          // Status
-          statusWidth: 12,
-          // Area spacer
-          areaSpacer: 20,
-          // Area 2
-          heightArea2: 45,
-          yPosGPM: 3,
-          yPosXPM: 25,
-
+          xPos: 159, // xPos of end of 'current values' with Dota Plus
+          width: 230,
+          heightTwoKPIs: 44, // hight of two KPIs  - CAN BE REMOVED?
+          spacer: 5, // Spacer between GPM/XPM and KDA/LH&DN
+          statusWidth: 12, // used for green and red triangle
+          xPosStatus: 38, // KPI name would be at 24
+          xPosCurrent: 57, // KPI name would be at 24
+          xPosGoal0: 131, // Position right edge of textfield
+          xPosSeparator: 141,
+          xPosGoal1: 151,
           nonDotaPlus: {
-            heightArea1: 80,
-            yPosKDA: 24, // Ma
-            yPosCS: 45,
-            xPosCurrent: 70,
-            xPosStatus: 95,
+            yPos: 104, // yPos of lower end of tracker (one line below Dota tracker)
+            height: 44,
+            yPosKDA: -1,
           },
           dotaPlus: {
-            heightArea1: 87,
-            yPosKDA: 22, // KPI name would be at 24
-            yPosCS: 44, // KPI name would be at 45
-            xPosStatus: 68,
-            xPosCurrent: 95,
+            yPos: 147, // yPos of lower end of tracker (one line below Dota tracker)
+            height: 87,
+            yPosKDA: 19,
           },
-          xPosGoal0: 177,
-          xPosSeparator: 266,
-          xPosGoal1: 281,
         },
         items: { // Based on KOTL with 6 skills
-          xPos: 1439, //1461,
-          width: 219, //181,
-          xPosGoal0: 119,
+          xPos: 1439,
+          width: 219,
+          xPosGoal0: 119, // MOVE TO xPosSpearator - 10... / text-align right
           xPosSeparator: 163,
-          xPosGoal1: 175,
-          //heightItems: 72,
-          //itemHeight: 23,
-          //yPosItems0: 7,
-          //yPosItems1: 41,
+          xPosGoal1: 175, // Should be 10 xp space... not 12
         }
       }
-      /*belowKPIs: 104+100,*/
     }
   },
   '1920x1079': { reuse: '1920x1080' },
