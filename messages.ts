@@ -621,7 +621,7 @@
 
     // 65. Night Stalker | 05.03.2021
     {category: "EnemyHero", hero: "Night Stalker", audioFile: "heroes/Night Stalker_1_Pressure early", messageTime: (10), textMessage: "Night Stalker is weak in the first 5 minutes of the game. Pressure him early.", audience: "Lane"},
-    {category: "EnemyHero", hero: "Night Stalker", audioFile: "heroes/Night Stalker_2_5min bounty", messageTime: (4*60+30), textMessage: "Night Stalker will fight you at the 5 minute mark, as night time will hit.", audience: "Lane"},
+    {category: "EnemyHero", hero: "Night Stalker", audioFile: "heroes/Night Stalker_2_5 minutes", messageTime: (4*60+30), textMessage: "Night Stalker will fight you at the 5 minute mark, as night time will hit.", audience: "Lane"},
     {category: "EnemyHero", hero: "Night Stalker", audioFile: "heroes/Night Stalker_3_Dark Ascension", messageTime: (8*60), textMessage: "Night Stalker's Dark Ascension will allow him to see you inside or behind trees.", audience: "All"},
     {category: "EnemyHero", hero: "Night Stalker", audioFile: "heroes/Night Stalker_4_Daytime", messageTimes: [(8*60+10), (18*60+10), (28*60+10)], textMessage: "Look to fight during daytime and when Dark Ascension is down.", audience: "All"},
     {category: "EnemyHero", hero: "Night Stalker", audioFile: "heroes/Night Stalker_5_Force", messageTime: (12*60), textMessage: "Force Staff and Hurricane Pike are great items against Night Stalker's Crippling Fear.", audience: "All"},
