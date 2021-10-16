@@ -52,25 +52,8 @@
 
   export const dotaCoachMessages = [
 
-    // NeutralItems
-    {category: "NeutralItems", audioFile: "general/NeutralItemsTier1", messageTime: (7*60-2), textMessage: "Neutral items tier 1 are available now", audience: "All"},
-    {category: "NeutralItems", audioFile: "general/NeutralItemsTier2", messageTime: (17*60-2), textMessage: "Neutral items tier 2 are available now", audience: "All"},
-    {category: "NeutralItems", audioFile: "general/NeutralItemsTier3", messageTime: (27*60-2), textMessage: "Neutral items tier 3 are available now", audience: "All"},
-    {category: "NeutralItems", audioFile: "general/NeutralItemsTier4", messageTime: (37*60-2), textMessage: "Neutral items tier 4 are available now", audience: "All"},
-    {category: "NeutralItems", audioFile: "general/NeutralItemsTier5", messageTime: (60*60-2), textMessage: "Neutral items tier 5 are available now", audience: "All"},
-
-    // DayTime
-    {category: "DayTime", audioFile: "general/DayTime", messageTime: (10*60-10), repeatTime: (10*60), textMessage: "It will be day soon", audience: "All"},
-    {category: "DayTime", audioFile: "general/NightTime", messageTime: (5*60-10), repeatTime: (10*60), textMessage: "It will be night soon", audience: "All"},
-
-    // Tome of Knowledge 
-    {category: "TomeOfKnowledge", audioFile: "general/TomeOfKnowledge", messageTime: (10*60)-3, repeatTime: (10*60), textMessage: "Tome of knowledge is available in the shop", audience: "All"},
-
-    // Siege Creeps
-    {category: "SiegeCreeps", audioFile: "general/SiegeCreeps", messageTime: 5*60, repeatTime: 5*60, textMessage: "Siege creeps just spawned", audience: "All"},
-
-    // Aghanim's Shard
-    {category: "AghanimsShard", audioFile: "general/AghanimsShard", messageTime: 20*60-2, textMessage: "Aghanim's Shard is available in the shop", audience: "All"},
+    // BountyRunes
+    {category: "BountyRunes", audioFile: "general/BountyRunes", messageTime: (3*60-30), repeatTime: (3*60), textMessage: "Bounty runes will appear soon", audience: "All"},
 
     // WaterRunes
     {category: "WaterRunes", audioFile: "general/WaterRunes", messageTimes: [2*60-15, 4*60-15], textMessage: "Water runes will appear soon", audience: "All"},
@@ -78,8 +61,29 @@
     // PowerRunes
     {category: "PowerRunes", audioFile: "general/PowerRune", messageTime: (6*60-15), repeatTime: (2*60), textMessage: "Power rune will appear soon", audience: "All"},
 
-    // BountyRunes
-    {category: "BountyRunes", audioFile: "general/BountyRunes", messageTime: (3*60-30), repeatTime: (3*60), textMessage: "Bounty runes will appear soon", audience: "All"},
+    // NeutralItems
+    {category: "NeutralItems", audioFile: "general/NeutralItemsTier1", messageTime: (7*60-2), textMessage: "Neutral items tier 1 are available now", audience: "All"},
+    {category: "NeutralItems", audioFile: "general/NeutralItemsTier2", messageTime: (17*60-2), textMessage: "Neutral items tier 2 are available now", audience: "All"},
+    {category: "NeutralItems", audioFile: "general/NeutralItemsTier3", messageTime: (27*60-2), textMessage: "Neutral items tier 3 are available now", audience: "All"},
+    {category: "NeutralItems", audioFile: "general/NeutralItemsTier4", messageTime: (37*60-2), textMessage: "Neutral items tier 4 are available now", audience: "All"},
+    {category: "NeutralItems", audioFile: "general/NeutralItemsTier5", messageTime: (60*60-2), textMessage: "Neutral items tier 5 are available now", audience: "All"},
+
+    // Smoke Of Deceit
+    {category: "SmokeOfDeceit", audioFile: "general/SmokeOfDeceit1", messageTime: (5*60 + 30)-1, textMessage: "Smoke of deceit is available in the shop", audience: "All"},
+    {category: "SmokeOfDeceit", audioFile: "general/SmokeOfDeceit2", messageTimes: [(15*60 + 10), (30*60 + 10), (45*60 + 10), (60*60 + 10)], textMessage: "Check if smoke of deceit is available in the shop", audience: "All"},
+
+    // Tome of Knowledge 
+    {category: "TomeOfKnowledge", audioFile: "general/TomeOfKnowledge", messageTime: (10*60)-3, repeatTime: (10*60), textMessage: "Tome of knowledge is available in the shop", audience: "All"},
+
+    // Aghanim's Shard
+    {category: "AghanimsShard", audioFile: "general/AghanimsShard", messageTime: 20*60-2, textMessage: "Aghanim's Shard is available in the shop", audience: "All"},
+
+    // Siege Creeps
+    {category: "SiegeCreeps", audioFile: "general/SiegeCreeps", messageTime: 5*60, repeatTime: 5*60, textMessage: "Siege creeps just spawned", audience: "All"},
+
+    // DayTime
+    {category: "DayTime", audioFile: "general/DayTime", messageTime: (10*60-10), repeatTime: (10*60), textMessage: "It will be day soon", audience: "All"},
+    {category: "DayTime", audioFile: "general/NightTime", messageTime: (5*60-10), repeatTime: (10*60), textMessage: "It will be night soon", audience: "All"},
 
     // Outposts
     // {category: "Outposts", audioFile: "general/Outposts", messageTime: (20*60-45), repeatTime: (10*60), textMessage: "Outposts will grant experience soon, capture them if you have already taken down a tier 2 tower", audience: "All"}, |patch 7.29| MESSAGES REMOVED
@@ -1092,7 +1096,7 @@
     // 120. Zeus | Earlier work | NOTE: Zeus ulty does 300 damage but after redcutions it does around 225-230. I think it is fine to keep the message as it is.
     {category: "EnemyHero", hero: "Zeus", audioFile: "heroes/Zeus_1_Magic resistance", messageTime: (-60), textMessage: "Agree on who builds magic resistance items such as Pipe of Insight against Zeus - all players should have items with some magic resistance", chatMessage: "Agree on who builds magic resistance items such as Pipe of Insight against Zeus", audience: "All", image: {type: "item", name: "pipe"}},
     {category: "EnemyHero", hero: "Zeus", audioFile: "heroes/Zeus_2_Wards", messageTimes: [(-40), (4*60+40), (10*60+40)], textMessage: "Place wards in unusual spots because of Zeus", audience: "All", image: {type: "item", name: "ward_observer"}},
-    {category: "EnemyHero", hero: "Zeus", audioFile: "heroes/Zeus_3_HP thundergod", messageTime: (5*60 + 30), textMessage: "Keep your HP above Thundergod's Wrath damage of 250", audience: "All", image: {type: "ability", name: "zuus_thundergods_wrath"}},
+    {category: "EnemyHero", hero: "Zeus", audioFile: "heroes/Zeus_3_HP thundergod", messageTime: (5*60 + 30), textMessage: "Keep your HP above Thundergod's Wrath damage of 300", audience: "All", image: {type: "ability", name: "zuus_thundergods_wrath"}},
     {category: "EnemyHero", hero: "Zeus", audioFile: "heroes/Zeus_4_Power runes", messageTime: (6*60), textMessage: "Control Power Runes to prevent Zeus from getting arcane or regeneration runes", audience: "All", image: {type: "rune", name: "arcane"}},
     {category: "EnemyHero", hero: "Zeus", audioFile: "heroes/Zeus_5_Smoke of deceit", messageTime: (10*60), textMessage: "Smoke of Deceit can be useful to dodge Thundergod's Wrath or to wrap around Zeus to catch him off-guard", audience: "All", image: {type: "item", name: "smoke_of_deceit"}}
     ]

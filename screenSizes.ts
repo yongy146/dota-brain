@@ -22,6 +22,22 @@ export function getScreenDetails(screenSize: string): any {
       overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "error", eventAction: "screenSizes.getScreenDetails", eventLabel: `Monitor size ${screenSize} not yet customized` }, () => { })
     }
 
+    // Add calculated fields by the performance tracker
+    frame.inGame.tracker.performance.width = frame.inGame.tracker.performance.xPos / 159 * 230
+    frame.inGame.tracker.performance.heightTwoKPIs = frame.inGame.tracker.performance.nonDotaPlus.height
+    frame.inGame.tracker.performance.spacer = frame.inGame.tracker.performance.nonDotaPlus.height / 44 * 5
+    frame.inGame.tracker.performance.statusWidth = frame.inGame.tracker.performance.xPos / 159 * 12
+
+    frame.inGame.tracker.performance.xPosStatus = frame.inGame.tracker.performance.xPos / 159 * 38
+    frame.inGame.tracker.performance.xPosCurrent = frame.inGame.tracker.performance.xPos / 159 * 57
+    frame.inGame.tracker.performance.xPosGoal0 = frame.inGame.tracker.performance.xPos / 159 * 131
+    frame.inGame.tracker.performance.xPosSeparator = frame.inGame.tracker.performance.xPos / 159 * 141
+    frame.inGame.tracker.performance.xPosGoal1 = frame.inGame.tracker.performance.xPos / 159 * 151
+
+    frame.inGame.tracker.items.xPosGoal0 = frame.inGame.tracker.items.width / 219 * 155
+    frame.inGame.tracker.items.xPosSeparator = frame.inGame.tracker.items.width / 219 * 163
+    frame.inGame.tracker.items.xPosGoal1 = frame.inGame.tracker.items.width / 219 * 175
+
     return frame
 }
 
@@ -34,10 +50,30 @@ export const ScreenSizes = {
       heroesWidth: 352,
     },
     inGame: {
-      heroesRadiantBottomLeftXPos: 221,
-      heroesDireBottomLeftXPos: 584,
+      heroesRadiantBottomLeftXPos: 221, //292,//221,
+      heroesDireBottomLeftXPos: 594, //540, //584,
       heroesHeight: 29,
-      heroesWidth: 220,
+      heroesWidth: 220, //192, //220,
+      tracker: {
+        fontSize: 9,
+        performance: {
+          xPos: 111,
+          yPos: 43,
+          nonDotaPlus: {
+            height: 28,
+            yPosKDA: -1,
+          },
+          dotaPlus: {
+            height: 60,
+            yPosKDA: 13,
+          },
+        },
+        items: {
+          xPos: 0,
+          yPos: 594,
+          width: 117+20,
+        }
+      }
     }
   },
   '1024x600': { reuse: '1024x768' },
@@ -53,6 +89,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 709,
       heroesHeight: 27,
       heroesWidth: 204,
+      tracker: {
+        fontSize: 9,
+        performance: {
+          xPos: 116,
+          yPos: 40,
+          nonDotaPlus: {
+            height: 30,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 59,
+            yPosKDA: 13,
+          },
+        },
+        items: {
+          xPos: 959,
+          yPos: 720,
+          width: 147,
+        }
+      }
     }
   },
   '1280x768': { reuse: '1280x720' },
@@ -70,6 +126,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 731,
       heroesHeight: 37,
       heroesWidth: 276,
+      tracker: {
+        fontSize: 12,
+        performance: {
+          xPos: 157,
+          yPos: 57,
+          nonDotaPlus: {
+            height: 40,
+            yPosKDA: -1,
+          },
+          dotaPlus: {
+            height: 80,
+            yPosKDA: 18,
+          },
+        },
+        items: {
+          xPos: 0,
+          yPos: 793,
+          width: 190,
+        }
+      }
     }
   },
 
@@ -84,6 +160,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 755,
       heroesHeight: 29,
       heroesWidth: 219,
+      tracker: {
+        fontSize: 10,
+        performance: {
+          xPos: 122,
+          yPos: 43,
+          nonDotaPlus: {
+            height: 32,
+            yPosKDA: 0,
+          },
+          dotaPlus: {
+            height: 62,
+            yPosKDA: 14,
+          },
+        },
+        items: {
+          xPos: 1024,
+          yPos: 768,
+          width: 156,
+        }
+      }
     }
   },
   '1360x768': { reuse: '1366x768' },
@@ -99,6 +195,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 804,
       heroesHeight: 33,
       heroesWidth: 258,
+      tracker: {
+        fontSize: 11,
+        performance: {
+          xPos: 137,
+          yPos: 50,
+          nonDotaPlus: {
+            height: 36,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 72,
+            yPosKDA: 16,
+          },
+        },
+        items: {
+          xPos: 0,
+          yPos: 697,
+          width: 183,
+        }
+      }
     }
   },
   '1440x1050': { reuse: '1440x900' },
@@ -114,6 +230,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 884,
       heroesHeight: 33,
       heroesWidth: 258,
+      tracker: {
+        fontSize: 12,
+        performance: {
+          xPos: 137,
+          yPos: 50,
+          nonDotaPlus: {
+            height: 36,
+            yPosKDA: -1,
+          },
+          dotaPlus: {
+            height: 72,
+            yPosKDA: 16,
+          },
+        },
+        items: {
+          xPos: 1199,
+          yPos: 900,
+          width: 182,
+        }
+      }
     }
   },
   '1600x1024': { reuse: '1600x900' },
@@ -130,6 +266,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 939,
       heroesHeight: 39,
       heroesWidth: 298,
+      tracker: {
+        fontSize: 13,
+        performance: {
+          xPos: 159,
+          yPos: 58,
+          nonDotaPlus: {
+            height: 42,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 83,
+            yPosKDA: 18,
+          },
+        },
+        items: {
+          xPos: 0,
+          yPos: 813,
+          width: 213,
+        }
+      }
     }
   },
   '1728x1080': { reuse: '1600x900' },
@@ -145,6 +301,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 978,
       heroesHeight: 37,
       heroesWidth: 284,
+      tracker: {
+        fontSize: 13,
+        performance: {
+          xPos: 150,
+          yPos: 55,
+          nonDotaPlus: {
+            height: 40,
+            yPosKDA: -2, // WRONG
+          },
+          dotaPlus: {
+            height: 79,
+            yPosKDA: 16,
+          },
+        },
+        items: {
+          xPos: 1325,
+          yPos: 992,
+          width: 203,
+        }
+      }
     }
   },
 
@@ -160,7 +336,30 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 1062,
       heroesHeight: 39,
       heroesWidth: 308,
-      tracker: {   // REVIEW AND OPTIMIZE LOGIC, OK???
+
+      tracker: {
+        fontSize: 13.5,
+        performance: {
+          xPos: 159, // xPos of end of 'Current' of last zero (white area) with Dota Plus
+          yPos: 60, // yPos of upper end of Dota 2 tracker
+          nonDotaPlus: {
+            height: 44,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 87,
+            yPosKDA: 19,
+          },
+        },
+        items: { // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
+          yPos: 1080, // yPos of where the next element below can be placed
+          xPos: 1439, // xPos of HUD element where TP ends
+          width: 219, // width to HUD element where gold starts
+        }
+      }
+
+
+      /*tracker: {   // REVIEW AND OPTIMIZE LOGIC, OK???
         fontSize: 13.5,
         widthSeparator: 2, // Width of seperator between both goals
         performance: {
@@ -193,7 +392,7 @@ export const ScreenSizes = {
           xPosSeparator: 163,
           xPosGoal1: 175, // Should be 10 xp space... not 12
         }
-      }
+      }*/
     }
   },
   '1920x1079': { reuse: '1920x1080' },
@@ -209,6 +408,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 1072,
       heroesHeight: 44,
       heroesWidth: 344,
+      tracker: {
+        fontSize: 15,
+        performance: {
+          xPos: 178,
+          yPos: 67,
+          nonDotaPlus: {
+            height: 50,
+            yPosKDA: -1,
+          },
+          dotaPlus: {
+            height: 98,
+            yPosKDA: 20,
+          },
+        },
+        items: {
+          xPos: 0,
+          yPos: 929,
+          width: 243,
+        }
+      }
     }
   },
   '2048x1152': { reuse: '1920x1200' },
@@ -224,6 +443,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 1094,
       heroesHeight: 53,
       heroesWidth: 413,
+      tracker: {
+        fontSize: 16,
+        performance: {
+          xPos: 224,
+          yPos: 80,
+          nonDotaPlus: {
+            height: 56,
+            yPosKDA: -3,
+          },
+          dotaPlus: {
+            height: 112,
+            yPosKDA: 23,
+          },
+        },
+        items: {
+          xPos: 0,
+          yPos: 1115,
+          width: 250,
+        }
+      }
     }
   },
 
@@ -238,6 +477,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 1382,
       heroesHeight: 40,
       heroesWidth: 308,
+      tracker: {
+        fontSize: 14,
+        performance: {
+          xPos: 159,
+          yPos: 60,
+          nonDotaPlus: {
+            height: 44, // WRONG
+            yPosKDA: -2, // WRONG
+          },
+          dotaPlus: {
+            height: 87,
+            yPosKDA: 19,
+          },
+        },
+        items: {
+          xPos: 2279-219,
+          yPos: 1080,
+          width: 219,
+        }
+      }
     }
   },
 
@@ -252,6 +511,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 1415,
       heroesHeight: 53,
       heroesWidth: 411,
+      tracker: {
+        fontSize: 17,
+        performance: {
+          xPos: 209,
+          yPos: 80,
+          nonDotaPlus: {
+            height: 58, // WRONG
+            yPosKDA: -2, // WRONG
+          },
+          dotaPlus: {
+            height: 115,
+            yPosKDA: 25,
+          },
+        },
+        items: {
+          xPos: 1949,
+          yPos: 1440,
+          width: 264,
+        }
+      }
     }
   },
   '2560x1600': { reuse: '2560x1440' },
@@ -269,6 +548,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 2021,
       heroesHeight: 39,
       heroesWidth: 312,
+      tracker: {
+        fontSize: 13,
+        performance: {
+          xPos: 159,
+          yPos: 60,
+          nonDotaPlus: {
+            height: 44,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 87,
+            yPosKDA: 19,
+          },
+        },
+        items: {
+          xPos: 3577-264,
+          yPos: 1080,
+          width: 264,
+        }
+      }
     }
   },
 
@@ -283,6 +582,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 2122,
       heroesHeight: 80,
       heroesWidth: 624,
+      tracker: {
+        fontSize: 26,/// CHECK ON 4K MONITOR!!!!!
+        performance: {
+          xPos: 312,
+          yPos: 120,
+          nonDotaPlus: {
+            height: 88, // WRONG
+            yPosKDA: -2, // WRONG
+          },
+          dotaPlus: {
+            height: 174,
+            yPosKDA: 37,
+          },
+        },
+        items: {
+          xPos: 2876,
+          yPos: 2160,
+          width: 441,
+        }
+      }
     }
   },
   '4096x2160': { reuse: '3840x2160' },
@@ -298,6 +617,26 @@ export const ScreenSizes = {
       heroesDireBottomLeftXPos: 2694,
       heroesHeight: 53,
       heroesWidth: 414,
+      tracker: {
+        fontSize: 17,
+        performance: {
+          xPos: 209,
+          yPos: 80,
+          nonDotaPlus: {
+            height: 58,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 115,
+            yPosKDA: 28,
+          },
+        },
+        items: {
+          xPos: 4760-264,
+          yPos: 1440,
+          width: 264,
+        }
+      }
     }
   }
 }
