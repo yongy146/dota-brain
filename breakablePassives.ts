@@ -56,6 +56,7 @@ export const breakablePassives =
 	"Luna": ["luna_lunar_blessing", "luna_moon_glaive"],
 	"Lycan": ["lycan_feral_impulse"],
 	"Magnus": [],
+	"Marci": [],
 	"Mars": ["mars_bulwark"],
 	"Medusa": [],
 	"Meepo": ["meepo_ransack"],

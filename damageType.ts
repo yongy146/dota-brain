@@ -56,6 +56,7 @@ export const damageType =
     "Luna": "neutral",
     "Lycan": "physical",
     "Magnus": "physical",
+    "Marci": "magical",
     "Mars": "neutral",
     "Medusa": "physical",
     "Meepo": "physical",

@@ -285,6 +285,11 @@ export const counterItemsLateGame =
         "support": [{"item": "black_king_bar"}],
         "core": [{"item": "bloodthorn", "info": "To burst this tanky hero"}, {"item": "assault"}]
     },
+    "Marci": {
+        "all": [],
+        "support": [],
+        "core": []
+    },
     "Medusa": {
         "all": [{"item": "sheepstick"}, {"item": "ethereal_blade"}],
         "support": [],

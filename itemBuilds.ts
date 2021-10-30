@@ -466,6 +466,13 @@
             late_game: [{item: "assault", info: "If you are playing right-clicking Magnus."}, {item: "satanic", info: "If you are playing right-clicking Magnus."}, {item: "refresher", info: "If you are playing utility Magnus."}, {item: "greater_crit", info: "If you are playing right-clicking Magnus."}, {item: "bloodthorn", info: "If you are playing right-clicking Magnus."}, {item: "abyssal_blade", info: "If you are playing right-clicking Magnus."}, {item: "swift_blink", info: "If you are playing right-clicking Magnus for single target burst."}, {item: "overwhelming_blink", info: "If you are playing right-clicking Magnus for extra AoE damage and to tank up."}, {item: "octarine_core", info: "If you are playing utility Magnus."}],
             situational: [{item: "blink"}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "If you are playing utility Magnus for extra control and to set up Skewer."}, {item: "invis_sword", info: "If you are playing utility Magnus to get Reverse Polarity off easier."}, {item: "lotus_orb", info: "If you are playing utility Magnus for reflect, dispel and armor."}, {item: "monkey_king_bar", info: "If you are playing right-clicking Magnus against evasion."}]
         },
+        // 
+        "Marci": {
+            starting: [],
+            early_game: [],
+            late_game: [],
+            situational: []
+        },
         // 57. Pos 3
         "Mars": {
             starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "branches"}, {item: "gauntlets"}, {item: "faerie_fire"}, {item: "ring_of_protection"}, {item: "flask"}, {item: "enchanted_mango"}, {item: "circlet"}, {item: "bracer"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}],

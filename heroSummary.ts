@@ -56,6 +56,7 @@ export const heroSummary =
     "Luna": "Tears into her enemies with bouncing attacks",
     "Lycan": "Shapeshifts into a ferocious beast",
     "Magnus": "Charges in to reposition his enemies",
+    "Marci": "Dashes around pummeling enemies with rapid attacks",
     "Mars": "Traps his foes in an inescapable arena",
     "Medusa": "Immobilizes her enemies with her stone gaze",
     "Meepo": "Five are stronger than one",

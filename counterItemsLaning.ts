@@ -287,6 +287,11 @@ export const counterItemsLaning =
         "support": [{"item": "ward_sentry", "info": "To block camps"}],
         "core": []
     },
+    "Marci": {
+        "all": [],
+        "support": [],
+        "core": []
+    },
     "Mars": {
         "all": [{"item": "blight_stone"}, {"item": "ring_of_regen", "info": "For sustain on the lane"}, {"item": "wind_lace", "info": "Makes harder for Mars to hit you with Spear of Mars and to catch you in the Arena of Blood"}, {"item": "boots", "info": "Makes harder for Mars to hit you with Spear of Mars and to catch you in the Arena of Blood"}, {"item": "infused_raindrop"}, {"item": "cloak", "info": "Mars is heavy on magical damage and Cloak will negate 15% of it"}],
         "support": [],

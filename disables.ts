@@ -220,6 +220,9 @@ export const disables =
 		// Skewer is an area stun.
 		{skill: "magnataur_reverse_polarity", affects: "area", disables: ["stun"]}
 	],
+	"Marci": [
+		{skill: "marci_grapple", affects: "area", disables: ["stun"]}
+	],
 	"Mars": [
 		{skill: "mars_spear", affects: "area", disables: ["stun"]}
 		// Spear of Mars is an area stun(forced movement by dota2.gamepedia.com). If there was another hero hit by spear before the hero that was teleporting out or channeling spell/item, the teleport or channeling spell/item won't be canceled.

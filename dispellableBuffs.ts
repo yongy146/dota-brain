@@ -58,6 +58,7 @@ export const dispellableBuffs =
 	"Luna": [],
 	"Lycan": ["lycan_howl"],
 	"Magnus": ["magnataur_empower"],
+	"Marci": ["marci_companion_run" /* rebound */, "marci_guardian" /* Sidekick */],
 	"Mars": [],
 	"Medusa": [],
 	"Meepo": [],

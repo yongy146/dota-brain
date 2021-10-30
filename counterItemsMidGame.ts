@@ -280,6 +280,11 @@ export const counterItemsMidGame =
         "support": [{"item": "ward_dispenser", "info": "Use wards to block camps"}, {"item": "glimmer_cape"}, {"item": "force_staff"}, {"item": "ghost"}],
         "core": [{"item": "sange_and_yasha", "info": "For status resistance"}, {"item": "kaya_and_sange", "info": "For status resistance"}]
     },
+    "Marci": {
+        "all": [],
+        "support": [],
+        "core": []
+    },
     "Mars": {
         "all": [],
         "support": [{"item": "glimmer_cape"}],
