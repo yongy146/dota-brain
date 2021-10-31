@@ -281,9 +281,9 @@ export const counterItemsMidGame =
         "core": [{"item": "sange_and_yasha", "info": "For status resistance"}, {"item": "kaya_and_sange", "info": "For status resistance"}]
     },
     "Marci": {
-        "all": [],
-        "support": [],
-        "core": []
+        "all": [{"item": "spirit_vessel"}, {"item": "cyclone", "info": "To disengage and dispel Sidekick"}, {"item": "blink", "info": "To disjoint Rebound"}, {"item": "rod_of_atos"}, {"item": "solar_crest"}],
+        "support": [{"item": "glimmer_cape"}, {"item": "force_staff"}, {"item": "ghost"}],
+        "core": [{"item": "heavens_halberd"}, {"item": "crimson_guard"}, {"item": "hurricane_pike"}, {"item": "hood_of_defiance"}, {"item": "pipe"}, {"item": "eternal_shroud"}, {"item": "blade_mail"}, {"item": "black_king_bar"}, {"item": "invis_sword", "info": "To disengage from Rebound and Unleash"}]
     },
     "Mars": {
         "all": [],

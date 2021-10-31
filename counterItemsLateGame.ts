@@ -286,9 +286,9 @@ export const counterItemsLateGame =
         "core": [{"item": "bloodthorn", "info": "To burst this tanky hero"}, {"item": "assault"}]
     },
     "Marci": {
-        "all": [],
-        "support": [],
-        "core": []
+        "all": [{"item": "sheepstick"}, {"item": "aeon_disk"}, {"item": "ethereal_blade"}, {"item": "wind_waker", "info": "To save an ally being focused by Marci"}],
+        "support": [{"item": "black_king_bar"}],
+        "core": [{"item": "abyssal_blade"}, {"item": "nullifier", "info": "To dispel Sidekick"}, {"item": "butterfly"}, {"item": "assault"}, {"item": "bloodthorn", "info":"To burst this tanky hero"}, {"item": "skadi", "info": "To reduce healing"}, {"item": "shivas_guard", "info": "To reduce healing and for some armor"}]
     },
     "Medusa": {
         "all": [{"item": "sheepstick"}, {"item": "ethereal_blade"}],
