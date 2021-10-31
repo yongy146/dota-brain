@@ -61,7 +61,7 @@ export const standardAbilityBuilds = {
 	"Luna": ["luna_lunar_blessing", "luna_lucent_beam", "luna_lunar_blessing", "luna_lucent_beam", "luna_lunar_blessing" /* "luna_moon_glaive" equals to 'moon glaives' */],
 	"Lycan": ["lycan_summon_wolves", "lycan_feral_impulse", "lycan_summon_wolves", "lycan_feral_impulse", "lycan_summon_wolves"],
 	"Magnus": ["magnataur_shockwave", "magnataur_skewer", "magnataur_empower", "magnataur_empower", "magnataur_empower"],
-	"Marcie": ["marci_companion_run" /* rebound */, "marci_grapple" /* dispose */, "marci_companion_run" /* rebound */, "marci_grapple" /* dispose */, "marci_companion_run" /* rebound */],
+	"Marci": ["marci_companion_run" /* rebound */, "marci_grapple" /* dispose */, "marci_companion_run" /* rebound */, "marci_grapple" /* dispose */, "marci_companion_run" /* rebound */],
 	"Mars": ["mars_gods_rebuke", "mars_spear", "mars_spear", "mars_gods_rebuke", "mars_spear"],
 	"Medusa": ["medusa_mystic_snake", "medusa_mana_shield", "medusa_mystic_snake", "medusa_split_shot", "medusa_mystic_snake"],
 	"Meepo": ["meepo_poof", "meepo_ransack", "meepo_poof", "meepo_divided_we_stand", "meepo_poof"],
