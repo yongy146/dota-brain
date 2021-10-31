@@ -547,10 +547,10 @@
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_1_Spirit vessel", messageTime: (-60), textMessage: "Someone should buy spirit Vessel against Marci's Sidekick.", audience: "All"},
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_2_Dispose", messageTime: (-30), textMessage: "Avoid staying too close to Marci as you'll get Disposed easily.", audience: "Lane"},
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_3_Unleash", messageTimes: [(8*60), (18*60), (28*60)], textMessage: "Kite Marci's ultimate by either stopping her from attacking or disengaging.", audience: "All"},
-    {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_4_Kiting items", messageTimes: [(12*60), (22*60), (32*60)], textMessage: "Acquire items that allow you to kite Marci's ulty defensively or offensively.", audience: "All"},
+    {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_4_Kiting items", messageTimes: [(12*60), (22*60), (32*60)], textMessage: "Acquire items that allow you to kite Marci's ultimate defensively or offensively.", audience: "All"},
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_5_Antihealing items", messageTimes: [(12*60+10), (22*60+10), (32*60+10)], textMessage: "Items that reduce healing and regeneration are good against Marci's Sidekick.", audience: "All"},
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_6_Dispel items", messageTimes: [(12*60+20), (22*60+20), (32*60+20)], textMessage: "Items that can dispel Sidekick or Rebound buff from Marci or her ally are great purchase.", audience: "All"},
-    {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_7_Blink dagger", messageTime: (15*60), textMessage: "Be aware of Marci's Blink Dagger timing. She can easily gap close, setup kills with Dispose or lock on targets during Unleash.", audience: "All"},
+    {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_7_Blink dagger", messageTime: (15*60), textMessage: "Be aware of Marci's Blink Dagger timing. She can easily gap close, setup kills with Dispose or lock on targets during Unleash.", chatMessage: "Be aware of Marci's Blink Dagger timing. She can easily gap close, setup kills with Dispose or Unleash.", audience: "All"},
 
     // 56. Mars | 04.03.2021
     {category: "EnemyHero", hero: "Mars", audioFile: "heroes/Mars_1_Avoid trees", messageTime: (-60), textMessage: "Avoid playing close to trees against Spear of Mars. Cut some with Quelling Blade and Tangoes.", audience: "Lane"},
