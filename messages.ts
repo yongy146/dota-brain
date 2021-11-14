@@ -41,14 +41,25 @@
 
 */
 
+
 /**
  * 
  * @param hero Hero name, e.g. "Anti-Mage"
- * @returns Arrey of message objects
+ * @returns Array of message objects
  */
- export function getMessages(hero): any[] {
-  return dotaCoachMessages.filter(message => message.hero == hero)
+export function getOwnHeroMessages(hero): any[] {
+  return dotaCoachMessages.filter(message => (message.hero==hero && message.category=='OwnHero'))
 }
+
+/**
+ * 
+ * @param hero Hero name, e.g. "Anti-Mage"
+ * @returns Array of message objects
+ */
+export function getEnemyHeroMessages(hero): any[] {
+  return dotaCoachMessages.filter(message => (message.hero==hero && message.category=='EnemyHero'))
+}
+
 
 export const ALL               = 'All'
 export const IN_LANE           = 'InLane'
