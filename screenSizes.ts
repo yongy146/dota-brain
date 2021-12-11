@@ -330,6 +330,13 @@ export const ScreenSizes = {
         heroesRadiantTopLeftXPos: 210,
         heroesDireTopLeftXPos: 1107,
         heroesWidth: 603,
+
+        chat: { // Position where to put the chat
+          xPos: 560, //478,
+          yPos: 115,
+          width: 800,
+          height: 60
+        }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 549,
@@ -356,6 +363,18 @@ export const ScreenSizes = {
           xPos: 1439, // xPos of HUD element where TP ends
           width: 219, // width to HUD element where gold starts
         }
+      },
+
+      chat: { // Sizing of chat enter text in game
+        /*xPos: 560, 
+        yPos: 819, // A couple of pixels below laten level 10
+        width: 800,
+        height: 60*/
+
+        xPos: 1381,
+        yPos: 4,
+        width: 362,
+        height: 140
       }
 
 

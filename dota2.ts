@@ -41,6 +41,21 @@ export function convertToDotaTime(t: number): string {
     return (t<0 ? '-' : '') + min + ":" + (sec<10 ? "0" : "") + sec;
 }
 
+
+export function lobbyTypeToString(s: string): string {
+    var result = s.replace('DOTA_lobby_type_name_', '')
+    if (result.length>0) {
+        // Convert first character to capital letter
+        result = result.charAt(0).toUpperCase() + result.slice(1);
+    }
+    return result
+    /*switch (s) {
+        case 'DOTA_lobby_type_name_ranked':
+            return 'Ranked'
+
+    }*/
+}
+
 /**
  * Returns an array of counter items for a given hero.
  * 

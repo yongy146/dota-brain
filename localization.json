@@ -1,0 +1,191 @@
+{
+    "config" : {
+        "languages": [
+            { "code": "en", "name": "English" },
+            { "code": "de", "name": "Deutsch" },
+            { "code": "fr", "name": "Français" },
+            { "code": "ru", "name": "Русский" },
+            { "code": "zh", "name": "中文" },
+            { "code": "id", "name": "Indonesia" }
+        ],
+        "comments": {
+            "SourceCountryCodes": "https://www.localeplanet.com/icu/"
+        }
+    },
+    "text" : {
+
+        "Show/hide": {},
+        "Sign in": {},
+        "Logged in": {},
+        "Logged in as": {},
+        "Create ballot": {},
+        "Watch tutorial": {},
+        "Get help": {},
+        "Report issue": {},
+        "Join Discord": {},
+        "Join Reddit": {},
+        "Manage subscription": {},
+        "Change settings": {},
+        "Click to sign in": {
+            "en": "Click to sign in to your Overwolf account"
+        },
+
+
+        "HELP": {},
+        "FEEDBACK": {},
+        "Report an issue": {
+            "en": "Report an issue/bug or request support"
+        },
+        "Share with us": {
+            "en": "What do you want to share with us?"
+        },
+        "Issue description": {
+            "en": "Enter description of issue/bug or request for support"
+        },
+        "SEND_REPORT": {
+            "en": "SEND REPORT"
+        },
+        "Contact details": {
+            "en": "Contact details (E-Mail/Discord)"
+        },
+        "Enter contact details": {
+            "en": "Enter your contact details"
+        },
+        "Log files": {
+            "en": "Attach Dota Coach log files"
+        },
+
+        "SETTINGS": {},
+        "av": {},
+        "channel": {},
+        "production": {},
+        "beta": {},
+
+        "Infoboxes": {},
+        "InfoboxesTooltip": {
+            "en": "Infoboxes are positioned on top of players in matches and provide insights on items and abilities."
+        },
+
+        "Items & abilities": {},
+        "Timers": {},
+        "TimersTooltip": {
+            "en": "The timer for Roshan, Glyph of Fortification, Buybacks and Ultimates can be turned off and on here."
+        },
+
+        "Roshan & glyph": {},
+        "Team buybacks": {},
+        "Team ultimates": {},
+        "Enemy buybacks": {},
+        "Enemy ultimates": {},
+        "subs only": {},
+
+        "Coaching": {},
+        "CoachingTooltip": {
+            "en": "Coaching for hero picks, item builds and enemy heroes can be set here."
+        },
+        "Hero picks & item builds": {},
+        "Own hero (voice)": {},
+        "Enemy heroes (voice)": {},
+
+        "Notifications": {},
+        "NotificationsTooltip": {
+            "en": "Notifications provided during the game to remind you of events such as the apprearance of bounty runes. You can enable or disable the different messages individually."
+        },
+        "Bounty runes": {},
+        "Water & power runes": {},
+        "Neutral items": {},
+        "Observer wards": {},
+        "Smoke of deceit": {},
+        "Tome of knowledge": {},
+        "Aghanim's shard": {},
+        "Siege creeps": {},
+        "Daytime": {},
+
+        "Message sharing": {},
+        "Subtitles": {},
+        "SubtitlesTooltip": {
+            "en": "Configure manual and automated message sharing through the Dota 2 team chat. Manual message sharing is triggered by left-clicking on timers or the loudspeaker."
+        },
+        "Show subtitles": {},
+        "Manual sharing": {},
+        "Automated sharing": {},
+        "Roshan & aegis": {},
+        
+        "Performance tracker": {},
+        "Performance trackerTooltip": {
+            "en": "Configure the performance tracker to your needs. Note that the layout depends on your Dota Plus subscription in Dota 2."
+        },
+        "Show tracker": {},
+        "Dota Plus subscriber": {},
+        "Goal left:": {},
+        "Goal right:": {},
+        "Your median": {},
+        "Your best": {},
+        "Peer median": {},
+        "Peer best": {},
+        "None": {},
+        "Your name (for leaderboard)": {},
+
+        "Hide main window": {},
+        "Hide main windowTooltip": {
+            "en": "This feature allows you to automatically show and hide app during game."
+        },
+        "During hero selection": {},
+        "During game": {},
+
+        "Misclick protection": {},
+        "Misclick protectionTooltip": {
+            "en": "Time in seconds that input isn't registered when the mouse first enters the timers. Default is 0.2 seconds."
+        },
+        "Delay": {},
+
+        "Audio": {},
+        "Disabled": {},
+        "AudioTooltip": {
+            "en": "Select speaker device and set volume."
+        },
+        "Speaker": {},
+        "Volume": {},
+        "Test": {},
+
+        "Second screen": {},
+        "Second screenTooltip": {
+            "en": "Users playing in windowed mode or having two or more monitors can benefit from a second screen providing additional information."
+        },
+        "Monitor": {},
+
+        "Reposition": {},
+        "RepositionTooltip": {
+            "en": "Reposition allows you to reposition infoboxes and timers on the screen. During repositioning the infoboxes and timers are deactivated."
+        },
+        "Reset position": {},
+        "RESET": {},
+
+        "Language": {},
+
+        "Hotkeys": {},
+        "HotkeysTooltip": {
+            "en": "Hotkey to show & hide app. We recommend setting the hotkey for the Performance Tracker to the same as you use to show Dota's Scoreboard."
+        },
+        "Show/hide main app": {},
+        "Show/hide second screen": {},
+        "Show/hide timers": {},
+        "Show/hide performance tracker": {},
+
+        "Ultimate": {},
+        "TIMING MODIFIERS": {},
+        "Ultimate Level": {},
+        "Items": {},
+        "Arcane Rune": {},
+        "Talent": {},
+        "level": {},
+        "No delay": {},
+        "sec": {},
+        "Adjustment": {},
+        "Apply to all": {},
+
+        "Buyback": {},
+
+        "ERROR": {}
+    }
+}
