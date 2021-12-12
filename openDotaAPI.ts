@@ -236,6 +236,8 @@ export async function getRecentItems(steamId32: string, heroId: number, numberOf
     getMatches(steamId32, heroId, numberOfMatches).then(async (matches) => {
       var items = []
       var counter = matches.length
+      if (counter==0) resolve(items) // If there are not matches, return immediatly
+      //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
       for (var i=0; i<numberOfMatches && i<matches.length; i++) {
         const matchId = matches[i].match_id
         getMatch(matchId).then((matchFull) => {
@@ -274,6 +276,7 @@ export async function getRecentItems(steamId32: string, heroId: number, numberOf
           DotaLogger.warn(`openDotaAPI.getRecentItems(): Match ${matchId} could not be loaded`)
         }).finally(() => {
           counter--
+          //DotaLogger.log(`openDotaAPI.getRecentItems(): Completed, number of matches remaining ${counter}`)
           if (counter==0) {
             resolve(items.sort((a, b) => { return b.start_time - a.start_time}))
           }  
