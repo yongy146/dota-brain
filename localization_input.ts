@@ -1,4 +1,13 @@
-{
+/**
+ * This file contains all the logic for the localization of the app (i18n)
+ * 
+ * Source for country codes: "https://www.localeplanet.com/icu/"
+ * 
+ */
+
+
+export const localization = {
+    // Configuration of localization
     "config" : {
         "languages": [
             { "code": "en", "name": "English" },
@@ -7,13 +16,12 @@
             { "code": "ru", "name": "Русский" },
             { "code": "zh", "name": "中文" },
             { "code": "id", "name": "Indonesia" }
-        ],
-        "comments": {
-            "SourceCountryCodes": "https://www.localeplanet.com/icu/"
-        }
+        ]
     },
+    // Text to be translated for Dota Coach
     "text" : {
 
+        // InGame window
         "Show/hide": {},
         "Sign in": {},
         "Logged in": {},
@@ -30,7 +38,7 @@
             "en": "Click to sign in to your Overwolf account"
         },
 
-
+        // Help window
         "HELP": {},
         "FEEDBACK": {},
         "Report an issue": {
@@ -55,8 +63,9 @@
             "en": "Attach Dota Coach log files"
         },
 
+        // Settings window
         "SETTINGS": {},
-        "av": {},
+        "version": {},
         "channel": {},
         "production": {},
         "beta": {},
@@ -66,75 +75,149 @@
             "en": "Infoboxes are positioned on top of players in matches and provide insights on items and abilities."
         },
 
-        "Items & abilities": {},
+        "ItemsAndAbilities": {
+            "en": "Items & abilities"
+        },
         "Timers": {},
         "TimersTooltip": {
             "en": "The timer for Roshan, Glyph of Fortification, Buybacks and Ultimates can be turned off and on here."
         },
 
-        "Roshan & glyph": {},
-        "Team buybacks": {},
-        "Team ultimates": {},
-        "Enemy buybacks": {},
-        "Enemy ultimates": {},
-        "subs only": {},
+        "RoshanAndGlyph": {
+            "en": "Roshan & glyph"
+        },
+        "TeamBuybacks":  {
+            "en": "Team buybacks"
+        },
+        "TeamUltimates":  {
+            "en": "Team ultimates"
+        },
+        "EnemyBuybacks":  {
+            "en": "Enemy buybacks"
+        },
+        "EnemyUltimates":  {
+            "en": "Enemy ultimates"
+        },
+        "subsOnly":  {
+            "en": "subs only"
+        },
 
         "Coaching": {},
         "CoachingTooltip": {
             "en": "Coaching for hero picks, item builds and enemy heroes can be set here."
         },
-        "Hero picks & item builds": {},
-        "Own hero (voice)": {},
-        "Enemy heroes (voice)": {},
+        "HeroPicksAndItemBuilds": {
+            "en": "Hero picks & item builds"
+        },
+        "OwnHeroVoice": {
+            "en": "Own hero (voice)"
+        },
+        "EnemyHeroesVoice": {
+            "en": "Enemy heroes (voice)"
+        },
 
         "Notifications": {},
         "NotificationsTooltip": {
             "en": "Notifications provided during the game to remind you of events such as the apprearance of bounty runes. You can enable or disable the different messages individually."
         },
-        "Bounty runes": {},
-        "Water & power runes": {},
-        "Neutral items": {},
-        "Observer wards": {},
-        "Smoke of deceit": {},
-        "Tome of knowledge": {},
-        "Aghanim's shard": {},
-        "Siege creeps": {},
+        "BountyRunes": {
+            "en": "Bounty runes"
+        },
+        "WaterAndPowerRunes": {
+            "en": "Water & power runes"
+        },
+        "NeutralItems":  {
+            "en": "Neutral items"
+        },
+        "ObserverWards":  {
+            "en": "Observer wards"
+        },
+        "SmokeOfDeceit":  {
+            "en": "Smoke of deceit"
+        },
+        "TomeOfKnowledge":  {
+            "en": "Tome of knowledge"
+        },
+        "AghanimsShard":  {
+            "en": "Aghanim's shard"
+        },
+        "SiegeCreeps":  {
+            "en": "Siege creeps"
+        },
         "Daytime": {},
 
-        "Message sharing": {},
+        /*"MessageSharing":   {
+            "en": "Message sharing"
+        },*/
         "Subtitles": {},
         "SubtitlesTooltip": {
             "en": "Configure manual and automated message sharing through the Dota 2 team chat. Manual message sharing is triggered by left-clicking on timers or the loudspeaker."
         },
-        "Show subtitles": {},
-        "Manual sharing": {},
-        "Automated sharing": {},
-        "Roshan & aegis": {},
-        
-        "Performance tracker": {},
-        "Performance trackerTooltip": {
+        "ShowSubtitles": {
+            "en": "Show subtitles"
+        },
+        "ManualSharing":  {
+            "en": "Manual sharing"
+        },
+        "AutomatedSharing": {
+            "en": "Automated sharing"
+        },
+        "RoshanAndAegis": {
+            "en": "Roshan & Aegis"
+        },
+
+        "PerformanceTracker": {
+            "en": "Performance tracker"
+        },
+        "PerformanceTrackerTooltip": {
             "en": "Configure the performance tracker to your needs. Note that the layout depends on your Dota Plus subscription in Dota 2."
         },
-        "Show tracker": {},
-        "Dota Plus subscriber": {},
-        "Goal left:": {},
-        "Goal right:": {},
-        "Your median": {},
-        "Your best": {},
-        "Peer median": {},
-        "Peer best": {},
+        "ShowTracker": {
+            "en": "Show tracker"
+        },
+        "DotaPlusSubscriber": {
+            "en": "Dota Plus subscriber"
+        },
+        "GoalLeft": {
+            "en": "Goal left:"
+        },
+        "GoalRight": {
+            "en": "Goal right:"
+        },
+        "YourMedian": {
+            "en": "Your median"
+        },
+        "YourBest": {
+            "en": "Your best"
+        },
+        "PeerMedian": {
+            "en": "Peer median"
+        },
+        "PeerBest": {
+            "en": "Peer best"
+        },
         "None": {},
-        "Your name (for leaderboard)": {},
+        "YourNameLeaderboard": {
+            "en": "Your name (for leaderboard)"
+        },
 
-        "Hide main window": {},
-        "Hide main windowTooltip": {
+        "HideMainWindow": {
+            "en": "Hide main window"
+        },
+        "HideMainWindowTooltip": {
             "en": "This feature allows you to automatically show and hide app during game."
         },
-        "During hero selection": {},
-        "During game": {},
+        "DuringHeroSelection": {
+            "en": "During hero selection"
+        },
+        "DuringGame": {
+            "en": "During game"
+        },
 
-        "Misclick protection": {},
-        "Misclick protectionTooltip": {
+        "MisclickProtection": {
+            "en": "Misclick protection"
+        },
+        "MisclickProtectionTooltip": {
             "en": "Time in seconds that input isn't registered when the mouse first enters the timers. Default is 0.2 seconds."
         },
         "Delay": {},
@@ -148,8 +231,10 @@
         "Volume": {},
         "Test": {},
 
-        "Second screen": {},
-        "Second screenTooltip": {
+        "SecondScreen": {
+            "en": "Second screen"
+        },
+        "SecondScreenTooltip": {
             "en": "Users playing in windowed mode or having two or more monitors can benefit from a second screen providing additional information."
         },
         "Monitor": {},
@@ -158,7 +243,9 @@
         "RepositionTooltip": {
             "en": "Reposition allows you to reposition infoboxes and timers on the screen. During repositioning the infoboxes and timers are deactivated."
         },
-        "Reset position": {},
+        "ResetPosition": {
+            "en": "Reset position"
+        },
         "RESET": {},
 
         "Language": {},
@@ -167,11 +254,20 @@
         "HotkeysTooltip": {
             "en": "Hotkey to show & hide app. We recommend setting the hotkey for the Performance Tracker to the same as you use to show Dota's Scoreboard."
         },
-        "Show/hide main app": {},
-        "Show/hide second screen": {},
-        "Show/hide timers": {},
-        "Show/hide performance tracker": {},
+        "ShowHideMainApp": {
+            "en": "Show/hide main app"
+        },
+        "ShowHideSecondScreen": {
+            "en": "Show/hide second screen"
+        },
+        "ShowHideTimers": {
+            "en": "Show/hide timers"
+        },
+        "ShowHidePerformanceTracker": {
+            "en": "Show/hide performance tracker"
+        },
 
+        // Ultimate window
         "Ultimate": {},
         "TIMING MODIFIERS": {},
         "Ultimate Level": {},

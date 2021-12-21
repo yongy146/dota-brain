@@ -3,7 +3,7 @@
  * 
  * Format to be used: <div id="i18n_#ENGLISH TEXT#" class="i18n">${i18n.t(#ENGLISH TEXT)}</div>`
  */
-import localization from './localization-enriched.json'
+import localization from './localization_output.json'
 import * as DotaLogger from '../../src/utility/log'
 
 declare namespace window {

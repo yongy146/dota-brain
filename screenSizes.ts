@@ -13,14 +13,16 @@
  * @param screenSize Screen size, e.g. 1920x1080
  * @returns 
  */
-export function getScreenDetails(screenSize: string): any {
+export function getScreenDetails(screenSize: string): ScreenDefinition {
     var frame = ScreenSizes.hasOwnProperty(screenSize) ? ScreenSizes[screenSize] : ScreenSizes['1920x1080']
-    if (frame.hasOwnProperty('reuse')) frame = ScreenSizes[frame.reuse]
+    if (frame.hasOwnProperty('reuse')) frame = ScreenSizes[(<ScreenReuse>frame).reuse]
 
     // Report in order to be able to see the number of users
     if (!ScreenSizes.hasOwnProperty(screenSize)) {
       overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "error", eventAction: "screenSizes.getScreenDetails", eventLabel: `Monitor size ${screenSize} not yet customized` }, () => { })
     }
+
+    frame = <ScreenDefinition>frame
 
     // Add calculated fields by the performance tracker
     frame.inGame.tracker.performance.width = frame.inGame.tracker.performance.xPos / 159 * 230
@@ -41,13 +43,94 @@ export function getScreenDetails(screenSize: string): any {
     return frame
 }
 
+export interface ScreenDefinition {
+  fontSize: number, // used for tracker and subtitle
+  // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
+  preGame: {
+      // Heroes: Excluding the grey shaded box
+      heroesRadiantTopLeftXPos: number,
+      heroesDireTopLeftXPos: number,
+      heroesWidth: number,
 
-export const ScreenSizes = {
+      subtitles: {  // Position where to put the subtitles
+        xPos: number,  // Middle hero radiant
+        yPos: number,  // One line above 'STRATEGY/LOADOUT / GUIDES'
+        width: number, // From middle hero radiant to middle hero dire 
+        height: number  // High such that longest 'hero selection' text can be shown
+      }
+  },
+  inGame: {
+    heroesRadiantBottomLeftXPos: number,
+    heroesDireBottomLeftXPos: number,
+    heroesHeight: number,
+    heroesWidth: number,
+
+    tracker: {
+      performance: {
+        xPos: number, // xPos of end of 'Current' of last zero (white area) with Dota Plus
+        yPos: number, // yPos of upper end of Dota 2 tracker
+        nonDotaPlus: {
+          height: number,
+          yPosKDA: number,
+        },
+        dotaPlus: {
+          height: number,
+          yPosKDA: number,
+        },
+        width?: number, // calcuated value
+        heightTwoKPIs?: number, // calcuated value
+        spacer?: number, // calcuated value
+        statusWidth?: number, // calcuated value
+    
+        xPosStatus?: number, // calcuated value
+        xPosCurrent?: number, // calcuated value
+        xPosGoal0?: number, // calcuated value
+        xPosSeparator?: number, // calcuated value
+        xPosGoal1?: number, // calcuated value
+    
+      },
+      items: { // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
+        yPos: number, // yPos of where the next element below can be placed
+        xPos: number, // xPos of HUD element where TP ends
+        width: number, // width to HUD element where gold starts
+
+        xPosGoal0?: number, // calcuated value
+        xPosSeparator?: number, // calcuated value
+        xPosGoal1?: number, // calcuated value
+      }
+    },
+
+    subtitles: {  // Position and sizing of the subtitles
+      xPos: number, // 4 pixels right of hero icons
+      yPos: number,    // 4 pixels form top of screen
+      width: number, // 4 pixels from loss in / out
+      height: number // high such that longes text is visble
+    }
+  }
+}
+
+export interface ScreenReuse {
+  reuse: string /* e.g. '1920x1080' */
+}
+
+
+export interface ScreenDefinitions {
+  [key: string /* e.g. '1920x1080' */]: ScreenDefinition | ScreenReuse
+}
+
+export const ScreenSizes: ScreenDefinitions = {
   '1024x768': {
+    fontSize: 9,
     preGame: {
       heroesRadiantTopLeftXPos: 58,
       heroesDireTopLeftXPos: 614,
       heroesWidth: 352,
+      subtitles: {
+        xPos: 212,
+        yPos: 67,
+        width: 600,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 221, //292,//221,
@@ -55,7 +138,6 @@ export const ScreenSizes = {
       heroesHeight: 29,
       heroesWidth: 220, //192, //220,
       tracker: {
-        fontSize: 9,
         performance: {
           xPos: 111,
           yPos: 43,
@@ -73,16 +155,30 @@ export const ScreenSizes = {
           yPos: 594,
           width: 117+20,
         }
+      },
+      subtitles: {
+        xPos: 739,
+        yPos: 3,
+        width: 168,
+        height: 140
       }
     }
   },
   '1024x600': { reuse: '1024x768' },
 
   '1280x720': {
+    fontSize: 9,
     preGame: {
       heroesRadiantTopLeftXPos: 140,
       heroesDireTopLeftXPos: 739,
       heroesWidth: 403,
+
+      subtitles: {
+        xPos: 290,
+        yPos: 66,
+        width: 700,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 366,
@@ -90,7 +186,6 @@ export const ScreenSizes = {
       heroesHeight: 27,
       heroesWidth: 204,
       tracker: {
-        fontSize: 9,
         performance: {
           xPos: 116,
           yPos: 40,
@@ -108,6 +203,12 @@ export const ScreenSizes = {
           yPos: 720,
           width: 147,
         }
+      },
+      subtitles: {
+        xPos: 920,
+        yPos: 3,
+        width: 248,
+        height: 140
       }
     }
   },
@@ -116,10 +217,17 @@ export const ScreenSizes = {
   '1280x960': { reuse: '1280x720' },
 
   '1280x1024': {
+    fontSize: 12,
     preGame: {
       heroesRadiantTopLeftXPos: 73,
       heroesDireTopLeftXPos: 767,
       heroesWidth: 440,
+      subtitles: {
+        xPos: 290,
+        yPos: 86,
+        width: 700,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 274,
@@ -127,7 +235,6 @@ export const ScreenSizes = {
       heroesHeight: 37,
       heroesWidth: 276,
       tracker: {
-        fontSize: 12,
         performance: {
           xPos: 157,
           yPos: 57,
@@ -145,15 +252,28 @@ export const ScreenSizes = {
           yPos: 793,
           width: 190,
         }
+      },
+      subtitles: {
+        xPos: 925,
+        yPos: 3,
+        width: 192,
+        height: 140
       }
     }
   },
 
   '1366x768': {
+    fontSize: 10,
     preGame: {
       heroesRadiantTopLeftXPos: 144,
       heroesDireTopLeftXPos: 787,
       heroesWidth: 436,
+      subtitles: {
+        xPos: 274,
+        yPos: 69,
+        width: 818,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 392,
@@ -161,7 +281,6 @@ export const ScreenSizes = {
       heroesHeight: 29,
       heroesWidth: 219,
       tracker: {
-        fontSize: 10,
         performance: {
           xPos: 122,
           yPos: 43,
@@ -179,16 +298,29 @@ export const ScreenSizes = {
           yPos: 768,
           width: 156,
         }
+      },
+      subtitles: {
+        xPos: 982,
+        yPos: 3,
+        width: 266,
+        height: 140
       }
     }
   },
   '1360x768': { reuse: '1366x768' },
 
   '1440x900': {
+    fontSize: 11,
     preGame: {
       heroesRadiantTopLeftXPos: 73,
       heroesDireTopLeftXPos: 862,
       heroesWidth: 506,
+      subtitles: {
+        xPos: 268,
+        yPos: 81,
+        width: 904,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 379,
@@ -196,7 +328,6 @@ export const ScreenSizes = {
       heroesHeight: 33,
       heroesWidth: 258,
       tracker: {
-        fontSize: 11,
         performance: {
           xPos: 137,
           yPos: 50,
@@ -214,16 +345,29 @@ export const ScreenSizes = {
           yPos: 697,
           width: 183,
         }
+      },
+      subtitles: {
+        xPos: 1070,
+        yPos: 3,
+        width: 224,
+        height: 140
       }
     }
   },
   '1440x1050': { reuse: '1440x900' },
 
   '1600x900': {
+    fontSize: 12,
     preGame: {
       heroesRadiantTopLeftXPos: 153,
       heroesDireTopLeftXPos: 941,
       heroesWidth: 505,
+      subtitles: {
+        xPos: 351,
+        yPos: 80,
+        width: 898,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 459,
@@ -231,7 +375,6 @@ export const ScreenSizes = {
       heroesHeight: 33,
       heroesWidth: 258,
       tracker: {
-        fontSize: 12,
         performance: {
           xPos: 137,
           yPos: 50,
@@ -249,6 +392,12 @@ export const ScreenSizes = {
           yPos: 900,
           width: 182,
         }
+      },
+      subtitles: {
+        xPos: 1150,
+        yPos: 3,
+        width: 305,
+        height: 140
       }
     }
   },
@@ -256,10 +405,17 @@ export const ScreenSizes = {
   '1600x1200': { reuse: '1600x900' },
 
   '1680x1050': {
+    fontSize: 13,
     preGame: {
       heroesRadiantTopLeftXPos: 87,
       heroesDireTopLeftXPos: 1005,
       heroesWidth: 588,
+      subtitles: {
+        xPos: 399,
+        yPos: 95,
+        width: 882,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 443,
@@ -267,7 +423,6 @@ export const ScreenSizes = {
       heroesHeight: 39,
       heroesWidth: 298,
       tracker: {
-        fontSize: 13,
         performance: {
           xPos: 159,
           yPos: 58,
@@ -285,16 +440,29 @@ export const ScreenSizes = {
           yPos: 813,
           width: 213,
         }
+      },
+      subtitles: {
+        xPos: 1245,
+        yPos: 3,
+        width: 264,
+        height: 140
       }
     }
   },
   '1728x1080': { reuse: '1600x900' },
 
   '1768x992': {
+    fontSize: 13,
     preGame: {
       heroesRadiantTopLeftXPos: 193,
       heroesDireTopLeftXPos: 1017,
       heroesWidth: 559,
+      subtitles: {
+        xPos: 461,
+        yPos: 89,
+        width: 846,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 505,
@@ -302,7 +470,6 @@ export const ScreenSizes = {
       heroesHeight: 37,
       heroesWidth: 284,
       tracker: {
-        fontSize: 13,
         performance: {
           xPos: 150,
           yPos: 55,
@@ -320,22 +487,30 @@ export const ScreenSizes = {
           yPos: 992,
           width: 203,
         }
+      },
+      subtitles: {
+        xPos: 1270,
+        yPos: 3,
+        width: 338,
+        height: 140
       }
     }
   },
 
   '1920x1080': {
+    fontSize: 13.5, // used for tracker and subtitle
+    // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
     preGame: {
         // Heroes: Excluding the grey shaded box
         heroesRadiantTopLeftXPos: 210,
         heroesDireTopLeftXPos: 1107,
         heroesWidth: 603,
 
-        chat: { // Position where to put the chat
-          xPos: 560, //478,
-          yPos: 115,
-          width: 800,
-          height: 60
+        subtitles: {  // Position where to put the subtitles
+          xPos: 560,  // Middle hero radiant
+          yPos: 115,  // One line above 'STRATEGY/LOADOUT / GUIDES'
+          width: 800, // From middle hero radiant to middle hero dire 
+          height: 60  // High such that longest 'hero selection' text can be shown
         }
     },
     inGame: {
@@ -345,7 +520,6 @@ export const ScreenSizes = {
       heroesWidth: 308,
 
       tracker: {
-        fontSize: 13.5,
         performance: {
           xPos: 159, // xPos of end of 'Current' of last zero (white area) with Dota Plus
           yPos: 60, // yPos of upper end of Dota 2 tracker
@@ -365,62 +539,28 @@ export const ScreenSizes = {
         }
       },
 
-      chat: { // Sizing of chat enter text in game
-        /*xPos: 560, 
-        yPos: 819, // A couple of pixels below laten level 10
-        width: 800,
-        height: 60*/
-
-        xPos: 1381,
-        yPos: 4,
-        width: 362,
-        height: 140
+      subtitles: {  // Position and sizing of the subtitles
+        xPos: 1381, // 4 pixels right of hero icons
+        yPos: 4,    // 4 pixels form top of screen
+        width: 362, // 4 pixels from loss in / out
+        height: 140 // high such that longes text is visble
       }
-
-
-      /*tracker: {   // REVIEW AND OPTIMIZE LOGIC, OK???
-        fontSize: 13.5,
-        widthSeparator: 2, // Width of seperator between both goals
-        performance: {
-          // Overall window
-          xPos: 159, // xPos of end of 'current values' with Dota Plus
-          width: 230,
-          heightTwoKPIs: 44, // hight of two KPIs  - CAN BE REMOVED?
-          spacer: 5, // Spacer between GPM/XPM and KDA/LH&DN
-          statusWidth: 12, // used for green and red triangle
-          xPosStatus: 38, // KPI name would be at 24
-          xPosCurrent: 57, // KPI name would be at 24
-          xPosGoal0: 131, // Position right edge of textfield
-          xPosSeparator: 141,
-          xPosGoal1: 151,
-          nonDotaPlus: {
-            yPos: 104, // yPos of lower end of tracker (one line below Dota tracker)
-            height: 44,
-            yPosKDA: -1,
-          },
-          dotaPlus: {
-            yPos: 147, // yPos of lower end of tracker (one line below Dota tracker)
-            height: 87,
-            yPosKDA: 19,
-          },
-        },
-        items: { // Based on KOTL with 6 skills
-          xPos: 1439,
-          width: 219,
-          xPosGoal0: 119, // MOVE TO xPosSpearator - 10... / text-align right
-          xPosSeparator: 163,
-          xPosGoal1: 175, // Should be 10 xp space... not 12
-        }
-      }*/
     }
   },
   '1920x1079': { reuse: '1920x1080' },
   
   '1920x1200': {
+    fontSize: 15,
     preGame: {
       heroesRadiantTopLeftXPos: 97,
       heroesDireTopLeftXPos: 1151,
       heroesWidth: 673,
+      subtitles: {
+        xPos: 450,
+        yPos: 109,
+        width: 1020,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 505,
@@ -428,7 +568,6 @@ export const ScreenSizes = {
       heroesHeight: 44,
       heroesWidth: 344,
       tracker: {
-        fontSize: 15,
         performance: {
           xPos: 178,
           yPos: 67,
@@ -446,16 +585,29 @@ export const ScreenSizes = {
           yPos: 929,
           width: 243,
         }
+      },
+      subtitles: {
+        xPos: 1425,
+        yPos: 3,
+        width: 302,
+        height: 160
       }
     }
   },
   '2048x1152': { reuse: '1920x1200' },
 
   '1920x1440': {
+    fontSize: 16,
     preGame: {
       heroesRadiantTopLeftXPos: 97,
       heroesDireTopLeftXPos: 1151,
       heroesWidth: 673,
+      subtitles: {
+        xPos: 446,
+        yPos: 124,
+        width: 1028,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 412,
@@ -463,7 +615,6 @@ export const ScreenSizes = {
       heroesHeight: 53,
       heroesWidth: 413,
       tracker: {
-        fontSize: 16,
         performance: {
           xPos: 224,
           yPos: 80,
@@ -481,15 +632,28 @@ export const ScreenSizes = {
           yPos: 1115,
           width: 250,
         }
+      },
+      subtitles: {
+        xPos: 1386,
+        yPos: 3,
+        width: 294,
+        height: 140
       }
     }
   },
 
   '2560x1080': {
+    fontSize: 14,
     preGame: {
       heroesRadiantTopLeftXPos: 528,
       heroesDireTopLeftXPos: 1425,
       heroesWidth: 607,
+      subtitles: {
+        xPos: 840,
+        yPos: 99,
+        width: 880,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 869,
@@ -497,7 +661,6 @@ export const ScreenSizes = {
       heroesHeight: 40,
       heroesWidth: 308,
       tracker: {
-        fontSize: 14,
         performance: {
           xPos: 159,
           yPos: 60,
@@ -515,15 +678,28 @@ export const ScreenSizes = {
           yPos: 1080,
           width: 219,
         }
+      },
+      subtitles: {
+        xPos: 1699,
+        yPos: 3,
+        width: 688,
+        height: 80
       }
     }
   },
 
   '2560x1440': {
+    fontSize: 17,
     preGame: {
       heroesRadiantTopLeftXPos: 278,
       heroesDireTopLeftXPos: 1473,
       heroesWidth: 808,
+      subtitles: {
+        xPos: 666,
+        yPos: 133,
+        width: 1228,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 734,
@@ -531,7 +707,6 @@ export const ScreenSizes = {
       heroesHeight: 53,
       heroesWidth: 411,
       tracker: {
-        fontSize: 17,
         performance: {
           xPos: 209,
           yPos: 80,
@@ -549,6 +724,12 @@ export const ScreenSizes = {
           yPos: 1440,
           width: 264,
         }
+      },
+      subtitles: {
+        xPos: 1839,
+        yPos: 3,
+        width: 480,
+        height: 140
       }
     }
   },
@@ -557,10 +738,17 @@ export const ScreenSizes = {
   '3440x1440': { reuse: '2560x1440' },
 
   '3840x1080': {
+    fontSize: 13,
     preGame: {
       heroesRadiantTopLeftXPos: 1168,
       heroesDireTopLeftXPos: 2065,
       heroesWidth: 607,
+      subtitles: {
+        xPos: 1473,
+        yPos: 98,
+        width: 894,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 1508,
@@ -568,7 +756,6 @@ export const ScreenSizes = {
       heroesHeight: 39,
       heroesWidth: 312,
       tracker: {
-        fontSize: 13,
         performance: {
           xPos: 159,
           yPos: 60,
@@ -586,15 +773,28 @@ export const ScreenSizes = {
           yPos: 1080,
           width: 264,
         }
+      },
+      subtitles: {
+        xPos: 2341,
+        yPos: 3,
+        width: 1321,
+        height: 40
       }
     }
   },
 
   '3840x2160': {
+    fontSize: 26,/// CHECK ON 4K MONITOR!!!!!
     preGame: {
       heroesRadiantTopLeftXPos: 416,
       heroesDireTopLeftXPos: 2210,
       heroesWidth: 1214,
+      subtitles: {
+        xPos: 1740,
+        yPos: 208,
+        width: 894,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 1101,
@@ -602,7 +802,6 @@ export const ScreenSizes = {
       heroesHeight: 80,
       heroesWidth: 624,
       tracker: {
-        fontSize: 26,/// CHECK ON 4K MONITOR!!!!!
         performance: {
           xPos: 312,
           yPos: 120,
@@ -620,16 +819,29 @@ export const ScreenSizes = {
           yPos: 2160,
           width: 441,
         }
+      },
+      subtitles: {
+        xPos: 2762,
+        yPos: 3,
+        width: 880,
+        height: 80
       }
     }
   },
   '4096x2160': { reuse: '3840x2160' },
 
   '5120x1440': {
+    fontSize: 17,
     preGame: {
       heroesRadiantTopLeftXPos: 1557,
       heroesDireTopLeftXPos: 2753,
       heroesWidth: 808,
+      subtitles: {
+        xPos: 1968,
+        yPos: 132,
+        width: 1184,
+        height: 60
+      }
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 2014,
@@ -637,7 +849,6 @@ export const ScreenSizes = {
       heroesHeight: 53,
       heroesWidth: 414,
       tracker: {
-        fontSize: 17,
         performance: {
           xPos: 209,
           yPos: 80,
@@ -655,6 +866,12 @@ export const ScreenSizes = {
           yPos: 1440,
           width: 264,
         }
+      },
+      subtitles: {
+        xPos: 3120,
+        yPos: 6,
+        width: 1755,
+        height: 40
       }
     }
   }

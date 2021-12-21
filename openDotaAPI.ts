@@ -40,7 +40,8 @@ const key = 'api_key=06632c9a-57d8-469b-a90a-1ecd64c72918'
 export async function getPlayer(steamId32: string): Promise<any> {
   DotaLogger.log(`openDotaAPI.getPlayer(steamId32: ${steamId32}): Called`)
 
-  let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
+  //let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
+  let url = `https://api.opendota.com/api/players/${steamId32}`
 
   return new Promise((resolve, reject) => {
     WebAccess.fetchJSONFile(url).then((player) => {
@@ -186,7 +187,8 @@ export async function getMatches(steamId32: string, heroId: number, numberOfMatc
   DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
 
   let heroIdParam = heroId==null ? '' : `&hero_id=${heroId}`
-  let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}&${key}`
+//  let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}&${key}`
+  let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}`
 
   return new Promise((resolve, reject) => {
     WebAccess.fetchJSONFile(url).then((matches) => {
@@ -216,7 +218,8 @@ export async function getMatches(steamId32: string, heroId: number, numberOfMatc
 export async function getMatch(matchId: string): Promise<any> {
   DotaLogger.log(`openDotaAPI.getMatch(matchId: ${matchId}): Called`)
 
-  let url = `https://api.opendota.com/api/matches/${matchId}?${key}`
+  let url = `https://api.opendota.com/api/matches/${matchId}`
+  //let url = `https://api.opendota.com/api/matches/${matchId}?${key}`
 
   return  WebAccess.fetchJSONFile(url)
 }
@@ -329,7 +332,8 @@ export function fetchPlayer(steamId32: string): Promise<Player> {
         reject()
         return
       }
-      let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
+      //let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
+      let url = `https://api.opendota.com/api/players/${steamId32}`
       DotaLogger.log("openDotaAPI.fetchPlayer(): URL='" + url + "'")
       let request = new XMLHttpRequest();
       request.open('GET', url);
@@ -398,7 +402,8 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
     // https://api.opendota.com/api/players/361606936/peers
 
     return new Promise((resolve, reject) => {
-      let url = `https://api.opendota.com/api/players/${steamId32}/peers?${key}`
+      let url = `https://api.opendota.com/api/players/${steamId32}/peers`
+      //let url = `https://api.opendota.com/api/players/${steamId32}/peers?${key}`
       DotaLogger.log("openDotaAPI.fetchPeers(): URL='" + url + "'")
       let request = new XMLHttpRequest();
       request.open('GET', url);
