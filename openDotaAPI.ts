@@ -290,6 +290,186 @@ export async function getRecentItems(steamId32: string, heroId: number, numberOf
 }
 
 
+export interface HeroStats {
+  id: number, // e.g. 1
+  "name": string, // "npc_dota_hero_antimage"
+  "localized_name": string , // "Anti-Mage"
+  "primary_attr": string , // "agi"
+  "attack_type": string, //"Melee"
+  "roles": string[], // e.g. ["Carry","Escape","Nuker"]
+  "img": string, // e.g. "/apps/dota2/images/dota_react/heroes/antimage.png?"
+  "icon": string, // e.g. "/apps/dota2/images/dota_react/heroes/icons/antimage.png?"
+  "base_health": number, // e.g. 200
+  "base_health_regen": number, // e.g. 0.25
+  "base_mana": number, // e.g. 75
+  "base_mana_regen": number, // 0
+  "base_armor": number, // 0
+  "base_mr": number, // 25
+  "base_attack_min": number, // 29
+  "base_attack_max": number, // 33
+  "base_str": number, // 23
+  "base_agi": number, // 24
+  "base_int": number, // 12
+  "str_gain": number, // 1.6
+  "agi_gain": number, // 2.8
+  "int_gain": number, // 1.8
+  "attack_range": number, // 150
+  "projectile_speed": number, // 0
+  "attack_rate": number, // 1.4
+  "move_speed": number, // 310
+  "turn_rate": number, // 0.9, can also be null
+  "cm_enabled": boolean, // true
+  "legs": number, // 2
+  "hero_id": number, // 1
+  "turbo_picks": number, // 432997
+  "turbo_wins": number, // 222647
+  "pro_ban": number, // 299
+  "pro_win": number, // 42
+  "pro_pick": number, // 85
+  "1_pick": number, // 28916 // Public
+  "1_win": number, // 14675
+  "2_pick": number, // 47375
+  "2_win": number, // 24311
+  "3_pick": number, // 54512
+  "3_win": number, // 28250
+  "4_pick": number, // 44432
+  "4_win": number, // 23053
+  "5_pick": number, // 26363
+  "5_win": number, // 13781
+  "6_pick": number, // 11961
+  "6_win": number, // 6074
+  "7_pick": number, // 5816
+  "7_win": number, // 2946
+  "8_pick": number, // 1942
+  "8_win": number, // 969
+  "null_pick": number, //1973708
+  "null_win": number, // 0
+}
+
+
+
+export interface SimplifiedHeroStats {
+  "hero_id": number, // 1
+  "name": string, // "npc_dota_hero_antimage"
+  "localized_name": string , // "Anti-Mage"
+  /*"turbo_pick_rate": number, // e.g.  55.5
+  "turbo_win_rate": number, // e.g. 45.9
+  "pro_pick_rate": number,
+  "pro_win_rate": number,*/
+  "1_win_rate": number, // Herald
+  "1_pick_rate": number,
+  "2_win_rate": number, // Guardian
+  "2_pick_rate": number,
+  "3_win_rate": number, // Crusader
+  "3_pick_rate": number,
+  "4_win_rate": number, // Archon
+  "4_pick_rate": number,
+  "5_win_rate": number, // Legend
+  "5_pick_rate": number,
+  "6_win_rate": number, // Acient
+  "6_pick_rate": number,
+  "7_win_rate": number, // Divine
+  "7_pick_rate": number,
+  "8_win_rate": number, // Immortal
+  "8_pick_rate": number, 
+  "overall_win_rate": number, // Sum across all medals
+  "overall_pick_rate": number
+}
+
+/**
+ * 
+ * @returns Simplified hero stats sorted by overall win rate
+ */
+export async function getSimplifiedHeroStats(): Promise<SimplifiedHeroStats[]> {
+  DotaLogger.log(`openDotaAPI.getSimplifiedHeroStats(): Called`)
+
+  return new Promise((resolve, reject) => {
+    getHeroStats().then((stats) => {
+      //DotaLogger.log(`Stats = ${JSON.stringify(stats)}`)
+
+      var publicGames = {
+        "1_pick": 0,
+        "2_pick": 0,
+        "3_pick": 0,
+        "4_pick": 0,
+        "5_pick": 0,
+        "6_pick": 0,
+        "7_pick": 0,
+        "8_pick": 0,
+        "overall_pick": 0
+      }
+      for (const heroStats of stats) {
+        publicGames['1_pick'] += heroStats['1_pick']
+        publicGames['2_pick'] += heroStats['2_pick']
+        publicGames['3_pick'] += heroStats['3_pick']
+        publicGames['4_pick'] += heroStats['4_pick']
+        publicGames['5_pick'] += heroStats['5_pick']
+        publicGames['6_pick'] += heroStats['6_pick']
+        publicGames['7_pick'] += heroStats['7_pick']
+        publicGames['8_pick'] += heroStats['8_pick']
+        publicGames['overall_pick'] += heroStats['1_pick'] + heroStats['2_pick'] + heroStats['3_pick'] + heroStats['4_pick'] + heroStats['5_pick'] + heroStats['6_pick'] + heroStats['7_pick'] + heroStats['8_pick']
+      }
+
+      var result = []
+      for (const heroStats of stats) {
+        var data: SimplifiedHeroStats
+        const total_win = heroStats['1_win'] + heroStats['2_win'] + heroStats['3_win'] + heroStats['4_win'] + heroStats['5_win'] + heroStats['6_win'] + heroStats['7_win'] + heroStats['8_win']
+        const total_pick = heroStats['1_pick'] + heroStats['2_pick'] + heroStats['3_pick'] + heroStats['4_pick'] + heroStats['5_pick'] + heroStats['6_pick'] + heroStats['7_pick'] + heroStats['8_pick']
+        data = {
+          "hero_id": heroStats.hero_id,
+          "name": heroStats.name,
+          "localized_name": heroStats.localized_name,
+          "1_win_rate": heroStats['1_win'] / heroStats['1_pick'], // Herald
+          "1_pick_rate": heroStats['1_pick'] / publicGames['1_pick'],
+          "2_win_rate": heroStats['2_win'] / heroStats['2_pick'], // Guardian
+          "2_pick_rate": heroStats['2_pick'] / publicGames['2_pick'],
+          "3_win_rate": heroStats['3_win'] / heroStats['3_pick'], // Crusader
+          "3_pick_rate": heroStats['3_pick'] / publicGames['3_pick'],
+          "4_win_rate": heroStats['4_win'] / heroStats['4_pick'], // Archon
+          "4_pick_rate": heroStats['4_pick'] / publicGames['4_pick'],
+          "5_win_rate": heroStats['5_win'] / heroStats['5_pick'], // Legend
+          "5_pick_rate": heroStats['5_pick'] / publicGames['5_pick'],
+          "6_win_rate": heroStats['6_win'] / heroStats['6_pick'], // Legend
+          "6_pick_rate": heroStats['6_pick'] / publicGames['6_pick'],
+          "7_win_rate": heroStats['7_win'] / heroStats['7_pick'], // Acient
+          "7_pick_rate": heroStats['7_pick'] / publicGames['7_pick'],
+          "8_win_rate": heroStats['8_win'] / heroStats['8_pick'], // Immortal
+          "8_pick_rate": heroStats['8_pick'] / publicGames['8_pick'],
+          "overall_win_rate": total_win / total_pick, // Immortal
+          "overall_pick_rate": total_pick / publicGames['overall_pick'],
+        }
+        result.push(data)
+      }
+      resolve(result)
+    }).catch((error) => {
+      reject(error)
+    })
+  })
+}
+
+
+
+/**
+ * Function returns hero stats
+ *
+ * API call: https://api.opendota.com/api/heroStats
+ * 
+ * @returns 
+ */
+export async function getHeroStats(): Promise<HeroStats[]> {
+    DotaLogger.log(`openDotaAPI.getHeroStats(): Called`)
+  
+    let url = `https://api.opendota.com/api/heroStats`
+  
+    return new Promise((resolve, reject) => {
+      WebAccess.fetchJSONFile(url).then((matches) => {
+        resolve(matches)
+      }).catch((error) => {
+        reject(error)
+      })
+    })
+  }
+
 /*
  * Function returns the players the user played with the last months
  */
