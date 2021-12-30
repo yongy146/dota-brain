@@ -7,7 +7,7 @@
 export const standardAbilityBuilds = {
 	"Abaddon": ["abaddon_aphotic_shield", "abaddon_frostmourne" /* equals to 'curse of avernus' */, "abaddon_aphotic_shield", "abaddon_death_coil", "abaddon_aphotic_shield"],
 	"Alchemist": ["alchemist_acid_spray", "alchemist_goblins_greed",  "alchemist_acid_spray", "alchemist_goblins_greed", "alchemist_acid_spray"],
-	"Ancient Apparition": ["ancient_apparition_chilling_touch", "ancient_apparition_cold_feet", "ancient_apparition_chilling_touch", "ancient_apparition_ice_vortex", "ancient_apparition_ice_vortex"],
+	"Ancient Apparition": ["ancient_apparition_chilling_touch", "ancient_apparition_cold_feet", "ancient_apparition_chilling_touch", "ancient_apparition_cold_feet", "ancient_apparition_ice_vortex"],
 	"Anti-Mage": ["antimage_mana_break", "antimage_blink", "antimage_mana_break", "antimage_counterspell", "antimage_blink"],
 	"Arc Warden": ["arc_warden_spark_wraith", "arc_warden_flux", "arc_warden_flux", "arc_warden_spark_wraith", "arc_warden_flux"],
 	"Axe": ["axe_battle_hunger", "axe_counter_helix", "axe_counter_helix", "axe_berserkers_call", "axe_counter_helix"],
