@@ -837,10 +837,10 @@
         // 102. Pos 2
         "Tinker": {
             starting: [{item: "tango"}, {item: "faerie_fire"}, {item: "branches"}, {item: "circlet"}, {item: "ward_observer"}],
-            early_game: [{item: "bottle"}, {item: "travel_boots", isCore: true}, {item: "soul_ring", isCore: true}, {item: "null_talisman"}],
-            mid_game: [{item: "blink", isCore: true}, {item: "ultimate_scepter", isCore: true}, {item: "aether_lens"}, {item: "kaya"}, {item: "bloodstone"}, {item: "ghost"}, {item: "dagon"}],
-            late_game: [{item: "sheepstick"}, {item: "arcane_blink"}, {item: "aeon_disk"}, {item: "travel_boots_2"}, {item: "ethereal_blade"}, {item: "shivas_guard"}],
-            situational: [{item: "infused_raindrop", info: "On hero against magical burst."}, {item: "black_king_bar", info: "Against disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "To prevent your blink from being canceled and for status resistance."}]
+            early_game: [{item: "bottle"}, {item: "soul_ring", isCore: true}, {item: "null_talisman"}, {item: "blink", isCore: true}],
+            mid_game: [{item: "ultimate_scepter", isCore: true}, {item: "shivas_guard"}, {item: "overwhelming_blink", info: "Along with Shiva's Guard for waveclear and AoE damage."}, {item: "aether_lens"}, {item: "kaya"}, {item: "bloodstone"}, {item: "ghost"}, {item: "dagon"}],
+            late_game: [{item: "sheepstick"}, {item: "aeon_disk"}, {item: "ethereal_blade"}],
+            situational: [{item: "infused_raindrop", info: "On hero against magical burst."}, {item: "black_king_bar", info: "Against disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "For extra AoE damage although Shiva's Guard and Overwhelming Blink are usually better."}]
         },   
         // 103. Pos 2, 4
         "Tiny": {
