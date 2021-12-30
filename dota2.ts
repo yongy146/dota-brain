@@ -705,6 +705,11 @@ export class OpenDotaAPIHero {
         return "Error"
     }
 
+    /**
+     * 
+     * @param name e.g. antimage (i.e. w/o 'npc_dota_hero_')
+     * @returns localited name, e.g. Anti-Mage
+     */
     export function overwolfNameToLocalizedName(name: string): string {
         //npc_dota_hero_bane
         for (var i=0; i<Heroes.length; i++) {
@@ -814,6 +819,11 @@ export class OpenDotaAPIHero {
         return '../img/heroes/' + heroName.replace(/ /gi, "_") + '_minimap_icon.png';*/
     }
   
+    /**
+     * 
+     * @param heroName localized name, e.g. Anti-Mage
+     * @returns NPC name, e.g. npc_dota_hero_antimage
+     */
   
   export function localizedNameToNPCName(heroName: string): string {
         //DotaLogger.log("dota2.localizedNameToNPCName(" + heroName + "): Called")
@@ -836,27 +846,22 @@ export class OpenDotaAPIHero {
         return -1
     }
   
-  function isHeroMelee(hero: string): boolean {
-        //console.log("isHeroMelee(" + hero + ") called")
-  
-        for (var i=0; i<Heroes.length; i++) {
-  
-  //        for (var index in jsonOpenDotaAPI) {
-            if (Heroes[i].localized_name == hero) {
-                return Heroes[i].attack_type == "Melee"
-            }
+function isHeroMelee(hero: string): boolean {
+    //console.log("isHeroMelee(" + hero + ") called")
+
+    for (var i=0; i<Heroes.length; i++) {
+
+//        for (var index in jsonOpenDotaAPI) {
+        if (Heroes[i].localized_name == hero) {
+            return Heroes[i].attack_type == "Melee"
         }
-        
-        /*for (var OpenDotaAPIHero of jsonOpenDotaAPI) {
-            if (OpenDotaAPIHero.localized_name == hero) {
-                return OpenDotaAPIHero.attack_type == "Melee"
-            }
-        }*/
-        console.log("Internal error: isHeroMelee(hero: " + hero + ")")
-        return false // should never get here though
-      }
+    }
     
-  
-  
-  
-  
+    /*for (var OpenDotaAPIHero of jsonOpenDotaAPI) {
+        if (OpenDotaAPIHero.localized_name == hero) {
+            return OpenDotaAPIHero.attack_type == "Melee"
+        }
+    }*/
+    console.log("Internal error: isHeroMelee(hero: " + hero + ")")
+    return false // should never get here though
+}
