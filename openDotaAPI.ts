@@ -9,8 +9,9 @@
  * 
  */
 import * as DotaLogger from '../../src/utility/log'
-import * as WebAccess from '../../src/utility/webAccess'
-//import * as WebAccess from '../../src/utility/webAccessNode'
+//import * as WebAccess from '../../src/utility/webAccess'
+import * as WebAccess from '../../src/utility/webAccessNode'
+import * as Dota2 from '../../submodules/dota2/dota2'
 
 export class Player {
   "account_id":  number // steam ID (32 bit)
@@ -184,7 +185,7 @@ export function getPlayerStats(steamId32): Promise<any> {
  * @returns 
  */
 export async function getMatches(steamId32: string, heroId: number, numberOfMatches: number): Promise<any> {
-  DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
+  //DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
 
   let heroIdParam = heroId==null ? '' : `&hero_id=${heroId}`
 //  let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}&${key}`
@@ -209,16 +210,43 @@ export async function getMatches(steamId32: string, heroId: number, numberOfMatc
 }
 
 /**
+ * Function returns an array with 100 last matches played with a give hero
+ *
+ * Sample API call: https://api.opendota.com/api/heroes/104/matches
+ * 
+ * @param heroId
+ * @returns 
+ */
+  export async function getMatchesWithHero(heroId: number): Promise<any> {
+    DotaLogger.log(`openDotaAPI.getMatchesWithHero(heroId: ${heroId}): Called`)
+  
+    let url = `https://api.opendota.com/api/heroes/${heroId}/matches`
+  
+    return new Promise((resolve, reject) => {
+      DotaLogger.log(`openDotaAPI.getMatchesWithHero(): Fetching url ${url}`)
+      WebAccess.fetchJSONFile(url).then((matches) => {
+        var result = []
+        for (const match of matches) {
+          result.push(match.match_id)
+        }
+        resolve(result)
+      }).catch((error) => {
+        reject(error)
+      })
+    })
+  }
+
+/**
  * 
  * Sample unparsed match: https://api.opendota.com/api/matches/6281922307
  * Sample parsed match: https://api.opendota.com/api/matches/6284478751
  * @param matchId 
  * @returns 
  */
-export async function getMatch(matchId: string): Promise<any> {
-  DotaLogger.log(`openDotaAPI.getMatch(matchId: ${matchId}): Called`)
+export async function getMatch(matchId: string, authenticated: boolean): Promise<any> {
+  //DotaLogger.log(`openDotaAPI.getMatch(matchId: ${matchId}): Called`)
 
-  let url = `https://api.opendota.com/api/matches/${matchId}`
+  let url = `https://api.opendota.com/api/matches/${matchId}${authenticated ? `?${key}` : ``}`
   //let url = `https://api.opendota.com/api/matches/${matchId}?${key}`
 
   return  WebAccess.fetchJSONFile(url)
@@ -243,7 +271,7 @@ export async function getRecentItems(steamId32: string, heroId: number, numberOf
       //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
       for (var i=0; i<numberOfMatches && i<matches.length; i++) {
         const matchId = matches[i].match_id
-        getMatch(matchId).then((matchFull) => {
+        getMatch(matchId, false).then((matchFull) => {
           const players = matchFull.players as any[]
           const index = players.findIndex((value) => {
             return value.hero_id == heroId
@@ -289,6 +317,104 @@ export async function getRecentItems(steamId32: string, heroId: number, numberOf
   })
 }
 
+
+export async function getAbilityUpgrades(heroId: number): Promise<any> {
+  DotaLogger.log(`openDotaAPI.getAbilityUpgrades(heroId: ${heroId}): Called`)
+  return new Promise(async (resolve, reject) => {
+    var attempts = 5
+    var successful = false
+
+    while ((!successful) && (attempts>0)) {
+      DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Attemp #${6-attempts}`)
+      await getMatchesWithHero(heroId).then(async (matches) => {
+        //DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Matches = ${JSON.stringify(matches)}`)
+        DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Loading ${matches.length} matches for hero ${Dota2.idToLocalizedName(heroId)}`)
+        successful = true
+        var abilityUpgradesMax = 0;
+        var abilityUpgrades = []
+        var matchCounts = matches.length
+        var matchCounter = 1
+        var matchSuccess = 0
+        var matchError = 0
+
+        process.stdout.write(`*** Downloading ${matches.length} matches: `);
+
+        for (const m of matches) {
+          //DotaLogger.log(`getting match ${++matchGets}`)
+          const matchCounter_ = ++matchCounter
+          process.stdout.write(`D${matchCounter_} `);
+
+          await new Promise(resolve => setTimeout(resolve, 200)); // Wait 100 ms to ensure only 10 reqquests are made per second 
+
+          getMatch(m, true).then((match) => {
+            //DotaLogger.log(`match ${matchGets_} received`)
+            const players = match.players
+            // Find player with hero id
+            var player = null
+            for (const p of players) {
+              if (p.hero_id==heroId) {
+                player = p
+                continue
+              }
+            }
+            //DotaLogger.log(`Match = ${JSON.stringify(match)}`)
+            // Register matches with highest ability upgrades
+            if (player.hasOwnProperty('ability_upgrades_arr') && player.ability_upgrades_arr!=null) {
+              // Only analyze ability upgrades if they are available and not null
+
+              const abilities_upgrades = player.ability_upgrades_arr
+              //DotaLogger.log(`xxxx: abilities_upgrades=${JSON.stringify(abilities_upgrades)}`)
+              if (abilities_upgrades.length<abilityUpgradesMax) {
+                // Do nothing, as we already have bigger ones
+              }
+              else if (abilities_upgrades.length==abilityUpgradesMax) {
+                // Add ability upgrade to list
+                abilityUpgrades.push(abilities_upgrades)
+              }
+              else {
+                abilityUpgradesMax = abilities_upgrades.length
+                abilityUpgrades = [abilities_upgrades]
+              }
+              //DotaLogger.log(`Match '${m}' has ${abilities_upgrades.length} ability upgrades`)
+
+              //DotaLogger.log(`Player = ${JSON.stringify(player.ability_upgrades_arr)}
+              /*DotaLogger.log(`abilityIds = ${JSON.stringify(t.abilityIds)}`)
+              for (const ability of abilities_upgrades) {
+                console.log(`ability upgrade: ${t.abilityIds[ability]} (ability: ${ability})`)
+              }*/
+            }
+          }).then(() => {
+            matchSuccess++
+            process.stdout.write(`S${matchCounter_} `);
+          }).catch((error) => {
+            matchError++
+            //process.stdout.write(`1) x${error}x\n`);
+            //process.stdout.write(`2) x${JSON.stringify(error)}x\n`);
+            process.stdout.write(`E${matchCounter_}[${error.status}][${error.statusText}][${error.url}] `);
+            //process.stdout.write(`E${matchCounter_}[${error}] `);
+            //process.stdout.write(`E${matchCounter_}[${JSON.stringify(error)}] `);
+            //DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Error from getMatch (${JSON.stringify(error)})`)
+          }).finally(() => {
+            //process.stdout.write(`${matchSuccess + matchError} `);
+  //          DotaLogger.log(`matchCounts: ${matchCounts} => ${matchCounts-1}`)
+            matchCounts--
+            if (matchCounts==0) {
+              process.stdout.write(`\n`);
+              DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Match loading for ${Dota2.idToLocalizedName(heroId)} completed (successes: ${matchSuccess}/${matches.length}, errors: ${matchError}/${matches.length})`)
+              resolve(abilityUpgrades)
+            }
+          })
+        }
+      }).catch((error) => {
+        DotaLogger.error(`openDotaAPI.getAbilityUpgrades(): ${JSON.stringify(error)}`)
+        attempts--
+        if (attempts==0) {
+          reject(error)
+        }
+      })
+    }
+  })
+}
 
 export interface HeroStats {
   id: number, // e.g. 1
@@ -634,6 +760,34 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
       request.send();
     })
   }
+
+
+  export interface ability_ids {
+    [key: number]: string // ability name
+  }
+
+/**
+ * Function returns ability ids
+ *
+ * Sample API call: https://api.opendota.com/api/constants/ability_ids
+ * 
+ * @param heroId
+ * @returns 
+ */
+ export async function getAbilityIds(authenticated: boolean): Promise<ability_ids> {
+  DotaLogger.log(`openDotaAPI.getAbilityIds(): Called`)
+  //let url = `https://api.opendota.com/api/matches/${matchId}${authenticated ? `?${key}` : ``}`
+  let url = `https://api.opendota.com/api/constants/ability_ids${authenticated ? `?${key}` : ``}`
+
+  return new Promise((resolve, reject) => {
+    WebAccess.fetchJSONFile(url).then((ability_ids) => {
+      resolve(ability_ids)
+    }).catch((error) => {
+      DotaLogger.log(`openDotaAPI.getAbilityIds(): Error (${JSON.stringify(error)}`)
+    })
+  })
+}
+
 
 function reportNetworkError(prefix: string, errorCode: number) {
   var errorMessage = errorCode.toString()
