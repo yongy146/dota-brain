@@ -222,9 +222,9 @@
         "Disruptor": {
             starting: [{item: "tango"}, {item: "flask"}, {item: "enchanted_mango"}, {item: "ward_observer"}, {item: "ward_sentry", info: "To block or unblock the pull camp."}, {item: "faerie_fire"}, {item: "branches"}, {item: "sobi_mask"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}],
             early_game: [{item: "boots"}, {item: "tranquil_boots"}, {item: "magic_wand"}, {item: "ring_of_basilius", info: "If your laning partner also uses a lot of mana early."}, {item: "arcane_boots"}],
-            mid_game: [{item: "glimmer_cape"}, {item: "blink"}, {item: "force_staff"}, {item: "ghost"}, {item: "aether_lens"}, {item: "cyclone"}, {item: "veil_of_discord"}],
+            mid_game: [{item: "glimmer_cape"}, {item: "solar_crest", info: "Goes well with Aghanim's Shard to buff your right-clicking core."}, {item: "aghanims_shard", info: "Goes well with Solar Crest to buff your right-clicking core."}, {item: "force_staff"}, {item: "ghost"}, {item: "aether_lens"}, {item: "veil_of_discord"}],
             late_game: [{item: "ultimate_scepter"}, {item: "aeon_disk"}],
-            situational: [{item: "infused_raindrop", info: "Against magical burst."}, {item: "aghanims_shard", info: "To buff your rightclicking core."}]
+            situational: [{item: "infused_raindrop", info: "Against magical burst."}, {item: "blink", info: "Allows you to land a multi-hero Static Storm especially once you have Aghanim's Scepter."}]
         },
         // 27. Pos 3, 2
         "Doom": {
