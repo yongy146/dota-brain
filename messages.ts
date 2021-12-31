@@ -60,7 +60,6 @@ export function getEnemyHeroMessages(hero): any[] {
   return dotaCoachMessages.filter(message => (message.hero==hero && message.category=='EnemyHero'))
 }
 
-
 export const ALL               = 'All'
 export const IN_LANE           = 'InLane'
 export const ROLE_CORE         = 'Core' // For mid, carry and offlane
@@ -71,7 +70,7 @@ export const ROLE_SUPPORT      = 'Support' // For soft and hard support
 export const ROLE_SUPPORT_SOFT = 'SoftSupport'
 export const ROLE_SUPPORT_HARD = 'HardSupport'
 
-  export const dotaCoachMessages = [
+export const dotaCoachMessages = [
 
     // BountyRunes
     {category: "BountyRunes", audioFile: "general/BountyRunes", messageTime: (3*60-30), repeatTime: (3*60), textMessage: "Bounty runes will appear soon", audience: [ALL]},
@@ -1024,17 +1023,17 @@ export const ROLE_SUPPORT_HARD = 'HardSupport'
     {category: "EnemyHero", hero: "Sven", audioFile: "heroes/Sven_6_Aghanims scepter", messageTime: (15*60), textMessage: "Be aware of Sven's Aghanim's Scepter timing. He becomes much more dangerous.", audience: [ALL]},
 
     // 96. Techies | 08.03.2021
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_1_Extra consumables", messageTime: (-60), textMessage: "Against Techies, deliver extra consumables and an Observer Ward to keep track of him.", audience: [IN_LANE]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_2_Quell", messageTime: (-50), textMessage: "Quell the trees in the area so you can spot Proximity mines and see Techies doing Blast Off!", audience: [IN_LANE]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_3_Proximity mines", messageTime: (-40), textMessage: "Proximity Mines explode 1.6 seconds after you hear the beep. Destroy them or move away quickly.", audience: [ALL]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_4_Keep track", messageTimes: [(8*60), (18*60), (28*60)], textMessage: "Keep track of Techies' movements and notice which part of the map is being mined.", audience: [ALL]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_5_Bring sentries", messageTimes: [(10*60+10), (20*60+10), (30*60+10)], textMessage: "Bring sentries whenever you're making a move on the opponent side of the map.", audience: [ALL]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_6_Avoid trees", messageTimes: [(10*60+20), (20*60+20), (30*60+20)], textMessage: "Avoid being next to trees in the lane as he can hide the Remote Mines in there.", audience: [ALL]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_7_Vision", messageTimes: [(10*60+30), (20*60+30), (30*60+30)], textMessage: "Avoid walking up highground or in Roshpit without vision. You might run into mines.", audience: [ALL]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_8_Antispell items", messageTime: (12*60), textMessage: "Magic resistance items, Black King Bar and Aeon Disk are great against Techies' Remote Mines.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_1_Extra consumables", messageTime: (-60), textMessage: "Against Techies, deliver extra consumables and an Observer Ward to keep track of him.", audience: [IN_LANE]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_2_Quell", messageTime: (-50), textMessage: "Quell the trees in the area so you can spot Proximity mines and see Techies doing Blast Off!", audience: [IN_LANE]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_3_Proximity mines", messageTime: (-40), textMessage: "Proximity Mines explode 1.6 seconds after you hear the beep. Destroy them or move away quickly.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_4_Keep track", messageTimes: [(8*60), (18*60), (28*60)], textMessage: "Keep track of Techies' movements and notice which part of the map is being mined.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_5_Bring sentries", messageTimes: [(10*60+10), (20*60+10), (30*60+10)], textMessage: "Bring sentries whenever you're making a move on the opponent side of the map.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_6_Avoid trees", messageTimes: [(10*60+20), (20*60+20), (30*60+20)], textMessage: "Avoid being next to trees in the lane as he can hide the Remote Mines in there.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_7_Vision", messageTimes: [(10*60+30), (20*60+30), (30*60+30)], textMessage: "Avoid walking up highground or in Roshpit without vision. You might run into mines.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_8_Antispell items", messageTime: (12*60), textMessage: "Magic resistance items, Black King Bar and Aeon Disk are great against Techies' Remote Mines.", audience: [ALL]},
     // {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_9_Necrobook 3", messageTime: (12*60+10), textMessage: "Consider buying Necrobook level3 on someone for true sight.", audience: [ALL]}, |patch 7.29| MESSAGE REMOVED
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_10_Aegis", messageTimes: [(15*60+10), (25*60+10), (35*60+10)], textMessage: "Getting Aegis of Immortal is great against Remote mines. Take Roshan as early as possible.", audience: [ALL]},
-    {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_11_Gem", messageTime: (20*60+10), textMessage: "Buy a Gem of True Sight around 20min when you start grouping up as team.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_10_Aegis", messageTimes: [(15*60+10), (25*60+10), (35*60+10)], textMessage: "Getting Aegis of Immortal is great against Remote mines. Take Roshan as early as possible.", audience: [ALL]},
+    {category: "EnemyHero", hero: "Techies", audioFile: "heroes/Techies_11_Gem", messageTime: (20*60+10), textMessage: "Buy a Gem of True Sight around 20min when you start grouping up as team.", audience: [ALL]},
 
     // 97. Templar Assassin | 08.03.2021
     {category: "EnemyHero", hero: "Templar Assassin", audioFile: "heroes/Templar Assassin_1_Refraction", messageTime: (-60), textMessage: "Damage over time spells and items are great at removing Templar's Refraction charges.", audience: [ALL]},

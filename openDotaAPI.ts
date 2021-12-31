@@ -9,8 +9,8 @@
  * 
  */
 import * as DotaLogger from '../../src/utility/log'
-//import * as WebAccess from '../../src/utility/webAccess'
-import * as WebAccess from '../../src/utility/webAccessNode'
+import * as WebAccess from '../../src/utility/webAccess'
+//import * as WebAccess from '../../src/utility/webAccessNode'
 import * as Dota2 from '../../submodules/dota2/dota2'
 
 export class Player {
