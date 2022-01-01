@@ -5,7 +5,7 @@
  * 
  * Copyright Dota Coach, 2021. All rights reserved
  */
-import { standardAbilityBuilds } from './standardAbilityBuilds'
+import { standardAbilityBuilds } from './standardAbilityBuildsOLD'
 import { itemBuilds } from './itemBuilds'
 import { dispellableBuffs } from './dispellableBuffs'
 import { breakablePassives } from './breakablePassives'
