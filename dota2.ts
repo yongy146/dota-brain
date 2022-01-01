@@ -791,7 +791,12 @@ export class OpenDotaAPIHero {
         return -1 // equals to not found
     }
   
+    export function localizedNameToHeropediaName(localized_name: string): string {
+        return localized_name.replace(/[ \']/g, '')
+    }
+
     
+
     export function localizedNameToImgName(heroName: string): string {
         //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
         switch (heroName) {

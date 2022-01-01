@@ -4,10 +4,6 @@
         2) file /img/ability/<ability>_hp1.jpg needs to be avaible (rename files according to OpenDotaAPI)
 */
 
-/**
- * Ability names should be consisten with these names: https://api.opendota.com/api/constants/hero_abilities
- */
-
 export const standardAbilityBuilds = {
 	"Abaddon": ["abaddon_aphotic_shield", "abaddon_frostmourne" /* equals to 'curse of avernus' */, "abaddon_aphotic_shield", "abaddon_death_coil", "abaddon_aphotic_shield"],
 	"Alchemist": ["alchemist_acid_spray", "alchemist_goblins_greed",  "alchemist_acid_spray", "alchemist_goblins_greed", "alchemist_acid_spray"],

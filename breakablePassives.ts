@@ -3,7 +3,7 @@ export const breakablePassives =
 	"Abaddon": ["abaddon_borrowed_time", "abaddon_frostmourne"],
 	"Alchemist": ["alchemist_goblins_greed"],
 	"Ancient Apparition": [],
-	"Anti-Mage": ["antimage_mana_break"],
+	"Anti-Mage": ["antimage_mana_break", "antimage_counterspell"],
 	"Arc Warden": [],
 	"Axe": ["axe_counter_helix"],
 	"Bane": ["bane_enfeeble"],

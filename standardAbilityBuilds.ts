@@ -4,8 +4,74 @@
         2) file /img/ability/<ability>_hp1.jpg needs to be avaible (rename files according to OpenDotaAPI)
 */
 
+export const ALL               = 'All'
+export const IN_LANE           = 'InLane'
+export const ROLE_CORE         = 'Core' // For mid, carry and offlane
+export const ROLE_MID          = 'Mid'
+export const ROLE_CARRY        = 'Carry'
+export const ROLE_OFFLANE      = 'Offlane'
+export const ROLE_SUPPORT      = 'Support' // For soft and hard support
+export const ROLE_SUPPORT_SOFT = 'SoftSupport'
+export const ROLE_SUPPORT_HARD = 'HardSupport'
+
+// skilling attributes: 'special_bonus_attributes'
+// Add build for 26 first abilities (incl. attributes)
+
 export const standardAbilityBuilds = {
-	"Abaddon": ["abaddon_aphotic_shield", "abaddon_frostmourne" /* equals to 'curse of avernus' */, "abaddon_aphotic_shield", "abaddon_death_coil", "abaddon_aphotic_shield"],
+	"Abaddon": {
+		builds: [
+			{
+				roles: [ROLE_OFFLANE],
+				build: [
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_frostmourne" /* equals to 'curse of avernus' */},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_death_coil"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "special_bonus_unique_antimage_3"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_aphotic_shield"},
+					20.. items
+				]
+			},
+			{
+				roles: [ROLE_SUPPORT_HARD],
+				build: [
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_frostmourne" /* equals to 'curse of avernus' */},
+					{ ability: "abaddon_aphotic_shield"},
+					{ ability: "abaddon_death_coil"},
+					{ ability: "abaddon_aphotic_shield"}
+					.items
+				]
+			}
+		],
+		info: [ // Optional
+			{ ability: "abaddon_aphotic_shield", info: ""},
+			{ ability: "special_bonus_unique_antimage_3", info: ""},
+			// Question, should we have info for each build at each level, or the infos be generic to the skills / telents, and only showed with first build?
+		]
+	},
+
+	/*
+COMMENT: ROLES CURRENTLY IN APP: (Same as role selection in Dota 2)
+export const ROLE_MID          = 'Mid'
+export const ROLE_CARRY        = 'Carry'
+export const ROLE_OFFLANE      = 'Offlane'
+export const ROLE_SUPPORT_SOFT = 'SoftSupport'
+export const ROLE_SUPPORT_HARD = 'HardSupport'
+*/
+
 	"Alchemist": ["alchemist_acid_spray", "alchemist_goblins_greed",  "alchemist_acid_spray", "alchemist_goblins_greed", "alchemist_acid_spray"],
 	"Ancient Apparition": ["ancient_apparition_chilling_touch", "ancient_apparition_cold_feet", "ancient_apparition_chilling_touch", "ancient_apparition_cold_feet", "ancient_apparition_ice_vortex"],
 	"Anti-Mage": ["antimage_mana_break", "antimage_blink", "antimage_mana_break", "antimage_counterspell", "antimage_blink"],
