@@ -13,7 +13,8 @@ import { counterItemsLaning } from './counterItemsLaning'
 import { counterItemsMidGame } from './counterItemsMidGame'
 import { counterItemsLateGame } from './counterItemsLateGame'
 import { damageType } from './damageType'
-import { Items, Heroes, HeroAbilities, Abilities } from './openDotaData'
+import { Items, HeroAbilities, Abilities } from './openDotaData'
+import Heroes from '../../submodules/dota2/dota2Heroes.json'
 import * as DotaLogger from '../../src/utility/log'
 import { channeling_interrupts, silence, root, disables } from './disables'
 
@@ -443,7 +444,6 @@ export class OpenDotaAPIHero {
     primary_attr: string
     attack_type: string
     roles: string[]
-    legs: number
   }
   
   export class Talent {

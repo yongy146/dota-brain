@@ -45,7 +45,7 @@ export async function getPlayer(steamId32: string): Promise<any> {
   let url = `https://api.opendota.com/api/players/${steamId32}`
 
   return new Promise((resolve, reject) => {
-    WebAccess.fetchJSONFile(url).then((player) => {
+    WebAccess.getRequestJSON(url, 3).then((player) => {
 
       player['rank_medal'] = "unknown rank (" + player.rank_tier + ")"
       /* Rank example 11 - Herald with one star or Immortal would be 80 */
@@ -192,7 +192,7 @@ export async function getMatches(steamId32: string, heroId: number, numberOfMatc
   let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}`
 
   return new Promise((resolve, reject) => {
-    WebAccess.fetchJSONFile(url).then((matches) => {
+    WebAccess.getRequestJSON(url, 3).then((matches) => {
       for (const match of matches) {
         match['is_victory'] = match.radiant_win ? match.player_slot<128 : match.player_slot>=128
       }
@@ -201,7 +201,7 @@ export async function getMatches(steamId32: string, heroId: number, numberOfMatc
   })
 /*  return new Promise((resolve, reject) => {
 
-      WebAccess.fetchJSONFile(url).then((result) => {
+      WebAccess.getRequestJSON(url).then((result) => {
         resolve(result)
       }).catch((error) => {
         reject(error)
@@ -224,7 +224,7 @@ export async function getMatches(steamId32: string, heroId: number, numberOfMatc
   
     return new Promise((resolve, reject) => {
       DotaLogger.log(`openDotaAPI.getMatchesWithHero(): Fetching url ${url}`)
-      WebAccess.fetchJSONFile(url).then((matches) => {
+      WebAccess.getRequestJSON(url, 3).then((matches) => {
         var result = []
         for (const match of matches) {
           result.push(match.match_id)
@@ -249,7 +249,7 @@ export async function getMatch(matchId: string, authenticated: boolean): Promise
   let url = `https://api.opendota.com/api/matches/${matchId}${authenticated ? `?${key}` : ``}`
   //let url = `https://api.opendota.com/api/matches/${matchId}?${key}`
 
-  return  WebAccess.fetchJSONFile(url)
+  return  WebAccess.getRequestJSON(url, 3)
 }
 
 
@@ -588,7 +588,7 @@ export async function getHeroStats(): Promise<HeroStats[]> {
     let url = `https://api.opendota.com/api/heroStats`
   
     return new Promise((resolve, reject) => {
-      WebAccess.fetchJSONFile(url).then((matches) => {
+      WebAccess.getRequestJSON(url, 3).then((matches) => {
         resolve(matches)
       }).catch((error) => {
         reject(error)
@@ -780,7 +780,7 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
   let url = `https://api.opendota.com/api/constants/ability_ids${authenticated ? `?${key}` : ``}`
 
   return new Promise((resolve, reject) => {
-    WebAccess.fetchJSONFile(url).then((ability_ids) => {
+    WebAccess.getRequestJSON(url, 3).then((ability_ids) => {
       resolve(ability_ids)
     }).catch((error) => {
       DotaLogger.log(`openDotaAPI.getAbilityIds(): Error (${JSON.stringify(error)}`)
