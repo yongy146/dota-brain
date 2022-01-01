@@ -41,7 +41,7 @@ export const standardAbilityBuilds = {
 					{ ability: "abaddon_aphotic_shield"},
 					{ ability: "abaddon_aphotic_shield"},
 					{ ability: "abaddon_aphotic_shield"},
-					20.. items
+					//20.. items
 				]
 			},
 			{
@@ -52,7 +52,7 @@ export const standardAbilityBuilds = {
 					{ ability: "abaddon_aphotic_shield"},
 					{ ability: "abaddon_death_coil"},
 					{ ability: "abaddon_aphotic_shield"}
-					.items
+					//.items
 				]
 			}
 		],
