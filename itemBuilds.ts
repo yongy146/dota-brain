@@ -47,7 +47,7 @@
             starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "circlet"}, {item: "slippers"}, {item: "branches"}, {item: "faerie_fire"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}],
             early_game: [{item: "ring_of_health", info: "To solve hp sustain issues."}, {item: "wraith_band"}, {item: "magic_wand"}, {item: "power_treads", isCore: true}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
             mid_game: [{item: "bfury", isCore: true}, {item: "manta", isCore: true}, {item: "basher", isCore: true}, {item: "skadi"}],
-            late_game: [{item: "abyssal_blade", isCore: true}, {item: "satanic"}, {item: "butterfly"}],
+            late_game: [{item: "abyssal_blade", isCore: true}, {item: "satanic"}, {item: "butterfly"}, {item: "ultimate_scepter", info: "Great for causing chaos in the fights."}],
             situational: [{item: "black_king_bar", info: "Against a lot of disables and as a dispel."}, {item: "aghanims_shard", info: "For extra mobility."}, {item: "monkey_king_bar", info: "Against evasion."}, {item: "sphere", info: "Against powerful single target spells like Duel, Lasso, Hex or Doom."}]
         },
         // 5. Pos 1, 2
