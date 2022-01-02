@@ -48,7 +48,7 @@
             early_game: [{item: "ring_of_health", info: "To solve hp sustain issues."}, {item: "wraith_band"}, {item: "magic_wand"}, {item: "power_treads", isCore: true}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
             mid_game: [{item: "bfury", isCore: true}, {item: "manta", isCore: true}, {item: "basher", isCore: true}, {item: "skadi"}],
             late_game: [{item: "abyssal_blade", isCore: true}, {item: "satanic"}, {item: "butterfly"}, {item: "ultimate_scepter", info: "Great for causing chaos in the fights."}],
-            situational: [{item: "black_king_bar", info: "Against a lot of disables and as a dispel."}, {item: "aghanims_shard", info: "For extra mobility."}, {item: "monkey_king_bar", info: "Against evasion."}, {item: "sphere", info: "Against powerful single target spells like Duel, Lasso, Hex or Doom."}]
+            situational: [{item: "black_king_bar", info: "Against a lot of disables and as a dispel."}, {item: "monkey_king_bar", info: "Against evasion."}, {item: "sphere", info: "Against powerful single target spells like Duel, Lasso, Hex or Doom."}, {item: "aghanims_shard", info: "Against heavy magical damage lineups."}, {item: "assault", info: "Against heavy armor reduction lineups."}]
         },
         // 5. Pos 1, 2
         "Arc Warden": {
