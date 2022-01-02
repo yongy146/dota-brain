@@ -191,7 +191,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		info: {
 			// For first level spell choice
 			"antimage_counterspell": "Skill Counterspell at level one if you exptect to be harrassed by single-target magical-damage spells like Arcane Bolt.",
-			"special_bonus_unique_antimage_2": "If there is a lot of magical damage against you or you have mana issues, skill the other talent."
+			"special_bonus_unique_antimage_2": "If there`s a lot of magical damage against you or you have mana issues, skill the other talent."
 		}
 	},
 
