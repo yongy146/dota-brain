@@ -4,6 +4,8 @@
         2) file /img/ability/<ability>_hp1.jpg needs to be avaible (rename files according to OpenDotaAPI)
 */
 
+// Attention: "'" doens't work due to dota issues. We have to use "`"
+
 // Task: rename file to "abilityBuilds.ts"
 
 export const ALL               = 'All'
@@ -72,8 +74,8 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 				]
 			}
 		],
-		info: { // Optional
-			"special_bonus_unique_abaddon": "If you have Aghanim's Scepter or about to have it, take the other talent."
+		info: { // Optional, used for Dota 2 Guides
+			"special_bonus_unique_abaddon": "If you have Aghanim`s Scepter or about to have it, take the other talent."
 			// Question, should we have info for each build at each level, or the infos be generic to the skills / telents, and only showed with first build?
 		}
 	},
@@ -113,7 +115,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		],
 		info: {
 			// For first level spell choice
-			"alchemist_goblins_greed": "If you are playing mid Alchemist against a tough match-up, you can skill Acid Spray instead."
+			"alchemist_acid_spray": "Consider skilling Acid Spray at level one if you are playing mid Alchemist against a tough match-up."
 		}
 	},
 	"Ancient Apparition": {
@@ -188,8 +190,8 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		],
 		info: {
 			// For first level spell choice
-			"antimage_mana_break": "If you will be harassed by single-target magical-damage spell like Arcane Bolt, skill Counterspell.",
-			"special_bonus_unique_antimage_2": "If there's a lot of magical damage against you or you have mana issues, skill the other talent."
+			"antimage_counterspell": "Skill Counterspell at level one if you exptect to be harrassed by single-target magical-damage spells like Arcane Bolt.",
+			"special_bonus_unique_antimage_2": "If there is a lot of magical damage against you or you have mana issues, skill the other talent."
 		}
 	},
 
