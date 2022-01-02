@@ -32,7 +32,7 @@
             early_game: [{item: "bracer"}, {item: "soul_ring"},  {item: "ring_of_health", info: "To solve hp sustain issues."}, {item: "magic_wand"}, {item: "phase_boots"}, {item: "power_treads"}],
             mid_game: [{item: "bfury", isCore: true}, {item: "sange_and_yasha", isCore: true},  {item: "assault", isCore: true}, {item: "blink"}, {item: "basher"}],
             late_game: [{item: "abyssal_blade"}, {item: "swift_blink"}, {item: "heart"}, {item: "ultimate_scepter", info: "To gift it to your teammates"}],
-            situational: [{item: "bottle", info: "If you are playing mid Alchemist."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "mjollnir", info: "Against illusion based heroes."}, {item: "overwhelming_blink", info: "Against illusion based heroes."}, {item: "silver_edge", info: "To break passives"}],
+            situational: [{item: "bottle", info: "If you are playing mid Alchemist."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "For extra dispel and buff."}, {item: "mjollnir", info: "Against illusion based heroes."}, {item: "overwhelming_blink", info: "Against illusion based heroes."},  {item: "monkey_king_bar", info: "Against evasion."}, {item: "silver_edge", info: "To break passives."}],
         },
         // 3. Pos 5
         "Ancient Apparition": {
@@ -47,8 +47,8 @@
             starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "circlet"}, {item: "slippers"}, {item: "branches"}, {item: "faerie_fire"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}],
             early_game: [{item: "ring_of_health", info: "To solve hp sustain issues."}, {item: "wraith_band"}, {item: "magic_wand"}, {item: "power_treads", isCore: true}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
             mid_game: [{item: "bfury", isCore: true}, {item: "manta", isCore: true}, {item: "basher", isCore: true}, {item: "skadi"}],
-            late_game: [{item: "abyssal_blade", isCore: true}, {item: "satanic"}, {item: "butterfly"}],
-            situational: [{item: "black_king_bar", info: "Against a lot of disables and as a dispel."}, {item: "aghanims_shard", info: "For extra mobility."}, {item: "monkey_king_bar", info: "Against evasion."}, {item: "sphere", info: "Against powerful single target spells like Duel, Lasso, Hex or Doom."}]
+            late_game: [{item: "abyssal_blade", isCore: true}, {item: "satanic"}, {item: "butterfly"}, {item: "ultimate_scepter", info: "Great for causing chaos in the fights."}],
+            situational: [{item: "black_king_bar", info: "Against a lot of disables and as a dispel."}, {item: "monkey_king_bar", info: "Against evasion."}, {item: "sphere", info: "Against powerful single target spells like Duel, Lasso, Hex or Doom."}, {item: "aghanims_shard", info: "Against heavy magical damage lineups."}, {item: "assault", info: "Against heavy armor reduction lineups."}]
         },
         // 5. Pos 1, 2
         "Arc Warden": {

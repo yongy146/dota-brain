@@ -113,6 +113,7 @@ export const dotaCoachMessages = [
     // Alex: Not sure I understand this one. Maybe we can refurmulate
     {category: "OwnHero", hero: "Abaddon", audioFile: "ownHero/Abaddon_2_Support", messageTime: 30, textMessage: "Play ahead of the Core you are supporting to absorb attention.", audience: [ROLE_SUPPORT]},
     // ALex: What do you mean by 'absorb attention'?
+    {category: "OwnHero", hero: "Abaddon", audioFile: "ownHero/Abaddon_9_Salve", messageTime: 45, textMessage: "Salve or clarity won't be canceled while you have Apothic Shield on.", audience: [ALL]},
     {category: "OwnHero", hero: "Abaddon", audioFile: "ownHero/Abaddon_3_BorrowedTime1", messageTime: 6*60, textMessage: "If someone applies a break effect on you, you will have to trigger Borrowed Time manually.", audience: [ALL]},
     {category: "OwnHero", hero: "Abaddon", audioFile: "ownHero/Abaddon_4_Disables", messageTime: 8*60, textMessage: "If you got disabled along with your teammate you can pop Borrowed Time to unstun yourself and then apply Aphotic Shield on a stunned ally to free him as well.", audience: [ROLE_OFFLANE, ROLE_SUPPORT]},
     {category: "OwnHero", hero: "Abaddon", audioFile: "ownHero/Abaddon_5_BorrowedTime2", messageTime: 12*60, repeatTime: 20*60, textMessage: "You can position more aggressively than rest of your team, as opponents usually don't want to go on you due to Borrowed Time.", audience: [ALL]},
