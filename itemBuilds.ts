@@ -32,7 +32,7 @@
             early_game: [{item: "bracer"}, {item: "soul_ring"},  {item: "ring_of_health", info: "To solve hp sustain issues."}, {item: "magic_wand"}, {item: "phase_boots"}, {item: "power_treads"}],
             mid_game: [{item: "bfury", isCore: true}, {item: "sange_and_yasha", isCore: true},  {item: "assault", isCore: true}, {item: "blink"}, {item: "basher"}],
             late_game: [{item: "abyssal_blade"}, {item: "swift_blink"}, {item: "heart"}, {item: "ultimate_scepter", info: "To gift it to your teammates"}],
-            situational: [{item: "bottle", info: "If you are playing mid Alchemist."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "mjollnir", info: "Against illusion based heroes."}, {item: "overwhelming_blink", info: "Against illusion based heroes."}, {item: "silver_edge", info: "To break passives"}],
+            situational: [{item: "bottle", info: "If you are playing mid Alchemist."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "For extra dispel and buff."}, {item: "mjollnir", info: "Against illusion based heroes."}, {item: "overwhelming_blink", info: "Against illusion based heroes."},  {item: "monkey_king_bar", info: "Against evasion."}, {item: "silver_edge", info: "To break passives."}],
         },
         // 3. Pos 5
         "Ancient Apparition": {
