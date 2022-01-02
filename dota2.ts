@@ -761,6 +761,16 @@ export class OpenDotaAPIHero {
         }
         return "#not found#"
     }
+
+    /**
+     * 
+     * @param heroId 
+     * @returns e.g. antimage or dark_willow
+     */
+  
+    export function idToNPCShortName(heroId: number): string {
+        return idToNPCName(heroId).replace('npc_dota_hero_', '')
+    }
   
     
     export function idToImgName(heroId: number): string {

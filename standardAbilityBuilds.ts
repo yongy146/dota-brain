@@ -19,158 +19,178 @@ export const ROLE_SUPPORT_HARD = 'HardSupport'
 // skilling attributes: "special_bonus_attributes"
 // Add build for 26 first abilities (incl. attributes)
 
+export interface AbilityBuilds {
+	builds: AbilityBuild[],
+	info: AbilityInfo
+}
 
-export const standardAbilityBuilds = {
+export interface AbilityBuild {
+	roles: string[],
+	guide: number, // steam guide
+	build: string[]
+}
+
+export interface AbilityInfo {
+	[key: string]: string
+}
+
+
+
+export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 	"Abaddon": {
 		builds: [
 			{
 				roles: [ROLE_SUPPORT],
+				guide: 1640698444,
 				build: [
-					{ ability: "abaddon_aphotic_shield"},
-					{ ability: "abaddon_frostmourne" /* equals to 'curse of avernus' */},
-					{ ability: "abaddon_aphotic_shield"},
-					{ ability: "abaddon_death_coil"},
-					{ ability: "abaddon_aphotic_shield"},
-					{ ability: "abaddon_borrowed_time"},
-					{ ability: "abaddon_aphotic_shield"},
-					{ ability: "abaddon_death_coil"},
-					{ ability: "abaddon_death_coil"},
-					{ ability: "abaddon_death_coil"},
-					{ ability: "special_bonus_movement_speed_15"},
-					{ ability: "abaddon_borrowed_time"},
-					{ ability: "abaddon_frostmourne"},
-					{ ability: "abaddon_frostmourne"},
-					{ ability: "special_bonus_unique_abaddon_2"},
-					{ ability: "abaddon_frostmourne"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_abaddon"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_abaddon_4"}
+					"abaddon_aphotic_shield",
+					"abaddon_frostmourne" /* equals to 'curse of avernus' */,
+					"abaddon_aphotic_shield",
+					"abaddon_death_coil",
+					"abaddon_aphotic_shield",
+					"abaddon_borrowed_time",
+					"abaddon_aphotic_shield",
+					"abaddon_death_coil",
+					"abaddon_death_coil",
+					"abaddon_death_coil",
+					"special_bonus_movement_speed_15",
+					"abaddon_borrowed_time",
+					"abaddon_frostmourne",
+					"abaddon_frostmourne",
+					"special_bonus_unique_abaddon_2",
+					"abaddon_frostmourne",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_abaddon",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_abaddon_4"
 					//25 levels, no need for more than that as they are automatic afterwards
 				]
 			}
 		],
-		info: [ // Optional
-			{ ability: "special_bonus_unique_abaddon", info: "If you have Aghanim's Scepter or about to have it, take the other talent."}
+		info: { // Optional
+			"special_bonus_unique_abaddon": "If you have Aghanim's Scepter or about to have it, take the other talent."
 			// Question, should we have info for each build at each level, or the infos be generic to the skills / telents, and only showed with first build?
-		]
+		}
 	},
 	"Alchemist": {
 		builds: [
 			{
 				roles: [ROLE_CARRY, ROLE_MID],
+				guide: 1640719685,
 				build: [
-					{ ability: "alchemist_goblins_greed"},
-					{ ability: "alchemist_acid_spray"},
-					{ ability: "alchemist_goblins_greed"},
-					{ ability: "alchemist_acid_spray"},
-					{ ability: "alchemist_goblins_greed"},
-					{ ability: "alchemist_chemical_rage"},
-					{ ability: "alchemist_goblins_greed"},
-					{ ability: "alchemist_acid_spray"},
-					{ ability: "alchemist_acid_spray"},
-					{ ability: "special_bonus_attack_speed_15"},
-					{ ability: "alchemist_unstable_concoction"},
-					{ ability: "alchemist_chemical_rage"},
-					{ ability: "alchemist_unstable_concoction"},
-					{ ability: "alchemist_unstable_concoction"},
-					{ ability: "special_bonus_hp_350"},
-					{ ability: "alchemist_unstable_concoction"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_cleave_25"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_alchemist_6"}
+					"alchemist_goblins_greed",
+					"alchemist_acid_spray",
+					"alchemist_goblins_greed",
+					"alchemist_acid_spray",
+					"alchemist_goblins_greed",
+					"alchemist_chemical_rage",
+					"alchemist_goblins_greed",
+					"alchemist_acid_spray",
+					"alchemist_acid_spray",
+					"special_bonus_attack_speed_15",
+					"alchemist_unstable_concoction",
+					"alchemist_chemical_rage",
+					"alchemist_unstable_concoction",
+					"alchemist_unstable_concoction",
+					"special_bonus_hp_350",
+					"alchemist_unstable_concoction",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_cleave_25",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_alchemist_6"
 				]
 			}
 		],
-		info: [
+		info: {
 			// For first level spell choice
-			{ ability: "alchemist_goblins_greed", info: "If you are playing mid Alchemist against a tough match-up, you can skill Acid Spray instead."}
-		]
+			"alchemist_goblins_greed": "If you are playing mid Alchemist against a tough match-up, you can skill Acid Spray instead."
+		}
 	},
 	"Ancient Apparition": {
 		builds: [
 			{
 				roles: [ROLE_SUPPORT],
+				guide: 1640719709,
 				build: [
-					{ ability: "ancient_apparition_chilling_touch"},
-					{ ability: "ancient_apparition_cold_feet"},
-					{ ability: "ancient_apparition_chilling_touch"},
-					{ ability: "ancient_apparition_cold_feet"},
-					{ ability: "ancient_apparition_ice_vortex"},
-					{ ability: "ancient_apparition_ice_blast"},
-					{ ability: "ancient_apparition_cold_feet"},
-					{ ability: "ancient_apparition_cold_feet"},
-					{ ability: "ancient_apparition_ice_vortex"},
-					{ ability: "ancient_apparition_ice_vortex"},
-					{ ability: "ancient_apparition_ice_vortex"},
-					{ ability: "ancient_apparition_ice_blast"},
-					{ ability: "special_bonus_spell_amplify_8"},
-					{ ability: "ancient_apparition_chilling_touch"},
-					{ ability: "special_bonus_unique_ancient_apparition_3"},
-					{ ability: "ancient_apparition_chilling_touch"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_ancient_apparition_4"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_ancient_apparition_5"}
+					"ancient_apparition_chilling_touch",
+					"ancient_apparition_cold_feet",
+					"ancient_apparition_chilling_touch",
+					"ancient_apparition_cold_feet",
+					"ancient_apparition_ice_vortex",
+					"ancient_apparition_ice_blast",
+					"ancient_apparition_cold_feet",
+					"ancient_apparition_cold_feet",
+					"ancient_apparition_ice_vortex",
+					"ancient_apparition_ice_vortex",
+					"ancient_apparition_ice_vortex",
+					"ancient_apparition_ice_blast",
+					"special_bonus_spell_amplify_8",
+					"ancient_apparition_chilling_touch",
+					"special_bonus_unique_ancient_apparition_3",
+					"ancient_apparition_chilling_touch",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_ancient_apparition_4",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_ancient_apparition_5"
 				]
 			}
 		],
-		info: []
+		info: {}
 	},
 	"Anti-Mage": {
 		builds: [
 			{
 				roles: [ROLE_CARRY],
+				guide: 1640719725,
 				build: [
-					{ ability: "antimage_mana_break"},
-					{ ability: "antimage_blink"},
-					{ ability: "antimage_mana_break"},
-					{ ability: "antimage_counterspell"},
-					{ ability: "antimage_blink"},
-					{ ability: "antimage_mana_void"},
-					{ ability: "antimage_blink"},
-					{ ability: "antimage_blink"},
-					{ ability: "antimage_mana_break"},
-					{ ability: "special_bonus_unique_antimage"},
-					{ ability: "antimage_mana_break"},
-					{ ability: "antimage_mana_void"},
-					{ ability: "antimage_counterspell"},
-					{ ability: "antimage_counterspell"},
-					{ ability: "antimage_counterspell"},
-					{ ability: "special_bonus_unique_antimage_8"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_antimage_3"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_attributes"},
-					{ ability: "special_bonus_unique_antimage_2"}
+					"antimage_mana_break",
+					"antimage_blink",
+					"antimage_mana_break",
+					"antimage_counterspell",
+					"antimage_blink",
+					"antimage_mana_void",
+					"antimage_blink",
+					"antimage_blink",
+					"antimage_mana_break",
+					"special_bonus_unique_antimage",
+					"antimage_mana_break",
+					"antimage_mana_void",
+					"antimage_counterspell",
+					"antimage_counterspell",
+					"antimage_counterspell",
+					"special_bonus_unique_antimage_8",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_antimage_3",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_antimage_2"
 				]
 			}
 		],
-		info: [
+		info: {
 			// For first level spell choice
-			{ ability: "antimage_mana_break", info: "If you will be harassed by single-target magical-damage spell like Arcane Bolt, skill Counterspell."},
-			{ ability: "special_bonus_unique_antimage_2", info: "If there's a lot of magical damage against you or you have mana issues, skill the other talent."}
-		]
+			"antimage_mana_break": "If you will be harassed by single-target magical-damage spell like Arcane Bolt, skill Counterspell.",
+			"special_bonus_unique_antimage_2": "If there's a lot of magical damage against you or you have mana issues, skill the other talent."
+		}
 	},
 
 	/*
@@ -181,7 +201,9 @@ export const ROLE_OFFLANE      = 'Offlane'
 export const ROLE_SUPPORT_SOFT = 'SoftSupport'
 export const ROLE_SUPPORT_HARD = 'HardSupport'
 */
+}
 
+export const standardAbilityBuildsOLD = {
 	
 	"Arc Warden": ["arc_warden_spark_wraith", "arc_warden_flux", "arc_warden_flux", "arc_warden_spark_wraith", "arc_warden_flux"],
 	"Axe": ["axe_battle_hunger", "axe_counter_helix", "axe_counter_helix", "axe_berserkers_call", "axe_counter_helix"],
