@@ -4,6 +4,8 @@
         2) file /img/ability/<ability>_hp1.jpg needs to be avaible (rename files according to OpenDotaAPI)
 */
 
+// Task: rename file to "abilityBuilds.ts"
+
 export const ALL               = 'All'
 export const IN_LANE           = 'InLane'
 export const ROLE_CORE         = 'Core' // For mid, carry and offlane
