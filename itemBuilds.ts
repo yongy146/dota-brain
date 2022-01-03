@@ -97,30 +97,47 @@
             mid_game: [{item: "rod_of_atos", info: "For offlane Bloodseeker mainly."}, {item: "maelstrom", isCore: true}, {item: "sange_and_yasha", isCore: true}, {item: "basher"}, {item: "skadi"}],
             late_game: [{item: "mjollnir"}, {item: "abyssal_blade"}, {item: "satanic"}, {item: "butterfly"}],
             situational: [{item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "manta", info: "Alternative to Sange and Yasha if you need to dispel something big."}, {item: "gungir", info: "Alternative to Mjollnir if you need AoE control."}, {item: "aghanims_shard", info: "Good against high HP targets and improves your dps."}]
+
         },
+        /* "Bloodseeker Carry": {
+            starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "circlet"}, {item: "slippers"}, {item: "branches"}, {item: "faerie_fire"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}],
+            early_game: [{item: "wraith_band"}, {item: "power_treads", isCore: true}, {item: "magic_wand"}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
+            mid_game: [{item: "maelstrom", isCore: true}, {item: "sange_and_yasha", isCore: true}, {item: "aghanims_shard", isCore: true, info: "Great against high HP targets, improves your dps and sustain."}, {item: "basher"}, {item: "skadi"}],
+            late_game: [{item: "mjollnir"}, {item: "satanic"}, {item: "abyssal_blade"}, {item: "butterfly"}],
+            situational: [{item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "manta", info: "Alternative to Sange and Yasha if you need to dispel something big."}, {item: "gungir", info: "Alternative to Mjollnir if you need AoE control."}, {item: "monkey_king_bar", info: "Against evasion although Maelstrom/Mjollnir pierces evasion on proc already."}, {item: "sphere", info: "Against powerful single target spells like Duel, Lasso, Hex or Doom."}]
+            
+        },
+        "Bloodseeker Offlane": {
+            starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "circlet"}, {item: "slippers"}, {item: "branches"}, {item: "faerie_fire"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}],
+            early_game: [{item: "wraith_band"}, {item: "phase_boots", isCore: true}, {item: "magic_wand"}, {item: "urn_of_shadows"}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
+            mid_game: [{item: "rod_of_atos", isCore: true}, {item: "ultimate_scepter", isCore: true}, {item: "maelstrom"}, {item: "gungir"}, {item: "veil_of_discord"}, {item: "dagon", info: "Benefits from Bloodrage spell amp and acts as Linken's popper."}],
+            late_game: [{item: "sheepstick"}, {item: "octarine_core"}, {item: "vladmir"}],
+            situational: [{item: "spirit_vessel", info: "Against heavy healing lineup."}, {item: "cyclone", info: "For dispel, setup and teleport cancel."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "lotus_orb", info: "For reflect, dispel and armor."}, {item: "aghanims_shard", info: "Good against high HP targets, improves your dps and sustain."}]
+        }, */
+
         // 11. Pos 4, 5
         "Bounty Hunter": {
             starting: [{item: "tango"}, {item: "boots"}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}, {item: "ward_observer"}, {item: "ward_sentry", info: "To block or unblock the pull camp."}, {item: "flask"}, {item: "faerie_fire"}],
             early_game: [{item: "tranquil_boots"}, {item: "wind_lace", info: "For extra movement speed to roam around."}, {item: "magic_wand"}, {item: "urn_of_shadows"}, {item: "arcane_boots"}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
-            mid_game: [{item: "medallion_of_courage"}, {item: "solar_crest"}, {item: "aghanims_shard"}, {item: "force_staff"}, {item: "hood_of_defiance"}, {item: "cyclone"}, {item: "ghost"}],
-            late_game: [{item: "vladmir"}, {item: "sheepstick"}],
+            mid_game: [{item: "medallion_of_courage"}, {item: "solar_crest"}, {item: "ultimate_scepter", isCore: true}, {item: "aghanims_shard", isCore: true}, {item: "force_staff"}, {item: "cyclone"}, {item: "ghost"}],
+            late_game: [{item: "sheepstick"}, {item: "octarine_core"}, {item: "vladmir"}],
             situational: [{item: "infused_raindrop", info: "Against magical burst."}, {item: "spirit_vessel", info: "Against heavy healing lineup."}, {item: "ancient_janggo", info: "If you are grouping up a lot as a team in midgame and if you have summons."}, {item: "pipe"}, {item: "lotus_orb", info: "For reflect, dispel(e.g. Dust of Appearance) and armor."}]
         },
         // 12. Pos 3
         "Brewmaster": {
             starting: [{item: "tango"}, {item: "flask"}, {item: "quelling_blade"}, {item: "ring_of_protection"}, {item: "branches"}, {item: "faerie_fire"}, {item: "gauntlets"}, {item: "circlet"}, {item: "enchanted_mango"}, {item: "bracer"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}],
-            early_game: [{item: "boots"}, {item: "magic_wand"}, {item: "soul_ring"}, {item: "urn_of_shadows", info: "The active of Urn activates Cinder Brew."}, {item: "power_treads"}, {item: "phase_boots"}],
-            mid_game: [{item: "hood_of_defiance"}, {item: "blink", isCore: true}, {item: "ultimate_scepter", isCore: true}],
-            late_game: [{item: "refresher"}, {item: "assault"}],
-            situational: [ {item: "hand_of_midas", info: "If you can get it early."}, {item: "spirit_vessel", info: "Against heavy healing lineup."}, {item: "pipe"}, {item: "black_king_bar", info: "To be able to get Primal Split off and against a lot of disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "For an extra brewling and after you get Aghanim's Scepter."}, {item: "aeon_disk", info: "To be able to get Primal Split off."}]
+            early_game: [{item: "boots"}, {item: "urn_of_shadows", isCore: true, info: "The active of Urn activates Cinder Brew."}, {item: "magic_wand"}, {item: "soul_ring"}],
+            mid_game: [{item: "ultimate_scepter", isCore: true}, {item: "blink", isCore: true}, {item: "aghanims_shard", info: "For an extra brewling and after you get Aghanim's Scepter."}],
+            late_game: [{item: "refresher"}, {item: "assault"}, {item: "vladimir"}],
+            situational: [ {item: "hand_of_midas", info: "If you can get it early."}, {item: "spirit_vessel", info: "Against heavy healing lineup."}, {item: "pipe"}, {item: "black_king_bar", info: "To be able to get Primal Split off and against a lot of disables, magical damage and as a dispel."}, {item: "aeon_disk", info: "To be able to get Primal Split off."}]
         },
         // 13. Pos 3, 1, 2
         "Bristleback": {
             starting: [{item: "tango"}, {item: "flask"}, {item: "quelling_blade"}, {item: "enchanted_mango"}, {item: "gauntlets"}, {item: "branches"}, {item: "ring_of_protection"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}],
-            early_game: [{item: "vanguard", isCore: true}, {item: "boots"}, {item: "soul_ring", isCore: true}, {item: "magic_wand"}, {item: "phase_boots"}, {item: "power_treads"}],
-            mid_game: [{item: "hood_of_defiance"}, {item: "ultimate_scepter", isCore: true}, {item: "sange"}, {item: "eternal_shroud"}, {item: "sange_and_yasha"}],
-            late_game: [{item: "assault"}, {item: "abyssal_blade"}, {item: "kaya_and_sange"}],
-            situational: [{item: "bottle", info: "To solve your sustain issues on midlane but can be considered on offlane too."}, {item: "heavens_halberd", info: "Especially good against ranged right-clickers."}, {item: "lotus_orb", info: "For reflect, dispel(e.g. Spirit Vessel debuff) and armor."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage, mana burn, breaks and as a dispel."}, {item: "aghanims_shard", info: "For more Quill stacks and AoE slow."}]
+            early_game: [{item: "vanguard", isCore: true}, {item: "boots"}, {item: "soul_ring", isCore: true}, {item: "magic_wand"}, {item: "phase_boots"}, {item: "arcane_boots"}],
+            mid_game: [{item: "hood_of_defiance"}, {item: "ultimate_scepter", isCore: true}, {item: "sange", info: "Can be used for Halberd or combined with Yasha"}, {item: "eternal_shroud"}, {item: "aghanims_shard", info: "For more Quill stacks and AoE slow."}, {item: "sange_and_yasha"}],
+            late_game: [{item: "assault"}, {item: "abyssal_blade"}, {item: "shivas_guard"}],
+            situational: [{item: "pipe", info: "Against heavy magical damage lineups."}, {item: "crimson_guard", info: "Against high attack speed heroes and multiple units."}, {item: "heavens_halberd", info: "Especially good against ranged right-clickers."}, {item: "lotus_orb", info: "For reflect, dispel(e.g. Spirit Vessel debuff) and armor."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage, mana burn, breaks and as a dispel."}]
         },
         // 14. Pos 3, 2
         "Broodmother": {
