@@ -84,11 +84,11 @@
         },
         // 9. Pos 3
         "Beastmaster": {
-            starting: [{item: "tango"}, {item: "flask"}, {item: "quelling_blade"}, {item: "ring_of_protection"}, {item: "faerie_fire"}, {item: "enchanted_mango"}, {item: "circlet"}, {item: "gauntlets"}, {item: "branches"}, {item: "bracer"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}],
-            early_game: [{item: "boots"}, {item: "phase_boots"}, {item: "medallion_of_courage"}, {item: "ring_of_basilius"}, {item: "magic_wand"}, {item: "orb_of_corrosion", info: "If you can pressure on the lane."}],
-            mid_game: [{item: "solar_crest", isCore: true}, {item: "hood_of_defiance"}, {item: "helm_of_the_dominator"}, {item: "ultimate_scepter", info: "Particularly good against illusion based heroes."}, {item: "kaya", info: "Goes well with Aghanim's Scepter build."}, {item: "vladmir"}],
-            late_game: [{item: "assault"}, {item: "kaya_and_sange", info: "Goes well with Aghanim's Scepter build."}, {item: "octarine_core", info: "Goes well with Aghanim's Scepter build."}],
-            situational: [{item: "soul_ring", info: "If you are going for Wild Axes build."}, {item: "pipe"}, {item: "blink", info: "To reach backliners."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "aghanims_shard", info: "To improve vision game and gain another disable."}]
+            starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "ring_of_protection"}, {item: "branches"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}],
+            early_game: [{item: "helm_of_iron_will", info: "Solves your HP sustain issues and builds into Helm of the Dominator. Get it as early as possible."}, {item: "helm_of_the_dominator", isCore: true}, {item: "boots"}, {item: "ring_of_basilius"}, {item: "ancient_janggo", info: "It works well with summons and if you are grouping early as a team."}, {item: "magic_wand"}],
+            mid_game: [{item: "vladmir", info: "Incorporates in Helm of the Overlord"}, {item: "helm_of_the_overlord", isCore: true}, {item: "aghanims_shard", isCore: true, info: "To improve vision game and gain another disable."}, {item: "solar_crest"}],
+            late_game: [{item: "assault"}, {item: "ultimate_scepter", info: "Particularly good against illusion based heroes."}, {item: "refresher"}, {item: "octarine_core", info: "Goes well with Aghanim's Scepter build."}],
+            situational: [{item: "blink", info: "To cast Primal Roar easier."}, {item: "black_king_bar", info: "Against a lot of disables, magical damage and as a dispel."}, {item: "lotus_orb", info: "For reflect, dispel and armor."}]
         },
         // 10. Pos 1, 3
         "Bloodseeker": {
