@@ -3,7 +3,7 @@
  * 
  * The only separated information sources in this folder are openDotaAPI.ts and startzAPI.ts 
  * 
- * Copyright Dota Coach, 2021. All rights reserved
+ * Copyright Dota Coach, 2022. All rights reserved
  */
 import { standardAbilityBuilds } from './standardAbilityBuildsOLD'
 import { itemBuilds } from './itemBuilds'
@@ -725,6 +725,21 @@ export class OpenDotaAPIHero {
         return "#not found#"
     }
   
+
+    /**
+     * 
+     * @param name e.g. npc_dota_hero_antimage
+     * @returns localited name, e.g. Anti-Mage
+     */
+     export function NPCNameToLocalizedName(name: string): string {
+        for (var i=0; i<Heroes.length; i++) {
+            if (Heroes[i].name == name) {
+                return Heroes[i].localized_name
+            }
+        }
+        return "#not found#"
+    }
+
     export function idToLocalizedName(heroId: number): string {
         for (var i=0; i<Heroes.length; i++) {
   //            for (var index in jsonOpenDotaAPI) {
