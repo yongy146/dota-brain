@@ -6,6 +6,8 @@
 
 // Attention: "'" doens't work due to dota issues. We have to use "`"
 
+// Attention: first level talent level 1, 2, 3 and then 4. Dota 2 can't handle other orders.
+
 // Task: rename file to "abilityBuilds.ts"
 
 export const ALL               = 'All'
@@ -198,7 +200,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_CARRY, ROLE_MID],
-				guide: 1640719725,
+				guide: 1640719743,
 				build: [
 					"arc_warden_spark_wraith",
 					"arc_warden_flux",
@@ -236,7 +238,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_OFFLANE],
-				guide: 1640719725,
+				guide: 1640802946,
 				build: [
 					"axe_battle_hunger",
 					"axe_counter_helix",
@@ -274,7 +276,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_SUPPORT],
-				guide: 1640719725,
+				guide: 1640803052,
 				build: [
 					"bane_brain_sap",
 					"bane_nightmare",
@@ -313,7 +315,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_MID, ROLE_OFFLANE],
-				guide: 1640719725,
+				guide: 1640803569,
 				build: [
 					"batrider_sticky_napalm",
 					"batrider_firefly",
@@ -349,7 +351,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_OFFLANE],
-				guide: 1640719725,
+				guide: 1640803579,
 				build: [
 					"beastmaster_call_of_the_wild_boar",
 					"beastmaster_inner_beast",
@@ -387,7 +389,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_CARRY],
-				guide: 1640719725,
+				guide: 1640803590,
 				build: [
 					"bloodseeker_blood_bath",
 					"bloodseeker_thirst",
@@ -418,7 +420,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 			},
 			{
 				roles: [ROLE_OFFLANE],
-				guide: 1640719725,
+				guide: 1641224485,
 				build: [
 					"bloodseeker_blood_bath",
 					"bloodseeker_thirst",
@@ -434,8 +436,8 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 					"bloodseeker_rupture",
 					"bloodseeker_bloodrage",
 					"bloodseeker_bloodrage",
-					"special_bonus_unique_bloodseeker_7",
 					"special_bonus_unique_bloodseeker_6",
+					"special_bonus_unique_bloodseeker_7",
 					"special_bonus_attributes",
 					"bloodseeker_rupture",
 					"special_bonus_attributes",
@@ -454,7 +456,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_CARRY],
-				guide: 1640719725,
+				guide: 1640804017,
 				build: [
 					"juggernaut_blade_fury",
 					"juggernaut_blade_dance",
@@ -495,7 +497,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_SUPPORT],
-				guide: 1640719725,
+				guide: 1640803622,
 				build: [
 					"bounty_hunter_jinada",
 					"bounty_hunter_wind_walk",
@@ -534,7 +536,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_OFFLANE],
-				guide: 1640719725,
+				guide: 1640803632,
 				build: [
 					"brewmaster_thunder_clap",
 					"brewmaster_cinder_brew",
@@ -572,7 +574,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 		builds: [
 			{
 				roles: [ROLE_OFFLANE],
-				guide: 1640719725,
+				guide: 1640803643,
 				build: [
 					"bristleback_quill_spray",
 					"bristleback_bristleback",

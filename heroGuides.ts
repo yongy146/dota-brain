@@ -9,7 +9,7 @@ export const HeroGuides = {
     "bane": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
     "batrider": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
     "beastmaster": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
-    "bloodseeker": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618",
+    "bloodseeker": ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618", "https://steamcommunity.com/sharedfiles/filedetails/?id=2706431682"],
     "bounty_hunter": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915719",
     "brewmaster": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915806",
     "bristleback": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915905",
