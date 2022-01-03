@@ -863,6 +863,11 @@ export class OpenDotaAPIHero {
     }
   
   
+    export function localizedNameToNPCShortName(heroName: string): string {
+        return localizedNameToNPCName(heroName).replace('npc_dota_hero_', '')
+    }
+  
+
     /* Returns -1 if hero not found
     */
     export function overwolfNameToId(name: string): number {
