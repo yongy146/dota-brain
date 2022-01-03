@@ -62,7 +62,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 					"special_bonus_unique_abaddon_2",
 					"abaddon_frostmourne",
 					"special_bonus_attributes",
-					"special_bonus_attributes",
+					"abaddon_borrowed_time",
 					"special_bonus_attributes",
 					"special_bonus_unique_abaddon",
 					"special_bonus_attributes",
@@ -102,7 +102,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 					"special_bonus_hp_350",
 					"alchemist_unstable_concoction",
 					"special_bonus_attributes",
-					"special_bonus_attributes",
+					"alchemist_chemical_rage",
 					"special_bonus_attributes",
 					"special_bonus_cleave_25",
 					"special_bonus_attributes",
@@ -141,7 +141,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 					"special_bonus_unique_ancient_apparition_3",
 					"ancient_apparition_chilling_touch",
 					"special_bonus_attributes",
-					"special_bonus_attributes",
+					"ancient_apparition_ice_blast",
 					"special_bonus_attributes",
 					"special_bonus_unique_ancient_apparition_4",
 					"special_bonus_attributes",
@@ -177,7 +177,7 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 					"antimage_counterspell",
 					"special_bonus_unique_antimage_8",
 					"special_bonus_attributes",
-					"special_bonus_attributes",
+					"antimage_mana_void",
 					"special_bonus_attributes",
 					"special_bonus_unique_antimage_3",
 					"special_bonus_attributes",
@@ -194,6 +194,419 @@ export const standardAbilityBuilds: { [key: string]: AbilityBuilds } = {
 			"special_bonus_unique_antimage_2": "If there`s a lot of magical damage against you or you have mana issues, skill the other talent."
 		}
 	},
+	"Arc Warden": {
+		builds: [
+			{
+				roles: [ROLE_CARRY, ROLE_MID],
+				guide: 1640719725,
+				build: [
+					"arc_warden_spark_wraith",
+					"arc_warden_flux",
+					"arc_warden_spark_wraith",
+					"arc_warden_flux",
+					"arc_warden_spark_wraith",
+					"arc_warden_tempest_double",
+					"arc_warden_spark_wraith",
+					"arc_warden_flux",
+					"arc_warden_flux",
+					"arc_warden_magnetic_field",
+					"special_bonus_unique_arc_warden_5",
+					"arc_warden_tempest_double",
+					"arc_warden_magnetic_field",
+					"arc_warden_magnetic_field",
+					"arc_warden_magnetic_field",
+					"special_bonus_unique_arc_warden_3",
+					"special_bonus_attributes",
+					"arc_warden_tempest_double",
+					"special_bonus_attributes",
+					"special_bonus_unique_arc_warden",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_arc_warden_6"
+				]
+			}
+		],
+		info: {
+			"special_bonus_unique_arc_warden": "Both level twenty talents are mediocre. I'd give slight edge to Spark Wraith one as in some rare cases you might purchase or obtain Aghanim`s Scepter from the Roshan."
+		}
+	},
+	"Axe": {
+		builds: [
+			{
+				roles: [ROLE_OFFLANE],
+				guide: 1640719725,
+				build: [
+					"axe_battle_hunger",
+					"axe_counter_helix",
+					"axe_counter_helix",
+					"axe_berserkers_call",
+					"axe_counter_helix",
+					"axe_culling_blade",
+					"axe_counter_helix",
+					"axe_berserkers_call",
+					"axe_berserkers_call",
+					"axe_berserkers_call",
+					"special_bonus_magic_resistance_12",
+					"axe_culling_blade",
+					"axe_battle_hunger",
+					"axe_battle_hunger",
+					"special_bonus_unique_axe_4",
+					"axe_battle_hunger",
+					"special_bonus_attributes",
+					"axe_culling_blade",
+					"special_bonus_attributes",
+					"special_bonus_unique_axe_5",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_axe_2"
+				]
+			}
+		],
+		info: {
+			"axe_battle_hunger": "If the opponent`s have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage."
+		}
+	},
+	"Bane": {
+		builds: [
+			{
+				roles: [ROLE_SUPPORT],
+				guide: 1640719725,
+				build: [
+					"bane_brain_sap",
+					"bane_nightmare",
+					"bane_brain_sap",
+					"bane_nightmare",
+					"bane_nightmare",
+					"bane_fiends_grip",
+					"bane_nightmare",
+					"bane_enfeeble",
+					"bane_enfeeble",
+					"bane_enfeeble",
+					"bane_enfeeble",
+					"bane_fiends_grip",
+					"bane_brain_sap",
+					"bane_brain_sap",
+					"special_bonus_unique_bane_8",
+					"special_bonus_armor_5",
+					"special_bonus_attributes",
+					"bane_fiends_grip",
+					"special_bonus_attributes",
+					"special_bonus_unique_bane_5",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_bane_2"
+				]
+			}
+		],
+		info: {
+			"special_bonus_armor_5": "This talent should be better than the other level ten talent in most cases as you often times have some magical resistance coming from Glimmer Cape.",
+			"special_bonus_unique_bane_2": "This talent goes well with Aghanim`s Shard and is particularly good against illusion and summon-based heroes and mega creeps. You can skill the other talent though if you have an easy time channeling your ulty or you have Aghanim`s Scepter, and you are in need of control."
+		}
+	},
+	"Batrider": {
+		builds: [
+			{
+				roles: [ROLE_MID, ROLE_OFFLANE],
+				guide: 1640719725,
+				build: [
+					"batrider_sticky_napalm",
+					"batrider_firefly",
+					"batrider_sticky_napalm",
+					"batrider_flamebreak",
+					"batrider_sticky_napalm",
+					"batrider_flaming_lasso",
+					"batrider_sticky_napalm",
+					"batrider_firefly",
+					"batrider_firefly",
+					"batrider_firefly",
+					"special_bonus_spell_amplify_5",
+					"batrider_flaming_lasso",
+					"batrider_flamebreak",
+					"batrider_flamebreak",
+					"special_bonus_unique_batrider_4",
+					"batrider_flamebreak",
+					"special_bonus_attributes",
+					"batrider_flaming_lasso",
+					"special_bonus_attributes",
+					"special_bonus_movement_speed_30",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_batrider_6"
+				]
+			}
+		],
+		info: {}
+	},
+	"Beastmaster": {
+		builds: [
+			{
+				roles: [ROLE_OFFLANE],
+				guide: 1640719725,
+				build: [
+					"beastmaster_call_of_the_wild_boar",
+					"beastmaster_inner_beast",
+					"beastmaster_call_of_the_wild_boar",
+					"beastmaster_inner_beast",
+					"beastmaster_call_of_the_wild_boar",
+					"beastmaster_primal_roar",
+					"beastmaster_call_of_the_wild_boar",
+					"beastmaster_inner_beast",
+					"beastmaster_inner_beast",
+					"special_bonus_attack_damage_30",
+					"beastmaster_wild_axes",
+					"beastmaster_primal_roar",
+					"beastmaster_wild_axes",
+					"beastmaster_wild_axes",
+					"beastmaster_wild_axes",
+					"special_bonus_unique_beastmaster_9",
+					"special_bonus_attributes",
+					"beastmaster_primal_roar",
+					"special_bonus_attributes",
+					"special_bonus_unique_beastmaster_6",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_beastmaster_4"
+				]
+			}
+		],
+		info: {
+			"beastmaster_wild_axes": "If you are laning against Chen or Enchantress, you might want to skill Wild Axes over Call of the Wild."
+		}
+	},
+	"Bloodseeker": {
+		builds: [
+			{
+				roles: [ROLE_CARRY],
+				guide: 1640719725,
+				build: [
+					"bloodseeker_blood_bath",
+					"bloodseeker_thirst",
+					"bloodseeker_thirst",
+					"bloodseeker_bloodrage",
+					"bloodseeker_thirst",
+					"bloodseeker_rupture",
+					"bloodseeker_bloodrage",
+					"bloodseeker_bloodrage",
+					"bloodseeker_bloodrage",
+					"special_bonus_unique_bloodseeker_5",
+					"bloodseeker_thirst",
+					"bloodseeker_rupture",
+					"bloodseeker_blood_bath",
+					"bloodseeker_blood_bath",
+					"special_bonus_unique_bloodseeker_7",
+					"bloodseeker_blood_bath",
+					"special_bonus_attributes",
+					"bloodseeker_rupture",
+					"special_bonus_attributes",
+					"special_bonus_hp_400",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_bloodseeker_4"
+				]
+			},
+			{
+				roles: [ROLE_OFFLANE],
+				guide: 1640719725,
+				build: [
+					"bloodseeker_blood_bath",
+					"bloodseeker_thirst",
+					"bloodseeker_thirst",
+					"bloodseeker_blood_bath",
+					"bloodseeker_thirst",
+					"bloodseeker_rupture",
+					"bloodseeker_thirst",
+					"bloodseeker_blood_bath",
+					"bloodseeker_blood_bath",
+					"bloodseeker_bloodrage",
+					"bloodseeker_bloodrage",
+					"bloodseeker_rupture",
+					"bloodseeker_bloodrage",
+					"bloodseeker_bloodrage",
+					"special_bonus_unique_bloodseeker_7",
+					"special_bonus_unique_bloodseeker_6",
+					"special_bonus_attributes",
+					"bloodseeker_rupture",
+					"special_bonus_attributes",
+					"special_bonus_unique_bloodseeker_3",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_bloodseeker"
+				]
+			}
+		],
+		info: {}
+	},
+	"Juggernaut": {
+		builds: [
+			{
+				roles: [ROLE_CARRY],
+				guide: 1640719725,
+				build: [
+					"juggernaut_blade_fury",
+					"juggernaut_blade_dance",
+					"juggernaut_blade_fury",
+					"juggernaut_healing_ward",
+					"juggernaut_blade_fury",
+					"juggernaut_omni_slash",
+					"juggernaut_blade_fury",
+					"juggernaut_blade_dance",
+					"juggernaut_blade_dance",
+					"juggernaut_blade_dance",
+					"special_bonus_unique_juggernaut",
+					"juggernaut_omni_slash",
+					"juggernaut_healing_ward",
+					"juggernaut_healing_ward",
+					"special_bonus_attack_speed_20",
+					"juggernaut_healing_ward",
+					"special_bonus_attributes",
+					"juggernaut_omni_slash",
+					"special_bonus_attributes",
+					"special_bonus_unique_juggernaut_3",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_juggernaut_2"
+				]
+			}
+		],
+		info: {
+			"juggernaut_healing_ward": "You can skill Healing Ward at level two if you are being pressured.",
+			"juggernaut_blade_dance": "Some players prefer taking stats over leveling Blade Dance past level one. It slows your farm a bit but makes you tankier.",
+			"special_bonus_unique_juggernaut": "This talent, along with level twenty Blade Fury talent and Aghanim`s Shard, allows you to dish out tons of damage while Blade Furying.",
+			"special_bonus_attack_speed_20": "This is definitely a talent to increase the DPS output. If you are playing against Tinker, Zeus and such heroes that damage you heavily from afar but can't destroy your Healing Ward as easily, taking healing ward cooldown talent might be better."
+		}
+	},
+	"Bounty Hunter": {
+		builds: [
+			{
+				roles: [ROLE_SUPPORT],
+				guide: 1640719725,
+				build: [
+					"bounty_hunter_jinada",
+					"bounty_hunter_wind_walk",
+					"bounty_hunter_jinada",
+					"bounty_hunter_shuriken_toss",
+					"bounty_hunter_jinada",
+					"bounty_hunter_track",
+					"bounty_hunter_shuriken_toss",
+					"bounty_hunter_shuriken_toss",
+					"bounty_hunter_shuriken_toss",
+					"bounty_hunter_jinada",
+					"special_bonus_unique_bounty_hunter_4",
+					"bounty_hunter_track",
+					"bounty_hunter_wind_walk",
+					"bounty_hunter_wind_walk",
+					"special_bonus_unique_bounty_hunter_6",
+					"bounty_hunter_wind_walk",
+					"special_bonus_attributes",
+					"bounty_hunter_track",
+					"special_bonus_attributes",
+					"special_bonus_unique_bounty_hunter_8",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_bounty_hunter_7"
+				]
+			}
+		],
+		info: {
+			"special_bonus_unique_bounty_hunter_8": "If you are not going for Aghanim`s Scepter or you are still farm from assembling it, take this talent. Otherwise, take the other one.",
+			"special_bonus_unique_bounty_hunter_7": "If you have Aghanim`s Scepter and you see yourself being able to do a lot of damage with Shuriken Tosses in the fight(short BKBs, no Linken Spheres), take this talent. Otherwise, take the other one."
+		}
+	},
+	"Brewmaster": {
+		builds: [
+			{
+				roles: [ROLE_OFFLANE],
+				guide: 1640719725,
+				build: [
+					"brewmaster_thunder_clap",
+					"brewmaster_cinder_brew",
+					"brewmaster_cinder_brew",
+					"brewmaster_drunken_brawler",
+					"brewmaster_cinder_brew",
+					"brewmaster_primal_split",
+					"brewmaster_cinder_brew",
+					"brewmaster_thunder_clap",
+					"brewmaster_thunder_clap",
+					"brewmaster_thunder_clap",
+					"special_bonus_unique_brewmaster_7",
+					"brewmaster_primal_split",
+					"brewmaster_drunken_brawler",
+					"brewmaster_drunken_brawler",
+					"special_bonus_hp_350",
+					"brewmaster_drunken_brawler",
+					"special_bonus_attributes",
+					"brewmaster_primal_split",
+					"special_bonus_attributes",
+					"special_bonus_unique_brewmaster",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_brewmaster_6"
+				]
+			}
+		],
+		info: {
+			"special_bonus_hp_350": "It is important that you get ulty off and extra HP can help with that. The other level fifteen does not see much play as you spend most of the fight in Primal Split."
+		}
+	},
+	"Bristleback": {
+		builds: [
+			{
+				roles: [ROLE_OFFLANE],
+				guide: 1640719725,
+				build: [
+					"bristleback_quill_spray",
+					"bristleback_bristleback",
+					"bristleback_quill_spray",
+					"bristleback_viscous_nasal_goo",
+					"bristleback_quill_spray",
+					"bristleback_warpath",
+					"bristleback_quill_spray",
+					"bristleback_bristleback",
+					"bristleback_bristleback",
+					"special_bonus_mp_regen_2",
+					"bristleback_bristleback",
+					"bristleback_warpath",
+					"bristleback_viscous_nasal_goo",
+					"bristleback_viscous_nasal_goo",
+					"special_bonus_hp_200",
+					"bristleback_viscous_nasal_goo",
+					"special_bonus_attributes",
+					"bristleback_warpath",
+					"special_bonus_attributes",
+					"special_bonus_hp_regen_20",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_attributes",
+					"special_bonus_unique_bristleback_3"
+				]
+			}
+		],
+		info: {
+			"bristleback_viscous_nasal_goo": "You can skill Viscious Nasal Goo on level one if you are fighting on the rune, or on level two if you see an opportunity to run down the opponent`s hero on the lane.",
+			"special_bonus_unique_bristleback_3": "You should generally be looking to transition to right-clicker in late game and this talent helps with that."
+		}
+	},
 
 	/*
 COMMENT: ROLES CURRENTLY IN APP: (Same as role selection in Dota 2)
@@ -206,16 +619,6 @@ export const ROLE_SUPPORT_HARD = 'HardSupport'
 }
 
 export const standardAbilityBuildsOLD = {
-	
-	"Arc Warden": ["arc_warden_spark_wraith", "arc_warden_flux", "arc_warden_flux", "arc_warden_spark_wraith", "arc_warden_flux"],
-	"Axe": ["axe_battle_hunger", "axe_counter_helix", "axe_counter_helix", "axe_berserkers_call", "axe_counter_helix"],
-	"Bane": ["bane_brain_sap", "bane_nightmare", "bane_brain_sap", "bane_nightmare", "bane_brain_sap"],
-	"Batrider": ["batrider_sticky_napalm", "batrider_firefly", "batrider_sticky_napalm", "batrider_flamebreak", "batrider_sticky_napalm"],
-	"Beastmaster": ["beastmaster_call_of_the_wild_hawk", "beastmaster_inner_beast", "beastmaster_call_of_the_wild_hawk", "beastmaster_inner_beast", "beastmaster_call_of_the_wild_hawk"],
-	"Bloodseeker": ["bloodseeker_blood_bath" /* equals to 'blood rite' */ , "bloodseeker_thirst", "bloodseeker_thirst", "bloodseeker_bloodrage", "bloodseeker_thirst"],
-	"Bounty Hunter": ["bounty_hunter_wind_walk", "bounty_hunter_jinada", "bounty_hunter_shuriken_toss", "bounty_hunter_shuriken_toss", "bounty_hunter_shuriken_toss"],
-	"Brewmaster": ["brewmaster_thunder_clap", "brewmaster_cinder_brew", "brewmaster_drunken_brawler", "brewmaster_thunder_clap", "brewmaster_thunder_clap"],
-	"Bristleback": ["bristleback_quill_spray", "bristleback_bristleback", "bristleback_quill_spray", "bristleback_viscous_nasal_goo", "bristleback_quill_spray"],
 	"Broodmother": ["broodmother_spin_web", "broodmother_insatiable_hunger", "broodmother_insatiable_hunger", "broodmother_spin_web", "broodmother_insatiable_hunger"],
 	"Centaur Warrunner": ["centaur_hoof_stomp", "centaur_double_edge", "centaur_double_edge", "centaur_return", "centaur_double_edge"],
 	"Chaos Knight": ["chaos_knight_chaos_bolt", "chaos_knight_reality_rift", "chaos_knight_chaos_strike", "chaos_knight_chaos_strike", "chaos_knight_chaos_strike"],
@@ -246,7 +649,6 @@ export const standardAbilityBuildsOLD = {
 	"Invoker": ["invoker_exort", "invoker_quas", "invoker_exort", "invoker_quas", "invoker_exort"],
 	"Io": ["wisp_tether", "wisp_overcharge", "wisp_overcharge", "wisp_tether", "wisp_overcharge"],
 	"Jakiro": ["jakiro_dual_breath", "jakiro_liquid_fire", "jakiro_dual_breath", "jakiro_ice_path", "jakiro_dual_breath"],
-	"Juggernaut": ["juggernaut_blade_fury", "juggernaut_blade_dance", "juggernaut_blade_fury", "juggernaut_healing_ward", "juggernaut_blade_fury"],
 	"Keeper of the Light": ["keeper_of_the_light_illuminate"/*,  "keeper_of_the_light_radiant_bind" equals to 'solar bind' */, "keeper_of_the_light_chakra_magic", "keeper_of_the_light_illuminate", "keeper_of_the_light_chakra_magic", "keeper_of_the_light_illuminate"],
 	"Kunkka": ["kunkka_tidebringer", "kunkka_torrent", "kunkka_tidebringer", "kunkka_x_marks_the_spot", "kunkka_tidebringer"],
 	"Legion Commander": ["legion_commander_overwhelming_odds", "legion_commander_moment_of_courage", "legion_commander_overwhelming_odds", "legion_commander_press_the_attack", "legion_commander_overwhelming_odds"],
