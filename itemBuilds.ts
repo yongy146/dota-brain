@@ -382,10 +382,10 @@
         // 44. Pos 1
         "Juggernaut": {
             starting: [{item: "tango"}, {item: "quelling_blade"}, {item: "slippers"}, {item: "branches"}, {item: "circlet"}, {item: "faerie_fire"}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}],
-            early_game: [{item: "boots"}, {item: "phase_boots"}, {item: "power_treads"}, {item: "wraith_band"}, {item: "magic_wand"}],
-            mid_game: [{item: "maelstrom"}, {item: "manta"}, {item: "sange_and_yasha"}, {item: "ultimate_scepter"}, {item: "basher"}, {item: "bfury"}, {item: "diffusal_blade", info: "Goes well with Manta Style."}],
+            early_game: [{item: "boots"}, {item: "phase_boots"}, {item: "power_treads", info: "If you are planning on going for Battle Fury as farming items, Power Treads are good fit for it."}, {item: "wraith_band"}, {item: "magic_wand"}],
+            mid_game: [{item: "maelstrom"}, {item: "manta"}, {item: "ultimate_scepter"}, {item: "basher"}, {item: "bfury", info: "An alternative to Maelstrom, good against NP`s Sprout and summon based heroes."}, {item: "sange_and_yasha", info: "An alternative to Manta Style when you are facing bunch of long lasting disables or debuffs."}, {item: "diffusal_blade", info: "Goes well with Manta Style against heroes like Medusa low mana pool heroes."}],
             late_game: [{item: "skadi"}, {item: "butterfly"}, {item: "mjollnir"}, {item: "satanic"}, {item: "abyssal_blade"}],
-            situational: [{item: "infused_raindrop", info: "Against magical burst."}, {item: "blink", info: "To close the gap."}, {item: "aghanims_shard", info: "Against lineups heavy on magic damage and disables."}, {item: "monkey_king_bar", info: "Against evasion."}]
+            situational: [{item: "infused_raindrop", info: "Against magical burst."}, {item: "blink", info: "To close the gap."}, {item: "aghanims_shard", info: "Against lineups heavy on magic damage and disables. You will dish out a lot of damage during Blade Fury if you pick up talents for it as well."}, {item: "monkey_king_bar", info: "Against evasion."}, {item: "nullifier", info: "To dispel defensive spells and items that counter Omnislash."}]
         },
         // 45. Pos 5, 4
         "Keeper of the Light": {
