@@ -5,7 +5,7 @@ export const HeroGuides = {
     "ancient_apparition": "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158",
     "antimage": "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
     "arc_warden": "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377376",
-    "axe": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915204",
+    "axe": "    ",
     "bane": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
     "batrider": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
     "beastmaster": "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
