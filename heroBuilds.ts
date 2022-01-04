@@ -21,6 +21,8 @@ export const ROLE_SUPPORT      = 'Support' // For soft and hard support
 export const ROLE_SUPPORT_SOFT = 'SoftSupport'
 export const ROLE_SUPPORT_HARD = 'HardSupport'
 
+import { STEAM_GUIDE_ROLE } from './playerRoles'
+
 // skilling attributes: "special_bonus_attributes"
 // Add build for 26 first abilities (incl. attributes)
 
@@ -31,8 +33,9 @@ export interface HeroBuilds {
 }
 
 export interface HeroBuild {
-	roles: string[],
-	guide: number,     // Steam guide id provided by Dota 2
+	roles: string[],      // Roles used in Dota Coach App and in title of Steam Guide
+	guide: number,  // Steam guide id provided by Dota 2
+	guide_role?: STEAM_GUIDE_ROLE,   // Role used for steam guide. Allowed values are : Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown
 	abilities: string[]
 	items: {
 		starting: string[],
@@ -58,6 +61,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_SUPPORT],
 				guide: 1640698444,
+				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
 					"abaddon_aphotic_shield",
 					"abaddon_frostmourne" /* equals to 'curse of avernus' */,
@@ -115,6 +119,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_CARRY, ROLE_MID],
 				guide: 1640719685,
+				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
 					"alchemist_goblins_greed",
 					"alchemist_acid_spray",
@@ -176,6 +181,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_SUPPORT],
 				guide: 1640719709,
+				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
 					"ancient_apparition_chilling_touch",
 					"ancient_apparition_cold_feet",
@@ -230,6 +236,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_CARRY],
 				guide: 1640719725,
+				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
 					"antimage_mana_break",
 					"antimage_blink",
@@ -291,6 +298,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_CARRY, ROLE_MID],
 				guide: 1640719743,
+				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
 					"arc_warden_spark_wraith",
 					"arc_warden_flux",
@@ -348,6 +356,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_OFFLANE],
 				guide: 1640802946,
+				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
 					"axe_battle_hunger",
 					"axe_counter_helix",
@@ -404,6 +413,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_SUPPORT],
 				guide: 1640803052,
+				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
 					"bane_brain_sap",
 					"bane_nightmare",
@@ -461,6 +471,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_MID, ROLE_OFFLANE],
 				guide: 1640803569,
+				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
 					"batrider_sticky_napalm",
 					"batrider_firefly",
@@ -516,6 +527,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_OFFLANE],
 				guide: 1640803579,
+				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
 					"beastmaster_call_of_the_wild_boar",
 					"beastmaster_inner_beast",
@@ -576,6 +588,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_CARRY],
 				guide: 1640803590,
+				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
 					"bloodseeker_blood_bath",
 					"bloodseeker_thirst",
@@ -615,6 +628,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			}, {
 				roles: [ROLE_OFFLANE],
 				guide: 1641224485,
+				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
 					"bloodseeker_blood_bath",
 					"bloodseeker_thirst",
@@ -676,6 +690,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_SUPPORT],
 				guide: 1640803622,
+				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
 					"bounty_hunter_jinada",
 					"bounty_hunter_wind_walk",
@@ -734,6 +749,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_OFFLANE],
 				guide: 1640803632,
+				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
 					"brewmaster_thunder_clap",
 					"brewmaster_cinder_brew",
@@ -790,6 +806,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_OFFLANE],
 				guide: 1640803643,
+				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
 					"bristleback_quill_spray",
 					"bristleback_bristleback",
@@ -2480,6 +2497,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			{
 				roles: [ROLE_CARRY],
 				guide: 1640804017,
+				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
 					"juggernaut_blade_fury",
 					"juggernaut_blade_dance",
