@@ -10,18 +10,7 @@
 
 // Task: rename file to "abilityBuilds.ts"
 
-// The name of these consts are used in the title of the Dota 2 Steam Guides.
-export const ALL               = 'All'
-export const IN_LANE           = 'InLane'
-export const ROLE_CORE         = 'Core' // For mid, carry and offlane
-export const ROLE_MID          = 'Mid'
-export const ROLE_CARRY        = 'Carry'
-export const ROLE_OFFLANE      = 'Offlane'
-export const ROLE_SUPPORT      = 'Support' // For soft and hard support
-export const ROLE_SUPPORT_SOFT = 'SoftSupport'
-export const ROLE_SUPPORT_HARD = 'HardSupport'
-
-import { STEAM_GUIDE_ROLE } from './playerRoles'
+import { PLAYER_ROLE, STEAM_GUIDE_ROLE } from './playerRoles'
 
 // skilling attributes: "special_bonus_attributes"
 // Add build for 26 first abilities (incl. attributes)
@@ -33,7 +22,7 @@ export interface HeroBuilds {
 }
 
 export interface HeroBuild {
-	roles: string[],      // Roles used in Dota Coach App and in title of Steam Guide
+	roles: PLAYER_ROLE[],      // Roles used in Dota Coach App and in title of Steam Guide
 	guide: number,  // Steam guide id provided by Dota 2
 	guide_role?: STEAM_GUIDE_ROLE,   // Role used for steam guide. Allowed values are : Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown
 	abilities: string[]
@@ -59,7 +48,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Abaddon": {
 		builds: [
 			{
-				roles: [ROLE_SUPPORT],
+				roles: [PLAYER_ROLE.SUPPORT],
 				guide: 1640698444,
 				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
@@ -117,7 +106,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Alchemist": {
 		builds: [
 			{
-				roles: [ROLE_CARRY, ROLE_MID],
+				roles: [PLAYER_ROLE.CARRY, PLAYER_ROLE.MID],
 				guide: 1640719685,
 				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
@@ -179,7 +168,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Ancient Apparition": {
 		builds: [
 			{
-				roles: [ROLE_SUPPORT],
+				roles: [PLAYER_ROLE.SUPPORT],
 				guide: 1640719709,
 				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
@@ -234,7 +223,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Anti-Mage": {
 		builds: [
 			{
-				roles: [ROLE_CARRY],
+				roles: [PLAYER_ROLE.CARRY],
 				guide: 1640719725,
 				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
@@ -296,7 +285,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Arc Warden": {
 		builds: [
 			{
-				roles: [ROLE_CARRY, ROLE_MID],
+				roles: [PLAYER_ROLE.CARRY, PLAYER_ROLE.MID],
 				guide: 1640719743,
 				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
@@ -354,7 +343,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Axe": {
 		builds: [
 			{
-				roles: [ROLE_OFFLANE],
+				roles: [PLAYER_ROLE.OFFLANE],
 				guide: 1640802946,
 				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
@@ -411,7 +400,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Bane": {
 		builds: [
 			{
-				roles: [ROLE_SUPPORT],
+				roles: [PLAYER_ROLE.SUPPORT],
 				guide: 1640803052,
 				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
@@ -469,7 +458,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Batrider": {
 		builds: [
 			{
-				roles: [ROLE_MID, ROLE_OFFLANE],
+				roles: [PLAYER_ROLE.MID, PLAYER_ROLE.OFFLANE],
 				guide: 1640803569,
 				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
@@ -525,7 +514,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Beastmaster": {
 		builds: [
 			{
-				roles: [ROLE_OFFLANE],
+				roles: [PLAYER_ROLE.OFFLANE],
 				guide: 1640803579,
 				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
@@ -586,7 +575,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Bloodseeker": {
 		builds: [
 			{
-				roles: [ROLE_CARRY],
+				roles: [PLAYER_ROLE.CARRY],
 				guide: 1640803590,
 				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [
@@ -626,7 +615,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 					neutral: []
 				},
 			}, {
-				roles: [ROLE_OFFLANE],
+				roles: [PLAYER_ROLE.OFFLANE],
 				guide: 1641224485,
 				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
@@ -688,7 +677,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Bounty Hunter": {
 		builds: [
 			{
-				roles: [ROLE_SUPPORT],
+				roles: [PLAYER_ROLE.SUPPORT],
 				guide: 1640803622,
 				guide_role: STEAM_GUIDE_ROLE.SUPPORT,
 				abilities: [
@@ -747,7 +736,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Brewmaster": {
 		builds: [
 			{
-				roles: [ROLE_OFFLANE],
+				roles: [PLAYER_ROLE.OFFLANE],
 				guide: 1640803632,
 				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
@@ -804,7 +793,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Bristleback": {
 		builds: [
 			{
-				roles: [ROLE_OFFLANE],
+				roles: [PLAYER_ROLE.OFFLANE],
 				guide: 1640803643,
 				guide_role: STEAM_GUIDE_ROLE.OFFLANE,
 				abilities: [
@@ -2495,7 +2484,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	"Juggernaut": {
 		builds: [
 			{
-				roles: [ROLE_CARRY],
+				roles: [PLAYER_ROLE.CARRY],
 				guide: 1640804017,
 				guide_role: STEAM_GUIDE_ROLE.CORE,
 				abilities: [

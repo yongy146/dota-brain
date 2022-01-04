@@ -3,6 +3,25 @@
  */
 import { storageItems } from '../../consts'
 
+
+// Steam Guide Rolse
+export enum STEAM_GUIDE_ROLE {
+    CORE = "#DOTA_HeroGuide_Role_Core",
+    OFFLANE = "#DOTA_HeroGuide_Role_OffLane",
+    SUPPORT = "#DOTA_HeroGuide_Role_Support",
+    JUNGLE = "#DOTA_HeroGuide_Role_Jungle",
+    INITIATOR = "#DOTA_HeroGuide_Role_Initiator",
+    ROAMER = "#DOTA_HeroGuide_Role_Roamer"
+}
+
+export enum PLAYER_ROLE {
+    CARRY = "Carry",
+    MID = "Mid",
+    SUPPORT = "Support",
+    OFFLANE = "Offlane"
+}
+
+
 // Roles stored in localSotrage / isPlayerSupport
 export const HARD_SUPPORT = 'Hard Support'
 export const SOFT_SUPPORT = 'Soft Support'
