@@ -5,7 +5,7 @@
  * 
  * Copyright Dota Coach, 2022. All rights reserved
  */
-import { standardAbilityBuilds } from './standardAbilityBuildsOLD'
+import { heroBuilds } from './heroBuilds'
 import { itemBuilds } from './itemBuilds'
 import { dispellableBuffs } from './dispellableBuffs'
 import dota2Abilities from './dota2Abilities.json'
@@ -184,13 +184,19 @@ export function getItemBuild(hero: string): any {
     return  itemBuild
 }
 
+/**
+ * 
+ * @param hero localized hero name
+ * @returns 
+ */
 export function getStandardAbilityBuild(hero: string): string[] {
-    if (standardAbilityBuilds[hero] == null) {
+
+    if (heroBuilds[hero] == null) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return []
     }
 
-    var abilityBuild = standardAbilityBuilds[hero]
+    var abilityBuild = heroBuilds[hero].builds[0].abilities
 
     /* return copy of array, otherwise recipient can change content of this.laningItemTips */
     return  [...abilityBuild] 
