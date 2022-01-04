@@ -15,7 +15,7 @@
 
 /*
  * Source for item info https://api.opendota.com/api/constants/items
- * Update: 30.10.(C) Dota Coach, 2022
+ * Update: 30.10.2021
  */
 // For performance Tracker
 export function getTrackedItems() {

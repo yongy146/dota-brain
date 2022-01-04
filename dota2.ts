@@ -5,10 +5,10 @@
  * 
  * Copyright Dota Coach, 2022. All rights reserved
  */
-import { standardAbilityBuilds } from './standardAbilityBuildsOLD'
+import { heroBuilds } from './heroBuilds'
 import { itemBuilds } from './itemBuilds'
 import { dispellableBuffs } from './dispellableBuffs'
-import { breakablePassives } from './breakablePassives'
+import dota2Abilities from './dota2Abilities.json'
 import { counterItemsLaning } from './counterItemsLaning'
 import { counterItemsMidGame } from './counterItemsMidGame'
 import { counterItemsLateGame } from './counterItemsLateGame'
@@ -17,6 +17,7 @@ import { Items, HeroAbilities, Abilities } from './openDotaData'
 import Heroes from '../../submodules/dota2/dota2Heroes.json'
 import * as DotaLogger from '../../src/utility/log'
 import { channeling_interrupts, silence, root, disables } from './disables'
+
 
 // Colors for radiant & dire
 export const colorRadiant = '#67dd98' //'#47661f'
@@ -183,28 +184,56 @@ export function getItemBuild(hero: string): any {
     return  itemBuild
 }
 
+/**
+ * 
+ * @param hero localized hero name
+ * @returns 
+ */
 export function getStandardAbilityBuild(hero: string): string[] {
-    if (standardAbilityBuilds[hero] == null) {
+
+    if (heroBuilds[hero] == null) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return []
     }
 
-    var abilityBuild = standardAbilityBuilds[hero]
+    var abilityBuild = heroBuilds[hero].builds[0].abilities
 
     /* return copy of array, otherwise recipient can change content of this.laningItemTips */
     return  [...abilityBuild] 
 }
 
+/**
+ * 
+ * @param hero localized hero name
+ * @returns arrray of breakable passives
+ */
 export function getBreakablePassives(hero: string): string[] {
-    if (breakablePassives[hero] == null) {
-        /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
+    const abilities = dota2Abilities[localizedNameToNPCName(hero)]
+    var result = []
+    for (const ability of Object.keys(abilities)) {
+        switch (abilities[ability].is_passive) {
+            case 'yes':
+            case 'partial': {
+                result.push(ability)
+                break
+            }
+            default: {
+                break
+            }
+        }
+    }
+    return result
+
+
+    /*if (breakablePassives[hero] == null) {
+        /* Check is used for the case Dota 2 adds heroes and the app is not updated yet //
         return []
     }
 
     var result = breakablePassives[hero]
 
-    /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-    return  [...result] 
+    /* return copy of array, otherwise recipient can change content of this.laningItemTips //
+    return  [...result] */
 }
 
 
