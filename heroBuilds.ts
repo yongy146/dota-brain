@@ -21,8 +21,8 @@ import { PLAYER_ROLE, STEAM_GUIDE_ROLE } from './playerRoles'
  */
 export interface HeroBuilds {
 	builds: HeroBuild[], // Note that the first build is seen as the standard build
-	ability_tooltips: Tooltips,
-	item_tooltips: Tooltips
+	ability_tooltips?: Tooltips,
+	item_tooltips?: Tooltips
 }
 
 
@@ -35,6 +35,7 @@ export interface HeroBuilds {
 	guide: number, 				   // ID of the steam guide; this ID is provided by Dota 2
 	guide_role?: STEAM_GUIDE_ROLE, // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
 	abilities: string[]
+	ability_tooltips?: Tooltips,
 	items: {
 		starting: string[],
 		early_game: string[],
@@ -44,6 +45,7 @@ export interface HeroBuilds {
 		core: string[],   // selected items from starting, early_game, mid_game, late_game and situational
 		neutral: string[]
 	}
+	item_tooltips?: Tooltips
 }
 
 
@@ -128,9 +130,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "bullwhip",
             "psychic_headband",
             "spider_legs",
-            "telescope",
+            "spy_gadget",
             "stormcrafter",
-            "arcanists_armor",
+            "force_field",
             "seer_stone",
           ],
         },
@@ -233,7 +235,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "chipped_vest",
             "broom_handle",
             "quicksilver_amulet",
-            "brigands_blade",
+            "misericorde",
             "paladin_sword",
             "elven_tunic",
             "the_leveller",
@@ -340,7 +342,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "bullwhip",
             "spider_legs",
             "psychic_headband",
-            "telescope",
+            "spy_gadget",
             "timeless_relic",
             "seer_stone",
             "book_of_shadows",
@@ -537,13 +539,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "monkey_king_bar",
             "silver_edge",
             "gungir",
-            ,
             "nullifier",
           ],
           core: ["hand_of_midas", "maelstrom", "travel_boots"],
           neutral: [
             "possessed_mask",
-            "pig_pole",
+            "unstable_wand",
             "grove_bow",
             "quicksilver_amulet",
             "enchanted_quiver",
@@ -651,10 +652,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "dragon_scale",
             "cloak_of_flames",
             "spider_legs",
-            "ascetics_cap",
+            "ascetic_cap",
             "trickster_cloak",
             "giants_ring",
-            "arcanists_armor",
+            "force_field",
           ],
         },
       },
@@ -745,7 +746,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "bullwhip",
             "psychic_headband",
             "spider_legs",
-            "telescope",
+            "spy_gadget",
             "timeless_relic",
             "seer_stone",
             "book_of_shadows",
@@ -844,8 +845,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: ["travel_boots"],
           neutral: [
-            "fairys_trinket",
-            "tumblers_toy",
+            "mysterious_hat",
+            "pogo_stick",
             "bullwhip",
             "quicksilver_amulet",
             "spider_legs",
@@ -951,7 +952,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "spell_prism",
             "trickster_cloak",
             "fallen_sky",
-            "book_of_the_dead",
+            "demonicon",
           ],
         },
       },
@@ -1047,7 +1048,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "possessed_mask",
             "chipped_vest",
             "quicksilver_amulet",
-            "brigands_blade",
+            "misericorde",
             "elven_tunic",
             "paladin_sword",
             "the_leveller",
@@ -1125,7 +1126,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           core: ["phase_boots", "rod_of_atos", "ultimate_scepter"],
           neutral: [
             "broom_handle",
-            "pig_pole",
+            "unstable_wand",
             "ring_of_aquila",
             "nether_shawl",
             "quickening_charm",
@@ -1133,7 +1134,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "timeless_relic",
             "spell_prism",
             "fallen_sky",
-            "arcanists_armor",
+            "force_field",
           ],
         },
       },
@@ -1247,14 +1248,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: ["ultimate_scepter", "aghanims_shard"],
           neutral: [
-            "pig_pole",
-            "tumblers_toy",
+            "unstable_wand",
+            "pogo_stick",
             "bullwhip",
-            "ring_of_aquilla",
+            "ring_of_aquila",
             "spider_legs",
             "quickening_charm",
             "flicker",
-            "ascetics_cap",
+            "ascetic_cap",
             "fallen_sky",
             "seer_stone",
           ],
@@ -1342,14 +1343,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           core: ["urn_of_shadows", "ultimate_scepter", "blink"],
           neutral: [
             "arcane_ring",
-            "tumblers_toy",
+            "pogo_stick",
             "ring_of_aquila",
-            "fae_grenade",
+            "paintball",
             "quickening_charm",
             "cloak_of_flames",
             "spell_prism",
-            "ascetics_cap",
-            "arcanists_armor",
+            "ascetic_cap",
+            "force_field",
             "fallen_sky",
           ],
         },
@@ -1460,7 +1461,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "spell_prism",
             "trickster_cloak",
             "giants_ring",
-            "arcanists_armor",
+            "force_field",
           ],
         },
       },
@@ -1556,7 +1557,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "arcane_ring",
             "broom_handle",
             "quicksilver_amulet",
-            "brigands_blade",
+            "misericorde",
             "paladin_sword",
             "elven_tunic",
             "the_leveller",
@@ -1657,7 +1658,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "cloak_of_flames",
             "spider_legs",
             "trickster_cloak",
-            "ascetics_cap",
+            "ascetic_cap",
             "giants_ring",
             "apex",
           ],
@@ -1723,6 +1724,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "special_bonus_attributes", // 24
           "special_bonus_unique_chaos_knight_5", // 25
         ],
+		ability_tooltips: {
+			special_bonus_unique_chaos_knight_6:
+			  "On level fifteen, take the level fifteen talent before this level ten talent. On level sixteen take this level ten talent. The dota2 client disallows me to indicate that in the leveling table above.",
+		},
         items: {
           starting: [
             "tango",
@@ -1744,7 +1749,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: ["power_treads", "armlet"],
           neutral: [
-            "pig_pole",
+            "unstable_wand",
             "possessed_mask",
             "vambrace",
             "pupils_gift",
@@ -1756,10 +1761,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "apex",
           ],
         },
+		item_tooltips: {
+			hand_of_midas: "If you can get it early. Your illusions benefit from the attack speed as well.",
+			blink: "Allows you to use Phantasm, blink in and pull the illusions onto the opponent with Reality Rift.",
+		}	  
       },
       {
         roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803680, // Different guide number for different role?
+        guide: 1641361683,
 		guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
@@ -1809,7 +1818,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
           ],
           neutral: [
-            "pig_pole",
+            "unstable_wand",
             "possessed_mask",
             "vambrace",
             "pupils_gift",
@@ -1821,12 +1830,15 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "apex",
           ],
         },
+		item_tooltips: {
+			// Offlane CK tips
+			ultimate_scepter:
+			"A core item that makes Phantasm create an extra illusion of Chaos Knight and of each ally. Applies a basic dispel on cast.",
+			aghanims_shard: "A core item that improves cast range of Chaos Bolt and creates an Chaos Knight illusion to attack the target by default."
+		}
       },
     ],
     ability_tooltips: {
-      // Carry CK tips
-      special_bonus_unique_chaos_knight_6:
-        "On level fifteen, take the level fifteen talent before this level ten talent. On level sixteen take this level ten talent. The dota2 client disallows me to indicate that in the leveling table above.",
       special_bonus_unique_chaos_knight:
         "If there are no spell-immune heroes or Black King Bars, take the other talent.",
     },
@@ -1835,22 +1847,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       power_treads:
         "A core item that allows you to farm faster due to attack speed increase. The movement speed, attributes and attack speed also affect the illusions.",
-      // carry CK tip
-      hand_of_midas:
-        "If you can get it early. Your illusions benefit from the attack speed as well.",
-      // ------------
       armlet:
         "A core item that boosts your dps significantly as Armlet active bonus strength is passed to your illusions as well.",
-      // carry CK tip
-      blink:
-        "Allows you to use Phantasm, blink in and pull the illusions onto the opponent with Reality Rift.",
-      // ------------
-      // Offlane CK tips
-      ultimate_scepter:
-        "A core item that makes Phantasm create an extra illusion of Chaos Knight and of each ally. Applies a basic dispel on cast.",
-      aghanims_shard:
-        "A core item that improves cast range of Chaos Bolt and creates an Chaos Knight illusion to attack the target by default.",
-      // --------------
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       silver_edge:
@@ -1928,9 +1926,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "bullwhip",
             "quickening_charm",
             "spider_legs",
-            "telescope",
+            "spy_gadget",
             "spell_prism",
-            "arcanists_armor",
+            "force_field",
             "book_of_shadows",
           ],
         },
@@ -2010,7 +2008,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "arcane_ring",
             "possessed_mask",
             "grove_bow",
-            "Ring_of_aquila",
+            "ring_of_aquila",
             "enchanted_quiver",
             "paladin_sword",
             "spell_prism",
@@ -3440,7 +3438,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 					late_game:	["skadi","mjollnir","butterfly","satanic","abyssal_blade"],
 					situational:	["infused_raindrop","diffusal_blade", "ultimate_scepter", "blink","monkey_king_bar", "nullifier"],
 					core:	[],
-					neutral:	["possessed_mask", "broom_handle", "quicksilver_amulet", "brigands_blade", "mind_breaker", "elven_tunic", "the_leveller", "ninja_gear", "pirate_hat", "apex"]
+					neutral:	["possessed_mask", "broom_handle", "quicksilver_amulet", "misericorde", "mind_breaker", "elven_tunic", "the_leveller", "ninja_gear", "pirate_hat", "apex"]
 				}
 			}
 		],
