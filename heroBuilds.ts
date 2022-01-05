@@ -157,7 +157,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       holy_locket:
         "A core item that allows you to further increase your healing output. On use, you replenish mana to your allies as well so watch out for the ones in need for a little bit of mana.",
       ultimate_scepter:
-        "A core item that changes that can impact the fights greatly. Make sure to activate the ultimate when the most damage is being pumped into your allies.",
+        "A core item that can impact the fights greatly. Make sure to activate the ultimate when the most damage is being pumped into your allies.",
       lotus_orb: "For reflect, dispel and armor.",
       aghanims_shard: "To silence against spell heavy lineups.",
     },
@@ -1110,7 +1110,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           mid_game: [
             "rod_of_atos",
             "ultimate_scepter",
-            "maelstrom",
             "gungir",
             "veil_of_discord",
             "dagon",
@@ -1834,6 +1833,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			// Offlane CK tips
 			ultimate_scepter:
 			"A core item that makes Phantasm create an extra illusion of Chaos Knight and of each ally. Applies a basic dispel on cast.",
+			heavens_halberd: "Especially good against ranged right-clickers.",
 			aghanims_shard: "A core item that improves cast range of Chaos Bolt and creates an Chaos Knight illusion to attack the target by default."
 		}
       },
