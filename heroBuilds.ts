@@ -1831,6 +1831,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
 		item_tooltips: {
 			// Offlane CK tips
+			blink: "A core item that allows you to use Phantasm, blink in and pull the illusions onto the opponent with Reality Rift.", 
 			ultimate_scepter:
 			"A core item that makes Phantasm create an extra illusion of Chaos Knight and of each ally. Applies a basic dispel on cast.",
 			heavens_halberd: "Especially good against ranged right-clickers.",
