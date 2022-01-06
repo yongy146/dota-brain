@@ -36,16 +36,18 @@ export interface HeroBuilds {
 	guide_role?: STEAM_GUIDE_ROLE, // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
 	abilities: string[]
 	ability_tooltips?: Tooltips,
-	items: {
-		starting: string[],
-		early_game: string[],
-		mid_game: string[],
-		late_game: string[],
-		situational: string[],
-		core: string[],   // selected items from starting, early_game, mid_game, late_game and situational
-		neutral: string[]
-	}
+	items: ItemBuild,
 	item_tooltips?: Tooltips
+}
+
+export interface ItemBuild {
+	starting: string[],
+	early_game: string[],
+	mid_game: string[],
+	late_game: string[],
+	situational: string[],
+	core: string[],   // selected items from starting, early_game, mid_game, late_game and situational
+	neutral: string[]
 }
 
 

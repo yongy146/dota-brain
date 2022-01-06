@@ -5,19 +5,20 @@
  * 
  * Copyright Dota Coach, 2022. All rights reserved
  */
-import { heroBuilds } from './heroBuilds'
-import { itemBuilds } from './itemBuilds'
+import { HeroBuild, ItemBuild, heroBuilds } from './heroBuilds'
+//import { itemBuilds } from './itemBuilds'
 import { dispellableBuffs } from './dispellableBuffs'
 import dota2Abilities from './dota2Abilities.json'
 import { counterItemsLaning } from './counterItemsLaning'
 import { counterItemsMidGame } from './counterItemsMidGame'
 import { counterItemsLateGame } from './counterItemsLateGame'
 import { damageType } from './damageType'
-import { Items, HeroAbilities, Abilities } from './openDotaData'
-import Heroes from '../../submodules/dota2/dota2Heroes.json'
+//import { HeroAbilities, Abilities } from './openDotaData'
+import dota2Items from './dota2Items.json'
+import dota2Heroes from '../../submodules/dota2/dota2Heroes.json'
 import * as DotaLogger from '../../src/utility/log'
 import { channeling_interrupts, silence, root, disables } from './disables'
-
+import { Transform } from 'stream'
 
 // Colors for radiant & dire
 export const colorRadiant = '#67dd98' //'#47661f'
@@ -37,7 +38,7 @@ export const colorAgilityTransparent = 'rgba(0, 255, 0, 0.35)'
  * @param t time in seconds
  * @returns 
  */
- export function convertToDotaTime(t: number): string {
+export function convertToDotaTime(t: number): string {
     var min = Math.floor(Math.abs(t) / 60);
     var sec = Math.abs(t) % 60;
     return (t<0 ? '-' : '') + min + ":" + (sec<10 ? "0" : "") + sec;
@@ -152,17 +153,20 @@ export function getCounterItemsLateGame(hero: string, isSupport: boolean): any[]
 
 /**
  * 
- * @param hero The name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
+ * @param hero Localized hero name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
  * @returns 
  */
-export function getStandardItemBuild(hero: string): any[] {
-    if (itemBuilds[hero] == null) {
+export function getStandardItemBuild(h: string): any[] { // MICHEL : ADD ROLE LOGIC!!!
+    const h_ = hero.name.localizedNameToNPCName(h)
+
+    if (!heroBuilds.hasOwnProperty(h_)) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return []
     }
 
-    const mid_game = itemBuilds[hero].mid_game
-    const late_game = itemBuilds[hero].late_game
+
+    const mid_game = heroBuilds[h_].builds[0].items.mid_game
+    const late_game = heroBuilds[h_].builds[0].items.late_game
 
     return mid_game.concat(late_game)
 }
@@ -170,18 +174,45 @@ export function getStandardItemBuild(hero: string): any[] {
 /**
  * 
  * @param hero The name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
- * @returns object with the following attributes: starting, early_game, mid_game, later_game, situational
+ * @returns object with the following attributes: starting, early_game, mid_game, later_game, situational. Each has an array of the following element: { item, info?, isCore?, purchaseTime? }
  */
-export function getItemBuild(hero: string): any {
-    if (itemBuilds[hero] == null) {
+export function getItemBuild(h: string): any {
+    if (!heroBuilds.hasOwnProperty(h)) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-        return {}
+        return null
     }
 
-    var itemBuild = itemBuilds[hero]
+    var tooltips_build = {}
+    var tooltips_hero = {}
+    if (heroBuilds[h].builds[0].hasOwnProperty('item_tooltips')) {
+        tooltips_build = heroBuilds[h].builds[0].item_tooltips
+    }
+    if (heroBuilds[h].hasOwnProperty('item_tooltips')) {
+        tooltips_hero = heroBuilds[h].item_tooltips
+    }
+    const item_tooltips = {
+        ...tooltips_hero,
+        ...tooltips_build
+    }
 
-    /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-    return  itemBuild
+    const build = heroBuilds[h].builds[0]
+    const core_items = build.items.core
+
+    function transformItem(item: string) {
+        var result = { item: item }
+        if (item_tooltips.hasOwnProperty('item')) result['info'] = item_tooltips[item]
+        if (core_items.indexOf(item)!=-1) result['isCore'] = true
+        return result
+    }
+
+    return {
+        starting:    build.items.starting.map(x => transformItem(x)),
+        early_game:  build.items.early_game.map(x => transformItem(x)),
+        mid_game:    build.items.mid_game.map(x => transformItem(x)),
+        late_game:   build.items.late_game.map(x => transformItem(x)),
+        situational: build.items.situational.map(x => transformItem(x)),
+        neutral:     build.items.neutral.map(x => transformItem(x))
+    }
 }
 
 /**
@@ -189,14 +220,15 @@ export function getItemBuild(hero: string): any {
  * @param hero localized hero name
  * @returns 
  */
-export function getStandardAbilityBuild(hero: string): string[] {
+export function getStandardAbilityBuild(h: string): string[] {
+    //const h_ = hero.name.localizedNameToNPCName(h)
 
-    if (heroBuilds[hero] == null) {
+    if (!heroBuilds.hasOwnProperty(h)) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return []
     }
 
-    var abilityBuild = heroBuilds[hero].builds[0].abilities
+    var abilityBuild = heroBuilds[h].builds[0].abilities
 
     /* return copy of array, otherwise recipient can change content of this.laningItemTips */
     return  [...abilityBuild] 
@@ -207,8 +239,8 @@ export function getStandardAbilityBuild(hero: string): string[] {
  * @param hero localized hero name
  * @returns arrray of breakable passives
  */
-export function getBreakablePassives(hero: string): string[] {
-    const abilities = dota2Abilities[localizedNameToNPCName(hero)]
+export function getBreakablePassives(heroName: string): string[] {
+    const abilities = dota2Abilities[hero.name.localizedNameToNPCName(heroName)]
     var result = []
     for (const ability of Object.keys(abilities)) {
         switch (abilities[ability].is_passive) {
@@ -294,9 +326,54 @@ export function getAbilitiesWithDisables(hero: string, disablesToScreen: string[
     return result
 }
 
-/*public getTPInterrupts(hero: string): any[] {
-    return this.getAbilitiesWithDisables(hero, Disables.teleport_interrupt)
-}*/
+
+export namespace ability {
+
+    /**
+     * 
+     * @param ability name, e.g. "bane_brain_sap" (Bane)
+     * @returns Object describing the ability (e.g. id, sequence, is_talent, etc. For further details see 'dota2Abilities.json')
+     */
+     export function getAbility(ability: string): any {
+        DotaLogger.log(`dota2.getAbility(itemCode: ${ability}): Called`)
+        for (const hero of Object.keys(dota2Abilities)) {
+            for (const a of Object.keys(dota2Abilities[hero])) {
+                if (a==ability) {
+                    return dota2Abilities[hero][a]
+                }
+            }
+        }
+        return null
+    }
+
+    /**
+     * 
+     * @param ability name, e.g. "brain_sap" (Bane)
+     * @returns English name of ability or null if name is not found
+     */
+    export function getAbilityName(ability: string): string {
+        DotaLogger.log(`dota2.getAbilityName(itemCode: ${ability}): Called`)
+
+        const a = getAbility(ability)
+
+        DotaLogger.log(`dota2.getAbility(): a=${JSON.stringify(a)}`)
+
+        if (a!=null) {
+            if (a.hasOwnProperty('name')) {
+                DotaLogger.log(`dota2.getAbilityName(): ${a.name}`)
+                return a.name
+            }
+            else {
+                DotaLogger.log(`dota2.getAbilityName(): null`)
+                return null
+            }
+        }
+
+        DotaLogger.log(`dota2.getAbilityName(): null`)
+        return null
+    }
+}
+
 
 /**
  * 
@@ -323,28 +400,71 @@ export function getRoots(hero: string): any[] {
     return getAbilitiesWithDisables(hero, root)
 }
 
+/**
+ * 
+ * @param item name of item e.g. 'blink' or overwhelming_blink'
+ * @returns Cooldown of item or -1 if item is not known
+ */
 export function getItemCooldown(item: string): number {
-    if (Items[item] == null) {
-        /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-        return -1
+    DotaLogger.log(`dota2.getItemCooldown(${item}): Called`)
+    if (dota2Items.hasOwnProperty(`item_${item}`)) {
+        if (dota2Items[`item_${item}`].hasOwnProperty('cooldown')) {
+            return dota2Items[`item_${item}`].cooldown
+        }
     }
 
-    return Items[item].cd
+    /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
+    return -1
 }
 
 /**
  * 
  * @param item Item number
- * @returns Null if item is not found 
+ * @returns Item name, e.g. 'blink' for blink., or null if item is not found 
  */
-export function getItemName(item: number): string {
-    for (var key of Object.keys(Items)) {
-        if (Items[key].id == item) {
-            return key
+export function getItemName(itemId: number): string {
+    for (var key of Object.keys(dota2Items)) {
+        if (dota2Items[key].id == itemId) {
+            return key.replace('item_', '')
         }
     }
     return null
 }
+
+
+/**
+ * 
+ * @param item e.g. item_blink or armor (Dota Coach item)
+ * @returns Item name, e.g. 'blink' for blink., or null if item is not found 
+ */
+ export function getItemNameFromItemCode(itemCode: string): string {
+     //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): Called`)
+
+     switch (itemCode) {
+        case "armor":
+        case "DamageItems":
+        case "SentryDustGem":
+        case "SentryGem":
+        case "SentryDust":
+        case "AttackSpeed": {
+            // Don't change
+            break
+        }
+        default: {
+            itemCode = `item_${itemCode}`
+        }
+    }
+
+    if (dota2Items.hasOwnProperty(itemCode)) {
+        if (dota2Items[itemCode].hasOwnProperty('name')) {
+            //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): ${dota2Items[itemCode].name}`)
+            return dota2Items[itemCode].name
+        }
+    }
+    //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): null`)
+    return null
+}
+
 
 /**
  * Get the file name of an item.
@@ -352,16 +472,10 @@ export function getItemName(item: number): string {
  * @param item Item number
  * @returns String with path and file name. Null if item is not found
  */
-export function getItemImage(item: number): string {
-    const name = getItemName(item)
-    if (name) {
-    /*for (var key of Object.keys(Items)) {
-        if (Items[key].id == item) {*/
-            return '../img/items/' + name + '.png'
-        }
-    else {
-       return null
-    }
+export function getItemImage(itemId: number): string {
+    const name = getItemName(itemId)
+    if (name) return '../img/items/' + name + '.png'
+    return null
 }
 
 //
@@ -489,20 +603,20 @@ export class OpenDotaAPIHero {
   
   /**
    * 
-   * @param heroName Standard hero name (e.g. 'Zeus')
+   * @param heroName Localized hero name (e.g. 'Anti-Mage' or 'Legion Commander')
    * @returns Talent object or null if there is not cooldown reduction talent
    */
   export function getCooldownReductionTalent(heroName: string): Talent {
       //DotaLogger.log("dota2.getCooldownReductionTalent(heroName='" + heroName + "'): Called" )
-      const heroNameNPC = localizedNameToNPCName(heroName)
-      const talents = HeroAbilities[heroNameNPC].talents
+      const heroNameNPC = hero.name.localizedNameToNPCName(heroName)
+      const abilities = dota2Abilities[heroNameNPC]
   
       var result: Talent  = null
   
-      for (var talent of talents) {
-          if (talent.name.startsWith('special_bonus_cooldown_reduction_')) {
-              let cooldownReduction = parseInt(talent.name.replace('special_bonus_cooldown_reduction_',''));
-              let talentLevel = talent.level
+      for (const ability of Object.keys(abilities)) {
+          if (ability.startsWith('special_bonus_cooldown_reduction_')) {
+              let cooldownReduction = parseInt(ability.replace('special_bonus_cooldown_reduction_',''));
+              let talentLevel = abilities[ability].talent_level
               result = new Talent(talentLevel, cooldownReduction)
               break
           }
@@ -516,8 +630,10 @@ export class OpenDotaAPIHero {
     // Input: takes Hero name as defined in?
     export function getSkills(heroName: string): string[] {
         //DotaLogger.log("dota2.getSkills(heroName='" + heroName + "'): Called" )
-        const heroNameNPC = localizedNameToNPCName(heroName)
-        return HeroAbilities[heroNameNPC].abilities
+        const heroNameNPC = hero.name.localizedNameToNPCName(heroName)
+        return dota2Abilities[heroNameNPC]
+        // RETURN ALL RIGH NOW, MIGHT NEED TO BE CORRECTED.....
+        // CHECK WHAT PEOPLE EXPECT
     }
   
   
@@ -572,15 +688,20 @@ export class OpenDotaAPIHero {
     export function getManaConsumption(heroAbility: string): string {
         //DotaLogger.log("dota2.getManaConsumption(heroAbility='" + heroAbility + "'): Called" )
   
-        if (!Abilities[heroAbility].hasOwnProperty("mc")) {
+        const a = ability.getAbility(heroAbility)
+/*        if (!Abilities[heroAbility].hasOwnProperty("mc")) {
+            return null
+        }*/
+        if (a.hasOwnProperty("mana_cost")) {
             return null
         }
   
-        const mc = Abilities[heroAbility].mc
+        const manaCost = a.mana_cost
         //DotaLogger.log("dota2.getManaConsumption: mc='" + JSON.stringify(mc) + "'")
         // Format of data: "mc":["80","90","100","110"]
   
-        return Array.isArray(mc) ? mc.join(" / ") : mc
+        //return Array.isArray(mc) ? mc.join(" / ") : mc
+        return manaCost.join(" / ") 
         /*var result = ""
         for (var i=0; i<mc.length; i++) {
             result += mc[i]
@@ -599,26 +720,16 @@ export class OpenDotaAPIHero {
      */
      export function getCooldown(heroAbility: string): number[] {
         //DotaLogger.log("dota2.getCooldown(heroAbility='" + heroAbility + "'): Called")
-  
-        var result = []
-  
-        if (Abilities[heroAbility].hasOwnProperty("cd")) {
+   
+        const a = ability.getAbility[heroAbility]
+
+        if (a.hasOwnProperty("cooldown")) {
             // if there is no 'cd' property, the function returns an empty array
-            const cd = Abilities[heroAbility].cd
-            
-            if (Array.isArray(cd)) {
-                for (var n of cd) {
-                    result.push(parseFloat(n))
-                }
-            }
-            else {
-                // It is a single number
-                result.push(parseFloat(cd))
-            }
+            return a.cooldown
         }
   
         //DotaLogger.log(`dota2.getCooldown(): Result = '${JSON.stringify(result)}'`)
-        return result
+        return []
     }
   
     /**
@@ -629,11 +740,14 @@ export class OpenDotaAPIHero {
      export function getCooldownAsString(heroAbility: string): string {
         //DotaLogger.log("dota2.getCooldown(heroAbility='" + heroAbility + "'): Called")
   
-        if (!Abilities[heroAbility].hasOwnProperty("cd")) {
+        const a = ability.getAbility[heroAbility]
+
+
+        if (!a.hasOwnProperty("cooldown")) {
             return null
         }
   
-        const cd = Abilities[heroAbility].cd
+        const cd = a.cooldown
   
         // cooldown can not exist as a field, can be a number or an array
   
@@ -644,7 +758,7 @@ export class OpenDotaAPIHero {
   
     // Returns the ability type
     // Possible value: 'Unit target', '...
-    function getSkillAbilityType(heroAbility: string): string {
+    /*function getSkillAbilityType(heroAbility: string): string {
         if (!Abilities[heroAbility].hasOwnProperty("behavior")) {
             return null
         }
@@ -660,7 +774,7 @@ export class OpenDotaAPIHero {
         }
   
         return null
-    }
+    }*/
   
     
     function getOpenDotaAPIHero(heroName: string): OpenDotaAPIHero {
@@ -669,9 +783,9 @@ export class OpenDotaAPIHero {
   
   
   //        for (var index in jsonOpenDotaAPI) {
-        for (var i=0; i<Heroes.length; i++) {
-            if (Heroes[i].localized_name == heroName) {
-                return Heroes[i]
+        for (var i=0; i<dota2Heroes.length; i++) {
+            if (dota2Heroes[i].localized_name == heroName) {
+                return dota2Heroes[i]
             }
         }
         
@@ -734,198 +848,281 @@ export class OpenDotaAPIHero {
         return "Error"
     }
 
-    /**
-     * 
-     * @param name e.g. antimage (i.e. w/o 'npc_dota_hero_')
-     * @returns localited name, e.g. Anti-Mage
-     */
-    export function overwolfNameToLocalizedName(name: string): string {
-        //npc_dota_hero_bane
-        for (var i=0; i<Heroes.length; i++) {
-  
-        //for (var index in jsonOpenDotaAPI) {
-            /*console.log("****** ------: OpenDotaAPIHero = " + OpenDotaAPIHero)
-            console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(OpenDotaAPIHero))
-            console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(jsonOpenDotaAPI[OpenDotaAPIHero]))*/
-            if (Heroes[i].name == "npc_dota_hero_" + name) {
-                return Heroes[i].localized_name
-            }
-        }
-        return "#not found#"
-    }
+
+
+
+
   
 
-    /**
-     * 
-     * @param name e.g. npc_dota_hero_antimage
-     * @returns localited name, e.g. Anti-Mage
-     */
-     export function NPCNameToLocalizedName(name: string): string {
-        for (var i=0; i<Heroes.length; i++) {
-            if (Heroes[i].name == name) {
-                return Heroes[i].localized_name
-            }
-        }
-        return "#not found#"
-    }
+export namespace hero {
+    export namespace name {
+        //
+        // The following names exist:
+        //    - NPC name:       npc_dota_hero_antimage
+        //    - NPC sort name:  antimage (NPCName w/o 'npc_dota_hero'; also used by Overwolf)
+        //    - localized name: Anti-Mage or Legion Commander
+        // 
 
-    export function idToLocalizedName(heroId: number): string {
-        for (var i=0; i<Heroes.length; i++) {
-  //            for (var index in jsonOpenDotaAPI) {
-            /*console.log("****** ------: OpenDotaAPIHero = " + OpenDotaAPIHero)
-            console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(OpenDotaAPIHero))
-            console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(jsonOpenDotaAPI[OpenDotaAPIHero]))*/
-            if (Heroes[i].id == heroId) {
-                return Heroes[i].localized_name
-            }
-        }
-        return "#not found#"
-    }
-  
-  
-    export function idToName(heroId: number): string {
-        for (var i=0; i<Heroes.length; i++) {
             
-            //for (var index in jsonHeroes) {
-            if (Heroes[i].id == heroId) {
-                return Heroes[i].localized_name
-            }
-        }
-        return "#not found#"
-    }
-  
+        /**
+         * 
+         * @param name e.g. antimage (i.e. w/o 'npc_dota_hero_')
+         * @returns localited name, e.g. Anti-Mage
+         */
+        export function overwolfNameToLocalizedName(name: string): string {
+            //npc_dota_hero_bane
+            for (var i=0; i<dota2Heroes.length; i++) {
     
-    function idToNPCName(heroId: number): string {
-        for (var i=0; i<Heroes.length; i++) {
-            
-            //for (var index in jsonHeroes) {
-            if (Heroes[i].id == heroId) {
-                return Heroes[i].name
+            //for (var index in jsonOpenDotaAPI) {
+                /*console.log("****** ------: OpenDotaAPIHero = " + OpenDotaAPIHero)
+                console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(OpenDotaAPIHero))
+                console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(jsonOpenDotaAPI[OpenDotaAPIHero]))*/
+                if (dota2Heroes[i].name == "npc_dota_hero_" + name) {
+                    return dota2Heroes[i].localized_name
+                }
             }
+            return "#not found#"
         }
-        return "#not found#"
-    }
 
-    /**
-     * 
-     * @param heroId 
-     * @returns e.g. antimage or dark_willow
-     */
-  
-    export function idToNPCShortName(heroId: number): string {
-        return idToNPCName(heroId).replace('npc_dota_hero_', '')
-    }
-  
-    
-    export function idToImgName(heroId: number): string {
-        var localizedName = idToLocalizedName(heroId)
-        if (localizedName == "#not found#") {
-            return localizedName
-        }
-        switch (localizedName) {
-            case "Nature's Prophet": {
-                localizedName = "furion"
-                break
+        /**
+         * 
+         * @param name e.g. npc_dota_hero_antimage
+         * @returns localized name, e.g. Anti-Mage
+         */
+        export function NPCNameToLocalizedName(heroNPCName: string): string {
+            for (var i=0; i<dota2Heroes.length; i++) {
+                if (dota2Heroes[i].name == heroNPCName) {
+                    return dota2Heroes[i].localized_name
+                }
             }
+            return "#not found#"
         }
-        let result = '../img/heroes/' + localizedName.replace(/ /gi, "_") + '_minimap_icon.png'
-        return result
-    }
-  
+
+        export function idToLocalizedName(heroId: number): string {
+            for (var i=0; i<dota2Heroes.length; i++) {
+                if (dota2Heroes[i].id == heroId) {
+                    return dota2Heroes[i].localized_name
+                }
+            }
+            return "#not found#"
+        }
     
-    export function localizedNameToId(localized_name: string): number {
-        //DotaLogger.log("dota2.localizedNameToId(" + localized_name + "): Called")
-            for (var i=0; i<Heroes.length; i++) {
+        export function idToName(heroId: number): string {
+            for (var i=0; i<dota2Heroes.length; i++) {
                 
-            if (Heroes[i].localized_name == localized_name) {
-                //DotaLogger.log("dota2.localizedNameToId(): Returned id = '" + Heroes[i].id + "'")
-                return Heroes[i].id
+                //for (var index in jsonHeroes) {
+                if (dota2Heroes[i].id == heroId) {
+                    return dota2Heroes[i].localized_name
+                }
             }
+            return "#not found#"
         }
-        return -1 // equals to not found
-    }
-  
-    export function localizedNameToHeropediaName(localized_name: string): string {
-        return localized_name.replace(/[ \']/g, '')
-    }
-
     
-
-    export function localizedNameToImgName(heroName: string): string {
-        //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
-        switch (heroName) {
-            case "Nature's Prophet": {
-                DotaLogger.log(`dota2.localizedNameToImgName(): Found 'Nature's Prophet'`)
-                heroName = "Furion"
-                break
-            }
-        }
-        return '../img/heroes/' + heroName.replace(/ /gi, "_") + '.png'
-    }
-  
-   export function localizedNameToMinimapImgName(heroName: string): string {
-        //DotaLogger.log(`dota2.localizedNameToMinimapImgName(${heroName}): Called`)
-        return localizedNameToImgName(heroName).replace('.png', '_minimap_icon.png')
         
-  /*        switch (heroName) {
-            case "Nature's Prophet": {
-                DotaLogger.log(`dota2.localizedNameToMinimapImgName(): Found 'Nature's Prophet'`)
-                heroName = "Furion"
-                break
+        function idToNPCName(heroId: number): string {
+            for (var i=0; i<dota2Heroes.length; i++) {
+                
+                //for (var index in jsonHeroes) {
+                if (dota2Heroes[i].id == heroId) {
+                    return dota2Heroes[i].name
+                }
             }
+            return "#not found#"
         }
-        //return '../img/heroes/' + heroName.replace(/ /gi, "_") + '.png'
-        return '../img/heroes/' + heroName.replace(/ /gi, "_") + '_minimap_icon.png';*/
-    }
-  
-    /**
+
+        /**
+         * 
+         * @param heroId 
+         * @returns e.g. antimage or dark_willow
+         */
+    
+        export function idToNPCShortName(heroId: number): string {
+            return idToNPCName(heroId).replace('npc_dota_hero_', '')
+        }
+
+        export function localizedNameToId(localized_name: string): number {
+            //DotaLogger.log("dota2.localizedNameToId(" + localized_name + "): Called")
+                for (var i=0; i<dota2Heroes.length; i++) {
+                    
+                if (dota2Heroes[i].localized_name == localized_name) {
+                    //DotaLogger.log("dota2.localizedNameToId(): Returned id = '" + Heroes[i].id + "'")
+                    return dota2Heroes[i].id
+                }
+            }
+            return -1 // equals to not found
+        }
+      
+        export function localizedNameToHeropediaName(localized_name: string): string {
+            return localized_name.replace(/[ \']/g, '')
+        }
+    
+            /**
      * 
      * @param heroName localized name, e.g. Anti-Mage
      * @returns NPC name, e.g. npc_dota_hero_antimage
      */
   
   export function localizedNameToNPCName(heroName: string): string {
-        //DotaLogger.log("dota2.localizedNameToNPCName(" + heroName + "): Called")
-  
-        const id = localizedNameToId(heroName)
-        return idToNPCName(id)
-    }
-  
-  
-    export function localizedNameToNPCShortName(heroName: string): string {
-        return localizedNameToNPCName(heroName).replace('npc_dota_hero_', '')
-    }
-  
+    //DotaLogger.log("dota2.localizedNameToNPCName(" + heroName + "): Called")
 
-    /* Returns -1 if hero not found
-    */
-    export function overwolfNameToId(name: string): number {
-        //npc_dota_hero_bane
-        for (var i=0; i<Heroes.length; i++) {
-        //for (var index in jsonHeroes) {
-            if (Heroes[i].name == "npc_dota_hero_" + name) {
-                return Heroes[i].id
+    const id = localizedNameToId(heroName)
+    return idToNPCName(id)
+}
+
+
+export function localizedNameToNPCShortName(heroName: string): string {
+    return localizedNameToNPCName(heroName).replace('npc_dota_hero_', '')
+}
+
+
+/* Returns -1 if hero not found
+*/
+export function overwolfNameToId(name: string): number {
+    //npc_dota_hero_bane
+    for (var i=0; i<dota2Heroes.length; i++) {
+    //for (var index in jsonHeroes) {
+        if (dota2Heroes[i].name == "npc_dota_hero_" + name) {
+            return dota2Heroes[i].id
+        }
+    }
+    return -1
+}
+    
+    }
+     
+    export namespace image {
+        export function idToImgName(heroId: number): string {
+            var localizedName = hero.name.idToLocalizedName(heroId)
+            if (localizedName == "#not found#") {
+                return localizedName
+            }
+            switch (localizedName) {
+                case "Nature's Prophet": {
+                    localizedName = "furion"
+                    break
+                }
+            }
+            let result = '../img/heroes/' + localizedName.replace(/ /gi, "_") + '_minimap_icon.png'
+            return result
+        }
+        export function localizedNameToImgName(heroName: string): string {
+            //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
+            switch (heroName) {
+                case "Nature's Prophet": {
+                    DotaLogger.log(`dota2.localizedNameToImgName(): Found 'Nature's Prophet'`)
+                    heroName = "Furion"
+                    break
+                }
+            }
+            return '../img/heroes/' + heroName.replace(/ /gi, "_") + '.png'
+        }
+      
+       export function localizedNameToMinimapImgName(heroName: string): string {
+            //DotaLogger.log(`dota2.localizedNameToMinimapImgName(${heroName}): Called`)
+            return localizedNameToImgName(heroName).replace('.png', '_minimap_icon.png')
+            
+      /*        switch (heroName) {
+                case "Nature's Prophet": {
+                    DotaLogger.log(`dota2.localizedNameToMinimapImgName(): Found 'Nature's Prophet'`)
+                    heroName = "Furion"
+                    break
+                }
+            }
+            //return '../img/heroes/' + heroName.replace(/ /gi, "_") + '.png'
+            return '../img/heroes/' + heroName.replace(/ /gi, "_") + '_minimap_icon.png';*/
+        }
+      
+    
+    }
+    function isHeroMelee(hero: string): boolean {
+        //console.log("isHeroMelee(" + hero + ") called")
+    
+        for (var i=0; i<dota2Heroes.length; i++) {
+    
+    //        for (var index in jsonOpenDotaAPI) {
+            if (dota2Heroes[i].localized_name == hero) {
+                return dota2Heroes[i].attack_type == "Melee"
             }
         }
-        return -1
-    }
-  
-function isHeroMelee(hero: string): boolean {
-    //console.log("isHeroMelee(" + hero + ") called")
-
-    for (var i=0; i<Heroes.length; i++) {
-
-//        for (var index in jsonOpenDotaAPI) {
-        if (Heroes[i].localized_name == hero) {
-            return Heroes[i].attack_type == "Melee"
-        }
+        
+        /*for (var OpenDotaAPIHero of jsonOpenDotaAPI) {
+            if (OpenDotaAPIHero.localized_name == hero) {
+                return OpenDotaAPIHero.attack_type == "Melee"
+            }
+        }*/
+        console.log("Internal error: isHeroMelee(hero: " + hero + ")")
+        return false // should never get here though
     }
     
-    /*for (var OpenDotaAPIHero of jsonOpenDotaAPI) {
-        if (OpenDotaAPIHero.localized_name == hero) {
-            return OpenDotaAPIHero.attack_type == "Melee"
-        }
-    }*/
-    console.log("Internal error: isHeroMelee(hero: " + hero + ")")
-    return false // should never get here though
 }
+
+
+  
+
+
+/**
+ * Function returns items tracked by the performance tracker
+ * 
+ * The list of items has been reviewed with ZoGraF in Q4 2021
+ * 
+ * @returns { tracked: { item_code : all_data }, notTracked: { item_code : all_data }}
+ */
+export function getTrackedItems() {
+    var result = {
+        tracked: {},
+        notTracked: {}
+    }
+
+    for (const [key, value] of Object.entries(dota2Items)) {
+        var isTracked = false
+        //if (!value.is_neutral) {
+        switch (key) {
+            case 'item_soul_booster':
+            case 'item_ultimate_orb': 
+            case 'item_demon_edge': 
+            case 'item_eagle': 
+            case 'item_reaver': 
+            case 'item_relic': 
+            case 'item_mystic_staff': 
+            case 'item_grandmasters_glaive': 
+            case 'item_ultimate_scepter_2': 
+            case 'item_ultimate_scepter_roshan': 
+            case 'item_fallen_sky': 
+                {
+
+                isTracked = false
+                break
+            }
+            case 'item_ultimate_scepter_2':
+            case 'item_mekansm':
+            case 'item_hood_of_defiance':
+            case 'item_lesser_crit':
+            case 'item_dragon_lance':
+            case 'item_mask_of_madness':
+            case 'item_ancient_janggo':
+            case 'item_veil_of_discord':
+            case 'item_glimmer_cape':
+            case 'item_vanguard':
+            case 'item_ghost':
+            case 'item_aghanims_shard':
+            {
+                isTracked = true
+                break
+            }
+            default: {
+                // Neutrals don't have a cost, so they are not being tracked by default
+                isTracked = (value as any).cost > 2000
+                break
+            }
+        }
+        
+        if (isTracked) {
+            result.tracked[key] = value
+        } 
+        else {
+            result.notTracked[key] = value
+        }
+    }
+
+    return result
+  }

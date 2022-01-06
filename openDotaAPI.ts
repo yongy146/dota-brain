@@ -328,7 +328,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
       DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Attemp #${6-attempts}`)
       await getMatchesWithHero(heroId).then(async (matches) => {
         //DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Matches = ${JSON.stringify(matches)}`)
-        DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Loading ${matches.length} matches for hero ${Dota2.idToLocalizedName(heroId)}`)
+        DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Loading ${matches.length} matches for hero ${Dota2.hero.name.idToLocalizedName(heroId)}`)
         successful = true
         var abilityUpgradesMax = 0;
         var abilityUpgrades = []
@@ -400,7 +400,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
             matchCounts--
             if (matchCounts==0) {
               process.stdout.write(`\n`);
-              DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Match loading for ${Dota2.idToLocalizedName(heroId)} completed (successes: ${matchSuccess}/${matches.length}, errors: ${matchError}/${matches.length})`)
+              DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Match loading for ${Dota2.hero.name.idToLocalizedName(heroId)} completed (successes: ${matchSuccess}/${matches.length}, errors: ${matchError}/${matches.length})`)
               resolve(abilityUpgrades)
             }
           })
