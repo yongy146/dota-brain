@@ -29,26 +29,25 @@ export interface HeroBuilds {
  * Data structure for each hero build
  *
  */
- export interface HeroBuild {
-	roles: PLAYER_ROLE[],          // These roles are used in the Dota Coach App and in title of Steam Guide
-	guide: number, 				   // ID of the steam guide; this ID is provided by Dota 2
-	guide_role?: STEAM_GUIDE_ROLE, // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
-	abilities: string[]
-	ability_tooltips?: Tooltips,
-	items: ItemBuild,
-	item_tooltips?: Tooltips
+export interface HeroBuild {
+  roles: PLAYER_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
+  guide: number; // ID of the steam guide; this ID is provided by Dota 2
+  guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
+  abilities: string[];
+  ability_tooltips?: Tooltips;
+  items: ItemBuild;
+  item_tooltips?: Tooltips;
 }
 
 export interface ItemBuild {
-	starting: string[],
-	early_game: string[],
-	mid_game: string[],
-	late_game: string[],
-	situational: string[],
-	core: string[],   // selected items from starting, early_game, mid_game, late_game and situational
-	neutral: string[]
+  starting: string[];
+  early_game: string[];
+  mid_game: string[];
+  late_game: string[];
+  situational: string[];
+  core: string[]; // selected items from starting, early_game, mid_game, late_game and situational
+  neutral: string[];
 }
-
 
 /**
  * Tooltip for abilities and items
@@ -2191,17 +2190,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ring_of_basilius",
           ],
           early_game: ["tranquil_boots", "magic_wand", "wind_lace"],
-          mid_game: [
-            "glimmer_cape",
-            "force_staff",
-            "ghost",
-            "aether_lens",
-            "blink",
-          ],
+          mid_game: ["glimmer_cape", "force_staff", "ghost", "aether_lens"],
           late_game: ["aeon_disk", "sheepstick"],
           situational: [
             "infused_raindrop",
             "black_king_bar",
+            "blink",
             "aghanims_shard",
             "lotus_orb",
             "ultimate_scepter",
@@ -2247,6 +2241,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core defensive item. It can be used during Freezing Field channeling.",
       black_king_bar:
         "If the game opens up for you. Allows you to channel Freezing Field longer. Couples well with Blink Dagger to be able to position your ultimate nicely.",
+      blink: "Goes well with the build centered around your ultimate.",
       aghanims_shard:
         "Allows you to cast and move slowly while channeling the Freezing Field.",
       lotus_orb: "For reflect, dispel and armor.",
@@ -2507,7 +2502,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "orb_of_venom",
             "branches",
             "enchanted_mango",
-            "orb_of_venom",
             "magic_stick",
           ],
           early_game: ["magic_wand", "arcane_boots"],
@@ -2693,6 +2687,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           mid_game: [
             "cyclone",
             "travel_boots",
+            "black_king_bar",
             "kaya_and_sange",
             "aghanims_shard",
           ],
@@ -2704,12 +2699,17 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           situational: [
             "infused_raindrop",
-            "black_king_bar",
             "heavens_halberd",
             "shivas_guard",
             "blink",
           ],
-          core: ["cyclone", "travel_boots", "kaya_and_sange", "aghanims_shard"],
+          core: [
+            "cyclone",
+            "travel_boots",
+            "black_king_bar",
+            "kaya_and_sange",
+            "aghanims_shard",
+          ],
           neutral: [
             "arcane_ring",
             "mysterious_hat",
@@ -2741,9 +2741,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that helps with mana sustain and provides extra movement speed and dispel. You can heal from Spirit Siphons while cycloned. Keeps you alive while Exorcism still does damage around you.",
       travel_boots:
         "A core item that allows you to cover the map better and deals with kiting along with BKB.",
-      black_king_bar: "So you can`t be kited during Exorcism.",
+      black_king_bar:
+        "A core item that allows you not to be kited during Exorcism.",
       kaya_and_sange:
-        "A core items that presents a mix of defensive and offensive stats. In some cases it might be enough for you to skip the Black King Bar.",
+        "A core items that presents a mix of defensive and offensive stats.",
       heavens_halberd: "Especially good against ranged right-clickers.",
       aghanims_shard: "A core item for more control and sustain.",
       shivas_guard:
@@ -2833,12 +2834,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Start with it if your laning partner also uses a lot of mana early. Bring additional hp consumables with courier right away.",
       glimmer_cape: "A core defensive item.",
       solar_crest:
-        "A core item that goes well with Aghanim's Shard to buff aF right-clicking core.",
+        "A core item that goes well with Aghanim`s Shard to buff a right-clicking core.",
       aghanims_shard:
         "Goes well with Solar Crest to buff a right-clicking core.",
       infused_raindrop: "Against magical burst.",
       blink:
-        "Allows you to land a multi-hero Static Storm especially once you have Aghanim's Scepter.",
+        "Allows you to land a multi-hero Static Storm especially once you have Aghanim`s Scepter.",
     },
   },
 
@@ -3011,7 +3012,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "For mid Dragon Knight but bring it to offlane too if it is available.",
       magic_stick:
         "If you expect high frequency of spells being used on the lane.",
-      bottle: "If you are playing mid Dragon Knight.",
+      bottle:
+        "If you are playing mid Dragon Knight. In that case you can skip Soul Ring.",
       power_treads:
         "A core boots upgrade that provides you with attack speed increase and some mana savings by toggling it.",
       hand_of_midas: "If you can get it early usually on mid Dragon Knight.",
