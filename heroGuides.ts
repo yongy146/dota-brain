@@ -43,12 +43,12 @@ export const HeroGuides = {
     "enchantress":          ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968"],
 */
 
-    "enigma":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081"],
+    /* "enigma":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081"],
     "faceless_void":        ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562159"],
     "furion":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338"],
     "grimstroke":           ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562245"],
     "gyrocopter":           ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562334"],
-    "hoodwink":             ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562407"],
+    "hoodwink":             ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562407"], */
     "huskar":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562484"],
     "invoker":              ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552"],
     "jakiro":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699957843"],

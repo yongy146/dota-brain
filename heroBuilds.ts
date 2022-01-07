@@ -12,10 +12,14 @@
  * Attention:
  *     - Steam guides can't have the character "'"". Instead we need to use "`"
  * 	   - The order of the talent build needs to be 1, 2, 3 and then 4. Any other order will cause the guide to fail in Dota 2
- * 
+ *
  * Relevant folder on local PC: D:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
  */
-import { DOTA_COACH_GUIDE_ROLE, DOTA_COACH_ROLE, STEAM_GUIDE_ROLE } from "./playerRoles";
+import {
+  DOTA_COACH_GUIDE_ROLE,
+  DOTA_COACH_ROLE,
+  STEAM_GUIDE_ROLE,
+} from "./playerRoles";
 
 /**
  * Data structure for the hero builds of a given hero
@@ -31,15 +35,15 @@ export interface HeroBuilds {
  * Data structure for each hero build
  *
  */
- export interface HeroBuild {
-	roles: DOTA_COACH_GUIDE_ROLE[],      // These roles are used in the Dota Coach App and in title of Steam Guide
-	steam_guide_id: number, 		     // ID of the steam guide; this ID is provided by Dota 2
-	steam_guide_link: string, 		     // Link to web buids
-	steam_guide_role?: STEAM_GUIDE_ROLE, // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
-	abilities: string[]
-	ability_tooltips?: Tooltips,
-	items: ItemBuild,
-	item_tooltips?: Tooltips
+export interface HeroBuild {
+  roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
+  steam_guide_id: number; // ID of the steam guide; this ID is provided by Dota 2
+  steam_guide_link: string; // Link to web buids
+  steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
+  abilities: string[];
+  ability_tooltips?: Tooltips;
+  items: ItemBuild;
+  item_tooltips?: Tooltips;
 }
 
 export interface ItemBuild {
@@ -66,7 +70,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640698444,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698376898",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698376898",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "abaddon_aphotic_shield",
@@ -171,7 +176,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_id: 1640719685,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "alchemist_goblins_greed",
@@ -284,7 +290,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640719709,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "ancient_apparition_chilling_touch",
@@ -375,7 +382,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640719725,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "antimage_mana_break",
@@ -487,7 +495,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_id: 1640719743,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377376",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377376",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "arc_warden_spark_wraith",
@@ -592,7 +601,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640802946,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915204",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915204",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "axe_battle_hunger",
@@ -694,7 +704,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803052,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "bane_brain_sap",
@@ -790,7 +801,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803569,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "batrider_sticky_napalm",
@@ -891,7 +903,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803579,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "beastmaster_call_of_the_wild_boar",
@@ -995,7 +1008,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640803590,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "bloodseeker_blood_bath",
@@ -1074,7 +1088,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1641224485,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2706431682",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2706431682",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "bloodseeker_blood_bath",
@@ -1196,7 +1211,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803622,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915719",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915719",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "bounty_hunter_jinada",
@@ -1303,7 +1319,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803632,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915806",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915806",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "brewmaster_thunder_clap",
@@ -1397,7 +1414,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803643,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915905",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915905",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "bristleback_quill_spray",
@@ -1513,7 +1531,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803657,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "broodmother_spin_web", // 1
@@ -1615,7 +1634,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803669,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916073",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916073",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "centaur_hoof_stomp", // 1
@@ -1714,7 +1734,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640803680,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916165",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916165",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
@@ -1790,7 +1811,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1641361683,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2708440963",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2708440963",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
@@ -1887,7 +1909,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803695,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916263",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916263",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "chen_holy_persuasion", // 1
@@ -1978,7 +2001,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640803707,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916348",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916348",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "clinkz_searing_arrows", // 1
@@ -2074,7 +2098,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803718,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "rattletrap_battery_assault", // 1
@@ -2173,7 +2198,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803727,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916517",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916517",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "crystal_maiden_crystal_nova", // 1
@@ -2280,7 +2306,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803737,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916602",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916602",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "dark_seer_ion_shell", // 1
@@ -2391,7 +2418,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803745,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916714",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916714",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dark_willow_bramble_maze", // 1
@@ -2494,7 +2522,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803756,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917167",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917167",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dawnbreaker_fire_wreath", // 1
@@ -2578,7 +2607,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803766,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917255",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917255",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dazzle_poison_touch", // 1
@@ -2674,7 +2704,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803776,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "death_prophet_carrion_swarm", // 1
@@ -2788,7 +2819,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803786,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "disruptor_thunder_strike", // 1
@@ -2879,7 +2911,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803798,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561417",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561417",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "doom_bringer_devour", // 1
@@ -2972,7 +3005,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803808,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "dragon_knight_breathe_fire", // 1
@@ -3058,13 +3092,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge: "For break effect.",
     },
   },
-  
+
   "Drow Ranger": {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640803817,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561590",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561590",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "drow_ranger_frost_arrows", // 1
@@ -3161,7 +3196,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803831,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561679",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561679",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "earth_spirit_rolling_boulder", // 1
@@ -3261,7 +3297,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803845,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561769",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561769",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "earthshaker_fissure", // 1
@@ -3340,7 +3377,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803855,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561834",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561834",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "elder_titan_ancestral_spirit", // 1
@@ -3434,7 +3472,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_id: 1640803867,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902", 
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "ember_spirit_flame_guard", // 1
@@ -3541,7 +3580,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640803881,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "enchantress_impetus", // 2
@@ -3625,280 +3665,695 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
   },
+
+  Enigma: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803897,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "enigma_demonic_conversion", // 1
+          "enigma_malefice", // 2
+          "enigma_demonic_conversion", // 3
+          "enigma_malefice", // 4
+          "enigma_demonic_conversion", // 5
+          "enigma_black_hole", // 6
+          "enigma_demonic_conversion", // 7
+          "enigma_midnight_pulse", // 8
+          "enigma_midnight_pulse", // 9
+          "special_bonus_unique_enigma_4", // 10
+          "enigma_midnight_pulse", // 11
+          "enigma_midnight_pulse", // 12
+          "enigma_black_hole", // 13
+          "enigma_malefice", // 14
+          "special_bonus_unique_enigma_9", // 15
+          "enigma_malefice", // 16
+          "special_bonus_attributes", // 17
+          "enigma_black_hole", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_enigma_3", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_enigma", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "null_talisman",
+            "enchanted_mango",
+            "mantle",
+            "circlet",
+            "clarity",
+            "sobi_mask",
+          ],
+          early_game: ["arcane_boots", "magic_wand", "soul_ring"],
+          mid_game: [
+            "blink",
+            "black_king_bar",
+            "aghanims_shard",
+            "aether_lens",
+          ],
+          late_game: [
+            "refresher",
+            "invis_sword",
+            "arcane_blink",
+            "ultimate_scepter",
+          ],
+          situational: ["hand_of_midas", "sphere", "aeon_disk"],
+          core: ["arcane_boots", "blink", "black_king_bar"],
+          neutral: [
+            "pogo_stick",
+            "arcane_ring",
+            "philosophers_stone",
+            "bullwhip",
+            "spider_legs",
+            "psychic_headband",
+            "ninja_gear",
+            "trickster_cloak",
+            "force_boots",
+            "seer_stone",
+          ],
+        },
+        item_tooltips: {
+          hand_of_midas: "If you can get it early and get away with it.",
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803897,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "enigma_demonic_conversion", // 1
+          "enigma_malefice", // 2
+          "enigma_demonic_conversion", // 3
+          "enigma_malefice", // 4
+          "enigma_demonic_conversion", // 5
+          "enigma_black_hole", // 6
+          "enigma_demonic_conversion", // 7
+          "enigma_midnight_pulse", // 8
+          "enigma_midnight_pulse", // 9
+          "special_bonus_unique_enigma_4", // 10
+          "enigma_midnight_pulse", // 11
+          "enigma_midnight_pulse", // 12
+          "enigma_black_hole", // 13
+          "enigma_malefice", // 14
+          "special_bonus_unique_enigma_9", // 15
+          "enigma_malefice", // 16
+          "special_bonus_attributes", // 17
+          "enigma_black_hole", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_enigma_3", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_enigma", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "null_talisman",
+            "enchanted_mango",
+            "mantle",
+            "circlet",
+            "clarity",
+            "sobi_mask",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "ring_of_basilius",
+            "arcane_boots",
+            "magic_wand",
+            "soul_ring",
+          ],
+          mid_game: [
+            "blink",
+            "black_king_bar",
+            "aghanims_shard",
+            "aether_lens",
+          ],
+          late_game: [
+            "refresher",
+            "invis_sword",
+            "arcane_blink",
+            "ultimate_scepter",
+          ],
+          situational: ["infused_raindrop", "sphere", "aeon_disk"],
+          core: ["arcane_boots", "blink", "black_king_bar"],
+          neutral: [
+            "pogo_stick",
+            "arcane_ring",
+            "philosophers_stone",
+            "bullwhip",
+            "spider_legs",
+            "psychic_headband",
+            "ninja_gear",
+            "trickster_cloak",
+            "force_boots",
+            "seer_stone",
+          ],
+        },
+        item_tooltips: {
+          ward_sentry: "To block the pull camps.",
+          magic_stick:
+            "Start with it if you expect high frequency of spells being used on the lane.",
+          ring_of_basilius:
+            "If your laning partner also uses a lot of mana early.",
+          infused_raindrop: "Against magical burst.",
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      arcane_boots: "A core item for mana sustain.",
+      blink: "A core item that allows you to land a multi-hero Black Hole.",
+      black_king_bar: "A core item that allows you to channel Black Hole.",
+      aghanims_shard:
+        "A core item that provides extra control during Black Hole.",
+      sphere:
+        "Against targetable spell-immunity piercing disables that prevent you from channeling Black Hole.",
+      aeon_disk:
+        "Gives you a second chance to survive and get your Black Hole off.",
+    },
+  },
+
+  "Faceless Void": {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640803904,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562159",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "faceless_void_time_walk", // 1
+          "faceless_void_time_lock", // 2
+          "faceless_void_time_lock", // 3
+          "faceless_void_time_dilation", // 4
+          "faceless_void_time_lock", // 5
+          "faceless_void_chronosphere", // 6
+          "faceless_void_time_lock", // 7
+          "faceless_void_time_walk", // 8
+          "faceless_void_time_walk", // 9
+          "faceless_void_time_walk", // 10
+          "special_bonus_unique_faceless_void_7", // 11
+          "faceless_void_chronosphere", // 12
+          "faceless_void_time_dilation", // 13
+          "faceless_void_time_dilation", // 14
+          "special_bonus_unique_faceless_void_5", // 15
+          "faceless_void_time_dilation", // 16
+          "special_bonus_attributes", // 17
+          "faceless_void_chronosphere", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_faceless_void", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_faceless_void_4", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "branches",
+            "slippers",
+            "faerie_fire",
+            "magic_stick",
+          ],
+          early_game: ["power_treads", "magic_wand", "wraith_band"],
+          mid_game: [
+            "mask_of_madness",
+            "maelstrom",
+            "sange_and_yasha",
+            "manta",
+          ],
+          late_game: ["mjollnir", "skadi", "satanic", "refresher"],
+          situational: [
+            "infused_raindrop",
+            "hand_of_midas",
+            "black_king_bar",
+            "aghanims_shard",
+            "blink",
+            "sphere",
+            "monkey_king_bar",
+          ],
+          core: ["power_treads", "mask_of_madness", "maelstrom"],
+          neutral: [
+            "possessed_mask",
+            "broom_handle",
+            "quicksilver_amulet",
+            "misericorde",
+            "elven_tunic",
+            "mind_breaker",
+            "the_leveller",
+            "ninja_gear",
+            "pirate_hat",
+            "apex",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      faceless_void_time_walk:
+        "The tougher the lane the more point you can put into this spell.",
+    },
+    item_tooltips: {
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      infused_raindrop: "Against magical burst.",
+      power_treads:
+        "A core item that provides attack speed boost and some mana savings through toggling. Keep it on strength if you feel like you might be in trouble.",
+      hand_of_midas: "If you can get it early and get away with it.",
+      mask_of_madness:
+        "A core item that accelerates your farm but also allows you to burst a hero inside Chronosphere.",
+      maelstrom:
+        "A core item that boosts your farming speed but also does some AoE damage in the fights. Can be upgraded to Mjollnir later on. Void likes attack speed for frequent bash procs.",
+      black_king_bar:
+        "Against a lot of disables, magical damage and as a dispel.",
+      aghanims_shard:
+        "For extra mobility. Often times you'll get it from Roshan.",
+      blink:
+        "To be able to seize the moment and get good Chronosphere out. Swift Blink is an option later on as well.",
+      sphere: "Against powerful single-target disables and debuffs.",
+      monkey_king_bar: "Against evasion.",
+    },
+  },
+
+  Grimstroke: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803941,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562245",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "grimstroke_dark_artistry", // 1   equals to 'stroke of faith'
+          "grimstroke_spirit_walk", // 2   equals to 'ink swell'
+          "grimstroke_spirit_walk", // 3
+          "grimstroke_ink_creature", // 4   equals to 'phantom's embrace'
+          "grimstroke_spirit_walk", // 5
+          "grimstroke_dark_artistry", // 6
+          "grimstroke_spirit_walk", // 7
+          "grimstroke_dark_artistry", // 8
+          "grimstroke_soul_chain", // 9
+          "special_bonus_unique_grimstroke_7", // 10
+          "grimstroke_dark_artistry", // 11
+          "grimstroke_soul_chain", // 12
+          "grimstroke_ink_creature", // 13
+          "grimstroke_ink_creature", // 14
+          "special_bonus_spell_amplify_15", // 15
+          "grimstroke_ink_creature", // 16
+          "special_bonus_attributes", // 17
+          "grimstroke_soul_chain", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_grimstroke_4", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_grimstroke_1", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "flask",
+            "faerie_fire",
+            "enchanted_mango",
+            "branches",
+            "circlet",
+            "sobi_mask",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "arcane_boots",
+            "magic_wand",
+            "ring_of_basilius",
+            "null_talisman",
+          ],
+          mid_game: [
+            "aether_lens",
+            "aghanims_shard",
+            "blink",
+            "glimmer_cape",
+            "ghost",
+            "force_staff",
+          ],
+          late_game: [
+            "ultimate_scepter",
+            "aeon_disk",
+            "ethereal_blade",
+            "octarine_core",
+            "sheepstick",
+          ],
+          situational: ["infused_raindrop", "lotus_orb"],
+          core: ["arcane_boots", "aether_lens", "aghanims_shard"],
+          neutral: [],
+        },
+      },
+    ],
+    ability_tooltips: {
+      grimstroke_soul_chain:
+        "You can skill this spell earlier than suggested if you have a really good combo(Chain Frost, Doom). Otherwise, it is hard to make a great use of this ability.",
+    },
+    item_tooltips: {
+      ward_sentry: "To block or unblock the pull camp.",
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      ring_of_basilius: "If your laning partner also uses a lot of mana early.",
+      infused_raindrop: "Against magical burst.",
+      arcane_boots:
+        "A core item that helps with mana sustain. You can disassemble it and use the Energy Booster for Aether Lens. You can upgrade boots into Tranquil Boots afterwards.",
+      aether_lens:
+        "A core item that allows you to get spells off from further away.",
+      aghanims_shard: "A core item that upgrades Ink Swell.",
+      lotus_orb: "For reflect, dispel and armor.",
+    },
+  },
+
+  Gyrocopter: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640803950,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562334",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "gyrocopter_homing_missile", // 1
+          "gyrocopter_flak_cannon", // 2
+          "gyrocopter_flak_cannon", // 3
+          "gyrocopter_rocket_barrage", // 4
+          "gyrocopter_flak_cannon", // 5
+          "gyrocopter_call_down", // 6
+          "gyrocopter_flak_cannon", // 7
+          "gyrocopter_rocket_barrage", // 8
+          "gyrocopter_rocket_barrage", // 9
+          "special_bonus_unique_gyrocopter_4", // 10
+          "gyrocopter_rocket_barrage", // 11
+          "gyrocopter_call_down", // 12
+          "gyrocopter_homing_missile", // 13
+          "gyrocopter_homing_missile", // 14
+          "special_bonus_unique_gyrocopter_2", // 15
+          "gyrocopter_homing_missile", // 16
+          "special_bonus_attributes", // 17
+          "gyrocopter_call_down", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_movement_speed_30", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_gyrocopter_1", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "branches",
+            "slippers",
+            "faerie_fire",
+            "magic_stick",
+          ],
+          early_game: [
+            "power_treads",
+            "magic_wand",
+            "wraith_band",
+            "falcon_blade",
+          ],
+          mid_game: [
+            "lesser_crit",
+            "ultimate_scepter",
+            "dragon_lance",
+            "sange_and_yasha",
+          ],
+          late_game: ["satanic", "greater_crit", "skadi", "butterfly"],
+          situational: [
+            "infused_raindrop",
+            "black_king_bar",
+            "monkey_king_bar",
+            "silver_edge",
+            "mjollnir",
+          ],
+          core: ["power_treads", "lesser_crit", "ultimate_scepter", "satanic"],
+          neutral: [
+            "possessed_mask",
+            "unstable_wand",
+            "grove_bow",
+            "quicksilver_amulet",
+            "paladin_sword",
+            "mind_breaker",
+            "the_leveller",
+            "penta_edged_sword",
+            "desolator_2",
+            "ex_machina",
+          ],
+        },
+        ability_tooltips: {
+          gyrocopter_rocket_barrage:
+            "You can optionally skill +2 attributes over this spell.",
+        },
+        item_tooltips: {
+          power_treads:
+            "A core boots upgrade that provides you with attack speed and mana savings through toggling.",
+          dragon_lance:
+            "Can be disasembled for Ogre Axe that can be used for next item.",
+          lesser_crit:
+            "A core item that speeds up your farm. Goes well Aghanim`s Scepter side-gunner.",
+          ultimate_scepter:
+            "A core item that significantly increases your dps. The side-gunner can also fire while you are disabled and all attack modifiers apply as well.",
+          black_king_bar:
+            "Against a lot of disables, magical damage and as a dispel.",
+          satanic:
+            "A core item that provides you with sustain and dispel. Works well with Aghanim`s Scepter.",
+          silver_edge: "For break effect and to reposition.",
+          monkey_king_bar: "Against evasion.",
+          mjollnir: "Great against illusion based heroes.",
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803950,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562334",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "gyrocopter_homing_missile", // 1
+          "gyrocopter_rocket_barrage", // 2
+          "gyrocopter_rocket_barrage", // 3
+          "gyrocopter_homing_missile", // 4
+          "gyrocopter_rocket_barrage", // 5
+          "gyrocopter_call_down", // 6
+          "gyrocopter_rocket_barrage", // 7
+          "gyrocopter_homing_missile", // 8
+          "gyrocopter_homing_missile", // 9
+          "special_bonus_hp_200", // 10
+          "gyrocopter_flak_cannon", // 11
+          "gyrocopter_call_down", // 12
+          "gyrocopter_flak_cannon", // 13
+          "gyrocopter_flak_cannon", // 14
+          "special_bonus_unique_gyrocopter_6", // 15
+          "gyrocopter_flak_cannon", // 16
+          "special_bonus_attributes", // 17
+          "gyrocopter_call_down", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_gyrocopter_3", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_gyrocopter_5", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "flask",
+            "branches",
+            "mango",
+            "faerie_fire",
+            "sobi_mask",
+            "ward_sentry",
+            "ward_observer",
+            "magic_stick",
+          ],
+          early_game: [
+            "ring_of_basilius",
+            "tranquil_boots",
+            "arcane_boots",
+            "medallion_of_courage",
+            "urn_of_shadows",
+          ],
+          mid_game: [
+            "veil_of_discord",
+            "aghanims_shard",
+            "solar_crest",
+            "force_staff",
+            "glimmer_cape",
+            "ghost",
+            "cyclone",
+          ],
+          late_game: ["ethereal_blade", "sheepstick", "refresher"],
+          situational: [
+            "infused_raindrop",
+            "spirit_vessel",
+            "ancient_janggo",
+            "lotus_orb",
+          ],
+          core: ["veil_of_discord", "aghanims_shard"],
+          neutral: [
+            "pogo_stick",
+            "mysterious_hat",
+            "philosophers_stone",
+            "bullwhip",
+            "quickening_charm",
+            "spider_legs",
+            "spy_gadget",
+            "timeless_relic",
+            "force_field",
+            "book_of_shadows",
+          ],
+        },
+        item_tooltips: {
+          spirit_vessel: "Against heavy-healing lineups.",
+          veil_of_discord:
+            "A core item that amplifies your and your team`s spell damage output.",
+          ancient_janggo:
+            "If you are grouping a lot early on and if you have summon-based heroes.",
+          aghanims_shard: "A core item that adds to your damage output.",
+          lotus_orb: "For reflect, dispel and armor.",
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      infused_raindrop: "Against magical burst.",
+    },
+  },
+
+  Hoodwink: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803963,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562407",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "hoodwink_bushwhack", // 1
+          "hoodwink_acorn_shot", // 2
+          "hoodwink_bushwhack", // 3
+          "hoodwink_scurry", // 4
+          "hoodwink_bushwhack", // 5
+          "hoodwink_sharpshooter", // 6
+          "hoodwink_bushwhack", // 7
+          "hoodwink_acorn_shot", // 8
+          "hoodwink_acorn_shot", // 9
+          "special_bonus_unique_hoodwink_bushwhack_cooldown", // 10
+          "hoodwink_acorn_shot", // 11
+          "hoodwink_sharpshooter", // 12
+          "hoodwink_scurry", // 13
+          "hoodwink_scurry", // 14
+          "special_bonus_unique_hoodwink_acorn_shot_bounces", // 15
+          "hoodwink_scurry", // 16
+          "special_bonus_attributes", // 17
+          "hoodwink_sharpshooter", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_hoodwink_sharpshooter_speed", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_hoodwink_sharpshooter_pure_damage", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "blight_stone",
+            "flask",
+            "faerie_fire",
+            "enchanted_mango",
+            "branches",
+            "circlet",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "arcane_boots",
+            "magic_wand",
+            "medallion_of_courage",
+            "urn_of_shadows",
+          ],
+          mid_game: [
+            "aether_lens",
+            "solar_crest",
+            "cyclone",
+            "force_staff",
+            "glimmer_cape",
+            "veil_of_discord",
+            "ghost",
+          ],
+          late_game: [
+            "ultimate_scepter",
+            "octarine_core",
+            "sheepstick",
+            "aeon_disk",
+          ],
+          situational: [
+            "infused_raindrop",
+            "spirit_vessel",
+            "aghanims_shard",
+            "blink",
+            "lotus_orb",
+          ],
+          core: ["arcane_boots", "aether_lens"],
+          neutral: [
+            "keen_optic",
+            "trusty_shovel",
+            "philosophers_stone",
+            "grove_bow",
+            "psychic_headband",
+            "spider_legs",
+            "spy_gadget",
+            "spell_prism",
+            "seer_stone",
+            "book_of_shadows",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_unique_hoodwink_acorn_shot_charges:
+        "You can take this talent on level 25 over the suggested one if you are transitioning into a right-clicker, or the opponents don`t have spell-immune items or heroes(rarely).",
+    },
+    item_tooltips: {
+      ward_sentry: "To block or unblock the pull camp.",
+      magic_stick:
+        "Starr with it if you expect high frequency of spells being used on the lane.",
+      infused_raindrop: "Against magical burst.",
+      arcane_boots:
+        "A core item for mana sustain. Can be disassembled and the Energy Booster can be used for Aether Lens. Boots can upgraded to Tranquil boots afterwards.",
+      spirit_vessel: "Against heavy-healing lineup.",
+      aether_lens: "A core item that extends the cast range of your spells.",
+      lotus_orb: "For reflect, dispel and armor.",
+      blink: "To close the gap and land your combo.",
+    },
+  },
   /*
-	"Enigma": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803897,
-				abilities: [
-					"enigma_demonic_conversion",	// 1
-					"enigma_malefice",	// 2
-					"enigma_demonic_conversion",	// 3
-					"enigma_malefice",	// 4
-					"enigma_demonic_conversion",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","null_talisman","enchanted_mango","clarity","circlet","mantle","sobi_mask","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["arcane_boots","soul_ring","magic_wand","ring_of_basilius"],
-					mid_game:	["blink","black_king_bar","aether_lens","hood_of_defiance","mekansm","guardian_greaves","solar_crest"],
-					late_game:	["refresher","aeon_disk","arcane_blink","octarine_core","travel_boots"],
-					situational:	["infused_raindrop","hand_of_midas","pipe","sphere","aghanims_shard"],
-					core:	["arcane_boots","blink","black_king_bar"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block the pull camps.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner also uses a lot of mana early.",
-			"black_king_bar":	"To be able to channel Black Hole.",
-			"infused_raindrop":	"Against magical burst.",
-			"hand_of_midas":	"If you can get it early.",
-			"sphere":	"Against spell immunity piercing disables that prevent you from channeling Black Hole.",
-			"aghanims_shard":	"For extra control."
-		}
-	},
-	"Faceless Void": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803904,
-				abilities: [
-					"faceless_void_time_walk",	// 1
-					"faceless_void_time_lock",	// 2
-					"faceless_void_time_lock",	// 3
-					"faceless_void_time_dilation",	// 4
-					"faceless_void_time_lock",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","slippers","circlet","faerie_fire","magic_stick"],
-					early_game:	["power_treads","magic_wand","wraith_band"],
-					mid_game:	["maelstrom","sange_and_yasha","mjollnir","manta","diffusal_blade"],
-					late_game:	["skadi","satanic","butterfly"],
-					situational:	["infused_raindrop","hand_of_midas","black_king_bar","aghanims_shard","monkey_king_bar"],
-					core:	["power_treads","maelstrom"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"diffusal_blade":	"Goes well with Manta Style.",
-			"infused_raindrop":	"Against magical burst.",
-			"hand_of_midas":	"If you can get it early.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"aghanims_shard":	"For extra mobility.",
-			"monkey_king_bar":	"Against evasion."
-		}
-	},
-	"Grimstroke": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803941,
-				abilities: [
-					"grimstroke_dark_artistry",	// 1   equals to 'stroke of faith'
-					"grimstroke_spirit_walk",	// 2   equals to 'ink swell'
-					"grimstroke_spirit_walk",	// 3
-					"grimstroke_ink_creature",	// 4   equals to 'phantom's embrace'
-					"grimstroke_spirit_walk",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","faerie_fire","enchanted_mango","ward_observer","ward_sentry","branches","circlet","sobi_mask","magic_stick"],
-					early_game:	["boots","arcane_boots","magic_wand","tranquil_boots","ring_of_basilius","null_talisman"],
-					mid_game:	["aether_lens","aghanims_shard","blink","glimmer_cape","ghost","force_staff"],
-					late_game:	["ultimate_scepter","aeon_disk","ethereal_blade","octarine_core","sheepstick"],
-					situational:	["infused_raindrop","lotus_orb","dagon"],
-					core:	["aether_lens","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner also uses a lot of mana early.",
-			"infused_raindrop":	"Against magical burst.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"dagon":	"For extra burst."
-		}
-	},
-	"Gyrocopter": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803950,
-				abilities: [
-					"gyrocopter_homing_missile",	// 1
-					"gyrocopter_rocket_barrage",	// 2
-					"gyrocopter_rocket_barrage",	// 3
-					"gyrocopter_flak_cannon",	// 4
-					"gyrocopter_flak_cannon",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","slippers","circlet","branches","faerie_fire","magic_stick"],
-					early_game:	["power_treads","magic_wand","wraith_band","ring_of_basilius"],
-					mid_game:	["maelstrom","dragon_lance","ultimate_scepter","sange_and_yasha","lesser_crit"],
-					late_game:	["satanic","butterfly","greater_crit","skadi","mjollnir"],
-					situational:	["infused_raindrop","black_king_bar","monkey_king_bar"],
-					core:	["power_treads","maelstrom","ultimate_scepter","satanic"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"dragon_lance":	"Can be disasembled for Ogre Axe that can be used for next item.",
-			"infused_raindrop":	"Against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"monkey_king_bar":	"Against evasion."
-		}
-	},
-	"Hoodwink": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803963,
-				abilities: [
-					"hoodwink_bushwhack",	// 1
-					"hoodwink_acorn_shot",	// 2
-					"hoodwink_bushwhack",	// 3
-					"hoodwink_scurry",	// 4
-					"hoodwink_bushwhack",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","faerie_fire","blight_stone","branches","circlet","enchanted_mango","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","arcane_boots","tranquil_boots","magic_wand","ring_of_basilius","urn_of_shadows"],
-					mid_game:	["aether_lens","force_staff","solar_crest","glimmer_cape","veil_of_discord","ghost","cyclone","maelstrom","rod_of_atos","gungir"],
-					late_game:	["ultimate_scepter","octarine_core","aeon_disk","kaya"],
-					situational:	["infused_raindrop","spirit_vessel","lotus_orb","blink"],
-					core:	["aether_lens"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner also uses a lot of mana early.",
-			"infused_raindrop":	"Against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"blink":	"To close the gap and land your combo."
-		}
-	},
 	"Huskar": {
 		builds: [
 			{
@@ -4123,7 +4578,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640804017,
-		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957943",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957943",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "juggernaut_blade_fury",
