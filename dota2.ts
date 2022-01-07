@@ -19,6 +19,8 @@ import dota2Heroes from '../../submodules/dota2/dota2Heroes.json'
 import * as DotaLogger from '../../src/utility/log'
 import { channeling_interrupts, silence, root, disables } from './disables'
 import { Transform } from 'stream'
+import { DOTA_COACH_GUIDE_ROLE, DOTA_COACH_ROLE } from '../../submodules/dota2/playerRoles'
+
 
 // Colors for radiant & dire
 export const colorRadiant = '#67dd98' //'#47661f'
@@ -232,6 +234,49 @@ export function getStandardAbilityBuild(h: string): string[] {
 
     /* return copy of array, otherwise recipient can change content of this.laningItemTips */
     return  [...abilityBuild] 
+}
+
+/**
+ * 
+ * @param heroName Localized hero name
+ * @param playerRole
+ * @return null if there is no such build
+ */
+export function getHeroBuild(heroName: string, playerRole: DOTA_COACH_ROLE): HeroBuild {
+/*    heroBuilds
+    MICHEL*/
+    if (!heroBuilds.hasOwnProperty(heroName)) return null
+
+    var role: DOTA_COACH_GUIDE_ROLE = null
+    switch (playerRole) {
+        case DOTA_COACH_ROLE.CARRY: {
+            role = DOTA_COACH_GUIDE_ROLE.CARRY
+            break
+        }
+        case DOTA_COACH_ROLE.MID: {
+            role = DOTA_COACH_GUIDE_ROLE.MID
+            break
+        }
+        case DOTA_COACH_ROLE.OFFLANE: {
+            role = DOTA_COACH_GUIDE_ROLE.OFFLANE
+            break
+        }
+        case DOTA_COACH_ROLE.SOFT_SUPPORT:
+        case DOTA_COACH_ROLE.HARD_SUPPORT: {
+            role = DOTA_COACH_GUIDE_ROLE.SUPPORT
+            break
+        }
+    }
+
+    // Find hero build with right role
+    for (const heroBuild of heroBuilds[heroName].builds) {
+        if (heroBuild.roles.indexOf(role)!=-1) {
+            return heroBuild
+        }
+    }
+
+    // No relevant guide found
+    return null
 }
 
 /**
@@ -855,6 +900,8 @@ export class OpenDotaAPIHero {
   
 
 export namespace hero {
+
+    
     export namespace name {
         //
         // The following names exist:

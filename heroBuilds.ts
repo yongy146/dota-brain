@@ -12,8 +12,10 @@
  * Attention:
  *     - Steam guides can't have the character "'"". Instead we need to use "`"
  * 	   - The order of the talent build needs to be 1, 2, 3 and then 4. Any other order will cause the guide to fail in Dota 2
+ * 
+ * Relevant folder on local PC: D:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
  */
-import { PLAYER_ROLE, STEAM_GUIDE_ROLE } from "./playerRoles";
+import { DOTA_COACH_GUIDE_ROLE, STEAM_GUIDE_ROLE } from "./playerRoles";
 
 /**
  * Data structure for the hero builds of a given hero
@@ -30,9 +32,10 @@ export interface HeroBuilds {
  *
  */
  export interface HeroBuild {
-	roles: PLAYER_ROLE[],          // These roles are used in the Dota Coach App and in title of Steam Guide
-	guide: number, 				   // ID of the steam guide; this ID is provided by Dota 2
-	guide_role?: STEAM_GUIDE_ROLE, // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
+	roles: DOTA_COACH_GUIDE_ROLE[],      // These roles are used in the Dota Coach App and in title of Steam Guide
+	steam_guide_id: number, 		     // ID of the steam guide; this ID is provided by Dota 2
+	steam_guide_link: string, 		     // Link to web buids
+	steam_guide_role?: STEAM_GUIDE_ROLE, // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
 	abilities: string[]
 	ability_tooltips?: Tooltips,
 	items: ItemBuild,
@@ -62,9 +65,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Abaddon: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640698444,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640698444,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698376898",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "abaddon_aphotic_shield",
           "abaddon_frostmourne" /* equals to 'curse of avernus' */,
@@ -166,9 +170,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Alchemist: {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY, PLAYER_ROLE.MID],
-        guide: 1640719685,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640719685,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "alchemist_goblins_greed",
           "alchemist_acid_spray",
@@ -278,9 +283,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Ancient Apparition": {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640719709,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640719709,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "ancient_apparition_chilling_touch",
           "ancient_apparition_cold_feet",
@@ -368,9 +374,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Anti-Mage": {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY],
-        guide: 1640719725,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640719725,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "antimage_mana_break",
           "antimage_blink",
@@ -479,9 +486,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Arc Warden": {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY, PLAYER_ROLE.MID],
-        guide: 1640719743,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640719743,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377376",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "arc_warden_spark_wraith",
           "arc_warden_flux",
@@ -583,9 +591,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Axe: {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640802946,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640802946,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915204",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "axe_battle_hunger",
           "axe_counter_helix",
@@ -684,9 +693,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Bane: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803052,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803052,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "bane_brain_sap",
           "bane_nightmare",
@@ -779,9 +789,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Batrider: {
     builds: [
       {
-        roles: [PLAYER_ROLE.MID, PLAYER_ROLE.OFFLANE],
-        guide: 1640803569,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803569,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "batrider_sticky_napalm",
           "batrider_firefly",
@@ -879,9 +890,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Beastmaster: {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803579,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803579,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "beastmaster_call_of_the_wild_boar",
           "beastmaster_inner_beast",
@@ -982,9 +994,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Bloodseeker: {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY],
-        guide: 1640803590,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640803590,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "bloodseeker_blood_bath",
           "bloodseeker_thirst",
@@ -1060,9 +1073,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
       },
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1641224485,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1641224485,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2706431682",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "bloodseeker_blood_bath",
           "bloodseeker_thirst",
@@ -1181,9 +1195,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Bounty Hunter": {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803622,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803622,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915719",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "bounty_hunter_jinada",
           "bounty_hunter_wind_walk",
@@ -1287,9 +1302,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Brewmaster: {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803632,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803632,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915806",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "brewmaster_thunder_clap",
           "brewmaster_cinder_brew",
@@ -1380,9 +1396,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Bristleback: {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803643,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803643,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915905",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "bristleback_quill_spray",
           "bristleback_bristleback",
@@ -1495,9 +1512,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Broodmother: {
     builds: [
       {
-        roles: [PLAYER_ROLE.MID, PLAYER_ROLE.OFFLANE],
-        guide: 1640803657,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803657,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "broodmother_spin_web", // 1
           "broodmother_insatiable_hunger", // 2
@@ -1596,9 +1614,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Centaur Warrunner": {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803669,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803669,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916073",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "centaur_hoof_stomp", // 1
           "centaur_return", // 2
@@ -1694,9 +1713,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Chaos Knight": {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY],
-        guide: 1640803680,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640803680,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916165",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
           "chaos_knight_chaos_strike", // 2
@@ -1769,9 +1789,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
       },
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1641361683,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1641361683,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2708440963",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
           "chaos_knight_reality_rift", // 2
@@ -1865,9 +1886,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Chen: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803695,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803695,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916263",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "chen_holy_persuasion", // 1
           "chen_divine_favor", // 2
@@ -1955,9 +1977,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Clinkz: {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY],
-        guide: 1640803707,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640803707,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916348",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "clinkz_searing_arrows", // 1
           "clinkz_strafe", // 2
@@ -2050,9 +2073,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Clockwerk: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803718,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803718,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "rattletrap_battery_assault", // 1
           "rattletrap_power_cogs", // 2
@@ -2148,9 +2172,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Crystal Maiden": {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803727,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803727,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916517",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "crystal_maiden_crystal_nova", // 1
           "crystal_maiden_brilliance_aura", // 2
@@ -2258,9 +2283,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Dark Seer": {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803737,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803737,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916602",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "dark_seer_ion_shell", // 1
           "dark_seer_vacuum", // 2
@@ -2368,9 +2394,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Dark Willow": {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803745,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803745,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916714",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dark_willow_bramble_maze", // 1
           "dark_willow_shadow_realm", // 2
@@ -2470,9 +2497,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Dawnbreaker: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803756,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803756,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917167",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dawnbreaker_fire_wreath", // 1
           "dawnbreaker_celestial_hammer", // 2   equals to 'starbreaker'
@@ -2554,9 +2582,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Dazzle: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803766,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803766,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917255",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dazzle_poison_touch", // 1
           "dazzle_shadow_wave", // 2
@@ -2649,9 +2678,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Death Prophet": {
     builds: [
       {
-        roles: [PLAYER_ROLE.MID, PLAYER_ROLE.OFFLANE],
-        guide: 1640803776,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803776,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "death_prophet_carrion_swarm", // 1
           "death_prophet_spirit_siphon", // 2
@@ -2755,9 +2785,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Disruptor: {
     builds: [
       {
-        roles: [PLAYER_ROLE.SUPPORT],
-        guide: 1640803786,
-        guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803786,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "disruptor_thunder_strike", // 1
           "disruptor_kinetic_field", // 2
@@ -2845,9 +2876,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Doom: {
     builds: [
       {
-        roles: [PLAYER_ROLE.OFFLANE],
-        guide: 1640803798,
-        guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803798,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561417",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "doom_bringer_devour", // 1
           "doom_bringer_scorched_earth", // 2
@@ -2937,9 +2969,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Dragon Knight": {
     builds: [
       {
-        roles: [PLAYER_ROLE.MID, PLAYER_ROLE.OFFLANE],
-        guide: 1640803808,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640803808,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "dragon_knight_breathe_fire", // 1
           "dragon_knight_dragon_blood", // 2
@@ -3028,7 +3061,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803817,
+				steam_guide_id: 1640803817,
 				abilities: [
 					"drow_ranger_frost_arrows",	// 1
 					"drow_ranger_multishot",	// 2
@@ -3081,7 +3114,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803831,
+				steam_guide_id: 1640803831,
 				abilities: [
 					"earth_spirit_rolling_boulder",	// 1
 					"earth_spirit_boulder_smash",	// 2
@@ -3136,7 +3169,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803845,
+				steam_guide_id: 1640803845,
 				abilities: [
 					"earthshaker_fissure",	// 1
 					"earthshaker_enchant_totem",	// 2
@@ -3187,7 +3220,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803855,
+				steam_guide_id: 1640803855,
 				abilities: [
 					"elder_titan_ancestral_spirit",	// 1
 					"elder_titan_echo_stomp",	// 2
@@ -3240,7 +3273,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803867,
+				steam_guide_id: 1640803867,
 				abilities: [
 					"ember_spirit_flame_guard",	// 1
 					"ember_spirit_sleight_of_fist",	// 2
@@ -3293,7 +3326,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803881,
+				steam_guide_id: 1640803881,
 				abilities: [
 					"enchantress_enchant",	// 1
 					"enchantress_impetus",	// 2
@@ -3348,7 +3381,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803897,
+				steam_guide_id: 1640803897,
 				abilities: [
 					"enigma_demonic_conversion",	// 1
 					"enigma_malefice",	// 2
@@ -3404,7 +3437,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803904,
+				steam_guide_id: 1640803904,
 				abilities: [
 					"faceless_void_time_walk",	// 1
 					"faceless_void_time_lock",	// 2
@@ -3459,7 +3492,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803941,
+				steam_guide_id: 1640803941,
 				abilities: [
 					"grimstroke_dark_artistry",	// 1   equals to 'stroke of faith'
 					"grimstroke_spirit_walk",	// 2   equals to 'ink swell'
@@ -3513,7 +3546,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803950,
+				steam_guide_id: 1640803950,
 				abilities: [
 					"gyrocopter_homing_missile",	// 1
 					"gyrocopter_rocket_barrage",	// 2
@@ -3566,7 +3599,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803963,
+				steam_guide_id: 1640803963,
 				abilities: [
 					"hoodwink_bushwhack",	// 1
 					"hoodwink_acorn_shot",	// 2
@@ -3621,7 +3654,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803974,
+				steam_guide_id: 1640803974,
 				abilities: [
 					"huskar_burning_spear",	// 1
 					"huskar_berserkers_blood",	// 2
@@ -3674,7 +3707,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803984,
+				steam_guide_id: 1640803984,
 				abilities: [
 					"invoker_exort",	// 1
 					"invoker_quas",	// 2
@@ -3733,7 +3766,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640803993,
+				steam_guide_id: 1640803993,
 				abilities: [
 					"wisp_tether",	// 1
 					"wisp_overcharge",	// 2
@@ -3787,7 +3820,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804005,
+				steam_guide_id: 1640804005,
 				abilities: [
 					"jakiro_dual_breath",	// 1
 					"jakiro_liquid_fire",	// 2
@@ -3839,9 +3872,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Juggernaut: {
     builds: [
       {
-        roles: [PLAYER_ROLE.CARRY],
-        guide: 1640804017,
-        guide_role: STEAM_GUIDE_ROLE.CORE,
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804017,
+		steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957943",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "juggernaut_blade_fury",
           "juggernaut_blade_dance",
@@ -3963,7 +3997,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804026,
+				steam_guide_id: 1640804026,
 				abilities: [
 					"keeper_of_the_light_illuminate",	// 1  "keeper_of_the_light_radiant_bind" equals to 'solar bind'
 					"keeper_of_the_light_chakra_magic",	// 2
@@ -4023,7 +4057,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804039,
+				steam_guide_id: 1640804039,
 				abilities: [
 					"kunkka_tidebringer",	// 1
 					"kunkka_torrent",	// 2
@@ -4092,7 +4126,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1606573292,
+				steam_guide_id: 1606573292,
 				abilities: [
 					"legion_commander_overwhelming_odds",	// 1
 					"legion_commander_moment_of_courage",	// 2
@@ -4150,7 +4184,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804061,
+				steam_guide_id: 1640804061,
 				abilities: [
 					"leshrac_split_earth",	// 1
 					"leshrac_lightning_storm",	// 2
@@ -4214,7 +4248,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804073,
+				steam_guide_id: 1640804073,
 				abilities: [
 					"lich_frost_nova",	// 1
 					"lich_frost_shield",	// 2
@@ -4269,7 +4303,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804081,
+				steam_guide_id: 1640804081,
 				abilities: [
 					"life_stealer_feast",	// 1
 					"life_stealer_ghoul_frenzy",	// 2
@@ -4325,7 +4359,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804097,
+				steam_guide_id: 1640804097,
 				abilities: [
 					"lina_light_strike_array",	// 1
 					"lina_fiery_soul",	// 2
@@ -4396,7 +4430,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804104,
+				steam_guide_id: 1640804104,
 				abilities: [
 					"lion_impale",	// 1
 					"lion_mana_drain",	// 2
@@ -4449,7 +4483,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804115,
+				steam_guide_id: 1640804115,
 				abilities: [
 					"lone_druid_spirit_bear",	// 1
 					"lone_druid_spirit_link",	// 2
@@ -4519,7 +4553,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804126,
+				steam_guide_id: 1640804126,
 				abilities: [
 					"luna_lunar_blessing",	// 1   "luna_moon_glaive" equals to 'moon glaives'
 					"luna_lucent_beam",	// 2
@@ -4574,7 +4608,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804136,
+				steam_guide_id: 1640804136,
 				abilities: [
 					"lycan_summon_wolves",	// 1
 					"lycan_feral_impulse",	// 2
@@ -4644,7 +4678,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804148,
+				steam_guide_id: 1640804148,
 				abilities: [
 					"magnataur_shockwave",	// 1
 					"magnataur_skewer",	// 2
@@ -4721,7 +4755,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804165,
+				steam_guide_id: 1640804165,
 				abilities: [
 					"marci_companion_run",	// 1	equals to rebound
 					"marci_grapple",		// 2	equals to dispose
@@ -4793,7 +4827,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804174,
+				steam_guide_id: 1640804174,
 				abilities: [
 					"mars_gods_rebuke",	// 1
 					"mars_spear",	// 2
@@ -4848,7 +4882,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804184,
+				steam_guide_id: 1640804184,
 				abilities: [
 					"medusa_mystic_snake",	// 1
 					"medusa_mana_shield",	// 2
@@ -4905,7 +4939,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804195,
+				steam_guide_id: 1640804195,
 				abilities: [
 					"meepo_poof",	// 1
 					"meepo_ransack",	// 2
@@ -4955,7 +4989,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804207,
+				steam_guide_id: 1640804207,
 				abilities: [
 					"mirana_arrow",	// 1
 					"mirana_leap",	// 2
@@ -5011,7 +5045,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804218,
+				steam_guide_id: 1640804218,
 				abilities: [
 					"monkey_king_boundless_strike",	// 1
 					"monkey_king_jingu_mastery",	// 2
@@ -5069,7 +5103,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804228,
+				steam_guide_id: 1640804228,
 				abilities: [
 					"morphling_morph_agi",	// 1
 					"morphling_waveform",	// 2
@@ -5126,7 +5160,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804237,
+				steam_guide_id: 1640804237,
 				abilities: [
 					"naga_siren_mirror_image",	// 1
 					"naga_siren_rip_tide",	// 2
@@ -5181,7 +5215,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804255,
+				steam_guide_id: 1640804255,
 				abilities: [
 					"furion_force_of_nature",	// 1
 					"furion_teleportation",	// 2
@@ -5256,7 +5290,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804267,
+				steam_guide_id: 1640804267,
 				abilities: [
 					"necrolyte_death_pulse",		// 1
 					"necrolyte_heartstopper_aura",	// 2
@@ -5316,7 +5350,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804283,
+				steam_guide_id: 1640804283,
 				abilities: [
 					"night_stalker_void",	// 1
 					"night_stalker_hunter_in_the_night",	// 2
@@ -5373,7 +5407,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804295,
+				steam_guide_id: 1640804295,
 				abilities: [
 					"nyx_assassin_impale",	// 1
 					"nyx_assassin_spiked_carapace",	// 2
@@ -5427,7 +5461,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804305,
+				steam_guide_id: 1640804305,
 				abilities: [
 					"ogre_magi_ignite",	// 1
 					"ogre_magi_fireblast",	// 2
@@ -5484,7 +5518,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804315,
+				steam_guide_id: 1640804315,
 				abilities: [
 					"omniknight_purification",	// 1
 					"omniknight_repel",	// 2
@@ -5549,7 +5583,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804325,
+				steam_guide_id: 1640804325,
 				abilities: [
 					"oracle_fortunes_end",	// 1
 					"oracle_purifying_flames",	// 2
@@ -5604,7 +5638,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 0,
+				steam_guide_id: 0,
 				abilities: [
 					"obsidian_destroyer_arcane_orb",	// 1
 					"obsidian_destroyer_equilibrium",	// 2
@@ -5659,7 +5693,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804346,
+				steam_guide_id: 1640804346,
 				abilities: [
 					"pangolier_shield_crash",	// 1
 					"pangolier_swashbuckle",	// 2
@@ -5720,7 +5754,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804354,
+				steam_guide_id: 1640804354,
 				abilities: [
 					"phantom_assassin_stifling_dagger",	// 1
 					"phantom_assassin_phantom_strike",	// 2
@@ -5776,7 +5810,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804368,
+				steam_guide_id: 1640804368,
 				abilities: [
 					"phantom_lancer_spirit_lance",	// 1
 					"phantom_lancer_phantom_edge",	// 2
@@ -5830,7 +5864,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804378,
+				steam_guide_id: 1640804378,
 				abilities: [
 					"phoenix_fire_spirits",	// 1
 					"phoenix_icarus_dive",	// 2
@@ -5886,7 +5920,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804386,
+				steam_guide_id: 1640804386,
 				abilities: [
 					"puck_illusory_orb",	// 1
 					"puck_phase_shift",	// 2
@@ -5940,7 +5974,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804395,
+				steam_guide_id: 1640804395,
 				abilities: [
 					"pudge_meat_hook",	// 1
 					"pudge_rot",	// 2
@@ -5994,7 +6028,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804407,
+				steam_guide_id: 1640804407,
 				abilities: [
 					"pugna_nether_blast",	// 1
 					"pugna_decrepify",	// 2
@@ -6050,7 +6084,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804415,
+				steam_guide_id: 1640804415,
 				abilities: [
 					"queenofpain_scream_of_pain",	// 1
 					"queenofpain_shadow_strike",	// 2
@@ -6102,7 +6136,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804423,
+				steam_guide_id: 1640804423,
 				abilities: [
 					"razor_static_link",	// 1
 					"razor_plasma_field",	// 2
@@ -6164,7 +6198,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804432,
+				steam_guide_id: 1640804432,
 				abilities: [
 					"riki_blink_strike",	// 1
 					"riki_tricks_of_the_trade",	// 2
@@ -6220,7 +6254,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804443,
+				steam_guide_id: 1640804443,
 				abilities: [
 					"rubick_fade_bolt",	// 1
 					"rubick_telekinesis",	// 2
@@ -6274,7 +6308,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804451,
+				steam_guide_id: 1640804451,
 				abilities: [
 					"sandking_caustic_finale",	// 1
 					"sandking_burrowstrike",	// 2
@@ -6327,7 +6361,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804460,
+				steam_guide_id: 1640804460,
 				abilities: [
 					"shadow_demon_disruption",	// 1
 					"shadow_demon_shadow_poison",	// 2
@@ -6382,7 +6416,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804468,
+				steam_guide_id: 1640804468,
 				abilities: [
 					"nevermore_shadowraze1",	// 1
 					"nevermore_necromastery",	// 2
@@ -6451,7 +6485,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804478,
+				steam_guide_id: 1640804478,
 				abilities: [
 					"shadow_shaman_ether_shock",	// 1
 					"shadow_shaman_shackles",	// 2
@@ -6505,7 +6539,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804488,
+				steam_guide_id: 1640804488,
 				abilities: [
 					"silencer_glaives_of_wisdom",	// 1
 					"silencer_curse_of_the_silent",	// 2
@@ -6559,7 +6593,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804496,
+				steam_guide_id: 1640804496,
 				abilities: [
 					"skywrath_mage_concussive_shot",	// 1
 					"skywrath_mage_arcane_bolt",	// 2
@@ -6614,7 +6648,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804505,
+				steam_guide_id: 1640804505,
 				abilities: [
 					"slardar_slithereen_crush",	// 1
 					"slardar_bash",	// 2
@@ -6668,7 +6702,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804517,
+				steam_guide_id: 1640804517,
 				abilities: [
 					"slark_essence_shift",	// 1
 					"slark_pounce",	// 2
@@ -6727,7 +6761,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804525,
+				steam_guide_id: 1640804525,
 				abilities: [
 					"snapfire_scatterblast",	// 1
 					"snapfire_firesnap_cookie",	// 2
@@ -6781,7 +6815,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804535,
+				steam_guide_id: 1640804535,
 				abilities: [
 					"sniper_shrapnel",	// 1
 					"sniper_headshot",	// 2
@@ -6860,7 +6894,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804547,
+				steam_guide_id: 1640804547,
 				abilities: [
 					"spectre_spectral_dagger",	// 1
 					"spectre_dispersion",	// 2
@@ -6918,7 +6952,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804560,
+				steam_guide_id: 1640804560,
 				abilities: [
 					"spirit_breaker_charge_of_darkness",	// 1
 					"spirit_breaker_greater_bash",	// 2
@@ -6976,7 +7010,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804570,
+				steam_guide_id: 1640804570,
 				abilities: [
 					"storm_spirit_static_remnant",	// 1
 					"storm_spirit_overload",	// 2
@@ -7030,7 +7064,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804579,
+				steam_guide_id: 1640804579,
 				abilities: [
 					"sven_storm_bolt",	// 1
 					"sven_warcry",	// 2
@@ -7085,7 +7119,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804587,
+				steam_guide_id: 1640804587,
 				abilities: [
 					"techies_suicide",	// 1
 					"techies_land_mines",	// 2
@@ -7139,7 +7173,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804595,
+				steam_guide_id: 1640804595,
 				abilities: [
 					"templar_assassin_psi_blades",	// 1
 					"templar_assassin_refraction",	// 2
@@ -7196,7 +7230,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804604,
+				steam_guide_id: 1640804604,
 				abilities: [
 					"terrorblade_reflection",	// 1
 					"terrorblade_metamorphosis",	// 2
@@ -7252,7 +7286,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804619,
+				steam_guide_id: 1640804619,
 				abilities: [
 					"tidehunter_anchor_smash",	// 1
 					"tidehunter_gush",	// 2
@@ -7304,7 +7338,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804634,
+				steam_guide_id: 1640804634,
 				abilities: [
 					"shredder_whirling_death",	// 1
 					"shredder_reactive_armor",	// 2
@@ -7357,7 +7391,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804644,
+				steam_guide_id: 1640804644,
 				abilities: [
 					"tinker_heat_seeking_missile",	// 1
 					"tinker_laser",	// 2
@@ -7409,7 +7443,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804671,
+				steam_guide_id: 1640804671,
 				abilities: [
 					"tiny_tree_grab",	// 1
 					"tiny_avalanche",	// 2
@@ -7478,7 +7512,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804657,
+				steam_guide_id: 1640804657,
 				abilities: [
 					"treant_natures_grasp",	// 1
 					"treant_leech_seed",	// 2
@@ -7532,7 +7566,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804682,
+				steam_guide_id: 1640804682,
 				abilities: [
 					"troll_warlord_whirling_axes_ranged",	// 1
 					"troll_warlord_berserkers_rage",	// 2
@@ -7588,7 +7622,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804698,
+				steam_guide_id: 1640804698,
 				abilities: [
 					"tusk_tag_team",	// 1
 					"tusk_ice_shards",	// 2
@@ -7645,7 +7679,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804708,
+				steam_guide_id: 1640804708,
 				abilities: [
 					"abyssal_underlord_firestorm",	// 1
 					"abyssal_underlord_atrophy_aura",	// 2
@@ -7698,7 +7732,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804718,
+				steam_guide_id: 1640804718,
 				abilities: [
 					"undying_decay",	// 1
 					"undying_soul_rip",	// 2
@@ -7753,7 +7787,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804726,
+				steam_guide_id: 1640804726,
 				abilities: [
 					"ursa_fury_swipes",	// 1
 					"ursa_earthshock",	// 2
@@ -7809,7 +7843,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804736,
+				steam_guide_id: 1640804736,
 				abilities: [
 					"vengefulspirit_magic_missile",	// 1
 					"vengefulspirit_wave_of_terror",	// 2
@@ -7864,7 +7898,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804752,
+				steam_guide_id: 1640804752,
 				abilities: [
 					"venomancer_poison_sting",	// 1
 					"venomancer_venomous_gale",	// 2
@@ -7924,7 +7958,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804761,
+				steam_guide_id: 1640804761,
 				abilities: [
 					"viper_nethertoxin",	// 1
 					"viper_poison_attack",	// 2
@@ -7982,7 +8016,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804769,
+				steam_guide_id: 1640804769,
 				abilities: [
 					"visage_grave_chill",	// 1
 					"visage_gravekeepers_cloak",	// 2
@@ -8050,7 +8084,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804780,
+				steam_guide_id: 1640804780,
 				abilities: [
 					"void_spirit_resonant_pulse",	// 1
 					"void_spirit_aether_remnant",	// 2
@@ -8104,7 +8138,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804789,
+				steam_guide_id: 1640804789,
 				abilities: [
 					"warlock_shadow_word",	// 1
 					"warlock_fatal_bonds",	// 2
@@ -8157,7 +8191,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804801,
+				steam_guide_id: 1640804801,
 				abilities: [
 					"weaver_shukuchi",	// 1
 					"weaver_geminate_attack",	// 2
@@ -8213,7 +8247,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804812,
+				steam_guide_id: 1640804812,
 				abilities: [
 					"windrunner_windrun",	// 1
 					"windrunner_shackleshot",	// 2
@@ -8283,7 +8317,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804822,
+				steam_guide_id: 1640804822,
 				abilities: [
 					"winter_wyvern_arctic_burn",	// 1
 					"winter_wyvern_splinter_blast",	// 2
@@ -8339,7 +8373,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804830,
+				steam_guide_id: 1640804830,
 				abilities: [
 					"witch_doctor_paralyzing_cask",	// 1
 					"witch_doctor_maledict",	// 2
@@ -8395,7 +8429,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804840,
+				steam_guide_id: 1640804840,
 				abilities: [
 					"skeleton_king_hellfire_blast",	// 1
 					"skeleton_king_mortal_strike",	// 2
@@ -8450,7 +8484,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 		builds: [
 			{
 				roles: [],
-				guide: 1640804850,
+				steam_guide_id: 1640804850,
 				abilities: [
 					"zuus_arc_lightning",	// 1
 					"zuus_static_field",	// 2

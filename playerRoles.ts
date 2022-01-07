@@ -4,8 +4,8 @@
 import { storageItems } from '../../consts'
 
 
-// Steam Guide Rolse
-export enum STEAM_GUIDE_ROLE {
+// Steam Guide Roles
+export enum STEAM_GUIDE_ROLE {  // <None> is treated by not providing any role
     CORE = "#DOTA_HeroGuide_Role_Core",
     OFFLANE = "#DOTA_HeroGuide_Role_OffLane",
     SUPPORT = "#DOTA_HeroGuide_Role_Support",
@@ -14,33 +14,44 @@ export enum STEAM_GUIDE_ROLE {
     ROAMER = "#DOTA_HeroGuide_Role_Roamer"
 }
 
-export enum PLAYER_ROLE {
-    CARRY = "Carry",
-    MID = "Mid",
-    SUPPORT = "Support",
-    OFFLANE = "Offlane"
+// Roles used for the Dota Coach guides
+export enum DOTA_COACH_GUIDE_ROLE {
+    CARRY   = "carry",
+    MID     = "mid",
+    OFFLANE = "offlane",
+    SUPPORT = "support"
+}
+
+// Roles as used by the Dota Coach app
+export enum DOTA_COACH_ROLE {
+    CARRY        = 'carry',
+    MID          = 'mid',
+    OFFLANE      = 'offlane',
+    SOFT_SUPPORT = 'soft_support',
+    HARD_SUPPORT = 'hard_support'
 }
 
 
 // Roles stored in localSotrage / isPlayerSupport
-export const HARD_SUPPORT = 'Hard Support'
+/*export const HARD_SUPPORT = 'Hard Support'
 export const SOFT_SUPPORT = 'Soft Support'
 export const SAFE_LANE = 'Safe lane'
 export const OFFLANE = 'Offlane'
-export const MID_LANE = 'Mid Lane'
+export const MID_LANE = 'Mid Lane'*/
 
-export const ROLES = ['safeLane', 'midLane', 'offlane', 'softSupport', 'hardSupport'] // used for HTML IDs and to reference files
-export const ROLE_NAMES = {
+/*export const ROLES = [
+    'safeLane', 'midLane', 'offlane', 'softSupport', 'hardSupport'] // used for HTML IDs and to reference files*/
+/*export const ROLE_NAMES = {
     'safeLane': "Safe Lane",
     'midLane': "Mid Lane",
     'offlane': "Offlane",
     'softSupport': "Soft Support",
     'hardSupport': "Hard Support"
-}
+}*/
 
 //export const IMG_PATH = '../img/roles/'
 
-export function getRoleFullName(role: string) {
+/*export function getRoleFullName(role: string) {
     switch (role) {
         case 'safeLane': {
             return SAFE_LANE
@@ -61,14 +72,54 @@ export function getRoleFullName(role: string) {
             return "Error"
         }
     }
+}*/
+
+export function getRoleString(role: DOTA_COACH_ROLE): string {
+    switch (role) {
+        case DOTA_COACH_ROLE.CARRY: {
+            return "Safe Lane"
+        }
+        case DOTA_COACH_ROLE.MID: {
+            return "Mid Lane"
+        }
+        case DOTA_COACH_ROLE.OFFLANE: {
+            return "Offlane"
+        }
+        case DOTA_COACH_ROLE.SOFT_SUPPORT: {
+            return "Soft Support"
+        }
+        case DOTA_COACH_ROLE.HARD_SUPPORT: {
+            return "Hard Support"
+        }
+    }
+}
+
+export function getRoleImage(role: DOTA_COACH_ROLE): string {
+    switch (role) {
+        case DOTA_COACH_ROLE.CARRY: {
+            return '../img/roles/safeLane.png'
+        }
+        case DOTA_COACH_ROLE.MID: {
+            return '../img/roles/midLane.png'
+        }
+        case DOTA_COACH_ROLE.OFFLANE: {
+            return '../img/roles/offlane.png'
+        }
+        case DOTA_COACH_ROLE.SOFT_SUPPORT: {
+            return '../img/roles/softSupport.png'
+        }
+        case DOTA_COACH_ROLE.HARD_SUPPORT: {
+            return '../img/roles/hardSupport.png'
+        }
+    }
 }
 
 
-export function getPlayerRole(): string {
-    return localStorage.getItem(storageItems.playerRole)
+export function getPlayerRole(): DOTA_COACH_ROLE {
+    return localStorage.getItem(storageItems.playerRole) as DOTA_COACH_ROLE
 }
 
-export function setPlayerRole(role: string) {
+export function setPlayerRole(role: DOTA_COACH_ROLE) {
     localStorage.setItem(storageItems.playerRole, role)
 }
 
@@ -76,30 +127,30 @@ export function isPlayerSupport() {
     return isSupport(getPlayerRole())
 }
 
-export function isSupport(role: string) {
+export function isSupport(role: DOTA_COACH_ROLE) {
     return isHardSupport(role) || isSoftSupport(role)
 }
 
-export function isSoftSupport(role: string) {
-    return (role==SOFT_SUPPORT || role=='softSupport')
+export function isSoftSupport(role: DOTA_COACH_ROLE) {
+    return (role==DOTA_COACH_ROLE.SOFT_SUPPORT)
 }
 
-export function isHardSupport(role: string) {
-    return (role==HARD_SUPPORT || role=='hardSupport')
+export function isHardSupport(role: DOTA_COACH_ROLE) {
+    return (role==DOTA_COACH_ROLE.HARD_SUPPORT)
 }
 
-export function isCore(role: string) {
+export function isCore(role: DOTA_COACH_ROLE) {
     return isCarry(role) || isMid(role) || isOfflane(role)
 }
 
-export function isCarry(role: string) {
-    return (role==SAFE_LANE || role=='safeLane')
+export function isCarry(role: DOTA_COACH_ROLE) {
+    return (role==DOTA_COACH_ROLE.CARRY)
 }
 
-export function isMid(role: string) {
-    return (role==MID_LANE || role=='midLane')
+export function isMid(role: DOTA_COACH_ROLE) {
+    return (role==DOTA_COACH_ROLE.MID)
 }
 
-export function isOfflane(role: string) {
-    return (role==OFFLANE || role=='offlane')
+export function isOfflane(role: DOTA_COACH_ROLE) {
+    return (role==DOTA_COACH_ROLE.OFFLANE)
 }
