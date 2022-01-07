@@ -33,12 +33,16 @@ export const HeroGuides = {
     "disruptor":            ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304"],
     "doom_bringer":         ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561417"],
     "dragon_knight":        ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505"],*/
+
+    /* 6.1.2021 
     "drow_ranger":          ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561590"],
     "earth_spirit":         ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561679"],
     "earthshaker":          ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561769"],
     "elder_titan":          ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561834"],
     "ember_spirit":         ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902"],
     "enchantress":          ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968"],
+*/
+
     "enigma":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081"],
     "faceless_void":        ["https://steamcommunity.com/sharedfiles/filedetails/?id=2700562159"],
     "furion":               ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338"],
