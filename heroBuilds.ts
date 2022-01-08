@@ -4536,7 +4536,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ultimate_scepter",
           ],
           neutral: [
-            "item_mysterious_hat",
+            "mysterious_hat",
             "pogo_stick",
             "grove_bow",
             "quicksilver_amulet",
@@ -4611,7 +4611,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: ["hand_of_midas", "travel_boots", "ultimate_scepter", "blink"],
           neutral: [
-            "item_mysterious_hat",
+            "mysterious_hat",
             "pogo_stick",
             "grove_bow",
             "quicksilver_amulet",
