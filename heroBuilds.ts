@@ -4353,119 +4353,307 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To close the gap and land your combo.",
     },
   },
+
+  Huskar: {
+    builds: [
+      {
+        roles: [
+          DOTA_COACH_GUIDE_ROLE.CARRY,
+          DOTA_COACH_GUIDE_ROLE.MID,
+          DOTA_COACH_GUIDE_ROLE.OFFLANE,
+        ],
+        steam_guide_id: 1640803974,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562484",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "huskar_burning_spear", // 1
+          "huskar_berserkers_blood", // 2
+          "huskar_burning_spear", // 3
+          "huskar_inner_fire", // 4
+          "huskar_berserkers_blood", // 5
+          "huskar_life_break", // 6
+          "huskar_berserkers_blood", // 7
+          "huskar_berserkers_blood", // 8
+          "huskar_burning_spear", // 9
+          "huskar_burning_spear", // 10
+          "huskar_inner_fire", // 11
+          "huskar_life_break", // 12
+          "huskar_inner_fire", // 13
+          "huskar_inner_fire", // 14
+          "special_bonus_unique_huskar_3", // 15
+          "special_bonus_unique_huskar_2", // 16
+          "special_bonus_attributes", // 17
+          "huskar_life_break", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_huskar_7", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_huskar_5", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "gauntlets",
+            "faerie_fire",
+            "branches",
+            "ward_observer",
+            "magic_stick",
+          ],
+          early_game: ["armlet", "boots", "bracer", "magic_wand"],
+          mid_game: ["sange", "ultimate_scepter", "dragon_lance"],
+          late_game: ["assault", "satanic", "heart"],
+          situational: [
+            "black_king_bar",
+            "heavens_halberd",
+            "aghanims_shard",
+            "blink",
+            "monkey_king_bar",
+            "silver_edge",
+          ],
+          core: ["armlet", "sange", "ultimate_scepter"],
+          neutral: [
+            "possessed_mask",
+            "unstable_wand",
+            "grove_bow",
+            "misericorde",
+            "paladin_sword",
+            "titan_sliver",
+            "the_leveller",
+            "trickster_cloak",
+            "giants_ring",
+            "fallen_sky",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      huskar_inner_fire:
+        "You can skill this ability on level 1 if you are playing midlane Huskar to secure a creep lasthit on the first wave.",
+      special_bonus_unique_huskar_3:
+        "On level 15, you should take level 15 talent first and then this level 10 talent. The dota client disallows me to indicate this order in the graphics above.",
+    },
+    item_tooltips: {
+      ward_observer:
+        "If you are playing mid Huskar but it is not bad to have vision around your sidelanes as well :) ",
+      magic_stick:
+        "If you expect high frequency of spells being used on the lane.",
+      armlet:
+        "A core item that allows you to activate Berserker`s Blood while farming, doing Roshan or in fights. Helm of Iron Will should be the first component purchased you get most of the time as it solves your hp sustain problems.",
+      sange:
+        "A core item that is standalone good but can be upgraded further. Amplifies the healing and tanks you up.",
+      black_king_bar:
+        "Against a lot of disables, magical damage and as a dispel.",
+      heavens_halberd: "Especially good against ranged right-clickers.",
+      ultimate_scepter:
+        "A core item that provides you with extra reach and a 3s disable upon Life Break landing.",
+      aghanims_shard:
+        "You will usually get this upgrade from second Roshan. It adds an additional layer of survivability and damage mitigation to your hero.",
+      blink:
+        "Allows you to instantly gap close and focus-fire an enemy hero. Can be upgraded to Overwhelming Blink down the road.",
+      monkey_king_bar: "Against evasion and miss chance.",
+      silver_edge: "For break and repositioning.",
+    },
+  },
+
+  Invoker: {
+    builds: [
+      {
+        // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640803984,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "invoker_wex", // 1
+          "invoker_quas", // 2
+          "invoker_quas", // 3
+          "invoker_wex", // 4
+          "invoker_wex", // 5
+          "invoker_quas", // 6
+          "invoker_wex", // 7
+          "invoker_quas", // 8
+          "invoker_wex", // 9
+          "invoker_exort", // 10
+          "invoker_exort", // 11
+          "invoker_exort", // 12
+          "invoker_exort", // 13
+          "invoker_exort", // 14
+          "invoker_exort", // 15
+          "invoker_exort", // 16
+          "invoker_wex", // 17
+          "invoker_wex", // 18
+          "invoker_quas", // 19
+          "special_bonus_unique_invoker_6", // 20
+          "special_bonus_unique_invoker_9", // 21
+          "special_bonus_unique_invoker_5", // 22
+          "invoker_quas", // 23
+          "invoker_quas", // 24
+          "special_bonus_unique_invoker_2", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "mantle",
+            "faerie_fire",
+            "circlet",
+            "branches",
+            "ward_observer",
+            "magic_stick",
+          ],
+          early_game: [
+            "null_talisman",
+            "urn_of_shadows",
+            "boots",
+            "hand_of_midas",
+            "magic_wand",
+          ],
+          mid_game: [
+            "travel_boots",
+            "ultimate_scepter",
+            "witch_blade",
+            "orchid",
+            "force_staff",
+          ],
+          late_game: ["sheepstick", "refresher", "octarine_core"],
+          situational: [
+            "infused_raindrop",
+            "spirit_vessel",
+            "black_king_bar",
+            "blink",
+            "aghanims_shard",
+            "sphere",
+            "aeon_disk",
+          ],
+          core: [
+            "urn_of_shadows",
+            "hand_of_midas",
+            "travel_boots",
+            "ultimate_scepter",
+          ],
+          neutral: [
+            "item_mysterious_hat",
+            "pogo_stick",
+            "grove_bow",
+            "quicksilver_amulet",
+            "quickening_charm",
+            "mind_breaker",
+            "timeless_relic",
+            "spell_prism",
+            "ex_machina",
+            "desolator_2",
+          ],
+        },
+        item_tooltips: {
+          urn_of_shadows: "A core item to proc Cold Snap ticks.",
+          witch_blade: "An alternative way to proc Cold Snap ticks.",
+          spirit_vessel: "Against heavy healing lineup.",
+          blink: "To close the gap and land your spell combo.",
+        },
+      },
+      {
+        // Midlane Quas Exort Invoker build
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640803984,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "invoker_exort", // 1
+          "invoker_quas", // 2
+          "invoker_exort", // 3
+          "invoker_quas", // 4
+          "invoker_exort", // 5
+          "invoker_quas", // 6
+          "invoker_exort", // 7
+          "invoker_wex", // 8
+          "invoker_exort", // 9
+          "invoker_quas", // 10
+          "invoker_exort", // 11
+          "invoker_wex", // 12
+          "invoker_exort", // 13
+          "invoker_wex", // 14
+          "invoker_wex", // 15
+          "invoker_wex", // 16
+          "invoker_wex", // 17
+          "invoker_wex", // 18
+          "invoker_quas", // 19
+          "special_bonus_unique_invoker_6", // 20
+          "special_bonus_unique_invoker_9", // 21
+          "special_bonus_unique_invoker_5", // 22
+          "invoker_quas", // 23
+          "invoker_quas", // 24
+          "special_bonus_unique_invoker_2", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "mantle",
+            "faerie_fire",
+            "circlet",
+            "branches",
+            "ward_observer",
+            "magic_stick",
+          ],
+          early_game: ["hand_of_midas", "boots", "null_talisman", "magic_wand"],
+          mid_game: ["travel_boots", "ultimate_scepter", "blink"],
+          late_game: ["sheepstick", "refresher", "octarine_core"],
+          situational: [
+            "infused_raindrop",
+            "black_king_bar",
+            "aghanims_shard",
+            "sphere",
+            "aeon_disk",
+          ],
+          core: ["hand_of_midas", "travel_boots", "ultimate_scepter", "blink"],
+          neutral: [
+            "item_mysterious_hat",
+            "pogo_stick",
+            "grove_bow",
+            "quicksilver_amulet",
+            "quickening_charm",
+            "mind_breaker",
+            "timeless_relic",
+            "spell_prism",
+            "ex_machina",
+            "desolator_2",
+          ],
+        },
+        item_tooltips: {
+          blink:
+            "A core item that allows you to close the gap and land your spell combo.",
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_unique_invoker_10:
+        "On level 20, take the level 20 talent over this one. The dota 2 client disallows me to indicate that in graphics above. The other Tornado talent can be better than Alacrity one, if you need more control or dispel.",
+      special_bonus_unique_invoker_9:
+        "You can take the Forged Spirit talent if you need to splitpush and extend the game.",
+      special_bonus_unique_invoker_6:
+        "This talent should be taken at level 22.",
+    },
+    item_tooltips: {
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      infused_raindrop: "Against magical burst.",
+      hand_of_midas: "A core item that allows you to scale.",
+      travel_boots: "A core item that allows you to cover the map with ease.",
+      black_king_bar:
+        "Against a lot of disables, magical damage and as a dispel.",
+      ultimate_scepter:
+        "A core item that provides spell-immunity piercring pure damage burst.",
+      aghanims_shard: "For extra AoE damage.",
+      sphere: "Against powerful single-target disables and debuffs.",
+      aeon_disk:
+        "Grants you a second chance to survive and get your spells and items off.",
+    },
+  },
   /*
-	"Huskar": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803974,
-				abilities: [
-					"huskar_burning_spear",	// 1
-					"huskar_berserkers_blood",	// 2
-					"huskar_burning_spear",	// 3
-					"huskar_berserkers_blood",	// 4
-					"huskar_burning_spear",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","faerie_fire","gauntlets","branches","bracer","ward_observer","magic_stick"],
-					early_game:	["bracer","boots","armlet","phase_boots","magic_wand"],
-					mid_game:	["sange","ultimate_scepter","hood_of_defiance","dragon_lance","sange_and_yasha","ghost"],
-					late_game:	["assault","satanic"],
-					situational:	["heavens_halberd","black_king_bar","aghanims_shard","hurricane_pike"],
-					core:	["armlet","sange","satanic"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"aghanims_shard":	"To offset healing and disarm the opponents.",
-			"hurricane_pike":	"To disengage from heroes like Slark and Troll."
-		}
-	},
-	"Invoker": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803984,
-				abilities: [
-					"invoker_exort",	// 1
-					"invoker_quas",	// 2
-					"invoker_exort",	// 3
-					"invoker_quas",	// 4
-					"invoker_exort",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","mantle","faerie_fire","circlet","branches","ward_observer","magic_stick"],
-					early_game:	["null_talisman","urn_of_shadows","boots","hand_of_midas","magic_wand"],
-					mid_game:	["travel_boots","ultimate_scepter","witch_blade","orchid","force_staff"],
-					late_game:	["sheepstick","refresher","octarine_core"],
-					situational:	["infused_raindrop","spirit_vessel","black_king_bar","blink","aeon_disk","aghanims_shard"],
-					core:	["urn_of_shadows","hand_of_midas","travel_boots","ultimate_scepter"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"urn_of_shadows":	"For QW build to proc Cold Snap.",
-			"hand_of_midas":	"Especially for QE build.",
-			"travel_boots":	"Especially for QE build.",
-			"witch_blade":	"For QW build to proc Cold Snap.",
-			"orchid":	"For QW build.",
-			"infused_raindrop":	"Against magical burst.",
-			"spirit_vessel":	"For QW build against heavy healing lineup.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"blink":	"To close the gap and land your spell combo.",
-			"aghanims_shard":	"For extra AoE damage."
-		}
-	},
 	"Io": {
 		builds: [
 			{
