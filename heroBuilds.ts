@@ -36,10 +36,10 @@ export interface HeroBuilds {
  *
  */
 export interface HeroBuild {
-  roles: DOTA_COACH_GUIDE_ROLE[];      // These roles are used in the Dota Coach App and in title of Steam Guide
-  type?: string;                       // Type currently only used for invoker mid (QW & QE)
-  steam_guide_id: number;              // ID of the steam guide; this ID is provided by Dota 2
-  steam_guide_link: string;            // Link to web buids
+  roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
+  type?: string; // Type currently only used for invoker mid (QW & QE)
+  steam_guide_id: number; // ID of the steam guide; this ID is provided by Dota 2
+  steam_guide_link: string; // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   abilities: string[];
   ability_tooltips?: Tooltips;
@@ -845,9 +845,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           early_game: ["boots", "magic_wand", "wind_lace"],
           mid_game: [
             "travel_boots",
-            "blink",
-            "aghanims_shard",
+            "black_king_bar",
             "aether_lens",
+            "aghanims_shard",
+            "blink",
             "force_staff",
             "ghost",
             "cyclone",
@@ -863,11 +864,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ward_observer",
             "bottle",
             "infused_raindrop",
-            "black_king_bar",
             "aeon_disk",
             "sphere",
           ],
-          core: ["travel_boots"],
+          core: ["travel_boots", "black_king_bar", "aghanims_shard"],
           neutral: [
             "mysterious_hat",
             "pogo_stick",
@@ -895,7 +895,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       travel_boots:
         "A core item that allows you to cover the map better when it comes to ganking and farming.",
       black_king_bar:
-        "To be able to get Flaming Lasso off and against a lot of disables, magical damage and as a dispel.",
+        "A core item that allows you to get Flaming Lasso off on a specific target.",
+      aghanims_shard:
+        "A core item that adds to your damage output and control.",
       sphere: "Against single target disables.",
     },
   },
@@ -4562,7 +4564,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "QE",
         steam_guide_id: 1641614689,
-        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "invoker_exort", // 1
