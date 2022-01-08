@@ -36,9 +36,10 @@ export interface HeroBuilds {
  *
  */
 export interface HeroBuild {
-  roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
-  steam_guide_id: number; // ID of the steam guide; this ID is provided by Dota 2
-  steam_guide_link: string; // Link to web buids
+  roles: DOTA_COACH_GUIDE_ROLE[];      // These roles are used in the Dota Coach App and in title of Steam Guide
+  type?: string;                       // Type currently only used for invoker mid (QW & QE)
+  steam_guide_id: number;              // ID of the steam guide; this ID is provided by Dota 2
+  steam_guide_link: string;            // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   abilities: string[];
   ability_tooltips?: Tooltips;
@@ -4464,6 +4465,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        type: "QW",
         steam_guide_id: 1640803984,
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552",
@@ -4558,9 +4560,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       {
         // Midlane Quas Exort Invoker build
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640803984,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552",
+        type: "QE",
+        steam_guide_id: 1641614689,
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "invoker_exort", // 1

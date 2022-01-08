@@ -74,6 +74,41 @@ export const MID_LANE = 'Mid Lane'*/
     }
 }*/
 
+/**
+ * Function used to display role in title of steam guide
+ * @param role 
+ * @returns 
+ */
+export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
+    switch (role) {
+        case DOTA_COACH_GUIDE_ROLE.CARRY: {
+            return "Carry"
+        }
+        case DOTA_COACH_GUIDE_ROLE.MID: {
+            return "Mid"
+        }
+        case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
+            return "Offlane"
+        }
+        case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
+            return "Support"
+        }
+    }
+}
+
+export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
+    var result = ''
+    for (var i=0; i<roles.length; i++) {
+      result += getDotaCoachGuideRoleString(roles[i])
+      if (i<(roles.length-1)) {
+        result += ' & '
+      }
+    }
+
+    return result
+}
+
+
 export function getRoleString(role: DOTA_COACH_ROLE): string {
     switch (role) {
         case DOTA_COACH_ROLE.CARRY: {
