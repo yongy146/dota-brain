@@ -3746,9 +3746,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640803897,
+        steam_guide_id: 1641648688,
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2712384931",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "enigma_demonic_conversion", // 1
@@ -4146,9 +4146,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640803950,
+        steam_guide_id: 1641648786,
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562334",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2712385902",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "gyrocopter_homing_missile", // 1

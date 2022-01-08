@@ -272,6 +272,22 @@ export function getHeroBuild(heroName: string, playerRole: PlayerRoles.DOTA_COAC
     return null
 }
 
+/**
+ * Returns an array with all http links to hero guides.
+ * 
+ * @param heroName Localized hero name
+ * @returns null in case of error
+ */
+export function getHeroGuideLinks(heroName: string): string[] {
+    if (!heroBuilds.hasOwnProperty(heroName)) return []
+
+    var result = []
+    for (const build of heroBuilds[heroName].builds) {
+        result.push(build.steam_guide_link)
+    }
+
+    return result
+}
 
 export function convertDotaCoachGuideRoleToDotaCoachRole(playerRole: PlayerRoles.DOTA_COACH_ROLE) {
     switch (playerRole) {
