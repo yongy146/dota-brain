@@ -36,10 +36,10 @@ export interface HeroBuilds {
  *
  */
 export interface HeroBuild {
-  roles: DOTA_COACH_GUIDE_ROLE[];      // These roles are used in the Dota Coach App and in title of Steam Guide
-  type?: string;                       // Type currently only used for invoker mid (QW & QE)
-  steam_guide_id: number;              // ID of the steam guide; this ID is provided by Dota 2
-  steam_guide_link: string;            // Link to web buids
+  roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
+  type?: string; // Type currently only used for invoker mid (QW & QE)
+  steam_guide_id: number; // ID of the steam guide; this ID is provided by Dota 2
+  steam_guide_link: string; // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   abilities: string[];
   ability_tooltips?: Tooltips;
@@ -845,9 +845,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           early_game: ["boots", "magic_wand", "wind_lace"],
           mid_game: [
             "travel_boots",
-            "blink",
-            "aghanims_shard",
+            "black_king_bar",
             "aether_lens",
+            "aghanims_shard",
+            "blink",
             "force_staff",
             "ghost",
             "cyclone",
@@ -863,11 +864,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ward_observer",
             "bottle",
             "infused_raindrop",
-            "black_king_bar",
             "aeon_disk",
             "sphere",
           ],
-          core: ["travel_boots"],
+          core: ["travel_boots", "black_king_bar", "aghanims_shard"],
           neutral: [
             "mysterious_hat",
             "pogo_stick",
@@ -895,7 +895,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       travel_boots:
         "A core item that allows you to cover the map better when it comes to ganking and farming.",
       black_king_bar:
-        "To be able to get Flaming Lasso off and against a lot of disables, magical damage and as a dispel.",
+        "A core item that allows you to get Flaming Lasso off on a specific target.",
+      aghanims_shard:
+        "A core item that adds to your damage output and control.",
       sphere: "Against single target disables.",
     },
   },
@@ -955,6 +957,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
             "solar_crest",
             "ancient_janggo",
+            "travel_boots",
           ],
           late_game: [
             "assault",
@@ -965,6 +968,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           situational: ["blink", "black_king_bar", "lotus_orb"],
           core: [
             "helm_of_the_dominator",
+            "boots",
             "helm_of_the_overlord",
             "aghanims_shard",
           ],
@@ -994,6 +998,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Solves your HP sustain issues and builds into Helm of the Dominator. Get it as early as possible.",
       helm_of_the_dominator:
         "A core item that synergizes well with the Inner Beast and allows you to push and pick-off heroes. Look to upgrade it to Helm of the Overlord.",
+      boots:
+        "A core item that should be upgraded to Boots of Travel after core items are acquired.",
       aghanims_shard:
         "A core item that improves vision game and adds another disable.",
       ultimate_scepter: "Particularly good against illusion based heroes.",
@@ -1071,7 +1077,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "monkey_king_bar",
             "sphere",
           ],
-          core: ["power_treads", "maelstrom", "sange_and_yasha"],
+          core: ["power_treads", "maelstrom", "sange_and_yasha", "basher"],
           neutral: [
             "possessed_mask",
             "chipped_vest",
@@ -1182,6 +1188,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core farming item that benefits from Bloodrage`s spell amplification.",
       sange_and_yasha:
         "A core item that has mix of defensive and offensive stats but also further speeds you up.",
+      basher:
+        "A core item that procs frequently under Bloodrage buff. Can be upgraded to Abyssal Blade down the road.",
       //   ---------------------
       aghanims_shard:
         "Great against high HP targets, improves your dps and sustain.",
@@ -1192,7 +1200,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "A core item that allows you to control two opponent`s heroes.",
       //   ---------------------
-      dagon: "Benefits from Bloodrage spell amp and acts as Linken's popper.",
+      dagon: "Benefits from Bloodrage spell amp and acts as Linken`s popper.",
       spirit_vessel: "Against heavy healing lineup.",
       cyclone: "For dispel, setup and teleport cancel.",
       black_king_bar:
@@ -1365,7 +1373,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_stick",
           ],
           early_game: ["boots", "urn_of_shadows", "magic_wand", "soul_ring"],
-          mid_game: ["ultimate_scepter", "blink", "aghanims_shard"],
+          mid_game: ["ultimate_scepter", "blink", "aghanims_shard", "travel_boots"],
           late_game: ["refresher", "assault", "vladmir"],
           situational: [
             "hand_of_midas",
@@ -1373,7 +1381,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "black_king_bar",
             "aeon_disk",
           ],
-          core: ["urn_of_shadows", "ultimate_scepter", "blink"],
+          core: ["urn_of_shadows", "boots", "ultimate_scepter", "refresher"],
           neutral: [
             "arcane_ring",
             "pogo_stick",
@@ -1397,16 +1405,20 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       urn_of_shadows: "A core item that activates the Cinder Brew on cast.",
+      boots:
+        "A core item that can be upgraded to Boots of Travels in mid to late-game.",
       hand_of_midas:
         "If you can get it early. Brewmaster is an experience-hungry hero.",
       spirit_vessel: "Against heavy healing lineup.",
       ultimate_scepter:
         "A core item that adds another charge to the Primal Split.",
       blink:
-        "A core item that allows you to initiate the fight and pop Primal Split closer to opponents.",
+        "An item that allows you to initiate the fight and pop Primal Split closer to opponents.",
       aghanims_shard: "For an extra brewling.",
       black_king_bar:
         "To be able to get Primal Split off and against a lot of disables, magical damage and as a dispel.",
+      refresher:
+        "A core item that allows you to have up to 4 Primal Splits when paired with Aghanim`s Scepter.",
       aeon_disk: "To be able to get Primal Split off.",
     },
   },
@@ -1607,7 +1619,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       special_bonus_agility_10:
-        "On level fifteen, take the level fifteen talent before this level ten talent. On level sixteen take this level ten talent. The dota2 client disallows me to indicate that in the leveling table above.",
+        "On level 15, take the level 15 talent before this level 10 talent. On level 16 take this level 10 talent. The dota2 client disallows me to indicate that in the leveling table above.",
     },
     item_tooltips: {
       magic_stick:
@@ -2040,7 +2052,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "quelling_blade",
             "magic_stick",
           ],
-          early_game: ["maelstrom", "boots", "power_treads", "magic_wand"],
+          early_game: ["maelstrom", "power_treads", "magic_wand"],
           mid_game: [
             "falcon_blade",
             "dragon_lance",
@@ -4562,7 +4574,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "QE",
         steam_guide_id: 1641614689,
-        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "invoker_exort", // 1
