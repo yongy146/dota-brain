@@ -957,6 +957,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
             "solar_crest",
             "ancient_janggo",
+            "travel_boots",
           ],
           late_game: [
             "assault",
@@ -967,6 +968,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           situational: ["blink", "black_king_bar", "lotus_orb"],
           core: [
             "helm_of_the_dominator",
+            "boots",
             "helm_of_the_overlord",
             "aghanims_shard",
           ],
@@ -996,6 +998,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Solves your HP sustain issues and builds into Helm of the Dominator. Get it as early as possible.",
       helm_of_the_dominator:
         "A core item that synergizes well with the Inner Beast and allows you to push and pick-off heroes. Look to upgrade it to Helm of the Overlord.",
+      boots:
+        "A core item that should be upgraded to Boots of Travel after core items are acquired.",
       aghanims_shard:
         "A core item that improves vision game and adds another disable.",
       ultimate_scepter: "Particularly good against illusion based heroes.",
@@ -1073,7 +1077,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "monkey_king_bar",
             "sphere",
           ],
-          core: ["power_treads", "maelstrom", "sange_and_yasha"],
+          core: ["power_treads", "maelstrom", "sange_and_yasha", "basher"],
           neutral: [
             "possessed_mask",
             "chipped_vest",
@@ -1184,6 +1188,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core farming item that benefits from Bloodrage`s spell amplification.",
       sange_and_yasha:
         "A core item that has mix of defensive and offensive stats but also further speeds you up.",
+      basher:
+        "A core item that procs frequently under Bloodrage buff. Can be upgraded to Abyssal Blade down the road.",
       //   ---------------------
       aghanims_shard:
         "Great against high HP targets, improves your dps and sustain.",
@@ -1194,7 +1200,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "A core item that allows you to control two opponent`s heroes.",
       //   ---------------------
-      dagon: "Benefits from Bloodrage spell amp and acts as Linken's popper.",
+      dagon: "Benefits from Bloodrage spell amp and acts as Linken`s popper.",
       spirit_vessel: "Against heavy healing lineup.",
       cyclone: "For dispel, setup and teleport cancel.",
       black_king_bar:
@@ -1367,7 +1373,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_stick",
           ],
           early_game: ["boots", "urn_of_shadows", "magic_wand", "soul_ring"],
-          mid_game: ["ultimate_scepter", "blink", "aghanims_shard"],
+          mid_game: ["ultimate_scepter", "blink", "aghanims_shard", "travel_boots"],
           late_game: ["refresher", "assault", "vladmir"],
           situational: [
             "hand_of_midas",
@@ -1375,7 +1381,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "black_king_bar",
             "aeon_disk",
           ],
-          core: ["urn_of_shadows", "ultimate_scepter", "blink"],
+          core: ["urn_of_shadows", "boots", "ultimate_scepter", "refresher"],
           neutral: [
             "arcane_ring",
             "pogo_stick",
@@ -1399,16 +1405,20 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       urn_of_shadows: "A core item that activates the Cinder Brew on cast.",
+      boots:
+        "A core item that can be upgraded to Boots of Travels in mid to late-game.",
       hand_of_midas:
         "If you can get it early. Brewmaster is an experience-hungry hero.",
       spirit_vessel: "Against heavy healing lineup.",
       ultimate_scepter:
         "A core item that adds another charge to the Primal Split.",
       blink:
-        "A core item that allows you to initiate the fight and pop Primal Split closer to opponents.",
+        "An item that allows you to initiate the fight and pop Primal Split closer to opponents.",
       aghanims_shard: "For an extra brewling.",
       black_king_bar:
         "To be able to get Primal Split off and against a lot of disables, magical damage and as a dispel.",
+      refresher:
+        "A core item that allows you to have up to 4 Primal Splits when paired with Aghanim`s Scepter.",
       aeon_disk: "To be able to get Primal Split off.",
     },
   },
@@ -1609,7 +1619,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       special_bonus_agility_10:
-        "On level fifteen, take the level fifteen talent before this level ten talent. On level sixteen take this level ten talent. The dota2 client disallows me to indicate that in the leveling table above.",
+        "On level 15, take the level 15 talent before this level 10 talent. On level 16 take this level 10 talent. The dota2 client disallows me to indicate that in the leveling table above.",
     },
     item_tooltips: {
       magic_stick:
@@ -2042,7 +2052,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "quelling_blade",
             "magic_stick",
           ],
-          early_game: ["maelstrom", "boots", "power_treads", "magic_wand"],
+          early_game: ["maelstrom", "power_treads", "magic_wand"],
           mid_game: [
             "falcon_blade",
             "dragon_lance",
