@@ -5062,7 +5062,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "special_bonus_attributes", // 17
           "pudge_dismember", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_pudge_6", // 20
+          "special_bonus_unique_pudge_5", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -5183,7 +5183,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aether_lens",
             "force_staff",
           ],
-          late_game: ["octarine_core", "overwhelming_blink"],
+          late_game: [
+            "assault",
+            "shivas_guard",
+            "overwhelming_blink",
+            "heart",
+            "octarine_core",
+          ],
           situational: ["crimson_guard", "lotus_orb"],
           core: [
             "phase_boots",
