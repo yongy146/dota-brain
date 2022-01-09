@@ -1,4 +1,5 @@
 /**
+ * 
  * heroBuilds.ts contains the ability and items builds for all Dota 2 heroes. Each hero can have several builds.
  *
  * Rules for abilities:
@@ -8,12 +9,16 @@
  * Consistency requirements for abilities:
  *     - Each ability needs to exist in dota2Abilits.json
  *     - For each ability there needs to be an image named '/img/ability/<ability>_hp1.jpg' (the script dataQuality.ts verifies that)
+ *     - Each item needs to exist in dota2Items.json
  *
  * Attention:
  *     - Steam guides can't have the character "'"". Instead we need to use "`"
  * 	   - The order of the talent build needs to be 1, 2, 3 and then 4. Any other order will cause the guide to fail in Dota 2
  *
  * Relevant folder on local PC: D:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
+ * 
+ * Copyright Dota Coach, 2022
+ * 
  */
 import {
   DOTA_COACH_GUIDE_ROLE,
@@ -5566,7 +5571,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640804395,
         steam_guide_link:
-          "hhttps://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "pudge_meat_hook", // 1
@@ -5654,9 +5659,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804395,
+        steam_guide_id: 1641704881,
         steam_guide_link:
-          "hhttps://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2713377028",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "pudge_meat_hook", // 1

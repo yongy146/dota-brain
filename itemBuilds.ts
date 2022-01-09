@@ -17,7 +17,9 @@
 	I've considered build for main role for that hero.
  */
 
-    export const itemBuilds = {
+// FILE SHALL BE REMOVED FROM REPOSITORY ONCE ALEX NO LONGER NEEDS IT FOR heroBuilds.ts (9.1.2022)
+
+    export const itemBuildsDEPRECATED = {
         // 1. Pos 5
         "Abaddon": {
             starting: [{item: "tango"}, {item: "flask" /* salve */}, {item: "enchanted_mango"}, {item: "faerie_fire"}, {item: "branches"}, {item: "ward_observer"}, {item: "ward_sentry", info: "To block or unblock the pull camp."}, {item: "magic_stick", info: "If you expect high frequency of spells being used on the lane."}, {item: "orb_of_venom", info: "If you see yourself being able to hit the opponents on the lane often."}, {item: "wind_lace", info: "For extra mobility and if you are planning to go for Tranquil Boots."}],
