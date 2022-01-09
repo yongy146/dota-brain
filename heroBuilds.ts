@@ -4673,114 +4673,204 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Grants you a second chance to survive and get your spells and items off.",
     },
   },
-  /*
-	"Io": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640803993,
-				abilities: [
-					"wisp_tether",	// 1
-					"wisp_overcharge",	// 2
-					"wisp_overcharge",	// 3
-					"wisp_tether",	// 4
-					"wisp_overcharge",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","faerie_fire","headdress","branches","ring_of_regen","bracer","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["magic_wand","soul_ring","bottle","urn_of_shadows","ring_of_basilius"],
-					mid_game:	["mekansm","holy_locket","glimmer_cape","ghost","hood_of_defiance","solar_crest"],
-					late_game:	["aeon_disk","heart"],
-					situational:	["infused_raindrop","pipe","lotus_orb","aghanims_shard"],
-					core:	["mekansm"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner also uses a lot of mana early.",
-			"infused_raindrop":	"Against magical burst.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"aghanims_shard":	"For extra control."
-		}
-	},
-	"Jakiro": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804005,
-				abilities: [
-					"jakiro_dual_breath",	// 1
-					"jakiro_liquid_fire",	// 2
-					"jakiro_dual_breath",	// 3
-					"jakiro_ice_path",	// 4
-					"jakiro_dual_breath",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","enchanted_mango","flask","faerie_fire","clarity","sobi_mask","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","magic_wand","ring_of_basilius","arcane_boots","wind_lace"],
-					mid_game:	["cyclone","force_staff","ghost","aghanims_shard","veil_of_discord","glimmer_cape","aether_lens","mekansm"],
-					late_game:	["aeon_disk","blink","ultimate_scepter","octarine_core"],
-					situational:	["infused_raindrop","lotus_orb"],
-					core:	["aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner also uses a lot of mana early.",
-			"infused_raindrop":	"Against magical burst.",
-			"lotus_orb":	"For reflect, dispel and armor."
-		}
-	},*/
+
+  Io: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640803993,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957619",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "wisp_tether", // 1
+          "wisp_overcharge", // 2
+          "wisp_overcharge", // 3
+          "wisp_tether", // 4
+          "wisp_overcharge", // 5
+          "wisp_relocate", // 6
+          "wisp_overcharge", // 7
+          "wisp_tether", // 8
+          "wisp_tether", // 9
+          "special_bonus_hp_regen_4", // 10
+          "wisp_spirits", // 11
+          "wisp_relocate", // 12
+          "wisp_spirits", // 13
+          "wisp_spirits", // 14
+          "special_bonus_unique_wisp_3", // 15
+          "wisp_spirits", // 16
+          "special_bonus_attributes", // 17
+          "wisp_relocate", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_wisp_6", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_wisp_4", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "headdress",
+            "flask",
+            "faerie_fire",
+            "ring_of_regen",
+            "branches",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "magic_wand",
+            "soul_ring",
+            "bottle",
+            "urn_of_shadows",
+            "ring_of_basilius",
+          ],
+          mid_game: [
+            "holy_locket",
+            "mekansm",
+            "aghanims_shard",
+            "ghost",
+            "glimmer_cape",
+            "solar_crest",
+          ],
+          late_game: ["aeon_disk", "vladmir", "heart"],
+          situational: ["infused_raindrop", "lotus_orb"],
+          core: ["holy_locket", "mekansm", "aghanims_shard"],
+          neutral: [
+            "trusty_shovel",
+            "arcane_ring",
+            "philosophers_stone",
+            "bullwhip",
+            "quickening_charm",
+            "paladin_sword",
+            "ascetic_cap",
+            "trickster_cloak",
+            "book_of_shadows",
+            "ex_machina",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ward_sentry: "To block or unblock the pull camp.",
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      ring_of_basilius: "If your laning partner also uses a lot of mana early.",
+      infused_raindrop: "Against magical burst.",
+      holy_locket:
+        "A core item that provides healing boost upon activation and improves healing output overall.",
+      mekansm: "A core item that provides an instant AoE heal. ",
+      aghanims_shard: "For extra control and mobility.",
+      lotus_orb: "For reflect, dispel and armor.",
+    },
+  },
+
+  Jakiro: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804005,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957843",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "jakiro_dual_breath", // 1
+          "jakiro_liquid_fire", // 2
+          "jakiro_dual_breath", // 3
+          "jakiro_liquid_fire", // 4
+          "jakiro_dual_breath", // 5
+          "jakiro_macropyre", // 6
+          "jakiro_ice_path", // 7
+          "jakiro_ice_path", // 8
+          "jakiro_ice_path", // 9
+          "jakiro_ice_path", // 10
+          "jakiro_liquid_fire", // 11
+          "jakiro_macropyre", // 12
+          "jakiro_liquid_fire", // 13
+          "jakiro_liquid_fire", // 14
+          "special_bonus_attack_range_325", // 15
+          "special_bonus_unique_jakiro_4", // 16
+          "special_bonus_attributes", // 17
+          "jakiro_macropyre", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_jakiro", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_jakiro_6", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "enchanted_mango",
+            "flask",
+            "faerie_fire",
+            "branches",
+            "sobi_mask",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "ring_of_basilius",
+            "arcane_boots",
+            "magic_wand",
+            "wind_lace",
+          ],
+          mid_game: [
+            "aether_lens",
+            "cyclone",
+            "aghanims_shard",
+            "force_staff",
+            "ghost",
+            "glimmer_cape",
+            "veil_of_discord",
+          ],
+          late_game: [
+            "ultimate_scepter",
+            "blink",
+            "aeon_disk",
+            "octarine_core",
+          ],
+          situational: ["infused_raindrop", "lotus_orb"],
+          core: ["arcane_boots", "aether_lens", "aghanims_shard"],
+          neutral: [
+            "keen_optic",
+            "trusty_shovel",
+            "philosophers_stone",
+            "bullwhip",
+            "spider_legs",
+            "psychic_headband",
+            "spy_gadget",
+            "timeless_relic",
+            "seer_stone",
+            "book_of_shadows",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ward_sentry: "To block or unblock the pull camp.",
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      ring_of_basilius: "If your laning partner also uses a lot of mana early.",
+      infused_raindrop: "Against magical burst.",
+      arcane_boots:
+        "A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Aether Lens. Getting Tranquil Boots afterwards for movement speed is recommendable.",
+      aether_lens:
+        "A core item that allows you to get spells off from further away.",
+      aghanims_shard:
+        "A core item that adds to control and damage output. Works on buildings as well. Goes well with level 10 talent.",
+      lotus_orb: "For reflect, dispel and armor.",
+    },
+  },
+
   Juggernaut: {
     builds: [
       {
@@ -4906,6 +4996,447 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier: "To dispel defensive spells and items that counter Omnislash.",
     },
   },
+
+  "Keeper of the Light": {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804026,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958059",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "keeper_of_the_light_illuminate", // 1  "keeper_of_the_light_radiant_bind" equals to 'solar bind'
+          "keeper_of_the_light_chakra_magic", // 2
+          "keeper_of_the_light_illuminate", // 3
+          "keeper_of_the_light_chakra_magic", // 4
+          "keeper_of_the_light_illuminate", // 5
+          "keeper_of_the_light_spirit_form", // 6
+          "keeper_of_the_light_illuminate", // 7
+          "keeper_of_the_light_chakra_magic", // 8
+          "keeper_of_the_light_chakra_magic", // 9
+          "keeper_of_the_light_radiant_bind", // 10
+          "keeper_of_the_light_radiant_bind", // 11
+          "keeper_of_the_light_spirit_form", // 12
+          "keeper_of_the_light_radiant_bind", // 13
+          "keeper_of_the_light_radiant_bind", // 14
+          "special_bonus_unique_keeper_of_the_light_8", // 15
+          "special_bonus_unique_keeper_of_the_light_7", // 16
+          "special_bonus_attributes", // 17
+          "keeper_of_the_light_spirit_form", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_keeper_of_the_light_11", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_keeper_of_the_light_10", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "flask",
+            "wind_lace",
+            "faerie_fire",
+            "boots",
+            "branches",
+            "enchanted_mango",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "tranquil_boots",
+            "magic_wand",
+            "ring_of_basilius",
+            "urn_of_shadows",
+          ],
+          mid_game: [
+            "glimmer_cape",
+            "force_staff",
+            "ghost",
+            "cyclone",
+            "veil_of_discord",
+            "solar_crest",
+            "mekansm",
+          ],
+          late_game: [
+            "ultimate_scepter",
+            "aeon_disk",
+            "sheepstick",
+            "octarine_core",
+          ],
+          situational: [
+            "infused_raindrop",
+            "spirit_vessel",
+            "aghanims_shard",
+            "lotus_orb",
+            "blink",
+          ],
+          core: ["tranquil_boots", "ultimate_scepter"],
+          neutral: [
+            "keen_optic",
+            "trusty_shovel",
+            "philosophers_stone",
+            "bullwhip",
+            "psychic_headband",
+            "quickening_charm",
+            "spy_gadget",
+            "spell_prism",
+            "seer_stone",
+            "book_of_shadows",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      keeper_of_the_light_radiant_bind:
+        "You can skill this spell on earlier than suggested if you have kill potential on the lane.",
+      special_bonus_unique_keeper_of_the_light_8:
+        "Skill this level 10 talent on level 16 and the suggested level 15 talent on level 15. The dota client disallows me to present that order in graphics above.",
+    },
+    item_tooltips: {
+      ward_sentry: "To block or unblock the pull camp.",
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      ring_of_basilius: "If your laning partner also uses a lot of mana early.",
+      infused_raindrop: "Against magical burst.",
+      tranquil_boots:
+        "A core boots upgrade that provides hp sustain and high movement speed.",
+      spirit_vessel: "Against heavy-healing lineup.",
+      ultimate_scepter:
+        "A core item that provides an AoE control in teamfights.",
+      aghanims_shard: "For extra mobility of your heroes.",
+      lotus_orb: "For reflect, dispel and armor.",
+      blink: "Helps with splitpush and lining up your spells.",
+    },
+  },
+
+  Kunkka: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804039,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958147",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "kunkka_tidebringer", // 1
+          "kunkka_torrent", // 2
+          "kunkka_tidebringer", // 3
+          "kunkka_x_marks_the_spot", // 4
+          "kunkka_tidebringer", // 5
+          "kunkka_ghostship", // 6
+          "kunkka_tidebringer", // 7
+          "kunkka_x_marks_the_spot", // 8
+          "kunkka_x_marks_the_spot", // 9
+          "special_bonus_attack_damage_30", // 10
+          "kunkka_x_marks_the_spot", // 11
+          "kunkka_ghostship", // 12
+          "kunkka_torrent", // 13
+          "kunkka_torrent", // 14
+          "special_bonus_strength_16", // 15
+          "kunkka_torrent", // 16
+          "special_bonus_attributes", // 17
+          "kunkka_ghostship", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_kunkka_4", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_kunkka_5", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "gauntlets",
+            "branches",
+            "faerie_fire",
+            "ward_observer",
+            "magic_stick",
+          ],
+          early_game: [
+            "bottle",
+            "phase_boots",
+            "helm_of_iron_will",
+            "bracer",
+            "magic_wand",
+          ],
+          mid_game: [
+            "armlet",
+            "black_king_bar",
+            "lesser_crit",
+            "silver_edge",
+            "orchid",
+            "sange_and_yasha",
+          ],
+          late_game: [
+            "assault",
+            "satanic",
+            "greater_crit",
+            "ultimate_scepter",
+            "sheepstick",
+          ],
+          situational: ["heavens_halberd", "blink", "aghanims_shard"],
+          core: [
+            "phase_boots",
+            "armlet",
+            "black_king_bar",
+            "lesser_crit",
+            "assault",
+          ],
+          neutral: [
+            "broom_handle",
+            "chipped_vest",
+            "vambrace",
+            "dragon_scale",
+            "titan_sliver",
+            "elven_tunic",
+            "the_leveller",
+            "penta_edged_sword",
+            "desolator_2",
+            "fallen_sky",
+          ],
+        },
+        item_tooltips: {
+          ward_observer:
+            "If you are playing midlane Kunkka. You can bring it to sidelane as well.",
+          bottle:
+            "If you are playing midlane Kunkka. You can do X Marks the spot refills.",
+          orchid:
+            "Buying this item after Armlet can be the way to go if you look to play actively early on.",
+          lesser_crit:
+            "A core item that can proc on Tidebring hits. Can be upgraded to Silver Edge or Daedalus.",
+          aghanims_shard: "For extra control and to reposition enemies.",
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804039,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958147",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "kunkka_tidebringer", // 1
+          "kunkka_torrent", // 2
+          "kunkka_tidebringer", // 3
+          "kunkka_x_marks_the_spot", // 4
+          "kunkka_tidebringer", // 5
+          "kunkka_ghostship", // 6
+          "kunkka_tidebringer", // 7
+          "kunkka_x_marks_the_spot", // 8
+          "kunkka_x_marks_the_spot", // 9
+          "kunkka_x_marks_the_spot", // 10
+          "kunkka_torrent", // 11
+          "kunkka_ghostship", // 12
+          "kunkka_torrent", // 13
+          "kunkka_torrent", // 14
+          "special_bonus_unique_kunkka_7", // 15
+          "special_bonus_unique_kunkka_2", // 16
+          "special_bonus_attributes", // 17
+          "kunkka_ghostship", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_kunkka", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_kunkka_3", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "gauntlets",
+            "branches",
+            "faerie_fire",
+            "magic_stick",
+          ],
+          early_game: [
+            "helm_of_iron_will",
+            "phase_boots",
+            "bracer",
+            "magic_wand",
+          ],
+          mid_game: [
+            "armlet",
+            "black_king_bar",
+            "ultimate_scepter",
+            "aghanims_shard",
+            "solar_crest",
+          ],
+          late_game: ["assault", "refresher", "sheepstick"],
+          situational: ["heavens_halberd", "pipe", "blink", "silver_edge"],
+          core: [
+            "phase_boots",
+            "armlet",
+            "black_king_bar",
+            "ultimate_scepter",
+            "aghanims_shard",
+          ],
+          neutral: [
+            "broom_handle",
+            "chipped_vest",
+            "vambrace",
+            "dragon_scale",
+            "quickening_charm",
+            "cloak_of_flames",
+            "timeless_relic",
+            "spell_prism",
+            "force_field",
+            "fallen_sky",
+          ],
+        },
+        item_tooltips: {
+          pipe: "Good against heavy magical-damage lineup.",
+          ultimate_scepter:
+            "A core item that grants extra AoE control and damage.",
+          aghanims_shard: "A core item to control and reposition opponents.",
+          silver_edge:
+            "It allows you to turn into a decent right-clicker and applies break.",
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        "If you expect high frequency of spells being used on the lane.",
+      helm_of_iron_will:
+        "A core item that solves your hp sustain issues. Upgrade it to Armlet.",
+      phase_boots:
+        "A core boots upgrade that makes Tidebringer hit even harder. Fixes the low armor gain of the hero temporarily.",
+      armlet:
+        "A core item that provides you with great stats and makes your Tidebringer hit hard. Helm of Iron Will should be the first component to purchase on tough lane.",
+      heavens_halberd:
+        "Especially good against ranged right-clickers. For utility build.",
+      assault:
+        "A core item that provides you with much needed attack speed and armor. Armor reduction goes well with the physical damage theme.",
+      black_king_bar:
+        "A core item that allows you to stay in the middle of the fight and deliver the damage.",
+      blink: "Combines well with X Marking yourself to do Tidebringer hits.",
+    },
+  },
+
+  "Legion Commander": {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1606573292,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2301488685",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "legion_commander_overwhelming_odds", // 1
+          "legion_commander_moment_of_courage", // 2
+          "legion_commander_press_the_attack", // 3
+          "legion_commander_moment_of_courage", // 4
+          "legion_commander_press_the_attack", // 5
+          "legion_commander_duel", // 6
+          "legion_commander_press_the_attack", // 7
+          "legion_commander_press_the_attack", // 8
+          "legion_commander_moment_of_courage", // 9
+          "special_bonus_unique_legion_commander_7", // 10
+          "legion_commander_moment_of_courage", // 11
+          "legion_commander_duel", // 12
+          "legion_commander_overwhelming_odds", // 13
+          "legion_commander_overwhelming_odds", // 14
+          "special_bonus_unique_legion_commander_6", // 15
+          "legion_commander_overwhelming_odds", // 16
+          "special_bonus_attributes", // 17
+          "legion_commander_duel", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_legion_commander_3", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_legion_commander_5", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "gauntlets",
+            "branches",
+            "ring_of_protection",
+            "faerie_fire",
+            "enchanted_mango",
+            "magic_stick",
+          ],
+          early_game: [
+            "helm_of_iron_will",
+            "phase_boots",
+            "soul_ring",
+            "magic_wand",
+            "bracer",
+            "orb_of_corrosion",
+          ],
+          mid_game: [
+            "armlet",
+            "blink",
+            "black_king_bar",
+            "aghanims_shard",
+            "blade_mail",
+          ],
+          late_game: [
+            "assault",
+            "invis_sword",
+            "ultimate_scepter",
+            "overwhelming_blink",
+            "swift_blink",
+            "moon_shard",
+          ],
+          situational: ["heavens_halberd", "monkey_king_bar"],
+          core: [
+            "phase_boots",
+            "armlet",
+            "blink",
+            "black_king_bar",
+            "aghanims_shard",
+          ],
+          neutral: [
+            "broom_handle",
+            "chipped_vest",
+            "misericorde",
+            "quicksilver_amulet",
+            "elven_tunic",
+            "paladin_sword",
+            "the_leveller",
+            "ninja_gear",
+            "pirate_hat",
+            "desolator_2",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      legion_commander_press_the_attack:
+        "You can skill this spell on level 1 already if you are being harassed by a dispellable damage-over-time spell like Thunder Strike and Poison Touch.",
+    },
+    item_tooltips: {
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      orb_of_corrosion: "If you can pressure on the lane.",
+      helm_of_iron_will:
+        "A core item that solves your hp sustain issues on the lane. It will be upgraded to Armlet but you can also get Blink Dagger before the upgrade.",
+      armlet:
+        "A core item that gives you all the needed stats to win duels. Usually better than Blade Mail.",
+      blink: "A core item that allows you to get Duel off.",
+      blade_mail: "Good against high dps right-clickers(PA, Anti-Mage).",
+      black_king_bar:
+        "A core item that allows you not to be disabled or killed during Duel as often :) .",
+      heavens_halberd:
+        "Especially good against ranged right-clickers and to pop Linken`s Sphere.",
+      aghanims_shard:
+        "A core item that allows you to save an ally or yourself. It also makes you spell-immune as you win the Duel.",
+      monkey_king_bar: "Against evasion.",
+      overwhelming_blink: "To tank up and for AoE damage.",
+      swift_blink: "For single target burst.",
+    },
+  },
+
   "Phantom Assassin": {
     builds: [
       {
@@ -5346,193 +5877,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge: "For break and extra mobility.",
     },
   },
-  /*	"Keeper of the Light": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804026,
-				abilities: [
-					"keeper_of_the_light_illuminate",	// 1  "keeper_of_the_light_radiant_bind" equals to 'solar bind'
-					"keeper_of_the_light_chakra_magic",	// 2
-					"keeper_of_the_light_illuminate",	// 3
-					"keeper_of_the_light_chakra_magic",	// 4
-					"keeper_of_the_light_illuminate",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","wind_lace","faerie_fire","boots","branches","clarity","enchanted_mango","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["tranquil_boots","magic_wand","ring_of_basilius","urn_of_shadows"],
-					mid_game:	["glimmer_cape","force_staff","ghost","solar_crest","holy_locket","mekansm","veil_of_discord"],
-					late_game:	["ultimate_scepter","aeon_disk","sheepstick"],
-					situational:	["infused_raindrop","spirit_vessel","lotus_orb","aghanims_shard","blink"],
-					core:	["tranquil_boots","ultimate_scepter"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner also uses a lot of mana early.",
-			"holy_locket":	"Goes well with Mekansm.",
-			"mekansm":	"Goes well with Holy Locket.",
-			"infused_raindrop":	"Against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"aghanims_shard":	"For extra mobility of your heroes.",
-			"blink":	"Helps with splitpush and lining up your spells."
-		}
-	},
-
-	/*
-	"Kunkka": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804039,
-				abilities: [
-					"kunkka_tidebringer",	// 1
-					"kunkka_torrent",	// 2
-					"kunkka_tidebringer",	// 3
-					"kunkka_x_marks_the_spot",	// 4
-					"kunkka_tidebringer",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","gauntlets","branches","circlet","faerie_fire","bracer","ring_of_protection","ward_observer","magic_stick"],
-					early_game:	["bottle","phase_boots","bracer","magic_wand","urn_of_shadows"],
-					mid_game:	["armlet","hood_of_defiance","solar_crest","sange","sange_and_yasha","lesser_crit","ultimate_scepter","echo_sabre","orchid"],
-					late_game:	["assault","greater_crit","sheepstick"],
-					situational:	["spirit_vessel","heavens_halberd","pipe","black_king_bar","blink","aghanims_shard"],
-					core:	["phase_boots"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"If you are playing midlane Kunkka.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"If you are playing midlane Kunkka.",
-			"urn_of_shadows":	"If you are planning for Spirit Vessel.",
-			"armlet":	"For right-click build.",
-			"hood_of_defiance":	"For utility build.",
-			"solar_crest":	"For utility build.",
-			"sange_and_yasha":	"For right-click build.",
-			"lesser_crit":	"For right-click build.",
-			"ultimate_scepter":	"For utility build.",
-			"echo_sabre":	"Can be disassembled. For right-click build.",
-			"orchid":	"For right-click build.",
-			"assault":	"For right-click build.",
-			"greater_crit":	"For right-click build.",
-			"sheepstick":	"For utility build.",
-			"spirit_vessel":	"Against heavy healing lineup. For utility build.",
-			"heavens_halberd":	"Especially good against ranged right-clickers. For utility build.",
-			"pipe":	"For utility build.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"blink":	"Combines well with X Marking yourself to do Tidebringer hits. For right-click build.",
-			"aghanims_shard":	"To reposition enemies. For utility build."
-		}
-	},
-	"Legion Commander": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1606573292,
-				abilities: [
-					"legion_commander_overwhelming_odds",	// 1
-					"legion_commander_moment_of_courage",	// 2
-					"legion_commander_overwhelming_odds",	// 3
-					"legion_commander_press_the_attack",	// 4
-					"legion_commander_overwhelming_odds",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","quelling_blade","gauntlets","branches","ring_of_protection","faerie_fire","enchanted_mango","circlet","bracer","magic_stick"],
-					early_game:	["phase_boots","magic_wand","bracer","soul_ring","orb_of_corrosion"],
-					mid_game:	["blink","armlet","blade_mail","hood_of_defiance","sange","solar_crest"],
-					late_game:	["assault","invis_sword","overwhelming_blink","swift_blink","ultimate_scepter","moon_shard"],
-					situational:	["pipe","black_king_bar","heavens_halberd","aghanims_shard","monkey_king_bar"],
-					core:	["phase_boots","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"armlet":	"Usually better than Blade Mail.",
-			"blade_mail":	"Good against high dps right-clickers.",
-			"overwhelming_blink":	"To tank up and for AoE damage.",
-			"swift_blink":	"For single target burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"heavens_halberd":	"Especially good against ranged right-clickers and to pop Linken's Sphere.",
-			"aghanims_shard":	"For hard dispel.",
-			"monkey_king_bar":	"Against evasion."
-		}
-	},
+  /*
+	
+	
 	"Leshrac": {
 		builds: [
 			{
