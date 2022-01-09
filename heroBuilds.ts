@@ -1373,7 +1373,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_stick",
           ],
           early_game: ["boots", "urn_of_shadows", "magic_wand", "soul_ring"],
-          mid_game: ["ultimate_scepter", "blink", "aghanims_shard", "travel_boots"],
+          mid_game: [
+            "ultimate_scepter",
+            "blink",
+            "aghanims_shard",
+            "travel_boots",
+          ],
           late_game: ["refresher", "assault", "vladmir"],
           situational: [
             "hand_of_midas",
@@ -4901,6 +4906,440 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier: "To dispel defensive spells and items that counter Omnislash.",
     },
   },
+  "Phantom Assassin": {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804354,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "phantom_assassin_stifling_dagger", // 1
+          "phantom_assassin_phantom_strike", // 2
+          "phantom_assassin_stifling_dagger", // 3
+          "phantom_assassin_blur", // 4
+          "phantom_assassin_stifling_dagger", // 5
+          "phantom_assassin_coup_de_grace", // 6
+          "phantom_assassin_phantom_strike", // 7
+          "phantom_assassin_phantom_strike", // 8
+          "phantom_assassin_phantom_strike", // 9
+          "special_bonus_unique_phantom_assassin_4", // 10
+          "phantom_assassin_stifling_dagger", // 11
+          "phantom_assassin_coup_de_grace", // 12
+          "phantom_assassin_blur", // 13
+          "phantom_assassin_blur", // 14
+          "special_bonus_unique_phantom_assassin_6", // 15
+          "phantom_assassin_blur", // 16
+          "special_bonus_attributes", // 17
+          "phantom_assassin_coup_de_grace", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_corruption_3", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_phantom_assassin_2", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "branches",
+            "slippers",
+            "faerie_fire",
+            "magic_stick",
+            "blight_stone",
+            "orb_of_venom",
+          ],
+          early_game: [
+            "ring_of_health",
+            "power_treads",
+            "magic_wand",
+            "orb_of_corrosion",
+          ],
+          mid_game: [
+            "bfury",
+            "desolator",
+            "black_king_bar",
+            "aghanims_shard",
+            "basher",
+            "manta",
+          ],
+          late_game: ["satanic", "abyssal_blade", "ultimate_scepter"],
+          situational: ["sphere", "monkey_king_bar", "nullifier"],
+          core: [
+            "power_treads",
+            "bfury",
+            "desolator",
+            "aghanims_shard",
+            "basher",
+            "satanic",
+          ],
+          neutral: [
+            "possessed_mask",
+            "broom_handle",
+            "misericorde",
+            "quicksilver_amulet",
+            "mind_breaker",
+            "paladin_sword",
+            "penta_edged_sword",
+            "the_leveller",
+            "desolator_2",
+            "ex_machina",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      phantom_assassin_blur:
+        "You can skill this spell at level 2 already if you are being pressured.",
+      special_bonus_unique_phantom_assassin_3:
+        "You can take this level 20 talent over the suggested one if the opponents still don`t have item counters to evasion.",
+      special_bonus_unique_phantom_assassin:
+        "You can take this level 25 talent over the suggested one if you are in need of more AoE damage.",
+    },
+    item_tooltips: {
+      blight_stone:
+        "If you can pressure the opponents early into the laning stage.",
+      orb_of_venom:
+        "If you can pressure the opponents early into the laning stage.",
+      magic_stick:
+        "If you expect high frequency of spells being used on the lane.",
+      orb_of_corrosion:
+        "If you can pressure the opponents early into the laning stage.",
+      ring_of_health:
+        "Helps with the hp sustain on the lane and incorporates into Battle Fury.",
+      power_treads:
+        "A core boots upgrade that improves your farming speed through attack speed increase and mana savings.",
+      bfury: "A core farming item.",
+      desolator:
+        "A core item that adds to your burst, allows you to take buildings down faster and kill Roshan. You can delay this item in favor of Black King Bar if you need to fight earlier.",
+      black_king_bar:
+        "A core item that allows you to deliver the damage under spell-immunity. You can buy this item immediately after Battle Fury if you need to fight earlier.",
+      aghanims_shard:
+        "A core item that provides break effect and adds to your burst potential.",
+      basher:
+        "A core item that makes delivering damage a lot easier. Can be upgraded to Abyssal Blade.",
+      satanic:
+        "A core item that improves your sustain and applies dispel on cast. Stifling Daggers also lifesteal.",
+      sphere: "Against powerful single-target disables and debuffs.",
+      monkey_king_bar: "Against evasion.",
+      nullifier: "To dispel defensive spells and items on opponents.",
+    },
+  },
+
+  Pudge: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804395,
+        steam_guide_link:
+          "hhttps://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "pudge_meat_hook", // 1
+          "pudge_rot", // 2
+          "pudge_rot", // 3
+          "pudge_meat_hook", // 4
+          "pudge_meat_hook", // 5
+          "pudge_dismember", // 6
+          "pudge_meat_hook", // 7
+          "pudge_rot", // 8
+          "pudge_rot", // 9
+          "pudge_flesh_heap", // 10
+          "special_bonus_armor_4", // 11
+          "pudge_dismember", // 12
+          "pudge_flesh_heap", // 13
+          "pudge_flesh_heap", // 14
+          "special_bonus_unique_pudge_7", // 15
+          "pudge_flesh_heap", // 16
+          "special_bonus_attributes", // 17
+          "pudge_dismember", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_pudge_6", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_pudge_1", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "boots",
+            "clarity",
+            "flask",
+            "enchanted_mango",
+            "faerie_fire",
+            "wind_lace",
+            "branches",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "tranquil_boots",
+            "soul_ring",
+            "magic_wand",
+            "urn_of_shadows",
+          ],
+          mid_game: [
+            "blink",
+            "aghanims_shard",
+            "aether_lens",
+            "ghost",
+            "glimmer_cape",
+            "force_staff",
+            "hood_of_defiance",
+          ],
+          late_game: [
+            "octarine_core",
+            "ultimate_scepter",
+            "overwhelming_blink",
+          ],
+          situational: ["spirit_vessel", "lotus_orb", "black_king_bar"],
+          core: ["tranquil_boots", "blink", "aghanims_shard"],
+          neutral: [
+            "keen_optic",
+            "pogo_stick",
+            "philosophers_stone",
+            "bullwhip",
+            "spider_legs",
+            "psychic_headband",
+            "spy_gadget",
+            "trickster_cloak",
+            "giants_ring",
+            "force_field",
+          ],
+        },
+        item_tooltips: {
+          ward_sentry: "To block or unblock the pull camp.",
+          tranquil_boots:
+            "A core boots upgrade that provides you with hp sustain and great movement speed.",
+          spirit_vessel: "Against heavy healing lineup.",
+          black_king_bar: "To channel Dismember fully.",
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804395,
+        steam_guide_link:
+          "hhttps://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "pudge_meat_hook", // 1
+          "pudge_rot", // 2
+          "pudge_rot", // 3
+          "pudge_meat_hook", // 4
+          "pudge_rot", // 5
+          "pudge_dismember", // 6
+          "pudge_rot", // 7
+          "pudge_flesh_heap", // 8
+          "pudge_meat_hook", // 9
+          "special_bonus_unique_pudge_4", // 10
+          "pudge_meat_hook", // 11
+          "pudge_dismember", // 12
+          "pudge_flesh_heap", // 13
+          "pudge_flesh_heap", // 14
+          "special_bonus_unique_pudge_7", // 15
+          "pudge_flesh_heap", // 16
+          "special_bonus_attributes", // 17
+          "pudge_dismember", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_pudge_5", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_pudge_1", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "ring_of_protection",
+            "gauntlets",
+            "branches",
+            "enchanted_mango",
+            "faerie_fire",
+            "bracer",
+            "magic_stick",
+          ],
+          early_game: ["phase_boots", "vanguard", "soul_ring"],
+          mid_game: [
+            "hood_of_defiance",
+            "blink",
+            "black_king_bar",
+            "ultimate_scepter",
+            "aghanims_shard",
+            "eternal_shroud",
+            "ghost",
+            "aether_lens",
+            "force_staff",
+          ],
+          late_game: ["octarine_core", "overwhelming_blink"],
+          situational: ["crimson_guard", "lotus_orb"],
+          core: [
+            "phase_boots",
+            "vanguard",
+            "hood_of_defiance",
+            "blink",
+            "aghanims_shard",
+            "black_king_bar",
+            "ultimate_scepter",
+          ],
+          neutral: [
+            "chipped_vest",
+            "arcane_ring",
+            "dragon_scale",
+            "essence_ring",
+            "cloak_of_flames",
+            "black_powder_bag",
+            "trickster_cloak",
+            "ascetic_cap",
+            "giants_ring",
+            "force_field",
+          ],
+        },
+        item_tooltips: {
+          phase_boots:
+            "A core boots upgrade that provides you with much needed armor and movement speed boost.",
+          vanguard:
+            "A core item that tanks you up and allows you to cut-waves, clear stacks and dive towers.",
+          hood_of_defiance:
+            "A core item that tanks you up by reducing damage you take from magical sources including Rot.",
+          crimson_guard:
+            "Against fast attacking right-clickers, illusions and summons.",
+          black_king_bar:
+            "A core item that allows you to channel Dismember fully.",
+          ultimate_scepter:
+            "A core item that improves Rot`s AoE and damage significantly. Reduces some healing on affected heroes too.",
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      blink:
+        "A core item that allows you to land Hook easier or to save an ally. Goes well with Aghanim`s Shard.",
+      aghanims_shard:
+        "A core item that allows you to save an ally in trouble. Goes well with Blink and Aether Lens.",
+      lotus_orb: "For reflect, dispel and armor.",
+    },
+  },
+
+  Medusa: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804184,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959648",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "medusa_mystic_snake", // 1
+          "medusa_mana_shield", // 2
+          "medusa_mystic_snake", // 3
+          "medusa_split_shot", // 4
+          "medusa_mystic_snake", // 5
+          "medusa_split_shot", // 6
+          "medusa_mystic_snake", // 7
+          "medusa_split_shot", // 8
+          "medusa_split_shot", // 9
+          "special_bonus_attack_damage_15", // 10
+          "medusa_stone_gaze", // 11
+          "medusa_mana_shield", // 12
+          "medusa_mana_shield", // 13
+          "medusa_mana_shield", // 14
+          "special_bonus_attack_speed_30", // 15
+          "medusa_stone_gaze", // 16
+          "special_bonus_attributes", // 17
+          "medusa_stone_gaze", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_medusa", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_medusa_4", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "slippers",
+            "branches",
+            "faerie_fire",
+            "circlet",
+            "magic_stick",
+          ],
+          early_game: [
+            "power_treads",
+            "magic_wand",
+            "wraith_band",
+            "mask_of_madness",
+          ],
+          mid_game: ["manta", "dragon_lance", "skadi", "lesser_crit"],
+          late_game: [
+            "greater_crit",
+            "ultimate_scepter",
+            "butterfly",
+            "satanic",
+          ],
+          situational: [
+            "black_king_bar",
+            "aghanims_shard",
+            "hurricane_pike",
+            "swift_blink",
+            "monkey_king_bar",
+            "silver_edge",
+          ],
+          core: ["power_treads", "mask_of_madness", "manta", "skadi"],
+          neutral: [
+            "possessed_mask",
+            "unstable_wand",
+            "grove_bow",
+            "quicksilver_amulet",
+            "elven_tunic",
+            "titan_sliver",
+            "the_leveller",
+            "ninja_gear",
+            "desolator_2",
+            "force_boots",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      medusa_stone_gaze:
+        "You can skill this spell(or keep a spell point) at level 6 if you are still laning or suspect to be ganked.",
+    },
+    item_tooltips: {
+      magic_stick:
+        "If you expect high frequency of spells being used on the lane.",
+      power_treads:
+        "A core boots upgrade that provides attack speed increase and mana savings through toggling.",
+      mask_of_madness: "A core farming item. Can be disassembled later on.",
+      manta:
+        "A core item that provides you with a bit of everything. Manta illusions are great for clearing out an extra creepwave that you otherwise wouldn`t be able to with your hero.",
+      dragon_lance: "Improves your attack range. Can be disassembled.",
+      skadi:
+        "A core item that improves your effective hp significantly, deals with kiting and reduces healing from opponents.",
+      aghanims_shard:
+        "Goes well with Aghanim's Scepter and Mysic Snake talents.",
+      hurricane_pike: "To disengage from heroes like Slark and Troll.",
+      black_king_bar:
+        "Against a lot of disables, magical damage and as a dispel.",
+      ultimate_scepter:
+        "For extra control and damage amplification. Goes well with Aghanim's Shard.",
+      swift_blink:
+        "To jump in the middle of the fight with Split Shot and Stone Gaze on.",
+      monkey_king_bar: "Against evasion.",
+      silver_edge: "For break and extra mobility.",
+    },
+  },
   /*	"Keeper of the Light": {
 		builds: [
 			{
@@ -5786,63 +6225,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			"lotus_orb":	"If you are playing utility Magnus for reflect, dispel and armor."
 		}
 	},
-	"Medusa": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804184,
-				abilities: [
-					"medusa_mystic_snake",	// 1
-					"medusa_mana_shield",	// 2
-					"medusa_mystic_snake",	// 3
-					"medusa_split_shot",	// 4
-					"medusa_mystic_snake",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","slippers","branches","faerie_fire","circlet","magic_stick"],
-					early_game:	["power_treads","magic_wand","wraith_band","mask_of_madness"],
-					mid_game:	["yasha","dragon_lance","manta","sange_and_yasha","ultimate_scepter","lesser_crit"],
-					late_game:	["skadi","greater_crit","butterfly","satanic"],
-					situational:	["infused_raindrop","black_king_bar","aghanims_shard","hurricane_pike","monkey_king_bar","swift_blink"],
-					core:	["power_treads","yasha","dragon_lance","skadi"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"dragon_lance":	"Can be disassembled.",
-			"ultimate_scepter":	"Goes well with Aghanim's Shard.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"aghanims_shard":	"Goes well with Aghanim's Scepter and Mysic Snake talents.",
-			"hurricane_pike":	"To disengage from heroes like Slark and Troll.",
-			"monkey_king_bar":	"Against evasion.",
-			"swift_blink":	"To jump in the middle of the fight with Split Shot and Stone Gaze on."
-		}
-	},
+	
 	"Meepo": {
 		builds: [
 			{
@@ -6658,62 +7041,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel."
 		}
 	},
-	"Phantom Assassin": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804354,
-				abilities: [
-					"phantom_assassin_stifling_dagger",	// 1
-					"phantom_assassin_phantom_strike",	// 2
-					"phantom_assassin_stifling_dagger",	// 3
-					"phantom_assassin_blur",	// 4
-					"phantom_assassin_stifling_dagger",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","faerie_fire","slippers","circlet","magic_stick"],
-					early_game:	["power_treads","magic_wand","orb_of_corrosion","wraith_band"],
-					mid_game:	["bfury","desolator","basher","sange_and_yasha","echo_sabre"],
-					late_game:	["satanic","abyssal_blade","ultimate_scepter"],
-					situational:	["infused_raindrop","black_king_bar","aghanims_shard","monkey_king_bar","nullifier"],
-					core:	["power_treads","bfury","desolator","basher","satanic"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"aghanims_shard":	"For break effect and against tanky heroes.",
-			"monkey_king_bar":	"Against evasion.",
-			"nullifier":	"To dispel defensive spells and items."
-		}
-	},
+	
 	"Phantom Lancer": {
 		builds: [
 			{
@@ -6878,60 +7206,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			"sphere":	"Aghainst powerful single target disables or burst damage."
 		}
 	},
-	"Pudge": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804395,
-				abilities: [
-					"pudge_meat_hook",	// 1
-					"pudge_rot",	// 2
-					"pudge_meat_hook",	// 3
-					"pudge_rot",	// 4
-					"pudge_meat_hook",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","boots","flask","clarity","enchanted_mango","ring_of_protection","faerie_fire","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["tranquil_boots","magic_wand","wind_lace","soul_ring","urn_of_shadows","bottle"],
-					mid_game:	["blink","aether_lens","aghanims_shard","ghost","glimmer_cape","force_staff","hood_of_defiance","eternal_shroud"],
-					late_game:	["octarine_core","ultimate_scepter","overwhelming_blink"],
-					situational:	["spirit_vessel","lotus_orb","black_king_bar","heavens_halberd"],
-					core:	["tranquil_boots","blink","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"black_king_bar":	"To channel Dismember fully.",
-			"heavens_halberd":	"Especially good against ranged right-clickers."
-		}
-	},
+	
 	"Pugna": {
 		builds: [
 			{
