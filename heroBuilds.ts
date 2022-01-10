@@ -5923,7 +5923,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           early_game: ['bottle', 'null_talisman', 'travel_boots', 'magic_wand'],
           mid_game: ['black_king_bar', 'silver_edge', 'satanic'],
-          late_game: ['skadi', 'assault', 'sheepstick', 'greater_crit'],
+          late_game: ['skadi', 'assault', 'sheepstick'],
           situational: [
             'infused_raindrop',
             'hurricane_pike',
