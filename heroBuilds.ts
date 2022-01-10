@@ -5219,9 +5219,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804039,
+        steam_guide_id: 1641828247,
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958147",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2715010750",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "kunkka_tidebringer", // 1
