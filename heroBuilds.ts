@@ -2621,9 +2621,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640803756,
+        steam_guide_id: 1641843276,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699917167',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2715224221',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           'dawnbreaker_fire_wreath', // 1
@@ -5968,9 +5968,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804097,
+        steam_guide_id: 1641843112,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699958714',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2715221904',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'lina_light_strike_array', // 1
