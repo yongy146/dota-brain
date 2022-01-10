@@ -5508,6 +5508,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "power_treads",
             "bfury",
             "desolator",
+            "black_king_bar",
             "aghanims_shard",
             "basher",
             "satanic",
