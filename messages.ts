@@ -613,7 +613,7 @@ export const dotaCoachMessages = [
     {category: "OwnHero", hero: "Marci", audioFile: "ownHero/Marci_4_Dispel", messageTime: 14*60, repeatTime: 30*60, textMessage: "Be aware of spells and items that can dispel by Sidekick or Rebound.", audience: [ALL]},
     {category: "OwnHero", hero: "Marci", audioFile: "ownHero/Marci_5_Kite", messageTime: 12*60, repeatTime: 30*60, textMessage: "Many spells and items can kite Marci during Unleash. Counter them with items or choose the right moment to engage and be ready to switch targets.", audience: [ALL]},
     {category: "OwnHero", hero: "Marci", audioFile: "ownHero/Marci_6_Blink", messageTime: 16*60, textMessage: "Blink Dagger is a huge powerspike as it allows you to lock on or switch targets, initiate fights or save allies.", audience: [ALL]},
-    {category: "OwnHero", hero: "Marci", audioFile: "ownHero/Marci_7_Roshan", messageTime: 20*60, textMessage: "You can kill Roshan with Unleash with minimal help from your allies.", audience: [ROLE_CORE]},
+    {category: "OwnHero", hero: "Marci", audioFile: "ownHero/Marci_7_Roshan", messageTime: 20*60, textMessage: "Unleash and Sidekick are great tools for killing Roshan.", audience: [ROLE_CORE]},
 
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_1_Spirit vessel", messageTime: (-60), textMessage: "Someone should buy spirit Vessel against Marci's Sidekick.", audience: [ALL]},
     {category: "EnemyHero", hero: "Marci", audioFile: "heroes/Marci_2_Dispose", messageTime: (-30), textMessage: "Avoid staying too close to Marci as you'll get Disposed easily.", audience: [IN_LANE]},
