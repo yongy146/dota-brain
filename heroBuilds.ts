@@ -54,12 +54,16 @@ export interface HeroBuild {
 
 export interface ItemBuild {
   starting: string[];
-  early_game: string[];
-  mid_game: string[];
-  late_game: string[];
+  starting_bear?: string[];
+  early_game?: string[];       // provided for all heroes, except for Lone Druid
+  mid_game?: string[];         // provided for all heroes, except for Lone Druid
+  late_game?: string[];        // provided for all heroes, except for Lone Druid
   situational: string[];
-  core: string[]; // selected items from starting, early_game, mid_game, late_game and situational
+  situational_bear?: string[];
+  core: string[];              // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
+  core_bear?: string[];
   neutral: string[];
+  neutral_bear?: string[];
 }
 
 /**
@@ -6206,62 +6210,62 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           'special_bonus_unique_lone_druid_10', // 25
         ],
         items: {
-          /* BEAR starting items: [
+          starting_bear: [
             'quelling_blade',
             'blight_stone',
-            'orb_of_venom',
-          ], */
-          /* HERO starting items: [
+            'orb_of_venom'
+          ],
+          starting: [
             'tango',
             'branches',
             'faerie_fire',
             'ward_observer',
             'magic_stick',
-          ], */
-          /* BEAR core items: [
+          ],
+          core_bear: [
             'orb_of_corrosion',
             'phase_boots',
             'mask_of_madness',
             'desolator',
             'basher',
             'assault',
-          ], */
-          /* HERO core items: [
+          ],
+          core: [
             'boots',
             'aghanims_shard',
-          ], */
-          /* BEAR situational items: [
+          ],
+          situational_bear: [
             'hand_of_midas',
             'maelstrom',
             'monkey_king_bar',
             'mjollnir',
             'black_king_bar',
             'nullifier',
-            'abyssal_blade,
+            'abyssal_blade',
             'moon_shard',
             'silver_edge',
-          ], */
-          /* HERO situational items: [
+          ],
+          situational: [
             'buckler',
             'cloak',
             'ghost',
             'solar_crest',
             'ultimate_scepter',
             'refresher',
-          ], */
-          /* BEAR neutral items: [
+          ],
+          neutral_bear: [
             'broom_handle',
             'chipped_vest',
             'misericorde',
             'dragon_scale',
-            'mind_breaker,
+            'mind_breaker',
             'elven_tunic',
             'the_leveller',
             'penta_edged_sword',
             'desolator_2',
             'pirate_hat',
-          ], */
-          /* HERO neutral items: [
+          ], 
+          neutral: [
             'unstable_wand',
             'trusty_shovel',
             'ring_of_aquila',
@@ -6272,9 +6276,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'ascetic_cap',
             'book_of_shadows',
             'force_field',
-          ], */
+          ],
 
-          starting: [
+          /*starting: [
             'tango',
             'branches',
             'faerie_fire',
@@ -6315,7 +6319,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'aghanims_shard',
           ],
           core: ['phase_boots', 'mask_of_madness', 'basher'],
-          neutral: [],
+          neutral: [],*/
         },
       },
     ],
@@ -6555,9 +6559,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804136,
+        steam_guide_id: 1641970144,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959154',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2716646867',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'lycan_summon_wolves', // 1
@@ -6761,9 +6765,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804148,
+        steam_guide_id: 1641970156,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959287',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2716646936',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'magnataur_shockwave', // 1
@@ -6857,9 +6861,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804148,
+        steam_guide_id: 1641970169,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959287',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2716647043',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'magnataur_shockwave', // 1
@@ -7048,9 +7052,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804165,
+        steam_guide_id: 1641970186,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959380',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2716647152',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           'marci_grapple', // 1	equals to rebound
