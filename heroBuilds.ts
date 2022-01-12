@@ -6347,7 +6347,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         'Against a lot of disables, magical damage and as a dispel. Helps with ratting.',
       aghanims_shard: 'A core item for hero to buff allies and dispel.',
       solar_crest: 'A buff to Bear to increase its dps.',
-      refresher: 'For extra Bear in very late game.',
+      refresher: 'For extra Bear charge in very late game.',
       ultimate_scepter: 'Amazing for split-pushing and ratting.',
     },
   },
@@ -6422,6 +6422,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'mask_of_madness',
             'manta',
             'dragon_lance',
+            'black_king_bar',
             'aghanims_shard',
             'greater_crit',
           ],
@@ -6849,7 +6850,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           orchid:
             'A core item that allows you to kill-off heroes without even needing to Reverse Polarity. It should be upgraded to Bloodthorn.',
           bloodthorn:
-            'A core item that allows you to burst heroes while they are stunned by Reverse Polarity. It silences and grants true strike on affected opponent.',
+            'A core item that allows you to burst heroes while they are stunned by Reverse Polarity. It silences, makes every attack crit and grants true strike on affected opponent.',
           sphere: 'Against powerful single-target disables and debuffs.',
           silver_edge:
             'Allows you to get off your combo easier, adds to the burst and applies break.',
@@ -7102,7 +7103,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'lesser_crit',
             'armlet',
           ],
-          late_game: ['greater_crit', 'abyssal_blade', 'overwhelming_blink'],
+          late_game: ['greater_crit', 'abyssal_blade', 'overwhelming_blink', 'satanic'],
           situational: ['infused_raindrop', 'monkey_king_bar', 'nullifier'],
           core: [
             'phase_boots',
