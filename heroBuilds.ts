@@ -7581,9 +7581,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804218,
+        steam_guide_id: 1642101493,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2718158708',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'monkey_king_tree_dance', // 1
@@ -7763,7 +7763,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'black_king_bar',
           ],
           neutral: [
-            'possessed_maks',
+            'possessed_mask',
             'unstable_wand',
             'pupils_gift',
             'vambrace',
