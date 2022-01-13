@@ -7703,16 +7703,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           'morphling_waveform', // 6
           'morphling_morph_agi', // 7
           'morphling_waveform', // 8
-          'morphling_morph', // 9
+          'morphling_replicate', // 9
           'special_bonus_unique_morphling_1', // 10
           'morphling_adaptive_strike_agi', // 11
           'morphling_adaptive_strike_agi', // 12
           'morphling_adaptive_strike_agi', // 13
           'morphling_adaptive_strike_agi', // 14
           'special_bonus_unique_morphling_8', // 15
-          'morphling_morph', // 16
+          'morphling_replicate', // 16
           'special_bonus_attributes', // 17
-          'morphling_morph', // 18
+          'morphling_replicate', // 18
           'special_bonus_attributes', // 19
           'special_bonus_unique_morphling_4', // 20
           'special_bonus_attributes', // 21
@@ -7780,7 +7780,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       morphling_adaptive_strike_agi:
         'You can put a point in this spell at level 2 if you have problems securing range creep lasthits.',
-      morphling_morph:
+      morphling_replicate:
         'You can put a point in ultimate at level 6 already if you can go for a kill. Otherwise skip it and max out Waveform.',
     },
     item_tooltips: {
