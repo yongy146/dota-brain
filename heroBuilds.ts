@@ -55,12 +55,12 @@ export interface HeroBuild {
 export interface ItemBuild {
   starting: string[];
   starting_bear?: string[];
-  early_game?: string[];       // provided for all heroes, except for Lone Druid
-  mid_game?: string[];         // provided for all heroes, except for Lone Druid
-  late_game?: string[];        // provided for all heroes, except for Lone Druid
+  early_game?: string[]; // provided for all heroes, except for Lone Druid
+  mid_game?: string[]; // provided for all heroes, except for Lone Druid
+  late_game?: string[]; // provided for all heroes, except for Lone Druid
   situational: string[];
   situational_bear?: string[];
-  core: string[];              // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
+  core: string[]; // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
   core_bear?: string[];
   neutral: string[];
   neutral_bear?: string[];
@@ -6210,11 +6210,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           'special_bonus_unique_lone_druid_10', // 25
         ],
         items: {
-          starting_bear: [
-            'quelling_blade',
-            'blight_stone',
-            'orb_of_venom'
-          ],
+          starting_bear: ['quelling_blade', 'blight_stone', 'orb_of_venom'],
           starting: [
             'tango',
             'branches',
@@ -6230,10 +6226,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'basher',
             'assault',
           ],
-          core: [
-            'boots',
-            'aghanims_shard',
-          ],
+          core: ['boots', 'aghanims_shard'],
           situational_bear: [
             'hand_of_midas',
             'maelstrom',
@@ -6264,7 +6257,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'penta_edged_sword',
             'desolator_2',
             'pirate_hat',
-          ], 
+          ],
           neutral: [
             'unstable_wand',
             'trusty_shovel',
@@ -7107,7 +7100,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'lesser_crit',
             'armlet',
           ],
-          late_game: ['greater_crit', 'abyssal_blade', 'overwhelming_blink', 'satanic'],
+          late_game: [
+            'greater_crit',
+            'abyssal_blade',
+            'overwhelming_blink',
+            'satanic',
+          ],
           situational: ['infused_raindrop', 'monkey_king_bar', 'nullifier'],
           core: [
             'phase_boots',
@@ -7151,6 +7149,658 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       orb_of_corrosion: 'If you can pressure on the lane.',
       infused_raindrop: 'Great against magical burst.',
       blink: 'A core item for instant gap-close, followed up with Dispose.',
+    },
+  },
+
+  Mars: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804174,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959474',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'mars_gods_rebuke', // 1
+          'mars_spear', // 2
+          'mars_spear', // 3
+          'mars_gods_rebuke', // 4
+          'mars_spear', // 5
+          'mars_arena_of_blood', // 6
+          'mars_spear', // 7
+          'mars_gods_rebuke', // 8
+          'mars_gods_rebuke', // 9
+          'mars_bulwark', // 10
+          'mars_bulwark', // 11
+          'mars_arena_of_blood', // 12
+          'mars_bulwark', // 13
+          'mars_bulwark', // 14
+          'special_bonus_unique_mars_rebuke_slow', // 15
+          'special_bonus_unique_mars_rebuke_cooldown', // 16
+          'special_bonus_attributes', // 17
+          'mars_arena_of_blood', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_mars_spear_stun_duration', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_mars_gods_rebuke_extra_crit', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'branches',
+            'ring_of_protection',
+            'faerie_fire',
+            'magic_stick',
+          ],
+          early_game: [
+            'phase_boots',
+            'soul_ring',
+            'helm_of_iron_will',
+            'infused_raindrop',
+            'magic_wand',
+            'bracer',
+          ],
+          mid_game: [
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'armlet',
+            'cyclone',
+            'desolator',
+            'hood_of_defiance',
+          ],
+          late_game: [
+            'overwhelming_blink',
+            'assault',
+            'satanic',
+            'greater_crit',
+          ],
+          situational: ['heavens_halberd', 'lotus_orb'],
+          core: ['phase_boots', 'soul_ring', 'blink', 'black_king_bar'],
+          neutral: [
+            'pogo_stick',
+            'possessed_mask',
+            'dragon_scale',
+            'vambrace',
+            'cloak_of_flames',
+            'black_powder_bag',
+            'trickster_cloak',
+            'ascetic_cap',
+            'fallen_sky',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      mars_bulwark:
+        'You can take a point in this spell early into the laning stage if you are being harassed a lot by right-clicks.',
+      special_bonus_unique_mars_rebuke_slow:
+        'At level 15, take the suggested level 15 over this level 10 talent. The dota client doesn`t allow me to indicate that in graphics above. On the level 16, take the level 10 talent.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      helm_of_iron_will:
+        'You can rush this item for sustain on the lane. Upgrading it to Armlet is fine but usually you should make your way to Blink Dagger first. You can opt not to upgrade it at all.',
+      phase_boots: 'A core boots upgrade that allows you to gap-close quicker.',
+      soul_ring: 'A core item that helps with mana sustain.',
+      cyclone:
+        'It can be a particularly good purchase against elusive heroes to setup the Arena of Blood into Spear of Mars combo.',
+      black_king_bar:
+        'A core item that allows you to stay alive and get spells off while in the middle of the fight. Bullwark reduces a lot of right-click damage and BKB covers most of the rest.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      aghanims_shard:
+        'Great against illusion or clone based heroes. You are likely to pin the real hero along with the illusion or clone.',
+      lotus_orb: 'For reflect, dispel and armor.',
+    },
+  },
+
+  Meepo: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804195,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959764',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'meepo_poof', // 1
+          'meepo_ransack', // 2
+          'meepo_poof', // 3
+          'meepo_divided_we_stand', // 4
+          'meepo_poof', // 5
+          'meepo_ransack', // 6
+          'meepo_poof', // 7
+          'meepo_earthbind', // 8
+          'meepo_earthbind', // 9
+          'special_bonus_attack_base_damage_20', // 10
+          'meepo_divided_we_stand', // 11
+          'meepo_earthbind', // 12
+          'meepo_earthbind', // 13
+          'meepo_ransack', // 14
+          'special_bonus_unique_meepo_2', // 15
+          'meepo_ransack', // 16
+          'special_bonus_attributes', // 17
+          'meepo_divided_we_stand', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_meepo_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_meepo_5', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'circlet',
+            'branches',
+            'ward_observer',
+          ],
+          early_game: ['power_treads', 'dragon_lance', 'wraith_band'],
+          mid_game: ['blink', 'ethereal_blade', 'skadi', 'manta'],
+          late_game: ['sheepstick', 'heart', 'overwhelming_blink'],
+          situational: ['invis_sword', 'aghanims_shard', 'ultimate_scepter'],
+          core: [
+            'power_treads',
+            'dragon_lance',
+            'blink',
+            'ethereal_blade',
+            'skadi',
+            'sheepstick',
+          ],
+          neutral: [
+            'unstable_wand',
+            'possessed_mask',
+            'vambrace',
+            'ring_of_aquila',
+            'titan_sliver',
+            'cloak_of_flames',
+            'ninja_gear',
+            'the_leveller',
+            'apex',
+            'fallen_sky',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      power_treads: 'A core boots upgrade. Meepo loves attribute stats.',
+      dragon_lance:
+        'A core item that provides a lot of attributes that Meepo wants for fair price.',
+      blink: 'A core item for gap-close followed by the burst from Poofs.',
+      ethereal_blade:
+        'A core item that provides tons of attributes and does a burst of magical damage along with Poofs.',
+      skadi: 'A core item that provides Meepo with a lot of useful stats.',
+      sheepstick: 'A core item that allows you to solo most of the heroes.',
+      invis_sword:
+        'An that allows you to pick-off heroes, especially the splitpushers.',
+      aghanims_shard:
+        'For extra mobility. In most cases you will get it from Roshan.',
+      ultimate_scepter:
+        'As a save and dispel. In most cases you will get it from Roshan.',
+    },
+  },
+
+  Mirana: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804207,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699959872',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'mirana_arrow', // 1
+          'mirana_leap', // 2
+          'mirana_starfall', // 3
+          'mirana_starfall', // 4
+          'mirana_starfall', // 5
+          'mirana_invis', // 6
+          'mirana_starfall', // 7
+          'mirana_arrow', // 8
+          'mirana_arrow', // 9
+          'mirana_arrow', // 10
+          'special_bonus_unique_mirana_3', // 11
+          'mirana_invis', // 12
+          'mirana_leap', // 13
+          'mirana_leap', // 14
+          'special_bonus_unique_mirana_5', // 15
+          'mirana_leap', // 16
+          'special_bonus_attributes', // 17
+          'mirana_invis', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_mirana_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_mirana_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'circlet',
+            'flask',
+            'faerie_fire',
+            'branches',
+            'ring_of_protection',
+            'sobi_mask',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: [
+            'urn_of_shadows',
+            'arcane_boots',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'cyclone',
+            'blink',
+            'solar_crest',
+            'force_staff',
+            'ghost',
+            'veil_of_discord',
+            'mekansm',
+            'guardian_greaves',
+          ],
+          late_game: [
+            'ethereal_blade',
+            'ultimate_scepter',
+            'sheepstick',
+            'octarine_core',
+          ],
+          situational: ['infused_raindrop', 'spirit_vessel', 'lotus_orb'],
+          core: ['urn_of_shadows', 'arcane_boots', 'cyclone', 'blink'],
+          neutral: [
+            'arcane_ring',
+            'unstable_wand',
+            'philosophers_stone',
+            'bullwhip',
+            'quickening_charm',
+            'enchanted_quiver',
+            'spell_prism',
+            'timeless_relic',
+            'book_of_shadows',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      mirana_starfall:
+        'You can keep a spell point at level 2 and skill situationally Starfall if the kill opportunity presents itself.',
+    },
+    item_tooltips: {
+      ward_sentry: 'To block or unblock the pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      urn_of_shadows:
+        'A core item that provides you with good stats. Allows you to snowball off of a single kill.',
+      arcane_boots:
+        'A core item that helps with mana sustain. Can be disassembled down the road.',
+      spirit_vessel: 'Against heavy-healing lineup.',
+      cyclone:
+        'A core item that allows you to setup Sacred Arrow. Goes well with Blink Dagger.',
+      blink:
+        'A core item that goes well with Eul`s Scepter to setup kills. Blink also allows you to do a double Starstorm.',
+      lotus_orb: 'For reflect, dispel and armor.',
+    },
+  },
+
+  'Monkey King': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804218,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'monkey_king_boundless_strike', // 1
+          'monkey_king_jingu_mastery', // 2
+          'monkey_king_jingu_mastery', // 3
+          'monkey_king_tree_dance', // 4
+          'monkey_king_tree_dance', // 5
+          'monkey_king_tree_dance', // 6
+          'monkey_king_tree_dance', // 7
+          'monkey_king_boundless_strike', // 8
+          'monkey_king_boundless_strike', // 9
+          'monkey_king_boundless_strike', // 10
+          'monkey_king_jingu_mastery', // 11
+          'monkey_king_wukongs_command', // 12
+          'monkey_king_jingu_mastery', // 13
+          'special_bonus_unique_monkey_king_9', // 14
+          'special_bonus_unique_monkey_king_2', // 15
+          'monkey_king_wukongs_command', // 16
+          'special_bonus_attributes', // 17
+          'monkey_king_wukongs_command', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_monkey_king_10', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_monkey_king_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'orb_of_venom',
+            'faerie_fire',
+            'slippers',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'orb_of_corrosion',
+            'power_treads',
+            'phase_boots',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'echo_sabre',
+            'black_king_bar',
+            'skadi',
+            'basher',
+            'diffusal_blade',
+            'desolator',
+            'maelstrom',
+            'lesser_crit',
+          ],
+          late_game: [
+            'abyssal_blade',
+            'greater_crit',
+            'mjollnir',
+            'satanic',
+            'ultimate_scepter',
+          ],
+          situational: [
+            'infused_raindrop',
+            'blink',
+            'silver_edge',
+            'monkey_king_bar',
+            'nullifier',
+          ],
+          core: [
+            'orb_of_corrosion',
+            'echo_sabre',
+            'black_king_bar',
+            'skadi',
+            'basher',
+          ],
+          neutral: [
+            'arcane_ring',
+            'broom_handle',
+            'misericorde',
+            'quicksilver_amulet',
+            'mind_breaker',
+            'paladin_sword',
+            'penta_edged_sword',
+            'the_leveller',
+            'desolator_2',
+            'ex_machina',
+          ],
+        },
+        ability_tooltips: {
+          monkey_king_jingu_mastery:
+            'You can skill this spell on level 1 if you have an easy time of getting stacks up. Depending on the match-up you invest more or less points in this spell. This spell doesn`t help you farm in any way though.',
+          monkey_king_wukongs_command:
+            'You can put a point in this spell earlier than suggested if you are grouping and fighting a lot early.',
+        },
+        item_tooltips: {
+          orb_of_venom:
+            'Start with it if you can get Jingu stacks easily(double melee against you for example).',
+          echo_sabre:
+            'A core item that helps with mana sustain and allows you to build up Jingu stacks quikly. Can be disassembled.',
+          black_king_bar:
+            'A core item that allows you to stand your ground and fight. Wukong`s command makes you resistant against physical damage and Black King Bar sorts out most of the other sources of damage.',
+          skadi: 'A core item which works well with Wukong`s command.',
+          basher:
+            'A core item that allows you to lock down the opponent you are focusing.',
+          blink: 'Allows you to find a nice spot to unleash Wukong`s Command.',
+          silver_edge: 'For break effect and to reposition.',
+          monkey_king_bar: 'Against evasion and miss chance.',
+          nullifier:
+            'To dispel defensive spells and items from the opponents that prevent you from hitting them.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804218,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'monkey_king_tree_dance', // 1
+          'monkey_king_boundless_strike', // 2
+          'monkey_king_tree_dance', // 3
+          'monkey_king_boundless_strike', // 4
+          'monkey_king_tree_dance', // 5
+          'monkey_king_boundless_strike', // 6
+          'monkey_king_tree_dance', // 7
+          'monkey_king_boundless_strike', // 8
+          'monkey_king_wukongs_command', // 9
+          'special_bonus_unique_monkey_king_9', // 10
+          'monkey_king_jingu_mastery', // 11
+          'monkey_king_wukongs_command', // 12
+          'monkey_king_jingu_mastery', // 13
+          'monkey_king_jingu_mastery', // 14
+          'special_bonus_unique_monkey_king_7', // 15
+          'monkey_king_jingu_mastery', // 16
+          'special_bonus_attributes', // 17
+          'monkey_king_wukongs_command', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_monkey_king_10', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_monkey_king_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'orb_of_venom',
+            'flask',
+            'faerie_fire',
+            'branches',
+            'enchanted_mango',
+            'ward_sentry',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'orb_of_corrosion',
+            'boots',
+            'magic_wand',
+            'urn_of_shadows',
+          ],
+          mid_game: ['orchid', 'solar_crest', 'ghost', 'cyclone'],
+          late_game: ['skadi', 'basher', 'sheepstick'],
+          situational: [
+            'infused_raindrop',
+            'spirit_vessel',
+            'lotus_orb',
+            'black_king_bar',
+            'mage_slayer',
+          ],
+          core: ['orb_of_corrosion', 'orchid', 'solar_crest'],
+          neutral: [
+            'arcane_ring',
+            'unstable_wand',
+            'bullwhip',
+            'ring_of_aquila',
+            'black_powder_bag',
+            'quickening_charm',
+            'penta_edged_sword',
+            'heavy_blade',
+            'desolator_2',
+            'book_of_shadows',
+          ],
+        },
+        ability_tooltips: {
+          monkey_king_jingu_mastery:
+            'You can skill this spell on level 1 if you have an easy time of getting stacks up. Don`t put too many points(more than 2) in it. This spell is the least useful for you as support later on.',
+        },
+        item_tooltips: {
+          orb_of_venom: 'Allows you to stay on top of the opponents.',
+          boots: 'You can skip the boots entirely.',
+          spirit_vessel: 'Against heavy-healing lineups.',
+          orchid:
+            'A core item that adds another utility to your hero. Helps with mana issues. You can setup kills with it.',
+          solar_crest:
+            'A core item to buff one of your right-clicking cores or debuff the hero you are looking to burst as a team.',
+          mage_slayer:
+            'Against heavy magical damage lineups. Your statues apply debuff as well.',
+          lotus_orb: 'For reflect, dispel and armor.',
+          black_king_bar:
+            'An item that allows you to stand your ground and fight. Wukong`s command makes you resistant against physical damage and Black King Bar sorts out most of the other sources of damage.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      monkey_king_wukongs_command:
+        'You can put a point in this spell earlier than suggested if you are grouping and fighting a lot early.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      orb_of_corrosion:
+        'A core item that allows you to pressure early on and works well with Wukong`s Command later.',
+      infused_raindrop: 'On hero against magical burst.',
+    },
+  },
+
+  Morphling: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804228,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960135',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'morphling_morph_agi', // 1
+          'morphling_waveform', // 2
+          'morphling_morph_agi', // 3
+          'morphling_waveform', // 4
+          'morphling_morph_agi', // 5
+          'morphling_waveform', // 6
+          'morphling_morph_agi', // 7
+          'morphling_waveform', // 8
+          'morphling_morph', // 9
+          'special_bonus_unique_morphling_1', // 10
+          'morphling_adaptive_strike_agi', // 11
+          'morphling_adaptive_strike_agi', // 12
+          'morphling_adaptive_strike_agi', // 13
+          'morphling_adaptive_strike_agi', // 14
+          'special_bonus_unique_morphling_8', // 15
+          'morphling_morph', // 16
+          'special_bonus_attributes', // 17
+          'morphling_morph', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_morphling_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_morphling_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'circlet',
+            'slippers',
+            'faerie_fire',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'bottle',
+            'lifesteal',
+            'power_treads',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'manta',
+            'ethereal_blade',
+            'black_king_bar',
+            'falcon_blade',
+            'dragon_lance',
+            'lesser_crit',
+          ],
+          late_game: ['skadi', 'satanic', 'butterfly', 'greater_crit'],
+          situational: [
+            'bottle',
+            'infused_raindrop',
+            'sphere',
+            'ultimate_scepter',
+            'blink',
+          ],
+          core: [
+            'lifesteal',
+            'power_treads',
+            'manta',
+            'ethereal_blade',
+            'black_king_bar',
+          ],
+          neutral: [
+            'possessed_maks',
+            'unstable_wand',
+            'pupils_gift',
+            'vambrace',
+            'titan_sliver',
+            'paladin_sword',
+            'the_leveller',
+            'ninja_gear',
+            'ex_machina',
+            'fallen_sky',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      morphling_adaptive_strike_agi:
+        'You can put a point in this spell at level 2 if you have problems securing range creep lasthits.',
+      morphling_morph:
+        'You can put a point in ultimate at level 6 already if you can go for a kill. Otherwise skip it and max out Waveform.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      bottle: 'If you are playing midlane Morphling.',
+      lifesteal: 'A core item that provides you with hp sustain.',
+      infused_raindrop: 'On hero against magical burst.',
+      power_treads:
+        'A core boots upgrade that speeds up your farm due to attack speed increase and mana savings through toggling.',
+      manta:
+        'A core item that provides you with mix of stats. Manta applies dispel on cast so it is good against Spirit Vessel - a common Morph counter. Using Manta illusions frequently will boost your farming speed.',
+      sphere: 'Great agaist powerful single-target disables and debuffs.',
+      ethereal_blade:
+        'A core item that provides you with magical burst. Goes well with agility Attribute Shift.',
+      black_king_bar:
+        'A core item that allows you to deliver the damage in the fights.',
+      ultimate_scepter:
+        'Allows you to cast Morph on allies. It is amazing if you are playing with heroes like Earthshaker, Dark Willow and Winter Wyvern.',
+      blink: 'To gap-close quickly.',
     },
   },
 
@@ -7608,283 +8258,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	
 	
 	
-	"Mars": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804174,
-				abilities: [
-					"mars_gods_rebuke",	// 1
-					"mars_spear",	// 2
-					"mars_spear",	// 3
-					"mars_gods_rebuke",	// 4
-					"mars_spear",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","gauntlets","faerie_fire","ring_of_protection","flask","enchanted_mango","circlet","bracer","magic_stick"],
-					early_game:	["soul_ring","phase_boots","magic_wand","bracer","bottle","orb_of_corrosion"],
-					mid_game:	["blink","desolator","cyclone","hood_of_defiance","solar_crest","vladmir"],
-					late_game:	["assault","satanic","overwhelming_blink","shivas_guard"],
-					situational:	["heavens_halberd","black_king_bar","aghanims_shard","lotus_orb"],
-					core:	["phase_boots","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"To sustain yourself if your midlaner isn't buying it.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"aghanims_shard":	"Against illusion or clone based heroes.",
-			"lotus_orb":	"If you are playing utility Magnus for reflect, dispel and armor."
-		}
-	},
 	
-	"Meepo": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804195,
-				abilities: [
-					"meepo_poof",	// 1
-					"meepo_ransack",	// 2
-					"meepo_poof",	// 3
-					"meepo_divided_we_stand",	// 4
-					"meepo_poof",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","ward_observer","circlet","branches","faerie_fire"],
-					early_game:	["boots","power_treads","dragon_lance","travel_boots","wraith_band"],
-					mid_game:	["dragon_lance","blink","sheepstick","ethereal_blade","manta"],
-					late_game:	["ethereal_blade","skadi","heart"],
-					situational:	["aghanims_shard","ultimate_scepter"],
-					core:	["dragon_lance","dragon_lance","blink","sheepstick","ethereal_blade","ethereal_blade"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"aghanims_shard":	"For extra mobility.",
-			"ultimate_scepter":	"As a save and dispel."
-		}
-	},
-	"Mirana": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804207,
-				abilities: [
-					"mirana_arrow",	// 1
-					"mirana_leap",	// 2
-					"mirana_starfall",	// 3
-					"mirana_starfall",	// 4
-					"mirana_starfall",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","faerie_fire","branches","flask","ring_of_protection","sobi_mask","clarity","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","magic_wand","arcane_boots","urn_of_shadows","tranquil_boots","wraith_band"],
-					mid_game:	["cyclone","mekansm","guardian_greaves","force_staff","ghost","solar_crest","rod_of_atos"],
-					late_game:	["aeon_disk","ultimate_scepter","ethereal_blade","sheepstick"],
-					situational:	["infused_raindrop","spirit_vessel","lotus_orb","blink"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ring_of_protection":	"For Urn of Shadows.",
-			"sobi_mask":	"For Urn of Shadows.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"blink":	"For extra mobility and to get double Starstorm off."
-		}
-	},
-	"Monkey King": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804218,
-				abilities: [
-					"monkey_king_boundless_strike",	// 1
-					"monkey_king_jingu_mastery",	// 2
-					"monkey_king_jingu_mastery",	// 3
-					"monkey_king_boundless_strike",	// 4
-					"monkey_king_jingu_mastery",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","orb_of_venom","faerie_fire","circlet","slippers","ward_observer","magic_stick"],
-					early_game:	["boots","power_treads","phase_boots","orb_of_corrosion","magic_wand","wraith_band","ring_of_basilius"],
-					mid_game:	["maelstrom","echo_sabre","sange_and_yasha","desolator","diffusal_blade","basher","lesser_crit"],
-					late_game:	["skadi","mjollnir","satanic","abyssal_blade","ultimate_scepter","greater_crit"],
-					situational:	["infused_raindrop","black_king_bar","silver_edge","monkey_king_bar","nullifier"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"ward_observer":	"If you are playing midlane Monkey King.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"silver_edge":	"For break effect and to close the gap.",
-			"monkey_king_bar":	"Against evasion.",
-			"nullifier":	"To dispel defensive spells and items."
-		}
-	},
-	"Morphling": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804228,
-				abilities: [
-					"morphling_morph_agi",	// 1
-					"morphling_waveform",	// 2
-					"morphling_morph_agi",	// 3
-					"morphling_waveform",	// 4
-					"morphling_morph_agi",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","branches","slippers","faerie_fire","quelling_blade","ward_observer","magic_stick"],
-					early_game:	["bottle","magic_wand","power_treads","wraith_band","ring_of_basilius"],
-					mid_game:	["yasha","manta","ethereal_blade","sange_and_yasha","dragon_lance","lesser_crit"],
-					late_game:	["skadi","satanic","butterfly","greater_crit"],
-					situational:	["infused_raindrop","black_king_bar","sphere","ultimate_scepter","blink"],
-					core:	["power_treads","yasha","ethereal_blade","skadi"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"If you are playing midlane Morphling.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"If you are playing midlane Morphling.",
-			"dragon_lance":	"Can be disassembled.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"sphere":	"Against powerful single target disables and damaging spells.",
-			"ultimate_scepter":	"If you have heroes like Dark Willow, Earthshaker, Gyrocopter with or against you.",
-			"blink":	"To close the gap quickly."
-		}
-	},
+	
+	
+	
+	
+	
 	"Naga Siren": {
 		builds: [
 			{
