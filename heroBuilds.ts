@@ -7804,6 +7804,860 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  'Naga Siren': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804237,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960208',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'naga_siren_mirror_image', // 1
+          'naga_siren_rip_tide', // 2
+          'naga_siren_mirror_image', // 3
+          'naga_siren_rip_tide', // 4
+          'naga_siren_mirror_image', // 5
+          'naga_siren_rip_tide', // 6
+          'naga_siren_mirror_image', // 7
+          'naga_siren_rip_tide', // 8
+          'naga_siren_song_of_the_siren', // 9
+          'special_bonus_movement_speed_20', // 10
+          'naga_siren_ensnare', // 11
+          'naga_siren_ensnare', // 12
+          'naga_siren_ensnare', // 13
+          'naga_siren_ensnare', // 14
+          'special_bonus_unique_naga_siren_4', // 15
+          'naga_siren_song_of_the_siren', // 16
+          'special_bonus_attributes', // 17
+          'naga_siren_song_of_the_siren', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_naga_siren', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_naga_siren_6', // 25
+        ],
+        items: {
+          starting: [
+            'quelling_blade',
+            'tango',
+            'branches',
+            'slippers',
+            'circlet',
+            'magic_stick',
+          ],
+          early_game: ['power_treads', 'magic_wand'],
+          mid_game: ['manta', 'skadi', 'ultimate_scepter', 'orchid'],
+          late_game: ['bloodthorn', 'heart', 'butterfly', 'sheepstick'],
+          situational: [
+            'infused_raindrop',
+            'diffusal_blade',
+            'orchid',
+            'black_king_bar',
+            'silver_edge',
+            'blink',
+            'aghanims_shard',
+            'nullifier',
+          ],
+          core: ['power_treads', 'manta', 'skadi', 'ultimate_scepter'],
+          neutral: [
+            'possessed_mask',
+            'unstable_wand',
+            'vambrace',
+            'pupils_gift',
+            'elven_tunic',
+            'titan_sliver',
+            'the_leveller',
+            'ninja_gear',
+            'apex',
+            'fallen_sky',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      naga_siren_ensnare:
+        'You can skill this spell earlier than suggested if you are able to setup a kill.',
+      naga_siren_song_of_the_siren:
+        'You can skill this spell earlier than suggested or keep a skill point if you feel like you might be in danger.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade. Naga really loves the attribute stats. Toggling the item can save you some mana as well.',
+      manta:
+        'A core item that provides you with a mix of stats. Rip Tide works on Manta illusions as well.',
+      diffusal_blade:
+        'Really good against Medusa and WK but also other heroes with small mana pool. Mana burn works on illusions as well.',
+      skadi: 'A core item that provides you with bunch of attribute stats.',
+      orchid:
+        'Allows you to pick-off heroes. Illusion benefit from attack speed as well. It should be upgraded to Bloodthorn down the road.',
+      ultimate_scepter:
+        'A core item for more control including spell-immune heroes.',
+      black_king_bar:
+        'Against a lot of disables, magical damage and as a dispel.',
+      silver_edge:
+        'For break effect, burst and to reposition quickly. Illusions crit as well.',
+      blink: 'To gap-close quickly.',
+      aghanims_shard:
+        'Allows you not to just reset the fight with Song of the Siren but also heal allies for a decent amount. You will acquire this buff from Roshan most of the time.',
+      nullifier:
+        'To dispel defensive spells and items that prevent you from right-clicking the opponents.',
+    },
+  },
+
+  "Nature's Prophet": {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804255,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'furion_force_of_nature', // 1
+          'furion_teleportation', // 2
+          'furion_force_of_nature', // 3
+          'furion_sprout', // 4
+          'furion_force_of_nature', // 5
+          'furion_wrath_of_nature', // 6
+          'furion_force_of_nature', // 7
+          'furion_teleportation', // 8
+          'furion_teleportation', // 9
+          'special_bonus_attack_damage_20', // 10
+          'furion_teleportation', // 11
+          'furion_wrath_of_nature', // 12
+          'furion_sprout', // 13
+          'furion_sprout', // 14
+          'special_bonus_attack_speed_25', // 15
+          'furion_sprout', // 16
+          'special_bonus_attributes', // 17
+          'furion_wrath_of_nature', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_furion_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_furion_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'blight_stone',
+            'branches',
+            'faerie_fire',
+            'magic_stick',
+          ],
+          early_game: ['power_treads', 'magic_wand'],
+          mid_game: [
+            'orchid',
+            'black_king_bar',
+            'aghanims_shard',
+            'silver_edge',
+            'witch_blade',
+            'maelstrom',
+            'gungir',
+          ],
+          late_game: [
+            'satanic',
+            'assault',
+            'bloodthorn',
+            'ultimate_scepter',
+            'sheepstick',
+          ],
+          situational: [
+            'infused_raindrop',
+            'ancient_janggo',
+            'heavens_halberd',
+            'monkey_king_bar',
+            'hurricane_pike',
+            'nullifier',
+          ],
+          core: [
+            'power_treads',
+            'orchid',
+            'black_king_bar',
+            'aghanims_shard',
+            'silver_edge',
+          ],
+          neutral: [
+            'unstable_wand',
+            'broom_handle',
+            'quicksilver_amulet',
+            'grove_bow',
+            'enchanted_quiver',
+            'elven_tunic',
+            'the_leveller',
+            'ninja_gear',
+            'desolator_2',
+            'pirate_hat',
+          ],
+        },
+        item_tooltips: {
+          power_treads:
+            'A core boots upgrade that provides you with good amount of attack speed.',
+          orchid: 'A core item that allows you to pick-off heroes.',
+          maelstrom: 'A farming item. Good against illusions.',
+          ancient_janggo:
+            'If you are fighting and grouping a lot early on. The buff works on summons.',
+          black_king_bar:
+            'A core item that allows you to stand your ground and right-click.',
+          heavens_halberd: 'Especially good against ranged right-clickers.',
+          silver_edge:
+            'A core item that provides you with burst, break effect and ability to reposition.',
+          ultimate_scepter: 'For extra control and to have lanes pushed out.',
+          monkey_king_bar: 'Against evasion and miss chance.',
+          hurricane_pike: 'To disengage from gap-closing opponents.',
+          nullifier:
+            'To dispel defensive spells and items that prevent you from right-clicking.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804255,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'furion_force_of_nature', // 1
+          'furion_teleportation', // 2
+          'furion_force_of_nature', // 3
+          'furion_sprout', // 4
+          'furion_force_of_nature', // 5
+          'furion_wrath_of_nature', // 6
+          'furion_force_of_nature', // 7
+          'furion_teleportation', // 8
+          'furion_teleportation', // 9
+          'special_bonus_attack_damage_20', // 10
+          'furion_teleportation', // 11
+          'furion_wrath_of_nature', // 12
+          'furion_sprout', // 13
+          'furion_sprout', // 14
+          'special_bonus_attack_speed_25', // 15
+          'furion_sprout', // 16
+          'special_bonus_attributes', // 17
+          'furion_wrath_of_nature', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_furion_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_furion_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'blight_stone',
+            'branches',
+            'faerie_fire',
+            'magic_stick',
+          ],
+          early_game: ['power_treads', 'magic_wand'],
+          mid_game: [
+            'orchid',
+            'witch_blade',
+            'black_king_bar',
+            'aghanims_shard',
+            'maelstrom',
+            'silver_edge',
+            'gungir',
+          ],
+          late_game: [
+            'skadi',
+            'satanic',
+            'assault',
+            'bloodthorn',
+            'ultimate_scepter',
+            'mjollnir',
+          ],
+          situational: [
+            'infused_raindrop',
+            'monkey_king_bar',
+            'hurricane_pike',
+            'nullifier',
+          ],
+          core: [
+            'power_treads',
+            'orchid',
+            'black_king_bar',
+            'aghanims_shard',
+            'silver_edge',
+          ],
+          neutral: [
+            'unstable_wand',
+            'broom_handle',
+            'quicksilver_amulet',
+            'grove_bow',
+            'enchanted_quiver',
+            'elven_tunic',
+            'the_leveller',
+            'ninja_gear',
+            'desolator_2',
+            'pirate_hat',
+          ],
+        },
+        item_tooltips: {
+          power_treads:
+            'A core boots upgrade that provides you with good amount of attack speed.',
+          orchid: 'A core item that allows you to pick-off heroes.',
+          witch_blade:
+            'Covers a lot of hero`s weaknesses like low armor, attack speed and burst.',
+          maelstrom: 'A farming item. Good against illusions.',
+          black_king_bar:
+            'A core item that allows you to stand your ground and right-click.',
+          silver_edge:
+            'A core item that provides you with burst, break effect and ability to reposition.',
+          ultimate_scepter: 'For extra control and to have lanes pushed out.',
+          monkey_king_bar: 'Against evasion and miss chance.',
+          hurricane_pike: 'To disengage from gap-closing opponents.',
+          nullifier:
+            'To dispel defensive spells and items that prevent you from right-clicking.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804255,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'furion_force_of_nature', // 1
+          'furion_teleportation', // 2
+          'furion_force_of_nature', // 3
+          'furion_sprout', // 4
+          'furion_force_of_nature', // 5
+          'furion_wrath_of_nature', // 6
+          'furion_force_of_nature', // 7
+          'furion_teleportation', // 8
+          'furion_teleportation', // 9
+          'special_bonus_unique_furion_5', // 10
+          'furion_teleportation', // 11
+          'furion_wrath_of_nature', // 12
+          'furion_sprout', // 13
+          'furion_sprout', // 14
+          'special_bonus_unique_furion_2', // 15
+          'furion_sprout', // 16
+          'special_bonus_attributes', // 17
+          'furion_wrath_of_nature', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_furion_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_furion', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'blight_stone',
+            'branches',
+            'faerie_fire',
+            'boots',
+            'ward_sentry',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'boots',
+            'magic_wand',
+            'medallion_of_courage',
+            'urn_of_shadows',
+          ],
+          mid_game: [
+            'ancient_janggo',
+            'solar_crest',
+            'aghanims_shard',
+            'ultimate_scepter',
+            'meteor_hammer',
+            'ghost',
+            'force_staff',
+          ],
+          late_game: ['assault', 'sheepstick', 'refresher'],
+          situational: [
+            'infused_raindrop',
+            'spirit_vessel',
+            'heavens_halberd',
+            'blink',
+            'lotus_orb',
+          ],
+          core: [
+            'ancient_janggo',
+            'solar_crest',
+            'aghanims_shard',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'arcane_ring',
+            'trusty_shovel',
+            'dragon_scale',
+            'pupils_gift',
+            'spider_legs',
+            'quickening_charm',
+            'spy_gadget',
+            'spell_prism',
+            'demonicon',
+            'book_of_shadows',
+          ],
+        },
+        item_tooltips: {
+          ward_sentry: 'To block or unblock a pull camp.',
+          ward_observer: 'Consider placing courier sniping Observer Ward.',
+          boots: 'You can skip the boots entirely',
+          spirit_vessel: 'Against a heavy-healing lineup.',
+          ancient_janggo:
+            'A core item that bufs your team early on. The buff works on summons.',
+          solar_crest:
+            'A core item to buff a right-clicking core. Allows you to kill Roshan earlier.',
+          heavens_halberd: 'Especially good against ranged right-clickers.',
+          ultimate_scepter:
+            'A core item for extra control and to have lanes pushed out.',
+          blink: 'For gap-closing and safer split-push.',
+          lotus_orb: 'For reflect, dispel and some armor.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_unique_furion_4:
+        'Very strong talent if coupled with Aghanim`s Shard.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      aghanims_shard:
+        'A core item that adds to the push but also serves as a "disable" in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.',
+    },
+  },
+
+  Necrophos: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804267,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'necrolyte_death_pulse', // 1
+          'necrolyte_heartstopper_aura', // 2
+          'necrolyte_death_pulse', // 3
+          'necrolyte_sadist', // 4   equals to 'ghost shroud'
+          'necrolyte_death_pulse', // 5
+          'necrolyte_reapers_scythe', // 6
+          'necrolyte_death_pulse', // 7
+          'necrolyte_heartstopper_aura', // 8
+          'necrolyte_heartstopper_aura', // 9
+          'necrolyte_heartstopper_aura', // 10
+          'special_bonus_strength_8', // 11
+          'necrolyte_reapers_scythe', // 12
+          'necrolyte_sadist', // 13
+          'necrolyte_sadist', // 14
+          'special_bonus_unique_necrophos_4', // 15
+          'necrolyte_sadist', // 16
+          'special_bonus_attributes', // 17
+          'necrolyte_reapers_scythe', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_necrophos_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_necrophos', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'branches',
+            'circlet',
+            'mantle',
+            'magic_stick',
+          ],
+          early_game: ['null_talisman', 'boots', 'magic_wand', 'power_treads'],
+          mid_game: [
+            'hood_of_defiance',
+            'cyclone',
+            'kaya_and_sange',
+            'force_staff',
+            'aghanims_shard',
+            'blink',
+            'sange',
+            'mekansm',
+            'eternal_shroud',
+          ],
+          late_game: ['shivas_guard', 'sheepstick', 'octarine_core'],
+          situational: [
+            'infused_raindrop',
+            'pipe',
+            'heavens_halberd',
+            'ultimate_scepter',
+            'lotus_orb',
+          ],
+          core: [
+            'power_treads',
+            'hood_of_defiance',
+            'cyclone',
+            'kaya_and_sange',
+            'aghanims_shard',
+          ],
+          neutral: [
+            'unstable_wand',
+            'pogo_stick',
+            'essence_ring',
+            'pupils_gift',
+            'quickening_charm',
+            'spider_legs',
+            'ascetic_cap',
+            'trickster_cloak',
+            'ex_machina',
+            'force_field',
+          ],
+        },
+        item_tooltips: {
+          power_treads:
+            'A core item that tanks you up forther. Improves your attack speed signifcantly.',
+          cyclone:
+            'A core item that provides you with movement speed and dispel against a common counter of Spirit Vessel.',
+          pipe: 'Against heavy-healing lineups.',
+          heavens_halberd:
+            'A strong alternative to Kaya and Sange especially against ranged right-clickers.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804267,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'necrolyte_death_pulse', // 1
+          'necrolyte_heartstopper_aura', // 2
+          'necrolyte_death_pulse', // 3
+          'necrolyte_heartstopper_aura', // 4   equals to 'ghost shroud'
+          'necrolyte_death_pulse', // 5
+          'necrolyte_reapers_scythe', // 6
+          'necrolyte_death_pulse', // 7
+          'necrolyte_heartstopper_aura', // 8
+          'necrolyte_heartstopper_aura', // 9
+          'necrolyte_sadist', // 10
+          'special_bonus_strength_8', // 11
+          'necrolyte_reapers_scythe', // 12
+          'necrolyte_sadist', // 13
+          'necrolyte_sadist', // 14
+          'special_bonus_unique_necrophos_4', // 15
+          'necrolyte_sadist', // 16
+          'special_bonus_attributes', // 17
+          'necrolyte_reapers_scythe', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_necrophos_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_necrophos', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'branches',
+            'circlet',
+            'mantle',
+            'magic_stick',
+          ],
+          early_game: [
+            'boots',
+            'null_talisman',
+            'magic_wand',
+            'hood_of_defiance',
+          ],
+          mid_game: [
+            'travel_boots',
+            'kaya_and_sange',
+            'aghanims_shard',
+            'dagon',
+            'blink',
+            'cyclone',
+            'eternal_shroud',
+          ],
+          late_game: [
+            'shivas_guard',
+            'aeon_disk',
+            'sheepstick',
+            'octarine_core',
+          ],
+          situational: [
+            'infused_raindrop',
+            'radiance',
+            'lotus_orb',
+            'ultimate_scepter',
+          ],
+          core: [
+            'hood_of_defiance',
+            'travel_boots',
+            'kaya_and_sange',
+            'aghanims_shard',
+          ],
+          neutral: [
+            'unstable_wand',
+            'pogo_stick',
+            'essence_ring',
+            'pupils_gift',
+            'quickening_charm',
+            'spider_legs',
+            'ascetic_cap',
+            'trickster_cloak',
+            'ex_machina',
+            'fallen_sky',
+          ],
+        },
+        item_tooltips: {
+          travel_boots:
+            'A core item that allows fixes your movement speed issues and allows you to cover the map.',
+          radiance: 'Good against illusion based heroes.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      necrolyte_sadist:
+        'Skill this spell on a per-need basis. On a tough lane, likely on level 4. On easy lane post level6.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane. Definitely upgrade it to Magic Wand as activating it under Ghost Shroud results in huge burst of healing.',
+      infused_raindrop: 'Against magical burst.',
+      hood_of_defiance:
+        'A core item that makes you less susceptible to magical damage, especially under the effect of the Ghost Shroud.',
+      kaya_and_sange:
+        'A core item that provides you with mix of offensive and defensive stats. Self healing amplification from Sange goes well with Ghost Shroud.',
+      aghanims_shard:
+        'A core item to save an ally, heal and amplify the magical damage on target.',
+      blink: "For extra mobility and to get Reaper's Scythe off easier.",
+      lotus_orb: 'For reflect, dispel and armor.',
+      ultimate_scepter: 'Against heavy physical damage lineups.',
+    },
+  },
+
+  'Night Stalker': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804283,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960635',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'night_stalker_void', // 1
+          'night_stalker_hunter_in_the_night', // 2
+          'night_stalker_void', // 3
+          'night_stalker_hunter_in_the_night', // 4
+          'night_stalker_void', // 5
+          'night_stalker_darkness', // 6
+          'night_stalker_void', // 7
+          'night_stalker_crippling_fear', // 8
+          'night_stalker_hunter_in_the_night', // 9
+          'night_stalker_hunter_in_the_night', // 10
+          'special_bonus_unique_night_stalker_7', // 11
+          'night_stalker_darkness', // 12
+          'night_stalker_crippling_fear', // 13
+          'night_stalker_crippling_fear', // 14
+          'special_bonus_unique_night_stalker_3', // 15
+          'night_stalker_crippling_fear', // 16
+          'special_bonus_attributes', // 17
+          'night_stalker_darkness', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_strength_20', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_night_stalker_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'branches',
+            'circlet',
+            'enchanted_mango',
+            'magic_stick',
+          ],
+          early_game: ['phase_boots', 'magic_wand', 'bracer'],
+          mid_game: [
+            'echo_sabre',
+            'black_king_bar',
+            'blink',
+            'basher',
+            'armlet',
+          ],
+          late_game: [
+            'abyssal_blade',
+            'nullifier',
+            'greater_crit',
+            'assault',
+            'overwhelming_blink',
+          ],
+          situational: ['hand_of_midas', 'heavens_halberd', 'aghanims_shard'],
+          core: [
+            'phase_boots',
+            'echo_sabre',
+            'black_king_bar',
+            'blink',
+            'basher',
+          ],
+          neutral: [
+            'broom_handle',
+            'unstable_wand',
+            'quicksilver_amulet',
+            'misericorde',
+            'elven_tunic',
+            'mind_breaker',
+            'penta_edged_sword',
+            'the_leveller',
+            'desolator_2',
+            'giants_ring',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      night_stalker_crippling_fear:
+        'You can put a point in this spell earlier than suggested if silence is necessary to get a kill.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      phase_boots:
+        'A core boots upgrade that allows you to gap-close even quicker.',
+      echo_sabre:
+        'A core item that that provides you with useful stats and burst. Can be disassembled.',
+      hand_of_midas:
+        'If you can get it early and the game looks to be slow paced.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      black_king_bar:
+        'A core item that allows you to be in the middle of the fight and right-click the opponents down.',
+      blink:
+        'A core item that allows you to jump the backlines with Crippling Fear on.',
+      basher:
+        'A core item that allows you to lock down the hero you are focusing.',
+      nullifier:
+        'To dispel defensive spells and items from opponents that prevent you from right-clicking.',
+      aghanims_shard:
+        'Against summon-based heroes. Consumes even ancients during night.',
+    },
+  },
+
+  'Nyx Assassin': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804295,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960726',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'nyx_assassin_impale', // 1
+          'nyx_assassin_spiked_carapace', // 2
+          'nyx_assassin_impale', // 3
+          'nyx_assassin_spiked_carapace', // 4
+          'nyx_assassin_impale', // 5
+          'nyx_assassin_vendetta', // 6
+          'nyx_assassin_impale', // 7
+          'nyx_assassin_mana_burn', // 8
+          'nyx_assassin_mana_burn', // 9
+          'nyx_assassin_mana_burn', // 10
+          'nyx_assassin_mana_burn', // 11
+          'nyx_assassin_vendetta', // 12
+          'nyx_assassin_spiked_carapace', // 13
+          'nyx_assassin_spiked_carapace', // 14
+          'special_bonus_unique_nyx_4', // 15
+          'special_bonus_hp_250', // 16
+          'special_bonus_attributes', // 17
+          'nyx_assassin_vendetta', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_nyx_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_agility_80', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'boots',
+            'flask',
+            'enchanted_mango',
+            'faerie_fire',
+            'branches',
+            'wind_lace',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['arcane_boots', 'magic_wand', 'urn_of_shadows'],
+          mid_game: [
+            'cyclone',
+            'blink',
+            'ultimate_scepter',
+            'aether_lens',
+            'force_staff',
+            'ghost',
+            'meteor_hammer',
+          ],
+          late_game: [
+            'octarine_core',
+            'ethereal_blade',
+            'aeon_disk',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'spirit_vessel', 'lotus_orb'],
+          core: ['arcane_boots', 'cyclone', 'blink', 'ultimate_scepter'],
+          neutral: [
+            'keen_optic',
+            'arcane_ring',
+            'philosophers_stone',
+            'bullwhip',
+            'spider_legs',
+            'psychic_headband',
+            'spy_gadget',
+            'timeless_relic',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      nyx_assassin_mana_burn:
+        'You can skill this spell on level 1 already if you playing against an intelligence high spell-pressure ranged support. Use it off cd in that case.',
+    },
+    item_tooltips: {
+      ward_sentry: 'To block or unblock the pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'On hero against magical burst.',
+      spirit_vessel: 'Against heavy-healing lineup.',
+      arcane_boots:
+        'A core item that solves your mana sustain issues. Can be disasembled and Energy Booster used for Aether Lens or Lotus Orb. Consider Tranquil Boots after disassembling.',
+      cyclone: 'A core item that allows you to setup kills.',
+      blink:
+        'A core item that allows you to gap-close instantly and setup a kill with cyclone and Impale.',
+      ultimate_scepter:
+        'A core item that improves Impale and Mana Burn signifcantly.',
+      lotus_orb: 'For reflect, dispel and armor.',
+      ethereal_blade: 'Goes well with level with suggested level 25 talent.',
+    },
+  },
+
   'Phantom Assassin': {
     builds: [
       {
@@ -8264,307 +9118,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 	
 	
 	
-	"Naga Siren": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804237,
-				abilities: [
-					"naga_siren_mirror_image",	// 1
-					"naga_siren_rip_tide",	// 2
-					"naga_siren_mirror_image",	// 3
-					"naga_siren_rip_tide",	// 4
-					"naga_siren_mirror_image",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","slippers","circlet","faerie_fire","magic_stick"],
-					early_game:	["power_treads","wraith_band","magic_wand"],
-					mid_game:	["yasha","manta","diffusal_blade","sange_and_yasha"],
-					late_game:	["skadi","heart","butterfly","satanic","sheepstick","orchid","bloodthorn"],
-					situational:	["infused_raindrop","black_king_bar","blink","aghanims_shard","ultimate_scepter","nullifier"],
-					core:	["power_treads","yasha"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"blink":	"To close the gap quickly.",
-			"aghanims_shard":	"To reduce armor and slow.",
-			"ultimate_scepter":	"To control spell immune heroes.",
-			"nullifier":	"To dispel defensive spells and items."
-		}
-	},
-	"Nature's Prophet": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804255,
-				abilities: [
-					"furion_force_of_nature",	// 1
-					"furion_teleportation",	// 2
-					"furion_force_of_nature",	// 3
-					"furion_sprout",	// 4
-					"furion_force_of_nature",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","blight_stone","branches","faerie_fire","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["power_treads","magic_wand","urn_of_shadows"],
-					mid_game:	["orchid","maelstrom","witch_blade","solar_crest","lesser_crit","mekansm","desolator","ancient_janggo"],
-					late_game:	["assault","satanic","greater_crit","skadi","sheepstick","aeon_disk","bloodthorn"],
-					situational:	["infused_raindrop","spirit_vessel","black_king_bar","heavens_halberd","aghanims_shard","lotus_orb","monkey_king_bar","ultimate_scepter","hurricane_pike","nullifier"],
-					core:	["power_treads","orchid"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"If you are playing support Nature's Prophet.",
-			"ward_sentry":	"If you are playing support Nature's Prophet to block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"urn_of_shadows":	"If you are playing support Nature's Prophet.",
-			"orchid":	"For right-clicking build.",
-			"maelstrom":	"For right-clicking build.",
-			"witch_blade":	"For right-clicking build.",
-			"solar_crest":	"For utility build.",
-			"lesser_crit":	"For right-clicking build.",
-			"mekansm":	"For utility build.",
-			"desolator":	"For right-clicking build.",
-			"ancient_janggo":	"For utility build.",
-			"assault":	"For right-clicking build.",
-			"satanic":	"For right-clicking build.",
-			"greater_crit":	"For right-clicking build.",
-			"skadi":	"For right-clicking build.",
-			"bloodthorn":	"For right-clicking build.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"spirit_vessel":	"For utility build against heavy healing lineup.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"heavens_halberd":	"For utility build. Especially good against ranged right-clickers.",
-			"aghanims_shard":	"Great at pushing waves and towers.",
-			"lotus_orb":	"For utility build to reflect, dispel and for armor.",
-			"monkey_king_bar":	"For right-clicking build against evasion.",
-			"ultimate_scepter":	"For extra control and to have lanes pushed out.",
-			"hurricane_pike":	"For right-clicking build to disengage from heroes like Slark and Troll.",
-			"nullifier":	"For right-clicking build to dispel defensive spells and items."
-		}
-	},
-	"Necrophos": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804267,
-				abilities: [
-					"necrolyte_death_pulse",		// 1
-					"necrolyte_heartstopper_aura",	// 2
-					"necrolyte_death_pulse",		// 3
-					"necrolyte_sadist",				// 4   equals to 'ghost shroud'
-					"necrolyte_death_pulse",		// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","branches","circlet","flask","mantle","enchanted_mango","ward_observer","magic_stick"],
-					early_game:	["boots","magic_wand","null_talisman","power_treads","arcane_boots","travel_boots"],
-					mid_game:	["hood_of_defiance","force_staff","sange","kaya_and_sange","cyclone","eternal_shroud","mekansm","guardian_greaves","holy_locket","witch_blade"],
-					late_game:	["shivas_guard","aeon_disk","sheepstick","octarine_core"],
-					situational:	["infused_raindrop","pipe","heavens_halberd","radiance","aghanims_shard","lotus_orb","blink","ultimate_scepter"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"If you are playing midlane Necrophos.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"travel_boots":	"For midlane Necrophos.",
-			"mekansm":	"Goes well with Holy Locket and Aghanim's Shard.",
-			"holy_locket":	"Goes well with Mekansm and Aghanim's Shard.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"radiance":	"Against illusions based heroes and summons.",
-			"aghanims_shard":	"To save an ally, heal and amplify the magical damage on target.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"blink":	"For extra mobility and to get Reaper's Scythe off easier.",
-			"ultimate_scepter":	"Against heavy physical damage lineups."
-		}
-	},
-	"Night Stalker": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804283,
-				abilities: [
-					"night_stalker_void",	// 1
-					"night_stalker_hunter_in_the_night",	// 2
-					"night_stalker_void",	// 3
-					"night_stalker_hunter_in_the_night",	// 4
-					"night_stalker_void",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","gauntlets","branches","flask","faerie_fire","enchanted_mango","bracer","ring_of_protection","circlet","magic_stick"],
-					early_game:	["phase_boots","magic_wand","bracer","urn_of_shadows","medallion_of_courage"],
-					mid_game:	["echo_sabre","basher","ultimate_scepter","solar_crest"],
-					late_game:	["assault","abyssal_blade","overwhelming_blink","satanic"],
-					situational:	["hand_of_midas","spirit_vessel","black_king_bar","heavens_halberd","blink","nullifier","aghanims_shard"],
-					core:	["phase_boots"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"hand_of_midas":	"If you can get it early.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"blink":	"To jump the backlines.",
-			"nullifier":	"To dispel defensive spells and items.",
-			"aghanims_shard":	"Against summon-based heroes."
-		}
-	},
-	"Nyx Assassin": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804295,
-				abilities: [
-					"nyx_assassin_impale",	// 1
-					"nyx_assassin_spiked_carapace",	// 2
-					"nyx_assassin_impale",	// 3
-					"nyx_assassin_spiked_carapace",	// 4
-					"nyx_assassin_impale",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","boots","flask","enchanted_mango","wind_lace","branches","faerie_fire","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","magic_wand","arcane_boots","urn_of_shadows","ring_of_basilius"],
-					mid_game:	["ultimate_scepter","aether_lens","cyclone","force_staff","ghost","meteor_hammer","solar_crest"],
-					late_game:	["octarine_core","aeon_disk","ethereal_blade","sheepstick"],
-					situational:	["infused_raindrop","blink","lotus_orb"],
-					core:	["ultimate_scepter"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"blink":	"To close the gap and land Impale easier.",
-			"lotus_orb":	"For reflect, dispel and armor."
-		}
-	},
+	
+	
+	
+	
+	
 	"Ogre Magi": {
 		builds: [
 			{
