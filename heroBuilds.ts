@@ -909,9 +909,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640803569,
+        steam_guide_id: 1642190860,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2719253341',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           'batrider_sticky_napalm',
@@ -9112,12 +9112,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
-  'Outworld Destroyer': {
-    // not 'Outworld Devourer'
+  'Outworld Devourer': {
+    // not 'Outworld Destroyer'
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 0,
+        steam_guide_id: 1640804336,
         steam_guide_link:
           'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
@@ -9199,9 +9199,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 0,
+        steam_guide_id: 1642190895,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2719253915',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'obsidian_destroyer_arcane_orb', // 1
@@ -9241,7 +9241,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'ultimate_scepter',
             'aether_lens',
           ],
-          late_game: ['sheepstick', 'moonshard', 'refresher', 'octarine_core'],
+          late_game: ['sheepstick', 'moon_shard', 'refresher', 'octarine_core'],
           situational: [
             'infused_raindrop',
             'hand_of_midas',
@@ -9397,9 +9397,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804346,
+        steam_guide_id: 1642190906,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2719254096',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'pangolier_shield_crash', // 1
@@ -9497,9 +9497,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804346,
+        steam_guide_id: 1642190919,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2719254316',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'pangolier_shield_crash', // 1
