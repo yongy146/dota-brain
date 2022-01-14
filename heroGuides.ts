@@ -87,19 +87,19 @@ export const HeroGuides = {
   // nyx_assassin: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960726',
   // ],
-  obsidian_destroyer: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071',
-  ],
-  ogre_magi: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960831',
-  ],
-  omniknight: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472',
-  ],
-  oracle: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699960994'],
-  pangolier: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166',
-  ],
+  // obsidian_destroyer: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071',
+  // ],
+  // ogre_magi: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960831',
+  // ],
+  // omniknight: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472',
+  // ],
+  // oracle: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699960994'],
+  // pangolier: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166',
+  // ],
   // "phantom_assassin":     ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303"],
   phantom_lancer: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961424',
