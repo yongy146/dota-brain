@@ -7854,7 +7854,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           situational: [
             'infused_raindrop',
             'diffusal_blade',
-            'orchid',
             'black_king_bar',
             'silver_edge',
             'blink',
@@ -7969,6 +7968,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'bloodthorn',
             'ultimate_scepter',
             'sheepstick',
+            'mjollnir',
           ],
           situational: [
             'infused_raindrop',
@@ -8302,6 +8302,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: [
             'power_treads',
+            'magic_wand',
             'hood_of_defiance',
             'cyclone',
             'kaya_and_sange',
@@ -8400,6 +8401,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'ultimate_scepter',
           ],
           core: [
+            'magic_wand',
             'hood_of_defiance',
             'travel_boots',
             'kaya_and_sange',
@@ -8427,12 +8429,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       necrolyte_sadist:
-        'Skill this spell on a per-need basis. On a tough lane, likely on level 4. On easy lane post level6.',
+        'Skill this spell on a per-need basis. On a tough lane, likely on level 4. On easy lane post level 6.',
     },
     item_tooltips: {
       magic_stick:
-        'Start with it if you expect high frequency of spells being used on the lane. Definitely upgrade it to Magic Wand as activating it under Ghost Shroud results in huge burst of healing.',
+        'Start with it if you expect high frequency of spells being used on the lane.',
       infused_raindrop: 'Against magical burst.',
+      magic_wand:
+        'A core item. Activating it under Ghost Shroud results in a huge burst of healing and mana.',
       hood_of_defiance:
         'A core item that makes you less susceptible to magical damage, especially under the effect of the Ghost Shroud.',
       kaya_and_sange:
@@ -8644,7 +8648,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ward_sentry: 'To block or unblock the pull camp.',
       magic_stick:
         'Start with it if you expect high frequency of spells being used on the lane.',
-      infused_raindrop: 'On hero against magical burst.',
+      infused_raindrop: 'Against magical burst.',
       spirit_vessel: 'Against heavy-healing lineup.',
       arcane_boots:
         'A core item that solves your mana sustain issues. Can be disasembled and Energy Booster used for Aether Lens or Lotus Orb. Consider Tranquil Boots after disassembling.',
