@@ -8019,9 +8019,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_id: 1640804255,
+        steam_guide_id: 1642147989,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2718666197',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'furion_force_of_nature', // 1
@@ -8122,9 +8122,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804255,
+        steam_guide_id: 1642148003,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2718666233',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'furion_force_of_nature', // 1
@@ -8333,9 +8333,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804267,
+        steam_guide_id: 1642148016,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2718666066',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'necrolyte_death_pulse', // 1
