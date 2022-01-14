@@ -9273,7 +9273,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           hand_of_midas:
             'After applying some pressure with Meteor Hammer you can slow down and purchase Hand of Midas.',
           witch_blade:
-            'A core item that provides you with significant right-click damage increase.',
+            'A core item that significantly increases the damage coming from your right-clicks.',
           black_king_bar: 'A core item that allows you to deliver the damage.',
           ultimate_scepter:
             'A core item that improves Astral Imprisonment and provides you with an extra charge of it.',
