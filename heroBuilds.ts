@@ -9739,6 +9739,355 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  'Phantom Lancer': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804368,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961424',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'phantom_lancer_spirit_lance', // 1
+          'phantom_lancer_phantom_edge', // 2
+          'phantom_lancer_doppelwalk', // 3
+          'phantom_lancer_phantom_edge', // 4
+          'phantom_lancer_phantom_edge', // 5
+          'phantom_lancer_juxtapose', // 6
+          'phantom_lancer_phantom_edge', // 7
+          'phantom_lancer_doppelwalk', // 8
+          'phantom_lancer_doppelwalk', // 9
+          'special_bonus_attack_speed_15', // 10
+          'phantom_lancer_doppelwalk', // 11
+          'phantom_lancer_juxtapose', // 12
+          'phantom_lancer_spirit_lance', // 13
+          'phantom_lancer_spirit_lance', // 14
+          'phantom_lancer_spirit_lance', // 15
+          'special_bonus_unique_phantom_lancer_5', // 16
+          'special_bonus_attributes', // 17
+          'phantom_lancer_juxtapose', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_phantom_lancer', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_phantom_lancer_4', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'faerie_fire',
+            'circlet',
+            'magic_stick',
+          ],
+          early_game: ['power_treads', 'magic_wand', 'wraith_band'],
+          mid_game: ['diffusal_blade', 'manta', 'heart', 'aghanims_shard'],
+          late_game: ['octarine_core', 'skadi', 'butterfly', 'abyssal_blade'],
+          situational: [
+            'infused_raindrop',
+            'hood_of_defiance',
+            'monkey_king_bar',
+            'sphere',
+            'bloodthorn',
+            'silver_edge',
+          ],
+          core: [
+            'power_treads',
+            'diffusal_blade',
+            'manta',
+            'heart',
+            'aghanims_shard',
+            'octarine_core',
+          ],
+          neutral: [
+            'possessed_mask',
+            'unstable_wand',
+            'vambrace',
+            'pupils_gift',
+            'titan_sliver',
+            'elven_tunic',
+            'ninja_gear',
+            'the_leveller',
+            'apex',
+            'pirate_hat',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      phantom_lancer_doppelwalk:
+        'You can skill this spell already on level 2 if there`s a need for dispel. On other hand, you can delay skilling this spell to level 4 if there`s no need for dispel.',
+      special_bonus_unique_phantom_lancer_6:
+        'On level 20, you can take this talent over the suggested one if you have no need of gap-closing.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade that allows you to farm faster due to attack speed increase. It also provides the stat attributes which all the illusion based heroes adore.',
+      hood_of_defiance: 'Against a lot of magical damage in early to midgame.',
+      diffusal_blade:
+        'A core item that provides you a lot of useful stat attributes but also mana burn works on illusions.',
+      manta:
+        'A core item that provides you with useful stat attributes and goes well with Diffusal Blade.',
+      heart: 'A core item that makes you and your illusions very tanky.',
+      aghanims_shard:
+        'A core item that is really good at poking the opponents from the distance and provides a lot of value in longer fights. Creates additional chaos in the fights. Works well with Octarine.',
+      octarine_core:
+        'A core item that reduces the cooldown of all of your active spell and items. Goes well with Aghanim`s Shard.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+      sphere: 'Against powerful single-target disables and debuffs.',
+      bloodthorn:
+        'To burst tanky heroes and for true strike. You illusions also crit on Bloodthorned hero.',
+      silver_edge:
+        'For break effect, burst and to reposition. Illusions have crit chance as well.',
+    },
+  },
+
+  Phoenix: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804378,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961589',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'phoenix_fire_spirits', // 1
+          'phoenix_icarus_dive', // 2
+          'phoenix_fire_spirits', // 3
+          'phoenix_icarus_dive', // 4
+          'phoenix_fire_spirits', // 5
+          'phoenix_supernova', // 6
+          'phoenix_fire_spirits', // 7
+          'phoenix_sun_ray', // 8
+          'phoenix_sun_ray', // 9
+          'phoenix_sun_ray', // 10
+          'phoenix_sun_ray', // 11
+          'phoenix_supernova', // 12
+          'phoenix_icarus_dive', // 13
+          'phoenix_icarus_dive', // 14
+          'special_bonus_spell_amplify_6', // 15
+          'special_bonus_unique_phoenix_3', // 16
+          'special_bonus_attributes', // 17
+          'phoenix_supernova', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_phoenix_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_phoenix_1', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'faerie_fire',
+            'branches',
+            'enchanted_mango',
+            'ring_of_regen',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: [
+            'tranquil_boots',
+            'magic_wand',
+            'urn_of_shadows',
+            'ring_of_basilius',
+          ],
+          mid_game: [
+            'holy_locket',
+            'aghanims_shard',
+            'veil_of_discord',
+            'cyclone',
+            'ghost',
+            'glimmer_cape',
+            'force_staff',
+          ],
+          late_game: [
+            'ultimate_scepter',
+            'refresher',
+            'aeon_disk',
+            'shivas_guard',
+            'sheepstick',
+          ],
+          situational: [
+            'infused_raindrop',
+            'spirit_vessel',
+            'lotus_orb',
+            'blink',
+          ],
+          core: [
+            'tranquil_boots',
+            'holy_locket',
+            'aghanims_shard',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'trusty_shovel',
+            'arcane_ring',
+            'philosophers_stone',
+            'bullwhip',
+            'quickening_charm',
+            'psychic_headband',
+            'spy_gadget',
+            'spell_prism',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_spell_amplify_6:
+        'On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.',
+    },
+    item_tooltips: {
+      ward_sentry: 'To block or unblock the pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      ring_of_basilius: 'If your laning partner uses a lot of mana early.',
+      infused_raindrop: 'On hero against magical burst.',
+      tranquil_boots:
+        'A core boots upgrade. Solves hp sustain and movement speed issues for the hero.',
+      spirit_vessel: 'Against heavy-healing lineup.',
+      holy_locket:
+        'A core item that signifcantly amplifies healing coming from Sunray. Provides you with a second source of burst healing when activating the item.',
+      aghanims_shard:
+        'A core upgrade that allows you to use Sunray during Supernova. Ideally, use the Sunray before you activate Supernova so you have another Sunray once the egg explodes.',
+      lotus_orb: 'For reflect, dispel and armor.',
+      ultimate_scepter:
+        'A core item that allows you to save an ally with Supernova. It matches well with suggested level 25 talent and Blink Dagger.',
+      blink:
+        'Allows you to position to Sunray properly. Goes well with Aghanim`s Scepter in the late game to instantly save an ally.',
+    },
+  },
+
+  Puck: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804386,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'puck_illusory_orb', // 1
+          'puck_phase_shift', // 2
+          'puck_illusory_orb', // 3
+          'puck_waning_rift', // 4
+          'puck_illusory_orb', // 5
+          'puck_dream_coil', // 6
+          'puck_illusory_orb', // 7
+          'puck_waning_rift', // 8
+          'puck_waning_rift', // 9
+          'puck_waning_rift', // 10
+          'special_bonus_unique_puck_7', // 11
+          'puck_dream_coil', // 12
+          'puck_phase_shift', // 13
+          'puck_phase_shift', // 14
+          'puck_phase_shift', // 15
+          'special_bonus_spell_amplify_12', // 16
+          'special_bonus_attributes', // 17
+          'puck_dream_coil', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_puck_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_puck_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'circlet',
+            'branches',
+            'mantle',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'bottle',
+            'null_talisman',
+            'boots',
+            'witch_blade',
+            'magic_wand',
+          ],
+          mid_game: [
+            'travel_boots',
+            'blink',
+            'kaya_and_sange',
+            'aghanims_shard',
+            'cyclone',
+            'dagon',
+          ],
+
+          late_game: [
+            'ultimate_scepter',
+            'octarine_core',
+            'ethereal_blade',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'sphere', 'aeon_disk'],
+          core: [
+            'bottle',
+            'witch_blade',
+            'travel_boots',
+            'blink',
+            'kaya_and_sange',
+            'aghanims_shard',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'arcane_ring',
+            'grove_bow',
+            'vambrace',
+            'psychic_headband',
+            'quickening_charm',
+            'timeless_relic',
+            'spell_prism',
+            'mirror_shield',
+            'fallen_sky',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      puck_phase_shift:
+        'You don`t have to skill this spell on level 2 if you are not being right-clicked often or you don`t need to dodge a spell.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      bottle:
+        'A core item that provides you with sustain and allows you to gank with stored rune.',
+      infused_raindrop: 'Against magical burst.',
+      witch_blade:
+        'A core item that significantly increases the damage coming from your right-clicks.',
+      travel_boots: 'A core item that allows you to cover the map better.',
+      blink:
+        'A core item that allows you to seize an opportunity and land a multi-hero Mystic Coil. Works well with Phase Shift when it comes to escaping.',
+      kaya_and_sange:
+        'A core item that provides you with a mix of defensive and offensive stats.',
+      aghanims_shard:
+        'A core upgrade that allows you to snap a Mystic Coil and detect invisble heroes or wards.',
+      ultimate_scepter:
+        'A core item that allows Dream Coil to affect spell-immune heroes.',
+      sphere: 'Aghainst powerful single-target disables or debuffs.',
+      aeon_disk: 'Against lineups with a lot of catch, disables and burst.',
+    },
+  },
+
   Pudge: {
     builds: [
       {
@@ -9946,6 +10295,421 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  Pugna: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804407,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'pugna_nether_blast', // 1
+          'pugna_decrepify', // 2
+          'pugna_nether_blast', // 3
+          'pugna_decrepify', // 4
+          'pugna_nether_blast', // 5
+          'pugna_life_drain', // 6
+          'pugna_nether_blast', // 7
+          'pugna_decrepify', // 8
+          'pugna_decrepify', // 9
+          'special_bonus_hp_200', // 10
+          'pugna_nether_ward', // 11
+          'pugna_life_drain', // 12
+          'pugna_nether_ward', // 13
+          'pugna_nether_ward', // 14
+          'pugna_nether_ward', // 15
+          'special_bonus_unique_pugna_4', // 16
+          'special_bonus_attributes', // 17
+          'pugna_life_drain', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pugna_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pugna_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'circlet',
+            'branches',
+            'mantle',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: ['bottle', 'null_talisman', 'arcane_boots'],
+          mid_game: [
+            'aether_lens',
+            'travel_boots',
+            'dagon',
+            'blink',
+            'cyclone',
+            'kaya_and_sange',
+            'glimmer_cape',
+            'force_staff',
+          ],
+          late_game: ['octarine_core', 'aeon_disk', 'sheepstick'],
+          situational: [
+            'infused_raindrop',
+            'black_king_bar',
+            'sphere',
+            'aghanims_shard',
+          ],
+          core: [
+            'bottle',
+            'arcane_boots',
+            'aether_lens',
+            'travel_boots',
+            'dagon',
+            'blink',
+            'octarine_core',
+          ],
+          neutral: [
+            'keen_optic',
+            'mysterious_hat',
+            'vambrace',
+            'essence_ring',
+            'psychic_headband',
+            'quickening_charm',
+            'timeless_relic',
+            'spell_prism',
+            'ex_machina',
+            'seer_stone',
+          ],
+        },
+        item_tooltips: {
+          bottle:
+            'A core item that provides you with sustain and allows you to gank with stored rune.',
+          arcane_boots:
+            'A core item that helps with mana sustain. It will be disassembled and Energy Booster used for Aether Lens. Boots should be used for Boots of Travel.',
+          travel_boots: 'A core item that allows you to cover the map better.',
+          black_king_bar:
+            'Agaist a lot of disables, silences and magical damage.',
+          dagon:
+            'A core item that provides you with magical burst. Goes well with Decrepify. You don`t have to upgrade it to level 5 right away. It instantly kills basic illusions.',
+          sphere: 'Aghainst powerful single target disables or burst damage.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804407,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'pugna_nether_blast', // 1
+          'pugna_decrepify', // 2
+          'pugna_nether_blast', // 3
+          'pugna_decrepify', // 4
+          'pugna_nether_blast', // 5
+          'pugna_life_drain', // 6
+          'pugna_nether_blast', // 7
+          'pugna_decrepify', // 8
+          'pugna_decrepify', // 9
+          'special_bonus_hp_200', // 10
+          'pugna_nether_ward', // 11
+          'pugna_life_drain', // 12
+          'pugna_nether_ward', // 13
+          'pugna_nether_ward', // 14
+          'pugna_nether_ward', // 15
+          'special_bonus_unique_pugna_6', // 16
+          'special_bonus_attributes', // 17
+          'pugna_life_drain', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pugna_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pugna_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'enchanted_mango',
+            'faerie_fire',
+            'circlet',
+            'branches',
+            'ring_of_basilius',
+            'ward_sentry',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: ['arcane_boots', 'null_talisman'],
+          mid_game: [
+            'aether_lens',
+            'tranquil_boots',
+            'holy_locket',
+            'blink',
+            'glimmer_cape',
+            'cyclone',
+            'force_staff',
+          ],
+          late_game: ['octarine_core', 'aeon_disk', 'sheepstick'],
+          situational: ['infused_raindrop', 'lotus_orb', 'aghanims_shard'],
+          core: [
+            'arcane_boots',
+            'aether_lens',
+            'tranquil_boots',
+            'holy_locket',
+            'blink',
+            'octarine_core',
+          ],
+          neutral: [
+            'keen_optic',
+            'pogo_stick',
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
+            'spider_legs',
+            'spy_gadget',
+            'trickster_cloak',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+        item_tooltips: {
+          arcane_boots:
+            'A core item that helps with mana sustain. It will be disassembled and Energy Booster used for Aether Lens. Boots should be used for Tranquil Boots.',
+          tranquil_boots:
+            'A core item for hp sustain while healing an ally with Life Drain.',
+          holy_locket:
+            'A core item that further increases your healing output. Provides you with burst of healing and mana upon activation.',
+          glimmer_cape: 'Can be used while channeling Life Drain.',
+          lotus_orb: 'For reflect, dispel and armor',
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      aether_lens:
+        'A core item that allows you to cast spells and items from further away.',
+      blink:
+        'A core item that allows you to position well. Can be upgraded down the road to Overwhelming Blink.',
+      octarine_core:
+        'A core item that reduces cooldown of your spells and items.',
+      aghanims_shard:
+        'Good against illusion based heroes as Life Drain destroys basic illusions instantly.',
+    },
+  },
+
+  'Queen of Pain': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804415,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'queenofpain_scream_of_pain', // 1
+          'queenofpain_shadow_strike', // 2
+          'queenofpain_shadow_strike', // 3
+          'queenofpain_blink', // 4
+          'queenofpain_scream_of_pain', // 5
+          'queenofpain_sonic_wave', // 6
+          'queenofpain_scream_of_pain', // 7
+          'queenofpain_scream_of_pain', // 8
+          'queenofpain_blink', // 9
+          'special_bonus_attack_damage_20', // 10
+          'queenofpain_blink', // 11
+          'queenofpain_sonic_wave', // 12
+          'queenofpain_blink', // 13
+          'queenofpain_shadow_strike', // 14
+          'special_bonus_attack_speed_30', // 15
+          'queenofpain_shadow_strike', // 16
+          'special_bonus_attributes', // 17
+          'queenofpain_sonic_wave', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_queen_of_pain_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_queen_of_pain_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'circlet',
+            'branches',
+            'mantle',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: ['bottle', 'null_talisman', 'power_treads'],
+          mid_game: [
+            'kaya_and_sange',
+            'aghanims_shard',
+            'black_king_bar',
+            'orchid',
+            'cyclone',
+          ],
+          late_game: [
+            'shivas_guard',
+            'sheepstick',
+            'refresher',
+            'bloodthorn',
+            'etheral_blade',
+          ],
+          situational: ['infused_raindrop', 'sphere'],
+          core: [
+            'bottle',
+            'power_treads',
+            'kaya_and_sange',
+            'black_king_bar',
+            'aghanims_shard',
+            'shivas_guard',
+            'sheepstick',
+          ],
+          neutral: [
+            'arcane_ring',
+            'mysterious_hat',
+            'grove_bow',
+            'vambrace',
+            'mind_breaker',
+            'quickening_charm',
+            'spell_prism',
+            'timeless_relic',
+            'ex_machina',
+            'mirror_shield',
+          ],
+        },
+        item_tooltips: {
+          bottle:
+            'A core item that provides you with sustain and allows you to gank with stored rune.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804415,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'queenofpain_shadow_strike', // 1
+          'queenofpain_blink', // 2
+          'queenofpain_shadow_strike', // 3
+          'queenofpain_scream_of_pain', // 4
+          'queenofpain_shadow_strike', // 5
+          'queenofpain_sonic_wave', // 6
+          'queenofpain_scream_of_pain', // 7
+          'queenofpain_scream_of_pain', // 8
+          'queenofpain_scream_of_pain', // 9
+          'special_bonus_strength_11', // 10
+          'queenofpain_blink', // 11
+          'queenofpain_sonic_wave', // 12
+          'queenofpain_blink', // 13
+          'queenofpain_blink', // 14
+          'special_bonus_attack_speed_30', // 15
+          'queenofpain_shadow_strike', // 16
+          'special_bonus_attributes', // 17
+          'queenofpain_sonic_wave', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_queen_of_pain_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_queen_of_pain_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'circlet',
+            'branches',
+            'faerie_fire',
+            'mantle',
+            'enchanted_mango',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: ['urn_of_shadows', 'power_treads', 'null_talisman'],
+          mid_game: [
+            'kaya_and_sange',
+            'aghanims_shard',
+            'black_king_bar',
+            'cyclone',
+            'orchid',
+          ],
+          late_game: [
+            'shivas_guard',
+            'sheepstick',
+            'refresher',
+            'bloodthorn',
+            'etheral_blade',
+          ],
+          situational: [
+            'infused_raindrop',
+            'spirit_vessel',
+            'lotus_orb',
+            'sphere',
+          ],
+          core: [
+            'urn_of_shadows',
+            'power_treads',
+            'kaya_and_sange',
+            'black_king_bar',
+            'aghanims_shard',
+            'shivas_guard',
+            'sheepstick',
+          ],
+          neutral: [
+            'arcane_ring',
+            'mysterious_hat',
+            'grove_bow',
+            'vambrace',
+            'quickening_charm',
+            'item_enchanted_quiver',
+            'spell_prism',
+            'timeless_relic',
+            'ex_machina',
+            'mirror_shield',
+          ],
+        },
+        item_tooltips: {
+          urn_of_shadows:
+            'A core item that allows you to snowball of off first kill.',
+          spirit_vessel: 'Against a heavy-healing lineup',
+          lotus_orb:
+            'For reflect, dispel and some armor, an alternative to Shiva`s Guard.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_spell_block_18:
+        'You can take this level 25 talent over the suggested one if you are in need for Linken`s sphere effect.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'On hero against magical burst.',
+      power_treads:
+        'A core boots upgrade that adds to your right-click dps and by toggling it you can save some mana.',
+      orchid:
+        'If you have a great start, you can pick up this item. You can kill most of the heroes by yourself.',
+      kaya_and_sange:
+        'A core item that provides you with mix of defensive and offensive stats',
+      black_king_bar:
+        'A core item that allows you to play in the middle of the fight, get spells off and right-click.',
+      aghanims_shard:
+        'A core upgrade that adds silence to your utility arsenal and some extra damage.',
+      sphere: 'Aghainst powerful single target disables and debuffs.',
+      shivas_guard:
+        'A core item that adds armor and more AoE damage. It also reduces healing on opponents.',
+      sheepstick:
+        'A core item that allows you to instantly disable and burst an opponent.',
+    },
+  },
+
   Medusa: {
     builds: [
       {
@@ -10056,284 +10820,18 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge: 'For break and extra mobility.',
     },
   },
+
   /*
 	
 	
 	
 	
-	"Phantom Lancer": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804368,
-				abilities: [
-					"phantom_lancer_spirit_lance",	// 1
-					"phantom_lancer_phantom_edge",	// 2
-					"phantom_lancer_doppelwalk",	// 3
-					"phantom_lancer_phantom_edge",	// 4
-					"phantom_lancer_phantom_edge",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","slippers","faerie_fire","circlet","magic_stick"],
-					early_game:	["power_treads","magic_wand","wraith_band"],
-					mid_game:	["diffusal_blade","yasha","manta","sange_and_yasha","aghanims_shard","aether_lens","basher"],
-					late_game:	["octarine_core","skadi","heart","butterfly","satanic","abyssal_blade"],
-					situational:	["infused_raindrop","hood_of_defiance","monkey_king_bar"],
-					core:	["power_treads","diffusal_blade","yasha","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"aether_lens":	"Goes well with Aghanim's_shard",
-			"octarine_core":	"Goes well with Aghanim's_shard",
-			"infused_raindrop":	"On hero against magical burst.",
-			"hood_of_defiance":	"Against a lot magical damage in early to midgame.",
-			"monkey_king_bar":	"Against evasion."
-		}
-	},
-	"Phoenix": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804378,
-				abilities: [
-					"phoenix_fire_spirits",	// 1
-					"phoenix_icarus_dive",	// 2
-					"phoenix_fire_spirits",	// 3
-					"phoenix_sun_ray",	// 4
-					"phoenix_fire_spirits",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","faerie_fire","branches","enchanted_mango","ring_of_regen","ring_of_protection","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["tranquil_boots","magic_wand","urn_of_shadows","ring_of_basilius","arcane_boots"],
-					mid_game:	["holy_locket","aghanims_shard","ghost","glimmer_cape","force_staff","cyclone","veil_of_discord"],
-					late_game:	["aeon_disk","refresher","shivas_guard","ethereal_blade","ultimate_scepter"],
-					situational:	["infused_raindrop","spirit_vessel","lotus_orb","heavens_halberd"],
-					core:	["tranquil_boots","holy_locket","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"arcane_boots":	"Disassemble for Holy_Locket and get Tranquil Boots.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"lotus_orb":	"For reflect, dispel and armor.",
-			"heavens_halberd":	"Especially good against ranged right-clickers."
-		}
-	},
-	"Puck": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804386,
-				abilities: [
-					"puck_illusory_orb",	// 1
-					"puck_phase_shift",	// 2
-					"puck_illusory_orb",	// 3
-					"puck_waning_rift",	// 4
-					"puck_illusory_orb",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","circlet","branches","mantle","ward_observer","magic_stick"],
-					early_game:	["bottle","null_talisman","boots","witch_blade","power_treads","magic_wand"],
-					mid_game:	["blink","travel_boots","cyclone","kaya_and_sange","dagon"],
-					late_game:	["aeon_disk","octarine_core","sheepstick"],
-					situational:	["infused_raindrop","black_king_bar","ultimate_scepter","aghanims_shard","sphere"],
-					core:	["witch_blade","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"ultimate_scepter":	"If opponents have spell immunity spells or items.",
-			"aghanims_shard":	"Against invisible heroes and to break Dream Coil.",
-			"sphere":	"Aghainst powerful single target disables or burst damage."
-		}
-	},
 	
-	"Pugna": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804407,
-				abilities: [
-					"pugna_nether_blast",	// 1
-					"pugna_decrepify",	// 2
-					"pugna_nether_blast",	// 3
-					"pugna_decrepify",	// 4
-					"pugna_nether_blast",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","circlet","branches","mantle","enchanted_mango","flask","ward_observer","magic_stick"],
-					early_game:	["bottle","null_talisman","boots","arcane_boots"],
-					mid_game:	["aether_lens","travel_boots","dagon","glimmer_cape","cyclone","kaya_and_sange","force_staff"],
-					late_game:	["octarine_core","aeon_disk","sheepstick"],
-					situational:	["infused_raindrop","blink","sphere","lotus_orb","aghanims_shard"],
-					core:	["aether_lens"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"For midlane Pugna.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"For midlane Pugna but can be considered for offlane too.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"blink":	"To close the gap.",
-			"sphere":	"Aghainst powerful single target disables or burst damage.",
-			"lotus_orb":	"For offlane Pugna to reflect, dispel and armor.",
-			"aghanims_shard":	"For an additional Life Drain if the fights are long."
-		}
-	},
-	"Queen of Pain": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804415,
-				abilities: [
-					"queenofpain_scream_of_pain",	// 1
-					"queenofpain_shadow_strike",	// 2
-					"queenofpain_shadow_strike",	// 3
-					"queenofpain_blink",	// 4
-					"queenofpain_scream_of_pain",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","faerie_fire","branches","mantle","ward_observer","magic_stick"],
-					early_game:	["bottle","null_talisman","boots","power_treads"],
-					mid_game:	["orchid","witch_blade","aghanims_shard","kaya_and_sange","aether_lens","cyclone","travel_boots"],
-					late_game:	["shivas_guard","ultimate_scepter","octarine_core","aeon_disk","sheepstick","bloodthorn"],
-					situational:	["infused_raindrop","black_king_bar","sphere"],
-					core:	["orchid","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"sphere":	"Aghainst powerful single target disables or burst damage."
-		}
-	},
+	
+	
+	
+	
+	
 	"Razor": {
 		builds: [
 			{

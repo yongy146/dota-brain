@@ -101,18 +101,18 @@ export const HeroGuides = {
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166',
   // ],
   // "phantom_assassin":     ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303"],
-  phantom_lancer: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961424',
-  ],
-  phoenix: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961589',
-  ],
-  puck: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683'],
+  // phantom_lancer: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961424',
+  // ],
+  // phoenix: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961589',
+  // ],
+  // puck: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683'],
   // "pudge":                ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699961775"],
-  pugna: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859'],
-  queenofpain: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952',
-  ],
+  // pugna: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859'],
+  // queenofpain: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952',
+  // ],
   //"rattletrap":           ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434"],
   razor: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040'],
   riki: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133'],
