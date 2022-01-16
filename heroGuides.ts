@@ -114,9 +114,9 @@ export const HeroGuides = {
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952',
   // ],
   //"rattletrap":           ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434"],
-  razor: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040'],
-  riki: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133'],
-  rubick: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962219'],
+  // razor: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040'],
+  // riki: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133'],
+  // rubick: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962219'],
   sand_king: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310',
   ],
