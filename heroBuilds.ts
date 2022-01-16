@@ -10395,9 +10395,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804407,
+        steam_guide_id: 1642312278,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2721136673',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'pugna_nether_blast', // 1
@@ -10558,7 +10558,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'sheepstick',
             'refresher',
             'bloodthorn',
-            'etheral_blade',
+            'ethereal_blade',
           ],
           situational: ['infused_raindrop', 'sphere'],
           core: [
@@ -10590,9 +10590,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804415,
+        steam_guide_id: 1642312289,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2721136803',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           'queenofpain_shadow_strike', // 1
@@ -10645,7 +10645,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'sheepstick',
             'refresher',
             'bloodthorn',
-            'etheral_blade',
+            'ethereal_blade',
           ],
           situational: [
             'infused_raindrop',
@@ -10668,7 +10668,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'grove_bow',
             'vambrace',
             'quickening_charm',
-            'item_enchanted_quiver',
+            'enchanted_quiver',
             'spell_prism',
             'timeless_relic',
             'ex_machina',
