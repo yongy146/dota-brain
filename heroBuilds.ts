@@ -31,9 +31,9 @@ import {
  *
  */
 export interface HeroBuilds {
-  builds: HeroBuild[]; // Note that the first build is seen as the standard build
-  ability_tooltips?: Tooltips;
-  item_tooltips?: Tooltips;
+  builds: HeroBuild[];         // The first build is seen as the "standard build" by the app
+  ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
+  item_tooltips?: Tooltips;    // Item tooltips valid for all builds of the hero
 }
 
 /**
@@ -41,10 +41,10 @@ export interface HeroBuilds {
  *
  */
 export interface HeroBuild {
-  roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
-  type?: string; // Type currently only used for invoker mid (QW & QE)
-  steam_guide_id: number; // ID of the steam guide; this ID is provided by Dota 2
-  steam_guide_link: string; // Link to web buids
+  roles: DOTA_COACH_GUIDE_ROLE[];      // These roles are used in the Dota Coach App and in title of Steam Guide
+  type?: string;                       // Type currently only used for invoker mid (QW & QE)
+  steam_guide_id: number;              // ID of the steam guide; this ID is provided by Dota 2
+  steam_guide_link: string;            // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   abilities: string[];
   ability_tooltips?: Tooltips;
@@ -55,12 +55,12 @@ export interface HeroBuild {
 export interface ItemBuild {
   starting: string[];
   starting_bear?: string[];
-  early_game?: string[]; // provided for all heroes, except for Lone Druid
-  mid_game?: string[]; // provided for all heroes, except for Lone Druid
-  late_game?: string[]; // provided for all heroes, except for Lone Druid
+  early_game?: string[];        // provided for all heroes, except for Lone Druid
+  mid_game?: string[];          // provided for all heroes, except for Lone Druid
+  late_game?: string[];         // provided for all heroes, except for Lone Druid
   situational: string[];
   situational_bear?: string[];
-  core: string[]; // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
+  core: string[];               // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
   core_bear?: string[];
   neutral: string[];
   neutral_bear?: string[];
@@ -72,6 +72,42 @@ export interface ItemBuild {
  */
 export interface Tooltips {
   [key: string]: string;
+}
+
+
+/**
+ * Function returns the item tooltip for an item (it checks the hero build as well as the hero)
+ * 
+ * @param heroBuild 
+ * @param item 
+ */
+export function getItemTooltips(heroBuilds: HeroBuilds, heroBuild: HeroBuild, item: string) {
+  if (heroBuild.hasOwnProperty('item_tooltips')) {
+    if (heroBuild.item_tooltips.hasOwnProperty(item)) {
+      return heroBuild.item_tooltips[item]
+    }
+  }
+  if (heroBuilds.hasOwnProperty('item_tooltips')) {
+    if (heroBuilds.item_tooltips.hasOwnProperty(item)) {
+      return heroBuilds.item_tooltips[item]
+    }
+  }
+  return null // There is no tooltip for the item
+}
+
+/**
+ * Function returns if item is core for this build
+ * 
+ * @param heroName
+ * @param heroBuild 
+ * @param item 
+ */
+ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
+  for (const coreItem of heroBuild.items.core) {
+    if (coreItem==item) return true
+  }
+  return false
+  // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
 export const heroBuilds: { [key: string]: HeroBuilds } = {

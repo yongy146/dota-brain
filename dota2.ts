@@ -5,11 +5,12 @@
  * 
  * Copyright Dota Coach, 2022. All rights reserved
  */
-import { HeroBuild, ItemBuild, heroBuilds } from './heroBuilds'
+//import { HeroBuild, ItemBuild, heroBuilds } from './heroBuilds'
+import * as HeroBuilds from './heroBuilds'
 //import { itemBuilds } from './itemBuilds'
 import { dispellableBuffs } from './dispellableBuffs'
 import dota2Abilities from './dota2Abilities.json'
-import npc_heroes from './parsed/npc_heroes.json'
+//import npc_heroes from './parsed/npc_heroes.json'
 
 import { counterItemsLaning } from './counterItemsLaning'
 import { counterItemsMidGame } from './counterItemsMidGame'
@@ -160,12 +161,12 @@ export namespace lobby {
 export function getStandardAbilityBuild(h: string): string[] {
     //const h_ = hero.name.localizedNameToNPCName(h)
 
-    if (!heroBuilds.hasOwnProperty(h)) {
+    if (!HeroBuilds.heroBuilds.hasOwnProperty(h)) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return []
     }
 
-    var abilityBuild = heroBuilds[h].builds[0].abilities
+    var abilityBuild = HeroBuilds.heroBuilds[h].builds[0].abilities
 
     /* return copy of array, otherwise recipient can change content of this.laningItemTips */
     return  [...abilityBuild] 
@@ -177,13 +178,13 @@ export function getStandardAbilityBuild(h: string): string[] {
  * @param playerRole
  * @return null if there is no such build
  */
-export function getHeroBuild(heroName: string, playerRole: PlayerRoles.DOTA_COACH_ROLE): HeroBuild {
-    if (!heroBuilds.hasOwnProperty(heroName)) return null
+export function getHeroBuild(heroName: string, playerRole: PlayerRoles.DOTA_COACH_ROLE): HeroBuilds.HeroBuild {
+    if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null
 
     var role: PlayerRoles.DOTA_COACH_GUIDE_ROLE = convertDotaCoachGuideRoleToDotaCoachRole(playerRole)
 
     // Find hero build with right role
-    for (const heroBuild of heroBuilds[heroName].builds) {
+    for (const heroBuild of HeroBuilds.heroBuilds[heroName].builds) {
         if (heroBuild.roles.indexOf(role)!=-1) {
             return heroBuild
         }
@@ -200,10 +201,10 @@ export function getHeroBuild(heroName: string, playerRole: PlayerRoles.DOTA_COAC
  * @returns null in case of error
  */
 export function getHeroGuideLinks(heroName: string): string[] {
-    if (!heroBuilds.hasOwnProperty(heroName)) return []
+    if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return []
 
     var result = []
-    for (const build of heroBuilds[heroName].builds) {
+    for (const build of HeroBuilds.heroBuilds[heroName].builds) {
         result.push(build.steam_guide_link)
     }
 
@@ -229,14 +230,14 @@ export function convertDotaCoachGuideRoleToDotaCoachRole(playerRole: PlayerRoles
 }
 
 
-export function getClosestHeroBuild(heroName: string, playerRole: PlayerRoles.DOTA_COACH_ROLE): HeroBuild {
-    if (!heroBuilds.hasOwnProperty(heroName)) return null
+export function getClosestHeroBuild(heroName: string, playerRole: PlayerRoles.DOTA_COACH_ROLE): HeroBuilds.HeroBuild {
+    if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null
 
     var role: PlayerRoles.DOTA_COACH_GUIDE_ROLE = convertDotaCoachGuideRoleToDotaCoachRole(playerRole)
 
     // Get all roles of guides
     var guides = {}
-    for (const heroBuild of heroBuilds[heroName].builds) {
+    for (const heroBuild of HeroBuilds.heroBuilds[heroName].builds) {
         for (const role of heroBuild.roles) {
             guides[role] = heroBuild
         }
@@ -286,11 +287,11 @@ export function getClosestHeroBuild(heroName: string, playerRole: PlayerRoles.DO
  * @param playerRole
  * @return null if there is no such build
  */
-export function getDefaultHeroBuild(heroName: string): HeroBuild {
-    if (!heroBuilds.hasOwnProperty(heroName)) return null
+export function getDefaultHeroBuild(heroName: string): HeroBuilds.HeroBuild {
+    if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null
 
     // Find hero build with right role
-    return heroBuilds[heroName].builds[0]
+    return HeroBuilds.heroBuilds[heroName].builds[0]
 }
 
 /**
@@ -299,7 +300,7 @@ export function getDefaultHeroBuild(heroName: string): HeroBuild {
  * @returns 
  */
 export function hasDefaultHeroBuild(heroName: string): boolean {
-    return heroBuilds.hasOwnProperty(heroName)
+    return HeroBuilds.heroBuilds.hasOwnProperty(heroName)
 }
 
 
@@ -328,7 +329,7 @@ export namespace ability {
      * @returns English name of ability or null if name is not found
      */
     export function getAbilityName(ability: string): string {
-        DotaLogger.log(`dota2.getAbilityName(itemCode: ${ability}): Called`)
+        DotaLogger.log(`dota2.getAbilityName(ability: ${ability}): Called`)
 
         const a = getAbility(ability)
 
@@ -881,7 +882,8 @@ export namespace hero {
          * Function returns the standard item build for a given hero. The standard item build is the first build in the heroGuides.ts file.
          * 
          * @param hero Localized hero name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
-         * @returns String of items
+         * OLD_returns String of items
+         * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
          */
         export function getStandardItemBuild(h: string): string[] {
             if (!hasDefaultHeroBuild(h))  {
@@ -889,10 +891,28 @@ export namespace hero {
                 return []
             }
 
-            const mid_game = heroBuilds[h].builds[0].items.mid_game
-            const late_game = heroBuilds[h].builds[0].items.late_game
+            const heroBuilds = HeroBuilds.heroBuilds[h] 
 
-            return mid_game.concat(late_game)
+            const mid_game = heroBuilds.builds[0].items.mid_game
+            const late_game = heroBuilds.builds[0].items.late_game
+            const standard = mid_game.concat(late_game)
+
+            var result = []
+            for (const s of standard) {
+                var r = { item: s }
+                const tooltip = HeroBuilds.getItemTooltips(heroBuilds, heroBuilds.builds[0], s)
+                if (tooltip) {
+                    r['info'] = tooltip
+                }
+                const isCore = HeroBuilds.isCoreItem(heroBuilds.builds[0], s)
+                if (isCore) {
+                    r['isCore'] = true
+                }
+                result.push(r)
+            }
+
+            // return mid_game.concat(late_game)
+            return result
         }
 
         /**
@@ -903,7 +923,7 @@ export namespace hero {
          */
         //export function getItemBuild(h: string): any {
         export function getItemBuild(h: string, playerRole: PlayerRoles.DOTA_COACH_ROLE): any    {
-            if (!heroBuilds.hasOwnProperty(h)) {
+            if (!HeroBuilds.heroBuilds.hasOwnProperty(h)) {
                 /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
                 return null
             }
@@ -921,17 +941,17 @@ export namespace hero {
             var tooltips_build = {}
             var tooltips_hero = {}
             if (heroBuild.hasOwnProperty('item_tooltips')) {
-                tooltips_build = heroBuilds[h].builds[0].item_tooltips
+                tooltips_build = HeroBuilds.heroBuilds[h].builds[0].item_tooltips
             }
-            if (heroBuilds[h].hasOwnProperty('item_tooltips')) {
-                tooltips_hero = heroBuilds[h].item_tooltips
+            if (HeroBuilds.heroBuilds[h].hasOwnProperty('item_tooltips')) {
+                tooltips_hero = HeroBuilds.heroBuilds[h].item_tooltips
             }
             const item_tooltips = {
                 ...tooltips_hero,
                 ...tooltips_build
             }
 
-            const build = heroBuilds[h].builds[0]
+            const build = HeroBuilds.heroBuilds[h].builds[0]
             const core_items = build.items.core
 
             function transformItem(item: string) {
