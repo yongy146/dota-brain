@@ -117,9 +117,9 @@ export const HeroGuides = {
   // razor: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040'],
   // riki: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133'],
   // rubick: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962219'],
-  sand_king: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310',
-  ],
+  // sand_king: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310',
+  // ],
   shadow_demon: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404',
   ],

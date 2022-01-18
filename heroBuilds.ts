@@ -31,9 +31,9 @@ import {
  *
  */
 export interface HeroBuilds {
-  builds: HeroBuild[];         // The first build is seen as the "standard build" by the app
+  builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
-  item_tooltips?: Tooltips;    // Item tooltips valid for all builds of the hero
+  item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
 }
 
 /**
@@ -41,10 +41,10 @@ export interface HeroBuilds {
  *
  */
 export interface HeroBuild {
-  roles: DOTA_COACH_GUIDE_ROLE[];      // These roles are used in the Dota Coach App and in title of Steam Guide
-  type?: string;                       // Type currently only used for invoker mid (QW & QE)
-  steam_guide_id: number;              // ID of the steam guide; this ID is provided by Dota 2
-  steam_guide_link: string;            // Link to web buids
+  roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
+  type?: string; // Type currently only used for invoker mid (QW & QE)
+  steam_guide_id: number; // ID of the steam guide; this ID is provided by Dota 2
+  steam_guide_link: string; // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   abilities: string[];
   ability_tooltips?: Tooltips;
@@ -55,12 +55,12 @@ export interface HeroBuild {
 export interface ItemBuild {
   starting: string[];
   starting_bear?: string[];
-  early_game?: string[];        // provided for all heroes, except for Lone Druid
-  mid_game?: string[];          // provided for all heroes, except for Lone Druid
-  late_game?: string[];         // provided for all heroes, except for Lone Druid
+  early_game?: string[]; // provided for all heroes, except for Lone Druid
+  mid_game?: string[]; // provided for all heroes, except for Lone Druid
+  late_game?: string[]; // provided for all heroes, except for Lone Druid
   situational: string[];
   situational_bear?: string[];
-  core: string[];               // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
+  core: string[]; // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
   core_bear?: string[];
   neutral: string[];
   neutral_bear?: string[];
@@ -74,39 +74,42 @@ export interface Tooltips {
   [key: string]: string;
 }
 
-
 /**
  * Function returns the item tooltip for an item (it checks the hero build as well as the hero)
- * 
- * @param heroBuild 
- * @param item 
+ *
+ * @param heroBuild
+ * @param item
  */
-export function getItemTooltips(heroBuilds: HeroBuilds, heroBuild: HeroBuild, item: string) {
+export function getItemTooltips(
+  heroBuilds: HeroBuilds,
+  heroBuild: HeroBuild,
+  item: string
+) {
   if (heroBuild.hasOwnProperty('item_tooltips')) {
     if (heroBuild.item_tooltips.hasOwnProperty(item)) {
-      return heroBuild.item_tooltips[item]
+      return heroBuild.item_tooltips[item];
     }
   }
   if (heroBuilds.hasOwnProperty('item_tooltips')) {
     if (heroBuilds.item_tooltips.hasOwnProperty(item)) {
-      return heroBuilds.item_tooltips[item]
+      return heroBuilds.item_tooltips[item];
     }
   }
-  return null // There is no tooltip for the item
+  return null; // There is no tooltip for the item
 }
 
 /**
  * Function returns if item is core for this build
- * 
+ *
  * @param heroName
- * @param heroBuild 
- * @param item 
+ * @param heroBuild
+ * @param item
  */
- export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
+export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
   for (const coreItem of heroBuild.items.core) {
-    if (coreItem==item) return true
+    if (coreItem == item) return true;
   }
-  return false
+  return false;
   // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
@@ -11010,8 +11013,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           mid_game: [
             'black_king_bar',
             'refresher',
-            'sange_and_yasha',
             'cyclone',
+            'sange_and_yasha',
           ],
           late_game: [
             'assault',
@@ -11170,7 +11173,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       assault:
         'A core item that amplifies physical damage output of your hero while also granting you armor.',
       shivas_guard:
-        'An alternative to Assault that is good against illusion-based hero and against a lot of healing. Adds to your AoE damage output and slow.',
+        'An alternative to Assault that is good against illusion-based heros and a lot of healing. Adds to your AoE damage output and slow.',
       satanic:
         'A core item that tanks you up and provides you with sustain through its active. The active applies basic dispel on cast. You will have two usages with Refresher.',
       monkey_king_bar: 'Against evasion and miss chance.',
@@ -11229,7 +11232,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'wraith_band',
           ],
           mid_game: ['diffusal_blade', 'manta', 'aghanims_shard', 'basher'],
-          late_game: ['skadi', 'greater_crit', 'abyssal_blade', 'butterfly'],
+          late_game: [
+            'skadi',
+            'ultimate_scepter',
+            'greater_crit',
+            'abyssal_blade',
+            'butterfly',
+          ],
           situational: [
             'infused_raindrop',
             'black_king_bar',
@@ -11477,61 +11486,120 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  'Sand King': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804451,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'sandking_caustic_finale', // 1
+          'sandking_burrowstrike', // 2
+          'sandking_sand_storm', // 3
+          'sandking_sand_storm', // 4
+          'sandking_sand_storm', // 5
+          'sandking_epicenter', // 6
+          'sandking_sand_storm', // 7
+          'sandking_burrowstrike', // 8
+          'sandking_burrowstrike', // 9
+          'sandking_burrowstrike', // 10
+          'special_bonus_unique_sand_king_2', // 11
+          'sandking_epicenter', // 12
+          'sandking_caustic_finale', // 13
+          'sandking_caustic_finale', // 14
+          'special_bonus_unique_sand_king_3', // 15
+          'sandking_caustic_finale', // 16
+          'special_bonus_attributes', // 17
+          'sandking_epicenter', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sand_king_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sand_king_4', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'gauntlets',
+            'ring_of_protection',
+            'faerie_fire',
+            'flask',
+            'magic_stick',
+          ],
+          early_game: [
+            'boots',
+            'soul_ring',
+            'magic_wand',
+            'bracer',
+            'vanguard',
+          ],
+          mid_game: [
+            'blink',
+            'cyclone',
+            'travel_boots',
+            'aghanims_shard',
+            'hood_of_defiance',
+            'ghost',
+            'veil_of_discord',
+          ],
+          late_game: [
+            'shivas_guard',
+            'ethereal_blade',
+            'sheepstick',
+            'ultimate_scepter',
+            'aeon_disk',
+          ],
+          situational: ['heavens_halberd', 'black_king_bar', 'lotus_orb'],
+          core: [
+            'soul_ring',
+            'blink',
+            'cyclone',
+            'travel_boots',
+            'aghanims_shard',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'arcane_ring',
+            'vambrace',
+            'nether_shawl',
+            'quickening_charm',
+            'cloak_of_flames',
+            'timeless_relic',
+            'spell_prism',
+            'giants_ring',
+            'fallen_sky',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      soul_ring:
+        'A core item that helps with mana sustain. It provides Sand King with useful stats.',
+      blink: 'A core item that allows you to channel Epicenter and jump in.',
+      cyclone:
+        'A core item that allows you to setup kills and dispel dust off of yourself.',
+      travel_boots:
+        'A core item that allows you to cover the map better. Sand King is really good at pushing sidelanes in quickly and without much of a risk.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      black_king_bar:
+        'Against a lot of disables, magical damage and as a dispel.',
+      aghanims_shard: 'A core item that adds extra AoE damage and burst.',
+      lotus_orb: 'To reflect, dispel and armor.',
+    },
+  },
+
   /*
 	
-	"Sand King": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804451,
-				abilities: [
-					"sandking_caustic_finale",	// 1
-					"sandking_burrowstrike",	// 2
-					"sandking_sand_storm",	// 3
-					"sandking_sand_storm",	// 4
-					"sandking_sand_storm",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","flask","branches","gauntlets","ring_of_protection","faerie_fire","enchanted_mango","magic_stick"],
-					early_game:	["boots","magic_wand","soul_ring","bracer","tranquil_boots","vanguard","arcane_boots"],
-					mid_game:	["blink","cyclone","travel_boots","force_staff","ghost","hood_of_defiance","veil_of_discord"],
-					late_game:	["ultimate_scepter","ethereal_blade","sheepstick"],
-					situational:	["lotus_orb","black_king_bar","heavens_halberd","aghanims_shard","aeon_disk"],
-					core:	["blink","cyclone"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"aghanims_shard":	"For extra AoE damage against illusions and waveclear."
-		}
-	},
+	
 	"Shadow Demon": {
 		builds: [
 			{
