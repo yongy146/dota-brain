@@ -78,9 +78,9 @@ export const HeroGuides = {
 //   necrolyte: [
 //     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447',
 //   ],
-  nevermore: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485',
-  ],
+  // nevermore: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485',
+  // ],
   // night_stalker: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960635',
   // ],
@@ -120,9 +120,9 @@ export const HeroGuides = {
   // sand_king: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310',
   // ],
-  shadow_demon: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404',
-  ],
+  // shadow_demon: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404',
+  // ],
   shadow_shaman: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568',
   ],

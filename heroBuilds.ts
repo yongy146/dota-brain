@@ -11597,296 +11597,614 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  'Shadow Demon': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804460,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'shadow_demon_shadow_poison', // 1
+          'shadow_demon_disruption', // 2
+          'shadow_demon_shadow_poison', // 3
+          'shadow_demon_disruption', // 4
+          'shadow_demon_shadow_poison', // 5
+          'shadow_demon_demonic_purge', // 6
+          'shadow_demon_shadow_poison', // 7
+          'shadow_demon_disruption', // 8
+          'shadow_demon_disruption', // 9
+          'special_bonus_unique_shadow_demon_4', // 10
+          'shadow_demon_soul_catcher', // 11
+          'shadow_demon_demonic_purge', // 12
+          'shadow_demon_soul_catcher', // 13
+          'shadow_demon_soul_catcher', // 14
+          'shadow_demon_soul_catcher', // 15
+          'special_bonus_unique_shadow_demon_1', // 16
+          'special_bonus_attributes', // 17
+          'shadow_demon_demonic_purge', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_shadow_demon_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_shadow_demon_7', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'enchanted_mango',
+            'faerie_fire',
+            'clarity',
+            'branches',
+            'sobi_mask',
+            'ring_of_basilius',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['arcane_boots', 'magic_wand'],
+          mid_game: [
+            'aether_lens',
+            'blink',
+            'glimmer_cape',
+            'force_staff',
+            'ghost',
+          ],
+          late_game: [
+            'ultimate_scepter',
+            'aeon_disk',
+            'octarine_core',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'lotus_orb', 'aghanims_shard'],
+          core: ['arcane_boots', 'aether_lens', 'blink', 'ultimate_scepter'],
+          neutral: [
+            'keen_optic',
+            'arcane_ring',
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
+            'spider_legs',
+            'spy_gadget',
+            'timeless_relic',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ring_of_basilius: 'If your laning partner also uses a lot of mana early.',
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core item that helps with mana sustain. Can be disassembled and Energy Booster used for Aether Lens. Upgrade boots to Tranquil Boots afterwards.',
+      aether_lens: 'A core item that provides you with extra cast range.',
+      blink:
+        'A core item that allows you to get Disruption off timely on desired hero.',
+      ultimate_scepter:
+        'A core item that grants 2 extra chaeges of Demonic Purge which also applies break.',
+      lotus_orb: 'To reflect, dispel and armor.',
+      aghanims_shard:
+        'If there are a lot of dispellable debuffs cast on your teammates(roots, silences, damage-over-time effects).',
+    },
+  },
+
+  'Shadow Fiend': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804468,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'nevermore_shadowraze1', // 1
+          'nevermore_necromastery', // 2
+          'nevermore_shadowraze1', // 3
+          'nevermore_necromastery', // 4
+          'nevermore_shadowraze1', // 5
+          'nevermore_necromastery', // 6
+          'nevermore_shadowraze1', // 7
+          'nevermore_necromastery', // 8
+          'nevermore_requiem', // 9
+          'special_bonus_spell_amplify_8', // 10
+          'nevermore_dark_lord', // 11
+          'nevermore_requiem', // 12
+          'nevermore_dark_lord', // 13
+          'nevermore_dark_lord', // 14
+          'special_bonus_unique_nevermore_2', // 15
+          'nevermore_dark_lord', // 16
+          'special_bonus_attributes', // 17
+          'nevermore_requiem', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_nevermore_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_nevermore_4', // 25
+        ],
+        items: {
+          starting: [
+            'enchanted_mango',
+            'tango',
+            'branches',
+            'faerie_fire',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: ['bottle', 'boots', 'cyclone', 'magic_wand'],
+          mid_game: ['blink', 'travel_boots', 'black_king_bar', 'arcane_blink'],
+          late_game: [
+            'sheepstick',
+            'refresher',
+            'ultimate_scepter',
+            'ethereal_blade',
+          ],
+          situational: ['infused_raindrop', 'sphere'],
+          core: [
+            'bottle',
+            'cyclone',
+            'blink',
+            'travel_boots',
+            'black_king_bar',
+            'arcane_blink',
+            'sheepstick',
+            'refresher',
+          ],
+          neutral: [
+            'pogo_stick',
+            'mysterious_hat',
+            'nether_shawl',
+            'vambrace',
+            'quickening_charm',
+            'psychic_headband',
+            'timeless_relic',
+            'spell_prism',
+            'ex_machina',
+            'fallen_sky',
+          ],
+        },
+        item_tooltips: {
+          magic_stick:
+            'Start with it if you expect high frequency of spells being used on the lane.',
+          bottle:
+            'A core item that provides you with sustain and allows you to gank with stored rune.',
+          infused_raindrop: 'Against magical burst.',
+          cyclone: 'A core item that allows you to setup Requiem of Souls.',
+          blink:
+            'A core item that allows you to jump an opponent and do Cyclone into Requiem of Souls combo.',
+          travel_boots: 'A core item that allows you to cover the map better.',
+          black_king_bar:
+            'A core item that allows you to channel Requiem of Souls fully and get other spells and items off.',
+          sphere: 'Against powerful single target disables and debuffs.',
+          arcane_blink:
+            'A core item that, when used, reduces the cast point of Requiem of Souls thus you don`t need to use Eul`s to setup kills. It also allows you to use spells and items more often.',
+          sheepstick:
+            'A core item that allows you to instantly disable an opponent.',
+          refresher:
+            'A core item that allows you to do twice as much damage and control in the figts.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804468,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'nevermore_dark_lord', // 1
+          'nevermore_necromastery', // 2
+          'nevermore_necromastery', // 3
+          'nevermore_dark_lord', // 4
+          'nevermore_necromastery', // 5
+          'nevermore_dark_lord', // 6
+          'nevermore_necromastery', // 7
+          'nevermore_dark_lord', // 8
+          'nevermore_requiem', // 9
+          'special_bonus_attack_speed_25', // 10
+          'nevermore_shadowraze1', // 11
+          'nevermore_requiem', // 12
+          'nevermore_shadowraze1', // 13
+          'nevermore_shadowraze1', // 14
+          'special_bonus_unique_nevermore_3', // 15
+          'nevermore_shadowraze1', // 16
+          'special_bonus_attributes', // 17
+          'nevermore_requiem', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_nevermore_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_nevermore_5', // 25
+        ],
+        items: {
+          starting: [
+            'quelling_blade',
+            'tango',
+            'branches',
+            'slippers',
+            'magic_stick',
+          ],
+          early_game: ['power_treads', 'mask_of_madness', 'magic_wand'],
+          mid_game: [
+            'dragon_lance',
+            'black_king_bar',
+            'silver_edge',
+            'satanic',
+          ],
+          late_game: ['butterfly', 'skadi', 'greater_crit'],
+          situational: [
+            'infused_raindrop',
+            'blink',
+            'hurricane_pike',
+            'monkey_king_bar',
+            'sphere',
+          ],
+          core: [
+            'power_treads',
+            'mask_of_madness',
+            'dragon_lance',
+            'black_king_bar',
+            'silver_edge',
+            'satanic',
+            'butterfly',
+          ],
+          neutral: [
+            'possessed_mask',
+            'unstable_wand',
+            'grove_bow',
+            'quicksilver_amulet',
+            'paladin_sword',
+            'elven_tunic',
+            'the_leveller',
+            'ninja_gear',
+            'desolator_2',
+            'pirate_hat',
+          ],
+        },
+        ability_tooltips: {
+          nevermore_shadowraze1:
+            'You can take +2 attributes instead of putting points in this spell.',
+        },
+        item_tooltips: {
+          power_treads:
+            'A core boots upgrade that allows you to farm faster due to attack speed increase.',
+          mask_of_madness:
+            'A core farming item that can be disassembled later on.',
+          dragon_lance:
+            'A core item that provides you with useful stats and allows you to right-click from distance.',
+          black_king_bar:
+            'A core item that allows you to stand your ground and right-click.',
+          hurricane_pike:
+            'Against heroes like Slark and Troll that you can`t fight back against effectively when they are on top of you under spell-immunity.',
+          sphere: 'Against powerful single target disables and debuffs.',
+          silver_edge:
+            'A core item that provides you with burst and ability to reposition. You can even surprise an opponent by channeling Requiem of Souls underneath him.',
+          monkey_king_bar: 'Against evasion and miss chance',
+          satanic:
+            'A core item that tanks you up and allows you to stand your ground and right-click.',
+          butterfly:
+            'A core item that provides you with mix of offensive and defensive stats.',
+          blink: 'For gap-close and to position yourself well.',
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+    },
+  },
+
+  'Shadow Shaman': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804478,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'shadow_shaman_ether_shock', // 1
+          'shadow_shaman_shackles', // 2
+          'shadow_shaman_ether_shock', // 3
+          'shadow_shaman_voodoo', // 4
+          'shadow_shaman_ether_shock', // 5
+          'shadow_shaman_mass_serpent_ward', // 6
+          'shadow_shaman_ether_shock', // 7
+          'shadow_shaman_voodoo', // 8
+          'shadow_shaman_voodoo', // 9
+          'shadow_shaman_voodoo', // 10
+          'special_bonus_unique_shadow_shaman_5', // 11
+          'shadow_shaman_mass_serpent_ward', // 12
+          'shadow_shaman_shackles', // 13
+          'shadow_shaman_shackles', // 14
+          'shadow_shaman_shackles', // 15
+          'special_bonus_unique_shadow_shaman_2', // 16
+          'special_bonus_attributes', // 17
+          'shadow_shaman_mass_serpent_ward', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_shadow_shaman_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_shadow_shaman_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'faerie_fire',
+            'enchanted_mango',
+            'boots',
+            'branches',
+            'wind_lace',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['arcane_boots', 'magic_wand'],
+          mid_game: [
+            'aether_lens',
+            'blink',
+            'aghanims_shard',
+            'ghost',
+            'force_staff',
+            'glimmer_cape',
+          ],
+          late_game: [
+            'octarine_core',
+            'aeon_disk',
+            'refresher',
+            'ultimate_scepter',
+          ],
+          situational: ['infused_raindrop', 'black_king_bar', 'lotus_orb'],
+          core: ['arcane_boots', 'aether_lens', 'blink', 'aghanims_shard'],
+          neutral: [
+            'keen_optic',
+            'pogo_stick',
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
+            'spider_legs',
+            'spy_gadget',
+            'timeless_relic',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_unique_shadow_shaman_1:
+        'On level 20, you can take this talent over the suggested one if there`s no need for break effect.',
+    },
+    item_tooltips: {
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Aether Lens. You should upgrade boots to Tranquil Boots afterwards.',
+      aether_lens: 'A core item that improves cast range.',
+      blink: 'A core item that allows you to instantly disable desired hero.',
+      aghanims_shard:
+        'A core upgrade that allows you channel Shackles from further away and spawn 4 snakes to attack the disabled target or push out the wave.',
+      black_king_bar: 'To channel Shackles fully.',
+      lotus_orb: 'To reflect, dispel and armor.',
+    },
+  },
+
+  Silencer: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804488,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'silencer_glaives_of_wisdom', // 1
+          'silencer_curse_of_the_silent', // 2
+          'silencer_curse_of_the_silent', // 3
+          'silencer_last_word', // 4
+          'silencer_curse_of_the_silent', // 5
+          'silencer_global_silence', // 6
+          'silencer_curse_of_the_silent', // 7
+          'silencer_last_word', // 8
+          'silencer_last_word', // 9
+          'silencer_last_word', // 10
+          'special_bonus_unique_silencer', // 11
+          'silencer_global_silence', // 12
+          'silencer_glaives_of_wisdom', // 13
+          'silencer_glaives_of_wisdom', // 14
+          'special_bonus_unique_silencer_6', // 15
+          'silencer_glaives_of_wisdom', // 16
+          'special_bonus_attributes', // 17
+          'silencer_global_silence', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_silencer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_silencer_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'faerie_fire',
+            'branches',
+            'enchanted_mango',
+            'circlet',
+            'ring_of_basilius',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['tranquil_boots', 'magic_wand', 'null_talisman'],
+          mid_game: ['veil_of_discord', 'glimmer_cape', 'force_staff', 'ghost'],
+          late_game: [
+            'ultimate_scepter',
+            'refresher',
+            'aeon_disk',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'lotus_orb'],
+          core: [
+            'tranquil_boots',
+            'veil_of_discord',
+            'ultimate_scepter',
+            'refresher',
+          ],
+          neutral: [
+            'arcane_ring',
+            'pogo_stick',
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
+            'quickening_charm',
+            'timeless_relic',
+            'spell_prism',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'On hero against magical burst.',
+      ring_of_basilius: 'If your laning partner also uses a lot of mana early.',
+      tranquil_boots:
+        'A core boots upgrade that helps with hp sustain and fixes hero`s movement speed issues.',
+      veil_of_discord:
+        'A core item that amplifies your team`s spell damage output.',
+      lotus_orb: 'To reflect, dispel and armor.',
+      ultimate_scepter: 'A core item that goes well with Last Word talents.',
+      refresher:
+        'A core item that allows you to cast Global Silence and other spells and items twice in the fight.',
+    },
+  },
+
+  'Skywrath Mage': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804496,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962794',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'skywrath_mage_concussive_shot', // 1
+          'skywrath_mage_arcane_bolt', // 2
+          'skywrath_mage_arcane_bolt', // 3
+          'skywrath_mage_ancient_seal', // 4
+          'skywrath_mage_arcane_bolt', // 5
+          'skywrath_mage_mystic_flare', // 6
+          'skywrath_mage_ancient_seal', // 7
+          'skywrath_mage_ancient_seal', // 8
+          'skywrath_mage_ancient_seal', // 9
+          'skywrath_mage_concussive_shot', // 10
+          'skywrath_mage_concussive_shot', // 11
+          'skywrath_mage_mystic_flare', // 12
+          'skywrath_mage_concussive_shot', // 13
+          'special_bonus_intelligence_10', // 14
+          'special_bonus_unique_skywrath', // 15
+          'skywrath_mage_arcane_bolt', // 16
+          'special_bonus_attributes', // 17
+          'skywrath_mage_mystic_flare', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_skywrath_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_skywrath_5', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'circlet',
+            'mantle',
+            'enchanted_mango',
+            'flask',
+            'branches',
+            'faerie_fire',
+            'null_talisman',
+            'sobi_mask',
+            'ring_of_basilius',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['null_talisman', 'arcane_boots', 'magic_wand'],
+          mid_game: [
+            'aether_lens',
+            'blink',
+            'rod_of_atos',
+            'ghost',
+            'veil_of_discord',
+            'glimmer_cape',
+            'force_staff',
+          ],
+          late_game: [
+            'ultimate_scepter',
+            'aeon_disk',
+            'octarine_core',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'aghanims_shard'],
+          core: ['arcane_boots', 'aether_lens', 'blink', 'ultimate_scepter'],
+          neutral: [],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ring_of_basilius: 'If your laning partner uses a lot of mana early.',
+      ward_sentry: 'To block or unblock the pull camp.',
+      magic_stick:
+        'If you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'On hero against magical burst.',
+      rod_of_atos:
+        'If you have a really good start, you can rush this item even before getting boots. With it, you can setup Mystic Flare and solo most of the heroes.',
+      arcane_boots:
+        'A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Aether Lens. You should upgrade boots to Tranquil Boots afterwards.',
+      aether_lens: 'A core item that improves cast range.',
+      blink:
+        'A core item that allows you to follow up quickly with your spells on any stun from allies.',
+      ultimate_scepter:
+        'A core item that doubles the amount of spells you cast.',
+      aghanims_shard:
+        'If you expect long fights and against physical damage lineups.',
+    },
+  },
+
   /*
 	
 	
-	"Shadow Demon": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804460,
-				abilities: [
-					"shadow_demon_disruption",	// 1
-					"shadow_demon_shadow_poison",	// 2
-					"shadow_demon_shadow_poison",	// 3
-					"shadow_demon_soul_catcher",	// 4
-					"shadow_demon_shadow_poison",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","enchanted_mango","clarity","faerie_fire","branches","sobi_mask","ring_of_basilius","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","arcane_boots","tranquil_boots","magic_wand"],
-					mid_game:	["aether_lens","force_staff","blink","glimmer_cape","ghost","solar_crest","ancient_janggo"],
-					late_game:	["ultimate_scepter","aeon_disk","sheepstick","octarine_core"],
-					situational:	["infused_raindrop","lotus_orb","aghanims_shard"],
-					core:	["aether_lens"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ultimate_scepter":	"Applies break effect.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"aghanims_shard":	"If there are a lot of dispellable debuffs cast on your teammates."
-		}
-	},
-	"Shadow Fiend": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804468,
-				abilities: [
-					"nevermore_shadowraze1",	// 1
-					"nevermore_necromastery",	// 2
-					"nevermore_shadowraze1",	// 3
-					"nevermore_necromastery",	// 4
-					"nevermore_shadowraze1",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["enchanted_mango","tango","branches","faerie_fire","circlet","ward_observer","magic_stick"],
-					early_game:	["bottle","boots","magic_wand","travel_boots","power_treads"],
-					mid_game:	["cyclone","ghost","yasha","dragon_lance","lesser_crit","sange_and_yasha","invis_sword"],
-					late_game:	["arcane_blink","ethereal_blade","sheepstick","refresher","satanic","greater_crit"],
-					situational:	["infused_raindrop","black_king_bar","sphere","aghanims_shard","monkey_king_bar"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"travel_boots":	"For magical build.",
-			"power_treads":	"For right-click build.",
-			"cyclone":	"For magical build.",
-			"ghost":	"For magical build.",
-			"yasha":	"For right-click build.",
-			"dragon_lance":	"For right-click build.",
-			"lesser_crit":	"For right-click build.",
-			"sange_and_yasha":	"For right-click build.",
-			"invis_sword":	"For right-click build.",
-			"arcane_blink":	"For magical build.",
-			"ethereal_blade":	"For magical build.",
-			"sheepstick":	"For magical build.",
-			"refresher":	"For magical build.",
-			"satanic":	"For right-click build.",
-			"greater_crit":	"For right-click build.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"To channel Requiem of Souls fully or to be able to right-click freely.",
-			"sphere":	"Against powerful single target disabels and burst damage.",
-			"aghanims_shard":	"For magical build to deal extra magical damage.",
-			"monkey_king_bar":	"For right-click build against evasion."
-		}
-	},
-	"Shadow Shaman": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804478,
-				abilities: [
-					"shadow_shaman_ether_shock",	// 1
-					"shadow_shaman_shackles",	// 2
-					"shadow_shaman_ether_shock",	// 3
-					"shadow_shaman_voodoo",	// 4
-					"shadow_shaman_ether_shock",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","boots","flask","faerie_fire","enchanted_mango","branches","wind_lace","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","arcane_boots","tranquil_boots","magic_wand","ring_of_basilius"],
-					mid_game:	["aether_lens","blink","aghanims_shard","ghost","force_staff","glimmer_cape","ancient_janggo"],
-					late_game:	["aeon_disk","refresher","octarine_core","ultimate_scepter"],
-					situational:	["infused_raindrop","black_king_bar","lotus_orb"],
-					core:	["aether_lens","blink","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"To channel Shackles fully.",
-			"lotus_orb":	"To reflect, dispel and armor."
-		}
-	},
-	"Silencer": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804488,
-				abilities: [
-					"silencer_glaives_of_wisdom",	// 1
-					"silencer_curse_of_the_silent",	// 2
-					"silencer_curse_of_the_silent",	// 3
-					"silencer_last_word",	// 4
-					"silencer_curse_of_the_silent",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","faerie_fire","branches","enchanted_mango","mantle","circlet","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","magic_wand","power_treads","ring_of_basilius","null_talisman","urn_of_shadows"],
-					mid_game:	["glimmer_cape","force_staff","ghost","ancient_janggo","dragon_lance","hurricane_pike","witch_blade","falcon_blade"],
-					late_game:	["aeon_disk","sheepstick","moon_shard"],
-					situational:	["infused_raindrop","lotus_orb","aghanims_shard"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"aghanims_shard":	"In late game when you are dealing signifcant amounts of damage."
-		}
-	},
-	"Skywrath Mage": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804496,
-				abilities: [
-					"skywrath_mage_concussive_shot",	// 1
-					"skywrath_mage_arcane_bolt",	// 2
-					"skywrath_mage_concussive_shot",	// 3
-					"skywrath_mage_ancient_seal",	// 4
-					"skywrath_mage_concussive_shot",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","mantle","enchanted_mango","flask","branches","clarity","faerie_fire","null_talisman","sobi_mask","ring_of_basilius","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["null_talisman","boots","arcane_boots","tranquil_boots","magic_wand"],
-					mid_game:	["aether_lens","rod_of_atos","force_staff","ghost","travel_boots","veil_of_discord","glimmer_cape"],
-					late_game:	["ultimate_scepter","aeon_disk","octarine_core","sheepstick"],
-					situational:	["infused_raindrop","blink","invis_sword","aghanims_shard"],
-					core:	["aether_lens","rod_of_atos"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"blink":	"To close the gap.",
-			"invis_sword":	"To hunt for kills.",
-			"aghanims_shard":	"If you expect long fights and against physical damage lineups."
-		}
-	},
+
+	
+	
+	
+	
 	"Slardar": {
 		builds: [
 			{
