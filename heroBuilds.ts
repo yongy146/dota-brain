@@ -11486,61 +11486,120 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  'Sand King': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804451,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'sandking_caustic_finale', // 1
+          'sandking_burrowstrike', // 2
+          'sandking_sand_storm', // 3
+          'sandking_sand_storm', // 4
+          'sandking_sand_storm', // 5
+          'sandking_epicenter', // 6
+          'sandking_sand_storm', // 7
+          'sandking_burrowstrike', // 8
+          'sandking_burrowstrike', // 9
+          'sandking_burrowstrike', // 10
+          'special_bonus_unique_sand_king_2', // 11
+          'sandking_epicenter', // 12
+          'sandking_caustic_finale', // 13
+          'sandking_caustic_finale', // 14
+          'special_bonus_unique_sand_king_3', // 15
+          'sandking_caustic_finale', // 16
+          'special_bonus_attributes', // 17
+          'sandking_epicenter', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sand_king_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sand_king_4', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'gauntlets',
+            'ring_of_protection',
+            'faerie_fire',
+            'flask',
+            'magic_stick',
+          ],
+          early_game: [
+            'boots',
+            'soul_ring',
+            'magic_wand',
+            'bracer',
+            'vanguard',
+          ],
+          mid_game: [
+            'blink',
+            'cyclone',
+            'travel_boots',
+            'aghanims_shard',
+            'hood_of_defiance',
+            'ghost',
+            'veil_of_discord',
+          ],
+          late_game: [
+            'shivas_guard',
+            'ethereal_blade',
+            'sheepstick',
+            'ultimate_scepter',
+            'aeon_disk',
+          ],
+          situational: ['heavens_halberd', 'black_king_bar', 'lotus_orb'],
+          core: [
+            'soul_ring',
+            'blink',
+            'cyclone',
+            'travel_boots',
+            'aghanims_shard',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'arcane_ring',
+            'vambrace',
+            'nether_shawl',
+            'quickening_charm',
+            'cloak_of_flames',
+            'timeless_relic',
+            'spell_prism',
+            'giants_ring',
+            'fallen_sky',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      soul_ring:
+        'A core item that helps with mana sustain. It provides Sand King with useful stats.',
+      blink: 'A core item that allows you to channel Epicenter and jump in.',
+      cyclone:
+        'A core item that allows you to setup kills and dispel dust off of yourself.',
+      travel_boots:
+        'A core item that allows you to cover the map better. Sand King is really good at pushing sidelanes in quickly and without much of a risk.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      black_king_bar:
+        'Against a lot of disables, magical damage and as a dispel.',
+      aghanims_shard: 'A core item that adds extra AoE damage and burst.',
+      lotus_orb: 'To reflect, dispel and armor.',
+    },
+  },
+
   /*
 	
-	"Sand King": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804451,
-				abilities: [
-					"sandking_caustic_finale",	// 1
-					"sandking_burrowstrike",	// 2
-					"sandking_sand_storm",	// 3
-					"sandking_sand_storm",	// 4
-					"sandking_sand_storm",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","flask","branches","gauntlets","ring_of_protection","faerie_fire","enchanted_mango","magic_stick"],
-					early_game:	["boots","magic_wand","soul_ring","bracer","tranquil_boots","vanguard","arcane_boots"],
-					mid_game:	["blink","cyclone","travel_boots","force_staff","ghost","hood_of_defiance","veil_of_discord"],
-					late_game:	["ultimate_scepter","ethereal_blade","sheepstick"],
-					situational:	["lotus_orb","black_king_bar","heavens_halberd","aghanims_shard","aeon_disk"],
-					core:	["blink","cyclone"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"aghanims_shard":	"For extra AoE damage against illusions and waveclear."
-		}
-	},
+	
 	"Shadow Demon": {
 		builds: [
 			{
