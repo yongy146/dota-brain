@@ -10959,9 +10959,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804423,
+        steam_guide_id: 1642400064,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2722413092',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           'razor_static_link', // 1
@@ -11057,9 +11057,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804423,
+        steam_guide_id: 1642400073,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2722413152',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'razor_static_link', // 1
@@ -11278,9 +11278,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804432,
+        steam_guide_id: 1642400084,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2722413235',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'riki_blink_strike', // 1
