@@ -11796,9 +11796,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_id: 1640804468,
+        steam_guide_id: 1642573708,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2724416695',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'nevermore_dark_lord', // 1
