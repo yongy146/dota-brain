@@ -123,32 +123,32 @@ export const HeroGuides = {
   // shadow_demon: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404',
   // ],
-  shadow_shaman: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568',
-  ],
+  // shadow_shaman: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568',
+  // ],
   shredder: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963963',
   ],
-  silencer: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648',
-  ],
+  // silencer: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648',
+  // ],
   skeleton_king: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699919868',
   ],
-  skywrath_mage: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962794',
-  ],
-  slardar: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962869',
-  ],
-  slark: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962959'],
-  snapfire: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963037',
-  ],
-  sniper: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139'],
-  spectre: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963243',
-  ],
+  // skywrath_mage: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962794',
+  // ],
+  // slardar: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962869',
+  // ],
+  // slark: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699962959'],
+  // snapfire: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963037',
+  // ],
+  // sniper: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139'],
+  // spectre: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963243',
+  // ],
   spirit_breaker: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328',
   ],

@@ -12197,318 +12197,733 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
-  /*
-	
-	
+  Slardar: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804505,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962869',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'slardar_slithereen_crush', // 1
+          'slardar_bash', // 2
+          'slardar_bash', // 3
+          'slardar_sprint', // 4
+          'slardar_bash', // 5
+          'slardar_amplify_damage', // 6
+          'slardar_bash', // 7
+          'slardar_sprint', // 8
+          'slardar_sprint', // 9
+          'slardar_sprint', // 10
+          'special_bonus_unique_slardar_7', // 11
+          'slardar_amplify_damage', // 12
+          'slardar_slithereen_crush', // 13
+          'slardar_slithereen_crush', // 14
+          'special_bonus_unique_slardar_2', // 15
+          'slardar_slithereen_crush', // 16
+          'special_bonus_attributes', // 17
+          'slardar_amplify_damage', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_slardar_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_slardar_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'branches',
+            'circlet',
+            'faerie_fire',
+            'bracer',
+            'magic_stick',
+          ],
+          early_game: [
+            'infused_raindrop',
+            'power_treads',
+            'mask_of_madness',
+            'magic_wand',
+            'armlet',
+            'orb_of_corrosion',
+          ],
+          mid_game: [
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'echo_sabre',
+            'ultimate_scepter',
+            'hood_of_defiance',
+          ],
+          late_game: [
+            'assault',
+            'moon_shard',
+            'satanic',
+            'ultimate_scepter',
+            'swift_blink',
+          ],
+          situational: ['infused_raindrop', 'hand_of_midas', 'heavens_halberd'],
+          core: [
+            'power_treads',
+            'mask_of_madness',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'assault',
+          ],
+          neutral: [
+            'broom_handle',
+            'possessed_mask',
+            'quicksilver_amulet',
+            'misericorde',
+            'mind_breaker',
+            'elven_tunic',
+            'the_leveller',
+            'penta_edged_sword',
+            'desolator_2',
+            'pirate_hat',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      slardar_bash:
+        'On level 1, you can skill this spell over the suggested one but achieving range creep lasthit or deny is more likely with Slithereen Crush.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'If you expect high frequency of spells being used on the lane.',
+      orb_of_corrosion: 'If you can pressure on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade that provides you with significant increase in attack speed and some mana savings through toggling.',
+      hand_of_midas:
+        'If you can get it early as replacement to Mask of Madness.',
+      mask_of_madness:
+        'A core item that provides you with a burst of attack speed which increases the frequency of Bash of the Deep.',
+      blink: 'A core item that allows you to initiate on desired target.',
+      black_king_bar:
+        'A core item that allows you to continuously right-click in the middle of the fight.',
+      aghanims_shard:
+        'A core upgrade which saves you time of applying Corrosive Haze on a target you jumped. Improves your waveclear speed as armor reduction is applied before Slithereen Crush physical damage.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      assault:
+        'A core item that provides you with even more attack speed and armor reduction.',
+    },
+  },
 
-	
-	
-	
-	
-	"Slardar": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804505,
-				abilities: [
-					"slardar_slithereen_crush",	// 1
-					"slardar_bash",	// 2
-					"slardar_bash",	// 3
-					"slardar_sprint",	// 4
-					"slardar_bash",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","gauntlets","branches","circlet","faerie_fire","flask","bracer","ring_of_protection","magic_stick"],
-					early_game:	["power_treads","magic_wand","bracer","orb_of_corrosion"],
-					mid_game:	["blink","echo_sabre","ultimate_scepter","hood_of_defiance"],
-					late_game:	["assault","moon_shard","satanic"],
-					situational:	["hand_of_midas","black_king_bar","heavens_halberd"],
-					core:	["power_treads","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"hand_of_midas":	"If you can get it early.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"heavens_halberd":	"Especially good against ranged right-clickers."
-		}
-	},
-	"Slark": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804517,
-				abilities: [
-					"slark_essence_shift",	// 1
-					"slark_pounce",	// 2
-					"slark_dark_pact",	// 3
-					"slark_dark_pact",	// 4
-					"slark_dark_pact",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","circlet","faerie_fire","slippers","orb_of_venom","magic_stick"],
-					early_game:	["power_treads","magic_wand","wraith_band","orb_of_corrosion"],
-					mid_game:	["echo_sabre","sange_and_yasha","basher","diffusal_blade"],
-					late_game:	["ultimate_scepter","skadi","abyssal_blade","satanic"],
-					situational:	["infused_raindrop","hand_of_midas","black_king_bar","blink","silver_edge","monkey_king_bar","nullifier"],
-					core:	["power_treads","echo_sabre","sange_and_yasha"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"hand_of_midas":	"If you can get it early.",
-			"black_king_bar":	"Against a lot of disables, magical damage and as a dispel.",
-			"blink":	"To close the gap.",
-			"silver_edge":	"For break effect and to close the gap.",
-			"monkey_king_bar":	"Against evasion.",
-			"nullifier":	"To dispel defensive spells and items."
-		}
-	},
-	"Snapfire": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804525,
-				abilities: [
-					"snapfire_scatterblast",	// 1
-					"snapfire_firesnap_cookie",	// 2
-					"snapfire_scatterblast",	// 3
-					"snapfire_firesnap_cookie",	// 4
-					"snapfire_scatterblast",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","blight_stone","faerie_fire","enchanted_mango","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","magic_wand","tranquil_boots","arcane_boots","ring_of_basilius"],
-					mid_game:	["solar_crest","aghanims_shard","blink","force_staff","glimmer_cape","ghost","mekansm","guardian_greaves","aether_lens","veil_of_discord"],
-					late_game:	["aeon_disk","ultimate_scepter","ethereal_blade","octarine_core","sheepstick"],
-					situational:	["infused_raindrop","lotus_orb"],
-					core:	["solar_crest","aghanims_shard","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"blink":	"Goes well with Aghanim's Shard and Aghanim's Scepter.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"lotus_orb":	"To reflect, dispel and armor."
-		}
-	},
-	"Sniper": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804535,
-				abilities: [
-					"sniper_shrapnel",	// 1
-					"sniper_headshot",	// 2
-					"sniper_shrapnel",	// 3
-					"sniper_take_aim",	// 4
-					"sniper_shrapnel",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","circlet","branches","slippers","flask","boots","wind_lace","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["wraith_band","boots","power_treads","magic_wand","tranquil_boots","ring_of_basilius","urn_of_shadows"],
-					mid_game:	["dragon_lance","maelstrom","hurricane_pike","ultimate_scepter","aghanims_shard","aether_lens","lesser_crit","yasha","sange_and_yasha","ghost","falcon_blade","glimmer_cape","force_staff"],
-					late_game:	["greater_crit","mjollnir","skadi","octarine_core","satanic"],
-					situational:	["infused_raindrop","hand_of_midas","black_king_bar","blink","monkey_king_bar"],
-					core:	["power_treads","tranquil_boots","dragon_lance","maelstrom","ultimate_scepter","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"boots":	"For support Sniper.",
-			"wind_lace":	"For support Sniper.",
-			"ward_sentry":	"For support Sniper to block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"wraith_band":	"For midlane Sniper.",
-			"power_treads":	"For midlane Sniper.",
-			"tranquil_boots":	"For support Sniper",
-			"ring_of_basilius":	"For support Sniper if your laning partner uses a lot of mana early.",
-			"urn_of_shadows":	"For support Sniper.",
-			"dragon_lance":	"For midlane Sniper. Can be disassembled.",
-			"maelstrom":	"For midlane Sniper",
-			"hurricane_pike":	"For midlane Sniper.",
-			"ultimate_scepter":	"For support Sniper.",
-			"aghanims_shard":	"For support Sniper.",
-			"aether_lens":	"For support Sniper.",
-			"lesser_crit":	"For midlane Sniper.",
-			"yasha":	"For midlane Sniper.",
-			"sange_and_yasha":	"For midlane Sniper.",
-			"ghost":	"For support Sniper.",
-			"falcon_blade":	"For support Sniper.",
-			"glimmer_cape":	"For support Sniper.",
-			"greater_crit":	"For midlane Sniper.",
-			"mjollnir":	"For midlane Sniper.",
-			"skadi":	"For midlane Sniper.",
-			"octarine_core":	"For support Sniper.",
-			"satanic":	"For midlane Sniper.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"hand_of_midas":	"For midlane Sniper if you can get it early.",
-			"black_king_bar":	"For midlane Sniper against a lot of disables, magical damage and as a dispel.",
-			"blink":	"For extra mobility.",
-			"monkey_king_bar":	"For midlane Sniper against evasion."
-		}
-	},
-	"Spectre": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804547,
-				abilities: [
-					"spectre_spectral_dagger",	// 1
-					"spectre_dispersion",	// 2
-					"spectre_spectral_dagger",	// 3
-					"spectre_dispersion",	// 4
-					"spectre_spectral_dagger",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","faerie_fire","slippers","circlet","magic_stick"],
-					early_game:	["magic_wand","power_treads","wraith_band"],
-					mid_game:	["echo_sabre","blade_mail","manta","basher","diffusal_blade","radiance"],
-					late_game:	["skadi","abyssal_blade","butterfly","ultimate_scepter","moon_shard"],
-					situational:	["infused_raindrop","hand_of_midas","black_king_bar","nullifier","orchid","aghanims_shard"],
-					core:	["power_treads","manta"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"diffusal_blade":	"Goes well with Manta.",
-			"radiance":	"Against illusion, clone and summon based heroes.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"hand_of_midas":	"If you can get it early.",
-			"black_king_bar":	"Against breaks, disables, magical damage and as a dispel.",
-			"nullifier":	"To dispel defensive spells and items.",
-			"orchid":	"Against heroes with escaping spells.",
-			"aghanims_shard":	"To close the gap once you get damage by backline hero."
-		}
-	},
+  Slark: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804517,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962959',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'slark_essence_shift', // 1
+          'slark_pounce', // 2
+          'slark_dark_pact', // 3
+          'slark_dark_pact', // 4
+          'slark_dark_pact', // 5
+          'slark_shadow_dance', // 6
+          'slark_dark_pact', // 7
+          'slark_pounce', // 8
+          'slark_pounce', // 9
+          'special_bonus_unique_slark_6', // 10
+          'slark_pounce', // 11
+          'slark_shadow_dance', // 12
+          'slark_essence_shift', // 13
+          'slark_essence_shift', // 14
+          'special_bonus_unique_slark_2', // 15
+          'slark_essence_shift', // 16
+          'special_bonus_attributes', // 17
+          'slark_shadow_dance', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_slark_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_slark_4', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'circlet',
+            'faerie_fire',
+            'orb_of_venom',
+            'magic_stick',
+          ],
+          early_game: [
+            'power_treads',
+            'magic_wand',
+            'soul_ring',
+            'falcon_blade',
+            'wraith_band',
+            'orb_of_corrosion',
+          ],
+          mid_game: [
+            'echo_sabre',
+            'silver_edge',
+            'black_king_bar',
+            'aghanims_shard',
+            'basher',
+            'diffusal_blade',
+            'sange_and_yasha',
+          ],
+          late_game: ['skadi', 'abyssal_blade', 'ultimate_scepter', 'satanic'],
+          situational: [
+            'infused_raindrop',
+            'hand_of_midas',
+            'sphere',
+            'blink',
+            'monkey_king_bar',
+            'nullifier',
+          ],
+          core: [
+            'power_treads',
+            'echo_sabre',
+            'silver_edge',
+            'black_king_bar',
+            'aghanims_shard',
+            'basher',
+            'skadi',
+          ],
+          neutral: [
+            'arcane_ring',
+            'possessed_mask',
+            'quicksilver_amulet',
+            'misericorde',
+            'mind_breaker',
+            'elven_tunic',
+            'the_leveller',
+            'penta_edged_sword',
+            'pirate_hat',
+            'apex',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      slark_dark_pact:
+        'You can skill this spell on level 1 if you are being harassed by a dispellable spell(Poision Touch, Thunder Strike).',
+      slark_essence_shift:
+        'You can put 2 points in this spell during laning stage if you are laning against double melee.',
+    },
+    item_tooltips: {
+      orb_of_venom: 'If you can pressure on the lane',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      orb_of_corrosion:
+        'If you can pressure on the lane, usually against double melee.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade that provides significant attack speed increase and some mana savings through toggling.',
+      hand_of_midas:
+        'If you can get it early as replacement to Echo Sabre. You need to get mana regen item if you don`t have it already.',
+      echo_sabre:
+        'A core item that helps with mana sustain and allows you to generate Essence Shift stacks faster. Can be disassembled.',
+      diffusal_blade:
+        'Can be a good item against heroes like Medusa and Wraith King but also generally heroes with small mana pool.',
+      silver_edge:
+        'A core item that provides you with burst, pick-off potential and break effect.',
+      black_king_bar:
+        'A core item that allows you to right-click in the middle of the fight. Try not to overlap it with Shadow Dance or Depth Shroud.',
+      sphere: 'Against powerful single-target disables and debuffs.',
+      aghanims_shard:
+        'A core upgrade that adds to yours and your teams survivability.',
+      basher:
+        'A core item that allows you to lock the target your are focusing.',
+      skadi: 'A core item that tanks you up and makes you less kitable.',
+      blink: 'To close the gap.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+      nullifier:
+        'To dispel defensive spells and items that prevent you from right-clicking the opponent.',
+    },
+  },
+
+  Snapfire: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804525,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963037',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'snapfire_scatterblast', // 1
+          'snapfire_firesnap_cookie', // 2
+          'snapfire_scatterblast', // 3
+          'snapfire_firesnap_cookie', // 4
+          'snapfire_scatterblast', // 5
+          'snapfire_mortimer_kisses', // 6
+          'snapfire_scatterblast', // 7
+          'snapfire_firesnap_cookie', // 8
+          'snapfire_firesnap_cookie', // 9
+          'snapfire_lil_shredder', // 10
+          'special_bonus_hp_200', // 11
+          'snapfire_mortimer_kisses', // 12
+          'snapfire_lil_shredder', // 13
+          'snapfire_lil_shredder', // 14
+          'special_bonus_unique_snapfire_7', // 15
+          'snapfire_lil_shredder', // 16
+          'special_bonus_attributes', // 17
+          'snapfire_mortimer_kisses', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_snapfire_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_snapfire_1', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'blight_stone',
+            'faerie_fire',
+            'branches',
+            'enchanted_mango',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: [
+            'ring_of_basilius',
+            'arcane_boots',
+            'magic_wand',
+            'medallion_of_courage',
+          ],
+          mid_game: [
+            'veil_of_discord',
+            'blink',
+            'aghanims_shard',
+            'solar_crest',
+            'force_staff',
+            'glimmer_cape',
+            'ghost',
+            'cyclone',
+            'mekansm',
+            'guardian_greaves',
+          ],
+          late_game: [
+            'ultimate_scepter',
+            'ethereal_blade',
+            'aeon_disk',
+            'octarine_core',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'lotus_orb'],
+          core: [
+            'arcane_boots',
+            'veil_of_discord',
+            'blink',
+            'aghanims_shard',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'keen_optic',
+            'philosophers_stone',
+            'bullwhip',
+            'quickening_charm',
+            'spider_legs',
+            'timeless_relic',
+            'spell_prism',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      snapfire_lil_shredder:
+        'You can put a point in this spell earlier than suggested if you are in need of killing a unit based on hit count(Homing Missile, Tombstone, Supernova).',
+    },
+    item_tooltips: {
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      ring_of_basilius:
+        'If your laning partner also uses a lot of mana early. You will need it for Veil of Discord.',
+      infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core boots upgrade that helps with mana sustain. Can be disassembled later on.',
+      veil_of_discord:
+        'A core item that improves spell damage output of your team. It can be cast from far away followed up with Mortimer Kisses.',
+      blink:
+        'A core item that goes well with Aghanim`s Shard and Aghanim`s Scepter. Allows you to position yourself nicely.',
+      aghanims_shard:
+        'A core upgrade that adds more control and burst. Goes well with Blink Dagger. The sequence should look like: Blink Dagger -> Scatterblast -> Firesnap Cookie.',
+      lotus_orb: 'To reflect, dispel and armor.',
+      ultimate_scepter:
+        'A core item that allows you to save or to toss in an ally. Adds even more disable and damage.',
+    },
+  },
+
+  Sniper: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804535,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'sniper_headshot', // 1
+          'sniper_shrapnel', // 2
+          'sniper_shrapnel', // 3
+          'sniper_take_aim', // 4
+          'sniper_shrapnel', // 5
+          'sniper_assassinate', // 6
+          'sniper_headshot', // 7
+          'sniper_headshot', // 8
+          'sniper_headshot', // 9
+          'special_bonus_attack_damage_15', // 10
+          'sniper_take_aim', // 11
+          'sniper_take_aim', // 12
+          'sniper_take_aim', // 13
+          'sniper_shrapnel', // 14
+          'special_bonus_attack_speed_30', // 15
+          'sniper_assassinate', // 16
+          'special_bonus_attributes', // 17
+          'sniper_assassinate', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sniper_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_attack_range_100', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'slippers',
+            'faerie_fire',
+            'branches',
+            'boots',
+            'magic_stick',
+          ],
+          early_game: [
+            'power_treads',
+            'mask_of_madness',
+            'wraith_band',
+            'magic_wand',
+          ],
+          mid_game: [
+            'dragon_lance',
+            'silver_edge',
+            'black_king_bar',
+            'maelstrom',
+            'hurricane_pike',
+            'ultimate_scepter',
+            'yasha',
+          ],
+          late_game: [
+            'satanic',
+            'butterfly',
+            'skadi',
+            'mjollnir',
+            'greater_crit',
+          ],
+          situational: [
+            'hand_of_midas',
+            'aghanims_shard',
+            'monkey_king_bar',
+            'blink',
+          ],
+          core: [
+            'power_treads',
+            'mask_of_madness',
+            'dragon_lance',
+            'silver_edge',
+            'black_king_bar',
+            'satanic',
+            'butterfly',
+          ],
+          neutral: [
+            'unstable_wand',
+            'possessed_mask',
+            'grove_bow',
+            'quicksilver_amulet',
+            'mind_breaker',
+            'elven_tunic',
+            'the_leveller',
+            'ninja_gear',
+            'pirate_hat',
+            'apex',
+          ],
+        },
+        item_tooltips: {
+          power_treads:
+            'A core boots upgrade that provides you with significant attack speed increase and mana savings through toggling.',
+          hand_of_midas:
+            'If you can get it early as an alternative to Mask of Madness.',
+          mask_of_madness:
+            'A core farming item that provides burst of attack speed which allows Headshot to proc more often. Can be disassembled down the road and components used for Satanic and Butterfly.',
+          dragon_lance:
+            'A core item that further improves attack range. Can be disassembled.',
+          maelstrom:
+            'Great against illusion-based heroes. Should be upgraded to Mjollnir fairy quickly if that is the case.',
+          yasha:
+            'Just a casual Yasha can be a value purchase as it fixes hero`s movement speed issues and provides good amount of attack speed. You are delaying the core items though.',
+          hurricane_pike:
+            'Allows you to create a gap against heroes like Slark, Anti Mage and Phantom Assasin.',
+          silver_edge:
+            'A core item that provides burst, ability to reposition and break effect.',
+          black_king_bar:
+            'A core item that allows you to stand your ground and right-click.',
+          aghanims_shard: 'Can be consider against gap-closing heroes.',
+          satanic:
+            'A core item that allows you to stand your ground and right-click. It dispels on cast.',
+          butterfly:
+            'A core item that provides you with mix of offensive and defensive stats.',
+          monkey_king_bar: 'Against evasion and miss chance.',
+          blink: 'For extra mobility.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804535,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'sniper_headshot', // 1
+          'sniper_shrapnel', // 2
+          'sniper_headshot', // 3
+          'sniper_shrapnel', // 4
+          'sniper_shrapnel', // 5
+          'sniper_assassinate', // 6
+          'sniper_shrapnel', // 7
+          'sniper_take_aim', // 8
+          'sniper_take_aim', // 9
+          'sniper_take_aim', // 10
+          'sniper_take_aim', // 11
+          'sniper_assassinate', // 12
+          'special_bonus_unique_sniper_4', // 13
+          'sniper_headshot', // 14
+          'special_bonus_unique_sniper_5', // 15
+          'sniper_headshot', // 16
+          'special_bonus_attributes', // 17
+          'sniper_assassinate', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sniper_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sniper_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'blight_stone',
+            'faerie_fire',
+            'branches',
+            'flask',
+            'circlet',
+            'boots',
+            'magic_stick',
+          ],
+          early_game: ['urn_of_shadows', 'tranquil_boots', 'magic_wand'],
+          mid_game: [
+            'veil_of_discord',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'glimmer_cape',
+            'force_staff',
+            'ghost',
+            'solar_crest',
+            'cyclone',
+          ],
+          late_game: [
+            'octarine_core',
+            'aeon_disk',
+            'ethereal_blade',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'spirit_vessel', 'blink'],
+          core: [
+            'urn_of_shadows',
+            'tranquil_boots',
+            'veil_of_discord',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'octarine_core',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'keen_optic',
+            'philosophers_stone',
+            'bullwhip',
+            'quickening_charm',
+            'spider_legs',
+            'timeless_relic',
+            'spell_prism',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+        item_tooltips: {
+          urn_of_shadows:
+            'A core item that provides you with useful stats and allows you to snowball off of first kill.',
+          infused_raindrop: 'Against magical burst',
+          tranquil_boots:
+            'A core boots upgrade that provides you with significant movement speed and hp sustain.',
+          spirit_vessel: 'Against heavy-healing lineup.',
+          veil_of_discord:
+            'A core item that increases spell damage output of your team.',
+          ultimate_scepter:
+            'A core item that upgrades Assassinate. Adds to control.',
+          aghanims_shard:
+            'A core upgrade that allows you to create gap between you and opponents. Concussive Grenade also disarms.',
+          octarine_core: 'Reduces cooldowns and improves cast range.',
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      blink: 'For extra mobility.',
+    },
+  },
+
+  Spectre: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804547,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963243',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'spectre_spectral_dagger', // 1
+          'spectre_dispersion', // 2
+          'spectre_spectral_dagger', // 3
+          'spectre_dispersion', // 4
+          'spectre_spectral_dagger', // 5
+          'spectre_haunt', // 6
+          'spectre_spectral_dagger', // 7
+          'spectre_dispersion', // 8
+          'spectre_dispersion', // 9
+          'spectre_desolate', // 10
+          'spectre_desolate', // 11
+          'spectre_haunt', // 12
+          'spectre_desolate', // 13
+          'spectre_desolate', // 14
+          'special_bonus_unique_spectre', // 15
+          'special_bonus_unique_spectre_6', // 16
+          'special_bonus_attributes', // 17
+          'spectre_haunt', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_hp_400', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_spectre_5', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'faerie_fire',
+            'circlet',
+            'magic_stick',
+          ],
+          early_game: [
+            'falcon_blade',
+            'power_treads',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'ultimate_scepter',
+            'manta',
+            'skadi',
+            'basher',
+            'blade_mail',
+            'echo_sabre',
+            'diffusal_blade',
+            'radiance',
+          ],
+          late_game: ['abyssal_blade', 'butterfly', 'moon_shard'],
+          situational: [
+            'infused_raindrop',
+            'orchid',
+            'black_king_bar',
+            'nullifier',
+          ],
+          core: [
+            'falcon_blade',
+            'power_treads',
+            'ultimate_scepter',
+            'manta',
+            'skadi',
+            'basher',
+          ],
+          neutral: [
+            'chipped_vest',
+            'possessed_mask',
+            'vambrace',
+            'pupils_gift',
+            'mind_breaker',
+            'elven_tunic',
+            'the_leveller',
+            'ninja_gear',
+            'pirate_hat',
+            'apex'
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      spectre_desolate:
+        'You can take a point in this spell during laning stage if you can be aggressive which is rarely the case.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'On hero against magical burst.',
+      falcon_blade:
+        'A core item that provides you with useful stats but most importantly with mana sustain.',
+      power_treads:
+        'A core boots upgrade that provides you with signifcant attack speed increase and mana savings through toggling.',
+      orchid: 'Can be considered against heroes with escaping spells.',
+      diffusal_blade:
+        'Great against heroes like Medusa and Wraith King but also other heroes with small mana pools. Goes well with Manta.',
+      radiance: 'Against illusion, clone and summon-based heroes.',
+      ultimate_scepter:
+        'A core item that allows you to play actively and be part of every pick-off and teamfight.',
+      manta:
+        'A core item that provides you with useful stats but mainly adds to your burst damage. Desolate works on illusions. Spectre becomes decent at taking Roshan with this item.',
+      skadi:
+        'A core item that tanks you up and makes you less kitable. Heal reduction is very useful against heavy-healing lineup.',
+      basher:
+        'A core item that allows you to lock the target your are focusing.',
+      black_king_bar:
+        'Against breaks, disables, magical damage and as a dispel. If you get hit from Silver Edge while spell-immune, the break effect doesn`t apply. If you get hit from Silver Edge before popping Black King Bar, casting Black King Bar won`t dispel break debuff.',
+      nullifier:
+        'To dispel defensive spells and items that prevent your from right-clicking the opponent.',
+    },
+  },
+
+  /*
 	"Spirit Breaker": {
 		builds: [
 			{
