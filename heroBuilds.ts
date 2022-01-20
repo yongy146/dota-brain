@@ -12695,9 +12695,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804535,
+        steam_guide_id: 1642652400,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'sniper_headshot', // 1
