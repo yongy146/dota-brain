@@ -12887,7 +12887,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'the_leveller',
             'ninja_gear',
             'pirate_hat',
-            'apex'
+            'apex',
           ],
         },
       },
@@ -12923,285 +12923,791 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  'Spirit Breaker': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804560,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'spirit_breaker_greater_bash', // 1
+          'spirit_breaker_charge_of_darkness', // 2
+          'spirit_breaker_greater_bash', // 3
+          'spirit_breaker_bulldoze', // 4
+          'spirit_breaker_greater_bash', // 5
+          'spirit_breaker_nether_strike', // 6
+          'spirit_breaker_greater_bash', // 7
+          'spirit_breaker_charge_of_darkness', // 8
+          'spirit_breaker_charge_of_darkness', // 9
+          'spirit_breaker_charge_of_darkness', // 10
+          'spirit_breaker_bulldoze', // 11
+          'spirit_breaker_nether_strike', // 12
+          'spirit_breaker_bulldoze', // 13
+          'spirit_breaker_bulldoze', // 14
+          'special_bonus_armor_4', // 15
+          'special_bonus_unique_spirit_breaker_2', // 16
+          'special_bonus_attributes', // 17
+          'spirit_breaker_nether_strike', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_spirit_breaker_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_spirit_breaker_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'boots',
+            'orb_of_venom',
+            'flask',
+            'faerie_fire',
+            'branches',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: [
+            'phase_boots',
+            'wind_lace',
+            'magic_wand',
+            'orb_of_corrosion',
+            'urn_of_shadows',
+            'bracer',
+          ],
+          mid_game: [
+            'invis_sword',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'black_king_bar',
+            'ancient_janggo',
+            'ghost',
+          ],
+          late_game: ['yasha_and_kaya', 'silver_edge', 'assault', 'moon_shard'],
+          situational: ['spirit_vessel', 'lotus_orb'],
+          core: [
+            'phase_boots',
+            'wind_lace',
+            'invis_sword',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'black_king_bar',
+            'yasha_and_kaya',
+          ],
+          neutral: [
+            'broom_handle',
+            'chipped_vest',
+            'quicksilver_amulet',
+            'paintball',
+            'spider_legs',
+            'elven_tunic',
+            'flicker',
+            'ninja_gear',
+            'force_boots',
+            'giants_ring',
+          ],
+        },
+        item_tooltips: {
+          orb_of_venom:
+            'If you can pressure on the lane, usually against double melee.',
+          ward_sentry: 'To block or unblock a pull camp.',
+          orb_of_corrosion: 'If you can pressure on the lane.',
+          spirit_vessel: 'Against heavy-healing lineup.',
+          lotus_orb: 'For reflect, dispel and armor.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804560,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'spirit_breaker_greater_bash', // 1
+          'spirit_breaker_charge_of_darkness', // 2
+          'spirit_breaker_greater_bash', // 3
+          'spirit_breaker_bulldoze', // 4
+          'spirit_breaker_greater_bash', // 5
+          'spirit_breaker_nether_strike', // 6
+          'spirit_breaker_greater_bash', // 7
+          'spirit_breaker_charge_of_darkness', // 8
+          'spirit_breaker_charge_of_darkness', // 9
+          'spirit_breaker_charge_of_darkness', // 10
+          'spirit_breaker_bulldoze', // 11
+          'spirit_breaker_nether_strike', // 12
+          'spirit_breaker_bulldoze', // 13
+          'spirit_breaker_bulldoze', // 14
+          'special_bonus_armor_4', // 15
+          'special_bonus_unique_spirit_breaker_2', // 16
+          'special_bonus_attributes', // 17
+          'spirit_breaker_nether_strike', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_spirit_breaker_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_spirit_breaker_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'branches',
+            'faerie_fire',
+            'bracer',
+            'magic_stick',
+          ],
+          early_game: ['phase_boots', 'wind_lace', 'magic_wand', 'soul_ring'],
+          mid_game: [
+            'invis_sword',
+            'ultimate_scepter',
+            'black_king_bar',
+            'aghanims_shard',
+            'ancient_janggo',
+            'ghost',
+          ],
+          late_game: [
+            'yasha_and_kaya',
+            'silver_edge',
+            'assault',
+            'moon_shard',
+            'refresher',
+          ],
+          situational: ['heavens_halberd', 'sphere'],
+          core: [
+            'phase_boots',
+            'wind_lace',
+            'invis_sword',
+            'ultimate_scepter',
+            'black_king_bar',
+            'aghanims_shard',
+            'yasha_and_kaya',
+          ],
+          neutral: [
+            'broom_handle',
+            'chipped_vest',
+            'quicksilver_amulet',
+            'paintball',
+            'spider_legs',
+            'elven_tunic',
+            'flicker',
+            'ninja_gear',
+            'force_boots',
+            'giants_ring',
+          ],
+        },
+        item_tooltips: {
+          heavens_halberd: 'Especially good against ranged right-clickers.',
+          sphere: 'Against powerful single-target disables and debuffs.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_armor_4:
+        'On level 15, take the suggested level 15 talent over this level 10 talent. Dota client disallows me to indicate such order in graphics above.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'If you expect high frequency of spells being used on the lane.',
+      phase_boots:
+        'A core boots upgrade typically used just before the Charge of Darkness lands. Percentage of movement speed is converted to damage whenever Greater Bash procs.',
+      wind_lace:
+        'A core cheap item that goes well with movement speed theme of the hero.',
+      ancient_janggo:
+        'If you are grouping up a lot as a team in midgame and if you have summons.',
+      invis_sword:
+        'A core item that can be used during Charge of Darkness without canceling it. Grants you even more burst damage on impact. Can be upgraded to Silver Edge in late game.',
+      ultimate_scepter:
+        'A core item that reduces cooldown of Charge of Darkness and allows it to pierce spell-immunity. You can use charge to push out sidelanes.',
+      black_king_bar:
+        'A core item that allows you to be in the middle of fight and right-click.',
+      aghanims_shard:
+        'A core upgrade that provides you with break effect and spell-immunity at the end of Nether Strike.',
+      yasha_and_kaya:
+        'A core item that provides you with useful stats but mainly with extra movement speed and spell amplification. Greater Bash is of magical damage.',
+    },
+  },
+
+  'Storm Spirit': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804570,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963425',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'storm_spirit_static_remnant', // 1
+          'storm_spirit_overload', // 2
+          'storm_spirit_electric_vortex', // 3
+          'storm_spirit_static_remnant', // 4
+          'storm_spirit_static_remnant', // 5
+          'storm_spirit_ball_lightning', // 6
+          'storm_spirit_static_remnant', // 7
+          'storm_spirit_overload', // 8
+          'storm_spirit_overload', // 9
+          'special_bonus_mp_regen_250', // 10
+          'storm_spirit_overload', // 11
+          'storm_spirit_ball_lightning', // 12
+          'storm_spirit_electric_vortex', // 13
+          'storm_spirit_electric_vortex', // 14
+          'storm_spirit_electric_vortex', // 15
+          'special_bonus_attack_speed_25', // 16
+          'special_bonus_attributes', // 17
+          'storm_spirit_ball_lightning', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_storm_spirit', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_storm_spirit_7', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'circlet',
+            'branches',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'bottle',
+            'soul_ring',
+            'power_treads',
+            'null_talisman',
+            'magic_stick',
+          ],
+          mid_game: [
+            'kaya_and_sange',
+            'black_king_bar',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'orchid',
+            'bloodstone',
+            'cyclone',
+          ],
+          late_game: ['shivas_guard', 'sheepstick', 'bloodthorn', 'aeon_disk'],
+          situational: ['infused_raindrop', 'sphere'],
+          core: [
+            'bottle',
+            'soul_ring',
+            'power_treads',
+            'kaya_and_sange',
+            'black_king_bar',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'shivas_guard',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'arcane_ring',
+            'vambrace',
+            'essence_ring',
+            'ceremonial_robe',
+            'psychic_headband',
+            'timeless_relic',
+            'stormcrafter',
+            'apex',
+            'ex_machina',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      storm_spirit_electric_vortex:
+        'You don`t have to put a point in this spell during laning stage if you have no way to pressure or land a kill on opponents` mid.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      bottle:
+        'A core item that provides you with sustain and allows you to gank with stored rune. Having arcane or regenaration rune stored can easily be a deciding factor in the teamfight.',
+      infused_raindrop: 'Against magical burst.',
+      soul_ring:
+        'A core item that provides you with even more mana. In Storm`s case, mana equals damage. It can be used during Ball Lightning.',
+      power_treads:
+        'A core boots upgrade that provides you with some mana and attack speed.',
+      orchid:
+        'If you have a really good start you can rush this item. It allows you to pick-off most of the heroes on the map.',
+      cyclone:
+        'If you are dealing with sileces and roots this item can helps you offset those.',
+      kaya_and_sange:
+        'A core item that provides you with mix of defensive and offensive stats.',
+      black_king_bar:
+        'A core item that deals with most of the disables, silences and roots.',
+      sphere: 'Against powerful single-target disables and debuffs.',
+      ultimate_scepter:
+        'A core item that allows you to have a ``Reverse Polarity`` effect on 16s cooldown.',
+      aghanims_shard:
+        'A core upgrade that increases your team`s damage output.',
+      shivas_guard:
+        'A core item that provides you with more intelligence and AoE damage. It also deals with healing lineup. The item can be used during Ball Lightning.',
+    },
+  },
+
+  Sven: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804579,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963505',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'sven_storm_bolt', // 1
+          'sven_storm_bolt', // 2
+          'sven_great_cleave', // 3
+          'sven_great_cleave', // 4
+          'sven_great_cleave', // 5
+          'sven_gods_strength', // 6
+          'sven_great_cleave', // 7
+          'sven_warcry', // 8
+          'sven_warcry', // 9
+          'special_bonus_attack_speed_15', // 10
+          'sven_warcry', // 11
+          'sven_gods_strength', // 12
+          'sven_warcry', // 13
+          'sven_storm_bolt', // 14
+          'special_bonus_unique_sven_8', // 15
+          'sven_storm_bolt', // 16
+          'special_bonus_attributes', // 17
+          'sven_gods_strength', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sven_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sven_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'gauntlets',
+            'faerie_fire',
+            'enchanted_mango',
+            'magic_stick',
+          ],
+          early_game: ['power_treads', 'mask_of_madness', 'magic_wand'],
+          mid_game: [
+            'echo_sabre',
+            'blink',
+            'black_king_bar',
+            'silver_edge',
+            'sange_and_yasha',
+          ],
+          late_game: [
+            'satanic',
+            'swift_blink',
+            'assault',
+            'greater_crit',
+            'bloodthorn',
+          ],
+          situational: [
+            'aghanims_shard',
+            'monkey_king_bar',
+            'ultimate_scepter',
+          ],
+          core: [
+            'power_treads',
+            'mask_of_madness',
+            'echo_sabre',
+            'blink',
+            'black_king_bar',
+            'silver_edge',
+            'satanic',
+            'swift_blink',
+          ],
+          neutral: [
+            'broom_handle',
+            'unstable_wand',
+            'quicksilver_amulet',
+            'misericorde',
+            'elven_tunic',
+            'mind_breaker',
+            'the_leveller',
+            'penta_edged_sword',
+            'apex',
+            'giants_ring',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      sven_warcry:
+        'At level 3, you can take a point in this spell over the suggested second point in Storm Hammer if the lane is hard.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      power_treads:
+        'A core boots upgrade that provides you with significant attack speed increase and mana savings through toggling.',
+      mask_of_madness:
+        'A core farming item that provides you with burst of attack speed and sustain through lifesteal. Can be disassembled down the road.',
+      echo_sabre:
+        'A core item that provides burst through double attack and helps with mana sustain. Can be disassembled for faster Black King Bar timing.',
+      blink: 'A core item to close the gap.',
+      black_king_bar:
+        'A core item that allows you to right-click in the middle of the fight.',
+      silver_edge:
+        'A core item that provides you with burst, ability to reposition and break effect.',
+      aghanims_shard: 'To dispel defensive items and spells with Storm Hammer.',
+      bloodthorn:
+        'An item of choice if you need to deal with evasion and miss chance. You can get Oblivion Staff from Echo Sabre. Apply it on stunned enemy so it doesn`t get dispelled easily.',
+      satanic:
+        'A core item that tanks you up and allows you to stand your ground and right-click. Dispels on cast.',
+      swift_blink:
+        'A core blink upgrade that provides you with attack speed burst. It allows you to move around faster especially if you decide to sell or backpack Power Treads. Overwhelming Blink can be considered instead if you are playing against illusion based heroes although Swift Blink might be still better.',
+      monkey_king_bar:
+        'Against evasion and miss chance. Bloodthorn is usually a better option as you already have Oblivion Staff in Echo Sabre that you can use.',
+      ultimate_scepter: 'For extra mobility.',
+    },
+  },
+
+  Techies: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804587,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699933135',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'techies_suicide', // 1
+          'techies_land_mines', // 2
+          'techies_land_mines', // 3
+          'techies_stasis_trap', // 4
+          'techies_land_mines', // 5
+          'techies_remote_mines', // 6
+          'techies_land_mines', // 7
+          'techies_suicide', // 8
+          'techies_suicide', // 9
+          'techies_suicide', // 10
+          'special_bonus_magic_resistance_20', // 11
+          'techies_remote_mines', // 12
+          'techies_stasis_trap', // 13
+          'techies_stasis_trap', // 14
+          'special_bonus_unique_techies', // 15
+          'techies_stasis_trap', // 16
+          'special_bonus_attributes', // 17
+          'techies_remote_mines', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_techies_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_techies_4', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'boots',
+            'faerie_fire',
+            'ring_of_regen',
+            'gauntlets',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['soul_ring', 'tranquil_boots'],
+          mid_game: [
+            'ultimate_scepter',
+            'aether_lens',
+            'aghanims_shard',
+            'force_staff',
+            'kaya',
+            'glimmer_cape',
+            'ghost',
+          ],
+          late_game: ['bloodstone', 'octarine_core', 'aeon_disk', 'sheepstick'],
+          situational: ['infused_raindrop', 'blink'],
+          core: [
+            'soul_ring',
+            'tranquil_boots',
+            'ultimate_scepter',
+            'aether_lens',
+            'aghanims_shard',
+            'bloodstone',
+          ],
+          neutral: [
+            'arcane_ring',
+            'keen_optic',
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
+            'ceremonial_robe',
+            'timeless_relic',
+            'stormcrafter',
+            'seer_stone',
+            'demonicon',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane. You don`t upgrade it usually.',
+      soul_ring: 'A core item that helps with mana sustain.',
+      tranquil_boots:
+        'A core boots upgrade that helps with hp sustain. Goes well with Soul Ring and offsets self-damage from Blast Off!',
+      infused_raindrop:
+        'Against magical burst. It doesn`t offset Blast Off! damage.',
+      ultimate_scepter:
+        'A core item that enhances all of your spells and allows you to hide mines under Minefield Sign.',
+      force_staff: 'Can be used to push an opponent into mines.',
+      aether_lens:
+        'A core item that improves cast range and mana regeneration. Can be upgraded to Octarine Core in late game.',
+      aghanims_shard: 'A core item that provides extra control.',
+      bloodstone:
+        'A core item that provides significant mana regeneration and some spell amplification.',
+      blink: 'For extra mobility around the map.',
+    },
+  },
+
+  'Templar Assassin': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804595,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'templar_assassin_meld', // 1
+          'templar_assassin_psi_blades', // 2
+          'templar_assassin_refraction', // 3
+          'templar_assassin_refraction', // 4
+          'templar_assassin_refraction', // 5
+          'templar_assassin_psionic_trap', // 6
+          'templar_assassin_refraction', // 7
+          'templar_assassin_psi_blades', // 8
+          'templar_assassin_meld', // 9
+          'special_bonus_attack_speed_20', // 10
+          'templar_assassin_meld', // 11
+          'templar_assassin_psionic_trap', // 12
+          'templar_assassin_meld', // 13
+          'templar_assassin_psi_blades', // 14
+          'special_bonus_unique_templar_assassin_8', // 15
+          'templar_assassin_psi_blades', // 16
+          'special_bonus_attributes', // 17
+          'templar_assassin_psionic_trap', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_templar_assassin_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_templar_assassin', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'faerie_fire',
+            'magic_stick',
+          ],
+          early_game: [
+            'power_treads',
+            'dragon_lance',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'desolator',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'hurricane_pike',
+            'orchid',
+          ],
+          late_game: ['greater_crit', 'swift_blink', 'butterfly', 'moon_shard'],
+          situational: [
+            'ultimate_scepter',
+            'monkey_king_bar',
+            'nullifier',
+            'sphere',
+          ],
+          core: [
+            'power_treads',
+            'dragon_lance',
+            'desolator',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'greater_crit',
+            'swift_blink',
+          ],
+          neutral: [
+            'possessed_mask',
+            'unstable_wand',
+            'grove_bow',
+            'quicksilver_amulet',
+            'mind_breaker',
+            'enchanted_quiver',
+            'the_leveller',
+            'ninja_gear',
+            'desolator_2',
+            'apex',
+          ],
+        },
+        ability_tooltips: {
+          templar_assassin_meld:
+            'You can surprise the opponents on the first wave by melding yourself in their offlaner`s creep blocking path.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804595,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'templar_assassin_meld', // 1
+          'templar_assassin_psi_blades', // 2
+          'templar_assassin_refraction', // 3
+          'templar_assassin_refraction', // 4
+          'templar_assassin_refraction', // 5
+          'templar_assassin_psionic_trap', // 6
+          'templar_assassin_refraction', // 7
+          'templar_assassin_psi_blades', // 8
+          'templar_assassin_meld', // 9
+          'special_bonus_attack_speed_20', // 10
+          'templar_assassin_meld', // 11
+          'templar_assassin_psionic_trap', // 12
+          'templar_assassin_meld', // 13
+          'templar_assassin_psi_blades', // 14
+          'special_bonus_unique_templar_assassin_8', // 15
+          'templar_assassin_psi_blades', // 16
+          'special_bonus_attributes', // 17
+          'templar_assassin_psionic_trap', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_templar_assassin_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_templar_assassin', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'quelling_blade',
+            'branches',
+            'circlet',
+            'slippers',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'bottle',
+            'power_treads',
+            'dragon_lance',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'desolator',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'hurricane_pike',
+            'orchid',
+          ],
+          late_game: ['greater_crit', 'swift_blink', 'butterfly', 'moon_shard'],
+          situational: [
+            'ultimate_scepter',
+            'monkey_king_bar',
+            'nullifier',
+            'sphere',
+          ],
+          core: [
+            'bottle',
+            'power_treads',
+            'dragon_lance',
+            'desolator',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'greater_crit',
+            'swift_blink',
+          ],
+          neutral: [
+            'possessed_mask',
+            'unstable_wand',
+            'grove_bow',
+            'quicksilver_amulet',
+            'mind_breaker',
+            'enchanted_quiver',
+            'the_leveller',
+            'ninja_gear',
+            'desolator_2',
+            'apex',
+          ],
+        },
+        ability_tooltips: {
+          templar_assassin_meld:
+            'You can surprise the opponents on the first wave by melding yourself in their offlaner`s creep blocking path.',
+        },
+        item_tooltips: {
+          bottle:
+            'A core item that provides you with sustain and allows you to fight with stored rune.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      templar_assassin_refraction:
+        'You can already skill this spell on level 1 or 2 if you expect to be harassed by the ``single instance of damage`` spells like Arcane Bolt, Death Pulse and such.',
+      special_bonus_unique_templar_assassin_2:
+        'You can take this talent over the suggested one if there`s nothing major to dispel. Usually there will be though.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      power_treads:
+        'A core boots upgrade that provides significant attack speed increase and some mana savings through toggling.',
+      dragon_lance:
+        'A core item that makes it easier for you to get right-clicks and Meld off. Can be disassembled for earlier timing on Black King Bar.',
+      desolator:
+        'A core item that adds to your burst. Allows you to take Roshan and buildings faster.',
+      blink:
+        'A core item for gap-closing. You don`t take damage during Refraction so it possible to blink out even after few instances of damage on you.',
+      black_king_bar:
+        'A core item that allows you to right-click in the fights. Refraction protects you against right-clicks and Black King Bar against most of the spells.',
+      hurricane_pike:
+        'Good at creating gap between you and heroes like Slark or Troll. You can use Meld during one of the 5 long range attacks of Hurricane Pike active ability.',
+      aghanims_shard:
+        'A core upgrade for silence and extra vision. Often times you will get this upgrade from second Roshan as Templar Assassin is good at killing Roshan early.',
+      greater_crit:
+        'A core damaging item of choice. Adds to the burst and extracts maximum value from armor reduction.',
+      ultimate_scepter:
+        'To splitpush and against it. It is appealing item to get if you are far behind or far ahead.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+      nullifier:
+        'To dispel defensive items and spells that prevent you from right-clicking the opponent.',
+      sphere: 'Against powerful single-target disables and debuffs.',
+      swift_blink:
+        'A core upgrade that provides burst of attack speed on cast. Allows you to move around the map faster especially if you are playing without the boots due to slot issues.',
+    },
+  },
   /*
-	"Spirit Breaker": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804560,
-				abilities: [
-					"spirit_breaker_charge_of_darkness",	// 1
-					"spirit_breaker_greater_bash",	// 2
-					"spirit_breaker_bulldoze",	// 3
-					"spirit_breaker_greater_bash",	// 4
-					"spirit_breaker_greater_bash",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","boots","orb_of_venom","flask","faerie_fire","enchanted_mango","branches","circlet","ring_of_protection","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","phase_boots","magic_wand","urn_of_shadows","tranquil_boots","orb_of_corrosion","power_treads","bracer"],
-					mid_game:	["ultimate_scepter","blade_mail","hood_of_defiance","ancient_janggo","glimmer_cape","ghost"],
-					late_game:	["assault","vladmir","moon_shard"],
-					situational:	["spirit_vessel","pipe","black_king_bar","heavens_halberd","lotus_orb","aghanims_shard"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"ancient_janggo":	"If you are grouping up a lot as a team in midgame and if you have summons.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"aghanims_shard":	"For break effect."
-		}
-	},
-	"Storm Spirit": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804570,
-				abilities: [
-					"storm_spirit_static_remnant",	// 1
-					"storm_spirit_overload",	// 2
-					"storm_spirit_electric_vortex",	// 3
-					"storm_spirit_static_remnant",	// 4
-					"storm_spirit_static_remnant",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","circlet","branches","mantle","ward_observer","magic_stick"],
-					early_game:	["bottle","null_talisman","power_treads","magic_stick"],
-					mid_game:	["orchid","kaya","kaya_and_sange","bloodstone","cyclone"],
-					late_game:	["ultimate_scepter","shivas_guard","bloodthorn","sheepstick","aeon_disk"],
-					situational:	["infused_raindrop","black_king_bar","sphere","aghanims_shard"],
-					core:	["power_treads","orchid","kaya"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"sphere":	"Against powerful single target disables and burst of damage.",
-			"aghanims_shard":	"If you are lacking damage as team."
-		}
-	},
-	"Sven": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804579,
-				abilities: [
-					"sven_storm_bolt",	// 1
-					"sven_warcry",	// 2
-					"sven_great_cleave",	// 3
-					"sven_great_cleave",	// 4
-					"sven_great_cleave",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","enchanted_mango","gauntlets","faerie_fire","circlet","magic_stick"],
-					early_game:	["power_treads","magic_wand","bracer","mask_of_madness"],
-					mid_game:	["echo_sabre","blink","lesser_crit","sange_and_yasha"],
-					late_game:	["greater_crit","swift_blink","assault","satanic","bloodthorn"],
-					situational:	["black_king_bar","aghanims_shard","monkey_king_bar","ultimate_scepter"],
-					core:	["power_treads","mask_of_madness","echo_sabre","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"echo_sabre":	"Can be disassembled.",
-			"blink":	"To close the gap.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"aghanims_shard":	"To dispel defensive items and spells with Storm Hammer.",
-			"monkey_king_bar":	"Against evasion.",
-			"ultimate_scepter":	"For extra mobility."
-		}
-	},
-	"Techies": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804587,
-				abilities: [
-					"techies_suicide",	// 1
-					"techies_land_mines",	// 2
-					"techies_land_mines",	// 3
-					"techies_stasis_trap",	// 4
-					"techies_land_mines",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","boots","faerie_fire","ring_of_regen","gauntlets","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","soul_ring","arcane_boots","null_talisman","magic_wand"],
-					mid_game:	["ultimate_scepter","force_staff","aether_lens","kaya","glimmer_cape","ghost"],
-					late_game:	["octarine_core","aeon_disk","travel_boots","sheepstick","bloodstone"],
-					situational:	["infused_raindrop","aghanims_shard","blink"],
-					core:	["soul_ring","ultimate_scepter"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"travel_boots":	"For extra mobility around the map.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"aghanims_shard":	"For extra control.",
-			"blink":	"For extra mobility around the map."
-		}
-	},
-	"Templar Assassin": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804595,
-				abilities: [
-					"templar_assassin_psi_blades",	// 1
-					"templar_assassin_refraction",	// 2
-					"templar_assassin_refraction",	// 3
-					"templar_assassin_psi_blades",	// 4
-					"templar_assassin_refraction",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","quelling_blade","branches","circlet","slippers","ward_observer","magic_stick"],
-					early_game:	["bottle","power_treads","dragon_lance","magic_wand","wraith_band"],
-					mid_game:	["desolator","blink","lesser_crit","hurricane_pike","orchid"],
-					late_game:	["greater_crit","swift_blink","butterfly","moon_shard"],
-					situational:	["infused_raindrop","black_king_bar","aghanims_shard","ultimate_scepter","monkey_king_bar","nullifier","sphere"],
-					core:	["power_treads","dragon_lance","desolator","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"For midlane Templar Assasin.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"aghanims_shard":	"For silence and extra vision.",
-			"ultimate_scepter":	"To splitpush and against it.",
-			"monkey_king_bar":	"Against evasion.",
-			"nullifier":	"To dispel defensive items and spells.",
-			"sphere":	"Against powerful single target disables and burst damage."
-		}
-	},
+	
+	
 	"Terrorblade": {
 		builds: [
 			{

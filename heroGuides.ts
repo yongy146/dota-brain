@@ -149,19 +149,19 @@ export const HeroGuides = {
   // spectre: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963243',
   // ],
-  spirit_breaker: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328',
-  ],
-  storm_spirit: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963425',
-  ],
-  sven: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699963505'],
-  techies: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699933135',
-  ],
-  templar_assassin: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659',
-  ],
+  // spirit_breaker: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328',
+  // ],
+  // storm_spirit: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963425',
+  // ],
+  // sven: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699963505'],
+  // techies: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699933135',
+  // ],
+  // templar_assassin: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659',
+  // ],
   terrorblade: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963755',
   ],
