@@ -75,9 +75,9 @@ export const HeroGuides = {
   // "monkey_king":          ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030"],
   // "morphling":            ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699960135"],
   // "naga_siren":           ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699960208"],
-//   necrolyte: [
-//     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447',
-//   ],
+  //   necrolyte: [
+  //     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447',
+  //   ],
   // nevermore: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485',
   // ],
