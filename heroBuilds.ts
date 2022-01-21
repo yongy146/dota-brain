@@ -13021,9 +13021,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804560,
+        steam_guide_id: 1642747940,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2726400030',
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           'spirit_breaker_greater_bash', // 1
@@ -13572,9 +13572,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804595,
+        steam_guide_id: 1642747928,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2726399928',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'templar_assassin_meld', // 1
