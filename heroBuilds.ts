@@ -13262,8 +13262,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'sven_storm_bolt', // 1
-          'sven_storm_bolt', // 2
-          'sven_great_cleave', // 3
+          'sven_great_cleave', // 2
+          'sven_storm_bolt', // 3
           'sven_great_cleave', // 4
           'sven_great_cleave', // 5
           'sven_gods_strength', // 6
