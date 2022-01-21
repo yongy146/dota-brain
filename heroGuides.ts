@@ -1,8 +1,8 @@
 export const HeroGuides = {
   //"abaddon":              ["https://steamcommunity.com/sharedfiles/filedetails/?id=2698376898"],
-  abyssal_underlord: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964445',
-  ],
+  // abyssal_underlord: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964445',
+  // ],
   //"alchemist":            ["https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018"],
   //"ancient_apparition":   ["https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158"],
   //"antimage":             ["https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261"],
@@ -126,9 +126,9 @@ export const HeroGuides = {
   // shadow_shaman: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568',
   // ],
-  shredder: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963963',
-  ],
+  // shredder: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963963',
+  // ],
   // silencer: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648',
   // ],
@@ -162,13 +162,13 @@ export const HeroGuides = {
   // templar_assassin: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659',
   // ],
-  terrorblade: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963755',
-  ],
-  tidehunter: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963852',
-  ],
-  tinker: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964058'],
+  // terrorblade: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963755',
+  // ],
+  // tidehunter: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963852',
+  // ],
+  // tinker: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964058'],
   tiny: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139'],
   treant: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699934294'],
   troll_warlord: [

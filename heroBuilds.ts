@@ -13705,222 +13705,581 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         'A core upgrade that provides burst of attack speed on cast. Allows you to move around the map faster especially if you are playing without the boots due to slot issues.',
     },
   },
+
+  Terrorblade: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804604,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963755',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'terrorblade_reflection', // 1
+          'terrorblade_metamorphosis', // 2
+          'terrorblade_metamorphosis', // 3
+          'terrorblade_conjure_image', // 4
+          'terrorblade_conjure_image', // 5
+          'terrorblade_conjure_image', // 6
+          'terrorblade_conjure_image', // 7
+          'terrorblade_sunder', // 8
+          'terrorblade_metamorphosis', // 9
+          'special_bonus_evasion_16', // 10
+          'terrorblade_metamorphosis', // 11
+          'terrorblade_sunder', // 12
+          'terrorblade_reflection', // 13
+          'terrorblade_reflection', // 14
+          'special_bonus_hp_275', // 15
+          'terrorblade_reflection', // 16
+          'special_bonus_attributes', // 17
+          'terrorblade_sunder', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_terrorblade_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_terrorblade_3', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'faerie_fire',
+            'circlet',
+            'magic_stick',
+          ],
+          early_game: [
+            'power_treads',
+            'falcon_blade',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: ['manta', 'dragon_lance', 'skadi', 'black_king_bar'],
+          late_game: [
+            'satanic',
+            'greater_crit',
+            'butterfly',
+            'ultimate_scepter',
+            'refresher',
+          ],
+          situational: [
+            'infused_raindrop',
+            'hurricane_pike',
+            'blink',
+            'monkey_king_bar',
+          ],
+          core: [
+            'power_treads',
+            'manta',
+            'dragon_lance',
+            'skadi',
+            'black_king_bar',
+            'satanic',
+            'greater_crit',
+          ],
+          neutral: [
+            'possessed_mask',
+            'unstable_wand',
+            'grove_bow',
+            'quicksilver_amulet',
+            'titan_sliver',
+            'elven_tunic',
+            'the_leveller',
+            'ninja_gear',
+            'apex',
+            'ex_machina',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      terrorblade_sunder:
+        'You can skill this spell eariler than suggested or keep a skill point if you are still laning and you feel like you might be ganked. It decreases your farming speed though.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade. Illusion-based heroes like agility and strength attributes.',
+      manta:
+        'A core item that provide a mix of useful stats. Proper Manta illusion usage can further accelerate your farm and in the fights significantly increase your damage output.',
+      dragon_lance:
+        'A core item that provides you with a lot of needed attributes and improves attack range during Metamorphosis. Can be disassembled.',
+      skadi:
+        'A core item that provides a lot of attributes and makes you less kitable.',
+      hurricane_pike: 'To disengage from heroes like Slark and Troll.',
+      black_king_bar:
+        'A core item that allows you to stand your ground and right-click. It helps with getting Sunder off.',
+      satanic:
+        'A core item that tanks you up and allows you to stand your ground. It dispels on cast.',
+      greater_crit:
+        'A core damaging item of choice. Illusions can crit as well.',
+      blink: 'To close the gap. Goes well with Aghanim`s Scepter.',
+      ultimate_scepter: 'For extra control and Metamorphosis uptime.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+    },
+  },
+
+  Tidehunter: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804619,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963852',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'tidehunter_anchor_smash', // 1
+          'tidehunter_gush', // 2
+          'tidehunter_anchor_smash', // 3
+          'tidehunter_kraken_shell', // 4
+          'tidehunter_anchor_smash', // 5
+          'tidehunter_ravage', // 6
+          'tidehunter_anchor_smash', // 7
+          'tidehunter_kraken_shell', // 8
+          'tidehunter_kraken_shell', // 9
+          'tidehunter_kraken_shell', // 10
+          'special_bonus_unique_tidehunter_5', // 11
+          'tidehunter_ravage', // 12
+          'tidehunter_gush', // 13
+          'tidehunter_gush', // 14
+          'tidehunter_gush', // 15
+          'special_bonus_unique_tidehunter_2', // 16
+          'special_bonus_attributes', // 17
+          'tidehunter_ravage', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tidehunter', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tidehunter_7', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'branches',
+            'ring_of_protection',
+            'enchanted_mango',
+            'magic_stick',
+          ],
+          early_game: [
+            'soul_ring',
+            'phase_boots',
+            'magic_wand',
+            'medallion_of_courage',
+          ],
+          mid_game: [
+            'hood_of_defiance',
+            'blink',
+            'ultimate_scepter',
+            'ghost',
+            'solar_crest',
+            'helm_of_the_dominator',
+          ],
+          late_game: [
+            'shivas_guard',
+            'refresher',
+            'overwhelming_blink',
+            'assault',
+          ],
+          situational: [
+            'pipe',
+            'heavens_halberd',
+            'aghanims_shard',
+            'lotus_orb',
+          ],
+          core: [
+            'soul_ring',
+            'phase_boots',
+            'hood_of_defiance',
+            'blink',
+            'ultimate_scepter',
+            'shivas_guard',
+            'refresher',
+          ],
+          neutral: [
+            'chipped_vest',
+            'broom_handle',
+            'dragon_scale',
+            'vambrace',
+            'cloak_of_flames',
+            'ceremonial_robe',
+            'timeless_relic',
+            'spell_prism',
+            'fallen_sky',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      tidehunter_gush:
+        'You can skill this spell on level 1 if you are fighting at the 0min rune or you can pressure on the lane.',
+      tidehunter_kraken_shell:
+        'On a tough lane you can put more points in this spell and earlier than suggested.',
+      special_bonus_unique_tidehunter_6:
+        'You can take this talent over the suggested one if opponents have a lot of stuns or debuffs that Kraken Shell can dispel off of you.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      soul_ring:
+        'A core item that helps with mana sustain and provides useful stats.',
+      phase_boots:
+        'A core boots upgrade that fixes movement speed and armor issues that Tidehunter has.',
+      hood_of_defiance:
+        'A core defensive item that negates magical damage. Kraken Shell protects Tidehunter from right-clicks and Hood against magical damage.',
+      pipe: 'Against heavy magical damage lineup.',
+      blink: 'A core item that allows you to land multi-hero Ravage.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      aghanims_shard: 'Improves right-click potential and building damage.',
+      ultimate_scepter:
+        'A core item that allows you to hit multiple opponents with Gush.',
+      lotus_orb: 'To reflect, dispel and armor.',
+      shivas_guard:
+        'A core item that icreases mana pool, adds to AoE damage and reduces healing of opponents team.',
+      refresher:
+        'A core item for second round of your spells and items. Goes well with level 25 Ravage talent.',
+    },
+  },
+
+  Timbersaw: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804634,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963963',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'shredder_whirling_death', // 1
+          'shredder_reactive_armor', // 2
+          'shredder_reactive_armor', // 3
+          'shredder_timber_chain', // 4
+          'shredder_reactive_armor', // 5
+          'shredder_chakram', // 6
+          'shredder_timber_chain', // 7
+          'shredder_timber_chain', // 8
+          'shredder_timber_chain', // 9
+          'shredder_reactive_armor', // 10
+          'special_bonus_hp_200', // 11
+          'shredder_chakram', // 12
+          'shredder_whirling_death', // 13
+          'shredder_whirling_death', // 14
+          'shredder_whirling_death', // 15
+          'special_bonus_spell_amplify_8', // 16
+          'special_bonus_attributes', // 17
+          'shredder_chakram', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_strength_16', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_timbersaw', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'ring_of_protection',
+            'gauntlets',
+            'enchanted_mango',
+            'faerie_fire',
+            'flask',
+            'magic_stick',
+          ],
+          early_game: ['soul_ring', 'arcane_boots', 'magic_wand', 'bracer'],
+          mid_game: [
+            'hood_of_defiance',
+            'cyclone',
+            'kaya_and_sange',
+            'aghanims_shard',
+            'eternal_shroud',
+          ],
+          late_game: ['shivas_guard', 'bloodstone', 'sheepstick'],
+          situational: [
+            'pipe',
+            'lotus_orb',
+            'blink',
+            'black_king_bar',
+            'heavens_halberd',
+          ],
+          core: [
+            'soul_ring',
+            'arcane_boots',
+            'hood_of_defiance',
+            'cyclone',
+            'kaya_and_sange',
+            'aghanims_shard',
+            'shivas_guard',
+          ],
+          neutral: [
+            'arcane_ring',
+            'mysterious_hat',
+            'essence_ring',
+            'pupils_gift',
+            'quickening_charm',
+            'cloak_of_flames',
+            'spell_prism',
+            'stormcrafter',
+            'giants_ring',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      shredder_timber_chain:
+        'In certain match-ups(Ursa, Slark), Reactive Armor doesn`t have much value. You can put a point in this spell on level 1 or 2 already.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      soul_ring: 'A core item that provides useful stats and mana sustain.',
+      arcane_boots:
+        'A core boots upgrade that provides mana sustain. Can be disassembled down the road.',
+      hood_of_defiance:
+        'A core defensive item. Reactive armor protects against physical damage and Hood covers the magical damage.',
+      cyclone:
+        'A core item that provides dispel on cast which is especially useful against Spirit Vessel. It also serves as a kill setup. You can disengage by Timber Chaining and Eul`sing yourself immediately.',
+      pipe: 'Against heavy magical damage lineup.',
+      kaya_and_sange:
+        'A core item that provide a mix of defensive and offensive stats. Self heal amplification synergizes with Reactive Armor really well.',
+      aghanims_shard:
+        'A core upgrade that adds to AoE damage output. Allows Timbersaw to deal significant damage to buildings.',
+      lotus_orb: 'For dispel, reflect and armor.',
+      shivas_guard:
+        'A core item that increases mana pool and adds to AoE damage. Reduces healing by a significant amount.',
+      blink: 'To close the gap quickly.',
+      black_king_bar: 'Against a lot of disables, silences and as a dispel.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+    },
+  },
+
+  Tinker: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804644,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964058',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'tinker_laser', // 1
+          'tinker_heat_seeking_missile', // 2
+          'tinker_laser', // 3
+          'tinker_heat_seeking_missile', // 4
+          'tinker_laser', // 5
+          'tinker_rearm', // 6
+          'tinker_laser', // 7
+          'tinker_heat_seeking_missile', // 8
+          'tinker_heat_seeking_missile', // 9
+          'special_bonus_mana_reduction_8', // 10
+          'tinker_defense_matrix', // 11
+          'tinker_rearm', // 12
+          'tinker_defense_matrix', // 13
+          'tinker_defense_matrix', // 14
+          'special_bonus_unique_tinker_5', // 15
+          'tinker_defense_matrix', // 16
+          'special_bonus_attributes', // 17
+          'tinker_rearm', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_spell_amplify_10', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tinker', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'branches',
+            'circlet',
+            'ward_observer',
+          ],
+          early_game: ['bottle', 'soul_ring', 'blink', 'null_talisman'],
+          mid_game: [
+            'shivas_guard',
+            'overwhelming_blink',
+            'ultimate_scepter',
+            'aether_lens',
+            'ghost',
+            'kaya_and_sange',
+          ],
+          late_game: ['sheepstick', 'ethereal_blade', 'bloodstone', 'dagon'],
+          situational: ['black_king_bar', 'aeon_disk'],
+          core: [
+            'bottle',
+            'soul_ring',
+            'blink',
+            'shivas_guard',
+            'overwhelming_blink',
+            'ultimate_scepter',
+            'aether_lens',
+            'sheepstick',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'keen_optic',
+            'philosophers_stone',
+            'vambrace',
+            'psychic_headband',
+            'ceremonial_robe',
+            'timeless_relic',
+            'stormcrafter',
+            'seer_stone',
+            'mirror_shield',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      bottle:
+        'A core item that provides you with sustain and allows you to fight with stored rune.',
+      soul_ring: 'A core item that provides mana sustain.',
+      blink:
+        'A core item that allows you to position yourself safe enough in teamfights and while pushing waves.',
+      shivas_guard:
+        'A core item for waveclear and AoE damage along with Overwhelming Blink.',
+      overwhelming_blink:
+        'A core item for waveclear and AoE damage along with Shiva`s Guard.',
+      black_king_bar:
+        'Against disables, silences, magical damage and as a dispel.',
+      ultimate_scepter:
+        'A core damaging item which damage output scales with opponents` current HP.',
+      aether_lens: 'A core item that increases cast range.',
+      sheepstick: 'A core item that allows you to chain disable an opponent.',
+      aeon_disk: 'Provides you with second chance to escape or turn around.',
+    },
+  },
+
+  Underlord: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804708,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964445',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'abyssal_underlord_atrophy_aura', // 1
+          'abyssal_underlord_firestorm', // 2
+          'abyssal_underlord_atrophy_aura', // 3
+          'abyssal_underlord_firestorm', // 4
+          'abyssal_underlord_firestorm', // 5
+          'abyssal_underlord_dark_rift', // 6
+          'abyssal_underlord_firestorm', // 7
+          'abyssal_underlord_pit_of_malice', // 8
+          'abyssal_underlord_pit_of_malice', // 9
+          'abyssal_underlord_pit_of_malice', // 10
+          'abyssal_underlord_pit_of_malice', // 11
+          'abyssal_underlord_dark_rift', // 12
+          'special_bonus_unique_underlord_8', // 13
+          'abyssal_underlord_atrophy_aura', // 14
+          'special_bonus_unique_underlord_5', // 15
+          'abyssal_underlord_atrophy_aura', // 16
+          'special_bonus_attributes', // 17
+          'abyssal_underlord_dark_rift', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_underlord_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_underlord', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'branches',
+            'ring_of_protection',
+            'magic_stick',
+          ],
+          early_game: ['soul_ring', 'phase_boots', 'magic_wand'],
+          mid_game: [
+            'rod_of_atos',
+            'hood_of_defiance',
+            'vanguard',
+            'aghanims_shard',
+            'solar_crest',
+            'cyclone',
+          ],
+          late_game: ['assault', 'octarine_core', 'shivas_guard', 'sheepstick'],
+          situational: [
+            'crimson_guard',
+            'pipe',
+            'heavens_halberd',
+            'black_king_bar',
+            'lotus_orb',
+          ],
+          core: [
+            'soul_ring',
+            'phase_boots',
+            'rod_of_atos',
+            'aghanims_shard',
+            'assault',
+          ],
+          neutral: [
+            'chipped_vest',
+            'arcane_ring',
+            'dragon_scale',
+            'vambrace',
+            'quickening_charm',
+            'cloak_of_flames',
+            'trickster_cloak',
+            'ascetic_cap',
+            'ex_machina',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      abyssal_underlord_firestorm:
+        'You can skill this spell on level 1 instead of the suggested Atrophy Aura if you have a tough match-up.',
+      abyssal_underlord_dark_rift:
+        'You can opt not to skill this spell on level 6 in favor of other spells. I find it useful as a reset tool and allows more aggressive waveclearing.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      soul_ring: 'A core item that provides mana sustain and useful stats.',
+      phase_boots:
+        'A core item that fixes movement speed and armor issues of the hero.',
+      rod_of_atos:
+        'A core item that synergizes well with Pit of Malice. The full combo would be: Pit of Malice - Firestorm - Rod of Atos - Pit of Malice procs again. You can right-click the opponent few times as well.',
+      crimson_guard:
+        'Against fast attacking right-clickers, illusions and summons.',
+      pipe: 'Against heavy magical damage lineup.',
+      heavens_halberd: 'Especially good against ranged right-clickers.',
+      black_king_bar:
+        'Against disables, silences, magical damage and as a dispel.',
+      aghanims_shard:
+        'A core upgrade of Firestorm that increases your overall damage significantly. You can use Firestorm on yourself and move around with it. Goes well with Firestorm talents.',
+      lotus_orb: 'To reflect, dispel and armor.',
+      assault:
+        'A core item that improves your right-click potential while also providing a strong aura. It helps with taking buildings down after a won fight along with bonus damage coming from Atrophy Aura.',
+      shivas_guard:
+        'An alternative to Assault Cuirass against heavy-healing and illusion-based lineups.',
+    },
+  },
+
   /*
 	
-	
-	"Terrorblade": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804604,
-				abilities: [
-					"terrorblade_reflection",	// 1
-					"terrorblade_metamorphosis",	// 2
-					"terrorblade_metamorphosis",	// 3
-					"terrorblade_conjure_image",	// 4
-					"terrorblade_conjure_image",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","slippers","faerie_fire","circlet","magic_stick"],
-					early_game:	["power_treads","magic_wand","wraith_band","ring_of_basilius"],
-					mid_game:	["dragon_lance","yasha","manta","sange_and_yasha","lesser_crit"],
-					late_game:	["skadi","greater_crit","satanic","butterfly"],
-					situational:	["infused_raindrop","black_king_bar","blink","hurricane_pike","monkey_king_bar","ultimate_scepter"],
-					core:	["power_treads","dragon_lance","yasha","skadi"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"dragon_lance":	"Can be disassembled.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"blink":	"To close the gap.",
-			"hurricane_pike":	"To disengage from heroes like Slark and Troll.",
-			"monkey_king_bar":	"Against evasion.",
-			"ultimate_scepter":	"For extra control."
-		}
-	},
-	"Tidehunter": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804619,
-				abilities: [
-					"tidehunter_anchor_smash",	// 1
-					"tidehunter_gush",	// 2
-					"tidehunter_anchor_smash",	// 3
-					"tidehunter_kraken_shell",	// 4
-					"tidehunter_anchor_smash",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","ring_of_protection","enchanted_mango","flask","gauntlets","faerie_fire","magic_stick"],
-					early_game:	["soul_ring","boots","phase_boots","magic_wand","arcane_boots"],
-					mid_game:	["hood_of_defiance","blink","ultimate_scepter","ghost","solar_crest","helm_of_the_dominator"],
-					late_game:	["refresher","arcane_blink","shivas_guard","vladmir"],
-					situational:	["pipe","heavens_halberd","lotus_orb","aghanims_shard"],
-					core:	["blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"aghanims_shard":	"For right-click build and to take buildings faster."
-		}
-	},
-	"Timbersaw": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804634,
-				abilities: [
-					"shredder_whirling_death",	// 1
-					"shredder_reactive_armor",	// 2
-					"shredder_reactive_armor",	// 3
-					"shredder_timber_chain",	// 4
-					"shredder_reactive_armor",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","ring_of_protection","flask","enchanted_mango","branches","gauntlets","faerie_fire","magic_stick"],
-					early_game:	["soul_ring","arcane_boots","magic_wand","bracer","vanguard"],
-					mid_game:	["hood_of_defiance","cyclone","sange","kaya_and_sange","aghanims_shard","kaya","eternal_shroud"],
-					late_game:	["bloodstone","sheepstick","shivas_guard"],
-					situational:	["pipe","heavens_halberd","lotus_orb","black_king_bar","blink"],
-					core:	["soul_ring","arcane_boots","hood_of_defiance","cyclone","sange","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"blink":	"To close the gap quickly."
-		}
-	},
-	"Tinker": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804644,
-				abilities: [
-					"tinker_heat_seeking_missile",	// 1
-					"tinker_laser",	// 2
-					"tinker_heat_seeking_missile",	// 3
-					"tinker_laser",	// 4
-					"tinker_heat_seeking_missile",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","faerie_fire","branches","circlet","ward_observer"],
-					early_game:	["bottle","soul_ring","null_talisman","blink"],
-					mid_game:	["ultimate_scepter","shivas_guard","overwhelming_blink","aether_lens","kaya","bloodstone","ghost","dagon"],
-					late_game:	["sheepstick","aeon_disk","ethereal_blade"],
-					situational:	["infused_raindrop","black_king_bar","aghanims_shard"],
-					core:	["soul_ring","blink","ultimate_scepter"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"overwhelming_blink":	"Along with Shiva's Guard for waveclear and AoE damage.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"aghanims_shard":	"For extra AoE damage although Shiva's Guard and Overwhelming Blink are usually better."
-		}
-	},
 	"Tiny": {
 		builds: [
 			{
@@ -14157,59 +14516,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			"aghanims_shard":	"For extra control and vision."
 		}
 	},
-	"Underlord": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804708,
-				abilities: [
-					"abyssal_underlord_firestorm",	// 1
-					"abyssal_underlord_atrophy_aura",	// 2
-					"abyssal_underlord_firestorm",	// 3
-					"abyssal_underlord_pit_of_malice",	// 4
-					"abyssal_underlord_firestorm",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","gauntlets","branches","flask","enchanted_mango","ring_of_protection","faerie_fire","magic_stick"],
-					early_game:	["soul_ring","boots","magic_wand","phase_boots","arcane_boots","vanguard"],
-					mid_game:	["rod_of_atos","hood_of_defiance","force_staff","mekansm","guardian_greaves","aghanims_shard"],
-					late_game:	["shivas_guard","assault","octarine_core"],
-					situational:	["pipe","heavens_halberd","crimson_guard","lotus_orb","black_king_bar"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"heavens_halberd":	"Especially good against ranged right-clickers.",
-			"crimson_guard":	"Against fast attacking right-clickers, illusions and summons.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel."
-		}
-	},
+	
 	"Undying": {
 		builds: [
 			{
