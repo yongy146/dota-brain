@@ -15365,9 +15365,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_id: 1640804752,
+        steam_guide_id: 1642969042,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2729605047',
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           'venomancer_poison_sting', // 1
@@ -15497,19 +15497,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           'viper_poison_attack', // 3
           'viper_nethertoxin', // 4
           'viper_poison_attack', // 5
-          'viper_strike', // 6
+          'viper_viper_strike', // 6
           'viper_nethertoxin', // 7
           'viper_poison_attack', // 8
           'viper_corrosive_skin', // 9
           'special_bonus_attack_speed_20', // 10
           'viper_corrosive_skin', // 11
-          'viper_strike', // 12
+          'viper_viper_strike', // 12
           'viper_corrosive_skin', // 13
           'viper_nethertoxin', // 14
           'special_bonus_hp_300', // 15
           'viper_nethertoxin', // 16
           'special_bonus_attributes', // 17
-          'viper_strike', // 18
+          'viper_viper_strike', // 18
           'special_bonus_attributes', // 19
           'special_bonus_attack_damage_70', // 20
           'special_bonus_attributes', // 21
@@ -15586,9 +15586,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804761,
+        steam_guide_id: 1642969059,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2729605437',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'viper_poison_attack', // 1
@@ -15596,19 +15596,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           'viper_poison_attack', // 3
           'viper_nethertoxin', // 4
           'viper_poison_attack', // 5
-          'viper_strike', // 6
+          'viper_viper_strike', // 6
           'viper_nethertoxin', // 7
           'viper_poison_attack', // 8
           'viper_corrosive_skin', // 9
           'special_bonus_attack_speed_20', // 10
           'viper_corrosive_skin', // 11
-          'viper_strike', // 12
+          'viper_viper_strike', // 12
           'viper_corrosive_skin', // 13
           'viper_nethertoxin', // 14
           'special_bonus_hp_300', // 15
           'viper_nethertoxin', // 16
           'special_bonus_attributes', // 17
-          'viper_strike', // 18
+          'viper_viper_strike', // 18
           'special_bonus_attributes', // 19
           'special_bonus_attack_damage_70', // 20
           'special_bonus_attributes', // 21
@@ -15792,9 +15792,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804769,
+        steam_guide_id: 1642969079,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2729605654',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'visage_grave_chill', // 1
