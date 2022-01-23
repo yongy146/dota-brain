@@ -8491,7 +8491,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         'Start with it if you expect high frequency of spells being used on the lane.',
       infused_raindrop: 'Against magical burst.',
       aghanims_shard:
-        'A core item that adds to the push but also serves as a "disable" in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.',
+        'A core item that adds to the push but also serves as a `disable` in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.',
     },
   },
 
