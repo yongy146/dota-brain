@@ -15029,305 +15029,881 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  Ursa: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804726,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964646',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'ursa_fury_swipes', // 1
+          'ursa_earthshock', // 2
+          'ursa_fury_swipes', // 3
+          'ursa_overpower', // 4
+          'ursa_fury_swipes', // 5
+          'ursa_enrage', // 6
+          'ursa_fury_swipes', // 7
+          'ursa_overpower', // 8
+          'ursa_overpower', // 9
+          'special_bonus_mp_regen_175', // 10
+          'ursa_overpower', // 11
+          'ursa_enrage', // 12
+          'ursa_earthshock', // 13
+          'ursa_earthshock', // 14
+          'ursa_earthshock', // 15
+          'special_bonus_hp_350', // 16
+          'special_bonus_attributes', // 17
+          'ursa_enrage', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_ursa', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_ursa_7', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'orb_of_venom',
+            'faerie_fire',
+            'slippers',
+            'magic_stick',
+          ],
+          early_game: ['phase_boots', 'magic_wand', 'orb_of_corrosion'],
+          mid_game: [
+            'diffusal_blade',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'basher',
+            'bfury',
+            'sange_and_yasha',
+          ],
+          late_game: ['satanic', 'abyssal_blade', 'swift_blink'],
+          situational: [
+            'infused_raindrop',
+            'monkey_king_bar',
+            'nullifier',
+            'ultimate_scepter',
+          ],
+          core: [
+            'phase_boots',
+            'diffusal_blade',
+            'blink',
+            'black_king_bar',
+            'aghanims_shard',
+            'basher',
+            'satanic',
+          ],
+          neutral: [
+            'broom_handle',
+            'possessed_mask',
+            'quicksilver_amulet',
+            'misericorde',
+            'mind_breaker',
+            'titan_sliver',
+            'penta_edged_sword',
+            'the_leveller',
+            'desolator_2',
+            'ex_machina',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      orb_of_venom: 'Start with it if you can pressure on the lane.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      orb_of_corrosion: 'If you can pressure on the lane.',
+      phase_boots:
+        'A core boots upgrade that allows you to gap-close faster and adds to burst.',
+      infused_raindrop: 'Against magical burst.',
+      diffusal_blade:
+        'A core item which active allows you to stay on top of the target. With Overpower on you can burn the target`s mana quickly.',
+      bfury:
+        'Whilst getting Diffusal Blade as a first major item goes along with aggressive approach to the game, getting Battle Fury would be indicative of more steady and farming approach. Ursa should be played with aggressive approach in mind more often than not.',
+      blink: 'A core item that allows you to gap-close instantly.',
+      black_king_bar:
+        'A core item that allows you to right-click the opponents in the middle of the fight.',
+      aghanims_shard:
+        'A core upgrade that you usually get from second Roshan.If that`s not the case, definitely purchase it.',
+      basher:
+        'A core item that allows you to lock the target you are focusing.',
+      satanic:
+        'A core item that tanks you up and allows you to stand your ground. Its active applies basic dispel on cast.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+      nullifier:
+        'To dispel defensive items and spells from opponents that prevent you from right-clicking.',
+      ultimate_scepter: 'Against long lasting disables.',
+    },
+  },
+
+  'Vengeful Spirit': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804736,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'vengefulspirit_wave_of_terror', // 1
+          'vengefulspirit_magic_missile', // 2
+          'vengefulspirit_magic_missile', // 3
+          'vengefulspirit_wave_of_terror', // 4
+          'vengefulspirit_magic_missile', // 5
+          'vengefulspirit_nether_swap', // 6
+          'vengefulspirit_magic_missile', // 7
+          'vengefulspirit_command_aura', // 8
+          'vengefulspirit_wave_of_terror', // 9
+          'vengefulspirit_wave_of_terror', // 10
+          'vengefulspirit_command_aura', // 11
+          'vengefulspirit_nether_swap', // 12
+          'vengefulspirit_command_aura', // 13
+          'vengefulspirit_command_aura', // 14
+          'special_bonus_magic_resistance_12', // 15
+          'special_bonus_unique_vengeful_spirit_4', // 16
+          'special_bonus_attributes', // 17
+          'vengefulspirit_nether_swap', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_vengeful_spirit_9', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_vengeful_spirit_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'faerie_fire',
+            'enchanted_mango',
+            'branches',
+            'circlet',
+            'ring_of_protection',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: [
+            'arcane_boots',
+            'magic_wand',
+            'ring_of_basilius',
+            'urn_of_shadows',
+          ],
+          mid_game: [
+            'aether_lens',
+            'solar_crest',
+            'aghanims_shard',
+            'force_staff',
+            'ghost',
+            'glimmer_cape',
+          ],
+          late_game: ['vladmir', 'ultimate_scepter'],
+          situational: ['infused_raindrop', 'ancient_janggo', 'lotus_orb'],
+          core: [
+            'arcane_boots',
+            'aether_lens',
+            'solar_crest',
+            'aghanims_shard',
+            'vladmir',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'keen_optic',
+            'pogo_stick',
+            'philosophers_stone',
+            'bullwhip',
+            'spider_legs',
+            'psychic_headband',
+            'spy_gadget',
+            'trickster_cloak',
+            'seer_stone',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_magic_resistance_12:
+        'On level 15, instead of taking this level 10 talent take the suggested level 15 talent. The DotA client disallows me to indicate that in graphics above.',
+    },
+    item_tooltips: {
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      ring_of_basilius: 'If your laning partner also uses a lot of mana early.',
+      infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Aether Lens. You should upgrade the leftover boots to Tranquil Boots.',
+      ancient_janggo:
+        'If you are looking to group up a lot early and if you have summons.',
+      aether_lens: 'A core item that improves cast range.',
+      solar_crest:
+        'A core buffing item for one of your right-clicking cores. It can be used offensively to take down an opponent or Roshan faster.',
+      aghanims_shard:
+        'A core upgrade to Wave of Terror that reduces the base damage and armor of affected opponents while at the same time buffing you for the same amount.',
+      lotus_orb: 'For reflect, dispel and armor.',
+      vladmir:
+        'A core buffing item which percentage values scale well into the late game.',
+      ultimate_scepter:
+        'A core item that allows you to cast spells and right-click even after the death.',
+    },
+  },
+
+  Venomancer: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804752,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'venomancer_poison_sting', // 1
+          'venomancer_venomous_gale', // 2
+          'venomancer_poison_sting', // 3
+          'venomancer_plague_ward', // 4
+          'venomancer_plague_ward', // 5
+          'venomancer_plague_ward', // 6
+          'venomancer_plague_ward', // 7
+          'venomancer_poison_nova', // 8
+          'venomancer_poison_sting', // 9
+          'venomancer_poison_sting', // 10
+          'venomancer_venomous_gale', // 11
+          'venomancer_poison_nova', // 12
+          'venomancer_venomous_gale', // 13
+          'venomancer_venomous_gale', // 14
+          'special_bonus_unique_venomancer_3', // 15
+          'special_bonus_unique_venomancer_2', // 16
+          'special_bonus_attributes', // 17
+          'venomancer_poison_nova', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_venomancer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_venomancer', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'circlet',
+            'branches',
+            'faerie_fire',
+            'quelling_blade',
+            'ring_of_protection',
+            'magic_stick',
+          ],
+          early_game: ['urn_of_shadows', 'arcane_boots', 'magic_wand'],
+          mid_game: [
+            'spirit_vessel',
+            'veil_of_discord',
+            'blink',
+            'aghanims_shard',
+            'ultimate_scepter',
+            'hood_of_defiance',
+            'aether_lens',
+            'force_staff',
+            'mekansm',
+          ],
+          late_game: [
+            'shivas_guard',
+            'octarine_core',
+            'aeon_disk',
+            'sheepstick',
+          ],
+          situational: [
+            'infused_raindrop',
+            'pipe',
+            'heavens_halberd',
+            'black_king_bar',
+          ],
+          core: [
+            'arcane_boots',
+            'spirit_vessel',
+            'veil_of_discord',
+            'blink',
+            'aghanims_shard',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'keen_optic',
+            'grove_bow',
+            'nether_shawl',
+            'ceremonial_robe',
+            'quickening_charm',
+            'timeless_relic',
+            'spell_prism',
+            'force_boots',
+            'seer_stone',
+          ],
+        },
+        ability_tooltips: {
+          venomancer_venomous_gale:
+            'You can skill this spell on level 1 if you are fighting at the 0min rune. You can also put a second point into this spell at level 4 if you are able to play aggressively on the lane.',
+        },
+        item_tooltips: {
+          arcane_boots:
+            'A core boots upgrade for mana sustain. The usual order is to pick up brown boots, then acquire Spirit Vessel and then assemble Arcane Boots.',
+          spirit_vessel:
+            'A core item and another ``damage over time`` effect. Especially good against heavy-healing lineup.',
+          pipe: 'Against heavy magical damage lineup.',
+          heavens_halberd: 'Especially good against ranged right-clickers.',
+          black_king_bar:
+            'Against disables, magical damage and as a dispel. Allows you to stay alive after blinking in the middle of the opponents.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804752,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'venomancer_poison_sting', // 1
+          'venomancer_venomous_gale', // 2
+          'venomancer_poison_sting', // 3
+          'venomancer_venomous_gale', // 4
+          'venomancer_plague_ward', // 5
+          'venomancer_poison_nova', // 6
+          'venomancer_plague_ward', // 7
+          'venomancer_plague_ward', // 8
+          'venomancer_plague_ward', // 9
+          'venomancer_poison_sting', // 10
+          'venomancer_poison_sting', // 11
+          'venomancer_poison_nova', // 12
+          'venomancer_venomous_gale', // 13
+          'venomancer_venomous_gale', // 14
+          'special_bonus_unique_venomancer_3', // 15
+          'special_bonus_unique_venomancer_2', // 16
+          'special_bonus_attributes', // 17
+          'venomancer_poison_nova', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_venomancer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_venomancer', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'circlet',
+            'branches',
+            'faerie_fire',
+            'ring_of_protection',
+            'enchanted_mango',
+            'wind_lace',
+            'magic_stick',
+          ],
+          early_game: [
+            'urn_of_shadows',
+            'arcane_boots',
+            'magic_wand',
+            'ring_of_basilius',
+          ],
+          mid_game: [
+            'veil_of_discord',
+            'blink',
+            'aghanims_shard',
+            'force_staff',
+            'ghost',
+            'aether_lens',
+            'cyclone',
+            'glimmer_cape',
+          ],
+          late_game: [
+            'ultimate_scepter',
+            'aeon_disk',
+            'shivas_guard',
+            'octarine_core',
+            'sheepstick',
+          ],
+          situational: ['infused_raindrop', 'spirit_vessel', 'lotus_orb'],
+          core: [
+            'urn_of_shadows',
+            'arcane_boots',
+            'veil_of_discord',
+            'blink',
+            'aghanims_shard',
+            'ultimate_scepter',
+          ],
+          neutral: [
+            'mysterious_hat',
+            'keen_optic',
+            'philosophers_stone',
+            'nether_shawl',
+            'ceremonial_robe',
+            'quickening_charm',
+            'timeless_relic',
+            'spell_prism',
+            'force_boots',
+            'seer_stone',
+          ],
+        },
+        ability_tooltips: {
+          venomancer_venomous_gale:
+            'You can skill this spell on level 1 if you are fighting at the 0min rune.',
+        },
+        item_tooltips: {
+          urn_of_shadows:
+            'A core item that adds another ``damage over time`` effect to your arsenal. Allows you to snowball off of first kill. It also provides you with useful stats, especially mana regeneration.',
+          arcane_boots:
+            'A core boots upgrade for mana sustain. It can be disassembled down the road.',
+          spirit_vessel:
+            'Another ``damage over time`` effect. Especially good against heavy-healing lineup.',
+          lotus_orb: 'For reflect, dispel and armor.',
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      veil_of_discord: 'A core item for spell damage amplification.',
+      blink:
+        'A core item that allows you to blink in the middle of the opponents team and release Poison Nova.',
+      aghanims_shard:
+        'A core upgrade for Venomous Gale improving its cast range and enabling it to spawn 2 Plague Wards per opponent hit.',
+      ultimate_scepter:
+        'A core damaging item. Along with level 20 talent, Poison Nova will technically deal more than 100% of affected heroes` total hp as magical damage.',
+    },
+  },
+
+  Viper: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804761,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'viper_poison_attack', // 1
+          'viper_corrosive_skin', // 2
+          'viper_poison_attack', // 3
+          'viper_nethertoxin', // 4
+          'viper_poison_attack', // 5
+          'viper_strike', // 6
+          'viper_nethertoxin', // 7
+          'viper_poison_attack', // 8
+          'viper_corrosive_skin', // 9
+          'special_bonus_attack_speed_20', // 10
+          'viper_corrosive_skin', // 11
+          'viper_strike', // 12
+          'viper_corrosive_skin', // 13
+          'viper_nethertoxin', // 14
+          'special_bonus_hp_300', // 15
+          'viper_nethertoxin', // 16
+          'special_bonus_attributes', // 17
+          'viper_strike', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_attack_damage_70', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_viper_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'circlet',
+            'branches',
+            'faerie_fire',
+            'slippers',
+            'enchanted_mango',
+            'sobi_mask',
+            'ring_of_protection',
+            'magic_stick',
+          ],
+          early_game: [
+            'urn_of_shadows',
+            'power_treads',
+            'wind_lace',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'dragon_lance',
+            'black_king_bar',
+            'skadi',
+            'aghanims_shard',
+            'rod_of_atos',
+            'hurricane_pike',
+            'hood_of_defiance',
+            'force_staff',
+            'ultimate_scepter',
+          ],
+          late_game: ['ethereal_blade', 'assault', 'butterfly'],
+          situational: [
+            'infused_raindrop',
+            'spirit_vessel',
+            'blink',
+            'monkey_king_bar',
+          ],
+          core: [
+            'urn_of_shadows',
+            'power_treads',
+            'wind_lace',
+            'dragon_lance',
+            'black_king_bar',
+            'skadi',
+            'aghanims_shard',
+            'ethereal_blade',
+          ],
+          neutral: [
+            'unstable_wand',
+            'pogo_stick',
+            'grove_bow',
+            'quicksilver_amulet',
+            'enchanted_quiver',
+            'elven_tunic',
+            'ninja_gear',
+            'the_leveller',
+            'apex',
+            'pirate_hat',
+          ],
+        },
+        item_tooltips: {
+          urn_of_shadows:
+            'A core item that allows you to snowball off of first kill. Provides you with useful stats, namely mana regeneration.',
+          spirit_vessel: 'Against heavy-healing lineup.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804761,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'viper_poison_attack', // 1
+          'viper_corrosive_skin', // 2
+          'viper_poison_attack', // 3
+          'viper_nethertoxin', // 4
+          'viper_poison_attack', // 5
+          'viper_strike', // 6
+          'viper_nethertoxin', // 7
+          'viper_poison_attack', // 8
+          'viper_corrosive_skin', // 9
+          'special_bonus_attack_speed_20', // 10
+          'viper_corrosive_skin', // 11
+          'viper_strike', // 12
+          'viper_corrosive_skin', // 13
+          'viper_nethertoxin', // 14
+          'special_bonus_hp_300', // 15
+          'viper_nethertoxin', // 16
+          'special_bonus_attributes', // 17
+          'viper_strike', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_attack_damage_70', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_viper_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'faerie_fire',
+            'branches',
+            'circlet',
+            'slippers',
+            'ward_observer',
+            'magic_stick',
+          ],
+          early_game: [
+            'bottle',
+            'power_treads',
+            'wind_lace',
+            'magic_wand',
+            'wraith_band',
+          ],
+          mid_game: [
+            'dragon_lance',
+            'black_king_bar',
+            'skadi',
+            'aghanims_shard',
+            'hurricane_pike',
+            'ultimate_scepter',
+            'orchid',
+          ],
+          late_game: ['ethereal_blade', 'assault', 'butterfly'],
+          situational: ['infused_raindrop', 'blink', 'monkey_king_bar'],
+          core: [
+            'bottle',
+            'power_treads',
+            'wind_lace',
+            'dragon_lance',
+            'black_king_bar',
+            'skadi',
+            'aghanims_shard',
+            'ethereal_blade',
+          ],
+          neutral: [
+            'unstable_wand',
+            'pogo_stick',
+            'grove_bow',
+            'quicksilver_amulet',
+            'enchanted_quiver',
+            'elven_tunic',
+            'ninja_gear',
+            'the_leveller',
+            'apex',
+            'pirate_hat',
+          ],
+        },
+        item_tooltips: {
+          bottle:
+            'A core item that provides you with sustain and allows you to fight with stored rune.',
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_unique_viper_5:
+        'You can take this level 25 talent over the suggested one if there`s a real need for break effect.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade that provides significant attack speed increase and mana savings through toggling.',
+      wind_lace:
+        'A core cost-effective item that tackles the movement speed issues of the hero.',
+      dragon_lance:
+        'A core item that improves attack range. Can be disassembled to get Black King Bar a bit faster and the assembled again.',
+      black_king_bar:
+        'A core item against disables, debuffs and as a dispel. Allows you to stand your ground and right-click.',
+      skadi:
+        'A core item that tanks you up but also makes you less kitable. Reduces healing of the affected hero by a significant amount.',
+      aghanims_shard:
+        'A core upgrade of Poison Attack. Allows you to deal more damage to heroes and buildings.',
+      blink: 'For extra mobility.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+      ethereal_blade:
+        'A core item that provides you with tons of stats for the cost. It can be used defensively and offensively depending on circumstances.',
+    },
+  },
+
+  Visage: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1640804769,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007',
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          'visage_soul_assumption', // 1
+          'visage_grave_chill', // 2
+          'visage_grave_chill', // 3
+          'visage_gravekeepers_cloak', // 4
+          'visage_grave_chill', // 5
+          'visage_summon_familiars', // 6
+          'visage_grave_chill', // 7
+          'visage_soul_assumption', // 8
+          'visage_soul_assumption', // 9
+          'visage_soul_assumption', // 10
+          'special_bonus_unique_visage_8', // 11
+          'visage_summon_familiars', // 12
+          'visage_gravekeepers_cloak', // 13
+          'visage_gravekeepers_cloak', // 14
+          'special_bonus_unique_visage_3', // 15
+          'visage_gravekeepers_cloak', // 16
+          'special_bonus_attributes', // 17
+          'visage_summon_familiars', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_visage_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_visage_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'faerie_fire',
+            'branches',
+            'circlet',
+            'mantle',
+            'enchanted_mango',
+            'magic_stick',
+          ],
+          early_game: [
+            'boots',
+            'magic_wand',
+            'null_talisman',
+            'medallion_of_courage',
+            'ring_of_basilius',
+          ],
+          mid_game: [
+            'orchid',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'solar_crest',
+            'ancient_janggo',
+            'rod_of_atos',
+          ],
+          late_game: ['sheepstick', 'bloodthorn', 'assault', 'shivas_guard'],
+          situational: ['infused_raindrop', 'black_king_bar', 'blink'],
+          core: [
+            'boots',
+            'orchid',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'sheepstick',
+            'bloodthorn',
+          ],
+          neutral: [
+            'arcane_ring',
+            'keen_optic',
+            'grove_bow',
+            'quicksilver_amulet',
+            'quickening_charm',
+            'enchanted_quiver',
+            'timeless_relic',
+            'spell_prism',
+            'ex_machina',
+            'desolator_2',
+          ],
+        },
+        ability_tooltips: {
+          visage_grave_chill:
+            'You can skill this spell on level 1 to mess around with opponents` lasthiting, to run down a hero out of position or to escape.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804769,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'visage_grave_chill', // 1
+          'visage_gravekeepers_cloak', // 2
+          'visage_grave_chill', // 3
+          'visage_soul_assumption', // 4
+          'visage_grave_chill', // 5
+          'visage_summon_familiars', // 6
+          'visage_grave_chill', // 7
+          'visage_soul_assumption', // 8
+          'visage_soul_assumption', // 9
+          'visage_soul_assumption', // 10
+          'special_bonus_unique_visage_8', // 11
+          'visage_summon_familiars', // 12
+          'visage_gravekeepers_cloak', // 13
+          'visage_gravekeepers_cloak', // 14
+          'special_bonus_unique_visage_3', // 15
+          'visage_gravekeepers_cloak', // 16
+          'special_bonus_attributes', // 17
+          'visage_summon_familiars', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_visage_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_visage_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'faerie_fire',
+            'blight_stone',
+            'branches',
+            'mantle',
+            'circlet',
+            'mantle',
+            'enchanted_mango',
+            'magic_stick',
+          ],
+          early_game: [
+            'boots',
+            'magic_wand',
+            'null_talisman',
+            'medallion_of_courage',
+          ],
+          mid_game: [
+            'orchid',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'solar_crest',
+            'ancient_janggo',
+            'rod_of_atos',
+          ],
+          late_game: ['sheepstick', 'bloodthorn', 'assault', 'shivas_guard'],
+          situational: ['infused_raindrop', 'black_king_bar', 'blink'],
+          core: [
+            'boots',
+            'orchid',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'sheepstick',
+            'bloodthorn',
+          ],
+          neutral: [
+            'arcane_ring',
+            'keen_optic',
+            'grove_bow',
+            'quicksilver_amulet',
+            'quickening_charm',
+            'enchanted_quiver',
+            'timeless_relic',
+            'spell_prism',
+            'ex_machina',
+            'desolator_2',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      boots:
+        'A core item. It can be upgraded to Tranquil Boots if you need sustain on the lane but usually you want to finish Orchid as soon as possible.',
+      infused_raindrop:
+        'Against magical burst. It can save you a layer of Gravekeeper`s Cloak.',
+      orchid: 'A core item that allows you to pick-off heroes on your own.',
+      ultimate_scepter:
+        'A core item that allows you to sneak up to an opponent and provides damage increase upon exiting invisibility.',
+      aghanims_shard:
+        'A core defensive upgrade that makes you immune for 6s, heal for significant amount and also stun around you upon cast.',
+      black_king_bar: 'Against disables, magical damage and as a dispel.',
+      sheepstick:
+        'A core item that allows you to instantly disable and then burst an opponent.',
+      bloodthorn:
+        'A core burst item. Goes well with Sycthe of Vyse as the affected opponent can`t dispel it for the duration of disable. Provides true strike.',
+      blink: 'To reposition quickly.',
+    },
+  },
+
   /*
 	
-	"Ursa": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804726,
-				abilities: [
-					"ursa_fury_swipes",	// 1
-					"ursa_earthshock",	// 2
-					"ursa_fury_swipes",	// 3
-					"ursa_overpower",	// 4
-					"ursa_fury_swipes",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","faerie_fire","slippers","orb_of_venom","magic_stick"],
-					early_game:	["boots","phase_boots","magic_wand","power_treads","orb_of_corrosion","wraith_band"],
-					mid_game:	["diffusal_blade","blink","basher","sange_and_yasha","aghanims_shard","bfury"],
-					late_game:	["abyssal_blade","swift_blink","satanic"],
-					situational:	["infused_raindrop","black_king_bar","monkey_king_bar","nullifier","ultimate_scepter"],
-					core:	["blink","basher","aghanims_shard"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"infused_raindrop":	"Against magical burst.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"monkey_king_bar":	"Against evasion.",
-			"nullifier":	"To dispel defensive items and spells.",
-			"ultimate_scepter":	"Against long lasting disables."
-		}
-	},
-	"Vengeful Spirit": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804736,
-				abilities: [
-					"vengefulspirit_magic_missile",	// 1
-					"vengefulspirit_wave_of_terror",	// 2
-					"vengefulspirit_magic_missile",	// 3
-					"vengefulspirit_wave_of_terror",	// 4
-					"vengefulspirit_magic_missile",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","faerie_fire","enchanted_mango","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","magic_wand","ring_of_basilius","urn_of_shadows","power_treads","arcane_boots"],
-					mid_game:	["solar_crest","force_staff","ghost","glimmer_cape","vladmir","aether_lens"],
-					late_game:	["aeon_disk","ultimate_scepter"],
-					situational:	["infused_raindrop","blink","lotus_orb"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"aeon_disk":	"Doesn't go well with Aghanim's Scepter.",
-			"infused_raindrop":	"Against magical burst.",
-			"blink":	"To get in position to save an ally or swap in an enemy.",
-			"lotus_orb":	"To reflect, dispel and armor."
-		}
-	},
-	"Venomancer": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804752,
-				abilities: [
-					"venomancer_poison_sting",	// 1
-					"venomancer_venomous_gale",	// 2
-					"venomancer_poison_sting",	// 3
-					"venomancer_venomous_gale",	// 4
-					"venomancer_plague_ward",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","faerie_fire","branches","flask","quelling_blade","enchanted_mango","boots","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","magic_wand","tranquil_boots","urn_of_shadows","arcane_boots","ring_of_basilius"],
-					mid_game:	["hood_of_defiance","aghanims_shard","ultimate_scepter","blink","aether_lens","force_staff","mekansm","solar_crest","guardian_greaves","glimmer_cape","ghost"],
-					late_game:	["aeon_disk","octarine_core","sheepstick"],
-					situational:	["infused_raindrop","spirit_vessel","pipe","heavens_halberd","black_king_bar"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"boots":	"For support Venomancer.",
-			"ward_observer":	"For support Venomancer.",
-			"ward_sentry":	"For support Venomancer to block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"tranquil_boots":	"Mainly for support Venomancer.",
-			"ring_of_basilius":	"For support Venomancer if your laning partner uses a lot of mana early.",
-			"glimmer_cape":	"For support Venomancer.",
-			"octarine_core":	"For offlane Venomancer.",
-			"infused_raindrop":	"Against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"heavens_halberd":	"For offlane Venomancer especially good against ranged right-clickers.",
-			"black_king_bar":	"For offlane Venomancer against disables, magical damage and as a dispel."
-		}
-	},
-	"Viper": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804761,
-				abilities: [
-					"viper_nethertoxin",	// 1
-					"viper_poison_attack",	// 2
-					"viper_poison_attack",	// 3
-					"viper_corrosive_skin",	// 4
-					"viper_poison_attack",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","circlet","enchanted_mango","branches","faerie_fire","flask","ring_of_protection","slippers","ward_observer","magic_stick"],
-					early_game:	["bottle","boots","magic_wand","travel_boots","urn_of_shadows","power_treads","wraith_band"],
-					mid_game:	["rod_of_atos","dragon_lance","hurricane_pike","hood_of_defiance","force_staff","ultimate_scepter","ghost"],
-					late_game:	["assault","skadi","aeon_disk","butterfly","ethereal_blade"],
-					situational:	["infused_raindrop","spirit_vessel","black_king_bar","blink","heavens_halberd","monkey_king_bar"],
-					core:	[],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_observer":	"For midlane Viper.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"For midlane Viper.",
-			"urn_of_shadows":	"For offlane Viper.",
-			"infused_raindrop":	"Against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"blink":	"For extra mobility.",
-			"heavens_halberd":	"For offlane Viper especially good against ranged right-clickers.",
-			"monkey_king_bar":	"Against evasion."
-		}
-	},
-	"Visage": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804769,
-				abilities: [
-					"visage_grave_chill",	// 1
-					"visage_gravekeepers_cloak",	// 2
-					"visage_grave_chill",	// 3
-					"visage_soul_assumption",	// 4
-					"visage_grave_chill",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","branches","blight_stone","mantle","circlet","faerie_fire","enchanted_mango","flask","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","arcane_boots","magic_wand","null_talisman","medallion_of_courage","phase_boots","bracer","bottle","ring_of_basilius"],
-					mid_game:	["orchid","ultimate_scepter","aether_lens","solar_crest","vladmir","glimmer_cape","hood_of_defiance","travel_boots"],
-					late_game:	["sheepstick","assault","octarine_core","heart","shivas_guard"],
-					situational:	["infused_raindrop","hand_of_midas","aghanims_shard","black_king_bar","pipe"],
-					core:	["orchid","ultimate_scepter","solar_crest"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"enchanted_mango":	"For support Visage.",
-			"flask":	"For support Visage.",
-			"ward_sentry":	"For support Visage to block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"For midlane Visage.",
-			"ring_of_basilius":	"For support Visage if your laning partner uses a lot of mana early.",
-			"orchid":	"For midlane Visage.",
-			"ultimate_scepter":	"For midlane Visage.",
-			"aether_lens":	"For midlane Visage.",
-			"solar_crest":	"For support Visage it is core.",
-			"vladmir":	"For support Visage.",
-			"glimmer_cape":	"For support Visage.",
-			"octarine_core":	"For midlane Visage.",
-			"heart":	"For midlane Visage.",
-			"shivas_guard":	"For midlane Visage.",
-			"infused_raindrop":	"Against magical burst.",
-			"hand_of_midas":	"For midlane Visage if you can get it early.",
-			"aghanims_shard":	"For extra survivability.",
-			"black_king_bar":	"For midlane Visage against disables, magical damage and as a dispel.",
-			"pipe":	"For support Visage."
-		}
-	},
+	
+	
+	
+	
+	
 	"Void Spirit": {
 		builds: [
 			{

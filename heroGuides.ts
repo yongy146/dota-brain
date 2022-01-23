@@ -178,15 +178,15 @@ export const HeroGuides = {
   // undying: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521',
   // ],
-  ursa: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964646'],
-  vengefulspirit: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761',
-  ],
-  venomancer: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844',
-  ],
-  viper: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923'],
-  visage: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007'],
+  // ursa: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964646'],
+  // vengefulspirit: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761',
+  // ],
+  // venomancer: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844',
+  // ],
+  // viper: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923'],
+  // visage: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007'],
   void_spirit: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965099',
   ],
