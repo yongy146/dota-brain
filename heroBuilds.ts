@@ -14212,9 +14212,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           late_game: [
             'ethereal_blade',
-            'kaya_and_sange',
             'overwhelming_blink',
             'wind_waker',
+            'sheepstick',
           ],
           situational: ['lotus_orb', 'invis_sword', 'black_king_bar'],
           core: [
@@ -14340,7 +14340,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         ability_tooltips: {
           tiny_toss:
-            'You can put a first point in this spell earlier than suggested if you see yourself being able to toss the opponents` midlaner under the tower.',
+            'You can put a first point in this spell earlier than suggested if you see yourself being able to toss the opponents` midlaner under your tower.',
         },
         item_tooltips: {
           bottle:
@@ -14445,7 +14445,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         ability_tooltips: {
           tiny_toss:
-            'You can put a first point in this spell earlier than suggested if you see yourself being able to toss the opponents` midlaner under the tower.',
+            'You can put a first point in this spell earlier than suggested if you see yourself being able to toss an opponents` hero under your tower.',
         },
         item_tooltips: {
           bottle:
