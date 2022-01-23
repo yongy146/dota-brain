@@ -41,15 +41,49 @@
 
 */
 
+import { DOTA_COACH_GUIDE_ROLE } from '../../submodules/dota2/playerRoles'
+
+//import { } from 
 
 /**
  * 
  * @param hero Hero name, e.g. "Anti-Mage"
  * @returns Array of message objects
  */
-export function getOwnHeroMessages(hero): any[] {
+export function getOwnHeroMessages(hero: string): any[] {
   return dotaCoachMessages.filter(message => (message.hero==hero && message.category=='OwnHero'))
 }
+
+export function getOwnHeroMessagesForRoles(hero: string, roles: DOTA_COACH_GUIDE_ROLE[]): any[] {
+  return dotaCoachMessages.filter(message => {
+    if (message.hero!=hero) return false
+    if (message.category!='OwnHero') return false
+
+    function isRelevant(audience: string, role: DOTA_COACH_GUIDE_ROLE) {
+      switch (audience) {
+        case ALL: return true
+        case IN_LANE: return true // This case should not exist
+        case ROLE_CORE: return role==DOTA_COACH_GUIDE_ROLE.CARRY || role==DOTA_COACH_GUIDE_ROLE.MID || role==DOTA_COACH_GUIDE_ROLE.OFFLANE
+        case ROLE_MID: return role==DOTA_COACH_GUIDE_ROLE.MID
+        case ROLE_CARRY: return role==DOTA_COACH_GUIDE_ROLE.CARRY
+        case ROLE_OFFLANE: return role==DOTA_COACH_GUIDE_ROLE.OFFLANE
+        case ROLE_SUPPORT: 
+        case ROLE_SUPPORT_SOFT:
+        case ROLE_SUPPORT_HARD: return role==DOTA_COACH_GUIDE_ROLE.SUPPORT
+      }
+    }
+
+    var answer = false
+    for (const audience of message.audience) {
+      for (const role of roles) {
+        if (isRelevant(audience, role)) answer = true
+      }
+    }
+    //(message.hero==hero && message.category=='OwnHero')
+    return answer
+  })
+}
+
 
 /**
  * 

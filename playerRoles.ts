@@ -2,7 +2,7 @@
  * Library to manage player roles
  */
 import { storageItems } from '../../consts'
-
+import { HeroBuild } from '../../submodules/dota2/heroBuilds'
 
 // Steam Guide Roles
 export enum STEAM_GUIDE_ROLE {  // <None> is treated by not providing any role
@@ -74,6 +74,19 @@ export const MID_LANE = 'Mid Lane'*/
     }
 }*/
 
+
+export function getRolesString(heroBuild: HeroBuild) {
+    var roles = ''
+    for (var i=0; i<heroBuild.roles.length; i++) {
+        roles += getDotaCoachGuideRoleString(heroBuild.roles[i])
+        if (i<(heroBuild.roles.length-1)) {
+          roles += ' & '
+        }
+    }
+    return roles
+}
+
+
 /**
  * Function used to display role in title of steam guide
  * @param role 
@@ -95,6 +108,7 @@ export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string
         }
     }
 }
+
 
 export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
     var result = ''
@@ -128,6 +142,24 @@ export function getRoleString(role: DOTA_COACH_ROLE): string {
         }
     }
 }
+
+export function getGuideRoleImage(role: DOTA_COACH_GUIDE_ROLE): string {
+    switch (role) {
+        case DOTA_COACH_GUIDE_ROLE.CARRY: {
+            return '../img/roles/safeLane.png'
+        }
+        case DOTA_COACH_GUIDE_ROLE.MID: {
+            return '../img/roles/midLane.png'
+        }
+        case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
+            return '../img/roles/offlane.png'
+        }
+        case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
+            return '../img/roles/support.png'
+        }
+    }
+}
+
 
 export function getRoleImage(role: DOTA_COACH_ROLE): string {
     switch (role) {
