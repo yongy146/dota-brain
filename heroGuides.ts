@@ -169,15 +169,15 @@ export const HeroGuides = {
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699963852',
   // ],
   // tinker: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964058'],
-  tiny: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139'],
-  treant: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699934294'],
-  troll_warlord: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964271',
-  ],
-  tusk: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964354'],
-  undying: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521',
-  ],
+  // tiny: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139'],
+  // treant: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699934294'],
+  // troll_warlord: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964271',
+  // ],
+  // tusk: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964354'],
+  // undying: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521',
+  // ],
   ursa: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964646'],
   vengefulspirit: [
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761',

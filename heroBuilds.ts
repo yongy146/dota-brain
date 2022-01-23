@@ -14165,6 +14165,659 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  Tiny: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804671,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'tiny_toss', // 1
+          'tiny_avalanche', // 2
+          'tiny_toss', // 3
+          'tiny_avalanche', // 4
+          'tiny_avalanche', // 5
+          'tiny_toss', // 6
+          'tiny_avalanche', // 7
+          'tiny_toss', // 8
+          'tiny_grow', // 9
+          'special_bonus_movement_speed_20', // 10
+          'tiny_tree_grab', // 11
+          'tiny_grow', // 12
+          'tiny_tree_grab', // 13
+          'tiny_tree_grab', // 14
+          'special_bonus_unique_tiny', // 15
+          'tiny_tree_grab', // 16
+          'special_bonus_attributes', // 17
+          'tiny_grow', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tiny_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tiny_2', // 25
+        ],
+        items: {
+          starting: ['tango', 'boots', 'ward_observer', 'ward_sentry'],
+          early_game: ['tranquil_boots', 'magic_wand', 'soul_ring'],
+          mid_game: [
+            'blink',
+            'cyclone',
+            'force_staff',
+            'ghost',
+            'veil_of_discord',
+          ],
+          late_game: [
+            'ethereal_blade',
+            'kaya_and_sange',
+            'overwhelming_blink',
+            'wind_waker',
+          ],
+          situational: ['lotus_orb', 'invis_sword', 'black_king_bar'],
+          core: [
+            'tranquil_boots',
+            'blink',
+            'cyclone',
+            'force_staff',
+            'ethereal_blade',
+          ],
+          neutral: [
+            'pogo_stick',
+            'arcane_ring',
+            'philosophers_stone',
+            'bullwhip',
+            'spider_legs',
+            'quickening_charm',
+            'stormcrafter',
+            'spell_prism',
+            'book_of_shadows',
+            'force_field',
+          ],
+        },
+        ability_tooltips: {
+          tiny_avalanche:
+            'You can skill this spell on level one if you don`t see yourself being able to use Toss effectively.',
+        },
+        item_tooltips: {
+          ward_sentry: 'To block or unblock a pull camp.',
+          tranquil_boots:
+            'A core boots upgrade that helps with hp sustain and increases movement speed significantly.',
+          blink:
+            'A core item that allows you to initiate and burst an opponent with your combo, or save an ally by tossing him away.',
+          cyclone:
+            'A core item that allows you to setup kills and control an opponent. Applies basic dispel on cast.',
+          force_staff:
+            'A core item that adds to mobility and serves as another save for an ally in trouble.',
+          lotus_orb: 'For support Tiny to reflect, dispel and armor.',
+          invis_sword: 'Good for find opponents when they are splitpushing.',
+          black_king_bar:
+            'Allows you to stay alive after initiating. The Grow ability provides you with a lot of physical resistance through armor and Black King Bar covers most of the spell damage and disables.',
+          ethereal_blade:
+            'A core item that adds to the burst but can also be used defensively.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804671,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'tiny_tree_grab', // 1
+          'tiny_avalanche', // 2
+          'tiny_avalanche', // 3
+          'tiny_toss', // 4
+          'tiny_avalanche', // 5
+          'tiny_grow', // 6
+          'tiny_avalanche', // 7
+          'tiny_toss', // 8
+          'tiny_toss', // 9
+          'tiny_toss', // 10
+          'special_bonus_strength_10', // 11
+          'tiny_grow', // 12
+          'tiny_tree_grab', // 13
+          'tiny_tree_grab', // 14
+          'special_bonus_unique_tiny_7', // 15
+          'tiny_tree_grab', // 16
+          'special_bonus_attributes', // 17
+          'tiny_grow', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_status_resistance_15', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tiny_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'faerie_fire',
+            'ward_observer',
+          ],
+          early_game: ['bottle', 'phase_boots', 'magic_wand'],
+          mid_game: [
+            'blink',
+            'echo_sabre',
+            'silver_edge',
+            'black_king_bar',
+            'aghanims_shard',
+          ],
+          late_game: [
+            'moon_shard',
+            'overwhelming_blink',
+            'swift_blink',
+            'assault',
+          ],
+          situational: ['cyclone', 'sphere'],
+          core: [
+            'bottle',
+            'phase_boots',
+            'blink',
+            'echo_sabre',
+            'silver_edge',
+            'black_king_bar',
+            'aghanims_shard',
+            'moon_shard',
+          ],
+          neutral: [
+            'pogo_stick',
+            'arcane_ring',
+            'quicksilver_amulet',
+            'misericorde',
+            'mind_breaker',
+            'elven_tunic',
+            'the_leveller',
+            'penta_edged_sword',
+            'pirate_hat',
+            'desolator_2',
+          ],
+        },
+        ability_tooltips: {
+          tiny_toss:
+            'You can put a first point in this spell earlier than suggested if you see yourself being able to toss the opponents` midlaner under the tower.',
+        },
+        item_tooltips: {
+          bottle:
+            'A core item that provides you with sustain and allows you to fight with stored rune.',
+          phase_boots:
+            'A core boots upgrade that fixes movement speed issues and allows you to gank more effectively.',
+          blink:
+            'A core item that allows you to initiate and burst an opponent with your combo, or save an ally by tossing him away.',
+          cyclone:
+            'Allows you to setup kills and control an opponent. Applies basic dispel on cast.',
+          echo_sabre:
+            'A core item that further increases the burst potential of your combo. Improves farming speed. Can be disassembled down the road.',
+          silver_edge:
+            'A core item that adds to burst, mobility and applies break effect on hit.',
+          sphere: 'Against powerful single-target disables and debuffs.',
+          black_king_bar:
+            'A core item that allows you to deliver the damage while in the middle of the fight. The Grow ability provides you with a lot of physical resistance through armor and Black King Bar covers most of the spell damage and disables.',
+          aghanims_shard:
+            'A core upgrade that allows you to have tree equiped non-stop.',
+          moon_shard: 'A core item that provides tons of attack speed.',
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804671,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'tiny_tree_grab', // 1
+          'tiny_avalanche', // 2
+          'tiny_tree_grab', // 3
+          'tiny_toss', // 4
+          'tiny_tree_grab', // 5
+          'tiny_grow', // 6
+          'tiny_tree_grab', // 7
+          'tiny_avalanche', // 8
+          'tiny_avalanche', // 9
+          'special_bonus_strength_10', // 10
+          'tiny_avalanche', // 11
+          'tiny_grow', // 12
+          'tiny_toss', // 13
+          'tiny_toss', // 14
+          'special_bonus_unique_tiny_7', // 15
+          'tiny_toss', // 16
+          'special_bonus_attributes', // 17
+          'tiny_grow', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_status_resistance_15', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tiny_2', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'gauntlets',
+            'faerie_fire',
+            'wraith_band',
+          ],
+          early_game: ['power_treads', 'soul_ring', 'magic_wand'],
+          mid_game: [
+            'echo_sabre',
+            'silver_edge',
+            'aghanims_shard',
+            'black_king_bar',
+            'blink',
+          ],
+          late_game: [
+            'moon_shard',
+            'satanic',
+            'bloodthorn',
+            'swift_blink',
+            'assault',
+            'overwhelming_blink',
+          ],
+          situational: ['sphere'],
+          core: [
+            'power_treads',
+            'echo_sabre',
+            'silver_edge',
+            'aghanims_shard',
+            'black_king_bar',
+            'moon_shard',
+          ],
+          neutral: [
+            'broom_handle',
+            'unstable_wand',
+            'quicksilver_amulet',
+            'misericorde',
+            'mind_breaker',
+            'elven_tunic',
+            'the_leveller',
+            'penta_edged_sword',
+            'pirate_hat',
+            'desolator_2',
+          ],
+        },
+        ability_tooltips: {
+          tiny_toss:
+            'You can put a first point in this spell earlier than suggested if you see yourself being able to toss the opponents` midlaner under the tower.',
+        },
+        item_tooltips: {
+          bottle:
+            'A core item that provides you with sustain and allows you to fight with stored rune.',
+          power_treads:
+            'A core boots upgrade that fixes attack speed issues and allows you to save some mana through toggling.',
+          echo_sabre:
+            'A core item that further increases the burst potential of your combo. Improves farming speed. Can be disassembled down the road.',
+          silver_edge:
+            'A core item that adds to burst, mobility and applies break effect on hit.',
+          aghanims_shard:
+            'A core upgrade that allows you to have tree equiped non-stop.',
+          sphere: 'Against powerful single-target disables and debuffs.',
+          black_king_bar:
+            'A core item that allows you to deliver the damage while in the middle of the fight. The Grow ability provides you with a lot of physical resistance through armor and Black King Bar covers most of the spell damage and disables.',
+          moon_shard: 'A core item that provides tons of attack speed.',
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {},
+  },
+
+  'Treant Protector': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804657,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699934294',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'treant_leech_seed', // 1
+          'treant_natures_grasp', // 2
+          'treant_leech_seed', // 3
+          'treant_natures_grasp', // 4
+          'treant_living_armor', // 5
+          'treant_overgrowth', // 6
+          'treant_living_armor', // 7
+          'treant_living_armor', // 8
+          'treant_living_armor', // 9
+          'special_bonus_unique_treant_8', // 10
+          'treant_leech_seed', // 11
+          'treant_overgrowth', // 12
+          'treant_leech_seed', // 13
+          'treant_natures_grasp', // 14
+          'treant_natures_grasp', // 15
+          'special_bonus_unique_treant_9', // 16
+          'special_bonus_attributes', // 17
+          'treant_overgrowth', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_treant_13', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_treant_7', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'flask',
+            'orb_of_venom',
+            'faerie_fire',
+            'enchanted_mango',
+            'boots',
+            'branches',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['arcane_boots', 'magic_wand', 'ring_of_basilius'],
+          mid_game: [
+            'holy_locket',
+            'solar_crest',
+            'blink',
+            'aghanims_shard',
+            'force_staff',
+            'veil_of_discord',
+            'meteor_hammer',
+            'glimmer_cape',
+          ],
+          late_game: ['vladmir', 'ultimate_scepter', 'refresher', 'sheepstick'],
+          situational: ['infused_raindrop', 'lotus_orb'],
+          core: [
+            'arcane_boots',
+            'holy_locket',
+            'solar_crest',
+            'blink',
+            'aghanims_shard',
+            'vladmir',
+          ],
+          neutral: [
+            'trusty_shovel',
+            'pogo_stick',
+            'philosophers_stone',
+            'bullwhip',
+            'quickening_charm',
+            'ceremonial_robe',
+            'spy_gadget',
+            'stormcrafter',
+            'book_of_shadows',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      ring_of_basilius: 'If your laning partner also uses a lot of mana early.',
+      infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core boots upgrade that helps with mana sustain. It can be disassembled and Energy Booster used for Holy Locket. You can upgrade remaining boots to Tranquil Boots or leave it as it is.',
+      holy_locket: 'A core healing item.',
+      solar_crest:
+        'A core item to buff one of your right-clicking cores or debuff the target you are focusing. It allows you to kill Roshan faster.',
+      blink:
+        'A core item that allows you to get off multi-hero Overgrowth after the opponents have used most of their dispels.',
+      aghanims_shard: 'A core upgrade that adds to mobility and control.',
+      lotus_orb: 'For reflect, dispel and armor.',
+      vladmir:
+        'A core aura item which percentage values scale well into the late game.',
+    },
+  },
+
+  'Troll Warlord': {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_id: 1640804682,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964271',
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          'troll_warlord_whirling_axes_ranged', // 1
+          'troll_warlord_berserkers_rage', // 2
+          'troll_warlord_fervor', // 3
+          'troll_warlord_whirling_axes_ranged', // 4
+          'troll_warlord_whirling_axes_ranged', // 5
+          'troll_warlord_battle_trance', // 6
+          'troll_warlord_whirling_axes_ranged', // 7
+          'troll_warlord_fervor', // 8
+          'troll_warlord_fervor', // 9
+          'special_bonus_unique_troll_warlord_2', // 10
+          'troll_warlord_fervor', // 11
+          'troll_warlord_battle_trance', // 12
+          'troll_warlord_berserkers_rage', // 13
+          'troll_warlord_berserkers_rage', // 14
+          'troll_warlord_berserkers_rage', // 15
+          'special_bonus_unique_troll_warlord_5', // 16
+          'special_bonus_attributes', // 17
+          'troll_warlord_battle_trance', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_attack_damage_30', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_troll_warlord_4', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'faerie_fire',
+            'circlet',
+            'magic_stick',
+          ],
+          early_game: [
+            'power_treads',
+            'ring_of_health',
+            'magic_wand',
+            'wraith_band',
+            'falcon_blade',
+          ],
+          mid_game: [
+            'bfury',
+            'sange_and_yasha',
+            'black_king_bar',
+            'basher',
+            'maelstrom',
+            'manta',
+          ],
+          late_game: ['satanic', 'abyssal_blade', 'skadi', 'butterfly'],
+          situational: [
+            'infused_raindrop',
+            'blink',
+            'monkey_king_bar',
+            'sphere',
+            'silver_edge',
+            'ultimate_scepter',
+          ],
+          core: [
+            'power_treads',
+            'bfury',
+            'sange_and_yasha',
+            'black_king_bar',
+            'basher',
+            'satanic',
+          ],
+          neutral: [
+            'possessed_mask',
+            'broom_handle',
+            'quicksilver_amulet',
+            'misericorde',
+            'elven_tunic',
+            'paladin_sword',
+            'the_leveller',
+            'penta_edged_sword',
+            'desolator_2',
+            'pirate_hat',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_unique_troll_warlord:
+        'You can take this level 10 talent over the suggested one if you are dealing with armor-reducing lineup.',
+    },
+    item_tooltips: {
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      power_treads:
+        'A core boots upgrade that allows you to build up Fervor stacks faster due to attack speed increase. Allows you to save some mana through toggling as well.',
+      maelstrom:
+        'An alternative to Battle Fury especially good against illusion-based heroes. You will likely need Falcon Blade before it for mana sustain.',
+      bfury:
+        'A core farming item. Ring of Health should be purchased first on a tough lane.',
+      sange_and_yasha:
+        'A core item that provides you with useful stats and makes you less kitable. Self heal amplification works well with Battle Trance and Satanic.',
+      sphere: 'Against powerful single-target disables and debuffs.',
+      black_king_bar:
+        'A core item that goes well with Battle Trance making you less kitable.',
+      basher:
+        'A core item that allows you to lock the target you are focusing.',
+      blink: 'To close the gap.',
+      monkey_king_bar: 'Against evasion and miss chance.',
+      silver_edge: 'For burst, extra mobility and break effect.',
+      ultimate_scepter:
+        'If there is a need for a dispel for yourself or to dispel an opponent.',
+      satanic:
+        'A core item that tanks you up and its active can turn the fight around. It applies basic dispel on cast.',
+    },
+  },
+
+  Tusk: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804698,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964354',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'tusk_tag_team', // 1
+          'tusk_ice_shards', // 2
+          'tusk_snowball', // 3
+          'tusk_tag_team', // 4
+          'tusk_tag_team', // 5
+          'tusk_walrus_punch', // 6
+          'tusk_tag_team', // 7
+          'tusk_snowball', // 8
+          'tusk_snowball', // 9
+          'special_bonus_unique_tusk_3', // 10
+          'tusk_snowball', // 11
+          'tusk_walrus_punch', // 12
+          'tusk_ice_shards', // 13
+          'tusk_ice_shards', // 14
+          'tusk_ice_shards', // 15
+          'special_bonus_unique_tusk_2', // 16
+          'special_bonus_attributes', // 17
+          'tusk_walrus_punch', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tusk_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tusk_6', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'boots',
+            'flask',
+            'orb_of_venom',
+            'faerie_fire',
+            'enchanted_mango',
+            'branches',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: [
+            'phase_boots',
+            'magic_wand',
+            'medallion_of_courage',
+            'urn_of_shadows',
+            'orb_of_corrosion',
+          ],
+          mid_game: [
+            'blink',
+            'solar_crest',
+            'aghanims_shard',
+            'ghost',
+            'cyclone',
+            'force_staff',
+            'glimmer_cape',
+          ],
+          late_game: ['ultimate_scepter', 'vladmir'],
+          situational: [
+            'infused_raindrop',
+            'spirit_vessel',
+            'ancient_janggo',
+            'lotus_orb',
+          ],
+          core: [
+            'phase_boots',
+            'blink',
+            'solar_crest',
+            'aghanims_shard',
+            'ultimate_scepter',
+            'vladmir',
+          ],
+          neutral: [
+            'broom_handle',
+            'pogo_stick',
+            'bullwhip',
+            'dragon_scale',
+            'spider_legs',
+            'black_powder_bag',
+            'trickster_cloak',
+            'ascetic_cap',
+            'book_of_shadows',
+            'force_field',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {},
+    item_tooltips: {
+      orb_of_venom: 'If you can pressure on the lane.',
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      orb_of_corrosion:
+        'If you can be aggressive on the lane. Armor reduction goes well with Tag Team and Walrush Punch!',
+      infused_raindrop: 'Against magical burst.',
+      phase_boots:
+        'A core boots upgrade that improves your roaming and gap-closing potential. The extra damage is multiplied by Walrus Punch!',
+      spirit_vessel: 'Against heavy-healing lineup.',
+      ancient_janggo:
+        'If you are grouping up a lot as a team in midgame and if you have summons.',
+      blink:
+        'A core item for instant initiation to either save an ally with Snowball or setup a kill with Walrus Punch!',
+      solar_crest:
+        'A core buffing item for one of your right-clicking cores. You can also debuff an opponent or Roshan to get more value out of Tag Team or Walrus Punch!',
+      aghanims_shard:
+        'A core upgrade of Ice Shards that can be used in various ways to either trap an enemy or save an ally.',
+      lotus_orb: 'For reflect, dispel and armor.',
+      ultimate_scepter: 'A core item to resposition an opponent.',
+      vladmir:
+        'A core buffing item which percentage values scale well into the late game.',
+    },
+  },
+
   Underlord: {
     builds: [
       {
@@ -14252,7 +14905,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       abyssal_underlord_firestorm:
         'You can skill this spell on level 1 instead of the suggested Atrophy Aura if you have a tough match-up.',
       abyssal_underlord_dark_rift:
-        'You can opt not to skill this spell on level 6 in favor of other spells. I find it useful as a reset tool and allows more aggressive waveclearing.',
+        'You can opt not to skill this spell on level 6 in favor of other spells. I find this spell useful as a reset tool and allows more aggressive waveclearing.',
     },
     item_tooltips: {
       magic_stick:
@@ -14278,300 +14931,106 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  Undying: {
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804718,
+        steam_guide_link:
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521',
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          'undying_decay', // 1
+          'undying_tombstone', // 2
+          'undying_soul_rip', // 3
+          'undying_tombstone', // 4
+          'undying_tombstone', // 5
+          'undying_flesh_golem', // 6
+          'undying_tombstone', // 7
+          'undying_soul_rip', // 8
+          'undying_soul_rip', // 9
+          'undying_soul_rip', // 10
+          'special_bonus_unique_undying_7', // 11
+          'undying_flesh_golem', // 12
+          'undying_decay', // 13
+          'undying_decay', // 14
+          'special_bonus_unique_undying_6', // 15
+          'undying_decay', // 16
+          'special_bonus_attributes', // 17
+          'undying_flesh_golem', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_undying_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_reincarnation_300', // 25
+        ],
+        items: {
+          starting: [
+            'tango',
+            'enchanted_mango',
+            'flask',
+            'boots',
+            'orb_of_venom',
+            'faerie_fire',
+            'wind_lace',
+            'ward_observer',
+            'ward_sentry',
+            'magic_stick',
+          ],
+          early_game: ['arcane_boots', 'magic_wand'],
+          mid_game: [
+            'holy_locket',
+            'solar_crest',
+            'glimmer_cape',
+            'mekansm',
+            'ghost',
+            'force_staff',
+            'cyclone',
+          ],
+          late_game: ['vladmir', 'ultimate_scepter'],
+          situational: ['infused_raindrop', 'lotus_orb'],
+          core: ['arcane_boots', 'holy_locket', 'solar_crest', 'vladmir'],
+          neutral: [
+            'trusty_shovel',
+            'arcane_ring',
+            'philosophers_stone',
+            'bullwhip',
+            'spider_legs',
+            'quickening_charm',
+            'trickster_cloak',
+            'spy_gadget',
+            'force_field',
+            'book_of_shadows',
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      undying_soul_rip:
+        'You can skill this spell on level 2 already to burst an opponent you have stacked a lot of Decays on. On other hand, this spell can be useful on tough lanes for sustain.',
+    },
+    item_tooltips: {
+      orb_of_venom: 'If you can pressure on the lane.',
+      ward_sentry: 'To block or unblock a pull camp.',
+      magic_stick:
+        'Start with it if you expect high frequency of spells being used on the lane.',
+      infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Holy Locket. You can assemble Tranquil Boots afterwards or Arcane Boots again.',
+      holy_locket:
+        'A core item that improves healing coming from Soul Rip but also provides you with burst of healing and mana on cast.',
+      solar_crest:
+        'A core buffing item for one of your right-clicking cores. It allows you to take Roshan earlier and faster.',
+      lotus_orb: 'For reflect, dispel and armor.',
+      vladmir:
+        'A core aura item which percentage values scale well into the late game.',
+    },
+  },
+
   /*
 	
-	"Tiny": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804671,
-				abilities: [
-					"tiny_tree_grab",	// 1
-					"tiny_avalanche",	// 2
-					"tiny_avalanche",	// 3
-					"tiny_avalanche",	// 4
-					"tiny_toss",	// 5
-					"tiny_avalanche",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","faerie_fire","branches","boots","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["bottle","boots","phase_boots","magic_wand","power_treads","tranquil_boots","soul_ring"],
-					mid_game:	["blink","echo_sabre","lesser_crit","aghanims_shard","ghost","cyclone","veil_of_discord","invis_sword","force_staff"],
-					late_game:	["greater_crit","assault","ethereal_blade","overwhelming_blink","moon_shard","aeon_disk"],
-					situational:	["hand_of_midas","black_king_bar","lotus_orb","ultimate_scepter"],
-					core:	["blink","echo_sabre","lesser_crit","cyclone"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"boots":	"For support Tiny.",
-			"ward_sentry":	"For support Tiny to block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"bottle":	"For midlane Tiny.",
-			"phase_boots":	"For midlane Tiny.",
-			"power_treads":	"For midlane Tiny.",
-			"tranquil_boots":	"For support Tiny.",
-			"echo_sabre":	"For midlane Tiny. Can be disassembled.",
-			"lesser_crit":	"For midlane Tiny.",
-			"aghanims_shard":	"For midlane Tiny.",
-			"cyclone":	"For support Tiny.",
-			"veil_of_discord":	"For support Tiny.",
-			"invis_sword":	"For midlane Tiny.",
-			"assault":	"For midlane Tiny.",
-			"overwhelming_blink":	"For support Tiny.",
-			"moon_shard":	"For midlane Tiny.",
-			"aeon_disk":	"For support Tiny.",
-			"hand_of_midas":	"For midlane Tiny if you can get it early.",
-			"black_king_bar":	"For midlane Tiny against disables, magical damage and as a dispel.",
-			"lotus_orb":	"For support Tiny to reflect, dispel and armor.",
-			"ultimate_scepter":	"For midlane Tiny for additional AoE damage."
-		}
-	},
-	"Treant Protector": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804657,
-				abilities: [
-					"treant_natures_grasp",	// 1
-					"treant_leech_seed",	// 2
-					"treant_natures_grasp",	// 3
-					"treant_living_armor",	// 4
-					"treant_natures_grasp",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","flask","orb_of_venom","faerie_fire","boots","enchanted_mango","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","tranquil_boots","arcane_boots","magic_wand","ring_of_basilius"],
-					mid_game:	["holy_locket","blink","aghanims_shard","force_staff","solar_crest","meteor_hammer","glimmer_cape","veil_of_discord","mekansm"],
-					late_game:	["ultimate_scepter","aeon_disk","refresher","sheepstick"],
-					situational:	["infused_raindrop","lotus_orb"],
-					core:	["holy_locket","blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"lotus_orb":	"To reflect, dispel and armor."
-		}
-	},
-	"Troll Warlord": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804682,
-				abilities: [
-					"troll_warlord_whirling_axes_ranged",	// 1
-					"troll_warlord_berserkers_rage",	// 2
-					"troll_warlord_fervor",	// 3
-					"troll_warlord_whirling_axes_ranged",	// 4
-					"troll_warlord_whirling_axes_ranged",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","quelling_blade","slippers","circlet","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","phase_boots","magic_wand","power_treads","wraith_band"],
-					mid_game:	["bfury","maelstrom","sange_and_yasha","basher","diffusal_blade"],
-					late_game:	["satanic","skadi","abyssal_blade","butterfly","moon_shard"],
-					situational:	["infused_raindrop","black_king_bar","blink","ultimate_scepter","monkey_king_bar","sphere"],
-					core:	["sange_and_yasha","basher"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"infused_raindrop":	"On hero against magical burst.",
-			"black_king_bar":	"Against disables, magical damage and as a dispel.",
-			"blink":	"To close the gap.",
-			"ultimate_scepter":	"If there is a need for a dispel.",
-			"monkey_king_bar":	"Against evasion.",
-			"sphere":	"Against powerful single target disables and damage burst."
-		}
-	},
-	"Tusk": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804698,
-				abilities: [
-					"tusk_tag_team",	// 1
-					"tusk_ice_shards",	// 2
-					"tusk_tag_team",	// 3
-					"tusk_snowball",	// 4
-					"tusk_tag_team",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","boots","flask","faerie_fire","enchanted_mango","orb_of_venom","branches","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["tranquil_boots","magic_wand","power_treads","urn_of_shadows","orb_of_corrosion","phase_boots"],
-					mid_game:	["blink","force_staff","solar_crest","ghost","hood_of_defiance","falcon_blade","cyclone"],
-					late_game:	["aeon_disk","ultimate_scepter"],
-					situational:	["infused_raindrop","spirit_vessel","ancient_janggo","lotus_orb","pipe","aghanims_shard"],
-					core:	["blink"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"orb_of_corrosion":	"If you can pressure on the lane.",
-			"infused_raindrop":	"Against magical burst.",
-			"spirit_vessel":	"Against heavy healing lineup.",
-			"ancient_janggo":	"If you are grouping up a lot as a team in midgame and if you have summons.",
-			"lotus_orb":	"To reflect, dispel and armor.",
-			"aghanims_shard":	"For extra control and vision."
-		}
-	},
-	
-	"Undying": {
-		builds: [
-			{
-				roles: [],
-				steam_guide_id: 1640804718,
-				abilities: [
-					"undying_decay",	// 1
-					"undying_soul_rip",	// 2
-					"undying_soul_rip",	// 3
-					"undying_tombstone",	// 4
-					"undying_soul_rip",	// 5
-					"",	// 6
-					"",	// 7
-					"",	// 8
-					"",	// 9
-					"",	// 10
-					"",	// 11
-					"",	// 12
-					"",	// 13
-					"",	// 14
-					"",	// 15
-					"",	// 16
-					"",	// 17
-					"",	// 18
-					"",	// 19
-					"",	// 20
-					"",	// 21
-					"",	// 22
-					"",	// 23
-					"",	// 24
-					""	// 25
-				],
-				items: {
-					starting:	["tango","enchanted_mango","flask","boots","orb_of_venom","wind_lace","branches","faerie_fire","ward_observer","ward_sentry","magic_stick"],
-					early_game:	["boots","magic_wand","tranquil_boots","arcane_boots","ring_of_basilius"],
-					mid_game:	["holy_locket","glimmer_cape","mekansm","force_staff","solar_crest","aghanims_shard","ghost"],
-					late_game:	["aeon_disk","ultimate_scepter","vladmir"],
-					situational:	["infused_raindrop","lotus_orb"],
-					core:	["holy_locket"],
-					neutral:	[]
-				},
-			}
-		],
-		ability_tooltips: {
-		},
-		item_tooltips: {
-			"orb_of_venom":	"If you can pressure on the lane.",
-			"ward_sentry":	"To block or unblock the pull camp.",
-			"magic_stick":	"If you expect high frequency of spells being used on the lane.",
-			"ring_of_basilius":	"If your laning partner uses a lot of mana early.",
-			"ultimate_scepter":	"Works well with Aghanim's Shard.",
-			"infused_raindrop":	"Against magical burst.",
-			"lotus_orb":	"To reflect, dispel and armor."
-		}
-	},
 	"Ursa": {
 		builds: [
 			{
