@@ -8491,7 +8491,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         'Start with it if you expect high frequency of spells being used on the lane.',
       infused_raindrop: 'Against magical burst.',
       aghanims_shard:
-        'A core item that adds to the push but also serves as a "disable" in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.',
+        'A core item that adds to the push but also serves as a `disable` in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.',
     },
   },
 
@@ -14261,9 +14261,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804671,
+        steam_guide_id: 1642947088,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2729200744',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'tiny_tree_grab', // 1
@@ -14365,9 +14365,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_id: 1640804671,
+        steam_guide_id: 1642947100,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2729201017',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'tiny_tree_grab', // 1
