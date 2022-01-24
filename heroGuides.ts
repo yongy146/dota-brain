@@ -132,9 +132,9 @@ export const HeroGuides = {
   // silencer: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648',
   // ],
-  skeleton_king: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699919868',
-  ],
+  // skeleton_king: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699919868',
+  // ],
   // skywrath_mage: [
   //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699962794',
   // ],
@@ -187,22 +187,22 @@ export const HeroGuides = {
   // ],
   // viper: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923'],
   // visage: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007'],
-  void_spirit: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965099',
-  ],
-  warlock: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965199',
-  ],
-  weaver: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699965288'],
-  windrunner: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445',
-  ],
-  winter_wyvern: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965518',
-  ],
+  // void_spirit: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965099',
+  // ],
+  // warlock: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965199',
+  // ],
+  // weaver: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699965288'],
+  // windrunner: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445',
+  // ],
+  // winter_wyvern: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965518',
+  // ],
   // "wisp":                 ["https://steamcommunity.com/sharedfiles/filedetails/?id=2699957619"],
-  witch_doctor: [
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2699957031',
-  ],
-  zuus: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699919737'],
+  // witch_doctor: [
+  //   'https://steamcommunity.com/sharedfiles/filedetails/?id=2699957031',
+  // ],
+  // zuus: ['https://steamcommunity.com/sharedfiles/filedetails/?id=2699919737'],
 };
