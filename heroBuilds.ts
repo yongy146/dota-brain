@@ -265,11 +265,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'magic_stick',
           ],
           early_game: [
-            'power_treads',
-            'bracer',
             'ring_of_health',
-            'magic_wand',
+            'power_treads',
             'soul_ring',
+            'magic_wand',
+            'bracer',
           ],
           mid_game: [
             'bfury',
@@ -316,6 +316,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
         },
         item_tooltips: {
+          ring_of_health:
+            'To solve hp sustain issues if you are being pressured.',
           power_treads:
             'A core boots upgrade that provides you with significant attack speed increase and mana savings through toggling.',
         },
@@ -364,12 +366,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'ward_observer',
           ],
           early_game: [
-            'bracer',
-            'ring_of_health',
-            'magic_wand',
-            'power_treads',
             'phase_boots',
+            'magic_wand',
             'soul_ring',
+            'bracer',
           ],
           mid_game: [
             'bfury',
@@ -430,12 +430,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     item_tooltips: {
       magic_stick:
         'Start with it if you expect high frequency of spells being used on the lane.',
-      ward_observer:
-        'If you are playing midlane but also to secure your safelane farm and jungling later on.',
-      bottle: 'If you are playing mid Alchemist.',
-      ring_of_health: 'To solve hp sustain issues.',
-      power_treads:
-        'Prefered boots upgrades that allows you to extract more value from the Battle Fury due to attack speed.',
       bfury:
         'A core farming item that provides you with sustain and great physical damage that synergizes well with Acid Spray.',
       radiance:
