@@ -157,20 +157,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'enchanted_mango',
             'faerie_fire',
             'branches',
+            'orb_of_venom',
+            'wind_lace',
             'ward_observer',
             'ward_sentry',
             'magic_stick',
-            'orb_of_venom',
-            'wind_lace',
           ],
-          early_game: [
-            'boots',
-            'magic_wand',
-            'headdress',
-            'arcane_boots',
-            'tranquil_boots',
-            'ring_of_basilius',
-          ],
+          early_game: ['arcane_boots', 'magic_wand', 'ring_of_basilius'],
           mid_game: [
             'holy_locket',
             'solar_crest',
@@ -178,9 +171,15 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'aether_lens',
             'mekansm',
           ],
-          late_game: ['ultimate_scepter', 'vladmir'],
+          late_game: ['ultimate_scepter', 'vladmir', 'assault'],
           situational: ['lotus_orb', 'aghanims_shard'],
-          core: ['holy_locket', 'ultimate_scepter'],
+          core: [
+            'arcane_boots',
+            'holy_locket',
+            'solar_crest',
+            'ultimate_scepter',
+            'vladmir',
+          ],
           neutral: [
             'trusty_shovel',
             'arcane_ring',
@@ -203,21 +202,23 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       // Question, should we have info for each build at each level, or the infos be generic to the skills / telents, and only showed with first build?
     },
     item_tooltips: {
-      ward_sentry: 'To block or unblock the pull camp.',
+      ward_sentry: 'To block or unblock a pull camp.',
       magic_stick:
         'Start with it if you expect high frequency of spells being used on the lane.',
       orb_of_venom:
         'If you see yourself being able to hit the opponents on the lane often.',
-      wind_lace:
-        'For extra mobility and if you are planning to go for Tranquil Boots.',
       arcane_boots:
-        'Prefered boots upgrade as you can disassemble it for Energy Booster that is needed for Holy Locket. You can assemble Tranquil Boots afterwards for movement speed.',
+        'A core boots upgrade for mana sustain. It can be disassembled and Energy Booster used for Holy Locket. You can assemble Tranquil Boots afterwards for movement speed.',
       holy_locket:
-        'A core item that allows you to further increase your healing output. On use, you replenish mana to your allies as well so watch out for the ones in need for a little bit of mana.',
+        'A core item to further increase your healing output. It provides a burst of healing and mana on cast as well.',
+      solar_crest:
+        'A core item to buff one of your right-clicking cores or to debuff the target your team is focusing.',
       ultimate_scepter:
         'A core item that can impact the fights greatly. Make sure to activate the ultimate when the most damage is being pumped into your allies.',
       lotus_orb: 'For reflect, dispel and armor.',
       aghanims_shard: 'To silence against spell heavy lineups.',
+      vladmir:
+        'A core aura item which percentage values scale well into the late game.',
     },
   },
   Alchemist: {
@@ -365,12 +366,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'magic_stick',
             'ward_observer',
           ],
-          early_game: [
-            'phase_boots',
-            'magic_wand',
-            'soul_ring',
-            'bracer',
-          ],
+          early_game: ['phase_boots', 'magic_wand', 'soul_ring', 'bracer'],
           mid_game: [
             'bfury',
             'sange_and_yasha',
@@ -498,23 +494,24 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'magic_stick',
             'blight_stone',
           ],
-          early_game: [
-            'boots',
-            'magic_wand',
-            'arcane_boots',
-            'tranquil_boots',
-            'wind_lace',
-          ],
+          early_game: ['arcane_boots', 'magic_wand', 'wind_lace'],
           mid_game: [
+            'solar_crest',
             'glimmer_cape',
             'aghanims_shard',
             'force_staff',
             'ghost',
             'cyclone',
           ],
-          late_game: ['solar_crest', 'vladmir', 'aeon_disk'],
+          late_game: ['vladmir', 'aeon_disk', 'sheepstick'],
           situational: ['infused_raindrop', 'lotus_orb'],
-          core: ['aghanims_shard'],
+          core: [
+            'arcane_boots',
+            'wind_lace',
+            'solar_crest',
+            'aghanims_shard',
+            'vladmir',
+          ],
           neutral: [
             'trusty_shovel',
             'arcane_ring',
@@ -538,10 +535,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blight_stone: 'If you expect double melee to lane against you.',
       infused_raindrop: 'Against magical burst.',
       arcane_boots:
-        'Prefered boots upgrade as you will run out of mana in the fights. When disasembled, Energy Booster can be used later on to craft Lotus Orb or Aeon Disk.',
+        'A core boots upgrade for mana sustain. It can be disasembled and Energy Booster can be later used on to craft Lotus Orb or Aeon Disk.',
+      solar_crest:
+        'A core item to buff one of your right-clicking cores or debuff a target your team is focusing. Allows you to take Roshan faster.',
       aghanims_shard:
         'A core item that allows you to waveclear, do decent amounts of damage in the fights and cancel Blink Daggers.',
       lotus_orb: 'For reflect, dispel and armor.',
+      vladmir:
+        'A core aura item which percentage values scale well into the late game.',
     },
   },
   'Anti-Mage': {
@@ -597,7 +598,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'power_treads',
             'orb_of_corrosion',
           ],
-          mid_game: ['bfury', 'manta', 'basher', 'skadi'],
+          mid_game: ['bfury', 'manta', 'skadi', 'basher'],
           late_game: [
             'abyssal_blade',
             'satanic',
@@ -611,7 +612,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'aghanims_shard',
             'assault',
           ],
-          core: ['power_treads', 'bfury', 'manta', 'basher'],
+          core: ['power_treads', 'bfury', 'manta', 'skadi', 'basher'],
           neutral: [
             'possessed_mask',
             'chipped_vest',
@@ -646,6 +647,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       bfury:
         'A core items that solves sustain issues and allows you to farm insanely fast.',
       manta: 'Allows you to burn the jumped target`s mana quickly.',
+      skadi:
+        'A core item that tanks you up and disallows opponents to run away. It reduces target`s healing significantly.',
       basher:
         'It procs frequently due to attack speed of Anti-Mage allowing you to burn even more mana before Mana Voiding.',
       monkey_king_bar: 'Against evasion.',
@@ -713,19 +716,28 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           late_game: [
             'skadi',
             'greater_crit',
+            'swift_blink',
             'satanic',
             'bloodthorn',
             'travel_boots_2',
           ],
           situational: [
             'infused_raindrop',
-            'black_king_bar',
             'monkey_king_bar',
             'silver_edge',
             'gungir',
             'nullifier',
           ],
-          core: ['hand_of_midas', 'maelstrom', 'travel_boots'],
+          core: [
+            'hand_of_midas',
+            'maelstrom',
+            'travel_boots',
+            'mjollnir',
+            'black_king_bar',
+            'skadi',
+            'greater_crit',
+            'swift_blink',
+          ],
           neutral: [
             'possessed_mask',
             'unstable_wand',
@@ -753,14 +765,20 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: 'Against magical burst.',
       hand_of_midas: 'A core item which active works on your clone too.',
       maelstrom:
-        'A core item that further increases your farming speed. Both upgrades of this item are great to have on this hero.',
+        'A core item that further increases your farming speed. Both upgrades of this item are great to have. Mjollnir does significantly more dps though.',
       travel_boots: 'Allows you to split-push the map effectively.',
       black_king_bar:
-        'Against a lot of disables, magical damage and as a dispel.',
-      monkey_king_bar: 'Against evasion.',
-      silver_edge: 'For break and greater splitpush/pick off potential.',
+        'A core item that allows you to stand your ground and right-click.',
+      skadi:
+        'A core item that tanks you up and reduces target`s movement speed and healing.',
+      greater_crit: 'A core damaging late game item.',
       gungir: 'An alternative for Mjollnir for crowd control.',
-      nullifier: 'To dispel defensive spells and items.',
+      silver_edge: 'For break and greater splitpush/pick off potential.',
+      monkey_king_bar:
+        'An alternative to Daedalus against evasion and miss chance. Whenever Mjollnir procs you can`t miss on that attack so you already have 30% accuracy.',
+      nullifier:
+        'To dispel defensive spells and items that prevent you from right-clicking the opponent.',
+      swift_blink: 'A core item to reposition and for extra burst.',
     },
   },
   Axe: {
@@ -808,29 +826,40 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'faerie_fire',
             'magic_stick',
           ],
-          early_game: [
-            'vanguard',
-            'boots',
-            'phase_boots',
-            'magic_wand',
-            'cloak',
+          early_game: ['vanguard', 'boots', 'magic_wand'],
+          mid_game: [
+            'blink',
+            'blade_mail',
+            'black_king_bar',
+            'aghanims_shard',
+            'platemail',
+            'travel_boots',
+            'hood_of_defiance',
           ],
-          mid_game: ['blink', 'hood_of_defiance', 'blade_mail'],
           late_game: [
-            'heart',
             'assault',
-            'abyssal_blade',
             'overwhelming_blink',
+            'heart',
+            'abyssal_blade',
+            'shivas_guard',
           ],
           situational: [
-            'black_king_bar',
             'pipe',
             'crimson_guard',
             'lotus_orb',
             'invis_sword',
             'manta',
           ],
-          core: ['vanguard', 'blink'],
+          core: [
+            'vanguard',
+            'boots',
+            'blink',
+            'blade_mail',
+            'black_king_bar',
+            'aghanims_shard',
+            'platemail',
+            'travel_boots',
+          ],
           neutral: [
             'chipped_vest',
             'broom_handle',
@@ -855,12 +884,22 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         'Start with it if you expect high frequency of spells being used on the lane.',
       vanguard:
         'A core item that fixes your hp sustain issues and makes you exremely tanky. It can be disassembled.',
+      boots:
+        'A core item that you shouldn`t upgrade usually. Get Blink Dagger as fast as possible and upgrade boots to Boots of Travel down the road.',
       blink:
-        'Allows you to initiate the fights by jumping in and using Berserker`s Call.',
-      overwhelming_blink: 'Against illusion, clones and summons.',
+        'A core item that allows you to initiate the fights by jumping in and using Berserker`s Call.',
+      blade_mail:
+        'A core item that combines well with Berserker`s Call. It is especially strong against high dps right-clickers and uncontrolable high AoE damage, e.g. Eclipse.',
       black_king_bar:
-        'Against a lot of disables, magical damage and as a dispel.',
+        'A core item that allows you to stay alive after initiating.',
+      aghanims_shard:
+        'A core upgrade for Counter Helix especially good against illusion, summon or clone based heroes.',
+      platemail:
+        'A core item that fixes armor issues. You can upgrade it to either Assault Cuirass, Lotus Orb or Shiva`s Guard down the road.',
+      travel_boots:
+        'A core boots upgrade that allows you to cover the map better.',
       lotus_orb: 'For reflect, dispel and armor.',
+      overwhelming_blink: 'Against illusion, clones and summons.',
       invis_sword: 'For pick-offs and to guarantee a good initiation.',
       manta:
         'As a farm accelerator as Counter Helix procs on illusions. It is greedy to go for this item.',
@@ -912,21 +951,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'ward_sentry',
             'magic_stick',
           ],
-          early_game: [
-            'magic_wand',
-            'tranquil_boots',
-            'arcane_boots',
-            'wind_lace',
-          ],
-          mid_game: ['glimmer_cape', 'aether_lens', 'force_staff', 'ghost'],
-          late_game: ['aeon_disk', 'ultimate_scepter', 'blink'],
+          early_game: ['magic_wand', 'arcane_boots', 'wind_lace'],
+          mid_game: ['aether_lens', 'glimmer_cape', 'force_staff', 'ghost'],
+          late_game: ['ultimate_scepter', 'aeon_disk', 'blink'],
           situational: [
             'infused_raindrop',
             'lotus_orb',
-            'black_king_bar',
             'aghanims_shard',
+            'black_king_bar',
           ],
-          core: ['glimmer_cape', 'aether_lens'],
+          core: ['arcane_boots', 'wind_lace', 'aether_lens', 'glimmer_cape'],
           neutral: [
             'trusty_shovel',
             'keen_optic',
@@ -949,18 +983,20 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         'This talent goes well with Aghanim`s Shard and is particularly good against illusion and summon-based heroes and mega creeps. You can skill the other talent though if you have an easy time channeling your ulty or you have Aghanim`s Scepter, and you are in need of control.',
     },
     item_tooltips: {
-      ward_sentry: 'To block or unblock the pull camp.',
+      ward_sentry: 'To block or unblock a pull camp.',
       magic_stick:
         'Start with it if you expect high frequency of spells being used on the lane.',
       infused_raindrop: 'Against magical burst.',
+      arcane_boots:
+        'A core boots upgrade for mana sustain. It can be disassembled and Energy Booster used for Aether Lens. You should upgrade the leftover boots to Tranquil Boots.',
       wind_lace: 'For extra mobility as Bane is great at setting up kills.',
-      glimmer_cape:
-        'A core defensive item that you can also use while casting Fiend`s Grip.',
       aether_lens:
         'A core item that allows you to get your spells off from further away.',
+      glimmer_cape:
+        'A core defensive item that can be used while channeling Fiend`s Grip.',
       lotus_orb: 'For reflect, dispel and armor.',
-      black_king_bar: "To get a full duration Fiend's Grip off.",
       aghanims_shard: 'Against summons, illusions and to depush.',
+      black_king_bar: "To get a full duration Fiend's Grip off.",
     },
   },
   Batrider: {
