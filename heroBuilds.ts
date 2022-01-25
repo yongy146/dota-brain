@@ -397,6 +397,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: [
             'bottle',
+            'phase_boots',
             'bfury',
             'sange_and_yasha',
             'blink',
