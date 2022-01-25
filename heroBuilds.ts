@@ -325,9 +325,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640719685,
+        steam_guide_id: 1643091346,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2730985550',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'alchemist_goblins_greed',
@@ -16394,9 +16394,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_id: 1640804801,
+        steam_guide_id: 1643091534,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965288',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2730987049',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'weaver_shukuchi', // 1
@@ -16620,9 +16620,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804812,
+        steam_guide_id: 1643091452,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2730986384',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'windrunner_powershot', // 1
@@ -16664,7 +16664,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           early_game: [
             'bottle',
             'boots',
-            'maelstorm',
+            'maelstrom',
             'magic_wand',
             'null_talisman',
           ],
@@ -16686,7 +16686,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           core: [
             'bottle',
             'boots',
-            'maelstorm',
+            'maelstrom',
             'black_king_bar',
             'blink',
             'travel_boots',
@@ -16711,7 +16711,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'A core item that helps with sustain and allows you to gank with a stored active rune.',
           boots:
             'A core item that will be upgraded to Boots of Travel down the road.',
-          maelstorm:
+          maelstrom:
             'A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.',
           black_king_bar:
             'A core item that allows you to burst an opponent during Focus Fire.',
@@ -16732,9 +16732,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_id: 1640804812,
+        steam_guide_id: 1643091463,
         steam_guide_link:
-          'https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445',
+          'https://steamcommunity.com/sharedfiles/filedetails/?id=2730986473',
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           'windrunner_powershot', // 1
@@ -16772,7 +16772,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'mantle',
             'magic_stick',
           ],
-          early_game: ['boots', 'maelstorm', 'magic_wand', 'null_talisman'],
+          early_game: ['boots', 'maelstrom', 'magic_wand', 'null_talisman'],
           mid_game: [
             'black_king_bar',
             'blink',
@@ -16790,7 +16790,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           core: [
             'boots',
-            'maelstorm',
+            'maelstrom',
             'black_king_bar',
             'blink',
             'travel_boots',
@@ -16814,7 +16814,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         item_tooltips: {
           boots:
             'A core item that will be upgraded to Boots of Travel down the road.',
-          maelstorm:
+          maelstrom:
             'A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.',
           black_king_bar:
             'A core item that allows you to burst an opponent during Focus Fire.',
