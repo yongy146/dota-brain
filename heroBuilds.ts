@@ -366,7 +366,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'magic_stick',
             'ward_observer',
           ],
-          early_game: ['phase_boots', 'magic_wand', 'soul_ring', 'bracer'],
+          early_game: [
+            'bottle',
+            'phase_boots',
+            'magic_wand',
+            'soul_ring',
+            'bracer',
+          ],
           mid_game: [
             'bfury',
             'sange_and_yasha',
@@ -383,7 +389,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'ultimate_scepter',
           ],
           situational: [
-            'bottle',
             'radiance',
             'aghanims_shard',
             'mjollnir',
@@ -391,6 +396,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'silver_edge',
           ],
           core: [
+            'bottle',
             'bfury',
             'sange_and_yasha',
             'blink',
@@ -431,7 +437,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       radiance:
         'An alternative to Battle Fury against illusion-based heroes. In general, illusions are susceptible to magical damage more than to physical damage.',
       sange_and_yasha:
-        'A core item that provides mix of offensive and defensive stats. Self heal amplification goes we with Chemical Rage.',
+        'A core item that provides mix of offensive and defensive stats. Self heal amplification goes well with Chemical Rage.',
       blink:
         'A core item that allows you to channel Unstable Concoction, blink on the target and release the fully channeled stun.',
       black_king_bar:
@@ -16166,8 +16172,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: 'Against magical burst.',
       cyclone:
         'A core item to setup Aether Remnant or to be used in defensive manner.',
-      travel_boots:
-        'A core item that allows you to split-push or to catch split-pushers effectively.',
+      travel_boots: 'A core item that allows you to cover the map.',
       ultimate_scepter:
         'A core item that icreases AoE damage and adds AoE silence to your arsenal.',
       sphere: 'Against powerful single-target disables and debuffs.',
@@ -16382,7 +16387,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             'A core saving item that allows you to use Time Lapse on an ally. Cast range is short so you will need to position yourself well until you get Blink Dagger.',
           blink:
             'A core item that allows you to get Time Lapse off on an ally instantly.',
-          aghanims_shard: 'A core upgrade to The Swarm.',
+          aghanims_shard:
+            'A core upgrade to The Swarm which can also detect invisible units among the other benefits.',
           lotus_orb: 'For reflect, dispel(removes dust) and some armor.',
         },
         ability_tooltips: {
@@ -16608,7 +16614,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           urn_of_shadows:
             'A core item that allows you to snowball off of first kill. Provides useful stats, namely mana regeneration.',
           arcane_boots:
-            'A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Aether Lens. You should upgrade the leftover boots to Tranquil boots usually.',
+            'A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Aether Lens. You should upgrade the leftover boots to Tranquil Boots usually.',
           spirit_vessel: 'Against heavy-healing lineup.',
           aether_lens: 'A core item that improves cast range.',
           aghanims_shard:
