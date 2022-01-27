@@ -1564,7 +1564,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           'special_bonus_attributes',
           'bounty_hunter_track',
           'special_bonus_attributes',
-          'special_bonus_unique_bounty_hunter_8',
+          'special_bonus_unique_bounty_hunter',
           'special_bonus_attributes',
           'special_bonus_attributes',
           'special_bonus_attributes',
@@ -1575,38 +1575,44 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           starting: [
             'tango',
             'boots',
+            'faerie_fire',
+            'flask',
             'orb_of_venom',
             'ward_observer',
             'ward_sentry',
-            'flask',
-            'faerie_fire',
           ],
           early_game: [
             'tranquil_boots',
             'wind_lace',
-            'magic_wand',
             'urn_of_shadows',
-            'arcane_boots',
+            'magic_wand',
             'orb_of_corrosion',
+            'medallion_of_courage',
           ],
           mid_game: [
-            'medallion_of_courage',
-            'solar_crest',
-            'ultimate_scepter',
-            'aghanims_shard',
-            'force_staff',
             'cyclone',
+            'aghanims_shard',
+            'ultimate_scepter',
+            'solar_crest',
+            'force_staff',
             'ghost',
           ],
-          late_game: ['sheepstick', 'octarine_core', 'vladmir'],
+          late_game: ['octarine_core', 'sheepstick', 'vladmir'],
           situational: [
             'infused_raindrop',
             'spirit_vessel',
             'ancient_janggo',
-            'pipe',
             'lotus_orb',
           ],
-          core: ['ultimate_scepter', 'aghanims_shard'],
+          core: [
+            'tranquil_boots',
+            'wind_lace',
+            'urn_of_shadows',
+            'cyclone',
+            'aghanims_shard',
+            'ultimate_scepter',
+            'octarine_core',
+          ],
           neutral: [
             'unstable_wand',
             'pogo_stick',
@@ -1624,24 +1630,33 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       special_bonus_unique_bounty_hunter_8:
-        'If you are not going for Aghanim`s Scepter or you are still farm from assembling it, take this talent. Otherwise, take the other one.',
+        'If you are not going for Aghanim`s Scepter or you are still farm from assembling it, take this talent. Otherwise, take the suggested one.',
       special_bonus_unique_bounty_hunter_7:
-        'If you have Aghanim`s Scepter and you see yourself being able to do a lot of damage with Shuriken Tosses in the fight(short BKBs, no Linken Spheres), take this talent. Otherwise, take the other one.',
+        'If you have Aghanim`s Scepter and you see yourself being able to do a lot of damage with Shuriken Tosses in the fight(short BKBs, no Linken Spheres), take this suggested talent. Otherwise, take the other one.',
     },
     item_tooltips: {
       orb_of_venom:
         'If you see yourself being able to hit the opponents on the lane often.',
-      ward_sentry: 'To block or unblock the pull camp.',
-      wind_lace: 'For extra movement speed to roam around.',
+      ward_sentry: 'To block or unblock a pull camp.',
+      tranquil_boots:
+        'A core boots upgrade that provides hp sustain but most importantly great movement speed to roam around.',
+      wind_lace:
+        'A core item that allows you to roam around even faster. It can be used to assemble Eul`s or Solar Crest.',
       orb_of_corrosion: 'If you can pressure on the lane.',
       infused_raindrop: 'Against magical burst.',
-      spirit_vessel: 'Against heavy healing lineup.',
+      urn_of_shadows:
+        'A core item that allows you to snowball off of first kill. It provides useful stats, namely mana regeneration. You can unstealth yourself by using it when you get dusted to move faster.',
+      spirit_vessel: 'Against heavy-healing lineup.',
       ancient_janggo:
         'If you are grouping up a lot as a team in midgame and if you have summons.',
+      cyclone:
+        'A core item that allows you to dispel yourself(e.g. dust) or disable an opponent.',
       aghanims_shard: 'A core item that adds more control and survivability.',
       ultimate_scepter:
         'A core item that allows you to deal more damage in the fights and get richer at the same time.',
       lotus_orb: 'For reflect, dispel(e.g. Dust of Appearance) and armor.',
+      octarine_core:
+        'A core item that reduces cooldown of spells and items. It increases the frequency of Shuriken Tosses and extracts even more value from Aghanim`s Scepter.',
     },
   },
   Brewmaster: {
