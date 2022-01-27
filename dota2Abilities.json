@@ -2581,7 +2581,7 @@
 				0,
 				0
 			],
-			"talent_level": 3,
+			"talent_level": 1,
 			"description": "+15% Magic Resistance"
 		},
 		"special_bonus_unique_morphling_1": {
@@ -2600,7 +2600,7 @@
 				0,
 				0
 			],
-			"talent_level": 4,
+			"talent_level": 1,
 			"description": "+250 Waveform Range"
 		},
 		"special_bonus_unique_morphling_8": {
@@ -2619,7 +2619,7 @@
 				0,
 				0
 			],
-			"talent_level": 4,
+			"talent_level": 2,
 			"description": "+16s Morph Duration"
 		},
 		"special_bonus_agility_15": {
@@ -2638,7 +2638,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 2,
 			"description": "+15 Agility"
 		},
 		"special_bonus_strength_20": {
@@ -2657,7 +2657,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 3,
 			"description": "+20 Strength"
 		},
 		"special_bonus_unique_morphling_4": {
@@ -2676,7 +2676,7 @@
 				0,
 				0
 			],
-			"talent_level": 6,
+			"talent_level": 3,
 			"description": "Waveform Attacks Targets"
 		},
 		"special_bonus_unique_morphling_6": {
@@ -2695,7 +2695,7 @@
 				0,
 				0
 			],
-			"talent_level": 6,
+			"talent_level": 4,
 			"description": "2 Waveform Charges"
 		},
 		"special_bonus_unique_morphling_10": {
@@ -2714,7 +2714,7 @@
 				0,
 				0
 			],
-			"talent_level": 7,
+			"talent_level": 4,
 			"description": "Attribute Shift While Stunned"
 		}
 	},
@@ -17670,93 +17670,107 @@
 		"invoker_emp": {
 			"id": 5383,
 			"sequence": "Ability10",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				30
 			],
 			"mana_cost": [
 				125
 			],
-			"talent_level": 1,
-			"description": "E.M.P."
+			"name": "E.M.P.",
+			"description": "Endoleon's Malevolent Perturbation.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"invoker_alacrity": {
 			"id": 5384,
 			"sequence": "Ability11",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				17
 			],
 			"mana_cost": [
 				60
 			],
-			"talent_level": 1,
-			"description": "Alacrity"
+			"name": "Alacrity",
+			"description": "Gaster's Mandate of Impetuous Strife.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"invoker_chaos_meteor": {
 			"id": 5385,
 			"sequence": "Ability12",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				55
 			],
 			"mana_cost": [
 				200
 			],
-			"talent_level": 2,
-			"description": "Chaos Meteor"
+			"name": "Chaos Meteor",
+			"description": "Tarak's Descent of Fire.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"invoker_sun_strike": {
 			"id": 5386,
 			"sequence": "Ability13",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				25
 			],
 			"mana_cost": [
 				175
 			],
-			"talent_level": 2,
-			"description": "Sun Strike"
+			"name": "Sun Strike",
+			"description": "Harlek's Incantation of Incineration.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"invoker_forge_spirit": {
 			"id": 5387,
 			"sequence": "Ability14",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				30
 			],
 			"mana_cost": [
 				75
 			],
-			"talent_level": 3,
-			"description": "Forge Spirit"
+			"name": "Forge Spirit",
+			"description": "Culween's Most Cunning Fabrications.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"invoker_ice_wall": {
 			"id": 5389,
 			"sequence": "Ability15",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				25
 			],
 			"mana_cost": [
 				175
 			],
-			"talent_level": 3,
-			"description": "Ice Wall"
+			"name": "Ice Wall",
+			"description": "Killing Wall of Koryx.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"invoker_deafening_blast": {
 			"id": 5390,
 			"sequence": "Ability16",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				40
 			],
 			"mana_cost": [
 				300
 			],
-			"talent_level": 4,
-			"description": "Deafening Blast"
+			"name": "Deafening Blast",
+			"description": "Buluphont's Aureal Incapacitator.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"special_bonus_unique_invoker_10": {
 			"id": 7390,
@@ -17774,7 +17788,7 @@
 				0,
 				0
 			],
-			"talent_level": 4,
+			"talent_level": 1,
 			"description": "-24s Ghost Walk Cooldown"
 		},
 		"special_bonus_unique_invoker_6": {
@@ -17793,7 +17807,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 1,
 			"description": "+{s:value_tooltip}% Chaos Meteor Damage"
 		},
 		"special_bonus_unique_invoker_11": {
@@ -17812,7 +17826,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 2,
 			"description": "+1 Forged Spirit Armor Reduction"
 		},
 		"special_bonus_unique_invoker_9": {
@@ -17831,7 +17845,7 @@
 				0,
 				0
 			],
-			"talent_level": 6,
+			"talent_level": 2,
 			"description": "-8s Cold Snap Cooldown"
 		},
 		"special_bonus_unique_invoker_3": {
@@ -17850,7 +17864,7 @@
 				0,
 				0
 			],
-			"talent_level": 6,
+			"talent_level": 3,
 			"description": "-10s Tornado Cooldown"
 		},
 		"special_bonus_unique_invoker_5": {
@@ -17869,7 +17883,7 @@
 				0,
 				0
 			],
-			"talent_level": 7,
+			"talent_level": 3,
 			"description": "+35 Alacrity Damage/Speed"
 		},
 		"special_bonus_unique_invoker_2": {
@@ -17888,7 +17902,7 @@
 				0,
 				0
 			],
-			"talent_level": 7,
+			"talent_level": 4,
 			"description": "Radial Deafening Blast"
 		},
 		"special_bonus_unique_invoker_13": {
@@ -17907,7 +17921,7 @@
 				0,
 				0
 			],
-			"talent_level": 8,
+			"talent_level": 4,
 			"description": "2.5x Quas/Wex/Exort passive effects"
 		}
 	},
@@ -20758,7 +20772,7 @@
 		"rubick_hidden3": {
 			"id": 5457,
 			"sequence": "Ability10",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				0,
 				0,
@@ -20771,13 +20785,15 @@
 				0,
 				0
 			],
-			"talent_level": 1,
-			"description": ""
+			"name": "n/a",
+			"description": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"rubick_telekinesis_land_self": {
 			"id": 647,
 			"sequence": "Ability11",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				0,
 				0,
@@ -20790,8 +20806,10 @@
 				0,
 				0
 			],
-			"talent_level": 1,
-			"description": "Telekinesis Land"
+			"name": "Telekinesis Land",
+			"description": "",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"special_bonus_unique_rubick_8": {
 			"id": 897,
@@ -20809,7 +20827,7 @@
 				0,
 				0
 			],
-			"talent_level": 2,
+			"talent_level": 1,
 			"description": "+175 Telekinesis Landing Damage"
 		},
 		"special_bonus_unique_rubick_2": {
@@ -20828,7 +20846,7 @@
 				0,
 				0
 			],
-			"talent_level": 2,
+			"talent_level": 1,
 			"description": "-10% Fade Bolt Damage Reduction"
 		},
 		"special_bonus_unique_rubick_6": {
@@ -20847,7 +20865,7 @@
 				0,
 				0
 			],
-			"talent_level": 3,
+			"talent_level": 2,
 			"description": "-25% Stolen Spells Cooldown"
 		},
 		"special_bonus_unique_rubick_7": {
@@ -20866,7 +20884,7 @@
 				0,
 				0
 			],
-			"talent_level": 3,
+			"talent_level": 2,
 			"description": "+0.6s Telekinesis Lift Duration"
 		},
 		"special_bonus_unique_rubick_3": {
@@ -20885,7 +20903,7 @@
 				0,
 				0
 			],
-			"talent_level": 4,
+			"talent_level": 3,
 			"description": "-4s Fade Bolt Cooldown"
 		},
 		"special_bonus_unique_rubick": {
@@ -20904,7 +20922,7 @@
 				0,
 				0
 			],
-			"talent_level": 4,
+			"talent_level": 3,
 			"description": "+240 Telekinesis Land Distance"
 		},
 		"special_bonus_unique_rubick_4": {
@@ -20923,7 +20941,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 4,
 			"description": "-12s Telekinesis Cooldown"
 		},
 		"special_bonus_unique_rubick_5": {
@@ -20942,7 +20960,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 4,
 			"description": "+40% Spell Amp For Stolen Spells"
 		}
 	},
@@ -21866,15 +21884,17 @@
 		"keeper_of_the_light_recall": {
 			"id": 5475,
 			"sequence": "Ability10",
-			"is_talent": true,
+			"is_talent": false,
 			"cooldown": [
 				15
 			],
 			"mana_cost": [
 				150
 			],
-			"talent_level": 1,
-			"description": "Recall"
+			"name": "Recall",
+			"description": "Walk towards the light.",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"special_bonus_unique_keeper_of_the_light_8": {
 			"id": 657,
@@ -21911,7 +21931,7 @@
 				0,
 				0
 			],
-			"talent_level": 2,
+			"talent_level": 1,
 			"description": "+20 Movement Speed"
 		},
 		"special_bonus_unique_keeper_of_the_light_7": {
@@ -21949,7 +21969,7 @@
 				0,
 				0
 			],
-			"talent_level": 3,
+			"talent_level": 2,
 			"description": "2 Solar Bind Charges"
 		},
 		"special_bonus_unique_keeper_of_the_light_11": {
@@ -21987,7 +22007,7 @@
 				0,
 				0
 			],
-			"talent_level": 4,
+			"talent_level": 3,
 			"description": "Chakra Magic Dispels"
 		},
 		"special_bonus_unique_keeper_of_the_light_10": {
@@ -22025,7 +22045,7 @@
 				0,
 				0
 			],
-			"talent_level": 5,
+			"talent_level": 4,
 			"description": "+180 Illuminate Damage"
 		}
 	},

@@ -225,6 +225,7 @@ export namespace ability {
      * @returns arrray of breakable passives
      */
     export function getBreakablePassives(heroName: string): string[] {
+        //DotaLogger.log(`dota.getBreakablePassives(heroName: ${heroName}): Called`)
         const abilities = dota2Abilities[hero.name.localizedNameToNPCName(heroName)]
         var result = []
         for (const ability of Object.keys(abilities)) {
@@ -239,6 +240,7 @@ export namespace ability {
                 }
             }
         }
+        //DotaLogger.log(`dota.getBreakablePassives(heroName: ${heroName}): Returned ${heroName}`)
         return result
 
 
@@ -807,38 +809,7 @@ export namespace hero {
                 if (heroBuild==null) heroBuild = hero.build.getDefaultHeroBuild(h)
             }
 
-            var tooltips_build = {}
-            var tooltips_hero = {}
-            if (heroBuild.hasOwnProperty('item_tooltips')) {
-                tooltips_build = HeroBuilds.heroBuilds[h].builds[0].item_tooltips
-            }
-            if (HeroBuilds.heroBuilds[h].hasOwnProperty('item_tooltips')) {
-                tooltips_hero = HeroBuilds.heroBuilds[h].item_tooltips
-            }
-            const item_tooltips = {
-                ...tooltips_hero,
-                ...tooltips_build
-            }
-
-            const build = HeroBuilds.heroBuilds[h].builds[0]
-            const core_items = build.items.core
-
-            function transformItem(item: string) {
-                var result = { item: item }
-                if (item_tooltips.hasOwnProperty('item')) result['info'] = item_tooltips[item]
-                if (core_items.indexOf(item)!=-1) result['isCore'] = true
-                return result
-            }
-
-            return {
-                starting:    build.items.starting.map(x => transformItem(x)),
-                early_game:  build.items.early_game.map(x => transformItem(x)),
-                mid_game:    build.items.mid_game.map(x => transformItem(x)),
-                late_game:   build.items.late_game.map(x => transformItem(x)),
-                situational: build.items.situational.map(x => transformItem(x)),
-                neutral:     build.items.neutral.map(x => transformItem(x)),
-                roles:        PlayerRoles.rolesToString(heroBuild.roles)
-            }
+            return hero.build.getItemBuild(heroBuild)            
         }
     }
     
@@ -884,6 +855,23 @@ export namespace hero {
             /* return copy of array, otherwise recipient can change content of this.laningItemTips */
             return  [...abilityBuild] 
         }
+
+
+        /**
+         * 
+         * @param heroBuild 
+         * @returns 
+         */
+        export function getAbilityBuild(heroBuild: HeroBuilds.HeroBuild): string[] {
+            //const h_ = hero.name.localizedNameToNPCName(h)
+
+            var abilityBuild = heroBuild.abilities
+
+            /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+            return  [...abilityBuild] 
+        }
+
+
 
         /**
          * 
@@ -989,6 +977,57 @@ export namespace hero {
             }
 
             return null
+        }
+
+        /**
+         * Returns item build in format to be use to display using DotaCoachUI
+         * 
+         * @param heroBuild 
+         * @returns object with the following attributes: starting, early_game, mid_game, later_game, situational, roles: string. Each has an array of the following element: { item, info?, isCore?, purchaseTime? }
+         */
+        export function getItemBuild(heroBuild: HeroBuilds.HeroBuild): any {
+            var tooltips_build = {}
+            var tooltips_hero = {}
+            if (heroBuild.hasOwnProperty('item_tooltips')) {
+                tooltips_build = heroBuild.item_tooltips
+            }
+            if (heroBuild.hasOwnProperty('item_tooltips')) {
+                tooltips_hero = heroBuild.item_tooltips
+            }
+            const item_tooltips = {
+                ...tooltips_hero,
+                ...tooltips_build
+            }
+
+            const build = heroBuild
+            /*var core_items_hero = build.items.core
+            var core_items_bear = {}
+            if (build.items.hasOwnProperty('core_baer')) {
+                core_items_bear = build.items.core_bear
+            }
+            const core_items = {
+                ...core_items_hero,
+                ...core_items_bear
+            }*/
+
+            function transformItem(item: string, core_items: string[]) {
+                var result = { item: item }
+                if (item_tooltips.hasOwnProperty('item')) result['info'] = item_tooltips[item]
+                if (core_items.indexOf(item)!=-1) result['isCore'] = true
+                return result
+            }
+
+            return {
+                starting:    build.items.starting.map(x => transformItem(x, build.items.core)),
+                starting_bear:  build.items.hasOwnProperty('starting_bear') ? build.items.starting_bear.map(x => transformItem(x, build.items.core_bear)) : null,
+                early_game:  build.items.hasOwnProperty('early_game') ? build.items.early_game.map(x => transformItem(x, build.items.core)) : null,
+                mid_game:  build.items.hasOwnProperty('mid_game') ? build.items.mid_game.map(x => transformItem(x, build.items.core)) : null,
+                late_game:  build.items.hasOwnProperty('late_game') ? build.items.late_game.map(x => transformItem(x, build.items.core)) : null,
+                situational: build.items.situational.map(x => transformItem(x, build.items.core)),
+                situational_bear:  build.items.hasOwnProperty('situational_bear') ? build.items.situational_bear.map(x => transformItem(x, build.items.core_bear)) : null,
+                neutral:     build.items.neutral.map(x => transformItem(x, build.items.core)),
+                roles:       PlayerRoles.rolesToString(heroBuild.roles)
+            }
         }
     }
 
