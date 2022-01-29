@@ -543,6 +543,18 @@ export namespace hero {
         return dota2Heroes[heroName]
     }
 
+    /**
+     * 
+     * @returns Array of localited hero names, e.g. Anti-Mage
+     */
+    export function getHeroNames(): string[] {
+        var result = []
+        for (const key of Object.keys(dota2Heroes)) {
+            result.push(dota2Heroes[key].localized_name)
+        }
+        return result
+    }
+
     export namespace damage {
        /**
         * Returns the damage type of a hero as a string.
@@ -756,7 +768,7 @@ export namespace hero {
          * OLD_returns String of items
          * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
          */
-        export function getStandardItemBuild(h: string): string[] {
+        export function getStandardItemBuild(h: string): any[] {
             if (!hero.build.hasDefaultHeroBuild(h))  {
                 /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
                 return []
