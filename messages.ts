@@ -2,19 +2,7 @@
 
    This document contains all the messages played by Dota Coach.
 
-   Each message is described by one object with the following fields:
-     - category (mandatory)     Category of the message, e.g. NeturalItem, DayTime, PowerRunes, BountyRunes, Outposts, EnemyHero [this field allows the app to turn on/off certain messages based on the user's preference]
-     - audioFile (mandatory)    Folder and name of audio file (the app adds '.mp3' to the file name)
-     - messageTime (optional)   Time when message is played in seconds (time is based on game time) ; -90 means that the message is played at hero selection
-     - repeatTime (optional)    Time interval to repeat message (this fields can only be used in combination with 'messageTime')
-     - messageTimes (optional)  Array of times when message is player
-     - textMessage (mandatory)  Message spoken by narrator and displayed in the game
-     - chatMessage (optional)   Optional parameter to specify chatMessages (used for the case the text message is too long). Max lenght is 109 characters.
-     - audiance (mandatory)     Has two possible values: 'All' and 'Lane' (All: All players get the message; Lane: Players playing against hero in the lane get messages)
 
-    [Idea for the future, but not yet implemented:
-        Support: Only support players get the message
-        Core: Only core player get the message]
 
   Questions and comments:
     // DayTime
@@ -38,12 +26,11 @@
   Armor reducing items: Blight Stone, Orb of Corrosion, Medallion of Courage, Solar Crest, Desolator, Assault Cuirass.
 
   ***CHANGED 7.30*** labels changed in 7.30
+  
+  (C) Dota Coch, 2022
 
 */
-
 import { DOTA_COACH_GUIDE_ROLE } from '../../submodules/dota2/playerRoles';
-
-//import { } from
 
 /**
  *
@@ -66,25 +53,25 @@ export function getOwnHeroMessagesForRoles(
 
     function isRelevant(audience: string, role: DOTA_COACH_GUIDE_ROLE) {
       switch (audience) {
-        case ALL:
+        case Audience.ALL:
           return true;
-        case IN_LANE:
+        case Audience.IN_LANE:
           return true; // This case should not exist
-        case ROLE_CORE:
+        case Audience.ROLE_CORE:
           return (
             role == DOTA_COACH_GUIDE_ROLE.CARRY ||
             role == DOTA_COACH_GUIDE_ROLE.MID ||
             role == DOTA_COACH_GUIDE_ROLE.OFFLANE
           );
-        case ROLE_MID:
+        case Audience.ROLE_MID:
           return role == DOTA_COACH_GUIDE_ROLE.MID;
-        case ROLE_CARRY:
+        case Audience.ROLE_CARRY:
           return role == DOTA_COACH_GUIDE_ROLE.CARRY;
-        case ROLE_OFFLANE:
+        case Audience.ROLE_OFFLANE:
           return role == DOTA_COACH_GUIDE_ROLE.OFFLANE;
-        case ROLE_SUPPORT:
-        case ROLE_SUPPORT_SOFT:
-        case ROLE_SUPPORT_HARD:
+        case Audience.ROLE_SUPPORT:
+        case Audience.ROLE_SUPPORT_SOFT:
+        case Audience.ROLE_SUPPORT_HARD:
           return role == DOTA_COACH_GUIDE_ROLE.SUPPORT;
       }
     }
@@ -111,17 +98,57 @@ export function getEnemyHeroMessages(hero): any[] {
   );
 }
 
-export const ALL = 'All';
-export const IN_LANE = 'InLane';
-export const ROLE_CORE = 'Core'; // For mid, carry and offlane
+export enum Audience {
+  ALL = 'All',                       // All players get the message
+  IN_LANE = 'InLane',                // Players playing against hero in the lane get messages
+  ROLE_CORE = 'Core',                // For mid, carry and offlane
+  ROLE_MID = 'Mid',
+  ROLE_CARRY = 'Carry',
+  ROLE_OFFLANE = 'Offlane',
+  ROLE_SUPPORT = 'Support',          // For soft and hard support
+  ROLE_SUPPORT_SOFT = 'SoftSupport',
+  ROLE_SUPPORT_HARD = 'HardSupport'
+}
+/*export const ALL = 'All';                       // All players get the message
+export const IN_LANE = 'InLane';                // Players playing against hero in the lane get messages
+export const ROLE_CORE = 'Core';                // For mid, carry and offlane
 export const ROLE_MID = 'Mid';
 export const ROLE_CARRY = 'Carry';
 export const ROLE_OFFLANE = 'Offlane';
-export const ROLE_SUPPORT = 'Support'; // For soft and hard support
+export const ROLE_SUPPORT = 'Support';          // For soft and hard support
 export const ROLE_SUPPORT_SOFT = 'SoftSupport';
-export const ROLE_SUPPORT_HARD = 'HardSupport';
+export const ROLE_SUPPORT_HARD = 'HardSupport';*/
 
-export const dotaCoachMessages = [
+export interface DotaCoachMessage {
+  //  Category of the message. This field allows the app to turn on/off certain messages based on the user's preference
+  category: 'BountyRunes' | 'WaterRunes' |'PowerRunes' |'NeutralItems' | 'SmokeOfDeceit' | 'AghanimsShard' | 'TomeOfKnowledge' |'SiegeCreeps' | 'DayTime' | 'EnemyHero' | 'OwnHero',
+  // Localized hero name, only needed for categories 'EnemyHero' and 'OwnHero'
+  hero?: string, // Localized name
+  // Folder and name of audio file (the app adds '.mp3' to the file name)
+  audioFile: string,
+  // Time when message is played in seconds (time is based on game time) ; -90 means that the message is played at hero selection
+  messageTime?: number,
+  // Time interval to repeat the message (this fields is only be used in combination with 'messageTime')
+  repeatTime?: number,
+  // Array of times when message is played
+  messageTimes?: number[],
+  // Message spoken by narrator and displayed in the game
+  textMessage: string,
+  // Optional parameter to specify chat messages (relevant when text message is too long). Max lenght is 109 characters.
+  chatMessage?: string,
+  // two possible values: 'All' and 'Lane' (All: ; Lane: )
+  audience: Audience[],
+  // Image to be displayed on web-page. Only works for messages that are short enough to allow for image to be displayed
+  image?: {
+    type: 'item' | 'ability' | 'rune', 
+    // name for item:    Short name, e.g. 'blink' (as provided by dota2Items.json, but without 'item_' prefex)
+    // name for ability: Name as provided in dota2Heroes.json, e.g. 'alchemist_unstable_concoction_throw'
+    // name for rune:    arcane, bounty, double_damage, haste, illusion, invisibility or regeneration
+    name: string 
+  }
+}
+
+export const dotaCoachMessages: DotaCoachMessage[] = [
   // BountyRunes
   {
     category: 'BountyRunes',
@@ -129,7 +156,7 @@ export const dotaCoachMessages = [
     messageTime: 3 * 60 - 30,
     repeatTime: 3 * 60,
     textMessage: 'Bounty runes will appear soon',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // WaterRunes
@@ -138,7 +165,7 @@ export const dotaCoachMessages = [
     audioFile: 'general/WaterRunes',
     messageTimes: [2 * 60 - 15, 4 * 60 - 15],
     textMessage: 'Water runes will appear soon',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // PowerRunes
@@ -148,7 +175,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 - 15,
     repeatTime: 2 * 60,
     textMessage: 'Power rune will appear soon',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // NeutralItems
@@ -157,35 +184,35 @@ export const dotaCoachMessages = [
     audioFile: 'general/NeutralItemsTier1',
     messageTime: 7 * 60 - 2,
     textMessage: 'Neutral items tier 1 are available now',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'NeutralItems',
     audioFile: 'general/NeutralItemsTier2',
     messageTime: 17 * 60 - 2,
     textMessage: 'Neutral items tier 2 are available now',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'NeutralItems',
     audioFile: 'general/NeutralItemsTier3',
     messageTime: 27 * 60 - 2,
     textMessage: 'Neutral items tier 3 are available now',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'NeutralItems',
     audioFile: 'general/NeutralItemsTier4',
     messageTime: 37 * 60 - 2,
     textMessage: 'Neutral items tier 4 are available now',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'NeutralItems',
     audioFile: 'general/NeutralItemsTier5',
     messageTime: 60 * 60 - 2,
     textMessage: 'Neutral items tier 5 are available now',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // Smoke Of Deceit
@@ -194,14 +221,14 @@ export const dotaCoachMessages = [
     audioFile: 'general/SmokeOfDeceit1',
     messageTime: 5 * 60 + 30 - 1,
     textMessage: 'Smoke of deceit is available in the shop',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'SmokeOfDeceit',
     audioFile: 'general/SmokeOfDeceit2',
     messageTimes: [15 * 60 + 10, 30 * 60 + 10, 45 * 60 + 10, 60 * 60 + 10],
     textMessage: 'Check if smoke of deceit is available in the shop',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // Tome of Knowledge
@@ -211,7 +238,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 - 2,
     repeatTime: 10 * 60,
     textMessage: 'Tome of knowledge is available in the shop',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // Aghanim's Shard
@@ -220,7 +247,7 @@ export const dotaCoachMessages = [
     audioFile: 'general/AghanimsShard',
     messageTime: 20 * 60 - 2,
     textMessage: "Aghanim's Shard is available in the shop",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // Siege Creeps
@@ -230,7 +257,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60,
     repeatTime: 5 * 60,
     textMessage: 'Siege creeps just spawned',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // DayTime
@@ -240,7 +267,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 - 10,
     repeatTime: 10 * 60,
     textMessage: 'It will be day soon',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'DayTime',
@@ -248,11 +275,11 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 - 10,
     repeatTime: 10 * 60,
     textMessage: 'It will be night soon',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // Outposts
-  // {category: "Outposts", audioFile: "general/Outposts", messageTime: (20*60-45), repeatTime: (10*60), textMessage: "Outposts will grant experience soon, capture them if you have already taken down a tier 2 tower", audience: [ALL]}, |patch 7.29| MESSAGES REMOVED
+  // {category: "Outposts", audioFile: "general/Outposts", messageTime: (20*60-45), repeatTime: (10*60), textMessage: "Outposts will grant experience soon, capture them if you have already taken down a tier 2 tower", audience: [Audience.ALL]}, |patch 7.29| MESSAGES REMOVED
 
   // 1. Abaddon | 28.02.2021
   {
@@ -262,7 +289,7 @@ export const dotaCoachMessages = [
     messageTime: 10,
     textMessage:
       'Apply Aphotic Shield preemptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.',
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   // Alex: Not sure I understand this one. Maybe we can refurmulate
   {
@@ -272,7 +299,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Play ahead of the Core you are supporting to absorb attention.',
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   // ALex: What do you mean by 'absorb attention'?
   {
@@ -282,7 +309,7 @@ export const dotaCoachMessages = [
     messageTime: 45,
     textMessage:
       "Salve or clarity won't be canceled while you have Apothic Shield on.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -291,7 +318,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       'If someone applies a break effect on you, you will have to trigger Borrowed Time manually.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -300,7 +327,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'If you got disabled along with your teammate you can pop Borrowed Time to unstun yourself and then apply Aphotic Shield on a stunned ally to free him as well.',
-    audience: [ROLE_OFFLANE, ROLE_SUPPORT],
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -310,7 +337,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       "You can position more aggressively than rest of your team, as opponents usually don't want to go on you due to Borrowed Time.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -320,7 +347,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'Constantly look at your teammates to heal or hard dispel them.',
-    audience: [ROLE_OFFLANE, ROLE_SUPPORT],
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -329,7 +356,7 @@ export const dotaCoachMessages = [
     messageTime: 16 * 60,
     textMessage:
       'Silences and heal reductions are a big problems for Abaddon. Avoid being hit by those or itemize against them.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -338,7 +365,7 @@ export const dotaCoachMessages = [
     messageTime: 22 * 60,
     textMessage:
       "With Aghanim's Scepter, you will need to activate your Ultimate manually, while most of the damage is being inflicted on your teammates.",
-    audience: [ROLE_OFFLANE, ROLE_SUPPORT],
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
   },
 
   {
@@ -350,7 +377,7 @@ export const dotaCoachMessages = [
       "Abaddon's Aphothic Shield applies strong dispel. Use disabling and damage-over-time dispellable spells only after the shield was used.",
     chatMessage:
       'Aphothic Shield applies strong dispel. Use dispellable spells after the shield was used.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'abaddon_aphotic_shield' },
   },
   {
@@ -360,7 +387,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "It takes four attacks from Abaddon's Curse of Avernus to silence and slow you significantly.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'abaddon_frostmourne' },
   },
   {
@@ -370,7 +397,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       "If you are in the fog, exploding Aphotic Shield won't damage you.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'abaddon_aphotic_shield' },
   },
   {
@@ -380,7 +407,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Abaddon's Ulti Burrowed Time applies strong dispel and heals Abaddon for all damage taken. Don't hit him.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'abaddon_aphotic_shield' },
   },
   {
@@ -390,7 +417,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 10,
     textMessage:
       'Break effects make Burrowed Time not start automatically. But Abaddon can still activate it manually.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'silver_edge' },
   },
 
@@ -402,7 +429,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'Collecting Bounty Runes is very important for Alchemist. Let your team know when the bounty runes are about to spawn.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -411,7 +438,7 @@ export const dotaCoachMessages = [
     messageTime: 4 * 60,
     textMessage:
       "Understand when you are no longer able to lane and move to the jungle. Alchemist farms insanely fast and you don't want die and lose Greevil's Greed stacks.",
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -420,7 +447,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60,
     textMessage:
       'Alchemist prefers to farm huge amounts of easy to kill creeps. Avoid farming Ancients until you can kill them reasonably fast. Ask your team to stack smaller camps.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -429,7 +456,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       "Chemical Rage applies dispel on cast, same as Berserker's Potion. You can use them to dispel Spirit Vessel or other dispellable spells and items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -438,7 +465,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Whilst farming, show yourself on lanes the least possible and don't waste your Greevil's Greed stacks by hitting buildings for too long.",
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -447,7 +474,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60,
     textMessage:
       'Blink Dagger or Shadow Blade allow you to cast fully channeled Unstable Concoction more easily.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -457,7 +484,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       "Once you get closer to being 6 slotted, consider giving Aghanim's Scepter upgrades to your teammates. You might do that even earlier, if the Scepter upgrades on your allies have great impact.",
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -466,7 +493,7 @@ export const dotaCoachMessages = [
     messageTimes: [25 * 60, 35 * 60],
     textMessage:
       'Alchemist tends to fall off as the game goes. Look to close the game by the 40 min mark.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
 
   {
@@ -476,7 +503,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Someone should buy spirit Vessel against Alchemist's HP regen from Chemical Rage",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -484,7 +511,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Alchemist_2_Neutral camps',
     messageTime: 2 * 60 + 10,
     textMessage: 'Block neutral camps with wards against Alchemist',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -492,7 +519,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Alchemist_3_Gank',
     messageTime: 2 * 60 + 40,
     textMessage: "Don't forget to gank Alchemist",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -501,7 +528,7 @@ export const dotaCoachMessages = [
     messageTimes: [-30, 4 * 60 + 30],
     textMessage:
       "Alchemist gets additional gold from bouty runes. Make sure he doesn't get any",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -509,7 +536,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Alchemist_5_Jungling',
     messageTime: 5 * 60 + 50,
     textMessage: 'Contest Alchemist while he is jungling',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 3. Ancient Apparition | 28.02.2021
@@ -520,7 +547,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       "Make maximal use of Ancient Apparition's long attack range and Chilling Touch to harass on the lane without aggroing lane creeps.",
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'ancient_apparition_chilling_touch' },
   },
   {
@@ -530,7 +557,7 @@ export const dotaCoachMessages = [
     messageTime: -15,
     textMessage:
       'Use Cold Feet when it is likely to stun, for example, after your laning partner applies a disable or slow, or just before the opponent wants to lasthit a creep.',
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'ancient_apparition_cold_feet' },
   },
   {
@@ -540,7 +567,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 + 10, 14 * 60 + 10, 24 * 60 + 10],
     textMessage:
       'Ice Wortex can be used to provide vision on top of pillars or in Roshpit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'ancient_apparition_ice_vortex' },
   },
   {
@@ -551,7 +578,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'Prioritize Ice Blasting heroes high on healing and with big health pool.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'ancient_apparition_ice_blast' },
   },
   {
@@ -561,7 +588,7 @@ export const dotaCoachMessages = [
     messageTime: 18 * 60,
     textMessage:
       "Grab Aghanim's Shard at 20min mark as it allows you to waveclear, deal additional damage in the fights and cancel Blink Daggers.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'aghanims_shard' },
   },
 
@@ -572,7 +599,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "When Ancient Apparition's Cold Feet is used on you, move away 715 distance or you will get stunned.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -581,7 +608,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Ancient's Ice Blast negates all healing. Avoid using healing items when affected by it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -590,7 +617,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 10,
     textMessage:
       'Ice Blast goes through spell immunity but is offset by magic resistance and magic barrier items.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 4. Anti-Mage | Earlier work
@@ -601,7 +628,7 @@ export const dotaCoachMessages = [
     messageTime: 50,
     textMessage:
       'Anti-Mage is a weak laner, so look to pressure him from the start',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -609,7 +636,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Anti-mage_2_Use mana',
     messageTime: 1 * 60 + 30,
     textMessage: 'Look to spend your mana before it gets burned by Anti-Mage',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'energy_booster' },
   },
   {
@@ -621,7 +648,7 @@ export const dotaCoachMessages = [
       'Against Anti-Mage during the laning phase buy a Magic Stick or consider buying a Soul Ring to have mana for spells ',
     chatMessage:
       'Against Anti-Mage buy Magic Stick or Soul Ring during the laning phase to have mana for spells',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'magic_stick' },
   },
   {
@@ -633,7 +660,7 @@ export const dotaCoachMessages = [
       "Look to disrupt Anti-Mange's jungling by placing deep wards and smoking on him. Anti-Mage is weak until he gets Manta Style",
     chatMessage:
       "Disrupt Anti-Mange's jungling by placing deep wards and smoking on him. He is weak until he gets Manta Style",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_observer' },
   },
   {
@@ -643,7 +670,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60 + 30,
     textMessage:
       "Consider getting Boots of Travel on one of the cores to address Anti-Mange's split push playstyle",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'travel_boots' },
   },
   {
@@ -655,7 +682,7 @@ export const dotaCoachMessages = [
       'In team fights look to save the hero that Anti-Mage jumps on. But be careful as you might blow up too if you get too close to a Mana Voided hero',
     chatMessage:
       'In team fights save hero that Anti-Mage jumps on, but stay away if hero gets Mana Voided',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'antimage_mana_void' },
   },
   {
@@ -665,7 +692,7 @@ export const dotaCoachMessages = [
     messageTime: 35 * 60 + 30,
     textMessage:
       'Anti-Mage is strong mid- to late-game as he can farm rapidly, but he is not that strong in very late game',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 5. Arc Warden | 28.02.2021
@@ -676,7 +703,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'Make use of Spark Wraiths to secure creep lasthits, especially ranged creep.',
-    audience: [IN_LANE, ROLE_CORE],
+    audience: [Audience.IN_LANE, Audience.ROLE_CORE],
     image: { type: 'ability', name: 'arc_warden_spark_wraith' },
   },
   {
@@ -686,7 +713,7 @@ export const dotaCoachMessages = [
     messageTime: -15,
     textMessage:
       'If an opponent splits away from creeps or his ally, you can Flux him and follow up with right-clicks and Spark Wraiths.',
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'arc_warden_flux' },
   },
   {
@@ -696,7 +723,7 @@ export const dotaCoachMessages = [
     messageTimes: [6 * 60, 11 * 60, 16 * 60],
     textMessage:
       'Use Spark Wraiths to scout the opponents and protect yourself while farming.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'arc_warden_spark_wraith' },
   },
   {
@@ -706,7 +733,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 16 * 60, 24 * 60],
     textMessage:
       'Make sure not to feed Tempest Double to opponents as it gives away a lot of gold and experience.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'arc_warden_tempest_double' },
   },
   {
@@ -716,7 +743,7 @@ export const dotaCoachMessages = [
     messageTimes: [9 * 60, 17 * 60],
     textMessage:
       'Use Tempest Double as frequently as possible to splitpush the sidelanes and damage buildings.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'arc_warden_tempest_double' },
   },
   {
@@ -726,7 +753,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60, 18 * 60],
     textMessage:
       'Avoid being part of the teamfights from the very start until you get first major item that will tank you up.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -736,7 +763,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'Whenever opponents teleport back on a hero or two to address your splitpush, look to fight the remaining opponents, smoke up or take Roshan.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
 
   {
@@ -746,7 +773,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Arc Warden's Flux does no damage to you if you are close to another unit.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'arc_warden_flux' },
   },
   {
@@ -756,7 +783,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Arc Warden's Spark Wraith takes two seconds to charge which gives you time to dodge it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'arc_warden_spark_wraith' },
   },
   {
@@ -766,7 +793,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       "Units inside Arc's Warden's Magnetic Field can be hit if you are inside of it or have evasion piercing items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'arc_warden_magnetic_field' },
   },
   {
@@ -775,7 +802,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Arc Warden_4_Pressure',
     messageTime: 30,
     textMessage: 'Arc Warden is a weak laner. Pressure him early on.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -784,7 +811,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Arc Warden's Tempest Double gives a lot of gold and experience. Kill it if possible.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'arc_warden_tempest_double' },
   },
   {
@@ -794,7 +821,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 10,
     textMessage:
       'Arc Warden farms the jungle a lot. Plant deep wards and gank him. Also block off camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_dispenser' },
   },
   {
@@ -803,7 +830,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Arc Warden_7_Gap closing',
     messageTime: 12 * 60,
     textMessage: 'Buy gap closing items to get on top of Arc Warden.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
   {
@@ -813,7 +840,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Boots of Travel allow to defend against Arc Warden's split-pushing and to quickly rejoin the team.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'travel_boots' },
   },
 
@@ -825,7 +852,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       "Use Battle Hunger off cooldown on opponents' support usually.",
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'axe_battle_hunger' },
   },
   {
@@ -835,7 +862,7 @@ export const dotaCoachMessages = [
     messageTime: -15,
     textMessage:
       'It is good to fight the opponents while you are surrounded by their creeps as Counter Helix will proc more often.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'axe_counter_helix' },
   },
   {
@@ -845,7 +872,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60, 6 * 60 + 30],
     textMessage:
       "If you can't pressure opponents' carry on the lane, consider creepskiping and farming neutrals in their jungle past 5 minute mark.",
-    audience: [IN_LANE, ROLE_OFFLANE],
+    audience: [Audience.IN_LANE, Audience.ROLE_OFFLANE],
   },
   {
     category: 'OwnHero',
@@ -854,7 +881,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60 + 15, 7 * 60 + 15],
     textMessage:
       'Encourage your supports to stack for you as you can clear stacks very quickly and early.',
-    audience: [IN_LANE, ROLE_CORE],
+    audience: [Audience.IN_LANE, Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -863,7 +890,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 10 * 60],
     textMessage:
       "Don't roam around too much. Focus on getting Blink Dagger timely.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
   {
@@ -873,7 +900,7 @@ export const dotaCoachMessages = [
     messageTime: 9 * 60,
     repeatTime: 10 * 60,
     textMessage: 'Use Battle Hunger on creeps to run around faster.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'axe_battle_hunger' },
   },
   {
@@ -883,7 +910,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 15,
     textMessage:
       'Once you acquire Blink Dagger, try to make use of it immediately and avoid showing yourself on the map too often.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
   {
@@ -893,7 +920,7 @@ export const dotaCoachMessages = [
     messageTimes: [11 * 60 + 45, 19 * 60 + 45],
     textMessage:
       'Grab illusion runes and make use of illusions to push out lanes as Counter Helix works on them as well.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'axe_counter_helix' },
   },
   {
@@ -904,7 +931,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'When initiating, make sure you have allies that deal damage nearby.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -913,7 +940,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Axe_1_Battle hunger',
     messageTime: -60,
     textMessage: "Axe's Battle Hunger can be removed by getting a creep kill.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'axe_battle_hunger' },
   },
   {
@@ -923,7 +950,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Avoid being close to Axe if you have bunch of allied or neutral creeps next to you.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'axe_counter_helix' },
   },
   {
@@ -932,7 +959,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Axe_3_Creep skipping',
     messageTime: 5 * 60,
     textMessage: 'Bring an extra hero to gank Axe if he starts creep-skipping.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -941,7 +968,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Keep checking Axe's items. Be aware of his Blink Dagger and Blade Mail timing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
   {
@@ -950,7 +977,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Axe_5_Clump up',
     messageTimes: [12 * 60 + 10, 22 * 60 + 20, 32 * 60 + 20],
     textMessage: "Don't clump up in teamfights or Axe will kill you all!",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'axe_berserkers_call' },
   },
   {
@@ -960,7 +987,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Consider buying an Eul's Scepter to use it on Axe quickly after he jumps your allies.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'cyclone' },
   },
   {
@@ -970,7 +997,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       "On Cores, Lifesteal and status resistance items are good against Axe's Call and Blade Mail combo.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 7. Bane | 28.02.2021
@@ -980,7 +1007,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Bane_1_Night vision',
     messageTimes: [-30, 5 * 60],
     textMessage: 'Bane has improved night vision.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -989,7 +1016,7 @@ export const dotaCoachMessages = [
     messageTime: -15,
     textMessage:
       'Bane is great at trading due to great baseline stats and Brain Sap to regain some health.',
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'bane_brain_sap' },
   },
   {
@@ -999,7 +1026,7 @@ export const dotaCoachMessages = [
     messageTimes: [1 * 60, 4 * 60],
     textMessage:
       'If an opponent is below 50%, you can Nightmare him and allow your core to come forward and finish the hero along with you.',
-    audience: [IN_LANE, ROLE_SUPPORT],
+    audience: [Audience.IN_LANE, Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'bane_nightmare' },
   },
   {
@@ -1010,7 +1037,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'Nightmare provides 1 second of invulnerability and thus you can save an ally in trouble or dodge a spell.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bane_nightmare' },
   },
   {
@@ -1020,7 +1047,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 15, 18 * 60 + 15, 28 * 60 + 15],
     textMessage:
       'Enfeeble is improved version of Spirit Vessel as it reduces healing and regeneration significantly aside from damage reduction.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bane_enfeeble' },
   },
   {
@@ -1031,7 +1058,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       "Bane is great for setting up kills. Nightmare and Fiend's Grip combined provide up to 13 seconds of disable.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bane_fiends_grip' },
   },
   {
@@ -1041,7 +1068,7 @@ export const dotaCoachMessages = [
     messageTimes: [9 * 60 + 30, 18 * 60 + 30, 28 * 60 + 30],
     textMessage:
       "You can unsleep or cast Glimmer Cape during Fiend's Grip without canceling it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bane_fiends_grip' },
   },
   {
@@ -1052,7 +1079,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'Avoid showing yourself at the start of the teamfight. Let opponents focus your allies so you can get your spells off easier.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -1062,7 +1089,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Bane is a strong laner and good at trading hits and regaining health with Brain Sap. Bring extra consumables.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'flask' },
   },
   {
@@ -1072,7 +1099,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "You can unsleep an ally affected by Bane's Nightmare by attacking that ally.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bane_nightmare' },
   },
   {
@@ -1082,7 +1109,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Look to cancel Bane's Fiend's Grip in fights as it is a long lasting disable.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bane_fiends_grip' },
   },
   {
@@ -1092,7 +1119,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Lotus Orb, Linken's Sphere and status resistance items are good at countering Bane's spells.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1101,7 +1128,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Avoid overpurchasing healing and regenerating items as Bane's Enfeeble reduces their effect.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 8. Batrider | 28.02.2021
@@ -1112,7 +1139,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       "Apply Sticky Napalm on opponents but also on the creeps at the same time. Batrider's base damage is very low.",
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'batrider_sticky_napalm' },
   },
   {
@@ -1122,7 +1149,7 @@ export const dotaCoachMessages = [
     messageTime: 45,
     textMessage:
       'When you have 3 Sticky Napalms on an opponent, you can consider making a kill attempt.',
-    audience: [IN_LANE, ALL],
+    audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: 'ability', name: 'batrider_sticky_napalm' },
   },
   {
@@ -1132,7 +1159,7 @@ export const dotaCoachMessages = [
     messageTime: 2 * 60,
     textMessage:
       "Having Bottle charges, Faerie Fire or Healing Salve can allow you to dive under the tower.",
-    audience: [IN_LANE, ROLE_CORE],
+    audience: [Audience.IN_LANE, Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -1141,7 +1168,7 @@ export const dotaCoachMessages = [
     messageTimes: [3 * 60, 5 * 60],
     textMessage:
       "Batrider is good at clearing stacks early on. Encourage your teammates to make them for you.",
-    audience: [IN_LANE, ROLE_CORE],
+    audience: [Audience.IN_LANE, Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -1150,7 +1177,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       "Focus on acquiring Boots of Travel and then start playing more actively.",
-    audience: [IN_LANE, ROLE_CORE],
+    audience: [Audience.IN_LANE, Audience.ROLE_CORE],
     image: { type: 'item', name: 'travel_boots' },
   },
   {
@@ -1160,7 +1187,7 @@ export const dotaCoachMessages = [
     messageTimes: [6 * 60 + 30, 16 * 60 + 30, 26 * 60 + 30],
     textMessage:
       "Sticky Napalm and Firefly provide flying vision.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -1170,7 +1197,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Magic Stick and Wand are great items against Batrider's Sticky Napalm spam.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'magic_stick' },
   },
   {
@@ -1180,7 +1207,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'If you have 3 or more stacks of Sticky Napalm be careful or back away to allow them to expire.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'batrider_sticky_napalm' },
   },
   {
@@ -1190,7 +1217,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Lotus Orb and Linken's Sphere are good at countering Batrider's Flaming Lasso.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 9. Beastmaster | 28.02.2021
@@ -1201,7 +1228,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Beastmaster's boars give a lot of gold and experience. Look to kill them.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'beastmaster_call_of_the_wild_boar' },
   },
   {
@@ -1211,10 +1238,10 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Bring a sentry to the lane to spot and kill Beastmaster's hawks.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'ward_sentry' },
   },
-  // {category: "EnemyHero", hero: "Beastmaster", audioFile: "heroes/Beastmaster_3_Powerspike", messageTime: (8*60), textMessage: "Be aware of Beastmaster's level 6 and Necrobook level 1's deadly powerspike.", audience: [IN_LANE]}, |patch 7.29| MESSAGE CHANGED
+  // {category: "EnemyHero", hero: "Beastmaster", audioFile: "heroes/Beastmaster_3_Powerspike", messageTime: (8*60), textMessage: "Be aware of Beastmaster's level 6 and Necrobook level 1's deadly powerspike.", audience: [Audience.IN_LANE]}, |patch 7.29| MESSAGE CHANGED
   {
     category: 'EnemyHero',
     hero: 'Beastmaster',
@@ -1222,7 +1249,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Be aware of Beastmaster's level 6 and Helm of Dominator powerspike.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'helm_of_the_dominator' },
   },
   {
@@ -1232,7 +1259,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 10,
     textMessage:
       'Defend towers against Beastmaster. Otherwise he will invade your jungle after taking towers.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1241,7 +1268,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Gank Beastmaster with smoke as he might have hawks around. You get double bounty as you kill his summons too.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'smoke_of_deceit' },
   },
   {
@@ -1251,7 +1278,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Consider buying a Crimson Guard and armor items against Beastmaster.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'crimson_guard' },
   },
   {
@@ -1261,7 +1288,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Lotus Orb and Linken's Sphere are good at countering Beastmaster's Primal Roar.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1270,7 +1297,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
       'Beastmaster lineups are good at taking early Roshan. Ward around Roshpit and check.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 10. Bloodseeker | 28.02.2021
@@ -1281,7 +1308,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Thirst sustains Bloodseeker. Deal burst of damage to him so he can't lasthit creeps easily and regain HP.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'bloodseeker_thirst' },
   },
   {
@@ -1291,7 +1318,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Stay high on HP so that Bloodseeker doesn't become super fast.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'flask' },
   },
   {
@@ -1301,7 +1328,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "When Ruptured by Bloodseeker, don't move too far and consider teleporting to base if possible.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bloodseeker_rupture' },
   },
   {
@@ -1311,7 +1338,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Lotus Orb, Linken's Sphere and status resistance items are good at countering Rupture.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 11. Bounty Hunter | 28.02.2021
@@ -1322,7 +1349,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'To counter Bounty Hunter, bring a sentry to the lane and dust later on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'ward_sentry' },
   },
   {
@@ -1332,7 +1359,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Bounty Hunter tends to snipe couriers, so be mindful about that.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1341,7 +1368,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       "Don't make it easy for Bounty Hunter to steal your gold with Jinada hits. Step away or damage him heavily.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'ability', name: 'bounty_hunter_jinada' },
   },
   {
@@ -1351,7 +1378,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage:
       "Pair observer wards with sentries to spot Bounty Hunter's movements.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_dispenser' },
   },
   {
@@ -1360,7 +1387,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Bounty Hunter_5_Carry detection',
     messageTimes: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
     textMessage: 'Encourage your allies to carry detection on multiple heroes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'dust' },
   },
   {
@@ -1370,7 +1397,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Avoid buying items that grant you invisibility because of Bounty Hunter's Track.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bounty_hunter_track' },
   },
   {
@@ -1380,7 +1407,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Consider buying one of many items that allow you to dispel Track.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'bounty_hunter_track' },
   },
 
@@ -1392,7 +1419,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'Try to lock down or silence Brewmaster and kill him before he splits.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'brewmaster_primal_split' },
   },
   {
@@ -1402,7 +1429,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 10, 18 * 60 + 10, 28 * 60 + 20],
     textMessage:
       "Don't fight Brewmaster's Primal Split unless you have damage to kill all the Brewlings.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'brewmaster_primal_split' },
   },
   {
@@ -1412,7 +1439,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Storm Brewling's Dispel Magic is an AOE basic dispel. So, avoid purchasing dispellable items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1421,7 +1448,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Black King Bar is amazing against all of the crowd control Brewmaster has.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'black_king_bar' },
   },
 
@@ -1433,7 +1460,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Magic Stick and Wand are must items against Bristleback's Quill Spray spam.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'magic_stick' },
   },
   {
@@ -1443,7 +1470,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Someone should buy Spirit Vessel against Bristleback to counter his regeneration and healing.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'spirit_vessel' },
   },
   {
@@ -1453,7 +1480,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 15 * 60 + 10, 20 * 60 + 20],
     textMessage:
       "If you have no good way of dealing with Bristleback, leave and don't waste too many resources on him.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1461,7 +1488,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Bristleback_4_Silver edge',
     messageTime: 12 * 60,
     textMessage: "Silver Edge allows you to break Bristleeback's passives.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'silver_edge' },
   },
   {
@@ -1471,7 +1498,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Armor items are good to counter Bristleback's physical damage output.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'armor' },
   },
 
@@ -1483,10 +1510,10 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Consider putting a hero that can deal with Spiderlings against her on the lane.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'broodmother_spawn_spiderlings' },
   },
-  // {category: "EnemyHero", hero: "Broodmother", audioFile: "heroes/Broodmother_2_Block camps", messageTime: (-50), textMessage: "Block off her camps with sentries.", audience: [ALL]}, |patch 7.29| MESSAGE CHANGED
+  // {category: "EnemyHero", hero: "Broodmother", audioFile: "heroes/Broodmother_2_Block camps", messageTime: (-50), textMessage: "Block off her camps with sentries.", audience: [Audience.ALL]}, |patch 7.29| MESSAGE CHANGED
   {
     category: 'EnemyHero',
     hero: 'Broodmother',
@@ -1494,7 +1521,7 @@ export const dotaCoachMessages = [
     messageTime: 4 * 60 + 15,
     textMessage:
       'Block off her camps with sentries as she gets closer to level 6.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_sentry' },
   },
   {
@@ -1504,7 +1531,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'If you are looking to gank Broodmother you need at least 3 heroes otherwise pressure other two lanes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1512,7 +1539,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Broodmother_4_Antisummons items',
     messageTime: 12 * 60,
     textMessage: 'Crimson Guard and armor items are good against Broodmother.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'crimson_guard' },
   },
   {
@@ -1522,16 +1549,16 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Healing and regeneration reducing items are good against Insatiable Hunger.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  // {category: "EnemyHero", hero: "Broodmother", audioFile: "heroes/Broodmother_6_Antievasion items", messageTime: (12*60+20), textMessage: "Evasion piercing items are good against Incapacitating Bite.", audience: [ALL]}, |patch 7.29|  MESSAGE CHANGED
+  // {category: "EnemyHero", hero: "Broodmother", audioFile: "heroes/Broodmother_6_Antievasion items", messageTime: (12*60+20), textMessage: "Evasion piercing items are good against Incapacitating Bite.", audience: [Audience.ALL]}, |patch 7.29|  MESSAGE CHANGED
   {
     category: 'EnemyHero',
     hero: 'Broodmother',
     audioFile: 'heroes/Broodmother_6_Antievasion items',
     messageTime: 12 * 60 + 20,
     textMessage: "Evasion piercing items are good against Brood's Silken Bola.",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'monkey_king_bar' },
   },
   {
@@ -1541,7 +1568,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
       'Broodmother is good at taking an early Roshan. Ward around Roshpit and check.',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_dispenser' },
   },
 
@@ -1553,7 +1580,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Someone should buy Spirit Vessel against Centaur to deal damage, offset his regeneration and cancel Blink.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1561,7 +1588,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Centaur Warrunner_2_Armor reducing items',
     messageTime: -50,
     textMessage: 'Armor reducing items are great against Centaur.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1570,7 +1597,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Items that offset magical damage output from Centaur are good against him.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1579,7 +1606,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Keep checking Centaur's items. Be aware of his Blink Dagger timing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1588,7 +1615,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
       "Don't clump up in teamfights for Centaur's Blink into Hoof Stomp initiation.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 16. Chaos Knight | 01.03.2021
@@ -1599,7 +1626,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Chaos Strike sustains Chaos Knight. Deal bursts of damage to him so he can't hit creeps easily and regain HP.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1607,7 +1634,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Chaos Knight_2_Basic dispel',
     messageTime: 8 * 60,
     textMessage: "Chaos Knight's Phantasm applies a basic dispel on cast.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1615,7 +1642,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Chaos Knight_3_Illusions',
     messageTimes: [8 * 60 + 10, 18 * 60 + 10, 28 * 60 + 10],
     textMessage: 'Either kills his illusions in the fights or disengage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1624,7 +1651,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Items that deal AoE damage are good against Chaos Knight's illusions.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1633,7 +1660,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard and armor items are good at offsetting Chaos Knight's physical damage output.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 17. Chen | 01.03.2021    ***CHANGED 7.30***
@@ -1644,7 +1671,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Against Chen, block off small and big pull camps either with a sentry or with your hero's body.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1653,7 +1680,7 @@ export const dotaCoachMessages = [
     messageTimes: [-50, 5 * 60 + 10, 10 * 60 + 30],
     textMessage:
       "Chen lineups tend to powerspike in early to midgame. Don't buy greedy items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1661,7 +1688,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Chen_3_Gank',
     messageTime: 10 * 60 + 10,
     textMessage: 'Look to gank Chen as you will kill his army as well.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1669,7 +1696,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Chen_4_Antihealing items',
     messageTime: 10 * 60 + 20,
     textMessage: 'Items that reduce healing are good against Chen.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1678,7 +1705,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
       'Chen lineups are good at taking early Roshan. Ward around Roshpit and check.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -1688,7 +1715,7 @@ export const dotaCoachMessages = [
     messageTimes: [25 * 60 + 20, 35 * 60 + 20, 45 * 60 + 20],
     textMessage:
       "Be aware of Chen applying strong dispel with Hand of God once he has Aghanim's Scepter.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 18. Clinkz | 01.03.2021  ***CHANGED 7.30***
@@ -1698,7 +1725,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Clinkz_1_Detection',
     messageTime: -60,
     textMessage: 'Bring a sentry to the lane and dust later on for Clinkz.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1707,7 +1734,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Clinkz is very squishy until he has Dark Pact buff active. Pressure him early on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
 
   {
@@ -1717,7 +1744,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Clinkz farms fast with Burning Barrage. Smoke on him, place deep wards and block off camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -1727,7 +1754,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage:
       "Pair observer wards with sentries to spot Clinkz's movements.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1735,7 +1762,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Clinkz_4_Carry detection',
     messageTimes: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
     textMessage: 'Carry detection on multiple heroes against Clinkz.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1743,9 +1770,9 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Clinkz_5_Armor',
     messageTime: 12 * 60,
     textMessage: 'Armor items are good against Clinkz.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  // {category: "EnemyHero", hero: "Clinkz", audioFile: "heroes/Clinkz_6_Antievasion", messageTime: (12*60+10), textMessage: "Evasion piercing items are good against Clinkz's Strafe.", audience: [ALL]},
+  // {category: "EnemyHero", hero: "Clinkz", audioFile: "heroes/Clinkz_6_Antievasion", messageTime: (12*60+10), textMessage: "Evasion piercing items are good against Clinkz's Strafe.", audience: [Audience.ALL]},
 
   // 19. Clockwerk | 01.03.2021
   {
@@ -1755,7 +1782,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Bring an Observer Ward to the lane to keep an eye on Clockwerk's aggressive movements.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1764,7 +1791,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Battery assault does a lot of damage. Keep distance from Clockwerk or share damage with allied units.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1773,7 +1800,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "If you get trapped in Power Cogs don't panic. It takes two hits to destroy a cog.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1782,7 +1809,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Clockwerk has a great solo kill potential in early to midgame. Keep track of his movements.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1791,7 +1818,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Force Staff is great at moving you or an ally out of Power Cogs and out of Battery Assault range.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1800,7 +1827,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60, 25 * 60, 35 * 60],
     textMessage:
       'Clockwerk is great at contesting you at Roshan. Block his Hookshot path when you are about to finish Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 20. Crystal Maiden | Earlier work
@@ -1813,7 +1840,7 @@ export const dotaCoachMessages = [
       "Crystal Maiden counters heroes that don't like to be rooted such as Ember Spirit, Void Spirit and Storm Spirit. Note that Frostbite is long-lasting and has a short cooldown.",
     chatMessage:
       "Crystal Maiden counters heroes that don't like to be rooted, e.g. Ember Spirit, Void Spirit and Storm Spirit",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1822,7 +1849,7 @@ export const dotaCoachMessages = [
     messageTime: -15,
     textMessage:
       'Crystal Maiden is a vulnerable hero and one of the easiest to kill during the laning phase',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1833,7 +1860,7 @@ export const dotaCoachMessages = [
       "Play on different sides of the lane with your coleague against Crystal Maiden such that you don't get hit both by Crystal Nova",
     chatMessage:
       "Play on different sides of the lane against Crystal Maiden such that you don't get hit both by Crystal Nova",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1844,7 +1871,7 @@ export const dotaCoachMessages = [
       "Use moments when Crystal Maiden is away from her laning partner to land a kill on her, for example when she's pulling. Keeping her on low levels means that her team won't have high levels of Arcane Aura",
     chatMessage:
       "Try to land a kill on Crystal Maiden when she is away from her laning partner, e.g. when she's pulling",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1855,7 +1882,7 @@ export const dotaCoachMessages = [
       "Look to disrupt Chrystal Maiden's Freezing Field channeling in fights. She will try to protect herself with Glimmer Cape or BKB",
     chatMessage:
       "Disrupt Chrystal Maiden's Freezing Field channeling in fights. She might use with Glimmer Cape or BKB",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1866,7 +1893,7 @@ export const dotaCoachMessages = [
       "Crystal Maiden's level 20 attack speed talent is good against specific heroes or abilities such as Supernova, Tombstone and Will-o-Wisp",
     chatMessage:
       "Crystal Maiden's level 20 attack speed talent is good against heroes or abilities such as Supernova",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 21. Dark Seer | 01.03.2021
@@ -1877,7 +1904,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Against Dark Seer, focus on denying creeps as Ion Shells are making them drop low.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1886,7 +1913,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Dark Seer will push the lane in with Ion Shell and pull the big neutral camp. Block it or prevent it.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1895,7 +1922,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Dark Seer relies on clarities to maintain Ion Shell spam. Look to cancel them.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1903,7 +1930,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Dark Seer_4_Surge cd',
     messageTime: 50,
     textMessage: "When Dark Seer's Surge is on cooldown he is vulnerable.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1912,7 +1939,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Avoid buying Radiance and Assault Cuirass against Dark Seer as he can replicate these items with his ulti.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1921,7 +1948,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 25 * 60 + 10, 35 * 60 + 10],
     textMessage:
       "Don't clump up in teamfights for Vacuum into Wall of Replica combination of Dark Seer.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 22. Dark Willow | 01.03.2021
@@ -1931,7 +1958,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Dark Willow_1_Squishy',
     messageTime: -60,
     textMessage: "Dark Willow is squishy at the start and doesn't trade well.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -1940,7 +1967,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Under effect of Cursed Crown make sure not to get too close to your allies or they will be stunned too.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1949,7 +1976,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Bedlam does a lot of damage to a single target. Share the damage with allied units.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1958,7 +1985,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Items that provide dispels are generally good against Cursed Crown, Bramble Maze and Terrorize.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1967,7 +1994,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Black King Bar is great against Dark Willow's disables and magical damage output.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1975,7 +2002,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Dark Willow_6_Clump up',
     messageTimes: [12 * 60 + 20, 22 * 60 + 10, 32 * 60 + 10],
     textMessage: "Don't clump up in teamfights for Terrorize and Cursed Crown.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 22.5. Dawnbreaker | 11.04.2021  |patch 7.29| ALL MESSAGES ARE NEW
@@ -1985,7 +2012,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Dawnbreaker_1_Spirit vessel',
     messageTime: -60,
     textMessage: "Someone buy a Spirit Vessel to counter Dawnbreaker's healing",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -1994,7 +2021,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Keep distance from Dawnbreaker so she can't use Starbreaker too often.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2003,7 +2030,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Avoid diving enemy heroes as Dawnbreaker can assist them from anywhere on the map with Solar Guardian.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2018,7 +2045,7 @@ export const dotaCoachMessages = [
     ],
     textMessage:
       "Avoid clumping up against Dawnbreaker's AoE damage and disabling spells.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2027,7 +2054,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Items that reduce healing are great against Dawnbreaker's Luminosity and Solar Guardian.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2035,7 +2062,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Dawnbreaker_6_Break',
     messageTime: 12 * 60 + 10,
     textMessage: "Break effects remove Dawnbreaker's Luminosity.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 23. Dazzle | 01.03.2021
@@ -2046,7 +2073,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Avoid being hit by enemy heroes while under effect of Dazzle's Poison Touch.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2055,7 +2082,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Shadow Wave does a lot of damage if you are surrounded by enemy units.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2064,7 +2091,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Someone buy a Spirit Vessel to offset healing from Dazzle and to finish off the Shallow Graved hero.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2073,7 +2100,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Look to focus Dazzle in teamfights as he is squishy but provides a lot of sustain if left unchecked.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2081,7 +2108,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Dazzle_5_Gap closing items',
     messageTime: 12 * 60,
     textMessage: 'Buy gap closing items to get on top of Dazzle.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 24. Death Prophet | 01.03.2021
@@ -2092,7 +2119,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'When Death Prophet has Exorcism on, either burst her down or run away.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2101,7 +2128,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 10, 18 * 60 + 10, 28 * 60 + 10],
     textMessage:
       'Look to defend towers against Death Prophet and fight her when Exorcism ends.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2110,7 +2137,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Items that reduce healing are good against Death Prophet's Spirit Siphons and Exorcism.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2118,7 +2145,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Death Prophet_4_Armor items',
     messageTime: 12 * 60 + 10,
     textMessage: 'Armor items are good against physical damage of Exorcism.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2127,7 +2154,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Items that provide dispels are good against Death Prophet's Silence.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 25. Disruptor | Earlier work
@@ -2138,7 +2165,7 @@ export const dotaCoachMessages = [
     messageTime: -10,
     textMessage:
       "Disruptor's main harassing tools is Thunder Strike. Heroes with dispel abilities are strong against him",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2147,7 +2174,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "You can use Disruptor's Thunder Strike AOE damage by walking into your creep wave and damaging it",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2156,7 +2183,7 @@ export const dotaCoachMessages = [
     messageTimes: [1 * 60, 8 * 60 + 45],
     textMessage:
       "Don't teleport in plain sight around Disruptor as you might get Glimpsed back to where you came from",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2165,7 +2192,7 @@ export const dotaCoachMessages = [
     messageTimes: [11 * 60, 21 * 60],
     textMessage:
       "Hide behind trees or run to highground before teleporting or escaping, so you don't get caught by Glimpse.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2174,7 +2201,7 @@ export const dotaCoachMessages = [
     messageTime: 16 * 60,
     textMessage:
       "Disruptor's Glimpse can be dodged by certain spells and items such as BKB or Manta Style",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2185,7 +2212,7 @@ export const dotaCoachMessages = [
       "All of Disruptor's spells are countered by Black King Bar until he has Aghanim's Scepter. Once he has it, you won't be able to activate Black King Bar under Static Storm as all items are muted",
     chatMessage:
       "Disruptor's spells are countered by BKB until he has Aghs, as all items are muted under Static Storm",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2196,20 +2223,20 @@ export const dotaCoachMessages = [
       "Don't clump up because of Disruptor's Kinetic Field and Static Storm combination. It takes 1.2 seconds for Kinetic Field to form so you have a small window to get out. You can't Force Staff out of it and many other mobility spells are not working",
     chatMessage:
       "Don't clump up because of Disruptor's Kinetic Field and Static Storm combination",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 26. Doom | 01.03.2021
-  // {category: "EnemyHero", hero: "Doom", audioFile: "heroes/Doom_1_Early pressure", messageTime: (-60), textMessage: "Doom is very slow and low armor hero. Pressure him early on.", audience: [IN_LANE]}, |patch 7.29| MESSAGE CHANGED
+  // {category: "EnemyHero", hero: "Doom", audioFile: "heroes/Doom_1_Early pressure", messageTime: (-60), textMessage: "Doom is very slow and low armor hero. Pressure him early on.", audience: [Audience.IN_LANE]}, |patch 7.29| MESSAGE CHANGED
   {
     category: 'EnemyHero',
     hero: 'Doom',
     audioFile: 'heroes/Doom_1_Early pressure',
     messageTime: -60,
     textMessage: 'Doom is a weak laner at lower levels. Pressure him early on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
-  // {category: "EnemyHero", hero: "Doom", audioFile: "heroes/Doom_2_Armor reducing items", messageTime: (-50), textMessage: "Armor reducing items are great against Doom.", audience: [ALL]}, |patch 7.29| MESSAGE REMOVED
+  // {category: "EnemyHero", hero: "Doom", audioFile: "heroes/Doom_2_Armor reducing items", messageTime: (-50), textMessage: "Armor reducing items are great against Doom.", audience: [Audience.ALL]}, |patch 7.29| MESSAGE REMOVED
   {
     category: 'EnemyHero',
     hero: 'Doom',
@@ -2217,7 +2244,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'The Doom spell has long cooldown. Look to play aggressively when it is down.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2226,7 +2253,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Linken's Sphere, status resistance items and Lotus Orb are good at dealing with The Doom spell.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2235,7 +2262,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 25 * 60 + 10, 35 * 60 + 10],
     textMessage:
       'Acquiring Aegis for your core is a good way of dealing with The Doom spell. Look to kill Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 27. Dragon Knight | 01.03.2021
@@ -2246,7 +2273,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Someone should buy Spirit Vessel against Dragon Knight to deal high damage and offset his regeneration.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2255,7 +2282,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Pressure Dragon Knight early on before he gets 2 or more points in Dragon Blood.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2264,7 +2291,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 13 * 60, 18 * 60],
     textMessage:
       'Elder Dragon Form is really good at destroying towers. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2273,7 +2300,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Be aware of Dragon Knight's Blink Dagger or Shadow Blade timing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2282,7 +2309,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Linken's Sphere, status resistance and Lotus Orb are good against Dragon Tail.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2291,7 +2318,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Break effects remove Dragon Blood - a spell that makes Dragon Knight tanky.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 28. Drow Ranger | Earlier work
@@ -2302,7 +2329,7 @@ export const dotaCoachMessages = [
     messageTime: 20,
     textMessage:
       'Drow Ranger is slow and has low armor. Look to harass her as much as you can on early levels',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2311,7 +2338,7 @@ export const dotaCoachMessages = [
     messageTimes: [1 * 60 + 20, 4 * 60 + 20],
     textMessage:
       'Avoid being in point target range of Drow Ranger when she starts channeling Multishot',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2322,7 +2349,7 @@ export const dotaCoachMessages = [
       "Drow Ranger's Gust and Multishot have cone shaped area of effect. If you are on top of her look to side step or run past or through her when she uses those spells",
     chatMessage:
       'When Drow Ranger uses Gust & Multishot and you are on top of her, try to step aside, run past or through her',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2333,7 +2360,7 @@ export const dotaCoachMessages = [
       'Gap closing items are good against Drow Ranger as she is a glass canon hero. Note that her Marksmanship is disabled when you are within 400 range of her',
     chatMessage:
       'Gap closing items are good against Drow Ranger as she is a glass canon hero',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2344,7 +2371,7 @@ export const dotaCoachMessages = [
       "Halberd's ability is amazing against Drow Ranger as it disarms her for 5 seconds. Keep in mind that Marksmanship procs pierce through evasion (true strike)",
     chatMessage:
       "Halberd's ability is amazing against Drow Ranger as it disarms her for 5 seconds",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2353,7 +2380,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 30, 22 * 60 + 30, 32 * 60 + 30, 42 * 60 + 30],
     textMessage:
       'Drow Ranger should be a priority target in team fights as her team loses Marksmanship aura when she dies',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2361,7 +2388,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Drow Ranger_7_Smoke',
     messageTimes: [18 * 60 + 15, 38 * 60 + 15, 58 * 60 + 15],
     textMessage: 'Use Smoke, to wrap around Drow Ranger and kill her',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 29. Earth Spirit | 01.03.2021
@@ -2372,7 +2399,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Bring an Observer Ward to keep an eye on Earth Spirit's aggressive movements and dodge Rolling Boulders.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2381,7 +2408,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Be careful when playing at opponent's tower as Earth Spirit can roll and kick you under the tower.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2390,7 +2417,7 @@ export const dotaCoachMessages = [
     messageTimes: [40, 3 * 60 + 30, 5 * 60 + 30],
     textMessage:
       'Earth Spirit tends to roam a lot. Keep track of his movements and have teleport ready.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2399,7 +2426,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Magic resistance and spell imunity items are great against Earth Spirit's magical damage and disables.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2408,7 +2435,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Items that provide dispels are great at removing Geomagnetic Grip silence and Magnetize.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 30. Earthshaker | Earlier work
@@ -2419,7 +2446,7 @@ export const dotaCoachMessages = [
     messageTime: 20,
     textMessage:
       'If Earthsaker is blocking the first wave with fissure, look to pull back the lane as soon as possible',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2428,7 +2455,7 @@ export const dotaCoachMessages = [
     messageTimes: [45, 3 * 60 + 15],
     textMessage:
       'Earthshaker uses fissure to block off heroes and land kills. Be mindful about your positioning',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2437,7 +2464,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 15,
     textMessage:
       "Keep checking Earthshaker to see if he has Dagger yet. Don't let him surprise you with multi-hero Echo Slam",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2446,7 +2473,7 @@ export const dotaCoachMessages = [
     messageTime: 13 * 60 + 30,
     textMessage:
       "Once Earthshaker has Dagger or Aghanim's Scepter control him in team fights",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2454,7 +2481,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Earthshaker_5_Dagger 3',
     messageTime: 15 * 60 + 15,
     textMessage: 'Earthshaker is like to have Dagger by now',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2468,7 +2495,7 @@ export const dotaCoachMessages = [
       60 * 60 + 15,
     ],
     textMessage: 'Don`t clump up or Earthshaker might kill you all',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2477,7 +2504,7 @@ export const dotaCoachMessages = [
     messageTimes: [22 * 60 + 45, 42 * 60 + 45],
     textMessage:
       'Earthshaker might also buy Shadow Blade. If he does, purchase detection',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 31. Elder Titan | 02.03.2021
@@ -2488,7 +2515,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Avoid being hit by Elder Titan's Astral Spirit and consider blocking a pull camp.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2497,7 +2524,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Avoid trading with Elder Titan when the Astral Spirit returns to him.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2506,7 +2533,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Echo Stomp into Earth Splitter combo.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2515,7 +2542,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Buy armor items, magic barrier giving items and Black King Bar against Elder Titan's Natural Order.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2524,7 +2551,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Astral Spirit buff on Elder Titan can be dispelled so items and spells that dispel Elder Titan are good.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 32. Ember Spirit | 02.03.2021
@@ -2535,7 +2562,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Flame Guard is most of Ember Spirit's damage early. Pop it with magical damage or dispel it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2544,7 +2571,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Make sure you are controlling power runes against Ember Spirit. He likes to bottle and gank with those.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2553,7 +2580,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       'Avoid clumping up against Sleight of Fist spam and triple Fire Remnant threat.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2561,7 +2588,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Ember Spirit_4_Disable items',
     messageTime: 12 * 60 + 10,
     textMessage: 'Items that can root or stun elusive Ember Spirit are great.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2570,7 +2597,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Ember Spirit is really good at split-pushing. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 33. Enchantress | 02.03.2021
@@ -2581,7 +2608,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Avoid laning with summon based heroes against Enchantress or use summons carefully on the lane.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2590,7 +2617,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Block off pull camps against Enchantress as she will control a neutral creep.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2599,7 +2626,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Enchant applies a basic dispel, so be careful with using buffing spells, items or runes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2608,7 +2635,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'If Impetus is flying your way, run towards Enchantress or stop moving to take less damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2617,7 +2644,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'It is hard to kill Enchantress with right-clicks against Untouchable. Spells are better.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 34. Enigma | 02.03.2021
@@ -2628,7 +2655,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage: 'Try to kill Eydolauns before they multiply.',
     chatMessage: 'Try to kill Eidolons before they multiply.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2636,7 +2663,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Enigma_2_Blink dagger',
     messageTime: 12 * 60,
     textMessage: "Be aware of Enigma's Blink Dagger timing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2645,7 +2672,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Blink Dagger into Black Hole combo.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2654,7 +2681,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
       'Black Hole has a long cooldown. Look for a fight when it is on cooldown.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2663,7 +2690,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 30, 22 * 60 + 30, 32 * 60 + 30],
     textMessage:
       'Stay back with one hero that can cancel Black Hole or save a core that is being Black Holed.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2672,7 +2699,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60, 25 * 60, 35 * 60],
     textMessage:
       'Having Aegis on a core hero is a protection against Black Hole. Kill Roshan on the first chance.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 35. Faceless Void | Earlier work
@@ -2683,7 +2710,7 @@ export const dotaCoachMessages = [
     messageTime: 20,
     textMessage:
       "Cause damage to Faceless Void over time, as he can't heal using Time Walk",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2691,7 +2718,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Faceless_2_Time walk 2',
     messageTimes: [45, 3 * 60 + 30],
     textMessage: 'Attack Faceless Void after he used Time Walk',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2708,7 +2735,7 @@ export const dotaCoachMessages = [
       'Faceless Void relies on Chronosphere to be effective and he will feel underwhelming if it is down. Make use of the long cooldown of his ultimate to force a fight or take an objective',
     chatMessage:
       'Faceless Void relies on Chronosphere. Make use of the long cooldown to force a fight or take an objective',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2719,7 +2746,7 @@ export const dotaCoachMessages = [
       "Don't clump up when Chronosphere is up. Save the hero that has been caught or look to interrupt the follow-up damage from Void's teammates",
     chatMessage:
       "Don't clump up when Chronosphere is up. Save the hero that has been caught",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2728,7 +2755,7 @@ export const dotaCoachMessages = [
     messageTimes: [16 * 60 + 15, 36 * 60 + 15, 56 * 60 + 15],
     textMessage:
       'It is recommended to have basic dispels available against Time Dilation',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2739,7 +2766,7 @@ export const dotaCoachMessages = [
       "Items like Aeon Disk and Aegis are good counters against Chronosphere in mid to late game. It is advised to keep buyback ready as you might want to use your first life to burn through Void's ultimate",
     chatMessage:
       "Aeon Disk and Aegis are good against Chronosphere. Also keep buyback ready and use it after Void's ultimate",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2748,7 +2775,7 @@ export const dotaCoachMessages = [
     messageTimes: [21 * 60 + 15, 41 * 60 + 15, 61 * 60 + 15],
     textMessage:
       "You can try to bait out Chronosphere with smart illusion rune usage or Illusionist's Cape",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 36. Grimstroke | 02.03.2021
@@ -2759,7 +2786,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Stroke of Fate does more damage the more units it hits. Play on the side of the creep wave.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2768,7 +2795,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Help removing Grimstroke's Phantom's Embrace from your team mates.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2777,7 +2804,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'The longer you were next to Ink Swelled unit the longer you will be stunned.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2786,7 +2813,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Against Grimstroke's Soulbind, avoid staying close to your cores, especially the mobile ones.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2795,7 +2822,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Magic resistance and spell immunity items are great against Grimstroke.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 37. Gyrocopter | 02.03.2021  ***CHANGED 7.30***
@@ -2806,7 +2833,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Rocket Barrage does a lot of damage. Keep distance from Gyrocopter or share damage with allied units.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -2815,7 +2842,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Help destroying Homing Missile that is aimed at your team mate.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -2825,7 +2852,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Gyrocopter farms quickly with Flak Cannon. Smoke on him, place deep wards and block off camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -2835,7 +2862,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Gyrocopter does a lot of magical damage and joins fights early. Magic resistance items are great.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2844,7 +2871,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard, Heaven's Halberd and armor items are great against Gyrocopter's Flak Cannon.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2853,7 +2880,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'It is easy to reflect Homing Missile back to Gyrocopter with Lotus Orb.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 38. Hoodwink | 02.03.2021 - DONE
@@ -2863,7 +2890,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Hoodwink_1_Bushwhack',
     messageTime: -60,
     textMessage: "Avoid playing around trees against Hoodwink's Bushwack.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2872,9 +2899,9 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "You can break Acorn Shot into Bushwhack combo by cutting Acorn Shot's tree quickly.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  // {category: "EnemyHero", hero: "Hoodwink", audioFile: "heroes/Hoodwink_3_Sharpshooter", messageTime: (8*60), textMessage: "Hoodwink's Sharpshooter can't be cancelled and applies break effect for up to 6 seconds.", audience: [ALL]}, |patch 7.29| MESSAGE UPDATED
+  // {category: "EnemyHero", hero: "Hoodwink", audioFile: "heroes/Hoodwink_3_Sharpshooter", messageTime: (8*60), textMessage: "Hoodwink's Sharpshooter can't be cancelled and applies break effect for up to 6 seconds.", audience: [Audience.ALL]}, |patch 7.29| MESSAGE UPDATED
   {
     category: 'EnemyHero',
     hero: 'Hoodwink',
@@ -2882,7 +2909,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Hoodwink's Sharpshooter can't be cancelled and applies break effect for up to 5 seconds.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2890,7 +2917,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Hoodwink_4_Antievasion items',
     messageTime: 12 * 60,
     textMessage: "Evasion piercing items are great against Hoodwink's Scurry.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 39. Huskar | 02.03.2021
@@ -2901,7 +2928,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Someone should buy Spirit Vessel against Huskar to offset his regeneration and deal high damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2909,7 +2936,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Huskar_2_Low hp',
     messageTime: 5 * 60,
     textMessage: 'Huskar likes to play on low HP. Look to gank him early on.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2918,7 +2945,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'Life Break applies basic dispel. Avoid casting dispellable spells and items before Huskar jumps.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2927,7 +2954,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Huskar is snowbally hero that relies on killing Roshan early on. Ward and check Roshpit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2936,7 +2963,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Heaven's Halberd disarms Huskar for 5 seconds and shortens Inner Fire debuff duration.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2944,7 +2971,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Huskar_6_Silver edge',
     messageTime: 12 * 60 + 10,
     textMessage: "Silver Edge breaks Huskar's passive - Berserker's Blood.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 40. Invoker | Earlier work
@@ -2957,7 +2984,7 @@ export const dotaCoachMessages = [
       'Identify which Invoker type you are playing against, by looking at invoked spells and orbs above Invoker. Quas Exort Invoker is farm and burst oriented and uses the Sunstrike ability early on. While Quas Wex is ganking and control oriented and uses Tornado + EMP and Cold Snap + Urn of Shadows combinations.',
     chatMessage:
       'Quas Exort Invoker is farm and burst oriented while Quas Wex is ganking and control oriented.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2968,7 +2995,7 @@ export const dotaCoachMessages = [
       'Invoker is squishy and the only real defense he has are his spells. Try to gank him early in the game with Smoke of Deceit and Dust of Appearance.',
     chatMessage:
       'Invoker is squishy. Try to gank him early in the game with Smoke of Deceit and Dust of Appearance.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2976,7 +3003,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Invoker_3_Anti-damage',
     messageTimes: [8 * 60 + 15, 15 * 60 + 15],
     textMessage: 'Opt for anti-magic damage items against Invoker',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2987,7 +3014,7 @@ export const dotaCoachMessages = [
       "Dodging or surviving Invoker's opening combination of spells, makes him weak for 5 to 10 seconds depending on the cooldown of his Invoke ability.",
     chatMessage:
       "Dodging or surviving Invoker's opening combination of spells makes him weak for 5 to 10s.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -2996,7 +3023,7 @@ export const dotaCoachMessages = [
     messageTimes: [17 * 60 + 15, 27 * 60 + 15],
     textMessage:
       "Keep in mind that Invoker's Tornado dispells. Active rune buffs and many spells are countered by it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3007,7 +3034,7 @@ export const dotaCoachMessages = [
       "Aghanim's Scepter grants Invoker Cataclysm spell. Be aware of it and be mindful about your hero's position during it.",
     chatMessage:
       "Aghs grants Invoker Cataclysm spell. Be aware of it and be mindful about your hero's position.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 41. Io | 03.03.2021
@@ -3018,7 +3045,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Someone should buy Spirit Vessel against Io to offset healing and regeneration.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3026,7 +3053,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Io_2_Harass',
     messageTime: -50,
     textMessage: 'Harass either Io or his laning partner, not both equally.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3035,7 +3062,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Relocate can be cancelled by disabling or silencing Io during channel time.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3044,7 +3071,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Focus Io in the fights as he's good at sustaining and saving his cores.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3052,7 +3079,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Io_5_Gap closing',
     messageTime: 12 * 60,
     textMessage: 'Gap closing items will help you get on top of Io.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3061,7 +3088,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Items that reduce healing and regeneration are great against Io.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3069,7 +3096,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Io_7_Ratting',
     messageTimes: [15 * 60 + 10, 25 * 60 + 10, 35 * 60 + 10],
     textMessage: "Be careful about Io's ratting potential with Relocate.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 42. Jakiro | 03.03.2021
@@ -3080,7 +3107,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Cast point on Jakiro's spells are long, so you can possibly dodge them.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3089,7 +3116,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Avoid standing beside your laning partner against Dual Breath and Liquid Fire.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3098,7 +3125,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Jakiro is great at destroying towers with Liquid Fire. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3107,7 +3134,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 20,
     textMessage:
       'Jakiro is great at defending towers alone. Jump him or consider glyphing the wave.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3116,7 +3143,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Ice Path and Macropyre combo.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3124,7 +3151,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Jakiro_6_Antimagic items',
     messageTime: 12 * 60 + 10,
     textMessage: 'Magic resistance items are great against Jakiro.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 43. Juggernaut | Earlier work
@@ -3137,7 +3164,7 @@ export const dotaCoachMessages = [
       'Juggernaut is one of the strongest laning carries as Blade Fury does more than 400 AOE damage already on level 1. Consider buying items to increase your movement speed',
     chatMessage:
       "Juggernaut's Blade Fury does more than 400 AOE damage. Consider buying items to increase your movement speed",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3148,7 +3175,7 @@ export const dotaCoachMessages = [
       "Try to keep distance from Juggernaut and try to force a defensive Blade Fury. Juggernaut's mana pool is not great and Blade Fury has high cooldown on lower levels. Pressure him after he used Blade Fury",
     chatMessage:
       'Try to keep distance from Juggernaut and try to force a defensive Blade Fury Pressure him after he used it',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3157,7 +3184,7 @@ export const dotaCoachMessages = [
     messageTime: 4 * 60 + 5,
     textMessage:
       "Look to hit Juggernaut's Healing Ward as one hit is sufficient and it gives you 75 gold",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3168,7 +3195,7 @@ export const dotaCoachMessages = [
       'When you are ganking Juggernaut, he will look to Blade Fury and teleport out on first sign of trouble. Make sure you surprise disable him before he spins if you do not yet have a spell immunity piercing disable',
     chatMessage:
       'Juggernaut can use Blade Fury and teleport to escape. Surprise disable him before he spins, if you can',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3177,7 +3204,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 15,
     textMessage:
       "Juggernaut's Omnislash jumps are random. Use surrounding creeps, illusions or heroes to split the damage",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3188,7 +3215,7 @@ export const dotaCoachMessages = [
       'Items and spells that disable through spell immunity are good against Juggernaut as Blade Fury grants him spell immunity',
     chatMessage:
       'Items and spells that disable through spell immunity are good against Juggernaut and his Blade Fury',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3199,7 +3226,7 @@ export const dotaCoachMessages = [
       'Main damaging ability of Juggernaut is Omnislash and this spell is counterable by many items. Make sure to have at least one such item for each hero',
     chatMessage:
       "Juggernaut's Omnislash is counterable by many items. Make sure to have at least one for each hero",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3208,7 +3235,7 @@ export const dotaCoachMessages = [
     messageTimes: [21 * 60 + 30, 31 * 60 + 30],
     textMessage:
       "Juggernaut's Omnislash cooldown is long with 140 seconds, which allows you to pressure him while it's down",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 44. Keeper of the Light | 03.03.2021   ***CHANGED 7.30***
@@ -3219,7 +3246,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Bring an Observer ward to your lane to see Keeper of the Light charging Illuminate.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3228,7 +3255,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Prevent Keeper of the Light from pulling as he will push with Illuminate and then look to pull.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3237,7 +3264,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Keeper of the Light is very squishy but really fast. One disable and he will drop low on HP.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3246,7 +3273,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Keeper of the Light is great at defending towers alone. Jump him or consider glyphing the wave.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   // |patch 7.29|
   {
@@ -3256,9 +3283,9 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Look to fight during night-time so Keeper of the Light can't heal his allies with Illuminate.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  // {category: "EnemyHero", hero: "Keeper of the Light", audioFile: "heroes/Keeper of the Light_5_Recall", messageTimes: [(10*60+20), (20*60+20), (30*60+20)], textMessage: "Keeper of the Light can Recall additional hero to the fight. Count on them having an extra hero.", audience: [ALL]}, |patch 7.29| NEW MESSAGE
+  // {category: "EnemyHero", hero: "Keeper of the Light", audioFile: "heroes/Keeper of the Light_5_Recall", messageTimes: [(10*60+20), (20*60+20), (30*60+20)], textMessage: "Keeper of the Light can Recall additional hero to the fight. Count on them having an extra hero.", audience: [Audience.ALL]}, |patch 7.29| NEW MESSAGE
 
   {
     category: 'EnemyHero',
@@ -3267,7 +3294,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Magic resistance and spell immunity items are great against Keeper of the Light.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -3277,7 +3304,7 @@ export const dotaCoachMessages = [
     messageTimes: [20 * 60 + 20, 30 * 60 + 20, 40 * 60 + 20],
     textMessage:
       "Aghanim's Shard on Keeper of the Light grants Recall. He can teleport allied heroes to himself.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 45. Kunkka | 03.03.2021
@@ -3288,7 +3315,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Kunkka's sword will be glowing when Tidebringer is ready. Play on the side not to get cleaved.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3297,7 +3324,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Kunkka will rise his sword when casting Torrent. Look to make a sharp turn.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3306,7 +3333,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Kunkka's Ghostship allows allied heroes that were underneath it to delay 40% damage taken.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3315,7 +3342,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Torrent and Ghostship.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3324,7 +3351,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Eul's Scepter is great at stopping X Marks the Spot pullback.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 46. Legion Commander | Earlier work
@@ -3335,7 +3362,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'Consider skilling Press the Attack on level 1 if you are being harassed by dispellable damage-over-time spells.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3344,7 +3371,7 @@ export const dotaCoachMessages = [
     messageTime: -20,
     textMessage:
       'Use Overwhelming Odds to secure a range creep last hit and harass the enemy heroes at the same time.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3353,7 +3380,7 @@ export const dotaCoachMessages = [
     messageTime: 60,
     textMessage:
       'Aggro creeps on yourself to increase Moment of Courage procs. It can be useful for denying as well.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -3362,7 +3389,7 @@ export const dotaCoachMessages = [
     messageTime: 60 * 10,
     textMessage:
       'Take your time to farm up a Blink Dagger and then start rotating around the map with a ganking partner.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -3371,7 +3398,7 @@ export const dotaCoachMessages = [
     messageTime: 60 * 11,
     textMessage:
       'Make sure not to overblink as you will land 240 units shorter than the maximum of 1200.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -3380,7 +3407,7 @@ export const dotaCoachMessages = [
     messageTimes: [60 * 12, 60 * 17],
     textMessage:
       'Duelling any hero is fine in early to midgame to collect Duel victories which will then allow you to potentially solo kill heroes.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -3389,7 +3416,7 @@ export const dotaCoachMessages = [
     messageTime: 60 * 20,
     textMessage:
       "Aghanim's Shard is an essential pick-up for a support Legion Commander as it is a great buff and save for your core.",
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -3399,7 +3426,7 @@ export const dotaCoachMessages = [
     repeatTime: 60 * 20,
     textMessage:
       'In mid to late game make sure to Duel specific heroes and not care about Duel victory as much.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -3409,7 +3436,7 @@ export const dotaCoachMessages = [
     repeatTime: 60 * 20,
     textMessage:
       'Sometimes it is better not to initiate fights, but rather stay back to save an ally with Press the Attack and turn the fight around.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
 
   {
@@ -3419,7 +3446,7 @@ export const dotaCoachMessages = [
     messageTimes: [1 * 60 + 15, 3 * 60 + 15],
     textMessage:
       'In the lane against Legion Commander stay away from your partner to reduce impact of Overwhelming Odds',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3430,7 +3457,7 @@ export const dotaCoachMessages = [
       'Avoid waisting mana on harassing Legion Commander with spells that can be dispelled by Press the Attack. Use those spells once she used Press the Attack',
     chatMessage:
       "Don't harass Legion Commander with spells that can be dispelled. Use spells once she used Press the Attack",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3438,7 +3465,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Legion Commander_3_Melee range',
     messageTime: 8 * 60 + 30,
     textMessage: 'Avoid getting into melee range of Legion Commander',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3449,7 +3476,7 @@ export const dotaCoachMessages = [
       "Keep an eye on Legion Commander's Blink Dagger or Shadow Blade purchase. She will want to find pickoffs so it's good to group up and bait with one hero and then to counter-attack",
     chatMessage:
       'Legion Commander buys Blink Dagger or Shadow Blade to duel heroes. Group up and bait with one hero',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3458,9 +3485,9 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 30, 20 * 60 + 30, 30 * 60 + 30, 40 * 60 + 30],
     textMessage:
       "Good counters items against Legion Commander's duel are Eul's Scepter, Linken's Sphere and Ethereal Blade",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  /* {category: "EnemyHero", hero: "Legion Commander", audioFile: "heroes/Legion Commander_6_Aghanim's scepter", messageTimes: [(23*60+30), (33*60+30), (43*60+30)], textMessage: "Legion Commander becomes spell immune when duelling with Aghanim's Scepter", audience: [ALL]}, Changed in 7.30*/
+  /* {category: "EnemyHero", hero: "Legion Commander", audioFile: "heroes/Legion Commander_6_Aghanim's scepter", messageTimes: [(23*60+30), (33*60+30), (43*60+30)], textMessage: "Legion Commander becomes spell immune when duelling with Aghanim's Scepter", audience: [Audience.ALL]}, Changed in 7.30*/
   {
     category: 'EnemyHero',
     hero: 'Legion Commander',
@@ -3468,7 +3495,7 @@ export const dotaCoachMessages = [
     messageTimes: [23 * 60 + 30, 33 * 60 + 30, 43 * 60 + 30],
     textMessage:
       "Legion Commander takes 50% damage from other sources when duelling with Aghanim's Scepter",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 47. Leshrac | 03.03.2021
@@ -3479,7 +3506,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Leshrac is great at dealing with illusions and summons due to high amount of AoE damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3488,7 +3515,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Leshrac's Split Earth has a long cast point. Look to dodge it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3497,7 +3524,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60, 15 * 60, 25 * 60],
     textMessage:
       "Leshrac's Diabolic Edict does great damage against single units and buildings. Organize defense quickly.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3506,7 +3533,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Pulse Nova converts mana into AoE damage. Fight when Leshrac is low on mana or burn it away.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3515,7 +3542,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Look to burst Leshrac in the fights or he'll do insane amounts of damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3524,7 +3551,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Magic resistance and spell immunity items are great against Leshrac.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3533,7 +3560,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Leshrac is great at split-pushing and ratting. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 48. Lich | 03.03.2021
@@ -3543,7 +3570,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Lich_1_Strong laner',
     messageTime: -60,
     textMessage: 'Lich is a strong laner. Bring extra consumables.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3552,7 +3579,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Frost Shield from Lich significantly reduces damage taken from right-clicks and it can be used on towers.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3561,7 +3588,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Split up when Lich uses Chain Frost or run towards a group of creeps to pass the bounce away.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3570,7 +3597,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Chain Frost.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3579,7 +3606,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Magic resistance and spell immunity items are great against Lich.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3587,7 +3614,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Lich_6_Lotus orb',
     messageTime: 12 * 60 + 10,
     textMessage: 'Lotus Orb is great at reflecting 3 spells of Lich.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   //49. Lifestealer | Earlier work
@@ -3600,7 +3627,7 @@ export const dotaCoachMessages = [
       "Chip damage doesn't work against Lifestealer as he is able to recover with Feast. If you manage to bring him below half HP it will be hard for him to feast as he risks dying",
     chatMessage:
       "Chip damage doesn't work against Lifestealer as he can Feast. Bring him below half HP to scare him",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3609,7 +3636,7 @@ export const dotaCoachMessages = [
     messageTime: 1 * 60 + 30,
     textMessage:
       'Buy boots early against Lifestealer as he is a fast hero who often buys Venom Orb and rushes Phase Boots',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3618,7 +3645,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 30, 15 * 60 + 30, 25 * 60 + 30],
     textMessage:
       'Items and spells that go through spell immunity are effective against Lifestealer',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3629,7 +3656,7 @@ export const dotaCoachMessages = [
       'When you gank Lifestealer he will Rage and teleport out on first signs of trouble. Make sure you disable him before he rages if you do not yet have a disable that goes through spell immunity',
     chatMessage:
       'When you gank Lifestealer he will Rage and teleport out. Disable him before he rages',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3640,7 +3667,7 @@ export const dotaCoachMessages = [
       "Lifestealer's main spell in fights is Rage. Play around it by disabling him or by saving heroes he is chasing",
     chatMessage:
       "Lifestealer's main spell in fights is Rage. Disable him or by save heroes he is chasing",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3651,7 +3678,7 @@ export const dotaCoachMessages = [
       'Lifestealer tends to have lots of evasion due to his level 20 talent and a Halberd purchase. Look to counter it by getting true strike items',
     chatMessage:
       'Lifestealer tends to have evasion due to his level 20 talent and Halberd. Counter it with true strike items',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3660,7 +3687,7 @@ export const dotaCoachMessages = [
     messageTimes: [18 * 60 + 30, 28 * 60 + 30, 38 * 60 + 30],
     textMessage:
       'Keep in mind that Lifestealer might be infested in the initiating hero or that he can use Infest to escape',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 50. Lina | 03.03.2021
@@ -3671,7 +3698,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Lina's Light Strike Array has a long cast point. Look to dodge it.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3680,7 +3707,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Lina is a glass cannon type hero. Look to focus her in the fights.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3689,7 +3716,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Magic resistance and spell immunity items are great against Lina.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3697,7 +3724,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Lina_4_Gap closing',
     messageTime: 12 * 60 + 10,
     textMessage: 'Gap closing items are good at getting you on top of Lina.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3706,7 +3733,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Lina is great at split-pushing and ratting. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 51. Lion | Earlier work
@@ -3717,7 +3744,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Use Earth Spike strategically so that you can get extra right-clicks in, deny a creep or secure a last hit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3725,7 +3752,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Lion_2_Hex',
     messageTime: 60,
     textMessage: 'You can skill Hex on level 2 to score a kill.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3733,7 +3760,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Lion_3_Illusions',
     messageTime: 90,
     textMessage: 'Hex and Mana Drain destroy basic illusions instantly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3741,7 +3768,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Lion_4_FingerOfDeath',
     messageTime: 8 * 60,
     textMessage: 'Make a move whenever you have Finger of Death available.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3750,7 +3777,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60,
     textMessage:
       'When Finger of Death is on cooldown, use the time to farm your Blink Dagger.',
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -3759,7 +3786,7 @@ export const dotaCoachMessages = [
     messageTimes: [14 * 60, 19 * 60],
     textMessage:
       'Initiate on enemies with your long lasting disables, so your allies can follow-up for a kill.',
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -3769,7 +3796,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'Fight around good vision, so you can land multi-hero Earth Spikes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -3777,7 +3804,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Lion_8_AghanimsShard',
     messageTime: 20 * 60,
     textMessage: "Aghanim's Shard is good at countering illusion based heroes.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -3786,7 +3813,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Lion_1_Fog of war',
     messageTime: 60,
     textMessage: "Use fog of war to cancel Lion's Mana Drain",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3794,7 +3821,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Lion_2_Anti-magic items',
     messageTime: 2 * 60 + 30,
     textMessage: 'Opt for anti-magic damage items against Lion',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3803,7 +3830,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Be aware of Lion's level 6 Finger of Death. Infused Raindrop might help you to survive the burst",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3812,7 +3839,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60,
     textMessage:
       'Lotus Orb is an effective item against Lion as all of his spells are targetable',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3823,7 +3850,7 @@ export const dotaCoachMessages = [
       'Look to target Lion in team fights as he provides a lot of control and magic damage against your cores and is also a very squishy hero',
     chatMessage:
       'Target Lion in team fights as he has control spells and magic damage and is also a squishy hero',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 52. Lone Druid | 03.03.2021
@@ -3834,7 +3861,7 @@ export const dotaCoachMessages = [
     messageTime: 60,
     textMessage:
       "Spirit Link heals Lone Druid every time the Bear hits. Burst Lone Druid or don't bother hitting him.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3843,7 +3870,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Lone Druid buys items for the Spirit Bear. If you kill Spirit Bear twice, he does no damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3852,7 +3879,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       'Spirit Bear does a lot of damage to buildings. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3861,7 +3888,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60,
     textMessage:
       'Lone Druid is a snowbally hero and falls off as the game goes. Look to extend the game.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3870,7 +3897,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60,
     textMessage:
       'Lone Druid is great at split-pushing and ratting. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 53. Luna | 04.03.2021
@@ -3881,7 +3908,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Luna has short attack range and is susceptible to early harass, especially to magical damage.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3890,7 +3917,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Be mindful about Luna's increased night vision from Night Blessing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3899,7 +3926,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Luna's Eclipse does a lot of damage. Keep distance from Luna or share damage with allied units.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3908,7 +3935,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Luna farms quickly due to Moon Glaives. Smoke on her, place deep wards and block camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3917,7 +3944,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       'Avoid clumping up in teamfights as the Moon Glaives will bounce between you and your allies.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 54. Lycan | 04.03.2021
@@ -3928,7 +3955,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Lycan is a low armor hero. Pressure him with your right-clicks.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3937,16 +3964,16 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Try to kill the wolves, especially when they are on low levels.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
-  // {category: "EnemyHero", hero: "Lycan", audioFile: "heroes/Lycan_3_Powerspike", messageTime: (8*60), textMessage: "Be aware of Lycan's level 6 and Necrobook 1 timing. Perhaps you can teleport out if you are quick enough.", audience: [IN_LANE]}, |patch 7.29| MESSAGE UPDATED
+  // {category: "EnemyHero", hero: "Lycan", audioFile: "heroes/Lycan_3_Powerspike", messageTime: (8*60), textMessage: "Be aware of Lycan's level 6 and Necrobook 1 timing. Perhaps you can teleport out if you are quick enough.", audience: [Audience.IN_LANE]}, |patch 7.29| MESSAGE UPDATED
   {
     category: 'EnemyHero',
     hero: 'Lycan',
     audioFile: 'heroes/Lycan_3_Powerspike',
     messageTime: 8 * 60,
     textMessage: "Be aware of Lycan's level 6 and Helm of Dominator timing.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -3955,7 +3982,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Lycan and his summons do a lot of damage to buildings. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3964,7 +3991,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Lycan is a snowbally hero and falls off. Look to extend the game. Don't be greedy with items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3973,7 +4000,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Crimson Guard and armor items are great against the physical damage output of Lycan and his units.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3982,7 +4009,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Lycan is great at split-pushing and ratting. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -3991,7 +4018,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60, 25 * 60, 35 * 60],
     textMessage:
       'Lycan is able to kill Roshan early on. Ward and check Roshpit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 55. Magnus | 04.03.2021
@@ -4002,7 +4029,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Be careful not to get Skewered by Magnus under the opponent's tower.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4011,7 +4038,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Empower is a great farming buff for Magnus and his melee cores. Contest their jungle and block camps.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4020,7 +4047,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Be aware of Magnus's Blink Dagger timing. Look to cancel his Dagger in the fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4029,7 +4056,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Blink Dagger into Reverse Polarity combos.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4038,7 +4065,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
       'Reverse Polarity has a long cooldown. Look to fight opponents when it is down.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4047,7 +4074,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Status resistance items shorten the disable duration of Reverse Polarity.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4056,7 +4083,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60, 25 * 60, 35 * 60],
     textMessage:
       'Having Aegis on a core hero is a protection against Reverse Polarity. Kill Roshan on the first chance.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // XXX. Marci | 31.10.2021
@@ -4068,7 +4095,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'Look to Dispose an enemy in direction of your allies or to stun more enemies on landing.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4078,7 +4105,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'You can Dispose an ally out of trouble, even from spells like Chronosphere or Black Hole.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4088,7 +4115,7 @@ export const dotaCoachMessages = [
     repeatTime: 30 * 60,
     textMessage:
       'You can save an ally by using Rebound on him as it provides movement speed bonus.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4098,7 +4125,7 @@ export const dotaCoachMessages = [
     repeatTime: 30 * 60,
     textMessage:
       'Be aware of spells and items that can dispel by Sidekick or Rebound.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4108,7 +4135,7 @@ export const dotaCoachMessages = [
     repeatTime: 30 * 60,
     textMessage:
       'Many spells and items can kite Marci during Unleash. Counter them with items or choose the right moment to engage and be ready to switch targets.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4117,7 +4144,7 @@ export const dotaCoachMessages = [
     messageTime: 16 * 60,
     textMessage:
       'Blink Dagger is a huge powerspike as it allows you to lock on or switch targets, initiate fights or save allies.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4125,7 +4152,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Marci_7_Roshan',
     messageTime: 20 * 60,
     textMessage: 'Unleash and Sidekick are great tools for killing Roshan.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
 
   {
@@ -4134,7 +4161,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Marci_1_Spirit vessel',
     messageTime: -60,
     textMessage: "Someone should buy spirit Vessel against Marci's Sidekick.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4143,7 +4170,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       "Avoid staying too close to Marci as you'll get Disposed easily.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4152,7 +4179,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Kite Marci's ultimate by either stopping her from attacking or disengaging.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4161,7 +4188,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       "Acquire items that allow you to kite Marci's ultimate defensively or offensively.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4170,7 +4197,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
     textMessage:
       "Items that reduce healing and regeneration are good against Marci's Sidekick.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4179,7 +4206,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
       'Items that can dispel Sidekick or Rebound buff from Marci or her ally are great purchase.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4190,7 +4217,7 @@ export const dotaCoachMessages = [
       "Be aware of Marci's Blink Dagger timing. She can easily gap close, setup kills with Dispose or lock on targets during Unleash.",
     chatMessage:
       "Be aware of Marci's Blink Dagger timing. She can easily gap close, setup kills with Dispose or Unleash.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 56. Mars | 04.03.2021
@@ -4201,7 +4228,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Avoid playing close to trees against Spear of Mars. Cut some with Quelling Blade and Tangoes.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4210,7 +4237,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Mars takes reduced damage from front and sides. Hit him from the back if possible.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4219,7 +4246,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'No range attacks can hit inside or outside of the Arena of Blood.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4227,7 +4254,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Mars_4_Arena of blood 2',
     messageTime: 8 * 60 + 10,
     textMessage: 'Arena of Blood destroys all the trees around it.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4236,7 +4263,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Be aware of Mars's Blink Dagger timing. Look to cancel his Dagger in the fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4245,7 +4272,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Blink Dagger into Arena of Blood combo.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4254,7 +4281,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Black King Bar allows you to move in and out of Arena of Blood.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4263,7 +4290,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Break effects remove Bulwark and Mars becomes significantly weaker.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 57. Medusa | 04.03.2021
@@ -4274,7 +4301,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Play on the side of the creepwave to avoid being hit by Mystic Snake - Medusa's main laning spell.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4283,7 +4310,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'Look to kill Medusa before she activates her Ulti. If Stone Gaze is up, turn or run away from Medusa.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4292,7 +4319,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Medusa farms quickly due to Split Shot. Smoke on her, place deep wards and block off camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4300,7 +4327,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Medusa_4_Mana burn',
     messageTime: 12 * 60,
     textMessage: 'Mana burning spells and items are great against Medusa.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4309,7 +4336,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard, armor items and Heaven's Halberd are great against Medusa.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 58. Meepo | 04.03.2021
@@ -4320,7 +4347,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Someone should buy Spirit Vessel against Meepo to counter healing from Ransack.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4329,7 +4356,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       'Meepo farms quickly due to Poof. Smoke on him, place deep wards and block off camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4337,7 +4364,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Meepo_3_Burst',
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage: "Look to burst one of the Meepos and don't split your damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4345,7 +4372,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Meepo_4_Tower defense',
     messageTime: 10 * 60 + 20,
     textMessage: 'Meepo takes buildings down fast. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4354,7 +4381,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Meepo is snowbally hero and falls off. Don't be greedy with items and allow him to pick you off.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4362,7 +4389,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Meepo_6_Counter items',
     messageTime: 12 * 60 + 10,
     textMessage: 'Crimson Guard and armor items are great against Meepo.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4371,7 +4398,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
       'Meepo is able to solo kill Roshan early on. Ward and check Roshpit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4380,7 +4407,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Meepo is great at split-pushing and ratting. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 59. Mirana | 04.03.2021
@@ -4391,7 +4418,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Bring an Observer Ward to the lane to be able to see Mirana's Sacred Arrows.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4400,7 +4427,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Play around your creeps and use them as a shield against Mirana's Sacred Arrow.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4409,7 +4436,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Consider blocking the big pull camp. Mirana likes to farm the big neutral creep with Sacred Arrow.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4418,7 +4445,7 @@ export const dotaCoachMessages = [
     messageTimes: [3 * 60 + 30, 5 * 60 + 30, 7 * 60 + 30],
     textMessage:
       'Mirana roams a lot. Keep track of her movements and have teleport ready.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4427,7 +4454,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage:
       'Pair Observer Wards and Sentries on map to see opponents approaching under Moonlight Shadow.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4435,7 +4462,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Mirana_6_Detection',
     messageTimes: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
     textMessage: 'Carry detection on multiple heroes against Moonlight Shadow.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 60. Monkey King | Earlier work
@@ -4446,7 +4473,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Turning into courier form with Mischief allows you to sneak up to opponents or snipe their couriers in the base. The opponents can't see you on minimap.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4455,7 +4482,7 @@ export const dotaCoachMessages = [
     messageTime: -20,
     textMessage:
       'Well timed Mischief allows you to dodge the damage coming from attacks and spells but not the debuffs coming with that spell or attack.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4464,7 +4491,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Consider skilling Boundless Strike on level 1 to secure range creep lasthit if you don't see yourself getting Jingu Mastery stacks up.",
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -4473,7 +4500,7 @@ export const dotaCoachMessages = [
     messageTime: 40,
     textMessage:
       'Acquiring Jingu stacks or a threat of getting them is the way Monkey King wins the lane. Orb of Venom and early boots help with that.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -4482,7 +4509,7 @@ export const dotaCoachMessages = [
     messageTime: 2 * 60 + 30,
     textMessage:
       'If the lane is rough consider putting more points in Tree Dance for creep clearing and work on solving mana issues to be able to spam it.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -4492,7 +4519,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'Many spells and items can cut trees you are standing on, including those coming from your allies. Be careful about that.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4501,7 +4528,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Pillar and Tinker wards as well as spells that provide flying vision when used, can spot you standing on the trees.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4510,7 +4537,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 30,
     textMessage:
       'You should skip skilling Wukong Command on level 6 in most of the games as it is hard to keep opponents inside of it early on.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4519,7 +4546,7 @@ export const dotaCoachMessages = [
     messageTime: 7 * 60 + 30,
     textMessage:
       'Channeling Wukong command from a tree will make you drop down from it without being stunned. You can jump back on the tree and the ulty will keep going.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4529,7 +4556,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       "To get a good Wukong Command ideally channel it outside of opponents' vision and follow up with Boundless Strike. ",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -4538,7 +4565,7 @@ export const dotaCoachMessages = [
     messageTime: 16 * 60,
     textMessage:
       'Items that modify attacks or have proc chance - except for Basher - will work on Monkey King soldiers.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -4550,7 +4577,7 @@ export const dotaCoachMessages = [
       'Monkey King is one of the strongest laners against melee heroes, as it is easy for him to get Jingu Mastery stacks up. Ranged heroes have better time against him in general as he has low armor and simple right clicks tend to do good work',
     chatMessage:
       'Monkey King is strong laner against melee heroes due to Jingu Mastery. Consider picking ranged hero',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4559,7 +4586,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Early boots or even a Windlace are advisable for melee cores against Monkey King',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4570,7 +4597,7 @@ export const dotaCoachMessages = [
       "Be careful on initial bounty runes as Monkey might come from behind while under the effect of Mischief (as courier). You can't see him on the minimap while under the effect of Mischief. He also doesn't aggro towers while Mischiefed so he might even run into your base and snipe couriers",
     chatMessage:
       "Monkey might come from behind while under the effect of Mischief. You can't see him on the minimap",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4581,7 +4608,7 @@ export const dotaCoachMessages = [
       'Prevent Monkey King from getting four stacks of Jingu Mastery. But if it happens avoid staying in one line for multi-hero Boundless Strike',
     chatMessage:
       'Prevent Monkey King from getting four stacks of Jingu Mastery',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4590,7 +4617,7 @@ export const dotaCoachMessages = [
     messageTime: 50,
     textMessage:
       'Melee cores should avoid laning directly against Monkey King. Try to hijack, skip or pull creeps',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4601,7 +4628,7 @@ export const dotaCoachMessages = [
       'Cutting trees that Monkey King stands on stuns him for 4 seconds. Having a quelling blade or a tree cutting ability is very useful against him',
     chatMessage:
       'Cutting trees that Monkey King stands on stuns him for 4 seconds',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4612,7 +4639,7 @@ export const dotaCoachMessages = [
       "Break effects are good at reducing Monkey Kings' damage output and Spirit Vessel reduces healing from Jingu Mastery stacks",
     chatMessage:
       "Break effects reduce Monkey Kings' damage output and Spirit Vessel reduces healing from Jingu Mastery",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4623,7 +4650,7 @@ export const dotaCoachMessages = [
       "Monkey King's ultimate grants him bonus armor and he therefore takes little physical damage. Dealing magical and pure damage is the priority. If Monkey King uses Black King Bar you should not fight him inside Wukong's Command ring",
     chatMessage:
       "Monkey King takes little physical damage inside Wukong's Command ring. Magical and pure damage are good",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4632,7 +4659,7 @@ export const dotaCoachMessages = [
     messageTimes: [26 * 60 + 30, 46 * 60 + 30],
     textMessage:
       'Items and abilities that force Monkey King out of his ultimate are valuable',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 61. Morphling | 04.03.2021
@@ -4643,7 +4670,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Someone should buy Spirit Vessel against Morphling to offset Attribute Shift strength gain.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4652,7 +4679,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Morphling is very weak until level 3 when he gets second point in Attribute Shift. Pressure him early on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4661,7 +4688,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Morphling tends to play on a low hp pool. Surprise him with smoke, instant disable, silence or invisibility.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4670,7 +4697,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       'Focus Morphling in the fights or he will do insane amounts of damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4679,7 +4706,7 @@ export const dotaCoachMessages = [
     messageTime: 13 * 60,
     textMessage:
       'Be aware of Ethereal Blade timing on Morphling. He can solo kill most of the heroes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4688,7 +4715,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60,
     textMessage:
       'Eye of Skadi is good against Morphing to offset Attribute Shift strength gain and to slow him.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 62. Naga Siren | 05.03.2021
@@ -4699,7 +4726,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Kill Mirror Images to cripple Naga's last hitting capabilities on the lane.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4707,7 +4734,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Naga Siren_2_Mirror image',
     messageTime: -50,
     textMessage: 'Hex, Drains and Dagon destroy Mirror Images instantly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4716,7 +4743,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Naga Siren farms quickly with Mirror Images. Smoke on her, place deep wards and block camps with sentries.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4725,7 +4752,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Items that provide AoE damage, especially magical damage, are great at dealing with Mirror Images.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4734,7 +4761,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard and armor items are great against Naga's physical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4743,7 +4770,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Naga is great at split-pushing and ratting. Consider getting Boots of Travel on a Core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4752,7 +4779,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60, 25 * 60, 35 * 60],
     textMessage:
       'Naga can pop Song of the Siren and finish Roshan. Be mindful about it when taking or contesting Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 63. Nature's Prophet | 05.03.2021
@@ -4763,7 +4790,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Nature's Prophet is great at sniping couriers. Fly courier over trees when possible",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4772,7 +4799,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "To counter Nature Prophet's Sprout, buy Quelling Blade, Tangoes or Force Staff.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4781,7 +4808,7 @@ export const dotaCoachMessages = [
     messageTime: 40,
     textMessage:
       'Using Tango on Sprout tree gives you twice as much regeneration.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4789,7 +4816,7 @@ export const dotaCoachMessages = [
     audioFile: "heroes/Nature's Prophet_4_Wrath of nature",
     messageTime: 8 * 60,
     textMessage: 'Wrath of Nature can hit you with up to 400 damage at level6.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4798,7 +4825,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 10,
     textMessage:
       'If Wrath of Nature hits you and there are no enemies around, then you are close to an Observer ward.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4807,7 +4834,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Nature's Prophet can take down buildings fast. Organize defense quickly.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4816,7 +4843,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Nature's Prophet is great at split-pushing and ratting. Consider getting Boots of Travel on a core.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 64. Necrophos | 05.03.2021
@@ -4827,7 +4854,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "To counter Necrophos' healing and regeneration, someone should buy Spirit Vessel",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4836,7 +4863,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Burst Necrophos down, so he can't last hit creeps and regain HP and mana with Heartstopper Aura.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4844,7 +4871,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Necrophos_3_Ghost Shroud',
     messageTime: 30,
     textMessage: 'Necrophos takes increased magical damage under Ghost Shroud.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4853,7 +4880,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Against Necrophos, keep your health above 60% to avoid being killed by Reaper's Scythe.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4862,7 +4889,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Against Necrophos, magic resistance and spell immunity items are great.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4871,7 +4898,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Against Necrophos, items that reduce healing and regeneration are good.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 65. Night Stalker | 05.03.2021
@@ -4882,7 +4909,7 @@ export const dotaCoachMessages = [
     messageTime: 10,
     textMessage:
       'Night Stalker is weak in the first 5 minutes of the game. Pressure him early.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4891,7 +4918,7 @@ export const dotaCoachMessages = [
     messageTime: 4 * 60 + 30,
     textMessage:
       'Night Stalker will fight you at the 5 minute mark, as night time will hit.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -4900,7 +4927,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Night Stalker's Dark Ascension will allow him to see you inside or behind trees.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4909,7 +4936,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 10, 18 * 60 + 10, 28 * 60 + 10],
     textMessage:
       'Look to fight during daytime and when Dark Ascension is down.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4918,7 +4945,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Force Staff and Hurricane Pike are great items against Night Stalker's Crippling Fear.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4927,7 +4954,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Break effects remove Hunter in the Night and Nightstalker becomes significantly weaker.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 66. Nyx Assassin | 05.03.2021
@@ -4938,7 +4965,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Be careful not to use a major damaging spell when Spiked Carapace is on or Nyx Assassin is about to use it.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4947,7 +4974,7 @@ export const dotaCoachMessages = [
     messageTime: 40,
     textMessage:
       "To counter Nyx Assassin's mana burn, get a Magic Stick or Arcane Boots.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4955,7 +4982,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Nyx Assassin_3_Observer sentry',
     messageTimes: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage: 'To see Nyx under Vendetta buy Sentries and Observer Wards.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4963,7 +4990,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Nyx Assassin_4_Detection',
     messageTimes: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
     textMessage: 'Carry detection on multiple heros.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4971,7 +4998,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Nyx Assassin_5_Spell immunity',
     messageTime: 12 * 60,
     textMessage: 'Spell immunity is great against Nyx.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -4980,7 +5007,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Avoid buying too many intelligence giving items against Nyx Assassin's Mana Burn.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 67. Ogre Magi | Earlier work
@@ -4990,7 +5017,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Ogre_1_Tankiness',
     messageTime: 30,
     textMessage: 'Play in front of your Core to to make use of your tankiness.',
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -4999,7 +5026,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60,
     textMessage:
       'Ignite has a much longer cast range than Fireblast, so cast it first.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5007,7 +5034,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Ogre_3_Multicast',
     messageTime: 10 * 60,
     textMessage: 'Prioritize items that you can multicast with.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5016,7 +5043,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Look to Ignite the heroes with Blink Dagger to keep it canceled continuously.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5025,7 +5052,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60,
     textMessage:
       "You become a lot squishier as the game progresses, so don't play too aggressive.",
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -5034,7 +5061,7 @@ export const dotaCoachMessages = [
     messageTime: 17 * 60,
     repeatTime: 20 * 60,
     textMessage: 'Bloodlust your right-click Cores prior and during a fight.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -5046,7 +5073,7 @@ export const dotaCoachMessages = [
       "Physical damage doesn't do much against Ogre as he has high starting armor and HP regeneration. Either ignore him or try to inflict a lot of damage in a short period of time",
     chatMessage:
       'Ogre is resistant to physical damage. Either ignore him or try to inflict a lot of damage quickly',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5054,7 +5081,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Ogre Magi_2_Magic resistance',
     messageTime: 1 * 60 + 30,
     textMessage: 'Opt for magic resistance items against Ogre',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5065,7 +5092,7 @@ export const dotaCoachMessages = [
       'Ogre players tend to go greedy and farm up Hand of Midas. Try to mess with their Midas timing - cooldown is 90 seconds',
     chatMessage:
       'Ogre tends to go greedy and farm Hand of Midas. Try to mess with his Midas timing (cooldown of 90 seconds)',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5074,7 +5101,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 30,
     textMessage:
       'Lotus Orb is an effective item against Ogre as both of his damaging spells are targetable',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5085,7 +5112,7 @@ export const dotaCoachMessages = [
       "Ogre is scary in late game as he's able to multicast also on his items. Black King Bar is mandatory for cores and even supports should consider buying it",
     chatMessage:
       'Ogre is scary in late game. BKB is mandatory for cores and even supports should consider buying it',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 68. Omniknight | 05.03.2021
@@ -5096,7 +5123,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Omniknight's Purification will damage you if you are in melee range of him.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5105,7 +5132,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Omniknight's Heavenly Grace applies strong dispel. Use your disables after it expires.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5114,7 +5141,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Omniknight in the fights as he provides saves and sustain for his team.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5123,7 +5150,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Spell and items that dispel are great again Omniknight's Guardian Angel and Heavenly Grace.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5132,7 +5159,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Items that do magical damage are great against Guardian Angel.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 69. Oracle | 05.03.2021
@@ -5143,7 +5170,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'Oracle has access to both basic and strong dispel. Look to dispel spells, items and runes that provide buffs or debuffs.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5152,7 +5179,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'You can deny on your own creep by nuking it with purifying flames and quickly attacking it afterwards.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5161,7 +5188,7 @@ export const dotaCoachMessages = [
     messageTime: 2 * 60 + 30,
     textMessage:
       "Oracle has a huge powerspike at level3 with one point in Fortune's End and two points in Purifying Flames. Combine Purifying Flames followed by Fortune's End and another Purifying Flames before Fortune's End lands on the enemy hero.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5170,7 +5197,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       'It is good to carry a Healing Salve to use it on the ally that you save with False Promise.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5179,7 +5206,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       "You can channel Fortune's End on your nearby ally that is teleporting or blinking out and the Fortune's End will follow that ally.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5188,7 +5215,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 15,
     textMessage:
       "If you expect to be silenced in next 2.5s, you can start channeling Fortune's End on yourself and as soon as you get silenced you will dispel it instantly with Fortune's End release.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5197,7 +5224,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 30,
     textMessage:
       "Well timed Fate's Edict can entirely negate damage the output of heavy magical spells like Reaper's Scythe, Finger of Death, Bedlam and others.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5207,7 +5234,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       "Position yourself outside of the opponents' vision at the start of a teamfight as you are usually the main target.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5216,7 +5243,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 30,
     textMessage:
       'Items like Aether Lens or Blink Dagger allow yout to get your Ulti off well. If you False Promise yourself you can blink out even under attack as you take no damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5226,7 +5253,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'You can spam Purifying Flames on one of your allies prior to a fight to provide some extra healing going into the fight.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -5236,7 +5263,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Oracle's Fortune's End applies dispel. Use your spells after it has been used.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5245,7 +5272,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Oracle's Fate's Edict negates all magical damage. Do not waste your magical damage on it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5254,7 +5281,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Oracle in the fights as he provides saves and sustain for his team.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5263,7 +5290,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Items that reduce healing and regeneration are good against Oracle.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5271,7 +5298,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Oracle_5_Gap closing items',
     messageTime: 12 * 60 + 10,
     textMessage: 'Gap closing items allow you to get on top of Oracle.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 70. Outworld Destroyer | 05.03.2021
@@ -5282,7 +5309,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       "Look for Outworld Destroyer's Meteor Hammer timing. He's able to solo kill most of the heroes with it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5291,7 +5318,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Outworld Destroyer in the fights as he provides saves for his team with Astral Imprisonment.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5300,7 +5327,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Mana pool increasing items are great against OD's Sanity's Eclipse.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5308,7 +5335,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Outworld Destroyer_4_Spell immunity',
     messageTime: 12 * 60 + 10,
     textMessage: 'Spell immunity items are great against Outworld Destroyer.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5317,7 +5344,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Heaven's Halberd is great at disabling Outworld Destroyer from using Arcane Orb.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 71. Pangolier | 06.03.2021   ***CHANGED 7.30***
@@ -5329,7 +5356,7 @@ export const dotaCoachMessages = [
     textMessage:
       'Pangolier has a low HP pool and is squishy. Pressure him early on, especially when Swashbuckle is on cooldown.',
     chatMessage: 'Pangolier is squishy. Pressure him early on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5338,7 +5365,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Pangolier's Rolling Thunder can be dodged by making sharp turns prior to impact.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5347,7 +5374,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Rolling Thunder.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5356,7 +5383,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Spell immunity items are great against Pangolier's disables and disarms.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5365,7 +5392,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Spells and items that provide roots or leash, stop Pangolier from using Swashbuckle and Rolling Thunder.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5374,7 +5401,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Spell immunity piercing spells and items are great at dealing with Pangolier's Rolling Thunder.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -5384,7 +5411,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Items and spells that can dispel enemies are great at removing Shield Crash buff from Pangolier.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 72. Phantom Assassin | Earlier work | UPDATED ON 06.03. (message on magic stick added)
@@ -5395,7 +5422,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'PA uses Stifling Dagger frequently to obtain lasthits. Buy Magic Stick and Magic Wand to get charges.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5404,7 +5431,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'PA is weak against spell harass in early game. Manage your mana and pressure her',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5413,7 +5440,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 15,
     textMessage:
       'Armor items are good against PA as she is all about physical damage and armor reduction',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5422,7 +5449,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 15,
     textMessage:
       "Cheap items that allow you to survive PA's Phantom Strike are Ghost Scepter, Glimmer Cape and Eul's Scepter",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5431,7 +5458,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 15,
     textMessage:
       "Counter PA's Blur ability with items piercing through evasion, breaking passive or causing magical damage",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5439,7 +5466,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Phantom Assassin_6_Blade mail',
     messageTime: 10 * 60 + 15,
     textMessage: 'PA can be killed by a well timed Blade Mail',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5447,7 +5474,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Phantom Assassin_7_Power runes',
     messageTimes: [11 * 60 + 15, 19 * 60 + 15, 27 * 60 + 15],
     textMessage: 'Control power runes to prevent PA from getting double damage',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 73. Phantom Lancer | Earlier work
@@ -5460,7 +5487,7 @@ export const dotaCoachMessages = [
       "Phantom Lancer's main escape mechanism is Doppelganger. As this spell has a very long cooldown at lower levels, look to play aggressively as soon as he used it",
     chatMessage:
       "Phantom Lancer's main escape mechanism is Doppelganger. Look to play aggressively as soon as he used it",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5471,7 +5498,7 @@ export const dotaCoachMessages = [
       "Pressure Phantom Lancer while he's farming Diffusal Blade. He's very weak until he gets that item. Smoke on him and place wards in his jungle",
     chatMessage:
       'Phantom Lancer is weak until he gets Diffusal Blade. Place wards in his jungle and smoke on him',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5482,7 +5509,7 @@ export const dotaCoachMessages = [
       "Phantom Lancer's main item is Diffusal Blade. Items that give you and your team burst of mana are good against him. Sample items are Magic Wand, Soul Ring, Arcane Boots, Arcane Ring, and Enchanted Mango",
     chatMessage:
       "Phantom Lancer's main item is Diffusal Blade. Buy items that give you and your team burst of mana",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5491,7 +5518,7 @@ export const dotaCoachMessages = [
     messageTime: 25 * 60 + 15,
     textMessage:
       "Use AOE nuke to weaken Phantom Lancer's illusions to figure out which one is the real hero",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5502,7 +5529,7 @@ export const dotaCoachMessages = [
       "Spells like Lion's and Shadow Shaman's Hex and Pugna's Life Drain are able to destroy Phantom Lancer's illusion instantly. That can help when the illusion count is low, but not when there are plenty of them",
     chatMessage:
       "Phantom Lancer illusions can be killed by spells like Lion's and Shadow Shaman's Hex and Pugna's Life Drain",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5513,7 +5540,7 @@ export const dotaCoachMessages = [
       "Against Phantom Lancer purchase items that are dealing AOE damage, preferably magical damage. For example Mjollnir, Radiance or Shiva's Guard. Battlefury is good as well but Phantom Lancer has a lot of armor and usually evasion on top of that",
     chatMessage:
       'Against Phantom Lancer purchase items that are dealing AOE damage, preferably magical damage',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5524,7 +5551,7 @@ export const dotaCoachMessages = [
       "Phantom Lancer loves long fights as he's able to drain huge amounts of mana. Ideally, look to burst him and to finish the fights reasonably fast. If the fight prolongs, count on the fact that you will be running low on mana and it might be better to disengage",
     chatMessage:
       'Phantom Lancer loves long fights as he drains huge amounts of mana. Burst him and finish the fights rapidly',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 74. Phoenix | 06.03.2021
@@ -5535,7 +5562,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Look to go on Phoenix when Icarus dive was used. It has long cd.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5544,7 +5571,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Fire Spirits are Phoenix's main laning spell - Look to dodge them by moving chaotically.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5553,7 +5580,7 @@ export const dotaCoachMessages = [
     messageTime: 2 * 60,
     textMessage:
       "Phoenix's Sun Ray does a lot of damage against high HP heroes. Run away from it or make a sharp turn.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5562,7 +5589,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Against Phoenix's Supernova you need to decide very quickly if you want to fight or run away.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5571,7 +5598,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Supernova or Sun Ray.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5580,7 +5607,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Spell immunity and magic resistance items are great against Phoenix's magical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5589,7 +5616,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Attack speed items allow you to destroy the Supernova faster.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 75. Puck | 06.03.2021
@@ -5599,7 +5626,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Puck_1_Early pressure',
     messageTime: -60,
     textMessage: 'Puck has low armor and HP. Pressure her early on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5608,7 +5635,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Control power runes against Puck. She likes to bottle and gank with those.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5617,7 +5644,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Fight back when Dream Coiled unless you think you can escape by breaking it.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5626,7 +5653,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Avoid fighting in choke spots and clumping up against Dream Coil.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5635,7 +5662,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Puck is hard to catch. Instant disables and silences are great against Puck.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5644,7 +5671,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Spell immunity and magic resistance items are great against Puck's magical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5653,7 +5680,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Puck is great at split-pushing. Consider getting Boots of Travel on a Core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5662,7 +5689,7 @@ export const dotaCoachMessages = [
     messageTime: 25 * 60 + 10,
     textMessage:
       "Once Puck gets Aghanim's Scepter, Dream Coil pierces spell immunity and stuns for longer.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 76. Pudge | Earlier work
@@ -5673,7 +5700,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'You can hook runes. Try to hook an enemy into your allies at the intial bounty rune.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5682,7 +5709,7 @@ export const dotaCoachMessages = [
     messageTime: 15,
     textMessage:
       "During the laning stage don't play only around the Hook, also use your hero's tankiness and high base damage.",
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -5691,7 +5718,7 @@ export const dotaCoachMessages = [
     messageTime: 45,
     textMessage:
       'Try to keep the creep equilibrium close to your tower, so you can hook your enemies under the tower.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5700,7 +5727,7 @@ export const dotaCoachMessages = [
     messageTime: 4 * 60 + 30,
     textMessage:
       'Meat Hook destroys creeps instantly, except for ancients. Protect your tower by hooking the catapult.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5708,7 +5735,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Pudge_5_Heal',
     messageTime: 5 * 60 + 30,
     textMessage: 'You can heal up signicantly by dismembering a high HP creep.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -5716,7 +5743,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Pudge_6_Smoke',
     messageTimes: [10 * 60, 15 * 60],
     textMessage: 'Find a partner and use smokes to find pick-offs.',
-    audience: [ROLE_OFFLANE, ROLE_SUPPORT],
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -5725,7 +5752,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60,
     textMessage:
       "Blink Dagger and Aghanim's Shard combined allow you to save your allies instantly.",
-    audience: [ROLE_OFFLANE, ROLE_SUPPORT],
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -5734,7 +5761,7 @@ export const dotaCoachMessages = [
     messageTime: 25 * 60,
     repeatTime: 10 * 60,
     textMessage: 'Fight around vision so you can land your Hooks more easily.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -5744,7 +5771,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       "Be aware of Pudge's camp spots and place observer wards to cover those spots",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5755,7 +5782,7 @@ export const dotaCoachMessages = [
       'Be careful when playing close to enemy towers because a simple hook with tower damage can easily get you killed',
     chatMessage:
       'Be careful when playing close to enemy towers because a hook with tower damage can easily get you killed',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5763,7 +5790,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Pudge_3_Phyiscal damage',
     messageTime: 2 * 60,
     textMessage: 'Physical damage is strong against Pudge as he has low armor',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5771,7 +5798,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Pudge_4_Anti-magic damage',
     messageTime: 3 * 60,
     textMessage: 'Anti-magic damage items are good against pudge',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5779,7 +5806,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Pudge_5_Armor reduction',
     messageTime: 6 * 60 + 30,
     textMessage: 'Armor reducing items are great for bursting Pudge',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 77. Pugna | 06.03.2021
@@ -5790,7 +5817,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Pugna's Nether Blast takes one second to explode. You can dodge it by moving away.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5799,7 +5826,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Be careful not to use high mana cost spells around Pugna's Nether Ward.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5808,7 +5835,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Look to interrupt Pugna's Life Drain by running away or by stunning or silencing him.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5817,7 +5844,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 15 * 60 + 10, 20 * 60 + 10],
     textMessage:
       'Pugna takes buildings down fast with Nether Blast. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5826,7 +5853,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Spell immunity and magic resistance items are great against Pugna's magical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5835,7 +5862,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "A well timed Lotus Orb is great at countering Pugna's Decrepify and Life Drain combo.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 78. Queen of Pain | 06.03.2021
@@ -5846,7 +5873,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Queen of Pain's Shadow Strike is a great harassing spell. Buy extra consumables.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5855,7 +5882,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Look to play aggressively on Queen of Pain once her Blink is on cd. She's very squishy.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5864,7 +5891,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Control power runes against Queen of Pain. She likes to bottle and gank with those.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5873,7 +5900,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       "Be aware of Queen of Pain's Orchid Malevolence timing. She can solo kill most of the heroes with it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5882,7 +5909,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       "Avoid fighting in choke spots and clumping up against Queen of Pain's Sonic Wave.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5891,7 +5918,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Spell immunity and magic resistance items are quite good against Queen of Pain.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 79. Razor | 06.03.2021
@@ -5902,7 +5929,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Razor wins most lanes against melee heroes. Consider sending ranged heroes against him.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5911,7 +5938,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Getting movement speed items helps a lot at dealing with Razor's Static Link.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5920,7 +5947,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Keep a good distance to Razor and make it hard for him to get a good Static Link off.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -5929,7 +5956,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Prevent Razor from draining your core's damage. That way Razor will have less impact in fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5938,7 +5965,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Force Staff, Hurricane Pike, Linken's Sphere and Lotus Orb are great at dealing with Static Link.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 80. Riki | 06.03.2021
@@ -5949,7 +5976,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Dust of Appearance doesn't reveal Riki while he's using Tricks of the Trade.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5957,7 +5984,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Riki_2_Detection',
     messageTimes: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage: 'Against Riki, carry detection on multiple heroes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5966,7 +5993,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
     textMessage:
       "Pair Observer Wards and Sentries on the map to track Riki's movements.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5974,7 +6001,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Riki_4_Protect supports',
     messageTimes: [10 * 60 + 30, 20 * 60 + 30, 30 * 60 + 30],
     textMessage: 'Protect your supports from being killed by Riki.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5983,7 +6010,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Items and spells with stuns and roots are great against Riki's mobility spells.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -5992,7 +6019,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Force Staff and Hurricane Pike, allow you to move out of Riki's Smoke Screen.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6001,7 +6028,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Break effects disable Cloak and Dagger and prevent Riki from being invisible.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 81. Rubick | Earlier work
@@ -6012,7 +6039,7 @@ export const dotaCoachMessages = [
     messageTime: -90,
     textMessage:
       'Avoid picking heroes with huge ultimates against Rubick such as Enigma, Magnus and Tidehunter',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6021,7 +6048,7 @@ export const dotaCoachMessages = [
     messageTime: -10,
     textMessage:
       'Avoid trading hits with Rubick while under effect of Fade Bolt as your attack damage is reduced',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6030,7 +6057,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 45,
     textMessage:
       "Rubick's Telekinesis can be broken by using Force Staff on affected ally",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6041,7 +6068,7 @@ export const dotaCoachMessages = [
       "Be mindful about spell usage so that you don't give away good spells to Rubick. Rubick is generally looking for stunning and high damage abilities",
     chatMessage:
       "Be mindful about spell usage so that you don't give away good spells to Rubick",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6050,7 +6077,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 30, 20 * 60 + 30],
     textMessage:
       'Lotus Orb is an effective item against Rubick as both of his damage spells are targetable',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6061,7 +6088,7 @@ export const dotaCoachMessages = [
       "Look to target Rubick in fights as he is a very squishy hero. If you manage to kill him you don't have to worry about spellcasting anymore",
     chatMessage:
       "Target Rubick in fights as he is squishy and you won't have to worry about spellcasting anymore",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 82. Sand King | 06.03.2021
@@ -6071,7 +6098,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Sand King_1_Sentry',
     messageTime: -60,
     textMessage: "Bring a sentry to the lane against Sand King's Sand Storm.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6080,7 +6107,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Your creeps explode on death due to Sand King's Caustic Finale. Denying affected creeps prevents explosion.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6089,7 +6116,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Avoid fighting in Sand Storm for too long as it does a lot of magical damage.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6098,7 +6125,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage:
       'Against Sand King you need to carry detection on multiple heroes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6107,7 +6134,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 20,
     textMessage:
       "Be aware of Sand King's Blink Dagger timing. Look to cancel his Dagger in fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6116,7 +6143,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 30, 20 * 60 + 30, 30 * 60 + 30],
     textMessage:
       "Avoid fighting in choke spots and clumping up against Sand King's Epicenter and Blink Dagger combination.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6125,7 +6152,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Spell immunity and magic resistance items are great against Sand King's magical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 83. Shadow Demon | 07.03.2021
@@ -6136,7 +6163,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Shadow Demon uses Shadow Poison frequently to harass. Magic Stick and Wand will be charged up.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6145,7 +6172,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "If you have 3 stacks of Shadow Poison back up a bit and don't let yourself get hit by it again.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6154,7 +6181,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Shadow Demon's Demonic Purge applies continuous dispel and removes positive buffs from spells and items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6163,7 +6190,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Shadow Demon in the fights as he provides saves and control for his team.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6172,7 +6199,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Demonic Purge slows and damages through spell immunity. Be Careful not to waste Black King Bar on it.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6181,7 +6208,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Avoid buying Radiance and Assault Cuirass against Disruption as it will replicate these items.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6190,7 +6217,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Status resistance items, Linken's Sphere and a well timed Lotus Orb are great against Shadow Demon.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6199,7 +6226,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60,
     textMessage:
       "Once Shadow Demon gets Aghanim's Scepter he's able to break passive spells with Demonic Purge.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 84. Shadow Fiend | Earlier work
@@ -6212,7 +6239,7 @@ export const dotaCoachMessages = [
       'Shadow Fiend has low starting damage and he relies on gathering souls through last hits. If you do well against him on the first few waves you are likely to win the match up',
     chatMessage:
       'Shadow Fiend has low starting damage and he relies on gathering souls through last hits',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6223,7 +6250,7 @@ export const dotaCoachMessages = [
       "Shadow Fiend doesn't have an escape mechanism, so look to gank him during the laning stage. If left unchallenged, he's one of the best farming heroes",
     chatMessage:
       "Shadow Fiend doesn't have an escape mechanism, so look to gank him during the laning stage",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6232,7 +6259,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 30,
     textMessage:
       'Try not to run at Shadow Fiend in plain sight as you might get triple razed to death',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6243,7 +6270,7 @@ export const dotaCoachMessages = [
       "Shadow Fiend's first big item is either Eul's Scepter or Shadow Blade. Both items are good at picking off heroes, so keep an eye on his item build",
     chatMessage:
       "Shadow Fiend's first big item is either Eul's Scepter or Shadow Blade. Both are good at killing heroes",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6252,7 +6279,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 30, 35 * 60 + 30, 55 * 60 + 30],
     textMessage:
       "In team-fights, look to play around Shadow Fiend's ultimate by either canceling it or moving away from him",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6261,7 +6288,7 @@ export const dotaCoachMessages = [
     messageTime: 18 * 60 + 30,
     textMessage:
       'Armor items are good against Shadow Fiend as his Presence of the Dark Lord is an armor reducing aura',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6272,7 +6299,7 @@ export const dotaCoachMessages = [
       "Shadow Fiend should be a high priority target in team fights. If left unchecked, he can do tons of damage. At the same time, he's not that tanky and easy to bring down",
     chatMessage:
       'Shadow Fiend should be a high priority target in team fights. He does tons of damage and is squishy',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 85. Shadow Shaman | 07.03.2021
@@ -6283,7 +6310,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       "Make use of Shadow Shaman's high base damage to secure last hits and denies.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6292,7 +6319,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       'A good Combo is to use Hex followed by Mass Serpent Ward with Shackles.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6301,7 +6328,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 30,
     textMessage:
       'You can pull nearby neutral or lane creeps to your Mass Serpent Wards after you made a move to get some extra gold.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6310,7 +6337,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'If opponents are farming your Mass Serpent Wards, try to deny individual Serpent Wards with other Serpent Wards.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6319,7 +6346,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60,
     textMessage:
       'Take your time to farm up Aether Lens or Blink Dagger, so that you can cast you spells more easily in fights.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6328,7 +6355,7 @@ export const dotaCoachMessages = [
     messageTime: 14 * 60,
     textMessage:
       'Initiate on enemies with your long lasting disables, so your allies can follow-up for a kill.',
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -6338,7 +6365,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'In certain games, Black King Bar can be great to get off full Shackles durations.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6348,7 +6375,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       "Aghanim's Scepter and a Refresher Orb in late game, allow you to breach high ground and end the game.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -6358,7 +6385,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Shadow Shaman has high base damage and a great nuke in Ether Shock. Avoid trading with him.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6367,7 +6394,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Shadow Shaman has long lasting but short cast range disables. Keep distance from him.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6376,7 +6403,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Shadow Shaman has high solo kill potential on level 6 with Mass Serpent Ward.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6385,7 +6412,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 10, 18 * 60 + 10, 28 * 60 + 10],
     textMessage:
       'Shadow Shaman takes buildings down fast with Mass Serpent Ward. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6394,7 +6421,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Shadow Shaman in the fights as he provides a lot of control for his team.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6403,9 +6430,9 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Black King Bar, status resistance items, Linken's Sphere and Lotus Orb are great against Shadow Shaman.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  /*{category: "EnemyHero", hero: "Shadow Shaman", audioFile: "heroes/Shadow Shaman_7_Crimson guard", messageTime: (12*60+10), textMessage: "Crimson Guard is great at reducing damage on buildings and heroes by Mass Serpent Ward.", audience: [ALL]}, 12.6.2021 no longer valid */
+  /*{category: "EnemyHero", hero: "Shadow Shaman", audioFile: "heroes/Shadow Shaman_7_Crimson guard", messageTime: (12*60+10), textMessage: "Crimson Guard is great at reducing damage on buildings and heroes by Mass Serpent Ward.", audience: [Audience.ALL]}, 12.6.2021 no longer valid */
   {
     category: 'EnemyHero',
     hero: 'Shadow Shaman',
@@ -6413,7 +6440,7 @@ export const dotaCoachMessages = [
     messageTime: 25 * 60,
     textMessage:
       "Shadow Shaman is good at ratting your base especially with Aghanim's Scepter and Refresher Orb.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 86. Silencer | 07.03.2021
@@ -6423,7 +6450,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Silencer_1_ArcaneCurse',
     messageTime: 30,
     textMessage: 'Use Arcane Curse when you expect opponents to cast a spell.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6432,7 +6459,7 @@ export const dotaCoachMessages = [
     messageTime: 60,
     textMessage:
       "Clicking Glaives of Wisdom on an enemy hero doesn't draw creep aggro.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6441,7 +6468,7 @@ export const dotaCoachMessages = [
     messageTime: -20,
     textMessage:
       'To steal intelligence from a dying hero you have to have Glaives of Wisdom skilled and be within 925 of dying hero or be the one who scores the kill.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6449,7 +6476,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Silencer_4_Combo',
     messageTime: 90,
     textMessage: 'Combining Arcane Curse with Last Word does a lot of damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6459,7 +6486,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'Be aware of what happens on the map, so you can use Global Silence when needed.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6469,7 +6496,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       'Using Global Silence defensively is fine, but ideally use it during fights. Make moves when it is off cooldown.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6479,7 +6506,7 @@ export const dotaCoachMessages = [
     repeatTime: 20 * 60,
     textMessage:
       "Many items dispel Global Silence. Be patient and don't waste it at the start of a fight.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -6489,7 +6516,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Glaives of Wisdom are great for harassing as Silencer doesn't pull aggro and the damage ramps up.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6498,7 +6525,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Silencer's Arcane Curse gets extended every time you cast a spell while under the effect of it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6507,7 +6534,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'Global Silence has a long cooldown. Look to fight after it was used.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6516,7 +6543,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Items that provide dispel are great against Silencer's silences.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 87. Skywrath Mage | 07.03.2021
@@ -6527,7 +6554,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Skywrath Mage uses his spells frequently to harass. Magic Stick and Wand will be charged up.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6536,7 +6563,7 @@ export const dotaCoachMessages = [
     messageTime: 3 * 60 + 30,
     textMessage:
       "Consider purchasing Infused Raindrops against Skywrath Mage's damaging spells.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6545,7 +6572,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Skywrath Mage in fights as he does a lot of damage but is very squishy.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6554,7 +6581,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 20,
     textMessage:
       'Be aware of Rod of Atos timing on Skywrath Mage. He can solo kill most of the heroes with it.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6563,7 +6590,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Force Staff is great at saving an ally from Skywrath's Mystic Flare.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6572,7 +6599,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Magic resistance and spell immunity items are great against Skywrath Mage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6581,7 +6608,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Items that provide dispel are great against Skywrath's Ancient Seal and root from Rod of Atos.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 88. Slardar | 07.03.2021
@@ -6592,7 +6619,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'After every 3rd hit, Slardar will have Bash of the Deep charged up. Keep yourself at distance.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6601,7 +6628,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       "Be aware of Slardar's Blink Dagger timing. Look to cancel his Dagger in the fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6610,7 +6637,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Items that provide dispel are great against Slardar's Corrosive Haze.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6619,7 +6646,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Armor items are great against Slardar's damage output and armor reduction.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6628,7 +6655,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
       'Slardar lineups are able to take Roshan early on. Ward around Roshpit and check.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 89. Slark | Earlier work
@@ -6641,7 +6668,7 @@ export const dotaCoachMessages = [
       'Slark tends to do well against offlane melee due to Essence Shift stacks. Check if you can send at least one ranged hero against him',
     chatMessage:
       'Slark tends to do well against offlane melee due to Essence Shift stacks. Send one ranged hero against him',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6650,7 +6677,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 + 45, 10 * 60 + 45],
     textMessage:
       'Place wards in unusual spots and more defensively as Slark is able to sense vision with his ultimate',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6659,7 +6686,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 30,
     textMessage:
       "Keep an eye on Slark's Dark Pact usage so that your spells and items don't get dispelled",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6667,7 +6694,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Slark_4_Force staff',
     messageTime: 8 * 60 + 30,
     textMessage: "Force Staff allows you to break away from Slark's Pounce",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6678,7 +6705,7 @@ export const dotaCoachMessages = [
       "Slark has increased night vision so he's likely to spot you before you spot him. Use Smoke of Deceit to gank him more effectively during night",
     chatMessage:
       'Slark has increased night vision so use Smoke of Deceit to gank him more effectively during night',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6689,7 +6716,7 @@ export const dotaCoachMessages = [
       'Long fights are favoring Slark as he is able to acquire Essence Shift stacks. Keep an eye on it and avoid fighting him if his stacks are high',
     chatMessage:
       'Long fights are favoring Slark as he acquires Essence Shift stacks. Avoid fighting him when stacks are high',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6698,7 +6725,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60 + 30,
     textMessage:
       'Instant or near instant disables and burst damage are good at dealing with Slark',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 90. Snapfire | Earlier work
@@ -6711,7 +6738,7 @@ export const dotaCoachMessages = [
       'Avoid staying too close to Snapfire on the lane as her main harassing spell is Scatterblast which does 50% more damage if you are within 450 range',
     chatMessage:
       'Avoid staying close to Snapfire as her Scatterblast which does 50% more damage if you are within 450 range',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6720,7 +6747,7 @@ export const dotaCoachMessages = [
     messageTime: 50,
     textMessage:
       'Firesnap Cookie stun can be dodged if you run quickly towards the hero or creep that cookie was used on',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6729,7 +6756,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 30,
     textMessage:
       "Be careful with spells that have hit counter as they are countered by Snapfire's Lil' Shredder",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6738,7 +6765,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 45, 28 * 60 + 45, 48 * 60 + 45],
     textMessage:
       "To dodge Snapfire's Mortimer Kisses, make sharp turns and change direction",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6749,7 +6776,7 @@ export const dotaCoachMessages = [
       "Snapfire's damage is primarily magical, getting magic resistance items or Black King Bar allows you to negate most of her impact in fights",
     chatMessage:
       "Snapfire's damage is primarily magical. Magic resistance items or Black King Bar is good",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6760,7 +6787,7 @@ export const dotaCoachMessages = [
       "Canceling Snapfire's ultimate can be a fight winning move. Try to position yourself such that you can get to her as quickly as possible. Getting gap closing items helps as well",
     chatMessage:
       "Canceling Snapfire's ultimate can be a fight winning move. Getting gap closing items helps",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 91. Sniper | Earlier work
@@ -6771,7 +6798,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'Sniper gets easily ganked, always have an Observer Ward placed and pay attention to the minimap.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -6785,7 +6812,7 @@ export const dotaCoachMessages = [
       9 * 60 + 45,
     ],
     textMessage: 'Push out the lane with Shrapnel prior to rune spawns.',
-    audience: [ROLE_MID],
+    audience: [Audience.ROLE_MID],
   },
   {
     category: 'OwnHero',
@@ -6793,7 +6820,7 @@ export const dotaCoachMessages = [
     audioFile: 'ownHero/Sniper_3_Stack',
     messageTime: 2 * 60 + 45,
     textMessage: 'Stack a small camp whenever you can.',
-    audience: [ROLE_MID],
+    audience: [Audience.ROLE_MID],
   },
   {
     category: 'OwnHero',
@@ -6802,7 +6829,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       "Sniper doesn't like to rotate too much, so focus on farming and pressure the tower if opponents' mid rotates.",
-    audience: [ROLE_MID],
+    audience: [Audience.ROLE_MID],
   },
   {
     category: 'OwnHero',
@@ -6812,7 +6839,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       "Don't let opponents see you at the start of a fight. Let them focus on someone else.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6822,7 +6849,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'If you feel you might be ganked, Shrapnel the wave and move out.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6832,7 +6859,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'Sniper is really strong at defending buildings with Shrapnel and his long attack range.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -6842,7 +6869,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'When in trouble, often times the correct play is to press Take Aim and stand your ground.',
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -6851,7 +6878,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60, 20 * 60],
     textMessage:
       "Aghanim's Scepter and Aghanim's Shard are Core items. Take your time in between the fights to farm them.",
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
 
   {
@@ -6861,7 +6888,7 @@ export const dotaCoachMessages = [
     messageTimes: [1 * 60 + 30, 4 * 60 + 30],
     textMessage:
       "Gank Sniper in early game. He doesn't have any escape mechanism and is very squishy",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6869,7 +6896,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Sniper_2_Gap-closing',
     messageTimes: [7 * 60 + 10, 15 * 60 + 20, 25 * 60 + 25],
     textMessage: 'Buy gap-closing items against Sniper',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6878,7 +6905,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60 + 30,
     textMessage:
       "Smoke of Deceit can be used to dodge Sniper's Assassinate ability",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6887,7 +6914,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 15, 20 * 60 + 15, 30 * 60 + 15],
     textMessage:
       'Use Smoke of Deceit to wrap around and catch Sniper off-guard',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6896,7 +6923,7 @@ export const dotaCoachMessages = [
     messageTimes: [11 * 60 + 15, 23 * 60 + 15, 33 * 60 + 15],
     textMessage:
       'Deep observer wards allow you to spot Sniper on the backlines',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6907,7 +6934,7 @@ export const dotaCoachMessages = [
       "Be very careful when pushing high-ground against Sniper. Chip the tower and racks patiently and don't overextend. You might also want to give up on the high-ground siege and take a fight outside of their base",
     chatMessage:
       "Be careful when pushing high-ground against Sniper. Chip the tower and racks patiently and don't overextend",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 92. Spectre | 07.03.2021
@@ -6918,7 +6945,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Spectre is a weak laner. Look to pressure her early on. She's slow at recovering.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -6927,7 +6954,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Spectre's Desolate does no damage to you, if you are close to an allied unit.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6936,7 +6963,7 @@ export const dotaCoachMessages = [
     messageTime: 40,
     textMessage:
       'The closer you are to Spectre the more damage you take from Dispersion.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6945,7 +6972,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Protect your supports from being killed during the Spectre's Haunt.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6954,7 +6981,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       "Spectre's Haunt has a long cooldown. Look to fight after it was used.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6963,7 +6990,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Break effects remove Desolate and Dispersion and make Spectre much weaker.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 93. Spirit Breaker | 07.03.2021
@@ -6974,7 +7001,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Charge of Darkness provides vision over you. Hiding in trees won't help once you're charged.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6982,7 +7009,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Spirit Breaker_2_Bulldoze',
     messageTime: 30,
     textMessage: 'Avoid wasting disables on Spirit Breaker buffed by Bulldoze.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -6991,7 +7018,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Spirit Breaker roams a lot. Keep track of his movements and have a teleport ready.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7000,7 +7027,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Spells and items that provide instant disable are great at stopping Charge of Darkness.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7008,7 +7035,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Spirit Breaker_5_Linkens sphere',
     messageTime: 12 * 60 + 10,
     textMessage: "Linken's Sphere is great against Charge of Darkness.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 94. Storm Spirit | 07.03.2021
@@ -7019,7 +7046,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60 + 45, 15 * 60 + 45, 25 * 60 + 45],
     textMessage:
       'Rune control is very important. Arcane and Regeneration runes can easily win you the fight or allow you to get a pick-off.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7028,7 +7055,7 @@ export const dotaCoachMessages = [
     messageTime: 2 * 60 + 45,
     textMessage:
       'Stack small camp and clear it after addressing lane creeps. It is very important to hit level 6 as soon as possible to make yourself less gankable.',
-    audience: [ROLE_MID],
+    audience: [Audience.ROLE_MID],
   },
   {
     category: 'OwnHero',
@@ -7037,7 +7064,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       'If you have a really good start, get Orchid as soon as possible. It will allow you to pick-off most of the heroes on the map.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7046,7 +7073,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60 + 45,
     textMessage:
       'You can right-click and use spells and items during Ball Lightning, including teleport.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7056,7 +7083,7 @@ export const dotaCoachMessages = [
     repeatTime: 15 * 60,
     textMessage:
       'Mana management is the key. The more mana you have the more damage you can do. Be full mana if you expect fight to break out.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7066,7 +7093,7 @@ export const dotaCoachMessages = [
     repeatTime: 15 * 60,
     textMessage:
       "Don't spend all of your mana on initial jump. Preserve some to be able to disengage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7076,7 +7103,7 @@ export const dotaCoachMessages = [
     repeatTime: 15 * 60,
     textMessage:
       'When leaving the fountain, you can Ball Lightning up to t3 tower while bottling and you will still be full mana.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7086,7 +7113,7 @@ export const dotaCoachMessages = [
     repeatTime: 15 * 60,
     textMessage:
       'Target backliners. They are squishy and Storm has no issue gap-closing.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7096,7 +7123,7 @@ export const dotaCoachMessages = [
     repeatTime: 15 * 60,
     textMessage:
       'Static Remnant provides flying vision around itself which can be useful to scout Roshan or rune spawn and give you vision in tree lines.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7105,7 +7132,7 @@ export const dotaCoachMessages = [
     messageTime: 14 * 60,
     repeatTime: 20 * 60,
     textMessage: 'Ball Lightning destroys trees in its path.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7115,7 +7142,7 @@ export const dotaCoachMessages = [
     repeatTime: 15 * 60,
     textMessage:
       'Storm Spirit is one of the best Aegis/Cheese carriers as he utilizes the mana he gets back really well.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7125,7 +7152,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       "Level 20 Vortex talent along with Aghanim's Scepter mimics Reverse Polarity but on 16s cooldown.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -7135,7 +7162,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'In late game you can fly over and kill the creeps that opponents are looking to push with.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -7145,7 +7172,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Storm Spirit uses Static Remnant frequently. Magic Stick and Wand will be charged up.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7154,7 +7181,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Control power runes against Storm. He likes to bottle and gank with those.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7163,7 +7190,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       "Look to fight when Storm Spirit is low on mana as he won't be able to use Ball Lightning much.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7172,7 +7199,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       "Be aware of Storm Spirit's Orchid timing. He can solo kill most heroes with it.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7181,7 +7208,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Spells and items that provide instant disables and silences are great against Storm Spirit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7190,7 +7217,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Magic resistance and spell immunity items are great against Storm Spirit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7199,7 +7226,7 @@ export const dotaCoachMessages = [
     messageTimes: [20 * 60 + 10, 30 * 60 + 10, 40 * 60 + 10],
     textMessage:
       "Be quick on glyphing or piping the creepwave when pushing highground against Storm's Ball Lightning. ",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 95. Sven | 08.03.2021
@@ -7210,7 +7237,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Against Sven, avoid playing inside the creep wave as you will take damage from Great Cleave.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7219,7 +7246,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Sven farms quickly with Great Cleave. Smoke him, place deep wards and sentry off camps.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7228,7 +7255,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       "God's Strength more than doubles Sven's damage. Look to disengage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7237,7 +7264,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
     textMessage:
       'Avoid clumping up in the fights for Storm Hammer and Great Cleave.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7246,7 +7273,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Armor items are great against Sven's insane physical damage output.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7255,7 +7282,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60,
     textMessage:
       "Be aware of Sven's Aghanim's Scepter timing. He becomes much more dangerous.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 96. Techies | 08.03.2021
@@ -7266,7 +7293,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Against Techies, deliver extra consumables and an Observer Ward to keep track of him.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7275,7 +7302,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Quell the trees in the area so you can spot Proximity mines and see Techies doing Blast Off!',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7284,7 +7311,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Proximity Mines explode 1.6 seconds after you hear the beep. Destroy them or move away quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7293,7 +7320,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Keep track of Techies' movements and notice which part of the map is being mined.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7302,7 +7329,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Bring sentries whenever you're making a move on the opponent side of the map.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7311,7 +7338,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       'Avoid being next to trees in the lane as he can hide the Remote Mines in there.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7320,7 +7347,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 30, 20 * 60 + 30, 30 * 60 + 30],
     textMessage:
       'Avoid walking up highground or in Roshpit without vision. You might run into mines.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7329,9 +7356,9 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Magic resistance items, Black King Bar and Aeon Disk are great against Techies' Remote Mines.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  // {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_9_Necrobook 3", messageTime: (12*60+10), textMessage: "Consider buying Necrobook level3 on someone for true sight.", audience: [ALL]}, |patch 7.29| MESSAGE REMOVED
+  // {category: "EnemyHero", hero: "Techie", audioFile: "heroes/Techie_9_Necrobook 3", messageTime: (12*60+10), textMessage: "Consider buying Necrobook level3 on someone for true sight.", audience: [Audience.ALL]}, |patch 7.29| MESSAGE REMOVED
   {
     category: 'EnemyHero',
     hero: 'Techies',
@@ -7339,7 +7366,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 25 * 60 + 10, 35 * 60 + 10],
     textMessage:
       'Getting Aegis of Immortal is great against Remote mines. Take Roshan as early as possible.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7348,7 +7375,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60 + 10,
     textMessage:
       'Buy a Gem of True Sight around 20min when you start grouping up as team.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 97. Templar Assassin | 08.03.2021
@@ -7359,7 +7386,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Damage over time spells and items are great at removing Templar's Refraction charges.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7368,7 +7395,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "To dodge Templar's Psi Blade, play on your hero's max range and on the same side of the lane as Templar.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7377,7 +7404,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 10,
     textMessage:
       "Make sure to have sentry on the lane against Templar's Psionic Trap.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7386,7 +7413,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Templar Assassin tends to stack and farm ancients early on. Block the camp or contest her.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7394,7 +7421,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Templar Assassin_5_Carry detection',
     messageTimes: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
     textMessage: 'Carry detection on multiple heroes against Templar.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7403,7 +7430,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
       'Templar Assassin takes down buildings fast with Desolator. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7412,7 +7439,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Armor items, Ghost Scepter and Heaven's Halberd are great against Templar Assassin.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7421,7 +7448,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Be aware of Templar Assassin's Desolator and Blink Dagger timing. She can solo kill most heroes.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7430,7 +7457,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
       'Templar Assassin is able to take Roshan early on. Ward and check Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7438,7 +7465,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Templar Assassin_10_Rospit psionic trap',
     messageTimes: [15 * 60 + 20, 25 * 60 + 20, 35 * 60 + 20],
     textMessage: 'Check the Roshpit for Psionic Trap before taking Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 98. Terrorblade | 08.03.2021
@@ -7449,7 +7476,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Terrorblade has high armor, but low HP and is weak against magical damage. Pressure him early on.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7458,7 +7485,7 @@ export const dotaCoachMessages = [
     messageTimes: [-50, 15 * 60 + 10, 25 * 60 + 10],
     textMessage:
       'Terrorblade is strong when he has Metamorphosis on. Look to escape and fight afterwards.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7467,7 +7494,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Hexes, drains and Dagon are destroying Conjur Images instantly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7476,7 +7503,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       'If you are high on HP, avoid staying close to Terrorblade when he is low as he will Sunder you.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7485,7 +7512,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Terrorblade farms quickly with Conjure Image. Smoke on him, place deep wards and sentry off camps.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7494,7 +7521,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Items that provide AoE damage, especially magical damage, are great at dealing with Conjure Image.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7503,7 +7530,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard and armor items are great against Terrorblade's physical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7512,7 +7539,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Black King Bar, Linken's sphere or a well timed Lotus Orb prevent you from being Sundered.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7521,7 +7548,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 30,
     textMessage:
       'Terrorblade is great at split-pushing and ratting. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 99. Tidehunter | 08.03.2021
@@ -7532,7 +7559,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Tidehunter uses Anchor Smash frequently. Magic Stick and Wand will be charged up.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7541,7 +7568,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Avoid being hit by Anchor Smash as you'll have decreased damage for last hitting or to fight back.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7550,7 +7577,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Only use dispellable spells or items on Tidehunter at the start of a fight or after Kraken Shell has procced.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7559,7 +7586,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Tidehunter's Ravage has a long cooldown. Look to fight when it is down.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7568,7 +7595,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Be aware of Tidehunter's Blink Dagger timing. Look to cancel it in the fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7576,7 +7603,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Tidehunter_6_Black king bar',
     messageTime: 12 * 60 + 10,
     textMessage: "Black King Bar will make you immune to Tidehunter's Ravage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7585,7 +7612,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Break effects are great at removing Kraken Shell which makes Tidehunter much weaker.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 100. Timbersaw | Earlier work
@@ -7596,7 +7623,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "One player should buy Spirit Vessel against Timbersaw's reactive armor",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7607,7 +7634,7 @@ export const dotaCoachMessages = [
       'Play agressively against Timbersaw before he reaches level 3, or only when his reactive armor stacks are low, otherwise avoid fighting him',
     chatMessage:
       'Play agressively against Timbersaw before he reaches level 3 or only when his reactive armor stacks are low',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7615,7 +7642,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Timbersaw_3_Trees',
     messageTime: 1 * 60 + 30,
     textMessage: 'Stay away from trees against Timbersaw',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7626,7 +7653,7 @@ export const dotaCoachMessages = [
       'Timbersaw is strongest between 8 and 20 minutes, so avoid contesting him on the lane and try to pressure other lanes and heroes instead',
     chatMessage:
       'Timbersaw is strongest between 8 and 20 minutes, pressure other lanes and heroes',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7635,7 +7662,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60,
     textMessage:
       "Buy Silver Edge against Timbersaw's reactive armor, if you need an additional item to deal with him",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 101. Tinker | 08.03.2021   ***CHANGED 7.30***
@@ -7646,7 +7673,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Tranquil Boots are great against Tinker as they don't break by his magical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   // Added "midlane" in next textMessage as Tinker can be played as a support as well
   {
@@ -7656,9 +7683,9 @@ export const dotaCoachMessages = [
     messageTime: 3 * 60 + 30,
     textMessage:
       "Look to gank midlane Tinker early on as he doesn't have an escape.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  /* {category: "EnemyHero", hero: "Tinker", audioFile: "heroes/Tinker_3_Contest farm", messageTime: (5*60+30), textMessage: "Tinker tends to make a lot of stacks in the jungle. Contest them or sentry off camps.", audience: [ALL]}, */
+  /* {category: "EnemyHero", hero: "Tinker", audioFile: "heroes/Tinker_3_Contest farm", messageTime: (5*60+30), textMessage: "Tinker tends to make a lot of stacks in the jungle. Contest them or sentry off camps.", audience: [Audience.ALL]}, */
 
   {
     category: 'EnemyHero',
@@ -7669,7 +7696,7 @@ export const dotaCoachMessages = [
       'Avoid using long lasting disables and debuffs on a hero shielded with Defense Matrix due to its high status resistance.',
     chatMessage:
       'Avoid using long lasting disables and debuffs on hero shielded by Defense Matrix.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -7679,7 +7706,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       "Focus Tinker in fights as he's squishy but does insane amounts of damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   // Removed Boots of Travel from textMessage as Tinker doesn't need them anymore
   {
@@ -7688,7 +7715,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Tinker_5_Item timings',
     messageTime: 12 * 60,
     textMessage: "Be aware of Tinker's Blink Dagger timing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7697,7 +7724,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "You can dodge Tinker's Heat-Seeking Missile by using Smoke of Deceit or blinking away.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7706,7 +7733,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       'Magic resistance items, Black King Bar or a well timed Lotus Orb are great against Tinker.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7714,7 +7741,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Tinker_8_Gap closing items',
     messageTime: 12 * 60 + 30,
     textMessage: 'Gap closing items are great at getting on top of Tinker.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7723,7 +7750,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 40,
     textMessage:
       'Tinker is great at split-pushing. Consider getting Boots of Travel on a core.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7732,7 +7759,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 25 * 60, 35 * 60],
     textMessage:
       'Place Tinker wards at the edges of the map. Consider camping those spots under the ward.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7741,7 +7768,7 @@ export const dotaCoachMessages = [
     messageTimes: [25 * 60 + 10, 35 * 60 + 10, 45 * 60 + 10],
     textMessage:
       'It is really hard to push highground against Tinker. Be patient and take fights outside the base.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 102. Tiny | 08.03.2021
@@ -7752,7 +7779,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Tiny starts with 0 armor. Harass him with physical damage as much as you can.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7761,7 +7788,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Toss is Tiny's main setup spell. Keep distance or play in creep wave to prevent easy Tosses.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7770,7 +7797,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       "Avoid playing close to the opponent's tower as you can get Tossed underneath it by Tiny.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7779,7 +7806,7 @@ export const dotaCoachMessages = [
     messageTime: 3 * 60 + 30,
     textMessage:
       'Avalanche into Toss combo does a lot of magical damage. Get Infused Raindrops or a Cloak.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7788,7 +7815,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       "Be aware of Tiny's Blink Dagger timing. Cancel it in the fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7797,7 +7824,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Magic resistance items are great against Tiny's magical burst.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7806,7 +7833,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Tiny takes down buildings fast with Tree Grab and Toss. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 103. Treant Protector | 08.03.2021
@@ -7817,7 +7844,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Quell trees in the lane so you can keep track of Treant Protector and stop Nature's Guise.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7826,7 +7853,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Keep distance from Treant Protector as he has the highest base damage in the game.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7835,7 +7862,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60 + 30, 15 * 60 + 30, 25 * 60 + 30],
     textMessage:
       "Take towers down in one go so Treant Protector can't heal them with Living Armor.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7844,7 +7871,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       "Be aware of Treant Protector's Meteor Hammer timing. He becomes good at splitpushing.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7853,7 +7880,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60, 20 * 60, 30 * 60],
     textMessage:
       'Treant Protector becomes invisible with his level10 talent. Carry detection on multiple heroes.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7862,7 +7889,7 @@ export const dotaCoachMessages = [
     messageTimes: [12 * 60 + 10, 20 * 60 + 20, 28 * 60 + 10],
     textMessage:
       'Observers and sentries at the edges of the map are great at stopping Treant from splitpushing.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7871,7 +7898,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Items that apply dispel on you, are great against Treant's Overgrowth and Leech Seed.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7880,7 +7907,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60 + 10,
     textMessage:
       "Once Treant gets Aghanim's Scepter consider getting a Gem and cut Eyes in the Forest.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 104. Troll Warlord | 09.03.2021
@@ -7890,7 +7917,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Troll Warlord_1_Extra consumables',
     messageTime: -60,
     textMessage: 'Troll Warlord is a strong laner. Buy extra healing items.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7899,7 +7926,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Avoid Troll when Battle Trance is on. Don't allow him to heal by hitting you.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7908,7 +7935,7 @@ export const dotaCoachMessages = [
     messageTime: 9 * 60 + 10,
     textMessage:
       'Battle Trance applies basic dispel on Troll. Use dispellable spells and items afterwards.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7917,7 +7944,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Troll Warlord takes down buildings fast with Fervor. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7926,7 +7953,7 @@ export const dotaCoachMessages = [
     messageTime: 13 * 60,
     textMessage:
       "Items that pierce evasion are good against Troll's Whirling Axes (relevant for Melee heroes).",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7935,7 +7962,7 @@ export const dotaCoachMessages = [
     messageTimes: [15 * 60 + 10, 25 * 60, 35 * 60],
     textMessage:
       'Troll Warlord is able to take Roshan early on. Ward and check Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7944,7 +7971,7 @@ export const dotaCoachMessages = [
     messageTime: 23 * 60,
     textMessage:
       "Aghanim's Scepter makes Troll's Whirling Axes apply basic dispel on him and opponents.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 105. Tusk | 09.03.2021
@@ -7954,7 +7981,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Tusk_1_Movement speed items',
     messageTime: -60,
     textMessage: "Movement speed items are great against Tusk's spells.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7963,7 +7990,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       "Bring an Observer Ward to lane to keep an eye on Tusk's aggressive movements.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7972,7 +7999,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Keep distance from Tusk because Tag Team does extra damage on every hit.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -7981,7 +8008,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Tusk roams a lot. Keep an eye on his movements and be ready to help.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7990,7 +8017,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Be aware of Tusk's Blink Dagger timing as he can easily save his allies with Snowball.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -7998,7 +8025,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Tusk_6_Fore staff',
     messageTime: 12 * 60 + 10,
     textMessage: 'Force Staff and Hurricane Pike are great against Tusk.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 106. Underlord | 09.03.2021
@@ -8008,7 +8035,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Underlord_1_Pressure early',
     messageTime: -60,
     textMessage: 'Pressure Underlord early on as he is slow and has no escape.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8017,7 +8044,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Bring extra consumables to the lane against Underlord's Firestorm spam.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8025,7 +8052,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Underlord_3_Deny ranged creeps',
     messageTime: 40,
     textMessage: 'Denying range creeps is easy against Firestorm.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8034,7 +8061,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       'Underlord is really good at defending buildings. Respect that fact.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8043,7 +8070,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Avoid clumping up and fighting in choke spots against Firestorm and Pit of Malice combo.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 107. Undying | 09.03.2021
@@ -8054,7 +8081,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Undying uses Decay frequently. Magic Stick and Wand will be charged up.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8063,7 +8090,7 @@ export const dotaCoachMessages = [
     messageTime: -40,
     textMessage:
       'Keep distance from Undying as he is likely to have high damage due to Decay stacks.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8072,7 +8099,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Keep an eye on your total HP against Decay spam. Soul Rip can finish you off.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8081,7 +8108,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60 + 20, 15 * 60 + 20, 25 * 60 + 20],
     textMessage:
       'Focus Tombstone in fights or you risk being slowed greatly and take a lot of damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8090,7 +8117,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       'Consider killing off zombies chasing you or team mates in trouble.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8099,7 +8126,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Avoid being hit by Undying in Flesh Golem form as you will take extra damage and be slowed.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 108. Ursa | 09.03.2021
@@ -8110,7 +8137,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Keep distance from Ursa as he is able to build up damage against you with Fury Swipes.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   // @Alex: This one is hard to understand: Does this mean the player has to use them on Ursa when he has enrange or not to use it then? (I recorded it anyway) ANSWER: Consider NOT to use them while Enrage is active as the disables will last short due to status resistance from Enrage. Sometimes it is fine to use them despite diminished effect. That's why I was using word "consider".
   {
@@ -8120,7 +8147,7 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       "Consider saving your disables against Ursa's Enrage status resistance increase.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8129,7 +8156,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Eul's Scepter is great for kiting Enrage as it doesn't get affected by its status resistance.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8138,7 +8165,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Ghost Scepter, Force Staff and Hurricane Pike are great for kiting Ursa.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8146,7 +8173,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Ursa_5_Roshan',
     messageTimes: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage: 'Ursa is able to take Roshan early on. Ward and check Roshan.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 109. Vengeful Spirit | 09.03.2021
@@ -8157,7 +8184,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Vengeful Spirit in the fights as she provides saves and empowers her Cores.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8166,7 +8193,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Armor items are great against Vengeful Spirit's Wave of Terror and Vengeance Aura.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8175,7 +8202,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Linken's Sphere and a well timed Lotus Orb are great against Magic Missile and Nether Swap.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8184,7 +8211,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60 + 10,
     textMessage:
       "If Vengeful bought Aghanim's Scepter, then you should ignore her in fights.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 110. Venomancer | 09.03.2021
@@ -8195,7 +8222,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Bring extra consumables to the lane against Venomancer's Poison Sting harass.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8204,7 +8231,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 10,
     textMessage:
       "Cloak has a lot of value against Venomancer's insane magic damage output.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8213,7 +8240,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60 + 20, 10 * 60 + 20, 15 * 60 + 20],
     textMessage:
       'Consider teleporting out quickly when you find yourself in trouble against Venomancer.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8222,7 +8249,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Spell immunity and magical resistance items are great against Venomancer.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8231,7 +8258,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Items that provide dispels are able to remove Venomous Gale and Poison Sting.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 111. Viper | 09.03.2021
@@ -8242,7 +8269,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       "Don't allow Viper to stack more than 3 Poison Attacks on you.",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8251,7 +8278,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       "Viper's Nethertoxin breaks passives. Stay away from it until you have a Black King Bar.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8260,7 +8287,7 @@ export const dotaCoachMessages = [
     messageTimes: [5 * 60 + 10, 10 * 60 + 10, 15 * 60 + 10],
     textMessage:
       'Consider teleporting out quickly when you find yourself in trouble against Viper.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8269,7 +8296,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Magic resistance items are great against Viper's magic damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8278,12 +8305,12 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Linken's Sphere and a well timed Lotus Orb are great against Viper Strike.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 112. Visage | 10.03.2021
   // @Alex: I don't understand this one: Does it mean that I have to make sure that I have at least 40 damage in lane to remove that buff? Don't all heroes have that anyway? (I didn't record this one) ANSWER: You need to deal an instance of damage higher than 40 to remove one layer of Gravekeeper's Cloak. Urn of Shadows won't do it as it does 20 per tick but it would be good to remove Templar Assassin's Refractions.
-  //{category: "EnemyHero", hero: "Visage", audioFile: "heroes/Visage_1_Gravekeepers cloak", messageTime: (30), textMessage: "Instance of 40 damage and more are removing a Gravekeeper's Cloak layer.", audience: [ALL]},
+  //{category: "EnemyHero", hero: "Visage", audioFile: "heroes/Visage_1_Gravekeepers cloak", messageTime: (30), textMessage: "Instance of 40 damage and more are removing a Gravekeeper's Cloak layer.", audience: [Audience.ALL]},
   {
     category: 'EnemyHero',
     hero: 'Visage',
@@ -8291,7 +8318,7 @@ export const dotaCoachMessages = [
     messageTime: 5 * 60 + 30,
     textMessage:
       "Visage's Familiars give a lot of gold and are easy to kill when Visage is not around.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8300,7 +8327,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 15 * 60 + 20, 20 * 60 + 20],
     textMessage:
       "Visage is snowbally hero and falls off in late game. Look to extend the game. Don't be greedy with items.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8309,7 +8336,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 15 * 60 + 30, 20 * 60 + 30],
     textMessage:
       'Visage takes down buildings fast with Familiars. Organize defense quickly.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8318,7 +8345,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Break effects are removing Gravekeeper's Cloak and Visage becomes much weaker.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8327,7 +8354,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard is great against the Familiar's physical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8336,7 +8363,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60 + 10,
     textMessage:
       "Once Visage gets Aghanim's Scepter, place Observer wards and sentries and carry detection.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 113. Void Spirit | 10.03.2021
@@ -8347,7 +8374,7 @@ export const dotaCoachMessages = [
     messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
     textMessage:
       'Control power runes against Void Spirit. He likes to bottle them and gank.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8356,7 +8383,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Instant disables and silences are great against the elusive Void Spirit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8365,7 +8392,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Magic resistance and spell immunity items are great against Void Spirit.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8374,7 +8401,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Be aware of Void Spirit's Aghanim's Scepter timing as he gets AoE silence of 4s.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 114. Warlock | 10.03.2021
@@ -8385,7 +8412,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 18 * 60, 28 * 60],
     textMessage:
       "Warlock's Chaotic Offering has long cooldown. Look to fight when it is down.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8394,7 +8421,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       "Avoid clumping up and fighting in choke spots against Warlock's spells.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8403,7 +8430,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Most of Warlock's damage comes from Fatal Bonds. Dispel items are great at removing them.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8411,7 +8438,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Warlock_4_Spell immunity',
     messageTime: 12 * 60 + 20,
     textMessage: 'Spell immunity is great against Warlocks spells.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8420,7 +8447,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60 + 10,
     textMessage:
       "Be aware of Warlock's Aghanim's Scepter and Refresher Orb timings. He can carry the game.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 115. Weaver | 10.03.2021
@@ -8431,7 +8458,7 @@ export const dotaCoachMessages = [
     messageTime: -60,
     textMessage:
       'Bring a sentry and extra consumables to the lane against Weaver.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8440,7 +8467,7 @@ export const dotaCoachMessages = [
     messageTime: 60 + 30,
     textMessage:
       'Remove The Swarm from yourself and from teammates or you will loose a lot of armor.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8448,7 +8475,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Weaver_3_Time lapse',
     messageTime: 8 * 60,
     textMessage: "Weaver's Time Lapse will remove Dust of Appearance.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8457,7 +8484,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Weaver is really good at killing supports and backliners. Protect them.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8466,7 +8493,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Becoming invisible removes The Swarm unless you are being detected or Weaver has Shard upgrade.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8475,7 +8502,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       'Instant disables and silences are great against the elusive Weaver.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8484,7 +8511,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Armor items, Heaven's Halberd and Ghost Scepter are great against Weaver's physical damage.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 116. Windranger | Earlier work
@@ -8495,7 +8522,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Windranger is susceptible to early game spell harass. Manage your mana and keep pressuring her',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8504,7 +8531,7 @@ export const dotaCoachMessages = [
     messageTimes: [1 * 60, 4 * 60],
     textMessage:
       "Windranger's Powershot does lots of damage. Avoid being hit or at least don't be the first unit being hit",
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8513,7 +8540,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60 + 15, 13 * 60 + 15],
     textMessage:
       'Windranger can easily kill most heroes with her ultimate and a single Javelin. Be mindful about that',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8521,7 +8548,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Windranger_4_Blade mail',
     messageTime: 7 * 60 + 15,
     textMessage: 'Blade Mail is a decent counter against her ultimate',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8532,7 +8559,7 @@ export const dotaCoachMessages = [
       "To counter Windranger's Shackleshot, try to stay away from trees and make sure you don't have creeps or heroes behind you. Linken's Sphere is also helpful against Shackleshot",
     chatMessage:
       "To counter Windranger's Shackleshot stay away from trees and don't have creeps or heroes behind you",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8543,7 +8570,7 @@ export const dotaCoachMessages = [
       "Windranger's Windrun ability is countered by items that pierce through evasion, cause magical damage and dispels such as Silver Edge",
     chatMessage:
       "Windranger's Windrun is countered by items that pierce through evasion, cause magical damage and dispels",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 117. Winter Wyvern | 10.03.2021
@@ -8554,7 +8581,7 @@ export const dotaCoachMessages = [
     messageTime: -30,
     textMessage:
       'Make sure to hit each enemy at least once to apply the Arctic Burn debuff.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -8563,7 +8590,7 @@ export const dotaCoachMessages = [
     messageTime: 30,
     textMessage:
       'Avoid Splinter Blasting melee creeps until it reaches level 4 as you will put ranged creep in deny range.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -8572,7 +8599,7 @@ export const dotaCoachMessages = [
     messageTime: 90,
     textMessage:
       "Be careful when using Cold Embrace as a save. Often it is better to use your slows or Winter's Curse.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -8582,7 +8609,7 @@ export const dotaCoachMessages = [
     repeatTime: 10 * 60,
     textMessage:
       'If you feel like you might be gone on, it is good to play close to trees or cliffs, so you can escape with Arctic Burn.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   //@Alex: What doy ou mean be "might be gone"? Might die? Might want to leave the fight?
   {
@@ -8593,7 +8620,7 @@ export const dotaCoachMessages = [
     repeatTime: 30 * 60,
     textMessage:
       "Avoid showing yourself early in fights. Stay hidden and play around your Winter's Curse and Cold Embrace. Use Arctic burn to reposition.",
-    audience: [ROLE_SUPPORT],
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -8603,7 +8630,7 @@ export const dotaCoachMessages = [
     repeatTime: 30 * 60,
     textMessage:
       "Use Curse carefully in the middle of fights as you might waste a lot of your ally's damage and cooldowns.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
@@ -8612,7 +8639,7 @@ export const dotaCoachMessages = [
     messageTime: 14 * 60,
     textMessage:
       "Aghanim's Scepter is crucial for right-click build. Make sure you take time to farm it.",
-    audience: [ROLE_CORE],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: 'OwnHero',
@@ -8621,7 +8648,7 @@ export const dotaCoachMessages = [
     messageTime: 17 * 60,
     textMessage:
       "Having timely Blink Dagger will allow you to seize a moment and land multi-hero Winter's Curses.",
-    audience: [ROLE_OFFLANE, ROLE_SUPPORT],
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
   },
   {
     category: 'OwnHero',
@@ -8631,7 +8658,7 @@ export const dotaCoachMessages = [
     repeatTime: 30 * 60,
     textMessage:
       "Fight around good vision so you can position well and land multi-hero Winter's Curses.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   {
@@ -8640,7 +8667,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Winter Wyvern_1_Arctic burn',
     messageTime: -60,
     textMessage: 'Winter Wyvern is bad at trading when Arctic Burn is down.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8648,7 +8675,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Winter Wyvern_2_Cold embrace',
     messageTime: 60 + 30,
     textMessage: 'Cold Embrace prevents all physical damage.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8657,7 +8684,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
       'Focus Winter Wyvern in fights as she provides saves and disables for her team.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8666,7 +8693,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       "Avoid clumping up and fighting in choke spots against Winter's Curse.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8675,7 +8702,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       'Black King Bar prevents you from hitting a Cursed unit, but you can still get cursed yourself.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8684,7 +8711,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Status resistance items shorten the duration of Winter's Curse.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 118. Witch Doctor | 10.03.2021
@@ -8694,7 +8721,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Witch Doctor_1_Paralyzing cask',
     messageTimes: [-60, 10 * 60 + 10, 20 * 60 + 20],
     textMessage: "Don't clump up because of Witch Doctor's Paralyzing Cask.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8703,7 +8730,7 @@ export const dotaCoachMessages = [
     messageTime: -50,
     textMessage:
       'Paralyzing Cask stuns creeps for 5 seconds. Keep your summons away from Witch Doctor.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8712,7 +8739,7 @@ export const dotaCoachMessages = [
     messageTime: 2 * 60 + 20,
     textMessage:
       'Witch Doctor is a strong laner, especially when he gets a second point in Maledict.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8721,9 +8748,9 @@ export const dotaCoachMessages = [
     messageTime: 8 * 60,
     textMessage:
       'Witch Doctor can solo kill most heroes with Death Ward. Track his movements on the map.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
-  /*{category: "EnemyHero", hero: "Witch Doctor", audioFile: "heroes/Witch Doctor_5_Crimson guard", messageTime: (12*60), textMessage: "Crimson Guard is great at reducing damage from Death Ward.", audience: [ALL]}, Message is no longer valid 21.6.2021 */
+  /*{category: "EnemyHero", hero: "Witch Doctor", audioFile: "heroes/Witch Doctor_5_Crimson guard", messageTime: (12*60), textMessage: "Crimson Guard is great at reducing damage from Death Ward.", audience: [Audience.ALL]}, Message is no longer valid 21.6.2021 */
   {
     category: 'EnemyHero',
     hero: 'Witch Doctor',
@@ -8731,7 +8758,7 @@ export const dotaCoachMessages = [
     messageTime: 20 * 60 + 10,
     textMessage:
       "Be aware of Witch Doctor's Aghanim's Scepter purchase. Focus him in the fights or cancel his Ulti.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 119. Wraith King | 10.03.2021
@@ -8741,7 +8768,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Wraith King_1_Low armor',
     messageTime: -60,
     textMessage: 'Wraith King has low armor. Pressure him with right clicks.',
-    audience: [IN_LANE],
+    audience: [Audience.IN_LANE],
   },
   {
     category: 'EnemyHero',
@@ -8750,7 +8777,7 @@ export const dotaCoachMessages = [
     messageTimes: [8 * 60, 10 * 60 + 30, 12 * 60 + 30],
     textMessage:
       'Reincarnation has a long cooldown on level 1. Look to pressure Wraith King while it is down.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8759,7 +8786,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60 + 10,
     textMessage:
       'Wraith King farms quickly with skeletons. Smoke on him, place deep wards and sentry off camps.',
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8768,7 +8795,7 @@ export const dotaCoachMessages = [
     messageTimes: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
       "Don't use all your energy on Wraith King's first life unless you are sure you can kill him once more.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8777,7 +8804,7 @@ export const dotaCoachMessages = [
     messageTime: 12 * 60,
     textMessage:
       "Mana burns are great at stopping Wraith King's Ulti until he gets Aghanim's Shard.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
   {
     category: 'EnemyHero',
@@ -8786,7 +8813,7 @@ export const dotaCoachMessages = [
     messageTime: 15 * 60 + 10,
     textMessage:
       "Be aware of Wraith King's Radiance timing. He'll be looking to fight you.",
-    audience: [ALL],
+    audience: [Audience.ALL],
   },
 
   // 120. Zeus | Earlier work | NOTE: Zeus ulty does 300 damage but after redcutions it does around 225-230. I think it is fine to keep the message as it is.
@@ -8799,7 +8826,7 @@ export const dotaCoachMessages = [
       'Agree on who builds magic resistance items such as Pipe of Insight against Zeus - all players should have items with some magic resistance',
     chatMessage:
       'Agree on who builds magic resistance items such as Pipe of Insight against Zeus',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'pipe' },
   },
   {
@@ -8808,7 +8835,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Zeus_2_Wards',
     messageTimes: [-40, 4 * 60 + 40, 10 * 60 + 40],
     textMessage: 'Place wards in unusual spots because of Zeus',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_observer' },
   },
   {
@@ -8817,7 +8844,7 @@ export const dotaCoachMessages = [
     audioFile: 'heroes/Zeus_3_HP thundergod',
     messageTime: 5 * 60 + 30,
     textMessage: "Keep your HP above Thundergod's Wrath damage of 300",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'ability', name: 'zuus_thundergods_wrath' },
   },
   {
@@ -8827,7 +8854,7 @@ export const dotaCoachMessages = [
     messageTime: 6 * 60,
     textMessage:
       'Control Power Runes to prevent Zeus from getting arcane or regeneration runes',
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'rune', name: 'arcane' },
   },
   {
@@ -8837,7 +8864,7 @@ export const dotaCoachMessages = [
     messageTime: 10 * 60,
     textMessage:
       "Smoke of Deceit can be useful to dodge Thundergod's Wrath or to wrap around Zeus to catch him off-guard",
-    audience: [ALL],
+    audience: [Audience.ALL],
     image: { type: 'item', name: 'smoke_of_deceit' },
   },
 ];
