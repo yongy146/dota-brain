@@ -16096,48 +16096,6 @@
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"doom_bringer_empty1": {
-			"id": 5343,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Devoured Ability",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "yes"
-		},
-		"doom_bringer_empty2": {
-			"id": 5344,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Devoured Ability",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "yes"
-		},
 		"doom_bringer_doom": {
 			"id": 5342,
 			"sequence": "Ability6",
@@ -17564,48 +17522,6 @@
 			"description": "",
 			"is_ultimate": false,
 			"is_passive": "no"
-		},
-		"invoker_empty1": {
-			"id": 5373,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Invoked Spell",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "yes"
-		},
-		"invoker_empty2": {
-			"id": 5374,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Invoked Spell",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "yes"
 		},
 		"invoker_invoke": {
 			"id": 5375,
@@ -20642,48 +20558,6 @@
 			],
 			"name": "Arcane Supremacy",
 			"description": "Not every magus can be a Grand Magus...",
-			"is_ultimate": false,
-			"is_passive": "yes"
-		},
-		"rubick_empty1": {
-			"id": 5453,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Stolen Spell",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "yes"
-		},
-		"rubick_empty2": {
-			"id": 5454,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Stolen Spell",
-			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "yes"
 		},
