@@ -99,15 +99,15 @@ export function getEnemyHeroMessages(hero): any[] {
 }
 
 export enum Audience {
-  ALL = 'All',                       // All players get the message
-  IN_LANE = 'InLane',                // Players playing against hero in the lane get messages
-  ROLE_CORE = 'Core',                // For mid, carry and offlane
+  ALL = 'All', // All players get the message
+  IN_LANE = 'InLane', // Players playing against hero in the lane get messages
+  ROLE_CORE = 'Core', // For mid, carry and offlane
   ROLE_MID = 'Mid',
   ROLE_CARRY = 'Carry',
   ROLE_OFFLANE = 'Offlane',
-  ROLE_SUPPORT = 'Support',          // For soft and hard support
+  ROLE_SUPPORT = 'Support', // For soft and hard support
   ROLE_SUPPORT_SOFT = 'SoftSupport',
-  ROLE_SUPPORT_HARD = 'HardSupport'
+  ROLE_SUPPORT_HARD = 'HardSupport',
 }
 /*export const ALL = 'All';                       // All players get the message
 export const IN_LANE = 'InLane';                // Players playing against hero in the lane get messages
@@ -121,31 +121,42 @@ export const ROLE_SUPPORT_HARD = 'HardSupport';*/
 
 export interface DotaCoachMessage {
   //  Category of the message. This field allows the app to turn on/off certain messages based on the user's preference
-  category: 'BountyRunes' | 'WaterRunes' |'PowerRunes' |'NeutralItems' | 'SmokeOfDeceit' | 'AghanimsShard' | 'TomeOfKnowledge' |'SiegeCreeps' | 'DayTime' | 'EnemyHero' | 'OwnHero',
+  category:
+    | 'BountyRunes'
+    | 'WaterRunes'
+    | 'PowerRunes'
+    | 'NeutralItems'
+    | 'SmokeOfDeceit'
+    | 'AghanimsShard'
+    | 'TomeOfKnowledge'
+    | 'SiegeCreeps'
+    | 'DayTime'
+    | 'EnemyHero'
+    | 'OwnHero';
   // Localized hero name, only needed for categories 'EnemyHero' and 'OwnHero'
-  hero?: string, // Localized name
+  hero?: string; // Localized name
   // Folder and name of audio file (the app adds '.mp3' to the file name)
-  audioFile: string,
+  audioFile: string;
   // Time when message is played in seconds (time is based on game time) ; -90 means that the message is played at hero selection
-  messageTime?: number,
+  messageTime?: number;
   // Time interval to repeat the message (this fields is only be used in combination with 'messageTime')
-  repeatTime?: number,
+  repeatTime?: number;
   // Array of times when message is played
-  messageTimes?: number[],
+  messageTimes?: number[];
   // Message spoken by narrator and displayed in the game
-  textMessage: string,
+  textMessage: string;
   // Optional parameter to specify chat messages (relevant when text message is too long). Max lenght is 109 characters.
-  chatMessage?: string,
+  chatMessage?: string;
   // two possible values: 'All' and 'Lane' (All: ; Lane: )
-  audience: Audience[],
+  audience: Audience[];
   // Image to be displayed on web-page. Only works for messages that are short enough to allow for image to be displayed
   image?: {
-    type: 'item' | 'ability' | 'rune', 
+    type: 'item' | 'ability' | 'rune';
     // name for item:    Short name, e.g. 'blink' (as provided by dota2Items.json, but without 'item_' prefex)
     // name for ability: Name as provided in dota2Heroes.json, e.g. 'alchemist_unstable_concoction_throw'
     // name for rune:    arcane, bounty, double_damage, haste, illusion, invisibility or regeneration
-    name: string 
-  }
+    name: string;
+  };
 }
 
 export const dotaCoachMessages: DotaCoachMessage[] = [
@@ -290,6 +301,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'Apply Aphotic Shield preemptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.',
     audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'abaddon_aphotic_shield' },
   },
   // Alex: Not sure I understand this one. Maybe we can refurmulate
   {
@@ -310,50 +322,56 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Salve or clarity won't be canceled while you have Apothic Shield on.",
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abaddon_aphotic_shield' },
   },
   {
     category: 'OwnHero',
     hero: 'Abaddon',
     audioFile: 'ownHero/Abaddon_3_BorrowedTime1',
     messageTime: 6 * 60,
+    repeatTime: 12 * 60,
     textMessage:
       'If someone applies a break effect on you, you will have to trigger Borrowed Time manually.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abaddon_borrowed_time' },
   },
   {
     category: 'OwnHero',
     hero: 'Abaddon',
     audioFile: 'ownHero/Abaddon_4_Disables',
     messageTime: 8 * 60,
+    repeatTime: 8 * 60,
     textMessage:
       'If you got disabled along with your teammate you can pop Borrowed Time to unstun yourself and then apply Aphotic Shield on a stunned ally to free him as well.',
-    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abaddon_aphotic_shield' },
   },
   {
     category: 'OwnHero',
     hero: 'Abaddon',
     audioFile: 'ownHero/Abaddon_5_BorrowedTime2',
     messageTime: 12 * 60,
-    repeatTime: 20 * 60,
+    repeatTime: 10 * 60,
     textMessage:
       "You can position more aggressively than rest of your team, as opponents usually don't want to go on you due to Borrowed Time.",
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'abaddon_borrowed_time' },
   },
   {
     category: 'OwnHero',
     hero: 'Abaddon',
     audioFile: 'ownHero/Abaddon_6_Dispel',
     messageTime: 20 * 60,
-    repeatTime: 20 * 60,
+    repeatTime: 10 * 60,
     textMessage:
       'Constantly look at your teammates to heal or hard dispel them.',
-    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
     hero: 'Abaddon',
     audioFile: 'ownHero/Abaddon_7_Silences',
-    messageTime: 16 * 60,
+    messageTimes: [16 * 60, 24 * 60],
     textMessage:
       'Silences and heal reductions are a big problems for Abaddon. Avoid being hit by those or itemize against them.',
     audience: [Audience.ALL],
@@ -365,7 +383,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 22 * 60,
     textMessage:
       "With Aghanim's Scepter, you will need to activate your Ultimate manually, while most of the damage is being inflicted on your teammates.",
-    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
   },
 
   {
@@ -921,7 +940,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'Grab illusion runes and make use of illusions to push out lanes as Counter Helix works on them as well.',
     audience: [Audience.ALL],
-    image: { type: 'ability', name: 'axe_counter_helix' },
+    image: { type: 'rune', name: 'illusion' },
   },
   {
     category: 'OwnHero',
@@ -1158,7 +1177,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Batrider_3_Dive',
     messageTime: 2 * 60,
     textMessage:
-      "Having Bottle charges, Faerie Fire or Healing Salve can allow you to dive under the tower.",
+      'Having Bottle charges, Faerie Fire or Healing Salve can allow you to dive under the tower.',
     audience: [Audience.IN_LANE, Audience.ROLE_CORE],
   },
   {
@@ -1167,7 +1186,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Batrider_4_Stacks',
     messageTimes: [3 * 60, 5 * 60],
     textMessage:
-      "Batrider is good at clearing stacks early on. Encourage your teammates to make them for you.",
+      'Batrider is good at clearing stacks early on. Encourage your teammates to make them for you.',
     audience: [Audience.IN_LANE, Audience.ROLE_CORE],
   },
   {
@@ -1176,7 +1195,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Batrider_5_Boots of Travel',
     messageTime: 6 * 60,
     textMessage:
-      "Focus on acquiring Boots of Travel and then start playing more actively.",
+      'Focus on acquiring Boots of Travel and then start playing more actively.',
     audience: [Audience.IN_LANE, Audience.ROLE_CORE],
     image: { type: 'item', name: 'travel_boots' },
   },
@@ -1185,8 +1204,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Batrider',
     audioFile: 'ownHero/Batrider_6_Flying vision',
     messageTimes: [6 * 60 + 30, 16 * 60 + 30, 26 * 60 + 30],
-    textMessage:
-      "Sticky Napalm and Firefly provide flying vision.",
+    textMessage: 'Sticky Napalm and Firefly provide flying vision.',
     audience: [Audience.ALL],
   },
 
@@ -1221,6 +1239,107 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 9. Beastmaster | 28.02.2021
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_1_Helm of Iron Will',
+    messageTime: -90,
+    textMessage:
+      'Save some of your starting gold to get Helm of Iron Will as soon as possible.',
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: 'item', name: 'item_helm_of_iron_will' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_2_Wild Axes',
+    messageTime: -60,
+    textMessage:
+      'If laning against Chen, Enchantress or Naga Siren, consider skilling Wild Axes on level 1 and investing more spell points into it.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'beastmaster_wild_axes' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_3_Save boars',
+    messageTime: 10,
+    textMessage:
+      "Make sure not to feed boars to opponents. Deny them or move them away when they're low on hp.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'call_of_the_wild_boar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_4_Scout support',
+    messageTime: 20,
+    textMessage: "Keep the hawk out to scout opponents' support whereabouts.",
+    audience: [
+      Audience.ROLE_OFFLANE,
+      Audience.ROLE_CARRY,
+      Audience.ROLE_SUPPORT,
+    ],
+    image: { type: 'ability', name: 'call_of_the_wild_hawk' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_5_High damage',
+    messageTime: 30,
+    textMessage:
+      "Utilize Beasmaster's high base damage and additional damage from boars to deny creeps and secure lasthits.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'call_of_the_wild_boar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_6_Catapults',
+    messageTimes: [5 * 60, 10 * 60],
+    textMessage:
+      'Make use of catapult waves to pressure the tower along with your summons.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_7_Powerspike',
+    messageTime: 6 * 60,
+    textMessage:
+      'The biggest early powerspike on Beastmaster is Helm of the Dominator and level 6 timing. Look to score a kill and take tower down.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_dominator' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_8_Farm aggressively',
+    messageTimes: [9 * 60, 11 * 60],
+    textMessage:
+      "You can farm aggressively since you have hawk's vision to protect you and summons to farm those camps safely.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_9_Push sidelanes',
+    messageTimes: [13 * 60, 15 * 60],
+    textMessage:
+      'Push out sidelanes with summons, especially once you control Helm of the Overlord creep, Black Dragon ideally.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_overlord' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Beastmaster',
+    audioFile: 'ownHero/Beastmaster_10_Roshan',
+    messageTime: 14 * 60 + 45,
+    textMessage: 'Take first Roshan between 15 and 20 minute mark.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Beastmaster',
@@ -1302,6 +1421,48 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 10. Bloodseeker | 28.02.2021
   {
+    category: 'OwnHero',
+    hero: 'Bloodseeker',
+    audioFile: 'ownHero/Bloodseeker_1_Blood Rite',
+    messageTime: 15,
+    textMessage:
+      'Use Blood Rite to secure range creep lasthits and damage the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bloodseeker_blood_bath' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bloodseeker',
+    audioFile: 'ownHero/Bloodseeker_2_Movement speed',
+    messageTimes: [90, 3 * 60],
+    textMessage:
+      'Keep an eye on your movement speed. If you are fast, you can play more aggressively.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bloodseeker_thirst' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bloodseeker',
+    audioFile: 'ownHero/Bloodseeker_3_Teleport out',
+    messageTimes: [6 * 60, 9 * 60],
+    textMessage:
+      "The opponents will often attempt to teleport out when you Rupture them. Call for an ally to help you out if you don't have a way of securing kill yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bloodseeker_rupture' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bloodseeker',
+    audioFile: 'ownHero/Bloodseeker_3_Rupture targets',
+    messageTime: 15 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Make sure to Rupture high priority targets in the fights, usually mobile cores, especially with Black King Bar.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bloodseeker_rupture' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Bloodseeker',
     audioFile: 'heroes/Bloodseeker_1_Burst',
@@ -1343,12 +1504,74 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 11. Bounty Hunter | 28.02.2021
   {
+    category: 'OwnHero',
+    hero: 'Bounty Hunter',
+    audioFile: 'ownHero/Bounty Hunter_1_Snipe couriers',
+    messageTime: -90,
+    textMessage:
+      'Place a non-obvious courier sniping Observer Ward. Killing couriers grants gold but also disallows detection to be delivered.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'courier' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bounty Hunter',
+    audioFile: 'ownHero/Bounty Hunter_2_Jinada',
+    messageTime: -15,
+    textMessage:
+      "Hit opponents with Jinada or secure range creep lasthits. The bonus damage doesn't work on denies.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bounty_hunter_jinada' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bounty Hunter',
+    audioFile: 'ownHero/Bounty Hunter_3_Check detection',
+    messageTime: 15,
+    repeatTime: 10 * 60,
+    textMessage: "Check frequently opponents' inventories for detection.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'SentryDustGem' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bounty Hunter',
+    audioFile: 'ownHero/Bounty Hunter_4_Leave invisibility',
+    messageTimes: [90, 8 * 60 + 30, 15 * 60 + 30],
+    textMessage:
+      "If you get dusted while in Shadow Walk, use any activatable item or Shuriken Toss to leave invisibility and your won't be slowed by dust.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'dust' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bounty Hunter',
+    audioFile: 'ownHero/Bounty Hunter_5_Avoid spots',
+    messageTime: 3 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Avoid running by spots that are typically sentried like pillars and active rune spots.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bounty Hunter',
+    audioFile: 'ownHero/Bounty Hunter_6_Playstyle',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      'In mid to lategame, play ahead of your teammates, track opponents, break smokes, collect runes, place deep wards and snipe couriers.',
+    audience: [Audience.ROLE_SUPPORT],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Bounty Hunter',
     audioFile: 'heroes/Bounty Hunter_1_Detection',
     messageTime: -60,
     textMessage:
-      'To counter Bounty Hunter, bring a sentry to the lane and dust later on.',
+      'Use Jinada off cooldown on opponents hero or to secure range creep lasthit.',
     audience: [Audience.IN_LANE],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -1413,6 +1636,69 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 12. Brewmaster | 28.02.2021
   {
+    category: 'OwnHero',
+    hero: 'Brewmaster',
+    audioFile: 'ownHero/Brewmaster_1_Urn',
+    messageTime: -90,
+    textMessage:
+      "Get Urn of Shadows as soon as possible as it allows you snowball off of first kill. Soul Release activates Cinder Brew.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'urn_of_shadows' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Brewmaster',
+    audioFile: 'ownHero/Brewmaster_2_Drunken Brawler',
+    messageTime: 15,
+    textMessage:
+      'Take a point in Drunken Brawler on a tough lane.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'brewmaster_drunken_brawler' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Brewmaster',
+    audioFile: 'ownHero/Brewmaster_3_Cinder Brew',
+    messageTime: 30,
+    textMessage:
+      "Ask your laning partner to activate Cinder Brew if you can't yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'brewmaster_cinder_brew' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Brewmaster',
+    audioFile: 'ownHero/Brewmaster_4_Cyclone',
+    messageTime: 6 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Make sure to cyclone an important target at least twice during Primal Split.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'brewmaster_primal_split' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Brewmaster',
+    audioFile: 'ownHero/Brewmaster_5_Dispel',
+    messageTime: 6 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Don't forget that Storm Panda has AoE dispel which can remove certain spells, runes and damage basic illusions.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'brewmaster_primal_split' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Brewmaster',
+    audioFile: 'ownHero/Brewmaster_6_Earth panda',
+    messageTimes: [6 * 60 + 30, 16 * 60 + 30],
+    textMessage:
+      "The Earth Panda carries all the auras and AoE effects like Radiance or Cloak of Flames.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'brewmaster_primal_split' },
+  },
+  
+  {
     category: 'EnemyHero',
     hero: 'Brewmaster',
     audioFile: 'heroes/Brewmaster_1_Lock down',
@@ -1453,6 +1739,66 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 13. Bristleback | 28.02.2021
+  {
+    category: 'OwnHero',
+    hero: 'Bristleback',
+    audioFile: 'ownHero/Bristleback_1_Early Goo',
+    messageTime: 45,
+    textMessage:
+      "If you can be aggressive, take a point in Viscous Nasal Goo as it will greatly improve physical damage output.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bristleback_viscous_nasal_goo' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bristleback',
+    audioFile: 'ownHero/Bristleback_2_Turn back',
+    messageTime: 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Turn your back to opponents, their towers or stacks of neutral creeps whenever you expect to take loads of damage.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'bristleback_bristleback' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bristleback',
+    audioFile: 'ownHero/Bristleback_3_Stack camps',
+    messageTimes: [3 * 60 + 30 , 6 * 60 + 30],
+    textMessage:
+      "Alert your supports to stack for you, especially ancient camp as you can clear it at level 7.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bristleback',
+    audioFile: 'ownHero/Bristleback_4_Stack camps',
+    messageTimes: [6 * 60 + 45 , 9 * 60 + 45, 12 * 60 + 45],
+    textMessage:
+      "Bristleback is not the best at moving around and ganking. Rather, make the opponents come to you by being aggressive.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bristleback',
+    audioFile: 'ownHero/Bristleback_5_Check inventory',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      "Check opponents' inventories frequently in search for break effects and healing reductions. Black King Bar and dispel items counter some of them.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Bristleback',
+    audioFile: 'ownHero/Bristleback_6_Roshan',
+    messageTimes: [18 * 60 + 15 , 23 * 60 + 15],
+    textMessage:
+      "You can take Roshan down fast and early with your team thanks to Viscous Nasal Goo.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+  
   {
     category: 'EnemyHero',
     hero: 'Bristleback',
