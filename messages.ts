@@ -1641,7 +1641,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Brewmaster_1_Urn',
     messageTime: -90,
     textMessage:
-      "Get Urn of Shadows as soon as possible as it allows you snowball off of first kill. Soul Release activates Cinder Brew.",
+      'Get Urn of Shadows as soon as possible as it allows you snowball off of first kill. Soul Release activates Cinder Brew.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'urn_of_shadows' },
   },
@@ -1650,8 +1650,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Brewmaster',
     audioFile: 'ownHero/Brewmaster_2_Drunken Brawler',
     messageTime: 15,
-    textMessage:
-      'Take a point in Drunken Brawler on a tough lane.',
+    textMessage: 'Take a point in Drunken Brawler on a tough lane.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'brewmaster_drunken_brawler' },
   },
@@ -1672,7 +1671,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 6 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Make sure to cyclone an important target at least twice during Primal Split.",
+      'Make sure to cyclone an important target at least twice during Primal Split.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'brewmaster_primal_split' },
   },
@@ -1693,11 +1692,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Brewmaster_6_Earth panda',
     messageTimes: [6 * 60 + 30, 16 * 60 + 30],
     textMessage:
-      "The Earth Panda carries all the auras and AoE effects like Radiance or Cloak of Flames.",
+      'The Earth Panda carries all the auras and AoE effects like Radiance or Cloak of Flames.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'brewmaster_primal_split' },
   },
-  
+
   {
     category: 'EnemyHero',
     hero: 'Brewmaster',
@@ -1745,7 +1744,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Bristleback_1_Early Goo',
     messageTime: 45,
     textMessage:
-      "If you can be aggressive, take a point in Viscous Nasal Goo as it will greatly improve physical damage output.",
+      'If you can be aggressive, take a point in Viscous Nasal Goo as it will greatly improve physical damage output.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'bristleback_viscous_nasal_goo' },
   },
@@ -1756,7 +1755,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Turn your back to opponents, their towers or stacks of neutral creeps whenever you expect to take loads of damage.",
+      'Turn your back to opponents, their towers or stacks of neutral creeps whenever you expect to take loads of damage.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'bristleback_bristleback' },
   },
@@ -1764,18 +1763,18 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: 'OwnHero',
     hero: 'Bristleback',
     audioFile: 'ownHero/Bristleback_3_Stack camps',
-    messageTimes: [3 * 60 + 30 , 6 * 60 + 30],
+    messageTimes: [3 * 60 + 30, 6 * 60 + 30],
     textMessage:
-      "Alert your supports to stack for you, especially ancient camp as you can clear it at level 7.",
+      'Alert your supports to stack for you, especially ancient camp as you can clear it at level 7.',
     audience: [Audience.ALL],
   },
   {
     category: 'OwnHero',
     hero: 'Bristleback',
     audioFile: 'ownHero/Bristleback_4_Stack camps',
-    messageTimes: [6 * 60 + 45 , 9 * 60 + 45, 12 * 60 + 45],
+    messageTimes: [6 * 60 + 45, 9 * 60 + 45, 12 * 60 + 45],
     textMessage:
-      "Bristleback is not the best at moving around and ganking. Rather, make the opponents come to you by being aggressive.",
+      'Bristleback is not the best at moving around and ganking. Rather, make the opponents come to you by being aggressive.',
     audience: [Audience.ALL],
   },
   {
@@ -1792,13 +1791,13 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: 'OwnHero',
     hero: 'Bristleback',
     audioFile: 'ownHero/Bristleback_6_Roshan',
-    messageTimes: [18 * 60 + 15 , 23 * 60 + 15],
+    messageTimes: [18 * 60 + 15, 23 * 60 + 15],
     textMessage:
-      "You can take Roshan down fast and early with your team thanks to Viscous Nasal Goo.",
+      'You can take Roshan down fast and early with your team thanks to Viscous Nasal Goo.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'aegis' },
   },
-  
+
   {
     category: 'EnemyHero',
     hero: 'Bristleback',
@@ -1849,6 +1848,66 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 14. Broodmother | 28.02.2021
+  {
+    category: 'OwnHero',
+    hero: 'Broodmother',
+    audioFile: 'ownHero/Broodmother_1_Until 6',
+    messageTime: 15,
+    textMessage:
+      'Broodmother is weak until level 6. Focus on lasthitting and sustaining health until you have Spawn Spiderlings.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Broodmother',
+    audioFile: 'ownHero/Broodmother_2_Spiderlings feed',
+    messageTime: 5 * 60 + 30,
+    textMessage:
+      'Make sure not to feed spiderlings away as that greatly affects your farming speed and kill threat.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'broodmother_spawn_spiderlings' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Broodmother',
+    audioFile: 'ownHero/Broodmother_3_Play aggressive',
+    messageTimes: [6 * 60 + 30, 9 * 60 + 30],
+    textMessage:
+      'Once you have buit up an army of spiderlings, try to play on the opponents side of the map as much as you can.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'broodmother_spawn_spiderlings' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Broodmother',
+    audioFile: 'ownHero/Broodmother_4_Place wards',
+    messageTimes: [7 * 60, 10 * 60, 13 * 60],
+    textMessage:
+      "Place Observer Wards and Sentries in the opponents' jungle so you feel comfortable playing there.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_dispenser' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Broodmother',
+    audioFile: 'ownHero/Broodmother_5_Feeling endangered',
+    messageTimes: [7 * 60 + 30, 10 * 60 + 30, 13 * 60 + 30],
+    textMessage:
+      'If you are feeling endangered, let your spiderlings farm while staying hidden on hero.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'broodmother_spawn_spiderlings' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Broodmother',
+    audioFile: 'ownHero/Broodmother_6_Roshan',
+    messageTimes: [15 * 60 + 30, 20 * 60 + 30],
+    textMessage:
+      'Broodmother can take Roshan down fairly early. Move spiderlings out when Roshan is about to clap.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Broodmother',
@@ -1920,6 +1979,67 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 15. Centaur Warrunner | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Centaur Warrunner',
+    audioFile: 'ownHero/Centaur Warrunner_1_Ring',
+    messageTime: 15,
+    textMessage:
+      'Focus on lasthitting to get Ring of Health purchased as soon as possible.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ring_of_health' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Centaur Warrunner',
+    audioFile: 'ownHero/Centaur Warrunner_2_Creepskip',
+    messageTime: 4 * 60 + 45,
+    textMessage:
+      "If you can't pressure on the lane, consider creepskipping after minute 5 and farming neutral camps nearby.",
+    audience: [Audience.ROLE_OFFLANE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Centaur Warrunner',
+    audioFile: 'ownHero/Centaur Warrunner_3_Buldings',
+    messageTimes: [5 * 60 + 15, 8 * 60 + 15],
+    textMessage:
+      'Retaliate works on buildings so consider tanking tower shots if it is safe enough.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'centaur_return' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Centaur Warrunner',
+    audioFile: 'ownHero/Centaur Warrunner_4_Stampede',
+    messageTimes: [6 * 60 + 30, 9 * 60 + 30, 12 * 60 + 30],
+    textMessage:
+      'Look around the map to help out your teammates in the trouble with Stampede.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'centaur_stampede' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Centaur Warrunner',
+    audioFile: 'ownHero/Centaur Warrunner_5_Blink',
+    messageTime: 10 * 60 + 30,
+    textMessage:
+      'Once you get Blink Dagger, try to make use of it immediately before the opponents can see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Centaur Warrunner',
+    audioFile: 'ownHero/Centaur Warrunner_6_Follow up',
+    messageTime: 11 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Make sure your teammates can follow up on your initiation. Centaur doesn't do insane amounts of damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Centaur Warrunner',
     audioFile: 'heroes/Centaur Warrunner_1_Spirit vessel',
@@ -1966,6 +2086,66 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 16. Chaos Knight | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Chaos Knight',
+    audioFile: 'ownHero/Chaos Knight_1_Aggressive',
+    messageTime: 15,
+    textMessage:
+      "Chaos Knight's spells allow you to play aggressively on the lane against most of the match-ups.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chaos Knight',
+    audioFile: 'ownHero/Chaos Knight_2_Phantasm farm',
+    messageTimes: [6 * 60 + 45, 10 * 60 + 45, 14 * 60 + 45],
+    textMessage:
+      'Use Phantasm off cooldown not just to fight but also to farm faster unless you suspect a fight will happen soon.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'chaos_knight_phantasm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chaos Knight',
+    audioFile: 'ownHero/Chaos Knight_3_Illusions',
+    messageTimes: [7 * 60, 11 * 60],
+    textMessage:
+      'Illusions scale with stat attributes, attack speed and movemet speed increases, health regeneration and some attack modifiers like lifesteal and crit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'chaos_knight_phantasm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chaos Knight',
+    audioFile: 'ownHero/Chaos Knight_4_Strong illusions',
+    messageTimes: [7 * 60 + 15, 11 * 60 + 15],
+    textMessage:
+      "Phantasm illusions are strong illusions so they can't be instantly killed with hex, dagon or drains.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'chaos_knight_phantasm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chaos Knight',
+    audioFile: 'ownHero/Chaos Knight_5_Burst',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Burst an opponent at the start of the fight. Your illusion will generally be killed off as the fight continues.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chaos Knight',
+    audioFile: 'ownHero/Chaos Knight_6_Blink',
+    messageTime: 15 * 60 + 15,
+    textMessage:
+      "With Blink Dagger you can use Phantasm, blink in and pull illusions on target by using Reality Rift.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Chaos Knight',
     audioFile: 'heroes/Chaos Knight_1_Burst',
@@ -2010,6 +2190,66 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 17. Chen | 01.03.2021    ***CHANGED 7.30***
+  {
+    category: 'OwnHero',
+    hero: 'Chen',
+    audioFile: 'ownHero/Chen_1_Unblock camps',
+    messageTime: -90,
+    textMessage:
+      "Bring a sentry or two to the lane to unblock the camps. Chen's laning impact is directly related to summon usage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chen',
+    audioFile: 'ownHero/Chen_2_Harpy',
+    messageTime: 55,
+    textMessage:
+      "If you find Harpy Stormcrafter you can send it mid and zap the opponents' midlaner until it runs out of mana.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'chen_holy_persuasion' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chen',
+    audioFile: 'ownHero/Chen_3_Summons',
+    messageTimes: [90, 4 * 60 + 30, 7 * 60 + 30],
+    textMessage:
+      "Aside from using summons to harass on the lane, you can gank with them, stack camps, control runes, block camps and even snipe couriers.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'chen_holy_persuasion' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chen',
+    audioFile: 'ownHero/Chen_4_Save',
+    messageTimes: [9 * 60, 13 * 60, 17 * 60],
+    textMessage:
+      "Keep an eye on the map and save your teammates in trouble by using Hand of God.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'chen_hand_of_god' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chen',
+    audioFile: 'ownHero/Chen_5_Group up',
+    messageTime: 10 * 60 + 15,
+    textMessage:
+      "You want to group up early with your team and make use of your summons and auras to play aggressively.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Chen',
+    audioFile: 'ownHero/Chen_6_Splitpush',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening on the map, you can splitpush with your summons.",
+    audience: [Audience.ALL],
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Chen',
@@ -2066,6 +2306,64 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 18. Clinkz | 01.03.2021  ***CHANGED 7.30***
   {
+    category: 'OwnHero',
+    hero: 'Clinkz',
+    audioFile: 'ownHero/Clinkz_1_Searing Arrows',
+    messageTime: 15,
+    textMessage: `Searing Arrows is one of most efficient "mana to damage" spells in the game and it doesn't pull aggro.`,
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'clinkz_searing_arrows' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clinkz',
+    audioFile: 'ownHero/Clinkz_2_Check inventory',
+    messageTime: 90,
+    repeatTime: 10 * 60,
+    textMessage: "Check frequently opponents' inventory for detection.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'SentryDustGem' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clinkz',
+    audioFile: 'ownHero/Clinkz_3_Death Pact',
+    messageTimes: [6 * 60, 20 * 60],
+    textMessage: "Death Pact the high hp, undamaged creeps or archer statues. Avoid fighting without Death Pact.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'clinkz_death_pact' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clinkz',
+    audioFile: 'ownHero/Clinkz_4_Clear stacks',
+    messageTime: 8 * 60 + 30,
+    textMessage: 'With Maelstrom and Burning Barrage maxed out, you can clear stacks of creeps without a problem.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'maelstrom' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clinkz',
+    audioFile: 'ownHero/Clinkz_5_Avoid sentries',
+    messageTime: 9 * 60,
+    repeatTime: 8 * 60,
+    textMessage: 'Avoid passing by the typical sentry spots like pillars and active rune spots.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clinkz',
+    audioFile: 'ownHero/Clinkz_6_Barrage line',
+    messageTime: 10 * 60 + 10,
+    repeatTime: 10 * 60,
+    textMessage: 'In the fights, look for opportunities when opponents are lined up to Burning Barrage them.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'clinkz_strafe' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Clinkz',
     audioFile: 'heroes/Clinkz_1_Detection',
@@ -2121,6 +2419,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   // {category: "EnemyHero", hero: "Clinkz", audioFile: "heroes/Clinkz_6_Antievasion", messageTime: (12*60+10), textMessage: "Evasion piercing items are good against Clinkz's Strafe.", audience: [Audience.ALL]},
 
   // 19. Clockwerk | 01.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_1_Observer',
+    messageTime: -60,
+    textMessage:
+      "Bring an Observer Ward to the lane to keep an eye on Clockwerk's aggressive movements.",
+    audience: [Audience.IN_LANE],
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Clockwerk',
