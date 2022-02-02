@@ -3037,6 +3037,86 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 23. Dazzle | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_1_Poison touch',
+    messageTime: -15,
+    textMessage:
+      'Use Poison Touch only if you can follow up with few right-clicks on poisoned hero.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dazzle_poison_touch' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_2_Heal surrounded',
+    messageTime: 75,
+    textMessage:
+      'If an opponent is surrounded by allied units, you can Shadow Wave those units and deal huge damage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dazzle_shadow_wave' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_3_Grave heal',
+    messageTimes: [3 * 60, 9 * 60, 15 * 60],
+    textMessage:
+      'Use Shadow Wave and other sources of healing as Shallow Grave is about to expire.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dazzle_shallow_grave' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_4_Grave tp',
+    messageTimes: [3 * 60 + 15, 9 * 60 + 15, 15 * 60 + 15],
+    textMessage:
+      'When in trouble, you can attempt to Shallow Grave yourself and teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'tpscroll' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_5_Activatable items',
+    messageTimes: [6 * 60 + 15, 14 * 60 + 15, 22 * 60 + 15],
+    textMessage:
+      'Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dazzle_bad_juju' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_6_Dont show',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Avoid showing yourself to opponents at the start of the fight. You are number 1 priority for them to kill.',
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_7_Juju stacking',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Percentage cooldown reductions from items or runes don't stack with Bad Juju. Higher value prevails.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dazzle',
+    audioFile: 'ownHero/Dazzle_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Purchase Aghanim's Shard at 20 minute mark as it provides extra control and kills off basic illusions.",
+    audience: [Audience.ALL],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Dazzle',
     audioFile: 'heroes/Dazzle_1_Poison touch',
@@ -3083,6 +3163,79 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 24. Death Prophet | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_1_Secure ranged',
+    messageTime: 15 * 60,
+    textMessage:
+      'Secure range creep lasthits with Crypt Swarm and possibly hit opponents as well.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'death_prophet_carrion_swarm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_2_Survivability siphons',
+    messageTime: 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Death Prophet's survivability is related to Spirit Siphon usage. Siphon as many units as possible for decent duration.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'death_prophet_spirit_siphon' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_3_Early pressure',
+    messageTimes: [6 * 60, 11 * 60, 16 * 60],
+    textMessage:
+      "Death Prophet excels at taking towers and Roshan early with Exorcism. Call for team to group up around you.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'death_prophet_exorcism' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_4_Exorcism down',
+    messageTime: 6 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid playing aggressively when Exorcism is down. Push out waves and prepare for the next move.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'death_prophet_exorcism' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_5_Itemize tank',
+    messageTime: 8 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Itemize for survivability and to stay in the middle of the fight. Exorcism and Spirit Siphons will do the damage.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_6_Cyclone play',
+    messageTimes: [10 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      "When in trouble, you can Spirit Siphon opponents and Eul's yourself. You are still being healed in the air.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'cyclone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Death Prophet',
+    audioFile: 'ownHero/Death Prophet_7_Heal reductions',
+    messageTimes: [10 * 60 + 30, 15 * 60 + 30, 20 * 60 + 30],
+    textMessage:
+      "Healing reductions are great problem for Death Prophet. You can itemize against some of them.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'spirit_vessel' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Death Prophet',
     audioFile: 'heroes/Death Prophet_1_Burst',
@@ -3128,6 +3281,69 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 25. Disruptor | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Disruptor',
+    audioFile: 'ownHero/Disruptor_1_Harassing',
+    messageTime: -15,
+    textMessage:
+      "Make use of Thunder Strike's movement speed slow and vision over opponent to follow up with few right-clicks.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'disruptor_thunder_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Disruptor',
+    audioFile: 'ownHero/Disruptor_2_Glimpse back',
+    messageTime: 75,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Whenever you see or expect an opponent to teleport in, be ready to Glimpse him back.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'disruptor_glimpse' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Disruptor',
+    audioFile: 'ownHero/Disruptor_3_Field vision',
+    messageTimes: [2 * 60 + 15, 9 * 60 + 15, 16 * 60 + 15],
+    textMessage:
+      "Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'disruptor_kinetic_field' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Disruptor',
+    audioFile: 'ownHero/Disruptor_4_Glimpse illusion',
+    messageTimes: [8 * 60 + 15, 15 * 60 + 15, 22 * 60 + 15],
+    textMessage:
+      "Glimpe instantly destroys basic illusions.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'disruptor_glimpse' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Disruptor',
+    audioFile: 'ownHero/Disruptor_5_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard as soon as possible. It is a great buff for a core but also allows you to move around faster.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Disruptor',
+    audioFile: 'ownHero/Disruptor_6_Aghanims Scepter',
+    messageTime: 25 * 60,
+    repeatTime: 8 *60,
+    textMessage:
+      "In late game, Aghanim's Scepter can turn your Static Storm into a win condition.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Disruptor',
