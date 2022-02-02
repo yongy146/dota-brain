@@ -2131,7 +2131,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Burst an opponent at the start of the fight. Your illusion will generally be killed off as the fight continues.",
+      'Burst an opponent at the start of the fight. Your illusion will generally be killed off as the fight continues.',
     audience: [Audience.ALL],
   },
   {
@@ -2140,7 +2140,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Chaos Knight_6_Blink',
     messageTime: 15 * 60 + 15,
     textMessage:
-      "With Blink Dagger you can use Phantasm, blink in and pull illusions on target by using Reality Rift.",
+      'With Blink Dagger you can use Phantasm, blink in and pull illusions on target by using Reality Rift.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -2216,7 +2216,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Chen_3_Summons',
     messageTimes: [90, 4 * 60 + 30, 7 * 60 + 30],
     textMessage:
-      "Aside from using summons to harass on the lane, you can gank with them, stack camps, control runes, block camps and even snipe couriers.",
+      'Aside from using summons to harass on the lane, you can gank with them, stack camps, control runes, block camps and even snipe couriers.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'chen_holy_persuasion' },
   },
@@ -2226,7 +2226,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Chen_4_Save',
     messageTimes: [9 * 60, 13 * 60, 17 * 60],
     textMessage:
-      "Keep an eye on the map and save your teammates in trouble by using Hand of God.",
+      'Keep an eye on the map and save your teammates in trouble by using Hand of God.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'chen_hand_of_god' },
   },
@@ -2236,7 +2236,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Chen_5_Group up',
     messageTime: 10 * 60 + 15,
     textMessage:
-      "You want to group up early with your team and make use of your summons and auras to play aggressively.",
+      'You want to group up early with your team and make use of your summons and auras to play aggressively.',
     audience: [Audience.ALL],
   },
   {
@@ -2246,7 +2246,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening on the map, you can splitpush with your summons.",
+      'When not much is happening on the map, you can splitpush with your summons.',
     audience: [Audience.ALL],
   },
 
@@ -2329,7 +2329,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Clinkz',
     audioFile: 'ownHero/Clinkz_3_Death Pact',
     messageTimes: [6 * 60, 20 * 60],
-    textMessage: "Death Pact the high hp, undamaged creeps or archer statues. Avoid fighting without Death Pact.",
+    textMessage:
+      'Death Pact the high hp, undamaged creeps or archer statues. Avoid fighting without Death Pact.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'clinkz_death_pact' },
   },
@@ -2338,7 +2339,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Clinkz',
     audioFile: 'ownHero/Clinkz_4_Clear stacks',
     messageTime: 8 * 60 + 30,
-    textMessage: 'With Maelstrom and Burning Barrage maxed out, you can clear stacks of creeps without a problem.',
+    textMessage:
+      'With Maelstrom and Burning Barrage maxed out, you can clear stacks of creeps without a problem.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'maelstrom' },
   },
@@ -2348,7 +2350,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Clinkz_5_Avoid sentries',
     messageTime: 9 * 60,
     repeatTime: 8 * 60,
-    textMessage: 'Avoid passing by the typical sentry spots like pillars and active rune spots.',
+    textMessage:
+      'Avoid passing by the typical sentry spots like pillars and active rune spots.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -2358,7 +2361,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Clinkz_6_Barrage line',
     messageTime: 10 * 60 + 10,
     repeatTime: 10 * 60,
-    textMessage: 'In the fights, look for opportunities when opponents are lined up to Burning Barrage them.',
+    textMessage:
+      'In the fights, look for opportunities when opponents are lined up to Burning Barrage them.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'clinkz_strafe' },
   },
@@ -2422,11 +2426,76 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Clockwerk',
-    audioFile: 'ownHero/Clockwerk_1_Observer',
-    messageTime: -60,
+    audioFile: 'ownHero/Clockwerk_1_Creep equilibrium',
+    messageTime: 15,
     textMessage:
-      "Bring an Observer Ward to the lane to keep an eye on Clockwerk's aggressive movements.",
-    audience: [Audience.IN_LANE],
+      'Have creep equilibrium close to your tower so you can run the opponents down for a while until they reach their tower.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rattletrap_battery_assault' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_2_Pray',
+    messageTime: 30,
+    textMessage:
+      'Play in tree lines and pray on isolated heroes as Battery Assault does all the damage to the single hero.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rattletrap_battery_assault' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_3_Deny cogs',
+    messageTime: 80,
+    textMessage:
+      "Don't feed Power Cogs unnecessarily to opponents. Deny cogs as opponents start attacking them.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rattletrap_power_cogs' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_4_Push cogs',
+    messageTime: 100,
+    repeatTime: 8 * 60,
+    textMessage:
+      "If an opponent can escape or fight you back in Power Cogs, don't trap him in the cogs but rather push him towards your team.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rattletrap_power_cogs' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_5_Rocket scout',
+    messageTime: 9 * 60 + 45,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Use Rockets off cooldown to scout around the map and push out dangerous lanes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rattletrap_rocket_flare' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_6_Split opponents',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      "In the teamfights, look to split opponents' team into two parts by placing cogs between their heroes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rattletrap_power_cogs' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Clockwerk',
+    audioFile: 'ownHero/Clockwerk_7_Controll bkb',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Clockwerk is good at controlling spell-immune heroes as Hookshot pierces spell-immunity and Power Cogs act as barrier.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'black_king_bar' },
   },
 
   {
@@ -2485,6 +2554,79 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 20. Crystal Maiden | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_1_Crystal Nova',
+    messageTime: 15,
+    textMessage:
+      'Try to hit both opponents with Crystal Nova and potentially secure the range creep at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'crystal_maiden_crystal_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_2_Level Frostbite',
+    messageTime: 45,
+    textMessage:
+      'Consider skilling Frostbite on level 2 for a kill attempt if you have enough mana for both active spells.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'crystal_maiden_frostbite' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_3_Frostbite creeps',
+    messageTimes: [2 * 60, 8 * 60],
+    textMessage:
+      "Frostbite lasts longer on the creeps. Use it to farm big neutral creeps or opponents' summons.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'crystal_maiden_frostbite' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_4_Vision',
+    messageTime: 5 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Crystal Nova provides vision so you can use it to scout pillars for wards and Roshpit for example.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'crystal_maiden_crystal_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_5_Skip ulty',
+    messageTime: 8 * 60 + 15,
+    textMessage:
+      'It is hard to land an impactful Freezing Field and it costs a lot of mana so you might want to delay skilling it.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'crystal_maiden_freezing_field' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_6_Avoid showing',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Avoid showing yourself at the start of the fight. Keep distance and spam Crystal Nova,Frostbite, and use items.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Crystal Maiden',
+    audioFile: 'ownHero/Crystal Maiden_7_Dont ulty',
+    messageTime: 16 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      "Don't rush with using Freezing Field in fights unless you can support it with Black King Bar and Blink.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'crystal_maiden_freezing_field' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Crystal Maiden',
@@ -2552,6 +2694,80 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 21. Dark Seer | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_1_Double shell',
+    messageTime: -10,
+    textMessage:
+      "Double Ion Shell the first wave and make sure opponents don't deny many creeps.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_seer_ion_shell' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_2_Push pull',
+    messageTime: 50,
+    textMessage:
+      'Execute push and pull strategy. Push the lane with shells and pull the big camp.',
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT_SOFT],
+    image: { type: 'ability', name: 'dark_seer_ion_shell' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_3_Creepskip',
+    messageTimes: [4 * 60 + 50, 6 * 60 + 50],
+    textMessage:
+      "If you can't pressure on the lane consider creepskipping and farming neutral camps nearby.",
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT_SOFT],
+    image: { type: 'ability', name: 'dark_seer_ion_shell' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_4_Vacuum cliffs',
+    messageTime: 8 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'If you are fighting close to pillar spots or cliffs, consider Vacuuming opponents on those.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_seer_vacuum' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_5_Push dangerous',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: 'Push out dangerous lanes with Ion Shells.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_seer_ion_shell' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_6_Combo',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Keep your melee cores shelled and wait for a moment when opponents are clumped up to do your combo.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_seer_wall_of_replica' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Seer',
+    audioFile: 'ownHero/Dark Seer_7_Priorities',
+    messageTime: 12 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Prioritize using Wall of Replica and Normal Punch on heroes that have strong illusions or auras.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_seer_wall_of_replica' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Dark Seer',
     audioFile: 'heroes/Dark Seer_1_Deny',
@@ -2607,6 +2823,64 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 22. Dark Willow | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Dark Willow',
+    audioFile: 'ownHero/Dark Willow_1_Lasthit range',
+    messageTime: 15,
+    textMessage: 'Consider using Shadow Realm to secure range creep lasthits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_willow_shadow_realm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Willow',
+    audioFile: 'ownHero/Dark Willow_2_Shadow Realm dodge',
+    messageTimes: [45, 8 * 60 + 45, 16 * 60 + 45],
+    textMessage:
+      'You can dodge ranged attacks and many spell projectiles with Shadow Realm.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_willow_shadow_realm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Willow',
+    audioFile: 'ownHero/Dark Willow_3_In trouble',
+    messageTimes: [90, 9 * 60 + 30, 17 * 60 + 30],
+    textMessage:
+      'If in trouble, you can potentially do Shadow Realm into teleport out play.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_willow_shadow_realm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Willow',
+    audioFile: 'ownHero/Dark Willow_4_Pick off',
+    messageTimes: [8 * 60, 14 * 60, 20 * 60],
+    textMessage:
+      'Dark Willow is great at picking off isolated heroes with no escape or dispel due to insane Bedlam damage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dark_willow_bedlam' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Willow',
+    audioFile: 'ownHero/Dark Willow_5_Teamfights',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      'In teamfights, focus on getting off Terrorize, Bramble Maze and Cursed Crown timely and then burst an isolated target with Bedlam.',
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dark Willow',
+    audioFile: 'ownHero/Dark Willow_6_Carry',
+    messageTimes: [20 * 60 + 15, 24 * 60 + 15],
+    textMessage:
+      "If the game opens up for you, you can transition into right-clicker with Aghanim's Scepter and attack speed talent.",
+    audience: [Audience.ROLE_SUPPORT],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Dark Willow',
     audioFile: 'heroes/Dark Willow_1_Squishy',
@@ -2660,6 +2934,48 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 22.5. Dawnbreaker | 11.04.2021  |patch 7.29| ALL MESSAGES ARE NEW
+  {
+    category: 'OwnHero',
+    hero: 'Dawnbreaker',
+    audioFile: 'ownHero/Dawnbreaker_1_Strong laner',
+    messageTime: 15,
+    textMessage:
+      'Dawnbreaker is typically a strong laner. Play aggressively and jump opponents out of position.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dawnbreaker',
+    audioFile: 'ownHero/Dawnbreaker_2_Save ally',
+    messageTime: 6 * 60 + 45,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Keep an eye on the map to save an ally in trouble with Solar Guardian and turn the fight around.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dawnbreaker_solar_guardian' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dawnbreaker',
+    audioFile: 'ownHero/Dawnbreaker_3_Clear safely',
+    messageTimes: [7 * 60 + 45, 14 * 60 + 45],
+    textMessage:
+      'You can clear waves from safe distance by using Celestial Hammer.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dawnbreaker_celestial_hammer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dawnbreaker',
+    audioFile: 'ownHero/Dawnbreaker_4_Play separately',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 8 * 60 + 15,
+    textMessage:
+      "Play seperately from your team, push out lanes and mask team's smoke moves as you can connect to your team with ulty.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dawnbreaker_solar_guardian' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Dawnbreaker',
