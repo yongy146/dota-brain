@@ -3189,7 +3189,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Death Prophet_3_Early pressure',
     messageTimes: [6 * 60, 11 * 60, 16 * 60],
     textMessage:
-      "Death Prophet excels at taking towers and Roshan early with Exorcism. Call for team to group up around you.",
+      'Death Prophet excels at taking towers and Roshan early with Exorcism. Call for team to group up around you.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'death_prophet_exorcism' },
   },
@@ -3200,7 +3200,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 6 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Avoid playing aggressively when Exorcism is down. Push out waves and prepare for the next move.",
+      'Avoid playing aggressively when Exorcism is down. Push out waves and prepare for the next move.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'death_prophet_exorcism' },
   },
@@ -3211,7 +3211,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 8 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Itemize for survivability and to stay in the middle of the fight. Exorcism and Spirit Siphons will do the damage.",
+      'Itemize for survivability and to stay in the middle of the fight. Exorcism and Spirit Siphons will do the damage.',
     audience: [Audience.ALL],
   },
   {
@@ -3230,7 +3230,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Death Prophet_7_Heal reductions',
     messageTimes: [10 * 60 + 30, 15 * 60 + 30, 20 * 60 + 30],
     textMessage:
-      "Healing reductions are great problem for Death Prophet. You can itemize against some of them.",
+      'Healing reductions are great problem for Death Prophet. You can itemize against some of them.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'spirit_vessel' },
   },
@@ -3298,7 +3298,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 75,
     repeatTime: 10 * 60,
     textMessage:
-      "Whenever you see or expect an opponent to teleport in, be ready to Glimpse him back.",
+      'Whenever you see or expect an opponent to teleport in, be ready to Glimpse him back.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'disruptor_glimpse' },
   },
@@ -3308,7 +3308,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Disruptor_3_Field vision',
     messageTimes: [2 * 60 + 15, 9 * 60 + 15, 16 * 60 + 15],
     textMessage:
-      "Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.",
+      'Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'disruptor_kinetic_field' },
   },
@@ -3317,8 +3317,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Disruptor',
     audioFile: 'ownHero/Disruptor_4_Glimpse illusion',
     messageTimes: [8 * 60 + 15, 15 * 60 + 15, 22 * 60 + 15],
-    textMessage:
-      "Glimpe instantly destroys basic illusions.",
+    textMessage: 'Glimpe instantly destroys basic illusions.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'disruptor_glimpse' },
   },
@@ -3337,7 +3336,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Disruptor',
     audioFile: 'ownHero/Disruptor_6_Aghanims Scepter',
     messageTime: 25 * 60,
-    repeatTime: 8 *60,
+    repeatTime: 8 * 60,
     textMessage:
       "In late game, Aghanim's Scepter can turn your Static Storm into a win condition.",
     audience: [Audience.ALL],
@@ -3413,6 +3412,91 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 26. Doom | 01.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_1_Devour ranged',
+    messageTime: -60,
+    textMessage:
+      'Consider going behind the opponents t1 or t2 tower on the first wave to devour ranged creep even earlier.',
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'doom_bringer_devour' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_2_Dont die',
+    messageTime: 15,
+    textMessage:
+      'Bonus gold from Devour is granted at the end of the Devour cycle and you will lose it if you die.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'doom_bringer_devour' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_3_Blink',
+    messageTime: 11 * 60,
+    textMessage:
+      'Once you get Blink Dagger, try to make use of it immediately before opponent see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_4_Centaur',
+    messageTime: 11 * 60 + 15,
+    textMessage:
+      'Usually you want to devour Centaur Conqueror and obtain War Stomp to disable opponents after blink and cast Doom.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'doom_bringer_devour' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_5_Dont show',
+    messageTime: 12 * 60 + 45,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Avoid showing yourself at the start of the fight and wait for your Doom target to show.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'doom_bringer_doom' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_6_Doom cd',
+    messageTime: 13 * 60,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Avoid fighting while Doom is on cooldown. Push out lanes or play defensively.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'doom_bringer_doom' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_6_Doom cd',
+    messageTime: 13 * 60,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Avoid fighting while Doom is on cooldown. Push out lanes or play defensively.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'doom_bringer_doom' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Doom',
+    audioFile: 'ownHero/Doom_7_Doom block',
+    messageTime: 13 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      "Check opponents' inventories for Linken's Spheres and Lotus Orbs. Be careful not to drop Doom on those.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'doom_bringer_doom' },
+  },
+
   // {category: "EnemyHero", hero: "Doom", audioFile: "heroes/Doom_1_Early pressure", messageTime: (-60), textMessage: "Doom is very slow and low armor hero. Pressure him early on.", audience: [Audience.IN_LANE]}, |patch 7.29| MESSAGE CHANGED
   {
     category: 'EnemyHero',
@@ -3452,6 +3536,69 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 27. Dragon Knight | 01.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Dragon Knight',
+    audioFile: 'ownHero/Dragon Knight_1_Lane spells',
+    messageTime: 15,
+    textMessage:
+      'On a tough lane put more points in Dragon Blood, otherwise put more points in your active spells.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dragon_knight_dragon_blood' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dragon Knight',
+    audioFile: 'ownHero/Dragon Knight_2_Take towers',
+    messageTime: 6 * 60,
+    textMessage:
+      'Dragon Knight is great at taking buildings down early due to Corrosive Breath and ability to tank tower shots.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dragon_knight_elder_dragon_form' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dragon Knight',
+    audioFile: 'ownHero/Dragon Knight_3_Blink',
+    messageTime: 10 * 60,
+    textMessage:
+      'Once you get Blink Dagger, try to make use of it immediately before opponent see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dragon Knight',
+    audioFile: 'ownHero/Dragon Knight_4_Follow up',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      "Make sure you have allies nearby when you initiate. Dragon Knight doesn't do much burst damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dragon Knight',
+    audioFile: 'ownHero/Dragon Knight_5_Ulty cd',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Avoid fighting while Dragon Form is on cooldown. Push out lanes or play defensively.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dragon_knight_elder_dragon_form' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Dragon Knight',
+    audioFile: 'ownHero/Dragon Knight_6_Counter items',
+    messageTime: 10 * 60 + 45,
+    textMessage:
+      'Break effects and healing reductions are big problem for Dragon Knight. Itemize against those.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'dragon_knight_dragon_blood' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Dragon Knight',
@@ -3509,12 +3656,72 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 28. Drow Ranger | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Drow Ranger',
+    audioFile: 'ownHero/Drow Ranger_1_Frost Arrows',
+    messageTime: 15,
+    textMessage:
+      "Use Frost Arrows frequently to harass as you don't pull aggro but also to secure lasthits with extra damage.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'drow_ranger_frost_arrows' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Drow Ranger',
+    audioFile: 'ownHero/Drow Ranger_2_Multishot',
+    messageTimes: [75, 7 * 60 + 15],
+    textMessage:
+      'Multishot does the most damage when used point blank as all the arrows will hit the target.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'drow_ranger_multishot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Drow Ranger',
+    audioFile: 'ownHero/Drow Ranger_3_Gust tp',
+    messageTimes: [4 * 60, 9 * 60],
+    textMessage: 'When in trouble, you can potentially Gust and teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'drow_ranger_wave_of_silence' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Drow Ranger',
+    audioFile: 'ownHero/Drow Ranger_4_Agility',
+    messageTimes: [8 * 60, 14 * 60],
+    textMessage:
+      'Drow loves agility stat as it gets further increased by Marksmanship.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'drow_ranger_marksmanship' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Drow Ranger',
+    audioFile: 'ownHero/Drow Ranger_5_Positioning',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      'Drow is all about positioning. Avoid showing yourself too early in the fight and maintain distance.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Drow Ranger',
+    audioFile: 'ownHero/Drow Ranger_5_Positioning',
+    messageTimes: [12 * 60 + 15, 20 * 60 + 15],
+    textMessage:
+      'Avoid buying evasion and miss chance piercing items as Marksmanship already does that for you on proc.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'drow_ranger_marksmanship' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Drow Ranger',
     audioFile: 'heroes/Drow Ranger_1_Harass',
     messageTime: 20,
     textMessage:
-      'Drow Ranger is slow and has low armor. Look to harass her as much as you can on early levels',
+      'Drow Ranger is slow and has low armor. Look to harass her as much as you can on early levels.',
     audience: [Audience.IN_LANE],
   },
   {
@@ -3579,6 +3786,94 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 29. Earth Spirit | 01.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_1_Observer',
+    messageTime: -90,
+    textMessage:
+      'You can place Observer Wards on the map quickly, especially on mid, by using Rolling Boulder.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_observer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_2_Destroy trees',
+    messageTime: -60,
+    textMessage:
+      'First three abilities can destroy trees which can be useful against certain heroes.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_3_Creep equilibrium',
+    messageTime: 15,
+    textMessage:
+      'The further the opponents are from their tower, the deadlier you are. You can roll-kick an opponent under the tower.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'earth_spirit_boulder_smash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_4_Hijack',
+    messageTime: 30,
+    textMessage:
+      'Consider hijacking the second wave to establish creep equilibrium closer to your tower.',
+    audience: [Audience.ROLE_SUPPORT_SOFT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_5_Roll',
+    messageTime: 45,
+    textMessage:
+      'Ideally roll from the fog when an opponent is somewhat stationary, for example when going for lasthit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'earth_spirit_rolling_boulder' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_6_Secure mid',
+    messageTimes: [5 * 60 + 30, 7 * 60 + 30, 9 * 60 + 30],
+    textMessage:
+      'Secure active runes and gank midlane if the situation allows.',
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_7_Existing stones',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      'Make use of existing stones in the fights as much as you can. Avoid overusing Stone Remnants.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'earth_spirit_stone_caller' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_8_Setup kills',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Earth Spirit is great at setting up kills. Communicate with your teammates as you will need follow up damage.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earth Spirit',
+    audioFile: 'ownHero/Earth Spirit_9_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at level 20 as it is a big quality of life improvent among other things.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Earth Spirit',
     audioFile: 'heroes/Earth Spirit_1_Observer',
@@ -3625,6 +3920,69 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 30. Earthshaker | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Earthshaker',
+    audioFile: 'ownHero/Earthshaker_1_Fissure block',
+    messageTime: -20,
+    textMessage:
+      'Consider Fissure blocking the first wave to have better creep equilibrium.',
+    audience: [Audience.ROLE_SUPPORT_SOFT],
+    image: { type: 'ability', name: 'earthshaker_fissure' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earthshaker',
+    audioFile: 'ownHero/Earthshaker_2_Enchant Totem',
+    messageTime: 75,
+    textMessage:
+      'Use Enchant Totem to harass opponents or secure creep lasthits, especially ranged ones.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'earthshaker_enchant_totem' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earthshaker',
+    audioFile: 'ownHero/Earthshaker_3_Farm blink',
+    messageTime: 9 * 60,
+    textMessage:
+      'At the end of the laning stage, find a lane for yourself to farm a Blink Dagger and catch up with levels.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earthshaker',
+    audioFile: 'ownHero/Earthshaker_4_Blink',
+    messageTime: 10 * 60 + 45,
+    textMessage:
+      'Once you get Blink Dagger, try to make use of it immediately before opponent see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earthshaker',
+    audioFile: 'ownHero/Earthshaker_5_Forget you',
+    messageTime: 12 * 60,
+    repeatTime: 8 * 60,
+    textMessage:
+      "Avoid showing yourself so the opponents forget about you and clump up, and your dagger doesn't get canceled.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Earthshaker',
+    audioFile: 'ownHero/Earthshaker_6_Fissure split',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 8 * 60,
+    textMessage:
+      "In the fights, split the opponents with Fissure into two parts or isolate an opponent from the rest.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'earthshaker_fissure' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Earthshaker',

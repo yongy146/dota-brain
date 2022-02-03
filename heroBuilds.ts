@@ -113,9 +113,6 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
   // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
-
-
-
 export const heroBuilds: { [key: string]: HeroBuilds } = {
   Abaddon: {
     builds: [
@@ -1739,6 +1736,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
     ],
     ability_tooltips: {
+      brewmaster_drunken_brawler:
+        'You can put a point in this spell even on level 1 against tough match-up or if Cinder Brew is easily dispelled by opponents.',
       special_bonus_hp_350:
         'It is important that you get ulty off and extra HP can help with that. The other level fifteen does not see much play as you spend most of the fight in Primal Split.',
     },
