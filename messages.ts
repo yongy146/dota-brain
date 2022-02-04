@@ -3978,7 +3978,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 8 * 60,
     textMessage:
-      "In the fights, split the opponents with Fissure into two parts or isolate an opponent from the rest.",
+      'In the fights, split the opponents with Fissure into two parts or isolate an opponent from the rest.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'earthshaker_fissure' },
   },
@@ -4053,6 +4053,87 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 31. Elder Titan | 02.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_1_Unblock camps',
+    messageTime: 15,
+    textMessage:
+      'Make sure to keep nearby camps unblocked as you want Astral Spirit to pass through neutral creeps.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'elder_titan_ancestral_spirit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_2_Creep equilibrium',
+    messageTime: 30,
+    textMessage:
+      'Keep creep equilibrium close to your tower to have more distance to run the enemies down under Astral Spirit buff.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'elder_titan_ancestral_spirit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_3_Natural Order duality',
+    messageTimes: [90, 5 * 60 + 30],
+    textMessage:
+      "Natural Order around Astral Spirit reduces magic resistance while around the hero there's armor reduction.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'elder_titan_natural_order' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_4_Natural Order hero',
+    messageTimes: [105, 5 * 60 + 45],
+    textMessage:
+      "When there's no Astral Spirit out, both Natural Order's magical and armor reduction applies around your hero.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'elder_titan_natural_order' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_5_Spirits movement speed',
+    messageTimes: [2 * 60, 12 * 60],
+    textMessage:
+      "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'elder_titan_ancestral_spirit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_6_Spirit scout',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'elder_titan_ancestral_spirit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_7_Combo',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When opponents clump up, cast Astral Spirit and channel Echo Stomp followed by Earthsplitter.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Elder Titan',
+    audioFile: 'own/Elder Titan_8_Aghanims Scepter',
+    messageTime: 18 * 60 + 45,
+    textMessage:
+      "Once you get hold of Aghanim's Scepter, you can enter the fights and right-click more easily.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Elder Titan',
     audioFile: 'heroes/Elder Titan_1_Astral spirit 1',
@@ -4100,6 +4181,89 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 32. Ember Spirit | 02.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_1_Dodge',
+    messageTime: -15,
+    textMessage:
+      'You can dodge many spells and ranged attacks with Slight of Fist or by activating Remnants.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ember_spirit_sleight_of_fist' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_2_Control runes',
+    messageTime: 5 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Active rune control is important for Ember Spirit's game. Keep checking for those throughout the game.",
+    audience: [Audience.ALL],
+    image: { type: 'rune', name: 'arcane' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_3_Sleight remnants',
+    messageTimes: [5 * 60 + 45, 15 * 60 + 45],
+    textMessage:
+      'You can drop and activate Fire Remnants while Slight of Fisting.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ember_spirit_fire_remnant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_4_Base remnant',
+    messageTimes: [6 * 60, 16 * 60],
+    textMessage:
+      'When low on health, you can leave the Fire Remnant behind, teleport to base and activate the remnant.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ember_spirit_fire_remnant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_5_Remnant spot',
+    messageTime: 6 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When leaving remant behind, it is good to drop it in neutral camp or at the rune spot.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ember_spirit_fire_remnant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_6_Proc items',
+    messageTime: 9 * 60,
+    textMessage:
+      'Items with proc chance are great for Ember Spirit as they proc frequently during Slight of Fist.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'maelstrom' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_7_Backline',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      "Ember Spirit is great at penetrating into opponents' backline due to high mobility of Fire Remnants.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ember_spirit_fire_remnant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ember Spirit',
+    audioFile: 'ownHero/Ember Spirit_8_Splitpush',
+    messageTimes: [12 * 60 + 15, 20 * 60 + 15],
+    textMessage:
+      "Ember Spirit is great at splitpushing as he is elusive and can always have remnant left behind.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ember_spirit_fire_remnant' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Ember Spirit',
     audioFile: 'heroes/Ember Spirit_1_Flame guard dispel',
@@ -4145,6 +4309,69 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 33. Enchantress | 02.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Enchantress',
+    audioFile: 'ownHero/Enchantress_1_Enchant',
+    messageTime: -30,
+    textMessage:
+      "Enchant can take over opponents' summons and illusions.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enchantress_enchant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enchantress',
+    audioFile: 'ownHero/Enchantress_2_Nuetrals',
+    messageTime: 15,
+    textMessage:
+      'Make sure the nearby neutral camps are unblocked so you can use Enchant.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enchantress_enchant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enchantress',
+    audioFile: 'ownHero/Enchantress_3_Tanky',
+    messageTime: 8 * 60,
+    textMessage:
+      "Enchantress is tanky in early to midgame due to Untouchable and Nature's Attendants. Play aggressively.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enchantress_untouchable' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enchantress',
+    audioFile: 'ownHero/Enchantress_4_Enchanted creeps',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, you can push out sidelanes or scout with Enchanted creeps.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enchantress_enchant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enchantress',
+    audioFile: 'ownHero/Enchantress_4_Tanky',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, you can push out sidelanes or scout with Enchanted creeps.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enchantress_enchant' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enchantress',
+    audioFile: 'ownHero/Enchantress_5_Tanky',
+    messageTimes: [10 * 60 + 30, 20 * 60 + 30],
+    textMessage:
+      "Break effects and healing reduction are problematic but you can counter them with items or playstyle adjustments.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'silver_edge' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Enchantress',
