@@ -4258,7 +4258,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Ember Spirit_8_Splitpush',
     messageTimes: [12 * 60 + 15, 20 * 60 + 15],
     textMessage:
-      "Ember Spirit is great at splitpushing as he is elusive and can always have remnant left behind.",
+      'Ember Spirit is great at splitpushing as he is elusive and can always have remnant left behind.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'ember_spirit_fire_remnant' },
   },
@@ -4314,8 +4314,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Enchantress',
     audioFile: 'ownHero/Enchantress_1_Enchant',
     messageTime: -30,
-    textMessage:
-      "Enchant can take over opponents' summons and illusions.",
+    textMessage: "Enchant can take over opponents' summons and illusions.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'enchantress_enchant' },
   },
@@ -4346,7 +4345,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, you can push out sidelanes or scout with Enchanted creeps.",
+      'When not much is happening, you can push out sidelanes or scout with Enchanted creeps.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'enchantress_enchant' },
   },
@@ -4357,7 +4356,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, you can push out sidelanes or scout with Enchanted creeps.",
+      'When not much is happening, you can push out sidelanes or scout with Enchanted creeps.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'enchantress_enchant' },
   },
@@ -4367,7 +4366,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Enchantress_5_Tanky',
     messageTimes: [10 * 60 + 30, 20 * 60 + 30],
     textMessage:
-      "Break effects and healing reduction are problematic but you can counter them with items or playstyle adjustments.",
+      'Break effects and healing reduction are problematic but you can counter them with items or playstyle adjustments.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'silver_edge' },
   },
@@ -4420,12 +4419,85 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 34. Enigma | 02.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_1_Block camps',
+    messageTime: -90,
+    textMessage:
+      "Keep opponents' pull camps blocked as the lane will be pushing your way due to Demonic Conversion.",
+    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'ward_dispenser' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_2_Sacrifice ranged',
+    messageTime: -15,
+    textMessage:
+      "Ideally, use Demonic Conversion on own ranged creeps or catapults out of opponents' experience range.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enigma_demonic_conversion' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_3_Feed eidolons',
+    messageTimes: [15, 2 * 60 + 15],
+    textMessage:
+      'Avoid feeding eidolons, make sure they multipy and use them to deny even more creeps.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enigma_demonic_conversion' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_4_Midnight Pulse',
+    messageTimes: [3 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      'Midnight Pulse destroys trees which can be useful in certain scenarios and to make your farming paths straight.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enigma_midnight_pulse' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_5_Blink Dagger',
+    messageTime: 10 * 60 + 15,
+    textMessage:
+      'Once you get Blink Dagger, make use of it immediately before opponents can see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_6_Teamfight',
+    messageTime: 12 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Be patient in teamfights, avoid showing too early and wait for opponets to clump up for your combo.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enigma_black_hole' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Enigma',
+    audioFile: 'ownHero/Enigma_7_Push sidelanes',
+    messageTime: 12 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, use eidolons to push out sidelanes safely.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'enigma_demonic_conversion' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Enigma',
     audioFile: 'heroes/Enigma_1_Eidolons',
     messageTime: -60,
-    textMessage: 'Try to kill Eydolauns before they multiply.',
-    chatMessage: 'Try to kill Eidolons before they multiply.',
+    textMessage: 'Try to kill eidolons before they multiply.',
+    chatMessage: 'Try to kill eidolons before they multiply.',
     audience: [Audience.IN_LANE],
   },
   {
@@ -4474,6 +4546,66 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 35. Faceless Void | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Faceless Void',
+    audioFile: 'ownHero/Faceless_1_Time walk',
+    messageTime: 15,
+    textMessage:
+      'Careful about using Time Walk aggressively on early levels as you leave yourself exposed for a while.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'faceless_void_time_walk' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Faceless Void',
+    audioFile: 'ownHero/Faceless_2_Teleport in',
+    messageTimes: [7 * 60, 11 * 60],
+    textMessage:
+      'Look around the map and be ready to teleport in and pick-off an opponent with Chronosphere.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'tpscroll' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Faceless Void',
+    audioFile: 'ownHero/Faceless_3_Attack speed',
+    messageTimes: [8 * 60, 14 * 60],
+    textMessage:
+      'Faceless Void is attack speed hungry hero as dps is closely related to frequency of Time Lock procs.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'faceless_void_time_lock' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Faceless Void',
+    audioFile: 'ownHero/Faceless_4_Teamfights',
+    messageTimes: [10 * 60 + 15, 20 * 60 + 15],
+    textMessage:
+      'In teamfights, look to trap as many opponents as possible in Chronosphere while leaving allies outside.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'faceless_void_chronosphere' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Faceless Void',
+    audioFile: 'ownHero/Faceless_5_Chronosphere cd',
+    messageTimes: [10 * 60 + 45, 20 * 60 + 45],
+    textMessage:
+      'Avoid playing aggressively when Chronosphere is on cooldown and push out lanes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'faceless_void_chronosphere' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Faceless Void',
+    audioFile: 'ownHero/Faceless_6_Itemize differently',
+    messageTimes: [11 * 60 + 15, 16 * 60 + 15],
+    textMessage:
+      'You can tank up and get mobility items if your teammates can provide plenty of damage in Chronosphere.',
+    audience: [Audience.ALL],
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Faceless Void',
@@ -4550,6 +4682,67 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 36. Grimstroke | 02.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Grimstroke',
+    audioFile: 'ownHero/Grimstroke_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Stroke of Faith to secure range creep lasthits and hit opponents and the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'grimstroke_dark_artistry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Grimstroke',
+    audioFile: 'ownHero/Grimstroke_2_Communicate',
+    messageTimes: [30, 3 * 60 + 30],
+    textMessage:
+      "Communicate whenever you want to use Ink Swell on an ally so it doesn't go to waste.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'grimstroke_spirit_walk' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Grimstroke',
+    audioFile: 'ownHero/Grimstroke_3_Stack camp',
+    messageTimes: [4 * 60, 8 * 60],
+    textMessage:
+      "Stroke of Faith can be used to stack an additional camp from distance.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'grimstroke_dark_artistry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Grimstroke',
+    audioFile: 'ownHero/Grimstroke_4_Soulbind',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
+    textMessage:
+      "Focus on using Soulbind on mobile heroes or heroes with Black King Bar.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'grimstroke_soul_chain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Grimstroke',
+    audioFile: 'ownHero/Grimstroke_5_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Buy Aghanim's Shard at minute 20 as it adds even more utility to Ink Sweel.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Grimstroke',
+    audioFile: 'ownHero/Grimstroke_6_Dark Portrait',
+    messageTimes: [22 * 60 + 45, 29 * 60 + 45],
+    textMessage:
+      "Aghanim's Scepter allows you to scale well into lategame by creating illusions of opponents right-clickers.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Grimstroke',
