@@ -4708,7 +4708,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Grimstroke_3_Stack camp',
     messageTimes: [4 * 60, 8 * 60],
     textMessage:
-      "Stroke of Faith can be used to stack an additional camp from distance.",
+      'Stroke of Faith can be used to stack an additional camp from distance.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'grimstroke_dark_artistry' },
   },
@@ -4718,7 +4718,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Grimstroke_4_Soulbind',
     messageTimes: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
     textMessage:
-      "Focus on using Soulbind on mobile heroes or heroes with Black King Bar.",
+      'Focus on using Soulbind on mobile heroes or heroes with Black King Bar.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'grimstroke_soul_chain' },
   },
@@ -4791,6 +4791,109 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 37. Gyrocopter | 02.03.2021  ***CHANGED 7.30***
   {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_1_Rocket Barrage',
+    messageTime: 15,
+    textMessage:
+      'Rocket Barrage does tons of damage when an opponent is isolated.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'gyrocopter_rocket_barrage' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_2_Creep equilibrium',
+    messageTime: 30,
+    textMessage:
+      'Keep creep equilibrium close to your tower to have longer distance to run opponents down with Rocket Barrage.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'gyrocopter_rocket_barrage' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_3_Waveclear',
+    messageTime: 4 * 60 + 45,
+    textMessage:
+      'Gyro has great waveclear early on. Push out waves from level 5 onwards and farming nearby camps.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'gyrocopter_flak_cannon' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_4_Clear stacks',
+    messageTimes: [5 * 60 + 15, 8 * 60 + 15],
+    textMessage:
+      'Ask your teammates to stack for you as you can clear stacks easily once you max out Flak Cannon.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'gyrocopter_flak_cannon' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_5_Hit count',
+    messageTimes: [5 * 60 + 30, 15 * 60 + 30],
+    textMessage:
+      '"Hit count" objects like Supernova can be removed with ease by attacking them and flakking other heroes down.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'gyrocopter_flak_cannon' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_6_Aghanims Scepter',
+    messageTime: 11 * 60 + 30,
+    textMessage:
+      "Make sure to get Aghanim's Scepter as soon as possible as it improves farming speed and dps in fights.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_7_Aghanims Scepter',
+    messageTime: 11 * 60 + 30,
+    textMessage:
+      "Make sure to get Aghanim's Scepter as soon as possible as it improves farming speed and dps in fights.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_8_Side Gunner',
+    messageTimes: [12 * 60, 20 * 60],
+    textMessage:
+      'Side Gunner can attack even when Gyrocopter is stunned and all attack modifiers work as well.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_9_Side Gunner',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'In teamfights, focus on hitting most of the opponents with Flak Cannon and Call Down.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'gyrocopter_flak_cannon' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Gyrocopter',
+    audioFile: 'ownHero/Gyrocopter_10_Divine Rapier',
+    messageTime: 25 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'If in desperate position, consider purchasing Divine Rapier as last resort. Works well with Flak Cannon.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'rapier' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Gyrocopter',
     audioFile: 'heroes/Gyrocopter_1_Rocket barrage',
@@ -4848,6 +4951,67 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 38. Hoodwink | 02.03.2021 - DONE
+  {
+    category: 'OwnHero',
+    hero: 'Hoodwink',
+    audioFile: 'ownHero/Hoodwink_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Acorn Shot to secure range creep lasthits and to harass the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'hoodwink_acorn_shot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Hoodwink',
+    audioFile: 'ownHero/Hoodwink_2_Bushwhack straight',
+    messageTime: 75,
+    textMessage:
+      'Opt to Bushwhack straight instead of setting it up with Acorn Shot as the planted tree can be cut.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'hoodwink_bushwhack' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Hoodwink',
+    audioFile: 'ownHero/Hoodwink_3_Trees',
+    messageTime: 3 * 60,
+    textMessage: 'Play close to the trees when you have a point in Scurry.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'hoodwink_scurry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Hoodwink',
+    audioFile: 'ownHero/Hoodwink_4_Acorn vision',
+    messageTimes: [3 * 60 + 30, 9 * 60 + 30, 15 * 60 + 30],
+    textMessage:
+      'Acorn Shot provides vision. You can scout pillars for wards or Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'hoodwink_acorn_shot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Hoodwink',
+    audioFile: 'ownHero/Hoodwink_5_Shoot defensively',
+    messageTimes: [8 * 60, 16 * 60],
+    textMessage:
+      'You can use Sharpshooter defensively to propel yourself further back or up or down the cliff.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'hoodwink_sharpshooter' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Hoodwink',
+    audioFile: 'ownHero/Hoodwink_6_Push sidelanes',
+    messageTime: 12 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, you can push out sidelanes easily and escape in treeline if necessary.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'hoodwink_scurry' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Hoodwink',
