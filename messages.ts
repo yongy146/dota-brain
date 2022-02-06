@@ -5372,6 +5372,99 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 41. Io | 03.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_1_Trees',
+    messageTime: -75,
+    textMessage:
+      'Tether breaks trees which is useful when laning against Treant Protector or to optimize farming routes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'wisp_tether' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_2_Consumables',
+    messageTime: 15,
+    textMessage:
+      'Make sure to have spare consumables with you to keep your laning partner healthy.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'flask' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_3_Kill Relocate',
+    messageTime: 8 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Look around the map for opportunities to Relocate in and prompt your teammates to setup kills.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'wisp_relocate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_4_Boost carry',
+    messageTime: 10 * 60 + 15,
+    textMessage:
+      'Past laning stage, you typically want to play with your farming core to boost his farm and stack camps.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_5_Dont show',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Avoid showing yourself at the start of the fight as you are number 1 target for opponents.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_6_Relocate nearby',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When using Relocate to save an ally consider relocating nearby to be able to re-engage faster.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'wisp_relocate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_7_Relocate splitpush',
+    messageTime: 15 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'You can use Relocate to push out a wave or rat a tower when not much is happening around the map.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'wisp_relocate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at minute 20. It provides a source of disable that opponents are typically unaware of.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Io',
+    audioFile: 'ownHero/Io_9_Cheese',
+    messageTime: 38 * 60,
+    textMessage:
+      "Io is one of the best Cheese carriers in the game as you can extract double the value through the Tether.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'cheese' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Io',
     audioFile: 'heroes/Io_1_Spirit vessel',
@@ -5433,6 +5526,98 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 42. Jakiro | 03.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_1_Pull camps',
+    messageTime: -90,
+    textMessage:
+      "Make sure camps are open for pulling as the lane will likely push due to AoE damage of your spells.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_2_Tanky',
+    messageTime: 15,
+    textMessage:
+      "Jakiro is tanky so look to play ahead of your core as much as you can.",
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_3_Ice Path scout',
+    messageTimes: [3 * 60, 9 * 60, 15 * 60],
+    textMessage:
+      "Ice Path provides vision so you can use it to scout pillars for wards and Roshpit.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'jakiro_ice_path' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_4_Defend towers',
+    messageTimes: [8 * 60, 14 * 60],
+    textMessage:
+      "Jakiro is great at defending towers due to Macropyre and your cores can splitpush in meantime.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'jakiro_macropyre' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_5_Tower damage',
+    messageTimes: [8 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      "Jakiro applies a lot of pressure on buildings by waveclearing and through Liquid Fire and Frost.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'jakiro_liquid_fire' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_6_Tower damage',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "In teamfight, take your time to land the most impactful Ice Paths and Macropyre.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'jakiro_ice_path' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_7_Splitpush',
+    messageTime: 12 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening on the map, you can splitpush easily without even showing yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'jakiro_dual_breath' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at minute 20 as it provides additional disable and damage boost.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Jakiro',
+    audioFile: 'ownHero/Jakiro_9_Aghanims Scepter',
+    messageTimes: [25 * 60, 31 * 60],
+    textMessage:
+      "You can carry late game fights by nicely positioning Macropyre improved by Aghanim's Scepter.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Jakiro',
