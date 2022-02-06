@@ -2310,7 +2310,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Clinkz',
     audioFile: 'ownHero/Clinkz_1_Searing Arrows',
     messageTime: 15,
-    textMessage: `Searing Arrows is one of most efficient "mana to damage" spells in the game and it doesn't pull aggro.`,
+    textMessage: "Searing Arrows is one of most efficient 'mana to damage' spells in the game and it doesn't pull aggro.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'clinkz_searing_arrows' },
   },
@@ -4836,7 +4836,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Gyrocopter_5_Hit count',
     messageTimes: [5 * 60 + 30, 15 * 60 + 30],
     textMessage:
-      '"Hit count" objects like Supernova can be removed with ease by attacking them and flakking other heroes down.',
+      "'Hit count' objects like Supernova can be removed with ease by attacking them and flakking other heroes down.",
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'gyrocopter_flak_cannon' },
   },
@@ -4850,7 +4850,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'ultimate_scepter' },
   },
-  {
+  /*{ // Duplicate, removed
     category: 'OwnHero',
     hero: 'Gyrocopter',
     audioFile: 'ownHero/Gyrocopter_7_Aghanims Scepter',
@@ -4859,7 +4859,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Make sure to get Aghanim's Scepter as soon as possible as it improves farming speed and dps in fights.",
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'ultimate_scepter' },
-  },
+  },*/
   {
     category: 'OwnHero',
     hero: 'Gyrocopter',
@@ -10651,7 +10651,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
   },
-  {
+/*  { // DUPLICATE
     category: 'OwnHero',
     hero: 'Underlord',
     audioFile: 'ownHero/Underlord_10_Splitpush',
@@ -10661,7 +10661,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       'When not much is happening, you can easily splitpush with Firestorm without showing yourself.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
-  },
+  },*/
   {
     category: 'OwnHero',
     hero: 'Underlord',
