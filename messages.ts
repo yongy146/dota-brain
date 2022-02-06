@@ -5050,6 +5050,77 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 39. Huskar | 02.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_1_Harass',
+    messageTime: 15,
+    textMessage:
+      "Harass with Burning Spears as often as you can as it doesn't pull aggro.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'huskar_burning_spear' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_2_Helm of Iron Will',
+    messageTime: 30,
+    textMessage:
+      'On tough lanes rush Helm of Iron Will to solve health sustain issues.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'helm_of_iron_will' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_3_Snowball',
+    messageTimes: [60, 7 * 60, 12 * 60],
+    textMessage:
+      'Huskar is snowbally type of a hero. Do well on the lane, take an early Roshan and call for a group up.',
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_4_Life Break dispels',
+    messageTimes: [5 * 60 + 30, 12 * 60],
+    textMessage:
+      'Lifebreak dispels on cast which is particulary useful against heal reductions like Spirit Vessel or Enfeeble.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'huskar_life_break' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_5_Roshan',
+    messageTimes: [9 * 60, 13 * 60],
+    textMessage:
+      "Do Roshan once you have Armlet completed and ideally Berserker's Blood and Burning Spears maxed out.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_6_Check opponents',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
+    textMessage:
+      "Check opponents for heal reductions and break effects. You can itemize or adjust playstyle accordingly.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'spirit_vessel' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Huskar',
+    audioFile: 'ownHero/Huskar_7_Aghanims Scepter',
+    messageTime: 19 * 60,
+    textMessage:
+      "Aghanim's Scepter allows you to pick-off heroes and deals with kiting.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+
+  {
     category: 'EnemyHero',
     hero: 'Huskar',
     audioFile: 'heroes/Huskar_1_Spirit vessel',
@@ -5103,6 +5174,140 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 40. Invoker | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_1_Sunstrike fountain',
+    messageTime: -90,
+    textMessage:
+      'Quas Exort: Sunstrike opponents fountain to check opponents items and infer lanes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_sun_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_2_Sunstrike kills',
+    messageTime: -15,
+    textMessage:
+      'Quas Exort: Look around the map as much as you can for potential Sunstrike kills.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_sun_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_3_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Quas Exort: You can use Sun Strike here and there to secure ranged creep lasthit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_sun_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_4_Secure ranged',
+    messageTime: 2 * 60,
+    textMessage:
+      "Quas Wex: Tornado and EMP to secure a lasthit or deny a creep, and burn opponent's mana at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_tornado' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_5_Rune control',
+    messageTimes: [2 * 60 + 45, 5 * 60 + 45],
+    textMessage:
+      "Quas Exort: Use Forged Spirits to control runes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_forge_spirit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_6_Rotate',
+    messageTimes: [5 * 60 + 30, 9 * 60 + 30],
+    textMessage:
+      "Quas Wex: Control active runes and look for opportunities to rotate once you have boots and Urn of Shadows.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'urn_of_shadows' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_7_Dont rotate',
+    messageTimes: [5 * 60 + 45, 9 * 60 + 45],
+    textMessage:
+      "Quas Exort: Avoid rotating and running around. Farm, pressure opponents' tower and look for Sun Strikes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_sun_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_8_Hand of Midas',
+    messageTime: 10 * 60 + 15,
+    textMessage:
+      "Quas Wex: After ganking few times, consider going back for Hand of Midas if the game slows down.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'hand_of_midas' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_9_Splitpush',
+    messageTime: 13 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, you can easily splitpush with summons or by dumping spells from the fog.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_chaos_meteor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_10_Alacrity',
+    messageTime: 14 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Don't forget to use Alacrity on yourself or right-clicking ally in the fights. Works well with Cold Snap.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_alacrity' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_11_Scout',
+    messageTime: 15 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Use Forged Spirits or Sunstrike to scout if opponents are missing.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'invoker_forge_spirit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_12_Roshan',
+    messageTime: 17 * 60,
+    textMessage:
+      "Invoker is great at enabling team to take Roshan early due to Alacrity, Forged Spirits and Cold Snap.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Invoker',
+    audioFile: 'ownHero/Invoker_13_Aghanims Scepter',
+    messageTime: 18 * 60 + 30,
+    textMessage:
+      "Aghanim's Scepter is a huge powerspike, especially if you have a setup within the team.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Invoker',
@@ -10157,6 +10362,142 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 106. Underlord | 09.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_1_Outlasthit',
+    messageTime: 15,
+    textMessage:
+      'Capitalize on attack damage difference to win the lane lasthit wise.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_atrophy_aura' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_2_Accelerate farm',
+    messageTime: 5 * 60,
+    textMessage:
+      'Once you have 3 points in Firestorm, consider Firestorming creepwaves and farming neutrals afterwards.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_3_Replenish rift',
+    messageTime: 7 * 60,
+    textMessage:
+      'Feel free to use Dark Rift to replenish mana and hp during laning stage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_dark_rift' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_4_Defend towers',
+    messageTimes: [8 * 60, 14 * 60],
+    textMessage:
+      'Underlord is amazing at safely defending the towers. Your other cores can splitpush in the meantime.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_5_Combo',
+    messageTimes: [10 * 60, 16 * 60],
+    textMessage:
+      'Full combo would be: Firestorm, Pit of Malice, Rod of Atos into right-clicks. Adjust based on situation.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'rod_of_atos' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_6_Firestorm carefully',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Place Firestorm carefully in the fights and you might end up being highest damage dealer in the team.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_7_Rift immediately',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Begin channeling Dark Rift on a first sign of trouble and cancel it if the situation improves.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_dark_rift' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_8_Objective damage',
+    messageTimes: [11 * 60, 18 * 60],
+    textMessage:
+      'If you win the teamfight and survive, you will have a lot of damage to take towers or Roshan down.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'abyssal_underlord_atrophy_aura' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_9_Objective rift',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Consider using Dark Rift to bring your team closer to objectives after pick-off or won fight.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_dark_rift' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_10_Splitpush',
+    messageTime: 11 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, you can easily splitpush with Firestorm without showing yourself.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_10_Splitpush',
+    messageTime: 11 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, you can easily splitpush with Firestorm without showing yourself.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_11_Splitpush',
+    messageTime: 19 * 60,
+    textMessage:
+      "Purchase Aghanim's Shard upgrade at minute 20 as it improves your overall damage output greatly.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Underlord',
+    audioFile: 'ownHero/Underlord_12_Firestorm scaling',
+    messageTime: 25 * 60,
+    textMessage:
+      'Firestorm scales well into late game due to percentage damage, shard upgrade and talents to enhance it.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Underlord',
