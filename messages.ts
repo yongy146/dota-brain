@@ -4055,7 +4055,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_1_Unblock camps',
+    audioFile: 'ownHero/Elder Titan_1_Unblock camps',
     messageTime: 15,
     textMessage:
       'Make sure to keep nearby camps unblocked as you want Astral Spirit to pass through neutral creeps.',
@@ -4065,7 +4065,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_2_Creep equilibrium',
+    audioFile: 'ownHero/Elder Titan_2_Creep equilibrium',
     messageTime: 30,
     textMessage:
       'Keep creep equilibrium close to your tower to have more distance to run the enemies down under Astral Spirit buff.',
@@ -4075,7 +4075,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_3_Natural Order duality',
+    audioFile: 'ownHero/Elder Titan_3_Natural Order duality',
     messageTimes: [90, 5 * 60 + 30],
     textMessage:
       "Natural Order around Astral Spirit reduces magic resistance while around the hero there's armor reduction.",
@@ -4085,7 +4085,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_4_Natural Order hero',
+    audioFile: 'ownHero/Elder Titan_4_Natural Order hero',
     messageTimes: [105, 5 * 60 + 45],
     textMessage:
       "When there's no Astral Spirit out, both Natural Order's magical and armor reduction applies around your hero.",
@@ -4095,7 +4095,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_5_Spirits movement speed',
+    audioFile: 'ownHero/Elder Titan_5_Spirits movement speed',
     messageTimes: [2 * 60, 12 * 60],
     textMessage:
       "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
@@ -4105,7 +4105,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_6_Spirit scout',
+    audioFile: 'ownHero/Elder Titan_6_Spirit scout',
     messageTimes: [10 * 60 + 15, 18 * 60 + 15],
     textMessage:
       "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
@@ -4115,7 +4115,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_7_Combo',
+    audioFile: 'ownHero/Elder Titan_7_Combo',
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
@@ -4125,7 +4125,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_8_Aghanims Scepter',
+    audioFile: 'ownHero/Elder Titan_8_Aghanims Scepter',
     messageTime: 18 * 60 + 45,
     textMessage:
       "Once you get hold of Aghanim's Scepter, you can enter the fights and right-click more easily.",
