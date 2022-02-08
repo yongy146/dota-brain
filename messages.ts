@@ -2310,7 +2310,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Clinkz',
     audioFile: 'ownHero/Clinkz_1_Searing Arrows',
     messageTime: 15,
-    textMessage: `Searing Arrows is one of most efficient "mana to damage" spells in the game and it doesn't pull aggro.`,
+    textMessage: "Searing Arrows is one of most efficient 'mana to damage' spells in the game and it doesn't pull aggro.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'clinkz_searing_arrows' },
   },
@@ -4055,7 +4055,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_1_Unblock camps',
+    audioFile: 'ownHero/Elder Titan_1_Unblock camps',
     messageTime: 15,
     textMessage:
       'Make sure to keep nearby camps unblocked as you want Astral Spirit to pass through neutral creeps.',
@@ -4065,7 +4065,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_2_Creep equilibrium',
+    audioFile: 'ownHero/Elder Titan_2_Creep equilibrium',
     messageTime: 30,
     textMessage:
       'Keep creep equilibrium close to your tower to have more distance to run the enemies down under Astral Spirit buff.',
@@ -4075,7 +4075,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_3_Natural Order duality',
+    audioFile: 'ownHero/Elder Titan_3_Natural Order duality',
     messageTimes: [90, 5 * 60 + 30],
     textMessage:
       "Natural Order around Astral Spirit reduces magic resistance while around the hero there's armor reduction.",
@@ -4085,7 +4085,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_4_Natural Order hero',
+    audioFile: 'ownHero/Elder Titan_4_Natural Order hero',
     messageTimes: [105, 5 * 60 + 45],
     textMessage:
       "When there's no Astral Spirit out, both Natural Order's magical and armor reduction applies around your hero.",
@@ -4095,7 +4095,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_5_Spirits movement speed',
+    audioFile: 'ownHero/Elder Titan_5_Spirits movement speed',
     messageTimes: [2 * 60, 12 * 60],
     textMessage:
       "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
@@ -4105,7 +4105,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_6_Spirit scout',
+    audioFile: 'ownHero/Elder Titan_6_Spirit scout',
     messageTimes: [10 * 60 + 15, 18 * 60 + 15],
     textMessage:
       "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
@@ -4115,7 +4115,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_7_Combo',
+    audioFile: 'ownHero/Elder Titan_7_Combo',
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
@@ -4125,7 +4125,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Elder Titan',
-    audioFile: 'own/Elder Titan_8_Aghanims Scepter',
+    audioFile: 'ownHero/Elder Titan_8_Aghanims Scepter',
     messageTime: 18 * 60 + 45,
     textMessage:
       "Once you get hold of Aghanim's Scepter, you can enter the fights and right-click more easily.",
@@ -4836,7 +4836,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Gyrocopter_5_Hit count',
     messageTimes: [5 * 60 + 30, 15 * 60 + 30],
     textMessage:
-      '"Hit count" objects like Supernova can be removed with ease by attacking them and flakking other heroes down.',
+      "'Hit count' objects like Supernova can be removed with ease by attacking them and flakking other heroes down.",
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'gyrocopter_flak_cannon' },
   },
@@ -4850,7 +4850,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'ultimate_scepter' },
   },
-  {
+  /*{ // Duplicate, removed
     category: 'OwnHero',
     hero: 'Gyrocopter',
     audioFile: 'ownHero/Gyrocopter_7_Aghanims Scepter',
@@ -4859,7 +4859,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Make sure to get Aghanim's Scepter as soon as possible as it improves farming speed and dps in fights.",
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'ultimate_scepter' },
-  },
+  },*/
   {
     category: 'OwnHero',
     hero: 'Gyrocopter',
@@ -11238,7 +11238,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
   },
-  {
+/*  { // DUPLICATE
     category: 'OwnHero',
     hero: 'Underlord',
     audioFile: 'ownHero/Underlord_10_Splitpush',
@@ -11248,7 +11248,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       'When not much is happening, you can easily splitpush with Firestorm without showing yourself.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
-  },
+  },*/
   {
     category: 'OwnHero',
     hero: 'Underlord',
