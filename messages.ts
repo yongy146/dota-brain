@@ -5104,7 +5104,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Huskar_6_Check opponents',
     messageTimes: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
     textMessage:
-      "Check opponents for heal reductions and break effects. You can itemize or adjust playstyle accordingly.",
+      'Check opponents for heal reductions and break effects. You can itemize or adjust playstyle accordingly.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'spirit_vessel' },
   },
@@ -5118,7 +5118,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'ultimate_scepter' },
   },
-
 
   {
     category: 'EnemyHero',
@@ -5219,8 +5218,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Invoker',
     audioFile: 'ownHero/Invoker_5_Rune control',
     messageTimes: [2 * 60 + 45, 5 * 60 + 45],
-    textMessage:
-      "Quas Exort: Use Forged Spirits to control runes.",
+    textMessage: 'Quas Exort: Use Forged Spirits to control runes.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'invoker_forge_spirit' },
   },
@@ -5230,7 +5228,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Invoker_6_Rotate',
     messageTimes: [5 * 60 + 30, 9 * 60 + 30],
     textMessage:
-      "Quas Wex: Control active runes and look for opportunities to rotate once you have boots and Urn of Shadows.",
+      'Quas Wex: Control active runes and look for opportunities to rotate once you have boots and Urn of Shadows.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'urn_of_shadows' },
   },
@@ -5250,7 +5248,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Invoker_8_Hand of Midas',
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Quas Wex: After ganking few times, consider going back for Hand of Midas if the game slows down.",
+      'Quas Wex: After ganking few times, consider going back for Hand of Midas if the game slows down.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'hand_of_midas' },
   },
@@ -5261,7 +5259,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, you can easily splitpush with summons or by dumping spells from the fog.",
+      'When not much is happening, you can easily splitpush with summons or by dumping spells from the fog.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'invoker_chaos_meteor' },
   },
@@ -5283,7 +5281,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 15 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Use Forged Spirits or Sunstrike to scout if opponents are missing.",
+      'Use Forged Spirits or Sunstrike to scout if opponents are missing.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'invoker_forge_spirit' },
   },
@@ -5293,7 +5291,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Invoker_12_Roshan',
     messageTime: 17 * 60,
     textMessage:
-      "Invoker is great at enabling team to take Roshan early due to Alacrity, Forged Spirits and Cold Snap.",
+      'Invoker is great at enabling team to take Roshan early due to Alacrity, Forged Spirits and Cold Snap.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'aegis' },
   },
@@ -5459,7 +5457,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Io_9_Cheese',
     messageTime: 38 * 60,
     textMessage:
-      "Io is one of the best Cheese carriers in the game as you can extract double the value through the Tether.",
+      'Io is one of the best Cheese carriers in the game as you can extract double the value through the Tether.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'cheese' },
   },
@@ -5532,7 +5530,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Jakiro_1_Pull camps',
     messageTime: -90,
     textMessage:
-      "Make sure camps are open for pulling as the lane will likely push due to AoE damage of your spells.",
+      'Make sure camps are open for pulling as the lane will likely push due to AoE damage of your spells.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -5542,7 +5540,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Jakiro_2_Tanky',
     messageTime: 15,
     textMessage:
-      "Jakiro is tanky so look to play ahead of your core as much as you can.",
+      'Jakiro is tanky so look to play ahead of your core as much as you can.',
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -5551,7 +5549,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Jakiro_3_Ice Path scout',
     messageTimes: [3 * 60, 9 * 60, 15 * 60],
     textMessage:
-      "Ice Path provides vision so you can use it to scout pillars for wards and Roshpit.",
+      'Ice Path provides vision so you can use it to scout pillars for wards and Roshpit.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'jakiro_ice_path' },
   },
@@ -5561,7 +5559,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Jakiro_4_Defend towers',
     messageTimes: [8 * 60, 14 * 60],
     textMessage:
-      "Jakiro is great at defending towers due to Macropyre and your cores can splitpush in meantime.",
+      'Jakiro is great at defending towers due to Macropyre and your cores can splitpush in meantime.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'jakiro_macropyre' },
   },
@@ -5571,7 +5569,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Jakiro_5_Tower damage',
     messageTimes: [8 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "Jakiro applies a lot of pressure on buildings by waveclearing and through Liquid Fire and Frost.",
+      'Jakiro applies a lot of pressure on buildings by waveclearing and through Liquid Fire and Frost.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'jakiro_liquid_fire' },
   },
@@ -5582,7 +5580,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "In teamfight, take your time to land the most impactful Ice Paths and Macropyre.",
+      'In teamfight, take your time to land the most impactful Ice Paths and Macropyre.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'jakiro_ice_path' },
   },
@@ -5593,7 +5591,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening on the map, you can splitpush easily without even showing yourself.",
+      'When not much is happening on the map, you can splitpush easily without even showing yourself.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'jakiro_dual_breath' },
   },
@@ -5673,6 +5671,98 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 43. Juggernaut | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_1_Instant attack',
+    messageTime: 10,
+    textMessage:
+      'Juggernaut has almost instant attack animation which makes lasthitting and denying a lot easier.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_2_Be aggressive',
+    messageTime: 20,
+    textMessage:
+      'Blade Fury does insane amounts of damage. Look to play aggressively on the lane.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'juggernaut_blade_fury' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_3_Spin click',
+    messageTime: 30,
+    textMessage:
+      'Avoid right-clicking opponents during Blade Fury until you get proc item or items that apply debuffs.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'juggernaut_blade_fury' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_4_Micro ward',
+    messageTimes: [75, 11 * 60 + 15, 21 * 60 + 15],
+    textMessage:
+      'Make sure to micro healing ward properly. You can use it during Blade Fury and Omnislash.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'juggernaut_healing_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_5_Spin tp',
+    messageTime: 4 * 60,
+    repeatTime: 10 * 60,
+    textMessage: 'When in trouble, consider to Blade Fury and teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'tpscroll' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_6_Omnislash creeps',
+    messageTimes: [7 * 60, 15 * 60, 23 * 60],
+    textMessage:
+      "When deciding to Omnislash, consider how close opponents' wave or neutral creeps might be.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'juggernaut_omni_slash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_7_Check inventory',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Scout opponents' inventories for Omnislash counters and adjust playstyle and itemization accordingly.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'juggernaut_omni_slash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_8_Roshan',
+    messageTime: 17 * 60 + 15,
+    textMessage:
+      'With decent game, Juggernaut is good at killing Roshan from 18min mark with minimal or no help.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Juggernaut',
+    audioFile: 'ownHero/Juggernaut_9_Slow siege',
+    messageTime: 22 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "You can slow siege opponents' building by damaging it during Blade Fury and then backing away.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'juggernaut_blade_fury' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Juggernaut',
@@ -5758,6 +5848,110 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 44. Keeper of the Light | 03.03.2021   ***CHANGED 7.30***
   {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_1_Unblock camps',
+    messageTime: -90,
+    textMessage:
+      'Make sure pull camps are unblocked as lane is likely to be pushed due to Illuminate.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_2_Illuminate positioning',
+    messageTime: 15,
+    textMessage:
+      'Be creative at positioning to be able to hit opponents with Illuminate.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_3_Ranged creeps',
+    messageTime: 30,
+    textMessage:
+      'Avoid hitting ranged creeps with level 1 Illuminate as it will become deniable.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_4_Illuminate vision',
+    messageTimes: [4 * 60 + 15, 12 * 60 + 15, 20 * 60 + 15],
+    textMessage:
+      'Illuminate provides vision which can be used to check pillars for wards or Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_5_Stack',
+    messageTimes: [4 * 60 + 30, 12 * 60 + 30],
+    textMessage:
+      'Keeper is fast and with Illuminate you can make multiple stacks at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_6_Defend buildings',
+    messageTimes: [8 * 60 + 15, 16 * 60 + 15, 24 * 60 + 15],
+    textMessage:
+      'Keeper is amazing at defending buildings while your cores can splitpush.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_7_Avoid showing',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid showing yourself at the start of the fight and align Illuminate's path over allies in Spirit Form for heals.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'keeper_of_the_light_spirit_form' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_8_Chakra ally',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Make sure to provide Chakra Magic to an ally that benefits most from it after his spells were used.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'keeper_of_the_light_chakra_magic' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_9_Splitpush',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out sidelanes with Illuminate. You don't even have to show yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'keeper_of_the_light_illuminate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Keeper of the Light',
+    audioFile: 'own/Keeper of the Light_10_Aghanims Scepter',
+    messageTime: 17 * 60 + 30,
+    textMessage:
+      "Make sure to pick up Aghanim's Scepter at reasonable time as this hero lacks control.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Keeper of the Light',
     audioFile: 'heroes/Keeper of the Light_1_Observer',
@@ -5826,6 +6020,119 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 45. Kunkka | 03.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_1_Tidebringer harass',
+    messageTime: 15,
+    textMessage:
+      'On early levels, make sure Tidebringer hits the opponents as that is your main laning tool.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_tidebringer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_2_Tidebringer cleave',
+    messageTime: 30,
+    textMessage:
+      'Ideally, you want to cleave off of creep with Tidebringer for maximum damage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_tidebringer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_3_X mark tp',
+    messageTimes: [4 * 60, 11 * 60, 18 * 60],
+    textMessage:
+      'You can do X Marks the Spot into teleport combo to replenish yourself or allies.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'tpscroll' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_4_Stacks',
+    messageTimes: [4 * 60 + 30, 9 * 60 + 30],
+    textMessage:
+      'Ask you allies to stack for you as you can easily clear those with level 4 Tidebringer.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'kunkka_tidebringer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_5_Torrent vision',
+    messageTimes: [4 * 60 + 45, 12 * 60 + 45, 20 * 60 + 45],
+    textMessage:
+      'Torrent provides vision so you can scout pillars for wards or Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_torrent' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_6_Torrent stacks',
+    messageTimes: [7 * 60 + 30, 12 * 60 + 30],
+    textMessage:
+      'You can stack some of the neutral camps by using Torrent 2.5 seconds before a full minute hits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_torrent' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_7_Armlet Tidebringer',
+    messageTimes: [8 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      'Make sure to activate Armlet if you have one before using Tidebringer.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'armlet' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_8_Combo',
+    messageTimes: [8 * 60 + 45, 13 * 60 + 45],
+    textMessage:
+      'Maximum value combo: X Mark, Ghostship, activate X Mark, Torrent after Ghostship lands into Tidebringer.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_ghostship' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_9_Rum buff',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'In fights, if possible align Ghostship in such way that it goes over most of your allies for Rum buff.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_ghostship' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_10_Cleave opponents',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "In fights, position yourself to cleave with Tidebringer on as many opponents' heroes as possible.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'kunkka_tidebringer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Kunkka',
+    audioFile: 'ownHero/Kunkka_11_X mark hit',
+    messageTimes: [10 * 60 + 45, 18 * 60 + 45, 26 * 60 + 45],
+    textMessage:
+      "X Mark yourself and run forward to kill a dangerous wave with Tidebringer if opponents don't have Eul's.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'kunkka_x_marks_the_spot' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Kunkka',
@@ -6018,6 +6325,117 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 47. Leshrac | 03.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_2_Split Earth ranged',
+    messageTime: 15,
+    textMessage:
+      'You can use Split Earth or Lightning Storm to secure a ranged creep here and there.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_split_earth' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_2_Split Earth harass',
+    messageTime: 30,
+    textMessage:
+      'Use Split Earth when opponents are likely to be stationary, e.g. when they are going for lasthit or deny.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_split_earth' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_3_Split Earth tress',
+    messageTime: 45,
+    textMessage:
+      'Split Earth breaks trees which can be useful against certain heroes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_split_earth' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_4_Diabolic Edict invis',
+    messageTimes: [90, 11 * 60 + 30, 21 * 60 + 30],
+    textMessage:
+      "Diabolic Edict pulses give you a hint where the opponents' invisible hero is.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_diabolic_edict' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_5_Clear stacks',
+    messageTimes: [4 * 60 + 15, 9 * 60 + 15],
+    textMessage:
+      "Alert your teammates to stack for you as you can clear stacks as soon as you hit level 6.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'leshrac_pulse_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_6_Building damage',
+    messageTimes: [6 * 60, 11 * 60, 16 * 60],
+    textMessage:
+      "Leshrac is really good at taking building early on due to wave clear and Diabolic Edict.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_diabolic_edict' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_7_Building damage hiding',
+    messageTimes: [6 * 60 + 15, 11 * 60 + 15, 16 * 60 + 15],
+    textMessage:
+      "You can damage a building with Diabolic Edict by hiding yourself in trees next to it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_diabolic_edict' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_8_Itemization',
+    messageTimes: [8 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      "Itemize for survivability and mobility to be able to position yourself in the center of the fight.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'cyclone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_9_Splitpush',
+    messageTime: 11 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Leshrac is great at splitpushing due to mobility, waveclear and tower damage.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'leshrac_pulse_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_10_Kite BKB',
+    messageTimes: [14 * 60 + 15, 19 * 60 + 15],
+    textMessage:
+      "When opponents get Black King Bars you typically need to kite those and itemize to survive their duration.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Leshrac',
+    audioFile: 'ownHero/Leshrac_11_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanims Shard at minute 20 for extra disable. It helps with siege or defense of the buildings.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Leshrac',
     audioFile: 'heroes/Leshrac_1_Illusions summons',
@@ -6083,6 +6501,73 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 48. Lich | 03.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_1_Frosh Blast rightlclick',
+    messageTime: 15,
+    textMessage: 'Make use of the slowing part of the Frost Blast to chain couple of right-clicks.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lich_frost_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_2_Secure ranged',
+    messageTime: 30,
+    textMessage: "Secure ranged creep lasthit with right-click or Frost Blast when your core can't.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'lich_frost_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_3_Play aggressively',
+    messageTime: 45,
+    textMessage: "Play aggressively on the lane, burn your mana and then run a clarity while pulling.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'lich_frost_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_4_Solo kill',
+    messageTime: 8 * 60,
+    textMessage: "At level 6, you can even solo kill opponents if there are creeps for ulty to bounce.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'lich_chain_frost' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_5_Defend towers',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage: "Frost Shield is great for defending towers, especially if you have talents for it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lich_frost_shield' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_6_Save ally',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage: "In fights, be quick at saving allies with Frost Shield and defensive items. Use other abilities afterwards.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'lich_frost_shield' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lich',
+    audioFile: 'ownHero/Lich_7_Push sidelanes',
+    messageTime: 12 * 60,
+    repeatTime: 10 * 60,
+    textMessage: "When not much is happening, push out sidelanes with Frost Shield and Blast.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lich_frost_shield' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Lich',
     audioFile: 'heroes/Lich_1_Strong laner',
@@ -6136,6 +6621,108 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   //49. Lifestealer | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_1_Rightclick feast',
+    messageTime: 15,
+    textMessage:
+      "Right-click opponents as much as you can on the lane for extra damage and sustain from Feast.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'life_stealer_feast' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_2_Helm of Iron Will',
+    messageTime: 30,
+    textMessage:
+      "Rush Helm of Iron will on tough lanes.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'helm_of_iron_will' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_3_Rage dispel',
+    messageTime: 60,
+    textMessage:
+      "Consider investing a point in Rage early on if there's a need for dispel or spell-immunity.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'life_stealer_rage' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_4_Rage tp',
+    messageTimes: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
+    textMessage:
+      "You can save an ally by Infesting it.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'tpscroll' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_5_Dispatch support',
+    messageTime: 7 * 60,
+    textMessage:
+      "Once you hit 6, you are really hard to kill and you can dispatch your support to help other lanes.",
+    audience: [Audience.ROLE_CARRY, Audience.ROLE_OFFLANE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_6_Save ally',
+    messageTimes: [7 * 60 + 15, 15 * 60 + 15, 23 * 60 + 15],
+    textMessage:
+      "You can save an ally by Infesting it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'life_stealer_infest' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_7_Fight early',
+    messageTimes: [10 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      "Lifestealer doesn't farm fast but is decent at fighting in early to mid game. Join good looking fights.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_8_Gap close infest',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "If you have gap-closing ally you can choose to Infest him to be able to get on top of opponents quickly.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'life_stealer_infest' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_9_Counter items',
+    messageTimes: [10 * 60 + 45, 18 * 60 + 45, 26 * 60 + 15],
+    textMessage:
+      "Orchid, Basher and Scythe are problematic. Adjust your playstyle and itemization accordingly.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lifestealer',
+    audioFile: 'ownHero/Lifestealer_10_Slow siege',
+    messageTime: 26 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "You can slow siege opponents' building by damaging it during Rage and then backing away.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'life_stealer_rage' },
+  },
+  
+
   {
     category: 'EnemyHero',
     hero: 'Lifestealer',
