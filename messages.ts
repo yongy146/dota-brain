@@ -2310,7 +2310,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Clinkz',
     audioFile: 'ownHero/Clinkz_1_Searing Arrows',
     messageTime: 15,
-    textMessage: "Searing Arrows is one of most efficient 'mana to damage' spells in the game and it doesn't pull aggro.",
+    textMessage:
+      "Searing Arrows is one of most efficient 'mana to damage' spells in the game and it doesn't pull aggro.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'clinkz_searing_arrows' },
   },
@@ -6370,7 +6371,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Leshrac_5_Clear stacks',
     messageTimes: [4 * 60 + 15, 9 * 60 + 15],
     textMessage:
-      "Alert your teammates to stack for you as you can clear stacks as soon as you hit level 6.",
+      'Alert your teammates to stack for you as you can clear stacks as soon as you hit level 6.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'leshrac_pulse_nova' },
   },
@@ -6380,7 +6381,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Leshrac_6_Building damage',
     messageTimes: [6 * 60, 11 * 60, 16 * 60],
     textMessage:
-      "Leshrac is really good at taking building early on due to wave clear and Diabolic Edict.",
+      'Leshrac is really good at taking building early on due to wave clear and Diabolic Edict.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'leshrac_diabolic_edict' },
   },
@@ -6390,7 +6391,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Leshrac_7_Building damage hiding',
     messageTimes: [6 * 60 + 15, 11 * 60 + 15, 16 * 60 + 15],
     textMessage:
-      "You can damage a building with Diabolic Edict by hiding yourself in trees next to it.",
+      'You can damage a building with Diabolic Edict by hiding yourself in trees next to it.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'leshrac_diabolic_edict' },
   },
@@ -6400,7 +6401,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Leshrac_8_Itemization',
     messageTimes: [8 * 60 + 15, 13 * 60 + 15],
     textMessage:
-      "Itemize for survivability and mobility to be able to position yourself in the center of the fight.",
+      'Itemize for survivability and mobility to be able to position yourself in the center of the fight.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'cyclone' },
   },
@@ -6411,7 +6412,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Leshrac is great at splitpushing due to mobility, waveclear and tower damage.",
+      'Leshrac is great at splitpushing due to mobility, waveclear and tower damage.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'leshrac_pulse_nova' },
   },
@@ -6421,7 +6422,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Leshrac_10_Kite BKB',
     messageTimes: [14 * 60 + 15, 19 * 60 + 15],
     textMessage:
-      "When opponents get Black King Bars you typically need to kite those and itemize to survive their duration.",
+      'When opponents get Black King Bars you typically need to kite those and itemize to survive their duration.',
     audience: [Audience.ALL],
   },
   {
@@ -6430,7 +6431,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Leshrac_11_Aghanims Shard',
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanims Shard at minute 20 for extra disable. It helps with siege or defense of the buildings.",
+      'Pick up Aghanims Shard at minute 20 for extra disable. It helps with siege or defense of the buildings.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'aghanims_shard' },
   },
@@ -6505,7 +6506,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lich',
     audioFile: 'ownHero/Lich_1_Frosh Blast rightlclick',
     messageTime: 15,
-    textMessage: 'Make use of the slowing part of the Frost Blast to chain couple of right-clicks.',
+    textMessage:
+      'Make use of the slowing part of the Frost Blast to chain couple of right-clicks.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lich_frost_nova' },
   },
@@ -6514,7 +6516,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lich',
     audioFile: 'ownHero/Lich_2_Secure ranged',
     messageTime: 30,
-    textMessage: "Secure ranged creep lasthit with right-click or Frost Blast when your core can't.",
+    textMessage:
+      "Secure ranged creep lasthit with right-click or Frost Blast when your core can't.",
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'lich_frost_nova' },
   },
@@ -6523,7 +6526,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lich',
     audioFile: 'ownHero/Lich_3_Play aggressively',
     messageTime: 45,
-    textMessage: "Play aggressively on the lane, burn your mana and then run a clarity while pulling.",
+    textMessage:
+      'Play aggressively on the lane, burn your mana and then run a clarity while pulling.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'lich_frost_nova' },
   },
@@ -6532,7 +6536,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lich',
     audioFile: 'ownHero/Lich_4_Solo kill',
     messageTime: 8 * 60,
-    textMessage: "At level 6, you can even solo kill opponents if there are creeps for ulty to bounce.",
+    textMessage:
+      'At level 6, you can even solo kill opponents if there are creeps for ulty to bounce.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'lich_chain_frost' },
   },
@@ -6542,7 +6547,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lich_5_Defend towers',
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
-    textMessage: "Frost Shield is great for defending towers, especially if you have talents for it.",
+    textMessage:
+      'Frost Shield is great for defending towers, especially if you have talents for it.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lich_frost_shield' },
   },
@@ -6552,7 +6558,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lich_6_Save ally',
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage: "In fights, be quick at saving allies with Frost Shield and defensive items. Use other abilities afterwards.",
+    textMessage:
+      'In fights, be quick at saving allies with Frost Shield and defensive items. Use other abilities afterwards.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'lich_frost_shield' },
   },
@@ -6562,7 +6569,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lich_7_Push sidelanes',
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
-    textMessage: "When not much is happening, push out sidelanes with Frost Shield and Blast.",
+    textMessage:
+      'When not much is happening, push out sidelanes with Frost Shield and Blast.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lich_frost_shield' },
   },
@@ -6627,7 +6635,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lifestealer_1_Rightclick feast',
     messageTime: 15,
     textMessage:
-      "Right-click opponents as much as you can on the lane for extra damage and sustain from Feast.",
+      'Right-click opponents as much as you can on the lane for extra damage and sustain from Feast.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'life_stealer_feast' },
   },
@@ -6636,8 +6644,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lifestealer',
     audioFile: 'ownHero/Lifestealer_2_Helm of Iron Will',
     messageTime: 30,
-    textMessage:
-      "Rush Helm of Iron will on tough lanes.",
+    textMessage: 'Rush Helm of Iron will on tough lanes.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'helm_of_iron_will' },
   },
@@ -6656,8 +6663,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lifestealer',
     audioFile: 'ownHero/Lifestealer_4_Rage tp',
     messageTimes: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
-    textMessage:
-      "You can save an ally by Infesting it.",
+    textMessage: 'You can save an ally by Infesting it.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'tpscroll' },
   },
@@ -6667,7 +6673,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lifestealer_5_Dispatch support',
     messageTime: 7 * 60,
     textMessage:
-      "Once you hit 6, you are really hard to kill and you can dispatch your support to help other lanes.",
+      'Once you hit 6, you are really hard to kill and you can dispatch your support to help other lanes.',
     audience: [Audience.ROLE_CARRY, Audience.ROLE_OFFLANE],
   },
   {
@@ -6675,8 +6681,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lifestealer',
     audioFile: 'ownHero/Lifestealer_6_Save ally',
     messageTimes: [7 * 60 + 15, 15 * 60 + 15, 23 * 60 + 15],
-    textMessage:
-      "You can save an ally by Infesting it.",
+    textMessage: 'You can save an ally by Infesting it.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'life_stealer_infest' },
   },
@@ -6696,7 +6701,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "If you have gap-closing ally you can choose to Infest him to be able to get on top of opponents quickly.",
+      'If you have gap-closing ally you can choose to Infest him to be able to get on top of opponents quickly.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'life_stealer_infest' },
   },
@@ -6706,7 +6711,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lifestealer_9_Counter items',
     messageTimes: [10 * 60 + 45, 18 * 60 + 45, 26 * 60 + 15],
     textMessage:
-      "Orchid, Basher and Scythe are problematic. Adjust your playstyle and itemization accordingly.",
+      'Orchid, Basher and Scythe are problematic. Adjust your playstyle and itemization accordingly.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'black_king_bar' },
   },
@@ -6721,7 +6726,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'life_stealer_rage' },
   },
-  
 
   {
     category: 'EnemyHero',
@@ -6796,6 +6800,83 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 50. Lina | 03.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_1_Light Strike Array trees',
+    messageTime: -90,
+    textMessage:
+      'Light Strike Array destroys trees which can be useful against certain heroes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lina_light_strike_array' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_2_Rightclick harass',
+    messageTime: 10,
+    textMessage:
+      "Make use of Lina's long attack range to harass opponents in the lane frequently.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_3_Stun stationary',
+    messageTime: 20,
+    textMessage:
+      'Lightstrike Array when opponents are somewhat stationary, e.g. when they are going for lasthit or deny.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lina_light_strike_array' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_4_Secure ranged',
+    messageTime: 30,
+    textMessage:
+      'Dragon Slave is great for securing ranged creep lasthits and harassing opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lina_dragon_slave' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_5_Charge Fiery Soul',
+    messageTimes: [2 * 60, 9 * 60, 16 * 60],
+    textMessage: 'Charge up Fiery Soul before leaving the base.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lina_fiery_soul' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_6_Upkeep Fiery Soul',
+    messageTimes: [7 * 60, 17 * 60, 27 * 60],
+    textMessage: 'Use Light Strike Array to upkeep Fiery Soul Stacks as it is cheaper and of shorter cooldown.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lina_light_strike_array' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_7_Splitpush pickoff',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: 'Lina is great at split-pushing and pick-offs due to high movement speed, great waveclear and damage burst.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lina',
+    audioFile: 'ownHero/Lina_8_Physical',
+    messageTime: 25 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: 'In late game fights, use active spells primarily to activate Fiery Soul as most of your damage will be physical.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'lina_fiery_soul' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Lina',
@@ -6908,7 +6989,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lion',
     audioFile: 'ownHero/Lion_8_AghanimsShard',
     messageTime: 20 * 60,
-    textMessage: "Aghanim's Shard is good at countering illusion based heroes.",
+    textMessage: "Aghanim's Shard is good at countering illusion-based heroes.",
     audience: [Audience.ALL],
   },
 
@@ -6960,6 +7041,87 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 52. Lone Druid | 03.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_1_Rune control',
+    messageTime: -30,
+    textMessage:
+      "Control runes with hero and bear.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lone_druid_spirit_bear' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_2_Entangle',
+    messageTime: 15,
+    textMessage:
+      "Fish for entangle by poking opponents with a bear here and there. If it procs, you can do follow up damage.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lone_druid_spirit_bear' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_3_Catapults',
+    messageTimes: [5 * 60, 10 * 60],
+    textMessage:
+      "Make use of catapult waves. The bear can tank tower shots for a while.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lone_druid_spirit_bear' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_4_In trouble',
+    messageTimes: [5 * 60 + 15, 15 * 60 + 15],
+    textMessage:
+      "When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the bear can help.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lone_druid_savage_roar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_5_Dont show',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid showing your hero too much, especially at the start of the fight.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_6_Roshan',
+    messageTime: 16 * 60 + 15,
+    textMessage:
+      "You can take Roshan fairy early by yourself or with minimal help. Tank with hero as the bear will heal you.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_7_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Make sure to pick up Aghanim's Shard at the 20 minute mark. It provides drums-like buff and basic dispel.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lone Druid',
+    audioFile: 'ownHero/Lone Druid_8_Aghanims Scepter',
+    messageTimes: [25 * 60, 30 * 60],
+    textMessage:
+      "In tough late game scenarios, resort to ratting and Aghanim's Scepter makes it easier to execute.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Lone Druid',
     audioFile: 'heroes/Lone Druid_1_Spirit link',
@@ -7007,6 +7169,107 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 53. Luna | 04.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_1_Beam lasthits',
+    messageTime: 15,
+    textMessage:
+      'Use Lucent Beams to secure ranged creep lasthits if necessary.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'luna_lucent_beam' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_2_Bless ally',
+    messageTime: 30,
+    textMessage:
+      'Stay close enough to your ally so he benefits from Lunar Blessing.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'luna_lunar_blessing' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_3_Beam points',
+    messageTime: 2 * 60,
+    textMessage:
+      'If you have a strong lane, you can invest more points in Lucent Beam, otherwise up to two is more than enough.',
+    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+    image: { type: 'ability', name: 'luna_lucent_beam' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_4_Stacks',
+    messageTimes: [4 * 60, 8 * 60],
+    textMessage:
+      'Alert your teammates to stack for you as you can clear stacks easily with Moon Glaives.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'luna_moon_glaive' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_5_Stacks',
+    messageTimes: [4 * 60, 8 * 60],
+    textMessage:
+      'Alert your teammates to stack for you as you can clear stacks easily with Moon Glaives.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'luna_moon_glaive' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_6_Night time',
+    messageTimes: [5 * 60, 15 * 60],
+    textMessage:
+      'You can play more aggressively during the night due to Lunar Blessing vision distance increase.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'luna_lunar_blessing' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_7_Manta farm',
+    messageTimes: [15 * 60, 21 * 60],
+    textMessage:
+      "Make use of the Manta illusions to farm extra creepwaves you otherwise wouldn't be able to with your hero.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'manta' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_7_Manta farm',
+    messageTimes: [14 * 60 + 15, 19 * 60 + 15],
+    textMessage:
+      "Make use of the Manta illusions to farm extra creepwaves you otherwise wouldn't be able to with your hero.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'manta' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around the 20 minute mark to improve dps and provide vision in the beamed area.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Luna',
+    audioFile: 'ownHero/Luna_9_Backliners',
+    messageTimes: [20 * 60 + 15, 25 * 60 + 15],
+    textMessage:
+      "Luna has trouble dealing with backliners but you can consider buying Aghanim's Scepter for it.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Luna',
     audioFile: 'heroes/Luna_1_Early harass',
@@ -7053,6 +7316,138 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 54. Lycan | 04.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_1_Helm of Iron Will',
+    messageTime: -90,
+    textMessage:
+      'Rush Helm of Iron Will to solve your health sustain issues.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'helm_of_iron_will' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_2_Scout opponents',
+    messageTime: -75,
+    textMessage:
+      "You can scout opponents' whereabouts with wolves before a 0 minute rune and check for the midlane ward.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lycan_summon_wolves' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_3_Focus lasthitting',
+    messageTime: 15,
+    textMessage:
+      "Focus on securing lasthits and denying as you have extra damage from the wolves and Feral Impulse.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'lycan_summon_wolves' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_4_Dont feed summons',
+    messageTimes: [30, 4 * 60 + 30],
+    textMessage:
+      "Avoid feeding summons to opponents. Deny them or send them away, perhaps to block a camp or control a rune.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lycan_summon_wolves' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_5_Powerspike',
+    messageTime: 4 * 60 + 45,
+    textMessage:
+      "Lycan's laning power spike is Helm of Dominator and level 6. Make use of it to score a kill and push the tower.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'helm_of_the_dominator' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_6_Catapult',
+    messageTime: 5 * 60,
+    textMessage:
+      "Delay death of the 5 minute catapult wave to meet Helm of the Dominator and level 6 power spike.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_7_Controlled creep',
+    messageTime: 5 * 60,
+    textMessage:
+      "Overtake a neutral creep with a stun or root with the Helm of the Dominator so the opponents can't teleport out.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_dominator' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_8_Deny bounty',
+    messageTimes: [7 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      "When dominated creep is about to die, you can overtake another one and deny gold and experience to opponents.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_dominator' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_9_Push sidelanes',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out the sidelines with summons. Black Dragon is particularly good for that.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_overlord' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_10_Roshan',
+    messageTime: 15 * 60 + 15,
+    textMessage:
+      "Lycan is great at killing Roshan due to summons, Howl and auras. Bring him down by the 20min mark.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_11_Scout wolves',
+    messageTime: 18 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Consider using wolves to scout in mid to late game. You can deny runes as well.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'lycan_summon_wolves' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_12_Aghanims Scepter',
+    messageTimes: [22 * 60 + 15, 27 * 60 + 15],
+    textMessage:
+      "Aghanim's Scepter's Wolf Bite is a huge buff for one of your right-clicking cores.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Lycan',
+    audioFile: 'ownHero/Lycan_13_Rat',
+    messageTimes: [28 * 60 + 15, 33 * 60 + 15],
+    textMessage:
+      "In tough late game scenarios, resort to ratting and Aghanim's Shard makes it easier.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Lycan',
@@ -7127,6 +7522,118 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 55. Magnus | 04.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_1_Skewer trees',
+    messageTime: -90,
+    textMessage:
+      "Skewer destroys trees which can be useful against certain heroes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'magnataur_skewer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_2_Skewer pillars',
+    messageTimes: [-60, 12 * 60],
+    textMessage:
+      "When fighting close to pillars and cliffs, consider Skewering opponents on them.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'magnataur_skewer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_3_Win lasthits',
+    messageTime: 15,
+    textMessage:
+      "Magnus has huge base damage that is further amplified by Empower. Use to win the lane lasthit wise.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'magnataur_empower' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_4_Combo play',
+    messageTime: 60,
+    textMessage:
+      "When an opponent is close to your tower, consider making Shockwave into Skewer play.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'magnataur_skewer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_5_Clear stacks',
+    messageTimes: [4 * 60, 8 * 60],
+    textMessage:
+      "Ask your teammates to make stacks for you as you can clear them with ease once Empower is maxed out.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'magnataur_empower' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_6_Make stacks',
+    messageTimes: [4 * 60 + 15, 8 * 60 + 15],
+    textMessage:
+      "Make stacks for your farming core and continuously Empower him.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'magnataur_empower' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_7_RP turn',
+    messageTimes: [6 * 60, 12 * 60, 18 * 60],
+    textMessage:
+      "Consider turning during Reverse Polarity animation to be able to Skewer stunned units towards allies right away.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'magnataur_reverse_polarity' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_8_Farm blink',
+    messageTimes: [6 * 60 + 15, 10 * 60 + 15],
+    textMessage:
+      "Don't rotate too much. Focus on farming Blink Dagger and then start playing more actively.",
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_9_Use blink',
+    messageTime: 10 * 60 + 45,
+    textMessage:
+      "Once you have Blink Dagger, make use of it immediately before opponents are able to scout it.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_10_Dont show',
+    messageTime: 12 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid showing yourself at the start of the fight. Wait for opponents to clump up and do your combo.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Magnus',
+    audioFile: 'ownHero/Magnus_11_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at the 20 minute mark as it makes it easier for you to do your combos.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Magnus',
@@ -7326,6 +7833,97 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 56. Mars | 04.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      "Use God's Rebuke to secure ranged creep lasthits and harass the opponents at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mars_gods_rebuke' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_2_Set up spear',
+    messageTimes: [75, 6 * 60 + 15],
+    textMessage:
+      "You often want to set up a Spear of Mars by God's Rebuking first.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mars_spear' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_3_Arena trees',
+    messageTimes: [6 * 60, 14 * 60],
+    textMessage:
+      "Arena of Blood destroys trees in huge AoE which can be useful against certain heroes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mars_arena_of_blood' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_4_Dont rush',
+    messageTimes: [6 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      "Don't rush spearing an enemy during Arena of Blood. It's oftentimes better to rebuke and spear with delay.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mars_arena_of_blood' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_5_Protect allies',
+    messageTimes: [6 * 60 + 30, 14 * 60 + 30, 22 * 60 + 30],
+    textMessage:
+      "You can protect your allies from ranged attacks by placing Arena of Blood or using Bulwark.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mars_arena_of_blood' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_6_Dont over rotate',
+    messageTimes: [6 * 60 + 45, 9 * 60 + 45],
+    textMessage:
+      "Don't over rotate. Focus on getting Blink Dagger or Eul's Scepter timely.",
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_7_Use blink',
+    messageTime: 11 * 60,
+    textMessage:
+      "Make use of the Blink Dagger immediately before opponents are able to scout it.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at minute 20 when dealing with illusion-based heroes.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mars',
+    audioFile: 'ownHero/Mars_9_Gods Rebuke items',
+    messageTimes: [21 * 60 + 15, 28 * 60 + 15],
+    textMessage:
+      "Attack modifying and proc items work with God's Rebuke. You can pick up Satanic in the late game for example.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mars_gods_rebuke' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Mars',
@@ -11238,7 +11836,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'abyssal_underlord_firestorm' },
   },
-/*  { // DUPLICATE
+  /*  { // DUPLICATE
     category: 'OwnHero',
     hero: 'Underlord',
     audioFile: 'ownHero/Underlord_10_Splitpush',
