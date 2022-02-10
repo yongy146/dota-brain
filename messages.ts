@@ -7998,6 +7998,140 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 57. Medusa | 04.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      "Secure ranged creep with Mystic Snake if contested.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'medusa_mystic_snake' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_2_Snake mana back',
+    messageTime: 30,
+    textMessage:
+      "In order to get most of the mana back, Mystic snake needs to hit opponents and ranged creep.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'medusa_mystic_snake' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_3_Stacks',
+    messageTimes: [4 * 60, 8 * 60],
+    textMessage:
+      "Ask your teammates to stack for you as you can clear them early.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'medusa_split_shot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_4_Accelerate',
+    messageTime: 5 * 60,
+    textMessage:
+      "From level 5, you can start clearing lane creeps quickly and farming camps nearby to accelerate your farm.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'medusa_mystic_snake' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_5_Farm two camps',
+    messageTimes: [5 * 60 + 15, 9 * 60 + 15],
+    textMessage:
+      "If possible, farm two neutral camps at the same time with Split Shot and Mystic Snake.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'medusa_split_shot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_6_Skill ulty',
+    messageTime: 5 * 60 + 45,
+    textMessage:
+      "You don't have to skill Stone Gaze at level 6 unless you feel like you might be in danger.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'medusa_stone_gaze' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_7_Neutral mana',
+    messageTimes: [6 * 60, 12 * 60],
+    textMessage:
+      "If a neutral camp consists of multiple creeps with mana pools, Mystic Snake can regain you a lot of mana.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'medusa_mystic_snake' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_8_Manta waves',
+    messageTime: 13 * 60,
+    textMessage:
+      "Use Manta Style with Split Shot on to farm extra creepwaves that you can't with your hero.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'manta' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_9_Stone Gaze rush',
+    messageTime: 13 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Don't rush Stone Gazing in the fights. Make sure opponents are committed to the fight before you pop it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'medusa_stone_gaze' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_10_Center',
+    messageTime: 13 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Position yourself in the center of the fight to Split Shot multiple heros. Medusa does mediocre single-target damage.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'medusa_split_shot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_11_Snake big mana pool',
+    messageTime: 13 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Prioritize using Mystic Snake on high mana pool heroes in the fights.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'medusa_mystic_snake' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_12_Mana burn',
+    messageTime: 14 * 60,
+    textMessage:
+      "Mana burns are a big problem for Medusa. You can itemize against them or adapt the playstyle.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Medusa',
+    audioFile: 'ownHero/Medusa_13_Divine Rapier',
+    messageTimes: [25 * 60, 35 * 60],
+    textMessage:
+      "If things are going rough, consider purchasing Divine Rapier. Works well with Split Shot.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'rapier' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Medusa',
     audioFile: 'heroes/Medusa_1_Mystic snake',
@@ -8043,6 +8177,65 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 58. Meepo | 04.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Meepo',
+    audioFile: 'ownHero/Meepo_1_Control runes',
+    messageTimes: [2 * 60 + 45, 7 * 60 + 45],
+    textMessage:
+      'Meepo farms really fast. Focus on pushing out waves, optimizing farming routes and stacking.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'meepo_divided_we_stand' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Meepo',
+    audioFile: 'ownHero/Meepo_2_Farm fast',
+    messageTime: 4 * 60 + 15,
+    textMessage:
+      'Meepo farms really fast. Focus on pushing out waves, optimizing farming routes and stacking.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'meepo_poof' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Meepo',
+    audioFile: 'ownHero/Meepo_3_Tempo',
+    messageTime: 4 * 60 + 30,
+    textMessage:
+      'Meepo is a tempo hero that falls off over time. Hit your item timings, secure Roshan and play aggressively.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Meepo',
+    audioFile: 'ownHero/Meepo_4_Gank items',
+    messageTime: 10 * 60 + 15,
+    textMessage:
+      'Once you have Blink Dagger or Ethereal Blade, look for pick-offs.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Meepo',
+    audioFile: 'ownHero/Meepo_5_Gank sidelanes',
+    messageTimes: [12 * 60 + 30, 22 * 60 + 30],
+    textMessage:
+      'Keep sidelines pushed in and linger around with a clone to gank the opponents that appear depushing.',
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Meepo',
+    audioFile: 'ownHero/Meepo_6_Gank sidelanes',
+    messageTime: 15 * 60 + 15,
+    textMessage:
+      'Meepo can take Roshan down on his own fairly early. Kill first Roshan before the 20 min mark.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Meepo',
@@ -8114,6 +8307,56 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 59. Mirana | 04.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Mirana',
+    audioFile: 'ownHero/Mirana_1_Big camp',
+    messageTime: -90,
+    textMessage:
+      "Big pull camp must not be blocked. You want to use it for pulling or gain extra farm by arrowing the big creep.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mirana',
+    audioFile: 'ownHero/Mirana_2_Long range',
+    messageTime: 10,
+    textMessage:
+      "Make use of Mirana's long attack range to harass without aggroing too often.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mirana',
+    audioFile: 'ownHero/Mirana_3_Ranged creep',
+    messageTime: 20,
+    textMessage:
+      "Secure ranged creeps with Sacred Arrow if necessary.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mirana_arrow' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mirana',
+    audioFile: 'ownHero/Mirana_4_Ranged creep',
+    messageTimes: [5 * 60, 10 * 60],
+    textMessage:
+      "Arrow catapults to prevent your buildings from taking extra damage.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mirana_arrow' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Mirana',
+    audioFile: 'ownHero/Mirana_5_Save ally',
+    messageTimes: [8 * 60, 14 * 60],
+    textMessage:
+      "Look around the map to save an ally in trouble with Moonlight Shadow.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'mirana_invis' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Mirana',
@@ -8367,6 +8610,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 61. Morphling | 04.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_1_Sprit Vessel',
+    messageTime: -60,
+    textMessage:
+      'Someone should buy Spirit Vessel against Morphling to offset Attribute Shift strength gain.',
+    audience: [Audience.ALL],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Morphling',
     audioFile: 'heroes/Morphling_1_Sprit Vessel',
@@ -8422,6 +8675,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 62. Naga Siren | 05.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_1_Kill images',
+    messageTime: -60,
+    textMessage:
+      "Kill Mirror Images to cripple Naga's last hitting capabilities on the lane.",
+    audience: [Audience.IN_LANE],
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Naga Siren',
@@ -8486,6 +8749,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 63. Nature's Prophet | 05.03.2021
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_1_Courier sniping",
+    messageTime: -60,
+    textMessage:
+      "Nature's Prophet is great at sniping couriers. Fly courier over trees when possible",
+    audience: [Audience.ALL],
+  },
+
   {
     category: 'EnemyHero',
     hero: "Nature's Prophet",
