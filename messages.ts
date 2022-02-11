@@ -6853,7 +6853,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lina',
     audioFile: 'ownHero/Lina_6_Upkeep Fiery Soul',
     messageTimes: [7 * 60, 17 * 60, 27 * 60],
-    textMessage: 'Use Light Strike Array to upkeep Fiery Soul Stacks as it is cheaper and of shorter cooldown.',
+    textMessage:
+      'Use Light Strike Array to upkeep Fiery Soul Stacks as it is cheaper and of shorter cooldown.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lina_light_strike_array' },
   },
@@ -6863,7 +6864,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lina_7_Splitpush pickoff',
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: 'Lina is great at split-pushing and pick-offs due to high movement speed, great waveclear and damage burst.',
+    textMessage:
+      'Lina is great at split-pushing and pick-offs due to high movement speed, great waveclear and damage burst.',
     audience: [Audience.ALL],
   },
   {
@@ -6872,7 +6874,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lina_8_Physical',
     messageTime: 25 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: 'In late game fights, use active spells primarily to activate Fiery Soul as most of your damage will be physical.',
+    textMessage:
+      'In late game fights, use active spells primarily to activate Fiery Soul as most of your damage will be physical.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'lina_fiery_soul' },
   },
@@ -7045,8 +7048,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lone Druid',
     audioFile: 'ownHero/Lone Druid_1_Rune control',
     messageTime: -30,
-    textMessage:
-      "Control runes with hero and bear.",
+    textMessage: 'Control runes with hero and bear.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lone_druid_spirit_bear' },
   },
@@ -7056,7 +7058,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lone Druid_2_Entangle',
     messageTime: 15,
     textMessage:
-      "Fish for entangle by poking opponents with a bear here and there. If it procs, you can do follow up damage.",
+      'Fish for entangle by poking opponents with a bear here and there. If it procs, you can do follow up damage.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lone_druid_spirit_bear' },
   },
@@ -7066,7 +7068,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lone Druid_3_Catapults',
     messageTimes: [5 * 60, 10 * 60],
     textMessage:
-      "Make use of catapult waves. The bear can tank tower shots for a while.",
+      'Make use of catapult waves. The bear can tank tower shots for a while.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lone_druid_spirit_bear' },
   },
@@ -7076,7 +7078,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lone Druid_4_In trouble',
     messageTimes: [5 * 60 + 15, 15 * 60 + 15],
     textMessage:
-      "When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the bear can help.",
+      'When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the bear can help.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lone_druid_savage_roar' },
   },
@@ -7087,7 +7089,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Avoid showing your hero too much, especially at the start of the fight.",
+      'Avoid showing your hero too much, especially at the start of the fight.',
     audience: [Audience.ALL],
   },
   {
@@ -7096,7 +7098,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lone Druid_6_Roshan',
     messageTime: 16 * 60 + 15,
     textMessage:
-      "You can take Roshan fairy early by yourself or with minimal help. Tank with hero as the bear will heal you.",
+      'You can take Roshan fairy early by yourself or with minimal help. Tank with hero as the bear will heal you.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'aegis' },
   },
@@ -7321,8 +7323,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Lycan',
     audioFile: 'ownHero/Lycan_1_Helm of Iron Will',
     messageTime: -90,
-    textMessage:
-      'Rush Helm of Iron Will to solve your health sustain issues.',
+    textMessage: 'Rush Helm of Iron Will to solve your health sustain issues.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'helm_of_iron_will' },
   },
@@ -7342,7 +7343,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lycan_3_Focus lasthitting',
     messageTime: 15,
     textMessage:
-      "Focus on securing lasthits and denying as you have extra damage from the wolves and Feral Impulse.",
+      'Focus on securing lasthits and denying as you have extra damage from the wolves and Feral Impulse.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'lycan_summon_wolves' },
   },
@@ -7352,7 +7353,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lycan_4_Dont feed summons',
     messageTimes: [30, 4 * 60 + 30],
     textMessage:
-      "Avoid feeding summons to opponents. Deny them or send them away, perhaps to block a camp or control a rune.",
+      'Avoid feeding summons to opponents. Deny them or send them away, perhaps to block a camp or control a rune.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lycan_summon_wolves' },
   },
@@ -7372,7 +7373,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lycan_6_Catapult',
     messageTime: 5 * 60,
     textMessage:
-      "Delay death of the 5 minute catapult wave to meet Helm of the Dominator and level 6 power spike.",
+      'Delay death of the 5 minute catapult wave to meet Helm of the Dominator and level 6 power spike.',
     audience: [Audience.ROLE_CORE],
   },
   {
@@ -7391,7 +7392,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lycan_8_Deny bounty',
     messageTimes: [7 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "When dominated creep is about to die, you can overtake another one and deny gold and experience to opponents.",
+      'When dominated creep is about to die, you can overtake another one and deny gold and experience to opponents.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'helm_of_the_dominator' },
   },
@@ -7402,7 +7403,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines with summons. Black Dragon is particularly good for that.",
+      'When not much is happening, push out the sidelines with summons. Black Dragon is particularly good for that.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'helm_of_the_overlord' },
   },
@@ -7412,7 +7413,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Lycan_10_Roshan',
     messageTime: 15 * 60 + 15,
     textMessage:
-      "Lycan is great at killing Roshan due to summons, Howl and auras. Bring him down by the 20min mark.",
+      'Lycan is great at killing Roshan due to summons, Howl and auras. Bring him down by the 20min mark.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'aegis' },
   },
@@ -7423,7 +7424,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 18 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Consider using wolves to scout in mid to late game. You can deny runes as well.",
+      'Consider using wolves to scout in mid to late game. You can deny runes as well.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'lycan_summon_wolves' },
   },
@@ -7528,7 +7529,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_1_Skewer trees',
     messageTime: -90,
     textMessage:
-      "Skewer destroys trees which can be useful against certain heroes.",
+      'Skewer destroys trees which can be useful against certain heroes.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'magnataur_skewer' },
   },
@@ -7538,7 +7539,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_2_Skewer pillars',
     messageTimes: [-60, 12 * 60],
     textMessage:
-      "When fighting close to pillars and cliffs, consider Skewering opponents on them.",
+      'When fighting close to pillars and cliffs, consider Skewering opponents on them.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'magnataur_skewer' },
   },
@@ -7548,7 +7549,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_3_Win lasthits',
     messageTime: 15,
     textMessage:
-      "Magnus has huge base damage that is further amplified by Empower. Use to win the lane lasthit wise.",
+      'Magnus has huge base damage that is further amplified by Empower. Use to win the lane lasthit wise.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'magnataur_empower' },
   },
@@ -7558,7 +7559,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_4_Combo play',
     messageTime: 60,
     textMessage:
-      "When an opponent is close to your tower, consider making Shockwave into Skewer play.",
+      'When an opponent is close to your tower, consider making Shockwave into Skewer play.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'magnataur_skewer' },
   },
@@ -7568,7 +7569,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_5_Clear stacks',
     messageTimes: [4 * 60, 8 * 60],
     textMessage:
-      "Ask your teammates to make stacks for you as you can clear them with ease once Empower is maxed out.",
+      'Ask your teammates to make stacks for you as you can clear them with ease once Empower is maxed out.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'magnataur_empower' },
   },
@@ -7578,7 +7579,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_6_Make stacks',
     messageTimes: [4 * 60 + 15, 8 * 60 + 15],
     textMessage:
-      "Make stacks for your farming core and continuously Empower him.",
+      'Make stacks for your farming core and continuously Empower him.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'magnataur_empower' },
   },
@@ -7588,7 +7589,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_7_RP turn',
     messageTimes: [6 * 60, 12 * 60, 18 * 60],
     textMessage:
-      "Consider turning during Reverse Polarity animation to be able to Skewer stunned units towards allies right away.",
+      'Consider turning during Reverse Polarity animation to be able to Skewer stunned units towards allies right away.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'magnataur_reverse_polarity' },
   },
@@ -7608,7 +7609,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Magnus_9_Use blink',
     messageTime: 10 * 60 + 45,
     textMessage:
-      "Once you have Blink Dagger, make use of it immediately before opponents are able to scout it.",
+      'Once you have Blink Dagger, make use of it immediately before opponents are able to scout it.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -7619,7 +7620,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Avoid showing yourself at the start of the fight. Wait for opponents to clump up and do your combo.",
+      'Avoid showing yourself at the start of the fight. Wait for opponents to clump up and do your combo.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -7859,7 +7860,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Mars_3_Arena trees',
     messageTimes: [6 * 60, 14 * 60],
     textMessage:
-      "Arena of Blood destroys trees in huge AoE which can be useful against certain heroes.",
+      'Arena of Blood destroys trees in huge AoE which can be useful against certain heroes.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'mars_arena_of_blood' },
   },
@@ -7879,7 +7880,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Mars_5_Protect allies',
     messageTimes: [6 * 60 + 30, 14 * 60 + 30, 22 * 60 + 30],
     textMessage:
-      "You can protect your allies from ranged attacks by placing Arena of Blood or using Bulwark.",
+      'You can protect your allies from ranged attacks by placing Arena of Blood or using Bulwark.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'mars_arena_of_blood' },
   },
@@ -7899,7 +7900,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Mars_7_Use blink',
     messageTime: 11 * 60,
     textMessage:
-      "Make use of the Blink Dagger immediately before opponents are able to scout it.",
+      'Make use of the Blink Dagger immediately before opponents are able to scout it.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -8002,8 +8003,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Medusa',
     audioFile: 'ownHero/Medusa_1_Secure ranged',
     messageTime: 15,
-    textMessage:
-      "Secure ranged creep with Mystic Snake if contested.",
+    textMessage: 'Secure ranged creep with Mystic Snake if contested.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'medusa_mystic_snake' },
   },
@@ -8013,7 +8013,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_2_Snake mana back',
     messageTime: 30,
     textMessage:
-      "In order to get most of the mana back, Mystic snake needs to hit opponents and ranged creep.",
+      'In order to get most of the mana back, Mystic snake needs to hit opponents and ranged creep.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'medusa_mystic_snake' },
   },
@@ -8023,7 +8023,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_3_Stacks',
     messageTimes: [4 * 60, 8 * 60],
     textMessage:
-      "Ask your teammates to stack for you as you can clear them early.",
+      'Ask your teammates to stack for you as you can clear them early.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'medusa_split_shot' },
   },
@@ -8033,7 +8033,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_4_Accelerate',
     messageTime: 5 * 60,
     textMessage:
-      "From level 5, you can start clearing lane creeps quickly and farming camps nearby to accelerate your farm.",
+      'From level 5, you can start clearing lane creeps quickly and farming camps nearby to accelerate your farm.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'medusa_mystic_snake' },
   },
@@ -8043,7 +8043,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_5_Farm two camps',
     messageTimes: [5 * 60 + 15, 9 * 60 + 15],
     textMessage:
-      "If possible, farm two neutral camps at the same time with Split Shot and Mystic Snake.",
+      'If possible, farm two neutral camps at the same time with Split Shot and Mystic Snake.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'medusa_split_shot' },
   },
@@ -8063,7 +8063,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_7_Neutral mana',
     messageTimes: [6 * 60, 12 * 60],
     textMessage:
-      "If a neutral camp consists of multiple creeps with mana pools, Mystic Snake can regain you a lot of mana.",
+      'If a neutral camp consists of multiple creeps with mana pools, Mystic Snake can regain you a lot of mana.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'medusa_mystic_snake' },
   },
@@ -8095,7 +8095,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Position yourself in the center of the fight to Split Shot multiple heros. Medusa does mediocre single-target damage.",
+      'Position yourself in the center of the fight to Split Shot multiple heros. Medusa does mediocre single-target damage.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'medusa_split_shot' },
   },
@@ -8106,7 +8106,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "Prioritize using Mystic Snake on high mana pool heroes in the fights.",
+      'Prioritize using Mystic Snake on high mana pool heroes in the fights.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'medusa_mystic_snake' },
   },
@@ -8116,7 +8116,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_12_Mana burn',
     messageTime: 14 * 60,
     textMessage:
-      "Mana burns are a big problem for Medusa. You can itemize against them or adapt the playstyle.",
+      'Mana burns are a big problem for Medusa. You can itemize against them or adapt the playstyle.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'black_king_bar' },
   },
@@ -8126,7 +8126,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Medusa_13_Divine Rapier',
     messageTimes: [25 * 60, 35 * 60],
     textMessage:
-      "If things are going rough, consider purchasing Divine Rapier. Works well with Split Shot.",
+      'If things are going rough, consider purchasing Divine Rapier. Works well with Split Shot.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'rapier' },
   },
@@ -8313,7 +8313,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Mirana_1_Big camp',
     messageTime: -90,
     textMessage:
-      "Big pull camp must not be blocked. You want to use it for pulling or gain extra farm by arrowing the big creep.",
+      'Big pull camp must not be blocked. You want to use it for pulling or gain extra farm by arrowing the big creep.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -8331,8 +8331,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Mirana',
     audioFile: 'ownHero/Mirana_3_Ranged creep',
     messageTime: 20,
-    textMessage:
-      "Secure ranged creeps with Sacred Arrow if necessary.",
+    textMessage: 'Secure ranged creeps with Sacred Arrow if necessary.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'mirana_arrow' },
   },
@@ -8342,7 +8341,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Mirana_4_Ranged creep',
     messageTimes: [5 * 60, 10 * 60],
     textMessage:
-      "Arrow catapults to prevent your buildings from taking extra damage.",
+      'Arrow catapults to prevent your buildings from taking extra damage.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'mirana_arrow' },
   },
@@ -8352,7 +8351,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Mirana_5_Save ally',
     messageTimes: [8 * 60, 14 * 60],
     textMessage:
-      "Look around the map to save an ally in trouble with Moonlight Shadow.",
+      'Look around the map to save an ally in trouble with Moonlight Shadow.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'mirana_invis' },
   },
@@ -8612,11 +8611,100 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Morphling',
-    audioFile: 'ownHero/Morphling_1_Sprit Vessel',
-    messageTime: -60,
+    audioFile: 'ownHero/Morphling_1_Outlasthit',
+    messageTime: 10,
+    textMessage: 'Focus on outlasthiting opponents with high base damage.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'morphling_morph_agi' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_2_Avoid harass',
+    messageTime: 20,
     textMessage:
-      'Someone should buy Spirit Vessel against Morphling to offset Attribute Shift strength gain.',
+      "Avoid taking much harass damage early as you'll be forced to attribute shift to strength.",
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'morphling_morph_str' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_3_Sustain',
+    messageTime: 30,
+    textMessage: 'Rush Morbid Mask for hp sustain on a mediocre to tough lane.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'lifesteal' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_4_Agility heal',
+    messageTime: 40,
+    textMessage:
+      'Whenever you drop low on health, shift to agility before using health consumables or stick.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'flask' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_5_Adaptive ranged',
+    messageTime: 60,
+    textMessage:
+      'Consider putting a point in Adaptive Strike on level 2 if you have issues securing range creep lasthit.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'morphling_adaptive_strike_agi' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_6_Morph strengh trouble',
+    messageTimes: [75, 9 * 60 + 15, 17 * 60 + 15],
+    textMessage:
+      'Start morphing into strength right away if you expect to be jumped.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'morphling_morph_str' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_7_Heal reductions',
+    messageTime: 8 * 60,
+    textMessage:
+      'Healing reductions and silences are a big problem for Morph and early Manta can dispel both in many cases.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'manta' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_8_Dont full agility',
+    messageTimes: [9 * 60, 14 * 60, 19 * 60],
+    textMessage:
+      "Don't be morphed fully into agility when moving around or before the fight.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'morphling_morph_str' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_9_Ethereal Blade',
+    messageTime: 9 * 60 + 30,
+    textMessage:
+      "Rush Ethereal Blade if you don't need Manta as you can burst squishier heroes with it.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ethereal_blade' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Morphling',
+    audioFile: 'ownHero/Morphling_10_Ethereal Blade',
+    messageTime: 18 * 60 + 30,
+    textMessage:
+      "Aghanim's Scepter is really good if you have allies like Earthshaker, Dark Willow, Spirit Breaker.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
   },
 
   {
@@ -8678,11 +8766,101 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Naga Siren',
-    audioFile: 'ownHero/Naga Siren_1_Kill images',
-    messageTime: -60,
+    audioFile: 'ownHero/Naga Siren_1_Mirror Images dispel',
+    messageTime: -75,
+    textMessage: 'Mirror Image applies basic dispel on cast.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'naga_siren_mirror_image' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_2_Mirror Images annoying',
+    messageTimes: [-60, 7 * 60 + 30, 17 * 60 + 30],
     textMessage:
-      "Kill Mirror Images to cripple Naga's last hitting capabilities on the lane.",
-    audience: [Audience.IN_LANE],
+      "Mirror Images can be used to deny runes or to deceive the opponents about your hero's presence.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'naga_siren_mirror_image' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_3_Unblock camps',
+    messageTime: -45,
+    textMessage:
+      'Make sure pull camps are unblocked as the lane will be pushing frequently due to Rip Tide.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_4_Mirror Images lasthitting',
+    messageTime: 15,
+    textMessage:
+      'Use Mirror Images non stop to have an upper hand when it comes to lasthitting.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'naga_siren_mirror_image' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_5_Ensnare kill',
+    messageTime: 2 * 60,
+    textMessage:
+      'Consider putting a point in Ensnare but only if you can get a kill out of it.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'naga_siren_ensnare' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_6_Dont overlane',
+    messageTime: 2 * 60 + 15,
+    textMessage:
+      'Naga is not a particularly good laning hero. Get as many levels as you can and move to the jungle.',
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_7_Push sidelanes',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      "Keep sidelines pushed out by illusions and farm opponents' camps more and more as you get stronger.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'naga_siren_mirror_image' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_8_Song in time',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Be quick at judging the situation and pop Song of Siren when it starts going downhill.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'naga_siren_song_of_the_siren' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_9_Song Roshan',
+    messageTime: 15 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: 'You can use Song of the Siren to secure Roshan kill.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'naga_siren_song_of_the_siren' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Naga Siren',
+    audioFile: 'ownHero/Naga Siren_10_Song Roshan',
+    messageTimes: [19 * 60 + 15, 24 * 60],
+    textMessage:
+      "Aghanim's Scepter is a great pick up to control spell-immune heroes.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
   },
 
   {
@@ -8752,11 +8930,112 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: "Nature's Prophet",
-    audioFile: "ownHero/Nature's Prophet_1_Courier sniping",
-    messageTime: -60,
+    audioFile: "ownHero/Nature's Prophet_1_Treants job",
+    messageTime: -75,
     textMessage:
-      "Nature's Prophet is great at sniping couriers. Fly courier over trees when possible",
+      'Treants are not only good for lasthitting or harassing but also to scout, block off camps and deny runes.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_force_of_nature' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_2_Bodyblock",
+    messageTimes: [-15, 6 * 60 + 45, 12 * 60 + 45],
+    textMessage:
+      'Consider bodyblocking opponents with treants when going for a kill or trying to escape.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_force_of_nature' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_3_Tp heal",
+    messageTime: 60,
+    textMessage:
+      'When low on health, consider using tp scroll to go back to base and teleport back with the spell.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_teleportation' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_4_Look around",
+    messageTime: 75,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Look around the map for opportunities to gank, snipe couriers, pick up runes or place deep wards.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_wrath_of_nature' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_5_Tango Sprout",
+    messageTime: 2 * 60 + 15,
+    textMessage:
+      'Using Tango on a Sprout tree provides more health regeneration.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'tango' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_6_Sprout vision",
+    messageTimes: [2 * 60 + 30, 12 * 60 + 30, 22 * 60 + 30],
+    textMessage:
+      'Sprout provides vision in the area and can be useful to scout pillars for wards or Roshan.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_sprout' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_7_Sprout vision",
+    messageTimes: [2 * 60 + 45, 12 * 60 + 45, 22 * 60 + 45],
+    textMessage:
+      'Save yourself or an ally by placing Sprout strategically. It is great for kitting spell-immune opponents.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_sprout' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_8_Sprout vision",
+    messageTimes: [3 * 60, 12 * 60],
+    textMessage: 'Sprout can push you up or down the cliff or pillar.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_sprout' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_9_Sprout vision",
+    messageTimes: [6 * 60, 9 * 60],
+    textMessage:
+      'Typically, use Wrath of Nature on the opposite side of the map from where you want it to hit hard.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_wrath_of_nature' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_10_Push sidelanes",
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
+    textMessage:
+      'When not much is happening, push out the sidelines with your hero and summons.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_force_of_nature' },
+  },
+  {
+    category: 'OwnHero',
+    hero: "Nature's Prophet",
+    audioFile: "ownHero/Nature's Prophet_11_Ratting",
+    messageTimes: [12 * 60 + 15, 20 * 60 + 15, 28 * 60 + 15],
+    textMessage:
+      "Nature's Prophet excels at ratting, so resort to it if the game slows down or you fall behind.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'furion_force_of_nature' },
   },
 
   {
