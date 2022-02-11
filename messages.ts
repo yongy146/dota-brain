@@ -9103,6 +9103,118 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 64. Necrophos | 05.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_1_Big camp',
+    messageTime: -90,
+    textMessage:
+      'Big camp needs to be open for pulling as the lane will push often due to Death Pulse.',
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_2_Sustain',
+    messageTime: -30,
+    textMessage:
+      'Necrophos typically wins the lane off of his sustain. Lasthitting needs to be on point.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'necrolyte_heartstopper_aura' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_3_Death Pulse multitasking',
+    messageTime: 10,
+    textMessage:
+      'Do multiple things with Death Pulse at the same time - secure lasthit, harass opponents and heal an ally.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'necrolyte_death_pulse' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_4_Screw lasthits',
+    messageTime: 20,
+    textMessage:
+      "Mess around with opponents' lasthitting by healing the creeps and damaging opponents at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'necrolyte_death_pulse' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_5_Stay close',
+    messageTime: 75,
+    textMessage:
+      'Keep yourself close enough to opponents for Heartstopper Aura to damage them.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'necrolyte_heartstopper_aura' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_6_In trouble',
+    messageTimes: [2 * 60, 9 * 60, 16 * 60],
+    textMessage:
+      'If in trouble, pop Ghost Shroud and then any healing you might have. You can potentially teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'necrolyte_sadist' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_7_Hood of Defiance',
+    messageTimes: [3 * 60 + 15, 6 * 60 + 15],
+    textMessage:
+      'Ghost Shroud makes you vulnerable to magical damage so you typically need a Hood of Defiance.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'hood_of_defiance' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_8_Counters',
+    messageTimes: [6 * 60, 12 * 60],
+    textMessage:
+      'Healing reductions and silences are a big problem for Necrophos. Itemize against those and adjust playstyle.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'cyclone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_9_Kill at start',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Look to score a kill at the beginning of the fight as you'll be considerably harder to kill afterwards.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'necrolyte_heartstopper_aura' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_10_Black King Bar',
+    messageTime: 12 * 60 + 15,
+    textMessage:
+      "Ghost Shroud has no effect during Black King Bar.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Necrophos',
+    audioFile: 'ownHero/Necrophos_11_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at the 20 minute mark as it provides additional offensive and defensive utilities.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Necrophos',
     audioFile: 'heroes/Necrophos_1_Spirit Vessel',
@@ -9157,6 +9269,94 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 65. Night Stalker | 05.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_1_Run down mid',
+    messageTime: -90,
+    textMessage:
+      "Run down mid as you load into the game and scout for opponents' midlaner placing observer ward.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_observer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_2_Vision',
+    messageTime: -80,
+    textMessage:
+      'Night Stalker has great night vision but very limited day vision.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_3_Survive day',
+    messageTime: 10,
+    textMessage:
+      'Look to survive through the first 5 minutes of the game and ideally have the boots as the night hits.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_4_Void creeps',
+    messageTime: 20,
+    textMessage:
+      'Use Void to secure ranged creep lasthits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'night_stalker_void' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_5_Crippling Fear',
+    messageTime: 4 * 60,
+    textMessage:
+      'Keep a skill point or opt to skill Crippling Fear as the first night approaches if it is necessary to score a kill.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'night_stalker_crippling_fear' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_6_Night aggression',
+    messageTimes: [4 * 60 + 50, 14 * 60 + 50],
+    textMessage:
+      'Play and farm aggressively during the night time and provide additional vision for your team.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_7_Tp cancel',
+    messageTimes: [5 * 60, 15 * 60],
+    textMessage:
+      'When going to kill, be careful with Voiding right away as the opponent might just teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'night_stalker_void' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_8_Avoid fighting',
+    messageTimes: [9 * 60 + 50, 19 * 60 + 50],
+    textMessage:
+      "Avoid fighting when it's daytime and Dark Ascension is down, play defensively or push out lanes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'night_stalker_darkness' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Night Stalker',
+    audioFile: 'ownHero/Night Stalker_9_Backliners and supports',
+    messageTimes: [10 * 60 + 15, 15 * 60 + 15],
+    textMessage:
+      "Prioritize dealing with backliners and supports in fights, especially once you have Blink Dagger.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Night Stalker',
