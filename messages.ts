@@ -9414,6 +9414,86 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 66. Nyx Assassin | 05.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_1_Weak laner',
+    messageTime: -60,
+    textMessage:
+      'Nyx is a fairly weak laner. Focus on creep equilibrium, pulling and securing runes for midlaner.',
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_2_Mana Burn lane',
+    messageTime: -30,
+    textMessage:
+      'You can skill Mana Burn on level 1 or 2 if laning against an intelligence hero that harasses a lot with spells.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'nyx_assassin_mana_burn' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_3_Impale ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Impale to secure ranged creep and stun opponents at the same time if possible.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'nyx_assassin_impale' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_4_Hijack',
+    messageTime: 30,
+    textMessage:
+      "Consider hijacking a second opponents' creepwave behind the tower at 50 seconds into the game.",
+    audience: [Audience.ROLE_SUPPORT_SOFT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_5_Carapace Vendetta',
+    messageTimes: [6 * 60, 11 * 60],
+    textMessage:
+      "You can use Spiked Carapace during Vendetta without exiting it.",
+    audience: [Audience.ROLE_SUPPORT_SOFT],
+    image: { type: 'ability', name: 'nyx_assassin_spiked_carapace' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_6_Vendetta active',
+    messageTimes: [6 * 60 + 15, 12 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      "Once you have Vendetta up, be active - setup kills and scout. Avoid showing yourself on the lanes too much.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'nyx_assassin_vendetta' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_7_Mana Burn frequently',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Mana Burn frequently in the fights. Intelligence heroes will take more damage. Other types will run out of mana quicker.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'nyx_assassin_mana_burn' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Nyx Assassin',
+    audioFile: 'ownHero/Nyx Assassin_8_Aghanims Scepter',
+    messageTimes: [19 * 60 + 15, 24 * 60 + 15],
+    textMessage:
+      "Pick up Aghanim's Scepter as it improves most of your spells among other things.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Nyx Assassin',
     audioFile: 'heroes/Nyx Assassin_1_Spiked carapace',
@@ -9482,6 +9562,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'Ignite has a much longer cast range than Fireblast, so cast it first.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ogre_magi_ignite' },
   },
   {
     category: 'OwnHero',
@@ -9490,6 +9571,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60,
     textMessage: 'Prioritize items that you can multicast with.',
     audience: [Audience.ALL],
+    image: { type: 'item', name: 'solar_crest' },
   },
   {
     category: 'OwnHero',
@@ -9499,6 +9581,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'Look to Ignite the heroes with Blink Dagger to keep it canceled continuously.',
     audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
   },
   {
     category: 'OwnHero',
@@ -9517,6 +9600,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     repeatTime: 20 * 60,
     textMessage: 'Bloodlust your right-click Cores prior and during a fight.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
   },
 
   {
@@ -9571,6 +9655,67 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 68. Omniknight | 05.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Omniknight',
+    audioFile: 'ownHero/Omniknight_1_Dispel',
+    messageTime: -90,
+    textMessage:
+      "Consider swapping lanes if there's a need for dispel.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'omniknight_repel' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Omniknight',
+    audioFile: 'ownHero/Omniknight_2_Weak laner',
+    messageTime: -30,
+    textMessage:
+      "Omniknight is a fairly weak laner. Focus on creep equilibrium, pulling and zoning opponents' support.",
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Omniknight',
+    audioFile: 'ownHero/Omniknight_3_Purification value',
+    messageTime: 15,
+    textMessage:
+      "Avoid using Purification only to heal. Secure a ranged creep lasthit or damage opponents at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'omniknight_purification' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Omniknight',
+    audioFile: 'ownHero/Omniknight_4_Skip Degen Aura',
+    messageTimes: [9 * 60 + 45, 13 * 60 + 45],
+    textMessage:
+      "After you maxed out the first and second spell, consider skilling stats over Degen Aura.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'omniknight_degen_aura' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Omniknight',
+    audioFile: 'ownHero/Omniknight_5_Avoid showing',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid showing yourself at the start of the fight as you are the primary target for opponents.",
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Omniknight',
+    audioFile: 'ownHero/Omniknight_6_Dispels',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Dispels are a big problem for Omniknight. Be mindful when using Heavenly Grace and Guardian Angel.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'omniknight_repel' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Omniknight',
@@ -9758,6 +9903,67 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 70. Outworld Destroyer | 05.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Outworld Destroyer',
+    audioFile: 'ownHero/Outworld Destroyer_1_Meteor hammer',
+    messageTime: -90,
+    textMessage:
+      "Rush Meteor Hammer as it provides sustain, solo kill potential, waveclear and tower damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'meteor_hammer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Outworld Destroyer',
+    audioFile: 'ownHero/Outworld Destroyer_2_Arcane Orb harass',
+    messageTime: 15,
+    textMessage:
+      "Use Arcane Orb on opponents preferably during laning stage as it does tons of damage.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'obsidian_destroyer_arcane_orb' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Outworld Destroyer',
+    audioFile: 'ownHero/Outworld Destroyer_3_Exposed',
+    messageTime: 2 * 60,
+    textMessage:
+      "After using Astral Imprisonment, the opponents might go on you, so be careful.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'obsidian_destroyer_astral_imprisonment' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Outworld Destroyer',
+    audioFile: 'ownHero/Outworld Destroyer_4_Avoid hammering',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      "Don't focus on channeling Meteor Hammer in bigger teamfights, at least not at the start.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'meteor_hammer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Outworld Destroyer',
+    audioFile: 'ownHero/Outworld Destroyer_5_Top target',
+    messageTime: 10 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "You will typically be a top priority target for opponents as you can save others. Be mindful about your positioning.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Outworld Destroyer',
+    audioFile: 'ownHero/Outworld Destroyer_6_Arcane Orb Roshan',
+    messageTime: 16 * 60 + 30,
+    textMessage:
+      "Arcane Orb works on Roshan so you only need someone to tank for you.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Outworld Destroyer',
     audioFile: 'heroes/Outworld Destroyer_1_Meteor hammer',
@@ -9803,6 +10009,18 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 71. Pangolier | 06.03.2021   ***CHANGED 7.30***
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_1_Squishy',
+    messageTime: -60,
+    textMessage:
+      'Pangolier has a low HP pool and is squishy. Pressure him early on, especially when Swashbuckle is on cooldown.',
+    chatMessage: 'Pangolier is squishy. Pressure him early on.',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Pangolier',
@@ -9871,6 +10089,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 72. Phantom Assassin | Earlier work | UPDATED ON 06.03. (message on magic stick added)
   {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_1_Magic stick',
+    messageTime: -60,
+    textMessage:
+      'PA uses Stifling Dagger frequently to obtain lasthits. Buy Magic Stick and Magic Wand to get charges.',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Phantom Assassin',
     audioFile: 'heroes/Phantom Assassin_1_Magic stick',
@@ -9934,9 +10163,22 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 73. Phantom Lancer | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Phantom Lancer',
+    audioFile: 'ownHero/Phantom Lancer_1_Doppelganger',
+    messageTime: 25,
+    textMessage:
+      "Phantom Lancer's main escape mechanism is Doppelganger. As this spell has a very long cooldown at lower levels, look to play aggressively as soon as he used it",
+    chatMessage:
+      "Phantom Lancer's main escape mechanism is Doppelganger. Look to play aggressively as soon as he used it",
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Phantom Lancer',
-    audioFile: 'heroes/Phantom Lancer_1_ Doppelganger',
+    audioFile: 'heroes/Phantom Lancer_1_Doppelganger',
     messageTime: 25,
     textMessage:
       "Phantom Lancer's main escape mechanism is Doppelganger. As this spell has a very long cooldown at lower levels, look to play aggressively as soon as he used it",
