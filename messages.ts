@@ -9198,8 +9198,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Necrophos',
     audioFile: 'ownHero/Necrophos_10_Black King Bar',
     messageTime: 12 * 60 + 15,
-    textMessage:
-      "Ghost Shroud has no effect during Black King Bar.",
+    textMessage: 'Ghost Shroud has no effect during Black King Bar.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'black_king_bar' },
   },
@@ -9302,8 +9301,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Night Stalker',
     audioFile: 'ownHero/Night Stalker_4_Void creeps',
     messageTime: 20,
-    textMessage:
-      'Use Void to secure ranged creep lasthits.',
+    textMessage: 'Use Void to secure ranged creep lasthits.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'night_stalker_void' },
   },
@@ -9352,7 +9350,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Night Stalker_9_Backliners and supports',
     messageTimes: [10 * 60 + 15, 15 * 60 + 15],
     textMessage:
-      "Prioritize dealing with backliners and supports in fights, especially once you have Blink Dagger.",
+      'Prioritize dealing with backliners and supports in fights, especially once you have Blink Dagger.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -9457,7 +9455,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Nyx Assassin_5_Carapace Vendetta',
     messageTimes: [6 * 60, 11 * 60],
     textMessage:
-      "You can use Spiked Carapace during Vendetta without exiting it.",
+      'You can use Spiked Carapace during Vendetta without exiting it.',
     audience: [Audience.ROLE_SUPPORT_SOFT],
     image: { type: 'ability', name: 'nyx_assassin_spiked_carapace' },
   },
@@ -9467,7 +9465,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Nyx Assassin_6_Vendetta active',
     messageTimes: [6 * 60 + 15, 12 * 60 + 15, 18 * 60 + 15],
     textMessage:
-      "Once you have Vendetta up, be active - setup kills and scout. Avoid showing yourself on the lanes too much.",
+      'Once you have Vendetta up, be active - setup kills and scout. Avoid showing yourself on the lanes too much.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'nyx_assassin_vendetta' },
   },
@@ -9478,7 +9476,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Mana Burn frequently in the fights. Intelligence heroes will take more damage. Other types will run out of mana quicker.",
+      'Mana Burn frequently in the fights. Intelligence heroes will take more damage. Other types will run out of mana quicker.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'nyx_assassin_mana_burn' },
   },
@@ -9571,7 +9569,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60,
     textMessage: 'Prioritize items that you can multicast with.',
     audience: [Audience.ALL],
-    image: { type: 'item', name: 'solar_crest' },
+    image: { type: 'ability', name: 'ogre_magi_multicast' },
   },
   {
     category: 'OwnHero',
@@ -9660,8 +9658,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Omniknight',
     audioFile: 'ownHero/Omniknight_1_Dispel',
     messageTime: -90,
-    textMessage:
-      "Consider swapping lanes if there's a need for dispel.",
+    textMessage: "Consider swapping lanes if there's a need for dispel.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'omniknight_repel' },
   },
@@ -9680,7 +9677,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Omniknight_3_Purification value',
     messageTime: 15,
     textMessage:
-      "Avoid using Purification only to heal. Secure a ranged creep lasthit or damage opponents at the same time.",
+      'Avoid using Purification only to heal. Secure a ranged creep lasthit or damage opponents at the same time.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'omniknight_purification' },
   },
@@ -9690,7 +9687,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Omniknight_4_Skip Degen Aura',
     messageTimes: [9 * 60 + 45, 13 * 60 + 45],
     textMessage:
-      "After you maxed out the first and second spell, consider skilling stats over Degen Aura.",
+      'After you maxed out the first and second spell, consider skilling stats over Degen Aura.',
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'ability', name: 'omniknight_degen_aura' },
   },
@@ -9701,7 +9698,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Avoid showing yourself at the start of the fight as you are the primary target for opponents.",
+      'Avoid showing yourself at the start of the fight as you are the primary target for opponents.',
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -9711,7 +9708,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Dispels are a big problem for Omniknight. Be mindful when using Heavenly Grace and Guardian Angel.",
+      'Dispels are a big problem for Omniknight. Be mindful when using Heavenly Grace and Guardian Angel.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'omniknight_repel' },
   },
@@ -9908,7 +9905,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Outworld Destroyer_1_Meteor hammer',
     messageTime: -90,
     textMessage:
-      "Rush Meteor Hammer as it provides sustain, solo kill potential, waveclear and tower damage.",
+      'Rush Meteor Hammer as it provides sustain, solo kill potential, waveclear and tower damage.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'meteor_hammer' },
   },
@@ -9918,7 +9915,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Outworld Destroyer_2_Arcane Orb harass',
     messageTime: 15,
     textMessage:
-      "Use Arcane Orb on opponents preferably during laning stage as it does tons of damage.",
+      'Use Arcane Orb on opponents preferably during laning stage as it does tons of damage.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'obsidian_destroyer_arcane_orb' },
   },
@@ -9928,7 +9925,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Outworld Destroyer_3_Exposed',
     messageTime: 2 * 60,
     textMessage:
-      "After using Astral Imprisonment, the opponents might go on you, so be careful.",
+      'After using Astral Imprisonment, the opponents might go on you, so be careful.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'obsidian_destroyer_astral_imprisonment' },
   },
@@ -9949,7 +9946,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "You will typically be a top priority target for opponents as you can save others. Be mindful about your positioning.",
+      'You will typically be a top priority target for opponents as you can save others. Be mindful about your positioning.',
     audience: [Audience.ALL],
   },
   {
@@ -9958,7 +9955,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Outworld Destroyer_6_Arcane Orb Roshan',
     messageTime: 16 * 60 + 30,
     textMessage:
-      "Arcane Orb works on Roshan so you only need someone to tank for you.",
+      'Arcane Orb works on Roshan so you only need someone to tank for you.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'aegis' },
   },
@@ -10012,13 +10009,81 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Pangolier',
-    audioFile: 'ownHero/Pangolier_1_Squishy',
-    messageTime: -60,
+    audioFile: 'ownHero/Pangolier_1_Crash lasthits',
+    messageTime: 10,
     textMessage:
-      'Pangolier has a low HP pool and is squishy. Pressure him early on, especially when Swashbuckle is on cooldown.',
-    chatMessage: 'Pangolier is squishy. Pressure him early on.',
-    audience: [Audience.IN_LANE],
-    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
+      'Secure lasthits and damage the opponents at the same time with Shield Crash.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pangolier_shield_crash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_2_Swashbuckle pass',
+    messageTime: 20,
+    textMessage:
+      'Swashbuckle applies an extra hit if you pass through the opponent.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pangolier_swashbuckle' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_3_Swashbuckle used',
+    messageTime: 75,
+    textMessage:
+      'Be careful after you expend Swashbuckle as opponents are more likely to go on you.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pangolier_swashbuckle' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_4_Turn rate',
+    messageTimes: [6 * 60, 12 * 60],
+    textMessage:
+      'During Rolling Thunder, turn rate is slightly improved after Shield Crash has been used.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pangolier_gyroshell' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_5_blink',
+    messageTime: 10 * 60 + 45,
+    textMessage:
+      'Once you have Blink Dagger, use it immediately before opponents are able to see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_6_Sidelanes',
+    messageTimes: [11 * 60, 19 * 60, 27 * 60],
+    textMessage:
+      'When not much is happening or Rolling Thunder is on cooldown, push out sidelines.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_7_Roshan',
+    messageTimes: [15 * 60 + 30, 18 * 60 + 30],
+    textMessage:
+      'Pangolier is great at enabling an early Roshan kill due to Lucky Shot armor reduction and disarm chance.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pangolier_lucky_shot' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pangolier',
+    audioFile: 'ownHero/Pangolier_8_Roshan',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard at minute 20 as it allows you to escape roots and leashes, among other things.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
   },
 
   {
@@ -10091,12 +10156,81 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Phantom Assassin',
-    audioFile: 'ownHero/Phantom Assassin_1_Magic stick',
-    messageTime: -60,
+    audioFile: 'ownHero/Phantom Assassin_1_Dagger lasthits',
+    messageTime: 15,
+    textMessage: 'Use Stifling Dagger to secure creep lasthits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_assassin_stifling_dagger' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_2_Ring of Health',
+    messageTime: 30,
     textMessage:
-      'PA uses Stifling Dagger frequently to obtain lasthits. Buy Magic Stick and Magic Wand to get charges.',
-    audience: [Audience.IN_LANE],
-    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
+      'Rush Ring of Health on a tough lane and put a point in Blur on level 2.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ring_of_health' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_3_Full stick',
+    messageTime: 60,
+    textMessage:
+      'Opponents are likely to have a lot of stick charges so take that into account when playing aggressively.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'magic_stick' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_4_Blur disjoint',
+    messageTimes: [90, 7 * 60 + 30, 15 * 60 + 30],
+    textMessage:
+      'You can disjoint most projectile spells and ranged attacks with Blur.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_assassin_blur' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_5_Blur farm',
+    messageTimes: [8 * 60 + 30, 14 * 60 + 30],
+    textMessage: 'When farming dangerous areas or stacks, consider using Blur.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_assassin_blur' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_6_Fight focus',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'You typically want to focus on killing disabling supports and backliners at the start of the fight.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'phantom_assassin_phantom_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_7_Counter items',
+    messageTimes: [12 * 60 + 15, 22 * 60 + 15],
+    textMessage:
+      "Check opponents' inventories for break effects and evasion-piercing items. Adjust playstyle and itemization.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Assassin',
+    audioFile: 'ownHero/Phantom Assassin_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 for extra burst, especially if the break effect is needed.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
   },
 
   {
@@ -10165,15 +10299,63 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Phantom Lancer',
-    audioFile: 'ownHero/Phantom Lancer_1_Doppelganger',
-    messageTime: 25,
+    audioFile: 'ownHero/Phantom Lancer_1_Doppelganger deception',
+    messageTime: -90,
     textMessage:
-      "Phantom Lancer's main escape mechanism is Doppelganger. As this spell has a very long cooldown at lower levels, look to play aggressively as soon as he used it",
-    chatMessage:
-      "Phantom Lancer's main escape mechanism is Doppelganger. Look to play aggressively as soon as he used it",
-    audience: [Audience.IN_LANE],
-    image: { type: 'ability', name: 'ogre_magi_bloodlust' },
+      'Bind a bright yellow Doppelganger illusion to make deceptive plays as it takes the same damage as the hero.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_lancer_doppelwalk' },
   },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Lancer',
+    audioFile: 'ownHero/Phantom Lancer_2_Lance ranged',
+    messageTime: 15,
+    textMessage: 'Use Spirit Lance to secure ranged creep lasthits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_lancer_spirit_lance' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Lancer',
+    audioFile: 'ownHero/Phantom Lancer_3_Toggle Phantom Rush',
+    messageTime: 75,
+    textMessage:
+      "Toggle on Phantom Rush on early levels so you don't waste it randomly.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_lancer_phantom_edge' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Lancer',
+    audioFile: 'ownHero/Phantom Lancer_4_Doppelganger saves',
+    messageTimes: [90, 6 * 60 + 30, 12 * 60 + 30],
+    textMessage:
+      'Doppelganger dispels on cast and can be used to disjoint projectile spells and ranged attacks.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phantom_lancer_doppelwalk' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Lancer',
+    audioFile: 'ownHero/Phantom Lancer_5_Long fights',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Phantom Lancer likes long fights in which you can amass illusions and grind opponents down.',
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phantom Lancer',
+    audioFile: 'ownHero/Phantom Lancer_6_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20, especially if you have issues engaging in fights or being behind.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  
 
   {
     category: 'EnemyHero',
