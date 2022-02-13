@@ -10355,7 +10355,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: 'item', name: 'aghanims_shard' },
   },
-  
 
   {
     category: 'EnemyHero',
@@ -10459,8 +10458,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Phoenix',
     audioFile: 'ownHero/Phoenix_3_Icarus Dive hit',
     messageTimes: [60, 8 * 60, 15 * 60],
-    textMessage:
-      'You can attack once during an Icarus Dive.',
+    textMessage: 'You can attack once during an Icarus Dive.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'phoenix_icarus_dive' },
   },
@@ -10479,8 +10477,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Phoenix',
     audioFile: 'ownHero/Phoenix_5_Sun Ray escape',
     messageTimes: [3 * 60 + 15, 9 * 60 + 45, 16 * 60 + 15],
-    textMessage:
-      'You can use Sun Ray to escape over cliffs and pillars.',
+    textMessage: 'You can use Sun Ray to escape over cliffs and pillars.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'phoenix_sun_ray' },
   },
@@ -10499,8 +10496,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Phoenix',
     audioFile: 'ownHero/Phoenix_7_Supernova deny',
     messageTimes: [7 * 60 + 15, 10 * 60 + 15],
-    textMessage:
-      'Your allies can deny you in Supernova when one hit is left.',
+    textMessage: 'Your allies can deny you in Supernova when one hit is left.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'phoenix_supernova' },
   },
@@ -10521,7 +10517,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Phoenix_9_Tower defense',
     messageTimes: [8 * 60, 14 * 60],
     textMessage:
-      "Phoenix is great at defending towers with his long range damaging spells and escape.",
+      'Phoenix is great at defending towers with his long range damaging spells and escape.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'phoenix_fire_spirits' },
   },
@@ -10532,7 +10528,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines with Fire Spirits and Sun Ray without even showing yourself.",
+      'When not much is happening, push out the sidelines with Fire Spirits and Sun Ray without even showing yourself.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'phoenix_fire_spirits' },
   },
@@ -10617,7 +10613,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_1_Orb to ward',
     messageTime: -90,
-    textMessage: 'Use Illusory Orb immediately as you load into the game to place Observer Ward quickly.',
+    textMessage:
+      'Use Illusory Orb immediately as you load into the game to place Observer Ward quickly.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_observer' },
   },
@@ -10626,7 +10623,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_2_Secure lasthits',
     messageTime: 15,
-    textMessage: "Use Illusory Orb and Waning Rift to secure creep lasthits and damage opponents' heroes at the same time.",
+    textMessage:
+      "Use Illusory Orb and Waning Rift to secure creep lasthits and damage opponents' heroes at the same time.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_illusory_orb' },
   },
@@ -10635,7 +10633,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_3_Disjoint',
     messageTimes: [30, 6 * 60 + 30],
-    textMessage: "You can disjoint ranged attacks and spell projectiles with Phase Shift and Illusory Orb.",
+    textMessage:
+      'You can disjoint ranged attacks and spell projectiles with Phase Shift and Illusory Orb.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_phase_shift' },
   },
@@ -10644,7 +10643,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_4_Rune and stacking',
     messageTimes: [105, 5 * 60 + 45],
-    textMessage: "Illusory Orb gives you an upper hand when it comes to rune control and helps with stacking from distance.",
+    textMessage:
+      'Illusory Orb gives you an upper hand when it comes to rune control and helps with stacking from distance.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_illusory_orb' },
   },
@@ -10653,7 +10653,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_5_Orb scouting',
     messageTimes: [2 * 60, 10 * 60, 18 * 60],
-    textMessage: "Illusory Orb provides vision on its path so you can check for pillar wards and scout Roshpit.",
+    textMessage:
+      'Illusory Orb provides vision on its path so you can check for pillar wards and scout Roshpit.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_illusory_orb' },
   },
@@ -10662,7 +10663,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_6_Be active',
     messageTimes: [6 * 60, 11 * 60, 16 * 60],
-    textMessage: "Play actively and look around for possibilities to gank. Make use of your hero's mobility and elusiveness.",
+    textMessage:
+      "Play actively and look around for possibilities to gank. Make use of your hero's mobility and elusiveness.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_dream_coil' },
   },
@@ -10672,7 +10674,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Puck_6_Push sidelanes',
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage: "When not much is happening, push out the sidelines with your nukes.",
+    textMessage:
+      'When not much is happening, push out the sidelines with your nukes.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_illusory_orb' },
   },
@@ -10682,7 +10685,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Puck_7_Backliners',
     messageTime: 11 * 60,
     repeatTime: 10 * 60,
-    textMessage: "Puck is amazing at gap-closing, especially with Blink Dagger. Prioritize killing backliners and supports in fights.",
+    textMessage:
+      'Puck is amazing at gap-closing, especially with Blink Dagger. Prioritize killing backliners and supports in fights.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'puck_illusory_orb' },
   },
@@ -10691,7 +10695,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Puck',
     audioFile: 'ownHero/Puck_8_Backliners',
     messageTime: 19 * 60,
-    textMessage: "Pick up Aghanim's Shards around minute 20 to improve vision game and to snap the Mystic Coil.",
+    textMessage:
+      "Pick up Aghanim's Shards around minute 20 to improve vision game and to snap the Mystic Coil.",
     audience: [Audience.ALL],
     image: { type: 'item', name: 'aghanims_shard' },
   },
@@ -10899,7 +10904,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Pugna_1_Nether Blast ranged',
     messageTime: 15,
     textMessage:
-      "Use Nether Blast to secure ranged creep lasthits and to damage opponents at the same time.",
+      'Use Nether Blast to secure ranged creep lasthits and to damage opponents at the same time.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'pugna_nether_blast' },
   },
@@ -10908,8 +10913,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Pugna',
     audioFile: 'ownHero/Pugna_2_Decrepify for lasthits',
     messageTime: 60,
-    textMessage:
-      "Use Decrepify to ruin lasthits for the opponents.",
+    textMessage: 'Use Decrepify to ruin lasthits for the opponents.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'pugna_decrepify' },
   },
@@ -10919,7 +10923,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Pugna_3_Decrepify save',
     messageTimes: [75, 7 * 60 + 15, 15 * 60 + 15],
     textMessage:
-      "You can Decrepify yourself or an ally in trouble and even attempt to teleport out.",
+      'You can Decrepify yourself or an ally in trouble and even attempt to teleport out.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'pugna_decrepify' },
   },
@@ -10938,8 +10942,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Pugna',
     audioFile: 'ownHero/Pugna_5_Life Drain illusions',
     messageTimes: [6 * 60, 15 * 60],
-    textMessage:
-      "Life Drain instantly destroys basic illusions.",
+    textMessage: 'Life Drain instantly destroys basic illusions.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'pugna_life_drain' },
   },
@@ -10949,7 +10952,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Pugna_6_Combo sequence',
     messageTimes: [6 * 60 + 15, 12 * 60 + 15, 18 * 60 + 15],
     textMessage:
-      "The full value burst spell combo would be: Nether Ward, Nether Blast, Decrepify quickly and begin Life Draining.",
+      'The full value burst spell combo would be: Nether Ward, Nether Blast, Decrepify quickly and begin Life Draining.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'pugna_life_drain' },
   },
@@ -10969,7 +10972,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Pugna_8_Nether Ward placement',
     messageTimes: [6 * 60 + 45, 15 * 60 + 45],
     textMessage:
-      "Place Nether Ward close enough to opponents but out of their sight.",
+      'Place Nether Ward close enough to opponents but out of their sight.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'pugna_nether_ward' },
   },
@@ -11031,6 +11034,78 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 78. Queen of Pain | 06.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_1_Secure lasthits',
+    messageTime: 15,
+    textMessage:
+      'Use Scream of Pain to secure ranged creeps and hit opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'queenofpain_scream_of_pain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_2_Avoid Shadow Strike',
+    messageTime: 2 * 60,
+    textMessage:
+      'Avoid overinvesting points in Shadow Strike. It will make your farming and midgame fights hard.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'queenofpain_shadow_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_3_In trouble',
+    messageTimes: [2 * 60 + 15, 12 * 60 + 15, 22 * 60 + 15],
+    textMessage:
+      'When in trouble, blink into fog, into treelines or over cliffs.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'queenofpain_blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_4_Be active',
+    messageTimes: [8 * 60 + 15, 10 * 60 + 15],
+    textMessage:
+      'Look around for opportunities to gank once you have Sonic Wave and control runes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'queenofpain_sonic_wave' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_5_Multihero Sonic Wave',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Blink or position yourself in such a way that you land a multi-hero Sonic Wave in the fights.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'queenofpain_sonic_wave' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_6_Push sidelanes',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: 'When not much is happening, push out the sidelines.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'queenofpain_scream_of_pain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Queen of Pain',
+    audioFile: 'ownHero/Queen of Pain_7_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 as it provides silence and extra damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Queen of Pain',
     audioFile: 'heroes/Queen of Pain_1_Shadow strike',
@@ -11087,6 +11162,89 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 79. Razor | 06.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_1_Sap damage',
+    messageTime: 10,
+    textMessage:
+      "During the laning stage, prioritize sapping opponents' core's damage and win the lasthit battle off of it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'razor_static_link' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_2_Link switching',
+    messageTime: 20,
+    textMessage:
+      'You can switch a target and hit something else during Static Link.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'razor_static_link' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_3_Plasma Field damage',
+    messageTime: 60,
+    textMessage:
+      'You want to hit opponents or creeps with the Plasma Field from maximum range for maximum value.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'razor_plasma_field' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_4_Plasma Field vision',
+    messageTimes: [2 * 60, 14 * 60],
+    textMessage:
+      'The Plasma Field provides vision so you can use it to scout treelines, pillars and Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'razor_plasma_field' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_5_Eye creeps',
+    messageTimes: [6 * 60, 11 * 60],
+    textMessage:
+      'Use Eye of the Storm to speed up your farming, especially when clearing stacks and ancients.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'razor_eye_of_the_storm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_6_Itemization',
+    messageTimes: [6 * 60 + 15, 12 * 60 + 15],
+    textMessage:
+      'Mobility and items that allow you to be in the middle of the fight will enable you to get a great Static Link off.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_7_Fight impact',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Most of your fight impact will come down to Static Link usage. Take your time and use it on the proper target.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'razor_static_link' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Razor',
+    audioFile: 'ownHero/Razor_8_Push sidelanes',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, push out the sidelines with the Plasma Field even without showing yourself.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'razor_plasma_field' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Razor',
     audioFile: 'heroes/Razor_1_Wins melee',
@@ -11133,6 +11291,75 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 80. Riki | 06.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_1_Secure ranged',
+    messageTime: 15,
+    textMessage: 'Use Blink Strike to secure ranged creep lasthits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'riki_blink_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_2_In trouble',
+    messageTime: 4 * 60,
+    repeatTime: 10 * 60,
+    textMessage: 'In trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'riki_blink_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_3_Check detection',
+    messageTime: 6 * 60,
+    repeatTime: 10 * 60,
+    textMessage: "Check opponents' inventories frequently for detection.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'SentryDustGem' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_4_Avoid sentry spots',
+    messageTime: 6 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: "Avoid passing by spots that are typically sentried like rune or pillar spots.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_5_Backliners',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: "Prioritize dealing with backliners and supports as Riki is great at gap-closing.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'riki_blink_strike' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_6_Diffusal Blade',
+    messageTime: 10 * 60 + 30,
+    textMessage: "Take your time to farm the Diffusal Blade which will significantly improve your pick-off potential.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'diffusal_blade' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Riki',
+    audioFile: 'ownHero/Riki_7_Aghanims Shard',
+    messageTime: 19 * 60,
+    repeatTime: 10 * 60,
+    textMessage: "Pick up Aghanim's Shard around minute 20 for extra control and Meteor Hammer setup if you have it.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Riki',
