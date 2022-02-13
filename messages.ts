@@ -10435,6 +10435,119 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 74. Phoenix | 06.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_1_Trees',
+    messageTime: -75,
+    textMessage:
+      'Icarus Dive, Sun Ray while moving and Supernova destroy trees.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_supernova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_2_Land Fire Spirits',
+    messageTime: 15,
+    textMessage:
+      'Make sure to land most of the Fire Spirit and get extra right-clicks in or deny a creep here and there.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_fire_spirits' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_3_Icarus Dive hit',
+    messageTimes: [60, 8 * 60, 15 * 60],
+    textMessage:
+      'You can attack once during an Icarus Dive.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_icarus_dive' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_4_Fire Spirits vision',
+    messageTimes: [3 * 60, 9 * 60 + 30, 16 * 60],
+    textMessage:
+      'Fire Spirits provide short-lasting vision so you can scout pillars for wards or Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_fire_spirits' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_5_Sun Ray escape',
+    messageTimes: [3 * 60 + 15, 9 * 60 + 45, 16 * 60 + 15],
+    textMessage:
+      'You can use Sun Ray to escape over cliffs and pillars.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_sun_ray' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_6_Day to night',
+    messageTime: 7 * 60,
+    textMessage:
+      'Supernova always turns night into day which can be great against Night Stalker for example.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_supernova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_7_Supernova deny',
+    messageTimes: [7 * 60 + 15, 10 * 60 + 15],
+    textMessage:
+      'Your allies can deny you in Supernova when one hit is left.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_supernova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_8_Supernova deny',
+    messageTime: 7 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid placing Supernova close to opponents' counters. Use terrain features to allow Supernova to go off.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_supernova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_9_Tower defense',
+    messageTimes: [8 * 60, 14 * 60],
+    textMessage:
+      "Phoenix is great at defending towers with his long range damaging spells and escape.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_fire_spirits' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_10_Push sidelanes',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out the sidelines with Fire Spirits and Sun Ray without even showing yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'phoenix_fire_spirits' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Phoenix',
+    audioFile: 'ownHero/Phoenix_11_Aghanims Shard',
+    messageTime: 20 * 60 + 15,
+    textMessage:
+      "With Aghanim's Shard, use Sun Ray before Supernova as it will persist and will be refreshed upon explosion.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Phoenix',
     audioFile: 'heroes/Phoenix_1_Icarus dive',
@@ -10499,6 +10612,90 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 75. Puck | 06.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_1_Orb to ward',
+    messageTime: -90,
+    textMessage: 'Use Illusory Orb immediately as you load into the game to place Observer Ward quickly.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_observer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_2_Secure lasthits',
+    messageTime: 15,
+    textMessage: "Use Illusory Orb and Waning Rift to secure creep lasthits and damage opponents' heroes at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_illusory_orb' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_3_Disjoint',
+    messageTimes: [30, 6 * 60 + 30],
+    textMessage: "You can disjoint ranged attacks and spell projectiles with Phase Shift and Illusory Orb.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_phase_shift' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_4_Rune and stacking',
+    messageTimes: [105, 5 * 60 + 45],
+    textMessage: "Illusory Orb gives you an upper hand when it comes to rune control and helps with stacking from distance.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_illusory_orb' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_5_Orb scouting',
+    messageTimes: [2 * 60, 10 * 60, 18 * 60],
+    textMessage: "Illusory Orb provides vision on its path so you can check for pillar wards and scout Roshpit.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_illusory_orb' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_6_Be active',
+    messageTimes: [6 * 60, 11 * 60, 16 * 60],
+    textMessage: "Play actively and look around for possibilities to gank. Make use of your hero's mobility and elusiveness.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_dream_coil' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_6_Push sidelanes',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage: "When not much is happening, push out the sidelines with your nukes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_illusory_orb' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_7_Backliners',
+    messageTime: 11 * 60,
+    repeatTime: 10 * 60,
+    textMessage: "Puck is amazing at gap-closing, especially with Blink Dagger. Prioritize killing backliners and supports in fights.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'puck_illusory_orb' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Puck',
+    audioFile: 'ownHero/Puck_8_Backliners',
+    messageTime: 19 * 60,
+    textMessage: "Pick up Aghanim's Shards around minute 20 to improve vision game and to snap the Mystic Coil.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Puck',
@@ -10580,6 +10777,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'You can hook runes. Try to hook an enemy into your allies at the intial bounty rune.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pudge_meat_hook' },
   },
   {
     category: 'OwnHero',
@@ -10598,6 +10796,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'Try to keep the creep equilibrium close to your tower, so you can hook your enemies under the tower.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pudge_meat_hook' },
   },
   {
     category: 'OwnHero',
@@ -10607,6 +10806,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       'Meat Hook destroys creeps instantly, except for ancients. Protect your tower by hooking the catapult.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pudge_meat_hook' },
   },
   {
     category: 'OwnHero',
@@ -10615,6 +10815,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60 + 30,
     textMessage: 'You can heal up signicantly by dismembering a high HP creep.',
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pudge_dismember' },
   },
   {
     category: 'OwnHero',
@@ -10623,6 +10824,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTimes: [10 * 60, 15 * 60],
     textMessage: 'Find a partner and use smokes to find pick-offs.',
     audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'smoke_of_deceit' },
   },
   {
     category: 'OwnHero',
@@ -10632,6 +10834,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Blink Dagger and Aghanim's Shard combined allow you to save your allies instantly.",
     audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'aghanims_shard' },
   },
   {
     category: 'OwnHero',
@@ -10641,6 +10844,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     repeatTime: 10 * 60,
     textMessage: 'Fight around vision so you can land your Hooks more easily.',
     audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_observer' },
   },
 
   {
@@ -10689,6 +10893,87 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 77. Pugna | 06.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_1_Nether Blast ranged',
+    messageTime: 15,
+    textMessage:
+      "Use Nether Blast to secure ranged creep lasthits and to damage opponents at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_nether_blast' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_2_Decrepify for lasthits',
+    messageTime: 60,
+    textMessage:
+      "Use Decrepify to ruin lasthits for the opponents.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_decrepify' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_3_Decrepify save',
+    messageTimes: [75, 7 * 60 + 15, 15 * 60 + 15],
+    textMessage:
+      "You can Decrepify yourself or an ally in trouble and even attempt to teleport out.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_decrepify' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_4_Chip towers',
+    messageTimes: [3 * 60, 7 * 60],
+    textMessage:
+      "Chip opponents' towers gradually with Nether Blast whenever you can and current mana allows it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_nether_blast' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_5_Life Drain illusions',
+    messageTimes: [6 * 60, 15 * 60],
+    textMessage:
+      "Life Drain instantly destroys basic illusions.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_life_drain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_6_Combo sequence',
+    messageTimes: [6 * 60 + 15, 12 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      "The full value burst spell combo would be: Nether Ward, Nether Blast, Decrepify quickly and begin Life Draining.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_life_drain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_7_Combo sequence',
+    messageTimes: [6 * 60 + 30, 12 * 60 + 30, 18 * 60 + 30],
+    textMessage:
+      "With Life Drain, you can restore health to an ally or mana if he's full health. Watch your health though.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_life_drain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Pugna',
+    audioFile: 'ownHero/Pugna_8_Nether Ward placement',
+    messageTimes: [6 * 60 + 45, 15 * 60 + 45],
+    textMessage:
+      "Place Nether Ward close enough to opponents but out of their sight.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'pugna_nether_ward' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Pugna',
