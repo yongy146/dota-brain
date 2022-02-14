@@ -11424,6 +11424,59 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 81. Rubick | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Rubick',
+    audioFile: 'ownHero/Rubick_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Secure ranged creeps with Fade Bolt and hit opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rubick_fade_bolt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Rubick',
+    audioFile: 'ownHero/Rubick_2_Strand',
+    messageTimes: [75, 8 * 60 + 15, 15 * 60 + 15],
+    textMessage:
+      'When fighting next to pillars or a cliff, consider using Telekinesis to strand an opponent.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rubick_telekinesis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Rubick',
+    audioFile: 'ownHero/Rubick_3_Waveclear spell',
+    messageTimes: [9 * 60 + 45, 12 * 60 + 45],
+    textMessage:
+      'In midgame, get hold of the wave-clearing spell when the game slows down to be able to depush.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rubick_spell_steal' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Rubick',
+    audioFile: 'ownHero/Rubick_4_Push sidelanes',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, push out sidelanes without even showing yourself.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rubick_fade_bolt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Rubick',
+    audioFile: 'ownHero/Rubick_5_Push sidelanes',
+    messageTime: 12 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Be patient in the fights and make sure to steal a high impact spell.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'rubick_spell_steal' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Rubick',
     audioFile: 'heroes/Rubick_1_Bad picks',
@@ -11483,6 +11536,81 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 82. Sand King | 06.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_1_Sentry',
+    messageTime: -90,
+    textMessage: "Make sure pull camps are open for pulling as the you'll be pushing lane non stop.",
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_2_Check detection',
+    messageTimes: [15, 8 * 60 + 15, 16 * 60 + 15],
+    textMessage: "Check opponents' inventories for detection frequently.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'SentryDustGem' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_3_Tag explode',
+    messageTimes: [75, 3 * 60 + 15],
+    textMessage: "Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike and explode creeps.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'sandking_caustic_finale' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_4_Fight back',
+    messageTimes: [3 * 60, 9 * 60],
+    textMessage: "When in trouble, you can sometimes stand your ground in a Sand Storm and fight back.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'sandking_sand_storm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_5_Defend towers',
+    messageTimes: [8 * 60, 12 * 60],
+    textMessage: "Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'sandking_sand_storm' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_6_Blink',
+    messageTime: 10 * 60 + 15,
+    textMessage: "Once you have Blink Dagger, use it immediately before opponents are able to see it in your inventory.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_7_Be patient',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: "Stay out of vision and be patient in the fights. Choose a good moment to jump with your combo.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sand King',
+    audioFile: 'ownHero/Sand King_8_Splitpush',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage: "Sand King is great at split pushing when not much is happening on the map. ",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'sandking_sand_storm' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Sand King',
@@ -11547,6 +11675,110 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 83. Shadow Demon | 07.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_1_Shadow Poison fog',
+    messageTime: 15,
+    textMessage:
+      'Use Shadow Poison from fog to not fill stick charges for opponents.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'shadow_demon_shadow_poison' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_2_5 stacks',
+    messageTime: 30,
+    textMessage:
+      "Don't spam Shadow Poison unless you have mana and a chance to build up 5 stacks.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_shadow_poison' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_3_Disrupt lasthits',
+    messageTime: 45,
+    textMessage:
+      "You can Disrupt an opponent's core and deny a creep or two.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_disruption' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_4_Shadow Poison stacking',
+    messageTimes: [90, 6 * 60 + 30],
+    textMessage:
+      "Shadow Poison is great for stacking multiple camps.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_shadow_poison' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_5_Demonic Purge power',
+    messageTimes: [8 * 60, 16 * 60],
+    textMessage:
+      "Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs including runes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_demonic_purge' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_5_Demonic Purge power',
+    messageTimes: [8 * 60, 16 * 60],
+    textMessage:
+      "Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_demonic_purge' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_6_Dont show',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Don't show yourself at the start of the fight. Be quick at saving an ally with Disruption.",
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'shadow_demon_disruption' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_7_Push sidelanes',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out the sidelines from the fog with Shadow Poison.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_shadow_poison' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_8_Disrupt cores',
+    messageTime: 13 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "You can use Disrupt on your cores to push out waves or to make deception plays.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shadow_demon_disruption' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Demon',
+    audioFile: 'ownHero/Shadow Demon_9_Aghanims Scepter',
+    messageTimes: [24 * 60 + 15, 29 * 60 + 15],
+    textMessage:
+      "Aghanim's Scepter is a must in late game for kitting opponents and for break effect.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Shadow Demon',
