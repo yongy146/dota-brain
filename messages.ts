@@ -11306,7 +11306,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Riki_2_In trouble',
     messageTime: 4 * 60,
     repeatTime: 10 * 60,
-    textMessage: 'In trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.',
+    textMessage:
+      'In trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'riki_blink_strike' },
   },
@@ -11326,7 +11327,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Riki_4_Avoid sentry spots',
     messageTime: 6 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: "Avoid passing by spots that are typically sentried like rune or pillar spots.",
+    textMessage:
+      'Avoid passing by spots that are typically sentried like rune or pillar spots.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -11336,7 +11338,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Riki_5_Backliners',
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: "Prioritize dealing with backliners and supports as Riki is great at gap-closing.",
+    textMessage:
+      'Prioritize dealing with backliners and supports as Riki is great at gap-closing.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'riki_blink_strike' },
   },
@@ -11345,7 +11348,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Riki',
     audioFile: 'ownHero/Riki_6_Diffusal Blade',
     messageTime: 10 * 60 + 30,
-    textMessage: "Take your time to farm the Diffusal Blade which will significantly improve your pick-off potential.",
+    textMessage:
+      'Take your time to farm the Diffusal Blade which will significantly improve your pick-off potential.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'diffusal_blade' },
   },
@@ -11355,7 +11359,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Riki_7_Aghanims Shard',
     messageTime: 19 * 60,
     repeatTime: 10 * 60,
-    textMessage: "Pick up Aghanim's Shard around minute 20 for extra control and Meteor Hammer setup if you have it.",
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 for extra control and Meteor Hammer setup if you have it.",
     audience: [Audience.ROLE_SUPPORT],
     image: { type: 'item', name: 'aghanims_shard' },
   },
@@ -11541,7 +11546,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Sand King',
     audioFile: 'ownHero/Sand King_1_Sentry',
     messageTime: -90,
-    textMessage: "Make sure pull camps are open for pulling as the you'll be pushing lane non stop.",
+    textMessage:
+      "Make sure pull camps are open for pulling as the you'll be pushing lane non stop.",
     audience: [Audience.ROLE_OFFLANE],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -11559,7 +11565,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Sand King',
     audioFile: 'ownHero/Sand King_3_Tag explode',
     messageTimes: [75, 3 * 60 + 15],
-    textMessage: "Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike and explode creeps.",
+    textMessage:
+      'Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike and explode creeps.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'sandking_caustic_finale' },
   },
@@ -11568,7 +11575,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Sand King',
     audioFile: 'ownHero/Sand King_4_Fight back',
     messageTimes: [3 * 60, 9 * 60],
-    textMessage: "When in trouble, you can sometimes stand your ground in a Sand Storm and fight back.",
+    textMessage:
+      'When in trouble, you can sometimes stand your ground in a Sand Storm and fight back.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'sandking_sand_storm' },
   },
@@ -11577,7 +11585,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Sand King',
     audioFile: 'ownHero/Sand King_5_Defend towers',
     messageTimes: [8 * 60, 12 * 60],
-    textMessage: "Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees.",
+    textMessage:
+      'Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'sandking_sand_storm' },
   },
@@ -11586,7 +11595,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Sand King',
     audioFile: 'ownHero/Sand King_6_Blink',
     messageTime: 10 * 60 + 15,
-    textMessage: "Once you have Blink Dagger, use it immediately before opponents are able to see it in your inventory.",
+    textMessage:
+      'Once you have Blink Dagger, use it immediately before opponents are able to see it in your inventory.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -11596,7 +11606,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Sand King_7_Be patient',
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: "Stay out of vision and be patient in the fights. Choose a good moment to jump with your combo.",
+    textMessage:
+      'Stay out of vision and be patient in the fights. Choose a good moment to jump with your combo.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -11606,7 +11617,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Sand King_8_Splitpush',
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: "Sand King is great at split pushing when not much is happening on the map. ",
+    textMessage:
+      'Sand King is great at split pushing when not much is happening on the map. ',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'sandking_sand_storm' },
   },
@@ -11700,8 +11712,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Shadow Demon',
     audioFile: 'ownHero/Shadow Demon_3_Disrupt lasthits',
     messageTime: 45,
-    textMessage:
-      "You can Disrupt an opponent's core and deny a creep or two.",
+    textMessage: "You can Disrupt an opponent's core and deny a creep or two.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shadow_demon_disruption' },
   },
@@ -11710,8 +11721,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Shadow Demon',
     audioFile: 'ownHero/Shadow Demon_4_Shadow Poison stacking',
     messageTimes: [90, 6 * 60 + 30],
-    textMessage:
-      "Shadow Poison is great for stacking multiple camps.",
+    textMessage: 'Shadow Poison is great for stacking multiple camps.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shadow_demon_shadow_poison' },
   },
@@ -11721,7 +11731,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Shadow Demon_5_Demonic Purge power',
     messageTimes: [8 * 60, 16 * 60],
     textMessage:
-      "Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs including runes.",
+      'Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs including runes.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shadow_demon_demonic_purge' },
   },
@@ -11731,7 +11741,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Shadow Demon_5_Demonic Purge power',
     messageTimes: [8 * 60, 16 * 60],
     textMessage:
-      "Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs.",
+      'Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shadow_demon_demonic_purge' },
   },
@@ -11753,7 +11763,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines from the fog with Shadow Poison.",
+      'When not much is happening, push out the sidelines from the fog with Shadow Poison.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shadow_demon_shadow_poison' },
   },
@@ -11764,7 +11774,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "You can use Disrupt on your cores to push out waves or to make deception plays.",
+      'You can use Disrupt on your cores to push out waves or to make deception plays.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shadow_demon_disruption' },
   },
@@ -11774,7 +11784,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Shadow Demon_9_Aghanims Scepter',
     messageTimes: [24 * 60 + 15, 29 * 60 + 15],
     textMessage:
-      "Aghanim's Scepter is a must in late game for kitting opponents and for break effect.",
+      "Aghanim's Scepter is a must in late game for kiting opponents and for break effect.",
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ultimate_scepter' },
   },
@@ -11853,6 +11863,86 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 84. Shadow Fiend | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_1_Secure lasthits',
+    messageTime: 10,
+    textMessage:
+      "Stack Shadowraze debuffs on opponents' mid and secure lasthits at the same time if possible.",
+    audience: [Audience.ROLE_MID],
+    image: { type: 'ability', name: 'nevermore_shadowraze3' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_2_Necromastery stacks',
+    messageTime: 20,
+    textMessage:
+      'Build up Necromastery stacks through lasthitting and capitalize on the extra damage you have.',
+    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+    image: { type: 'ability', name: 'nevermore_necromastery' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_3_Stack small camp',
+    messageTimes: [2 * 60 + 40, 4 * 60 + 40],
+    textMessage:
+      'Stack a small camp next to the midlane and raze it after addressing the next creepwave.',
+    audience: [Audience.ROLE_MID],
+    image: { type: 'ability', name: 'nevermore_shadowraze3' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_4_Rune control',
+    messageTimes: [3 * 60 + 40, 5 * 60 + 40],
+    textMessage:
+      'Kill the creepwave prior to rune spawns quickly and collect the runes. You need runes badly for mana.',
+    audience: [Audience.ROLE_MID],
+    image: { type: 'rune', name: 'regeneration' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_5_Stacks',
+    messageTimes: [4 * 60 + 30, 7 * 60 + 30],
+    textMessage:
+      'Alert your teammates to stack for you as you can clear those early.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_6_Farm Euls',
+    messageTimes: [5 * 60 + 45, 7 * 60 + 45],
+    textMessage:
+      "Focus on farming Eul's Scepter and don't rotate unnecessarily.",
+    audience: [Audience.ROLE_MID],
+    image: { type: 'item', name: 'cyclone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_7_Pick off',
+    messageTimes: [9 * 60 + 45, 15 * 60 + 45],
+    textMessage:
+      "Make pick-off plays with Eul's Scepter, Requiem of Souls and Shadowraze combination.",
+    audience: [Audience.ROLE_MID],
+    image: { type: 'item', name: 'cyclone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Shadow Fiend',
+    audioFile: 'ownHero/Shadow Fiend_8_Push sidelanes',
+    messageTime: 12 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Keep sidelines pushed out when not much is happening.",
+    audience: [Audience.ALL],
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Shadow Fiend',
@@ -12171,6 +12261,57 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 87. Skywrath Mage | 07.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Skywrath Mage',
+    audioFile: 'ownHero/Skywrath Mage_1_Squishy',
+    messageTime: -45,
+    textMessage:
+      'Skywrath Mage is very squishy, so be mindful about your positioning.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Skywrath Mage',
+    audioFile: 'ownHero/Skywrath Mage_2_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Arcane Bolt or Concussive Shot to secure ranged creep lastihts.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'skywrath_mage_arcane_bolt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Skywrath Mage',
+    audioFile: 'ownHero/Skywrath Mage_3_Fog casting',
+    messageTime: 30,
+    textMessage:
+      'Cast your spells from fog whenever you can if opponents have magic sticks.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'skywrath_mage_arcane_bolt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Skywrath Mage',
+    audioFile: 'ownHero/Skywrath Mage_4_Smoke gank',
+    messageTimes: [10 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      'Find a ganking partner that can set up your Mystic Flare and burn smokes with him.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'smoke_of_deceit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Skywrath Mage',
+    audioFile: 'ownHero/Skywrath Mage_5_Fight focus',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'In fights, focus on dropping Mystic Flare on a disabled unit and applying Ancient Seal on a target with no dispel.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'skywrath_mage_mystic_flare' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Skywrath Mage',
     audioFile: 'heroes/Skywrath Mage_1_Magic stick wand',
@@ -12235,6 +12376,79 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 88. Slardar | 07.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_1_Bash of the deep',
+    messageTime: 10,
+    textMessage:
+      'Keep an eye on Bash of the Deep charges and preferably bash the opponents.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slardar_bash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_2_Secure ranged',
+    messageTime: 20,
+    textMessage:
+      'Use Slithereen Crush and Bash of the Deep to secure ranged creep lasthits.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slardar_slithereen_crush' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_3_River',
+    messageTime: 4 * 60 + 45,
+    repeatTime: 15 * 60,
+    textMessage:
+      'Run through the river as much as you can when you are moving around due to extra movement speed.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slardar_sprint' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_4_Charge up',
+    messageTimes: [5 * 60, 12 * 60, 19 * 60],
+    textMessage:
+      'Build up Bash of the Deep charges up to 3 ideally, before making a move or gank attempt.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slardar_bash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_5_Blink',
+    messageTime: 10 * 60 + 30,
+    textMessage:
+      'Once you have Blink Dagger, make use of it before opponents are able to see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_6_Core focus',
+    messageTime: 11 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'In fights, play around your right-clicking core. Jump and Corrosive Haze the target he is able to hit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slardar_amplify_damage' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slardar',
+    audioFile: 'ownHero/Slardar_7_Roshan',
+    messageTimes: [14 * 60 + 45, 17 * 60 + 45],
+    textMessage:
+      'Slardar enables the team to take Roshan down fairly early due to Corrosive Haze.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Slardar',
