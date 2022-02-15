@@ -12497,10 +12497,91 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 89. Slark | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_1_Scout wards',
+    messageTime: -90,
+    textMessage:
+      "As you load into the game, start running to scout opponents placing wards as you have night vision.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_2_Damage difference',
+    messageTime: 15,
+    textMessage:
+      "Hit an opponent whenever you can to create a damage difference of 4. It'll help you with lasthiting.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slark_essence_shift' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_3_Go Pounce',
+    messageTime: 75,
+    textMessage:
+      "If you are able to build up a few Essence Shift stacks, you can perhaps commit for a kill attempt with Pounce.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slark_pounce' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_4_Night aggression',
+    messageTime: 4 * 60 + 55,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Play more aggressively during night time as you have increased vision.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_5_In trouble',
+    messageTimes: [6 * 60, 13 * 60],
+    textMessage:
+      "Whenever you are in trouble, you can Pounce away or even Shadow Dance and teleport out.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slark_pounce' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_6_Deward',
+    messageTimes: [6 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      "Pick up a couple of sentries to deward when you sense with Shadow Dance you are being seen.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_sentry' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_7_Stacks aggression',
+    messageTimes: [6 * 60 + 30, 16 * 60 + 30, 26 * 60 + 30],
+    textMessage:
+      "Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slark_essence_shift' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Slark',
+    audioFile: 'ownHero/Slark_8_Push sidelanes',
+    messageTime: 12 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'slark_dark_pact' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Slark',
     audioFile: 'heroes/Slark_1_Offlane melee',
-    messageTime: -60 - 15,
+    messageTime: -90,
     textMessage:
       'Slark tends to do well against offlane melee due to Essence Shift stacks. Check if you can send at least one ranged hero against him',
     chatMessage:
@@ -12567,9 +12648,90 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 90. Snapfire | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Secure ranged creep lasthits with Scatteblast and damage the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_scatterblast' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_2_Secure ranged',
+    messageTime: 75,
+    textMessage:
+      'Look for opportunities to cookie yourself in, or an ally or creep to stun opponents and apply follow-up damage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_firesnap_cookie' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_3_Communicate cookie',
+    messageTime: 90,
+    textMessage:
+      'Communicate with your allies whenever you are going to use Firesnap Cookie.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_firesnap_cookie' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_4_Value point',
+    messageTime: 105,
+    textMessage:
+      "Pick up a point in Lil' Shredder if you are dealing with hit count spells like Tombstone, The Swarm and such.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_lil_shredder' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_5_In trouble',
+    messageTimes: [2 * 60 + 45, 12 * 60 + 45, 22 * 60 + 45],
+    textMessage:
+      "When in trouble, use Firesnap Cookie to jump into a treeline or over a cliff.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_firesnap_cookie' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_6_Value point',
+    messageTimes: [6 * 60 + 15, 12 * 60 + 15],
+    textMessage:
+      "It is very important that you land the first Mortimer Kiss to slow the opponents so it is easier to land follow-up ones.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_mortimer_kisses' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_7_Push sidelanes',
+    messageTime: 12 * 60 + 15,
+    textMessage:
+      "Whenever not much is happening, push out the sidelines without even showing yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'snapfire_scatterblast' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Snapfire',
+    audioFile: 'ownHero/Snapfire_8_Push sidelanes',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around the 20min mark as it adds another disable and sets up a Firesnap Cookie.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Snapfire',
-    audioFile: 'heroes/Snapfire_1_ Scatterblast',
+    audioFile: 'heroes/Snapfire_1_Scatterblast',
     messageTime: -10,
     textMessage:
       'Avoid staying too close to Snapfire on the lane as her main harassing spell is Scatterblast which does 50% more damage if you are within 450 range',
@@ -12775,6 +12937,70 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 92. Spectre | 07.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Spectre',
+    audioFile: 'ownHero/Spectre_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      "Use Spectral Dagger to secure ranged creep lasthits and damage the opponents.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spectre',
+    audioFile: 'ownHero/Spectre_2_Escape',
+    messageTimes: [3 * 60, 13 * 60, 23 * 60],
+    textMessage:
+      "When in trouble, use a Spectral Dagger to run over a cliff or a treeline, or even pop a defensive Haunt to escape.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spectre',
+    audioFile: 'ownHero/Spectre_3_Look around',
+    messageTime: 7 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Look around for Haunt opportunities. Spectre farms slowly so kills are necessary.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spectre_haunt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spectre',
+    audioFile: 'ownHero/Spectre_4_Kill targets',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Spectre's Haunt is amazing for killing backliners and supports. Focus on killing those at the start of the fight.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spectre_haunt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spectre',
+    audioFile: 'ownHero/Spectre_5_Break effects',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Check opponents for break effects. Adapt your playstyle and itemization accordingly.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spectre',
+    audioFile: 'ownHero/Spectre_6_Manta spike',
+    messageTime: 16 * 60 + 15,
+    textMessage:
+      "With Manta Style, Spectre gains burst and Roshan potential as Desolate works on illusions.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'manta' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Spectre',
