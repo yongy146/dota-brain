@@ -11938,8 +11938,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Shadow Fiend_8_Push sidelanes',
     messageTime: 12 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage:
-      "Keep sidelines pushed out when not much is happening.",
+    textMessage: 'Keep sidelines pushed out when not much is happening.',
     audience: [Audience.ALL],
   },
 
@@ -12502,7 +12501,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Slark_1_Scout wards',
     messageTime: -90,
     textMessage:
-      "As you load into the game, start running to scout opponents placing wards as you have night vision.",
+      'As you load into the game, start running to scout opponents placing wards as you have night vision.',
     audience: [Audience.ALL],
   },
   {
@@ -12521,7 +12520,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Slark_3_Go Pounce',
     messageTime: 75,
     textMessage:
-      "If you are able to build up a few Essence Shift stacks, you can perhaps commit for a kill attempt with Pounce.",
+      'If you are able to build up a few Essence Shift stacks, you can perhaps commit for a kill attempt with Pounce.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'slark_pounce' },
   },
@@ -12532,7 +12531,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 4 * 60 + 55,
     repeatTime: 10 * 60,
     textMessage:
-      "Play more aggressively during night time as you have increased vision.",
+      'Play more aggressively during night time as you have increased vision.',
     audience: [Audience.ALL],
   },
   {
@@ -12541,7 +12540,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Slark_5_In trouble',
     messageTimes: [6 * 60, 13 * 60],
     textMessage:
-      "Whenever you are in trouble, you can Pounce away or even Shadow Dance and teleport out.",
+      'Whenever you are in trouble, you can Pounce away or even Shadow Dance and teleport out.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'slark_pounce' },
   },
@@ -12551,7 +12550,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Slark_6_Deward',
     messageTimes: [6 * 60 + 15, 13 * 60 + 15],
     textMessage:
-      "Pick up a couple of sentries to deward when you sense with Shadow Dance you are being seen.",
+      'Pick up a couple of sentries to deward when you sense with Shadow Dance you are being seen.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_sentry' },
   },
@@ -12561,7 +12560,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Slark_7_Stacks aggression',
     messageTimes: [6 * 60 + 30, 16 * 60 + 30, 26 * 60 + 30],
     textMessage:
-      "Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.",
+      'Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'slark_essence_shift' },
   },
@@ -12572,7 +12571,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.",
+      'Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'slark_dark_pact' },
   },
@@ -12693,7 +12692,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Snapfire_5_In trouble',
     messageTimes: [2 * 60 + 45, 12 * 60 + 45, 22 * 60 + 45],
     textMessage:
-      "When in trouble, use Firesnap Cookie to jump into a treeline or over a cliff.",
+      'When in trouble, use Firesnap Cookie to jump into a treeline or over a cliff.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'snapfire_firesnap_cookie' },
   },
@@ -12703,7 +12702,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Snapfire_6_Value point',
     messageTimes: [6 * 60 + 15, 12 * 60 + 15],
     textMessage:
-      "It is very important that you land the first Mortimer Kiss to slow the opponents so it is easier to land follow-up ones.",
+      'It is very important that you land the first Mortimer Kiss to slow the opponents so it is easier to land follow-up ones.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'snapfire_mortimer_kisses' },
   },
@@ -12713,7 +12712,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Snapfire_7_Push sidelanes',
     messageTime: 12 * 60 + 15,
     textMessage:
-      "Whenever not much is happening, push out the sidelines without even showing yourself.",
+      'Whenever not much is happening, push out the sidelines without even showing yourself.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'snapfire_scatterblast' },
   },
@@ -12943,7 +12942,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spectre_1_Secure ranged',
     messageTime: 15,
     textMessage:
-      "Use Spectral Dagger to secure ranged creep lasthits and damage the opponents.",
+      'Use Spectral Dagger to secure ranged creep lasthits and damage the opponents.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spectre_spectral_dagger' },
   },
@@ -12953,7 +12952,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spectre_2_Escape',
     messageTimes: [3 * 60, 13 * 60, 23 * 60],
     textMessage:
-      "When in trouble, use a Spectral Dagger to run over a cliff or a treeline, or even pop a defensive Haunt to escape.",
+      'When in trouble, use a Spectral Dagger to run over a cliff or a treeline, or even pop a defensive Haunt to escape.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spectre_spectral_dagger' },
   },
@@ -12964,7 +12963,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 7 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Look around for Haunt opportunities. Spectre farms slowly so kills are necessary.",
+      'Look around for Haunt opportunities. Spectre farms slowly so kills are necessary.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spectre_haunt' },
   },
@@ -12986,7 +12985,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Check opponents for break effects. Adapt your playstyle and itemization accordingly.",
+      'Check opponents for break effects. Adapt your playstyle and itemization accordingly.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'black_king_bar' },
   },
@@ -12996,7 +12995,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spectre_6_Manta spike',
     messageTime: 16 * 60 + 15,
     textMessage:
-      "With Manta Style, Spectre gains burst and Roshan potential as Desolate works on illusions.",
+      'With Manta Style, Spectre gains burst and Roshan potential as Desolate works on illusions.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'item', name: 'manta' },
   },
@@ -13063,7 +13062,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spirit Breaker_1_Creep equilibrium',
     messageTime: 15,
     textMessage:
-      "In order to pressure opponents on the lane, bring creep equilibrium closer to your tower.",
+      'In order to pressure opponents on the lane, bring creep equilibrium closer to your tower.',
     audience: [Audience.ROLE_SUPPORT_SOFT, Audience.ROLE_OFFLANE],
   },
   {
@@ -13082,7 +13081,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spirit Breaker_3_Movement speed items',
     messageTimes: [2 * 60, 13 * 60, 24 * 60],
     textMessage:
-      "Movement speed items are amazing for Spirit Breaker as they amplify the Greater Bash damage.",
+      'Movement speed items are amazing for Spirit Breaker as they amplify the Greater Bash damage.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'phase_boots' },
   },
@@ -13092,7 +13091,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spirit Breaker_4_Pop charge',
     messageTimes: [2 * 60 + 15, 13 * 60 + 15],
     textMessage:
-      "Pop Bulldoze and other movement speed-increasing items like Phase Boots or Shadow Blade before charge lands.",
+      'Pop Bulldoze and other movement speed-increasing items like Phase Boots or Shadow Blade before charge lands.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spirit_breaker_bulldoze' },
   },
@@ -13103,7 +13102,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 7 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-    "Use Charge of Darkness to provide vision over an opponent so he can't juke your allies.",
+      "Use Charge of Darkness to provide vision over an opponent so he can't juke your allies.",
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
   },
@@ -13113,7 +13112,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spirit Breaker_6_Rosh charge',
     messageTimes: [7 * 60 + 30, 17 * 60 + 30],
     textMessage:
-    "Careful about charging through Roshpit as you can get bashed.",
+      'Careful about charging through Roshpit as you can get bashed.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
   },
@@ -13124,7 +13123,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Charge of Darkness allows you to focus on the backliners and supports. Focus on those in the fights.",
+      'Charge of Darkness allows you to focus on the backliners and supports. Focus on those in the fights.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
   },
@@ -13134,7 +13133,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spirit Breaker_8_Farm Shadow Blade',
     messageTime: 10 * 60 + 30,
     textMessage:
-      "Take your time to farm Shadow Blade as it provides even more burst and almost guarantees charge completion.",
+      'Take your time to farm Shadow Blade as it provides even more burst and almost guarantees charge completion.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'invis_sword' },
   },
@@ -13144,8 +13143,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Spirit Breaker_9_Push sidelanes',
     messageTime: 11 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage:
-      "When not much is happening, push out the sidelines.",
+    textMessage: 'When not much is happening, push out the sidelines.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
   },
@@ -13430,8 +13428,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Sven',
     audioFile: 'ownHero/Sven_4_Ulty stacks',
     messageTime: 8 * 60,
-    textMessage:
-      'Feel free to pop ulty to farm big stacks.',
+    textMessage: 'Feel free to pop ulty to farm big stacks.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'sven_gods_strength' },
   },
@@ -13452,7 +13449,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "In the fights, position yourself in such a way so that you can cleave onto the opponents further away.",
+      'In the fights, position yourself in such a way so that you can cleave onto the opponents further away.',
     audience: [Audience.ROLE_CORE],
   },
   {
@@ -13546,8 +13543,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Techies',
     audioFile: 'ownHero/Techies_3_Mine treelines',
     messageTime: 75,
-    textMessage:
-      'Plant Proximity Mines in treelines next to the lane.',
+    textMessage: 'Plant Proximity Mines in treelines next to the lane.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'techies_land_mines' },
   },
@@ -13586,8 +13582,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Techies',
     audioFile: 'ownHero/Techies_7_Look around',
     messageTimes: [9 * 60 + 15, 16 * 60 + 15],
-    textMessage:
-      'Look around frequently to timely detonate Remote Mines.',
+    textMessage: 'Look around frequently to timely detonate Remote Mines.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'techies_remote_mines' },
   },
@@ -13608,8 +13603,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Techies_9_Signal',
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage:
-      "Signal your teammates to play around your mines.",
+    textMessage: 'Signal your teammates to play around your mines.',
     audience: [Audience.ALL],
   },
   {
@@ -13619,7 +13613,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "If your teammates are pressuring, move with them, mine around them and Blast Off! when opponents clump up.",
+      'If your teammates are pressuring, move with them, mine around them and Blast Off! when opponents clump up.',
     audience: [Audience.ALL],
   },
   {
@@ -13629,7 +13623,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 14 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "There are spots in Roshpit at the edge of the entrance where your Remote Mines are hard to see.",
+      'There are spots in Roshpit at the edge of the entrance where your Remote Mines are hard to see.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'techies_remote_mines' },
   },
@@ -13649,7 +13643,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Techies_13_Force into mines',
     messageTime: 20 * 60 + 15,
     textMessage:
-      "Consider purchasing Force Staff to push opponents into mines when they try to remove them.",
+      'Consider purchasing Force Staff to push opponents into mines when they try to remove them.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'force_staff' },
   },
@@ -13750,12 +13744,91 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Templar Assassin',
-    audioFile: 'ownHero/Templar Assassin_1_Refraction',
-    messageTime: -60,
-    textMessage:
-      "Damage over time spells and items are great at removing Templar's Refraction charges.",
+    audioFile: 'ownHero/Templar Assassin_1_Meld melee',
+    messageTime: -30,
+    textMessage: 'Consider skilling Meld on level 1 against melee match-ups.',
     audience: [Audience.ALL],
-    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+    image: { type: 'ability', name: 'templar_assassin_meld' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_2_Psi Blade cleave',
+    messageTime: 15,
+    textMessage:
+      'Keep repositioning to Psi Blade the opponent when lasthitting.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'templar_assassin_psi_blades' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_3_Stack small camp',
+    messageTimes: [105, 3 * 60 + 45],
+    textMessage:
+      'Stack a small camp and farm it after clearing the next wave of lane creeps.',
+    audience: [Audience.ROLE_MID],
+    image: { type: 'ability', name: 'templar_assassin_psi_blades' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_4_Stacks',
+    messageTimes: [4 * 60 + 30, 7 * 60 + 30],
+    textMessage:
+      'Ask your teammates to stack for you, especially ancients as you can clear them early.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'templar_assassin_psi_blades' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_5_Trap vision',
+    messageTime: 6 * 60 + 15,
+    repeatTime: 12 * 60,
+    textMessage:
+      'Psionic Traps provide vision, so place them on rune spots, Roshpit and other strategic spots.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'templar_assassin_psionic_trap' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_6_Trap stacking',
+    messageTimes: [6 * 60 + 30, 8 * 60 + 30],
+    textMessage:
+      'You can stack with Psionic Traps but you need to be within the aggro range of neutral creeps.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'templar_assassin_psionic_trap' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_7_Dont rotate',
+    messageTimes: [6 * 60 + 45, 9 * 60 + 45],
+    textMessage:
+      "Don't rotate unnecessarily. Focus on hitting your item timings and pressure opponents' tower.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_8_Burst',
+    messageTime: 11 * 60 + 15,
+    textMessage:
+      'Focus on bursting squishy backliners and supports, especially with Blink Dagger.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_9_Roshan',
+    messageTime: 15 * 60 + 15,
+    textMessage:
+      'Templar Assassin is great at taking Roshan early on with minimal or no help. Kill Roshan by the 20 minute mark.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
   },
 
   {
@@ -13851,12 +13924,83 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Terrorblade',
-    audioFile: 'ownHero/Terrorblade_1_Pressure early',
-    messageTime: -60,
+    audioFile: 'ownHero/Terrorblade_1_Reflection harass',
+    messageTime: 10,
     textMessage:
-      'Terrorblade has high armor, but low HP and is weak against magical damage. Pressure him early on.',
-    audience: [Audience.IN_LANE],
-    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+      'Spam Reflection to harass the opponents or in combination with Metamorphosis to inflict greater damage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'terrorblade_reflection' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_2_Metamorphosis farming',
+    messageTime: 20,
+    textMessage:
+      'Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'terrorblade_metamorphosis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_3_Stay healthy',
+    messageTimes: [2 * 60 + 45, 8 * 60 + 45],
+    textMessage:
+      "Stay healthy as illusions will inherit your hero's current health.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'terrorblade_conjure_image' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_4_Dont overlane',
+    messageTime: 7 * 60 + 15,
+    textMessage:
+      "Don't overlane. Consider moving to the jungle when laning opponents are about to hit level 6.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_5_In trouble',
+    messageTimes: [7 * 60 + 45, 17 * 60 + 45],
+    textMessage:
+      'You can also Sunder an ally or illusion when in trouble. You can body block an opponent with illusions as well.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'terrorblade_sunder' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_6_Illusion usage',
+    messageTimes: [7 * 60 + 45, 17 * 60 + 45],
+    textMessage:
+      'Farm dangerous areas with illusions, control runes and provide vision when opponents are missing.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'terrorblade_conjure_image' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_7_Metamorphosis in fights',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Pop Metamorphosis only when opponents are committed to the fight. It can get kited if you pop it too early.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'terrorblade_metamorphosis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_8_Push sidelanes',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Push out sidelines and farm opponents' jungle with illusions when not much is happening around the map.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'terrorblade_conjure_image' },
   },
 
   {
@@ -13945,12 +14089,53 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Tidehunter',
-    audioFile: 'ownHero/Tidehunter_1_Magic stick wand',
-    messageTime: -60,
+    audioFile: 'ownHero/Tidehunter_1_Secure lasthits',
+    messageTime: 15,
     textMessage:
-      'Tidehunter uses Anchor Smash frequently. Magic Stick and Wand will be charged up.',
-    audience: [Audience.IN_LANE],
-    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+      'Use Anchor Smash to secure lasthits and damage the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tidehunter_anchor_smash' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tidehunter',
+    audioFile: 'ownHero/Tidehunter_2_Tough lane',
+    messageTime: 75,
+    textMessage:
+      'The tougher the lane, the more points in Kraken Shell are needed.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'tidehunter_kraken_shell' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tidehunter',
+    audioFile: 'ownHero/Tidehunter_3_Antimagic item',
+    messageTimes: [4 * 60, 8 * 60],
+    textMessage:
+      'Tidehunter is resilient against right-clicks due to Kraken Shell. Typically you need a magical resistance item.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'hood_of_defiance' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tidehunter',
+    audioFile: 'ownHero/Tidehunter_4_Blink',
+    messageTime: 11 * 60 + 15,
+    textMessage:
+      'Once you have Blink Dagger, make use of it before opponents are able to see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tidehunter',
+    audioFile: 'ownHero/Tidehunter_5_Initiation check',
+    messageTime: 11 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Before initiating, make sure that your follow-up damage dealers are close enough and in position.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
   },
 
   {
