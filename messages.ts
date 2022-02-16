@@ -13058,6 +13058,109 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 93. Spirit Breaker | 07.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_1_Creep equilibrium',
+    messageTime: 15,
+    textMessage:
+      "In order to pressure opponents on the lane, bring creep equilibrium closer to your tower.",
+    audience: [Audience.ROLE_SUPPORT_SOFT, Audience.ROLE_OFFLANE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_2_Charge further target',
+    messageTimes: [90, 11 * 60 + 30, 21 * 60 + 30],
+    textMessage:
+      "Consider charging the further target and bash all the opponents' heroes on the way.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_3_Movement speed items',
+    messageTimes: [2 * 60, 13 * 60, 24 * 60],
+    textMessage:
+      "Movement speed items are amazing for Spirit Breaker as they amplify the Greater Bash damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'phase_boots' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_4_Pop charge',
+    messageTimes: [2 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      "Pop Bulldoze and other movement speed-increasing items like Phase Boots or Shadow Blade before charge lands.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spirit_breaker_bulldoze' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_5_Provide vision',
+    messageTime: 7 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+    "Use Charge of Darkness to provide vision over an opponent so he can't juke your allies.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_6_Rosh charge',
+    messageTimes: [7 * 60 + 30, 17 * 60 + 30],
+    textMessage:
+    "Careful about charging through Roshpit as you can get bashed.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_7_Backliners',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Charge of Darkness allows you to focus on the backliners and supports. Focus on those in the fights.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_8_Farm Shadow Blade',
+    messageTime: 10 * 60 + 30,
+    textMessage:
+      "Take your time to farm Shadow Blade as it provides even more burst and almost guarantees charge completion.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'invis_sword' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_9_Push sidelanes',
+    messageTime: 11 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out the sidelines.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spirit_breaker_charge_of_darkness' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Spirit Breaker',
+    audioFile: 'ownHero/Spirit Breaker_10_Aghanims Scepter',
+    messageTimes: [17 * 60 + 45, 21 * 60 + 45],
+    textMessage:
+      "Aghanim's Scepter is a must in the mid-late game as it deals with spell-immunity and makes charge more frequent.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Spirit Breaker',
     audioFile: 'heroes/Spirit Breaker_1_Charge of darkness',
@@ -13294,6 +13397,75 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 95. Sven | 08.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Storm Hammer to secure ranged creep lasthit and damage the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'sven_storm_bolt' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_2_Make stacks',
+    messageTimes: [3 * 60 + 30, 6 * 60 + 30],
+    textMessage:
+      'Alert your teammates to stack for you as you can clear those fairly early.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'sven_great_cleave' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_3_Dont overlane',
+    messageTime: 7 * 60 + 15,
+    textMessage:
+      "Don't overlane. Consider moving out of the lane as laning opponents are getting closer to level 6.",
+    audience: [Audience.ROLE_CARRY, Audience.ROLE_OFFLANE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_4_Ulty stacks',
+    messageTime: 8 * 60,
+    textMessage:
+      'Feel free to pop ulty to farm big stacks.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'sven_gods_strength' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_5_Initial jump',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Your initial jump in the fights has to be well timed and precise. You don't want to be kited.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_6_Cleave all',
+    messageTime: 11 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "In the fights, position yourself in such a way so that you can cleave onto the opponents further away.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Sven',
+    audioFile: 'ownHero/Sven_7_Antikiting',
+    messageTimes: [11 * 60 + 45, 21 * 60 + 45],
+    textMessage:
+      "Itemize against kitting by purchasing Black King Bar, Blink Dagger, Shadow Blade, Aghanim's Scepter or Shard.",
+    audience: [Audience.ROLE_CORE],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Sven',
     audioFile: 'heroes/Sven_1_Great cleave',
@@ -13349,6 +13521,139 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 96. Techies | 08.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_1_Extra consumables',
+    messageTime: -90,
+    textMessage:
+      'Bring a lot of health consumables to the lane and use Blast Off! frequently.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_suicide' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_2_Destroy trees',
+    messageTime: -30,
+    textMessage:
+      'Blast Off! destroys trees which can be useful against certain heroes.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_suicide' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_3_Mine treelines',
+    messageTime: 75,
+    textMessage:
+      'Plant Proximity Mines in treelines next to the lane.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_land_mines' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_4_Sit on mines',
+    messageTimes: [90, 5 * 60 + 30],
+    textMessage:
+      'You can make it harder for opponents to destroy mines by sitting on top of them.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_land_mines' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_5_Efficiency',
+    messageTimes: [3 * 60, 13 * 60],
+    textMessage:
+      'Drop or backpack items that provide you with mana before using Arcane Boots or Soul Ring.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'arcane_boots' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_6_Vision',
+    messageTimes: [9 * 60, 15 * 60, 21 * 60],
+    textMessage:
+      'Remote and Proximity Mines provide limited vision so you can place them on pillars, runes or Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_remote_mines' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_7_Look around',
+    messageTimes: [9 * 60 + 15, 16 * 60 + 15],
+    textMessage:
+      'Look around frequently to timely detonate Remote Mines.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_remote_mines' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_8_Mine aggressively',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Consider smoking yourself onto the opponents' side of the map to mine aggressively. Bring an observer as well.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'smoke_of_deceit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_9_Signal',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Signal your teammates to play around your mines.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_10_Fight along',
+    messageTime: 11 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "If your teammates are pressuring, move with them, mine around them and Blast Off! when opponents clump up.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_11_Roshpit',
+    messageTime: 14 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "There are spots in Roshpit at the edge of the entrance where your Remote Mines are hard to see.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'techies_remote_mines' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_12_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 as provides additional control in the fights.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Techies',
+    audioFile: 'ownHero/Techies_13_Force into mines',
+    messageTime: 20 * 60 + 15,
+    textMessage:
+      "Consider purchasing Force Staff to push opponents into mines when they try to remove them.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'force_staff' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Techies',
@@ -13443,6 +13748,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 97. Templar Assassin | 08.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Templar Assassin',
+    audioFile: 'ownHero/Templar Assassin_1_Refraction',
+    messageTime: -60,
+    textMessage:
+      "Damage over time spells and items are great at removing Templar's Refraction charges.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Templar Assassin',
     audioFile: 'heroes/Templar Assassin_1_Refraction',
@@ -13533,6 +13849,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 98. Terrorblade | 08.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Terrorblade',
+    audioFile: 'ownHero/Terrorblade_1_Pressure early',
+    messageTime: -60,
+    textMessage:
+      'Terrorblade has high armor, but low HP and is weak against magical damage. Pressure him early on.',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Terrorblade',
     audioFile: 'heroes/Terrorblade_1_Pressure early',
@@ -13615,6 +13942,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 99. Tidehunter | 08.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Tidehunter',
+    audioFile: 'ownHero/Tidehunter_1_Magic stick wand',
+    messageTime: -60,
+    textMessage:
+      'Tidehunter uses Anchor Smash frequently. Magic Stick and Wand will be charged up.',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'spectre_spectral_dagger' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Tidehunter',
