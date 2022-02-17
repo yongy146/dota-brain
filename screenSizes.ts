@@ -44,7 +44,7 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
 }
 
 export interface ScreenDefinition {
-  fontSize: number, // used for tracker and subtitle
+  fontSize: number, // used for tracker and subtitle (take KDA font size and add 20%)
   // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
   preGame: {
       // Heroes: Excluding the grey shaded box
@@ -62,15 +62,15 @@ export interface ScreenDefinition {
   inGame: {
     heroesRadiantBottomLeftXPos: number,
     heroesDireBottomLeftXPos: number,
-    heroesHeight: number,
-    heroesWidth: number,
+    heroesWidth: number,  // width of 5 heroes
+    heroesHeight: number, // height of heroes display by Dota 2 
 
     tracker: {
       performance: {
         xPos: number, // xPos of end of 'Current' of last zero (white area) with Dota Plus
         yPos: number, // yPos of upper end of Dota 2 tracker
         nonDotaPlus: {
-          height: number,
+          height: number, // height of KDA & LH/DN provided by app
           yPosKDA: number,
         },
         dotaPlus: {
@@ -89,8 +89,8 @@ export interface ScreenDefinition {
         xPosGoal1?: number, // calcuated value
     
       },
-      items: { // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
-        yPos: number, // yPos of where the next element below can be placed
+      items: { // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
+        yPos: number, // yPos of where the next element on the window starts
         xPos: number, // xPos of HUD element where TP ends
         width: number, // width to HUD element where gold starts
 
@@ -214,7 +214,53 @@ export const ScreenSizes: ScreenDefinitions = {
   },
   '1280x768': { reuse: '1280x720' },
   '1280x800': { reuse: '1280x720' },
-  '1280x960': { reuse: '1280x720' },
+
+  '1280x960': {
+    fontSize: 11,
+    preGame: {
+      heroesRadiantTopLeftXPos: 73,
+      heroesDireTopLeftXPos: 767,
+      heroesWidth: 440,
+
+      subtitles: {
+        xPos: 240,
+        yPos: 84,
+        width: 800,
+        height: 60
+      }
+    },
+    inGame: {
+      heroesRadiantBottomLeftXPos: 274,
+      heroesDireBottomLeftXPos: 732,
+      heroesHeight: 35,
+      heroesWidth: 274,
+      tracker: {
+        performance: {
+          xPos: 122,
+          yPos: 53,
+          nonDotaPlus: {
+            height: 36, // Not yet verfiied with Dota Plus...
+            yPosKDA: -3, //-2, // Not yet verfiied with Dota Plus...
+          },
+          dotaPlus: {
+            height: 53,
+            yPosKDA: 13,
+          },
+        },
+        items: {
+          xPos: 1133, /* 1280 - 147 */
+          yPos: 871,
+          width: 147,
+        }
+      },
+      subtitles: {
+        xPos: 1013,
+        yPos: 2,
+        width: 112,
+        height: 280
+      }
+    }
+  },
 
   '1280x1024': {
     fontSize: 12,
