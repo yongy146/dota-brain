@@ -209,7 +209,7 @@ export namespace ability {
                 DotaLogger.log(`dota2.getAbilityName(): ${a.name}`)
                 return a.name
             }
-            else {
+            else { 
                 DotaLogger.log(`dota2.getAbilityName(): null`)
                 return null
             }
@@ -375,6 +375,7 @@ export namespace ability {
         return !(
             (cd.length==0) ||
             ((cd.length==1) && (cd[0]==0)) ||
+            ((cd.length==4) && (cd[0]==0) && (cd[1]==0) && (cd[2]==0) && (cd[3]==0)) ||
             (heroName=='Broodmother') ||
             (heroName=='Timbersaw') ||
             (heroName=='Leshrac') ||
@@ -430,7 +431,7 @@ export namespace ability {
     export function getCooldown(heroAbility: string): number[] {
         //DotaLogger.log("Dota2.hero.ability.getCooldown(heroAbility='" + heroAbility + "'): Called")
     
-        const a = ability.getAbility[heroAbility]
+        const a = ability.getAbility(heroAbility)
 
         if (a.hasOwnProperty("cooldown")) {
             // if there is no 'cd' property, the function returns an empty array
