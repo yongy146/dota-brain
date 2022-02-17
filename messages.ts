@@ -14203,6 +14203,117 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 100. Timbersaw | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_1_Secure lasthits',
+    messageTime: 10,
+    textMessage:
+      "Use Whirling Death to secure lasthits, harass opponents and at the same time cut some trees with it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shredder_whirling_death' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_2_Tough lane',
+    messageTime: 20,
+    textMessage:
+      "Consider putting a point in the Timber Chain early on tough lanes.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shredder_timber_chain' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_3_Armor stacks',
+    messageTimes: [40, 7 * 60 + 10, 13 * 60 + 10],
+    textMessage:
+      "Keep Reactive Armor stacks high to be able to play aggressively and not fear for your life.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shredder_reactive_armor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_4_Check sticks',
+    messageTime: 3 * 60 + 45,
+    textMessage:
+      "Check how many stick charges opponents have when you are going for a kill.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'magic_stick' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_5_Tank tower',
+    messageTimes: [5 * 60 + 10, 10 * 60 + 10],
+    textMessage:
+      "Consider tanking tower shots to keep the catapult alive.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shredder_reactive_armor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_6_Avoid rotating',
+    messageTimes: [6 * 60 + 10, 12 * 60 + 10],
+    textMessage:
+      "Timbersaw isn't the best at rotating. You'd rather force opponents to come to you by playing aggressively.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shredder_reactive_armor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_7_Defend towers',
+    messageTimes: [9 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      "Consider parking yourself in front of the tower opponents are looking to destroy. Build up armor stacks though.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'shredder_reactive_armor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_8_Counter items',
+    messageTimes: [9 * 60 + 45, 14 * 60 + 45, 19 * 60 + 45],
+    textMessage:
+      "Items that reduce healing and break effects are a big problem. Itemize against them and adjust playstyle.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'spirit_vessel' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_9_Counter items',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out the sidelines even out of vision if necessary.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'shredder_chakram' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_10_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around the 20 minute mark. It improves dps and provides much needed building damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Timbersaw',
+    audioFile: 'ownHero/Timbersaw_11_No to lategame',
+    messageTimes: [22 * 60, 27 * 60],
+    textMessage:
+      "You don't necessarily want to go to late game, so try to close the game down before you fall off.",
+    audience: [Audience.ALL],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Timbersaw',
     audioFile: 'heroes/Timbersaw_1_Spirit vessel',
@@ -14252,6 +14363,142 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 101. Tinker | 08.03.2021   ***CHANGED 7.30***
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      "Secure ranged creep lasthits with Laser and potentially harass the opponent at the same time.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_laser' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_2_Rocket harass',
+    messageTime: 30,
+    textMessage:
+      "If the opponents don't have great health regeneration, you can whittle them down with rocket spam.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_heat_seeking_missile' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_3_Stacks',
+    messageTimes: [3 * 60 + 30, 6 * 60 + 30],
+    textMessage:
+      "Ask your teammates to stack and make some yourself. You can clear ancients with maxed Laser under smoke.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_laser' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_4_Look around',
+    messageTimes: [6 * 60 + 30, 12 * 60 + 30, 18 * 60 + 30],
+    textMessage:
+      "Look around the map to join fights or gank. Be careful not to expose yourself, especially before Blink Dagger.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_keen_teleport' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_5_Farm blink',
+    messageTime: 7 * 60 + 45,
+    textMessage:
+      "Take your time and farm Blink Dagger as it greatly improves your survivability and kill potential.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_6_Defense Matrix',
+    messageTimes: [9 * 60 + 45, 19 * 60 + 45, 29 * 60 + 45],
+    textMessage:
+      "Make sure to apply Defense Matrix on yourself before teleporting out of the base.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_defense_matrix' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_7_Cant join',
+    messageTimes: [10 * 60 + 15, 17 * 60 + 15],
+    textMessage:
+      "Alert your teammates not to fight on the spots where you can't join them quickly.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_keen_teleport' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_8_Runes',
+    messageTimes: [11 * 60 + 45, 17 * 60 + 45, 23 * 60 + 45],
+    textMessage:
+      "Look for arcane and regeneration runes as you'll be able to pump in so much more damage in the fights.",
+    audience: [Audience.ALL],
+    image: { type: 'rune', name: 'arcane' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_9_Vision',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Fight under your vision to be able to do more damage with rockets and position easier, even place wards yourself.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_observer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_10_Avoid Tinker wards',
+    messageTime: 14 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid blinking to Tinker Ward spots at the edges of the map too often.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ward_observer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_11_Smoke yourself',
+    messageTime: 15 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "You can smoke yourself here and there as another layer of protection in the fights.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'smoke_of_deceit' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_12_Keep buyback',
+    messageTime: 15 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Keep buyback available as you can rejoin the fights almost instantly.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_keen_teleport' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tinker',
+    audioFile: 'ownHero/Tinker_13_Highground',
+    messageTime: 25 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Tinker is an insane highground defender. Don't give up and lift up your team's morale.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tinker_heat_seeking_missile' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Tinker',
@@ -14358,6 +14605,99 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 102. Tiny | 08.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_1_Toss back',
+    messageTime: 15,
+    textMessage:
+      'Keep creep equilibrium close to your tower so you can do toss-back plays.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'tiny_toss' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_2_Courier toss',
+    messageTimes: [30, 15 * 60 + 30],
+    textMessage: 'Tree toss can kill couriers.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tiny_tree_grab' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_3_Secure lasthits',
+    messageTime: 45,
+    textMessage:
+      'Use Avalanche or Tree Toss to secure lasthits and harass opponents here and there.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tiny_avalanche' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_4_Save ally',
+    messageTimes: [90, 11 * 60 + 30, 22 * 60 + 30],
+    textMessage:
+      'You can save an ally with Toss, especially once you have a Blink Dagger.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tiny_toss' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_5_Stacks',
+    messageTimes: [4 * 60 + 30, 8 * 60 + 30],
+    textMessage:
+      'Alert your teammates to stack for you as you can clear those fairly early.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'tiny_tree_grab' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_6_Blink',
+    messageTime: 11 * 60 + 30,
+    textMessage:
+      'Once you have Blink Dagger, make use of it before opponents are able to see it in your inventory.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_7_Combo chill',
+    messageTime: 12 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'In teamfights, you want to do blink into spells combo and then chill until cooldowns are ready.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_8_Combo chill',
+    messageTime: 12 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Be quick at going for buildings when you get a pick off or win a fight. Tiny destroys buildings really fast.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'tiny_tree_grab' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tiny',
+    audioFile: 'ownHero/Tiny_9_Push sidelanes',
+    messageTime: 12 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, push out the sidelines with your spells.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tiny_avalanche' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Tiny',
