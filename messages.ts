@@ -14208,7 +14208,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Timbersaw_1_Secure lasthits',
     messageTime: 10,
     textMessage:
-      "Use Whirling Death to secure lasthits, harass opponents and at the same time cut some trees with it.",
+      'Use Whirling Death to secure lasthits, harass opponents and at the same time cut some trees with it.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shredder_whirling_death' },
   },
@@ -14218,7 +14218,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Timbersaw_2_Tough lane',
     messageTime: 20,
     textMessage:
-      "Consider putting a point in the Timber Chain early on tough lanes.",
+      'Consider putting a point in the Timber Chain early on tough lanes.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shredder_timber_chain' },
   },
@@ -14228,7 +14228,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Timbersaw_3_Armor stacks',
     messageTimes: [40, 7 * 60 + 10, 13 * 60 + 10],
     textMessage:
-      "Keep Reactive Armor stacks high to be able to play aggressively and not fear for your life.",
+      'Keep Reactive Armor stacks high to be able to play aggressively and not fear for your life.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shredder_reactive_armor' },
   },
@@ -14238,7 +14238,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Timbersaw_4_Check sticks',
     messageTime: 3 * 60 + 45,
     textMessage:
-      "Check how many stick charges opponents have when you are going for a kill.",
+      'Check how many stick charges opponents have when you are going for a kill.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'magic_stick' },
   },
@@ -14247,8 +14247,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: 'Timbersaw',
     audioFile: 'ownHero/Timbersaw_5_Tank tower',
     messageTimes: [5 * 60 + 10, 10 * 60 + 10],
-    textMessage:
-      "Consider tanking tower shots to keep the catapult alive.",
+    textMessage: 'Consider tanking tower shots to keep the catapult alive.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shredder_reactive_armor' },
   },
@@ -14268,7 +14267,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Timbersaw_7_Defend towers',
     messageTimes: [9 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "Consider parking yourself in front of the tower opponents are looking to destroy. Build up armor stacks though.",
+      'Consider parking yourself in front of the tower opponents are looking to destroy. Build up armor stacks though.',
     audience: [Audience.ROLE_CORE],
     image: { type: 'ability', name: 'shredder_reactive_armor' },
   },
@@ -14278,7 +14277,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Timbersaw_8_Counter items',
     messageTimes: [9 * 60 + 45, 14 * 60 + 45, 19 * 60 + 45],
     textMessage:
-      "Items that reduce healing and break effects are a big problem. Itemize against them and adjust playstyle.",
+      'Items that reduce healing and break effects are a big problem. Itemize against them and adjust playstyle.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'spirit_vessel' },
   },
@@ -14289,7 +14288,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines even out of vision if necessary.",
+      'When not much is happening, push out the sidelines even out of vision if necessary.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'shredder_chakram' },
   },
@@ -14369,7 +14368,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Tinker_1_Secure ranged',
     messageTime: 15,
     textMessage:
-      "Secure ranged creep lasthits with Laser and potentially harass the opponent at the same time.",
+      'Secure ranged creep lasthits with Laser and potentially harass the opponent at the same time.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'tinker_laser' },
   },
@@ -14389,7 +14388,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Tinker_3_Stacks',
     messageTimes: [3 * 60 + 30, 6 * 60 + 30],
     textMessage:
-      "Ask your teammates to stack and make some yourself. You can clear ancients with maxed Laser under smoke.",
+      'Ask your teammates to stack and make some yourself. You can clear ancients with maxed Laser under smoke.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'tinker_laser' },
   },
@@ -14399,7 +14398,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Tinker_4_Look around',
     messageTimes: [6 * 60 + 30, 12 * 60 + 30, 18 * 60 + 30],
     textMessage:
-      "Look around the map to join fights or gank. Be careful not to expose yourself, especially before Blink Dagger.",
+      'Look around the map to join fights or gank. Be careful not to expose yourself, especially before Blink Dagger.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'tinker_keen_teleport' },
   },
@@ -14409,7 +14408,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Tinker_5_Farm blink',
     messageTime: 7 * 60 + 45,
     textMessage:
-      "Take your time and farm Blink Dagger as it greatly improves your survivability and kill potential.",
+      'Take your time and farm Blink Dagger as it greatly improves your survivability and kill potential.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'blink' },
   },
@@ -14419,7 +14418,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Tinker_6_Defense Matrix',
     messageTimes: [9 * 60 + 45, 19 * 60 + 45, 29 * 60 + 45],
     textMessage:
-      "Make sure to apply Defense Matrix on yourself before teleporting out of the base.",
+      'Make sure to apply Defense Matrix on yourself before teleporting out of the base.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'tinker_defense_matrix' },
   },
@@ -14450,7 +14449,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Fight under your vision to be able to do more damage with rockets and position easier, even place wards yourself.",
+      'Fight under your vision to be able to do more damage with rockets and position easier, even place wards yourself.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_observer' },
   },
@@ -14461,7 +14460,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 14 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Avoid blinking to Tinker Ward spots at the edges of the map too often.",
+      'Avoid blinking to Tinker Ward spots at the edges of the map too often.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'ward_observer' },
   },
@@ -14472,7 +14471,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 15 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "You can smoke yourself here and there as another layer of protection in the fights.",
+      'You can smoke yourself here and there as another layer of protection in the fights.',
     audience: [Audience.ALL],
     image: { type: 'item', name: 'smoke_of_deceit' },
   },
@@ -14483,7 +14482,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 15 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "Keep buyback available as you can rejoin the fights almost instantly.",
+      'Keep buyback available as you can rejoin the fights almost instantly.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'tinker_keen_teleport' },
   },
@@ -14764,6 +14763,99 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 103. Treant Protector | 08.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_1_Base damage',
+    messageTime: 10,
+    textMessage:
+      'Treant has the highest base damage in the game at level 1 so make use of it to harass and lasthit.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_2_Cut off',
+    messageTime: 20,
+    textMessage:
+      "Look for angles to cut off opponents with Nature's Grasp. Make sure to catch a tree in its path.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'treant_natures_grasp' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_3_Heal still',
+    messageTime: 60,
+    textMessage:
+      "Leech Seed continues healing even after the unit it was used on dies.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'treant_leech_seed' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_4_Look around',
+    messageTime: 2 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Look around the map to heal and save allies and buildings with Living Armor.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'treant_living_armor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_5_Defend towers',
+    messageTimes: [5 * 60 + 45, 15 * 60 + 45],
+    textMessage:
+      "Treant is great at defending towers safely with Nature's Grasp and Living Armor.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'treant_living_armor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_6_Delay Overgrowth',
+    messageTime: 12 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Don't rush with Overgrowth in the fights as opponents are likely to have multiple ways to dispel it at the start.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'treant_overgrowth' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_7_Splitpush',
+    messageTime: 13 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Treant is amazing at splitpushing without even showing himself. Go ham on it when not much is happening.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'treant_natures_grasp' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_8_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 as it adds even more utility and disables the hero.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Treant Protector',
+    audioFile: 'ownHero/Treant Protector_9_Aghanims Scepter',
+    messageTimes: [25 * 60, 32 * 60],
+    textMessage:
+      "Aghanim's Scepter will win a vision game for your team in the late game.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Treant Protector',
     audioFile: 'heroes/Treant Protector_1_Quell trees',
@@ -14838,6 +14930,59 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 104. Troll Warlord | 09.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Troll Warlord',
+    audioFile: 'ownHero/Troll Warlord_1_Secured ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Whirling Axes to secure ranged creep lasthits and harass the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'troll_warlord_whirling_axes_ranged' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Troll Warlord',
+    audioFile: 'ownHero/Troll Warlord_2_Dont switch',
+    messageTime: 4 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Avoid switching targets in engagements as you'll lose Fervor stacks.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'troll_warlord_fervor' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Troll Warlord',
+    audioFile: 'ownHero/Troll Warlord_3_Not early',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Avoid popping Battle Trance too early in fights as you might get kited. Use it later, on disabled unit or defensively.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'troll_warlord_battle_trance' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Troll Warlord',
+    audioFile: 'ownHero/Troll Warlord_4_Roshan',
+    messageTimes: [14 * 60 + 45, 18 * 60 + 45],
+    textMessage:
+      'Troll can take Roshan early on even by himself. Use Battle Trance if necessary to heal up.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Troll Warlord',
+    audioFile: 'ownHero/Troll Warlord_5_Antikiting',
+    messageTimes: [15 * 60, 22 * 60],
+    textMessage:
+      'Consider purchasing anti-kiting items so you can stick to the target and not waste Battle Trance.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'black_king_bar' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Troll Warlord',
     audioFile: 'heroes/Troll Warlord_1_Extra consumables',
@@ -14901,6 +15046,77 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 105. Tusk | 09.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_1_Shard setup',
+    messageTime: 30,
+    textMessage:
+      'Most of your laning kills will come from well placed Ice Shards. Constantly look for opponents out of position.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tusk_ice_shards' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_2_In trouble',
+    messageTimes: [90, 11 * 60 + 30],
+    textMessage:
+      'When you or your allies are in trouble, you can do a Snowball save or Ice Shard the opponents away.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tusk_snowball' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_3_In trouble',
+    messageTimes: [4 * 60, 14 * 60],
+    textMessage:
+      'Ice Shards provide vision so you can use them to scout pillars for wards or Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tusk_ice_shards' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_4_Max punch',
+    messageTimes: [4 * 60, 14 * 60],
+    textMessage:
+      'Pop Tag Team before using Walrus Punch to maximize on damage.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tusk_tag_team' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_5_Blink Snowball',
+    messageTimes: [4 * 60, 14 * 60],
+    textMessage:
+      'Once you get a blink Dagger, you want to use Snowball primarily to save an ally.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'item', name: 'blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_6_Blink Snowball',
+    messageTimes: [14 * 60 + 30, 19 * 60 + 30],
+    textMessage:
+      'Tuskar enables the team to take an early Roshan due to the Tag Team.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'tusk_tag_team' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Tusk',
+    audioFile: 'ownHero/Tusk_7_Aghanims Scepter',
+    messageTimes: [24 * 60 + 30, 29 * 60 + 30],
+    textMessage:
+      "Pick up Aghanim's Scepter in the late game as it is an amazing repositioning and kiting tool.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Tusk',
