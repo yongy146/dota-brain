@@ -14787,7 +14787,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: 'ownHero/Treant Protector_3_Heal still',
     messageTime: 60,
     textMessage:
-      "Leech Seed continues healing even after the unit it was used on dies.",
+      'Leech Seed continues healing even after the unit it was used on dies.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'treant_leech_seed' },
   },
@@ -14798,7 +14798,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 2 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Look around the map to heal and save allies and buildings with Living Armor.",
+      'Look around the map to heal and save allies and buildings with Living Armor.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'treant_living_armor' },
   },
@@ -14830,7 +14830,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Treant is amazing at splitpushing without even showing himself. Go ham on it when not much is happening.",
+      'Treant is amazing at splitpushing without even showing himself. Go ham on it when not much is happening.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'treant_natures_grasp' },
   },
@@ -15353,6 +15353,76 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 107. Undying | 09.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_1_Double Decay',
+    messageTime: 15,
+    textMessage:
+      'Catch both opponents on the lane with Decay and use the extra damage to harass or secure lasthits.',
+    audience: [Audience.ROLE_SUPPORT, Audience.ROLE_OFFLANE],
+    image: { type: 'ability', name: 'undying_decay' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_2_Check sticks',
+    messageTimes: [60, 5 * 60],
+    textMessage:
+      'Check for the number of stick charges opponents have before diving or committing for a kill.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'magic_stick' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_3_Tombstone placement',
+    messageTimes: [90, 9 * 60 + 30, 17 * 60 + 30],
+    textMessage:
+      "Don't make it too easy for opponents to destroy Tombstone. Place it on pillars, cliffs and protect it.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'undying_tombstone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_4_Tomb trees',
+    messageTimes: [105, 9 * 60 + 45, 17 * 60 + 45],
+    textMessage: 'Tombstone destroys trees and provides great vision.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'undying_tombstone' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_5_Reset',
+    messageTimes: [2 * 60 + 15, 5 * 60 + 15],
+    textMessage:
+      'When you drop low on resources consider suiciding into neutral camp or opponents towers to reset quickly.',
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_6_Hit once',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Hit an opponent your cores are targeting at least once for damage amplification while in Flesh Golem form.',
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: 'ability', name: 'undying_flesh_golem' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Undying',
+    audioFile: 'ownHero/Undying_7_Early Rosh',
+    messageTimes: [14 * 60 + 45, 19 * 60 + 15],
+    textMessage:
+      'Undying allows the team to kill Roshan early due to zombie tanking and damage amplification from Flesh Golem.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Undying',
     audioFile: 'heroes/Undying_1_Magic stick wand',
@@ -15409,6 +15479,66 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 108. Ursa | 09.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Ursa',
+    audioFile: 'ownHero/Ursa_1_Lasthit setup',
+    messageTime: 15,
+    textMessage:
+      'Ursa has low base damage so you might want to hit creep once or twice to apply Fury Swipes before lasthitting.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'ursa_fury_swipes' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ursa',
+    audioFile: 'ownHero/Ursa_2_Earthshock jump',
+    messageTimes: [75, 11 * 60 + 15, 21 * 60 + 15],
+    textMessage:
+      'You can jump over walls, cliffs or into treelines with Earthshock.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'ursa_earthshock' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ursa',
+    audioFile: 'ownHero/Ursa_3_Earthshock jump',
+    messageTimes: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
+    textMessage:
+      'Ursa typically farms very slowly so you need to play actively and look for kills to gain networth.',
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ursa',
+    audioFile: 'ownHero/Ursa_4_Roshan',
+    messageTimes: [9 * 60 + 45, 13 * 60 + 45],
+    textMessage:
+      'Ursa can take Roshan on his own fairly early due to Fury Swipes stacking.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aegis' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ursa',
+    audioFile: 'ownHero/Ursa_5_Antikiting',
+    messageTimes: [12 * 60 + 45, 18 * 60 + 45],
+    textMessage:
+      "Itemize against kiting as you don't necessarily want to switch targets too often due to Fury Swipes stacking.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'diffusal_blade' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Ursa',
+    audioFile: 'ownHero/Ursa_6_Second Roshan',
+    messageTimes: [19 * 60 + 45, 23 * 60 + 45],
+    textMessage:
+      "Second Roshan is very important for Ursa as it drops Aghanim's Shard, which adds to tankiness.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Ursa',
     audioFile: 'heroes/Ursa_1_Keep distance',
@@ -15455,6 +15585,58 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 109. Vengeful Spirit | 09.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Vengeful Spirit',
+    audioFile: 'ownHero/Vengeful Spirit_1_Secure ranged',
+    messageTime: 15,
+    textMessage:
+      'Use Wave of Terror to secure ranged creep and harass the opponents at the same time.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'vengefulspirit_wave_of_terror' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Vengeful Spirit',
+    audioFile: 'ownHero/Vengeful Spirit_2_Stack',
+    messageTimes: [2 * 60 + 30, 9 * 60 + 30],
+    textMessage:
+      'You can stack multiple camps at the same time and help clear them with Wave of Terror.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'vengefulspirit_wave_of_terror' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Vengeful Spirit',
+    audioFile: 'ownHero/Vengeful Spirit_3_Vision',
+    messageTimes: [3 * 60 + 30, 13 * 60 + 30],
+    textMessage:
+      'Wave of Terror provides vision so you can scout pillars for wards and Roshpit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'vengefulspirit_wave_of_terror' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Vengeful Spirit',
+    audioFile: 'ownHero/Vengeful Spirit_4_Be ready',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'The most important thing in the fights is to be ready to swap an ally in trouble or an opponent out of position.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'vengefulspirit_nether_swap' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Vengeful Spirit',
+    audioFile: 'ownHero/Vengeful Spirit_5_Roshan',
+    messageTimes: [14 * 60 + 45, 18 * 60 + 45],
+    textMessage:
+      'Vengeful Spirit enables early Roshan kill due to Wave of Terror, Vengeance Aura and posibly minus armor items.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aegis' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Vengeful Spirit',
