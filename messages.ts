@@ -15676,6 +15676,111 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 110. Venomancer | 09.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_1_Tough lane',
+    messageTime: 10,
+    textMessage:
+      'If the lane is tough, consider putting more points in Plague Wards and move to the jungle if necessary.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'venomancer_plague_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_2_Poison harass',
+    messageTime: 20,
+    textMessage:
+      'Hit opponents regularly to apply ticking damage from Poison Sting.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_poison_sting' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_3_Secure kills',
+    messageTime: 90,
+    textMessage:
+      'Galed opponents can be denied, so do your best to secure a lasthit on a dying hero.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_venomous_gale' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_4_Deny wards',
+    messageTime: 3 * 60,
+    textMessage:
+      'Deny low health Plague Wards to deprive opponents of extra gold.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_plague_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_5_Defend towers',
+    messageTimes: [8 * 60 + 45, 15 * 60 + 45],
+    textMessage:
+      'Venomancer is great at defending towers as you can place a bunch of Plague Wards around it.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_plague_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_6_Spam wards',
+    messageTime: 9 * 60,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Use Plague Wards off cd when you are moving around to scout, control runes and block camps.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_plague_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_7_Farm aggressively',
+    messageTime: 9 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Farm aggressively, as Plague Wards provide vision and farm dangerous spots for you along with gale and sting.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_plague_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_8_Fights',
+    messageTime: 10 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'In fights, look to affect as many heroes as possible with Poison Nova and Venomous Gale.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_poison_nova' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_9_Push sidelanes',
+    messageTime: 11 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'When not much is happening, push out the sidelines even without showing yourself.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'venomancer_plague_ward' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Venomancer',
+    audioFile: 'ownHero/Venomancer_10_Aghanims',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard and Scepter as the game progresses as they're huge damage increase.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Venomancer',
     audioFile: 'heroes/Venomancer_1_Extra consumables',
@@ -15723,6 +15828,76 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 111. Viper | 09.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_1_Falls off',
+    messageTime: -30,
+    textMessage:
+      "Viper is very strong in early to mid game but drops off later on. Play actively while you're the strongest.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_2_Aggression mana',
+    messageTime: 15,
+    textMessage:
+      'Look to stack up Poison Attacks on a single target and fix your mana issues early on.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'viper_poison_attack' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_3_Slow',
+    messageTimes: [2 * 60 + 45, 7 * 60 + 45],
+    textMessage:
+      'Viper is insanely slow. Consider getting a casual Wind Lace and perhaps even Boots of Travel in the long run.',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'wind_lace' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_4_Nethertoxin usage',
+    messageTimes: [8 * 60 + 45, 16 * 60 + 45],
+    textMessage:
+      'Viper is insanely slow. Consider getting a casual Wind Lace and perhaps even Boots of Travel in the long run.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'viper_nethertoxin' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_5_Push sidelanes',
+    messageTime: 11 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Push out the sidelines when not much is happening on the map. You can do it from fog with Nethertoxin.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'viper_nethertoxin' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_6_Not tanky',
+    messageTime: 17 * 60 + 45,
+    textMessage:
+      "Although you are very tanky in early stages, you aren't nearly as tanky around the 20 minute mark.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Viper',
+    audioFile: 'ownHero/Viper_7_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 to further increase your dps and building damage.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Viper',
     audioFile: 'heroes/Viper_1_Poison attack',
@@ -15769,8 +15944,86 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 112. Visage | 10.03.2021
-  // @Alex: I don't understand this one: Does it mean that I have to make sure that I have at least 40 damage in lane to remove that buff? Don't all heroes have that anyway? (I didn't record this one) ANSWER: You need to deal an instance of damage higher than 40 to remove one layer of Gravekeeper's Cloak. Urn of Shadows won't do it as it does 20 per tick but it would be good to remove Templar Assassin's Refractions.
-  //{category: "EnemyHero", hero: "Visage", audioFile: "heroes/Visage_1_Gravekeepers cloak", messageTime: (30), textMessage: "Instance of 40 damage and more are removing a Gravekeeper's Cloak layer.", audience: [Audience.ALL]},
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_1_Weak laner',
+    messageTime: -30,
+    textMessage:
+      'Visage is fairly weak until level 6. Play for lasthits and lane control.',
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_2_Squishy familiars',
+    messageTime: 7 * 60,
+    textMessage: 'Familiars are fairly squishy when Visage is not around.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_summon_familiars' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_3_Familiars usage',
+    messageTimes: [7 * 60 + 30, 17 * 60 + 30, 27 * 60 + 30],
+    textMessage:
+      'Use familiars to control runes, stack camps, gank lanes even without your hero, drag and cut creepwaves.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_summon_familiars' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_4_Dont overrotate',
+    messageTimes: [7 * 60 + 45, 11 * 60 + 45],
+    textMessage:
+      "Don't over-rotate. Work your way to Orchid as it allows you to solo kill most of the heroes.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'orchid' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_5_Familiars stun chain',
+    messageTimes: [9 * 60 + 30, 19 * 60 + 30, 29 * 60 + 30],
+    textMessage:
+      'You can summon fresh familiars to be able to chain 4 stuns on opponents.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_summon_familiars' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_6_Aghanims Scepter',
+    messageTime: 15 * 60 + 30,
+    textMessage:
+      "With Aghanim's Scepter, your burst and pick off potential further increases.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Visage',
+    audioFile: 'ownHero/Visage_7_Aghanims Shard',
+    messageTime: 15 * 60 + 30,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 as it allows you to survive jumps and provides another stun.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
+  },
+
+  {
+    category: 'EnemyHero',
+    hero: 'Visage',
+    audioFile: 'heroes/Visage_1_Gravekeepers cloak',
+    messageTimes: [90, 11 * 60 + 30],
+    textMessage:
+      "Instances of 40 damage and higher will remove a layer of Gravekeeper's Cloak.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Visage',
@@ -15779,6 +16032,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Visage's Familiars give a lot of gold and are easy to kill when Visage is not around.",
     audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
   },
   {
     category: 'EnemyHero',
@@ -15806,6 +16060,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Break effects are removing Gravekeeper's Cloak and Visage becomes much weaker.",
     audience: [Audience.ALL],
+    image: { type: 'item', name: 'silver_edge' },
   },
   {
     category: 'EnemyHero',
@@ -15815,6 +16070,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Crimson Guard is great against the Familiar's physical damage.",
     audience: [Audience.ALL],
+    image: { type: 'item', name: 'crimson_guard' },
   },
   {
     category: 'EnemyHero',
@@ -15824,9 +16080,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Once Visage gets Aghanim's Scepter, place Observer wards and sentries and carry detection.",
     audience: [Audience.ALL],
+    image: { type: 'item', name: 'SentryDustGem' },
   },
 
   // 113. Void Spirit | 10.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Void Spirit',
+    audioFile: 'ownHero/Void Spirit_1_Control runes',
+    messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
+    textMessage:
+      'Control power runes against Void Spirit. He likes to bottle them and gank.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Void Spirit',
@@ -15865,6 +16133,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 114. Warlock | 10.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Warlock',
+    audioFile: 'ownHero/Warlock_1_Chaotic offering',
+    messageTimes: [8 * 60, 18 * 60, 28 * 60],
+    textMessage:
+      "Warlock's Chaotic Offering has long cooldown. Look to fight when it is down.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Warlock',
@@ -15911,6 +16190,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 115. Weaver | 10.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Weaver',
+    audioFile: 'ownHero/Weaver_1_Sentry consumables',
+    messageTime: -60,
+    textMessage:
+      'Bring a sentry and extra consumables to the lane against Weaver.',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Weaver',
@@ -15975,6 +16265,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 116. Windranger | Earlier work
+  {
+    category: 'OwnHero',
+    hero: 'Windranger',
+    audioFile: 'ownHero/Windranger_1_Spell harass',
+    messageTime: 30,
+    textMessage:
+      'Windranger is susceptible to early game spell harass. Manage your mana and keep pressuring her',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Windranger',
@@ -16176,6 +16477,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 118. Witch Doctor | 10.03.2021
   {
+    category: 'OwnHero',
+    hero: 'Witch Doctor',
+    audioFile: 'ownHero/Witch Doctor_1_Paralyzing cask',
+    messageTimes: [-60, 10 * 60 + 10, 20 * 60 + 20],
+    textMessage: "Don't clump up because of Witch Doctor's Paralyzing Cask.",
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Witch Doctor',
     audioFile: 'heroes/Witch Doctor_1_Paralyzing cask',
@@ -16210,7 +16521,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       'Witch Doctor can solo kill most heroes with Death Ward. Track his movements on the map.',
     audience: [Audience.ALL],
   },
-  /*{category: "EnemyHero", hero: "Witch Doctor", audioFile: "heroes/Witch Doctor_5_Crimson guard", messageTime: (12*60), textMessage: "Crimson Guard is great at reducing damage from Death Ward.", audience: [Audience.ALL]}, Message is no longer valid 21.6.2021 */
   {
     category: 'EnemyHero',
     hero: 'Witch Doctor',
@@ -16222,6 +16532,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 119. Wraith King | 10.03.2021
+  {
+    category: 'OwnHero',
+    hero: 'Wraith King',
+    audioFile: 'ownHero/Wraith King_1_Low armor',
+    messageTime: -60,
+    textMessage: 'Wraith King has low armor. Pressure him with right clicks.',
+    audience: [Audience.IN_LANE],
+    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Wraith King',
@@ -16277,6 +16597,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 120. Zeus | Earlier work | NOTE: Zeus ulty does 300 damage but after redcutions it does around 225-230. I think it is fine to keep the message as it is.
+  {
+    category: 'OwnHero',
+    hero: 'Zeus',
+    audioFile: 'ownHero/Zeus_1_Magic resistance',
+    messageTime: -60,
+    textMessage:
+      'Agree on who builds magic resistance items such as Pipe of Insight against Zeus - all players should have items with some magic resistance',
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'pipe' },
+  },
+
   {
     category: 'EnemyHero',
     hero: 'Zeus',
