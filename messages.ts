@@ -16087,12 +16087,63 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Void Spirit',
-    audioFile: 'ownHero/Void Spirit_1_Control runes',
-    messageTimes: [4 * 60 - 30, 6 * 60 - 30, 8 * 60 - 30],
+    audioFile: 'ownHero/Void Spirit_1_Secure ranged',
+    messageTime: 15,
     textMessage:
-      'Control power runes against Void Spirit. He likes to bottle them and gank.',
+      'Use Resonant Pulse to secure ranged creep and harass opponents at the same time.',
     audience: [Audience.ALL],
-    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+    image: { type: 'ability', name: 'void_spirit_resonant_pulse' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Void Spirit',
+    audioFile: 'ownHero/Void Spirit_2_Tough lane',
+    messageTime: 2 * 60,
+    textMessage:
+      'On tough lanes put more points in Dissimilate to be able push out waves and clear camps faster.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'void_spirit_dissimilate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Void Spirit',
+    audioFile: 'ownHero/Void Spirit_3_Play actively',
+    messageTimes: [5 * 60 + 45, 9 * 60 + 45],
+    textMessage:
+      'Look to play actively, especially with good runes as Void Spirit has huge magical burst potential and low cooldowns.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'rune', name: 'arcane' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Void Spirit',
+    audioFile: 'ownHero/Void Spirit_4_Fight targets',
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Void Spirit is great at killing supports and backliners in teamfights. Focus on those first.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'void_spirit_astral_step' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Void Spirit',
+    audioFile: 'ownHero/Void Spirit_5_Push sidelanes',
+    messageTime: 11 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage: 'When not much is happening, push out the sidelines.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'void_spirit_dissimilate' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Void Spirit',
+    audioFile: 'ownHero/Void Spirit_6_Aghanims Scepter',
+    messageTime: 14 * 60 + 45,
+    textMessage:
+      "Aghanim's Scepter is a game changer as it adds another utility in the form of silence among other things.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'ultimate_scepter' },
   },
 
   {
@@ -16136,12 +16187,60 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: 'OwnHero',
     hero: 'Warlock',
-    audioFile: 'ownHero/Warlock_1_Chaotic offering',
-    messageTimes: [8 * 60, 18 * 60, 28 * 60],
+    audioFile: 'ownHero/Warlock_1_Heal over damage',
+    messageTime: 15,
     textMessage:
-      "Warlock's Chaotic Offering has long cooldown. Look to fight when it is down.",
+      'Prioritize using Shadow Word for healing instead for damage due to magic resistance.',
     audience: [Audience.ALL],
-    image: { type: 'ability', name: 'visage_gravekeepers_cloak' },
+    image: { type: 'ability', name: 'warlock_shadow_word' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Warlock',
+    audioFile: 'ownHero/Warlock_2_Bonds latching',
+    messageTimes: [75, 11 * 60 + 15],
+    textMessage: 'Fatal Bonds latch onto fogged units.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'warlock_fatal_bonds' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Warlock',
+    audioFile: 'ownHero/Warlock_3_Bonds harass',
+    messageTime: 90,
+    textMessage:
+      'Use Fatal Bonds to harass if you can link 4 lane creeps and 2 opponents on the lane.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'warlock_fatal_bonds' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Warlock',
+    audioFile: 'ownHero/Warlock_4_Chaotic Offering trees',
+    messageTimes: [8 * 60 + 15, 18 * 60 + 15],
+    textMessage: 'Chaotic Offering destroys trees upon landing.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'warlock_rain_of_chaos' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Warlock',
+    audioFile: 'ownHero/Warlock_5_Active off cd',
+    messageTimes: [10 * 60 + 15, 18 * 60 + 15],
+    textMessage:
+      'Be active when Chaotic Offering is up, organize smokes and farm with golem after the fight.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'warlock_rain_of_chaos' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Warlock',
+    audioFile: 'ownHero/Warlock_6_Aghanims Shard',
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 as it improves your waveclear and healing significantly.",
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'aghanims_shard' },
   },
 
   {
