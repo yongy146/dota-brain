@@ -12577,7 +12577,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      'Whenever you have a decent amount of Essence Shift, play more aggressively and look for extra kills.',
+      'Whenever not much is happening, push out the sidelines as Slark is quite elusive.',
     audience: [Audience.ALL],
     image: { type: 'ability', name: 'slark_dark_pact' },
   },
