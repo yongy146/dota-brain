@@ -647,6 +647,87 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // 4. Anti-Mage | Earlier work
   {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_1_Laning',
+    messageTime: 10,
+    textMessage:
+      'Rush Ring of Health on tough lanes.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ring_of_health' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_2_Burn mana',
+    messageTime: 20,
+    textMessage:
+      'Hit opponents and burn their mana whenever you can, for example when they go for lasthit.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'antimage_mana_break' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_3_Burn mana',
+    messageTimes: [2 * 60, 7 * 60],
+    textMessage:
+      'Play safe and acquire Battle Fury as early as possible. Your farming speed goes up exponentially with it.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'bfury' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_4_Look around',
+    messageTimes: [7 * 60 + 45, 13 * 60 + 45],
+    textMessage:
+      'Look around the map while you are farming to dodge the ganks but also to potentially snipe a kill with Mana Void.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'ability', name: 'antimage_mana_void' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_5_Plant wards',
+    messageTimes: [8 * 60 + 15, 14 * 60 + 15],
+    textMessage:
+      'Plant wards for yourself in the area you are farming.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'ward_observer' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_6_Push lane',
+    messageTimes: [10 * 60 + 15, 13 * 60 + 45],
+    textMessage:
+      'Keep a lane pushed out to apply some pressure on the map. If you expect to be gank, Blink into trees and teleport out.',
+    audience: [Audience.ALL],
+    image: { type: 'ability', name: 'antimage_blink' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_7_Manta',
+    messageTime: 18 * 60 + 15,
+    textMessage:
+      'With Manta Style you can play more actively and join most of the fights. Prioritize killing backliners and supports.',
+    audience: [Audience.ROLE_CORE],
+    image: { type: 'item', name: 'manta' },
+  },
+  {
+    category: 'OwnHero',
+    hero: 'Anti-Mage',
+    audioFile: 'ownHero/Anti-mage_8_Cut waves',
+    messageTime: 18 * 60 + 30,
+    repeatTime: 10 * 60,
+    textMessage:
+      'Wehenever your teammates die consider cutting a wave behind the opponents or push out some other lane.',
+    audience: [Audience.ROLE_CORE],
+  },
+
+  {
     category: 'EnemyHero',
     hero: 'Anti-Mage',
     audioFile: 'enemyHero/Anti-mage_1_Laning',
