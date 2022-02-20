@@ -9633,7 +9633,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   // 67. Ogre Magi | Earlier work
   {
     category: 'OwnHero',
-    hero: 'Ogre',
+    hero: 'Ogre Magi',
     audioFile: 'ownHero/Ogre_1_Tankiness',
     messageTime: 30,
     textMessage: 'Play in front of your Core to to make use of your tankiness.',
@@ -9641,7 +9641,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: 'OwnHero',
-    hero: 'Ogre',
+    hero: 'Ogre Magi',
     audioFile: 'ownHero/Ogre_2_Ignite1',
     messageTime: 5 * 60,
     textMessage:
@@ -9651,7 +9651,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: 'OwnHero',
-    hero: 'Ogre',
+    hero: 'Ogre Magi',
     audioFile: 'ownHero/Ogre_3_Multicast',
     messageTime: 10 * 60,
     textMessage: 'Prioritize items that you can multicast with.',
@@ -9660,7 +9660,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: 'OwnHero',
-    hero: 'Ogre',
+    hero: 'Ogre Magi',
     audioFile: 'ownHero/Ogre_4_Ignite2',
     messageTime: 12 * 60,
     textMessage:
@@ -9670,7 +9670,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: 'OwnHero',
-    hero: 'Ogre',
+    hero: 'Ogre Magi',
     audioFile: 'ownHero/Ogre_5_Squishy',
     messageTime: 15 * 60,
     textMessage:
@@ -9679,7 +9679,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: 'OwnHero',
-    hero: 'Ogre',
+    hero: 'Ogre Magi',
     audioFile: 'ownHero/Ogre_6_Bloodlust',
     messageTime: 17 * 60,
     repeatTime: 20 * 60,
