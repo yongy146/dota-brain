@@ -17,10 +17,12 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
     var frame = ScreenSizes.hasOwnProperty(screenSize) ? ScreenSizes[screenSize] : ScreenSizes['1920x1080']
     if (frame.hasOwnProperty('reuse')) frame = ScreenSizes[(<ScreenReuse>frame).reuse]
 
-    // Report in order to be able to see the number of users
-    if (!ScreenSizes.hasOwnProperty(screenSize)) {
-      overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "error", eventAction: "screenSizes.getScreenDetails", eventLabel: `Monitor size ${screenSize} not yet customized` }, () => { })
+    // Report to be able to see the number of users with different screen sizes
+    var eventAction = "not yet customized"
+    if (ScreenSizes.hasOwnProperty(screenSize)) {
+      eventAction = ScreenSizes[screenSize].hasOwnProperty('reuse') ? "piggy backed" : "customized"
     }
+    overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "monitor", eventAction: eventAction, eventLabel: `${screenSize}` }, () => { })
 
     frame = <ScreenDefinition>frame
 
@@ -41,6 +43,10 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
     frame.inGame.tracker.items.xPosGoal1 = frame.inGame.tracker.items.width / 219 * 175
 
     return frame
+}
+
+export function isScreenCustomized(screenSize: string): boolean {
+  return ScreenSizes.hasOwnProperty(screenSize)
 }
 
 export interface ScreenDefinition {
@@ -106,6 +112,11 @@ export interface ScreenDefinition {
       width: number, // 4 pixels from loss in / out
       height: number // high such that longes text is visble
     }
+  },
+  roshanGlyph: {
+    xPos: number,
+    yPos: number,
+    size: number  // Roshan glyph window has same widht and height
   }
 }
 
@@ -162,6 +173,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 168,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 179,
+      yPos: 594,
+      size: 80
     }
   },
   '1024x600': { reuse: '1024x768' },
@@ -210,6 +226,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 248,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 168,
+      yPos: 556,
+      size: 74
     }
   },
   '1280x768': { reuse: '1280x720' },
@@ -259,6 +280,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 112,
         height: 280
       }
+    },
+    roshanGlyph: {
+      xPos: 225,
+      yPos: 743,
+      size: 86
     }
   },
 
@@ -305,6 +331,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 192,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 223,
+      yPos: 792,
+      size: 93
     }
   },
 
@@ -351,6 +382,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 266,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 180,
+      yPos: 594,
+      size: 76
     }
   },
   '1360x768': { reuse: '1366x768' },
@@ -398,6 +434,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 224,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 210,
+      yPos: 697,
+      size: 86
     }
   },
   '1440x1050': { reuse: '1440x900' },
@@ -445,6 +486,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 305,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 210,
+      yPos: 697,
+      size: 93
     }
   },
   '1600x1024': { reuse: '1600x900' },
@@ -493,6 +539,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 264,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 244,
+      yPos: 813,
+      size: 106
     }
   },
   '1728x1080': { reuse: '1600x900' },
@@ -540,6 +591,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 338,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 230,
+      yPos: 768,
+      size: 93
     }
   },
 
@@ -591,6 +647,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 362, // 4 pixels from loss in / out
         height: 140 // high such that longes text is visble
       }
+    },
+    roshanGlyph: {
+      xPos: 250,
+      yPos: 841,
+      size: 106
     }
   },
   '1920x1079': { reuse: '1920x1080' },
@@ -638,6 +699,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 302,
         height: 160
       }
+    },
+    roshanGlyph: {
+      xPos: 279,
+      yPos: 937,
+      size: 106
     }
   },
   '2048x1152': { reuse: '1920x1200' },
@@ -685,6 +751,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 294,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 334,
+      yPos: 1123,
+      size: 106
     }
   },
 
@@ -731,6 +802,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 688,
         height: 80
       }
+    },
+    roshanGlyph: {
+      xPos: 253,
+      yPos: 836,
+      size: 104
     }
   },
 
@@ -777,6 +853,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 480,
         height: 140
       }
+    },
+    roshanGlyph: {
+      xPos: 335,
+      yPos: 1115,
+      size: 134
     }
   },
   '2560x1600': { reuse: '2560x1440' },
@@ -826,6 +907,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 1321,
         height: 40
       }
+    },
+    roshanGlyph: {
+      xPos: 254,
+      yPos: 836,
+      size: 106
     }
   },
 
@@ -872,6 +958,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 880,
         height: 80
       }
+    },
+    roshanGlyph: {
+      xPos: 501,
+      yPos: 1672,
+      size: 212
     }
   },
   '4096x2160': { reuse: '3840x2160' },
@@ -919,6 +1010,11 @@ export const ScreenSizes: ScreenDefinitions = {
         width: 1755,
         height: 40
       }
+    },
+    roshanGlyph: {
+      xPos: 336,
+      yPos: 1115,
+      size: 140
     }
   }
 }
