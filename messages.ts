@@ -232,13 +232,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
 
-  // Smoke Of Deceit
+  // Smoke of Deceit
   {
     category: 'SmokeOfDeceit',
     audioFile: 'general/SmokeOfDeceit1',
     messageTime: 5 * 60 + 30 - 1,
     textMessage: 'Smoke of deceit is available in the shop',
     audience: [Audience.ALL],
+     
+    
   },
   {
     category: 'SmokeOfDeceit',

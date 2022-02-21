@@ -76,8 +76,8 @@ export const MID_LANE = 'Mid Lane'*/
 
 
 export function getRolesString(heroBuild: HeroBuild) {
-    var roles = ''
-    for (var i=0; i<heroBuild.roles.length; i++) {
+    let roles = ''
+    for (let i=0; i<heroBuild.roles.length; i++) {
         roles += getDotaCoachGuideRoleString(heroBuild.roles[i])
         if (i<(heroBuild.roles.length-1)) {
           roles += ' & '
@@ -111,8 +111,8 @@ export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string
 
 
 export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
-    var result = ''
-    for (var i=0; i<roles.length; i++) {
+    let result = ''
+    for (let i=0; i<roles.length; i++) {
       result += getDotaCoachGuideRoleString(roles[i])
       if (i<(roles.length-1)) {
         result += ' & '
