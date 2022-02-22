@@ -14,15 +14,15 @@
  * @returns 
  */
 export function getScreenDetails(screenSize: string): ScreenDefinition {
-    var frame = ScreenSizes.hasOwnProperty(screenSize) ? ScreenSizes[screenSize] : ScreenSizes['1920x1080']
+    let frame = ScreenSizes.hasOwnProperty(screenSize) ? ScreenSizes[screenSize] : ScreenSizes['1920x1080']
     if (frame.hasOwnProperty('reuse')) frame = ScreenSizes[(<ScreenReuse>frame).reuse]
 
     // Report to be able to see the number of users with different screen sizes
-    var eventAction = "not yet customized"
+    let eventAction = "not yet customized"
     if (ScreenSizes.hasOwnProperty(screenSize)) {
       eventAction = ScreenSizes[screenSize].hasOwnProperty('reuse') ? "piggy backed" : "customized"
     }
-    overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "monitor", eventAction: eventAction, eventLabel: `${screenSize}` }, () => { })
+    overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "monitor", eventAction: eventAction, eventLabel: `${screenSize}` }, () => undefined)
 
     frame = <ScreenDefinition>frame
 
