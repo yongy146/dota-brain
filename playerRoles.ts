@@ -1,36 +1,35 @@
 /**
  * Library to manage player roles
  */
-import { storageItems } from '../../consts'
-import { HeroBuild } from '../../submodules/dota2/heroBuilds'
+import { storageItems } from "../../consts";
+import { HeroBuild } from "../../submodules/dota2/heroBuilds";
 
 // Steam Guide Roles
-export enum STEAM_GUIDE_ROLE {  // <None> is treated by not providing any role
-    CORE = "#DOTA_HeroGuide_Role_Core",
-    OFFLANE = "#DOTA_HeroGuide_Role_OffLane",
-    SUPPORT = "#DOTA_HeroGuide_Role_Support",
-    JUNGLE = "#DOTA_HeroGuide_Role_Jungle",
-    INITIATOR = "#DOTA_HeroGuide_Role_Initiator",
-    ROAMER = "#DOTA_HeroGuide_Role_Roamer"
+export enum STEAM_GUIDE_ROLE { // <None> is treated by not providing any role
+  CORE = "#DOTA_HeroGuide_Role_Core",
+  OFFLANE = "#DOTA_HeroGuide_Role_OffLane",
+  SUPPORT = "#DOTA_HeroGuide_Role_Support",
+  JUNGLE = "#DOTA_HeroGuide_Role_Jungle",
+  INITIATOR = "#DOTA_HeroGuide_Role_Initiator",
+  ROAMER = "#DOTA_HeroGuide_Role_Roamer",
 }
 
 // Roles used for the Dota Coach guides
 export enum DOTA_COACH_GUIDE_ROLE {
-    CARRY   = "carry",
-    MID     = "mid",
-    OFFLANE = "offlane",
-    SUPPORT = "support"
+  CARRY = "carry",
+  MID = "mid",
+  OFFLANE = "offlane",
+  SUPPORT = "support",
 }
 
 // Roles as used by the Dota Coach app
 export enum DOTA_COACH_ROLE {
-    CARRY        = 'carry',
-    MID          = 'mid',
-    OFFLANE      = 'offlane',
-    SOFT_SUPPORT = 'soft_support',
-    HARD_SUPPORT = 'hard_support'
+  CARRY = "carry",
+  MID = "mid",
+  OFFLANE = "offlane",
+  SOFT_SUPPORT = "soft_support",
+  HARD_SUPPORT = "hard_support",
 }
-
 
 // Roles stored in localSotrage / isPlayerSupport
 /*export const HARD_SUPPORT = 'Hard Support'
@@ -74,150 +73,146 @@ export const MID_LANE = 'Mid Lane'*/
     }
 }*/
 
-
 export function getRolesString(heroBuild: HeroBuild) {
-    var roles = ''
-    for (var i=0; i<heroBuild.roles.length; i++) {
-        roles += getDotaCoachGuideRoleString(heroBuild.roles[i])
-        if (i<(heroBuild.roles.length-1)) {
-          roles += ' & '
-        }
+  let roles = "";
+  for (let i = 0; i < heroBuild.roles.length; i++) {
+    roles += getDotaCoachGuideRoleString(heroBuild.roles[i]);
+    if (i < heroBuild.roles.length - 1) {
+      roles += " & ";
     }
-    return roles
+  }
+  return roles;
 }
-
 
 /**
  * Function used to display role in title of steam guide
- * @param role 
- * @returns 
+ * @param role
+ * @returns
  */
-export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
-    switch (role) {
-        case DOTA_COACH_GUIDE_ROLE.CARRY: {
-            return "Carry"
-        }
-        case DOTA_COACH_GUIDE_ROLE.MID: {
-            return "Mid"
-        }
-        case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
-            return "Offlane"
-        }
-        case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
-            return "Support"
-        }
+export function getDotaCoachGuideRoleString(
+  role: DOTA_COACH_GUIDE_ROLE
+): string {
+  switch (role) {
+    case DOTA_COACH_GUIDE_ROLE.CARRY: {
+      return "Carry";
     }
+    case DOTA_COACH_GUIDE_ROLE.MID: {
+      return "Mid";
+    }
+    case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
+      return "Offlane";
+    }
+    case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
+      return "Support";
+    }
+  }
 }
-
 
 export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
-    var result = ''
-    for (var i=0; i<roles.length; i++) {
-      result += getDotaCoachGuideRoleString(roles[i])
-      if (i<(roles.length-1)) {
-        result += ' & '
-      }
+  let result = "";
+  for (let i = 0; i < roles.length; i++) {
+    result += getDotaCoachGuideRoleString(roles[i]);
+    if (i < roles.length - 1) {
+      result += " & ";
     }
+  }
 
-    return result
+  return result;
 }
 
-
 export function getRoleString(role: DOTA_COACH_ROLE): string {
-    switch (role) {
-        case DOTA_COACH_ROLE.CARRY: {
-            return "Safe Lane"
-        }
-        case DOTA_COACH_ROLE.MID: {
-            return "Mid Lane"
-        }
-        case DOTA_COACH_ROLE.OFFLANE: {
-            return "Offlane"
-        }
-        case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-            return "Soft Support"
-        }
-        case DOTA_COACH_ROLE.HARD_SUPPORT: {
-            return "Hard Support"
-        }
+  switch (role) {
+    case DOTA_COACH_ROLE.CARRY: {
+      return "Safe Lane";
     }
+    case DOTA_COACH_ROLE.MID: {
+      return "Mid Lane";
+    }
+    case DOTA_COACH_ROLE.OFFLANE: {
+      return "Offlane";
+    }
+    case DOTA_COACH_ROLE.SOFT_SUPPORT: {
+      return "Soft Support";
+    }
+    case DOTA_COACH_ROLE.HARD_SUPPORT: {
+      return "Hard Support";
+    }
+  }
 }
 
 export function getGuideRoleImage(role: DOTA_COACH_GUIDE_ROLE): string {
-    switch (role) {
-        case DOTA_COACH_GUIDE_ROLE.CARRY: {
-            return '../img/roles/safeLane.png'
-        }
-        case DOTA_COACH_GUIDE_ROLE.MID: {
-            return '../img/roles/midLane.png'
-        }
-        case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
-            return '../img/roles/offlane.png'
-        }
-        case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
-            return '../img/roles/support.png'
-        }
+  switch (role) {
+    case DOTA_COACH_GUIDE_ROLE.CARRY: {
+      return "../img/roles/safeLane.png";
     }
+    case DOTA_COACH_GUIDE_ROLE.MID: {
+      return "../img/roles/midLane.png";
+    }
+    case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
+      return "../img/roles/offlane.png";
+    }
+    case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
+      return "../img/roles/support.png";
+    }
+  }
 }
-
 
 export function getRoleImage(role: DOTA_COACH_ROLE): string {
-    switch (role) {
-        case DOTA_COACH_ROLE.CARRY: {
-            return '../img/roles/safeLane.png'
-        }
-        case DOTA_COACH_ROLE.MID: {
-            return '../img/roles/midLane.png'
-        }
-        case DOTA_COACH_ROLE.OFFLANE: {
-            return '../img/roles/offlane.png'
-        }
-        case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-            return '../img/roles/softSupport.png'
-        }
-        case DOTA_COACH_ROLE.HARD_SUPPORT: {
-            return '../img/roles/hardSupport.png'
-        }
+  switch (role) {
+    case DOTA_COACH_ROLE.CARRY: {
+      return "../img/roles/safeLane.png";
     }
+    case DOTA_COACH_ROLE.MID: {
+      return "../img/roles/midLane.png";
+    }
+    case DOTA_COACH_ROLE.OFFLANE: {
+      return "../img/roles/offlane.png";
+    }
+    case DOTA_COACH_ROLE.SOFT_SUPPORT: {
+      return "../img/roles/softSupport.png";
+    }
+    case DOTA_COACH_ROLE.HARD_SUPPORT: {
+      return "../img/roles/hardSupport.png";
+    }
+  }
 }
 
-
 export function getPlayerRole(): DOTA_COACH_ROLE {
-    return localStorage.getItem(storageItems.playerRole) as DOTA_COACH_ROLE
+  return localStorage.getItem(storageItems.playerRole) as DOTA_COACH_ROLE;
 }
 
 export function setPlayerRole(role: DOTA_COACH_ROLE) {
-    localStorage.setItem(storageItems.playerRole, role)
+  localStorage.setItem(storageItems.playerRole, role);
 }
 
 export function isPlayerSupport() {
-    return isSupport(getPlayerRole())
+  return isSupport(getPlayerRole());
 }
 
 export function isSupport(role: DOTA_COACH_ROLE) {
-    return isHardSupport(role) || isSoftSupport(role)
+  return isHardSupport(role) || isSoftSupport(role);
 }
 
 export function isSoftSupport(role: DOTA_COACH_ROLE) {
-    return (role==DOTA_COACH_ROLE.SOFT_SUPPORT)
+  return role == DOTA_COACH_ROLE.SOFT_SUPPORT;
 }
 
 export function isHardSupport(role: DOTA_COACH_ROLE) {
-    return (role==DOTA_COACH_ROLE.HARD_SUPPORT)
+  return role == DOTA_COACH_ROLE.HARD_SUPPORT;
 }
 
 export function isCore(role: DOTA_COACH_ROLE) {
-    return isCarry(role) || isMid(role) || isOfflane(role)
+  return isCarry(role) || isMid(role) || isOfflane(role);
 }
 
 export function isCarry(role: DOTA_COACH_ROLE) {
-    return (role==DOTA_COACH_ROLE.CARRY)
+  return role == DOTA_COACH_ROLE.CARRY;
 }
 
 export function isMid(role: DOTA_COACH_ROLE) {
-    return (role==DOTA_COACH_ROLE.MID)
+  return role == DOTA_COACH_ROLE.MID;
 }
 
 export function isOfflane(role: DOTA_COACH_ROLE) {
-    return (role==DOTA_COACH_ROLE.OFFLANE)
+  return role == DOTA_COACH_ROLE.OFFLANE;
 }

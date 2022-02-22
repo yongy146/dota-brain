@@ -1,136 +1,166 @@
 /**
  * This class provides information on the screens in Dota 2 for the app to be able to properly position windows
- * 
+ *
  * (C) Dota Coach, 2021
  */
- import { windowNames } from '../../consts';
+import { windowNames } from "../../consts";
 
 /**
  * The function information on Dota 2 screens. This information can be used to position elements in the game.
- * 
+ *
  * If there is not details availalbe for proivded screenSitze, the it returns information for the default screen size, which is 1920x1080
- * 
+ *
  * @param screenSize Screen size, e.g. 1920x1080
- * @returns 
+ * @returns
  */
 export function getScreenDetails(screenSize: string): ScreenDefinition {
-    var frame = ScreenSizes.hasOwnProperty(screenSize) ? ScreenSizes[screenSize] : ScreenSizes['1920x1080']
-    if (frame.hasOwnProperty('reuse')) frame = ScreenSizes[(<ScreenReuse>frame).reuse]
+  let frame = Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize)
+    ? ScreenSizes[screenSize]
+    : ScreenSizes["1920x1080"];
+  if (Object.prototype.hasOwnProperty.call(frame, "reuse"))
+    frame = ScreenSizes[(<ScreenReuse>frame).reuse];
 
-    // Report to be able to see the number of users with different screen sizes
-    var eventAction = "not yet customized"
-    if (ScreenSizes.hasOwnProperty(screenSize)) {
-      eventAction = ScreenSizes[screenSize].hasOwnProperty('reuse') ? "piggy backed" : "customized"
-    }
-    overwolf.windows.sendMessage(windowNames.background, "ga", {eventCategory: "monitor", eventAction: eventAction, eventLabel: `${screenSize}` }, () => { })
+  // Report to be able to see the number of users with different screen sizes
+  let eventAction = "not yet customized";
+  if (Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize)) {
+    eventAction = Object.prototype.hasOwnProperty.call(
+      ScreenSizes[screenSize],
+      "reuse"
+    )
+      ? "piggy backed"
+      : "customized";
+  }
+  overwolf.windows.sendMessage(
+    windowNames.background,
+    "ga",
+    {
+      eventCategory: "monitor",
+      eventAction: eventAction,
+      eventLabel: `${screenSize}`,
+    },
+    () => undefined
+  );
 
-    frame = <ScreenDefinition>frame
+  frame = <ScreenDefinition>frame;
 
-    // Add calculated fields by the performance tracker
-    frame.inGame.tracker.performance.width = frame.inGame.tracker.performance.xPos / 159 * 230
-    frame.inGame.tracker.performance.heightTwoKPIs = frame.inGame.tracker.performance.nonDotaPlus.height
-    frame.inGame.tracker.performance.spacer = frame.inGame.tracker.performance.nonDotaPlus.height / 44 * 5
-    frame.inGame.tracker.performance.statusWidth = frame.inGame.tracker.performance.xPos / 159 * 12
+  // Add calculated fields by the performance tracker
+  frame.inGame.tracker.performance.width =
+    (frame.inGame.tracker.performance.xPos / 159) * 230;
+  frame.inGame.tracker.performance.heightTwoKPIs =
+    frame.inGame.tracker.performance.nonDotaPlus.height;
+  frame.inGame.tracker.performance.spacer =
+    (frame.inGame.tracker.performance.nonDotaPlus.height / 44) * 5;
+  frame.inGame.tracker.performance.statusWidth =
+    (frame.inGame.tracker.performance.xPos / 159) * 12;
 
-    frame.inGame.tracker.performance.xPosStatus = frame.inGame.tracker.performance.xPos / 159 * 38
-    frame.inGame.tracker.performance.xPosCurrent = frame.inGame.tracker.performance.xPos / 159 * 57
-    frame.inGame.tracker.performance.xPosGoal0 = frame.inGame.tracker.performance.xPos / 159 * 131
-    frame.inGame.tracker.performance.xPosSeparator = frame.inGame.tracker.performance.xPos / 159 * 141
-    frame.inGame.tracker.performance.xPosGoal1 = frame.inGame.tracker.performance.xPos / 159 * 151
+  frame.inGame.tracker.performance.xPosStatus =
+    (frame.inGame.tracker.performance.xPos / 159) * 38;
+  frame.inGame.tracker.performance.xPosCurrent =
+    (frame.inGame.tracker.performance.xPos / 159) * 57;
+  frame.inGame.tracker.performance.xPosGoal0 =
+    (frame.inGame.tracker.performance.xPos / 159) * 131;
+  frame.inGame.tracker.performance.xPosSeparator =
+    (frame.inGame.tracker.performance.xPos / 159) * 141;
+  frame.inGame.tracker.performance.xPosGoal1 =
+    (frame.inGame.tracker.performance.xPos / 159) * 151;
 
-    frame.inGame.tracker.items.xPosGoal0 = frame.inGame.tracker.items.width / 219 * 155
-    frame.inGame.tracker.items.xPosSeparator = frame.inGame.tracker.items.width / 219 * 163
-    frame.inGame.tracker.items.xPosGoal1 = frame.inGame.tracker.items.width / 219 * 175
+  frame.inGame.tracker.items.xPosGoal0 =
+    (frame.inGame.tracker.items.width / 219) * 155;
+  frame.inGame.tracker.items.xPosSeparator =
+    (frame.inGame.tracker.items.width / 219) * 163;
+  frame.inGame.tracker.items.xPosGoal1 =
+    (frame.inGame.tracker.items.width / 219) * 175;
 
-    return frame
+  return frame;
 }
 
 export function isScreenCustomized(screenSize: string): boolean {
-  return ScreenSizes.hasOwnProperty(screenSize)
+  return Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize);
 }
 
 export interface ScreenDefinition {
-  fontSize: number, // used for tracker and subtitle (take KDA font size and add 20%)
+  fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
   // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
   preGame: {
-      // Heroes: Excluding the grey shaded box
-      heroesRadiantTopLeftXPos: number,
-      heroesDireTopLeftXPos: number,
-      heroesWidth: number,
+    // Heroes: Excluding the grey shaded box
+    heroesRadiantTopLeftXPos: number;
+    heroesDireTopLeftXPos: number;
+    heroesWidth: number;
 
-      subtitles: {  // Position where to put the subtitles
-        xPos: number,  // Middle hero radiant
-        yPos: number,  // One line above 'STRATEGY/LOADOUT / GUIDES'
-        width: number, // From middle hero radiant to middle hero dire 
-        height: number  // High such that longest 'hero selection' text can be shown
-      }
-  },
+    subtitles: {
+      // Position where to put the subtitles
+      xPos: number; // Middle hero radiant
+      yPos: number; // One line above 'STRATEGY/LOADOUT / GUIDES'
+      width: number; // From middle hero radiant to middle hero dire
+      height: number; // High such that longest 'hero selection' text can be shown
+    };
+  };
   inGame: {
-    heroesRadiantBottomLeftXPos: number,
-    heroesDireBottomLeftXPos: number,
-    heroesWidth: number,  // width of 5 heroes
-    heroesHeight: number, // height of heroes display by Dota 2 
+    heroesRadiantBottomLeftXPos: number;
+    heroesDireBottomLeftXPos: number;
+    heroesWidth: number; // width of 5 heroes
+    heroesHeight: number; // height of heroes display by Dota 2
 
     tracker: {
       performance: {
-        xPos: number, // xPos of end of 'Current' of last zero (white area) with Dota Plus
-        yPos: number, // yPos of upper end of Dota 2 tracker
+        xPos: number; // xPos of end of 'Current' of last zero (white area) with Dota Plus
+        yPos: number; // yPos of upper end of Dota 2 tracker
         nonDotaPlus: {
-          height: number, // height of KDA & LH/DN provided by app
-          yPosKDA: number,
-        },
+          height: number; // height of KDA & LH/DN provided by app
+          yPosKDA: number;
+        };
         dotaPlus: {
-          height: number,
-          yPosKDA: number,
-        },
-        width?: number, // calcuated value
-        heightTwoKPIs?: number, // calcuated value
-        spacer?: number, // calcuated value
-        statusWidth?: number, // calcuated value
-    
-        xPosStatus?: number, // calcuated value
-        xPosCurrent?: number, // calcuated value
-        xPosGoal0?: number, // calcuated value
-        xPosSeparator?: number, // calcuated value
-        xPosGoal1?: number, // calcuated value
-    
-      },
-      items: { // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
-        yPos: number, // yPos of where the next element on the window starts
-        xPos: number, // xPos of HUD element where TP ends
-        width: number, // width to HUD element where gold starts
+          height: number;
+          yPosKDA: number;
+        };
+        width?: number; // calcuated value
+        heightTwoKPIs?: number; // calcuated value
+        spacer?: number; // calcuated value
+        statusWidth?: number; // calcuated value
 
-        xPosGoal0?: number, // calcuated value
-        xPosSeparator?: number, // calcuated value
-        xPosGoal1?: number, // calcuated value
-      }
-    },
+        xPosStatus?: number; // calcuated value
+        xPosCurrent?: number; // calcuated value
+        xPosGoal0?: number; // calcuated value
+        xPosSeparator?: number; // calcuated value
+        xPosGoal1?: number; // calcuated value
+      };
+      items: {
+        // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
+        yPos: number; // yPos of where the next element on the window starts
+        xPos: number; // xPos of HUD element where TP ends
+        width: number; // width to HUD element where gold starts
 
-    subtitles: {  // Position and sizing of the subtitles
-      xPos: number, // 4 pixels right of hero icons
-      yPos: number,    // 4 pixels form top of screen
-      width: number, // 4 pixels from loss in / out
-      height: number // high such that longes text is visble
-    }
-  },
+        xPosGoal0?: number; // calcuated value
+        xPosSeparator?: number; // calcuated value
+        xPosGoal1?: number; // calcuated value
+      };
+    };
+
+    subtitles: {
+      // Position and sizing of the subtitles
+      xPos: number; // 4 pixels right of hero icons
+      yPos: number; // 4 pixels form top of screen
+      width: number; // 4 pixels from loss in / out
+      height: number; // high such that longes text is visble
+    };
+  };
   roshanGlyph: {
-    xPos: number,
-    yPos: number,
-    size: number  // Roshan glyph window has same widht and height
-  }
+    xPos: number;
+    yPos: number;
+    size: number; // Roshan glyph window has same widht and height
+  };
 }
 
 export interface ScreenReuse {
-  reuse: string /* e.g. '1920x1080' */
+  reuse: string /* e.g. '1920x1080' */;
 }
 
-
 export interface ScreenDefinitions {
-  [key: string /* e.g. '1920x1080' */]: ScreenDefinition | ScreenReuse
+  [key: string /* e.g. '1920x1080' */]: ScreenDefinition | ScreenReuse;
 }
 
 export const ScreenSizes: ScreenDefinitions = {
-  '1024x768': {
+  "1024x768": {
     fontSize: 9,
     preGame: {
       heroesRadiantTopLeftXPos: 58,
@@ -140,8 +170,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 212,
         yPos: 67,
         width: 600,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 221, //292,//221,
@@ -164,25 +194,25 @@ export const ScreenSizes: ScreenDefinitions = {
         items: {
           xPos: 0,
           yPos: 594,
-          width: 117+20,
-        }
+          width: 117 + 20,
+        },
       },
       subtitles: {
         xPos: 739,
         yPos: 3,
         width: 168,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 179,
       yPos: 594,
-      size: 80
-    }
+      size: 80,
+    },
   },
-  '1024x600': { reuse: '1024x768' },
+  "1024x600": { reuse: "1024x768" },
 
-  '1280x720': {
+  "1280x720": {
     fontSize: 9,
     preGame: {
       heroesRadiantTopLeftXPos: 140,
@@ -193,8 +223,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 290,
         yPos: 66,
         width: 700,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 366,
@@ -218,25 +248,25 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 959,
           yPos: 720,
           width: 147,
-        }
+        },
       },
       subtitles: {
         xPos: 920,
         yPos: 3,
         width: 248,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 168,
       yPos: 556,
-      size: 74
-    }
+      size: 74,
+    },
   },
-  '1280x768': { reuse: '1280x720' },
-  '1280x800': { reuse: '1280x720' },
+  "1280x768": { reuse: "1280x720" },
+  "1280x800": { reuse: "1280x720" },
 
-  '1280x960': {
+  "1280x960": {
     fontSize: 11,
     preGame: {
       heroesRadiantTopLeftXPos: 73,
@@ -247,8 +277,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 240,
         yPos: 84,
         width: 800,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 274,
@@ -269,26 +299,26 @@ export const ScreenSizes: ScreenDefinitions = {
           },
         },
         items: {
-          xPos: 1133, /* 1280 - 147 */
+          xPos: 1133 /* 1280 - 147 */,
           yPos: 871,
           width: 147,
-        }
+        },
       },
       subtitles: {
         xPos: 1013,
         yPos: 2,
         width: 112,
-        height: 280
-      }
+        height: 280,
+      },
     },
     roshanGlyph: {
       xPos: 225,
       yPos: 743,
-      size: 86
-    }
+      size: 86,
+    },
   },
 
-  '1280x1024': {
+  "1280x1024": {
     fontSize: 12,
     preGame: {
       heroesRadiantTopLeftXPos: 73,
@@ -298,8 +328,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 290,
         yPos: 86,
         width: 700,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 274,
@@ -323,23 +353,23 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 0,
           yPos: 793,
           width: 190,
-        }
+        },
       },
       subtitles: {
         xPos: 925,
         yPos: 3,
         width: 192,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 223,
       yPos: 792,
-      size: 93
-    }
+      size: 93,
+    },
   },
 
-  '1366x768': {
+  "1366x768": {
     fontSize: 10,
     preGame: {
       heroesRadiantTopLeftXPos: 144,
@@ -349,8 +379,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 274,
         yPos: 69,
         width: 818,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 392,
@@ -374,24 +404,24 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 1024,
           yPos: 768,
           width: 156,
-        }
+        },
       },
       subtitles: {
         xPos: 982,
         yPos: 3,
         width: 266,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 180,
       yPos: 594,
-      size: 76
-    }
+      size: 76,
+    },
   },
-  '1360x768': { reuse: '1366x768' },
+  "1360x768": { reuse: "1366x768" },
 
-  '1440x900': {
+  "1440x900": {
     fontSize: 11,
     preGame: {
       heroesRadiantTopLeftXPos: 73,
@@ -401,8 +431,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 268,
         yPos: 81,
         width: 904,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 379,
@@ -426,24 +456,24 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 0,
           yPos: 697,
           width: 183,
-        }
+        },
       },
       subtitles: {
         xPos: 1070,
         yPos: 3,
         width: 224,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 210,
       yPos: 697,
-      size: 86
-    }
+      size: 86,
+    },
   },
-  '1440x1050': { reuse: '1440x900' },
+  "1440x1050": { reuse: "1440x900" },
 
-  '1600x900': {
+  "1600x900": {
     fontSize: 12,
     preGame: {
       heroesRadiantTopLeftXPos: 153,
@@ -453,8 +483,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 351,
         yPos: 80,
         width: 898,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 459,
@@ -478,25 +508,25 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 1199,
           yPos: 900,
           width: 182,
-        }
+        },
       },
       subtitles: {
         xPos: 1150,
         yPos: 3,
         width: 305,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 210,
       yPos: 697,
-      size: 93
-    }
+      size: 93,
+    },
   },
-  '1600x1024': { reuse: '1600x900' },
-  '1600x1200': { reuse: '1600x900' },
+  "1600x1024": { reuse: "1600x900" },
+  "1600x1200": { reuse: "1600x900" },
 
-  '1680x1050': {
+  "1680x1050": {
     fontSize: 13,
     preGame: {
       heroesRadiantTopLeftXPos: 87,
@@ -506,8 +536,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 399,
         yPos: 95,
         width: 882,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 443,
@@ -531,24 +561,24 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 0,
           yPos: 813,
           width: 213,
-        }
+        },
       },
       subtitles: {
         xPos: 1245,
         yPos: 3,
         width: 264,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 244,
       yPos: 813,
-      size: 106
-    }
+      size: 106,
+    },
   },
-  '1728x1080': { reuse: '1600x900' },
+  "1728x1080": { reuse: "1600x900" },
 
-  '1768x992': {
+  "1768x992": {
     fontSize: 13,
     preGame: {
       heroesRadiantTopLeftXPos: 193,
@@ -558,8 +588,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 461,
         yPos: 89,
         width: 846,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 505,
@@ -583,37 +613,38 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 1325,
           yPos: 992,
           width: 203,
-        }
+        },
       },
       subtitles: {
         xPos: 1270,
         yPos: 3,
         width: 338,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 230,
       yPos: 768,
-      size: 93
-    }
+      size: 93,
+    },
   },
 
-  '1920x1080': {
+  "1920x1080": {
     fontSize: 13.5, // used for tracker and subtitle
     // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
     preGame: {
-        // Heroes: Excluding the grey shaded box
-        heroesRadiantTopLeftXPos: 210,
-        heroesDireTopLeftXPos: 1107,
-        heroesWidth: 603,
+      // Heroes: Excluding the grey shaded box
+      heroesRadiantTopLeftXPos: 210,
+      heroesDireTopLeftXPos: 1107,
+      heroesWidth: 603,
 
-        subtitles: {  // Position where to put the subtitles
-          xPos: 560,  // Middle hero radiant
-          yPos: 115,  // One line above 'STRATEGY/LOADOUT / GUIDES'
-          width: 800, // From middle hero radiant to middle hero dire 
-          height: 60  // High such that longest 'hero selection' text can be shown
-        }
+      subtitles: {
+        // Position where to put the subtitles
+        xPos: 560, // Middle hero radiant
+        yPos: 115, // One line above 'STRATEGY/LOADOUT / GUIDES'
+        width: 800, // From middle hero radiant to middle hero dire
+        height: 60, // High such that longest 'hero selection' text can be shown
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 549,
@@ -634,29 +665,31 @@ export const ScreenSizes: ScreenDefinitions = {
             yPosKDA: 19,
           },
         },
-        items: { // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
+        items: {
+          // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
           yPos: 1080, // yPos of where the next element below can be placed
           xPos: 1439, // xPos of HUD element where TP ends
           width: 219, // width to HUD element where gold starts
-        }
+        },
       },
 
-      subtitles: {  // Position and sizing of the subtitles
+      subtitles: {
+        // Position and sizing of the subtitles
         xPos: 1381, // 4 pixels right of hero icons
-        yPos: 4,    // 4 pixels form top of screen
+        yPos: 4, // 4 pixels form top of screen
         width: 362, // 4 pixels from loss in / out
-        height: 140 // high such that longes text is visble
-      }
+        height: 140, // high such that longes text is visble
+      },
     },
     roshanGlyph: {
       xPos: 250,
       yPos: 841,
-      size: 106
-    }
+      size: 106,
+    },
   },
-  '1920x1079': { reuse: '1920x1080' },
-  
-  '1920x1200': {
+  "1920x1079": { reuse: "1920x1080" },
+
+  "1920x1200": {
     fontSize: 15,
     preGame: {
       heroesRadiantTopLeftXPos: 97,
@@ -666,8 +699,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 450,
         yPos: 109,
         width: 1020,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 505,
@@ -691,24 +724,24 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 0,
           yPos: 929,
           width: 243,
-        }
+        },
       },
       subtitles: {
         xPos: 1425,
         yPos: 3,
         width: 302,
-        height: 160
-      }
+        height: 160,
+      },
     },
     roshanGlyph: {
       xPos: 279,
       yPos: 937,
-      size: 106
-    }
+      size: 106,
+    },
   },
-  '2048x1152': { reuse: '1920x1200' },
+  "2048x1152": { reuse: "1920x1200" },
 
-  '1920x1440': {
+  "1920x1440": {
     fontSize: 16,
     preGame: {
       heroesRadiantTopLeftXPos: 97,
@@ -718,8 +751,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 446,
         yPos: 124,
         width: 1028,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 412,
@@ -743,23 +776,23 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 0,
           yPos: 1115,
           width: 250,
-        }
+        },
       },
       subtitles: {
         xPos: 1386,
         yPos: 3,
         width: 294,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 334,
       yPos: 1123,
-      size: 106
-    }
+      size: 106,
+    },
   },
 
-  '2560x1080': {
+  "2560x1080": {
     fontSize: 14,
     preGame: {
       heroesRadiantTopLeftXPos: 528,
@@ -769,8 +802,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 840,
         yPos: 99,
         width: 880,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 869,
@@ -791,26 +824,26 @@ export const ScreenSizes: ScreenDefinitions = {
           },
         },
         items: {
-          xPos: 2279-219,
+          xPos: 2279 - 219,
           yPos: 1080,
           width: 219,
-        }
+        },
       },
       subtitles: {
         xPos: 1699,
         yPos: 3,
         width: 688,
-        height: 80
-      }
+        height: 80,
+      },
     },
     roshanGlyph: {
       xPos: 253,
       yPos: 836,
-      size: 104
-    }
+      size: 104,
+    },
   },
 
-  '2560x1440': {
+  "2560x1440": {
     fontSize: 17,
     preGame: {
       heroesRadiantTopLeftXPos: 278,
@@ -820,8 +853,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 666,
         yPos: 133,
         width: 1228,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 734,
@@ -845,26 +878,26 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 1949,
           yPos: 1440,
           width: 264,
-        }
+        },
       },
       subtitles: {
         xPos: 1839,
         yPos: 3,
         width: 480,
-        height: 140
-      }
+        height: 140,
+      },
     },
     roshanGlyph: {
       xPos: 335,
       yPos: 1115,
-      size: 134
-    }
+      size: 134,
+    },
   },
-  '2560x1600': { reuse: '2560x1440' },
-  '2715x1527': { reuse: '2560x1440' },
-  '3440x1440': { reuse: '2560x1440' },
+  "2560x1600": { reuse: "2560x1440" },
+  "2715x1527": { reuse: "2560x1440" },
+  "3440x1440": { reuse: "2560x1440" },
 
-  '3840x1080': {
+  "3840x1080": {
     fontSize: 13,
     preGame: {
       heroesRadiantTopLeftXPos: 1168,
@@ -874,8 +907,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 1473,
         yPos: 98,
         width: 894,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 1508,
@@ -896,27 +929,27 @@ export const ScreenSizes: ScreenDefinitions = {
           },
         },
         items: {
-          xPos: 3577-264,
+          xPos: 3577 - 264,
           yPos: 1080,
           width: 264,
-        }
+        },
       },
       subtitles: {
         xPos: 2341,
         yPos: 3,
         width: 1321,
-        height: 40
-      }
+        height: 40,
+      },
     },
     roshanGlyph: {
       xPos: 254,
       yPos: 836,
-      size: 106
-    }
+      size: 106,
+    },
   },
 
-  '3840x2160': {
-    fontSize: 26,/// CHECK ON 4K MONITOR!!!!!
+  "3840x2160": {
+    fontSize: 26, /// CHECK ON 4K MONITOR!!!!!
     preGame: {
       heroesRadiantTopLeftXPos: 416,
       heroesDireTopLeftXPos: 2210,
@@ -925,8 +958,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 1740,
         yPos: 208,
         width: 894,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 1101,
@@ -950,24 +983,24 @@ export const ScreenSizes: ScreenDefinitions = {
           xPos: 2876,
           yPos: 2160,
           width: 441,
-        }
+        },
       },
       subtitles: {
         xPos: 2762,
         yPos: 3,
         width: 880,
-        height: 80
-      }
+        height: 80,
+      },
     },
     roshanGlyph: {
       xPos: 501,
       yPos: 1672,
-      size: 212
-    }
+      size: 212,
+    },
   },
-  '4096x2160': { reuse: '3840x2160' },
+  "4096x2160": { reuse: "3840x2160" },
 
-  '5120x1440': {
+  "5120x1440": {
     fontSize: 17,
     preGame: {
       heroesRadiantTopLeftXPos: 1557,
@@ -977,8 +1010,8 @@ export const ScreenSizes: ScreenDefinitions = {
         xPos: 1968,
         yPos: 132,
         width: 1184,
-        height: 60
-      }
+        height: 60,
+      },
     },
     inGame: {
       heroesRadiantBottomLeftXPos: 2014,
@@ -999,22 +1032,22 @@ export const ScreenSizes: ScreenDefinitions = {
           },
         },
         items: {
-          xPos: 4760-264,
+          xPos: 4760 - 264,
           yPos: 1440,
           width: 264,
-        }
+        },
       },
       subtitles: {
         xPos: 3120,
         yPos: 6,
         width: 1755,
-        height: 40
-      }
+        height: 40,
+      },
     },
     roshanGlyph: {
       xPos: 336,
       yPos: 1115,
-      size: 140
-    }
-  }
-}
+      size: 140,
+    },
+  },
+};
