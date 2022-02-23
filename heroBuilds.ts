@@ -86,13 +86,13 @@ export function getItemTooltips(
   heroBuild: HeroBuild,
   item: string
 ) {
-  if (heroBuild.hasOwnProperty("item_tooltips")) {
-    if (heroBuild.item_tooltips.hasOwnProperty(item)) {
+  if (Object.prototype.hasOwnProperty.call(heroBuild, "item_tooltips")) {
+    if (Object.prototype.hasOwnProperty.call(heroBuild.item_tooltips, item)) {
       return heroBuild.item_tooltips[item];
     }
   }
-  if (heroBuilds.hasOwnProperty("item_tooltips")) {
-    if (heroBuilds.item_tooltips.hasOwnProperty(item)) {
+  if (Object.prototype.hasOwnProperty.call(heroBuilds, "item_tooltips")) {
+    if (Object.prototype.hasOwnProperty.call(heroBuilds.item_tooltips, item)) {
       return heroBuilds.item_tooltips[item];
     }
   }

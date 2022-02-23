@@ -198,7 +198,7 @@ export namespace ability {
     DotaLogger.log(`dota2.getAbility(): a=${JSON.stringify(a)}`);
 
     if (a != null) {
-      if (a.hasOwnProperty("name")) {
+      if (Object.prototype.hasOwnProperty.call(a, "name")) {
         DotaLogger.log(`dota2.getAbilityName(): ${a.name}`);
         return a.name;
       } else {
@@ -333,8 +333,8 @@ export namespace ability {
                 result.push(hero[`Ability${i}`])
             }
         }*/
-
-    if (!dota2Heroes.hasOwnProperty(heroNameNPC)) return [];
+    if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroNameNPC))
+      return [];
 
     return dota2Heroes[heroNameNPC].abilities;
   }
@@ -400,8 +400,8 @@ export namespace ability {
     /*        if (!Abilities[heroAbility].hasOwnProperty("mc")) {
             return null
         }*/
-    if (a == null || a.hasOwnProperty("mana_cost")) return null;
-
+    if (a == null || Object.prototype.hasOwnProperty.call(a, "mana_cost"))
+      return null;
     const manaCost = a.mana_cost;
     //DotaLogger.log("Dota2.hero.ability.getManaConsumption: mc='" + JSON.stringify(mc) + "'")
     // Format of data: "mc":["80","90","100","110"]
@@ -419,6 +419,7 @@ export namespace ability {
         return result*/
   }
 
+  
   /**
    *
    * @param heroAbility
@@ -428,8 +429,7 @@ export namespace ability {
     //DotaLogger.log("Dota2.hero.ability.getCooldown(heroAbility='" + heroAbility + "'): Called")
 
     const a = ability.getAbility(heroAbility);
-
-    if (a.hasOwnProperty("cooldown")) {
+    if (Object.prototype.hasOwnProperty.call(a, "cooldown")) {
       // if there is no 'cd' property, the function returns an empty array
       return a.cooldown;
     }
@@ -447,8 +447,8 @@ export namespace ability {
     //DotaLogger.log("Dota2.hero.ability.getCooldown(heroAbility='" + heroAbility + "'): Called")
 
     const a = ability.getAbility[heroAbility];
-
-    if (a == null || !a.hasOwnProperty("cooldown")) return null;
+    if (a == null || !Object.prototype.hasOwnProperty.call(a, "cooldown"))
+      return null;
 
     const cd = a.cooldown;
 
@@ -535,7 +535,8 @@ export namespace hero {
    * @returns null if there is no such hero
    */
   function getHero(heroName: string): Hero {
-    if (!dota2Heroes.hasOwnProperty(heroName)) return null;
+    if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
+      return null;
     return dota2Heroes[heroName];
   }
 
@@ -724,14 +725,12 @@ export namespace hero {
       hero: string,
       isSupport: boolean
     ): any[] {
-      let allItems: [any];
+      const allItems = counterItemsLaning[hero].all;
       let roleItems: [any];
       if (counterItemsLaning[hero] == null) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return [];
       }
-
-      allItems = counterItemsLaning[hero].all;
       if (isSupport) {
         roleItems = counterItemsLaning[hero].support;
       } else {
@@ -746,20 +745,19 @@ export namespace hero {
       hero: string,
       isSupport: boolean
     ): any[] {
-      let allItems: [any];
+      const allItems = counterItemsMidGame[hero].all;
       let roleItems: [any];
       if (counterItemsMidGame[hero] == null) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return [];
       }
 
-      allItems = counterItemsMidGame[hero].all;
+
       if (isSupport) {
         roleItems = counterItemsMidGame[hero].support;
       } else {
         roleItems = counterItemsMidGame[hero].core;
       }
-
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
       return [...allItems].concat([...roleItems]);
     }
@@ -768,14 +766,13 @@ export namespace hero {
       hero: string,
       isSupport: boolean
     ): any[] {
-      let allItems: [any];
+      const allItems = counterItemsLateGame[hero].all;
       let roleItems: [any];
       if (counterItemsLateGame[hero] == null) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return [];
       }
 
-      allItems = counterItemsLateGame[hero].all;
       if (isSupport) {
         roleItems = counterItemsLateGame[hero].support;
       } else {
@@ -838,7 +835,7 @@ export namespace hero {
       h: string,
       playerRole: PlayerRoles.DOTA_COACH_ROLE
     ): any {
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(h)) {
+      if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, h)) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return null;
       }
@@ -863,7 +860,10 @@ export namespace hero {
      * @returns
      */
     export function hasDefaultHeroBuild(heroName: string): boolean {
-      return HeroBuilds.heroBuilds.hasOwnProperty(heroName);
+      return Object.prototype.hasOwnProperty.call(
+        HeroBuilds.heroBuilds,
+        heroName
+      );
     }
 
     /**
@@ -875,7 +875,10 @@ export namespace hero {
     export function getDefaultHeroBuild(
       heroName: string
     ): HeroBuilds.HeroBuild {
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null;
+      if (
+        !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
+      )
+        return null;
 
       // Find hero build with right role
       return HeroBuilds.heroBuilds[heroName].builds[0];
@@ -888,8 +891,7 @@ export namespace hero {
      */
     export function getStandardAbilityBuild(h: string): string[] {
       //const h_ = hero.name.localizedNameToNPCName(h)
-
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(h)) {
+      if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, h)) {
         /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
         return [];
       }
@@ -898,6 +900,7 @@ export namespace hero {
 
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
       return [...abilityBuild];
+
     }
 
     /**
@@ -920,7 +923,10 @@ export namespace hero {
      * @return null if there is no such build
      */
     export function getHeroBuilds(heroName: string): HeroBuilds.HeroBuild[] {
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null;
+      if (
+        !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
+      )
+        return null;
 
       return HeroBuilds.heroBuilds[heroName].builds;
     }
@@ -935,7 +941,10 @@ export namespace hero {
       heroName: string,
       playerRole: PlayerRoles.DOTA_COACH_ROLE
     ): HeroBuilds.HeroBuild {
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null;
+      if (
+        !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
+      )
+        return null;
 
       const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
         role.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -958,7 +967,10 @@ export namespace hero {
      * @returns null in case of error
      */
     export function getHeroGuideLinks(heroName: string): string[] {
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return [];
+      if (
+        !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
+      )
+        return [];
 
       const result = [];
       for (const build of HeroBuilds.heroBuilds[heroName].builds) {
@@ -976,7 +988,11 @@ export namespace hero {
       heroName: string,
       playerRole: PlayerRoles.DOTA_COACH_ROLE
     ): HeroBuilds.HeroBuild {
-      if (!HeroBuilds.heroBuilds.hasOwnProperty(heroName)) return null;
+      if (
+        !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
+      )
+        return null;
+
 
       const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
         role.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -1017,7 +1033,7 @@ export namespace hero {
 
       for (const rule of guide_rules[r]) {
         for (const roleOfRules of rule) {
-          if (guides.hasOwnProperty(roleOfRules)) {
+          if (Object.prototype.hasOwnProperty.call(guides, roleOfRules)) {
             DotaLogger.log(
               `dota2.getClosestHeroBuild(): ${playerRole} => ${roleOfRules}`
             );
@@ -1038,10 +1054,11 @@ export namespace hero {
     export function getItemBuild(heroBuild: HeroBuilds.HeroBuild): any {
       let tooltips_build = {};
       let tooltips_hero = {};
-      if (heroBuild.hasOwnProperty("item_tooltips")) {
+
+      if (Object.prototype.hasOwnProperty.call(heroBuild, "item_tooltips")) {
         tooltips_build = heroBuild.item_tooltips;
       }
-      if (heroBuild.hasOwnProperty("item_tooltips")) {
+      if (Object.prototype.hasOwnProperty.call(heroBuild, "item_tooltips")) {
         tooltips_hero = heroBuild.item_tooltips;
       }
       const item_tooltips = {
@@ -1062,7 +1079,7 @@ export namespace hero {
 
       function transformItem(item: string, core_items: string[]) {
         const result = { item: item };
-        if (item_tooltips.hasOwnProperty("item"))
+        if (Object.prototype.hasOwnProperty.call(item_tooltips, "item"))
           result["info"] = item_tooltips[item];
         if (core_items.indexOf(item) != -1) result["isCore"] = true;
         return result;
@@ -1072,26 +1089,38 @@ export namespace hero {
         starting: build.items.starting.map((x) =>
           transformItem(x, build.items.core)
         ),
-        starting_bear: build.items.hasOwnProperty("starting_bear")
+        starting_bear: Object.prototype.hasOwnProperty.call(
+          build.items,
+          "starting_bear"
+        )
           ? build.items.starting_bear.map((x) =>
               transformItem(x, build.items.core_bear)
             )
           : null,
-        early_game: build.items.hasOwnProperty("early_game")
+        early_game: Object.prototype.hasOwnProperty.call(
+          build.items,
+          "early_game"
+        )
           ? build.items.early_game.map((x) =>
               transformItem(x, build.items.core)
             )
           : null,
-        mid_game: build.items.hasOwnProperty("mid_game")
+        mid_game: Object.prototype.hasOwnProperty.call(build.items, "mid_game")
           ? build.items.mid_game.map((x) => transformItem(x, build.items.core))
           : null,
-        late_game: build.items.hasOwnProperty("late_game")
+        late_game: Object.prototype.hasOwnProperty.call(
+          build.items,
+          "late_game"
+        )
           ? build.items.late_game.map((x) => transformItem(x, build.items.core))
           : null,
         situational: build.items.situational.map((x) =>
           transformItem(x, build.items.core)
         ),
-        situational_bear: build.items.hasOwnProperty("situational_bear")
+        situational_bear: Object.prototype.hasOwnProperty.call(
+          build.items,
+          "situational_bear"
+        )
           ? build.items.situational_bear.map((x) =>
               transformItem(x, build.items.core_bear)
             )
@@ -1312,12 +1341,20 @@ export namespace items {
    */
   export function getItemCooldown(item: string): number {
     DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Called`);
-    if (dota2Items.hasOwnProperty(`item_${item}`)) {
-      if (dota2Items[`item_${item}`].hasOwnProperty("cooldown")) {
+    if (Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`)) {
+      if (
+        Object.prototype.hasOwnProperty.call(
+          dota2Items[`item_${item}`],
+          "cooldown"
+        )
+      ) {
         return dota2Items[`item_${item}`].cooldown;
       }
     }
-
+    Object.prototype.hasOwnProperty.call(
+      dota2Items[`item_${item}`],
+      "cooldown"
+    );
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return -1;
   }
@@ -1358,9 +1395,8 @@ export namespace items {
         itemCode = `item_${itemCode}`;
       }
     }
-
-    if (dota2Items.hasOwnProperty(itemCode)) {
-      if (dota2Items[itemCode].hasOwnProperty("name")) {
+    if (Object.prototype.hasOwnProperty.call(dota2Items, itemCode)) {
+      if (Object.prototype.hasOwnProperty.call(dota2Items[itemCode], "name")) {
         //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): ${dota2Items[itemCode].name}`)
         return dota2Items[itemCode].name;
       }
@@ -1412,7 +1448,6 @@ export namespace items {
           isTracked = false;
           break;
         }
-        case "item_ultimate_scepter_2":
         case "item_mekansm":
         case "item_hood_of_defiance":
         case "item_lesser_crit":

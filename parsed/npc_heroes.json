@@ -5512,7 +5512,7 @@
 			"Team": "Bad",
 			"HeroOrderID": "25",
 			"ModelScale": "0.880000",
-			"VersusScale": "0.85	0000",
+			"VersusScale": "0.850000",
 			"SpectatorLoadoutScale": "0.94",
 			"HeroGlowColor": "78 127 208",
 			"PickSound": "slardar_slar_spawn_01",
