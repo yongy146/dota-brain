@@ -22,7 +22,7 @@
  */
 import {
   DOTA_COACH_GUIDE_ROLE,
-  DOTA_COACH_ROLE,
+  //DOTA_COACH_ROLE,
   STEAM_GUIDE_ROLE,
 } from "./playerRoles";
 
@@ -31,8 +31,7 @@ import {
  *
  */
 export interface HeroBuilds {
-  builds: HeroBuild[]; // The first build is see
-  n as the "standard build" by the app
+  builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
   item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
 }

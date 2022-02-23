@@ -109,15 +109,13 @@ export function getDotaCoachGuideRoleString(
 }
 
 export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
-    let result = ''
-    for (let i=0; i<roles.length; i++) {
-      result += getDotaCoachGuideRoleString(roles[i])
-      if (i<(roles.length-1)) {
-        result += ' & '
-      }
+  let result = "";
+  for (let i = 0; i < roles.length; i++) {
+    result += getDotaCoachGuideRoleString(roles[i]);
+    if (i < roles.length - 1) {
+      result += " & ";
     }
   }
-
   return result;
 }
 
