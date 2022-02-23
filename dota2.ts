@@ -402,7 +402,6 @@ export namespace ability {
         }*/
     if (a == null || Object.prototype.hasOwnProperty.call(a, "mana_cost"))
       return null;
-
     const manaCost = a.mana_cost;
     //DotaLogger.log("Dota2.hero.ability.getManaConsumption: mc='" + JSON.stringify(mc) + "'")
     // Format of data: "mc":["80","90","100","110"]
@@ -420,6 +419,7 @@ export namespace ability {
         return result*/
   }
 
+  
   /**
    *
    * @param heroAbility
@@ -752,12 +752,12 @@ export namespace hero {
         return [];
       }
 
+
       if (isSupport) {
         roleItems = counterItemsMidGame[hero].support;
       } else {
         roleItems = counterItemsMidGame[hero].core;
       }
-
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
       return [...allItems].concat([...roleItems]);
     }
@@ -900,6 +900,7 @@ export namespace hero {
 
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
       return [...abilityBuild];
+
     }
 
     /**
@@ -991,6 +992,7 @@ export namespace hero {
         !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
       )
         return null;
+
 
       const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
         role.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);

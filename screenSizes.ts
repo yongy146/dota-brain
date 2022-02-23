@@ -72,6 +72,7 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
     (frame.inGame.tracker.items.width / 219) * 175;
 
   return frame;
+
 }
 
 export function isScreenCustomized(screenSize: string): boolean {
