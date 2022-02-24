@@ -238,8 +238,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60 + 30 - 1,
     textMessage: "Smoke of deceit is available in the shop",
     audience: [Audience.ALL],
-     
-    
   },
   {
     category: "SmokeOfDeceit",
@@ -263,7 +261,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "AghanimsShard",
     audioFile: "general/AghanimsShard",
-    messageTime: 20 * 60 - 2,
+    messageTime: 15 * 60 - 2,
     textMessage: "Aghanim's Shard is available in the shop",
     audience: [Audience.ALL],
   },
