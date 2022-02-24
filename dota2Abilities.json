@@ -313,14 +313,14 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				75,
-				65,
-				55
+				100,
+				85,
+				70
 			],
 			"mana_cost": [
-				60,
-				120,
-				180
+				100,
+				125,
+				150
 			],
 			"name": "Culling Blade",
 			"description": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat.",
@@ -346,8 +346,8 @@
 			"talent_level": 1,
 			"description": "+1.5 Mana Regen"
 		},
-		"special_bonus_magic_resistance_12": {
-			"id": 6299,
+		"special_bonus_movement_speed_20": {
+			"id": 5918,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -363,10 +363,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+12% Magic Resistance"
+			"description": "+20 Movement Speed"
 		},
-		"special_bonus_movement_speed_25": {
-			"id": 5919,
+		"special_bonus_unique_axe_6": {
+			"id": 670,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -382,7 +382,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Movement Speed"
+			"description": "+{s:bonus_slow}% Battle Hunger Slow"
 		},
 		"special_bonus_unique_axe_4": {
 			"id": 6991,
@@ -420,10 +420,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+150 Culling Blade Threshold"
+			"description": "+{s:bonus_damage} Culling Blade Damage"
 		},
-		"special_bonus_hp_regen_20": {
-			"id": 6079,
+		"special_bonus_unique_axe_3": {
+			"id": 6815,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -439,7 +439,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+20 Health Regen"
+			"description": "+{s:bonus_armor_per_stack} Bonus Armor per Culling Blade Stack"
 		},
 		"special_bonus_unique_axe_2": {
 			"id": 6608,
@@ -477,7 +477,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+100 Battle Hunger DPS"
+			"description": "{s:bonus_armor_multiplier}x Battle Hunger Armor Multiplier"
 		}
 	},
 	"npc_dota_hero_bane": {
@@ -712,7 +712,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+150 Brain Sap Damage/Heal"
+			"description": "+200 Brain Sap Damage/Heal"
 		},
 		"special_bonus_unique_bane_3": {
 			"id": 6609,
@@ -794,6 +794,21 @@
 			"description": "Strygwyr becomes frenzied when blood is spilled.",
 			"is_ultimate": false,
 			"is_passive": "yes"
+		},
+		"bloodseeker_blood_mist": {
+			"id": 902,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				4
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "Blood Mist",
+			"description": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no"
 		},
 		"bloodseeker_rupture": {
 			"id": 5018,
@@ -907,8 +922,8 @@
 			"talent_level": 3,
 			"description": "+475 Rupture Cast Range"
 		},
-		"special_bonus_hp_400": {
-			"id": 5976,
+		"special_bonus_spell_lifesteal_15": {
+			"id": 6550,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -924,10 +939,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+400 Health"
+			"description": "15% Spell Lifesteal"
 		},
-		"special_bonus_unique_bloodseeker": {
-			"id": 6230,
+		"special_bonus_unique_bloodseeker_rupture_charges": {
+			"id": 905,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -943,7 +958,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-4s Blood Rite Cooldown"
+			"description": "{s:value} Rupture Charges"
 		},
 		"special_bonus_unique_bloodseeker_4": {
 			"id": 6809,
@@ -1066,8 +1081,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_hp_200": {
-			"id": 5959,
+		"special_bonus_hp_250": {
+			"id": 5903,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -1083,7 +1098,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+200 Health"
+			"description": "+250 Health"
 		},
 		"special_bonus_unique_crystal_maiden_6": {
 			"id": 772,
@@ -1121,7 +1136,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+6% Magic Resistance Arcane Aura"
+			"description": "+{s:bonus_mana_per_cast} Arcane Aura Mana per Cast"
 		},
 		"special_bonus_unique_crystal_maiden_5": {
 			"id": 7654,
@@ -1569,8 +1584,8 @@
 			"talent_level": 1,
 			"description": "+80 Fissure Damage"
 		},
-		"special_bonus_movement_speed_25": {
-			"id": 5919,
+		"special_bonus_unique_earthshaker_totem_damage": {
+			"id": 918,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -1586,7 +1601,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Movement Speed"
+			"description": "+{s:bonus_totem_damage_percentage}% Enchant Totem Damage"
 		},
 		"special_bonus_unique_earthshaker_6": {
 			"id": 858,
@@ -1717,7 +1732,10 @@
 				60
 			],
 			"mana_cost": [
-				140
+				140,
+				130,
+				120,
+				110
 			],
 			"name": "Healing Ward",
 			"description": "Of the rituals learned at the Isle of Masks, tending wounds with a bit of voodoo magic has proven to be quite useful.",
@@ -1765,7 +1783,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				140
+				130
 			],
 			"mana_cost": [
 				200,
@@ -1834,8 +1852,8 @@
 			"talent_level": 2,
 			"description": "-20s Healing Ward Cooldown"
 		},
-		"special_bonus_attack_speed_20": {
-			"id": 5906,
+		"special_bonus_unique_juggernaut_4": {
+			"id": 7394,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -1851,10 +1869,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20 Attack Speed"
+			"description": "+{s:bonus_duration}s Blade Fury Duration"
 		},
-		"special_bonus_armor_8": {
-			"id": 5934,
+		"special_bonus_unique_juggernaut_blade_dance_lifesteal": {
+			"id": 915,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -1870,7 +1888,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+8 Armor"
+			"description": "+{s:bonus_blade_dance_lifesteal}% Blade Dance Lifesteal"
 		},
 		"special_bonus_unique_juggernaut_3": {
 			"id": 7021,
@@ -1889,7 +1907,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+160 Blade Fury DPS"
+			"description": "+150 Blade Fury DPS"
 		},
 		"special_bonus_hp_475": {
 			"id": 429,
@@ -1943,9 +1961,9 @@
 			],
 			"mana_cost": [
 				80,
-				105,
-				130,
-				155
+				95,
+				110,
+				125
 			],
 			"name": "Starstorm",
 			"description": "The Goddess breaks the strata to empower her Princess in the time of need.",
@@ -2041,7 +2059,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+100 Leap Distance"
+			"description": "+{s:bonus_leap_distance} Leap Distance"
 		},
 		"special_bonus_unique_mirana_5": {
 			"id": 702,
@@ -2060,7 +2078,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Moonlight Shadow gives +20 Evasion"
+			"description": "Moonlight Shadow gives +20% Evasion"
 		},
 		"special_bonus_unique_mirana_1": {
 			"id": 6013,
@@ -2079,7 +2097,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+80 Leap Attack Speed"
+			"description": "+{s:bonus_leap_speedbonus_as} Leap Attack Speed"
 		},
 		"special_bonus_unique_mirana_4": {
 			"id": 6692,
@@ -2233,10 +2251,7 @@
 			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
-				0,
-				0,
-				0,
-				0
+				10
 			],
 			"mana_cost": [
 				0,
@@ -2268,8 +2283,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_spell_amplify_8": {
-			"id": 5949,
+		"special_bonus_unique_nevermore_7": {
+			"id": 999,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -2285,7 +2300,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+8% Spell Amplification"
+			"description": "+{s:bonus_stack_bonus_damage} Shadowraze Stack Damage"
 		},
 		"special_bonus_attack_speed_25": {
 			"id": 6016,
@@ -2380,7 +2395,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.4s Requiem Fear per line."
+			"description": "+0.4s Requiem Fear per line"
 		},
 		"special_bonus_unique_nevermore_5": {
 			"id": 6912,
@@ -2757,9 +2772,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				16,
-				12,
-				8,
+				13,
+				10,
+				7,
 				4
 			],
 			"mana_cost": [
@@ -2807,8 +2822,8 @@
 			"talent_level": 1,
 			"description": "+150 Health"
 		},
-		"special_bonus_attack_speed_15": {
-			"id": 6119,
+		"special_bonus_unique_phantom_lancer_2": {
+			"id": 6400,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -2824,10 +2839,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Attack Speed"
+			"description": "+{s:bonus_agility_duration} Phantom Rush Bonus Agi Duration"
 		},
-		"special_bonus_evasion_16": {
-			"id": 452,
+		"special_bonus_strength_15": {
+			"id": 6145,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -2843,7 +2858,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "16% Evasion"
+			"description": "+15 Strength"
 		},
 		"special_bonus_unique_phantom_lancer_5": {
 			"id": 563,
@@ -2968,9 +2983,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				19,
-				17,
+				16,
 				15,
+				14,
 				13
 			],
 			"mana_cost": [
@@ -3031,7 +3046,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				80
+				75
 			],
 			"mana_cost": [
 				100,
@@ -3043,8 +3058,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_unique_puck": {
-			"id": 6219,
+		"special_bonus_unique_puck_8": {
+			"id": 797,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -3060,7 +3075,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+300 Illusory Orb Distance"
+			"description": "-2s Illusory Orb Cooldown"
 		},
 		"special_bonus_unique_puck_7": {
 			"id": 767,
@@ -3081,8 +3096,8 @@
 			"talent_level": 1,
 			"description": "+0.75s Waning Rift Silence Duration"
 		},
-		"special_bonus_spell_amplify_12": {
-			"id": 6326,
+		"special_bonus_unique_puck": {
+			"id": 6219,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -3098,10 +3113,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+12% Spell Amplification"
+			"description": "-{s:value}s Dream Coil Cooldown"
 		},
-		"special_bonus_unique_puck_5": {
-			"id": 348,
+		"special_bonus_unique_puck_6": {
+			"id": 407,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -3117,7 +3132,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Phase Shift Attack"
+			"description": "+{s:bonus_damage} Waning Rift Damge"
 		},
 		"special_bonus_unique_puck_2": {
 			"id": 6402,
@@ -3138,8 +3153,8 @@
 			"talent_level": 3,
 			"description": "-6s Waning Rift Cooldown"
 		},
-		"special_bonus_unique_puck_8": {
-			"id": 797,
+		"special_bonus_unique_puck_4": {
+			"id": 7057,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -3155,10 +3170,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-4s Illusory Orb Cooldown"
+			"description": "+{s:bonus_coil_stun_duration}s Dream Coil Stun Duration"
 		},
-		"special_bonus_unique_puck_6": {
-			"id": 407,
+		"special_bonus_unique_puck_5": {
+			"id": 348,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -3174,7 +3189,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+250 Waning Rift AoE and Range"
+			"description": "Dream Coil Pierces Magic Immunity"
 		},
 		"special_bonus_unique_puck_3": {
 			"id": 6855,
@@ -3241,21 +3256,18 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0,
-				0,
-				0,
-				0
+				30,
+				25,
+				20,
+				15
 			],
 			"mana_cost": [
-				0,
-				0,
-				0,
-				0
+				50
 			],
 			"name": "Flesh Heap",
 			"description": "The Butcher gives new meaning to the words 'meat shield.'",
 			"is_ultimate": false,
-			"is_passive": "yes"
+			"is_passive": "no"
 		},
 		"pudge_eject": {
 			"id": 322,
@@ -3606,8 +3618,8 @@
 			"talent_level": 2,
 			"description": "+14 Strength"
 		},
-		"special_bonus_unique_razor_3": {
-			"id": 6860,
+		"special_bonus_unique_razor_5": {
+			"id": 567,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -3623,7 +3635,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+6s Static Link Drain Duration"
+			"description": "+21% Storm Surge Move Speed"
 		},
 		"special_bonus_unique_razor_2": {
 			"id": 6408,
@@ -3680,7 +3692,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1 Eye of the Storm Target"
+			"description": "2 Static Link Charges"
 		}
 	},
 	"npc_dota_hero_sand_king": {
@@ -3716,7 +3728,10 @@
 				22
 			],
 			"mana_cost": [
-				75
+				70,
+				75,
+				80,
+				85
 			],
 			"name": "Sand Storm",
 			"description": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste.",
@@ -3782,8 +3797,8 @@
 			"talent_level": 1,
 			"description": "+20 Sand Storm DPS"
 		},
-		"special_bonus_hp_200": {
-			"id": 5959,
+		"special_bonus_unique_sand_king_6": {
+			"id": 497,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -3799,7 +3814,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+200 Health"
+			"description": "+12% Caustic Finale Slow"
 		},
 		"special_bonus_unique_sand_king_3": {
 			"id": 6530,
@@ -3818,10 +3833,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "150 Sand Storm Radius"
+			"description": "+150 Sand Storm Radius"
 		},
-		"special_bonus_unique_sand_king_6": {
-			"id": 497,
+		"special_bonus_unique_sand_king_8": {
+			"id": 890,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -3837,7 +3852,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20% Caustic Finale Slow"
+			"description": "+100 Caustic Finale Damage"
 		},
 		"special_bonus_unique_sand_king_7": {
 			"id": 498,
@@ -3858,8 +3873,8 @@
 			"talent_level": 3,
 			"description": "-2s Burrowstrike Cooldown"
 		},
-		"special_bonus_unique_sand_king_8": {
-			"id": 890,
+		"special_bonus_unique_sand_king_5": {
+			"id": 6872,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -3875,7 +3890,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+120 Caustic Finale Damage"
+			"description": "+{s:bonus_epicenter_radius} Epicenter Radius"
 		},
 		"special_bonus_unique_sand_king": {
 			"id": 6207,
@@ -3995,8 +4010,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_unique_storm_spirit_5": {
-			"id": 6916,
+		"special_bonus_attack_speed_20": {
+			"id": 5906,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -4012,10 +4027,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+40 Static Remnant Damage"
+			"description": "+20 Attack Speed"
 		},
-		"special_bonus_mp_regen_250": {
-			"id": 7873,
+		"special_bonus_mp_regen_175": {
+			"id": 6926,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -4031,7 +4046,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+2.5 Mana Regen"
+			"description": "+1.75 Mana Regen"
 		},
 		"special_bonus_hp_250": {
 			"id": 5903,
@@ -4052,8 +4067,8 @@
 			"talent_level": 2,
 			"description": "+250 Health"
 		},
-		"special_bonus_attack_speed_25": {
-			"id": 6016,
+		"special_bonus_unique_storm_spirit_5": {
+			"id": 6916,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -4069,7 +4084,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Attack Speed"
+			"description": "+50 Static Remnant Damage"
 		},
 		"special_bonus_unique_storm_spirit": {
 			"id": 6167,
@@ -4267,8 +4282,8 @@
 			"talent_level": 1,
 			"description": "+15 Attack Speed"
 		},
-		"special_bonus_lifesteal_15": {
-			"id": 6289,
+		"special_bonus_unique_sven_3": {
+			"id": 6911,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -4284,7 +4299,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "15% Lifesteal"
+			"description": "-15s God's Strength Cooldown"
 		},
 		"special_bonus_unique_sven_8": {
 			"id": 763,
@@ -4305,8 +4320,8 @@
 			"talent_level": 2,
 			"description": "+25% Great Cleave Damage"
 		},
-		"special_bonus_movement_speed_25": {
-			"id": 5919,
+		"special_bonus_unique_sven_6": {
+			"id": 734,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -4322,7 +4337,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+25 Movement Speed"
+			"description": "+8% Warcry Movement Speed"
 		},
 		"special_bonus_unique_sven_7": {
 			"id": 716,
@@ -4555,7 +4570,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20% Tree Grab Unit Damage Bonus"
+			"description": "+{s:bonus_tree_bonus_damage_pct}% Tree Grow Bonus Damage"
 		},
 		"special_bonus_unique_tiny": {
 			"id": 6153,
@@ -4955,7 +4970,7 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				40
+				30
 			],
 			"mana_cost": [
 				150
@@ -4984,8 +4999,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_mp_regen_150": {
-			"id": 7132,
+		"special_bonus_unique_windranger_3": {
+			"id": 6562,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -5001,7 +5016,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+1.5 Mana Regen"
+			"description": "-{s:bonus_damage_reduction}% Powershot Damage Reduction"
 		},
 		"special_bonus_unique_windranger_9": {
 			"id": 7890,
@@ -5022,8 +5037,8 @@
 			"talent_level": 1,
 			"description": "-2s Shackleshot Cooldown"
 		},
-		"special_bonus_unique_windranger_3": {
-			"id": 6562,
+		"special_bonus_unique_windranger_4": {
+			"id": 6992,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -5039,7 +5054,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+100 Powershot Damage"
+			"description": "-4s Windrun Cooldown"
 		},
 		"special_bonus_unique_windranger": {
 			"id": 6144,
@@ -5058,7 +5073,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Undispellable Windrun"
+			"description": "+{s:bonus_radius} Windrun Radius"
 		},
 		"special_bonus_unique_windranger_6": {
 			"id": 7062,
@@ -5146,7 +5161,10 @@
 				1.6
 			],
 			"mana_cost": [
-				80
+				80,
+				85,
+				90,
+				95
 			],
 			"name": "Arc Lightning",
 			"description": "Arc Lightning is Zeus' favorite spell to use against puny mortals.",
@@ -5174,9 +5192,45 @@
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
+		"zuus_heavenly_jump": {
+			"id": 641,
+			"sequence": "Ability3",
+			"is_talent": false,
+			"cooldown": [
+				25,
+				20,
+				15,
+				10
+			],
+			"mana_cost": [
+				50,
+				60,
+				70,
+				80
+			],
+			"name": "Heavenly Jump",
+			"description": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"zuus_cloud": {
+			"id": 6325,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				45
+			],
+			"mana_cost": [
+				325
+			],
+			"name": "Nimbus",
+			"description": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
 		"zuus_static_field": {
 			"id": 5112,
-			"sequence": "Ability3",
+			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
 				0,
@@ -5194,36 +5248,6 @@
 			"description": "The air crackles with static when the Thundergod walks the world.",
 			"is_ultimate": false,
 			"is_passive": "yes"
-		},
-		"zuus_cloud": {
-			"id": 6325,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				45
-			],
-			"mana_cost": [
-				325
-			],
-			"name": "Nimbus",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "no"
-		},
-		"zuus_heavenly_jump": {
-			"id": 641,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				6
-			],
-			"mana_cost": [
-				75
-			],
-			"name": "Heavenly Jump",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "no"
 		},
 		"zuus_thundergods_wrath": {
 			"id": 5113,
@@ -5318,7 +5342,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+1.2% Static Field Damage"
+			"description": "+{s:bonus_targets} Heavenly Jump Target"
 		},
 		"special_bonus_unique_zeus_4": {
 			"id": 611,
@@ -5445,9 +5469,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
+				30,
 				24,
-				20,
-				16,
+				18,
 				12
 			],
 			"mana_cost": [
@@ -5560,8 +5584,8 @@
 			"talent_level": 1,
 			"description": "+0.4s Torrent Knock Up/Stun Duration"
 		},
-		"special_bonus_strength_16": {
-			"id": 447,
+		"special_bonus_unique_kunkka_6": {
+			"id": 745,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -5577,7 +5601,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+16 Strength"
+			"description": "+{s:bonus_ally_ms}% X Mark the Spot Move Speed"
 		},
 		"special_bonus_unique_kunkka_2": {
 			"id": 6385,
@@ -5867,7 +5891,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+30/{s:value2}% Fiery Soul Per Stack"
+			"description": "+15/{s:value2}% Fiery Soul Per Stack"
 		},
 		"special_bonus_unique_lina_6": {
 			"id": 844,
@@ -5991,9 +6015,9 @@
 				60
 			],
 			"mana_cost": [
-				200,
-				350,
-				500
+				180,
+				300,
+				420
 			],
 			"name": "Chain Frost",
 			"description": "Almost universally considered the ultimate in frost magic, Ethreain's orb of frozen death strikes fear into those who dare stand against him.",
@@ -6228,8 +6252,8 @@
 			],
 			"mana_cost": [
 				200,
-				420,
-				650
+				400,
+				600
 			],
 			"name": "Finger of Death",
 			"description": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force.",
@@ -6581,7 +6605,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+1 Serpent Wards Max HP"
+			"description": "+{s:value2} Serpent Wards Max HP"
 		},
 		"special_bonus_unique_shadow_shaman_3": {
 			"id": 6502,
@@ -6788,7 +6812,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+125 Slithereen Crush Damage"
+			"description": "+150 Slithereen Crush Damage"
 		},
 		"special_bonus_unique_slardar_5": {
 			"id": 504,
@@ -6807,7 +6831,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-4 Corrosive Haze Armor"
+			"description": "-{s:bonus_armor_reduction} Corrosive Haze Armor"
 		},
 		"special_bonus_unique_slardar_4": {
 			"id": 7871,
@@ -7165,7 +7189,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				80
+				75
 			],
 			"mana_cost": [
 				200,
@@ -7342,7 +7366,10 @@
 				11
 			],
 			"mana_cost": [
-				75
+				65,
+				70,
+				75,
+				80
 			],
 			"name": "Smoke Screen",
 			"description": "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents.",
@@ -7375,7 +7402,7 @@
 				12
 			],
 			"mana_cost": [
-				50
+				55
 			],
 			"name": "Tricks of the Trade",
 			"description": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
@@ -7418,8 +7445,8 @@
 			"is_ultimate": true,
 			"is_passive": "yes"
 		},
-		"special_bonus_strength_8": {
-			"id": 5982,
+		"special_bonus_unique_riki_7": {
+			"id": 474,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -7435,10 +7462,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+8 Strength"
+			"description": "+75 Smoke Screen AoE"
 		},
-		"special_bonus_attack_speed_20": {
-			"id": 5906,
+		"special_bonus_unique_riki_2": {
+			"id": 6193,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -7454,7 +7481,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Attack Speed"
+			"description": "+{s:bonus_slow}s Blink Strike Slow"
 		},
 		"special_bonus_unique_riki_8": {
 			"id": 782,
@@ -7475,8 +7502,8 @@
 			"talent_level": 2,
 			"description": "8% Cloak and Dagger Movement Speed"
 		},
-		"special_bonus_unique_riki_2": {
-			"id": 6193,
+		"special_bonus_unique_riki_3": {
+			"id": 6865,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -7551,8 +7578,8 @@
 			"talent_level": 4,
 			"description": "-4 Tricks of the Trade Cooldown"
 		},
-		"special_bonus_unique_riki_7": {
-			"id": 474,
+		"special_bonus_unique_riki_5": {
+			"id": 6867,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -7568,7 +7595,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+175 Smoke Screen AoE"
+			"description": "Tricks of the Trade Applies a Basic Dispel"
 		}
 	},
 	"npc_dota_hero_enigma": {
@@ -7862,18 +7889,18 @@
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"tinker_march_of_the_machines": {
-			"id": 5152,
+		"tinker_warp_grenade": {
+			"id": 909,
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				35
+				15
 			],
 			"mana_cost": [
-				190
+				150
 			],
-			"name": "March of the Machines",
-			"description": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order.",
+			"name": "Warp Flare",
+			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
@@ -7949,8 +7976,8 @@
 			"talent_level": 1,
 			"description": "+8% Manacost/Manaloss Reduction"
 		},
-		"special_bonus_unique_tinker_5": {
-			"id": 413,
+		"special_bonus_unique_tinker_7": {
+			"id": 8039,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -7966,7 +7993,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-0.5s Keen Conveyance Channel Time"
+			"description": "+125 Defense Matrix Damage Absorbed"
 		},
 		"special_bonus_unique_tinker_6": {
 			"id": 765,
@@ -8006,8 +8033,8 @@
 			"talent_level": 3,
 			"description": "+10% Spell Amplification"
 		},
-		"special_bonus_unique_tinker_7": {
-			"id": 8039,
+		"special_bonus_unique_tinker_5": {
+			"id": 413,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -8023,7 +8050,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+150 Defense Matrix Damage Absorbed"
+			"description": "-0.5s Keen Conveyance Channel Time"
 		},
 		"special_bonus_unique_tinker": {
 			"id": 6152,
@@ -8112,7 +8139,7 @@
 				14
 			],
 			"mana_cost": [
-				25
+				50
 			],
 			"name": "Take Aim",
 			"description": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
@@ -8124,7 +8151,7 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				16
+				10
 			],
 			"mana_cost": [
 				50
@@ -8530,7 +8557,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+0.5  Heartstopper Aura"
+			"description": "+0.5% Heartstopper Aura"
 		},
 		"special_bonus_unique_necrophos": {
 			"id": 6010,
@@ -8601,9 +8628,9 @@
 			],
 			"mana_cost": [
 				70,
+				80,
 				90,
-				110,
-				130
+				100
 			],
 			"name": "Upheaval",
 			"description": "Demnok manipulates space-time, impairing entire armies.",
@@ -8663,7 +8690,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+50 Chaotic Offering Golems Movement Speed"
+			"description": "+{s:bonus_duration} Shadow Word Duration"
 		},
 		"special_bonus_unique_warlock_10": {
 			"id": 845,
@@ -8701,7 +8728,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-5s Shadow Word Cooldown"
+			"description": "-4s Shadow Word Cooldown"
 		},
 		"special_bonus_unique_warlock_4": {
 			"id": 6505,
@@ -8928,8 +8955,8 @@
 			"talent_level": 1,
 			"description": "+1.75 Mana Regen"
 		},
-		"special_bonus_movement_speed_30": {
-			"id": 6141,
+		"special_bonus_unique_beastmaster_5": {
+			"id": 506,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -8945,7 +8972,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+30 Movement Speed"
+			"description": "+{s:bonus_ms} Movespeed Beastmaster Controlled"
 		},
 		"special_bonus_unique_beastmaster_9": {
 			"id": 901,
@@ -9094,9 +9121,9 @@
 				7
 			],
 			"mana_cost": [
-				85,
 				100,
-				115,
+				110,
+				120,
 				130
 			],
 			"name": "Scream Of Pain",
@@ -9368,7 +9395,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-6 Venomous Gale CD"
+			"description": "-6s Venomous Gale CD"
 		},
 		"special_bonus_hp_175": {
 			"id": 6034,
@@ -9465,8 +9492,8 @@
 			"talent_level": 3,
 			"description": "-1.5s Plague Ward Cooldown"
 		},
-		"special_bonus_unique_venomancer_6": {
-			"id": 6999,
+		"special_bonus_unique_venomancer_5": {
+			"id": 6981,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -9482,7 +9509,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+640 Poison Nova AoE"
+			"description": "Poison Nova reduces {s:bonus_aspd_slow} Attack Speed"
 		},
 		"special_bonus_unique_venomancer": {
 			"id": 6058,
@@ -9654,7 +9681,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-1.5s Time Walk"
+			"description": "-1.5s Time Walk Cooldown"
 		},
 		"special_bonus_unique_faceless_void_8": {
 			"id": 868,
@@ -10239,9 +10266,9 @@
 			],
 			"mana_cost": [
 				35,
-				40,
 				45,
-				50
+				55,
+				65
 			],
 			"name": "Phantom Strike",
 			"description": "Mortred's silken veil is the last thing her unfortunate target sees.",
@@ -10340,8 +10367,8 @@
 			"talent_level": 1,
 			"description": "-2s Stifling Dagger Cooldown"
 		},
-		"special_bonus_lifesteal_12": {
-			"id": 433,
+		"special_bonus_lifesteal_15": {
+			"id": 6289,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -10357,7 +10384,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "12% Lifesteal"
+			"description": "15% Lifesteal"
 		},
 		"special_bonus_unique_phantom_assassin_6": {
 			"id": 490,
@@ -10378,8 +10405,8 @@
 			"talent_level": 2,
 			"description": "+250 Phantom Strike Cast Range"
 		},
-		"special_bonus_corruption_3": {
-			"id": 7383,
+		"special_bonus_unique_phantom_assassin_5": {
+			"id": 491,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -10395,7 +10422,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-3 Armor Corruption"
+			"description": "+{s:bonus_attack_factor}% Stifling Dagger Damage"
 		},
 		"special_bonus_unique_phantom_assassin_3": {
 			"id": 6848,
@@ -10485,7 +10512,7 @@
 				6
 			],
 			"mana_cost": [
-				60
+				80
 			],
 			"name": "Decrepify",
 			"description": "A now-mastered relic from his childhood, Pugna delights in banishing others into the Nether Realm, whether for good, evil, or simple enjoyment.",
@@ -10582,7 +10609,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-1s Netherblast Cooldown"
+			"description": "-1s Nether Blast Cooldown"
 		},
 		"special_bonus_unique_pugna_6": {
 			"id": 6859,
@@ -10677,7 +10704,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.75 Netherward Damage Per Mana"
+			"description": "+1.75 Nether Ward Damage Per Mana"
 		}
 	},
 	"npc_dota_hero_templar_assassin": {
@@ -10828,8 +10855,8 @@
 			"talent_level": 1,
 			"description": "+110 Psionic Trap Damage"
 		},
-		"special_bonus_evasion_15": {
-			"id": 5972,
+		"special_bonus_evasion_20": {
+			"id": 5973,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -10845,7 +10872,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "15% Evasion"
+			"description": "20% Evasion"
 		},
 		"special_bonus_unique_templar_assassin_8": {
 			"id": 757,
@@ -10864,7 +10891,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+120 Psi Blades Range"
+			"description": "+120 Psi Blades Attack and Spill Range"
 		},
 		"special_bonus_unique_templar_assassin_4": {
 			"id": 6939,
@@ -10940,7 +10967,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+8 Refraction Instances"
+			"description": "+7 Refraction Instances"
 		}
 	},
 	"npc_dota_hero_viper": {
@@ -11036,8 +11063,8 @@
 			"talent_level": 1,
 			"description": "+20 Attack Speed"
 		},
-		"special_bonus_spell_lifesteal_8": {
-			"id": 6565,
+		"special_bonus_unique_viper_1": {
+			"id": 6156,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -11053,7 +11080,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "8% Spell Lifesteal"
+			"description": "+13 Corrosive Skin Damage"
 		},
 		"special_bonus_unique_viper_3": {
 			"id": 6819,
@@ -11072,7 +11099,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+70 Nethertoxin Max Damage"
+			"description": "+40 Nethertoxin Min/Max Damage"
 		},
 		"special_bonus_hp_300": {
 			"id": 5993,
@@ -11112,8 +11139,8 @@
 			"talent_level": 3,
 			"description": "+80 Viper Strike DPS"
 		},
-		"special_bonus_attack_damage_70": {
-			"id": 5942,
+		"special_bonus_unique_viper_4": {
+			"id": 6820,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -11129,7 +11156,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+70 Damage"
+			"description": "+{s:bonus_magic_resistance} Poison Attack Magic Resistance Reduction"
 		},
 		"special_bonus_unique_viper_5": {
 			"id": 645,
@@ -11308,7 +11335,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-3.5s Lucent Beam Cooldown"
+			"description": "-3.0s Lucent Beam Cooldown"
 		},
 		"special_bonus_unique_luna_6": {
 			"id": 770,
@@ -11327,7 +11354,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-20s Eclipse Cooldown"
+			"description": "-25s Eclipse Cooldown"
 		},
 		"special_bonus_unique_luna_8": {
 			"id": 848,
@@ -11346,7 +11373,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "Global Lunar Blessing"
+			"description": "Lunar Blessing Global and +{s:bonus_bonus_night_vision} Night Vision"
 		},
 		"special_bonus_unique_luna_1": {
 			"id": 6180,
@@ -11598,7 +11625,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+150 Elder Dragon Form Attack Range"
+			"description": "+175 Elder Dragon Form Attack Range"
 		},
 		"special_bonus_strength_20": {
 			"id": 6080,
@@ -11655,7 +11682,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+375 AoE Dragon Tail During Elder Dragon Form"
+			"description": "+400 AoE Dragon Tail During Elder Dragon Form"
 		}
 	},
 	"npc_dota_hero_dazzle": {
@@ -11665,9 +11692,9 @@
 			"is_talent": false,
 			"cooldown": [
 				27,
-				24,
-				21,
-				18
+				23,
+				19,
+				15
 			],
 			"mana_cost": [
 				110,
@@ -11706,25 +11733,22 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				14,
 				12,
+				11,
 				10,
-				8
+				9
 			],
 			"mana_cost": [
-				90,
-				100,
-				110,
-				120
+				90
 			],
 			"name": "Shadow Wave",
 			"description": "While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success.",
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"dazzle_bad_juju": {
-			"id": 7304,
-			"sequence": "Ability6",
+		"dazzle_good_juju": {
+			"id": 933,
+			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
 				0,
@@ -11738,10 +11762,27 @@
 				0,
 				0
 			],
-			"name": "Bad Juju",
+			"name": "Good Juju",
 			"description": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
 			"is_ultimate": true,
 			"is_passive": "yes"
+		},
+		"dazzle_bad_juju": {
+			"id": 7304,
+			"sequence": "Ability6",
+			"is_talent": false,
+			"cooldown": [
+				15
+			],
+			"mana_cost": [
+				50,
+				75,
+				100
+			],
+			"name": "Bad Juju",
+			"description": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
+			"is_ultimate": true,
+			"is_passive": "no"
 		},
 		"special_bonus_attack_damage_50": {
 			"id": 5941,
@@ -11781,8 +11822,8 @@
 			"talent_level": 1,
 			"description": "+1.75 Mana Regen"
 		},
-		"special_bonus_strength_20": {
-			"id": 6080,
+		"special_bonus_unique_dazzle_2": {
+			"id": 6232,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -11798,7 +11839,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20 Strength"
+			"description": "+50 Shadow Wave Heal / Damage"
 		},
 		"special_bonus_attack_speed_60": {
 			"id": 5908,
@@ -12112,7 +12153,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+100 Rocket Flare Damage"
+			"description": "Power Cogs Leash Units Inside"
 		},
 		"special_bonus_unique_clockwerk_6": {
 			"id": 614,
@@ -12451,10 +12492,7 @@
 				37
 			],
 			"mana_cost": [
-				130,
-				140,
-				150,
-				160
+				150
 			],
 			"name": "Nature's Call",
 			"description": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild.",
@@ -12469,17 +12507,17 @@
 				85
 			],
 			"mana_cost": [
+				150,
 				175,
-				225,
-				275
+				200
 			],
 			"name": "Wrath of Nature",
 			"description": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_attack_damage_20": {
-			"id": 5960,
+		"special_bonus_unique_furion_6": {
+			"id": 926,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -12495,7 +12533,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Damage"
+			"description": "-8s Nature's Call Cooldown"
 		},
 		"special_bonus_unique_furion_5": {
 			"id": 470,
@@ -12554,8 +12592,8 @@
 			"talent_level": 2,
 			"description": "+5 Treants Summoned"
 		},
-		"special_bonus_armor_8": {
-			"id": 5934,
+		"special_bonus_unique_furion_7": {
+			"id": 927,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -12571,7 +12609,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+8 Armor"
+			"description": "Sprout Leashes"
 		},
 		"special_bonus_unique_furion_4": {
 			"id": 6702,
@@ -12590,7 +12628,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "75% Miss chance for Sprouted units"
+			"description": "100% Miss chance for Sprouted units"
 		},
 		"special_bonus_unique_furion_3": {
 			"id": 6539,
@@ -12637,6 +12675,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				21,
+				20,
+				19,
 				18
 			],
 			"mana_cost": [
@@ -13241,8 +13282,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_magic_resistance_12": {
-			"id": 6299,
+		"special_bonus_unique_clinkz_1": {
+			"id": 6104,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -13258,10 +13299,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+12% Magic Resistance"
+			"description": "+20 Searing Arrows Damage"
 		},
-		"special_bonus_mp_regen_175": {
-			"id": 6926,
+		"special_bonus_unique_clinkz_10": {
+			"id": 523,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -13277,10 +13318,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+1.75 Mana Regen"
+			"description": "-3s Skeleton Walk Cooldown"
 		},
-		"special_bonus_unique_clinkz_10": {
-			"id": 523,
+		"special_bonus_unique_clinkz_8": {
+			"id": 495,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -13296,10 +13337,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-5s Skeleton Walk Cooldown"
+			"description": "+25% Death Pact Health"
 		},
-		"special_bonus_unique_clinkz_1": {
-			"id": 6104,
+		"special_bonus_unique_clinkz_2": {
+			"id": 6231,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -13315,7 +13356,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+30 Searing Arrows Damage"
+			"description": "Death Pact Steal creep abilities"
 		},
 		"special_bonus_attack_range_125": {
 			"id": 5944,
@@ -13355,8 +13396,8 @@
 			"talent_level": 3,
 			"description": "+3 Burning Barrage arrows"
 		},
-		"special_bonus_unique_clinkz_8": {
-			"id": 495,
+		"special_bonus_unique_clinkz_4": {
+			"id": 7878,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -13372,7 +13413,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+50/{s:value2}% Death Pact Health/Damage"
+			"description": "+{s:bonus_damage_pct}% Burning Barrage Damage"
 		},
 		"special_bonus_unique_clinkz_3": {
 			"id": 6620,
@@ -13416,8 +13457,8 @@
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"omniknight_repel": {
-			"id": 5264,
+		"omniknight_martyr": {
+			"id": 895,
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
@@ -13433,13 +13474,31 @@
 				110
 			],
 			"name": "Heavenly Grace",
-			"description": "When faced with the pit of sacrifice, Purist's resilience to magic was tested and affirmed.",
+			"description": "The All Seeing One casts down his protection over those that Purist calls friend.",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"omniknight_hammer_of_purity": {
+			"id": 656,
+			"sequence": "Ability3",
+			"is_talent": false,
+			"cooldown": [
+				10
+			],
+			"mana_cost": [
+				50,
+				60,
+				70,
+				80
+			],
+			"name": "Hammer of Purity",
+			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
 		"omniknight_degen_aura": {
 			"id": 5265,
-			"sequence": "Ability3",
+			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
 				0,
@@ -13457,21 +13516,6 @@
 			"description": "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith.",
 			"is_ultimate": false,
 			"is_passive": "yes"
-		},
-		"omniknight_hammer_of_purity": {
-			"id": 656,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				10
-			],
-			"mana_cost": [
-				40
-			],
-			"name": "Hammer of Purity",
-			"description": "n/a",
-			"is_ultimate": false,
-			"is_passive": "no"
 		},
 		"omniknight_guardian_angel": {
 			"id": 5266,
@@ -13509,7 +13553,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10 Heavenly Grace HP Regen"
+			"description": "+4s Heavenly Grace Duration"
 		},
 		"special_bonus_attack_base_damage_50": {
 			"id": 548,
@@ -13549,8 +13593,8 @@
 			"talent_level": 2,
 			"description": "-2s Purification Cooldown"
 		},
-		"special_bonus_movement_speed_30": {
-			"id": 6141,
+		"special_bonus_unique_omniknight_7": {
+			"id": 501,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -13566,7 +13610,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+30 Movement Speed"
+			"description": "-30s Guardian Angel Cooldown"
 		},
 		"special_bonus_unique_omniknight_2": {
 			"id": 6300,
@@ -13585,7 +13629,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-15% Degen Aura"
+			"description": "+4 Heavenly Grace Strength/HP Regen per Stack"
 		},
 		"special_bonus_unique_omniknight_3": {
 			"id": 6709,
@@ -13604,7 +13648,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-2s Heavenly Grace Cooldown"
+			"description": "-4s Hammer of Purity Cooldown"
 		},
 		"special_bonus_unique_omniknight_1": {
 			"id": 5981,
@@ -13625,8 +13669,8 @@
 			"talent_level": 4,
 			"description": "+160 Purification Damage/Heal"
 		},
-		"special_bonus_unique_omniknight_7": {
-			"id": 501,
+		"special_bonus_unique_omniknight_4": {
+			"id": 7010,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -13642,7 +13686,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-60s Guardian Angel Cooldown"
+			"description": "+{s:bonus_base_damage}% Hammer of Purity Damage"
 		}
 	},
 	"npc_dota_hero_enchantress": {
@@ -13657,7 +13701,7 @@
 				0
 			],
 			"mana_cost": [
-				55
+				50
 			],
 			"name": "Impetus",
 			"description": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her.",
@@ -13693,9 +13737,6 @@
 				35
 			],
 			"mana_cost": [
-				170,
-				160,
-				150,
 				140
 			],
 			"name": "Nature's Attendants",
@@ -13870,7 +13911,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+6.5% Impetus Damage"
+			"description": "+{s:bonus_distance_damage_pct}% Impetus Damage"
 		},
 		"special_bonus_unique_enchantress_5": {
 			"id": 6648,
@@ -14225,7 +14266,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+45 Void Damage"
+			"description": "+{s:bonus_damage} Void Damage"
 		},
 		"special_bonus_unique_night_stalker_7": {
 			"id": 816,
@@ -14244,7 +14285,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10s Dark Ascension Duration"
+			"description": "+{s:bonus_duration}s Dark Ascension Duration"
 		},
 		"special_bonus_unique_night_stalker_3": {
 			"id": 480,
@@ -14263,7 +14304,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+40 Dark Ascension Damage"
+			"description": "+{s:bonus_bonus_damage} Dark Ascension Damage"
 		},
 		"special_bonus_unique_night_stalker_5": {
 			"id": 503,
@@ -14282,7 +14323,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+10% Hunter In The Night Movement Speed"
+			"description": "+{s:bonus_bonus_movement_speed_pct_night}% Hunter In The Night Movement Speed"
 		},
 		"special_bonus_unique_night_stalker_6": {
 			"id": 799,
@@ -14301,7 +14342,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-4s Crippling Fear Cooldown"
+			"description": "-5s Crippling Fear Cooldown"
 		},
 		"special_bonus_strength_20": {
 			"id": 6080,
@@ -14339,7 +14380,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+80 Hunter In The Night Attack Speed"
+			"description": "+{s:bonus_bonus_attack_speed_night} Hunter In The Night Attack Speed"
 		},
 		"special_bonus_unique_night_stalker": {
 			"id": 6129,
@@ -14471,10 +14512,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+80 Spawn Spiderlings Damage"
+			"description": "+{s:bonus_damage} Spawn Spiderlings Damage"
 		},
-		"special_bonus_agility_10": {
-			"id": 6029,
+		"special_bonus_unique_broodmother_6": {
+			"id": 900,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -14490,7 +14531,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10 Agility"
+			"description": "+{s:bonus_count} Spin Web Simultaneous Webs"
 		},
 		"special_bonus_unique_broodmother_5": {
 			"id": 8033,
@@ -14509,10 +14550,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-10s Spin Web Recharge Time"
+			"description": "-{s:bonus_AbilityChargeRestoreTime}s Spin Web Recharge Time"
 		},
-		"special_bonus_attack_speed_30": {
-			"id": 5907,
+		"special_bonus_agility_16": {
+			"id": 6169,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -14528,7 +14569,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+30 Attack Speed"
+			"description": "+16 Agility"
 		},
 		"special_bonus_unique_broodmother_4": {
 			"id": 6362,
@@ -14547,7 +14588,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+50% Spiders Damage to Buildings"
+			"description": "+{s:bonus_movement_speed}% Silken Bola Slow"
 		},
 		"special_bonus_hp_400": {
 			"id": 5976,
@@ -14585,7 +14626,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+50 Insatiable Hunger Damage/Lifesteal"
+			"description": "+{s:bonus_lifesteal_pct} Insatiable Hunger Damage/Lifesteal"
 		},
 		"special_bonus_unique_broodmother_2": {
 			"id": 6258,
@@ -14604,7 +14645,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+350 Spiders Health"
+			"description": "+{s:bonus_hp_bonus} Spiders Health"
 		}
 	},
 	"npc_dota_hero_bounty_hunter": {
@@ -14652,9 +14693,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				15,
-				15,
-				15,
+				18,
+				17,
+				16,
 				15
 			],
 			"mana_cost": [
@@ -14697,7 +14738,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+2s Shadow Walk Slow Duration"
+			"description": "+{s:value}% Shadow Walk Slow"
 		},
 		"special_bonus_unique_bounty_hunter_4": {
 			"id": 484,
@@ -14857,9 +14898,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				15,
 				12,
-				10,
-				8,
+				9,
 				6
 			],
 			"mana_cost": [
@@ -15090,9 +15131,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				12,
-				11,
-				10,
+				21,
+				17,
+				13,
 				9
 			],
 			"mana_cost": [
@@ -15108,9 +15149,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				20,
-				15,
-				10,
+				16,
+				12,
+				8,
 				4
 			],
 			"mana_cost": [
@@ -15345,9 +15386,9 @@
 			],
 			"mana_cost": [
 				110,
+				115,
 				120,
-				130,
-				140
+				125
 			],
 			"name": "Flamebreak",
 			"description": "A molotov cocktail is the weapon of choice for Batrider.",
@@ -15382,6 +15423,8 @@
 				110
 			],
 			"mana_cost": [
+				175,
+				220,
 				225
 			],
 			"name": "Flaming Lasso",
@@ -15389,8 +15432,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_spell_amplify_5": {
-			"id": 5948,
+		"special_bonus_unique_batrider_7": {
+			"id": 714,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -15406,10 +15449,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+5% Spell Amplification"
+			"description": "+{s:bonus_radius} Sticky Napalm Radius"
 		},
-		"special_bonus_armor_6": {
-			"id": 5933,
+		"special_bonus_unique_batrider_3": {
+			"id": 6610,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -15425,10 +15468,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+6 Armor"
+			"description": "+{s:bonus_knockback_distance} Flamebreak Knockback Distance"
 		},
-		"special_bonus_unique_batrider_4": {
-			"id": 512,
+		"special_bonus_movement_speed_25": {
+			"id": 5919,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -15444,10 +15487,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+5 Sticky Napalm Damage"
+			"description": "+25 Movement Speed"
 		},
-		"special_bonus_hp_250": {
-			"id": 5903,
+		"special_bonus_unique_batrider_6": {
+			"id": 658,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -15463,10 +15506,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+250 Health"
+			"description": "-10s Flaming Lasso Cooldown"
 		},
-		"special_bonus_magic_resistance_20": {
-			"id": 6000,
+		"special_bonus_unique_batrider_4": {
+			"id": 512,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -15482,10 +15525,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+20% Magic Resistance"
+			"description": "+{s:bonus_damage} Sticky Napalm Damage"
 		},
-		"special_bonus_movement_speed_30": {
-			"id": 6141,
+		"special_bonus_unique_batrider_5": {
+			"id": 572,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -15501,7 +15544,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+30 Movement Speed"
+			"description": "2 Flamebreak Charges"
 		},
 		"special_bonus_unique_batrider_1": {
 			"id": 6087,
@@ -15522,8 +15565,8 @@
 			"talent_level": 4,
 			"description": "+6.5s Firefly Duration"
 		},
-		"special_bonus_unique_batrider_6": {
-			"id": 658,
+		"special_bonus_unique_batrider_2": {
+			"id": 6229,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -15539,7 +15582,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-35s Flaming Lasso Cooldown"
+			"description": "Flamebreak applies {s:bonus_napalm_stacks} Sticky Napalm Stacks"
 		}
 	},
 	"npc_dota_hero_chen": {
@@ -15772,7 +15815,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+280 Hand of God Heal"
+			"description": "+{s:bonus_heal_amount}/+{s:bonus_heal_per_second} Hand of God Heal/Heal Over Time"
 		}
 	},
 	"npc_dota_hero_spectre": {
@@ -15880,8 +15923,8 @@
 			],
 			"mana_cost": [
 				150,
-				200,
-				250
+				175,
+				200
 			],
 			"name": "Haunt",
 			"description": "At the height of combat, Mercurial's physical manifestation shatters, and the shadowy pieces haunt those who still cling to life.",
@@ -15964,8 +16007,8 @@
 			"talent_level": 2,
 			"description": "+100 Spectral Dagger Damage"
 		},
-		"special_bonus_hp_400": {
-			"id": 5976,
+		"special_bonus_hp_350": {
+			"id": 6195,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -15981,7 +16024,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+400 Health"
+			"description": "+350 Health"
 		},
 		"special_bonus_unique_spectre_3": {
 			"id": 6901,
@@ -16000,7 +16043,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+14% Spectral Dagger Slow/Bonus"
+			"description": "+12% Spectral Dagger Slow/Bonus"
 		},
 		"special_bonus_unique_spectre_4": {
 			"id": 6902,
@@ -16105,8 +16148,8 @@
 			],
 			"mana_cost": [
 				150,
-				200,
-				250
+				225,
+				300
 			],
 			"name": "Doom",
 			"description": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
@@ -16311,16 +16354,16 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				15,
-				11,
-				7,
+				12,
+				9,
+				6,
 				3
 			],
 			"mana_cost": [
 				30,
-				45,
-				60,
-				75
+				40,
+				50,
+				60
 			],
 			"name": "Chilling Touch",
 			"description": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks.",
@@ -16457,7 +16500,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-6% Ice Vortex Slow/Resistance"
+			"description": "-5% Ice Vortex Slow/Resistance"
 		},
 		"special_bonus_unique_ancient_apparition_2": {
 			"id": 6291,
@@ -16690,7 +16733,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+10% Enrage Status Resistance"
+			"description": "+15% Enrage Status Resistance"
 		},
 		"special_bonus_unique_ursa": {
 			"id": 6132,
@@ -16711,8 +16754,8 @@
 			"talent_level": 3,
 			"description": "+12 Fury Swipes Damage"
 		},
-		"special_bonus_unique_ursa_5": {
-			"id": 6976,
+		"special_bonus_unique_ursa_2": {
+			"id": 6973,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -16728,7 +16771,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+500 AoE Earthshock"
+			"description": "-3s Earthshock Cooldown"
 		},
 		"special_bonus_unique_ursa_7": {
 			"id": 424,
@@ -16762,7 +16805,7 @@
 				11
 			],
 			"mana_cost": [
-				100
+				120
 			],
 			"name": "Charge of Darkness",
 			"description": "Barathrum erupts from the darkness with unwieldy force.",
@@ -16942,7 +16985,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+200 Charge of Darkness Move Speed"
+			"description": "+175 Charge of Darkness Move Speed"
 		},
 		"special_bonus_unique_spirit_breaker_3": {
 			"id": 6543,
@@ -17028,10 +17071,7 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				24,
-				22,
-				20,
-				18
+				20
 			],
 			"mana_cost": [
 				50,
@@ -17194,7 +17234,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-6 Flak Cannon Cooldown"
+			"description": "-6s Flak Cannon Cooldown"
 		},
 		"special_bonus_unique_gyrocopter_5": {
 			"id": 6654,
@@ -17606,7 +17646,7 @@
 				17
 			],
 			"mana_cost": [
-				60
+				100
 			],
 			"name": "Alacrity",
 			"description": "Gaster's Mandate of Impetuous Strife.",
@@ -17666,7 +17706,7 @@
 				25
 			],
 			"mana_cost": [
-				175
+				125
 			],
 			"name": "Ice Wall",
 			"description": "Killing Wall of Koryx.",
@@ -17705,7 +17745,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-24s Ghost Walk Cooldown"
+			"description": "-25s Ghost Walk Cooldown"
 		},
 		"special_bonus_unique_invoker_6": {
 			"id": 6811,
@@ -17743,7 +17783,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+1 Forged Spirit Armor Reduction"
+			"description": "+50 Forged Spirit Attack Speed"
 		},
 		"special_bonus_unique_invoker_9": {
 			"id": 7148,
@@ -17800,7 +17840,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+35 Alacrity Damage/Speed"
+			"description": "+30 Alacrity Damage/Speed"
 		},
 		"special_bonus_unique_invoker_2": {
 			"id": 6098,
@@ -17838,7 +17878,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "2.5x Quas/Wex/Exort passive effects"
+			"description": "3x Quas/Wex/Exort passive effects"
 		}
 	},
 	"npc_dota_hero_silencer": {
@@ -17853,10 +17893,10 @@
 				14
 			],
 			"mana_cost": [
-				125,
 				130,
-				135,
-				140
+				140,
+				150,
+				160
 			],
 			"name": "Arcane Curse",
 			"description": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
@@ -17935,7 +17975,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Arcane Curse Damage"
+			"description": "+12 Arcane Curse Damage"
 		},
 		"special_bonus_attack_speed_20": {
 			"id": 5906,
@@ -17994,8 +18034,8 @@
 			"talent_level": 2,
 			"description": "+8% Arcane Curse Slow"
 		},
-		"special_bonus_hp_400": {
-			"id": 5976,
+		"special_bonus_unique_silencer_7": {
+			"id": 721,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -18011,7 +18051,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+400 Health"
+			"description": "-20s Global Silence Cooldown"
 		},
 		"special_bonus_unique_silencer_4": {
 			"id": 6880,
@@ -18399,8 +18439,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_unique_lycan_3": {
-			"id": 6519,
+		"special_bonus_unique_lycan_6": {
+			"id": 621,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -18416,10 +18456,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10 Feral HP Regen"
+			"description": "+{s:bonus_attack_damage_reduction}% Howl Attack Damage Reduction"
 		},
-		"special_bonus_unique_lycan_6": {
-			"id": 621,
+		"special_bonus_unique_lycan_3": {
+			"id": 6519,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -18435,7 +18475,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+13 Summon Wolves Damage"
+			"description": "+{s:bonus_bonus_damage} Wolves Damage"
 		},
 		"special_bonus_unique_lycan_7": {
 			"id": 794,
@@ -18454,7 +18494,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+200 Summon Wolves Health"
+			"description": "+{s:bonus_bonus_health} Summon Wolves Health"
 		},
 		"special_bonus_unique_lycan_8": {
 			"id": 846,
@@ -18492,7 +18532,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+6s Shapeshift Duration"
+			"description": "+{s:bonus_duration}s Shapeshift Duration"
 		},
 		"special_bonus_unique_lycan_4": {
 			"id": 6684,
@@ -18511,7 +18551,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+25% Feral Impulse Damage"
+			"description": "+{s:bonus_bonus_damage}% Feral Impulse Damage"
 		},
 		"special_bonus_unique_lycan_5": {
 			"id": 6685,
@@ -18530,7 +18570,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+32% Chance Shapeshift Critical Strike"
+			"description": "+{s:bonus_crit_chance}% Chance Shapeshift Critical Strike"
 		},
 		"special_bonus_unique_lycan_2": {
 			"id": 6140,
@@ -18549,7 +18589,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+2 Wolves Summoned"
+			"description": "+{s:bonus_tooltip_wolf_count} Wolves Summoned"
 		}
 	},
 	"npc_dota_hero_brewmaster": {
@@ -18597,16 +18637,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				29,
-				25,
-				21,
-				17
+				0
 			],
 			"mana_cost": [
-				35,
-				40,
-				45,
-				50
+				0
 			],
 			"name": "Drunken Brawler",
 			"description": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
@@ -18782,7 +18816,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+90% Drunken Brawler Critical Strike Damage"
+			"description": "Cinder Brew applies Fear when ignited"
 		}
 	},
 	"npc_dota_hero_shadow_demon": {
@@ -18859,6 +18893,23 @@
 			"name": "Shadow Poison Release",
 			"description": "n/a",
 			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"shadow_demon_demonic_cleanse": {
+			"id": 916,
+			"sequence": "Ability5",
+			"is_talent": false,
+			"cooldown": [
+				60
+			],
+			"mana_cost": [
+				150,
+				175,
+				200
+			],
+			"name": "Demonic Cleanse",
+			"description": "Once Shadow Demon no longer has any need for his collected cultist, he releases it from its subservience - and its life.",
+			"is_ultimate": true,
 			"is_passive": "no"
 		},
 		"shadow_demon_demonic_purge": {
@@ -19159,7 +19210,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-10 Savage Roar Cooldown"
+			"description": "-10s Savage Roar Cooldown"
 		},
 		"special_bonus_unique_lone_druid_2": {
 			"id": 6262,
@@ -19216,7 +19267,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "0 Entangle Cooldown"
+			"description": "0 Entangling Claws Cooldown"
 		},
 		"special_bonus_unique_lone_druid_10": {
 			"id": 7382,
@@ -19494,12 +19545,15 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				26,
 				20,
-				16,
-				12,
+				14,
 				8
 			],
 			"mana_cost": [
+				70,
+				80,
+				90,
 				100
 			],
 			"name": "Earthbind",
@@ -19551,10 +19605,10 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				40
+				50
 			],
 			"mana_cost": [
-				150
+				125
 			],
 			"name": "Dig",
 			"description": "n/a",
@@ -19597,8 +19651,8 @@
 			"talent_level": 1,
 			"description": "+6 Strength"
 		},
-		"special_bonus_attack_base_damage_20": {
-			"id": 496,
+		"special_bonus_unique_meepo_2": {
+			"id": 6689,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -19614,7 +19668,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Base Damage"
+			"description": "+30 Poof Damage"
 		},
 		"special_bonus_evasion_15": {
 			"id": 5972,
@@ -19635,8 +19689,8 @@
 			"talent_level": 2,
 			"description": "15% Evasion"
 		},
-		"special_bonus_unique_meepo_2": {
-			"id": 6689,
+		"special_bonus_unique_meepo_4": {
+			"id": 7102,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -19652,7 +19706,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+40 Poof Damage"
+			"description": "Earthbind grants True Strike on Targets"
 		},
 		"special_bonus_unique_meepo_3": {
 			"id": 7027,
@@ -19779,10 +19833,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				26,
-				22,
-				18,
-				14
+				30,
+				25,
+				20,
+				15
 			],
 			"mana_cost": [
 				50
@@ -20014,9 +20068,9 @@
 			],
 			"mana_cost": [
 				70,
-				80,
-				90,
-				100
+				85,
+				100,
+				115
 			],
 			"name": "Fireblast",
 			"description": "The Ogre Magi is easily amused, entertained for hours by playing with fire.",
@@ -20028,7 +20082,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				15
+				17
 			],
 			"mana_cost": [
 				80,
@@ -20170,8 +20224,8 @@
 			"talent_level": 2,
 			"description": "+80 Damage"
 		},
-		"special_bonus_hp_275": {
-			"id": 6311,
+		"special_bonus_hp_250": {
+			"id": 5903,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -20187,10 +20241,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+275 Health"
+			"description": "+250 Health"
 		},
-		"special_bonus_strength_25": {
-			"id": 5984,
+		"special_bonus_strength_30": {
+			"id": 6708,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -20206,7 +20260,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+25 Strength"
+			"description": "+30 Strength"
 		},
 		"special_bonus_unique_ogre_magi": {
 			"id": 6183,
@@ -20227,8 +20281,8 @@
 			"talent_level": 3,
 			"description": "+25 Bloodlust AS"
 		},
-		"special_bonus_20_bash_2": {
-			"id": 6025,
+		"special_bonus_unique_ogre_magi_3": {
+			"id": 7030,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -20244,7 +20298,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:value2}% 1.5s Bash"
+			"description": "17% Fireblast chance on attack"
 		},
 		"special_bonus_unique_ogre_magi_2": {
 			"id": 6707,
@@ -20293,16 +20347,16 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				24,
 				18,
-				12,
+				14,
+				10,
 				6
 			],
 			"mana_cost": [
-				85,
+				90,
 				100,
-				115,
-				130
+				110,
+				120
 			],
 			"name": "Soul Rip",
 			"description": "Even allies feel despair in Undying's presence.",
@@ -20567,8 +20621,8 @@
 			"is_talent": false,
 			"cooldown": [
 				20,
-				15,
-				10
+				12,
+				4
 			],
 			"mana_cost": [
 				25,
@@ -20865,12 +20919,15 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				48,
-				38,
-				28,
+				24,
+				22,
+				20,
 				18
 			],
 			"mana_cost": [
+				55,
+				70,
+				85,
 				100
 			],
 			"name": "Glimpse",
@@ -21074,6 +21131,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				17,
+				16,
+				15,
 				14
 			],
 			"mana_cost": [
@@ -21092,12 +21152,15 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				28,
 				20,
-				12,
-				4
+				15,
+				10,
+				5
 			],
 			"mana_cost": [
+				70,
+				80,
+				90,
 				100
 			],
 			"name": "Mana Burn",
@@ -21238,8 +21301,8 @@
 			"talent_level": 2,
 			"description": "+250 Health"
 		},
-		"special_bonus_movement_speed_20": {
-			"id": 5918,
+		"special_bonus_unique_nyx_5": {
+			"id": 778,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -21255,7 +21318,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20 Movement Speed"
+			"description": "+{s:bonus_float_multiplier}x Mana Burn Intelligence Multiplier"
 		},
 		"special_bonus_unique_nyx_6": {
 			"id": 891,
@@ -21295,8 +21358,8 @@
 			"talent_level": 3,
 			"description": "+130 Impale Damage"
 		},
-		"special_bonus_agility_80": {
-			"id": 435,
+		"special_bonus_unique_nyx": {
+			"id": 6130,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -21312,7 +21375,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+80 Agility"
+			"description": "{s:bonus_aoe} Mana Burn Radius"
 		},
 		"special_bonus_unique_nyx_3": {
 			"id": 6814,
@@ -21456,8 +21519,8 @@
 			"talent_level": 1,
 			"description": "+20 Movement Speed"
 		},
-		"special_bonus_agility_8": {
-			"id": 6014,
+		"special_bonus_unique_naga_siren_2": {
+			"id": 6398,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -21473,7 +21536,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+8 Agility"
+			"description": "+{s:bonus_damage} Rip Tide Damage"
 		},
 		"special_bonus_unique_naga_siren_4": {
 			"id": 7029,
@@ -21530,7 +21593,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+12% Rip Tide Chance"
+			"description": "-{s:value} Rip Tide Hits"
 		},
 		"special_bonus_unique_naga_siren": {
 			"id": 6205,
@@ -21683,7 +21746,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				70
+				65
 			],
 			"mana_cost": [
 				75,
@@ -21968,9 +22031,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
+				25,
 				22,
-				20,
-				18,
+				19,
 				16
 			],
 			"mana_cost": [
@@ -21997,7 +22060,7 @@
 				0,
 				0
 			],
-			"name": "Spirits Movement",
+			"name": "Spirits In",
 			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no"
@@ -22080,8 +22143,8 @@
 			"talent_level": 1,
 			"description": "+4 Health Regen"
 		},
-		"special_bonus_attack_damage_30": {
-			"id": 5939,
+		"special_bonus_unique_wisp_8": {
+			"id": 7071,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -22097,7 +22160,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+30 Damage"
+			"description": "+15 Attack Damage to Tethered Units"
 		},
 		"special_bonus_unique_wisp_3": {
 			"id": 6659,
@@ -22116,10 +22179,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+300 Spirits Max Range"
+			"description": "+{s:bonus_movespeed}% Tether Movement Speed"
 		},
-		"special_bonus_spell_lifesteal_15": {
-			"id": 6550,
+		"special_bonus_unique_wisp": {
+			"id": 6265,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -22135,10 +22198,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "15% Spell Lifesteal"
+			"description": "+45 Spirits Hero Damage"
 		},
-		"special_bonus_unique_wisp": {
-			"id": 6265,
+		"special_bonus_unique_wisp_10": {
+			"id": 7073,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -22154,7 +22217,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+60 Spirits Hero Damage"
+			"description": "+{s:bonus_hp_regen}% Overcharge Max HP Regen Bonus"
 		},
 		"special_bonus_unique_wisp_6": {
 			"id": 7070,
@@ -22175,8 +22238,8 @@
 			"talent_level": 3,
 			"description": "-25s Relocate Cooldown"
 		},
-		"special_bonus_hp_900": {
-			"id": 874,
+		"special_bonus_unique_wisp_9": {
+			"id": 7072,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -22192,7 +22255,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+900 Health"
+			"description": "+400 Health to Tethered Units"
 		},
 		"special_bonus_unique_wisp_4": {
 			"id": 6808,
@@ -22358,8 +22421,8 @@
 			"talent_level": 1,
 			"description": "-3s Grave Chill Cooldown"
 		},
-		"special_bonus_attack_damage_25": {
-			"id": 6009,
+		"special_bonus_unique_visage_7": {
+			"id": 626,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -22375,10 +22438,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+25 Damage"
+			"description": "+8 Visage and Familiars Attack Damage"
 		},
-		"special_bonus_corruption_3": {
-			"id": 7383,
+		"special_bonus_unique_visage_1": {
+			"id": 6031,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -22394,7 +22457,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-3 Armor Corruption"
+			"description": "+1.5 Corruption to Visage and Familiars"
 		},
 		"special_bonus_unique_visage_3": {
 			"id": 6522,
@@ -22451,7 +22514,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+40 Familiars Movement Speed"
+			"description": "+30 Visage and Familiars Movement Speed"
 		},
 		"special_bonus_unique_visage_5": {
 			"id": 6984,
@@ -22470,7 +22533,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+5 Gravekeeper's Cloak Stacks"
+			"description": "Gravekeeper's Cloak  grants +10 Armor"
 		},
 		"special_bonus_unique_visage_6": {
 			"id": 6985,
@@ -22606,8 +22669,8 @@
 			"talent_level": 1,
 			"description": "-1s Dark Pact Cooldown"
 		},
-		"special_bonus_agility_8": {
-			"id": 6014,
+		"special_bonus_unique_slark": {
+			"id": 6147,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -22623,7 +22686,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+8 Agility"
+			"description": "+0.5s Pounce Leash"
 		},
 		"special_bonus_unique_slark_2": {
 			"id": 6892,
@@ -22644,8 +22707,8 @@
 			"talent_level": 2,
 			"description": "+70 Dark Pact Damage"
 		},
-		"special_bonus_unique_slark_7": {
-			"id": 892,
+		"special_bonus_unique_slark_8": {
+			"id": 921,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -22661,7 +22724,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+50 Shadow Dance Attack Speed"
+			"description": "+{s:bonus_bonus_regen_pct}% Shadow Dance Regen"
 		},
 		"special_bonus_unique_slark_5": {
 			"id": 814,
@@ -22682,8 +22745,8 @@
 			"talent_level": 3,
 			"description": "+1 Agility gain/stolen per Essence Shift Stack"
 		},
-		"special_bonus_unique_slark": {
-			"id": 6147,
+		"special_bonus_unique_slark_7": {
+			"id": 892,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -22699,7 +22762,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.8s Pounce Leash"
+			"description": "+75 Shadow Dance Attack Speed"
 		},
 		"special_bonus_unique_slark_3": {
 			"id": 6893,
@@ -22737,7 +22800,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+55s Essence Shift Duration"
+			"description": "+50s Essence Shift Duration"
 		}
 	},
 	"npc_dota_hero_medusa": {
@@ -22770,10 +22833,7 @@
 				10
 			],
 			"mana_cost": [
-				140,
-				150,
-				160,
-				170
+				140
 			],
 			"name": "Mystic Snake",
 			"description": "The Gorgon's curse is her greatest strength.",
@@ -22834,8 +22894,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_attack_damage_15": {
-			"id": 5938,
+		"special_bonus_attack_speed_20": {
+			"id": 5906,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -22851,10 +22911,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Damage"
+			"description": "+20 Attack Speed"
 		},
-		"special_bonus_evasion_15": {
-			"id": 5972,
+		"special_bonus_unique_medusa_6": {
+			"id": 920,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -22870,10 +22930,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "15% Evasion"
+			"description": "+{s:bonus_damage_per_mana} Mana Shield Damage per Mana"
 		},
-		"special_bonus_attack_speed_30": {
-			"id": 5907,
+		"special_bonus_unique_medusa_2": {
+			"id": 6392,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -22889,7 +22949,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+30 Attack Speed"
+			"description": "-{s:bonus_damage_modifier}% Split Shot Damage Penalty"
 		},
 		"special_bonus_unique_medusa_5": {
 			"id": 7389,
@@ -22927,7 +22987,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+30% Mystic Snake Mana Gain"
+			"description": "+{s:bonus_snake_jumps} Mystic Snake Bounces"
 		},
 		"special_bonus_unique_medusa": {
 			"id": 6182,
@@ -23168,8 +23228,8 @@
 			"talent_level": 2,
 			"description": "+90 Whirling Axes Damage"
 		},
-		"special_bonus_evasion_20": {
-			"id": 5973,
+		"special_bonus_unique_troll_warlord_7": {
+			"id": 704,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -23185,7 +23245,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "20% Evasion"
+			"description": "-15s Battle Trance Cooldown"
 		},
 		"special_bonus_attack_damage_30": {
 			"id": 5939,
@@ -23206,8 +23266,8 @@
 			"talent_level": 3,
 			"description": "+30 Damage"
 		},
-		"special_bonus_unique_troll_warlord_7": {
-			"id": 704,
+		"special_bonus_unique_troll_warlord_6": {
+			"id": 988,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -23223,7 +23283,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+2s Battle Trance Duration"
+			"description": "Whirling Axes Pierce Magic Immunity"
 		},
 		"special_bonus_unique_troll_warlord_4": {
 			"id": 6960,
@@ -23361,8 +23421,8 @@
 			"talent_level": 1,
 			"description": "+20 Movement Speed"
 		},
-		"special_bonus_armor_5": {
-			"id": 5932,
+		"special_bonus_strength_15": {
+			"id": 6145,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -23378,7 +23438,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+5 Armor"
+			"description": "+15 Strength"
 		},
 		"special_bonus_unique_centaur_4": {
 			"id": 6617,
@@ -23416,7 +23476,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+50 Retaliate Damage"
+			"description": "+{s:bonus_return_damage} Retaliate Damage"
 		},
 		"special_bonus_unique_centaur_5": {
 			"id": 453,
@@ -23645,8 +23705,8 @@
 			"talent_level": 2,
 			"description": "-7s Skewer Cooldown"
 		},
-		"special_bonus_hp_350": {
-			"id": 6195,
+		"special_bonus_unique_magnus": {
+			"id": 6199,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -23662,7 +23722,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+350 Health"
+			"description": "+{s:bonus_shock_damage} Shockwave Damage"
 		},
 		"special_bonus_unique_magnus_3": {
 			"id": 6507,
@@ -23728,6 +23788,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				7.5,
+				7,
+				6.5,
 				6
 			],
 			"mana_cost": [
@@ -23801,7 +23864,7 @@
 			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
-				18
+				20
 			],
 			"mana_cost": [
 				100
@@ -23865,7 +23928,7 @@
 				0,
 				0
 			],
-			"name": "Return Chakram",
+			"name": "Return Second Chakram",
 			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no"
@@ -24139,8 +24202,8 @@
 			"talent_level": 1,
 			"description": "+15 Damage"
 		},
-		"special_bonus_mp_regen_2": {
-			"id": 5961,
+		"special_bonus_mp_regen_150": {
+			"id": 7132,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -24156,7 +24219,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+2 Mana Regen"
+			"description": "+1.5 Mana Regen"
 		},
 		"special_bonus_hp_200": {
 			"id": 5959,
@@ -24234,8 +24297,8 @@
 			"talent_level": 3,
 			"description": "+20 Quill Stack Damage"
 		},
-		"special_bonus_spell_lifesteal_13": {
-			"id": 6560,
+		"special_bonus_spell_lifesteal_12": {
+			"id": 434,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -24251,7 +24314,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "13% Spell Lifesteal"
+			"description": "12% Spell Lifesteal"
 		},
 		"special_bonus_unique_bristleback_3": {
 			"id": 6615,
@@ -24270,7 +24333,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+24 Warpath Damage Per Stack"
+			"description": "+25 Warpath Damage Per Stack"
 		}
 	},
 	"npc_dota_hero_tusk": {
@@ -24336,7 +24399,7 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				8
+				12
 			],
 			"mana_cost": [
 				100
@@ -24366,14 +24429,12 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				36,
-				24,
-				12
+				20,
+				15,
+				10
 			],
 			"mana_cost": [
-				50,
-				75,
-				100
+				75
 			],
 			"name": "Walrus PUNCH!",
 			"description": "It never matters who throws the first punch, only who throws the last.",
@@ -24437,7 +24498,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+0.4s Walrus Punch Stun Duration"
+			"description": "+0.5s Walrus Punch Stun Duration"
 		},
 		"special_bonus_hp_325": {
 			"id": 6423,
@@ -24513,7 +24574,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+80% Walrus Punch Crit"
+			"description": "+75% Walrus Punch Crit"
 		},
 		"special_bonus_unique_tusk_4": {
 			"id": 6962,
@@ -24935,7 +24996,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+55 Mist Coil Heal/Damage"
+			"description": "+50 Mist Coil Heal/Damage"
 		},
 		"special_bonus_unique_abaddon": {
 			"id": 6100,
@@ -24992,7 +25053,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-1 Curse of Avernus Attacks Required"
+			"description": "-{s:bonus_hit_count} Curse of Avernus Attacks Required"
 		},
 		"special_bonus_unique_abaddon_4": {
 			"id": 7335,
@@ -25011,7 +25072,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "500 AoE Mist Coil"
+			"description": "400 AoE Mist Coil"
 		}
 	},
 	"npc_dota_hero_elder_titan": {
@@ -25075,6 +25136,26 @@
 			"is_ultimate": false,
 			"is_passive": "yes"
 		},
+		"elder_titan_move_spirit": {
+			"id": 6563,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"name": "Move Astral Spirit",
+			"description": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
 		"elder_titan_earth_splitter": {
 			"id": 5594,
 			"sequence": "Ability6",
@@ -25114,8 +25195,8 @@
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"special_bonus_movement_speed_15": {
-			"id": 5917,
+		"special_bonus_unique_elder_titan_bonus_spirit_speed": {
+			"id": 917,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -25131,10 +25212,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Movement Speed"
+			"description": "+{s:bonus_move_pct_heroes}% Ancestral Spirit Move Speed Per Hero"
 		},
-		"special_bonus_attack_speed_20": {
-			"id": 5906,
+		"special_bonus_attack_speed_25": {
+			"id": 6016,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -25150,7 +25231,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Attack Speed"
+			"description": "+25 Attack Speed"
 		},
 		"special_bonus_magic_resistance_15": {
 			"id": 6138,
@@ -25188,7 +25269,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Astral Spirit Hero Attack"
+			"description": "+{s:bonus_damage_heroes} Astral Spirit Hero Attack"
 		},
 		"special_bonus_cleave_100": {
 			"id": 6827,
@@ -25420,8 +25501,8 @@
 			"talent_level": 2,
 			"description": "+75 Overwhelming Odds Hero Damage"
 		},
-		"special_bonus_movement_speed_30": {
-			"id": 6141,
+		"special_bonus_unique_legion_commander_5": {
+			"id": 7395,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -25437,7 +25518,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+30 Movement Speed"
+			"description": "250 AoE Press The Attack"
 		},
 		"special_bonus_unique_legion_commander_3": {
 			"id": 6526,
@@ -25477,8 +25558,8 @@
 			"talent_level": 4,
 			"description": "+30 Duel Damage Bonus"
 		},
-		"special_bonus_unique_legion_commander_5": {
-			"id": 7395,
+		"special_bonus_unique_legion_commander_8": {
+			"id": 925,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -25494,7 +25575,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "400 AoE Press The Attack"
+			"description": "Press the Attack grants 2s Spell Immunity"
 		}
 	},
 	"npc_dota_hero_ember_spirit": {
@@ -25524,9 +25605,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				18,
-				14,
-				10,
+				15,
+				12,
+				9,
 				6
 			],
 			"mana_cost": [
@@ -25621,7 +25702,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+280 Flame Guard Absorption"
+			"description": "+200 Flame Guard Absorption"
 		},
 		"special_bonus_unique_ember_spirit_3": {
 			"id": 6647,
@@ -25768,7 +25849,7 @@
 				4
 			],
 			"mana_cost": [
-				50
+				70
 			],
 			"name": "Rolling Boulder",
 			"description": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
@@ -25783,7 +25864,7 @@
 				13
 			],
 			"mana_cost": [
-				100
+				75
 			],
 			"name": "Geomagnetic Grip",
 			"description": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
@@ -25949,7 +26030,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+3 Geomagnetic Grip Silence"
+			"description": "+3s Geomagnetic Grip Silence"
 		},
 		"special_bonus_unique_earth_spirit_2": {
 			"id": 6514,
@@ -26020,9 +26101,9 @@
 				16
 			],
 			"mana_cost": [
-				70,
+				55,
+				65,
 				75,
-				80,
 				85
 			],
 			"name": "Conjure Image",
@@ -26111,10 +26192,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+2s Reflection Duration"
+			"description": "+{s:bonus_illusion_duration}s Reflection Duration"
 		},
-		"special_bonus_evasion_16": {
-			"id": 452,
+		"special_bonus_unique_terrorblade_4": {
+			"id": 7861,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -26130,10 +26211,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "16% Evasion"
+			"description": "+{s:bonus_illusion_outgoing_damage}% Conjure Image Damage"
 		},
-		"special_bonus_hp_275": {
-			"id": 6311,
+		"special_bonus_hp_300": {
+			"id": 5993,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -26149,10 +26230,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+275 Health"
+			"description": "+300 Health"
 		},
-		"special_bonus_attack_speed_30": {
-			"id": 5907,
+		"special_bonus_unique_terrorblade_6": {
+			"id": 924,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -26168,10 +26249,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+30 Attack Speed"
+			"description": "+{s:bonus_move_slow}% Reflection Slow"
 		},
-		"special_bonus_all_stats_8": {
-			"id": 5923,
+		"special_bonus_all_stats_10": {
+			"id": 6168,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -26187,7 +26268,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+8 All Stats"
+			"description": "+10 All Stats"
 		},
 		"special_bonus_unique_terrorblade_5": {
 			"id": 479,
@@ -26206,7 +26287,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+8s Conjure Image Duration"
+			"description": "+{s:bonus_illusion_duration}s Conjure Image Duration"
 		},
 		"special_bonus_unique_terrorblade": {
 			"id": 6107,
@@ -26271,13 +26352,13 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				51,
-				44,
-				37,
-				30
+				50,
+				40,
+				30,
+				20
 			],
 			"mana_cost": [
-				120
+				100
 			],
 			"name": "Fire Spirits",
 			"description": "The ever-collapsing core of Phoenix often emits short-lived bursts of conscious light.",
@@ -26420,7 +26501,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+24% Icarus Dive Slow"
+			"description": "+25% Icarus Dive Slow"
 		},
 		"special_bonus_spell_amplify_6": {
 			"id": 5996,
@@ -26479,8 +26560,8 @@
 			"talent_level": 2,
 			"description": "+500 Health"
 		},
-		"special_bonus_unique_phoenix_4": {
-			"id": 6852,
+		"special_bonus_unique_phoenix_5": {
+			"id": 6915,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -26496,7 +26577,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+1000 Icarus Dive Cast Range"
+			"description": "+1.5% Max Health Sun Ray Damage"
 		},
 		"special_bonus_unique_phoenix_2": {
 			"id": 6085,
@@ -26536,8 +26617,8 @@
 			"talent_level": 4,
 			"description": "+3 Supernova Hit Count"
 		},
-		"special_bonus_unique_phoenix_5": {
-			"id": 6915,
+		"special_bonus_unique_phoenix_4": {
+			"id": 6852,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -26553,7 +26634,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.5% Max Health Sun Ray Damage"
+			"description": "+1000 Icarus Dive Cast Range"
 		}
 	},
 	"npc_dota_hero_oracle": {
@@ -26580,10 +26661,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				16,
-				13,
-				10,
-				7
+				17,
+				14,
+				11,
+				8
 			],
 			"mana_cost": [
 				50
@@ -26601,13 +26682,25 @@
 				2.5
 			],
 			"mana_cost": [
-				80,
-				85,
-				90,
-				95
+				80
 			],
 			"name": "Purifying Flames",
 			"description": "Like a hall of mirrors might amplify the light of a single candle, the shattered walls of the universe can transform the light of prophecy into a burning torch.",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"oracle_rain_of_destiny": {
+			"id": 932,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				40
+			],
+			"mana_cost": [
+				150
+			],
+			"name": "Rain of Destiny",
+			"description": "Through mixture of the astral and the atmospheric, Nerif bends a single reality into paradoxical alignment.",
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
@@ -26780,46 +26873,46 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.5 False Promise Duration"
+			"description": "+1.5s False Promise Duration"
 		}
 	},
 	"npc_dota_hero_techies": {
-		"techies_land_mines": {
-			"id": 5599,
+		"techies_sticky_bomb": {
+			"id": 879,
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				12,
+				10,
+				8,
+				6
 			],
 			"mana_cost": [
-				110,
+				100,
+				115,
 				130,
-				150,
-				170
+				145
 			],
-			"name": "Proximity Mines",
-			"description": "The bane of Toterin!",
+			"name": "Sticky Bomb",
+			"description": "Such revolutionary brilliance was meant to be shared.",
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"techies_stasis_trap": {
-			"id": 5600,
+		"techies_reactive_tazer": {
+			"id": 886,
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				28,
+				24,
 				20,
-				16,
-				13,
-				10
+				16
 			],
 			"mana_cost": [
-				80,
-				110,
-				140,
-				160
+				60
 			],
-			"name": "Stasis Trap",
-			"description": "The scourge of Trapper Town!",
+			"name": "Reactive Tazer",
+			"description": "A steady bomb hand prefers an abundance of personal space.",
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
@@ -26828,7 +26921,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				35
+				45,
+				40,
+				35,
+				30
 			],
 			"mana_cost": [
 				100,
@@ -26841,55 +26937,20 @@
 			"is_ultimate": false,
 			"is_passive": "no"
 		},
-		"techies_focused_detonate": {
-			"id": 5635,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				1,
-				1,
-				1
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Focused Detonate",
-			"description": "Why light one fuse when you can light them all?",
-			"is_ultimate": false,
-			"is_passive": "no"
-		},
-		"techies_minefield_sign": {
-			"id": 5644,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				360
-			],
-			"mana_cost": [
-				0
-			],
-			"name": "Minefield Sign",
-			"description": "Watch your step!",
-			"is_ultimate": false,
-			"is_passive": "no"
-		},
-		"techies_remote_mines": {
-			"id": 5602,
+		"techies_land_mines": {
+			"id": 5599,
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				8
+				0
 			],
 			"mana_cost": [
-				120,
-				180,
-				240
+				110,
+				140,
+				170
 			],
-			"name": "Remote Mines",
-			"description": "The downfall of Dredger's Bight!",
+			"name": "Proximity Mines",
+			"description": "The bane of Toterin!",
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
@@ -26948,7 +27009,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+300 Blast Off! Damage"
+			"description": "+200 Blast Off! Damage"
 		},
 		"special_bonus_mp_regen_3": {
 			"id": 6160,
@@ -26969,8 +27030,8 @@
 			"talent_level": 2,
 			"description": "+3 Mana Regen"
 		},
-		"special_bonus_movement_speed_40": {
-			"id": 6093,
+		"special_bonus_unique_techies_2": {
+			"id": 6552,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -26986,7 +27047,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+40 Movement Speed"
+			"description": "+{s:bonus_damage} Sticky Bomb Damage"
 		},
 		"special_bonus_unique_techies_5": {
 			"id": 412,
@@ -27005,7 +27066,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-22s Blast Off! Cooldown"
+			"description": "-15s Blast Off! Cooldown"
 		},
 		"special_bonus_attack_damage_252": {
 			"id": 703,
@@ -27043,7 +27104,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+60 Mines Movement Speed"
+			"description": "-{s:bonus_activation_delay} Proximity Mines Activation Delay"
 		}
 	},
 	"npc_dota_hero_winter_wyvern": {
@@ -27363,7 +27424,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+175 Flux Cast Range"
+			"description": "+{s:bonus_abilitycastrange} Flux Cast Range"
 		},
 		"special_bonus_hp_225": {
 			"id": 6405,
@@ -27384,8 +27445,8 @@
 			"talent_level": 1,
 			"description": "+225 Health"
 		},
-		"special_bonus_armor_8": {
-			"id": 5934,
+		"special_bonus_unique_arc_warden_4": {
+			"id": 7105,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -27401,7 +27462,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+8 Armor"
+			"description": "+{s:bonus_duration}s Flux Duration"
 		},
 		"special_bonus_unique_arc_warden_3": {
 			"id": 7104,
@@ -27460,8 +27521,8 @@
 			"talent_level": 3,
 			"description": "+40 Flux Damage"
 		},
-		"special_bonus_lifesteal_35": {
-			"id": 8011,
+		"special_bonus_unique_arc_warden_7": {
+			"id": 975,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -27477,7 +27538,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "35% Lifesteal"
+			"description": "+{s:value}% Tempest Double Cooldown Reduction"
 		},
 		"special_bonus_unique_arc_warden_6": {
 			"id": 685,
@@ -27562,56 +27623,18 @@
 		},
 		"abyssal_underlord_dark_portal": {
 			"id": 865,
-			"sequence": "Ability4",
+			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				110
+				140,
+				120,
+				100
 			],
 			"mana_cost": [
 				100
 			],
 			"name": "Fiend's Gate",
 			"description": "Long have the forces of the abyss been limited in reach, but with the power of Aghanim in hand, Vrogros' thirst for conquest grows only stronger.",
-			"is_ultimate": false,
-			"is_passive": "no"
-		},
-		"abyssal_underlord_dark_rift": {
-			"id": 5616,
-			"sequence": "Ability6",
-			"is_talent": false,
-			"cooldown": [
-				130,
-				115,
-				100
-			],
-			"mana_cost": [
-				100,
-				200,
-				300
-			],
-			"name": "Dark Rift",
-			"description": "They come without warning, leaving fire and blood where kingdoms once flourished.",
-			"is_ultimate": true,
-			"is_passive": "no"
-		},
-		"abyssal_underlord_cancel_dark_rift": {
-			"id": 5617,
-			"sequence": "Ability7",
-			"is_talent": false,
-			"cooldown": [
-				0,
-				0,
-				0,
-				0
-			],
-			"mana_cost": [
-				0,
-				0,
-				0,
-				0
-			],
-			"name": "Cancel Dark Rift",
-			"description": "n/a",
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
@@ -28303,8 +28326,8 @@
 			"talent_level": 3,
 			"description": "+30 Swashbuckle Damage"
 		},
-		"special_bonus_strength_18": {
-			"id": 469,
+		"special_bonus_strength_20": {
+			"id": 6080,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -28320,7 +28343,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+18 Strength"
+			"description": "+20 Strength"
 		},
 		"special_bonus_unique_pangolier_4": {
 			"id": 9061,
@@ -28339,7 +28362,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-2.5s Swashbuckle Cooldown"
+			"description": "-3s Swashbuckle Cooldown"
 		},
 		"special_bonus_unique_pangolier_5": {
 			"id": 9062,
@@ -28511,7 +28534,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+32 Bedlam Damage"
+			"description": "+30 Bedlam Damage"
 		},
 		"special_bonus_unique_dark_willow_7": {
 			"id": 780,
@@ -28570,8 +28593,8 @@
 			"talent_level": 3,
 			"description": "-7s Bramble Maze CD"
 		},
-		"special_bonus_attack_speed_110": {
-			"id": 478,
+		"special_bonus_attack_speed_100": {
+			"id": 6037,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -28587,7 +28610,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+110 Attack Speed"
+			"description": "+100 Attack Speed"
 		},
 		"special_bonus_unique_dark_willow_2": {
 			"id": 6465,
@@ -28866,10 +28889,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				15,
 				14,
 				13,
-				12,
-				11
+				12
 			],
 			"mana_cost": [
 				110,
@@ -29326,16 +29349,16 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				13,
+				16,
+				14,
 				12,
-				11,
 				10
 			],
 			"mana_cost": [
-				80,
+				85,
 				90,
-				100,
-				110
+				95,
+				100
 			],
 			"name": "Scatterblast",
 			"description": "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands.",
@@ -29389,7 +29412,7 @@
 				40
 			],
 			"mana_cost": [
-				150
+				120
 			],
 			"name": "Gobble Up",
 			"description": "",
@@ -29433,8 +29456,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_hp_200": {
-			"id": 5959,
+		"special_bonus_unique_snapfire_3": {
+			"id": 6489,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -29450,10 +29473,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+200 Health"
+			"description": "+{s:bonus_impact_stun_duration}s Firesnap Cookie Stun"
 		},
-		"special_bonus_unique_snapfire_2": {
-			"id": 6487,
+		"special_bonus_unique_snapfire_5": {
+			"id": 6479,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -29469,10 +29492,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+1s Scatterblast Slow Duration"
+			"description": "Firesnap Cookie Restores {s:bonus_target_heal} Health"
 		},
-		"special_bonus_unique_snapfire_5": {
-			"id": 6479,
+		"special_bonus_unique_snapfire_2": {
+			"id": 6487,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -29488,7 +29511,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Firesnap Cookie Restores 200 Health"
+			"description": "+{s:bonus_buffed_attacks} Lil Shredder attacks"
 		},
 		"special_bonus_unique_snapfire_7": {
 			"id": 384,
@@ -29507,7 +29530,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+75 Scatterblast Damage"
+			"description": "+80 Scatterblast Damage"
 		},
 		"special_bonus_unique_snapfire_6": {
 			"id": 382,
@@ -29726,7 +29749,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+1 Scurry Duration"
+			"description": "+1s Scurry Duration"
 		},
 		"special_bonus_unique_hoodwink_bushwhack_cooldown": {
 			"id": 9510,
@@ -29804,8 +29827,8 @@
 			"talent_level": 3,
 			"description": "{s:pct_change}% Sharpshooter Faster Projectile / Charge Time"
 		},
-		"special_bonus_corruption_3": {
-			"id": 7383,
+		"special_bonus_corruption_4": {
+			"id": 7011,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -29821,7 +29844,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-3 Armor Corruption"
+			"description": "-4 Armor Corruption"
 		},
 		"special_bonus_unique_hoodwink_acorn_shot_charges": {
 			"id": 9509,
@@ -29842,8 +29865,8 @@
 			"talent_level": 4,
 			"description": "2 Acorn Shot Charges"
 		},
-		"special_bonus_unique_hoodwink_sharpshooter_pure_damage": {
-			"id": 9507,
+		"special_bonus_unique_hoodwink_bushwhack_radius": {
+			"id": 967,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -29859,7 +29882,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Sharpshooter Pierces Spell Immunity"
+			"description": "+{s:bonus_trap_radius} Bushwhack Radius"
 		}
 	},
 	"npc_dota_hero_dawnbreaker": {
@@ -29874,7 +29897,7 @@
 				11
 			],
 			"mana_cost": [
-				80
+				100
 			],
 			"name": "Starbreaker",
 			"description": "Across the vast lineage of star progeny, there were multitudes unwilling to align with the aims of the Children of Light. To those who dared organize defiance, the Children would dispatch Valora and her hammer to show a measure of their power--to leave the rebels either shattered or set back to rights.",
@@ -29992,7 +30015,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+30 Starbreaker Swipe Damage"
+			"description": "+25 Starbreaker Swipe/Smash Damage"
 		},
 		"special_bonus_unique_dawnbreaker_celestial_hammer_slow": {
 			"id": 7942,
@@ -30030,7 +30053,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+40% Luminosity Crit"
+			"description": "+50% Luminosity Crit"
 		},
 		"special_bonus_unique_dawnbreaker_solar_guardian_cooldown": {
 			"id": 7938,
@@ -30359,6 +30382,269 @@
 			],
 			"talent_level": 4,
 			"description": "1.5s Sidekick Spell Immunity"
+		}
+	},
+	"npc_dota_hero_primal_beast": {
+		"primal_beast_onslaught": {
+			"id": 992,
+			"sequence": "Ability1",
+			"is_talent": false,
+			"cooldown": [
+				25,
+				22,
+				19,
+				16
+			],
+			"mana_cost": [
+				120
+			],
+			"name": "Onslaught",
+			"description": "The Beast's single-minded focus on chosen prey leaves all other considerations scattered in his ruinous wake.",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"primal_beast_trample": {
+			"id": 994,
+			"sequence": "Ability2",
+			"is_talent": false,
+			"cooldown": [
+				30,
+				28,
+				26,
+				24
+			],
+			"mana_cost": [
+				90,
+				95,
+				100,
+				105
+			],
+			"name": "Trample",
+			"description": "As the only member of his species to arrive on this world, locals can only speculate on the Beast's size relative to his kin. Such observation would prove easier of course if the subject didn't eat everything it sees and destroy most of what it doesn't.",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"primal_beast_uproar": {
+			"id": 995,
+			"sequence": "Ability3",
+			"is_talent": false,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"name": "Uproar",
+			"description": "Already draped in a broken patchwork of barding and chains upon appearing in the mistwoods, the Beast tolerates no further attempts at subjugation.",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"primal_beast_rock_throw": {
+			"id": 7739,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				25
+			],
+			"mana_cost": [
+				85
+			],
+			"name": "Rock Throw",
+			"description": "AGAIN WITH THE ROCKS!",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"primal_beast_onslaught_release": {
+			"id": 993,
+			"sequence": "Ability5",
+			"is_talent": false,
+			"cooldown": [
+				0.3
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"name": "Begin Onslaught",
+			"description": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no"
+		},
+		"primal_beast_pulverize": {
+			"id": 996,
+			"sequence": "Ability6",
+			"is_talent": false,
+			"cooldown": [
+				32,
+				28,
+				24
+			],
+			"mana_cost": [
+				100,
+				115,
+				130
+			],
+			"name": "Pulverize",
+			"description": "Though none are certain whether his utterances have true meaning, most concede the Beast's powerful grip and tendency to smash his enemies into naught but pulp and pieces communicates his intent well enough.",
+			"is_ultimate": true,
+			"is_passive": "no"
+		},
+		"special_bonus_magic_resistance_12": {
+			"id": 6299,
+			"sequence": "Ability10",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 1,
+			"description": "+12% Magic Resistance"
+		},
+		"special_bonus_mp_regen_2": {
+			"id": 5961,
+			"sequence": "Ability11",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 1,
+			"description": "+2 Mana Regen"
+		},
+		"special_bonus_unique_primal_beast_uproar_armor": {
+			"id": 7744,
+			"sequence": "Ability12",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 2,
+			"description": "+{s:bonus_roared_bonus_armor} Uproar Armor Per Stack"
+		},
+		"special_bonus_unique_primal_beast_onslaught_damage": {
+			"id": 7741,
+			"sequence": "Ability13",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 2,
+			"description": "+{s:bonus_knockback_damage} Onslaught Damage"
+		},
+		"special_bonus_unique_primal_beast_trample_attack_damage": {
+			"id": 7742,
+			"sequence": "Ability14",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 3,
+			"description": "+{s:bonus_attack_damage}% Trample Attack Multiplier"
+		},
+		"special_bonus_unique_primal_beast_roar_dispells": {
+			"id": 7740,
+			"sequence": "Ability15",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 3,
+			"description": "Beast dispells himself when activating Uproar"
+		},
+		"special_bonus_unique_primal_beast_pulverize_duration": {
+			"id": 7743,
+			"sequence": "Ability16",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 4,
+			"description": "+{s:bonus_channel_time}% Pulverize Duration"
+		},
+		"special_bonus_spell_lifesteal_50": {
+			"id": 806,
+			"sequence": "Ability17",
+			"is_talent": true,
+			"cooldown": [
+				0,
+				0,
+				0,
+				0
+			],
+			"mana_cost": [
+				0,
+				0,
+				0,
+				0
+			],
+			"talent_level": 4,
+			"description": "50% Spell Lifesteal"
 		}
 	}
 }

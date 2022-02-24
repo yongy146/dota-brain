@@ -141,7 +141,7 @@
 		"id": "11",
 		"name": "Quelling Blade",
 		"mana_cost": 0,
-		"cost": 130,
+		"cost": 100,
 		"cooldown": 4,
 		"is_recipe": false,
 		"is_neutral": false
@@ -348,6 +348,7 @@
 		"id": "30",
 		"name": "Gem of True Sight",
 		"cost": 900,
+		"cooldown": 12,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -400,7 +401,7 @@
 		"id": "37",
 		"name": "Ghost Scepter",
 		"cost": 1500,
-		"cooldown": 20,
+		"cooldown": 22,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -809,6 +810,22 @@
 		"is_recipe": false,
 		"is_neutral": false
 	},
+	"item_recipe_wraith_pact": {
+		"id": "907",
+		"name": "Wraith Pact Recipe",
+		"cost": 400,
+		"is_recipe": true,
+		"is_neutral": false
+	},
+	"item_wraith_pact": {
+		"id": "908",
+		"name": "Wraith Pact",
+		"mana_cost": 100,
+		"cost": 4200,
+		"cooldown": 60,
+		"is_recipe": false,
+		"is_neutral": false
+	},
 	"item_recipe_buckler": {
 		"id": "85",
 		"name": "Buckler Recipe",
@@ -915,7 +932,7 @@
 	"item_recipe_orchid": {
 		"id": "97",
 		"name": "Orchid Malevolence Recipe",
-		"cost": 475,
+		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -923,7 +940,7 @@
 		"id": "98",
 		"name": "Orchid Malevolence",
 		"mana_cost": 100,
-		"cost": 3475,
+		"cost": 3175,
 		"cooldown": 18,
 		"is_recipe": false,
 		"is_neutral": false
@@ -931,7 +948,7 @@
 	"item_recipe_bloodthorn": {
 		"id": "245",
 		"name": "Bloodthorn Recipe",
-		"cost": 800,
+		"cost": 925,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -939,7 +956,7 @@
 		"id": "250",
 		"name": "Bloodthorn",
 		"mana_cost": 100,
-		"cost": 6275,
+		"cost": 6500,
 		"cooldown": 15,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1017,7 +1034,7 @@
 		"name": "Force Staff",
 		"mana_cost": 100,
 		"cost": 2200,
-		"cooldown": 23,
+		"cooldown": 20,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -1033,7 +1050,7 @@
 		"name": "Hurricane Pike",
 		"mana_cost": 100,
 		"cost": 4450,
-		"cooldown": 23,
+		"cooldown": 20,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -1219,7 +1236,7 @@
 		"name": "Refresher Orb",
 		"mana_cost": 300,
 		"cost": 5000,
-		"cooldown": 160,
+		"cooldown": 170,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -1292,15 +1309,16 @@
 	"item_recipe_bloodstone": {
 		"id": "120",
 		"name": "Bloodstone Recipe",
-		"cost": 0,
+		"cost": 900,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_bloodstone": {
 		"id": "121",
 		"name": "Bloodstone",
-		"cost": 5750,
-		"cooldown": 85,
+		"mana_cost": 0,
+		"cost": 4600,
+		"cooldown": 40,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -1344,7 +1362,7 @@
 	"item_meteor_hammer": {
 		"id": "223",
 		"name": "Meteor Hammer",
-		"mana_cost": 125,
+		"mana_cost": 100,
 		"cost": 2350,
 		"cooldown": 24,
 		"is_recipe": false,
@@ -1360,7 +1378,7 @@
 	"item_nullifier": {
 		"id": "225",
 		"name": "Nullifier",
-		"mana_cost": 75,
+		"mana_cost": 0,
 		"cost": 4725,
 		"cooldown": 11,
 		"is_recipe": false,
@@ -1454,14 +1472,14 @@
 		"id": "242",
 		"name": "Crimson Guard",
 		"cost": 3600,
-		"cooldown": 40,
+		"cooldown": 35,
 		"is_recipe": false,
 		"is_neutral": false
 	},
 	"item_recipe_blade_mail": {
 		"id": "126",
 		"name": "Blade Mail Recipe",
-		"cost": 575,
+		"cost": 550,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -1469,7 +1487,7 @@
 		"id": "127",
 		"name": "Blade Mail",
 		"mana_cost": 25,
-		"cost": 2125,
+		"cost": 2100,
 		"cooldown": 25,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1495,7 +1513,7 @@
 	"item_hood_of_defiance": {
 		"id": "131",
 		"name": "Hood of Defiance",
-		"mana_cost": 75,
+		"mana_cost": 50,
 		"cost": 1500,
 		"cooldown": 60,
 		"is_recipe": false,
@@ -1547,14 +1565,14 @@
 	"item_recipe_radiance": {
 		"id": "136",
 		"name": "Radiance Recipe",
-		"cost": 1350,
+		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_radiance": {
 		"id": "137",
 		"name": "Radiance",
-		"cost": 5100,
+		"cost": 5050,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -1610,7 +1628,7 @@
 	"item_bfury": {
 		"id": "145",
 		"name": "Battle Fury",
-		"cost": 4130,
+		"cost": 4100,
 		"cooldown": 4,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1756,7 +1774,7 @@
 		"id": "156",
 		"name": "Satanic",
 		"cost": 5050,
-		"cooldown": 25,
+		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -1911,7 +1929,7 @@
 	"item_recipe_diffusal_blade": {
 		"id": "173",
 		"name": "Diffusal Blade Recipe",
-		"cost": 700,
+		"cost": 1050,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -1919,14 +1937,15 @@
 		"id": "174",
 		"name": "Diffusal Blade",
 		"mana_cost": 0,
-		"cost": 3150,
+		"cost": 2500,
 		"cooldown": 15,
 		"is_recipe": false,
 		"is_neutral": false
 	},
 	"item_recipe_ethereal_blade": {
 		"id": "175",
-		"cost": 0,
+		"name": "Ethereal Blade Recipe",
+		"cost": 1100,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -1934,15 +1953,15 @@
 		"id": "176",
 		"name": "Ethereal Blade",
 		"mana_cost": 100,
-		"cost": 4300,
-		"cooldown": 20,
+		"cost": 4650,
+		"cooldown": 22,
 		"is_recipe": false,
 		"is_neutral": false
 	},
 	"item_recipe_soul_ring": {
 		"id": "177",
 		"name": "Soul Ring Recipe",
-		"cost": 225,
+		"cost": 245,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -1950,7 +1969,7 @@
 		"id": "178",
 		"name": "Soul Ring",
 		"mana_cost": 0,
-		"cost": 680,
+		"cost": 700,
 		"cooldown": 25,
 		"is_recipe": false,
 		"is_neutral": false
@@ -2055,6 +2074,21 @@
 		"is_recipe": false,
 		"is_neutral": false
 	},
+	"item_recipe_boots_of_bearing": {
+		"id": "930",
+		"name": "Boots of Bearing Recipe",
+		"cost": 1500,
+		"is_recipe": true,
+		"is_neutral": false
+	},
+	"item_boots_of_bearing": {
+		"id": "931",
+		"name": "Boots of Bearing",
+		"cost": 4125,
+		"cooldown": 30,
+		"is_recipe": false,
+		"is_neutral": false
+	},
 	"item_recipe_medallion_of_courage": {
 		"id": "186",
 		"cost": 0,
@@ -2112,6 +2146,22 @@
 		"mana_cost": 50,
 		"cost": 1525,
 		"cooldown": 22,
+		"is_recipe": false,
+		"is_neutral": false
+	},
+	"item_recipe_revenants_brooch": {
+		"id": "910",
+		"name": "Revenant's Brooch Recipe",
+		"cost": 800,
+		"is_recipe": true,
+		"is_neutral": false
+	},
+	"item_revenants_brooch": {
+		"id": "911",
+		"name": "Revenant's Brooch",
+		"mana_cost": 250,
+		"cost": 6200,
+		"cooldown": 45,
 		"is_recipe": false,
 		"is_neutral": false
 	},
@@ -2422,14 +2472,6 @@
 		"name": "Arcanist's Armor",
 		"cost": 0,
 		"cooldown": 20,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_tree_processor": {
-		"id": "833",
-		"name": "Tree Processor",
-		"cost": 0,
-		"cooldown": 40,
 		"is_recipe": false,
 		"is_neutral": true
 	},
@@ -3114,7 +3156,7 @@
 		"id": "840",
 		"name": "Tumbler's Toy",
 		"cost": 0,
-		"cooldown": 20,
+		"cooldown": 15,
 		"is_recipe": false,
 		"is_neutral": true
 	},
