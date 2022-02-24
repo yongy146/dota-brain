@@ -10313,13 +10313,135 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
-  Puck: {
+  Phoenix: {
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_id: 1640804386,
+        roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+        steam_guide_id: 1640804378,
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961589",
+        steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        abilities: [
+          "phoenix_fire_spirits", // 1
+          "phoenix_icarus_dive", // 2
+          "phoenix_fire_spirits", // 3
+          "phoenix_icarus_dive", // 4
+          "phoenix_fire_spirits", // 5
+          "phoenix_supernova", // 6
+          "phoenix_fire_spirits", // 7
+          "phoenix_sun_ray", // 8
+          "phoenix_sun_ray", // 9
+          "phoenix_sun_ray", // 10
+          "phoenix_sun_ray", // 11
+          "phoenix_supernova", // 12
+          "phoenix_icarus_dive", // 13
+          "phoenix_icarus_dive", // 14
+          "special_bonus_spell_amplify_6", // 15
+          "special_bonus_unique_phoenix_3", // 16
+          "special_bonus_attributes", // 17
+          "phoenix_supernova", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_phoenix_4", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_phoenix_1", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "flask",
+            "faerie_fire",
+            "branches",
+            "enchanted_mango",
+            "ring_of_regen",
+            "ward_observer",
+            "ward_sentry",
+            "magic_stick",
+          ],
+          early_game: [
+            "tranquil_boots",
+            "magic_wand",
+            "urn_of_shadows",
+            "ring_of_basilius",
+          ],
+          mid_game: [
+            "holy_locket",
+            "aghanims_shard",
+            "veil_of_discord",
+            "cyclone",
+            "ghost",
+            "glimmer_cape",
+            "force_staff",
+          ],
+          late_game: [
+            "ultimate_scepter",
+            "refresher",
+            "aeon_disk",
+            "shivas_guard",
+            "sheepstick",
+          ],
+          situational: [
+            "infused_raindrop",
+            "spirit_vessel",
+            "lotus_orb",
+            "blink",
+          ],
+          core: [
+            "tranquil_boots",
+            "holy_locket",
+            "aghanims_shard",
+            "ultimate_scepter",
+          ],
+          neutral: [
+            "trusty_shovel",
+            "arcane_ring",
+            "philosophers_stone",
+            "bullwhip",
+            "quickening_charm",
+            "psychic_headband",
+            "spy_gadget",
+            "spell_prism",
+            "seer_stone",
+            "book_of_shadows",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      special_bonus_spell_amplify_6:
+        "On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.",
+    },
+    item_tooltips: {
+      ward_sentry: "To block or unblock the pull camp.",
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      ring_of_basilius: "If your laning partner uses a lot of mana early.",
+      infused_raindrop: "On hero against magical burst.",
+      tranquil_boots:
+        "A core boots upgrade. Solves hp sustain and movement speed issues for the hero.",
+      spirit_vessel: "Against heavy-healing lineup.",
+      holy_locket:
+        "A core item that signifcantly amplifies healing coming from Sunray. Provides you with a second source of burst healing when activating the item.",
+      aghanims_shard:
+        "A core upgrade that allows you to use Sunray during Supernova. Ideally, use the Sunray before you activate Supernova so you have another Sunray once the egg explodes.",
+      lotus_orb: "For reflect, dispel and armor.",
+      ultimate_scepter:
+        "A core item that allows you to save an ally with Supernova. It matches well with suggested level 25 talent and Blink Dagger.",
+      blink:
+        "Allows you to position to Sunray properly. Goes well with Aghanim`s Scepter in the late game to instantly save an ally.",
+    },
+  },
+
+  "Primal Beast": {
+    // TO BE UPDATE (Michel only updated steam_guide_id and steam_guide_link)
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID], // To be updated
+        steam_guide_id: 1645697252,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2763260196",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "puck_illusory_orb", // 1
