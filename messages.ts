@@ -10691,6 +10691,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
 
+  // Primal Beast
+  
+
   // 75. Puck | 06.03.2021
   {
     category: "OwnHero",
