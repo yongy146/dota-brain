@@ -10692,7 +10692,109 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // Primal Beast
-  
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_1_Outlasthit",
+    messageTime: 10,
+    textMessage:
+      "Primal Beast's base damage and Uproar's passive and active effects allow you to outlasthit the opponents.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "ability", name: "primal_beast_uproar" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_2_Onslaught timing",
+    messageTimes: [20, 4 * 60 + 20],
+    textMessage:
+      "Use Onslaught when opponents are somewhat stationary, for example when they are going for a lasthit.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_onslaught" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_3_Uproar Trample",
+    messageTimes: [2 * 60 + 15, 9 * 60 + 15, 16 * 60 + 15],
+    textMessage:
+      "You want to use Uproar when Trampling over the opponents heroes for maximum damage.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_trample" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_4_Take time",
+    messageTime: 9 * 60 + 30,
+    textMessage:
+      "Take your time and farm Blink Dagger so you can instantly Pulverize an opponent.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "blink" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_5_MIddle Pulverize",
+    messageTime: 10 * 60 + 15,
+    repeatTime: 10 * 60,
+    textMessage:
+      "Try to Pulverize an opponents that's in the middle of the opponents lineup so you can stun the rest as well.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_pulverize" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_6_Push sidelanes",
+    messageTime: 11 * 60 + 45,
+    repeatTime: 10 * 60,
+    textMessage:
+      "When not much is happening, push out sidelanes with your AoE abilities.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_trample" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Primal Beast",
+    audioFile: "ownHero/Primal Beast_7_Aghanims Shard",
+    messageTime: 19 * 60,
+    textMessage:
+      "Pick up Aghanim's Shard around minute 20 as it provides another disable among other things.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_trample" },
+  },
+
+  {
+    category: "EnemyHero",
+    hero: "Primal Beast",
+    audioFile: "enemyHero/Primal Beast_1_Dance around",
+    messageTimes: [15, 4 * 60 + 15],
+    textMessage:
+      "Avoid staying still against Primal Beast. Move around and be ready to dodge the Onslaught.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_onslaught" },
+  },
+  {
+    category: "EnemyHero",
+    hero: "Primal Beast",
+    audioFile: "enemyHero/Primal Beast_2_Pulverize stoppers",
+    messageTimes: [6 * 60 + 45, 12 * 60 + 45],
+    textMessage:
+      "Stun, fear, hex and silence effects can stop Pulverize.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "primal_beast_pulverize" },
+  },
+  {
+    category: "EnemyHero",
+    hero: "Primal Beast",
+    audioFile: "enemyHero/Primal Beast_3_Spell immunity",
+    messageTimes: [10 * 60 + 15, 16 * 60 + 15],
+    textMessage:
+      "Spell immunity counters all of the Primal Beasts abilities but Uproar.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "black_king_bar" },
+  },
 
   // 75. Puck | 06.03.2021
   {
