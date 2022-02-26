@@ -1,3 +1,11 @@
+/**
+ *
+ *
+ * Unfortunately file can't be replaced with static data from Dota 2 (24.2.2022)
+ *
+ * Copyright Dota Coach, 2022
+ */
+
 export const dispellableBuffs = {
   info: "// All skill buffs can be removed from enemy heroes with basic dispel - // Aura buffs are not dispellable - right Alex?",
 
@@ -76,6 +84,10 @@ export const dispellableBuffs = {
   Omniknight: ["omniknight_guardian_angel", "omniknight_repel"],
   Oracle: ["oracle_purifying_flames"],
   "Outworld Destroyer": ["obsidian_destroyer_equilibrium"],
+  "Primal Beast": [
+    "primal_beast_onslaught",
+    "primal_beast_trample" /* Strong dispel only */,
+  ],
   Pangolier: ["pangolier_shield_crash"],
   "Phantom Assassin": ["phantom_assassin_phantom_strike"],
   "Phantom Lancer": ["phantom_lancer_phantom_edge"],

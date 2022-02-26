@@ -1,3 +1,11 @@
+/**
+ *
+ *
+ * Note: Automatic production of this file based on static data provided by Dota 2 is not possible. Sample issue:  Anti-Mage's mana break ability has a silence_duration in the file, but not in the game.
+ *
+ * Copyright Dota Coach, 2022
+ */
+
 // Root and Silence are the disables  that make the difference between interrupting teleport and channeling skills
 // https://dota2.gamepedia.com/Disable	There is no need to differentiate between disables that precisely I believe. If there is a need for it, let me know.
 // Some spells are "hero" and "area"(Telekinesis, Winter's Curse, Unstable Concoction...). These spells are classified as area
@@ -394,6 +402,10 @@ export const disables = {
   "Phantom Lancer": [],
   Phoenix: [
     { skill: "phoenix_supernova", affects: "area", disables: ["stun"] },
+  ],
+  "Primal Beast": [
+    { skill: "primal_beast_onslaught", affects: "area", disables: ["stun"] },
+    { skill: "primal_beast_pulverize", affects: "hero", disables: ["stun"] },
   ],
   Puck: [
     { skill: "puck_dream_coil", affects: "area", disables: ["stun"] },
