@@ -1,3 +1,10 @@
+/**
+ *
+ * Source: Dota2.com
+ *
+ * Copyright Dota Coach, 2022
+ */
+
 export const heroSummary = {
   Abaddon: "Shields his allies or himself from attacks",
   Alchemist: "Earns extra gold from unit kills and bounty runes",

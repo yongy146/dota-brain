@@ -808,7 +808,6 @@
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/puck.png",
 		"video": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/puck.webm",
 		"steam_guide": [
-			"https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683"
 		],
 		"abilities": [
 			"puck_illusory_orb",
@@ -7897,6 +7896,8 @@
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/primal_beast.png",
 		"video": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/primal_beast.webm",
 		"steam_guide": [
+			"https://steamcommunity.com/sharedfiles/filedetails/?id=2763260196",
+			"https://steamcommunity.com/sharedfiles/filedetails/?id=2765463290"
 		],
 		"abilities": [
 			"primal_beast_onslaught",
