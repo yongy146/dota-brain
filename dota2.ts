@@ -354,6 +354,10 @@ export namespace ability {
     }
   }
 
+  /**
+   *
+   * @param heroName Localized hero name
+   */
   export function getUltimateCooldown(heroName: string): number[] {
     const ultimate = getUltimate(heroName);
     return getCooldown(ultimate);
@@ -419,7 +423,6 @@ export namespace ability {
         return result*/
   }
 
-  
   /**
    *
    * @param heroAbility
@@ -542,7 +545,7 @@ export namespace hero {
 
   /**
    *
-   * @returns Array of localited hero names, e.g. Anti-Mage
+   * @returns Array of localized hero names, e.g. Anti-Mage
    */
   export function getHeroNames(): string[] {
     const result = [];
@@ -752,7 +755,6 @@ export namespace hero {
         return [];
       }
 
-
       if (isSupport) {
         roleItems = counterItemsMidGame[hero].support;
       } else {
@@ -900,7 +902,6 @@ export namespace hero {
 
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
       return [...abilityBuild];
-
     }
 
     /**
@@ -992,7 +993,6 @@ export namespace hero {
         !Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)
       )
         return null;
-
 
       const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
         role.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -1222,6 +1222,10 @@ export namespace hero {
         }
       }
       return -1; // equals to not found
+    }
+
+    export function NPCNameToHeropediaName(heroNPCName: string): string {
+      return localizedNameToHeropediaName(NPCNameToLocalizedName(heroNPCName));
     }
 
     export function localizedNameToHeropediaName(
