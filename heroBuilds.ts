@@ -26,11 +26,17 @@ import {
   STEAM_GUIDE_ROLE,
 } from "./playerRoles";
 
+export enum ContentCreator {
+  TBD = "TBD",
+  AlexDota = "AlexDota",
+}
+
 /**
  * Data structure for the hero builds of a given hero
  *
  */
 export interface HeroBuilds {
+  creator: ContentCreator; // Owner of the guide (e.g. AlexDota)
   gameplay_version: string; // E.g. 7.30e or 7.31
   builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
@@ -117,6 +123,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
 export const heroBuilds: { [key: string]: HeroBuilds } = {
   Abaddon: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -225,6 +232,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Alchemist: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -460,6 +468,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Ancient Apparition": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -558,6 +567,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Anti-Mage": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -674,6 +684,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Arc Warden": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -796,6 +807,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Axe: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -921,6 +933,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Bane: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -1016,6 +1029,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Batrider: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -1230,6 +1244,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Beastmaster: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1340,6 +1355,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Bloodseeker: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -1546,6 +1562,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Bounty Hunter": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -1670,6 +1687,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Brewmaster: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1777,6 +1795,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Bristleback: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1895,6 +1914,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Broodmother: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1999,6 +2019,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Centaur Warrunner": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2100,6 +2121,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Chaos Knight": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -2276,6 +2298,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Chen: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2369,6 +2392,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Clinkz: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -2467,6 +2491,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Clockwerk: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2568,6 +2593,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Crystal Maiden": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2677,6 +2703,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Dark Seer": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2790,6 +2817,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Dark Willow": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2895,6 +2923,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Dawnbreaker: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3077,6 +3106,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Dazzle: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3175,6 +3205,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Death Prophet": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3291,6 +3322,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Disruptor: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3384,6 +3416,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Doom: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3479,6 +3512,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Dragon Knight": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3573,6 +3607,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Drow Ranger": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -3672,6 +3707,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Earth Spirit": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3774,6 +3810,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Earthshaker: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3855,6 +3892,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Elder Titan": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3951,6 +3989,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   "Ember Spirit": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -4060,6 +4099,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
   Enchantress: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4152,6 +4192,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Enigma: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -4333,6 +4374,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Faceless Void": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -4437,6 +4479,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Grimstroke: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4532,6 +4575,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Gyrocopter: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -4734,6 +4778,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Hoodwink: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4845,6 +4890,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Huskar: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [
@@ -4951,6 +4997,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Invoker: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
@@ -5149,6 +5196,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Io: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5245,6 +5293,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Jakiro: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5348,6 +5397,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Juggernaut: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -5488,6 +5538,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Keeper of the Light": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5604,6 +5655,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Kunkka: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -5812,6 +5864,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Legion Commander": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -5931,6 +5984,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Leshrac: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -6050,6 +6104,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lich: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -6152,6 +6207,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lifestealer: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -6274,6 +6330,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lina: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -6473,6 +6530,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lion: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -6570,6 +6628,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Lone Druid": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -6746,6 +6805,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Luna: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -6866,6 +6926,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lycan: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -7052,6 +7113,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Magnus: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -7353,6 +7415,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Marci: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7553,6 +7616,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Mars: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -7663,6 +7727,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Medusa: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -7775,6 +7840,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Meepo: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -7865,6 +7931,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Mirana: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7975,6 +8042,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Monkey King": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -8203,6 +8271,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Morphling: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -8322,6 +8391,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Naga Siren": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -8428,6 +8498,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Nature's Prophet": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -8756,6 +8827,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Necrophos: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -8970,6 +9042,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Night Stalker": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9081,6 +9154,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Nyx Assassin": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9185,6 +9259,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Ogre Magi": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9308,6 +9383,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Omniknight: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9421,6 +9497,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Oracle: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9530,6 +9607,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Outworld Devourer": {
     // not 'Outworld Destroyer'
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9717,6 +9795,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Pangolier: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -10034,6 +10113,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Phantom Assassin": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10159,6 +10239,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Phantom Lancer": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10270,6 +10351,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Phoenix: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -10392,6 +10474,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Primal Beast": {
     gameplay_version: "7.31",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // To be updated
@@ -10613,6 +10696,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Puck: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -10732,6 +10816,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Pudge: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -10940,6 +11025,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Pugna: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -11146,6 +11232,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Queen of Pain": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -11357,6 +11444,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Razor: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -11678,6 +11766,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Riki: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -11877,6 +11966,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Rubick: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -11986,6 +12076,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Sand King": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -12098,6 +12189,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Shadow Demon": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12199,6 +12291,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Shadow Fiend": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -12410,6 +12503,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Shadow Shaman": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12511,6 +12605,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Silencer: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12608,6 +12703,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Skywrath Mage": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12703,6 +12799,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Slardar: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -12823,6 +12920,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Slark: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -12958,6 +13056,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Snapfire: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -13079,6 +13178,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Sniper: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -13311,6 +13411,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Spectre: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -13434,6 +13535,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Spirit Breaker": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -13645,6 +13747,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Storm Spirit": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -13765,6 +13868,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Sven: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -13887,6 +13991,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Techies: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -13992,6 +14097,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Templar Assassin": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14222,6 +14328,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Terrorblade: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14341,6 +14448,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Tidehunter: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -14468,6 +14576,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Timbersaw: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -14584,6 +14693,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Tinker: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -14685,6 +14795,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Tiny: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -14990,6 +15101,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Treant Protector": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15096,6 +15208,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Troll Warlord": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -15220,6 +15333,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Tusk: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15342,6 +15456,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Underlord: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -15456,6 +15571,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Undying: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15555,6 +15671,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Ursa: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -15671,6 +15788,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Vengeful Spirit": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15786,6 +15904,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Venomancer: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -16012,6 +16131,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Viper: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -16231,6 +16351,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Visage: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -16428,6 +16549,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Void Spirit": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -16544,6 +16666,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Warlock: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16651,6 +16774,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Weaver: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16876,6 +17000,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Windranger: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17209,6 +17334,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Winter Wyvern": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17324,6 +17450,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Witch Doctor": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17447,6 +17574,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Wraith King": {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -17573,6 +17701,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Zeus: {
     gameplay_version: "7.30e",
+    creator: ContentCreator.TBD,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
