@@ -31,6 +31,7 @@ import {
  *
  */
 export interface HeroBuilds {
+  gameplay_version: string; // E.g. 7.30e or 7.31
   builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
   item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
@@ -115,6 +116,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
 
 export const heroBuilds: { [key: string]: HeroBuilds } = {
   Abaddon: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -222,6 +224,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Alchemist: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -456,6 +459,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Ancient Apparition": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -553,6 +557,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Anti-Mage": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -668,6 +673,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Arc Warden": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -762,7 +768,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       special_bonus_unique_arc_warden:
-        "Both level twenty talents are mediocre. I'd give slight edge to Spark Wraith one as in some rare cases you might purchase or obtain Aghanim`s Scepter from the Roshan.",
+        "Both level twenty talents are mediocre. I`d give slight edge to Spark Wraith one as in some rare cases you might purchase or obtain Aghanim`s Scepter from the Roshan.",
     },
     item_tooltips: {
       magic_stick:
@@ -789,6 +795,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Axe: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -913,6 +920,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Bane: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -1003,10 +1011,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core defensive item that can be used while channeling Fiend`s Grip.",
       lotus_orb: "For reflect, dispel and armor.",
       aghanims_shard: "Against summons, illusions and to depush.",
-      black_king_bar: "To get a full duration Fiend's Grip off.",
+      black_king_bar: "To get a full duration Fiend`s Grip off.",
     },
   },
   Batrider: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -1220,6 +1229,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Beastmaster: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1321,7 +1331,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard:
         "A core item that improves vision game and adds another disable.",
       ultimate_scepter: "Particularly good against illusion based heroes.",
-      octarine_core: "Goes well with Aghanim's Scepter build.",
+      octarine_core: "Goes well with Aghanim`s Scepter build.",
       blink: "To cast Primal Roar easier.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
@@ -1329,6 +1339,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Bloodseeker: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -1534,6 +1545,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Bounty Hunter": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -1657,6 +1669,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Brewmaster: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1763,6 +1776,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Bristleback: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1880,6 +1894,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Broodmother: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1983,6 +1998,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Centaur Warrunner": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2083,6 +2099,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Chaos Knight": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -2258,6 +2275,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Chen: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2350,6 +2368,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Clinkz: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -2447,6 +2466,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Clockwerk: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2547,6 +2567,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Crystal Maiden": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2655,6 +2676,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Dark Seer": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2767,6 +2789,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Dark Willow": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2871,6 +2894,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Dawnbreaker: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3052,6 +3076,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Dazzle: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3149,6 +3174,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Death Prophet": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3264,6 +3290,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Disruptor: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3356,6 +3383,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Doom: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3450,6 +3478,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Dragon Knight": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3543,6 +3572,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Drow Ranger": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -3641,6 +3671,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Earth Spirit": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3742,6 +3773,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Earthshaker: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3822,6 +3854,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Elder Titan": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3917,6 +3950,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   "Ember Spirit": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -4005,7 +4039,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       ember_spirit_flame_guard:
-        "You can put more points in this spell over Slight of Fist if the lane is not going particularly well. You'll catch-up faster with more points in Flame Guard.",
+        "You can put more points in this spell over Slight of Fist if the lane is not going particularly well. You`ll catch-up faster with more points in Flame Guard.",
     },
     item_tooltips: {
       magic_stick:
@@ -4025,6 +4059,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
   Enchantress: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4116,6 +4151,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Enigma: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -4296,6 +4332,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Faceless Void": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -4390,7 +4427,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       aghanims_shard:
-        "For extra mobility. Often times you'll get it from Roshan.",
+        "For extra mobility. Often times you`ll get it from Roshan.",
       blink:
         "To be able to seize the moment and get good Chronosphere out. Swift Blink is an option later on as well.",
       sphere: "Against powerful single-target disables and debuffs.",
@@ -4399,6 +4436,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Grimstroke: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4493,6 +4531,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Gyrocopter: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -4694,6 +4733,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Hoodwink: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4804,6 +4844,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Huskar: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [
@@ -4909,6 +4950,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Invoker: {
+    gameplay_version: "7.30e",
     builds: [
       {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
@@ -5106,6 +5148,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Io: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5201,6 +5244,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Jakiro: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5303,6 +5347,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Juggernaut: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -5409,7 +5454,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       special_bonus_unique_juggernaut:
         "This talent, along with level twenty Blade Fury talent and Aghanim`s Shard, allows you to dish out tons of damage while Blade Furying.",
       special_bonus_attack_speed_20:
-        "This is definitely a talent to increase the DPS output. If you are playing against Tinker, Zeus and such heroes that damage you heavily from afar but can't destroy your Healing Ward as easily, taking healing ward cooldown talent might be better.",
+        "This is definitely a talent to increase the DPS output. If you are playing against Tinker, Zeus and such heroes that damage you heavily from afar but can`t destroy your Healing Ward as easily, taking healing ward cooldown talent might be better.",
     },
     item_tooltips: {
       magic_stick:
@@ -5442,6 +5487,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Keeper of the Light": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5557,6 +5603,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Kunkka: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -5764,6 +5811,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Legion Commander": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -5882,6 +5930,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Leshrac: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -6000,6 +6049,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Lich: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -6096,11 +6146,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "For extra control and potential to burst a secluded enemy hero with Chain Frost.",
       lotus_orb: "For reflect, dispel and armor.",
       blink:
-        "Goes well with Aghanim's Shard to burst a single hero. Good for canceling channeling spells(Fiend`s Grip, Shackles).",
+        "Goes well with Aghanim`s Shard to burst a single hero. Good for canceling channeling spells(Fiend`s Grip, Shackles).",
     },
   },
 
   Lifestealer: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -6222,6 +6273,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Lina: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -6420,6 +6472,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Lion: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -6516,6 +6569,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Lone Druid": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -6691,6 +6745,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Luna: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -6810,6 +6865,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Lycan: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -6995,6 +7051,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Magnus: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -7295,6 +7352,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Marci: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7494,6 +7552,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Mars: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -7603,6 +7662,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Medusa: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -7700,12 +7760,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       skadi:
         "A core item that improves your effective hp significantly, deals with kiting and reduces healing from opponents.",
       aghanims_shard:
-        "Goes well with Aghanim's Scepter and Mysic Snake talents.",
+        "Goes well with Aghanim`s Scepter and Mysic Snake talents.",
       hurricane_pike: "To disengage from heroes like Slark and Troll.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       ultimate_scepter:
-        "For extra control and damage amplification. Goes well with Aghanim's Shard.",
+        "For extra control and damage amplification. Goes well with Aghanim`s Shard.",
       swift_blink:
         "To jump in the middle of the fight with Split Shot and Stone Gaze on.",
       monkey_king_bar: "Against evasion.",
@@ -7714,6 +7774,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Meepo: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -7803,6 +7864,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Mirana: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7912,6 +7974,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Monkey King": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -8139,6 +8202,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Morphling: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -8257,6 +8321,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Naga Siren": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -8362,6 +8427,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Nature's Prophet": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -8689,6 +8755,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Necrophos: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -8895,13 +8962,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that provides you with mix of offensive and defensive stats. Self healing amplification from Sange goes well with Ghost Shroud.",
       aghanims_shard:
         "A core item to save an ally, heal and amplify the magical damage on target.",
-      blink: "For extra mobility and to get Reaper's Scythe off easier.",
+      blink: "For extra mobility and to get Reaper`s Scythe off easier.",
       lotus_orb: "For reflect, dispel and armor.",
       ultimate_scepter: "Against heavy physical damage lineups.",
     },
   },
 
   "Night Stalker": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9012,6 +9080,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Nyx Assassin": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9115,6 +9184,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Ogre Magi": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9237,6 +9307,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Omniknight: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9349,6 +9420,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Oracle: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -9457,6 +9529,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Outworld Devourer": {
     // not 'Outworld Destroyer'
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9643,6 +9716,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Pangolier: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9959,6 +10033,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Phantom Assassin": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10083,6 +10158,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Phantom Lancer": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10193,6 +10269,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Phoenix: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -10314,6 +10391,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Primal Beast": {
+    gameplay_version: "7.31",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // To be updated
@@ -10527,13 +10605,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       black_king_bar:
         "A core item that deals with most spells while Uproar deals with physical damage.",
       aghanims_shard:
-        "A core upgrade that adds another disable to Primal Beast's arsenal.",
+        "A core upgrade that adds another disable to Primal Beast`s arsenal.",
       heavens_halberd: "Particularly good against ranged right-clickers.",
       lotus_orb: "For reflect, dispel and armor.",
     },
   },
 
   Pudge: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -10741,6 +10820,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Pugna: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -10946,6 +11026,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Queen of Pain": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -11156,6 +11237,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Razor: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -11476,6 +11558,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Riki: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -11674,6 +11757,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Rubick: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -11782,6 +11866,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Sand King": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -11893,6 +11978,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Shadow Demon": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -11993,6 +12079,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Shadow Fiend": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -12203,6 +12290,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Shadow Shaman": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12303,6 +12391,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Silencer: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12399,6 +12488,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Skywrath Mage": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12493,6 +12583,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Slardar: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -12612,6 +12703,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Slark: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -12746,6 +12838,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Snapfire: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12866,6 +12959,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Sniper: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -13097,6 +13191,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Spectre: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -13219,6 +13314,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Spirit Breaker": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -13429,6 +13525,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Storm Spirit": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -13548,6 +13645,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Sven: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -13669,6 +13767,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Techies: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -13773,6 +13872,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Templar Assassin": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14002,6 +14102,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Terrorblade: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14120,6 +14221,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tidehunter: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -14246,6 +14348,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Timbersaw: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -14361,6 +14464,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tinker: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -14461,6 +14565,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tiny: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -14765,6 +14870,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Treant Protector": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -14870,6 +14976,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Troll Warlord": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14993,6 +15100,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tusk: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15114,6 +15222,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Underlord: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -15227,6 +15336,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Undying: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15325,6 +15435,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Ursa: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -15440,6 +15551,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Vengeful Spirit": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15554,6 +15666,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Venomancer: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -15779,6 +15892,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Viper: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -15997,6 +16111,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Visage: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -16193,6 +16308,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Void Spirit": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -16308,6 +16424,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Warlock: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16414,6 +16531,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Weaver: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16638,6 +16756,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Windranger: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16970,6 +17089,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Winter Wyvern": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17084,6 +17204,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Witch Doctor": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17206,6 +17327,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Wraith King": {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -17331,6 +17453,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Zeus: {
+    gameplay_version: "7.30e",
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
