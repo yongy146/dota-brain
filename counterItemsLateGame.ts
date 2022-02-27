@@ -773,6 +773,11 @@ export const counterItemsLateGame = {
     support: [{ item: "black_king_bar" }],
     core: [{ item: "AttackSpeed", info: "to destroy the egg" }],
   },
+  "Primal Beast": {
+    all: [],
+    support: [],
+    core: [],
+  },
   Puck: {
     all: [{ item: "sheepstick" }],
     support: [{ item: "black_king_bar" }],

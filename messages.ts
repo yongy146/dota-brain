@@ -1331,7 +1331,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Save some of your starting gold to get Helm of Iron Will as soon as possible.",
     audience: [Audience.ROLE_OFFLANE],
-    image: { type: "item", name: "item_helm_of_iron_will" },
+    image: { type: "item", name: "helm_of_iron_will" },
   },
   {
     category: "OwnHero",
@@ -1351,7 +1351,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Make sure not to feed boars to opponents. Deny them or move them away when they're low on hp.",
     audience: [Audience.ALL],
-    image: { type: "ability", name: "call_of_the_wild_boar" },
+    image: { type: "ability", name: "beastmaster_call_of_the_wild_boar" },
   },
   {
     category: "OwnHero",
@@ -1364,7 +1364,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       Audience.ROLE_CARRY,
       Audience.ROLE_SUPPORT,
     ],
-    image: { type: "ability", name: "call_of_the_wild_hawk" },
+    image: { type: "ability", name: "beastmaster_call_of_the_wild_hawk" },
   },
   {
     category: "OwnHero",
@@ -1374,7 +1374,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Utilize Beasmaster's high base damage and additional damage from boars to deny creeps and secure lasthits.",
     audience: [Audience.ALL],
-    image: { type: "ability", name: "call_of_the_wild_boar" },
+    image: { type: "ability", name: "beastmaster_call_of_the_wild_boar" },
   },
   {
     category: "OwnHero",
@@ -10780,8 +10780,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Primal Beast",
     audioFile: "enemyHero/Primal Beast_2_Pulverize stoppers",
     messageTimes: [6 * 60 + 45, 12 * 60 + 45],
-    textMessage:
-      "Stun, fear, hex and silence effects can stop Pulverize.",
+    textMessage: "Stun, fear, hex and silence effects can stop Pulverize.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_pulverize" },
   },

@@ -10611,6 +10611,125 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
   },
 
+  Puck: {
+    gameplay_version: "7.30e",
+    builds: [
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1640804386,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "puck_illusory_orb", // 1
+          "puck_phase_shift", // 2
+          "puck_illusory_orb", // 3
+          "puck_waning_rift", // 4
+          "puck_illusory_orb", // 5
+          "puck_dream_coil", // 6
+          "puck_illusory_orb", // 7
+          "puck_waning_rift", // 8
+          "puck_waning_rift", // 9
+          "puck_waning_rift", // 10
+          "special_bonus_unique_puck_7", // 11
+          "puck_dream_coil", // 12
+          "puck_phase_shift", // 13
+          "puck_phase_shift", // 14
+          "puck_phase_shift", // 15
+          "special_bonus_spell_amplify_12", // 16
+          "special_bonus_attributes", // 17
+          "puck_dream_coil", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_puck_2", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_puck_6", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "faerie_fire",
+            "circlet",
+            "branches",
+            "mantle",
+            "ward_observer",
+            "magic_stick",
+          ],
+          early_game: [
+            "bottle",
+            "null_talisman",
+            "boots",
+            "witch_blade",
+            "magic_wand",
+          ],
+          mid_game: [
+            "travel_boots",
+            "blink",
+            "kaya_and_sange",
+            "aghanims_shard",
+            "cyclone",
+            "dagon",
+          ],
+
+          late_game: [
+            "ultimate_scepter",
+            "octarine_core",
+            "ethereal_blade",
+            "sheepstick",
+          ],
+          situational: ["infused_raindrop", "sphere", "aeon_disk"],
+          core: [
+            "bottle",
+            "witch_blade",
+            "travel_boots",
+            "blink",
+            "kaya_and_sange",
+            "aghanims_shard",
+            "ultimate_scepter",
+          ],
+          neutral: [
+            "mysterious_hat",
+            "arcane_ring",
+            "grove_bow",
+            "vambrace",
+            "psychic_headband",
+            "quickening_charm",
+            "timeless_relic",
+            "spell_prism",
+            "mirror_shield",
+            "fallen_sky",
+          ],
+        },
+      },
+    ],
+    ability_tooltips: {
+      puck_phase_shift:
+        "You don`t have to skill this spell on level 2 if you are not being right-clicked often or you don`t need to dodge a spell.",
+    },
+    item_tooltips: {
+      magic_stick:
+        "Start with it if you expect high frequency of spells being used on the lane.",
+      bottle:
+        "A core item that provides you with sustain and allows you to gank with stored rune.",
+      infused_raindrop: "Against magical burst.",
+      witch_blade:
+        "A core item that significantly increases the damage coming from your right-clicks.",
+      travel_boots: "A core item that allows you to cover the map better.",
+      blink:
+        "A core item that allows you to seize an opportunity and land a multi-hero Mystic Coil. Works well with Phase Shift when it comes to escaping.",
+      kaya_and_sange:
+        "A core item that provides you with a mix of defensive and offensive stats.",
+      aghanims_shard:
+        "A core upgrade that allows you to snap a Mystic Coil and detect invisble heroes or wards.",
+      ultimate_scepter:
+        "A core item that allows Dream Coil to affect spell-immune heroes.",
+      sphere: "Aghainst powerful single-target disables or debuffs.",
+      aeon_disk: "Against lineups with a lot of catch, disables and burst.",
+    },
+  },
+
   Pudge: {
     gameplay_version: "7.30e",
     builds: [

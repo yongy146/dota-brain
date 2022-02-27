@@ -248,6 +248,7 @@ export namespace ability {
   }
 
   export function getDispellableBuffs(hero: string): string[] {
+    if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
     if (dispellableBuffs[hero] == null) {
       /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
       return [];
@@ -255,7 +256,7 @@ export namespace ability {
 
     const result = dispellableBuffs[hero];
 
-    /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+    /* return copy of array, otherwise recipient can change content of dispellableBuffs */
     return [...result];
   }
 
@@ -728,6 +729,7 @@ export namespace hero {
       hero: string,
       isSupport: boolean
     ): any[] {
+      if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
       const allItems = counterItemsLaning[hero].all;
       let roleItems: [any];
       if (counterItemsLaning[hero] == null) {
@@ -748,6 +750,7 @@ export namespace hero {
       hero: string,
       isSupport: boolean
     ): any[] {
+      if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
       const allItems = counterItemsMidGame[hero].all;
       let roleItems: [any];
       if (counterItemsMidGame[hero] == null) {
@@ -768,6 +771,7 @@ export namespace hero {
       hero: string,
       isSupport: boolean
     ): any[] {
+      if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
       const allItems = counterItemsLateGame[hero].all;
       let roleItems: [any];
       if (counterItemsLateGame[hero] == null) {
@@ -1355,10 +1359,10 @@ export namespace items {
         return dota2Items[`item_${item}`].cooldown;
       }
     }
-    Object.prototype.hasOwnProperty.call(
+    /*Object.prototype.hasOwnProperty.call(
       dota2Items[`item_${item}`],
       "cooldown"
-    );
+    );*/
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return -1;
   }

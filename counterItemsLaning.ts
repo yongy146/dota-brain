@@ -1291,6 +1291,11 @@ export const counterItemsLaning = {
     ],
     core: [],
   },
+  "Primal Beast": {
+    all: [],
+    support: [],
+    core: [],
+  },
   Puck: {
     all: [
       {
