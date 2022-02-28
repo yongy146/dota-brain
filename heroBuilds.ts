@@ -1064,8 +1064,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Axe: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.TNTCNz,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1420,6 +1420,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ghost",
             "cyclone",
             "kaya_and_sange",
+      
           ],
           late_game: [
             "octarine_core",
@@ -15047,8 +15048,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Slardar: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.TNTCNz,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -16884,8 +16885,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Timbersaw: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.TNTCNz,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
