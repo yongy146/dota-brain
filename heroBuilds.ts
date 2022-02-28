@@ -44,7 +44,7 @@ export const ContentCreatorLinks = {
   },
   AlexDota: {
     img: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ...
-    txt: "This guide was written by 10k Professional Player AlexDota",
+    txt: "This guide was written by 10k Professional Player AlexDota.",
     link_http: "https://www.gamersensei.com/senseis/alexxo",
     link_text: "Click here to be coached by him.",
   },
