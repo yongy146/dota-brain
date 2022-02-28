@@ -31,6 +31,7 @@ export enum ContentCreator {
   AlexDota = "AlexDota",
   YoonA = "YoonA",
   TNTCNz = "TNTCNz",
+  Michel = "Michel"
 }
 
 /**
