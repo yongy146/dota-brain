@@ -34,6 +34,13 @@ export enum ContentCreator {
   Michel = "Michel",
 }
 
+export enum DamageType {
+  neutral = "neutral", // Combination of physcal, magical and pure
+  physical = "physical",
+  magical = "magical",
+  pure = "pure",
+}
+
 /**
  * Data structure for the hero builds of a given hero
  *
@@ -44,6 +51,7 @@ export interface HeroBuilds {
   // TASK MICHEL: RENOME TO 'HeroContent'
   creator: ContentCreator; // Owner of the guide (e.g. AlexDota)
   gameplay_version: string; // E.g. 7.30e or 7.31
+  damage_type: DamageType;
   builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
   item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
@@ -149,6 +157,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Abaddon: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -300,6 +309,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Alchemist: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -575,6 +585,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Ancient Apparition": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -713,6 +724,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Anti-Mage": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -884,6 +896,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Arc Warden": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -1064,8 +1077,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Axe: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.TNTCNz,
+    damage_type: DamageType.pure,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1231,6 +1245,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Bane: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.pure,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -1365,6 +1380,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Batrider: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -1420,6 +1436,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ghost",
             "cyclone",
             "kaya_and_sange",
+      
           ],
           late_game: [
             "octarine_core",
@@ -1622,6 +1639,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Beastmaster: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -1772,6 +1790,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Bloodseeker: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -2016,6 +2035,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Bounty Hunter": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -2185,6 +2205,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Brewmaster: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2343,6 +2364,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Bristleback: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2519,6 +2541,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Broodmother: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2679,6 +2702,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Centaur Warrunner": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -2821,6 +2845,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Chaos Knight": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -3044,6 +3069,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Chen: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3147,6 +3173,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Clinkz: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -3279,6 +3306,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Clockwerk: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3418,6 +3446,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Crystal Maiden": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3564,6 +3593,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Dark Seer": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -3715,6 +3745,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Dark Willow": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -3877,6 +3908,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Dawnbreaker: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4110,6 +4142,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Dazzle: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4251,6 +4284,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Death Prophet": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -4424,6 +4458,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Disruptor: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -4554,6 +4589,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Doom: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -4688,6 +4724,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Dragon Knight": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -4824,6 +4861,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Drow Ranger": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -4968,6 +5006,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Earth Spirit": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5106,6 +5145,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Earthshaker: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5216,6 +5256,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Elder Titan": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5358,6 +5399,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Ember Spirit": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -5526,6 +5568,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Enchantress: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.pure,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -5657,6 +5700,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Enigma: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -5877,6 +5921,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Faceless Void": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -6031,6 +6076,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Grimstroke: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -6171,6 +6217,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Gyrocopter: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -6424,6 +6471,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Hoodwink: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -6604,6 +6652,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Huskar: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [
@@ -6766,6 +6815,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Invoker: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
@@ -7043,6 +7093,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Io: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7181,6 +7232,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Jakiro: {
     gameplay_version: "7.31",
     creator: ContentCreator.YoonA,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7320,6 +7372,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Juggernaut: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -7511,6 +7564,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Keeper of the Light": {
     gameplay_version: "7.31",
     creator: ContentCreator.YoonA,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7685,6 +7739,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Kunkka: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -7929,6 +7984,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Legion Commander": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -8097,6 +8153,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Leshrac: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -8253,6 +8310,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Lich: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -8405,6 +8463,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Lifestealer: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -8581,6 +8640,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Lina: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -8834,6 +8894,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Lion: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -8969,6 +9030,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   "Lone Druid": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -9186,6 +9248,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Luna: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -9348,6 +9411,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   Lycan: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9531,15 +9595,35 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier: "To dispel defensive spells and items.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+          { item: "phase_boots", info: "To phase through the summons block" },
+          { item: "vanguard" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "rod_of_atos" }],
+        support: [{ item: "glimmer_cape" }, { item: "ghost" }],
+        core: [{ item: "crimson_guard" }],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [{ item: "abyssal_blade" }, { item: "assault" }],
+      },
     },
   },
 
   Magnus: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -9838,15 +9922,51 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to get Reverse Polarity off and to Skewer an enemy.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "aeon_disk" },
+          { item: "ethereal_blade" },
+          {
+            item: "wind_waker",
+            info: "To save an ally stunned by Reverse Polarity",
+          },
+        ],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   Marci: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -10044,15 +10164,90 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "A core item for instant gap-close, followed up with Dispose.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          { item: "infused_raindrop" },
+          { item: "wind_lace", info: "To keep the distance from Marci" },
+          { item: "boots", info: "To keep the distance from Marci" },
+          {
+            item: "urn_of_shadows",
+            info: "To build Spirit Vessel against Marci's Sidekick",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "blight_stone" },
+          {
+            item: "cloak",
+            info: "Marci is heavy on magical damage early on and Cloak will negate 15% of it",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [
+          { item: "ring_of_health" },
+          { item: "vanguard" },
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "cyclone", info: "To disengage and dispel Sidekick" },
+          { item: "blink", info: "To disjoint Rebound" },
+          { item: "rod_of_atos" },
+          { item: "solar_crest" },
+        ],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "heavens_halberd" },
+          { item: "crimson_guard" },
+          { item: "hurricane_pike" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+          {
+            item: "invis_sword",
+            info: "To disengage from Rebound and Unleash",
+          },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "aeon_disk" },
+          { item: "ethereal_blade" },
+          {
+            item: "wind_waker",
+            info: "To save an ally being focused by Marci",
+          },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "nullifier", info: "To dispel Sidekick" },
+          { item: "butterfly" },
+          { item: "assault" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "skadi", info: "To reduce healing" },
+          {
+            item: "shivas_guard",
+            info: "To reduce healing and for some armor",
+          },
+        ],
+      },
     },
   },
 
   Mars: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -10160,15 +10355,56 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "wind_lace",
+            info: "Makes harder for Mars to hit you with Spear of Mars and to catch you in the Arena of Blood",
+          },
+          {
+            item: "boots",
+            info: "Makes harder for Mars to hit you with Spear of Mars and to catch you in the Arena of Blood",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Mars is heavy on magical damage and Cloak will negate 15% of it",
+          },
+        ],
+        support: [],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "silver_edge" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "assault" },
+        ],
+      },
     },
   },
 
   Medusa: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10278,15 +10514,46 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge: "For break and extra mobility.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "wind_lace", info: "To avoid Mysic Snake bounces" },
+          { item: "boots", info: "To avoid Mysic Snake bounces" },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "crimson_guard" },
+          { item: "diffusal_blade" },
+          { item: "heavens_halberd" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+        ],
+      },
     },
   },
 
   Meepo: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10374,15 +10641,49 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "As a save and dispel. In most cases you will get it from Roshan.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "crimson_guard", info: "To burst one of the clones" },
+        ],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "force_staff" },
+        ],
+        core: [
+          { item: "crimson_guard" },
+          { item: "hurricane_pike" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Earthbind" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "mjollnir" },
+          { item: "abyssal_blade" },
+          { item: "bloodthorn", info: "To burst one of his clones" },
+          { item: "butterfly" },
+          { item: "assault" },
+        ],
+      },
     },
   },
 
   Mirana: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -10490,15 +10791,55 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Mirana is heavy on magical damage early on and Cloak will negate 15% of it",
+          },
+        ],
+        support: [
+          { item: "ward_observer", info: "To spot arrows" },
+          {
+            item: "ward_sentry",
+            info: "Mirana's ultimate Moonlight Shadow makes her and her allies become invisible",
+          },
+          { item: "dust" },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "SentryDust" },
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+        ],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "SentryDustGem" }, { item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "butterfly", info: "Against a core right-clicking Mirana" },
+          { item: "assault", info: "Against a core right-clicking Mirana" },
+        ],
+      },
     },
   },
 
   "Monkey King": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -10724,15 +11065,60 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "On hero against magical burst.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "wind_lace", info: "To keep the distance from Monkey King" },
+          { item: "boots", info: "To keep the distance from Monkey King" },
+          { item: "quelling_blade", info: "To cut the tree he is on" },
+          { item: "armor", info: "Buy armor items" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel against Jingu Mastery lifesteal",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "cyclone" },
+          {
+            item: "mekansm",
+            info: "Heals some of the AoE damage from his abilities and provides armor against right-clicks, Boundless Strike and Wukong's Command",
+          },
+        ],
+        support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "crimson_guard" },
+          { item: "hurricane_pike" },
+          { item: "silver_edge" },
+          { item: "basher" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [],
+        core: [
+          { item: "assault" },
+          { item: "skadi" },
+          { item: "shivas_guard" },
+          { item: "abyssal_blade" },
+          { item: "butterfly" },
+          {
+            item: "bloodthorn",
+            info: "To burst this tanky hero while in Wukong's Command",
+          },
+          { item: "nullifier", info: "Dispels Jingu Mastery buff" },
+        ],
+      },
     },
   },
 
   Morphling: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -10849,15 +11235,54 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To gap-close quickly.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel against Attribute Shift(Strength Gain)",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "orchid" },
+          { item: "diffusal_blade" },
+          { item: "heavens_halberd" },
+          { item: "black_king_bar" },
+          { item: "mage_slayer" },
+          { item: "basher" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "sphere" },
+          { item: "aeon_disk" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "skadi" },
+          { item: "abyssal_blade" },
+          { item: "butterfly" },
+          {
+            item: "bloodthorn",
+            info: "To burst this high armor hero and while it is morphing into strength",
+          },
+        ],
+      },
     },
   },
 
   "Naga Siren": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -10961,15 +11386,69 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive spells and items that prevent you from right-clicking the opponents.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [{ item: "armor", info: "Buy armor items" }],
+        support: [
+          {
+            item: "ward_sentry",
+            info: "To block the camps in the area she is farming once she leaves the lane",
+          },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "dagon", info: "Instantly kills illusions" }],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "maelstrom" },
+          { item: "bfury" },
+          {
+            item: "black_king_bar",
+            info: "To be able to fight during Song of the Siren",
+          },
+          { item: "gungir" },
+          { item: "travel_boots" },
+          { item: "manta", info: "To dispel Ensnare" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [
+          {
+            item: "black_king_bar",
+            info: "To be able to fight during Song of the Siren",
+          },
+          { item: "travel_boots" },
+        ],
+        core: [
+          { item: "mjollnir" },
+          { item: "shivas_guard" },
+          { item: "radiance" },
+          { item: "abyssal_blade" },
+          { item: "butterfly" },
+          { item: "bloodthorn", info: "To burst this tanky high armor hero" },
+          {
+            item: "overwhelming_blink",
+            info: "For AoE damage against illusions",
+          },
+          {
+            item: "satanic",
+            info: "To dispel Ensnare and to lifesteal off of her or her illusions",
+          },
+        ],
+      },
     },
   },
 
   "Nature's Prophet": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -11295,15 +11774,56 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that adds to the push but also serves as a `disable` in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "quelling_blade", info: "To cut a tree in Sprout" },
+          { item: "armor", info: "Buy armor items" },
+          { item: "infused_raindrop", info: "For Wrath of Nature" },
+        ],
+        support: [],
+        core: [
+          { item: "ring_of_health" },
+          { item: "phase_boots", info: "To phase through the summons block" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "quelling_blade" }],
+        support: [
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "crimson_guard" },
+          { item: "bfury" },
+          {
+            item: "heavens_halberd",
+            info: "Against a core right-click build Nature's Prophet",
+          },
+          { item: "basher" },
+          { item: "travel_boots" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "travel_boots" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   Necrophos: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -11515,15 +12035,68 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter: "Against heavy physical damage lineups.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Necrophos will use Death Pulse frequently to harass and secure creep lasthits",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For lane sustain and/or Pipe of Insight later",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Necrophos is heavy on magical damage early on and Cloak will negate 15% of it",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel against Hearthstopper Aura and Death Pulse",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "orchid" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "aeon_disk" },
+          {
+            item: "wind_waker",
+            info: "To save an ally being Reaper's Scythed",
+          },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "skadi" },
+          { item: "shivas_guard" },
+          { item: "nullifier" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+        ],
+      },
     },
   },
 
   "Night Stalker": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -11632,15 +12205,46 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Against summon-based heroes. Consumes even ancients during night.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Night Stalker during night time",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Night Stalker during night time",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [{ item: "hurricane_pike" }, { item: "silver_edge" }],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [],
+        core: [
+          { item: "abyssal_blade", info: "To pin this mobile hero" },
+          { item: "assault" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   "Nyx Assassin": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -11742,15 +12346,40 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ethereal_blade: "Goes well with level with suggested level 25 talent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "arcane_boots",
+            info: "To upkeep the mana against Mana Burn",
+          },
+          { item: "infused_raindrop" },
+        ],
+        support: [{ item: "ward_sentry" }, { item: "dust" }],
+        core: [{ item: "soul_ring" }],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "SentryDust" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "SentryDustGem" }, { item: "black_king_bar" }],
+        core: [{ item: "abyssal_blade" }],
+      },
     },
   },
 
   "Ogre Magi": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -11871,15 +12500,40 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To close the gap.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Ogre Magi will frequently use his spells to harass or buff himself or his allies",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Ogre Magi does a lot of magical damage and Cloak will offset 15% of it",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: { all: [], support: [{ item: "black_king_bar" }], core: [] },
     },
   },
 
   Omniknight: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.pure,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -11990,15 +12644,65 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "For sustain on the lane against a core Omniknight",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from a core Omniknight",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from a core Omniknight",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel against Purification and Heavenly Grace",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }, { item: "cyclone" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "orchid" },
+          { item: "diffusal_blade" },
+          { item: "maelstrom" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [],
+        core: [
+          { item: "skadi" },
+          { item: "shivas_guard" },
+          {
+            item: "nullifier",
+            info: "Dispels Heavenly Grace and Guardian Angel",
+          },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          {
+            item: "mjollnir",
+            info: "To be able to do magical damage while Guarding Angel is active",
+          },
+          {
+            item: "monkey_king_bar",
+            info: "To be able to do magical damage while Guarding Angel is active",
+          },
+        ],
+      },
     },
   },
 
   Oracle: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12104,9 +12808,36 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to surive the jump by opponents and possibly turn the fight around by using False Promise. You are generally the first priority target for opponents.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to negate the healing on the hero that False Promise was used on. Apply Vessel towards end of the False promise and be mindful that Fortune's End dispels Vessel debuff",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "blink", info: "To close the gap to Oracle" },
+        ],
+        support: [{ item: "force_staff" }],
+        core: [{ item: "orchid" }, { item: "black_king_bar" }],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [
+          { item: "skadi" },
+          { item: "shivas_guard" },
+          { item: "satanic", info: "To dispel Fate's Edict and Fortune's End" },
+        ],
+      },
     },
   },
 
@@ -12114,6 +12845,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     // not 'Outworld Destroyer'
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -12298,15 +13030,43 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sphere: "Against powerful single-target disables and debuffs.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to negate the healing on the hero that False Promise was used on. Apply Vessel towards end of the False promise and be mindful that Fortune's End dispels Vessel debuff",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "blink", info: "To close the gap to Oracle" },
+        ],
+        support: [{ item: "force_staff" }],
+        core: [{ item: "orchid" }, { item: "black_king_bar" }],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [
+          { item: "skadi" },
+          { item: "shivas_guard" },
+          { item: "satanic", info: "To dispel Fate's Edict and Fortune's End" },
+        ],
+      },
     },
   },
 
   Pangolier: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -12621,15 +13381,60 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Against powerful single-target disables and debuffs(Rupture, Primal Roar, Scythe of Vyse).",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Pangolier and to dodge the Rolling Thunder",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Pangolier and to dodge the Rolling Thunder",
+          },
+          { item: "infused_raindrop" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "hurricane_pike" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+          { item: "manta", info: "To dispel Lucky Shot" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          {
+            item: "bloodthorn",
+            info: "To burst this tanky hero even if Shield Crash is active",
+          },
+          {
+            item: "nullifier",
+            info: "To burst this tanky hero while Shield Crash is active",
+          },
+          { item: "satanic", info: "To dispel Lucky Shot" },
+        ],
+      },
     },
   },
 
   "Phantom Assassin": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -12752,15 +13557,48 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier: "To dispel defensive spells and items on opponents.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_wand",
+            info: "Great item as she uses Stifling Dagger to farm and harass",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "ghost" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "hurricane_pike" },
+          { item: "monkey_king_bar" },
+          { item: "silver_edge" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [],
+        core: [
+          { item: "bloodthorn", info: "For true strike against Blur" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   "Phantom Lancer": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -12869,15 +13707,43 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "For break effect, burst and to reposition. Illusions have crit chance as well.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [{ item: "armor", info: "Buy armor items" }],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "ghost" }],
+        core: [
+          { item: "maelstrom" },
+          { item: "bfury" },
+          { item: "black_king_bar" },
+          { item: "gungir" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "mjollnir" },
+          { item: "shivas_guard" },
+          { item: "radiance" },
+          { item: "butterfly" },
+          { item: "assault" },
+          {
+            item: "overwhelming_blink",
+            info: "For some AoE damage against illusions",
+          },
+        ],
+      },
     },
   },
 
   Phoenix: {
     gameplay_version: "7.31",
     creator: ContentCreator.YoonA,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12997,15 +13863,51 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Allows you to position to Sunray properly. Goes well with Aghanim`s Scepter in the late game to instantly save an ally.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          {
+            item: "cloak",
+            info: "Phoenix is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by magical damage and thus when Phoenix does his spell combo you can often times run away from Supernova quickly while being healed by active Tranquil Boots",
+          },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "AttackSpeed", info: "to destroy the egg" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "AttackSpeed", info: "to destroy the egg" }],
+      },
     },
   },
 
   "Primal Beast": {
     gameplay_version: "7.31",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // To be updated
@@ -13224,15 +14126,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: { all: [], support: [], core: [] },
+      mid_game: { all: [], support: [], core: [] },
+      late_game: { all: [], support: [], core: [] },
     },
   },
 
   Puck: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -13349,15 +14252,65 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk: "Against lineups with a lot of catch, disables and burst.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Puck tends to use Illusory Orb and Waning Rift frequently to kill creeps or harass you",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Puck is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "cloak",
+            info: "Puck is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+          { item: "manta", info: "To dispel Wanning Rift" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          {
+            item: "satanic",
+            info: "To be able stand your ground while coiled and dispel Waning Rift silence",
+          },
+          { item: "assault", info: "Against a right-click Puck" },
+          { item: "butterfly", info: "Against a right-click Puck" },
+        ],
+      },
     },
   },
 
   Pudge: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -13563,15 +14516,57 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          {
+            item: "wind_lace",
+            info: "To avoid Meat hooks and being able to offset the Rot slow",
+          },
+          {
+            item: "boots",
+            info: "To avoid Meat hooks and being able to offset the Rot slow",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel as Pudge has high HP and Vessel removes percentage of it and offsets some of the healing from Dismember",
+          },
+        ],
+        support: [
+          {
+            item: "ward_observer",
+            info: "Place wards to see Pudge and avoid being hooked",
+          },
+        ],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }, { item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hurricane_pike" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sphere" },
+          { item: "wind_waker", info: "To save an ally being Dismembered" },
+        ],
+        support: [],
+        core: [],
+      },
     },
   },
 
   Pugna: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -13775,15 +14770,75 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Good against illusion based heroes as Life Drain destroys basic illusions instantly.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Pugna tends to use Nether Blast and Decrepify frequently to harass or kill the creeps",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          {
+            item: "wind_lace",
+            info: "To dodge Nether Blasts and run out of the Life Drain range",
+          },
+          {
+            item: "boots",
+            info: "To dodge Nether Blasts and run out of the Life Drain range",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Pugna is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to offset healing coming from Life Drain",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by magical damage and thus when Pugna does his spell combo you can often times run away quickly while being healed by active Tranquil Boots",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "manta", info: "To dispel Decrepify and cancel Life Drain" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "nullifier", info: "To dispel Decrepify" },
+          { item: "satanic", info: "To dispel Decrepify from yourself" },
+        ],
+      },
     },
   },
 
   "Queen of Pain": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -13992,15 +15047,52 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to instantly disable and burst an opponent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Queen of Pain will use Shadow Strike and Scream of Pain frequently to harras or kill the creeps",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "cloak",
+            info: "Queen of Pain is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by magical damage and thus when Queen does her spell combo you can often times run away quickly while being healed by active Tranquil Boots",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "rod_of_atos" }, { item: "cyclone" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "hurricane_pike" },
+          { item: "manta", info: "To dispel Orchid and Shadow Strike" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "abyssal_blade" }],
+      },
     },
   },
 
   Razor: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14319,15 +15411,47 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion and miss chance.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "Razor is looking to close the gap and stick a Static Link onto a target and wind_lace will help you keep the distance or run away",
+          },
+          {
+            item: "boots",
+            info: "Razor is looking to close the gap and stick a Static Link onto a target and wind_lace will help you keep the distance or run away",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [{ item: "hurricane_pike" }],
+      },
+      late_game: {
+        all: [{ item: "sphere" }, { item: "sheepstick" }],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   Riki: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -14524,15 +15648,54 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "A core item that provides you with extra control.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Riki and escape the Smoke Screen",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Riki and escape the Smoke Screen",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [{ item: "ward_sentry" }, { item: "dust" }],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "rod_of_atos" }],
+        support: [
+          { item: "SentryDustGem" },
+          { item: "force_staff" },
+          { item: "ghost" },
+          { item: "glimmer_cape" },
+        ],
+        core: [
+          { item: "crimson_guard" },
+          { item: "hurricane_pike" },
+          { item: "silver_edge" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "aeon_disk" }],
+        support: [{ item: "SentryDustGem" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "monkey_king_bar" },
+          { item: "bloodthorn" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   Rubick: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -14639,15 +15802,38 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "To reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Rubick is going to use Fade Bolt every wave to harass and reduce your damage",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "infused_raindrop" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [{ item: "black_king_bar" }],
+      },
+      late_game: {
+        all: [{ item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [],
+      },
     },
   },
 
   "Sand King": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -14757,15 +15943,50 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "To reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "magic_stick" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Sand King is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [{ item: "ward_sentry" }, { item: "dust" }],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [
+          { item: "SentryDust" },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+        ],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "sphere" }],
+        support: [{ item: "SentryDustGem" }, { item: "black_king_bar" }],
+        core: [{ item: "abyssal_blade" }],
+      },
     },
   },
 
   "Shadow Demon": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -14864,15 +16085,53 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "If there are a lot of dispellable debuffs cast on your teammates(roots, silences, damage-over-time effects).",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_wand",
+            info: "Shadow Demon's Shadow Poison is cheap spammable spell that will grant you many stick charges",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "cloak",
+            info: "Shadow Demon is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by magical damage and thus when Shadow Demon does his spell combo you can often times run away quickly while being healed by active Tranquil Boots",
+          },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [
+          {
+            item: "glimmer_cape",
+            info: "It is useful against every other spell than Demonic Purge",
+          },
+        ],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [],
+      },
     },
   },
 
   "Shadow Fiend": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -15081,15 +16340,64 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Shadow Fiend will use Shadowraze frequently to harass or kill the creeps",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "wind_lace", info: "To keep the distance from Shadow Fiend" },
+          { item: "boots", info: "To keep the distance from Shadow Fiend" },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Shadow Fiend is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [
+          { item: "ring_of_health" },
+          {
+            item: "DamageItems",
+            info: "To compete with extra damage Shadow Fiend gets from Necromastery",
+          },
+        ],
+      },
+      mid_game: {
+        all: [
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+          {
+            item: "mekansm",
+            info: "Heals some of the AoE damage from his abilities and provides armor against right-clicks and Presence of the Dark Lord",
+          },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "heavens_halberd", info: "Against physical damage build" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [],
+      },
     },
   },
 
   "Shadow Shaman": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15188,15 +16496,46 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "To reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "infused_raindrop" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "orchid" },
+          { item: "black_king_bar" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          {
+            item: "assault",
+            info: "Against Mass Serpent Ward to protect heroes and buildings",
+          },
+        ],
+      },
     },
   },
 
   Silencer: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15291,15 +16630,53 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to cast Global Silence and other spells and items twice in the fight.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }, { item: "lotus_orb" }],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+          { item: "force_staff" },
+        ],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "heavens_halberd", info: "Against a core Silencer" },
+          { item: "orchid", info: "Against a core Silencer" },
+          {
+            item: "manta",
+            info: "To dispel Global Silence, Arcane Curse and Last Word",
+          },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick", info: "Against a core right-clicker Silencer" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "butterfly", info: "Against a core right-clicker Silencer" },
+        ],
+      },
     },
   },
 
   "Skywrath Mage": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15392,15 +16769,54 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "If you expect long fights and against physical damage lineups.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Skywrath Mage is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }, { item: "lotus_orb" }],
+        support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Ancient Seal" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sphere" },
+          { item: "sheepstick", info: "Against a core Skywrath Mage" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [],
+      },
     },
   },
 
   Slardar: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.TNTCNz,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -15518,15 +16934,40 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that provides you with even more attack speed and armor reduction.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "wind_lace", info: "To keep the distance from Slardar" },
+          { item: "boots", info: "To keep the distance from Slardar" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "lotus_orb" },
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+        ],
+        support: [{ item: "force_staff" }, { item: "ghost" }],
+        core: [
+          { item: "manta" },
+          { item: "hurricane_pike" },
+          { item: "manta", info: "To dispel Corrosive Haze" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "ethereal_blade" }],
+        support: [],
+        core: [{ item: "assault" }, { item: "butterfly" }],
+      },
     },
   },
 
   Slark: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -15659,15 +17100,61 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Slark and to dodge the Pounce",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Slark and to dodge the Pounce",
+          },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+          {
+            item: "ward_sentry",
+            info: "Slark commonly buys Shadow Blade or SilverEdge",
+          },
+        ],
+        core: [
+          { item: "hurricane_pike" },
+          { item: "heavens_halberd" },
+          { item: "basher" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [
+          {
+            item: "SentryGem",
+            info: "Slark commonly buys ShadowBlade or SilverEdge",
+          },
+        ],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "butterfly" },
+          {
+            item: "bloodthorn",
+            info: "To burst him before he pops Shadow Dance",
+          },
+        ],
+      },
     },
   },
 
   Snapfire: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -15786,15 +17273,70 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to save or to toss in an ally. Adds even more disable and damage.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Snapfire tends to use Scatter Blast and Firesnap Cookie frequently to harass you and your allies",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Snapfire is heavy on magical damage and Cloak negates 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by magical damage and thus when Snapfire does her spell combo you can often times run away quickly while being healed by active Tranquil Boots",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [
+          {
+            item: "sheepstick",
+            info: "Against a core right-clicking Snapfire",
+          },
+          {
+            item: "ethereal_blade",
+            info: "Against a core right-clicking Snapfire",
+          },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "assault", info: "Against a core right-clicking Snapfire" },
+          { item: "butterfly", info: "Against a core right-clicking Snapfire" },
+        ],
+      },
     },
   },
 
   Sniper: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -16024,15 +17566,67 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "For extra mobility.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To catch up to Sniper and to move out of Shrapnel AoE",
+          },
+          {
+            item: "boots",
+            info: "To catch up to Sniper and to move out of Shrapnel AoE",
+          },
+          { item: "armor", info: "Buy armor items" },
+          { item: "infused_raindrop" },
+        ],
+        support: [
+          { item: "ward_sentry", info: "To block camps" },
+          { item: "smoke_of_deceit", info: "To dodge Assassinate" },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "blink", info: "To close the gap to Sniper" }],
+        support: [
+          { item: "force_staff" },
+          {
+            item: "smoke_of_deceit",
+            info: "Use smoke to counter Sniper's ultimate",
+          },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "heavens_halberd" },
+          { item: "invis_sword", info: "To close the gap to Sniper" },
+          { item: "blade_mail" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [
+          {
+            item: "smoke_of_deceit",
+            info: "Use smoke to counter Sniper's ultimate",
+          },
+        ],
+        core: [
+          { item: "silver_edge", info: "To close the gap to Sniper" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   Spectre: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -16153,15 +17747,41 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive spells and items that prevent your from right-clicking the opponent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: { all: [], support: [], core: [] },
+      mid_game: {
+        all: [
+          {
+            item: "mekansm",
+            info: "Heals some of the AoE damage from her abilities and provides armor against right-clicks and Haunt",
+          },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "ghost" }],
+        core: [
+          { item: "hurricane_pike" },
+          { item: "silver_edge" },
+          { item: "crimson_guard" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "butterfly" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+        ],
+      },
     },
   },
 
   "Spirit Breaker": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16370,15 +17990,46 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that provides you with useful stats but mainly with extra movement speed and spell amplification. Greater Bash is of magical damage.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Spirit Breaker",
+          },
+          { item: "boots", info: "To keep the distance from Spirit Breaker" },
+        ],
+        support: [
+          {
+            item: "ward_observer",
+            info: "To see him charging as early as you can so you can move away in time or alert an ally to do the same",
+          },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }],
+        support: [
+          { item: "glimmer_cape" },
+          {
+            item: "force_staff",
+            info: "Using it on Spirit Breaker stops Charge of Darkness",
+          },
+          { item: "ghost" },
+        ],
+        core: [{ item: "hurricane_pike" }],
+      },
+      late_game: {
+        all: [{ item: "sphere" }],
+        support: [],
+        core: [{ item: "abyssal_blade" }, { item: "butterfly" }],
+      },
     },
   },
 
   "Storm Spirit": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -16496,15 +18147,44 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that provides you with more intelligence and AoE damage. It also deals with healing lineup. The item can be used during Ball Lightning.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Storm Spirit is heavy on magical damage and Cloak negates 15% of it",
+          },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "rod_of_atos" }],
+        support: [{ item: "glimmer_cape" }, { item: "ghost" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "orchid" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Orchid" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "aeon_disk" }],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "abyssal_blade" }, { item: "butterfly" }],
+      },
     },
   },
 
   Sven: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -16624,15 +18304,57 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter: "For extra mobility.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "solar_crest" },
+          {
+            item: "blink",
+            info: "Once Sven gets 'Storm Hammer Dispels Enemies' talent, BlinkDagger is a good way to dodge his stun initiation",
+          },
+          { item: "lotus_orb" },
+        ],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+          { item: "force_staff" },
+        ],
+        core: [{ item: "hurricane_pike" }, { item: "heavens_halberd" }],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          {
+            item: "shivas_guard",
+            info: "To reduce Sven's not so fast attack speed and acquire some armor",
+          },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "butterfly" },
+          { item: "nullifier", info: "To dispel Warcry" },
+        ],
+      },
     },
   },
 
   Techies: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -16735,15 +18457,75 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "For extra mobility around the map.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "quelling_blade",
+            info: "QuellingBlade the trees so you can see Techies mines easier or when he is doing Blast Off!",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Techies is heavy on magical damage and Cloak negates 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "ward_sentry",
+            info: "Remote Mines, Techies ultimate, are invisible",
+          },
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by spell damage so you can keep regenerating while being damaged by Techie's spells",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "SentryGem" },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+        ],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Statis Trap" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "aeon_disk" }],
+        support: [{ item: "SentryGem" }, { item: "black_king_bar" }],
+        core: [
+          {
+            item: "heart",
+            info: "To tank up and recover against Remote Mines",
+          },
+          {
+            item: "satanic",
+            info: "To dispel Statis Trap root and Blast Off! silence and be able to recover health after being damaged by mines",
+          },
+        ],
+      },
     },
   },
 
   "Templar Assassin": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -16971,15 +18753,69 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core upgrade that provides burst of attack speed on cast. Allows you to move around the map faster especially if you are playing without the boots due to slot issues.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To dodge the Psi Blades and offset the slow from Psionic Traps",
+          },
+          {
+            item: "boots",
+            info: "To dodge the Psi Blades and offset the slow from Psionic Traps",
+          },
+          { item: "urn_of_shadows", info: "To remove Refraction charges" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [
+          {
+            item: "ward_sentry",
+            info: "To block camps and for Psionic Traps and Meld",
+          },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "medallion_of_courage" }, { item: "solar_crest" }],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block ancient camp" },
+          { item: "SentryDust" },
+          { item: "ghost" },
+          { item: "glimmer_cape" },
+        ],
+        core: [
+          { item: "hurricane_pike" },
+          {
+            item: "witch_blade",
+            info: "To remove Refraction charges and to obtain some armor",
+          },
+          { item: "heavens_halberd" },
+          { item: "javelin", info: "To remove Refractions" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [{ item: "SentryDustGem" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+          {
+            item: "radiance",
+            info: "To remove defensive Refraction charges and for miss chance",
+          },
+        ],
+      },
     },
   },
 
   Terrorblade: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -17096,15 +18932,83 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion and miss chance.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [{ item: "armor", info: "Buy armor items" }],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+          {
+            item: "lotus_orb",
+            info: "Dispels Reflection and nullifies health swap of Sunder",
+          },
+          { item: "dagon", info: "Instantly kills illusions" },
+        ],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "maelstrom" },
+          { item: "crimson_guard" },
+          { item: "heavens_halberd" },
+          { item: "orchid" },
+          {
+            item: "black_king_bar",
+            info: "Sunder and Reflection can't be used against spell immune heroes",
+          },
+          {
+            item: "travel_boots",
+            info: "To deal with splitpush by his illusions",
+          },
+          {
+            item: "manta",
+            info: "To dispel Reflection if the illusion of you that Terrorblade creates is strong",
+          },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [
+          {
+            item: "travel_boots",
+            info: "To deal with splitpush by his illusions",
+          },
+        ],
+        core: [
+          {
+            item: "mjollnir",
+            info: "Magic damage from procs is good against this high armor hero and attacks with procs pierce evasion",
+          },
+          {
+            item: "monkey_king_bar",
+            info: "Magic damage from procs is good against this high armor hero that also buys evasion very often",
+          },
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "bloodthorn", info: "To burst this high armor hero" },
+          { item: "butterfly" },
+          {
+            item: "overwhelming_blink",
+            info: "For some AoE damage against illusions",
+          },
+          {
+            item: "satanic",
+            info: "To dispel Reflection and be able to recover health after Sunder",
+          },
+        ],
+      },
     },
   },
 
   Tidehunter: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -17229,15 +19133,48 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item for second round of your spells and items. Goes well with level 25 Ravage talent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Tidehunter tends to use Anchor Smash frequently to harass and kill the creeps",
+          },
+          { item: "blight_stone" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [
+          {
+            item: "mekansm",
+            info: "Heals some of the AoE damage from his abilities and provides armor against Gush",
+          },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "black_king_bar" },
+          { item: "silver_edge" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "wind_waker", info: "To save an ally being Ravaged" }],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "assault" }],
+      },
     },
   },
 
   Timbersaw: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.TNTCNz,
+    damage_type: DamageType.pure,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -17351,15 +19288,56 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Timbersaw tends to use Whirling Death and Timber Chain frequently to harass",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "wind_lace", info: "To keep the distance from Timbersaw" },
+          { item: "boots", info: "To keep the distance from Timbersaw" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to offset some of the HP regeneration from Reactive Armor",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by spell damage so you can keep regenerating while being hit by Timber's spells",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "black_king_bar" },
+          { item: "silver_edge" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "skadi" },
+          { item: "abyssal_blade" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+        ],
+      },
     },
   },
 
   Tinker: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -17458,15 +19436,100 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk: "Provides you with second chance to escape or turn around.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Tinker is heavy on magic damage and Cloak reduces 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate by spell damage so you can keep regenerating while being hit by Tinker's spells",
+          },
+          { item: "smoke_of_deceit", info: "To dodge Missiles" },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [
+          { item: "lotus_orb" },
+          { item: "blink", info: "To close the gap to Tinker" },
+        ],
+        support: [
+          { item: "glimmer_cape" },
+          {
+            item: "smoke_of_deceit",
+            info: "Smoke to avoid missiles & prevent Blink break on my initiator",
+          },
+          {
+            item: "ward_observer",
+            info: "Tinker spots are at the edges of the map",
+          },
+        ],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+          {
+            item: "invis_sword",
+            info: "To close to gap to Tinker and dodge Missiles",
+          },
+          { item: "travel_boots" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "sphere" },
+          { item: "aeon_disk" },
+        ],
+        support: [
+          {
+            item: "smoke_of_deceit",
+            info: "Smoke to avoid missiles and prevent Blink break on my initiator",
+          },
+          {
+            item: "ward_observer",
+            info: "Tinker spots are at the edges of the map",
+          },
+          { item: "black_king_bar" },
+          { item: "travel_boots" },
+        ],
+        core: [
+          { item: "monkey_king_bar", info: "Against Laser miss rate" },
+          { item: "abyssal_blade" },
+          {
+            item: "satanic",
+            info: "For sustain against Tinker's spell spam and to dispel Laser debuff",
+          },
+          {
+            item: "heart",
+            info: "To tank up and recover against Tinker's spam",
+          },
+        ],
+      },
     },
   },
 
   Tiny: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17769,15 +19832,64 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {},
     item_tooltips: {},
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "infused_raindrop" },
+          {
+            item: "armor",
+            info: "Buy armor items against a core right-clicking Tiny",
+          },
+          {
+            item: "cloak",
+            info: "Avalance and Toss combination does a lot of magical damage of which 15% can be reduced by Cloak",
+          },
+        ],
+        support: [
+          {
+            item: "ward_sentry",
+            info: "If Tiny is core he tends to farm very quickly thus blocking the camps with Sentries can slow down his farm",
+          },
+        ],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "medallion_of_courage" }, { item: "solar_crest" }],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "hurricane_pike" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick", info: "Against core Tiny" },
+          { item: "ethereal_blade", info: "Against core Tiny" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "assault", info: "Against core Tiny" },
+          { item: "shivas_guard", info: "Against core Tiny" },
+          { item: "butterfly", info: "Against core Tiny" },
+          {
+            item: "bloodthorn",
+            info: "Against core Tiny to be able to burst him",
+          },
+        ],
+      },
     },
   },
 
   "Treant Protector": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -17881,15 +19993,65 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core aura item which percentage values scale well into the late game.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "quelling_blade",
+            info: "To remove the trees on one side of the lane so Treant Protector has less impact",
+          },
+          { item: "blight_stone" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Treant Protector and offset the slows coming from Treant's Grasp and Leech Seed",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Treant Protector and offset the slows coming from Treant's Grasp and Leech Seed",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }, { item: "cyclone" }],
+        support: [
+          {
+            item: "SentryDustGem",
+            info: "Treant players often purchase Aghanim's Shard which grants him invisibility while near the trees",
+          },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+        ],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Overgrowth" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [
+          {
+            item: "SentryDustGem",
+            info: "Treant players usually take 'Natures Guise Invisibility' talent on level 10 and build Aghanim's Scepter at some point",
+          },
+          { item: "black_king_bar" },
+        ],
+        core: [{ item: "satanic", info: "To dispel Overgrowth" }],
+      },
     },
   },
 
   "Troll Warlord": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -18011,15 +20173,63 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that tanks you up and its active can turn the fight around. It applies basic dispel on cast.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Troll Warlod tends to use Whirling Axes frequently to harass and kill creeps",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Troll and offset the slow coming from Whirling Axes(Ranged)",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Troll and offset the slow coming from Whirling Axes(Ranged)",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }, { item: "vanguard" }],
+      },
+      mid_game: {
+        all: [
+          { item: "cyclone" },
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+        ],
+        support: [{ item: "force_staff" }, { item: "ghost" }],
+        core: [
+          { item: "heavens_halberd" },
+          { item: "hurricane_pike" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "wind_waker", info: "To save an ally being Battle Tranced" },
+        ],
+        support: [],
+        core: [
+          { item: "assault" },
+          { item: "abyssal_blade" },
+          { item: "butterfly" },
+          { item: "monkey_king_bar" },
+        ],
+      },
     },
   },
 
   Tusk: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -18139,15 +20349,37 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core buffing item which percentage values scale well into the late game.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "wind_lace", info: "To keep the distance from Tuskar" },
+          { item: "boots", info: "To keep the distance from Tuskar" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [
+          {
+            item: "ward_observer",
+            info: "To spot Tuskar's movements on and out of the lane",
+          },
+        ],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "medallion_of_courage" }, { item: "solar_crest" }],
+        support: [
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [],
+      },
+      late_game: { all: [], support: [], core: [{ item: "assault" }] },
     },
   },
 
   Underlord: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -18259,15 +20491,64 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "An alternative to Assault Cuirass against heavy-healing and illusion-based lineups.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Underlod tends to use Firestorm every creep wave",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          {
+            item: "wind_lace",
+            info: "To move out of the Firestorm or run down the Underlord",
+          },
+          {
+            item: "boots",
+            info: "To move out of the Firestorm or run down the Underlord",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to offset some of the HP regeneration and damage this HP hero",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "medallion_of_courage" },
+          { item: "spirit_vessel" },
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "skadi", info: "To reduce healing" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+        ],
+      },
     },
   },
 
   Undying: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -18364,15 +20645,37 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core aura item which percentage values scale well into the late game.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "wind_lace", info: "To keep the distance from Undying" },
+          { item: "boots", info: "To keep the distance from Undying" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel against Soul rip and this high HP hero while in Flesh Golem form",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [{ item: "AttackSpeed", info: "to destroy the Tombstone" }],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [{ item: "AttackSpeed", info: "to destroy the Tombstone" }],
+      },
     },
   },
 
   Ursa: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -18486,15 +20789,58 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter: "Against long lasting disables.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Ursa and offset the slow coming from Earthshock",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Ursa and offset the slow coming from Earthshock",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "cyclone" },
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+        ],
+        support: [
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [{ item: "hurricane_pike" }, { item: "heavens_halberd" }],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+          {
+            item: "wind_waker",
+            info: "To save an ally from being bursted by Ursa",
+          },
+        ],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
   "Vengeful Spirit": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -18607,15 +20953,44 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to cast spells and right-click even after the death.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Vengeful Spirit's Wave of Terror is a cheap and short cooldown spell that will be frequently along with Magic Missile",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "medallion_of_courage" }, { item: "solar_crest" }],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost", info: "Against core Vengeful Spirit" },
+        ],
+        core: [
+          { item: "heavens_halberd", info: "Against a core Vengeful Spirit" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [
+          { item: "assault", info: "Against a core Vengeful Spirit" },
+          { item: "butterfly", info: "Against a core Vengeful Spirit" },
+        ],
+      },
     },
   },
 
   Venomancer: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -18839,15 +21214,70 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core damaging item. Along with level 20 talent, Poison Nova will technically deal more than 100% of affected heroes` total hp as magical damage.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Venomancer tends to plant many Plague Wards and each time it will give you a stick charge",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Venomancer and offset slows coming from Venomous Gale and Poison Sting",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from the Venomancer and offset slows coming from Venomous Gale and Poison Sting",
+          },
+          {
+            item: "cloak",
+            info: "Venomancer is heavy on magical damage and Cloak will reduce 15% of it",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "As long as your Tranquil Boots are active you are going to be able to recover a lot of damage delt to you by Venomancer damage over time spells",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Venomous Gale and Poison Sting" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          {
+            item: "satanic",
+            info: "To dispel Venomous Gale and to recover health during Poison Nova",
+          },
+        ],
+      },
     },
   },
 
   Viper: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -19064,15 +21494,52 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that provides you with tons of stats for the cost. It can be used defensively and offensively depending on circumstances.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "wind_lace", info: "To keep the distance from the Viper" },
+          { item: "boots", info: "To keep the distance from the Viper" },
+          {
+            item: "cloak",
+            info: "Viper is heavy on magical damage and Cloak will reduce it by 15%",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "heavens_halberd", info: "Against physical build on Viper" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          {
+            item: "abyssal_blade",
+            info: "Against a core right-clicking Viper",
+          },
+          { item: "butterfly", info: "Against a core right-clicking Viper" },
+        ],
+      },
     },
   },
 
   Visage: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -19267,15 +21734,52 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To reposition quickly.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "armor", info: "Buy armor items" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to remove layers of Gravekeeper's Cloak",
+          },
+        ],
+        support: [],
+        core: [{ item: "vanguard" }],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "lotus_orb" },
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "crimson_guard" },
+          { item: "black_king_bar" },
+          { item: "javelin", info: "To remove Gravekeeper's Cloak layers" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "assault" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "satanic", info: "To dispel Grave Chill" },
+        ],
+      },
     },
   },
 
   "Void Spirit": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -19389,15 +21893,66 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item for additonal burst. Can be used defensively to save yourself or an ally in trouble.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          {
+            item: "magic_stick",
+            info: "Void will use his spells frequently to harass you or to kill the creeps",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "wind_lace",
+            info: "To dodge Aether remnant and Dissimilate",
+          },
+          { item: "boots", info: "To dodge Aether remnant and Dissimilate" },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Void Spirit is heavy on magical damage and Cloak will reduce it by 15%",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "rod_of_atos" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "orchid" },
+          { item: "hurricane_pike" },
+          { item: "black_king_bar" },
+          {
+            item: "manta",
+            info: "To dispel silences coming from his Aghanim's Scepter or Orchid",
+          },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "aeon_disk" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "invis_sword", info: "To get on top of Void Spirit" },
+          {
+            item: "nullifier",
+            info: "To dispel Resonant Pulse and commonly purchased Eul's on him",
+          },
+          { item: "satanic", info: "To dispel silences" },
+        ],
+      },
     },
   },
 
   Warlock: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -19502,15 +22057,47 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core aura item which percentage values scale well into the late game.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Warlock will use Shadow Word frequently to heal himself or his ally",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "headdress",
+            info: "Headdress is good at mitigating the AOE damage done to you and your ally with Fatal Bonds",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "lotus_orb", info: "To dispel Fatal Bonds and Shadow Word" },
+          { item: "cyclone", info: "To dispel Fatal Bonds and Shadow Word" },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Fatal Bonds and Shadow Word" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "satanic", info: "To dispel Fatal Bonds" }],
+      },
     },
   },
 
   Weaver: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -19733,15 +22320,58 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Weaver will use Shukuchi frequently to harass you or escape",
+          },
+          { item: "blight_stone" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [
+          { item: "ward_sentry" },
+          { item: "dust", info: "Dust can be dispeled by Time Lapse" },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "medallion_of_courage" }, { item: "solar_crest" }],
+        support: [
+          { item: "SentryDustGem" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+        ],
+        core: [{ item: "orchid" }, { item: "heavens_halberd" }],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [{ item: "SentryDustGem" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "butterfly" },
+          {
+            item: "silver_edge",
+            info: "To get on top of Weaver, to remove the bugs and break the passive",
+          },
+        ],
+      },
     },
   },
 
   Windranger: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -20072,15 +22702,68 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "A core item that allows you to land Shackleshot reliably.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Windranger",
+          },
+          { item: "boots", info: "To keep the distance from the Windranger" },
+          { item: "armor", info: "Buy armor items" },
+          { item: "infused_raindrop" },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }, { item: "vanguard" }],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }],
+        support: [{ item: "glimmer_cape" }, { item: "ghost" }],
+        core: [
+          { item: "blade_mail" },
+          { item: "orchid" },
+          { item: "heavens_halberd" },
+          { item: "hurricane_pike" },
+          { item: "ghost" },
+          { item: "black_king_bar" },
+          { item: "monkey_king_bar" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sphere" },
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+        ],
+        support: [
+          {
+            item: "SentryDustGem",
+            info: "She often times gets 'Windrun grants invisibility' talent on level 25",
+          },
+          { item: "black_king_bar" },
+        ],
+        core: [
+          { item: "monkey_king_bar" },
+          { item: "abyssal_blade" },
+          { item: "bloodthorn" },
+          { item: "assault" },
+          { item: "butterfly" },
+          { item: "nullifier", info: "To dispel Windrun" },
+        ],
+      },
     },
   },
 
   "Winter Wyvern": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -20193,15 +22876,57 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core aura item which percentage values scale well into the late game.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Void Spirit is heavy on magical damage and Cloak will reduce it by 15%",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sphere" },
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+          { item: "wind_waker", info: "To save an ally being Winter's Cursed" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "invis_sword", info: "To get on top of Winter Wyvern" }],
+      },
     },
   },
 
   "Witch Doctor": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -20322,15 +23047,55 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "For extra mobility to get your spells off.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Witch Doctor be able to split away from other units when being casked or run away from Death Ward",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from the Witch Doctor be able to split away from other units when being casked or run away from Death Ward",
+          },
+          { item: "armor", info: "Buy armor items" },
+          {
+            item: "infused_raindrop",
+            info: "Maledict does more damage as you lose more HP. Raindrops will save you from some magical damage from Maledict ticks",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [
+          { item: "lotus_orb" },
+          { item: "medallion_of_courage" },
+          { item: "solar_crest" },
+        ],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: { all: [], support: [{ item: "black_king_bar" }], core: [] },
     },
   },
 
   "Wraith King": {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
@@ -20454,15 +23219,55 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Wraith King",
+          },
+          { item: "boots", info: "To keep the distance from the Wraith King" },
+          { item: "armor", info: "Buy armor items" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel against this high HP hero and Vampiric Aura",
+          },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "medallion_of_courage" }, { item: "solar_crest" }],
+        support: [
+          { item: "ward_dispenser", info: "Use wards to block camps" },
+          { item: "glimmer_cape" },
+          { item: "ghost" },
+          { item: "force_staff" },
+        ],
+        core: [{ item: "hurricane_pike" }, { item: "diffusal_blade" }],
+      },
+      late_game: {
+        all: [{ item: "ethereal_blade" }, { item: "aeon_disk" }],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "skadi", info: "To reduce healing" },
+          { item: "shivas_guard", info: "To reduce healing" },
+          { item: "silver_edge" },
+          { item: "butterfly" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+        ],
+      },
     },
   },
 
   Zeus: {
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -20571,9 +23376,65 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "For extra mobility.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_wand",
+            info: "Zeus will use Arc Lightning frequently to secure creep lasthits and to harass you",
+          },
+          { item: "blight_stone" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Zeus is heavy on magical damage and Cloak will reduce it by 15%",
+          },
+        ],
+        support: [
+          {
+            item: "tranquil_boots",
+            info: "Tranquil Boots don't inactivate from spells so you can keep regenerating while being hit by Zeus spells",
+          },
+          {
+            item: "smoke_of_deceit",
+            info: "To dodge damage from Thundergod's Wrath",
+          },
+        ],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [
+          { item: "lotus_orb" },
+          { item: "blink", info: "To close the gap to Zeus" },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "mage_slayer" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          {
+            item: "silver_edge",
+            info: "To get on top of Zeus, avoid being damaged by Thundergod's Wrath while invisible and as bonus to break his passive",
+          },
+        ],
+      },
     },
   },
 };
