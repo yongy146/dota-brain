@@ -31,7 +31,7 @@ export enum ContentCreator {
   AlexDota = "AlexDota",
   YoonA = "YoonA",
   TNTCNz = "TNTCNz",
-  Michel = "Michel"
+  Michel = "Michel",
 }
 
 /**
@@ -7890,9 +7890,39 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "Combines well with X Marking yourself to do Tidebringer hits.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane against Tidebringer",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+          { item: "ring_of_health" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }, { item: "spirit_vessel" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "assault", info: "Against a right-clicking Kunkka" },
+        ],
+      },
     },
   },
 
@@ -8013,6 +8043,54 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion.",
       overwhelming_blink: "To tank up and for AoE damage.",
       swift_blink: "For single target burst.",
+    },
+    counter_items: {
+      laning_phase: {
+        all: [
+          { item: "blight_stone" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Legion Commander",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from the Legion Commander",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+          { item: "ring_of_health" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }],
+        support: [{ item: "ghost" }],
+        core: [
+          { item: "heavens_halberd" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sphere" },
+          { item: "aeon_disk" },
+          { item: "ethereal_blade" },
+          { item: "wind_waker", info: "To save an ally in Duel" },
+        ],
+        support: [],
+        core: [
+          { item: "satanic", info: "For lifesteal in Duel" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
@@ -8135,9 +8213,40 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Against bursty lineups and lineups with long lasting disables.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Leshrac will use low cooldown spells Split Earth and Lightning Storm to harass or kill creeps",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "wind_lace", info: "To keep the distance from the Leshrac" },
+          { item: "boots", info: "To keep the distance from the Leshrac" },
+          {
+            item: "cloak",
+            info: "Leshrac is heavy on magical damage and Cloak will negate 15% of it",
+          },
+          { item: "infused_raindrop" },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "abyssal_blade" }],
+      },
     },
   },
 
@@ -8243,9 +8352,53 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Goes well with Aghanim`s Shard to burst a single hero. Good for canceling channeling spells(Fiend`s Grip, Shackles).",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Lich will use Frost Blast and Frost Shield to harass or make kill attempts frequently",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To offset the slow from Frost Blast and Frost Shield",
+          },
+          {
+            item: "boots",
+            info: "To offset the slow from Frost Blast and Frost Shield",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Lich is heavy on magical damage and Cloak will negate 15% of it",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "nullifier", info: "To dispel Frost Shield" }],
+      },
     },
   },
 
@@ -8371,9 +8524,57 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To close the gap.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Lifestealer",
+          },
+          { item: "boots", info: "To keep the distance from the Lifestealer" },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }, { item: "vanguard" }],
+      },
+      mid_game: {
+        all: [],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [
+          { item: "crimson_guard" },
+          { item: "orchid" },
+          { item: "basher" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }, { item: "ethereal_blade" }],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          {
+            item: "monkey_king_bar",
+            info: "The procs from this item deal damage through spell immunity and also counter evasion talent",
+          },
+          {
+            item: "bloodthorn",
+            info: "To burst this tanky hero and for true strike against evasion talent",
+          },
+          {
+            item: "skadi",
+            info: "To reduce healing from Feast and Open Wounds",
+          },
+          {
+            item: "shivas_guard",
+            info: "To reduce healing from Feast and Open Wounds",
+          },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
@@ -8576,9 +8777,57 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To be able to reposition quickly.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane and/or for Pipe of Insight later on",
+          },
+          { item: "infused_raindrop" },
+          {
+            item: "cloak",
+            info: "Lina is heavy on magical damage and Cloak will negate 15% of it",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "mage_slayer" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sphere" }, { item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          {
+            item: "silver_edge",
+            info: "To close the gap to Lina and break her passive",
+          },
+          {
+            item: "assault",
+            info: "In the late game Lina does a lot of physical damage due to items and Fiery Soul",
+          },
+          {
+            item: "butterfly",
+            info: "In the late game Lina does a lot of physical damage due to items and Fiery Soul",
+          },
+        ],
+      },
     },
   },
 
@@ -8679,9 +8928,41 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "enchanted_mango",
+            info: "Lion drains mana and Enchanted Mangoes will allow you to offset that",
+          },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "infused_raindrop" },
+          { item: "arcane_boots", info: "To sustain mana against Mana Drain" },
+          {
+            item: "cloak",
+            info: "Lion is heavy on magical damage and Cloak will negate 15% of it",
+          },
+        ],
+        support: [],
+        core: [{ item: "soul_ring" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sphere" }, { item: "aeon_disk" }],
+        support: [{ item: "black_king_bar" }],
+        core: [],
+      },
     },
   },
 
@@ -8861,9 +9142,44 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter: "Amazing for split-pushing and ratting.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "wind_lace", info: "To keep the distance from the bear" },
+          { item: "boots", info: "To keep the distance from the bear" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          { item: "armor", info: "Buy armor items" },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }, { item: "vanguard" }],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+        ],
+        core: [{ item: "crimson_guard" }, { item: "hurricane_pike" }],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          {
+            item: "travel_boots",
+            info: "Lone Druids tends to rat with Bear especially when his Aghanim's Scepter comes into play",
+          },
+        ],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "assault" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
@@ -8987,9 +9303,45 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Consider replacing Daedalus with it against a lot of  evasion and miss chance.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          { item: "infused_raindrop" },
+          { item: "ring_of_regen", info: "For sustain on the lane" },
+          {
+            item: "cloak",
+            info: "Luna is heavy on magical damage and Cloak will negate 15% of it",
+          },
+        ],
+        support: [{ item: "ward_sentry", info: "To block camps" }],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+          { item: "heavens_halberd" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sheepstick" }],
+        support: [{ item: "black_king_bar" }],
+        core: [
+          { item: "assault" },
+          { item: "abyssal_blade" },
+          {
+            item: "skadi",
+            info: "To slow ranged right-click core and to reduce healing coming from her talent and lifesteal items",
+          },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
