@@ -6122,9 +6122,48 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Grimstroke's Stroke of Faith is a strong low cooldown spell with which you are likely to be hit by once or twice per creep wave",
+          },
+          {
+            item: "ring_of_regen",
+            info: "For sustain on the lane against the pressure from the Grimstroke",
+          },
+          {
+            item: "wind_lace",
+            info: "To move away from Ink Swell and offset the slow from Stroke of Faith",
+          },
+          {
+            item: "boots",
+            info: "To move away from Ink Swell and offset the slow from Stroke of Faith",
+          },
+          {
+            item: "headdress",
+            info: "For lane sustain and/or Pipe of Insight later",
+          },
+          { item: "infused_raindrop" },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }, { item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [{ item: "sphere" }],
+        support: [{ item: "black_king_bar" }],
+        core: [],
+      },
     },
   },
 
@@ -6330,9 +6369,54 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Gyrocopter tends to use Rocket Barrage and Flak Cannon frequently",
+          },
+          {
+            item: "wind_lace",
+            info: "To keep the distance from Gyrocopter's Rocket Barrage",
+          },
+          {
+            item: "boots",
+            info: "To keep the distance from Gyrocopter's Rocket Barrage",
+          },
+          {
+            item: "headdress",
+            info: "For lane sustain and/or Pipe of Insight later",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          {
+            item: "mekansm",
+            info: "Heals some of the AoE damage from his abilities and provides armor against right-clicks and Flak Cannon",
+          },
+          { item: "lotus_orb" },
+        ],
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+          { item: "ghost" },
+          { item: "cyclone" },
+        ],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "assault" }, { item: "butterfly" }],
+      },
     },
   },
 
@@ -6447,9 +6531,72 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To close the gap and land your combo.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Hoodwink often times casts and combines her two offensive spells",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane against the pressure from the Hoodwink",
+          },
+          {
+            item: "quelling_blade",
+            info: "Against a sidelane Hoodwink to make Bushwhack harder to hit and Scurry to be less effective",
+          },
+          {
+            item: "infused_raindrop",
+            info: "Against burst of magical damage coming from Bushwhack and Sharshooter",
+          },
+          {
+            item: "cloak",
+            info: "Hoodwink does a lot of magical damage and Cloak offsets 15% of it",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "mekansm" },
+          {
+            item: "vladmir",
+            info: "As the game goes, a core Hoodwink does more and more physical damage and armor will offset that",
+          },
+          { item: "rod_of_atos", info: "To be able to catch her" },
+          { item: "blink", info: "To be able to catch her" },
+        ],
+        support: [
+          { item: "glimmer_cape" },
+          {
+            item: "SentryDustGem",
+            info: "Hoodwink often goes for Scurry Camouflage talent on level 15",
+          },
+        ],
+        core: [
+          { item: "orchid" },
+          { item: "black_king_bar" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [
+          { item: "abyssal_blade", info: "To be able to pin her" },
+          { item: "skadi", info: "To be able to catch her" },
+          { item: "assault", info: "To be able to catch her" },
+          {
+            item: "bloodthorn",
+            info: "To pierce evasion from Scurry and to Silence her",
+          },
+          { item: "monkey_king_bar", info: "To pierce evasion from Scurry" },
+          { item: "sheepstick", info: "To be able to catch her" },
+        ],
+      },
     },
   },
 
@@ -6559,9 +6706,59 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge: "For break and repositioning.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "blight_stone",
+            info: "Huskar is a low armor hero and if you can see yourself right-clicking him often then Blightstone is a good purchase",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane against the pressure from the Huskar",
+          },
+          { item: "wind_lace", info: "To keep the distance from Huskar" },
+          { item: "boots", info: "To keep the distance from Huskar" },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to offset Berserker's Blood HP regeneration",
+          },
+          {
+            item: "cloak",
+            info: "Huskar does a lot of magical damage and Cloak offsets 15% of it",
+          },
+        ],
+        support: [],
+        core: [
+          { item: "orb_of_corrosion", info: "If you are playing a melee core" },
+          { item: "ring_of_health" },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "spirit_vessel" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "heavens_halberd" },
+          { item: "hurricane_pike" },
+          { item: "black_king_bar" },
+          { item: "silver_edge" },
+          { item: "manta", info: "To dispel Inner Fire" },
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [
+          { item: "skadi", info: "To reduce healing" },
+          { item: "shivas_guard", info: "To reduce healing" },
+          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "butterfly" },
+          { item: "abyssal_blade" },
+        ],
+      },
     },
   },
 
@@ -6763,9 +6960,82 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Grants you a second chance to survive and get your spells and items off.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Against Quas Wex build Invoker to have burst of mana available after the EMP was used",
+          },
+          {
+            item: "enchanted_mango",
+            info: "Against Quas Wen build Invoker that casts EMP often",
+          },
+          {
+            item: "ring_of_regen",
+            info: "Against a sidelane Invoker, for sustain on the lane",
+          },
+          {
+            item: "wind_lace",
+            info: "To easier dodge some of his skill shot spells",
+          },
+          {
+            item: "boots",
+            info: "To easier dodge some of his skill shot spells",
+          },
+          {
+            item: "arcane_boots",
+            info: "Against Quas Wex build Invoker that casts EMP often to burn mana and Arcane Boots will allow you to offset that",
+          },
+          {
+            item: "cloak",
+            info: "Invoker does a lot of magical damage and Cloak offsets 15% of it",
+          },
+        ],
+        support: [{ item: "dust" }, { item: "ward_sentry" }],
+        core: [
+          {
+            item: "soul_ring",
+            info: "Against Quas Wex build Invoker that casts EMP often to burn mana and Soul Ring will allow you to offset that",
+          },
+          {
+            item: "DamageItems",
+            info: "Against Quas Exort Invoker, to compete with extra damage from levels in Exort",
+          },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "cyclone" }],
+        support: [
+          { item: "SentryDust" },
+          { item: "force_staff" },
+          { item: "glimmer_cape" },
+        ],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "orchid" },
+          { item: "black_king_bar" },
+          { item: "manta", info: "To dispel Cold Snap" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "aeon_disk" },
+          {
+            item: "wind_waker",
+            info: "To save an ally from dying to Cataclysm",
+          },
+        ],
+        support: [{ item: "SentryDustGem" }, { item: "black_king_bar" }],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "satanic", info: "To dispel Cold Snap" },
+        ],
+      },
     },
   },
 
@@ -6865,9 +7135,45 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "ring_of_regen",
+            info: "To keep up with the sustain from Io",
+          },
+          {
+            item: "wind_lace",
+            info: "To catch up to Io or escape against Tether bonus movement speed",
+          },
+          {
+            item: "boots",
+            info: "To catch up to Io or escape against Tether bonus movement speed",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to offset healing from the Tether",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [
+          { item: "spirit_vessel" },
+          { item: "blink", info: "To close the gap to Io" },
+        ],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [],
+      },
+      late_game: {
+        all: [{ item: "sheepstick", info: "For Io or his tethered partner" }],
+        support: [],
+        core: [
+          { item: "shivas_guard", info: "To reduce healing" },
+          { item: "skadi", info: "To reduce healing" },
+          { item: "abyssal_blade", info: "To pin Io or cancel Relocate" },
+        ],
+      },
     },
   },
 
@@ -6974,9 +7280,39 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          { item: "magic_stick" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "headdress",
+            info: "For lane sustain and/or Pipe of Insight later",
+          },
+          { item: "wind_lace", info: "To offset the slow from Dual Breath" },
+          { item: "boots", info: "To offset the slow from Dual Breath" },
+          {
+            item: "cloak",
+            info: "Jakiro does a lot of magical damage and Cloak offsets 15% of it",
+          },
+        ],
+        support: [{ item: "headdress" }],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "blade_mail" },
+          { item: "black_king_bar" },
+        ],
+      },
+      late_game: { all: [], support: [{ item: "black_king_bar" }], core: [] },
     },
   },
 
@@ -7120,9 +7456,54 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier: "To dispel defensive spells and items that counter Omnislash.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "wind_lace",
+            info: "To keep the distance from the Juggernaut",
+          },
+          { item: "boots", info: "To keep the distance from the Juggernaut" },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane",
+          },
+          {
+            item: "bracer",
+            info: "To survive the burst of damage coming from Blade Fury",
+          },
+          {
+            item: "armor",
+            info: "Buy armor items against Omnislash and right-clicks",
+          },
+        ],
+        support: [],
+        core: [{ item: "ring_of_health" }],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "ghost" }],
+        core: [
+          { item: "crimson_guard" },
+          { item: "basher" },
+          { item: "invis_sword" },
+          { item: "manta" },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "sheepstick" },
+          { item: "ethereal_blade" },
+          { item: "aeon_disk" },
+          { item: "wind_waker", info: "To save an ally being Omnislashed" },
+        ],
+        support: [],
+        core: [
+          { item: "abyssal_blade" },
+          { item: "silver_edge" },
+          { item: "assault" },
+          { item: "butterfly" },
+        ],
+      },
     },
   },
 
@@ -7242,9 +7623,61 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "Helps with splitpush and lining up your spells.",
     },
     counter_items: {
-      laning_phase: {},
-      mid_game: {},
-      late_game: {},
+      laning_phase: {
+        all: [
+          {
+            item: "magic_stick",
+            info: "Keeper of the Light's Chakra Magic allows him or his ally to cast spells frequently",
+          },
+          {
+            item: "ring_of_regen",
+            info: "One or two, for sustain on the lane against Illuminate build on Keeper of the Light",
+          },
+          {
+            item: "headdress",
+            info: "For sustain on the lane against Illuminate build on Keeper of the Light",
+          },
+          {
+            item: "infused_raindrop",
+            info: "Against Illuminate build on Keeper of the Light",
+          },
+          {
+            item: "urn_of_shadows",
+            info: "For Spirit Vessel to offset healing during from Spirit Form's Illuminate during daytime",
+          },
+        ],
+        support: [],
+        core: [
+          {
+            item: "ring_of_health",
+            info: "Against Illuminate build on Keeper of the Light",
+          },
+        ],
+      },
+      mid_game: {
+        all: [{ item: "lotus_orb" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "sphere", info: "Against midlane Keeper of the Light" },
+          { item: "witch_blade", info: "Poison attack has True Strike" },
+          {
+            item: "manta",
+            info: "To dispel Solar Bind against midlane Keeper of the Light",
+          },
+        ],
+      },
+      late_game: {
+        all: [
+          { item: "aeon_disk", info: "Against a midlane Keeper of the Light" },
+        ],
+        support: [{ item: "black_king_bar" }],
+        core: [{ item: "monkey_king_bar" }],
+      },
     },
   },
 
