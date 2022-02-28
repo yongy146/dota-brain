@@ -2,8 +2,6 @@
 
    This document contains all the messages played by Dota Coach.
 
-// GitHub Desktop Change 
-
   Questions and comments:
     // DayTime
     Is it worth adding it for 0min switch to daytime? -> Recent patch might make it worth it

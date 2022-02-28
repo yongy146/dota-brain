@@ -34,6 +34,8 @@ export enum ContentCreator {
 /**
  * Data structure for the hero builds of a given hero
  *
+ *
+ *
  */
 export interface HeroBuilds {
   creator: ContentCreator; // Owner of the guide (e.g. AlexDota)
