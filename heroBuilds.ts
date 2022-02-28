@@ -7179,8 +7179,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Jakiro: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.YoonA,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -7509,8 +7509,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Keeper of the Light": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.YoonA,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
@@ -12876,8 +12876,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Phoenix: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31",
+    creator: ContentCreator.YoonA,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
