@@ -1119,12 +1119,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "tango",
             "flask",
             "quelling_blade",
+            "gauntlets",
             "ring_of_protection",
             "branches",
             "faerie_fire",
             "magic_stick",
           ],
-          early_game: ["vanguard", "boots", "magic_wand"],
+          early_game: ["boots","magic_wand","vanguard","hood_of_defiance"],
           mid_game: [
             "blink",
             "blade_mail",
@@ -1132,7 +1133,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
             "platemail",
             "travel_boots",
-            "hood_of_defiance",
+           
           ],
           late_game: [
             "assault",
@@ -1175,8 +1176,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       axe_battle_hunger:
-        "If the opponent`s have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage.",
+        "If the opponents have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage.Try using it when all creeps are high HP",
+        axe_berserkers_call: "Use this to prevent enemies from lasthitting a creep or use it so they don't deny you one."
     },
+
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
@@ -1197,7 +1200,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       travel_boots:
         "A core boots upgrade that allows you to cover the map better.",
       lotus_orb: "For reflect, dispel and armor.",
-      overwhelming_blink: "Against illusion, clones and summons.",
+      overwhelming_blink: "Against illusions, clones and summons.",
       invis_sword: "For pick-offs and to guarantee a good initiation.",
       manta:
         "As a farm accelerator as Counter Helix procs on illusions. It is greedy to go for this item.",
@@ -1208,7 +1211,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "blight_stone" },
           {
             item: "ring_of_regen",
-            info: "One or two, for sustain on the lane against the pressure from the Axe",
+            info: "One or two, for sustain on the lane against the pressure from Axe",
           },
           { item: "wind_lace", info: "To keep the distance from the Axe" },
           { item: "boots", info: "To keep the distance from the Axe" },
@@ -1226,7 +1229,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "mage_slayer", info: "Reduces Counter Helix damage by 35%" },
           { item: "sange_and_yasha", info: "For status resistance" },
           { item: "kaya_and_sange", info: "For status resistance" },
-          { item: "silver_edge" },
+          { item: "silver_edge", info: "For breaking his passive ability" },
         ],
       },
       late_game: {
@@ -19229,7 +19232,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
             "eternal_shroud",
           ],
-          late_game: ["shivas_guard", "bloodstone", "sheepstick"],
+          late_game: ["shivas_guard", "bloodstone", "sheepstick","ultimate_scepter","overwhelming_blink"],
           situational: [
             "pipe",
             "lotus_orb",
@@ -19251,19 +19254,23 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "mysterious_hat",
             "essence_ring",
             "pupils_gift",
+            "black_powder_bag",
             "quickening_charm",
             "cloak_of_flames",
             "spell_prism",
+            "trickster_cloak",
             "stormcrafter",
             "giants_ring",
             "force_field",
+            "fallen_sky",
+            
           ],
         },
       },
     ],
     ability_tooltips: {
       shredder_timber_chain:
-        "In certain match-ups(Ursa, Slark), Reactive Armor doesn`t have much value. You can put a point in this spell on level 1 or 2 already.",
+        "In certain match-ups(Ursa, Slark), Reactive Armor doesn`t have much value. You can put a point in this spell on level 1 or 2 and secure lasthits.",
     },
     item_tooltips: {
       magic_stick:
@@ -19286,6 +19293,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To close the gap quickly.",
       black_king_bar: "Against a lot of disables, silences and as a dispel.",
       heavens_halberd: "Especially good against ranged right-clickers.",
+      ultimate_scepter: "Increasing your damage output versus immobile heroes, especially stregth",
+      overwhelming_blink: "Good for gap closure , burst of damage and especially good versus illusions and summons ",
     },
     counter_items: {
       laning_phase: {
@@ -19304,6 +19313,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             item: "urn_of_shadows",
             info: "For Spirit Vessel to offset some of the HP regeneration from Reactive Armor",
           },
+          { item: "quelling_blade",
+            info: "Before and during the laning phase, use it to destroy the trees around you so you can minimize Timbers damage output"}
         ],
         support: [
           {
@@ -19328,7 +19339,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         core: [
           { item: "skadi" },
           { item: "abyssal_blade" },
-          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "bloodthorn", info: "Provides silence,spell damage debuff and high burst versus Timber" },
         ],
       },
     },
