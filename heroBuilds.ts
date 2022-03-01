@@ -36,29 +36,35 @@ export enum ContentCreator {
 
 // Links provided by content creators to promote their own brand and activites
 export const ContentCreatorLinks = {
-  ZoGraf: {
-    img: "https://i.imgur.com/QZzNRhz.png",
-    txt: "This guide was written by 9k Professional Coach ZoGraF.",
+  TBD: {
+    image: "https://i.imgur.com/QZzNRhz.png",
+    text: "This guide was written by 9k Professional Coach ZoGraF.",
+    link_http: "https://www.gamersensei.com/senseis/zograf",
+    link_text: "Click here to be coached by him.",
+  },
+  ZoGraF: {
+    image: "https://i.imgur.com/QZzNRhz.png",
+    text: "This guide was written by 9k Professional Coach ZoGraF.",
     link_http: "https://www.gamersensei.com/senseis/zograf",
     link_text: "Click here to be coached by him.",
   },
   AlexDota: {
-    img: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ...
-    txt: "This guide was written by 10k Professional Player AlexDota.",
+    image: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ...
+    text: "This guide was written by 10k Professional Player AlexDota.",
     link_http: "https://www.gamersensei.com/senseis/alexxo",
     link_text: "Click here to be coached by him.",
   },
   TNTCNz: {
-    img: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ... => what image would you like to use?
-    txt: "This guide was written by TNTCNz",
+    image: null, // Create imgur file ... => what image would you like to use?
+    text: "This guide was written by TNTCNz",
     link_http: null,
     link_text: null,
   },
   YoonA: {
-    img: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ... => what image would you like to use?
-    txt: "This guide was written by YoonA",
-    link_http: null,
-    link_text: null,
+    image: "https://i.imgur.com/TZpRwOK.jpeg",
+    text: "This guide was written by Hammad.",
+    link_http: "https://www.fiverr.com/share/k0bmRk",
+    link_text: "Click here to book a coaching session with him.",
   },
 };
 
