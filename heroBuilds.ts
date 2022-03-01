@@ -156,7 +156,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
 export const heroBuilds: { [key: string]: HeroBuilds } = {
   Abaddon: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -584,7 +584,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Ancient Apparition": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -1244,7 +1244,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Bane: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
       {
@@ -2363,7 +2363,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Bristleback: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -3445,7 +3445,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Crystal Maiden": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -3456,66 +3456,74 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "crystal_maiden_crystal_nova", // 1
-          "crystal_maiden_brilliance_aura", // 2
-          "crystal_maiden_frostbite", // 3
-          "crystal_maiden_brilliance_aura", // 4
-          "crystal_maiden_crystal_nova", // 5
-          "crystal_maiden_crystal_nova", // 6
-          "crystal_maiden_crystal_nova", // 7
-          "crystal_maiden_frostbite", // 8
-          "crystal_maiden_frostbite", // 9
-          "crystal_maiden_frostbite", // 10
-          "special_bonus_unique_crystal_maiden_6", // 11
+          "crystal_maiden_frostbite", // 2
+          "crystal_maiden_brilliance_aura", // 3
+          "crystal_maiden_frostbite", // 4
+          "crystal_maiden_frostbite", // 5
+          "crystal_maiden_brilliance_aura", // 6
+          "crystal_maiden_frostbite", // 7
+          "crystal_maiden_brilliance_aura", // 8
+          "crystal_maiden_brilliance_aura", // 9
+          "crystal_maiden_freezing_field", // 10
+          "special_bonus_hp_250", // 11
           "crystal_maiden_freezing_field", // 12
-          "crystal_maiden_freezing_field", // 13
-          "crystal_maiden_brilliance_aura", // 14
-          "special_bonus_unique_crystal_maiden_5", // 15
-          "crystal_maiden_brilliance_aura", // 16
+          "crystal_maiden_crystal_nova", // 13
+          "crystal_maiden_crystal_nova", // 14
+          "crystal_maiden_crystal_nova", // 15
+          "special_bonus_unique_crystal_maiden_5", // 16
           "special_bonus_attributes", // 17
           "crystal_maiden_freezing_field", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_attack_speed_200", // 20
+          "special_bonus_unique_crystal_maiden_3", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_crystal_maiden_2", // 25
+          "special_bonus_unique_crystal_maiden_1", // 25
         ],
         items: {
           starting: [
             "tango",
+			`tango`,
             "flask",
+			`enchanted_mango`,
+			`enchanted_mango`,
             "enchanted_mango",
-            "faerie_fire",
-            "branches",
+			`clarity`,
             "ward_observer",
             "ward_sentry",
-            "magic_stick",
-            "ring_of_basilius",
           ],
-          early_game: ["tranquil_boots", "magic_wand", "wind_lace"],
+          early_game: ["tranquil_boots", `infused_raindrop`, "magic_wand", "wind_lace"],
           mid_game: ["glimmer_cape", "force_staff", "ghost", "aether_lens"],
-          late_game: ["aeon_disk", "sheepstick"],
+          late_game: [`black_king_bar`, `blink`, "aeon_disk", "sheepstick"],
           situational: [
-            "infused_raindrop",
-            "black_king_bar",
-            "blink",
+			`ring_of_basilius`,
             "aghanims_shard",
             "lotus_orb",
             "ultimate_scepter",
+			`kaya_and_sange`,
+			`ethereal_blade`,
+			`octarine_core`,
+			`shivas_guard`,
           ],
-          core: ["tranquil_boots", "glimmer_cape"],
+          core: ["tranquil_boots", "glimmer_cape", `force_staff`],
           neutral: [
             "trusty_shovel",
+			`pogo_stick`,
             "keen_optic",
+			`mysterious_hat`,
             "philosophers_stone",
             "bullwhip",
+			`essence_ring`,
             "spider_legs",
             "psychic_headband",
+			`ceremonial_robe`,
             "spy_gadget",
             "timeless_relic",
+			`heavy_blade`,
             "seer_stone",
             "book_of_shadows",
+			`force_field`,
           ],
         },
       },
@@ -3526,11 +3534,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       crystal_maiden_freezing_field:
         "It is hard to get off a long impactful Freezing Field in early to mid-game, until you get Blink Dagger and Black King Bar which is a greedy build. You can skill it earlier than recommended by guide if you have a good setup from your teammates or to clear some stacks.",
       special_bonus_unique_crystal_maiden_4:
-        "You can skill this talent over recommended one if you are facing heavy magical-damage lineup.",
-      special_bonus_unique_crystal_maiden_3:
-        "You can skill this talent over recommended one if you are doing well and can afford to buy Blink Dagger and Black King Bar.",
-      special_bonus_unique_crystal_maiden_1:
-        "You can skill this talent over recommended one if you have Aghanim`s Scepter.",
+        "You can skill this talent over recommended one if you have skill spammers on your lineup.",
+      special_bonus_attack_speed_200:
+        "You can skill this talent over recommended one if you want to destroy a phoenix egg or undying tombstone.",
+      special_bonus_unique_crystal_maiden_2:
+        "You can skill this talent over recommended one if you are against mega creeps.",
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
@@ -3744,7 +3752,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Dark Willow": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -3907,7 +3915,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Dawnbreaker: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -4141,7 +4149,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Dazzle: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -4457,7 +4465,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Disruptor: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -5005,7 +5013,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Earth Spirit": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -5144,7 +5152,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Earthshaker: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -6075,7 +6083,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Grimstroke: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -7092,7 +7100,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Io: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -7376,7 +7384,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Juggernaut: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -7751,7 +7759,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Kunkka: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -8322,7 +8330,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lich: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -8652,7 +8660,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lina: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -8906,7 +8914,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lion: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -10416,7 +10424,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Medusa: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -10695,7 +10703,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Mirana: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -12108,7 +12116,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Night Stalker": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -12256,7 +12264,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Nyx Assassin": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -12391,7 +12399,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Ogre Magi": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -12714,7 +12722,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Oracle: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -14587,7 +14595,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Pugna: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -15113,7 +15121,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Razor: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -16007,7 +16015,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Shadow Demon": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -16418,7 +16426,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Shadow Shaman": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -16556,7 +16564,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Silencer: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -16697,7 +16705,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Skywrath Mage": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -17175,7 +17183,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Snapfire: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -19029,7 +19037,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Tidehunter: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -19910,7 +19918,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Treant Protector": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -20569,7 +20577,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Undying: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -20861,7 +20869,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Vengeful Spirit": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -21973,7 +21981,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Warlock: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -22118,7 +22126,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Weaver: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -22784,7 +22792,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Winter Wyvern": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -22947,7 +22955,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Witch Doctor": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
