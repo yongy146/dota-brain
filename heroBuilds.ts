@@ -7230,7 +7230,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Jakiro: {
-    gameplay_version: "7.31",
+    gameplay_version: "7.31b",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -7244,23 +7244,23 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "jakiro_dual_breath", // 1
           "jakiro_liquid_fire", // 2
           "jakiro_dual_breath", // 3
-          "jakiro_liquid_fire", // 4
+          "jakiro_ice_path", // 4
           "jakiro_dual_breath", // 5
           "jakiro_macropyre", // 6
-          "jakiro_ice_path", // 7
+          "jakiro_dual_breath", // 7
           "jakiro_ice_path", // 8
           "jakiro_ice_path", // 9
           "jakiro_ice_path", // 10
-          "jakiro_liquid_fire", // 11
+          "special_bonus_attack_range_325", // 11
           "jakiro_macropyre", // 12
           "jakiro_liquid_fire", // 13
           "jakiro_liquid_fire", // 14
-          "special_bonus_attack_range_325", // 15
-          "special_bonus_unique_jakiro_4", // 16
+          "jakiro_liquid_fire", // 15
+          "special_bonus_hp_325", // 16
           "special_bonus_attributes", // 17
           "jakiro_macropyre", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_jakiro", // 20
+          "special_bonus_unique_jakiro_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -7270,20 +7270,21 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         items: {
           starting: [
             "tango",
+			"tango",
             "enchanted_mango",
+			"enchanted_mango",
             "flask",
             "faerie_fire",
-            "branches",
-            "sobi_mask",
+            "clarity",
             "ward_observer",
             "ward_sentry",
             "magic_stick",
           ],
           early_game: [
-            "ring_of_basilius",
             "arcane_boots",
             "magic_wand",
             "wind_lace",
+			"infused_raindrop",
           ],
           mid_game: [
             "aether_lens",
@@ -7292,7 +7293,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "force_staff",
             "ghost",
             "glimmer_cape",
-            "veil_of_discord",
           ],
           late_game: [
             "ultimate_scepter",
@@ -7300,19 +7300,24 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aeon_disk",
             "octarine_core",
           ],
-          situational: ["infused_raindrop", "lotus_orb"],
-          core: ["arcane_boots", "aether_lens", "aghanims_shard"],
+          situational: ["veil_of_discord", "ring_of_basilius", "pipe", "ethereal_blade", "travel_boots", "lotus_orb"],
+          core: ["arcane_boots", "aether_lens", "aghanims_shard", "ultimate_scepter"],
           neutral: [
             "keen_optic",
             "trusty_shovel",
+			"mysterious_hat",
             "philosophers_stone",
             "bullwhip",
+			"essence_ring",
             "spider_legs",
             "psychic_headband",
+			"ceremonial_robe",
             "spy_gadget",
             "timeless_relic",
+			"spell_prism",
             "seer_stone",
             "book_of_shadows",
+			"force_field",
           ],
         },
       },
@@ -7338,7 +7343,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "magic_stick" },
           {
             item: "ring_of_regen",
-            info: "One or two, for sustain on the lane",
+            info: "For sustain on the lane",
           },
           {
             item: "headdress",
@@ -7562,7 +7567,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Keeper of the Light": {
-    gameplay_version: "7.31",
+    gameplay_version: "7.31b",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -7579,10 +7584,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "keeper_of_the_light_chakra_magic", // 4
           "keeper_of_the_light_illuminate", // 5
           "keeper_of_the_light_spirit_form", // 6
-          "keeper_of_the_light_illuminate", // 7
-          "keeper_of_the_light_chakra_magic", // 8
+          "keeper_of_the_light_radiant_bind", // 7
+          "keeper_of_the_light_illuminate", // 8
           "keeper_of_the_light_chakra_magic", // 9
-          "keeper_of_the_light_radiant_bind", // 10
+          "keeper_of_the_light_chakra_magic", // 10
           "keeper_of_the_light_radiant_bind", // 11
           "keeper_of_the_light_spirit_form", // 12
           "keeper_of_the_light_radiant_bind", // 13
@@ -7602,25 +7607,24 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         items: {
           starting: [
             "tango",
+			"tango",
             "flask",
-            "wind_lace",
             "faerie_fire",
-            "boots",
-            "branches",
             "enchanted_mango",
             "ward_observer",
             "ward_sentry",
             "magic_stick",
+			"boots",
+			"null_talisman",
           ],
           early_game: [
             "tranquil_boots",
             "magic_wand",
-            "ring_of_basilius",
-            "urn_of_shadows",
+			"infused_raindrop"
+            "force_staff",
           ],
           mid_game: [
             "glimmer_cape",
-            "force_staff",
             "ghost",
             "cyclone",
             "veil_of_discord",
@@ -7631,27 +7635,36 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ultimate_scepter",
             "aeon_disk",
             "sheepstick",
+			"dagon"
             "octarine_core",
+			"wind_waker"
           ],
           situational: [
-            "infused_raindrop",
-            "spirit_vessel",
+            "ring_of_basilius",
+			"spirit_vessel",
             "aghanims_shard",
             "lotus_orb",
             "blink",
+			"kaya_and_sange",
+			"ethereal_blade",
+			"travel_boots",
           ],
-          core: ["tranquil_boots", "ultimate_scepter"],
+          core: ["tranquil_boots", "veil_of_discord", "dagon", "kaya_and_sange", "ultimate_scepter"],
           neutral: [
             "keen_optic",
             "trusty_shovel",
+			"mysterious_hat",
             "philosophers_stone",
             "bullwhip",
+			"essence_ring",
             "psychic_headband",
             "quickening_charm",
             "spy_gadget",
             "spell_prism",
+			"timeless_relic",
             "seer_stone",
             "book_of_shadows",
+			"force_field",
           ],
         },
       },
@@ -7673,7 +7686,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       spirit_vessel: "Against heavy-healing lineup.",
       ultimate_scepter:
         "A core item that provides an AoE control in teamfights.",
-      aghanims_shard: "For extra mobility of your heroes.",
+      aghanims_shard: "For better teamfight and split push potential.",
       lotus_orb: "For reflect, dispel and armor.",
       blink: "Helps with splitpush and lining up your spells.",
     },
@@ -13741,7 +13754,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Phoenix: {
-    gameplay_version: "7.31",
+    gameplay_version: "7.31b",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -13755,14 +13768,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "phoenix_fire_spirits", // 1
           "phoenix_icarus_dive", // 2
           "phoenix_fire_spirits", // 3
-          "phoenix_icarus_dive", // 4
+          "phoenix_sun_ray", // 4
           "phoenix_fire_spirits", // 5
           "phoenix_supernova", // 6
           "phoenix_fire_spirits", // 7
           "phoenix_sun_ray", // 8
           "phoenix_sun_ray", // 9
           "phoenix_sun_ray", // 10
-          "phoenix_sun_ray", // 11
+          "phoenix_icarus_dive", // 11
           "phoenix_supernova", // 12
           "phoenix_icarus_dive", // 13
           "phoenix_icarus_dive", // 14
@@ -13771,70 +13784,80 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "special_bonus_attributes", // 17
           "phoenix_supernova", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_phoenix_4", // 20
+          "special_bonus_unique_phoenix_5", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_phoenix_1", // 25
+          "special_bonus_unique_phoenix_4", // 25
         ],
         items: {
           starting: [
             "tango",
             "flask",
-            "faerie_fire",
-            "branches",
             "enchanted_mango",
-            "ring_of_regen",
+            "ring_of_protection",
+            "circlet",
             "ward_observer",
-            "ward_sentry",
-            "magic_stick",
+			"ward_sentry",
+			"magic_stick",
+			"ring_of_regen",
           ],
           early_game: [
-            "tranquil_boots",
-            "magic_wand",
             "urn_of_shadows",
-            "ring_of_basilius",
+			"tranquil_boots",
+            "magic_wand",
+            "infused_raindrop",
           ],
           mid_game: [
             "holy_locket",
             "aghanims_shard",
-            "veil_of_discord",
             "cyclone",
-            "ghost",
-            "glimmer_cape",
-            "force_staff",
+            "meteor_hammer",
           ],
           late_game: [
-            "ultimate_scepter",
+            "shivas_guard",
+			"ultimate_scepter",
             "refresher",
             "aeon_disk",
-            "shivas_guard",
             "sheepstick",
+			"travel_boots",
           ],
           situational: [
-            "infused_raindrop",
             "spirit_vessel",
             "lotus_orb",
             "blink",
+			"glimmer_cape",
+			"force_staff",
+			"ghost",
+			"heavens_halberd",
+			"pipe",
+			"radiance",
+			"ethereal_blade",
+			"kaya_and_sange",
           ],
           core: [
             "tranquil_boots",
             "holy_locket",
             "aghanims_shard",
-            "ultimate_scepter",
+            "shivas_guard",
           ],
           neutral: [
             "trusty_shovel",
             "arcane_ring",
+			"mysterious_hat",
             "philosophers_stone",
             "bullwhip",
             "quickening_charm",
             "psychic_headband",
+			"ceremonial_robe",
             "spy_gadget",
             "spell_prism",
+			"ascetic_cap",
+			"timeless_relic",
             "seer_stone",
             "book_of_shadows",
+			"force_field"
           ],
         },
       },
@@ -13847,7 +13870,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ward_sentry: "To block or unblock the pull camp.",
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
-      ring_of_basilius: "If your laning partner uses a lot of mana early.",
       infused_raindrop: "On hero against magical burst.",
       tranquil_boots:
         "A core boots upgrade. Solves hp sustain and movement speed issues for the hero.",
