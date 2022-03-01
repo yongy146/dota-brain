@@ -138,7 +138,7 @@ export interface CounterItems {
 }
 
 export interface CounterItem {
-  item: string; // Name of item, as in dota2Items.json, but without prefix 'item_'
+  item: string; // Name of item, as in dota2Items.json, but without prefix `item_`
   info?: string; // Optional info to be displayed on webpage and in the app
 }
 
@@ -195,7 +195,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "abaddon_aphotic_shield",
-          "abaddon_frostmourne" /* equals to 'curse of avernus' */,
+          "abaddon_frostmourne" /* equals to `curse of avernus` */,
           "abaddon_aphotic_shield",
           "abaddon_death_coil",
           "abaddon_aphotic_shield",
@@ -306,7 +306,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         core: [
           { item: "orb_of_corrosion", info: "If you are playing a melee core" },
         ],
-        // Comment for Alex: On the screen in the game only 5 items are shows, on the second screen there are 6. The items in the catrogy 'all' are shonw first, then either 'support' or 'core'. Any additional items are discarded.
+        // Comment for Alex: On the screen in the game only 5 items are shows, on the second screen there are 6. The items in the catrogy `all` are shonw first, then either `support` or `core`. Any additional items are discarded.
       },
       mid_game: {
         all: [],
@@ -3945,9 +3945,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "dawnbreaker_fire_wreath", // 1
-          "dawnbreaker_celestial_hammer", // 2   equals to 'starbreaker'
+          "dawnbreaker_celestial_hammer", // 2   equals to `starbreaker`
           "dawnbreaker_celestial_hammer", // 3
-          "dawnbreaker_fire_wreath", // 4   equals to 'starbreaker'
+          "dawnbreaker_fire_wreath", // 4   equals to `starbreaker`
           "dawnbreaker_celestial_hammer", // 5
           "dawnbreaker_solar_guardian", // 6
           "dawnbreaker_celestial_hammer", // 7
@@ -4022,9 +4022,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "dawnbreaker_fire_wreath", // 1
-          "dawnbreaker_celestial_hammer", // 2   equals to 'starbreaker'
+          "dawnbreaker_celestial_hammer", // 2   equals to `starbreaker`
           "dawnbreaker_celestial_hammer", // 3
-          "dawnbreaker_luminosity", // 4   equals to 'starbreaker'
+          "dawnbreaker_luminosity", // 4   equals to `starbreaker`
           "dawnbreaker_fire_wreath", // 5
           "dawnbreaker_solar_guardian", // 6
           "dawnbreaker_fire_wreath", // 7
@@ -6112,10 +6112,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562245",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "grimstroke_dark_artistry", // 1   equals to 'stroke of faith'
-          "grimstroke_spirit_walk", // 2   equals to 'ink swell'
+          "grimstroke_dark_artistry", // 1   equals to `stroke of faith`
+          "grimstroke_spirit_walk", // 2   equals to `ink swell`
           "grimstroke_spirit_walk", // 3
-          "grimstroke_ink_creature", // 4   equals to 'phantom's embrace'
+          "grimstroke_ink_creature", // 4   equals to `phantom`s embrace`
           "grimstroke_spirit_walk", // 5
           "grimstroke_dark_artistry", // 6
           "grimstroke_spirit_walk", // 7
@@ -7297,9 +7297,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         items: {
           starting: [
             "tango",
-			"tango",
+            "tango",
             "enchanted_mango",
-			"enchanted_mango",
+            "enchanted_mango",
             "flask",
             "faerie_fire",
             "clarity",
@@ -7311,7 +7311,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "arcane_boots",
             "magic_wand",
             "wind_lace",
-			"infused_raindrop",
+            "infused_raindrop",
           ],
           mid_game: [
             "aether_lens",
@@ -7327,24 +7327,36 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aeon_disk",
             "octarine_core",
           ],
-          situational: ["veil_of_discord", "ring_of_basilius", "pipe", "ethereal_blade", "travel_boots", "lotus_orb"],
-          core: ["arcane_boots", "aether_lens", "aghanims_shard", "ultimate_scepter"],
+          situational: [
+            "veil_of_discord",
+            "ring_of_basilius",
+            "pipe",
+            "ethereal_blade",
+            "travel_boots",
+            "lotus_orb",
+          ],
+          core: [
+            "arcane_boots",
+            "aether_lens",
+            "aghanims_shard",
+            "ultimate_scepter",
+          ],
           neutral: [
             "keen_optic",
             "trusty_shovel",
-			"mysterious_hat",
+            "mysterious_hat",
             "philosophers_stone",
             "bullwhip",
-			"essence_ring",
+            "essence_ring",
             "spider_legs",
             "psychic_headband",
-			"ceremonial_robe",
+            "ceremonial_robe",
             "spy_gadget",
             "timeless_relic",
-			"spell_prism",
+            "spell_prism",
             "seer_stone",
             "book_of_shadows",
-			"force_field",
+            "force_field",
           ],
         },
       },
@@ -7605,7 +7617,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958059",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "keeper_of_the_light_illuminate", // 1  "keeper_of_the_light_radiant_bind" equals to 'solar bind'
+          "keeper_of_the_light_illuminate", // 1  "keeper_of_the_light_radiant_bind" equals to `solar bind`
           "keeper_of_the_light_chakra_magic", // 2
           "keeper_of_the_light_illuminate", // 3
           "keeper_of_the_light_chakra_magic", // 4
@@ -7634,20 +7646,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         items: {
           starting: [
             "tango",
-			"tango",
             "flask",
             "faerie_fire",
             "enchanted_mango",
             "ward_observer",
             "ward_sentry",
             "magic_stick",
-			"boots",
-			"null_talisman",
+            "boots",
+            "null_talisman",
           ],
           early_game: [
             "tranquil_boots",
             "magic_wand",
-			"infused_raindrop"
+            "infused_raindrop",
             "force_staff",
           ],
           mid_game: [
@@ -7662,36 +7673,42 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ultimate_scepter",
             "aeon_disk",
             "sheepstick",
-			"dagon"
+            "dagon",
             "octarine_core",
-			"wind_waker"
+            "wind_waker",
           ],
           situational: [
             "ring_of_basilius",
-			"spirit_vessel",
+            "spirit_vessel",
             "aghanims_shard",
             "lotus_orb",
             "blink",
-			"kaya_and_sange",
-			"ethereal_blade",
-			"travel_boots",
+            "kaya_and_sange",
+            "ethereal_blade",
+            "travel_boots",
           ],
-          core: ["tranquil_boots", "veil_of_discord", "dagon", "kaya_and_sange", "ultimate_scepter"],
+          core: [
+            "tranquil_boots",
+            "veil_of_discord",
+            "dagon",
+            "kaya_and_sange",
+            "ultimate_scepter",
+          ],
           neutral: [
             "keen_optic",
             "trusty_shovel",
-			"mysterious_hat",
+            "mysterious_hat",
             "philosophers_stone",
             "bullwhip",
-			"essence_ring",
+            "essence_ring",
             "psychic_headband",
             "quickening_charm",
             "spy_gadget",
             "spell_prism",
-			"timeless_relic",
+            "timeless_relic",
             "seer_stone",
             "book_of_shadows",
-			"force_field",
+            "force_field",
           ],
         },
       },
@@ -9166,49 +9183,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "book_of_shadows",
             "force_field",
           ],
-
-          /*starting: [
-            'tango',
-            'branches',
-            'faerie_fire',
-            'blight_stone',
-            'orb_of_venom',
-            'quelling_blade',
-            'ward_observer',
-            'magic_stick',
-          ],
-          early_game: [
-            'orb_of_corrosion',
-            'phase_boots',
-            'mask_of_madness',
-            'boots',
-          ],
-          mid_game: [
-            'desolator',
-            'basher',
-            'maelstrom',
-            'phase_boots',
-            'buckler',
-            'wind_lace',
-            'solar_crest',
-          ],
-          late_game: [
-            'mjollnir',
-            'assault',
-            'moon_shard',
-            'abyssal_blade',
-            'aeon_disk',
-            'refresher',
-            'vladmir',
-          ],
-          situational: [
-            'infused_raindrop',
-            'ultimate_scepter',
-            'black_king_bar',
-            'aghanims_shard',
-          ],
-          core: ['phase_boots', 'mask_of_madness', 'basher'],
-          neutral: [],*/
         },
       },
     ],
@@ -9297,7 +9271,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959031",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "luna_lunar_blessing", // 1   "luna_moon_glaive" equals to 'moon glaives'
+          "luna_lunar_blessing", // 1   "luna_moon_glaive" equals to `moon glaives`
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
           "luna_lucent_beam", // 4
@@ -11875,7 +11849,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
           "necrolyte_death_pulse", // 3
-          "necrolyte_sadist", // 4   equals to 'ghost shroud'
+          "necrolyte_sadist", // 4   equals to `ghost shroud`
           "necrolyte_death_pulse", // 5
           "necrolyte_reapers_scythe", // 6
           "necrolyte_death_pulse", // 7
@@ -11968,7 +11942,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
           "necrolyte_death_pulse", // 3
-          "necrolyte_heartstopper_aura", // 4   equals to 'ghost shroud'
+          "necrolyte_heartstopper_aura", // 4   equals to `ghost shroud`
           "necrolyte_death_pulse", // 5
           "necrolyte_reapers_scythe", // 6
           "necrolyte_death_pulse", // 7
@@ -12882,7 +12856,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Outworld Devourer": {
-    // not 'Outworld Destroyer'
+    // not `Outworld Destroyer`
     gameplay_version: "7.30e",
     creator: ContentCreator.TBD,
     damage_type: DamageType.neutral,
@@ -13826,13 +13800,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ring_of_protection",
             "circlet",
             "ward_observer",
-			"ward_sentry",
-			"magic_stick",
-			"ring_of_regen",
+            "ward_sentry",
+            "magic_stick",
+            "ring_of_regen",
           ],
           early_game: [
             "urn_of_shadows",
-			"tranquil_boots",
+            "tranquil_boots",
             "magic_wand",
             "infused_raindrop",
           ],
@@ -13844,24 +13818,24 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           late_game: [
             "shivas_guard",
-			"ultimate_scepter",
+            "ultimate_scepter",
             "refresher",
             "aeon_disk",
             "sheepstick",
-			"travel_boots",
+            "travel_boots",
           ],
           situational: [
             "spirit_vessel",
             "lotus_orb",
             "blink",
-			"glimmer_cape",
-			"force_staff",
-			"ghost",
-			"heavens_halberd",
-			"pipe",
-			"radiance",
-			"ethereal_blade",
-			"kaya_and_sange",
+            "glimmer_cape",
+            "force_staff",
+            "ghost",
+            "heavens_halberd",
+            "pipe",
+            "radiance",
+            "ethereal_blade",
+            "kaya_and_sange",
           ],
           core: [
             "tranquil_boots",
@@ -13872,19 +13846,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           neutral: [
             "trusty_shovel",
             "arcane_ring",
-			"mysterious_hat",
+            "mysterious_hat",
             "philosophers_stone",
             "bullwhip",
             "quickening_charm",
             "psychic_headband",
-			"ceremonial_robe",
+            "ceremonial_robe",
             "spy_gadget",
             "spell_prism",
-			"ascetic_cap",
-			"timeless_relic",
+            "ascetic_cap",
+            "timeless_relic",
             "seer_stone",
             "book_of_shadows",
-			"force_field"
+            "force_field",
           ],
         },
       },
