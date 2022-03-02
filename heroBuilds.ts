@@ -12534,7 +12534,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "ogre_magi_bloodlust", // 13
           "ogre_magi_bloodlust", // 14
           "ogre_magi_bloodlust", // 15
-          "special_bonus_hp_275", // 16
+          "special_bonus_hp_250", // 16
           "special_bonus_attributes", // 17
           "ogre_magi_multicast", // 18
           "special_bonus_attributes", // 19
