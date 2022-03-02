@@ -5635,7 +5635,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Enchantress: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.30",
     creator: ContentCreator.TBD,
     damage_type: DamageType.pure,
     builds: [
@@ -5767,7 +5767,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Enigma: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.30",
     creator: ContentCreator.TBD,
     damage_type: DamageType.magical,
     builds: [
