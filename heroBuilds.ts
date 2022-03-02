@@ -1077,7 +1077,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Axe: {
-    gameplay_version: "7.31",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
@@ -1176,7 +1176,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       axe_battle_hunger:
-        "If the opponents have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage.Try using it when all creeps are high HP",
+        "If the opponents have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage. Try using it when all creeps are high HP",
         axe_berserkers_call: "Use this to prevent enemies from lasthitting a creep or use it so they don't deny you one."
     },
 
@@ -4590,8 +4590,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Doom: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -7985,7 +7985,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Legion Commander": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TBD,
     damage_type: DamageType.physical,
     builds: [
@@ -8081,7 +8081,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       legion_commander_press_the_attack:
-        "You can skill this spell on level 1 already if you are being harassed by a dispellable damage-over-time spell like Thunder Strike and Poison Touch.",
+        "You can skill this spell on level 1 if you are being harassed by a dispellable damage-over-time spell like Thunder Strike and Poison Touch.",
     },
     item_tooltips: {
       magic_stick:
@@ -10248,8 +10248,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Mars: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -10299,6 +10299,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "phase_boots",
             "soul_ring",
             "helm_of_iron_will",
+            "ring_of_health",
             "infused_raindrop",
             "magic_wand",
             "bracer",
@@ -10308,17 +10309,17 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "black_king_bar",
             "aghanims_shard",
             "armlet",
-            "cyclone",
             "desolator",
             "hood_of_defiance",
           ],
           late_game: [
+            "refresher",
             "overwhelming_blink",
             "assault",
             "satanic",
             "greater_crit",
           ],
-          situational: ["heavens_halberd", "lotus_orb"],
+          situational: ["heavens_halberd", "lotus_orb", "cyclone"],
           core: ["phase_boots", "soul_ring", "blink", "black_king_bar"],
           neutral: [
             "pogo_stick",
@@ -10328,25 +10329,31 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "cloak_of_flames",
             "black_powder_bag",
             "trickster_cloak",
+            "titan_sliver",
             "ascetic_cap",
             "fallen_sky",
             "force_field",
+            "desolator_2",
           ],
         },
       },
     ],
     ability_tooltips: {
       mars_bulwark:
-        "You can take a point in this spell early into the laning stage if you are being harassed a lot by right-clicks.",
+        "You can take a point in this spell early into the laning stage if you are being harassed a lot by right-clicks especially ranged heroes.",
       special_bonus_unique_mars_rebuke_slow:
-        "At level 15, take the suggested level 15 over this level 10 talent. The dota client doesn`t allow me to indicate that in graphics above. On the level 16, take the level 10 talent.",
+        "Skip this talent until you are level 16, you can take the level 15 talent BEFORE taking this one.",
+        special_bonus_unique_mars_gods_rebuke_extra_crit:
+        "You can choose this talent over the other if you have build into high dmg items such as Desolator and Satanic. Pick the other if you are playing a utility Mars"
     },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
+      ring_of_health:
+        "Provides very good lane sustain and you can later on upgrade it to Hood or Refresher. You can opt not to upgrade before getting your Blink Dagger", 
       helm_of_iron_will:
         "You can rush this item for sustain on the lane. Upgrading it to Armlet is fine but usually you should make your way to Blink Dagger first. You can opt not to upgrade it at all.",
-      phase_boots: "A core boots upgrade that allows you to gap-close quicker.",
+      phase_boots: "A core boots upgrade that allows you to gap-close quicker and covers armor problems that Mars has.",
       soul_ring: "A core item that helps with mana sustain.",
       cyclone:
         "It can be a particularly good purchase against elusive heroes to setup the Arena of Blood into Spear of Mars combo.",
@@ -10355,13 +10362,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
       aghanims_shard:
         "Great against illusion or clone based heroes. You are likely to pin the real hero along with the illusion or clone.",
-      lotus_orb: "For reflect, dispel and armor.",
+      lotus_orb: "For reflecting, dispelling and provides good armor.",
+      desolator: "Very good dmg item that synergizes well with God's Rebuke. You can get damage output items instead of utility items when you are ahead in the game. e.g 5/0 ",
+      satanic: "Provides very good stats and using it with God's Rebuke will result into very high HP lifesteals",
+      refresher: "One of the best items you can get on Mars for crowd control. After you have used your Black King Bar, Arena and Spear you can refresh to use them again"
     },
     counter_items: {
       laning_phase: {
         all: [
-          { item: "blight_stone" },
-          { item: "ring_of_regen", info: "For sustain on the lane" },
+          { item: "blight_stone", info: "Mars has relatively low armor early and you can exploit that as a weakness" },
+          { item: "lifesteal", info: "For sustaining on the lane" },
           {
             item: "wind_lace",
             info: "Makes harder for Mars to hit you with Spear of Mars and to catch you in the Arena of Blood",
@@ -10370,7 +10380,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             item: "boots",
             info: "Makes harder for Mars to hit you with Spear of Mars and to catch you in the Arena of Blood",
           },
-          { item: "infused_raindrop" },
+          { item: "infused_raindrop", info:" Mars uses Spear in order to secure creeps whilst damaging you " },
           {
             item: "cloak",
             info: "Mars is heavy on magical damage and Cloak will negate 15% of it",
@@ -10385,19 +10395,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         all: [],
         support: [{ item: "glimmer_cape" }],
         core: [
-          { item: "mage_slayer" },
           { item: "hood_of_defiance" },
           { item: "pipe" },
-          { item: "eternal_shroud" },
-          { item: "black_king_bar" },
-          { item: "silver_edge" },
+          { item: "black_king_bar", info: "Will get you out of Arena and Spear setup or let you fight inside it" },
+          { item: "silver_edge", info: " Breaking Mars will let you bypass the Bulwark and let you kill Mars easier" },
+          { item: "desolator", info: "Mars has relatively low armor and low armor gain which desolator will help you punish even more" },
         ],
       },
       late_game: {
         all: [],
-        support: [{ item: "black_king_bar" }],
+        support: [{ item: "black_king_bar", info: "Will get you out of Arena or use your abilities inside it"}],
         core: [
-          { item: "bloodthorn", info: "To burst this tanky hero" },
+          { item: "bloodthorn", info: "Provides silence, spell damage debuff and high burst against Mars" },
+          { item: "wind_waker", info: "Will let you cyclone out of the Arena and disengage" },
           { item: "assault" },
         ],
       },
@@ -12097,7 +12107,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Night Stalker": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TBD,
     damage_type: DamageType.physical,
     builds: [
@@ -12144,13 +12154,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "enchanted_mango",
             "magic_stick",
           ],
-          early_game: ["phase_boots", "magic_wand", "bracer"],
+          early_game: ["phase_boots", "magic_wand", "bracer","raindrops"],
           mid_game: [
             "echo_sabre",
             "black_king_bar",
             "blink",
             "basher",
             "armlet",
+            "invis_sword",
           ],
           late_game: [
             "abyssal_blade",
@@ -12206,6 +12217,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive spells and items from opponents that prevent you from right-clicking.",
       aghanims_shard:
         "Against summon-based heroes. Consumes even ancients during night.",
+      invis_sword:
+        "Gives you pretty good stats and the ability to find backliners and scout."
     },
     counter_items: {
       laning_phase: {
@@ -12226,19 +12239,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         all: [],
         support: [
           { item: "glimmer_cape" },
-          { item: "force_staff" },
-          { item: "ghost" },
+          { item: "force_staff", info: "Lets you disengage out of the Crippling Fear and reposition yourself." },
+          { item: "ghost", info: "Night Stalker mostly relies on right clicking opponents." },
         ],
-        core: [{ item: "hurricane_pike" }, { item: "silver_edge" }],
+        core: [{ item: "hurricane_pike" }, { item: "silver_edge" }, {item:"heavens_halberd"}],
       },
       late_game: {
         all: [{ item: "sheepstick" }],
-        support: [],
+        support: [{item:"aeon_disk", info: "Prevents getting jumped in the backline and getting bursted."}],
         core: [
           { item: "abyssal_blade", info: "To pin this mobile hero" },
-          { item: "assault" },
+          { item: "assault", info: "The armor from Assault helps with Night Stalkers right-clicks." },
           { item: "bloodthorn", info: "To burst this tanky hero" },
-          { item: "butterfly" },
+          { item: "butterfly", info: "Night Stalker mostly relies on right clicking and Butterfly provides evasion." },
         ],
       },
     },
@@ -15834,8 +15847,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Sand King": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -15888,19 +15901,23 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_wand",
             "bracer",
             "vanguard",
+            "hood_of_defiance",
+            "raindrops",
           ],
           mid_game: [
             "blink",
             "cyclone",
+            "kaya",
             "travel_boots",
             "aghanims_shard",
-            "hood_of_defiance",
             "ghost",
             "veil_of_discord",
           ],
           late_game: [
             "shivas_guard",
+            "kaya_and_sange",
             "ethereal_blade",
+            "octarine_core",
             "sheepstick",
             "ultimate_scepter",
             "aeon_disk",
@@ -15917,8 +15934,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "mysterious_hat",
             "arcane_ring",
             "vambrace",
+            "essence_ring",
             "nether_shawl",
             "quickening_charm",
+            "ceremonial_robe",
             "cloak_of_flames",
             "timeless_relic",
             "spell_prism",
@@ -15936,22 +15955,23 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that helps with mana sustain. It provides Sand King with useful stats.",
       blink: "A core item that allows you to channel Epicenter and jump in.",
       cyclone:
-        "A core item that allows you to setup kills and dispel dust off of yourself.",
+        "A core item that gives you very good stats, allows you to setup kills and dispel dust off of yourself.",
       travel_boots:
         "A core item that allows you to cover the map better. Sand King is really good at pushing sidelanes in quickly and without much of a risk.",
       heavens_halberd: "Especially good against ranged right-clickers.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       aghanims_shard: "A core item that adds extra AoE damage and burst.",
-      lotus_orb: "To reflect, dispel and armor.",
+      lotus_orb: "For reflecting, dispelling and armor.",
     },
     counter_items: {
       laning_phase: {
         all: [
           { item: "blight_stone" },
           { item: "magic_stick" },
-          { item: "ring_of_regen", info: "For sustain on the lane" },
-          { item: "infused_raindrop" },
+          { item: "lifesteal", info:"For sustaining through Sand Kings damage output on the lane."},
+          { item: "ring_of_health", info: "For sustaining through Sand Kings damage output on the lane." },
+          { item: "infused_raindrop", info: "Nullifies some of the damage that Burrowstrike does." },
           {
             item: "cloak",
             info: "Sand King is heavy on magical damage and Cloak will reduce 15% of it",
@@ -15970,16 +15990,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "force_staff" },
         ],
         core: [
-          { item: "mage_slayer" },
-          { item: "hood_of_defiance" },
-          { item: "pipe" },
+          { item: "mage_slayer", info: "Provides you magic resistance,and spell damage debuff (-35%)." },
+          { item: "hood_of_defiance", info: "Since Sandking has a lot of AOE magical damage spells, this item will nullify a lot of the damage output." },
+          { item: "pipe", info: "Since Sandking has a lot of AOE magical damage spells, this item will nullify a lot of the damage output." },
           { item: "eternal_shroud" },
-          { item: "blade_mail" },
-          { item: "black_king_bar" },
+          { item: "blade_mail", info: "When Sandking initiates you can quickly react with Blade Mail and reflect a lot of damage back to him" },
+          { item: "black_king_bar", info: "Sand kings damage relies on spells and Black King Bar prevents all of them." },
         ],
       },
       late_game: {
-        all: [{ item: "sheepstick" }, { item: "sphere" }],
+        all: [{ item: "sheepstick" }, { item: "sphere", info: "Sandking relies on jumping in with Blink Dagger and using Burrowstrike and Linken Sphere prevents that." }],
         support: [{ item: "SentryDustGem" }, { item: "black_king_bar" }],
         core: [{ item: "abyssal_blade" }],
       },
@@ -16817,7 +16837,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Slardar: {
-    gameplay_version: "7.31",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -16866,16 +16886,17 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_stick",
           ],
           early_game: [
-            "infused_raindrop",
+            "bracer",
             "power_treads",
             "mask_of_madness",
             "magic_wand",
             "armlet",
-            "orb_of_corrosion",
+            "orb of corrosion"
           ],
           mid_game: [
             "blink",
             "black_king_bar",
+            "orchid",
             "aghanims_shard",
             "echo_sabre",
             "ultimate_scepter",
@@ -19009,8 +19030,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tidehunter: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -19068,7 +19089,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ultimate_scepter",
             "ghost",
             "solar_crest",
-            "helm_of_the_dominator",
+          
           ],
           late_game: [
             "shivas_guard",
@@ -19129,7 +19150,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "Improves right-click potential and building damage.",
       ultimate_scepter:
         "A core item that allows you to hit multiple opponents with Gush.",
-      lotus_orb: "To reflect, dispel and armor.",
+      lotus_orb: "For reflecting, dispelling and armor.",
       shivas_guard:
         "A core item that icreases mana pool, adds to AoE damage and reduces healing of opponents team.",
       refresher:
@@ -19142,9 +19163,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             item: "magic_stick",
             info: "Tidehunter tends to use Anchor Smash frequently to harass and kill the creeps",
           },
-          { item: "blight_stone" },
-          { item: "ring_of_regen", info: "For sustain on the lane" },
-          { item: "armor", info: "Buy armor items" },
+          { item: "blight_stone", info: "Tide has very low armor early which you can exploit as a weakness" }, 
+          { item: "lifesteal", info: "For sustaining on the lane since Tide doesn't do big increments of damage" },
+          { item: "armor", info: "Helps you with Gush and Anchor Smash combo" },
         ],
         support: [],
         core: [
@@ -19158,24 +19179,24 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             info: "Heals some of the AoE damage from his abilities and provides armor against Gush",
           },
         ],
-        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" },],
         core: [
           { item: "black_king_bar" },
-          { item: "silver_edge" },
+          { item: "silver_edge", info: "Breaking Tide's passive will result into a very easier target to kill" },
           { item: "sange_and_yasha", info: "For status resistance" },
           { item: "kaya_and_sange", info: "For status resistance" },
         ],
       },
       late_game: {
         all: [{ item: "wind_waker", info: "To save an ally being Ravaged" }],
-        support: [{ item: "black_king_bar" }],
-        core: [{ item: "assault" }],
+        support: [{ item: "black_king_bar" }, {item:" aeon_disk"}],
+        core: [{ item: "assault" }], 
       },
     },
   },
 
   Timbersaw: {
-    gameplay_version: "7.31",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
@@ -19304,8 +19325,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             info: "Timbersaw tends to use Whirling Death and Timber Chain frequently to harass",
           },
           {
-            item: "ring_of_regen",
-            info: "One or two, for sustain on the lane",
+            item: "ring_of_health",
+            info: "Sustains through timbers damage output.",
           },
           { item: "wind_lace", info: "To keep the distance from Timbersaw" },
           { item: "boots", info: "To keep the distance from Timbersaw" },
@@ -19314,7 +19335,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             info: "For Spirit Vessel to offset some of the HP regeneration from Reactive Armor",
           },
           { item: "quelling_blade",
-            info: "Before and during the laning phase, use it to destroy the trees around you so you can minimize Timbers damage output"}
+            info: "Before and during the laning phase, use it to destroy the trees around you so you can minimize Timbers damage output"},
+
+          { item: "lifesteal", info: "To sustain through Timbers damage output"}
         ],
         support: [
           {
@@ -19329,16 +19352,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           { item: "mage_slayer" },
-          { item: "black_king_bar" },
-          { item: "silver_edge" },
-        ],
+          { item: "black_king_bar", info: " Timber's dmg relies on spells and Black King Bar prevents all of them" },
+          { item: "silver_edge", info :" Breaking through Timbers passive will get you a much easier target to kill" },
+        ], 
       },
       late_game: {
         all: [{ item: "sheepstick" }],
         support: [{ item: "black_king_bar" }],
         core: [
-          { item: "skadi" },
-          { item: "abyssal_blade" },
+          { item: "skadi", info: " Reduces 25% of Timbers overall healing." },
+          { item: "abyssal_blade", info: " Timber relies on moving around with Timber Chain and Abyssal gives you very good control" },
           { item: "bloodthorn", info: "Provides silence,spell damage debuff and high burst versus Timber" },
         ],
       },
