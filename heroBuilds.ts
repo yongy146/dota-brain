@@ -343,8 +343,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Alchemist: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -758,8 +758,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Anti-Mage": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -1416,8 +1416,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Batrider: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -1674,8 +1674,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Beastmaster: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -1825,8 +1825,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Bloodseeker: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -2070,8 +2070,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Bounty Hunter": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -5616,7 +5616,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Enchantress: {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TBD,
     damage_type: DamageType.pure,
     builds: [
@@ -5748,7 +5748,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Enigma: {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.TBD,
     damage_type: DamageType.magical,
     builds: [
@@ -5969,8 +5969,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Faceless Void": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -6519,8 +6519,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Hoodwink: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -6700,8 +6700,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Huskar: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -6863,8 +6863,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Invoker: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -8063,7 +8063,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Legion Commander": {
     gameplay_version: "7.31b",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -8231,8 +8231,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Leshrac: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -9283,8 +9283,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Luna: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -9658,8 +9658,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Magnus: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -10884,8 +10884,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Monkey King": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -11163,8 +11163,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Morphling: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -11868,8 +11868,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Necrophos: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -12581,8 +12581,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Omniknight: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
       {
@@ -13482,8 +13482,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Phantom Assassin": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -13646,8 +13646,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Phantom Lancer": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -13964,8 +13964,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Primal Beast": {
-    gameplay_version: "7.31",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -14192,8 +14192,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Puck: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -14367,8 +14367,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Pudge: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -15508,8 +15508,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Riki: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -15752,8 +15752,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Rubick: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -16195,8 +16195,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Shadow Fiend": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -17032,8 +17032,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Slark: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -17401,8 +17401,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Sniper: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -17691,8 +17691,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Spectre: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -17846,8 +17846,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Spirit Breaker": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -18094,8 +18094,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Storm Spirit": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -18249,8 +18249,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Sven: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -18419,8 +18419,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Techies: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -19614,8 +19614,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tiny: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -20314,8 +20314,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Tusk: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -20464,8 +20464,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Underlord: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -20760,8 +20760,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Ursa: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -21075,8 +21075,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Venomancer: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -21864,8 +21864,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Void Spirit": {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -23352,8 +23352,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   Zeus: {
-    gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    gameplay_version: "7.31b",
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
