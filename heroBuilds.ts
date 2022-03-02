@@ -32,6 +32,8 @@ export enum ContentCreator {
   //AlexDota = "AlexDota",
   TNTCNz = "TNTCNz",
   YoonA = "YoonA",
+  eidandota = "eidandota",
+  yongy146 = "yongy146",
 }
 
 // Links provided by content creators to promote their own brand and activites
@@ -48,7 +50,7 @@ export const ContentCreatorLinks = {
     link_http: "https://www.gamersensei.com/senseis/zograf",
     link_text: "Click here to be coached by him.",
   },
-/*  AlexDota: {
+  /*  AlexDota: {
     image: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ...
     text: "This guide was written by 10k Professional Player AlexDota.",
     link_http: "https://www.gamersensei.com/senseis/alexxo",
@@ -1159,7 +1161,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "faerie_fire",
             "magic_stick",
           ],
-          early_game: ["boots","magic_wand","vanguard","hood_of_defiance"],
+          early_game: ["boots", "magic_wand", "vanguard", "hood_of_defiance"],
           mid_game: [
             "blink",
             "blade_mail",
@@ -1167,7 +1169,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
             "platemail",
             "travel_boots",
-           
           ],
           late_game: [
             "assault",
@@ -1211,7 +1212,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       axe_battle_hunger:
         "If the opponents have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage.Try using it when all creeps are high HP",
-        axe_berserkers_call: "Use this to prevent enemies from lasthitting a creep or use it so they don't deny you one."
+      axe_berserkers_call:
+        "Use this to prevent enemies from lasthitting a creep or use it so they don't deny you one.",
     },
 
     item_tooltips: {
@@ -3520,46 +3522,51 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         items: {
           starting: [
             "tango",
-			`tango`,
+            `tango`,
             "flask",
-			`enchanted_mango`,
-			`enchanted_mango`,
+            `enchanted_mango`,
+            `enchanted_mango`,
             "enchanted_mango",
-			`clarity`,
+            `clarity`,
             "ward_observer",
             "ward_sentry",
           ],
-          early_game: ["tranquil_boots", `infused_raindrop`, "magic_wand", "wind_lace"],
+          early_game: [
+            "tranquil_boots",
+            `infused_raindrop`,
+            "magic_wand",
+            "wind_lace",
+          ],
           mid_game: ["glimmer_cape", "force_staff", "ghost", "aether_lens"],
           late_game: [`black_king_bar`, `blink`, "aeon_disk", "sheepstick"],
           situational: [
-			`ring_of_basilius`,
+            `ring_of_basilius`,
             "aghanims_shard",
             "lotus_orb",
             "ultimate_scepter",
-			`kaya_and_sange`,
-			`ethereal_blade`,
-			`octarine_core`,
-			`shivas_guard`,
+            `kaya_and_sange`,
+            `ethereal_blade`,
+            `octarine_core`,
+            `shivas_guard`,
           ],
           core: ["tranquil_boots", "glimmer_cape", `force_staff`],
           neutral: [
             "trusty_shovel",
-			`pogo_stick`,
+            `pogo_stick`,
             "keen_optic",
-			`mysterious_hat`,
+            `mysterious_hat`,
             "philosophers_stone",
             "bullwhip",
-			`essence_ring`,
+            `essence_ring`,
             "spider_legs",
             "psychic_headband",
-			`ceremonial_robe`,
+            `ceremonial_robe`,
             "spy_gadget",
             "timeless_relic",
-			`heavy_blade`,
+            `heavy_blade`,
             "seer_stone",
             "book_of_shadows",
-			`force_field`,
+            `force_field`,
           ],
         },
       },
@@ -19269,7 +19276,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "aghanims_shard",
             "eternal_shroud",
           ],
-          late_game: ["shivas_guard", "bloodstone", "sheepstick","ultimate_scepter","overwhelming_blink"],
+          late_game: [
+            "shivas_guard",
+            "bloodstone",
+            "sheepstick",
+            "ultimate_scepter",
+            "overwhelming_blink",
+          ],
           situational: [
             "pipe",
             "lotus_orb",
@@ -19300,7 +19313,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "giants_ring",
             "force_field",
             "fallen_sky",
-            
           ],
         },
       },
@@ -19330,8 +19342,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink: "To close the gap quickly.",
       black_king_bar: "Against a lot of disables, silences and as a dispel.",
       heavens_halberd: "Especially good against ranged right-clickers.",
-      ultimate_scepter: "Increasing your damage output versus immobile heroes, especially stregth",
-      overwhelming_blink: "Good for gap closure , burst of damage and especially good versus illusions and summons ",
+      ultimate_scepter:
+        "Increasing your damage output versus immobile heroes, especially stregth",
+      overwhelming_blink:
+        "Good for gap closure , burst of damage and especially good versus illusions and summons ",
     },
     counter_items: {
       laning_phase: {
@@ -19350,8 +19364,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             item: "urn_of_shadows",
             info: "For Spirit Vessel to offset some of the HP regeneration from Reactive Armor",
           },
-          { item: "quelling_blade",
-            info: "Before and during the laning phase, use it to destroy the trees around you so you can minimize Timbers damage output"}
+          {
+            item: "quelling_blade",
+            info: "Before and during the laning phase, use it to destroy the trees around you so you can minimize Timbers damage output",
+          },
         ],
         support: [
           {
@@ -19376,7 +19392,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         core: [
           { item: "skadi" },
           { item: "abyssal_blade" },
-          { item: "bloodthorn", info: "Provides silence,spell damage debuff and high burst versus Timber" },
+          {
+            item: "bloodthorn",
+            info: "Provides silence,spell damage debuff and high burst versus Timber",
+          },
         ],
       },
     },
