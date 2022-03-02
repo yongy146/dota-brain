@@ -152,7 +152,7 @@ export interface DotaCoachMessage {
   chatMessage?: string;
   // two possible values: 'All' and 'Lane' (All: ; Lane: )
   audience: Audience[];
-  // Image to be displayed on web-page. Only works for messages that are short enough to allow for image to be displayed
+  // Image to be displayed on web-page. Only works for messages that are short enough to allow for an image to be displayed
   image?: {
     type: "item" | "ability" | "rune";
     // name for item:    Short name, e.g. 'blink' (as provided by dota2Items.json, but without 'item_' prefex)
