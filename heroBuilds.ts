@@ -29,7 +29,7 @@ import {
 export enum ContentCreator {
   TBD = "TBD",
   ZoGraF = "ZoGraF",
-  AlexDota = "AlexDota",
+  //AlexDota = "AlexDota",
   TNTCNz = "TNTCNz",
   YoonA = "YoonA",
 }
@@ -48,17 +48,17 @@ export const ContentCreatorLinks = {
     link_http: "https://www.gamersensei.com/senseis/zograf",
     link_text: "Click here to be coached by him.",
   },
-  AlexDota: {
+/*  AlexDota: {
     image: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ...
     text: "This guide was written by 10k Professional Player AlexDota.",
     link_http: "https://www.gamersensei.com/senseis/alexxo",
     link_text: "Click here to be coached by him.",
-  },
+  },*/
   TNTCNz: {
-    image: null, // Create imgur file ... => what image would you like to use?
-    text: "This guide was written by TNTCNz",
-    link_http: null,
-    link_text: null,
+    image: "https://i.imgur.com/MvM6s5B.jpeg",
+    text: "This guide was written by 8k MRR player TNTCNz.",
+    link_http: "https://www.gamersensei.com/senseis/tntcn",
+    link_text: "Click here to book a coaching session with him.",
   },
   YoonA: {
     image: "https://i.imgur.com/TZpRwOK.jpeg",
