@@ -12243,7 +12243,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "enchanted_mango",
             "magic_stick",
           ],
-          early_game: ["phase_boots", "magic_wand", "bracer", "raindrops"],
+          early_game: [
+            "phase_boots",
+            "magic_wand",
+            "bracer",
+            "infused_raindrop",
+          ],
           mid_game: [
             "echo_sabre",
             "black_king_bar",
@@ -16032,7 +16037,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "bracer",
             "vanguard",
             "hood_of_defiance",
-            "raindrops",
+            "infused_raindrop",
           ],
           mid_game: [
             "blink",
@@ -17051,7 +17056,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "mask_of_madness",
             "magic_wand",
             "armlet",
-            "orb of corrosion",
+            "orb_of_corrosion",
           ],
           mid_game: [
             "blink",
