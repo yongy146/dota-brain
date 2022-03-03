@@ -1479,9 +1479,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "travel_boots",
             "witch_blade",
             "black_king_bar",
+            "blink",
             "aether_lens",
             "aghanims_shard",
-            "blink",
+            
             "kaya_and_sange",
           ],
           late_game: [
@@ -1527,7 +1528,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           aether_lens:
             "A core item that extends the cast range of all of your spells but Firefly, including items. It should be upgraded to Octarine Core down the road.",
           witch_blade:
-            "An item that activates the sticky napalm and does immense amount of damage while giving good stats.",
+            "An item that activates the sticky napalm and does immense amount of damage while giving good stats. Don't buy it against heroes that can easily dispel it.",
           octarine_core:
             "A core item that increases the frequency of your spells and item being used by reducing the cooldown.",
         },
@@ -4914,7 +4915,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink:
         "A core item that helps you initiate the fights. Can be coupled with Bloodthorn down the road to burst the stunned hero.",
       radiance:
-      " A good item versus illusions and summons. Goes well with Elder Dragons Splash attack                                         .",
+      " A good item versus illusions and summons. Goes well with Elder Dragons Splash attack.",
       black_king_bar:
         "Allows you to stay in the middle of the fight. Dragon Blood provides you with physical damage resistance and Black King Bar negates most of the magical damage and disables.",
       heavens_halberd: "Especially good against ranged right-clickers.",
@@ -6137,11 +6138,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         all: [
           {
             item: "wind_lace",
-            info: "To keep the distance from Void Spirit, be able chase him down after Time Walk and offset Time Dilation slow",
+            info: "To keep the distance from Faceless Void, be able chase him down after Time Walk and offset Time Dilation slow",
           },
           {
             item: "boots",
-            info: "To keep the distance from Void Spirit, be able chase him down after Time Walk and offset Time Dilation slow",
+            info: "To keep the distance from Faceless Void, be able chase him down after Time Walk and offset Time Dilation slow",
           },
           { item: "armor", info: "Buy armor items" },
           {
@@ -6154,6 +6155,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       mid_game: {
         all: [
+          { item: "blink_dagger", info: "Faceless Void usually jumps and uses ulty. That gives you a fraction of a second to react and blink away."},
           { item: "spirit_vessel" },
           { item: "cyclone" },
           { item: "rod_of_atos" },
