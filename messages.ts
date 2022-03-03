@@ -5682,9 +5682,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Jakiro",
     audioFile: "ownHero/Jakiro_8_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20 as it provides additional disable and damage boost.",
+      "Pick up Aghanim's Shard at minute 15 as it provides additional disable and damage boost.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16948,7 +16948,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Witch Doctor_2_Secure ranged",
     messageTime: 15,
     textMessage:
-      "Use Paralyzing Cast to secure ranged creep and harass the opponents at the same time.",
+      "Use Paralyzing Cask to secure ranged creep and harass the opponents at the same time.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_paralyzing_cask" },
   },
@@ -17028,9 +17028,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Witch Doctor",
     audioFile: "ownHero/Witch Doctor_10_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it has a combination of defensive and offensive traits.",
+      "Pick up Aghanim's Shard around minute 15 as it has a combination of defensive and offensive traits.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
