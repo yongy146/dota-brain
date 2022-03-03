@@ -20,6 +20,7 @@
  * Copyright Dota Coach, 2022
  *
  */
+import { Ultimate } from "../../src/app/ultimate/ultimate";
 import {
   DOTA_COACH_GUIDE_ROLE,
   //DOTA_COACH_ROLE,
@@ -33,7 +34,7 @@ export enum ContentCreator {
   TNTCNz = "TNTCNz",
   YoonA = "YoonA",
   eidandota = "eidandota",
-  yongy146 = "yongy146",
+  //yongy146 = "yongy146",
 }
 
 // Links provided by content creators to promote their own brand and activites
@@ -91,6 +92,7 @@ export interface HeroBuilds {
   builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
   item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
+  combo: string[]; // Main spell and item combo for the hero ; this combo is shown in the app (infoboxes) and in guides
   counter_items: {
     laning_phase: CounterItems;
     mid_game: CounterItems;
@@ -299,6 +301,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       vladmir:
         "A core aura item which percentage values scale well into the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -578,6 +581,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion and miss-chance.",
       silver_edge: "For burst, to reposition and break effect.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -717,6 +721,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       vladmir:
         "A core aura item which percentage values scale well into the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -874,6 +879,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       assault: "Against heavy armor reduction lineups.",
       ultimate_scepter: "Great for causing chaos in the fights.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -1052,6 +1058,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
       swift_blink: "A core item to reposition and for extra burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -1241,6 +1248,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       manta:
         "As a farm accelerator as Counter Helix procs on illusions. It is greedy to go for this item.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -1396,6 +1404,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "Against summons, illusions and to depush.",
       black_king_bar: "To get a full duration Fiend`s Grip off.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -1650,6 +1659,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that adds to your damage output and control.",
       sphere: "Against single target disables.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -1804,6 +1814,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Against a lot of disables, magical damage and as a dispel.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -2051,6 +2062,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sphere:
         "Against powerful single target spells like Duel, Lasso, Hex or Doom.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -2214,6 +2226,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       octarine_core:
         "A core item that reduces cooldown of spells and items. It increases the frequency of Shuriken Tosses and extracts even more value from Aghanim`s Scepter.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -2367,6 +2380,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to have up to 4 Primal Splits when paired with Aghanim`s Scepter.",
       aeon_disk: "To be able to get Primal Split off.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -2536,6 +2550,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       black_king_bar:
         "Against a lot of disables, magical damage, mana burn, breaks and as a dispel.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -2699,6 +2714,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Allows you to instantly reposition on top of the hero you want to kill.",
       sheepstick: "For extra control in the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -2857,6 +2873,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -3075,6 +3092,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge:
         "For pick-off potential, easier initiation and break effect.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -3216,6 +3234,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that buffs one of your right-clicking cores and allows you to take Roshan earlier.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [],
@@ -3325,6 +3344,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "For more AoE damage and chaos in late game teamfights.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -3461,6 +3481,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item. Having two of each spells is always better than having only one.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -3621,6 +3642,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "If the game opens up for you and you proceed with item and talent build centered around Freezing Field. Goes will with Blink Dagger, Black King Bar and Aghanim`s Shard.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -3772,6 +3794,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       black_king_bar: "To be able to get your combo off.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -3916,6 +3939,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "If the game opens up for you, you can pick up this item and work on acquiring more attack speed with level twenty-five talent and items.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -4156,6 +4180,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -4306,6 +4331,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "A core item that provides extra control in fights.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -4466,6 +4492,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Great at reducing healing, bumping up your armor and preventing kiting.",
       blink: "Great for gap closing.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -4617,6 +4644,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink:
         "Allows you to land a multi-hero Static Storm especially once you have Aghanim`s Scepter.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -4750,6 +4778,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk:
         "Gives you a second chance to survive and get spells and items off.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -4884,6 +4913,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
       silver_edge: "For break effect.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5027,6 +5057,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       mjollnir:
         "Against illusion-based heroes. It is better than Aghanim`s Scepter.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5175,6 +5206,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       heavens_halberd: "Especially good against ranged right-clicking cores.",
       blink: "Goes well with Aghanim`s Scepter.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5293,6 +5325,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that reduces cooldown of the fissure, allows you to walk on it and applies half of the stun duration of Aftershock along it.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5419,6 +5452,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to deliver right-clicks as you become spell immune based on the number of heroes your spirit passed through.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5575,6 +5609,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard:
         "Adds to damage output and allows you to snowball in the fights with extra Fire Remnants.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5726,6 +5761,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item for additional healing. Fits well with Holy Locket.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -5947,6 +5983,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk:
         "Gives you a second chance to survive and get your Black Hole off.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -6091,6 +6128,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sphere: "Against powerful single-target disables and debuffs.",
       monkey_king_bar: "Against evasion.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -6237,6 +6275,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "A core item that upgrades Ink Swell.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -6485,6 +6524,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       infused_raindrop: "Against magical burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -6648,6 +6688,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
       blink: "To close the gap and land your combo.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -6824,6 +6865,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion and miss chance.",
       silver_edge: "For break and repositioning.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -7079,6 +7121,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk:
         "Grants you a second chance to survive and get your spells and items off.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -7255,6 +7298,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "For extra control and mobility.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -7417,6 +7461,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that adds to control and damage output. Works on buildings as well. Goes well with level 10 talent.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [
+      "cyclone",
+      "jakiro_macropyre",
+      "jakiro_ice_path",
+      "jakiro_dual_breath",
+      "jakiro_liquid_fire",
+    ],
     counter_items: {
       laning_phase: {
         all: [
@@ -7594,6 +7645,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion and miss chance.",
       nullifier: "To dispel defensive spells and items that counter Omnislash.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -7774,6 +7826,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
       blink: "Helps with splitpush and lining up your spells.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -8041,6 +8094,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to stay in the middle of the fight and deliver the damage.",
       blink: "Combines well with X Marking yourself to do Tidebringer hits.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -8197,6 +8251,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       overwhelming_blink: "To tank up and for AoE damage.",
       swift_blink: "For single target burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -8366,6 +8421,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk:
         "Against bursty lineups and lineups with long lasting disables.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -8506,6 +8562,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink:
         "Goes well with Aghanim`s Shard to burst a single hero. Good for canceling channeling spells(Fiend`s Grip, Shackles).",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -8679,6 +8736,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Against a lot of disables, magical damage and as a dispel. Use it after Rage.",
       blink: "To close the gap.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -8933,6 +8991,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
       blink: "To be able to reposition quickly.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -9085,6 +9144,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that has a mix of defensive and offensive utilities. It is especially good against illusion based heroes like Naga or Terrorblade as mana drain destroys them instantly.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -9257,6 +9317,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       refresher: "For extra Bear charge in very late game.",
       ultimate_scepter: "Amazing for split-pushing and ratting.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -9419,6 +9480,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar:
         "Consider replacing Daedalus with it against a lot of  evasion and miss chance.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -9648,6 +9710,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sheepstick: "For extra control.",
       nullifier: "To dispel defensive spells and items.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -9975,6 +10038,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink:
         "A core item that allows you to get Reverse Polarity off and to Skewer an enemy.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -10217,6 +10281,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Great against magical burst.",
       blink: "A core item for instant gap-close, followed up with Dispose.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -10422,6 +10487,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       refresher:
         "One of the best items you can get on Mars for crowd control. After you have used your Black King Bar, Arena and Spear you can refresh to use them again",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -10607,6 +10673,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion.",
       silver_edge: "For break and extra mobility.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -10734,6 +10801,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "As a save and dispel. In most cases you will get it from Roshan.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [],
@@ -10889,6 +10957,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that goes well with Eul`s Scepter to setup kills. Blink also allows you to do a double Starstorm.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -11166,6 +11235,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to pressure early on and works well with Wukong`s Command later.",
       infused_raindrop: "On hero against magical burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -11336,6 +11406,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Allows you to cast Morph on allies. It is amazing if you are playing with heroes like Earthshaker, Dark Willow and Winter Wyvern.",
       blink: "To gap-close quickly.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -11487,6 +11558,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier:
         "To dispel defensive spells and items that prevent you from right-clicking the opponents.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [{ item: "armor", info: "Buy armor items" }],
@@ -11875,6 +11947,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard:
         "A core item that adds to the push but also serves as a `disable` in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -12136,6 +12209,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
       ultimate_scepter: "Against heavy physical damage lineups.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -12314,6 +12388,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       invis_sword:
         "Gives you pretty good stats and the ability to find backliners and scout.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -12476,6 +12551,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
       ethereal_blade: "Goes well with level with suggested level 25 talent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -12642,6 +12718,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       lotus_orb: "For reflect, dispel and armor.",
       blink: "To close the gap.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -12786,6 +12863,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that goes well with the buffing and saving theme of the hero. Percentage value benefits of this item shine in late game.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -12950,6 +13028,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aeon_disk:
         "A core item that allows you to surive the jump by opponents and possibly turn the fight around by using False Promise. You are generally the first priority target for opponents.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -13172,6 +13251,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Allows you to create a distance from an enemy hero that jumped you. Adds to your right-click potential.",
       sphere: "Against powerful single-target disables and debuffs.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -13523,6 +13603,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sphere:
         "Against powerful single-target disables and debuffs(Rupture, Primal Roar, Scythe of Vyse).",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -13699,6 +13780,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       monkey_king_bar: "Against evasion.",
       nullifier: "To dispel defensive spells and items on opponents.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -13849,6 +13931,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       silver_edge:
         "For break effect, burst and to reposition. Illusions have crit chance as well.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [{ item: "armor", info: "Buy armor items" }],
@@ -14013,6 +14096,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink:
         "Allows you to position to Sunray properly. Goes well with Aghanim`s Scepter in the late game to instantly save an ally.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -14276,6 +14360,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       heavens_halberd: "Particularly good against ranged right-clickers.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: { all: [], support: [], core: [] },
       mid_game: { all: [], support: [], core: [] },
@@ -14402,6 +14487,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sphere: "Aghainst powerful single-target disables or debuffs.",
       aeon_disk: "Against lineups with a lot of catch, disables and burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -14666,6 +14752,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that allows you to save an ally in trouble. Goes well with Blink and Aether Lens.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -14920,6 +15007,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard:
         "Good against illusion based heroes as Life Drain destroys basic illusions instantly.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -15197,6 +15285,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sheepstick:
         "A core item that allows you to instantly disable and burst an opponent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -15561,6 +15650,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that tanks you up and provides you with sustain through its active. The active applies basic dispel on cast. You will have two usages with Refresher.",
       monkey_king_bar: "Against evasion and miss chance.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -15798,6 +15888,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
       aghanims_shard: "A core item that provides you with extra control.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -15952,6 +16043,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To reposition an ally in trouble and to get Aghanim`s Shard upgrades on stolen spells.",
       lotus_orb: "To reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -16099,6 +16191,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "A core item that adds extra AoE damage and burst.",
       lotus_orb: "For reflecting, dispelling and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -16272,6 +16365,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard:
         "If there are a lot of dispellable debuffs cast on your teammates(roots, silences, damage-over-time effects).",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -16527,6 +16621,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       infused_raindrop: "Against magical burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -16683,6 +16778,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       black_king_bar: "To channel Shackles fully.",
       lotus_orb: "To reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -16817,6 +16913,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       refresher:
         "A core item that allows you to cast Global Silence and other spells and items twice in the fight.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -16956,6 +17053,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard:
         "If you expect long fights and against physical damage lineups.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -17122,6 +17220,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       assault:
         "A core item that provides you with even more attack speed and armor reduction.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -17288,6 +17387,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier:
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -17461,6 +17561,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "A core item that allows you to save or to toss in an ally. Adds even more disable and damage.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -17754,6 +17855,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       blink: "For extra mobility.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -17935,6 +18037,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier:
         "To dispel defensive spells and items that prevent your from right-clicking the opponent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: { all: [], support: [], core: [] },
       mid_game: {
@@ -18178,6 +18281,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       yasha_and_kaya:
         "A core item that provides you with useful stats but mainly with extra movement speed and spell amplification. Greater Bash is of magical damage.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -18335,6 +18439,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       shivas_guard:
         "A core item that provides you with more intelligence and AoE damage. It also deals with healing lineup. The item can be used during Ball Lightning.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -18492,6 +18597,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Against evasion and miss chance. Bloodthorn is usually a better option as you already have Oblivion Staff in Echo Sabre that you can use.",
       ultimate_scepter: "For extra mobility.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -18645,6 +18751,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that provides significant mana regeneration and some spell amplification.",
       blink: "For extra mobility around the map.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -18941,6 +19048,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       swift_blink:
         "A core upgrade that provides burst of attack speed on cast. Allows you to move around the map faster especially if you are playing without the boots due to slot issues.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -19120,6 +19228,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter: "For extra control and Metamorphosis uptime.",
       monkey_king_bar: "Against evasion and miss chance.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [{ item: "armor", info: "Buy armor items" }],
@@ -19320,6 +19429,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       refresher:
         "A core item for second round of your spells and items. Goes well with level 25 Ravage talent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -19497,6 +19607,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       overwhelming_blink:
         "Good for gap closure , burst of damage and especially good versus illusions and summons ",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -19658,6 +19769,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       sheepstick: "A core item that allows you to chain disable an opponent.",
       aeon_disk: "Provides you with second chance to escape or turn around.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -20054,6 +20166,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {},
     item_tooltips: {},
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -20215,6 +20328,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       vladmir:
         "A core aura item which percentage values scale well into the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -20395,6 +20509,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       satanic:
         "A core item that tanks you up and its active can turn the fight around. It applies basic dispel on cast.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -20571,6 +20686,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       vladmir:
         "A core buffing item which percentage values scale well into the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -20713,6 +20829,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       shivas_guard:
         "An alternative to Assault Cuirass against heavy-healing and illusion-based lineups.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -20867,6 +20984,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       vladmir:
         "A core aura item which percentage values scale well into the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -21011,6 +21129,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To dispel defensive items and spells from opponents that prevent you from right-clicking.",
       ultimate_scepter: "Against long lasting disables.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -21187,6 +21306,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "A core item that allows you to cast spells and right-click even after the death.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -21448,6 +21568,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ultimate_scepter:
         "A core damaging item. Along with level 20 talent, Poison Nova will technically deal more than 100% of affected heroes` total hp as magical damage.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -21728,6 +21849,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ethereal_blade:
         "A core item that provides you with tons of stats for the cost. It can be used defensively and offensively depending on circumstances.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -21968,6 +22090,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core burst item. Goes well with Sycthe of Vyse as the affected opponent can`t dispel it for the duration of disable. Provides true strike.",
       blink: "To reposition quickly.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -22127,6 +22250,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       ethereal_blade:
         "A core item for additonal burst. Can be used defensively to save yourself or an ally in trouble.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -22291,6 +22415,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       vladmir:
         "A core aura item which percentage values scale well into the late game.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -22554,6 +22679,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       infused_raindrop: "Against magical burst.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -22936,6 +23062,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
       blink: "A core item that allows you to land Shackleshot reliably.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -23125,6 +23252,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core upgrade for Cold Embrace. Adds to AoE damage in the fights but also improves waveclear.",
       lotus_orb: "For reflect, dispel and armor.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -23296,6 +23424,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "To be able to channel Death Ward fully. Goes well with Aghanim`s Scepter.",
       blink: "For extra mobility to get your spells off.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -23468,6 +23597,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       nullifier:
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
@@ -23625,6 +23755,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that reduces cooldown of spells and items. The more spells you cast the more Static Field procs.",
       blink: "For extra mobility.",
     },
+    combo: [],
     counter_items: {
       laning_phase: {
         all: [
