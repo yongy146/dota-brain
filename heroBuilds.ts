@@ -59,7 +59,7 @@ export const ContentCreatorLinks = {
   },*/
   TNTCNz: {
     image: "https://i.imgur.com/MvM6s5B.jpeg",
-    text: "This guide was written by 8k MRR player TNTCNz.",
+    text: "This guide was written by 8k MMR player TNTCNz.",
     link_http: "https://www.gamersensei.com/senseis/tntcn",
     link_text: "Click here to book a coaching session with him.",
   },
@@ -387,7 +387,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           starting: [
             "tango",
             "quelling_blade",
-            "circlet",
+            "ring_of_protection",
             "gauntlets",
             "branches",
             "magic_stick",
@@ -395,12 +395,15 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           early_game: [
             "ring_of_health",
             "power_treads",
+            "phase_boots",
             "soul_ring",
             "magic_wand",
             "bracer",
+            "raindrops",
           ],
           mid_game: [
             "bfury",
+            "radiance",
             "sange_and_yasha",
             "blink",
             "assault",
@@ -410,8 +413,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           late_game: [
             "abyssal_blade",
             "swift_blink",
-            "heart",
+            "satanic",
             "ultimate_scepter",
+            "moon_shard",
+            "bloodthorn",
           ],
           situational: [
             "radiance",
@@ -445,9 +450,15 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         item_tooltips: {
           ring_of_health:
-            "To solve hp sustain issues if you are being pressured.",
+            "Buy this sustain item on the lane if your next desired item is Battle Fury.",
           power_treads:
             "A core boots upgrade that provides you with significant attack speed increase and mana savings through toggling.",
+          bfury:
+           "An item to consider for accelerating farm and against summons. Synergizes very well with Acid Spray.",
+          radiance:
+          "An alternative to Battle Fury against illusion-based heroes. In general, illusions are susceptible to magical damage more than to physical damage. e.g Phantom Lancer & Templar Assassin against you.",
+          blink:
+          "A core item that allows you to channel Unstable Concoction, blink on the target and release the fully channeled stun."
         },
       },
       {
@@ -552,7 +563,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         ability_tooltips: {
           alchemist_acid_spray:
-            "Consider skilling Acid Spray at level 1 against a tough match-up.",
+            "Consider skilling Acid Spray at level 1 against a tough match-up e.g. Queen Of Pain.",
         },
       },
     ],
@@ -605,7 +616,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "force_staff" },
           { item: "cyclone" },
         ],
-        core: [{ item: "desolator" }],
+        core: [{ item: "desolator", info: "Alchemist has relatively low armor and armor gain, which makes him weak to Armor reducing items and abilities." }],
       },
       late_game: {
         all: [{ item: "sheepstick" }, { item: "aeon_disk" }],
@@ -1492,16 +1503,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "mantle",
             "magic_stick",
           ],
-          early_game: ["boots", "magic_wand", "wind_lace"],
+          early_game: ["boots", "magic_wand", "wind_lace", "bottle"],
           mid_game: [
             "travel_boots",
+            "witch_blade",
             "black_king_bar",
             "aether_lens",
             "aghanims_shard",
             "blink",
-            "force_staff",
-            "ghost",
-            "cyclone",
             "kaya_and_sange",
           ],
           late_game: [
@@ -1511,9 +1520,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "wind_waker",
           ],
           situational: [
-            "ward_observer",
-            "bottle",
-            "infused_raindrop",
+            "ghost",
+            "force_staff",
+            "cyclone",
             "aeon_disk",
             "sphere",
           ],
@@ -1542,8 +1551,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         item_tooltips: {
           bottle:
             "A core item that helps with sustain and allows you to gank with a stored active rune.",
+          boots_of_travel:
+            "A core item that provides very good mobility and map coverage while ganking and farming.",
           aether_lens:
             "A core item that extends the cast range of all of your spells but Firefly, including items. It should be upgraded to Octarine Core down the road.",
+          witch_blade:
+            "An item that activates the sticky napalm and does immense amount of damage while giving good stats.",
           octarine_core:
             "A core item that increases the frequency of your spells and item being used by reducing the cooldown.",
         },
@@ -1642,7 +1655,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+    sticky_napalm: 
+    "Make sure you also use this spell on the creeps as it increases your right click damage which Batrider lacks.",
+    firefly: 
+    "Your main farming spell. Try killing multiple waves or neutral camps with one usage." },
+
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
@@ -1652,12 +1670,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "If you are playing midlane but also offlane to have better vision around the lane.",
       infused_raindrop: "Against magical burst.",
       travel_boots:
-        "A core item that allows you to cover the map better when it comes to ganking and farming.",
+        "A core item that provides very good mobility and map coverage while ganking and farming.",
       black_king_bar:
         "A core item that allows you to get Flaming Lasso off on a specific target.",
       aghanims_shard:
-        "A core item that adds to your damage output and control.",
-      sphere: "Against single target disables.",
+        "A core item that adds to your damage output.",
+      sphere: "Against single target disables. e.g Sand King, Legion Commander.",
     },
     combo: [],
     counter_items: {
@@ -1671,20 +1689,20 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "boots", info: "To keep the distance from the Batrider" },
           {
             item: "cloak",
-            info: "Batrider is heavy on magical damage and Cloak negates 15% of its",
+            info: "Batrider is heavy on magical damage and Cloak negates 15% of it.",
           },
         ],
         support: [],
         core: [
           {
             item: "phase_boots",
-            info: "Improves turn rate against Sticky Napalm",
+            info: "Improves turn rate against Sticky Napalm.",
           },
         ],
       },
       mid_game: {
-        all: [{ item: "lotus_orb" }],
-        support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
+        all: [{ item: "lotus_orb", info: "A good item to either dispell the debuffs from Batrider or to make it hard for him to Lasso a desired target." }],
+        support: [{ item: "force_staff", info: " To disengage or to reposition." }, { item: "glimmer_cape", info: " Batrider relies mostly on magic damage which Glimmer Cape helps with." }],
         core: [
           { item: "mage_slayer" },
           { item: "hood_of_defiance" },
@@ -1696,12 +1714,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         ],
       },
       late_game: {
-        all: [{ item: "sphere" }, { item: "sheepstick" }],
+        all: [{ item: "sphere", info: "Removes the threat of being ultied by Batrider." }, { item: "sheepstick" }],
         support: [{ item: "black_king_bar" }],
         core: [{ item: "abyssal_blade" }],
       },
     },
   },
+
 
   Beastmaster: {
     gameplay_version: "7.31b",
@@ -1751,6 +1770,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           early_game: [
             "helm_of_iron_will",
+            "crown",
             "helm_of_the_dominator",
             "boots",
             "ring_of_basilius",
@@ -1760,6 +1780,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "vladmir",
             "helm_of_the_overlord",
             "aghanims_shard",
+            "blink_dagger",
             "solar_crest",
             "ancient_janggo",
             "travel_boots",
@@ -1770,10 +1791,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "refresher",
             "octarine_core",
           ],
-          situational: ["blink", "black_king_bar", "lotus_orb"],
+          situational: ["blink", "black_king_bar", "lotus_orb","pipe",],
           core: [
             "helm_of_the_dominator",
             "boots",
+            "blink_dagger",
             "helm_of_the_overlord",
             "aghanims_shard",
           ],
@@ -1783,6 +1805,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "vambrace",
             "dragon_scale",
             "spider_legs",
+            "black_powder_bag",
             "quickening_charm",
             "spell_prism",
             "trickster_cloak",
@@ -1795,6 +1818,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       beastmaster_wild_axes:
         "If you are laning against Chen or Enchantress, you might want to skill Wild Axes over Call of the Wild.",
+      beastmaster_call_of_the_wild_boar:
+        " Preferably to have 2 boars active. Make sure the most recent one is not the one tanking damage or getting killed.",
     },
     item_tooltips: {
       magic_stick:
@@ -1807,12 +1832,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that should be upgraded to Boots of Travel after core items are acquired.",
       aghanims_shard:
         "A core item that improves vision game and adds another disable.",
-      ultimate_scepter: "Particularly good against illusion based heroes.",
-      octarine_core: "Goes well with Aghanim`s Scepter build.",
-      blink: "To cast Primal Roar easier.",
+      ultimate_scepter: "Particularly good against illusion based heroes and base defense.",
+      octarine_core: "Goes well with Aghanims Scepter. .",
+      blink: "To cast Primal Roar on a desired target and supports that often stay in the back.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
-      lotus_orb: "For reflect, dispel and armor.",
+      lotus_orb: "For reflecting, dispelling and armor.",
+      pipe: "Against AOE damage. Protects your units and your teammates as they tend to move together with Beastmaster.",
     },
     combo: [],
     counter_items: {
@@ -1830,6 +1856,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         core: [
           { item: "orb_of_corrosion", info: "If you are playing a melee core" },
           { item: "vanguard" },
+          
         ],
       },
       mid_game: {
@@ -1841,16 +1868,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "glimmer_cape" },
         ],
         core: [
-          { item: "crimson_guard" },
+          { item: "crimson_guard", info: "Effective item versus the summons that Beastmaster has." },
           { item: "sange_and_yasha", info: "For status resistance" },
           { item: "kaya_and_sange", info: "For status resistance" },
           { item: "gungir" },
         ],
       },
       late_game: {
-        all: [{ item: "sphere" }],
+        all: [{ item: "sphere", info: "Protects you from Primal Roar" }],
         support: [{ item: "SentryGem", info: "for Hawks" }],
-        core: [{ item: "assault" }],
+        core: [{ item: "assault", info: "The armor that you get from Assault nullifies some of the physical damage Beastmaster and his units output." }],
       },
     },
   },
@@ -1903,17 +1930,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "faerie_fire",
             "magic_stick",
             "orb_of_venom",
+            "enchanted_mango",
           ],
           early_game: [
             "wraith_band",
             "power_treads",
+            "phase_boots",
             "magic_wand",
             "orb_of_corrosion",
           ],
           mid_game: [
             "maelstrom",
             "sange_and_yasha",
-            "aghanims_shard",
+            "black_king_bar",
             "basher",
             "skadi",
           ],
@@ -1922,10 +1951,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "black_king_bar",
             "manta",
             "gungir",
+            "silver_edge",
             "monkey_king_bar",
             "sphere",
+            "aghanims_shard",
           ],
-          core: ["power_treads", "maelstrom", "sange_and_yasha", "basher"],
+          core: ["power_treads", "maelstrom", "sange_and_yasha", "black_king_bar", "basher"],
           neutral: [
             "possessed_mask",
             "chipped_vest",
@@ -1935,6 +1966,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "paladin_sword",
             "the_leveller",
             "penta_edged_sword",
+            "ninja_gear",
             "desolator_2",
             "apex",
           ],
@@ -1993,20 +2025,22 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           mid_game: [
             "rod_of_atos",
+            "cyclone",
+            "solar_crest",
             "ultimate_scepter",
             "gungir",
-            "veil_of_discord",
             "dagon",
           ],
-          late_game: ["sheepstick", "octarine_core", "vladmir"],
+          late_game: ["sheepstick", "octarine_core",],
           situational: [
             "spirit_vessel",
             "cyclone",
             "black_king_bar",
             "lotus_orb",
             "aghanims_shard",
+            "refresher",
           ],
-          core: ["phase_boots", "rod_of_atos", "ultimate_scepter"],
+          core: ["phase_boots", "rod_of_atos"],
           neutral: [
             "broom_handle",
             "unstable_wand",
@@ -2022,7 +2056,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+      blood_bath: "On the lane use this spell to secure the range creep lasthit.",
+      rupture: "Use Rupture on a highly mobile target to prevent them from being elusive.",
+    },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
@@ -2045,18 +2082,18 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       phase_boots: "A core item that allows you to be even faster.",
       rod_of_atos:
         "A core item that guarantees that Blood Rite will hit and acts as a tp cancel.",
-      ultimate_scepter:
-        "A core item that allows you to control two opponent`s heroes.",
+      solar_crest:
+        "Solar is a very effective item that amplifies your carry.",
       //   ---------------------
       dagon: "Benefits from Bloodrage spell amp and acts as Linken`s popper.",
-      spirit_vessel: "Against heavy healing lineup.",
+      spirit_vessel: "Against heavy healing lineup and high HP targets.",
       cyclone: "For dispel, setup and teleport cancel.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       lotus_orb: "For reflect, dispel and armor.",
       manta:
-        "Alternative to Sange and Yasha if you need to dispel something big.",
-      gungir: "Alternative to Mjollnir if you need AoE control.",
+        "Alternative to Sange and Yasha if you need to dispel something like a root or a silence.",
+      gungir: "Alternative to Mjollnir if you need AoE control. Goes well with Blood Rite.",
       monkey_king_bar:
         "Against evasion although Maelstrom/Mjollnir pierces evasion on proc already.",
       sphere:
@@ -2068,20 +2105,23 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         all: [
           { item: "wind_lace", info: "To keep escape the Blood Rite" },
           { item: "boots", info: "To keep escape the Blood Rite" },
-          { item: "armor", info: "Buy armor items" },
+          { item: "armor", info: "Buy armor items" },                   
         ],
         support: [],
         core: [],
       },
       mid_game: {
-        all: [{ item: "cyclone" }, { item: "lotus_orb" }],
+        all: 
+       [{ item: "cyclone" }, 
+       {  item: "lotus_orb", info: "If Bloodseeker ulties you under the effect of Lotus, its much harder for him to chase you down." }],
+
         support: [
           { item: "force_staff" },
           { item: "glimmer_cape" },
           { item: "ghost" },
         ],
         core: [
-          { item: "blade_mail" },
+          { item: "blade_mail", info: "Could potentially be lethal as you run with the Rupture effect and kill him while Blade Mail is on." },
           { item: "sange_and_yasha", info: "For status resistance" },
           { item: "kaya_and_sange", info: "For status resistance" },
         ],
@@ -2151,6 +2191,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           early_game: [
             "tranquil_boots",
+            "arcane_boots",
             "wind_lace",
             "urn_of_shadows",
             "magic_wand",
@@ -2159,25 +2200,25 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           mid_game: [
             "cyclone",
-            "aghanims_shard",
-            "ultimate_scepter",
+            "ancient_janggo",
             "solar_crest",
             "force_staff",
             "ghost",
           ],
-          late_game: ["octarine_core", "sheepstick", "vladmir"],
+          late_game: [ "octarine_core","ultimate_scepter", "sheepstick", "boots_of_bearing",],
           situational: [
-            "infused_raindrop",
+            "infused raindrops",
+            "aghanims_shard",
             "spirit_vessel",
             "ancient_janggo",
             "lotus_orb",
+            "cyclone",
           ],
           core: [
             "tranquil_boots",
             "wind_lace",
-            "urn_of_shadows",
-            "cyclone",
-            "aghanims_shard",
+            "spirit_vessel",
+            "solar_crest",
             "ultimate_scepter",
             "octarine_core",
           ],
@@ -2186,6 +2227,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "pogo_stick",
             "bullwhip",
             "ring_of_aquila",
+            "essence_ring",
             "spider_legs",
             "quickening_charm",
             "flicker",
@@ -2197,14 +2239,18 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
     ],
     ability_tooltips: {
+      bounty_hunter_jinada:
+        "Goes very well with Boots and can harass melee heroes on lane. Put a point on level 1 if thats the case.",
+      bounty_hunter_wind_walk: 
+        "You can put a point on level 1 if you feel like you cant reach opponents or frequently attack them with Jinada.",
       special_bonus_unique_bounty_hunter_8:
-        "If you are not going for Aghanim`s Scepter or you are still farm from assembling it, take this talent. Otherwise, take the suggested one.",
+        "If you are not going for Aghanim`s Scepter or you are still far from assembling it, take this talent. Otherwise, take the suggested one.",
       special_bonus_unique_bounty_hunter_7:
         "If you have Aghanim`s Scepter and you see yourself being able to do a lot of damage with Shuriken Tosses in the fight(short BKBs, no Linken Spheres), take this suggested talent. Otherwise, take the other one.",
     },
     item_tooltips: {
       orb_of_venom:
-        "If you see yourself being able to hit the opponents on the lane often.",
+        "If you see yourself being able to hit the opponents and run them down on the lane often.",
       ward_sentry: "To block or unblock a pull camp.",
       tranquil_boots:
         "A core boots upgrade that provides hp sustain but most importantly great movement speed to roam around.",
@@ -2213,7 +2259,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       orb_of_corrosion: "If you can pressure on the lane.",
       infused_raindrop: "Against magical burst.",
       urn_of_shadows:
-        "A core item that allows you to snowball off of first kill. It provides useful stats, namely mana regeneration. You can unstealth yourself by using it when you get dusted to move faster.",
+        "A core item that allows you to snowball off of first kill. It provides useful stats, good mana regeneration. You can unstealth yourself by using it when you get dusted to move faster.",
       spirit_vessel: "Against heavy-healing lineup.",
       ancient_janggo:
         "If you are grouping up a lot as a team in midgame and if you have summons.",
@@ -2222,9 +2268,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       aghanims_shard: "A core item that adds more control and survivability.",
       ultimate_scepter:
         "A core item that allows you to deal more damage in the fights and get richer at the same time.",
-      lotus_orb: "For reflect, dispel(e.g. Dust of Appearance) and armor.",
+      lotus_orb: "For reflecting, dispelling (e.g. Dust of Appearance) and armor.",
       octarine_core:
-        "A core item that reduces cooldown of spells and items. It increases the frequency of Shuriken Tosses and extracts even more value from Aghanim`s Scepter.",
+        "A core item that reduces cooldown of spells and items. It increases the frequency and range of Shuriken Tosses and extracts even more value from Aghanim`s Scepter.",
     },
     combo: [],
     counter_items: {
@@ -4739,7 +4785,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "heavens_halberd",
             "invis_sword",
             "ultimate_scepter",
-            "aeon_disk",
           ],
           core: ["phase_boots", "hand_of_midas", "black_king_bar", "blink"],
           neutral: [
@@ -4757,12 +4802,17 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+      doom_bringer_devour: 
+      " Satyr Tormenter, Ogre Frostmage and Wildwing Ripper would be the best to devour early on. As the game progresses make sure to get a Centaur stomp to Blink stun heroes.",
+      doom_bringer_doom: 
+      " Be sure to use your ulty on a very mobile target or a target that needs to use a big ulty. Always check if they have Linken Sphere."
+    },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       phase_boots:
-        "A core boots upgrade that provides you with armor and allows you to get Doom off easier.",
+        "A core boots upgrade that provides you with armor and allows you to get Doom off easier and run heroes down.",
       hand_of_midas:
         "A core item that allows you to level up faster and acquire a bit of extra gold.",
       black_king_bar:
@@ -4775,8 +4825,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "Especially good against ranged right-clicking heroes and to pop Linken`s if necessary.",
       invis_sword: "Helps with getting Doom off on specific hero.",
       ultimate_scepter: "For break effect.",
-      aeon_disk:
-        "Gives you a second chance to survive and get spells and items off.",
+      shivas_guard: "Provides Doom with armor and mana pool which he lacks. Also helps with AOE slow that goes with Scorched Earth.",
+      refresher: "A core item on Doom as it lets you ulty 2 targets. Make sure you pair it up with an item that gives you mana e.g Shiva , Lotus or you wont have mana to use everything."
+      
     },
     combo: [],
     counter_items: {
@@ -4810,7 +4861,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       late_game: {
         all: [
-          { item: "sphere" },
+          { item: "sphere", info: "Prevents Doom from ultying you easily." },
           { item: "wind_waker", info: "To save an ally that is Doomed" },
         ],
         support: [{ item: "black_king_bar" }],
@@ -4820,7 +4871,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
   },
 
   "Dragon Knight": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -4867,14 +4918,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_stick",
           ],
           early_game: ["soul_ring", "power_treads", "magic_wand"],
-          mid_game: ["blink", "black_king_bar", "orchid", "armlet"],
-          late_game: ["ultimate_scepter", "assault", "bloodthorn"],
+          mid_game: ["blink", "black_king_bar", "orchid", "armlet", "invis_sword",],
+          late_game: ["ultimate_scepter", "assault", "satanic", "bloodthorn" ],
           situational: [
             "ward_observer",
             "bottle",
+            "aghanims_shard",
             "hand_of_midas",
             "heavens_halberd",
             "silver_edge",
+            "nulifier",
           ],
           core: ["power_treads", "blink", "black_king_bar"],
           neutral: [
@@ -4908,6 +4961,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       hand_of_midas: "If you can get it early usually on mid Dragon Knight.",
       blink:
         "A core item that helps you initiate the fights. Can be coupled with Bloodthorn down the road to burst the stunned hero.",
+      radiance:
+      " A good item versus illusions and summons. Goes well with Elder Dragons Splash attack                                         .",
       black_king_bar:
         "Allows you to stay in the middle of the fight. Dragon Blood provides you with physical damage resistance and Black King Bar negates most of the magical damage and disables.",
       heavens_halberd: "Especially good against ranged right-clickers.",
@@ -4917,10 +4972,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     counter_items: {
       laning_phase: {
         all: [
-          {
-            item: "ring_of_regen",
-            info: "For sustain on the lane against the pressure from the Dragon Knight",
-          },
           {
             item: "urn_of_shadows",
             info: "To build Spirit Vessel against high HP pool and HP regeneration from Dragon Blood",
@@ -4934,24 +4985,27 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           { item: "maelstrom" },
-          { item: "silver_edge" },
+          { item: "silver_edge" , info: "To break Dragon Knights passive that makes him more tanky." },
           { item: "sange_and_yasha", info: "For status resistance" },
           { item: "kaya_and_sange", info: "For status resistance" },
         ],
       },
       late_game: {
-        all: [{ item: "sphere" }],
+        all: [{ item: "sphere" , info: " To prevent the instant blink stun combo from Dragon Knight." }],
         support: [],
         core: [
           {
             item: "mjollnir",
             info: "Magical damage from procs doesn`t get reduced by Dragon Blood",
           },
+          { item : "skadi",
+            info : "Reduces his regeneration,lifesteal and slows him by 50% when he is in Dragon form. "},
           {
             item: "monkey_king_bar",
             info: "Magical damage from procs doesn`t get reduced by Dragon Blood",
           },
           { item: "butterfly" },
+
         ],
       },
     },
@@ -6077,6 +6131,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "maelstrom",
             "sange_and_yasha",
             "manta",
+            "black_king_bar",
           ],
           late_game: ["mjollnir", "skadi", "satanic", "refresher"],
           situational: [
@@ -6095,6 +6150,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "quicksilver_amulet",
             "misericorde",
             "elven_tunic",
+            "titan_sliver",
             "mind_breaker",
             "the_leveller",
             "ninja_gear",
@@ -6107,6 +6163,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       faceless_void_time_walk:
         "The tougher the lane the more point you can put into this spell.",
+      faceless_void_time_dilation: 
+      "Dont have to put more than 1 point in this spell as it scales very badly. You should level your stats and talents first.",
+      special_bonus_unique_faceless_void_7: "Consider skipping the first talent until you skill your spells and stats.",
     },
     item_tooltips: {
       magic_stick:
@@ -6126,6 +6185,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       blink:
         "To be able to seize the moment and get good Chronosphere out. Swift Blink is an option later on as well.",
       sphere: "Against powerful single-target disables and debuffs.",
+      skadi: "Against ranged heroes. Also gives you good mana pool that lets you use Refresher.",
       monkey_king_bar: "Against evasion.",
     },
     combo: [],
@@ -6170,8 +6230,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       late_game: {
         all: [
           { item: "sheepstick" },
-          { item: "ethereal_blade" },
-          { item: "aeon_disk" },
+          { item: "ethereal_blade", info: "Make a target ethereal and prevent Faceless Void from right clicking them as he relies solely on physical attacks." },
+          { item: "aeon_disk", info: "Will buy you time during Chronosphere." },
           { item: "wind_waker", info: "To save an ally in Chronosphere" },
         ],
         support: [],
