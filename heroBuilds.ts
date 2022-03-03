@@ -92,7 +92,7 @@ export interface HeroBuilds {
   builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
   item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
-  combo: string[]; // Main spell and item combo for the hero ; this combo is shown in the app (infoboxes) and in guides
+  combo: string[]; // Main spell, item and "attack" combo for the hero ; this combo is shown in the app (infoboxes) and in guides ; use the same keywords as for ability builds and item buids - on top of that you can also use the word "attack" for right-clicking
   counter_items: {
     laning_phase: CounterItems;
     mid_game: CounterItems;
