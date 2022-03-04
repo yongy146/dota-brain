@@ -546,6 +546,26 @@ export namespace hero {
   }
 
   /**
+   * Returns readable name of ability or item
+   *
+   * @param abilityOrItem e.g. legion_commander_moment_of_courage for Legion Commander's Moment of Courage or revenants_brooch fro Revenants Brooch
+   * @returns error if the ability or item does not exist
+   */
+  export function getAbilityOrItemName(abilityOrItem: string): string {
+    const itemName = `item_${abilityOrItem}`;
+    if (abilityOrItem == "attack") {
+      return "Attack"; // Create imgur file for attack
+    } else if (Object.prototype.hasOwnProperty.call(dota2Items, itemName)) {
+      // It is an item
+      return dota2Items[itemName].name;
+    } else {
+      // It must be an ability
+      const a = ability.getAbility(abilityOrItem);
+      return a ? a.name : "error (dota2.getAbilityOrItemName)";
+    }
+  }
+
+  /**
    *
    * @returns Array of localized hero names, e.g. Anti-Mage
    */
