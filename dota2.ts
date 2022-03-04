@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 /**
  * This library is used to access all manual dota 2 data of Dota Coach (on items and abilities)
  *
@@ -538,7 +539,7 @@ export namespace hero {
    * @param heroName NPC hero name
    * @returns null if there is no such hero
    */
-  function getHero(heroName: string): Hero {
+  export function getHero(heroName: string): Hero {
     if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
       return null;
     return dota2Heroes[heroName];
@@ -633,7 +634,7 @@ export namespace hero {
 
   export namespace attributes {
     // Takes localized hero name
-    function getAttributeColor(
+    export function getAttributeColor(
       heroName: string,
       isTransparent: boolean
     ): string {
@@ -1197,7 +1198,7 @@ export namespace hero {
       return "#not found#";
     }
 
-    function idToNPCName(heroId: number): string {
+    export function idToNPCName(heroId: number): string {
       for (const hero of Object.values(dota2Heroes)) {
         //for (var index in jsonHeroes) {
         if (hero.id == heroId) {
@@ -1235,7 +1236,7 @@ export namespace hero {
     export function localizedNameToHeropediaName(
       localized_name: string
     ): string {
-      return localized_name.replace(/[ \']/g, "");
+      return localized_name.replace(/[ ']/g, "");
     }
 
     /**
@@ -1321,7 +1322,7 @@ export namespace hero {
   /**
    * @heroName: Localized name
    */
-  function isHeroMelee(heroName: string): boolean {
+  export function isHeroMelee(heroName: string): boolean {
     //console.log("isHeroMelee(" + hero + ") called")
 
     for (const hero of Object.values(dota2Heroes)) {
