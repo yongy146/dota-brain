@@ -3949,9 +3949,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Earth Spirit",
     audioFile: "ownHero/Earth Spirit_9_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at level 20 as it is a big quality of life improvent among other things.",
+      `Pick up Aghanim's Shard at minute 15 as it is a big quality of life improvent among other things.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -5528,9 +5528,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Io",
     audioFile: "ownHero/Io_8_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20. It provides a source of disable that opponents are typically unaware of.",
+      `Pick up Aghanim's Shard at minute 15. It provides a source of disable that opponents are typically unaware of.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -11921,7 +11921,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "shadow_demon_demonic_purge" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Shadow Demon",
     audioFile: "ownHero/Shadow Demon_5_Demonic Purge power",
@@ -11930,7 +11930,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "shadow_demon_demonic_purge" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Shadow Demon",
@@ -16422,9 +16422,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Warlock",
     audioFile: "ownHero/Warlock_6_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it improves your waveclear and healing significantly.",
+      `Pick up Aghanim's Shard around minute 15 as it improves your waveclear and healing significantly.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16491,7 +16491,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Weaver_2_Courier sniping",
     messageTime: -75,
     textMessage:
-      "Sniping opponents' safelaners' couriers with the help of the courier-sniping ward will reduce their available detection.",
+      `Sniping couriers with the help of a ward behind their tier 1 tower will reduce their available detection.`,
     audience: [Audience.ROLE_SUPPORT_SOFT],
     image: { type: "item", name: "courier" },
   },
@@ -16560,9 +16560,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Weaver",
     audioFile: "ownHero/Weaver_9_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it allows you to detect invisible heroes but also improves dps.",
+      `Pick up Aghanim's Shard around minute 15 as it allows you to detect invisible heroes but also improves dps.`,
     audience: [Audience.ROLE_SUPPORT, Audience.ROLE_OFFLANE],
     image: { type: "item", name: "aghanims_shard" },
   },
