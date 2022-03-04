@@ -11077,7 +11077,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         item_tooltips: {
           orb_of_venom:
-            "Start with it if you can get Jingu stacks easily e.g Against Kunkka mid.",
+            "Start with it if you can get Jingu stacks easily against double melee on the sidelane e.g Pudge and Underlord or e.g Against Kunkka mid.",
           echo_sabre:
             "A core item that helps with mana sustain and allows you to build up Jingu stacks quikly. Can be disassembled.",
           black_king_bar:
@@ -11144,7 +11144,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_wand",
             "urn_of_shadows",
           ],
-          mid_game: ["orchid", "solar_crest", "ghost", "cyclone"],
+          mid_game: ["orchid", "solar_crest", "ghost", "cyclone", "rod_of_atos",],
           late_game: ["skadi", "basher", "sheepstick"],
           situational: [
             "infused_raindrop",
@@ -11173,12 +11173,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         item_tooltips: {
           orb_of_venom: "Allows you to stay on top of the opponents.",
-          boots: "You can skip the boots entirely.",
+          boots: "You can skip the boots entirely as you mainly use the trees to gank and setup kills.",
           spirit_vessel: "Against heavy-healing lineups.",
           orchid:
             "A core item that adds another utility to your hero. Helps with mana issues. You can setup kills with it.",
           solar_crest:
             "A core item to buff one of your right-clicking cores or debuff the hero you are looking to burst as a team.",
+          rod_of_atos: "A good item that provides a little bit of extra control. Synergizes well with all of Monkey Kings skill set.",
           mage_slayer:
             "Against heavy magical damage lineups. Your statues apply debuff as well.",
           lotus_orb: "For reflect, dispel and armor.",
@@ -11190,6 +11191,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       monkey_king_wukongs_command:
         "You can put a point in this spell earlier than suggested if you are grouping and fighting a lot early.",
+      monkey_king_mischief: "Use this spell as the game starts and transform into a courier which sets your movespeed to 380 and try killing some of the couriers that opponents send right outside of fountain. "
     },
     item_tooltips: {
       magic_stick:
