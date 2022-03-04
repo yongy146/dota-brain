@@ -58,10 +58,10 @@ export const ContentCreatorLinks = {
     link_text: "Click here to be coached by him.",
   },*/
   eidandota: {
-    image: null, //"https://i.imgur.com/MvM6s5B.jpeg",
-    text: "This guide was written by eidandota.",
-    link_http: null, //"https://www.gamersensei.com/senseis/tntcn",
-    link_text: null, //"Click here to book a coaching session with him.",
+    image: "https://i.imgur.com/BLWOWSp.jpg",
+    text: "This guide was written by 8k MMR player and coach eidandota.",
+    link_http: "https://www.fiverr.com/share/ywVQ5V",
+    link_text: "Click here to book a coaching session with eidandota",
   },
   TNTCNz: {
     image: "https://i.imgur.com/MvM6s5B.jpeg",
@@ -74,12 +74,6 @@ export const ContentCreatorLinks = {
     text: "This guide was written by Hammad.",
     link_http: "https://www.fiverr.com/share/k0bmRk",
     link_text: "Click here to book a coaching session with him.",
-  },
-  eidandota: {
-    image: "https://i.imgur.com/BLWOWSp.jpg",
-    text: "This guide was written by 8k MMR player and coach eidandota.",
-    link_http: "https://www.fiverr.com/share/ywVQ5V",
-    link_text: "Click here to book a coaching session with eidandota.",
   },
 };
 
@@ -5120,7 +5114,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "blink", 
             "black_king_bar", 
             "orchid", 
-            "armlet"
+            "armlet",
+            "aghanims_shard"
           ],
           late_game: [
             "ultimate_scepter", 
@@ -5135,6 +5130,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "heavens_halberd",
             "silver_edge",
             "nullifier",
+            "aghanims_shard"
           ],
           core: [
             "power_treads", 
