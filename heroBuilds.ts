@@ -57,6 +57,12 @@ export const ContentCreatorLinks = {
     link_http: "https://www.gamersensei.com/senseis/alexxo",
     link_text: "Click here to be coached by him.",
   },*/
+  eidandota: {
+    image: null, //"https://i.imgur.com/MvM6s5B.jpeg",
+    text: "This guide was written by eidandota.",
+    link_http: null, //"https://www.gamersensei.com/senseis/tntcn",
+    link_text: null, //"Click here to book a coaching session with him.",
+  },
   TNTCNz: {
     image: "https://i.imgur.com/MvM6s5B.jpeg",
     text: "This guide was written by 8k MMR player TNTCNz.",
