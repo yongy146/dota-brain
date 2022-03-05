@@ -61,11 +61,11 @@ export const ContentCreatorLinks = {
     image: "https://i.imgur.com/BLWOWSp.jpg",
     text: "This guide was written by 8k MMR player and coach eidandota.",
     link_http: "https://www.fiverr.com/share/ywVQ5V",
-    link_text: "Click here to book a coaching session with eidandota",
+    link_text: "Click here to book a coaching session with eidandota.",
   },
   TNTCNz: {
     image: "https://i.imgur.com/MvM6s5B.jpeg",
-    text: "This guide was written by 8k MMR player TNTCNz.",
+    text: "This guide was written by 8k MMR player TNTCN.",
     link_http: "https://www.gamersensei.com/senseis/tntcn",
     link_text: "Click here to book a coaching session with him.",
   },
@@ -11750,7 +11750,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "magic_wand",
             "urn_of_shadows",
           ],
-          mid_game: ["orchid", "solar_crest", "ghost", "cyclone", "rod_of_atos",],
+          mid_game: [
+            "orchid",
+            "solar_crest",
+            "ghost",
+            "cyclone",
+            "rod_of_atos",
+          ],
           late_game: ["skadi", "basher", "sheepstick"],
           situational: [
             "infused_raindrop",
@@ -11779,13 +11785,15 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
         item_tooltips: {
           orb_of_venom: "Allows you to stay on top of the opponents.",
-          boots: "You can skip the boots entirely as you mainly use the trees to gank and setup kills.",
+          boots:
+            "You can skip the boots entirely as you mainly use the trees to gank and setup kills.",
           spirit_vessel: "Against heavy-healing lineups.",
           orchid:
             "A core item that adds another utility to your hero. Helps with mana issues. You can setup kills with it.",
           solar_crest:
             "A core item to buff one of your right-clicking cores or debuff the hero you are looking to burst as a team.",
-          rod_of_atos: "A good item that provides a little bit of extra control. Synergizes well with all of Monkey Kings skill set.",
+          rod_of_atos:
+            "A good item that provides a little bit of extra control. Synergizes well with all of Monkey Kings skill set.",
           mage_slayer:
             "Against heavy magical damage lineups. Your statues apply debuff as well.",
           lotus_orb: "For reflect, dispel and armor.",
@@ -11797,7 +11805,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       monkey_king_wukongs_command:
         "You can put a point in this spell earlier than suggested if you are grouping and fighting a lot early.",
-      monkey_king_mischief: "Use this spell as the game starts and transform into a courier which sets your movespeed to 380 and try killing some of the couriers that opponents send right outside of fountain. "
+      monkey_king_mischief:
+        "Use this spell as the game starts and transform into a courier which sets your movespeed to 380 and try killing some of the couriers that opponents send right outside of fountain. ",
     },
     item_tooltips: {
       magic_stick:
@@ -11834,8 +11843,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
         core: [
           { item: "crimson_guard" },
-          { item: "hurricane_pike", info: "As he uses the ulty you can potentially use this item to get him out of the circle and cancel it." },
-          { item: "silver_edge", },
+          {
+            item: "hurricane_pike",
+            info: "As he uses the ulty you can potentially use this item to get him out of the circle and cancel it.",
+          },
+          { item: "silver_edge" },
           { item: "basher" },
         ],
       },
@@ -11844,7 +11856,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         support: [],
         core: [
           { item: "assault" },
-          { item: "radiance", info: "Provides you evasion and blind which helps against his physical attacks as well as continously doing dmg to him which prevents him to jump on trees."},
+          {
+            item: "radiance",
+            info: "Provides you evasion and blind which helps against his physical attacks as well as continously doing dmg to him which prevents him to jump on trees.",
+          },
           { item: "skadi" },
           { item: "shivas_guard" },
           { item: "abyssal_blade" },
@@ -12772,7 +12787,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ability_tooltips: {
       necrolyte_sadist:
         "Skill this spell on a per-need basis. On a tough lane, likely on level 4. On easy lane post level 6.",
-      necrolyte_death_seeker: "Good spell to save a teammate from physical attacks. Also a very effective way of pushing a wave very fast."
+      necrolyte_death_seeker:
+        "Good spell to save a teammate from physical attacks. Also a very effective way of pushing a wave very fast.",
     },
     item_tooltips: {
       magic_stick:
@@ -12780,13 +12796,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
       magic_wand:
         "A core item. Activating it under Ghost Shroud results in a huge burst of healing and mana.",
-        hood_of_defiance:
+      hood_of_defiance:
         "A core item that makes you less susceptible to magical damage, especially under the effect of the Ghost Shroud.",
-      guardian_greaves: 
+      guardian_greaves:
         "A potentially good item if you are planning to group up with your team and need to dispel something. If you use this under Ghost Shroud the healing gets amplified.",
-      holy_locket: 
+      holy_locket:
         "If you feel your team doesnt need more damage but rather needs sustain. Amplifies all healing. Goes very well with your Death Pulse and its talent.",
-      eternal_shroud: 
+      eternal_shroud:
         "An upgrade to Hood of Defience that pairs up nicely with Death Pulse and Radiance.",
       kaya_and_sange:
         "A core item that provides you with mix of offensive and defensive stats. Self healing amplification from Sange goes well with Ghost Shroud.",
@@ -12823,13 +12839,28 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           },
         ],
         support: [],
-        core: [{ item: "ring_of_health", info: "To sustain through the DOT(Damage Over Time) from Heartstopper Aura." }],
+        core: [
+          {
+            item: "ring_of_health",
+            info: "To sustain through the DOT(Damage Over Time) from Heartstopper Aura.",
+          },
+        ],
       },
       mid_game: {
-        all: [{ item: "spirit_vessel", info: "Reduces Necrophoses healing effectiveness as his whole skill set and item set relies onto it." }],
-        support: [{ item: "glimmer_cape", info: "Using Glimmer Cape onto a target that is about to get ultied by Necrophos could potentially save them from lethal damage." }],
+        all: [
+          {
+            item: "spirit_vessel",
+            info: "Reduces Necrophoses healing effectiveness as his whole skill set and item set relies onto it.",
+          },
+        ],
+        support: [
+          {
+            item: "glimmer_cape",
+            info: "Using Glimmer Cape onto a target that is about to get ultied by Necrophos could potentially save them from lethal damage.",
+          },
+        ],
         core: [
-          { item: "mage_slayer", },
+          { item: "mage_slayer" },
           { item: "hood_of_defiance" },
           { item: "pipe" },
           { item: "eternal_shroud" },
@@ -12844,14 +12875,26 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             item: "wind_waker",
             info: "To save an ally being ultied by Necrophos",
           },
-          { item: "revenants_brooch", info: "Your next 5 attacks will be able to go through his Ghost Shroud or Death Seeker."}
+          {
+            item: "revenants_brooch",
+            info: "Your next 5 attacks will be able to go through his Ghost Shroud or Death Seeker.",
+          },
         ],
         support: [{ item: "black_king_bar" }],
         core: [
-          { item: "skadi", info: "Core item against Necrophos as it reduces his healing, spell lifesteal and his movespeed." },
+          {
+            item: "skadi",
+            info: "Core item against Necrophos as it reduces his healing, spell lifesteal and his movespeed.",
+          },
           { item: "shivas_guard" },
-          { item: "nullifier", info: "One of the core dispel items against Necrophos as his survival relies on Ghost Shroud and Deathseeker as well as some items like Eul's Scepter or Aeon Disk." },
-          { item: "bloodthorn", info: "Provides you magic resistance, spell damage debuff and silence. Use it to burst Necrophos." },
+          {
+            item: "nullifier",
+            info: "One of the core dispel items against Necrophos as his survival relies on Ghost Shroud and Deathseeker as well as some items like Eul`s Scepter or Aeon Disk.",
+          },
+          {
+            item: "bloodthorn",
+            info: "Provides you magic resistance, spell damage debuff and silence. Use it to burst Necrophos.",
+          },
         ],
       },
     },
@@ -13393,7 +13436,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "ward_sentry",
             "magic_stick",
           ],
-          early_game: ["arcane_boots", "magic_wand", "soul_ring", "ring_of_basilius",],
+          early_game: [
+            "arcane_boots",
+            "magic_wand",
+            "soul_ring",
+            "ring_of_basilius",
+          ],
           mid_game: [
             "holy_locket",
             "solar_crest",
@@ -13406,13 +13454,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           late_game: ["wraith_pact", "ultimate_scepter", "octarine_core"],
           situational: ["guardian_greaves", "lotus_orb"],
-          core: [
-            "arcane_boots",
-            "holy_locket",
-            "solar_crest",
-            "blink",
-
-          ],
+          core: ["arcane_boots", "holy_locket", "solar_crest", "blink"],
           neutral: [
             "keen_optic",
             "arcane_ring",
@@ -13430,7 +13472,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       omniknight_hammer_of_purity:
-      " Consider putting a skill point in this spell if you are able to run down an opponent. Goes well with Orb Of venom.",
+        " Consider putting a skill point in this spell if you are able to run down an opponent. Goes well with Orb Of venom.",
       omniknight_guardian_angel:
         "You don`t have to skill this spell on level 6. Sometimes it is better to max out the Heavenly Grace and Purification before taking a point in Guardian Angel.",
       special_bonus_unique_omniknight_7:
@@ -13443,7 +13485,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       ring_of_basilius: "If your laning partner also uses a lot of mana early.",
-      soul_ring: "Lets you use your Purification more frequently. Also if Purification is used on yourself, covers the HP loss from the soulring.",
+      soul_ring:
+        "Lets you use your Purification more frequently. Also if Purification is used on yourself, covers the HP loss from the soulring.",
       arcane_boots:
         "A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Holy Locket. Get Tranquil Boots afterwards.",
       holy_locket:
@@ -13461,8 +13504,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     counter_items: {
       laning_phase: {
         all: [
-          { item: "magic_stick",
-            info: "Omniknight tends to use his spells to contest the lane frequently."
+          {
+            item: "magic_stick",
+            info: "Omniknight tends to use his spells to contest the lane frequently.",
           },
           {
             item: "wind_lace",
@@ -13481,11 +13525,20 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         core: [],
       },
       mid_game: {
-        all: [{ item: "spirit_vessel" }, { item: "cyclone", info: "To dispel Heavenly Grace." }],
+        all: [
+          { item: "spirit_vessel" },
+          { item: "cyclone", info: "To dispel Heavenly Grace." },
+        ],
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
-          { item: "orchid", info: "Silencing Omniknight in a fight is a good way of preventing him from using his defensive skill set." },
-          { item: "diffusal_blade", info: "Omniknight is a very mana dependent hero." },
+          {
+            item: "orchid",
+            info: "Silencing Omniknight in a fight is a good way of preventing him from using his defensive skill set.",
+          },
+          {
+            item: "diffusal_blade",
+            info: "Omniknight is a very mana dependent hero.",
+          },
           { item: "maelstrom" },
         ],
       },
@@ -13493,13 +13546,19 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         all: [{ item: "sheepstick" }],
         support: [],
         core: [
-          { item: "skadi", info: "Reduces his healing effects and his movespeed." },
-          { item: "shivas_guard", info:" Reduces his healing effects." },
+          {
+            item: "skadi",
+            info: "Reduces his healing effects and his movespeed.",
+          },
+          { item: "shivas_guard", info: " Reduces his healing effects." },
           {
             item: "nullifier",
             info: "Dispels Heavenly Grace and Guardian Angel",
           },
-          { item: "bloodthorn", info: "To prevent him from using his defensive skill set and burst him." },
+          {
+            item: "bloodthorn",
+            info: "To prevent him from using his defensive skill set and burst him.",
+          },
           {
             item: "mjollnir",
             info: "To be able to do magical damage while Guarding Angel is active",
@@ -14341,7 +14400,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "basher",
           ],
           late_game: ["satanic", "abyssal_blade", "ultimate_scepter"],
-          situational: ["manta", "ultimate_scepter", "sphere", "monkey_king_bar", "nullifier"],
+          situational: [
+            "manta",
+            "ultimate_scepter",
+            "sphere",
+            "monkey_king_bar",
+            "nullifier",
+          ],
           core: [
             "power_treads",
             "bfury",
@@ -14394,7 +14459,8 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core item that adds to your burst, allows you to take buildings down faster and kill Roshan. You can delay this item in favor of Black King Bar if you need to fight earlier.",
       black_king_bar:
         "A core item that allows you to deliver the damage under spell-immunity. You can buy this item immediately after Battle Fury if you need to fight earlier.",
-      ultimate_scepter: "Provides your Blur to have a dispel and lowers its cooldown tremendously.",
+      ultimate_scepter:
+        "Provides your Blur to have a dispel and lowers its cooldown tremendously.",
       aghanims_shard:
         "A core item that provides break effect and adds to your burst potential.",
       basher:
@@ -14421,7 +14487,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       mid_game: {
         all: [],
-      support: [{ item: "ghost" }, { item: "glimmer_cape" }, { item: "force_staff"} ],
+        support: [
+          { item: "ghost" },
+          { item: "glimmer_cape" },
+          { item: "force_staff" },
+        ],
         core: [
           { item: "hurricane_pike" },
           { item: "monkey_king_bar" },
@@ -14434,7 +14504,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "sheepstick" },
           { item: "ethereal_blade" },
           { item: "aeon_disk" },
-          { item: "revenants_brooch", info: "Your next 5 attacks have True strike that pierce through Blur."}
+          {
+            item: "revenants_brooch",
+            info: "Your next 5 attacks have True strike that pierce through Blur.",
+          },
         ],
         support: [],
         core: [
