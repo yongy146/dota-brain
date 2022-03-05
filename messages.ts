@@ -5830,7 +5830,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Juggernaut_8_Roshan",
     messageTime: 17 * 60 + 15,
     textMessage:
-      "With decent game, Juggernaut is good at killing Roshan from 18min mark with minimal or no help.",
+      `With decent game, Juggernaut is good at killing Roshan from the 18 minute mark with minimal or no help.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -5841,7 +5841,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 22 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "You can slow siege opponents' building by damaging it during Blade Fury and then backing away.",
+      `You can slow siege enemy towers and buildings by damaging them during Blade Fury and then backing away.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "juggernaut_blade_fury" },
   },
@@ -6159,7 +6159,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Kunkka_6_Torrent stacks",
     messageTimes: [7 * 60 + 30, 12 * 60 + 30],
     textMessage:
-      "You can stack some of the neutral camps by using Torrent 2.5 seconds before a full minute hits.",
+      `You can stack some of the neutral camps by using Torrent 2 seconds before a full minute hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "kunkka_torrent" },
   },
@@ -9508,7 +9508,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Nyx Assassin_2_Mana Burn lane",
     messageTime: -30,
     textMessage:
-      "You can skill Mana Burn on level 1 or 2 if laning against an intelligence hero that harasses a lot with spells.",
+      `You can skill Mana Burn on level 2 or 4 if laning against an intelligence hero that harasses a lot with spells.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_mana_burn" },
   },
@@ -11425,7 +11425,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines with the Plasma Field even without showing yourself.",
+      `When not much is happening, push out the sidelines with the Plasma Field without even showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "razor_plasma_field" },
   },
