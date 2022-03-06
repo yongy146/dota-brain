@@ -7,8 +7,6 @@
  */
 
 export const dispellableBuffs = {
-  info: "// All skill buffs can be removed from enemy heroes with basic dispel - // Aura buffs are not dispellable - right Alex?",
-
   Abaddon: ["abaddon_aphotic_shield", "abaddon_frostmourne"],
   Alchemist: [],
   "Ancient Apparition": [],

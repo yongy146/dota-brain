@@ -90,7 +90,7 @@ export enum DamageType {
  *
  *
  */
-export interface HeroBuilds {
+export interface HeroContent {
   // TASK MICHEL: RENOME TO `HeroContent`
   creator: ContentCreator; // Owner of the guide (e.g. AlexDota)
   gameplay_version: string; // E.g. 7.30e or 7.31. This should only be updated once the guide is ready to be published
@@ -159,24 +159,59 @@ export interface CounterItem {
 }
 
 /**
- * Function returns the item tooltip for an item (it checks the hero build as well as the hero)
+ * Function returns the tooltip for an item (it checks the hero build as well as the hero)
  *
+ * @param heroContent
  * @param heroBuild
  * @param item
+ * @return Tooltip string or null, if there is no tooltip
  */
-export function getItemTooltips(
-  heroBuilds: HeroBuilds,
+export function getItemTooltip(
+  heroContent: HeroContent,
   heroBuild: HeroBuild,
   item: string
-) {
+): string {
   if (Object.prototype.hasOwnProperty.call(heroBuild, "item_tooltips")) {
     if (Object.prototype.hasOwnProperty.call(heroBuild.item_tooltips, item)) {
       return heroBuild.item_tooltips[item];
     }
   }
-  if (Object.prototype.hasOwnProperty.call(heroBuilds, "item_tooltips")) {
-    if (Object.prototype.hasOwnProperty.call(heroBuilds.item_tooltips, item)) {
-      return heroBuilds.item_tooltips[item];
+  if (Object.prototype.hasOwnProperty.call(heroContent, "item_tooltips")) {
+    if (Object.prototype.hasOwnProperty.call(heroContent.item_tooltips, item)) {
+      return heroContent.item_tooltips[item];
+    }
+  }
+  return null; // There is no tooltip for the item
+}
+
+/**
+ * Function returns the tooltip for an ability (it checks the hero build as well as the hero)
+ *
+ * @param heroBuilds
+ * @param heroBuild
+ * @param item
+ * @return Tooltip string or null, if there is no tooltip
+ */
+export function getAbilityTooltip(
+  heroContent: HeroContent,
+  heroBuild: HeroBuild,
+  ability: string
+): string {
+  if (Object.prototype.hasOwnProperty.call(heroBuild, "ability_tooltips")) {
+    if (
+      Object.prototype.hasOwnProperty.call(heroBuild.ability_tooltips, ability)
+    ) {
+      return heroBuild.ability_tooltips[ability];
+    }
+  }
+  if (Object.prototype.hasOwnProperty.call(heroContent, "ability_tooltips")) {
+    if (
+      Object.prototype.hasOwnProperty.call(
+        heroContent.ability_tooltips,
+        ability
+      )
+    ) {
+      return heroContent.ability_tooltips[ability];
     }
   }
   return null; // There is no tooltip for the item
@@ -197,7 +232,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
   // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
-export const heroBuilds: { [key: string]: HeroBuilds } = {
+export const heroBuilds: { [key: string]: HeroContent } = {
   Abaddon: {
     gameplay_version: "7.31b",
     creator: ContentCreator.YoonA,
@@ -20327,7 +20362,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       late_game: {
         all: [{ item: "wind_waker", info: "To save an ally being Ravaged" }],
-        support: [{ item: "black_king_bar" }, { item: " aeon_disk" }],
+        support: [{ item: "black_king_bar" }, { item: "aeon_disk" }],
         core: [{ item: "assault" }],
       },
     },

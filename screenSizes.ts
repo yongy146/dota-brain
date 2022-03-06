@@ -72,7 +72,6 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
     (frame.inGame.tracker.items.width / 219) * 175;
 
   return frame;
-
 }
 
 export function isScreenCustomized(screenSize: string): boolean {
@@ -97,8 +96,11 @@ export interface ScreenDefinition {
     };
   };
   inGame: {
-    heroesRadiantBottomLeftXPos: number;
+    heroesRadiantTopLeftXPos?: number;
+    heroesDireTopLeftXPos?: number;
+    heroesRadiantBottomLeftXPos: number; // Infoboxes need to be migrated to TopLeft... and not bottom left.
     heroesDireBottomLeftXPos: number;
+
     heroesWidth: number; // width of 5 heroes
     heroesHeight: number; // height of heroes display by Dota 2
 
@@ -648,7 +650,9 @@ export const ScreenSizes: ScreenDefinitions = {
       },
     },
     inGame: {
+      heroesRadiantTopLeftXPos: 545,
       heroesRadiantBottomLeftXPos: 549,
+      heroesDireTopLeftXPos: 1066,
       heroesDireBottomLeftXPos: 1062,
       heroesHeight: 39,
       heroesWidth: 308,

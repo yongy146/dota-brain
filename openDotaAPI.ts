@@ -376,7 +376,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
           DotaLogger.log(
             `openDotaAPI.getAbilityUpgrades(): Loading ${
               matches.length
-            } matches for hero ${Dota2.hero.name.idToLocalizedName(heroId)}`
+            } matches for hero ${Dota2.hero_names.idToLocalizedName(heroId)}`
           );
           successful = true;
           let abilityUpgradesMax = 0;
@@ -460,7 +460,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
                 if (matchCounts == 0) {
                   process.stdout.write(`\n`);
                   DotaLogger.log(
-                    `openDotaAPI.getAbilityUpgrades(): Match loading for ${Dota2.hero.name.idToLocalizedName(
+                    `openDotaAPI.getAbilityUpgrades(): Match loading for ${Dota2.hero_names.idToLocalizedName(
                       heroId
                     )} completed (successes: ${matchSuccess}/${
                       matches.length
