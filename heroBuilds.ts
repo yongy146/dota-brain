@@ -6731,10 +6731,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "hood_of_defiance" },
           { item: "pipe" },
           { item: "mekansm" },
-          {
-            item: "vladmir",
-            info: "As the game goes, a core Hoodwink does more and more physical damage and armor will offset that",
-          },
+          
           { item: "rod_of_atos", info: "To be able to catch her" },
           { item: "blink", info: "To be able to catch her" },
         ],
@@ -13769,7 +13766,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "phantom_lancer_phantom_edge", // 7
           "phantom_lancer_doppelwalk", // 8
           "phantom_lancer_doppelwalk", // 9
-          "special_bonus_attack_speed_15", // 10
+          "special_bonus_unique_phantom_lancer_2", // 10
           "phantom_lancer_doppelwalk", // 11
           "phantom_lancer_juxtapose", // 12
           "phantom_lancer_spirit_lance", // 13
@@ -13806,6 +13803,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "sphere",
             "bloodthorn",
             "silver_edge",
+            "swift_blink",
           ],
           core: [
             "power_treads",
@@ -13813,7 +13811,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "manta",
             "heart",
             "aghanims_shard",
-            "octarine_core",
           ],
           neutral: [
             "possessed_mask",
@@ -13832,7 +13829,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     ],
     ability_tooltips: {
       phantom_lancer_doppelwalk:
-        "You can skill this spell already on level 2 if there`s a need for dispel. On other hand, you can delay skilling this spell to level 4 if there`s no need for dispel.",
+        "You can skill this spell on level 1 or 2 if there`s a need for dispel. On other hand, you can delay skilling this spell to level 4 if there`s no need for dispel.",
       special_bonus_unique_phantom_lancer_6:
         "On level 20, you can take this talent over the suggested one if you have no need of gap-closing.",
     },
@@ -13844,14 +13841,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         "A core boots upgrade that allows you to farm faster due to attack speed increase. It also provides the stat attributes which all the illusion based heroes adore.",
       hood_of_defiance: "Against a lot of magical damage in early to midgame.",
       diffusal_blade:
-        "A core item that provides you a lot of useful stat attributes but also mana burn works on illusions.",
+        "A cheap core item that provides you a lot of useful stat attributes but also the mana burn works with your illusions.",
       manta:
-        "A core item that provides you with useful stat attributes and goes well with Diffusal Blade.",
-      heart: "A core item that makes you and your illusions very tanky.",
+        "A core item that provides you with useful stat attributes, dispel and goes well with Diffusal Blade.",
+      heart: "A core item that makes you and your illusions very tanky. An alternative would be tanking up with Skadi against immobile tanky heroes or ranged heroes.",
+      skadi: "A core item that is usually used against tanky immobile heroes with a lot of regen and against ranged heroes since it immensely slows their attack speed and movespeed. Is an alternative to Heart.",
       aghanims_shard:
         "A core item that is really good at poking the opponents from the distance and provides a lot of value in longer fights. Creates additional chaos in the fights. Works well with Octarine.",
       octarine_core:
-        "A core item that reduces the cooldown of all of your active spell and items. Goes well with Aghanim`s Shard.",
+        "A core item that reduces the cooldown of all of your active spell and items. Goes well with Aghanim`s Shard and your 15th Talent (Spirit Lance cooldown -2).",
+      butterfly: "A core item after you've tanked up. Good against physical damage heroes. Provides you with very good stats and evasion. Your illusion benefit from it very well.",
       monkey_king_bar: "Against evasion and miss chance.",
       sphere: "Against powerful single-target disables and debuffs.",
       bloodthorn:
@@ -13861,7 +13860,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
     },
     counter_items: {
       laning_phase: {
-        all: [{ item: "armor", info: "Buy armor items" }],
+        all: [{ item: "armor", info: "Buy armor items" },
+              { item: "magic_stick", info: "Phantom Lancer uses his Spirit Lance and Doppelganger to contest the lane."}],
+
         support: [],
         core: [],
       },
@@ -14120,15 +14121,16 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "phase_boots",
             "magic_wand",
             "bracer",
-            "vanguard",
-            "hood_of_defiance",
+            "helm_of_iron_will",
+            "armlet",
+            "hood_of_defiance"
           ],
           mid_game: [
             "blink",
             "black_king_bar",
             "aghanims_shard",
             "kaya_and_sange",
-            "eternal_shroud",
+
           ],
 
           late_game: [
@@ -14138,10 +14140,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "octarine_core",
           ],
           situational: [
+            "vanguard",
+            "solar_crest",
             "crimson_guard",
             "pipe",
             "heavens_halberd",
             "lotus_orb",
+            "radiance",
+            "satanic",
           ],
           core: [
             "soul_ring",
@@ -14155,8 +14161,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "arcane_ring",
             "vambrace",
             "nether_shawl",
+            "dragon_scale",
             "quickening_charm",
             "cloak_of_flames",
+            "black_powder_keg",
             "spell_prism",
             "timeless_relic",
             "giants_ring",
@@ -14164,10 +14172,14 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
         },
         item_tooltips: {
+          helm_of_the_iron_will: "Good laning sustain item that can go into Armlet down the road.",
+          armlet: "A good early game item that increases your damage output.",
           phase_boots: "A core boots upgrade for gap-closing.",
           crimson_guard:
             "Very strong against summon and illusion-based lineups and fast attacking heroes.",
           pipe: "Against heavy-magical damage lineups.",
+          radiance: "Potentially a good buy against illusions and summons after you've tanked up a bit and you have a good start.",
+          kaya_and_sange: "Gives you status resistance and amplifies your spells."
         },
       },
       {
@@ -14224,10 +14236,11 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           ],
           mid_game: [
             "blink",
+            "veil_of_discord",
             "boots_of_bearing",
             "aghanims_shard",
             "black_king_bar",
-            "veil_of_discord",
+            
           ],
           late_game: [
             "wraith_pact",
@@ -14252,8 +14265,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "bullwhip",
             "spider_legs",
             "ceremonial_robe",
+            "cloak_of_flames",
             "timeless_relic",
             "spell_prism",
+            "ascetic_cap",
             "fallen_sky",
             "force_field",
           ],
@@ -14262,10 +14277,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           tranquil_boots:
             "A core boots upgrade for health sustain. It should be upgraded to Boots of Bearing.",
           spirit_vessel: "Against heavy-healing heroes or lineups.",
+        
         },
       },
     ],
     ability_tooltips: {
+      primal_beast_uproar: "Consider putting a point in this spell early when you are getting harassed. It can increase your damage immensely. Goes well with Orb of Venom.",
+      special_bonus_mp_regen_2: "Consider leveling this talent on level 10 if you have mana sustain problems.",
       special_bonus_unique_primal_beast_onslaught_damage:
         "On level 15, you can take this level 15 talent instead of the level 10 talent. The Dota client disallows me to indicate such order in graphics above.",
       special_bonus_unique_primal_beast_roar_dispells:
@@ -14280,8 +14298,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       infused_raindrop: "Against magical burst.",
       blink:
         "A core item that allows to instantly Pulverize an opponent among other benefits.",
+      veil_of_discord: "Increases yours and your teammates spell damage output. Consider buying this with allied heroes like Zeus or Leshrac.",
       black_king_bar:
-        "A core item that deals with most spells while Uproar deals with physical damage.",
+        "A core item that deals with most spells while Uproar deals with physical damage. Allows you to cast Pulverize in the middle of the fight.",
       aghanims_shard:
         "A core upgrade that adds another disable to Primal Beast`s arsenal.",
       heavens_halberd: "Particularly good against ranged right-clickers.",
@@ -14321,7 +14340,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "puck_phase_shift", // 13
           "puck_phase_shift", // 14
           "puck_phase_shift", // 15
-          "special_bonus_spell_amplify_12", // 16
+          "special_bonus_unique_puck_6", // 16
           "special_bonus_attributes", // 17
           "puck_dream_coil", // 18
           "special_bonus_attributes", // 19
@@ -14330,49 +14349,45 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_puck_6", // 25
+          "special_bonus_unique_puck_5", // 25
         ],
         items: {
           starting: [
             "tango",
             "faerie_fire",
-            "circlet",
             "branches",
-            "mantle",
+            "branches",
+            "branches",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
             "bottle",
             "null_talisman",
             "boots",
-            "witch_blade",
             "magic_wand",
           ],
           mid_game: [
+            "witch_blade",
             "travel_boots",
             "blink",
-            "kaya_and_sange",
-            "aghanims_shard",
-            "cyclone",
-            "dagon",
+            "kaya",
           ],
 
           late_game: [
-            "ultimate_scepter",
-            "octarine_core",
             "ethereal_blade",
+            "octarine_core",
+            "revenenants_brooch",
             "sheepstick",
+            "arcane_blink",
           ],
-          situational: ["infused_raindrop", "sphere", "aeon_disk"],
+          situational: ["cyclone", "sphere", "kaya_and_sange", "ultimate_scepter", "aeon_disk"],
           core: [
             "bottle",
             "witch_blade",
             "travel_boots",
             "blink",
-            "kaya_and_sange",
-            "aghanims_shard",
-            "ultimate_scepter",
+            "kaya",
+            "ethereal_blade",
           ],
           neutral: [
             "mysterious_hat",
@@ -14390,8 +14405,10 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
     ],
     ability_tooltips: {
+      special_bonus_unique_puck_8: "Consider taking this talent over the other if you dont need as much control. This can go very well with Cooldown Reduction items.",
       puck_phase_shift:
         "You don`t have to skill this spell on level 2 if you are not being right-clicked often or you don`t need to dodge a spell.",
+      puck_waning_rift: "You can max this spell out against elusive heroes. e.g Storm Spirit, Ember Spirit, Void Spirit."
     },
     item_tooltips: {
       magic_stick:
@@ -14404,12 +14421,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       travel_boots: "A core item that allows you to cover the map better.",
       blink:
         "A core item that allows you to seize an opportunity and land a multi-hero Mystic Coil. Works well with Phase Shift when it comes to escaping.",
+      ethereal_blade: "A core item that increases your damage output or alternatively used to save you from physical damage.",
       kaya_and_sange:
         "A core item that provides you with a mix of defensive and offensive stats.",
       aghanims_shard:
-        "A core upgrade that allows you to snap a Mystic Coil and detect invisble heroes or wards.",
+        "A situational item if you go for a right click build.",
       ultimate_scepter:
-        "A core item that allows Dream Coil to affect spell-immune heroes.",
+        "A situational item against invisible heroes.",
       sphere: "Aghainst powerful single-target disables or debuffs.",
       aeon_disk: "Against lineups with a lot of catch, disables and burst.",
     },
@@ -14420,10 +14438,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             item: "magic_stick",
             info: "Puck tends to use Illusory Orb and Waning Rift frequently to kill creeps or harass you",
           },
-          {
-            item: "ring_of_regen",
-            info: "One or two, for sustain on the lane",
-          },
+          
           { item: "infused_raindrop" },
           {
             item: "cloak",
@@ -14484,13 +14499,13 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
           "pudge_rot", // 3
-          "pudge_meat_hook", // 4
+          "pudge_flesh_heap", // 4
           "pudge_meat_hook", // 5
           "pudge_dismember", // 6
           "pudge_meat_hook", // 7
-          "pudge_rot", // 8
+          "pudge_meat_hook", // 8
           "pudge_rot", // 9
-          "pudge_flesh_heap", // 10
+          "pudge_rot", // 10
           "special_bonus_armor_4", // 11
           "pudge_dismember", // 12
           "pudge_flesh_heap", // 13
@@ -14500,12 +14515,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "special_bonus_attributes", // 17
           "pudge_dismember", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_pudge_5", // 20
+          "special_bonus_unique_pudge_6", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_pudge_1", // 25
+          "special_bonus_unique_pudge_3", // 25
         ],
         items: {
           starting: [
@@ -14514,7 +14529,6 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "clarity",
             "flask",
             "enchanted_mango",
-            "faerie_fire",
             "wind_lace",
             "branches",
             "ward_observer",
@@ -14526,27 +14540,32 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "soul_ring",
             "magic_wand",
             "urn_of_shadows",
+            "smoke_of_deceit",
           ],
           mid_game: [
             "blink",
-            "aghanims_shard",
             "aether_lens",
+            "aghanims_shard",
             "ghost",
             "glimmer_cape",
             "force_staff",
             "hood_of_defiance",
+            "blade_mail",
+            "rod_of_atos",
           ],
           late_game: [
             "octarine_core",
+            "ethereal_blade",
             "ultimate_scepter",
             "overwhelming_blink",
           ],
-          situational: ["spirit_vessel", "lotus_orb", "black_king_bar"],
-          core: ["tranquil_boots", "blink", "aghanims_shard"],
+          situational: ["spirit_vessel", "pipe", "cyclone", "lotus_orb", "black_king_bar"],
+          core: ["tranquil_boots", "magic_wand", "blink", "aether_lens", "aghanims_shard" ],
           neutral: [
             "keen_optic",
             "pogo_stick",
             "philosophers_stone",
+            "essence_ring",
             "bullwhip",
             "spider_legs",
             "psychic_headband",
@@ -14561,7 +14580,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           tranquil_boots:
             "A core boots upgrade that provides you with hp sustain and great movement speed.",
           spirit_vessel: "Against heavy healing lineup.",
-          black_king_bar: "To channel Dismember fully.",
+          black_king_bar: "To channel Dismember without interruption.",
         },
       },
       {
@@ -14574,28 +14593,28 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
           "pudge_rot", // 3
-          "pudge_meat_hook", // 4
+          "pudge_flesh_heap", // 4
           "pudge_rot", // 5
           "pudge_dismember", // 6
           "pudge_rot", // 7
           "pudge_flesh_heap", // 8
-          "pudge_meat_hook", // 9
-          "special_bonus_unique_pudge_4", // 10
-          "pudge_meat_hook", // 11
+          "pudge_flesh_heap", // 9
+          "special_bonus_armor_4", // 10
+          "pudge_flesh_heap", // 11
           "pudge_dismember", // 12
-          "pudge_flesh_heap", // 13
-          "pudge_flesh_heap", // 14
+          "pudge_meat_hook", // 13
+          "pudge_meat_hook", // 14
           "special_bonus_unique_pudge_7", // 15
-          "pudge_flesh_heap", // 16
+          "pudge_meat_hook", // 16
           "special_bonus_attributes", // 17
           "pudge_dismember", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_pudge_5", // 20
+          "special_bonus_unique_pudge_6", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_pudge_1", // 25
+          "special_bonus_unique_pudge_3", // 25
         ],
         items: {
           starting: [
@@ -14605,30 +14624,25 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
             "gauntlets",
             "branches",
             "enchanted_mango",
-            "faerie_fire",
             "bracer",
             "magic_stick",
           ],
-          early_game: ["phase_boots", "vanguard", "soul_ring"],
+          early_game: ["phase_boots", "magic_wand", "soul_ring" , "hood_of_defiance",],
           mid_game: [
-            "hood_of_defiance",
             "blink",
-            "black_king_bar",
+            "black_king_bar", 
             "ultimate_scepter",
-            "aghanims_shard",
             "eternal_shroud",
-            "ghost",
+            "aghanims_shard",
             "aether_lens",
-            "force_staff",
           ],
           late_game: [
-            "assault",
             "shivas_guard",
             "overwhelming_blink",
             "heart",
             "octarine_core",
           ],
-          situational: ["crimson_guard", "lotus_orb"],
+          situational: ["crimson_guard", "lotus_orb", "pipe", "cyclone", "force_staff", "blademail",],
           core: [
             "phase_boots",
             "vanguard",
@@ -14655,9 +14669,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           phase_boots:
             "A core boots upgrade that provides you with much needed armor and movement speed boost.",
           vanguard:
-            "A core item that tanks you up and allows you to cut-waves, clear stacks and dive towers.",
+            "A core item that tanks you up and allows you to cut-waves, clear stacks and dive towers. You can also disassemble it.",
           hood_of_defiance:
             "A core item that tanks you up by reducing damage you take from magical sources including Rot.",
+          eternal_shroud: "An upgrade to Hood of Defiance. Provides you with spell lifesteal that goes well with your skill set.",
+          aether_lens: "Increases the range of your Hook and Dismember while providing you good stats. Goes into Octarine Core down the road.",
+          aghanims_shard: "Allows you to use Dismember on an allied hero, potentially saving them from death and healing them in the process.",
           crimson_guard:
             "Against fast attacking right-clickers, illusions and summons.",
           black_king_bar:
@@ -14667,7 +14684,12 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+      pudge_meat_hook: "You can use this to secure range creeps, catapults and even big neutral creeps as it instantly kills them.",
+      special_bonus_spell_lifesteal_10: " Consider taking this talent if you are close or already have Aghanims Scepter.",
+      special_bonus_unique_pudge_1: "Consider taking this talent over the other if you want to tank up even more. Flesh heap is Retroactive.",
+
+    },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
@@ -14706,8 +14728,9 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
       },
       mid_game: {
         all: [{ item: "spirit_vessel" }, { item: "lotus_orb" }],
-        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }, { item: "cyclone" }],
         core: [
+          { item: "desolator"},
           { item: "mage_slayer" },
           { item: "hurricane_pike" },
           { item: "sange_and_yasha", info: "For status resistance" },
@@ -14720,7 +14743,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
           { item: "wind_waker", info: "To save an ally being Dismembered" },
         ],
         support: [],
-        core: [],
+        core: [ {item: "bloodthorn"}],
       },
     },
   },
