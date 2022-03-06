@@ -7184,7 +7184,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
       magic_stick:
-        "Starr with it if you expect high frequency of spells being used on the lane.",
+        "Start with it if you expect high frequency of spells being used on the lane.",
       infused_raindrop: "Against magical burst.",
       arcane_boots:
         "A core item for mana sustain. Can be disassembled and the Energy Booster can be used for Aether Lens. Boots can upgraded to Tranquil boots afterwards.",
