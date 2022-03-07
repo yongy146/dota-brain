@@ -8785,7 +8785,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       legion_commander_press_the_attack:
         "You can skill this spell on level 1 if you are being harassed by a dispellable damage-over-time spell like Thunder Strike and Poison Touch.",
-      special_bonus_unique_legion_commander:  "Take this talent over the other if you think your team lacks damage and you play more for yourself rather than your teammates.",
+      special_bonus_unique_legion_commander:
+        "Take this talent over the other if you think your team lacks damage and you play more for yourself rather than your teammates.",
     },
     item_tooltips: {
       magic_stick:
@@ -16735,7 +16736,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             "infused_raindrop",
-            "battle_fury", // michel comment something
+            "battle_fury", // michel comment something ; I comment somthing for bane
             "black_king_bar",
             "blink",
             "nullifier",
