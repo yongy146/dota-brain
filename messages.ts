@@ -588,7 +588,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Ancient Appartion_3_Ice Vortex",
     messageTimes: [4 * 60 + 10, 14 * 60 + 10, 24 * 60 + 10],
     textMessage:
-      "Ice Wortex can be used to provide vision on top of pillars or in Roshpit.",
+      "Ice Vortex can be used to provide vision on top of pillars or in Roshpit.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "ancient_apparition_ice_vortex" },
   },
@@ -607,9 +607,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Ancient Apparition",
     audioFile: "ownHero/Ancient Appartion_3_Aghanims Shard",
-    messageTime: 18 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Grab Aghanim's Shard at 20min mark as it allows you to waveclear, deal additional damage in the fights and cancel Blink Daggers.",
+      "Grab Aghanim's Shard at 15 minute mark as it allows you to clear waves, deal additional damage in the fights and cancel Blink Daggers.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -3165,7 +3165,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Dazzle_5_Activatable items",
     messageTimes: [6 * 60 + 15, 14 * 60 + 15, 22 * 60 + 15],
     textMessage:
-      "Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.",
+      "Prioritize purchasing and using activatable items and neutral items to take advantage of Aghanims Scepter.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_bad_juju" },
   },
@@ -3193,9 +3193,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Dazzle",
     audioFile: "ownHero/Dazzle_8_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Purchase Aghanim's Shard at 20 minute mark as it provides extra control and kills off basic illusions.",
+      "Purchase Aghanim's Shard at 15 minute mark as it provides extra control and kills off basic illusions.",
     audience: [Audience.ALL],
   },
 
@@ -3408,9 +3408,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Disruptor",
     audioFile: "ownHero/Disruptor_5_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard as soon as possible. It is a great buff for a core but also allows you to move around faster.",
+      `Pick up Aghanim's Shard as soon as possible to help your team move faster around enemy targets.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -3949,9 +3949,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Earth Spirit",
     audioFile: "ownHero/Earth Spirit_9_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at level 20 as it is a big quality of life improvent among other things.",
+      `Pick up Aghanim's Shard at minute 15 as it is a big quality of life improvent among other things.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -4771,7 +4771,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Grimstroke_1_Secure ranged",
     messageTime: 15,
     textMessage:
-      "Use Stroke of Faith to secure range creep lasthits and hit opponents and the same time.",
+      `Use Stroke of Faith to secure range creep lasthits and hit opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "grimstroke_dark_artistry" },
   },
@@ -4809,9 +4809,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Grimstroke",
     audioFile: "ownHero/Grimstroke_5_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Buy Aghanim's Shard at minute 20 as it adds even more utility to Ink Sweel.",
+      `Buy Aghanim's Shard at minute 15 as it adds even more utility to Ink Sweel.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -5528,9 +5528,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Io",
     audioFile: "ownHero/Io_8_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20. It provides a source of disable that opponents are typically unaware of.",
+      `Pick up Aghanim's Shard at minute 15. It provides a source of disable that opponents are typically unaware of.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -5682,9 +5682,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Jakiro",
     audioFile: "ownHero/Jakiro_8_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20 as it provides additional disable and damage boost.",
+      "Pick up Aghanim's Shard at minute 15 as it provides additional disable and damage boost.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -5830,7 +5830,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Juggernaut_8_Roshan",
     messageTime: 17 * 60 + 15,
     textMessage:
-      "With decent game, Juggernaut is good at killing Roshan from 18min mark with minimal or no help.",
+      `With decent game, Juggernaut is good at killing Roshan from the 18 minute mark with minimal or no help.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -5841,7 +5841,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 22 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "You can slow siege opponents' building by damaging it during Blade Fury and then backing away.",
+      `You can slow siege enemy towers and buildings by damaging them during Blade Fury and then backing away.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "juggernaut_blade_fury" },
   },
@@ -6159,7 +6159,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Kunkka_6_Torrent stacks",
     messageTimes: [7 * 60 + 30, 12 * 60 + 30],
     textMessage:
-      "You can stack some of the neutral camps by using Torrent 2.5 seconds before a full minute hits.",
+      `You can stack some of the neutral camps by using Torrent 2 seconds before a full minute hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "kunkka_torrent" },
   },
@@ -6619,7 +6619,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_4_Solo kill",
     messageTime: 8 * 60,
     textMessage:
-      "At level 6, you can even solo kill opponents if there are creeps for ulty to bounce.",
+      `At level 6, you can even solo kill opponents if there are creeps for Chain Frost to bounce.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_chain_frost" },
   },
@@ -6630,7 +6630,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Frost Shield is great for defending towers, especially if you have talents for it.",
+      `Frost Shield is great for defending towers and delaying the enemy push.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_frost_shield" },
   },
@@ -6921,7 +6921,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_dragon_slave" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Lina",
     audioFile: "ownHero/Lina_5_Charge Fiery Soul",
@@ -6929,14 +6929,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Charge up Fiery Soul before leaving the base.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_fiery_soul" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Lina",
     audioFile: "ownHero/Lina_6_Upkeep Fiery Soul",
     messageTimes: [7 * 60, 17 * 60, 27 * 60],
     textMessage:
-      "Use Light Strike Array to upkeep Fiery Soul Stacks as it is cheaper and of shorter cooldown.",
+      `Use Light Strike Array on creep waves to maintain Fiery Soul Stacks as it is cheaper and of shorter cooldown.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_light_strike_array" },
   },
@@ -6957,7 +6957,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 25 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "In late game fights, use active spells primarily to activate Fiery Soul as most of your damage will be physical.",
+      `In late game fights, use active spells on enemies to activate Fiery Soul as most of your damage will be physical.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "lina_fiery_soul" },
   },
@@ -9508,7 +9508,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Nyx Assassin_2_Mana Burn lane",
     messageTime: -30,
     textMessage:
-      "You can skill Mana Burn on level 1 or 2 if laning against an intelligence hero that harasses a lot with spells.",
+      `You can skill Mana Burn on level 2 or 4 if laning against an intelligence hero that harasses a lot with spells.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_mana_burn" },
   },
@@ -11425,7 +11425,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines with the Plasma Field even without showing yourself.",
+      `When not much is happening, push out the sidelines with the Plasma Field without even showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "razor_plasma_field" },
   },
@@ -11921,7 +11921,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "shadow_demon_demonic_purge" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Shadow Demon",
     audioFile: "ownHero/Shadow Demon_5_Demonic Purge power",
@@ -11930,7 +11930,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Demonic Purge is great for kitting spell-immune heroes and to dispel important buffs.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "shadow_demon_demonic_purge" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Shadow Demon",
@@ -12898,7 +12898,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Snapfire_7_Push sidelanes",
     messageTime: 12 * 60 + 15,
     textMessage:
-      "Whenever not much is happening, push out the sidelines without even showing yourself.",
+      `When there's not much happening, push out the sidelines with Scatterblast and Cookie.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "snapfire_scatterblast" },
   },
@@ -12906,9 +12906,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Snapfire",
     audioFile: "ownHero/Snapfire_8_Push sidelanes",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around the 20min mark as it adds another disable and sets up a Firesnap Cookie.",
+      "Pick up Aghanim's Shard around the 15 minute mark as it adds another disable and sets up a Firesnap Cookie.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -14954,7 +14954,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Treant Protector_1_Base damage",
     messageTime: 10,
     textMessage:
-      "Treant has the highest base damage in the game at level 1 so make use of it to harass and lasthit.",
+      `Treant has the highest base damage in the game at level 1 so make use of it to harass and deny.`,
     audience: [Audience.ALL],
   },
   {
@@ -15024,9 +15024,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Treant Protector",
     audioFile: "ownHero/Treant Protector_8_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it adds even more utility and disables the hero.",
+      "Pick up Aghanim's Shard around minute 15 as it adds even more utility and disables the hero.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16422,9 +16422,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Warlock",
     audioFile: "ownHero/Warlock_6_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it improves your waveclear and healing significantly.",
+      `Pick up Aghanim's Shard around minute 15 as it improves your waveclear and healing significantly.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16491,7 +16491,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Weaver_2_Courier sniping",
     messageTime: -75,
     textMessage:
-      "Sniping opponents' safelaners' couriers with the help of the courier-sniping ward will reduce their available detection.",
+      `Sniping couriers with the help of a ward behind their tier 1 tower will reduce their available detection.`,
     audience: [Audience.ROLE_SUPPORT_SOFT],
     image: { type: "item", name: "courier" },
   },
@@ -16560,9 +16560,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Weaver",
     audioFile: "ownHero/Weaver_9_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it allows you to detect invisible heroes but also improves dps.",
+      `Pick up Aghanim's Shard around minute 15 as it allows you to detect invisible heroes but also improves dps.`,
     audience: [Audience.ROLE_SUPPORT, Audience.ROLE_OFFLANE],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16932,7 +16932,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 118. Witch Doctor | 10.03.2021
-  {
+/*   {
     category: "OwnHero",
     hero: "Witch Doctor",
     audioFile: "ownHero/Witch Doctor_1_Paralyzing cask duration",
@@ -16941,14 +16941,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Paralyzing Cast lasts 5 seconds on creeps, summons and illusions.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_paralyzing_cask" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Witch Doctor",
     audioFile: "ownHero/Witch Doctor_2_Secure ranged",
     messageTime: 15,
     textMessage:
-      "Use Paralyzing Cast to secure ranged creep and harass the opponents at the same time.",
+      "Use Paralyzing Cask to secure ranged creep and harass the opponents at the same time.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_paralyzing_cask" },
   },
@@ -17028,9 +17028,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Witch Doctor",
     audioFile: "ownHero/Witch Doctor_10_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it has a combination of defensive and offensive traits.",
+      "Pick up Aghanim's Shard around minute 15 as it has a combination of defensive and offensive traits.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
