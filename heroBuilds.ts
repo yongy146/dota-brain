@@ -7220,7 +7220,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             info: "Hoodwink does a lot of magical damage and Cloak offsets 15% of it",
           },
           {
-            item: "blademail",
+            item: "blade_mail",
             info: "Could potentially be lethal to Hoodwink as you absorb his Sharpshooter.",
           },
         ],
@@ -9019,7 +9019,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "pipe" },
           { item: "eternal_shroud" },
           { item: "black_king_bar" },
-          { item: "blademail" },
+          { item: "blade_mail" },
         ],
       },
       late_game: {
@@ -15108,7 +15108,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_scale",
             "quickening_charm",
             "cloak_of_flames",
-            "black_powder_keg",
+            "black_powder_bag",
             "spell_prism",
             "timeless_relic",
             "giants_ring",
@@ -15315,7 +15315,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           late_game: [
             "ethereal_blade",
             "octarine_core",
-            "revenenants_brooch",
+            "revenants_brooch",
             "sheepstick",
             "arcane_blink",
           ],
@@ -15612,7 +15612,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pipe",
             "cyclone",
             "force_staff",
-            "blademail",
+            "blade_mail",
           ],
           core: [
             "phase_boots",
