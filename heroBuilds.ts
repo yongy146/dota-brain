@@ -16797,7 +16797,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             "infused_raindrop",
-            "battle_fury", // michel comment something ; I comment somthing for bane
+            "battle_fury", // michel comment something ; I comment somthing for bane, hey can you see this
             "black_king_bar",
             "blink",
             "nullifier",
