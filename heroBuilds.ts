@@ -5428,7 +5428,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Drow Ranger": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5468,18 +5468,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "quelling_blade",
+            "slippers",
             "slippers",
             "branches",
-            "faerie_fire",
             "circlet",
             "magic_stick",
           ],
-          early_game: ["power_treads", "magic_wand", "falcon_blade"],
-          mid_game: ["dragon_lance", "manta", "hurricane_pike", "lesser_crit"],
+          early_game: ["power_treads", "magic_wand", "falcon_blade", "wraith_band"],
+          mid_game: ["dragon_lance", "yasha", "manta_style", "lesser_crit", "black_king_bar"],
           late_game: ["greater_crit", "skadi", "butterfly", "satanic"],
           situational: [
-            "infused_raindrop",
+            "infused_raindrops",
+            "sange_and_yasha",
+            "aghanims_scepter",
             "black_king_bar",
             "blink",
             "aghanims_shard",
@@ -5504,28 +5505,40 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
+      drow_ranger_frost_arrows:
+        "You can get a third point in this before level 6 if you feel it will lead to kills or an easier lane.",
       drow_ranger_wave_of_silence:
         "You can skill a point in this spell earlier than suggested if that allows you to survive the lane or land a kill.",
+      drow_ranger_multishot:
+        "This will be used off-cooldown for farming, So the earlier you max it the faster you will farm. If there is going to be an engagement soon make sure to keep this spell ready."
     },
     item_tooltips: {
       magic_stick:
-        "If you expect high frequency of spells being used on the lane.",
-      infused_raindrop: "Against magical burst.",
+        "If you are playing against heroes that spam spells in the lane start with this (eg.brisleback, batrider).",
+      infused_raindrop: 
+        "For mana regen and if you're playing against annoying magical nukes.",
       power_treads:
-        "A core boots upgrade that speeds up your farm by increasing attack speed and saves a bit of mana through toggling.",
+        "Try to get this as early as possible in the laning stage in order to ramp up your farm speed and survivability.",
       dragon_lance:
         "A core item that allows you to shoot from further away. Can be upgrade to Pike against gap-closing heroes.",
       manta:
-        "A core item that improves your farming speed, damage output and survivabilty.",
+        "Good farming item for drow but better when you are playing aginast silences or annoying debuffs/roots.",
+      sange_and_yash:
+        "A good alternative to manta if you are playing against alot of illusion clear and feel the extra hp will help you survive.",
       black_king_bar:
-        "Against a lot of disables, magical damage and as a dispel.",
-      blink: "To reposition. Can be upgraded to Swift Blink down the road.",
-      aghanims_shard: "To offset healing and for extra bit of damage.",
-      silver_edge: "For break effect and to be able to reposition.",
+        "Try to get bkb as late as possible but keep in mind that many games you will need to get it quite early if you want to take engagements.",
+      blink: 
+        "To reposition. Can be upgraded to Swift Blink down the road.",
+      aghanims_shard: 
+        "To offset healing and for extra bit of damage.",
+      silver_edge: 
+        "For break effect and to be able to reposition.",
       sphere:
-        "Against powerful single target disables/debuffs and gap-closing spells and items.",
+        "Against powerful single target disables/debuffs and gap-closing spells and items (eg.Doom/Batrider).",
       mjollnir:
         "Against illusion-based heroes. It is better than Aghanim`s Scepter.",
+      aghanims_scepter:
+        "This paired with mjollnir can be really good against illusion-based heroes."
     },
     combo: [],
     counter_items: {
@@ -6029,7 +6042,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Ember Spirit": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -6040,21 +6053,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "ember_spirit_flame_guard", // 1
-          "ember_spirit_sleight_of_fist", // 2
+          "ember_spirit_sleight_of_fist", // 1
+          "ember_spirit_flame_guard", // 2
           "ember_spirit_flame_guard", // 3
-          "ember_spirit_sleight_of_fist", // 4
-          "ember_spirit_sleight_of_fist", // 5
+          "ember_spirit_searing_chains", // 4
+          "ember_spirit_flame_guard", // 5
           "ember_spirit_fire_remnant", // 6
-          "ember_spirit_sleight_of_fist", // 7
-          "ember_spirit_searing_chains", // 8
-          "ember_spirit_flame_guard", // 9
-          "ember_spirit_flame_guard", // 10
-          "special_bonus_attack_damage_15", // 11
+          "ember_spirit_flame_guard", // 7
+          "ember_spirit_sleight_of_fist", // 8
+          "ember_spirit_sleight_of_fist", // 9
+          "ember_spirit_sleight_of_fist", // 10
+          "ember_spirit_searing_chains", // 11
           "ember_spirit_searing_chains", // 12
           "ember_spirit_searing_chains", // 13
-          "ember_spirit_searing_chains", // 14
-          "special_bonus_unique_ember_spirit_2", // 15
+          "special_bonus_attack_damage_15", // 14
+          "special_bonus_unique_ember_spirit_3", // 15
           "ember_spirit_fire_remnant", // 16
           "special_bonus_attributes", // 17
           "ember_spirit_fire_remnant", // 18
@@ -6064,16 +6077,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_ember_spirit_4", // 25
+          "special_bonus_unique_ember_spirit_5", // 25
         ],
         items: {
           starting: [
-            "tango",
             "quelling_blade",
-            "faerie_fire",
             "branches",
+            "branches",
+            "Faerie Fire",
+            "tango",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
             "bottle",
@@ -6084,11 +6097,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             "maelstrom",
+            "black_king_bar",
             "ultimate_scepter",
-            "gungir",
             "kaya_and_sange",
             "cyclone",
-            "desolator",
           ],
           late_game: ["refresher", "shivas_guard", "greater_crit"],
           situational: [
@@ -6096,12 +6108,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "black_king_bar",
             "aghanims_shard",
             "sphere",
+            "desolater",
+            "gungir",
+            "radiance",
+            "boots_of_travel"
           ],
           core: [
-            "orb_of_corrosion",
-            "phase_boots",
             "maelstrom",
             "ultimate_scepter",
+            "black_king_bar",
+            "shivas_guard",
+            "kaya_and_sange"
           ],
           neutral: [
             "arcane_ring",
@@ -6114,31 +6131,41 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "penta_edged_sword",
             "desolator_2",
             "mirror_shield",
+            "ex_machina",
           ],
         },
       },
     ],
     ability_tooltips: {
-      ember_spirit_flame_guard:
-        "You can put more points in this spell over Slight of Fist if the lane is not going particularly well. You`ll catch-up faster with more points in Flame Guard.",
+      ember_spirit_sleight_of_fist:
+        "You can max this over flameguard in matchup's where you want to dodge projectiles or harrass low armour ranged heroes. Works really well with orb of corrosion and phase boots in the early game."
     },
     item_tooltips: {
       magic_stick:
-        "If you expect high frequency of spells being used on the lane.",
-      infused_raindrop: "Against magical burst.",
-      orb_of_corrosion: "A core item that works well with Sleight of Fist.",
+        "If you are laning against spell spammers start with this (eg. Batirder/Zeus).",
+      infused_raindrop: 
+        "Against magical burst.",
+      orb_of_corrosion: 
+        "A core item that works well with Sleight of Fist.",
       phase_boots:
         "A core boots upgrade. Make sure to activate Phase Boots before using dropping a Fire Remnant as it will travel faster.",
       maelstrom:
-        "A core item that servers as a farming and dps tool. It can proc with Sleight of Fist.",
+        "A core item that serves as a farming and dps tool. It can proc with Sleight of Fist.",
+      kaya_and_sange:
+        "A great item for survivability and overall damage output.",
       ultimate_scepter:
         "A core item that adds to your burst and mobility. Goes well with Refresher later on.",
       black_king_bar:
-        "Against a lot of disables, magical damage and as a dispel.",
+        "Many games it will be neccesary to get this as your second item after maelstrom, as ember wants to be in all the engagements early on and throughout the game.",
       aghanims_shard:
         "Adds to damage output and allows you to snowball in the fights with extra Fire Remnants.",
     },
-    combo: [],
+    combo: [
+      "ember_spirit_flame_guard",
+      "ember_spirit_sleight_of_fist",
+      "ember_spirit_searing_chains",
+      "ember_spirit_fire_remanant"
+    ],
     counter_items: {
       laning_phase: {
         all: [
@@ -6167,7 +6194,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
       mid_game: {
         all: [
-          { item: "cyclone" },
+          { item: "cyclone",
+            info: "Purges off flame guard" },
           {
             item: "mekansm",
             info: "Heals some of the AoE damage from his abilities and provides armor against right-clicks and Sleight of Fist",
