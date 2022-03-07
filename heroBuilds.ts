@@ -8785,25 +8785,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       legion_commander_press_the_attack:
         "You can skill this spell on level 1 if you are being harassed by a dispellable damage-over-time spell like Thunder Strike and Poison Touch.",
-      special_bonus_unique_legion_commander:
-        "Take this talent over the other if you think your team lacks damage and you play more for yourself22 rather than your teammates.",
+      special_bonus_unique_legion_commander:  "Take this talent over the other if you think your team lacks damage and you play more for yourself rather than your teammates.",
     },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       orb_of_corrosion: "If you can pressure on the lane.",
       helm_of_iron_will:
-        "A core item that solves your hp sustain issues on the lane. It will be upgraded to Armlet but you can also get Blink Dagger before the upgrade.",
+        "A core item that solves your hp sustain issues on the lane. It can be upgraded to Armlet but you can also get Blink Dagger before the upgrade.",
       armlet:
         "A core item that gives you all the needed stats to win duels. Usually better than Blade Mail.",
       blink: "A core item that allows you to get Duel off.",
       blade_mail: "Good against high dps right-clickers(PA, Anti-Mage).",
       black_king_bar:
-        "A core item that allows you not to be disabled or killed during Duel as often :) .",
+        "A core item that allows you not to be disabled or killed during Duel as often .",
       heavens_halberd:
         "Especially good against ranged right-clickers and to pop Linken`s Sphere.",
       aghanims_shard:
-        "A core item that allows you to save an ally or yourself. It also makes you spell-immune as you win the Duel.",
+        "A good upgrade to increase your AOE spam as it decreases cooldown on your Overwhelming odds. Good against illusions and summons. ",
       monkey_king_bar: "Against evasion.",
       overwhelming_blink: "To tank up and for AoE damage.",
       swift_blink: "For single target burst.",
@@ -8813,10 +8812,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       laning_phase: {
         all: [
           { item: "blight_stone" },
-          {
-            item: "ring_of_regen",
-            info: "One or two, for sustain on the lane",
-          },
+
           {
             item: "wind_lace",
             info: "To keep the distance from the Legion Commander",
@@ -16696,13 +16692,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "riki_blink_strike", // 7
           "riki_smoke_screen", // 8
           "riki_tricks_of_the_trade", // 9
-          "special_bonus_attack_speed_20", // 10
+          "special_bonus_unique_riki_2", // 10
           "riki_tricks_of_the_trade", // 11
           "riki_backstab", // 12
           "riki_smoke_screen", // 13
           "riki_smoke_screen", // 14
-          "riki_smoke_screen", // 15
-          "special_bonus_unique_riki_2", // 16
+          "special_bonus_unique_riki_3", // 15
+          "riki_smoke_screen", // 16
           "special_bonus_attributes", // 17
           "riki_backstab", // 18
           "special_bonus_attributes", // 19
@@ -16739,6 +16735,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             "infused_raindrop",
+            "battle_fury", // michel comment something
             "black_king_bar",
             "blink",
             "nullifier",
