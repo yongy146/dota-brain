@@ -3709,7 +3709,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clockwerk: {
-    gameplay_version: "7.30e",
+    gameplay_version: `7.31b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -3739,7 +3739,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "rattletrap_hookshot", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_clockwerk_4", // 20
+          `special_bonus_unique_clockwerk_2`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -3748,68 +3748,82 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "boots",
-            "flask",
-            "wind_lace",
-            "enchanted_mango",
-            "ward_observer",
-            "ward_sentry",
-            "magic_stick",
+			`tango`,
+            `boots`,
+            `ward_observer`,
           ],
           early_game: [
-            "tranquil_boots",
+			`ward_sentry`,
+            `tranquil_boots`,
             "urn_of_shadows",
             "magic_wand",
-            "wind_lace",
+            `wind_lace`,
+			`infused_raindrop`,
           ],
-          mid_game: ["force_staff", "glimmer_cape", "ghost", "blade_mail"],
-          late_game: ["ultimate_scepter", "sheepstick"],
+          mid_game: [`force_staff`, `spirit_vessel`, `blade_mail`, `ultimate_scepter`],
+          late_game: [`aghanims_shard`, `boots_of_bearing`, `sheepstick`],
           situational: [
-            "spirit_vessel",
-            "ancient_janggo",
-            "lotus_orb",
-            "heavens_halberd",
+            `spirit_vessel`,
+			`glimmer_cape`,
+			`pipe`,
+			`cyclone`,
+			`solar_crest`,
+			`guardian_greaves`,
+            `black_king_bar`,
+            `lotus_orb`,
+			`aeon_disk`,
+            `heavens_halberd`,
+			`orchid`,
+			`travel_boots`,
           ],
           core: ["tranquil_boots", "force_staff", "ultimate_scepter"],
           neutral: [
             "pogo_stick",
-            "unstable_wand",
+            `unstable_wand`,
+			`trusty_shovel`,
             "essence_ring",
-            "dragon_scale",
+            `dragon_scale`,
+			`paintball`,
             "cloak_of_flames",
             "black_powder_bag",
             "ascetic_cap",
             "trickster_cloak",
             "force_field",
-            "ex_machina",
+            `ex_machina`,
+			`fallen_sky`,
           ],
         },
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_clockwerk_4:
-        "Even though the opponents might not have invisibility in some shape or form, it is still useful talent to deward.",
-      special_bonus_unique_clockwerk_6:
+      special_bonus_unique_clockwerk_2:
+		`The leash makes sure an enemy hero cannot get out of Power Cogs with their mobility spells, such as Mirana Leap or Phoenix Dive.`,
+	  special_bonus_unique_clockwerk_6:
         "You can take this talent over the other one if the opponents become short on damage once you become spell-immune.",
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
-      ward_sentry: "To block or unblock the pull camp.",
+      magic_wand:
+        `Start with magic_stick instead of boots if you expect high frequency of spells being used on the lane.`,
+      ward_sentry: `Buy one with the bounty rune gold if your pull camp is blocked.`,
       tranquil_boots:
         "A core boots upgrade that allows you to sustain HP and move fast around the map. You can consider Phase Boots instead if you have a good start.",
       spirit_vessel: "Against heavy healing lineup.",
       force_staff:
         "A core item that allows you to catch up to opponents` heroes even in scenario when they get a Force Staff as well.",
-      ancient_janggo:
-        "If you are grouping up a lot as a team in midgame and if you have summons.",
+      boots_of_bearing:
+        `An excellent upgrade for tranquil boots in the late game.`,
       heavens_halberd: "Especially good against ranged right-clickers.",
       ultimate_scepter:
         "A core item. Having two of each spells is always better than having only one.",
       lotus_orb: "For reflect, dispel and armor.",
     },
-    combo: [],
+    combo: [
+		`rattletrap_rocket_flare`,
+		`rattletrap_hookshot`,
+		`rattletrap_battery_assault`,
+		`rattletrap_power_cogs`,
+		`rattletrap_overclocking`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -4015,7 +4029,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dark Seer": {
-    gameplay_version: "7.30e",
+    gameplay_version: `7.31b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4027,19 +4041,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "dark_seer_ion_shell", // 1
-          "dark_seer_vacuum", // 2
+          `dark_seer_surge`, // 2
           "dark_seer_ion_shell", // 3
-          "dark_seer_surge", // 4
+          `dark_seer_vacuum`, // 4
           "dark_seer_ion_shell", // 5
           "dark_seer_wall_of_replica", // 6
           "dark_seer_ion_shell", // 7
           "dark_seer_surge", // 8
           "dark_seer_surge", // 9
-          "dark_seer_surge", // 10
+          `dark_seer_vacuum`, // 10
           "dark_seer_vacuum", // 11
           "dark_seer_wall_of_replica", // 12
           "dark_seer_vacuum", // 13
-          "dark_seer_vacuum", // 14
+          `dark_seer_surge`, // 14
           "special_bonus_unique_dark_seer_7", // 15
           "special_bonus_unique_dark_seer_5", // 16
           "special_bonus_attributes", // 17
@@ -4054,55 +4068,61 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "enchanted_mango",
-            "clarity",
-            "flask",
-            "mantle",
-            "branches",
-            "circlet",
-            "magic_stick",
+            `tango`,
+            `quelling_blade`,
+            `mantle`,
+            `branches`,
+			`branches`,
+            `circlet`,
+			`ward_observer`,
           ],
           early_game: [
-            "null_talisman",
-            "soul_ring",
+            `null_talisman`,
+			`null_talisman`,
             "arcane_boots",
-            "magic_wand",
+            `magic_wand`,
+			`infused_raindrop`,
           ],
           mid_game: [
             "ultimate_scepter",
-            "blink",
-            "aghanims_shard",
-            "mekansm",
-            "hood_of_defiance",
+            `blink`,
+            `aghanims_shard`,
+			`shivas_guard`,
           ],
           late_game: [
-            "sheepstick",
-            "refresher",
-            "shivas_guard",
-            "octarine_core",
+            `refresher`,
+            `aeon_disk`,
+			`sheepstick`,
+            `octarine_core`,
+			`arcane_blink`,
           ],
           situational: [
-            "bottle",
-            "infused_raindrop",
-            "guardian_greaves",
-            "pipe",
-            "black_king_bar",
-            "lotus_orb",
+            `soul_ring`,
+			`bottle`,
+            `guardian_greaves`,
+			`helm_of_the_dominator`,
+            `pipe`,
+			`solar_crest`,
+			`force_staff`,
+            `black_king_bar`,
+            `lotus_orb`,
+			`travel_boots`,
           ],
-          core: ["arcane_boots", "ultimate_scepter", "blink", "aghanims_shard"],
+          core: [`null_talisman`, `arcane_boots`, `ultimate_scepter`, `blink`, `aghanims_shard`, `refresher`],
           neutral: [
             "arcane_ring",
-            "mysterious_hat",
+            `mysterious_hat`,
+			`trusty_shovel`,
             "philosophers_stone",
             "essence_ring",
             "quickening_charm",
-            "cloak_of_flames",
-            "spell_prism",
+            `cloak_of_flames`,
+            `spell_prism`,
             "trickster_cloak",
             "force_field",
-            "ex_machina",
+            `ex_machina`,
+			`fallen_sky`,
+			`demonicon`,
           ],
         },
       },
@@ -4112,8 +4132,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "On level fifteen, you should take the level fifteen talent before this level ten one. The dota client disallows me to set it up in such order in graphics above.",
     },
     item_tooltips: {
-      bottle: "Alternative way to solve your sustain issues.",
-      infused_raindrop: "Against magical burst.",
+      null_talisman: `A couple of Null Talismans provide you with mana regen to spam Ion Shell.`,
+	  bottle: `Alternative way to solve your sustain issues.`,
+      soul_ring: `You can get soul ring over two null talismans when the armor is useful, for example against Phantom Assassin`,
+	  infused_raindrop: `Against magical burst.`,
       arcane_boots:
         "A core boots upgrade for mana sustain. You can disassemble it down the road.",
       ultimate_scepter:
@@ -4127,7 +4149,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       black_king_bar: "To be able to get your combo off.",
       lotus_orb: "For reflect, dispel and armor.",
     },
-    combo: [],
+    combo: [
+		`dark_seer_ion_shell`,
+		`dark_seer_surge`,
+		`blink`,
+		`dark_seer_normal_punch`,
+		`dark_seer_vacuum`,
+		`dark_seer_wall_of_replica`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -4796,7 +4825,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Death Prophet": {
-    gameplay_version: "7.30e",
+    gameplay_version: `7.31b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -4816,7 +4845,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "death_prophet_spirit_siphon", // 7
           "death_prophet_silence", // 8
           "death_prophet_silence", // 9
-          "special_bonus_attack_damage_30", // 10
+          `special_bonus_magic_resistance_12`, // 10
           "death_prophet_silence", // 11
           "death_prophet_exorcism", // 12
           "death_prophet_silence", // 13
@@ -4831,19 +4860,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_death_prophet", // 25
+          `special_bonus_unique_death_prophet`, // 25
         ],
         items: {
           starting: [
             "tango",
             "faerie_fire",
-            "branches",
+            `branches`,
+			`branches`,
             "circlet",
             "mantle",
-            "ward_observer",
-            "magic_stick",
+            `ward_observer`,
           ],
-          early_game: ["bottle", "null_talisman", "boots", "magic_wand"],
+          early_game: [`bottle`, `null_talisman`, `null_talisman`, `boots`, `magic_wand`, `infused_raindrop`],
           mid_game: [
             "cyclone",
             "travel_boots",
@@ -4852,48 +4881,61 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
           ],
           late_game: [
-            "assault",
-            "refresher",
-            "octarine_core",
-            "ultimate_scepter",
+            `shivas_guard`,
+            `octarine_core`,
+			`refresher`,
+            `ultimate_scepter`,
           ],
           situational: [
-            "infused_raindrop",
-            "heavens_halberd",
-            "shivas_guard",
-            "blink",
+            `power_treads`,
+			`blink`,
+			`solar_crest`,
+			`ghost`,
+            `heavens_halberd`,
+            `assault`,
+			`eternal_shroud`,
+			`sphere`,
+			`arcane_blink`,
+			`travel_boots_2`,
           ],
           core: [
             "cyclone",
             "travel_boots",
             "black_king_bar",
             "kaya_and_sange",
-            "aghanims_shard",
+            `aghanims_shard`,
+			`shivas_guard`,
           ],
           neutral: [
             "arcane_ring",
-            "mysterious_hat",
+            `mysterious_hat`,
+			`trusty_shovel`,
             "essence_ring",
             "dragon_scale",
             "quickening_charm",
-            "black_powder_bag",
+            `black_powder_bag`,
+			`spider_legs`,
             "timeless_relic",
-            "spell_prism",
+            `spell_prism`,
+			`flicker`,
             "ex_machina",
-            "mirror_shield",
+            `mirror_shield`,
+			`force_field`,
           ],
         },
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_death_prophet_5:
+      special_bonus_attack_damage_30:
+		`You can take this level 10 talent over the suggested one on mid Death Prophet.`,
+	  special_bonus_unique_death_prophet_5:
         "You can take this talent at level 25 over the suggested one. Usually, having 5 Spirit Siphons per fight due to Aghanim`s Shard should be more than enough thus I prefer the Exorcism talent. Also, if you have Refresher Orb or Shard in late game, the Siphon talent is redundant.",
     },
     item_tooltips: {
       ward_observer:
         "If you are playing mid Death Prophet but also on the offlane to have vision around your lane.",
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with magic stick if you expect high frequency of spells being used on the lane. Replace one branch and mantle for it.`,
       bottle:
         "If you are playing mid Death Prophet but also worth considering on offlane too if your mid isn`t buying bottle. Make sure your supports refill it for you here and there.",
       infused_raindrop: "Against magical burst.",
@@ -4911,7 +4953,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Great at reducing healing, bumping up your armor and preventing kiting.",
       blink: "Great for gap closing.",
     },
-    combo: [],
+    combo: [
+		`death_prophet_exorcism`,
+		`death_prophet_silence`,
+		`death_prophet_spirit_siphon`,
+		`death_prophet_carrion_swarm`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -5878,7 +5925,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Elder Titan": {
-    gameplay_version: "7.30e",
+    gameplay_version: `7.31b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -5903,7 +5950,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "elder_titan_earth_splitter", // 12
           "elder_titan_ancestral_spirit", // 13
           "elder_titan_ancestral_spirit", // 14
-          "special_bonus_attack_speed_20", // 15
+          `special_bonus_attack_speed_25`, // 15
           "special_bonus_unique_elder_titan", // 16
           "special_bonus_attributes", // 17
           "elder_titan_earth_splitter", // 18
@@ -5918,30 +5965,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "flask",
-            "wind_lace",
-            "enchanted_mango",
-            "boots",
-            "faerie_fire",
-            "ward_observer",
-            "ward_sentry",
-            "orb_of_venom",
-            "magic_stick",
+            `flask`,
+            `faerie_fire`,
+            `ward_observer`,
+            `ward_sentry`,
+            `orb_of_venom`,
           ],
-          early_game: ["phase_boots", "magic_wand", "medallion_of_courage"],
+          early_game: [`phase_boots`, `magic_wand`, `medallion_of_courage`, `wind_lace`, `infused_raindrop`,],
           mid_game: [
             "solar_crest",
             "ultimate_scepter",
             "aghanims_shard",
-            "ghost",
-            "glimmer_cape",
-            "force_staff",
-            "veil_of_discord",
-            "cyclone",
+            `force_staff`,
           ],
           late_game: ["assault", "aeon_disk", "greater_crit"],
-          situational: ["spirit_vessel", "lotus_orb"],
-          core: ["phase_boots", "ultimate_scepter"],
+          situational: [
+			`spirit_vessel`,
+			`pipe`,
+			`cyclone`,
+			`glimmer_cape`,
+			`ghost`,
+			`lotus_orb`,
+			`shivas_guard`,
+			`travel_boots`,
+		  ],
+          core: [`phase_boots`, `ultimate_scepter`, `aghanims_shard`],
           neutral: [
             "trusty_shovel",
             "arcane_ring",
@@ -5963,8 +6011,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
-      magic_stick:
-        "Start with it iff you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with magic stick if you expect high frequency of spells being used on the lane. Replace the salve, faerie fire, and sentry for it.`,
       orb_of_venom:
         "If you see yourself being able to hit the opponents on the lane often.",
       phase_boots:
@@ -5972,9 +6020,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       spirit_vessel: "Against heavy healing lineup.",
       ultimate_scepter:
         "A core item that allows you to deliver right-clicks as you become spell immune based on the number of heroes your spirit passed through.",
-      lotus_orb: "For reflect, dispel and armor.",
+      aghanims_shard: `Lets you immediately get on top of people after you stomp them.`,
+	  lotus_orb: `For reflect, dispel and armor.`,
     },
-    combo: [],
+    combo: [
+		`elder_titan_ancestral_spirit`,
+		`elder_titan_echo_stomp`,
+		`elder_titan_earth_splitter`,
+		`elder_titan_return_spirit`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -6192,7 +6246,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Enchantress: {
-    gameplay_version: "7.30e",
+    gameplay_version: `7.31b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -6203,17 +6257,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "enchantress_impetus", // 2
-          "enchantress_enchant", // 1
+          `enchantress_enchant`, // 1
+          `enchantress_impetus`, // 2
           "enchantress_enchant", // 3
-          "enchantress_natures_attendants", // 4
-          "enchantress_enchant", // 5
+          `enchantress_impetus`, // 4
+          `enchantress_natures_attendants`, // 5
           "enchantress_untouchable", // 6
           "enchantress_enchant", // 7
-          "enchantress_natures_attendants", // 8
+          `enchantress_enchant`, // 8
           "enchantress_natures_attendants", // 9
           "enchantress_natures_attendants", // 10
-          "enchantress_impetus", // 11
+          `enchantress_natures_attendants`, // 11
           "enchantress_untouchable", // 12
           "enchantress_impetus", // 13
           "enchantress_impetus", // 14
@@ -6222,7 +6276,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "enchantress_untouchable", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_enchantress_3", // 20
+          `special_bonus_unique_enchantress_1`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -6231,30 +6285,44 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "flask",
-            "blight_stone",
-            "branches",
-            "faerie_fire",
-            "enchanted_mango",
-            "ward_observer",
-            "ward_sentry",
-            "magic_stick",
+            `tango`,
+			`tango`,
+            `flask`,
+            `faerie_fire`,
+			`faerie_fire`,
+            `enchanted_mango`,
+            `ward_observer`,
+            `ward_sentry`,
+			`ward_sentry`,
           ],
-          early_game: ["boots", "magic_wand", "power_treads"],
+          early_game: [`arcane_boots`, `magic_wand`, `infused_raindrop`],
           mid_game: [
-            "holy_locket",
-            "solar_crest",
-            "aghanims_shard",
-            "force_staff",
-            "glimmer_cape",
+            `holy_locket`,
+			`tranquil_boots`,
+            `solar_crest`,
+            `aghanims_shard`,
+            `force_staff`,
+			`boots_of_bearing`,
           ],
-          late_game: ["hurricane_pike", "ultimate_scepter", "vladmir"],
-          situational: ["infused_raindrop", "lotus_orb"],
-          core: ["holy_locket", "aghanims_shard"],
+          late_game: [`hurricane_pike`, `ultimate_scepter`, `aeon_disk`],
+          situational: [
+			`blight_stone`,
+			`power_treads`,
+			`urn_of_shadows`,
+			`glimmer_cape`,
+			`cyclone`,
+			`pipe`,
+			`wraith_pact`,
+			`spirit_vessel`,
+			`lotus_orb`,
+			`shivas_guard`,
+			`travel_boots`,
+		  ],
+          core: [`holy_locket`, `aghanims_shard`, `force_staff`],
           neutral: [
             "trusty_shovel",
-            "arcane_ring",
+            `arcane_ring`,
+			`pogo_stick`,
             "grove_bow",
             "essence_ring",
             "spider_legs",
@@ -6270,20 +6338,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       special_bonus_magic_resistance_10:
         "On level 15, instead of taking this level 10 talent, take the level 15 talent instead. The dota client disallows me to display the talents in this order.",
-      special_bonus_unique_enchantress_1:
-        "You can take this talent over suggested one in case you are playing against an opponent with Helm of the Overlord.",
+      special_bonus_unique_enchantress_3:
+        `You can take this talent over suggested one if the enemy team has 2-3 right click heroes.`,
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
-      magic_stick:
-        "If you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with magic stick if you expect high frequency of spells on the lane. Replace one tango, sentry, and faerie fire each for it.`,
       infused_raindrop: "Against magical burst.",
       holy_locket: "A core item that adds to your healing output.",
       aghanims_shard:
         "A core item for additional healing. Fits well with Holy Locket.",
       lotus_orb: "For reflect, dispel and armor.",
     },
-    combo: [],
+    combo: [
+		`enchantress_natures_attendants`,
+		`enchantress_enchant`,
+		`enchantress_impetus`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -6325,7 +6397,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Enigma: {
-    gameplay_version: "7.30e",
+    gameplay_version: `7.31b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -6344,14 +6416,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "enigma_black_hole", // 6
           "enigma_demonic_conversion", // 7
           "enigma_midnight_pulse", // 8
-          "enigma_midnight_pulse", // 9
-          "special_bonus_unique_enigma_4", // 10
-          "enigma_midnight_pulse", // 11
-          "enigma_midnight_pulse", // 12
-          "enigma_black_hole", // 13
-          "enigma_malefice", // 14
+          `enigma_malefice`, // 9
+          `enigma_malefice`, // 10
+          `special_bonus_unique_enigma_6`, // 11
+          `enigma_black_hole`, // 12
+          `enigma_midnight_pulse`, // 13
+          `enigma_midnight_pulse`, // 14
           "special_bonus_unique_enigma_9", // 15
-          "enigma_malefice", // 16
+          `enigma_midnight_pulse`, // 16
           "special_bonus_attributes", // 17
           "enigma_black_hole", // 18
           "special_bonus_attributes", // 19
@@ -6364,15 +6436,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "null_talisman",
-            "enchanted_mango",
+            `tango`,
+            `flask`,
             "mantle",
             "circlet",
-            "clarity",
-            "sobi_mask",
+            `clarity`,
+            `branches`,
+			`ward_observer`,
           ],
-          early_game: ["arcane_boots", "magic_wand", "soul_ring"],
+          early_game: [`null_talisman`, `null_talisman`, `arcane_boots`, `magic_wand`, `wind_lace`],
           mid_game: [
             "blink",
             "black_king_bar",
@@ -6381,23 +6453,40 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           late_game: [
             "refresher",
-            "invis_sword",
+            `sphere`,
             "arcane_blink",
-            "ultimate_scepter",
+            `ultimate_scepter`,
+			`aeon_disk`,
           ],
-          situational: ["hand_of_midas", "sphere", "aeon_disk"],
-          core: ["arcane_boots", "blink", "black_king_bar"],
+          situational: [
+			`smoke_of_deceit`,
+			`infused_raindrop`,
+			`hand_of_midas`,
+			`soul_ring`,
+			`invis_sword`,
+			`helm_of_the_overlord`,
+			`shivas_guard`,
+			`octarine_core`,
+			`travel_boots`,
+		  ],
+          core: [`arcane_boots`, `blink`, `black_king_bar`, `aghanims_shard`, `refresher`],
           neutral: [
             "pogo_stick",
-            "arcane_ring",
+            `arcane_ring`,
+			`trusty_shovel`,
             "philosophers_stone",
-            "bullwhip",
+            `bullwhip`,
+			`essence_ring`,
             "spider_legs",
-            "psychic_headband",
-            "ninja_gear",
-            "trickster_cloak",
+            `psychic_headband`,
+			`ceremonial_robe`,
+            `ninja_gear`,
+            `trickster_cloak`,
+			`spell_prism`,
+			`timeless_relic`,
             "force_boots",
-            "seer_stone",
+            `seer_stone`,
+			`mirror_shield`,
           ],
         },
         item_tooltips: {
@@ -6419,14 +6508,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "enigma_black_hole", // 6
           "enigma_demonic_conversion", // 7
           "enigma_midnight_pulse", // 8
-          "enigma_midnight_pulse", // 9
-          "special_bonus_unique_enigma_4", // 10
-          "enigma_midnight_pulse", // 11
-          "enigma_midnight_pulse", // 12
-          "enigma_black_hole", // 13
-          "enigma_malefice", // 14
+          `enigma_malefice`, // 9
+          `enigma_malefice`, // 10
+          `special_bonus_unique_enigma_6`, // 11
+          `enigma_black_hole`, // 12
+          `enigma_midnight_pulse`, // 13
+          `enigma_midnight_pulse`, // 14
           "special_bonus_unique_enigma_9", // 15
-          "enigma_malefice", // 16
+          `enigma_midnight_pulse`, // 16
           "special_bonus_attributes", // 17
           "enigma_black_hole", // 18
           "special_bonus_attributes", // 19
@@ -6439,22 +6528,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "null_talisman",
-            "enchanted_mango",
-            "mantle",
-            "circlet",
-            "clarity",
-            "sobi_mask",
-            "ward_observer",
-            "ward_sentry",
-            "magic_stick",
+            `tango`,
+            `mantle`,
+            `circlet`,
+            `clarity`,
+            `clarity`,
+			`ward_observer`,
+			`ward_sentry`,
           ],
           early_game: [
-            "ring_of_basilius",
+            `null_talisman`,
+			`null_talisman`,
             "arcane_boots",
             "magic_wand",
-            "soul_ring",
+            `wind_lace`,
           ],
           mid_game: [
             "blink",
@@ -6463,30 +6550,44 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aether_lens",
           ],
           late_game: [
-            "refresher",
-            "invis_sword",
-            "arcane_blink",
-            "ultimate_scepter",
+            `refresher`,
+            `sphere`,
+            `arcane_blink`,
+            `ultimate_scepter`,
+			`aeon_disk`,
           ],
-          situational: ["infused_raindrop", "sphere", "aeon_disk"],
-          core: ["arcane_boots", "blink", "black_king_bar"],
+          situational: [
+			`smoke_of_deceit`,
+			`ring_of_basilius`,
+			`invis_sword`,
+			`shivas_guard`,
+			`octarine_core`,
+			`travel_boots`,
+		  ],
+          core: [`arcane_boots`, `blink`, `black_king_bar`, `aghanims_shard`, `refresher`],
           neutral: [
-            "pogo_stick",
-            "arcane_ring",
-            "philosophers_stone",
-            "bullwhip",
-            "spider_legs",
-            "psychic_headband",
-            "ninja_gear",
-            "trickster_cloak",
-            "force_boots",
-            "seer_stone",
+            `pogo_stick`,
+            `arcane_ring`,
+			`trusty_shovel`,
+            `philosophers_stone`,
+            `bullwhip`,
+			`essence_ring`,
+            `spider_legs`,
+            `psychic_headband`,
+			`ceremonial_robe`,
+            `ninja_gear`,
+            `trickster_cloak`,
+			`spell_prism`,
+			`timeless_relic`,
+            `force_boots`,
+            `seer_stone`,
+			`mirror_shield`,
           ],
         },
         item_tooltips: {
           ward_sentry: "To block the pull camps.",
-          magic_stick:
-            "Start with it if you expect high frequency of spells being used on the lane.",
+          magic_wand:
+            `Start with magic stick if you expect high frequency of spells being used on the lane. Replace the circlet and branch/clarity for it.`,
           ring_of_basilius:
             "If your laning partner also uses a lot of mana early.",
           infused_raindrop: "Against magical burst.",
@@ -6505,7 +6606,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       aeon_disk:
         "Gives you a second chance to survive and get your Black Hole off.",
     },
-    combo: [],
+    combo: [
+		`enigma_demonic_conversion`,
+		`black_king_bar`,
+		`blink`,
+		`enigma_midnight_pulse`,
+		`enigma_black_hole`,
+		`enigma_malefice`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -12974,11 +13082,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Good spell to save a teammate from physical attacks. Also a very effective way of pushing a wave very fast.",
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
-      infused_raindrop: "Against magical burst.",
       magic_wand:
-        "A core item. Activating it under Ghost Shroud results in a huge burst of healing and mana.",
+        `Start with magic stick if you expect high frequency of spells being used on the lane. Replace the circlet for it.`,
+      infused_raindrop: "Against magical burst.",
       hood_of_defiance:
         "A core item that makes you less susceptible to magical damage, especially under the effect of the Ghost Shroud.",
       guardian_greaves:
