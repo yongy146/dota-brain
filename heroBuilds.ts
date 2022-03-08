@@ -1286,7 +1286,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "axe_berserkers_call",
           "axe_berserkers_call",
           "axe_berserkers_call",
-          "special_bonus_magic_resistance_12",
+          "special_bonus_movement_speed_20",
           "axe_culling_blade",
           "axe_battle_hunger",
           "axe_battle_hunger",
@@ -1618,21 +1618,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "batrider_firefly",
           "batrider_firefly",
           "batrider_firefly",
-          "special_bonus_spell_amplify_5",
+          "special_bonus_unique_batrider_7",
           "batrider_flaming_lasso",
           "batrider_flamebreak",
           "batrider_flamebreak",
+          "special_bonus_movement_speed_25",
+          "batrider_flamebreak",
+          "special_bonus_attributes",
+          "batrider_flaming_lasso",
+          "special_bonus_attributes",
           "special_bonus_unique_batrider_4",
-          "batrider_flamebreak",
-          "special_bonus_attributes",
-          "batrider_flaming_lasso",
-          "special_bonus_attributes",
-          "special_bonus_movement_speed_30",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
-          "special_bonus_unique_batrider_6",
+          "special_bonus_unique_batrider_2",
         ],
         items: {
           starting: [
@@ -1720,21 +1720,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "batrider_firefly",
           "batrider_firefly",
           "batrider_firefly",
-          "special_bonus_spell_amplify_5",
+          "special_bonus_unique_batrider_7",
           "batrider_flaming_lasso",
           "batrider_flamebreak",
           "batrider_flamebreak",
+          "special_bonus_movement_speed_25",
+          "batrider_flamebreak",
+          "special_bonus_attributes",
+          "batrider_flaming_lasso",
+          "special_bonus_attributes",
           "special_bonus_unique_batrider_4",
-          "batrider_flamebreak",
-          "special_bonus_attributes",
-          "batrider_flaming_lasso",
-          "special_bonus_attributes",
-          "special_bonus_movement_speed_30",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
-          "special_bonus_unique_batrider_6",
+          "special_bonus_unique_batrider_1",
         ],
         items: {
           starting: [
@@ -1798,9 +1798,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      sticky_napalm:
+      batrider_sticky_napalm:
         "Make sure you also use this spell on the creeps as it increases your right click damage which Batrider lacks.",
-      firefly:
+      batrider_firefly:
         "Your main farming spell. Try killing multiple waves or neutral camps with one usage.",
     },
 
@@ -2081,7 +2081,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes",
           "bloodseeker_rupture",
           "special_bonus_attributes",
-          "special_bonus_hp_400",
+          "special_bonus_unique_bloodseeker_3",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
@@ -2177,7 +2177,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
-          "special_bonus_unique_bloodseeker",
+          "special_bonus_unique_bloodseeker_rupture_charges",
         ],
         items: {
           starting: [
@@ -2231,9 +2231,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      blood_bath:
+      bloodseeker_blood_bath:
         "On the lane use this spell to secure the range creep lasthit.",
-      rupture:
+      bloodseeker_rupture:
         "Use Rupture on a highly mobile target to prevent them from being elusive.",
     },
     item_tooltips: {
@@ -3237,8 +3237,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_chaos_knight_5", // 25
         ],
         ability_tooltips: {
-          chaos_knight_chaos_reality_rift:
-            "You can take this on level 2 instead of level 3 if you have a strong lane partner or tri-lane in order to get kills.",
+          /*chaos_knight_chaos_reality_rift:
+            "You can take this on level 2 instead of level 3 if you have a strong lane partner or tri-lane in order to get kills.",*/
           chaos_knight_phantasm:
             "In the early game you should be using this ability off-cooldown in order to farm faster and push out waves. Only keep this ready if you think a fight will break out soon.",
         },
@@ -3303,7 +3303,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
         },
         item_tooltips: {
-          stick:
+          magic_stick:
             "If you are laning against a hero that spams alot of spells in the lane (eg. Bristleback/Batrider) then you should start with a stick.",
           bracer: "Don`t get more than two bracers",
           soul_ring: "Get this instead of bracers or with 1 bracer.",
@@ -5535,7 +5535,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that allows you to shoot from further away. Can be upgrade to Pike against gap-closing heroes.",
       manta:
         "Good farming item for drow but better when you are playing aginast silences or annoying debuffs/roots.",
-      sange_and_yash:
+      sange_and_yasha:
         "A good alternative to manta if you are playing against alot of illusion clear and feel the extra hp will help you survive.",
       black_king_bar:
         "Try to get bkb as late as possible but keep in mind that many games you will need to get it quite early if you want to take engagements.",
@@ -5932,7 +5932,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "elder_titan_earth_splitter", // 12
           "elder_titan_ancestral_spirit", // 13
           "elder_titan_ancestral_spirit", // 14
-          "special_bonus_attack_speed_20", // 15
+          "special_bonus_attack_speed_25", // 15
           "special_bonus_unique_elder_titan", // 16
           "special_bonus_attributes", // 17
           "elder_titan_earth_splitter", // 18
@@ -5987,8 +5987,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_movement_speed_15:
-        "At level 15, you should skill the level 15 talent first and then the level 10 talent. The dota client system disallows me to indicate that in the graphics above.",
+      /*special_bonus_movement_speed_15:
+        "At level 15, you should skill the level 15 talent first and then the level 10 talent. The dota client system disallows me to indicate that in the graphics above.",*/
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
@@ -6171,7 +6171,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       "ember_spirit_flame_guard",
       "ember_spirit_sleight_of_fist",
       "ember_spirit_searing_chains",
-      "ember_spirit_fire_remanant",
+      "ember_spirit_fire_remnant",
     ],
     counter_items: {
       laning_phase: {
@@ -8241,7 +8241,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       juggernaut_healing_ward:
         "You can skill Healing Ward at level two if you are being pressured.",
       juggernaut_blade_dance: `Some players prefer taking stats over leveling Blade Dance past level one. It slows your farm a bit but makes you tankier.`,
-      special_bonus_attack_speed_20: `You can take the other level 15 talent if the enemy team has long range nukers like Tinker who find it difficult to destroy your Healing Ward.`,
+      /*special_bonus_attack_speed_20: `You can take the other level 15 talent if the enemy team has long range nukers like Tinker who find it difficult to destroy your Healing Ward.`,*/
     },
     item_tooltips: {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane. Replace your slippers and circlet for it.`,
@@ -9698,7 +9698,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core boots upgrade that helps with mana sustain. Can be disasembled and Energy Booster used for Aether Lens. Upgrading the remaining boots to Tranquil boots is advised.",
           aether_lens:
             "A core item that allows you to cast spells and items from further away.",
-          cylcone: "A core item that allows you to setup Light Strike Array.",
+          cyclone: "A core item that allows you to setup Light Strike Array.",
           ultimate_scepter:
             "A core item that turns Laguna Blade damage type to pure and allows it pierce spell-immunity. Goes well with Aghanim`s Shard.",
           aghanims_shard:
@@ -11513,7 +11513,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "meepo_poof", // 7
           "meepo_earthbind", // 8
           "meepo_earthbind", // 9
-          "special_bonus_attack_base_damage_20", // 10
+          "special_bonus_strength_6", // 10
           "meepo_divided_we_stand", // 11
           "meepo_earthbind", // 12
           "meepo_earthbind", // 13
@@ -12452,7 +12452,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_force_of_nature", // 7
           "furion_teleportation", // 8
           "furion_teleportation", // 9
-          "special_bonus_attack_damage_20", // 10
+          "special_bonus_unique_furion_6", // 10
           "furion_teleportation", // 11
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
@@ -12558,7 +12558,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_force_of_nature", // 7
           "furion_teleportation", // 8
           "furion_teleportation", // 9
-          "special_bonus_attack_damage_20", // 10
+          "special_bonus_unique_furion_6", // 10
           "furion_teleportation", // 11
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
@@ -12922,7 +12922,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "necrolyte_heartstopper_aura", // 8
           "necrolyte_heartstopper_aura", // 9
           "necrolyte_sadist", // 10
-          "special_bonus_strength_6", // 11
+          "special_bonus_unique_necrophos_6", // 11
           "necrolyte_reapers_scythe", // 12
           "necrolyte_sadist", // 13
           "necrolyte_sadist", // 14
@@ -13654,14 +13654,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "omniknight_purification", // 1
-          "omniknight_repel", // 2
+          "omniknight_hammer_of_purity", // 2
           "omniknight_purification", // 3
-          "omniknight_repel", // 4
+          "omniknight_hammer_of_purity", // 4
           "omniknight_purification", // 5
           "omniknight_guardian_angel", // 6
           "omniknight_purification", // 7
-          "omniknight_repel", // 8
-          "omniknight_repel", // 9
+          "omniknight_hammer_of_purity", // 8
+          "omniknight_hammer_of_purity", // 9
           "special_bonus_unique_omniknight_5", // 10
           "omniknight_degen_aura", // 11
           "omniknight_guardian_angel", // 12
@@ -14254,7 +14254,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "pangolier_gyroshell", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_strength_18", // 20
+          "special_bonus_strength_20", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -14348,7 +14348,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "pangolier_gyroshell", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_strength_18", // 20
+          "special_bonus_strength_20", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -15215,7 +15215,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
         },
         item_tooltips: {
-          helm_of_the_iron_will:
+          helm_of_iron_will:
             "Good laning sustain item that can go into Armlet down the road.",
           armlet: "A good early game item that increases your damage output.",
           phase_boots: "A core boots upgrade for gap-closing.",
@@ -16900,7 +16900,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "riki_smoke_screen", // 8
           "riki_smoke_screen", // 9
           "riki_smoke_screen", // 10
-          "special_bonus_strength_8", // 11
+          "special_bonus_unique_riki_7", // 11
           "riki_backstab", // 12
           "riki_tricks_of_the_trade", // 13
           "riki_tricks_of_the_trade", // 14
@@ -17548,7 +17548,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "nevermore_shadowraze1", // 7
           "nevermore_necromastery", // 8
           "nevermore_requiem", // 9
-          "special_bonus_spell_amplify_8", // 10
+          "special_bonus_unique_nevermore_7", // 10
           "nevermore_dark_lord", // 11
           "nevermore_requiem", // 12
           "nevermore_dark_lord", // 13
@@ -19145,7 +19145,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "spectre_haunt", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_hp_400", // 20
+          "special_bonus_hp_350", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -19540,13 +19540,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "storm_spirit_static_remnant", // 7
           "storm_spirit_overload", // 8
           "storm_spirit_overload", // 9
-          "special_bonus_mp_regen_250", // 10
+          "special_bonus_mp_regen_175", // 10
           "storm_spirit_overload", // 11
           "storm_spirit_ball_lightning", // 12
           "storm_spirit_electric_vortex", // 13
           "storm_spirit_electric_vortex", // 14
           "storm_spirit_electric_vortex", // 15
-          "special_bonus_attack_speed_25", // 16
+          "special_bonus_unique_storm_spirit_5", // 16
           "special_bonus_attributes", // 17
           "storm_spirit_ball_lightning", // 18
           "special_bonus_attributes", // 19
@@ -19858,24 +19858,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699933135",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "techies_suicide", // 1
-          "techies_land_mines", // 2
-          "techies_land_mines", // 3
-          "techies_stasis_trap", // 4
-          "techies_land_mines", // 5
-          "techies_remote_mines", // 6
-          "techies_land_mines", // 7
+          "techies_sticky_bomb", // 1
+          "techies_suicide", // 2
+          "techies_sticky_bomb", // 3
+          "techies_suicide", // 4
+          "techies_sticky_bomb", // 5
+          "techies_land_mines", // 6
+          "techies_sticky_bomb", // 7
           "techies_suicide", // 8
           "techies_suicide", // 9
-          "techies_suicide", // 10
+          "techies_reactive_tazer", // 10
           "special_bonus_magic_resistance_20", // 11
-          "techies_remote_mines", // 12
-          "techies_stasis_trap", // 13
-          "techies_stasis_trap", // 14
+          "techies_land_mines", // 12
+          "techies_reactive_tazer", // 13
+          "techies_reactive_tazer", // 14
           "special_bonus_unique_techies", // 15
-          "techies_stasis_trap", // 16
+          "techies_reactive_tazer", // 16
           "special_bonus_attributes", // 17
-          "techies_remote_mines", // 18
+          "techies_land_mines", // 18
           "special_bonus_attributes", // 19
           "special_bonus_unique_techies_5", // 20
           "special_bonus_attributes", // 21
@@ -20330,12 +20330,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "terrorblade_conjure_image", // 7
           "terrorblade_sunder", // 8
           "terrorblade_metamorphosis", // 9
-          "special_bonus_evasion_16", // 10
+          "special_bonus_unique_terrorblade_4", // 10
           "terrorblade_metamorphosis", // 11
           "terrorblade_sunder", // 12
           "terrorblade_reflection", // 13
           "terrorblade_reflection", // 14
-          "special_bonus_hp_275", // 15
+          "special_bonus_hp_300", // 15
           "terrorblade_reflection", // 16
           "special_bonus_attributes", // 17
           "terrorblade_sunder", // 18
@@ -21960,19 +21960,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "abyssal_underlord_atrophy_aura", // 3
           "abyssal_underlord_firestorm", // 4
           "abyssal_underlord_firestorm", // 5
-          "abyssal_underlord_dark_rift", // 6
+          "abyssal_underlord_dark_portal", // 6
           "abyssal_underlord_firestorm", // 7
           "abyssal_underlord_pit_of_malice", // 8
           "abyssal_underlord_pit_of_malice", // 9
           "abyssal_underlord_pit_of_malice", // 10
           "abyssal_underlord_pit_of_malice", // 11
-          "abyssal_underlord_dark_rift", // 12
+          "abyssal_underlord_dark_portal", // 12
           "special_bonus_unique_underlord_8", // 13
           "abyssal_underlord_atrophy_aura", // 14
           "special_bonus_unique_underlord_5", // 15
           "abyssal_underlord_atrophy_aura", // 16
           "special_bonus_attributes", // 17
-          "abyssal_underlord_dark_rift", // 18
+          "abyssal_underlord_dark_portal", // 18
           "special_bonus_attributes", // 19
           "special_bonus_unique_underlord_4", // 20
           "special_bonus_attributes", // 21
@@ -22032,8 +22032,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       abyssal_underlord_firestorm:
         "You can skill this spell on level 1 instead of the suggested Atrophy Aura if you have a tough match-up.",
-      abyssal_underlord_dark_rift:
-        "You can opt not to skill this spell on level 6 in favor of other spells. I find this spell useful as a reset tool and allows more aggressive waveclearing.",
+      /*abyssal_underlord_dark_rift:
+        "You can opt not to skill this spell on level 6 in favor of other spells. I find this spell useful as a reset tool and allows more aggressive waveclearing.",*/
     },
     item_tooltips: {
       magic_stick:
@@ -22932,7 +22932,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "viper_viper_strike", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_attack_damage_70", // 20
+          "special_bonus_unique_viper_2", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -23031,7 +23031,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "viper_viper_strike", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_attack_damage_70", // 20
+          "special_bonus_unique_viper_2", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
