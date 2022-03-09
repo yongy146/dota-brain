@@ -7034,7 +7034,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Gyrocopter: {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -7077,63 +7077,79 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "slippers",
-            "faerie_fire",
-            "magic_stick",
+            "slippers",
+            "magic_stick"
           ],
           early_game: [
             "power_treads",
             "magic_wand",
             "wraith_band",
-            "falcon_blade",
+            "falcon_blade"
           ],
           mid_game: [
             "lesser_crit",
             "ultimate_scepter",
             "dragon_lance",
-            "sange_and_yasha",
+            "black_king_bar"
           ],
           late_game: ["satanic", "greater_crit", "skadi", "butterfly"],
           situational: [
             "infused_raindrop",
-            "black_king_bar",
             "monkey_king_bar",
             "silver_edge",
             "mjollnir",
+            "swift_blink",
+            "sphere",
+            "sange_and_yasha"
           ],
-          core: ["power_treads", "lesser_crit", "ultimate_scepter", "satanic"],
+          core: ["black_king_bar", "lesser_crit", "ultimate_scepter", "satanic", "greater_crit"],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
             "quicksilver_amulet",
+            "ring_of_aquila",
             "paladin_sword",
+            "elven_tunic",
             "mind_breaker",
             "the_leveller",
-            "penta_edged_sword",
-            "desolator_2",
+            "ninja_gear",
+            "apex",
+            "mirror_shield",
             "ex_machina",
           ],
         },
         ability_tooltips: {
           gyrocopter_rocket_barrage:
-            "You can optionally skill +2 attributes over this spell.",
+            "You can also not level this spell and instead level stats. Upside is faster farming in the early game and more survivability, Downside is that you have less damage in the lane and early game fights.",
+          gyrocopter_homing_missle:
+            "You should use this spell to secure ranged creeps in the laning stage, by timing the missle as ranged creeps get low.",
+          gyrocopter_flak_cannon:
+            "This is your main tool for farming throught out the game so use it off cooldown, but rememeber that you need it for fights too."
         },
         item_tooltips: {
+          magic_stick:
+            "If you are laning against enemies that spam alot of spells start with this item.(eg. batrider/bristleback)",
+          wraith_band:
+            "Decent stats in the lane and early game and double the stats 25:00mins+ ;)",
+          falcon_blade:
+            "You can get this item if you feel you're having mana issues, Decent item overall",
           power_treads:
-            "A core boots upgrade that provides you with attack speed and mana savings through toggling.",
-          dragon_lance:
-            "Can be disasembled for Ogre Axe that can be used for next item.",
+            "You want to get PT as fast as possibe to increase farming speed and strenght in the lane.",
           lesser_crit:
-            "A core item that speeds up your farm. Goes well Aghanim`s Scepter side-gunner.",
+            "A core item that speeds up your farm. Goes well with Aghanim`s Scepter side-gunner.",
           ultimate_scepter:
             "A core item that significantly increases your dps. The side-gunner can also fire while you are disabled and all attack modifiers apply as well.",
           black_king_bar:
-            "Against a lot of disables, magical damage and as a dispel.",
+            "In most games you'll need this in order to take engagements so usually you'll get it 2nd/3rd item, but if you can get away with not buying it early it will pay off.",
           satanic:
             "A core item that provides you with sustain and dispel. Works well with Aghanim`s Scepter.",
-          silver_edge: "For break effect and to reposition.",
-          monkey_king_bar: "Against evasion.",
-          mjollnir: "Great against illusion based heroes.",
+          silver_edge: 
+            "For break effect and to reposition.",
+          monkey_king_bar: 
+            "Against evasion.",
+          mjollnir: 
+            "Great against illusion based heroes.",
         },
       },
       {
@@ -9414,7 +9430,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lifestealer: {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9456,11 +9472,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
-            "branches",
-            "faerie_fire",
-            "orb_of_venom",
-            "circlet",
-            "magic_stick",
+            "gauntlets",
+            "iron_branch",
+            "iron_branch",
           ],
           early_game: [
             "helm_of_iron_will",
@@ -9468,9 +9482,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "armlet",
             "magic_wand",
             "orb_of_corrosion",
+            "bracer"
           ],
           mid_game: [
             "sange",
+            "eye_of_skadi",
             "sange_and_yasha",
             "basher",
             "desolator",
@@ -9492,8 +9508,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "nullifier",
             "black_king_bar",
             "blink",
+            "swift_blink",
+            "orchid_malevolence",
+            "bloodthorn"
           ],
-          core: ["phase_boots", "armlet", "sange_and_yasha", "basher"],
+          core: ["armlet", "sange","sange_and_yasha", "basher", "skadi", "satanic",],
           neutral: [
             "chipped_vest",
             "broom_handle",
@@ -9512,28 +9531,46 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       life_stealer_rage:
         "You can put a first point in this spell earlier than suggested if you need to dispel or disjoint the spell.",
+      life_stealer_feast:
+        "Really good for trading and sustaining hp during the laning stage, make sure to trade with opponent for harras and sustain.",
+      life_stealer_ghoul_frenzy:
+        "Helps with early game farming speed, Max as soon as possible.",
+      life_stealer_infest:
+        "Will save you alot in alot of games towards the end of the laning stage. Make sure to pick a mobile teammate to infest that can iniate for you."
+        
     },
     item_tooltips: {
-      orb_of_venom: "If you can pressure on the lane.",
+      orb_of_venom: 
+        "If you can pressure on the lane. Can upgrade to orb of corrosion if you choose to go this route.",
       magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+        "Start with it if you expect high frequency of spells being used on the lane (eg. batrider/bristleback).",
       helm_of_iron_will:
-        "On rough lane, you can rush this component of Armlet that solves your hp sustain issues.",
-      phase_boots: "A core boots upgrade that helps you to gap close quicker.",
-      orb_of_corrosion: "If you can pressure on the lane.",
-      armlet: "A core item that provides you with useful stats and burst.",
-      sange_and_yasha:
-        "A core item that gives you a mix of offensive and defensive stats. Heal amplification from Sange works well with Feast and Infest.",
-      heavens_halberd: "Especially good against ranged right-clickers.",
-      basher: "A core item that allows you to lock down the target.",
+        "On high harras lanes(mostly ranged heroes), you can rush this component of Armlet that solves your hp sustain issues.",
+      phase_boots: 
+        "The earlier you get this in the lane the more effective it will be.",
+      bracer:
+        "Good stats early and double after 25:00min ;)",
+      armlet: 
+        "A core item that provides you with useful stats and burst.",
+      sange:
+        "Can buy a value sange after armlet for great survivability, And then you have many options (eg. sange&yasha, eye of skadi, satanic, desolater etc.) ",
+      skadi:
+        "Really good stats and lockdown against enemy heroes, I highly recommend this 3rd/4th item.",
+      heavens_halberd: 
+        "Must have against some physical damage heroes (eg. templar assassin/Ursa).",
+      basher: 
+        "A core item that allows you to lock down the target.",
       aghanims_shard:
         "Not a particularly great upgrade. You will most of the time get it from Roshan.",
       monkey_king_bar: "Against evasion.",
-      silver_edge: "For break effect and to reposition quickly.",
-      nullifier: "To dispel defensive spells and items.",
+      silver_edge: 
+        "For break effect and to reposition quickly.",
+      nullifier: 
+        "To dispel defensive spells and items.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel. Use it after Rage.",
-      blink: "To close the gap.",
+      blink: 
+        "To close the gap, also good against annoying lockdown spells to dodge (eg. Chrono/Blackhole)",
     },
     combo: [],
     counter_items: {
@@ -10030,7 +10067,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Lone Druid": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10046,17 +10083,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "lone_druid_spirit_bear", // 3
           "lone_druid_spirit_link", // 4
           "lone_druid_spirit_bear", // 5
-          "lone_druid_spirit_link", // 6
-          "lone_druid_spirit_link", // 7
-          "lone_druid_spirit_bear", // 8
-          "lone_druid_savage_roar", // 9
-          "lone_druid_true_form", // 10
-          "special_bonus_hp_200", // 11
+          "lone_druid_true_form", // 6
+          "lone_druid_spirit_bear", // 7
+          "lone_druid_spirit_link", // 8
+          "lone_druid_spirit_link", // 9
+          "lone_druid_savage_roar", // 10
+          "lone_druid_savage_roar", // 11
           "lone_druid_true_form", // 12
           "lone_druid_savage_roar", // 13
-          "lone_druid_savage_roar", // 14
-          "lone_druid_savage_roar", // 15
-          "special_bonus_unique_lone_druid_4", // 16
+          "special_bonus_unique_lone_druid_11", // 14
+          "special_bonus_unique_lone_druid_4", // 15
+          "lone_druid_savage_roar", // 16
           "special_bonus_attributes", // 17
           "lone_druid_true_form", // 18
           "special_bonus_attributes", // 19
@@ -10068,13 +10105,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_lone_druid_10", // 25
         ],
         items: {
-          starting_bear: ["quelling_blade", "blight_stone", "orb_of_venom"],
+          starting_bear: ["quelling_blade", "blight_stone", "branches", "branches"],
           starting: [
             "tango",
-            "branches",
-            "faerie_fire",
-            "ward_observer",
-            "magic_stick",
+            "ward_observer"
           ],
           core_bear: [
             "orb_of_corrosion",
@@ -10084,7 +10118,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "basher",
             "assault",
           ],
-          core: ["boots", "aghanims_shard"],
+          core: [
+            "boots",
+            "aghanims_shard",
+            "wraith",
+            "magic_wand"
+          ],
           situational_bear: [
             "hand_of_midas",
             "maelstrom",
@@ -10095,6 +10134,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "abyssal_blade",
             "moon_shard",
             "silver_edge",
+            "butterfly"
           ],
           situational: [
             "buckler",
@@ -10135,7 +10175,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       lone_druid_savage_roar:
         "You can skill this spell earlier than suggested if you are being pressured or expect to be ganked. It comes at the cost of slowing your farming speed a bit.",
       lone_druid_true_form:
-        "You can skill this spell earlier than suggested if you are being pressured or expect to be ganked. It comes at the cost of slowing your farming speed a bit.",
+        "You can level this abit later if you feel like you are under no pressure and have a low chance of getting ganked."
     },
     item_tooltips: {
       orb_of_venom:
@@ -10144,7 +10184,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       orb_of_corrosion:
         "A core item that allows Bear to dish out more damage and be kitted less.",
-      phase_boots: "A core boots upgrade that allows Bear to gap-close faster.",
+      phase_boots: 
+        "A core boots upgrade that allows Bear to gap-close faster.",
       mask_of_madness:
         "A core item that allows you to farm quicker with Bear but also allows you to burst heroes and buildings.",
       desolator:
@@ -10157,10 +10198,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that goes well with minus armor theme and breaking buildings.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel. Helps with ratting.",
-      aghanims_shard: "A core item for hero to buff allies and dispel.",
-      solar_crest: "A buff to Bear to increase its dps.",
-      refresher: "For extra Bear charge in very late game.",
-      ultimate_scepter: "Amazing for split-pushing and ratting.",
+      aghanims_shard: 
+        "A core item for hero to buff allies and dispel.",
+      solar_crest: 
+        "A buff to Bear to increase its dps.",
+      refresher: 
+        "For an extra Bear charge in the very late game.",
+      ultimate_scepter: 
+        "Amazing for split-pushing and ratting. If you feel you cannot take fights or are slot-maxxed.",
+      ghost:
+        "Against high physical damage heroes (eg. ursa/templar assassin)"
     },
     combo: [],
     counter_items: {
