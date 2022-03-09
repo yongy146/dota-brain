@@ -8269,7 +8269,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "meepo_divided_we_stand" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Meepo",
     audioFile: "ownHero/Meepo_2_Farm fast",
@@ -8278,7 +8278,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Meepo farms really fast. Focus on pushing out waves, optimizing farming routes and stacking.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "meepo_poof" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Meepo",
@@ -8294,7 +8294,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Meepo_4_Gank items",
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Once you have Blink Dagger or Ethereal Blade, look for pick-offs.",
+      `Once you have Blink Dagger and dragon lance, look for pick-offs.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "blink" },
   },
@@ -10028,7 +10028,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "You will typically be a top priority target for opponents as you can save others. Be mindful about your positioning.",
+      `You will typically be a top priority target for opponents as you can save others. So be mindful of your positioning.`,
     audience: [Audience.ALL],
   },
   {
@@ -10037,7 +10037,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Outworld Destroyer_6_Arcane Orb Roshan",
     messageTime: 16 * 60 + 30,
     textMessage:
-      "Arcane Orb works on Roshan so you only need someone to tank for you.",
+      `Arcane Orb works on Roshan. So you can take it early with an ally tanking for you.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -10161,9 +10161,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Pangolier",
     audioFile: "ownHero/Pangolier_8_Roshan",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20 as it allows you to escape roots and leashes, among other things.",
+      `Pick up Aghanims Shard at minute 15 as it allows you to escape roots and leashes, among other things.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -14614,7 +14614,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tinker_7_Cant join",
     messageTimes: [10 * 60 + 15, 17 * 60 + 15],
     textMessage:
-      "Alert your teammates not to fight on the spots where you can't join them quickly.",
+      `Alert your teammates to not fight at places where you cannot join them quickly.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "tinker_keen_teleport" },
   },
@@ -16042,7 +16042,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "wind_lace" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_4_Nethertoxin usage",
@@ -16051,7 +16051,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Viper is insanely slow. Consider getting a casual Wind Lace and perhaps even Boots of Travel in the long run.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "viper_nethertoxin" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Viper",
@@ -16076,9 +16076,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_7_Aghanims Shard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 to further increase your dps and building damage.",
+      `Pick up Aghanims Shard around minute 15 to further increase your dps and building damage.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16192,9 +16192,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Visage",
     audioFile: "ownHero/Visage_7_Aghanims Shard",
-    messageTime: 15 * 60 + 30,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it allows you to survive jumps and provides another stun.",
+      `Pick up Aghanims Shard later in the game as it allows you to survive jumps and provides another stun.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
