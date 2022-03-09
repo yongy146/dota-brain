@@ -1,6 +1,6 @@
 /**
  *
- * HELLO BANE
+ * 
  *
  * heroBuilds.ts contains the ability and items builds for all Dota 2 heroes. Each hero can have several builds.
  *
@@ -21,7 +21,7 @@
  *
  * Copyright Dota Coach, 2022
  *
- * SMALL CHANGE
+ * 
  *
  */
 //import { Ultimate } from "../../src/app/ultimate/ultimate";
@@ -19451,7 +19451,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "spectre_haunt", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_hp_400", // 20
+          "special_bonus_hp_350", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -19502,7 +19502,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "chipped_vest",
             "possessed_mask",
             "vambrace",
-            "ring_of_aquilla",
+            "ring_of_aquila",
             "pupils_gift",
             "mind_breaker",
             "elven_tunic",
@@ -19546,7 +19546,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       nullifier:
         "To dispel defensive spells and items that prevent your from right-clicking the opponent.",
     },
-    combo: [`spectre_haunt`, `spectre_reality`, `manta`, `diffusal`],
+    combo: [`spectre_haunt`, `spectre_reality`, `manta`, `diffusal_blade`],
     counter_items: {
       laning_phase: { all: [], support: [], core: [] },
       mid_game: {
