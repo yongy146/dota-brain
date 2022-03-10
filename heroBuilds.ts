@@ -1,6 +1,6 @@
 /**
  *
- * 
+ *
  *
  * heroBuilds.ts contains the ability and items builds for all Dota 2 heroes. Each hero can have several builds.
  *
@@ -21,7 +21,7 @@
  *
  * Copyright Dota Coach, 2022
  *
- * 
+ *
  *
  */
 //import { Ultimate } from "../../src/app/ultimate/ultimate";
@@ -20230,13 +20230,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "flask",
             "faerie_fire",
-            "gauntlets", 
+            "gauntlets",
             "magic_stick",
             "ward_observer",
             "ward_sentry",
-           
           ],
-          early_game: ["null_talisman", "soul_ring", "tranquil_boots", "arcane_boots"],
+          early_game: [
+            "null_talisman",
+            "soul_ring",
+            "tranquil_boots",
+            "arcane_boots",
+          ],
           mid_game: [
             "aether_lens",
             "veil_of_discord",
@@ -20246,7 +20250,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "glimmer_cape",
             "ghost",
           ],
-          late_game: [ "octarine_core", "sheepstick", "bloodstone" ],
+          late_game: ["octarine_core", "sheepstick", "bloodstone"],
           situational: ["infused_raindrop", "cyclone", "blink", "aeon_disk"],
           core: [
             "soul_ring",
@@ -20256,7 +20260,91 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "ethereal_blade",
             "octarine_core",
-            
+          ],
+          neutral: [
+            "arcane_ring",
+            "keen_optic",
+            "philosophers_stone",
+            "bullwhip",
+            "psychic_headband",
+            "ceremonial_robe",
+            "spell_prism",
+            "timeless_relic",
+            "stormcrafter",
+            "seer_stone",
+            "demonicon",
+          ],
+        },
+      },
+      {
+        // INPUT MICHEL: GUIDE TO BE UPDATED BY BANE, NOW IT IS JUST A COPY OF THE OTHER GUIDE
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        steam_guide_id: 1646925148,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2776661467",
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        abilities: [
+          "techies_sticky_bomb", // 1
+          "techies_suicide", // 2
+          "techies_sticky_bomb", // 3
+          "techies_suicide", // 4
+          "techies_sticky_bomb", // 5
+          "techies_land_mines", // 6
+          "techies_sticky_bomb", // 7
+          "techies_suicide", // 8
+          "techies_suicide", // 9
+          "techies_reactive_tazer", // 10
+          "special_bonus_magic_resistance_20", // 11
+          "techies_land_mines", // 12
+          "techies_reactive_tazer", // 13
+          "techies_reactive_tazer", // 14
+          "special_bonus_unique_techies", // 15
+          "techies_reactive_tazer", // 16
+          "special_bonus_attributes", // 17
+          "techies_land_mines", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_techies_5", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_techies_4", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "flask",
+            "faerie_fire",
+            "gauntlets",
+            "magic_stick",
+            "ward_observer",
+            "ward_sentry",
+          ],
+          early_game: [
+            "null_talisman",
+            "soul_ring",
+            "tranquil_boots",
+            "arcane_boots",
+          ],
+          mid_game: [
+            "aether_lens",
+            "veil_of_discord",
+            "kaya",
+            "aghanims_shard",
+            "force_staff",
+            "glimmer_cape",
+            "ghost",
+          ],
+          late_game: ["octarine_core", "sheepstick", "bloodstone"],
+          situational: ["infused_raindrop", "cyclone", "blink", "aeon_disk"],
+          core: [
+            "soul_ring",
+            "tranquil_boots",
+            "veil_of_discord",
+            "aether_lens",
+            "aghanims_shard",
+            "ethereal_blade",
+            "octarine_core",
           ],
           neutral: [
             "arcane_ring",
@@ -20275,12 +20363,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      techies_sticky_bomb: "Use this spell on the laning stage to secure range creeps and harass. In the later portions of the game use this to slow the enemy and guarantee a Blast Off while they are slowed.",
-      techies_reactive_tazer: "Use this spell before jumping with Blast Off and disarm your opponents. That will make them unable to kill the Proximity Mine that you place under them.",
-      techies_suicide: 
-      "On the laning stage use this spell to secure a range creep as well as deal damage to the heroes. In the later portions of the game use this to silence/stun a target and following with Sticky Bomb and Proximity Mines.",
-      
-
+      techies_sticky_bomb:
+        "Use this spell on the laning stage to secure range creeps and harass. In the later portions of the game use this to slow the enemy and guarantee a Blast Off while they are slowed.",
+      techies_reactive_tazer:
+        "Use this spell before jumping with Blast Off and disarm your opponents. That will make them unable to kill the Proximity Mine that you place under them.",
+      techies_suicide:
+        "On the laning stage use this spell to secure a range creep as well as deal damage to the heroes. In the later portions of the game use this to silence/stun a target and following with Sticky Bomb and Proximity Mines.",
     },
     item_tooltips: {
       ward_sentry: "To block or unblock a pull camp.",
@@ -20289,17 +20377,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       soul_ring: "A core item that helps with mana sustain.",
       tranquil_boots:
         "A core boots upgrade that helps with hp sustain. Goes well with Soul Ring and offsets self-damage from Blast Off!",
-      travel_boots: "A good item that enables you to splitpush with Techies as he is very good at one-shotting creep waves.",
+      travel_boots:
+        "A good item that enables you to splitpush with Techies as he is very good at one-shotting creep waves.",
       infused_raindrop:
         "Against magical burst. It doesn`t offset Blast Off! damage.",
-      force_staff: "A saving tool for you and your teammates. Can be used to push an opponent into Proximity Mines.",
-      veil_of_discord: "A core item that provides you and your teammates with mana regen. Increases spell damage enemies take by 18% which synergizes well with your skill set.",
+      force_staff:
+        "A saving tool for you and your teammates. Can be used to push an opponent into Proximity Mines.",
+      veil_of_discord:
+        "A core item that provides you and your teammates with mana regen. Increases spell damage enemies take by 18% which synergizes well with your skill set.",
       kaya: "A core item that provides you with spell amplification as well as mana regen amplification. Should be upgraded into an Ethereal Blade later on.",
-      ethereal_blade: "A core item that increases the damage output of your hero. Can be used on a hero to disarm them so that they cant kill the Proximity Mine you place under them.",
+      ethereal_blade:
+        "A core item that increases the damage output of your hero. Can be used on a hero to disarm them so that they cant kill the Proximity Mine you place under them.",
       aether_lens:
         "A core item that improves cast range and mana regeneration. Can be upgraded to Octarine Core in late game.",
-      octarine_core: "A core item that increases your cast range as well as reducing the cooldown of your skills and items.",
-      aghanims_shard: "A core item that provides extra control and guarantees a land on your other spells.",
+      octarine_core:
+        "A core item that increases your cast range as well as reducing the cooldown of your skills and items.",
+      aghanims_shard:
+        "A core item that provides extra control and guarantees a land on your other spells.",
       bloodstone:
         "Increases your spell lifesteal by a big margin that synergizes well with your skill set. Can be activated when using spells to gain hp and mana back.",
       blink: "For extra mobility around the map.",
@@ -21085,9 +21179,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "gauntlets",
             "branches",
             "branches",
-            
           ],
-          early_game: ["soul_ring", "arcane_boots", "magic_wand", "hood_of_defiance" ],
+          early_game: [
+            "soul_ring",
+            "arcane_boots",
+            "magic_wand",
+            "hood_of_defiance",
+          ],
           mid_game: [
             "cyclone",
             "kaya_and_sange",
@@ -21140,14 +21238,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         },
       },
     ],
-    ability_tooltips: { 
+    ability_tooltips: {
       shredder_whirling_death:
-         "Make sure you hit trees when damaging your enemies as it will make more damage the more trees you destroy.",
+        "Make sure you hit trees when damaging your enemies as it will make more damage the more trees you destroy.",
       shredder_timber_chain:
         "In certain match-ups(Ursa, Slark), Reactive Armor doesn`t have much value. You can put a point in this spell on level 1 or 2 and secure lasthits.",
     },
     item_tooltips: {
-      orb_of_venom: "Consider buying this on a lane where you can right click the opponent and be very annoying to them. Can be upgraded to Orb of Corrosion to deal tower damage which Timber lacks.",
+      orb_of_venom:
+        "Consider buying this on a lane where you can right click the opponent and be very annoying to them. Can be upgraded to Orb of Corrosion to deal tower damage which Timber lacks.",
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       soul_ring: "A core item that provides useful stats and mana sustain.",
@@ -21499,14 +21598,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wind_waker",
             "sheepstick",
           ],
-          situational: [ "bottle", "spirit_vessel", "invis_sword" ,"lotus_orb", "black_king_bar"],
+          situational: [
+            "bottle",
+            "spirit_vessel",
+            "invis_sword",
+            "lotus_orb",
+            "black_king_bar",
+          ],
           core: [
             "tranquil_boots",
-            "blink", 
+            "blink",
             "ethereal_blade",
             "cyclone",
             "force_staff",
-           
           ],
           neutral: [
             "pogo_stick",
@@ -21586,7 +21690,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "ward_observer",
           ],
-          early_game: ["bottle","power_treads", "phase_boots", "magic_wand"],
+          early_game: ["bottle", "power_treads", "phase_boots", "magic_wand"],
           mid_game: [
             "blink",
             "echo_sabre",
@@ -21600,10 +21704,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "moon_shard",
             "overwhelming_blink",
             "swift_blink",
-            
           ],
-          situational: [ "hand_of_midas", "orchid" ,"monkey_king_bar", "sphere", "ultimate_scepter", "greater_crit" ],
-          core: [ 
+          situational: [
+            "hand_of_midas",
+            "orchid",
+            "monkey_king_bar",
+            "sphere",
+            "ultimate_scepter",
+            "greater_crit",
+          ],
+          core: [
             "power_treads",
             "blink",
             "echo_sabre",
@@ -21641,12 +21751,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item that allows you to initiate and burst an opponent with your combo, or save an ally by tossing him away.",
           echo_sabre:
             "A core item that further increases the burst potential of your combo. Improves farming speed. Can be disassembled down the road.",
-          hand_of_midas: "A situational item that provides attack speed and you mainly buy this if you feel the game has slowed down and will go the distance.",
-          orchid: "An situational item that gives you good stats as well as mana sustain. Can be taken against elusive heroes to prevent them to run away. Adds up a lot of damage with the Soul Burn. ",
+          hand_of_midas:
+            "A situational item that provides attack speed and you mainly buy this if you feel the game has slowed down and will go the distance.",
+          orchid:
+            "An situational item that gives you good stats as well as mana sustain. Can be taken against elusive heroes to prevent them to run away. Adds up a lot of damage with the Soul Burn. ",
           silver_edge:
             "A core item that adds to burst, mobility and applies break effect on hit.",
-          satanic: "A core item that provides you with good offensive stats. Also serves as a dispel.",
-          assault: "A core item that increases your attack speed and armor as Tiny lacks both.",
+          satanic:
+            "A core item that provides you with good offensive stats. Also serves as a dispel.",
+          assault:
+            "A core item that increases your attack speed and armor as Tiny lacks both.",
           sphere: "Against powerful single-target disables and debuffs.",
           black_king_bar:
             "A core item that allows you to deliver the damage while in the middle of the fight. The Grow ability provides you with a lot of physical resistance through armor and Black King Bar covers most of the spell damage and disables.",
@@ -21691,14 +21805,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "quelling_blade",
-            "tango", 
+            "tango",
             "gauntlets",
             "gauntlets",
             "branches",
             "branches",
             "wraith_band",
           ],
-          early_game: ["power_treads", "soul_ring", "magic_wand" ],
+          early_game: ["power_treads", "soul_ring", "magic_wand"],
           mid_game: [
             "echo_sabre",
             "silver_edge",
@@ -21708,12 +21822,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           late_game: [
             "assault",
-            "moon_shard",  
+            "moon_shard",
             "satanic",
             "swift_blink",
             "overwhelming_blink",
           ],
-          situational: [ "sange_and_yasha", "skadi" , "sphere", "bloodthorn", "butterfly", "monkey_king_bar" , "ultimate_scepter"],
+          situational: [
+            "sange_and_yasha",
+            "skadi",
+            "sphere",
+            "bloodthorn",
+            "butterfly",
+            "monkey_king_bar",
+            "ultimate_scepter",
+          ],
           core: [
             "power_treads",
             "echo_sabre",
@@ -21721,7 +21843,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "black_king_bar",
             "assault",
-            "satanic"
+            "satanic",
           ],
           neutral: [
             "broom_handle",
@@ -21763,12 +21885,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {},
     item_tooltips: {},
-    combo: [
-      `blink`,
-      `tiny_avalanche`,
-      `tiny_toss`,
-      `attack`,
-        ],
+    combo: [`blink`, `tiny_avalanche`, `tiny_toss`, `attack`],
     counter_items: {
       laning_phase: {
         all: [
@@ -21809,7 +21926,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         all: [
           { item: "sheepstick", info: "Against core Tiny" },
           { item: "ethereal_blade", info: "Against core Tiny" },
-          { item: "aeon_disk", info: "Prevents Tiny from doing a burst combo and killing you."}
+          {
+            item: "aeon_disk",
+            info: "Prevents Tiny from doing a burst combo and killing you.",
+          },
         ],
         support: [{ item: "black_king_bar" }],
         core: [

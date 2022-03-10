@@ -14,7 +14,6 @@ import dota2Heroes from "../../submodules/dota2/dota2Heroes.json";
 import * as DotaLogger from "../../src/utility/log";
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "../../submodules/dota2/playerRoles";
-//import { PLAYER_MICHEL } from "../../consts";
 import { UIItem, UIAbility } from "../../src/UI/dotaCoachUI";
 import * as DotaCoachUI from "../../src/UI/dotaCoachUI";
 
