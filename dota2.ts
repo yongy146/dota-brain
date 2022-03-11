@@ -1198,7 +1198,7 @@ export namespace hero_abilities {
     if (Object.prototype.hasOwnProperty.call(dota2Abilities, npcHeroName)) {
       for (const a of Object.keys(dota2Abilities[npcHeroName])) {
         if (a == talent) {
-          return dota2Abilities[npcHeroName];
+          return dota2Abilities[npcHeroName][a];
         }
       }
     }
