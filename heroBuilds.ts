@@ -20414,29 +20414,28 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_techies_4", // 25
         ],
         items: {
-          starting: [
-            "tango",
-            "branches",
-            "branches",
-            "branches",
-
+          starting: ["tango", "branches", "branches", "branches"],
+          early_game: ["crown", "veil_of_discord", "boots", "kaya"],
+          mid_game: ["aether_lens", "kaya", "ethereal_blade", "aghanims_shard"],
+          late_game: [
+            "octarine_core",
+            "sheepstick",
+            "bloodstone",
+            "arcane_blink",
+            "overwhelming_blink",
           ],
-          early_game: [
-           "crown",
-           "veil_of_discord",
-           "boots",
-           "kaya",
+          situational: [
+            "infused_raindrop",
+            "cyclone",
+            "eternal_shroud",
+            "black_king_bar",
+            "aeon_disk",
+            "sphere",
+            "heart",
+            "moon_shard",
           ],
-          mid_game: [
-            "aether_lens",
-            "kaya",
-            "ethereal_blade",
-            "aghanims_shard",
-          ],
-          late_game: ["octarine_core", "sheepstick", "bloodstone", "arcane_blink", "overwhelming_blink", ],
-          situational: ["infused_raindrop", "cyclone", "eternal_shroud", "black_king_bar", "aeon_disk", "sphere", "heart", "moon_shard",  ],
           core: [
-            "boots_of_travel",
+            "travel_boots",
             "veil_of_discord",
             "aether_lens",
             "aghanims_shard",
@@ -20488,7 +20487,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that improves cast range and mana regeneration. Can be upgraded to Octarine Core in late game.",
       octarine_core:
         "A core item that increases your cast range as well as reducing the cooldown of your skills and items.",
-      moon_shard: "Only purchase this item if you take your last 252 damage talent as your right clicks become way stronger and you can right click enemies.",
+      moon_shard:
+        "Only purchase this item if you take your last 252 damage talent as your right clicks become way stronger and you can right click enemies.",
       aghanims_shard:
         "A core item that provides extra control and guarantees a land on your other spells.",
       bloodstone:
@@ -22417,7 +22417,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             item: "magic_stick",
             info: "Troll Warlod tends to use Whirling Axes frequently to harass and kill creeps",
           },
-          
+
           {
             item: "wind_lace",
             info: "To keep the distance from Troll and offset the slow coming from Whirling Axes(Ranged)",
@@ -22501,13 +22501,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-           "boots",
-           "tango",
-           "flask",
-           "orb_of_venom",
-           "enchanted_mango",
-           "ward_sentry",
-
+            "boots",
+            "tango",
+            "flask",
+            "orb_of_venom",
+            "enchanted_mango",
+            "ward_sentry",
           ],
           early_game: [
             "phase_boots",
@@ -22528,7 +22527,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "force_staff",
             "glimmer_cape",
           ],
-          late_game: [ "boots_of_bearing", "wraith_pact", ],
+          late_game: ["boots_of_bearing", "wraith_pact"],
           situational: [
             "infused_raindrop",
             "spirit_vessel",
@@ -22538,7 +22537,102 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "heavens_halberd",
             "silver_edge",
             "desolator",
-            "ultimate_scepter"
+            "ultimate_scepter",
+          ],
+          core: [
+            "phase_boots",
+            "boots_of_bearing",
+            "blink",
+            "solar_crest",
+            "vladmir",
+          ],
+          neutral: [
+            "broom_handle",
+            "pogo_stick",
+            "bullwhip",
+            "dragon_scale",
+            "spider_legs",
+            "black_powder_bag",
+            "cloak_of_flames",
+            "trickster_cloak",
+            "ascetic_cap",
+            "book_of_shadows",
+            "force_field",
+          ],
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // NEW GUIDE
+        steam_guide_id: 1646986431,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2776954201",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "tusk_tag_team", // 1
+          "tusk_ice_shards", // 2
+          "tusk_snowball", // 3
+          "tusk_tag_team", // 4
+          "tusk_tag_team", // 5
+          "tusk_walrus_punch", // 6
+          "tusk_tag_team", // 7
+          "tusk_snowball", // 8
+          "tusk_snowball", // 9
+          "special_bonus_unique_tusk_3", // 10
+          "tusk_snowball", // 11
+          "tusk_walrus_punch", // 12
+          "tusk_ice_shards", // 13
+          "tusk_ice_shards", // 14
+          "tusk_ice_shards", // 15
+          "special_bonus_unique_tusk_2", // 16
+          "special_bonus_attributes", // 17
+          "tusk_walrus_punch", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_tusk_5", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_tusk_6", // 25
+        ],
+        items: {
+          starting: [
+            "boots",
+            "tango",
+            "flask",
+            "orb_of_venom",
+            "enchanted_mango",
+            "ward_sentry",
+          ],
+          early_game: [
+            "phase_boots",
+            "tranquil_boots",
+            "magic_wand",
+            "medallion_of_courage",
+            "urn_of_shadows",
+            "orb_of_corrosion",
+          ],
+          mid_game: [
+            "blink",
+            "solar_crest",
+            "ancient_janggo",
+            "aghanims_shard",
+            "vladmir",
+            "ghost",
+            "cyclone",
+            "force_staff",
+            "glimmer_cape",
+          ],
+          late_game: ["boots_of_bearing", "wraith_pact"],
+          situational: [
+            "infused_raindrop",
+            "spirit_vessel",
+            "lotus_orb",
+            "guardian_greaves",
+            "black_king_bar",
+            "heavens_halberd",
+            "silver_edge",
+            "desolator",
+            "ultimate_scepter",
           ],
           core: [
             "phase_boots",
@@ -22564,8 +22658,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      tusk_snowball: "Consider staying back and saving your teammates rather than initiating all the time. Could be an exceptionally useful skill against some heroes and stop their combo.",
-      tusk_walrus_punch: "Consider not using your ultimate after you have initiated so you can cancel a tp out while your teammates are closing in on the target."
+      tusk_snowball:
+        "Consider staying back and saving your teammates rather than initiating all the time. Could be an exceptionally useful skill against some heroes and stop their combo.",
+      tusk_walrus_punch:
+        "Consider not using your ultimate after you have initiated so you can cancel a tp out while your teammates are closing in on the target.",
     },
     item_tooltips: {
       orb_of_venom: "If you can pressure on the lane.",
@@ -22575,7 +22671,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       orb_of_corrosion:
         "If you can be aggressive on the lane. Armor reduction goes well with Tag Team and Walrush Punch!",
       infused_raindrop: "Against magical burst.",
-      tranquil_boots: "If you have a rough start. Should be upgraded into Boots Of Bearing down the road.",
+      tranquil_boots:
+        "If you have a rough start. Should be upgraded into Boots Of Bearing down the road.",
       phase_boots:
         "If you have a good start. Improves your roaming and gap-closing potential. The extra damage is multiplied by Walrus Punch!",
       spirit_vessel: "Against heavy-healing hero or lineup.",
@@ -22622,9 +22719,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "ghost" },
         ],
         core: [
-          {item: "blink_dagger", info: "To lure Tuskar deeper as he snowballs into you." },
-          {item: "hurricane_pike", info: "To use the active and get out of shards."}
-              ],
+          {
+            item: "blink",
+            info: "To lure Tuskar deeper as he snowballs into you.",
+          },
+          {
+            item: "hurricane_pike",
+            info: "To use the active and get out of shards.",
+          },
+        ],
       },
       late_game: { all: [], support: [], core: [{ item: "assault" }] },
     },
@@ -22675,7 +22778,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "gauntlets",
             "gauntlets",
             "branches",
-            "branches"
+            "branches",
           ],
           early_game: ["soul_ring", "phase_boots", "magic_wand"],
           mid_game: [
@@ -22683,22 +22786,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "hood_of_defiance",
             "vanguard",
             "solar_crest",
-            
           ],
-          late_game: [ "aghanims_shard", "shivas_guard", "octarine_core", "sheepstick" ],
+          late_game: [
+            "aghanims_shard",
+            "shivas_guard",
+            "octarine_core",
+            "sheepstick",
+          ],
           situational: [
             "guardian_greaves",
             "boots_of_bearing",
             "crimson_guard",
             "pipe",
             "cyclone",
-            "blademail",
+            "blade_mail",
             "blink",
             "eternal_shroud",
             "heavens_halberd",
             "black_king_bar",
             "lotus_orb",
-            
           ],
           core: [
             "soul_ring",
@@ -22706,7 +22812,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "hood_of_defiance",
             "rod_of_atos",
             "aghanims_shard",
-
           ],
           neutral: [
             "chipped_vest",
@@ -22731,7 +22836,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       abyssal_underlord_firestorm:
         "You can skill this spell on level 1 instead of the suggested Atrophy Aura if you have a tough match-up. Its very important that you use this before using Pit of Malice to get an extra wave hit.",
-        abyssal_underlord_dark_portal: "Consider not to skill this on level 6 so you can invest more skill points in other spells. As the game progresses your ulty becomes more valuable than earlier."
+      abyssal_underlord_dark_portal:
+        "Consider not to skill this on level 6 so you can invest more skill points in other spells. As the game progresses your ulty becomes more valuable than earlier.",
     },
     item_tooltips: {
       magic_stick:
@@ -22747,7 +22853,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
       black_king_bar:
         "Against disables, silences, magical damage and as a dispel.",
-      guardian_greaves: "An alternative to Phase boots that is good against roots, silences and slows. Very effective if you group up with your teammates early on.",
+      guardian_greaves:
+        "An alternative to Phase boots that is good against roots, silences and slows. Very effective if you group up with your teammates early on.",
       aghanims_shard:
         "A core upgrade of Firestorm that increases your overall damage significantly. You can use Firestorm on yourself and move around with it. Goes well with Firestorm talents and Eternal Shroud.",
       lotus_orb: "To reflect, dispel and armor.",
@@ -22787,7 +22894,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           },
         ],
         support: [],
-        core: [ { item: "orb_of_corrosion", info: "If you can apply pressure and run him down." }],
+        core: [
+          {
+            item: "orb_of_corrosion",
+            info: "If you can apply pressure and run him down.",
+          },
+        ],
       },
       mid_game: {
         all: [
