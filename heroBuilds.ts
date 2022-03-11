@@ -19708,8 +19708,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "spirit_breaker_nether_strike", // 12
           "spirit_breaker_bulldoze", // 13
           "spirit_breaker_bulldoze", // 14
-          "special_bonus_unique_spirit_breaker_2", // 15
-          "special_bonus_armor_4", // 16
+          "special_bonus_armor_4", // 15
+          "special_bonus_unique_spirit_breaker_2", // 16
           "special_bonus_attributes", // 17
           "spirit_breaker_nether_strike", // 18
           "special_bonus_attributes", // 19
@@ -19811,8 +19811,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "spirit_breaker_nether_strike", // 12
           "spirit_breaker_charge_of_darkness", // 13
           "spirit_breaker_charge_of_darkness", // 14
-          "special_bonus_unique_spirit_breaker_2", // 15
-          "special_bonus_armor_4", // 16
+          "special_bonus_armor_4", // 15
+          "special_bonus_unique_spirit_breaker_2", // 16
           "special_bonus_attributes", // 17
           "spirit_breaker_nether_strike", // 18
           "special_bonus_attributes", // 19
@@ -22600,8 +22600,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "gauntlets",
             "gauntlets",
             "branches",
-            "enchanted_mango"
-
+            "enchanted_mango",
           ],
           early_game: [
             "phase_boots",
@@ -22609,18 +22608,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_wand",
             "orb_of_corrosion",
             "medallion_of_courage",
-            
           ],
           mid_game: [
             "blink",
             "solar_crest",
-            "desolator", 
+            "desolator",
             "black_king_bar",
             "invis_sword",
-            
-
           ],
-          late_game: [ "silver_edge", "assault", "satanic", "greater_crit", "moon_shard" ],
+          late_game: [
+            "silver_edge",
+            "assault",
+            "satanic",
+            "greater_crit",
+            "moon_shard",
+          ],
           situational: [
             "infused_raindrop",
             "helm_of_the_dominator",
@@ -22635,7 +22637,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "orb_of_corrosion",
             "blink",
             "solar_crest",
-            "black_king_bar"
+            "black_king_bar",
           ],
           neutral: [
             "broom_handle",
@@ -22651,7 +22653,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "penta_edged_sword",
             "the_leveller",
             "ascetic_cap",
-            "desolator_2"
+            "desolator_2",
           ],
         },
       },
@@ -22672,8 +22674,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       infused_raindrop: "Against magical burst.",
       phase_boots:
         "If you are dealing with a decent amount of physical damage and need to chase heavy. The extra damage goes well with Walrus Punch.",
-      desolator: "A core item if you are gonna go for a right click Tusk build. The minus armor and the damage go very well with Walrus Punch.",
-      silver_edge: "A core item if you are dealing with heroes which passives are hard to deal with. Use Tag Team, then Silver edge and attack an opponent with Walrus Punch.",
+      desolator:
+        "A core item if you are gonna go for a right click Tusk build. The minus armor and the damage go very well with Walrus Punch.",
+      silver_edge:
+        "A core item if you are dealing with heroes which passives are hard to deal with. Use Tag Team, then Silver edge and attack an opponent with Walrus Punch.",
       ancient_janggo:
         "If you are grouping up a lot as a team in the midgame. Goes well with summons. Could be updated into Boots Of Bearing down the road.",
       blink:
@@ -22683,8 +22687,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       aghanims_shard:
         "A core upgrade of Ice Shards that can be used in various ways to either trap an enemy or save an ally.",
       lotus_orb: "For reflect, dispel and armor.",
-      ultimate_scepter: "A very effective item to resposition an opponent and kill their momentum. e.g. Ursa , Sven , Monkey King.",
-      moon_shard: "A very effective super late game item as it goes very well with your 25 level Walrus Punch talent."
+      ultimate_scepter:
+        "A very effective item to resposition an opponent and kill their momentum. e.g. Ursa , Sven , Monkey King.",
+      moon_shard:
+        "A very effective super late game item as it goes very well with your 25 level Walrus Punch talent.",
     },
     combo: [
       `tusk_tag_team`,
@@ -23137,7 +23143,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "orb_of_venom",
             "slippers",
           ],
-          early_game: ["power_treads", "phase_boots", "magic_wand", "orb_of_corrosion"],
+          early_game: [
+            "power_treads",
+            "phase_boots",
+            "magic_wand",
+            "orb_of_corrosion",
+          ],
           mid_game: [
             "lifesteal",
             "diffusal_blade",
@@ -23185,8 +23196,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      ursa_overpower: 
-      "Before approaching a target, use Overpower preemptively, so that it is off-cooldown once you jump the target and can be used again."
+      ursa_overpower:
+        "Before approaching a target, use Overpower preemptively, so that it is off-cooldown once you jump the target and can be used again.",
     },
     item_tooltips: {
       orb_of_venom: "Start with it if you can pressure on the lane.",
@@ -23195,8 +23206,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       orb_of_corrosion: "If you can pressure on the lane.",
       phase_boots:
         "A core boots upgrade that allows you to gap-close faster and adds to burst.",
-      power_treads: "A core item if you are going for the Battle Fury build. Can swap between stats and be more mana efficient.",
-      lifesteal: "Provides your hero with lifesteal that goes very well with the damage stacking from Fury Swipes. Should be upgraded to Satanic down the road.",
+      power_treads:
+        "A core item if you are going for the Battle Fury build. Can swap between stats and be more mana efficient.",
+      lifesteal:
+        "Provides your hero with lifesteal that goes very well with the damage stacking from Fury Swipes. Should be upgraded to Satanic down the road.",
       infused_raindrop: "Against magical burst.",
       diffusal_blade:
         "A core item which active allows you to stay on top of the target. With Overpower on you can burn the target`s mana quickly.",
@@ -23222,7 +23235,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       `ursa_earthshock`,
       `attack`,
       `ursa_overpower`,
-      `attack`
+      `attack`,
     ],
     counter_items: {
       laning_phase: {
@@ -23235,14 +23248,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             item: "boots",
             info: "To keep the distance from Ursa and offset the slow coming from Earthshock",
           },
-
         ],
         support: [],
         core: [],
       },
       mid_game: {
         all: [
-          { item: "cyclone", info: "Exceptionally useful against Ursa as it serves to Dispel the Overpower attacks or to be used while he is Enraged. The Enraged status resistance does not affect the Eul's active." },
+          {
+            item: "cyclone",
+            info: "Exceptionally useful against Ursa as it serves to Dispel the Overpower attacks or to be used while he is Enraged. The Enraged status resistance does not affect the Eul's active.",
+          },
           { item: "medallion_of_courage" },
           { item: "solar_crest" },
         ],
@@ -23467,8 +23482,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "venomancer_poison_nova", // 12
           "venomancer_venomous_gale", // 13
           "venomancer_venomous_gale", // 14
-          "special_bonus_unique_venomancer_2", // 15
-          "special_bonus_unique_venomancer_3", // 16
+          "special_bonus_unique_venomancer_3", // 15
+          "special_bonus_unique_venomancer_2", // 16
           "special_bonus_attributes", // 17
           "venomancer_poison_nova", // 18
           "special_bonus_attributes", // 19
@@ -23486,8 +23501,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "circlet",
             "branches",
             "branches",
-            "faerie_fire"
-
+            "faerie_fire",
           ],
           early_game: ["urn_of_shadows", "boots", "magic_wand"],
           mid_game: [
@@ -23497,7 +23511,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "solar_crest",
             "ghost",
             "aghanims_shard",
-            "aether_lens"
+            "aether_lens",
           ],
           late_game: [
             "ethereal_blade",
@@ -23516,7 +23530,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "eternal_shroud",
             "pipe",
             "heavens_halberd",
-            "black_king_bar", 
+            "black_king_bar",
             "aeon_disk",
           ],
           core: [
@@ -23543,17 +23557,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ability_tooltips: {
           venomancer_venomous_gale:
             "You can skill this spell on level 1 if you are fighting at the 0min rune. You can also put a second point into this spell at level 4 if you are able to play aggressively on the lane.",
-          special_bonus_unique_venomancer_8: 
-            "Consider skilling this over the suggesting talent in case you want a better base defense and area control rather than a teamfight talent."
+          special_bonus_unique_venomancer_8:
+            "Consider skilling this over the suggesting talent in case you want a better base defense and area control rather than a teamfight talent.",
         },
         item_tooltips: {
-          travel_boots: 
-          "A core item that lets you cover different areas on the map as Veno is an area controller. Also provides you with great movespeed which Veno doesnt have.",
+          travel_boots:
+            "A core item that lets you cover different areas on the map as Veno is an area controller. Also provides you with great movespeed which Veno doesnt have.",
           spirit_vessel:
             "A core item and another ``damage over time`` effect. Especially good against heavy-healing lineup.",
           pipe: "Against heavy magical damage lineup.",
-          cyclone: "A situational item mainly used for dispel or to stop someone from teleporting as you dont have a stun.",
-          force_staff: "A situational item that can be used as a disengage as Veno is very slow and immobile, he is an easy target once they get close to him. e.g Slark , Ursa, Troll. ",
+          cyclone:
+            "A situational item mainly used for dispel or to stop someone from teleporting as you dont have a stun.",
+          force_staff:
+            "A situational item that can be used as a disengage as Veno is very slow and immobile, he is an easy target once they get close to him. e.g Slark , Ursa, Troll. ",
           heavens_halberd: "Especially good against ranged right-clickers.",
           black_king_bar:
             "Against disables, magical damage and as a dispel. Allows you to stay alive after blinking in the middle of the opponents.",
@@ -23580,8 +23596,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "venomancer_poison_nova", // 12
           "venomancer_venomous_gale", // 13
           "venomancer_venomous_gale", // 14
-          "special_bonus_unique_venomancer_2", // 15
-          "special_bonus_unique_venomancer_3", // 16
+          "special_bonus_unique_venomancer_3", // 15
+          "special_bonus_unique_venomancer_2", // 16
           "special_bonus_attributes", // 17
           "venomancer_poison_nova", // 18
           "special_bonus_attributes", // 19
@@ -23619,7 +23635,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "cyclone",
             "glimmer_cape",
             "aghanims_shard",
- 
           ],
           late_game: [
             "boots_of_bearing",
@@ -23628,15 +23643,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "octarine_core",
             "sheepstick",
           ],
-          situational: [ 
+          situational: [
             "blink",
             "guardian_greaves",
             "travel_boots",
             "pipe",
             "crimson_guard",
-            "cyclone", 
-            "lotus_orb", 
-            "aeon_disk",  
+            "cyclone",
+            "lotus_orb",
+            "aeon_disk",
           ],
           core: [
             "urn_of_shadows",
@@ -23667,13 +23682,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         item_tooltips: {
           urn_of_shadows:
             "A core item that adds another ``damage over time`` effect to your arsenal. Allows you to snowball off of first kill. It also provides you with useful stats, especially mana regeneration.",
-          solar_crest: "A situational item that doesnt enhance Veno's skill set. Mainly used as a buff to a teammate and and to take Roshan more easily.",
-          veil_of_discord: "A situational item that makes the enemies take more spell damage and Veno's skill set is mainly spell damage.",
+          solar_crest:
+            "A situational item that doesnt enhance Veno's skill set. Mainly used as a buff to a teammate and and to take Roshan more easily.",
+          veil_of_discord:
+            "A situational item that makes the enemies take more spell damage and Veno's skill set is mainly spell damage.",
           arcane_boots:
             "A core boots upgrade for mana sustain. It can be disassembled down the road.",
           spirit_vessel:
             "Another ``damage over time`` effect. Especially good against heavy-healing lineup.",
-          force_staff: "A situational item that can be used as a disangage as Veno is very slow and immobile and also to save your teammates.",
+          force_staff:
+            "A situational item that can be used as a disangage as Veno is very slow and immobile and also to save your teammates.",
           lotus_orb: "For reflect, dispel and armor.",
         },
       },
@@ -23696,8 +23714,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       `spirit_vessel`,
       `venomancer_poison_nova`,
       `venomancer_plague_ward`,
-      `attack`
-        ],
+      `attack`,
+    ],
     counter_items: {
       laning_phase: {
         all: [
@@ -23735,7 +23753,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         core: [{ item: "ring_of_health" }],
       },
       mid_game: {
-        all: [{ item: "lotus_orb" }, {item: "cyclone"}],
+        all: [{ item: "lotus_orb" }, { item: "cyclone" }],
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           { item: "mage_slayer" },
