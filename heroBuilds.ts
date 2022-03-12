@@ -17304,30 +17304,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "riki_backstab", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_riki_9", // 20
+          "special_bonus_unique_riki_3", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_riki_7", // 25
+          "special_bonus_unique_riki_5", // 25
         ],
         items: {
           starting: [
             "tango",
             "orb_of_venom",
-            "branches",
-            "boots",
             "flask",
-            "faerie_fire",
-            "crown",
-            "ward_sentry",
-            "ward_observer",
-            "magic_stick",
+            "branches",
+            "branches",
+            "faerie_fire"
           ],
           early_game: ["meteor_hammer", "tranquil_boots", "magic_wand"],
           mid_game: ["cyclone", "aghanims_shard", "blink"],
-          late_game: ["sheepstick", "aeon_disk", "octarine_core"],
-          situational: ["infused_raindrop", "lotus_orb", "blink"],
+          late_game: [ "sheepstick", "aeon_disk", "octarine_core" ],
+          situational: [ "infused_raindrop", "lotus_orb", "blink" ],
           core: [
             "meteor_hammer",
             "tranquil_boots",
@@ -22544,7 +22540,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "boots_of_bearing",
             "blink",
             "solar_crest",
-            "vladmir",
           ],
           neutral: [
             "broom_handle",
@@ -22610,8 +22605,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "medallion_of_courage",
           ],
           mid_game: [
-            "blink",
             "solar_crest",
+            "blink",
             "desolator",
             "black_king_bar",
             "invis_sword",
@@ -22624,7 +22619,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "moon_shard",
           ],
           situational: [
-            "infused_raindrop",
             "helm_of_the_dominator",
             "ancient_janggo",
             "lotus_orb",
@@ -24353,8 +24347,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "void_spirit_astral_step", // 12
           "void_spirit_aether_remnant", // 13
           "void_spirit_aether_remnant", // 14
-          "special_bonus_unique_void_spirit_2", // 15
-          "special_bonus_unique_void_spirit_4", // 16
+          "special_bonus_unique_void_spirit_4", // 15
+          "special_bonus_unique_void_spirit_2", // 16
           "special_bonus_attributes", // 17
           "void_spirit_astral_step", // 18
           "special_bonus_attributes", // 19
@@ -24371,39 +24365,40 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "faerie_fire",
             "branches",
+            "branches",
+            "branches",
             "ward_observer",
-            "magic_stick",
           ],
-          early_game: ["bottle", "null_talisman", "boots", "magic_wand"],
+          early_game: ["bottle", "null_talisman", "null_talisman", "boots", "magic_wand"],
           mid_game: [
-            "cyclone",
             "travel_boots",
+            "cyclone",
             "ultimate_scepter",
+            "ethereal_blade",
             "kaya_and_sange",
             "aghanims_shard",
-            "witch_blade",
-            "orchid",
+            
           ],
           late_game: [
-            "ethereal_blade",
             "shivas_guard",
             "octarine_core",
             "sheepstick",
+            "wind_waker",
+            "arcane_blink",
           ],
-          situational: ["infused_raindrop", "sphere", "black_king_bar"],
+          situational: ["witch_blade", "orchid", "sphere","dagon_5", "black_king_bar" , "aeon_disk", ],
           core: [
             "bottle",
-            "boots",
-            "cyclone",
             "travel_boots",
             "ultimate_scepter",
-            "kaya_and_sange",
-            "aghanims_shard",
             "ethereal_blade",
+            "aghanims_shard",
+
           ],
           neutral: [
             "mysterious_hat",
             "arcane_ring",
+            "nether_shawl",
             "vambrace",
             "grove_bow",
             "quickening_charm",
@@ -24426,10 +24421,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       bottle:
         "A core item that helps with sustain and allows you to gank with a stored active rune.",
       boots:
-        "A core item that should be upgraded to Boots of Travels usually after Eul`s was purchased.",
+        "A core item that should be upgraded to Boots of Travels. You can upgrade it before buying any other items if you want to have more map presence.",
       infused_raindrop: "Against magical burst.",
       cyclone:
-        "A core item to setup Aether Remnant or to be used in defensive manner.",
+        "A core item to setup Aether Remnant or to be used as a dispel in a defensive manner.",
       travel_boots: "A core item that allows you to cover the map.",
       ultimate_scepter:
         "A core item that icreases AoE damage and adds AoE silence to your arsenal.",
@@ -24443,7 +24438,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       ethereal_blade:
         "A core item for additonal burst. Can be used defensively to save yourself or an ally in trouble.",
     },
-    combo: [],
+    combo: [
+      `void_spirit_astral_step`,
+      `void_spirit_aether_remnant`,
+      `void_spirit_dissimilate`,
+      `void_spirit_resonant_pulse`,
+      `void_spirit_astral_step`
+    ],
     counter_items: {
       laning_phase: {
         all: [
@@ -26007,62 +26008,60 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "zuus_arc_lightning", // 1
-          "zuus_static_field", // 2
+          "zuus_lightning_bolt", // 2
           "zuus_arc_lightning", // 3
-          "zuus_static_field", // 4
+          "zuus_heavenly_jump", // 4
           "zuus_arc_lightning", // 5
           "zuus_thundergods_wrath", // 6
           "zuus_arc_lightning", // 7
           "zuus_lightning_bolt", // 8
           "zuus_lightning_bolt", // 9
-          "special_bonus_mp_regen_125", // 10
-          "zuus_lightning_bolt", // 11
+          "zuus_lightning_bolt", // 10
+          "special_bonus_mp_regen_125", // 11
           "zuus_thundergods_wrath", // 12
-          "zuus_lightning_bolt", // 13
-          "zuus_static_field", // 14
-          "zuus_static_field", // 15
-          "special_bonus_unique_zeus", // 16
+          "zuus_heavenly_jump", // 13
+          "zuus_heavenly_jump", // 14
+          "special_bonus_hp_350", // 15
+          "zuus_heavenly_jump", // 16
           "special_bonus_attributes", // 17
           "zuus_thundergods_wrath", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_zeus_3", // 20
+          "special_bonus_unique_zeus_4", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_zeus_2", // 25
+          "special_bonus_unique_zeus_5", // 25
         ],
         items: {
           starting: [
             "tango",
-            "faerie_fire",
             "branches",
-            "mantle",
-            "ward_observer",
-            "magic_stick",
+            "branches",
+            "branches",
+            "faerie_fire"
           ],
-          early_game: ["bottle", "arcane_boots", "null_talisman", "magic_wand"],
+          early_game: ["bottle", "arcane_boots", "null_talisman", "null_talisman", "magic_wand"],
           mid_game: [
             "aether_lens",
             "travel_boots",
+            "kaya",
+            "ethereal_blade",
             "ultimate_scepter",
-            "ghost",
-            "cyclone",
-            "kaya_and_sange",
+            "aghanims_shard"
           ],
           late_game: [
             "refresher",
             "octarine_core",
-            "bloodstone",
-            "ethereal_blade",
-            "aeon_disk",
+            "bloodstone",        
           ],
-          situational: ["infused_raindrop", "blink"],
+          situational: ["cyclone", "blink", "aeon_disk" ],
           core: [
             "bottle",
             "arcane_boots",
             "aether_lens",
             "travel_boots",
+            "ethereal_blade",
             "ultimate_scepter",
             "aghanims_shard",
             "refresher",
@@ -26083,7 +26082,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+      special_bonus_unique_zeus_3: "Consider taking this talent if you are going to get Aghanims Scepter or already have it."
+
+    },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
@@ -26095,17 +26097,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       aether_lens: "A core item that improves cast range.",
       travel_boots:
         "A core boots upgrade that allows you to cover the map better and get in position to cast spells faster.",
+      ethereal_blade: "A core item upgrade that increases your damage output greatly and can potentially be used defensively.",
       ultimate_scepter:
-        "A core upgrade that adds another global spell to your arsenal. It is especially good for canceling teleports and channeling spells but also for scouting and waveclearing.",
+        "A core upgrade that adds another global spell to your arsenal. It is especially good for canceling teleports and channeling spells but also for scouting and waveclearing. Dont take it versus an illusion based line up.",
       aghanims_shard:
         "A core upgrade that adds another layer of survivability mixed with some damage and control.",
       refresher:
         "A core item that allows you to cast two rounds of spells and items quickly.",
       octarine_core:
-        "A core item that reduces cooldown of spells and items. The more spells you cast the more Static Field procs.",
+        "A core item that reduces cooldown of spells and items and increases your range.",
       blink: "For extra mobility.",
     },
-    combo: [],
+    combo: [
+      `ethereal_blade`,
+      `zuus_arc_lightning`,
+      `zuus_lightning_bolt`,
+      `zuus_thundergods_wrath`,
+     
+
+    ],
     counter_items: {
       laning_phase: {
         all: [
