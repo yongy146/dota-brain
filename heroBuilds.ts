@@ -4690,19 +4690,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "dazzle_poison_touch", // 3
           "dazzle_shallow_grave", // 4
           "dazzle_poison_touch", // 5
-          "dazzle_bad_juju", // 6
+          "dazzle_good_juju", // 6  Comment Michel: Use 'dazzle_good_juju' instaed of 'dazzle_bad_juju' (Dota 2 converion issue)
           `dazzle_poison_touch`, // 7
           "dazzle_shadow_wave", // 8
           "dazzle_shadow_wave", // 9
           "special_bonus_mp_regen_175", // 10
           `dazzle_shadow_wave`, // 11
-          "dazzle_bad_juju", // 12
+          "dazzle_good_juju", // 12
           "dazzle_shallow_grave", // 13
           "dazzle_shallow_grave", // 14
           `special_bonus_unique_dazzle_2`, // 15
           `dazzle_shallow_grave`, // 16
           "special_bonus_attributes", // 17
-          "dazzle_bad_juju", // 18
+          "dazzle_good_juju", // 18
           "special_bonus_attributes", // 19
           "special_bonus_unique_dazzle_5", // 20
           "special_bonus_attributes", // 21
@@ -13978,12 +13978,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "omniknight_hammer_of_purity", // 8
           "omniknight_hammer_of_purity", // 9
           "special_bonus_unique_omniknight_5", // 10
-          "omniknight_degen_aura", // 11
+          "omniknight_martyr", // 11   Note from Michel: 'omniknight_degen_aura' does no longer exist
           "omniknight_guardian_angel", // 12
-          "omniknight_degen_aura", // 13
-          "omniknight_degen_aura", // 14
+          "omniknight_martyr", // 13
+          "omniknight_martyr", // 14
           "special_bonus_unique_omniknight_6", // 15
-          "omniknight_degen_aura", // 16
+          "omniknight_martyr", // 16
           "special_bonus_attributes", // 17
           "omniknight_guardian_angel", // 18
           "special_bonus_attributes", // 19
@@ -19160,7 +19160,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       blink:
         "A core item that goes well with Aghanim`s Shard and Aghanim`s Scepter. Allows you to position yourself nicely.",
       aghanims_shard:
-        "A core upgrade that adds more control and burst. Goes well with Blink Dagger. The sequence should look like: Blink Dagger -> Scatterblast -> Firesnap Cookie.",
+        "A core upgrade that adds more control and burst. Goes well with Blink Dagger. The sequence should look like: Blink Dagger - Scatterblast - Firesnap Cookie.",
       lotus_orb: "To reflect, dispel and armor.",
       ultimate_scepter:
         "A core item that allows you to save or to toss in an ally. Adds even more disable and damage.",
@@ -21485,19 +21485,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "tinker_laser", // 3
           "tinker_heat_seeking_missile", // 4
           "tinker_laser", // 5
-          "tinker_rearm", // 6
+          "tinker_keen_teleport", // 6   Note Michel: Use 'tinker_keen_teleport' instead of 'tinker_rearm'
           "tinker_laser", // 7
           "tinker_heat_seeking_missile", // 8
           "tinker_heat_seeking_missile", // 9
           "special_bonus_mana_reduction_8", // 10
           "tinker_defense_matrix", // 11
-          "tinker_rearm", // 12
+          "tinker_keen_teleport", // 12
           "tinker_defense_matrix", // 13
           "tinker_defense_matrix", // 14
           `special_bonus_unique_tinker_6`, // 15
           "tinker_defense_matrix", // 16
           "special_bonus_attributes", // 17
-          "tinker_rearm", // 18
+          "tinker_keen_teleport", // 18
           "special_bonus_attributes", // 19
           `special_bonus_unique_tinker_5`, // 20
           "special_bonus_attributes", // 21
@@ -25045,32 +25045,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "medallion_of_courage",
             "null_talisman",
           ],
-          mid_game: [
-            "blink",
-            "force_staff",
-            "aghanims_shard",
-            "maelstrom"
-          ],
+          mid_game: ["blink", "force_staff", "aghanims_shard", "maelstrom"],
           late_game: [
             "black_king_bar",
             "octarine_core",
             "sheepstick",
             "aeon_disk",
             "ultimate_scepter",
-            "hurricane_pike"
+            "hurricane_pike",
           ],
           situational: [
-            "infused_raindrop", 
-            "spirit_vessel", 
+            "infused_raindrop",
+            "spirit_vessel",
             "lotus_orb",
             "solar_crest",
             "aether_lens",
             "cyclone",
-            "boots_of_travel",
+            "travel_boots",
             "meteor_hammer",
             "tranquil_boots",
-            "arcane_boots"
-
+            "arcane_boots",
           ],
 
           core: [
@@ -25079,7 +25073,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "force_staff",
             "aghanims_shard",
             "octarine_core",
-            "black_king_bar"
+            "black_king_bar",
           ],
           neutral: [
             "keen_optic",
@@ -25095,8 +25089,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
         },
         item_tooltips: {
-          ward_sentry: 
-            "To block or unblock a pull camp.",
+          ward_sentry: "To block or unblock a pull camp.",
           urn_of_shadows:
             "A core item that allows you to snowball off of first kill. Provides useful stats, namely mana regeneration.",
           arcane_boots:
@@ -25105,18 +25098,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "Great all around item for saving yourself and your allies.",
           maelstrom:
             "It's not an item for everygame but if you are snowballing and can get it at a decent time it's really good.",
-          spirit_vessel: 
-            "Against heavy-healing lineup.",
-          aether_lens: 
+          spirit_vessel: "Against heavy-healing lineup.",
+          aether_lens:
             "Good item for windranger increasing the range of her spells and items.",
           aghanims_shard:
             "A core upgrade that provides more control in the fights.",
-          lotus_orb: 
-            "For reflect, dispel and armor.",
+          lotus_orb: "For reflect, dispel and armor.",
           octarine_core:
             "A core item that reduces cooldown of spells and items.",
           medallion_of_courage:
-            "Great buildup as the orb of destruction is quite good in the lane and all around good item for the game."
+            "Great buildup as the orb of destruction is quite good in the lane and all around good item for the game.",
         },
       },
       {
@@ -25159,7 +25150,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "branches",
-            "ward_observer"
+            "ward_observer",
           ],
           early_game: [
             "bottle",
@@ -25167,18 +25158,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "javelin",
             "maelstrom",
             "magic_wand",
-            "null_talisman"
+            "null_talisman",
           ],
           mid_game: [
             "black_king_bar",
             "lesser_crit",
             "blink",
             "travel_boots",
-            "monkey_king_bar"
+            "monkey_king_bar",
           ],
           late_game: [
-            "ultimate_scepter", 
-            "sheepstick", 
+            "ultimate_scepter",
+            "sheepstick",
             "arcane_blink",
             "gungir",
             "refresher",
@@ -25222,20 +25213,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.",
           black_king_bar:
             "A core item that allows you to burst an opponent during Focus Fire.",
-          sphere: 
-            "Against powerful single-target disables and debuffs.",
-          travel_boots: 
-            "A core item that allows you to cover the map better.",
-          silver_edge: 
-            "For burst, reposition and break effect.",
-          aghanims_shard: 
-            "If you need more control in the fights.",
+          sphere: "Against powerful single-target disables and debuffs.",
+          travel_boots: "A core item that allows you to cover the map better.",
+          silver_edge: "For burst, reposition and break effect.",
+          aghanims_shard: "If you need more control in the fights.",
           nullifier:
             "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
           monkey_king_bar:
             "A core major damaging item of choice. It procs frequently during Focus Fire and procs pierce spell-immunity. It deals with evasion and miss chance as well.",
-          ultimate_scepter: 
-            "A core item that makes you more elusive.",
+          ultimate_scepter: "A core item that makes you more elusive.",
         },
         ability_tooltips: {
           windrunner_shackleshot:
@@ -25293,10 +25279,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "boots",
-            "power_treads", 
-            "maelstrom", 
-            "magic_wand", 
-            "null_talisman"],
+            "power_treads",
+            "maelstrom",
+            "magic_wand",
+            "null_talisman",
+          ],
           mid_game: [
             "black_king_bar",
             "blink",
@@ -25304,11 +25291,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "monkey_king_bar",
             "gungir",
-            "rod_of_atos"
+            "rod_of_atos",
           ],
           late_game: [
-            "ultimate_scepter", 
-            "sheepstick", 
+            "ultimate_scepter",
+            "sheepstick",
             "arcane_blink",
             "bloodthorn",
           ],
@@ -25319,7 +25306,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "nullifier",
             "meteor_hammer",
             "greater_crit",
-            "refresher"
+            "refresher",
           ],
           core: [
             "maelstrom",
@@ -25350,20 +25337,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.",
           black_king_bar:
             "A core item that allows you to burst an opponent during Focus Fire.",
-          sphere: 
-            "Against powerful single-target disables and debuffs.",
-          travel_boots: 
-            "A core item that allows you to cover the map better.",
-          aghanims_shard: 
-            "A core item for more control in the fights.",
-          silver_edge: 
-            "For burst, reposition and break effect.",
+          sphere: "Against powerful single-target disables and debuffs.",
+          travel_boots: "A core item that allows you to cover the map better.",
+          aghanims_shard: "A core item for more control in the fights.",
+          silver_edge: "For burst, reposition and break effect.",
           nullifier:
             "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
           monkey_king_bar:
             "A core major damaging item of choice. It procs frequently during Focus Fire and procs pierce spell-immunity. It deals with evasion and miss chance as well.",
-          ultimate_scepter: 
-            "A core item that makes you more elusive.",
+          ultimate_scepter: "A core item that makes you more elusive.",
         },
         ability_tooltips: {
           windrunner_shackleshot:
@@ -25857,7 +25839,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "armlet",
             "magic_wand",
             "soul_ring",
-            "bracer"
+            "bracer",
           ],
           mid_game: [
             "desolator",
@@ -25883,7 +25865,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "radiance",
             "bloodthorn",
             "swift_blink",
-            "butterfly"
+            "butterfly",
           ],
           core: [
             "armlet",
@@ -25892,7 +25874,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "black_king_bar",
             "assault",
             "aghanims_shard",
-            "invis_sword"
+            "invis_sword",
           ],
           neutral: [
             "broom_handle",
@@ -25928,22 +25910,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that provides you with useful stats. The hp loss is offset by Vampiric Spirit. On a tough lane, get Helm of the Iron Will first even before boots.",
       desolator:
         "A core damaging item that provides burst, tower damage and Roshan killing potential.",
-      silver_edge: 
-        "For burst, to reposition and break effect.",
-      blink: 
-        "A core item for instant jump on desired target.",
+      silver_edge: "For burst, to reposition and break effect.",
+      blink: "A core item for instant jump on desired target.",
       black_king_bar:
         "A core item that allows you to deliver the damage while in the middle of the fight.",
       assault:
         "A core item that provides much needed attack speed and armor. Armor reduction goes up to -11 combined with Desolator.",
       swift_blink:
         "For single-target burst. Great when you need to sell or backpack boots in late game.",
-      overwhelming_blink: 
-        "For AoE damage and tankiness.",
-      aghanims_shard: 
-        "If opponents have mana burn.",
-      monkey_king_bar: 
-        "Against evasion and miss chance.",
+      overwhelming_blink: "For AoE damage and tankiness.",
+      aghanims_shard: "If opponents have mana burn.",
+      monkey_king_bar: "Against evasion and miss chance.",
       nullifier:
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
     },
