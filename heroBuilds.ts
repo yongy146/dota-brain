@@ -24988,7 +24988,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Windranger: {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -24999,10 +24999,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "windrunner_powershot", // 1
-          "windrunner_shackleshot", // 2
-          "windrunner_windrun", // 3
-          "windrunner_powershot", // 4
+          "windrunner_windrun", // 1
+          "windrunner_powershot", // 2
+          "windrunner_powershot", // 3
+          "windrunner_shackleshot", // 4
           "windrunner_powershot", // 5
           "windrunner_focusfire", // 6
           "windrunner_powershot", // 7
@@ -25013,7 +25013,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "windrunner_focusfire", // 12
           "windrunner_windrun", // 13
           "windrunner_windrun", // 14
-          "special_bonus_unique_windranger_3", // 15
+          "special_bonus_unique_windranger_4", // 15
           "windrunner_windrun", // 16
           "special_bonus_attributes", // 17
           "windrunner_focusfire", // 18
@@ -25040,34 +25040,46 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "urn_of_shadows",
-            "arcane_boots",
+            "boots",
             "magic_wand",
             "medallion_of_courage",
             "null_talisman",
           ],
           mid_game: [
             "blink",
-            "aether_lens",
-            "aghanims_shard",
-            "maelstrom",
             "force_staff",
-            "cyclone",
-            "meteor_hammer",
+            "aghanims_shard",
+            "maelstrom"
           ],
           late_game: [
+            "black_king_bar",
             "octarine_core",
             "sheepstick",
             "aeon_disk",
             "ultimate_scepter",
+            "hurricane_pike"
           ],
-          situational: ["infused_raindrop", "spirit_vessel", "lotus_orb"],
+          situational: [
+            "infused_raindrop", 
+            "spirit_vessel", 
+            "lotus_orb",
+            "solar_crest",
+            "aether_lens",
+            "cyclone",
+            "boots_of_travel",
+            "meteor_hammer",
+            "tranquil_boots",
+            "arcane_boots"
+
+          ],
+
           core: [
             "urn_of_shadows",
-            "arcane_boots",
             "blink",
-            "aether_lens",
+            "force_staff",
             "aghanims_shard",
             "octarine_core",
+            "black_king_bar"
           ],
           neutral: [
             "keen_optic",
@@ -25083,18 +25095,28 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
         },
         item_tooltips: {
-          ward_sentry: "To block or unblock a pull camp.",
+          ward_sentry: 
+            "To block or unblock a pull camp.",
           urn_of_shadows:
             "A core item that allows you to snowball off of first kill. Provides useful stats, namely mana regeneration.",
           arcane_boots:
             "A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Aether Lens. You should upgrade the leftover boots to Tranquil Boots usually.",
-          spirit_vessel: "Against heavy-healing lineup.",
-          aether_lens: "A core item that improves cast range.",
+          force_staff:
+            "Great all around item for saving yourself and your allies.",
+          maelstrom:
+            "It's not an item for everygame but if you are snowballing and can get it at a decent time it's really good.",
+          spirit_vessel: 
+            "Against heavy-healing lineup.",
+          aether_lens: 
+            "Good item for windranger increasing the range of her spells and items.",
           aghanims_shard:
             "A core upgrade that provides more control in the fights.",
-          lotus_orb: "For reflect, dispel and armor.",
+          lotus_orb: 
+            "For reflect, dispel and armor.",
           octarine_core:
             "A core item that reduces cooldown of spells and items.",
+          medallion_of_courage:
+            "Great buildup as the orb of destruction is quite good in the lane and all around good item for the game."
         },
       },
       {
@@ -25119,7 +25141,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "windrunner_shackleshot", // 13
           "windrunner_shackleshot", // 14
           "special_bonus_unique_windranger_9", // 15
-          "special_bonus_unique_windranger", // 16
+          "special_bonus_unique_windranger_4", // 16
           "special_bonus_attributes", // 17
           "windrunner_focusfire", // 18
           "special_bonus_attributes", // 19
@@ -25135,26 +25157,34 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "faerie_fire",
             "branches",
-            "circlet",
-            "mantle",
-            "ward_observer",
-            "magic_stick",
+            "branches",
+            "branches",
+            "ward_observer"
           ],
           early_game: [
             "bottle",
             "boots",
+            "javelin",
             "maelstrom",
             "magic_wand",
-            "null_talisman",
+            "null_talisman"
           ],
           mid_game: [
             "black_king_bar",
+            "lesser_crit",
             "blink",
             "travel_boots",
-            "monkey_king_bar",
-            "gungir",
+            "monkey_king_bar"
           ],
-          late_game: ["ultimate_scepter", "sheepstick", "arcane_blink"],
+          late_game: [
+            "ultimate_scepter", 
+            "sheepstick", 
+            "arcane_blink",
+            "gungir",
+            "refresher",
+            "bloodthorn",
+            "greater_crit",
+          ],
           situational: [
             "infused_raindrop",
             "sphere",
@@ -25163,8 +25193,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "nullifier",
           ],
           core: [
-            "bottle",
-            "boots",
             "maelstrom",
             "black_king_bar",
             "blink",
@@ -25194,19 +25222,30 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.",
           black_king_bar:
             "A core item that allows you to burst an opponent during Focus Fire.",
-          sphere: "Against powerful single-target disables and debuffs.",
-          travel_boots: "A core item that allows you to cover the map better.",
-          silver_edge: "For burst, reposition and break effect.",
-          aghanims_shard: "If you need more control in the fights.",
+          sphere: 
+            "Against powerful single-target disables and debuffs.",
+          travel_boots: 
+            "A core item that allows you to cover the map better.",
+          silver_edge: 
+            "For burst, reposition and break effect.",
+          aghanims_shard: 
+            "If you need more control in the fights.",
           nullifier:
             "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
           monkey_king_bar:
             "A core major damaging item of choice. It procs frequently during Focus Fire and procs pierce spell-immunity. It deals with evasion and miss chance as well.",
-          ultimate_scepter: "A core item that makes you more elusive.",
+          ultimate_scepter: 
+            "A core item that makes you more elusive.",
         },
         ability_tooltips: {
-          special_bonus_unique_windranger_3:
-            "You can take this talent over the suggested level 15 talent if opponents don`t have a way to dispel Windrun.",
+          windrunner_shackleshot:
+            "You can just get a value point in this on level 4 in order to setup ganks or catch targets out of position at runes during the laning stage. Throughout the game it will be your main disable to kill enemies",
+          windrunner_powershot:
+            "Use this spell to secure ranged creeps and harras the enemy hero during the laning stage. After the laning stage use it for farming and pushing in unsafe waves.",
+          windrunner_windrun:
+            "Using this spell at the right time during the laning stage can be the difference in dying or getting a kill. Your main escape before any mobility items.",
+          windrunner_focusfire:
+            "Once you have javelin focus fire will do a ton of damage and kill most heroes without escape.",
         },
       },
       {
@@ -25231,7 +25270,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "windrunner_shackleshot", // 13
           "windrunner_shackleshot", // 14
           "special_bonus_unique_windranger_9", // 15
-          "special_bonus_unique_windranger", // 16
+          "special_bonus_unique_windranger_4", // 16
           "special_bonus_attributes", // 17
           "windrunner_focusfire", // 18
           "special_bonus_attributes", // 19
@@ -25247,11 +25286,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "faerie_fire",
             "branches",
+            "branches",
             "circlet",
             "mantle",
             "magic_stick",
           ],
-          early_game: ["boots", "maelstrom", "magic_wand", "null_talisman"],
+          early_game: [
+            "boots",
+            "power_treads", 
+            "maelstrom", 
+            "magic_wand", 
+            "null_talisman"],
           mid_game: [
             "black_king_bar",
             "blink",
@@ -25259,16 +25304,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "monkey_king_bar",
             "gungir",
+            "rod_of_atos"
           ],
-          late_game: ["ultimate_scepter", "sheepstick", "arcane_blink"],
+          late_game: [
+            "ultimate_scepter", 
+            "sheepstick", 
+            "arcane_blink",
+            "bloodthorn",
+          ],
           situational: [
             "infused_raindrop",
             "sphere",
             "silver_edge",
             "nullifier",
+            "meteor_hammer",
+            "greater_crit",
+            "refresher"
           ],
           core: [
-            "boots",
             "maelstrom",
             "black_king_bar",
             "blink",
@@ -25291,25 +25344,36 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
         },
         item_tooltips: {
-          boots:
-            "A core item that will be upgraded to Boots of Travel down the road.",
+          power_treads:
+            "A core item that makes you stronger in the lane and midgame. Make sure to tread switch for efficiency.",
           maelstrom:
             "A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.",
           black_king_bar:
             "A core item that allows you to burst an opponent during Focus Fire.",
-          sphere: "Against powerful single-target disables and debuffs.",
-          travel_boots: "A core item that allows you to cover the map better.",
-          aghanims_shard: "A core item for more control in the fights.",
-          silver_edge: "For burst, reposition and break effect.",
+          sphere: 
+            "Against powerful single-target disables and debuffs.",
+          travel_boots: 
+            "A core item that allows you to cover the map better.",
+          aghanims_shard: 
+            "A core item for more control in the fights.",
+          silver_edge: 
+            "For burst, reposition and break effect.",
           nullifier:
             "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
           monkey_king_bar:
             "A core major damaging item of choice. It procs frequently during Focus Fire and procs pierce spell-immunity. It deals with evasion and miss chance as well.",
-          ultimate_scepter: "A core item that makes you more elusive.",
+          ultimate_scepter: 
+            "A core item that makes you more elusive.",
         },
         ability_tooltips: {
-          special_bonus_unique_windranger_3:
-            "You can take this talent over the suggested level 15 talent if opponents don`t have a way to dispel Windrun.",
+          windrunner_shackleshot:
+            "You'll get a value point in this and max it later. Use it to setup kills on enemy heroes when allies gank.",
+          windrunner_powershot:
+            "You should use this to secure ranged creeps during the laning stage, Try to lasthit the ranged creep and hit the enemy heroes at the same time.",
+          windrunner_windrun:
+            "Save this for the right moments during the lane.",
+          windrunner_focusfire:
+            "As soon as focus fire comes online and you have javelin you have a very high kill potential.",
         },
       },
     ],
@@ -25740,7 +25804,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Wraith King": {
-    gameplay_version: "7.30e",
+    gameplay_version: "7.31b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -25751,8 +25815,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699919868",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "skeleton_king_vampiric_aura", // 1
-          "skeleton_king_hellfire_blast", // 2
+          "skeleton_king_hellfire_blast", // 1
+          "skeleton_king_vampiric_aura", // 2
           "skeleton_king_vampiric_aura", // 3
           "skeleton_king_mortal_strike", // 4
           "skeleton_king_vampiric_aura", // 5
@@ -25782,8 +25846,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "gauntlets",
-            "faerie_fire",
+            "circlet",
             "magic_stick",
           ],
           early_game: [
@@ -25792,13 +25857,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "armlet",
             "magic_wand",
             "soul_ring",
+            "bracer"
           ],
           mid_game: [
             "desolator",
             "blink",
             "black_king_bar",
             "basher",
-            "radiance",
+            "invis_sword",
           ],
           late_game: [
             "assault",
@@ -25806,20 +25872,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "overwhelming_blink",
             "abyssal_blade",
             "bloodthorn",
+            "silver_edge",
+            "skadi",
           ],
           situational: [
             "silver_edge",
             "aghanims_shard",
             "monkey_king_bar",
             "nullifier",
+            "radiance",
+            "bloodthorn",
+            "swift_blink",
+            "butterfly"
           ],
           core: [
-            "phase_boots",
             "armlet",
             "desolator",
             "blink",
             "black_king_bar",
             "assault",
+            "aghanims_shard",
+            "invis_sword"
           ],
           neutral: [
             "broom_handle",
@@ -25838,7 +25911,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       skeleton_king_hellfire_blast:
-        "You can skill this spell on level 1 but I recommend to skill Vampiric Spirit, build up 2 skeleton charges on first and second wave, and at level 2 release them with follow up Wraithfire Blast stun.",
+        "You can skill this spell on level 1 but I recommend to skill Vampiric Spirit, build up 2 skeleton charges on first and second wave, and at level 2 release them with follow up Wraithfire Blast stun. Use your stun to secure ranged creep last hits in the laning stage.",
+      skeleton_king_vampiric_aura:
+        "Use your skeleton charges to push out waves when you leave your lane and during the mid game.",
+      skeleton_king_mortal_strike:
+        "Try use the extra damage from the guaranteed crit to secure last hits and extra harras during the lane.",
       skeleton_king_reincarnation:
         "You should save a spell point at level 6 and invest it in Reincarnation if you are being ganked and if you can escape with second life. Otherwise, if you end up jungling, you can invest spell point in Mortal Strike or Vampiric Spirit.",
     },
@@ -25851,17 +25928,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that provides you with useful stats. The hp loss is offset by Vampiric Spirit. On a tough lane, get Helm of the Iron Will first even before boots.",
       desolator:
         "A core damaging item that provides burst, tower damage and Roshan killing potential.",
-      silver_edge: "For burst, to reposition and break effect.",
-      blink: "A core item for instant jump on desired target.",
+      silver_edge: 
+        "For burst, to reposition and break effect.",
+      blink: 
+        "A core item for instant jump on desired target.",
       black_king_bar:
         "A core item that allows you to deliver the damage while in the middle of the fight.",
       assault:
         "A core item that provides much needed attack speed and armor. Armor reduction goes up to -11 combined with Desolator.",
       swift_blink:
         "For single-target burst. Great when you need to sell or backpack boots in late game.",
-      overwhelming_blink: "For AoE damage and tankiness.",
-      aghanims_shard: "If opponents have mana burn.",
-      monkey_king_bar: "Against evasion and miss chance.",
+      overwhelming_blink: 
+        "For AoE damage and tankiness.",
+      aghanims_shard: 
+        "If opponents have mana burn.",
+      monkey_king_bar: 
+        "Against evasion and miss chance.",
       nullifier:
         "To dispel defensive spells and items that prevent you from right-clicking the opponent.",
     },
