@@ -1610,31 +1610,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "batrider_sticky_napalm",
-          "batrider_firefly",
-          "batrider_sticky_napalm",
-          "batrider_flamebreak",
-          "batrider_sticky_napalm",
-          "batrider_flaming_lasso",
-          "batrider_sticky_napalm",
-          "batrider_firefly",
-          "batrider_firefly",
-          "batrider_firefly",
-          "special_bonus_unique_batrider_7",
-          "batrider_flaming_lasso",
-          "batrider_flamebreak",
-          "batrider_flamebreak",
-          "special_bonus_movement_speed_25",
-          "batrider_flamebreak",
-          "special_bonus_attributes",
-          "batrider_flaming_lasso",
-          "special_bonus_attributes",
-          "special_bonus_unique_batrider_4",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_batrider_2",
+          "batrider_sticky_napalm", // 1
+          "batrider_firefly", // 2
+          "batrider_sticky_napalm", // 3
+          "batrider_flamebreak", // 4
+          "batrider_sticky_napalm", // 5
+          "batrider_flaming_lasso", // 6
+          "batrider_sticky_napalm", // 7
+          "batrider_firefly", // 8
+          "batrider_firefly", // 9
+          "batrider_firefly", // 10
+          "special_bonus_unique_batrider_7", // 11
+          "batrider_flaming_lasso", // 12
+          "batrider_flamebreak", // 13
+          "batrider_flamebreak", // 14
+          "special_bonus_movement_speed_20", // 15  Michel: We have to use 'special_bonus_movement_speed_20' insted of 'special_bonus_movement_speed_25'
+          "batrider_flamebreak", // 16
+          "special_bonus_attributes", // 17
+          "batrider_flaming_lasso", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_batrider_4", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_batrider_2", // 25
         ],
         items: {
           starting: [
@@ -1712,31 +1712,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253341",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
-          "batrider_sticky_napalm",
-          "batrider_firefly",
-          "batrider_sticky_napalm",
-          "batrider_flamebreak",
-          "batrider_sticky_napalm",
-          "batrider_flaming_lasso",
-          "batrider_sticky_napalm",
-          "batrider_firefly",
-          "batrider_firefly",
-          "batrider_firefly",
-          "special_bonus_unique_batrider_7",
-          "batrider_flaming_lasso",
-          "batrider_flamebreak",
-          "batrider_flamebreak",
-          "special_bonus_movement_speed_25",
-          "batrider_flamebreak",
-          "special_bonus_attributes",
-          "batrider_flaming_lasso",
-          "special_bonus_attributes",
-          "special_bonus_unique_batrider_4",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_batrider_1",
+          "batrider_sticky_napalm", // 1
+          "batrider_firefly", // 2
+          "batrider_sticky_napalm", // 3
+          "batrider_flamebreak", // 4
+          "batrider_sticky_napalm", // 5
+          "batrider_flaming_lasso", // 6
+          "batrider_sticky_napalm", // 7
+          "batrider_firefly", // 8
+          "batrider_firefly", // 9
+          "batrider_firefly", // 10
+          "special_bonus_unique_batrider_7", // 11
+          "batrider_flaming_lasso", // 12
+          "batrider_flamebreak", // 13
+          "batrider_flamebreak", // 14
+          "special_bonus_movement_speed_20", // 15  Michel: We have to use 'special_bonus_movement_speed_20' insted of 'special_bonus_movement_speed_25'
+          "batrider_flamebreak", // 16
+          "special_bonus_attributes", // 17
+          "batrider_flaming_lasso", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_batrider_4", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_batrider_1", //25
         ],
         items: {
           starting: [
@@ -17299,12 +17299,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "riki_backstab", // 12
           "riki_tricks_of_the_trade", // 13
           "riki_tricks_of_the_trade", // 14
-          "special_bonus_unique_riki_2", // 15
+          "special_bonus_unique_riki_3", // 15 // Michel changed, as it was 'special_bonus_unique_riki_2' previously
           "riki_tricks_of_the_trade", // 16
           "special_bonus_attributes", // 17
           "riki_backstab", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_riki_3", // 20
+          "special_bonus_unique_riki_9", // 20 // Michel changed, as it was 'special_bonus_unique_riki_3' previously
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -17318,12 +17318,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "flask",
             "branches",
             "branches",
-            "faerie_fire"
+            "faerie_fire",
           ],
           early_game: ["meteor_hammer", "tranquil_boots", "magic_wand"],
           mid_game: ["cyclone", "aghanims_shard", "blink"],
-          late_game: [ "sheepstick", "aeon_disk", "octarine_core" ],
-          situational: [ "infused_raindrop", "lotus_orb", "blink" ],
+          late_game: ["sheepstick", "aeon_disk", "octarine_core"],
+          situational: ["infused_raindrop", "lotus_orb", "blink"],
           core: [
             "meteor_hammer",
             "tranquil_boots",
@@ -22535,12 +22535,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "desolator",
             "ultimate_scepter",
           ],
-          core: [
-            "phase_boots",
-            "boots_of_bearing",
-            "blink",
-            "solar_crest",
-          ],
+          core: ["phase_boots", "boots_of_bearing", "blink", "solar_crest"],
           neutral: [
             "broom_handle",
             "pogo_stick",
@@ -24347,8 +24342,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "void_spirit_astral_step", // 12
           "void_spirit_aether_remnant", // 13
           "void_spirit_aether_remnant", // 14
-          "special_bonus_unique_void_spirit_4", // 15
-          "special_bonus_unique_void_spirit_2", // 16
+          "special_bonus_unique_void_spirit_2", // 15 Comment Michel: Talent level 1 has to come before talent level 2
+          "special_bonus_unique_void_spirit_4", // 16
           "special_bonus_attributes", // 17
           "void_spirit_astral_step", // 18
           "special_bonus_attributes", // 19
@@ -24369,7 +24364,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "ward_observer",
           ],
-          early_game: ["bottle", "null_talisman", "null_talisman", "boots", "magic_wand"],
+          early_game: [
+            "bottle",
+            "null_talisman",
+            "null_talisman",
+            "boots",
+            "magic_wand",
+          ],
           mid_game: [
             "travel_boots",
             "cyclone",
@@ -24377,7 +24378,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ethereal_blade",
             "kaya_and_sange",
             "aghanims_shard",
-            
           ],
           late_game: [
             "shivas_guard",
@@ -24386,14 +24386,115 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wind_waker",
             "arcane_blink",
           ],
-          situational: ["witch_blade", "orchid", "sphere","dagon_5", "black_king_bar" , "aeon_disk", ],
+          situational: [
+            "witch_blade",
+            "orchid",
+            "sphere",
+            "dagon_5",
+            "black_king_bar",
+            "aeon_disk",
+          ],
           core: [
             "bottle",
             "travel_boots",
             "ultimate_scepter",
             "ethereal_blade",
             "aghanims_shard",
-
+          ],
+          neutral: [
+            "mysterious_hat",
+            "arcane_ring",
+            "nether_shawl",
+            "vambrace",
+            "grove_bow",
+            "quickening_charm",
+            "ceremonial_robe",
+            "timeless_relic",
+            "spell_prism",
+            "fallen_sky",
+            "desolator_2",
+          ],
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_id: 1647151711,
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2778135054",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "void_spirit_resonant_pulse", // 1
+          "void_spirit_aether_remnant", // 2
+          "void_spirit_resonant_pulse", // 3
+          "void_spirit_dissimilate", // 4
+          "void_spirit_dissimilate", // 5
+          "void_spirit_astral_step", // 6
+          "void_spirit_dissimilate", // 7
+          "void_spirit_dissimilate", // 8
+          "void_spirit_resonant_pulse", // 9
+          "void_spirit_resonant_pulse", // 10
+          "void_spirit_aether_remnant", // 11
+          "void_spirit_astral_step", // 12
+          "void_spirit_aether_remnant", // 13
+          "void_spirit_aether_remnant", // 14
+          "special_bonus_unique_void_spirit_2", // 15 Comment Michel: Talent level 1 has to come before talent level 2
+          "special_bonus_unique_void_spirit_4", // 16
+          "special_bonus_attributes", // 17
+          "void_spirit_astral_step", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_spell_amplify_12", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_void_spirit_3", // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "quelling_blade",
+            "faerie_fire",
+            "branches",
+            "branches",
+            "branches",
+            "ward_observer",
+          ],
+          early_game: [
+            "bottle",
+            "null_talisman",
+            "null_talisman",
+            "boots",
+            "magic_wand",
+          ],
+          mid_game: [
+            "travel_boots",
+            "cyclone",
+            "ultimate_scepter",
+            "ethereal_blade",
+            "kaya_and_sange",
+            "aghanims_shard",
+          ],
+          late_game: [
+            "shivas_guard",
+            "octarine_core",
+            "sheepstick",
+            "wind_waker",
+            "arcane_blink",
+          ],
+          situational: [
+            "witch_blade",
+            "orchid",
+            "sphere",
+            "dagon_5",
+            "black_king_bar",
+            "aeon_disk",
+          ],
+          core: [
+            "bottle",
+            "travel_boots",
+            "ultimate_scepter",
+            "ethereal_blade",
+            "aghanims_shard",
           ],
           neutral: [
             "mysterious_hat",
@@ -24443,7 +24544,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       `void_spirit_aether_remnant`,
       `void_spirit_dissimilate`,
       `void_spirit_resonant_pulse`,
-      `void_spirit_astral_step`
+      `void_spirit_astral_step`,
     ],
     counter_items: {
       laning_phase: {
@@ -26016,23 +26117,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "branches",
-            "faerie_fire"
+            "faerie_fire",
           ],
-          early_game: ["bottle", "arcane_boots", "null_talisman", "null_talisman", "magic_wand"],
+          early_game: [
+            "bottle",
+            "arcane_boots",
+            "null_talisman",
+            "null_talisman",
+            "magic_wand",
+          ],
           mid_game: [
             "aether_lens",
             "travel_boots",
             "kaya",
             "ethereal_blade",
             "ultimate_scepter",
-            "aghanims_shard"
+            "aghanims_shard",
           ],
-          late_game: [
-            "refresher",
-            "octarine_core",
-            "bloodstone",        
-          ],
-          situational: ["cyclone", "blink", "aeon_disk" ],
+          late_game: ["refresher", "octarine_core", "bloodstone"],
+          situational: ["cyclone", "blink", "aeon_disk"],
           core: [
             "bottle",
             "arcane_boots",
@@ -26060,8 +26163,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_zeus_3: "Consider taking this talent if you are going to get Aghanims Scepter or already have it."
-
+      special_bonus_unique_zeus_3:
+        "Consider taking this talent if you are going to get Aghanims Scepter or already have it.",
     },
     item_tooltips: {
       magic_stick:
@@ -26074,7 +26177,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       aether_lens: "A core item that improves cast range.",
       travel_boots:
         "A core boots upgrade that allows you to cover the map better and get in position to cast spells faster.",
-      ethereal_blade: "A core item upgrade that increases your damage output greatly and can potentially be used defensively.",
+      ethereal_blade:
+        "A core item upgrade that increases your damage output greatly and can potentially be used defensively.",
       ultimate_scepter:
         "A core upgrade that adds another global spell to your arsenal. It is especially good for canceling teleports and channeling spells but also for scouting and waveclearing. Dont take it versus an illusion based line up.",
       aghanims_shard:
@@ -26090,8 +26194,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       `zuus_arc_lightning`,
       `zuus_lightning_bolt`,
       `zuus_thundergods_wrath`,
-     
-
     ],
     counter_items: {
       laning_phase: {
