@@ -12,6 +12,11 @@ import * as DotaLogger from "../../src/utility/log";
 import * as WebAccess from "../../src/utility/webAccess";
 //import * as WebAccess from '../../src/utility/webAccessNode'
 import * as Dota2 from "../../submodules/dota2/dota2";
+import {
+  PlayerProfile,
+  PlayerMatch,
+} from "../../src/app/background/dataManager";
+import { resolve } from "path";
 
 export class Player {
   "account_id": number; // steam ID (32 bit)
@@ -31,59 +36,32 @@ export class Friend extends Player {
 const key = "api_key=06632c9a-57d8-469b-a90a-1ecd64c72918";
 
 /**
+ * Function retrieves the player's profile for a steam account.
  *
- * Sample player: https://api.opendota.com/api/players/361606936
+ * Sample API calls:
+ *   - https://api.opendota.com/api/players/361606936 (public profile - Michel)
+ *   - https://api.opendota.com/api/players/107050251 (public profile - Zograf)
+ *   - https://api.opendota.com/api/players/4294967295 (private profile)
  *
  * @param steamId32
- * @returns
+ * @return null, if it failed
  */
-export async function getPlayer(steamId32: string): Promise<any> {
+export async function getPlayerProfile(
+  steamId32: string
+): Promise<PlayerProfile> {
   DotaLogger.log(`openDotaAPI.getPlayer(steamId32: ${steamId32}): Called`);
 
   //let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
   const url = `https://api.opendota.com/api/players/${steamId32}`;
 
-  return new Promise((resolve, reject) => {
-    WebAccess.getRequestJSON(url, 3).then((player) => {
-      player["rank_medal"] = "unknown rank (" + player.rank_tier + ")";
-      /* Rank example 11 - Herald with one star or Immortal would be 80 */
-      switch (Math.floor(player.rank_tier / 10)) {
-        case 1: {
-          player.rank_medal = "Herald";
-          break;
-        }
-        case 2: {
-          player.rank_medal = "Guardian";
-          break;
-        }
-        case 3: {
-          player.rank_medal = "Crusader";
-          break;
-        }
-        case 4: {
-          player.rank_medal = "Archon";
-          break;
-        }
-        case 5: {
-          player.rank_medal = "Legend";
-          break;
-        }
-        case 6: {
-          player.rank_medal = "Ancient";
-          break;
-        }
-        case 7: {
-          player.rank_medal = "Divine";
-          break;
-        }
-        case 8: {
-          player.rank_medal = "Immortal";
-          break;
-        }
-      }
-
-      resolve(player);
-    });
+  return new Promise((resolve) => {
+    WebAccess.getRequestJSON(url, 3)
+      .then((player) => {
+        resolve(player);
+      })
+      .catch((error) => {
+        resolve(null);
+      });
   });
 }
 
@@ -95,10 +73,10 @@ export async function getPlayer(steamId32: string): Promise<any> {
  * @param steamId32
  * @returns { steamId32: <sring>, heroes: [{hero_id: 103, match_count, wins: xx, win_rate: xx%, pick_rate: xx%, kills: .., deaths: ... assists: ...[average] }]matches: <array of matches>]}
  */
-export function getPlayerStats(steamId32): Promise<any> {
+/*export function getPlayerStats(steamId32): Promise<any> {
   DotaLogger.log(`openDotaAPI.getPlayerStats(${steamId32}): Called`);
   return new Promise((resolve, reject) => {
-    getMatches(steamId32, null, 100)
+    getMatches(steamId32, 100)
       .then((matches) => {
         //DotaLogger.log(`openDotaAPI.getPlayerStats(): ${matches.length} matches received`)
 
@@ -165,7 +143,7 @@ export function getPlayerStats(steamId32): Promise<any> {
         );
       });
   });
-}
+}*/
 
 /**
  * Function returns an array with the last 4 matches of a player with a given hero
@@ -193,55 +171,47 @@ export function getPlayerStats(steamId32): Promise<any> {
  * 
  * @param steamId32
  * @param heroId (if null, provides matches with any hero)
- * @returns 
+ * @returns null in case of error or other
  */
 export async function getMatches(
   steamId32: string,
-  heroId: number,
-  numberOfMatches: number
-): Promise<any> {
+  numberOfMatches: number,
+  heroId?: number
+): Promise<PlayerMatch[]> {
   //DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
 
-  const heroIdParam = heroId == null ? "" : `&hero_id=${heroId}`;
+  const heroIdParam = heroId == undefined ? "" : `&hero_id=${heroId}`;
   //  let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}&${key}`
   const url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}`;
 
-  return new Promise((resolve, reject) => {
-    WebAccess.getRequestJSON(url, 3).then((matches) => {
-      for (const match of matches) {
-        match["is_victory"] = match.radiant_win
-          ? match.player_slot < 128
-          : match.player_slot >= 128;
-      }
-      resolve(matches);
-    });
-  });
-  /*  return new Promise((resolve, reject) => {
-
-      WebAccess.getRequestJSON(url).then((result) => {
-        resolve(result)
-      }).catch((error) => {
-        reject(error)
+  return new Promise((resolve) => {
+    WebAccess.getRequestJSON(url, 3)
+      .then((matches) => {
+        resolve(matches);
       })
-  })*/
+      .catch(() => {
+        resolve(null);
+      });
+  });
 }
 
 /**
- * Function returns an array with 100 last matches played with a give hero
+ * Function returns 100 last matches played with a hero.
  *
  * Sample API call: https://api.opendota.com/api/heroes/104/matches
  *
- * @param heroId
+ * @param heroId Array of matches
  * @returns
  */
-export async function getMatchesWithHero(heroId: number): Promise<any> {
-  DotaLogger.log(`openDotaAPI.getMatchesWithHero(heroId: ${heroId}): Called`);
+export async function getMatchesOfHero(heroId: number): Promise<any> {
+  DotaLogger.log(`openDotaAPI.getMatchesOfHero(heroId: ${heroId}): Called`);
 
   const url = `https://api.opendota.com/api/heroes/${heroId}/matches`;
 
   return new Promise((resolve, reject) => {
-    DotaLogger.log(`openDotaAPI.getMatchesWithHero(): Fetching url ${url}`);
+    DotaLogger.log(`openDotaAPI.getMatchesOfHero(): Fetching url ${url}`);
     WebAccess.getRequestJSON(url, 3)
+
       .then((matches) => {
         const result = [];
         for (const match of matches) {
@@ -263,7 +233,7 @@ export async function getMatchesWithHero(heroId: number): Promise<any> {
  * @returns
  */
 export async function getMatch(
-  matchId: string,
+  matchId: number,
   authenticated: boolean
 ): Promise<any> {
   //DotaLogger.log(`openDotaAPI.getMatch(matchId: ${matchId}): Called`)
@@ -293,7 +263,7 @@ export async function getRecentItems(
     `openDotaAPI.getRecentItems(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`
   );
   return new Promise(async (resolve, reject) => {
-    getMatches(steamId32, heroId, numberOfMatches).then(async (matches) => {
+    getMatches(steamId32, numberOfMatches, heroId).then(async (matches) => {
       const items = [];
       let counter = matches.length;
       if (counter == 0) resolve(items); // If there are not matches, return immediatly
@@ -370,7 +340,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
       DotaLogger.log(
         `openDotaAPI.getAbilityUpgrades(): Attemp #${6 - attempts}`
       );
-      await getMatchesWithHero(heroId)
+      await getMatchesOfHero(heroId)
         .then(async (matches) => {
           //DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Matches = ${JSON.stringify(matches)}`)
           DotaLogger.log(
@@ -854,40 +824,6 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
       }
       t.isLoading = true*/
     request.send();
-  });
-}
-
-export interface ability_ids {
-  [key: number]: string; // ability name
-}
-
-/**
- * Function returns ability ids
- *
- * Sample API call: https://api.opendota.com/api/constants/ability_ids
- *
- * @param heroId
- * @returns
- */
-export async function getAbilityIds(
-  authenticated: boolean
-): Promise<ability_ids> {
-  DotaLogger.log(`openDotaAPI.getAbilityIds(): Called`);
-  //let url = `https://api.opendota.com/api/matches/${matchId}${authenticated ? `?${key}` : ``}`
-  const url = `https://api.opendota.com/api/constants/ability_ids${
-    authenticated ? `?${key}` : ``
-  }`;
-
-  return new Promise((resolve, reject) => {
-    WebAccess.getRequestJSON(url, 3)
-      .then((ability_ids) => {
-        resolve(ability_ids);
-      })
-      .catch((error) => {
-        DotaLogger.log(
-          `openDotaAPI.getAbilityIds(): Error (${JSON.stringify(error)}`
-        );
-      });
   });
 }
 

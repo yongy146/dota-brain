@@ -476,7 +476,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "gauntlets",
             "gauntlets",
             "branches",
-            "branches"
+            "branches",
           ],
           early_game: [
             "ring_of_health",
@@ -502,7 +502,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "moon_shard",
             "bloodthorn",
           ],
-          situational: [ 
+          situational: [
             "silver_edge",
             "mjollnir",
             "overwhelming_blink",
@@ -938,7 +938,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wraith_band",
             "magic_wand",
             "power_treads",
-            
           ],
           mid_game: ["bfury", "manta", "skadi", "basher"],
           late_game: [
@@ -1002,12 +1001,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       assault: "Against heavy armor reduction lineups.",
       ultimate_scepter: "Great for causing chaos in the fights.",
     },
-    combo: [
-      `antimage_blink`,
-      `manta`,
-      `attack`,
-      `antimage_mana_void`,
-    ],
+    combo: [`antimage_blink`, `manta`, `attack`, `antimage_mana_void`],
     counter_items: {
       laning_phase: {
         all: [
@@ -1314,8 +1308,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "bracer",
-
-
           ],
 
           early_game: ["boots", "magic_wand", "vanguard", "hood_of_defiance"],
@@ -1398,10 +1390,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
     combo: [
       `blink`,
-      `axe_bersekers_call`,
+      `axe_berserkers_call`,
       `blade_mail`,
       `axe_battle_hunger`,
-      `axe_culling_blade`
+      `axe_culling_blade`,
     ],
     counter_items: {
       laning_phase: {
@@ -1649,10 +1641,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "faerie_fire",
             "branches",
             "branches",
-            "ward_observer"
-
+            "ward_observer",
           ],
-          early_game: [ "bottle", "boots", "magic_wand", "wind_lace", ],
+          early_game: ["bottle", "boots", "magic_wand", "wind_lace"],
           mid_game: [
             "travel_boots",
             "black_king_bar",
@@ -1702,7 +1693,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item that helps with sustain and allows you to gank with a stored active rune.",
           travel_boots:
             "A core item that provides very good mobility and map coverage while ganking and farming.",
-          blink: 
+          blink:
             "A core item that lets you gap close and instantly use your Flaming Lasso.",
           aether_lens:
             "A core item that extends the cast range of all of your spells but Firefly, including items. It should be upgraded to Octarine Core down the road.",
@@ -1754,9 +1745,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "faerie_fire",
             "wind_lace",
             "circlet",
-      
           ],
-          early_game: ["boots","tranquil_boots", "null_talisman", "magic_wand", "wind_lace"],
+          early_game: [
+            "boots",
+            "tranquil_boots",
+            "null_talisman",
+            "magic_wand",
+            "wind_lace",
+          ],
           mid_game: [
             "travel_boots",
             "black_king_bar",
@@ -1774,11 +1770,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "refresher",
             "wind_waker",
           ],
-          situational: [
-            "boots_of_bearing",
-            "aeon_disk",
-            "sphere",
-          ],
+          situational: ["boots_of_bearing", "aeon_disk", "sphere"],
           core: [
             "wind_lace",
             "travel_boots",
@@ -1934,7 +1926,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "branches",
-
           ],
           early_game: [
             "helm_of_iron_will",
@@ -2104,11 +2095,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "circlet",
             "slippers",
-            "branches",          
+            "branches",
             "enchanted_mango",
             "faerie_fire",
             "orb_of_venom",
-  
           ],
           early_game: [
             "wraith_band",
