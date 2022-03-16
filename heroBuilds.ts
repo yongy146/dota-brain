@@ -13969,19 +13969,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "omniknight_purification", // 1
           "omniknight_hammer_of_purity", // 2
           "omniknight_purification", // 3
-          "omniknight_hammer_of_purity", // 4
+          "omniknight_martyr", // 4
           "omniknight_purification", // 5
           "omniknight_guardian_angel", // 6
           "omniknight_purification", // 7
-          "omniknight_hammer_of_purity", // 8
-          "omniknight_hammer_of_purity", // 9
-          "special_bonus_unique_omniknight_5", // 10
-          "omniknight_martyr", // 11   Note from Michel: 'omniknight_degen_aura' does no longer exist
+          "omniknight_martyr", // 8
+          "omniknight_martyr", // 9
+          "omniknight_martyr", // 10
+          "special_bonus_unique_omniknight_5", // 11
           "omniknight_guardian_angel", // 12
-          "omniknight_martyr", // 13
-          "omniknight_martyr", // 14
+          "omniknight_hammer_of_purity", // 13
+          "omniknight_hammer_of_purity", // 14
           "special_bonus_unique_omniknight_6", // 15
-          "omniknight_martyr", // 16
+          "omniknight_hammer_of_purity", // 16
           "special_bonus_attributes", // 17
           "omniknight_guardian_angel", // 18
           "special_bonus_attributes", // 19
@@ -13997,12 +13997,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "flask",
             "enchanted_mango",
+            "enchanted_mango",
             "orb_of_venom",
-            "faerie_fire",
             "branches",
             "ward_observer",
             "ward_sentry",
-            "magic_stick",
           ],
           early_game: [
             "arcane_boots",
@@ -14011,16 +14010,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ring_of_basilius",
           ],
           mid_game: [
+            "aether_lens",
             "holy_locket",
             "solar_crest",
-            "blink",
-            "aether_lens",
             "glimmer_cape",
             "mekansm",
             "force_staff",
-            "ghost",
+            "ghost", 
+            "blink",
           ],
-          late_game: ["wraith_pact", "ultimate_scepter", "octarine_core"],
+          late_game: [ "wraith_pact", "ultimate_scepter", "octarine_core"],
           situational: ["guardian_greaves", "lotus_orb"],
           core: ["arcane_boots", "holy_locket", "solar_crest", "blink"],
           neutral: [
