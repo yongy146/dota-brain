@@ -3631,11 +3631,32 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
+    hero:"Dragon Knight",
+    audioFile: "ownHero/Dragon Knight_2_Lane spell usage",
+    messageTime: 30,
+    textMessage:
+      "Try to use Breathe Fire or Dragon Tail in order to secure ranged creeps during the laning stage.",
+    audience: [Audience.ROLE_MID],
+    image: {type: "ability", name: "dragon_knight_breathe_fire" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Dragon Knight",
+    audioFile: "ownHero/Dragon Knight_push-lane_runes",
+    messageTime: 2 * 60 + 30,
+    textMessage:
+      "You should push your lane in as the river runes are about to spawn, this is especially important when you have a bottle.",
+    audience: [Audience.ROLE_MID],
+    image: { type: "item", name: "bottle" },
+
+  },
+  {
+    category: "OwnHero",
     hero: "Dragon Knight",
     audioFile: "ownHero/Dragon Knight_2_Take towers",
     messageTime: 6 * 60,
     textMessage:
-      "Dragon Knight is great at taking buildings down early due to Corrosive Breath and ability to tank tower shots.",
+      "Dragon Knight is great at taking buildings down early due to Corrosive Breath from dragon form and ability to tank tower shots.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "dragon_knight_elder_dragon_form" },
   },
@@ -3677,7 +3698,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Dragon Knight_6_Counter items",
     messageTime: 10 * 60 + 45,
     textMessage:
-      "Break effects and healing reductions are big problem for Dragon Knight. Itemize against those.",
+      "Break effects and healing reductions are a big problem for Dragon Knight. Itemize against those.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "dragon_knight_dragon_blood" },
   },
@@ -3747,6 +3768,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Use Frost Arrows frequently to harass as you don't pull aggro but also to secure lasthits with extra damage.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "drow_ranger_frost_arrows" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Drow Ranger",
+    audioFile: "ownHero/Drow Ranger_laning_stage",
+    messageTime: 50,
+    textMessage:
+      "Be careful of allowing the enemies to get to close during laning stage, You are especially vulnerable when your support is pulling the lane.",
+    audience: [Audience.ROLE_CARRY],
+    image: {type: "item", name: "ironwood_tree" },
+
   },
   {
     category: "OwnHero",
@@ -4276,6 +4308,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Ember Spirit",
+    audioFile: "ownHero/Ember spirit_laning_tips",
+    messageTime: 2 * 60 + 30,
+    textMessage:
+      "You can push out the lane with Flame Guide or Sleight Of Fist as the river runes are about to spawn.",
+    audience: [Audience.ROLE_MID],
+    image: {type: "ability", name: "ember_spirit_flame_guard"}, 
+  },
+  {
+    category: "OwnHero",
+    hero: "Ember Spirit",
     audioFile: "ownHero/Ember Spirit_2_Control runes",
     messageTime: 5 * 60 + 30,
     repeatTime: 10 * 60,
@@ -4290,7 +4332,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Ember Spirit_3_Sleight remnants",
     messageTimes: [5 * 60 + 45, 15 * 60 + 45],
     textMessage:
-      "You can drop and activate Fire Remnants while Slight of Fisting.",
+      "You can drop and activate Fire Remnants while Sleight of Fisting.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "ember_spirit_fire_remnant" },
   },
@@ -4341,7 +4383,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Ember Spirit_8_Splitpush",
     messageTimes: [12 * 60 + 15, 20 * 60 + 15],
     textMessage:
-      "Ember Spirit is great at splitpushing as he is elusive and can always have remnant left behind.",
+      "Ember Spirit is great at splitpushing as he is elusive and can always have a remnant left behind.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "ember_spirit_fire_remnant" },
   },
@@ -6745,7 +6787,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Lifestealer",
     audioFile: "ownHero/Lifestealer_4_Rage tp",
     messageTimes: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
-    textMessage: "You can save an ally by Infesting it.",
+    textMessage: "If the enemy lineup has no disable through magic immunity you can be more aggresive on sides lanes and rage TP out.",
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
@@ -7190,7 +7232,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lone Druid_7_Aghanims Shard",
     messageTime: 19 * 60,
     textMessage:
-      "Make sure to pick up Aghanim's Shard at the 20 minute mark. It provides drums-like buff and basic dispel.",
+      "Make sure to pick up Aghanim's Shard at the 15 minute mark. It provides drums-like buff and basic dispel.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8877,6 +8919,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Naga Siren",
+    audioFile: "ownHero/Naga Siren_Hotkeys",
+    messageTimes:[ 10, 11 * 60, 25 * 60],
+    textMessage: 
+      "Setup hotkeys to easily split up your illusions.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "naga_siren_mirror_image"},
+
+  },
+  {
+    category: "OwnHero",
+    hero: "Naga Siren",
     audioFile: "ownHero/Naga Siren_4_Mirror Images lasthitting",
     messageTime: 15,
     textMessage:
@@ -8924,7 +8977,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "naga_siren_song_of_the_siren" },
   },
-  {
+    {
     category: "OwnHero",
     hero: "Naga Siren",
     audioFile: "ownHero/Naga Siren_9_Song Roshan",
@@ -8959,7 +9012,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Naga Siren",
     audioFile: "enemyHero/Naga Siren_2_Mirror image",
     messageTime: -50,
-    textMessage: "Hex, Drains and Dagon destroy Mirror Images instantly.",
+    textMessage: 
+      "Hex, Drains and Dagon destroy Mirror Images instantly.",
     audience: [Audience.ALL],
   },
   {
@@ -11286,7 +11340,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Queen of Pain_7_Aghanims Shard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it provides silence and extra damage.",
+      "Pick up Aghanim's Shard around minute 15 as it provides silence and extra damage.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -13949,6 +14003,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Templar Assassin",
+    audioFile: "ownHero/Templar Assassin_secure_runes",
+    messageTimes:[1 * 60 + 30, 3 * 60 + 30],
+    textMessage: "You can push the lane in faster with psi blades and refraction in order to secure river runes.",
+    audience: [Audience.ROLE_MID],
+    image: { type: "ability", name: "templar_assassin_psi_blades"},
+  },
+  {
+    category: "OwnHero",
+    hero: "Templar Assassin",
     audioFile: "ownHero/Templar Assassin_3_Stack small camp",
     messageTimes: [105, 3 * 60 + 45],
     textMessage:
@@ -14038,6 +14101,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     hero: "Templar Assassin",
+    audioFile: "enemyHero/Templar Assassin_gank_earlygame",
+    messageTime: 7 * 60,
+    textMessage:
+      "Templar assassin struggles against well coordinated ganks in the early game before her traps are online.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: "EnemyHero",
+    hero: "Templar Assassin",
     audioFile: "enemyHero/Templar Assassin_3_Psionic trap",
     messageTime: 5 * 60 + 10,
     textMessage:
@@ -14123,7 +14195,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Terrorblade_2_Metamorphosis farming",
     messageTime: 20,
     textMessage:
-      "Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves.",
+      "Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves, Try to harras your opponent and deny they're creeps.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "terrorblade_metamorphosis" },
   },
@@ -14213,7 +14285,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Terrorblade_3_Conjure image",
     messageTime: -40,
     textMessage:
-      "Hexes, drains and Dagon are destroying Conjur Images instantly.",
+      "Hexes, drains and Dagon destroy Conjure Images instantly.",
     audience: [Audience.ALL],
   },
   {
@@ -15193,6 +15265,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Battle Trance applies basic dispel on Troll. Use dispellable spells and items afterwards.",
     audience: [Audience.ALL],
+  },
+  {
+    category: "EnemyHero",
+    hero: "Troll Warlord",
+    audioFile: "enemyHero/Troll Warlord_kiting_items",
+    messageTime: 10 * 60,
+    textMessage:
+      "Item's like euls and ghost scepter are really good at kiting Troll Warlord and battle trance.",
+    audience: [Audience.ROLE_SUPPORT],
   },
   {
     category: "EnemyHero",
@@ -16727,7 +16808,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Windranger_9_Aghanims Shard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Ahanim's Shard around minute 20 as it adds another control spell to your arsenal.",
+      "Pick up Ahanim's Shard around minute 15 as it adds another control spell to your arsenal.",
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -17167,7 +17248,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Wraith King_8_Mana burn",
     messageTime: 14 * 60,
     textMessage:
-      "Mana burn is a big problem for the Wraith King. Itemize against it or adjust the playstyle.",
+      "Mana burn is a big problem for the Wraith King. Consider aghanims shard to deal with this.",
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -17232,7 +17313,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Wraith King_6_Radiance",
     messageTime: 15 * 60 + 10,
     textMessage:
-      "Be aware of Wraith King's Radiance timing. He'll be looking to fight you.",
+      "If wraith king seems to be saving gold he is most probably buying radiance, becareful of this timing and try punish this before he has it.",
     audience: [Audience.ALL],
   },
 
