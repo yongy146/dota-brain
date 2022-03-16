@@ -9766,12 +9766,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Omniknight",
-    audioFile: "ownHero/Omniknight_4_Skip Degen Aura",
+    audioFile: "ownHero/Omniknight_4_Skill Hammer Of Purity on Level 1",
     messageTimes: [9 * 60 + 45, 13 * 60 + 45],
     textMessage:
-      "After you maxed out the first and second spell, consider skilling stats over Degen Aura.",
+      "If you can run down an opponent on the lane and have nothing to dispel, take Hammer of Purity on Level 1.",
     audience: [Audience.ROLE_SUPPORT],
-    image: { type: "ability", name: "omniknight_degen_aura" },
+    image: { type: "ability", name: "omniknight_hammer_of_purity" },
   },
   {
     category: "OwnHero",
@@ -9840,6 +9840,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Items that do magical damage are great against Guardian Angel.",
     audience: [Audience.ALL],
   },
+  
 
   // 69. Oracle | 05.03.2021
   {
