@@ -253,7 +253,7 @@ export const ScreenSizes: ScreenDefinitions = {
       appButton: {
         xPos: 75,
         yPos: 11,
-        size: 17,
+        size: 15,
       },
     },
     inGame: {
@@ -317,7 +317,7 @@ export const ScreenSizes: ScreenDefinitions = {
       appButton: {
         xPos: 8,
         yPos: 42,
-        size: 17,
+        size: 20,
       },
     },
     inGame: {
@@ -378,7 +378,7 @@ export const ScreenSizes: ScreenDefinitions = {
       appButton: {
         xPos: 8,
         yPos: 42,
-        size: 17,
+        size: 20,
       },
     },
     inGame: {
@@ -439,7 +439,7 @@ export const ScreenSizes: ScreenDefinitions = {
       appButton: {
         xPos: 80,
         yPos: 11,
-        size: 17,
+        size: 20,
       },
     },
     inGame: {
@@ -561,8 +561,8 @@ export const ScreenSizes: ScreenDefinitions = {
         height: 60,
       },
       appButton: {
-        xPos: 65,
-        yPos: 10,
+        xPos: 90,
+        yPos: 16,
         size: 20,
       },
     },
@@ -624,7 +624,7 @@ export const ScreenSizes: ScreenDefinitions = {
         height: 60,
       },
       appButton: {
-        xPos: 10,
+        xPos: 7,
         yPos: 45,
         size: 24,
       },
