@@ -799,9 +799,9 @@ export const ScreenSizes: ScreenDefinitions = {
       size: 106,
     },
     appButton: {
-      xPos: 0,
-      yPos: 0,
-      size: 0,
+      xPos: 288,
+      yPos: 942,
+      size: 38,
     },
   },
   "1920x1079": { reuse: "1920x1080" },
