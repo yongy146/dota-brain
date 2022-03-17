@@ -94,6 +94,13 @@ export interface ScreenDefinition {
       width: number; // From middle hero radiant to middle hero dire
       height: number; // High such that longest 'hero selection' text can be shown
     };
+
+    // Ingame app button
+    appButton: {
+      xPos: number;
+      yPos: number;
+      size: number;
+    };
   };
   inGame: {
     heroesRadiantTopLeftXPos?: number;
@@ -152,6 +159,11 @@ export interface ScreenDefinition {
     yPos: number;
     size: number; // Roshan glyph window has same widht and height
   };
+  appButton: {
+    xPos: number;
+    yPos: number;
+    size: number;
+  };
 }
 
 export interface ScreenReuse {
@@ -174,6 +186,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 67,
         width: 600,
         height: 60,
+      },
+      appButton: {
+        xPos: 6,
+        yPos: 28,
+        size: 17,
       },
     },
     inGame: {
@@ -212,6 +229,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 594,
       size: 80,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1024x600": { reuse: "1024x768" },
 
@@ -227,6 +249,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 66,
         width: 700,
         height: 60,
+      },
+      appButton: {
+        xPos: 75,
+        yPos: 11,
+        size: 17,
       },
     },
     inGame: {
@@ -265,6 +292,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 556,
       size: 74,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1280x768": { reuse: "1280x720" },
   "1280x800": { reuse: "1280x720" },
@@ -281,6 +313,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 84,
         width: 800,
         height: 60,
+      },
+      appButton: {
+        xPos: 8,
+        yPos: 42,
+        size: 17,
       },
     },
     inGame: {
@@ -319,6 +356,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 743,
       size: 86,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
 
   "1280x1024": {
@@ -332,6 +374,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 86,
         width: 700,
         height: 60,
+      },
+      appButton: {
+        xPos: 8,
+        yPos: 42,
+        size: 17,
       },
     },
     inGame: {
@@ -370,6 +417,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 792,
       size: 93,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
 
   "1366x768": {
@@ -383,6 +435,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 69,
         width: 818,
         height: 60,
+      },
+      appButton: {
+        xPos: 80,
+        yPos: 11,
+        size: 17,
       },
     },
     inGame: {
@@ -421,6 +478,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 594,
       size: 76,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1360x768": { reuse: "1366x768" },
 
@@ -435,6 +497,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 81,
         width: 904,
         height: 60,
+      },
+      appButton: {
+        xPos: 8,
+        yPos: 42,
+        size: 20,
       },
     },
     inGame: {
@@ -473,6 +540,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 697,
       size: 86,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1440x1050": { reuse: "1440x900" },
 
@@ -487,6 +559,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 80,
         width: 898,
         height: 60,
+      },
+      appButton: {
+        xPos: 65,
+        yPos: 10,
+        size: 20,
       },
     },
     inGame: {
@@ -525,6 +602,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 697,
       size: 93,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1600x1024": { reuse: "1600x900" },
   "1600x1200": { reuse: "1600x900" },
@@ -540,6 +622,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 95,
         width: 882,
         height: 60,
+      },
+      appButton: {
+        xPos: 10,
+        yPos: 45,
+        size: 24,
       },
     },
     inGame: {
@@ -578,6 +665,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 813,
       size: 106,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1728x1080": { reuse: "1600x900" },
 
@@ -592,6 +684,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 89,
         width: 846,
         height: 60,
+      },
+      appButton: {
+        xPos: 105,
+        yPos: 14,
+        size: 24,
       },
     },
     inGame: {
@@ -630,6 +727,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 768,
       size: 93,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
 
   "1920x1080": {
@@ -647,6 +749,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 115, // One line above 'STRATEGY/LOADOUT / GUIDES'
         width: 800, // From middle hero radiant to middle hero dire
         height: 60, // High such that longest 'hero selection' text can be shown
+      },
+      appButton: {
+        xPos: 113,
+        yPos: 16,
+        size: 25,
       },
     },
     inGame: {
@@ -691,6 +798,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 841,
       size: 106,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "1920x1079": { reuse: "1920x1080" },
 
@@ -705,6 +817,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 109,
         width: 1020,
         height: 60,
+      },
+      appButton: {
+        xPos: 11,
+        yPos: 55,
+        size: 28,
       },
     },
     inGame: {
@@ -743,6 +860,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 937,
       size: 106,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "2048x1152": { reuse: "1920x1200" },
 
@@ -757,6 +879,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 124,
         width: 1028,
         height: 60,
+      },
+      appButton: {
+        xPos: 12,
+        yPos: 50,
+        size: 26,
       },
     },
     inGame: {
@@ -795,6 +922,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 1123,
       size: 106,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
 
   "2560x1080": {
@@ -808,6 +940,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 99,
         width: 880,
         height: 60,
+      },
+      appButton: {
+        xPos: 113,
+        yPos: 16,
+        size: 25,
       },
     },
     inGame: {
@@ -846,6 +983,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 836,
       size: 104,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
 
   "2560x1440": {
@@ -859,6 +1001,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 133,
         width: 1228,
         height: 60,
+      },
+      appButton: {
+        xPos: 150,
+        yPos: 21,
+        size: 34,
       },
     },
     inGame: {
@@ -897,6 +1044,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 1115,
       size: 134,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "2560x1600": { reuse: "2560x1440" },
   "2715x1527": { reuse: "2560x1440" },
@@ -913,6 +1065,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 98,
         width: 894,
         height: 60,
+      },
+      appButton: {
+        xPos: 113,
+        yPos: 16,
+        size: 26,
       },
     },
     inGame: {
@@ -951,6 +1108,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 836,
       size: 106,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
 
   "3840x2160": {
@@ -964,6 +1126,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 208,
         width: 894,
         height: 60,
+      },
+      appButton: {
+        xPos: 225,
+        yPos: 32,
+        size: 50,
       },
     },
     inGame: {
@@ -1002,6 +1169,11 @@ export const ScreenSizes: ScreenDefinitions = {
       yPos: 1672,
       size: 212,
     },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
+    },
   },
   "4096x2160": { reuse: "3840x2160" },
 
@@ -1016,6 +1188,11 @@ export const ScreenSizes: ScreenDefinitions = {
         yPos: 132,
         width: 1184,
         height: 60,
+      },
+      appButton: {
+        xPos: 151,
+        yPos: 21,
+        size: 34,
       },
     },
     inGame: {
@@ -1053,6 +1230,11 @@ export const ScreenSizes: ScreenDefinitions = {
       xPos: 336,
       yPos: 1115,
       size: 140,
+    },
+    appButton: {
+      xPos: 0,
+      yPos: 0,
+      size: 0,
     },
   },
 };
