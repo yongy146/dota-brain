@@ -20,27 +20,6 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
   if (Object.prototype.hasOwnProperty.call(frame, "reuse"))
     frame = ScreenSizes[(<ScreenReuse>frame).reuse];
 
-  // Report to be able to see the number of users with different screen sizes
-  let eventAction = "not yet customized";
-  if (Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize)) {
-    eventAction = Object.prototype.hasOwnProperty.call(
-      ScreenSizes[screenSize],
-      "reuse"
-    )
-      ? "piggy backed"
-      : "customized";
-  }
-  overwolf.windows.sendMessage(
-    windowNames.background,
-    "ga",
-    {
-      eventCategory: "monitor",
-      eventAction: eventAction,
-      eventLabel: `${screenSize}`,
-    },
-    () => undefined
-  );
-
   frame = <ScreenDefinition>frame;
 
   // Add calculated fields by the performance tracker
@@ -76,6 +55,24 @@ export function getScreenDetails(screenSize: string): ScreenDefinition {
 
 export function isScreenCustomized(screenSize: string): boolean {
   return Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize);
+}
+
+/**
+ *
+ * @param screenSize String containing <width x height>, e.g. '1920x1080'
+ * @returns "piggy backed", "customized" or "not configured"
+ */
+export function getScreenCustomization(screenSize: string): string {
+  if (Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize)) {
+    const frame = Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize);
+    if (Object.prototype.hasOwnProperty.call(frame, "reuse")) {
+      return "piggy backed";
+    } else {
+      return "customized";
+    }
+  } else {
+    return "not configured";
+  }
 }
 
 export interface ScreenDefinition {
