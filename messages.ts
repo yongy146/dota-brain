@@ -3630,13 +3630,13 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    hero:"Dragon Knight",
+    hero: "Dragon Knight",
     audioFile: "ownHero/Dragon Knight_2_Lane spell usage",
     messageTime: 30,
     textMessage:
       "Try to use Breathe Fire or Dragon Tail in order to secure ranged creeps during the laning stage.",
     audience: [Audience.ROLE_MID],
-    image: {type: "ability", name: "dragon_knight_breathe_fire" },
+    image: { type: "ability", name: "dragon_knight_breathe_fire" },
   },
   {
     category: "OwnHero",
@@ -3647,7 +3647,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "You should push your lane in as the river runes are about to spawn, this is especially important when you have a bottle.",
     audience: [Audience.ROLE_MID],
     image: { type: "item", name: "bottle" },
-
   },
   {
     category: "OwnHero",
@@ -3776,8 +3775,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Be careful of allowing the enemies to get to close during laning stage, You are especially vulnerable when your support is pulling the lane.",
     audience: [Audience.ROLE_CARRY],
-    image: {type: "item", name: "ironwood_tree" },
-
+    image: { type: "item", name: "ironwood_tree" },
   },
   {
     category: "OwnHero",
@@ -4311,7 +4309,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "You can push out the lane with Flame Guide or Sleight Of Fist as the river runes are about to spawn.",
     audience: [Audience.ROLE_MID],
-    image: {type: "ability", name: "ember_spirit_flame_guard"}, 
+    image: { type: "ability", name: "ember_spirit_flame_guard" },
   },
   {
     category: "OwnHero",
@@ -6776,7 +6774,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Lifestealer",
     audioFile: "ownHero/Lifestealer_4_Rage tp",
     messageTimes: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
-    textMessage: "If the enemy lineup has no disable through magic immunity you can be more aggresive on sides lanes and rage TP out.",
+    textMessage:
+      "If the enemy lineup has no disable through magic immunity you can be more aggresive on sides lanes and rage TP out.",
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
@@ -8906,12 +8905,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Naga Siren",
     audioFile: "ownHero/Naga Siren_Hotkeys",
-    messageTimes:[ 10, 11 * 60, 25 * 60],
-    textMessage: 
-      "Setup hotkeys to easily split up your illusions.",
+    messageTimes: [10, 11 * 60, 25 * 60],
+    textMessage: "Setup hotkeys to easily split up your illusions.",
     audience: [Audience.ALL],
-    image: { type: "ability", name: "naga_siren_mirror_image"},
-
+    image: { type: "ability", name: "naga_siren_mirror_image" },
   },
   {
     category: "OwnHero",
@@ -8963,7 +8960,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "naga_siren_song_of_the_siren" },
   },
-    {
+  {
     category: "OwnHero",
     hero: "Naga Siren",
     audioFile: "ownHero/Naga Siren_9_Song Roshan",
@@ -8998,8 +8995,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Naga Siren",
     audioFile: "enemyHero/Naga Siren_2_Mirror image",
     messageTime: -50,
-    textMessage: 
-      "Hex, Drains and Dagon destroy Mirror Images instantly.",
+    textMessage: "Hex, Drains and Dagon destroy Mirror Images instantly.",
     audience: [Audience.ALL],
   },
   {
@@ -9879,7 +9875,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Items that do magical damage are great against Guardian Angel.",
     audience: [Audience.ALL],
   },
-  
 
   // 69. Oracle | 05.03.2021
   {
@@ -13985,10 +13980,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Templar Assassin",
     audioFile: "ownHero/Templar Assassin_secure_runes",
-    messageTimes:[1 * 60 + 30, 3 * 60 + 30],
-    textMessage: "You can push the lane in faster with psi blades and refraction in order to secure river runes.",
+    messageTimes: [1 * 60 + 30, 3 * 60 + 30],
+    textMessage:
+      "You can push the lane in faster with psi blades and refraction in order to secure river runes.",
     audience: [Audience.ROLE_MID],
-    image: { type: "ability", name: "templar_assassin_psi_blades"},
+    image: { type: "ability", name: "templar_assassin_psi_blades" },
   },
   {
     category: "OwnHero",
@@ -14265,8 +14261,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Terrorblade",
     audioFile: "enemyHero/Terrorblade_3_Conjure image",
     messageTime: -40,
-    textMessage:
-      "Hexes, drains and Dagon destroy Conjure Images instantly.",
+    textMessage: "Hexes, drains and Dagon destroy Conjure Images instantly.",
     audience: [Audience.ALL],
   },
   {
