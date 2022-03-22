@@ -30,6 +30,12 @@
 */
 import { DOTA_COACH_GUIDE_ROLE } from "../../submodules/dota2/playerRoles";
 
+export function _findCategory(categoryValue: string): DotaCoachMessage {
+  return dotaCoachMessages.find(
+    (dotaCoachMessages) => dotaCoachMessages.category === categoryValue
+  );
+}
+
 /**
  *
  * @param hero Hero name, e.g. "Anti-Mage"
