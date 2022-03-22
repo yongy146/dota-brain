@@ -30,6 +30,13 @@
 */
 import { DOTA_COACH_GUIDE_ROLE } from "../../submodules/dota2/playerRoles";
 
+/**
+ * Searches dotacoachmessages array for a given category values and
+ * returns the entire object if value is found
+ *
+ * @param categoryValue category value to search for
+ * @returns Dotacoachmessage object
+ */
 export function _findCategory(categoryValue: string): DotaCoachMessage {
   return dotaCoachMessages.find(
     (dotaCoachMessages) => dotaCoachMessages.category === categoryValue
