@@ -833,11 +833,11 @@ export const disables: Disables = {
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
-    {
+    /*{
       skill: "techies_stasis_trap",
       affects: AbilityAffects.AREA,
       disables: ["root"],
-    },
+    },*/
   ],
   "Templar Assassin": [
     // Level 25 talent "1s Meld Hit Bash" is a hero stun.

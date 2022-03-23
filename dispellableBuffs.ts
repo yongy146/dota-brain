@@ -62,7 +62,9 @@ export const dispellableBuffs = {
   Lifestealer: [],
   Lina: [],
   Lion: [],
-  "Lone Druid": ["lone_druid_true_form_battle_cry"],
+  "Lone Druid": [
+    /* "lone_druid_true_form_battle_cry" no longer available */
+  ],
   Luna: [],
   Lycan: ["lycan_howl"],
   Magnus: ["magnataur_empower"],

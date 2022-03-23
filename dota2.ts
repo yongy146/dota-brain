@@ -1156,7 +1156,7 @@ export namespace hero_abilities {
   /**
    *
    * @param ability Long ability name, e.g. centaur_hoof_stomp
-   * @return Localized name of hero
+   * @return Localized name of hero, "Unknown hero" in case of error
    */
   export function getHeroName(ability: string) {
     //DotaLogger.log(`dota2.hero.getHeroName(${ability}): Called`);
