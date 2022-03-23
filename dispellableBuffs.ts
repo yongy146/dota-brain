@@ -79,7 +79,7 @@ export const dispellableBuffs = {
   "Night Stalker": [],
   "Nyx Assassin": [],
   "Ogre Magi": ["ogre_magi_bloodlust"],
-  Omniknight: ["omniknight_guardian_angel", "omniknight_repel"],
+  Omniknight: ["omniknight_guardian_angel", "omniknight_hammer_of_purity"],
   Oracle: ["oracle_purifying_flames"],
   "Outworld Destroyer": ["obsidian_destroyer_equilibrium"],
   "Primal Beast": [

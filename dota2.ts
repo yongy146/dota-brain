@@ -758,6 +758,7 @@ export namespace hero_item_builds {
    * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
    */
   export function getStandardItemBuild(h: string): UIItem[] {
+    DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
     if (!hero_builds.hasDefaultHeroBuild(h)) {
       /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
       return [];
@@ -765,9 +766,17 @@ export namespace hero_item_builds {
 
     const heroBuilds = HeroBuilds.heroBuilds[h];
 
-    const mid_game = heroBuilds.builds[0].items.mid_game;
-    const late_game = heroBuilds.builds[0].items.late_game;
-    const standard = mid_game.concat(late_game);
+    //const mid_game = heroBuilds.builds[0].items.mid_game;
+    //const late_game = heroBuilds.builds[0].items.late_game;
+    //const late_game = heroBuilds.builds[0].items.core;
+
+    /*DotaLogger.log(
+      `dota2.getStandardItemBuild(${h}): contact ${JSON.stringify(
+        mid_game
+      )} ${JSON.stringify(late_game)}`
+    );*/
+    //const standard = mid_game.concat(late_game);
+    const standard = heroBuilds.builds[0].items.core;
 
     const result = [];
     for (const s of standard) {
