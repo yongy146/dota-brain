@@ -199,7 +199,7 @@ export namespace hero {
    * @return null if there is no such hero
    */
   export function getHeroContent(heroName: string): HeroBuilds.HeroContent {
-    DotaLogger.log(`Dota2.getHeroContent(${heroName}): Called`);
+    //DotaLogger.log(`Dota2.getHeroContent(${heroName}): Called`);
     if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
       return null;
 
@@ -1222,6 +1222,10 @@ export namespace hero_abilities {
   export function getAbilityName(ability: string): string {
     DotaLogger.log(`dota2.getAbilityName(ability: ${ability}): Called`);
 
+    if (ability == "attack") {
+      return "Attack";
+    }
+
     const a = getAbility(ability);
 
     DotaLogger.log(`dota2.getAbility(): a=${JSON.stringify(a)}`);
@@ -1590,7 +1594,7 @@ export namespace items {
    * @returns Cooldown of item if it is an real Dota 2 item (otherwise 0, e.g. in case of armor or other selfmade items)
    */
   export function getItemCooldown(item: string): number {
-    DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Called`);
+    //DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Called`);
 
     if (Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`)) {
       // It is a standard Dota 2 item
