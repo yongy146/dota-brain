@@ -122,10 +122,10 @@ export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
 export function getRoleString(role: DOTA_COACH_ROLE): string {
   switch (role) {
     case DOTA_COACH_ROLE.CARRY: {
-      return "Safe Lane";
+      return "Carry";
     }
     case DOTA_COACH_ROLE.MID: {
-      return "Mid Lane";
+      return "Mid";
     }
     case DOTA_COACH_ROLE.OFFLANE: {
       return "Offlane";

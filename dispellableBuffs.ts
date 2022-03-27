@@ -1,5 +1,7 @@
 /**
+ * dispellableBuffs.ts contains all information about dispellable buffs from hero kills in the game.
  *
+ * IMPORTANT: Use the following function to access dispellable buffs: Dota2.hero_abilities.getDispellableBuffs()
  *
  * Unfortunately file can't be replaced with static data from Dota 2 (24.2.2022)
  *

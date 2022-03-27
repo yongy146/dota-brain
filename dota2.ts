@@ -725,7 +725,7 @@ export namespace hero_attributes {
 
   // Takes localized hero name
   export function getAttributeImg(heroName: string): string {
-    DotaLogger.log(`Dota2.getAttributeImg(heroName: ${heroName}): Called`);
+    //DotaLogger.log(`Dota2.getAttributeImg(heroName: ${heroName}): Called`);
     return `${process.env.IMGPATH}/attributes/${getAttribute(heroName)}.png`;
   }
 
@@ -758,7 +758,7 @@ export namespace hero_item_builds {
    * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
    */
   export function getStandardItemBuild(h: string): UIItem[] {
-    DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
+    //DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
     if (!hero_builds.hasDefaultHeroBuild(h)) {
       /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
       return [];
@@ -1220,7 +1220,7 @@ export namespace hero_abilities {
    * @returns English name of ability or null if name is not found
    */
   export function getAbilityName(ability: string): string {
-    DotaLogger.log(`dota2.getAbilityName(ability: ${ability}): Called`);
+    //DotaLogger.log(`dota2.getAbilityName(ability: ${ability}): Called`);
 
     if (ability == "attack") {
       return "Attack";
@@ -1228,19 +1228,19 @@ export namespace hero_abilities {
 
     const a = getAbility(ability);
 
-    DotaLogger.log(`dota2.getAbility(): a=${JSON.stringify(a)}`);
+    //DotaLogger.log(`dota2.getAbility(): a=${JSON.stringify(a)}`);
 
     if (a != null) {
       if (Object.prototype.hasOwnProperty.call(a, "name")) {
-        DotaLogger.log(`dota2.getAbilityName(): ${a.name}`);
+        //DotaLogger.log(`dota2.getAbilityName(): ${a.name}`);
         return a.name;
       } else {
-        DotaLogger.log(`dota2.getAbilityName(): null`);
+        //DotaLogger.log(`dota2.getAbilityName(): null`);
         return null;
       }
     }
 
-    DotaLogger.log(`dota2.getAbilityName(): null`);
+    //DotaLogger.log(`dota2.getAbilityName(): null`);
     return null;
   }
 
@@ -1369,9 +1369,9 @@ export namespace hero_abilities {
    * @returns array with ability names, e.g. ["antimage_mana_break", ... ] first 6 skills
    */
   export function getAbilities(heroName: string): string[] {
-    DotaLogger.log(
+    /*DotaLogger.log(
       "Dota2.hero.ability.getAbilities(heroName='" + heroName + "'): Called"
-    );
+    );*/
     const heroNameNPC = hero_names.localizedNameToNPCName(heroName);
     /*        return Object.keys(dota2Abilities[heroNameNPC])*/
     /*if (!npc_heroes.DOTAHeroes.hasOwnProperty(heroNameNPC)) return []
@@ -1445,11 +1445,11 @@ export namespace hero_abilities {
    *
    */
   export function getManaConsumption(heroAbility: string): string {
-    DotaLogger.log(
+    /*DotaLogger.log(
       "Dota2.hero_abilities.getManaConsumption(heroAbility='" +
         heroAbility +
         "'): Called"
-    );
+    );*/
 
     const a = hero_abilities.getAbility(heroAbility);
 
