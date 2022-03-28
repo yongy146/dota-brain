@@ -664,7 +664,7 @@ export const ScreenSizes: ScreenDefinitions = {
     },
     appButton: {
       xPos: 5,
-      yPos: 788,
+      yPos: 788 - 80,
       size: 25,
     },
   },
