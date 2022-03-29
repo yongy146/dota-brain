@@ -54,13 +54,13 @@ export async function getPlayerProfile(
   //let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
   const url = `https://api.opendota.com/api/players/${steamId32}`;
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     WebAccess.getRequestJSON(url, 3)
       .then((player) => {
         resolve(player);
       })
       .catch((error) => {
-        resolve(null);
+        reject(null);
       });
   });
 }
