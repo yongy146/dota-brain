@@ -15499,21 +15499,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "primal_beast_uproar", // 1
-          "primal_beast_onslaught", // 2
-          "primal_beast_onslaught", // 3
-          "primal_beast_trample", // 4
-          "primal_beast_onslaught", // 5
+          "primal_beast_trample", // 2
+          "primal_beast_trample", // 3
+          "primal_beast_onslaught", // 4
+          "primal_beast_trample", // 5
           "primal_beast_pulverize", // 6
-          "primal_beast_onslaught", // 7
-          "primal_beast_trample", // 8
-          "primal_beast_trample", // 9
-          "primal_beast_trample", // 10
-          "primal_beast_uproar", // 11
+          "primal_beast_trample", // 7
+          "primal_beast_uproar", // 8
+          "primal_beast_uproar", // 9
+          "primal_beast_uproar", // 10
+          "special_bonus_magic_resistance_12", // 11
           "primal_beast_pulverize", // 12
-          "primal_beast_uproar", // 13
-          "primal_beast_uproar", // 14
-          "special_bonus_magic_resistance_12", // 15
-          "special_bonus_unique_primal_beast_onslaught_damage", // 16
+          "primal_beast_onslaught", // 13
+          "primal_beast_onslaught", // 14
+          "special_bonus_unique_primal_beast_onslaught_damage", // 15
+          "primal_beast_onslaught", // 16
           "special_bonus_attributes", // 17
           "primal_beast_pulverize", // 18
           "special_bonus_attributes", // 19
@@ -15529,19 +15529,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
+            "gauntlets",
             "branches",
-            "circlet",
-            "ring_of_protection",
-            "faerie_fire",
-            "magic_stick",
+            "branches",
+
           ],
           early_game: [
             "soul_ring",
             "phase_boots",
             "magic_wand",
             "bracer",
-            "helm_of_iron_will",
-            "armlet",
             "hood_of_defiance",
           ],
           mid_game: [
@@ -15610,22 +15607,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2765463290",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "primal_beast_onslaught", // 1
+
+          "primal_beast_uproar", // 1
           "primal_beast_trample", // 2
-          "primal_beast_onslaught", // 3
-          "primal_beast_trample", // 4
-          "primal_beast_onslaught", // 5
+          "primal_beast_trample", // 3
+          "primal_beast_onslaught", // 4
+          "primal_beast_trample", // 5
           "primal_beast_pulverize", // 6
-          "primal_beast_onslaught", // 7
-          "primal_beast_trample", // 8
-          "primal_beast_trample", // 9
+          "primal_beast_trample", // 7
+          "primal_beast_uproar", // 8
+          "primal_beast_uproar", // 9
           "primal_beast_uproar", // 10
-          "primal_beast_uproar", // 11
+          "special_bonus_magic_resistance_12", // 11
           "primal_beast_pulverize", // 12
-          "primal_beast_uproar", // 13
-          "primal_beast_uproar", // 14
-          "special_bonus_magic_resistance_12", // 15
-          "special_bonus_unique_primal_beast_onslaught_damage", // 16
+          "primal_beast_onslaught", // 13
+          "primal_beast_onslaught", // 14
+          "special_bonus_unique_primal_beast_onslaught_damage", // 15
+          "primal_beast_onslaught", // 16
           "special_bonus_attributes", // 17
           "primal_beast_pulverize", // 18
           "special_bonus_attributes", // 19
@@ -15705,8 +15703,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Consider putting a point in this spell early when you are getting harassed. It can increase your damage immensely. Goes well with Orb of Venom.",
       special_bonus_mp_regen_2:
         "Consider leveling this talent on level 10 if you have mana sustain problems.",
-      special_bonus_unique_primal_beast_onslaught_damage:
-        "On level 15, you can take this level 15 talent instead of the level 10 talent. The Dota client disallows me to indicate such order in graphics above.",
       special_bonus_unique_primal_beast_roar_dispells:
         "You can take this talent over the suggested one if the dispel has great value in the game.",
     },
@@ -15728,11 +15724,49 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       heavens_halberd: "Particularly good against ranged right-clickers.",
       lotus_orb: "For reflect, dispel and armor.",
     },
-    combo: [],
+    combo: [
+      `primal_beast_onslaught`,
+      `black_king_bar`,
+      `primal_beast_pulverize`,
+      `primal_beast_trample`,
+    ],
     counter_items: {
-      laning_phase: { all: [], support: [], core: [] },
-      mid_game: { all: [], support: [], core: [] },
-      late_game: { all: [], support: [], core: [] },
+      laning_phase: { 
+        all: [
+          {
+          item: "magic_stick",
+          info: "Primal Beast tends to use a lot of spells early on to contest the lane.",
+        },
+        {
+          item: "boots",
+          info: "To outrun the Primal Beast while he is using Trample."
+        },
+        ], support: [], core: [] },
+       mid_game: { all: [], 
+        support: [
+          { item: "glimmer_cape" },
+          { item: "force_staff" }
+        ], 
+        core: [
+          { item: "mage_slayer" },
+          { item: "hood_of_defiance" },
+          { item: "pipe" },
+          { item: "blade_mail" },
+          { item: "eternal_shroud" },
+          { item: "black_king_bar" },
+          { item: "orchid" },
+          { item: "hurricane_pike" },
+          { item: "sange_and_yasha", info: "For status resistance" },
+          { item: "kaya_and_sange", info: "For status resistance" },
+        ] },
+      late_game: { all: [], support: [], 
+        core: [ 
+          
+        { item: "bloodthorn", info: "To burst this tanky hero and reduce his spell damage output." },
+        { item: "sheepstick" },
+        { item: "shivas_guard", info: "To reduce his regen and slows his movement speed as a main source of dealing damage." }
+       ] 
+      },
     },
   },
 
