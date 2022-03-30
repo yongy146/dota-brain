@@ -1160,6 +1160,10 @@ export namespace hero_abilities {
    */
   export function getHeroName(ability: string) {
     //DotaLogger.log(`dota2.hero.getHeroName(${ability}): Called`);
+
+    // This ability is not shown in dota2 Heroes and therefore needs to be treated manually
+    if (ability == "lone_druid_entangling_claws") return "Lone Druid";
+
     for (const hero of Object.keys(dota2Heroes)) {
       //DotaLogger.log(`dota2.hero.getHeroName(): Hero=${hero}`);
       /*DotaLogger.log(

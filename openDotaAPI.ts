@@ -1,12 +1,9 @@
 /*
- * This library accesses and contains data from OpenDota.
+ * openDotaAPI.ts provides access to the OpenDota API.
  *
  * Source: https://api.opendota.com/
  *
- * OpenDota APIs used in this library:
- *    - fetchPlayer: https://api.opendota.com/api/players/361606936
- *    - fetchPeers:  https://api.opendota.com/api/players/361606936/peers
- *
+ * Copyright (C) Dota Coach, 2022
  */
 import * as DotaLogger from "../../src/utility/log";
 import * as WebAccess from "../../src/utility/webAccess";
@@ -16,7 +13,6 @@ import {
   PlayerProfile,
   PlayerMatch,
 } from "../../src/app/background/dataManager";
-import { resolve } from "path";
 
 export class Player {
   "account_id": number; // steam ID (32 bit)
@@ -25,18 +21,13 @@ export class Player {
 }
 
 export class Friend extends Player {
-  //"account_id":  number // steam ID (32 bit)
   "last_played": number; // Last time played together / Unix epoch time
   "with_win": number; // wins together
   "with_games": number; // losses together
-  //"personaname": string // user name
-  //"avatarfull":  string // avatar
 }
 
-const key = "api_key=06632c9a-57d8-469b-a90a-1ecd64c72918";
-
 /**
- * Function retrieves the player's profile for a steam account.
+ * Function retrieves the player's profile (steam account).
  *
  * Sample API calls:
  *   - https://api.opendota.com/api/players/361606936 (public profile - Michel)
@@ -44,109 +35,26 @@ const key = "api_key=06632c9a-57d8-469b-a90a-1ecd64c72918";
  *   - https://api.opendota.com/api/players/4294967295 (private profile)
  *
  * @param steamId32
- * @return null, if it failed
+ * @return Player's profile
  */
-export async function getPlayerProfile(
-  steamId32: string
-): Promise<PlayerProfile> {
+export function getPlayerProfile(steamId32: string): Promise<PlayerProfile> {
   DotaLogger.log(`openDotaAPI.getPlayer(steamId32: ${steamId32}): Called`);
 
-  //let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
   const url = `https://api.opendota.com/api/players/${steamId32}`;
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     WebAccess.getRequestJSON(url, 3)
       .then((player) => {
         resolve(player);
       })
       .catch((error) => {
-        resolve(null);
+        reject(error);
       });
   });
 }
 
 /**
- * Function returns player stats of a user based of last 100 matches, max 30 days old
- *
- * This information is used for ban recommendations and non-ban recommendations
- *
- * @param steamId32
- * @returns { steamId32: <sring>, heroes: [{hero_id: 103, match_count, wins: xx, win_rate: xx%, pick_rate: xx%, kills: .., deaths: ... assists: ...[average] }]matches: <array of matches>]}
- */
-/*export function getPlayerStats(steamId32): Promise<any> {
-  DotaLogger.log(`openDotaAPI.getPlayerStats(${steamId32}): Called`);
-  return new Promise((resolve, reject) => {
-    getMatches(steamId32, 100)
-      .then((matches) => {
-        //DotaLogger.log(`openDotaAPI.getPlayerStats(): ${matches.length} matches received`)
-
-        const result = {
-          steamId32: steamId32,
-          match_count: 0,
-          heroes: [],
-          matches: matches,
-        };
-
-        const cutoff =
-          Math.round(new Date().getTime() / 1000) - 30 * 24 * 60 * 60;
-
-        // Add matches that are less than 30 days old
-        for (const match of matches) {
-          if (match.start_time > cutoff) {
-            let index = result.heroes.findIndex((hero) => {
-              return hero.hero_id == match.hero_id;
-            });
-            if (index == -1) {
-              index = result.heroes.length;
-              result.heroes.push({
-                hero_id: match.hero_id,
-                match_count: 0,
-                wins: 0,
-                kills: 0,
-                deaths: 0,
-                assists: 0,
-              });
-            }
-            result.match_count++;
-            result.heroes[index].match_count++;
-            result.heroes[index].wins += match.is_victory ? 1 : 0;
-            result.heroes[index].kills += match.kills;
-            result.heroes[index].deaths += match.deaths;
-            result.heroes[index].assists += match.assists;
-          }
-        }
-
-        // Manage calculated fields
-        for (const hero of result.heroes) {
-          hero.win_rate =
-            Math.round((hero.wins / hero.match_count) * 100) / 100;
-          hero.pick_rate =
-            Math.round((hero.match_count / result.match_count) * 100) / 100;
-          hero.kills = Math.round(hero.kills / hero.match_count);
-          hero.deaths = Math.round(hero.deaths / hero.match_count);
-          hero.assists = Math.round(hero.assists / hero.match_count);
-        }
-
-        // Sort array
-        result.heroes.sort((a, b) => {
-          return b.match_count - a.match_count;
-        });
-        //DotaLogger.log(`Results = ${JSON.stringify(result)}`)
-        resolve(result);
-      })
-      .catch((error) => {
-        DotaLogger.error(
-          `openDotaAPI.getPlayerStats(${steamId32}): Error = ${error}`
-        );
-        DotaLogger.error(
-          `openDotaAPI.getPlayerStats(${steamId32}): Stack = ${error.stack}`
-        );
-      });
-  });
-}*/
-
-/**
- * Function returns an array with the last 4 matches of a player with a given hero
+ * Function returns an array with the last matches of a player with a given hero
  * 
  * {
     "match_id": 6283427150,
@@ -171,7 +79,7 @@ export async function getPlayerProfile(
  * 
  * @param steamId32
  * @param heroId (if null, provides matches with any hero)
- * @returns null in case of error or other
+ * @returns Array of matches
  */
 export async function getMatches(
   steamId32: string,
@@ -181,16 +89,15 @@ export async function getMatches(
   //DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
 
   const heroIdParam = heroId == undefined ? "" : `&hero_id=${heroId}`;
-  //  let url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}&${key}`
   const url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}`;
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     WebAccess.getRequestJSON(url, 3)
       .then((matches) => {
         resolve(matches);
       })
-      .catch(() => {
-        resolve(null);
+      .catch((error) => {
+        reject(error);
       });
   });
 }
@@ -232,16 +139,10 @@ export async function getMatchesOfHero(heroId: number): Promise<any> {
  * @param matchId
  * @returns
  */
-export async function getMatch(
-  matchId: number,
-  authenticated: boolean
-): Promise<any> {
+export async function getMatch(matchId: number): Promise<any> {
   //DotaLogger.log(`openDotaAPI.getMatch(matchId: ${matchId}): Called`)
 
-  const url = `https://api.opendota.com/api/matches/${matchId}${
-    authenticated ? `?${key}` : ``
-  }`;
-  //let url = `https://api.opendota.com/api/matches/${matchId}?${key}`
+  const url = `https://api.opendota.com/api/matches/${matchId}`;
 
   return WebAccess.getRequestJSON(url, 3);
 }
@@ -250,8 +151,8 @@ export async function getMatch(
  *
  * @param steamId32
  * @param heroId
- * @param numberOfMatches Number of matches to be downloaded (has direct impact on the numbe of server requests)
- * @returns Array of matches. Each match includes purchase_log
+ * @param numberOfMatches Number of matches to be downloaded (has direct impact on the number of server requests)
+ * @returns Array of matches or null (if there was an error). Each match includes purchase_log
  * Sample result: [{"match_id":6284402681,"start_time":1637436825,"account_id":361606936,"item_0":50,"item_1":208,"item_2":145,"item_3":600,"item_4":127,"item_5":135,"purchase_log":[{"time":-71,"key":"quelling_blade"},{"time":-70,"key":"magic_stick"}]},{"match_id":6284091347,"start_time":1637425123,"account_id":361606936,"item_0":48,"item_1":208,"item_2":249,"item_3":604,"item_4":127,"item_5":235,"purchase_log":[{"time":-84,"key":"orb_of_venom"},{"time":-83,"key":"tango"}]}]
  */
 export async function getRecentItems(
@@ -262,15 +163,18 @@ export async function getRecentItems(
   DotaLogger.log(
     `openDotaAPI.getRecentItems(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`
   );
-  return new Promise(async (resolve, reject) => {
-    getMatches(steamId32, numberOfMatches, heroId).then(async (matches) => {
+  return new Promise((resolve, reject) => {
+    getMatches(steamId32, numberOfMatches, heroId).then((matches) => {
       const items = [];
       let counter = matches.length;
       if (counter == 0) resolve(items); // If there are not matches, return immediatly
+
+      const errors = [];
+
       //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
       for (let i = 0; i < numberOfMatches && i < matches.length; i++) {
         const matchId = matches[i].match_id;
-        getMatch(matchId, false)
+        getMatch(matchId)
           .then((matchFull) => {
             const players = matchFull.players as any[];
             const index = players.findIndex((value) => {
@@ -313,16 +217,21 @@ export async function getRecentItems(
             DotaLogger.warn(
               `openDotaAPI.getRecentItems(): Match ${matchId} could not be loaded`
             );
+            errors.push(error);
           })
           .finally(() => {
             counter--;
             //DotaLogger.log(`openDotaAPI.getRecentItems(): Completed, number of matches remaining ${counter}`)
             if (counter == 0) {
-              resolve(
-                items.sort((a, b) => {
-                  return b.start_time - a.start_time;
-                })
-              );
+              if (errors.length > 0) {
+                reject(errors[0]);
+              } else {
+                resolve(
+                  items.sort((a, b) => {
+                    return b.start_time - a.start_time;
+                  })
+                );
+              }
             }
           });
       }
@@ -330,6 +239,13 @@ export async function getRecentItems(
   });
 }
 
+/**
+ * Function is currently no longer used (was used to build hero guides previously)
+ *
+ *
+ * @param heroId
+ * @returns
+ */
 export async function getAbilityUpgrades(heroId: number): Promise<any> {
   DotaLogger.log(`openDotaAPI.getAbilityUpgrades(heroId: ${heroId}): Called`);
   return new Promise(async (resolve, reject) => {
@@ -365,7 +281,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
 
             await new Promise((resolve) => setTimeout(resolve, 200)); // Wait 100 ms to ensure only 10 reqquests are made per second
 
-            getMatch(m, true)
+            getMatch(m)
               .then((match) => {
                 //DotaLogger.log(`match ${matchGets_} received`)
                 const players = match.players;
@@ -657,90 +573,13 @@ export async function getHeroStats(): Promise<HeroStats[]> {
   });
 }
 
-/*
- * Function returns the players the user played with the last months
+/**
+ *
+ * Sample API call: https://api.opendota.com/api/players/361606936/peers
+ *
+ * @param steamId32
+ * @returns
  */
-export function fetchPlayer(steamId32: string): Promise<Player> {
-  DotaLogger.log(`openDotaAPI.fetchPlayer(${steamId32}): Called`);
-  /*
-      Format:
-        {
-          "tracked_until": "1606740072",
-          "profile": {
-            "account_id": 361606936,
-            "personaname": "Mario",
-            "name": null,
-            "plus": true,
-            "cheese": 0,
-            "steamid": "76561198321872664",
-            "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/72/720ce60b21640db1dbcf7366441952b885ce5bd7.jpg",
-            "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/72/720ce60b21640db1dbcf7366441952b885ce5bd7_medium.jpg",
-            "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/72/720ce60b21640db1dbcf7366441952b885ce5bd7_full.jpg",
-            "profileurl": "https://steamcommunity.com/profiles/76561198321872664/",
-            "last_login": "2020-08-08T16:34:34.787Z",
-            "loccountrycode": null,
-            "is_contributor": false
-          },
-          "rank_tier": 54,
-          "leaderboard_rank": null,
-          "solo_competitive_rank": 3239,
-          "mmr_estimate": {
-            "estimate": 3120
-          },
-          "competitive_rank": 2129
-        }
-     */
-
-  // https://api.opendota.com/api/players/361606936
-
-  return new Promise((resolve, reject) => {
-    if (steamId32 == "0") {
-      // Can happen when steam ID is not known
-      reject();
-      return;
-    }
-    //let url = `https://api.opendota.com/api/players/${steamId32}?${key}`
-    const url = `https://api.opendota.com/api/players/${steamId32}`;
-    DotaLogger.log("openDotaAPI.fetchPlayer(): URL='" + url + "'");
-    const request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.setRequestHeader("Cache-Control", "no-cache");
-    request.responseType = "text";
-
-    request.onload = async function () {
-      DotaLogger.log(
-        "dotaAPI.fetchPlayer(): Request status = " + request.status
-      );
-
-      if (request.status == 200) {
-        const text = request.response;
-        DotaLogger.log("openDotaAPI.fetchPlayer(): Message received: " + text);
-        const player = JSON.parse(text);
-
-        const p = new Player();
-        p.account_id = player.profile.account_id;
-        p.personaname = player.profile.personaname;
-        p.avatarfull = player.profile.avatarfull;
-
-        DotaLogger.log(
-          "openDotaAPI.fetchPlayer(): peers: " + JSON.stringify(p)
-        );
-        resolve(p);
-      } else {
-        reportNetworkError("openDotaAPI.fetchPlayer(): ", request.status);
-        reject();
-      }
-      //await new Promise(resolve => setTimeout(resolve, 1000/20)); // max 10 requests per second allowed
-      //t.isLoading = false
-    };
-    /*while (this.isLoading) {
-          await new Promise(resolve => setTimeout(resolve, 1000/20)); // max 10 requests per second allowed
-      }
-      t.isLoading = true*/
-    request.send();
-  });
-}
-
 export function fetchPeers(steamId32: string): Promise<Friend[]> {
   DotaLogger.log(`openDotaAPI.fetchPeers(${steamId32}): Called`);
   /*
@@ -767,32 +606,14 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
           { ... }
         ]
      */
-
-  // https://api.opendota.com/api/players/361606936/peers
-
   return new Promise((resolve, reject) => {
     const url = `https://api.opendota.com/api/players/${steamId32}/peers`;
-    //let url = `https://api.opendota.com/api/players/${steamId32}/peers?${key}`
     DotaLogger.log("openDotaAPI.fetchPeers(): URL='" + url + "'");
-    const request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.setRequestHeader("Cache-Control", "no-cache");
-    request.responseType = "text";
-    request.onload = async function () {
-      DotaLogger.log(
-        "openDotaAPI.fetchPeers(): Request status = " + request.status
-      );
-
-      if (request.status == 200) {
-        const text = request.response;
-        DotaLogger.log("openDotaAPI.fetchPeers(): Message received: " + text);
-        const peers = JSON.parse(text);
-
+    WebAccess.getRequestJSON(url, 3)
+      .then((peers) => {
         const result: Friend[] = [];
 
         for (let i = 0; i < peers.length; i++) {
-          const now = new Date();
-
           const date = new Date(peers[i].last_played * 1000); // Need the x 1000 to get miliseconds
           date.setMonth(date.getMonth() + 1); // Increase by one months
           //if (date > now) {
@@ -812,22 +633,14 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
           "openDotaAPI.fetchPeers(): peers: " + JSON.stringify(result)
         );
         resolve(result);
-      } else {
-        reportNetworkError("openDotaAPI.fetchPeers(): ", request.status);
-        reject();
-      }
-      //await new Promise(resolve => setTimeout(resolve, 1000/20)); // max 10 requests per second allowed
-      //t.isLoading = false
-    };
-    /*while (this.isLoading) {
-          await new Promise(resolve => setTimeout(resolve, 1000/20)); // max 10 requests per second allowed
-      }
-      t.isLoading = true*/
-    request.send();
+      })
+      .catch((error) => {
+        reject(error);
+      });
   });
 }
 
-function reportNetworkError(prefix: string, errorCode: number) {
+/*function reportNetworkError(prefix: string, errorCode: number) {
   let errorMessage = errorCode.toString();
   switch (errorCode) {
     case 430: {
@@ -841,3 +654,4 @@ function reportNetworkError(prefix: string, errorCode: number) {
   }
   DotaLogger.log(prefix + "Network error (" + errorMessage + ")");
 }
+*/
