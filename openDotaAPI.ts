@@ -78,18 +78,26 @@ export function getPlayerProfile(steamId32: string): Promise<PlayerProfile> {
  * Sample API call: https://api.opendota.com/api/players/361606936/matches?limit=4&hero_id=104
  * 
  * @param steamId32
- * @param heroId (if null, provides matches with any hero)
+ * @param options (if null, provides matches with any hero)
  * @returns Array of matches
  */
 export async function getMatches(
   steamId32: string,
-  numberOfMatches: number,
-  heroId?: number
+  options?: getMatchesOptions
+  /*numberOfMatches: number,
+  heroId?: number*/
 ): Promise<PlayerMatch[]> {
   //DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
 
-  const heroIdParam = heroId == undefined ? "" : `&hero_id=${heroId}`;
-  const url = `https://api.opendota.com/api/players/${steamId32}/matches?limit=${numberOfMatches}${heroIdParam}`;
+  if (options == undefined) options = {};
+  const params = Object.entries(options)
+    .map((val) => val.join("="))
+    .join("&");
+
+  //const heroIdParam = heroId == undefined ? "" : `&hero_id=${heroId}`;
+  const url = `https://api.opendota.com/api/players/${steamId32}/matches${
+    params == "" ? "" : "?" + params
+  }`;
 
   return new Promise((resolve, reject) => {
     WebAccess.getRequestJSON(url, 3)
@@ -100,6 +108,12 @@ export async function getMatches(
         reject(error);
       });
   });
+}
+
+export interface getMatchesOptions {
+  limit?: number; // number of matches
+  days?: number; // number of days
+  hero_id?: number; // hero id, e.g. 104 for legion commander
 }
 
 /**
@@ -164,78 +178,80 @@ export async function getRecentItems(
     `openDotaAPI.getRecentItems(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`
   );
   return new Promise((resolve, reject) => {
-    getMatches(steamId32, numberOfMatches, heroId).then((matches) => {
-      const items = [];
-      let counter = matches.length;
-      if (counter == 0) resolve(items); // If there are not matches, return immediatly
+    getMatches(steamId32, { limit: numberOfMatches, hero_id: heroId }).then(
+      (matches) => {
+        const items = [];
+        let counter = matches.length;
+        if (counter == 0) resolve(items); // If there are not matches, return immediatly
 
-      const errors = [];
+        const errors = [];
 
-      //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
-      for (let i = 0; i < numberOfMatches && i < matches.length; i++) {
-        const matchId = matches[i].match_id;
-        getMatch(matchId)
-          .then((matchFull) => {
-            const players = matchFull.players as any[];
-            const index = players.findIndex((value) => {
-              return value.hero_id == heroId;
+        //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
+        for (let i = 0; i < numberOfMatches && i < matches.length; i++) {
+          const matchId = matches[i].match_id;
+          getMatch(matchId)
+            .then((matchFull) => {
+              const players = matchFull.players as any[];
+              const index = players.findIndex((value) => {
+                return value.hero_id == heroId;
+              });
+              if (index != -1) {
+                //DotaLogger.log(`getRecentItems: matches[i]=${JSON.stringify(matchFull)}`)
+                // Add data available in unparsed matches
+                const matchData = {
+                  match_id: matchFull.match_id,
+                  start_time: matchFull.start_time,
+                  account_id: players[index].account_id,
+                  item_0: players[index].item_0,
+                  item_1: players[index].item_1,
+                  item_2: players[index].item_2,
+                  item_3: players[index].item_3,
+                  item_4: players[index].item_4,
+                  item_5: players[index].item_5,
+                };
+                // Add data available in parsed matches
+                if (
+                  Object.prototype.hasOwnProperty.call(
+                    players[index],
+                    "purchase_log"
+                  ) &&
+                  players[index].purchase_log != null
+                ) {
+                  matchData["purchase_log"] = players[index].purchase_log;
+                  //for (const itemPurchase of matches[i].purchase_log) {
+                  // format itemPurchse: {"time": -89, "key": "tango", "charges": 6}
+
+                  //}
+                } else {
+                  matchData["purchase_log"] = [];
+                }
+                items.push(matchData);
+              }
+            })
+            .catch((error) => {
+              DotaLogger.warn(
+                `openDotaAPI.getRecentItems(): Match ${matchId} could not be loaded`
+              );
+              errors.push(error);
+            })
+            .finally(() => {
+              counter--;
+              //DotaLogger.log(`openDotaAPI.getRecentItems(): Completed, number of matches remaining ${counter}`)
+              if (counter == 0) {
+                if (errors.length > 0) {
+                  reject(errors[0]);
+                } else {
+                  resolve(
+                    items.sort((a, b) => {
+                      return b.start_time - a.start_time;
+                    })
+                  );
+                }
+              }
             });
-            if (index != -1) {
-              //DotaLogger.log(`getRecentItems: matches[i]=${JSON.stringify(matchFull)}`)
-              // Add data available in unparsed matches
-              const matchData = {
-                match_id: matchFull.match_id,
-                start_time: matchFull.start_time,
-                account_id: players[index].account_id,
-                item_0: players[index].item_0,
-                item_1: players[index].item_1,
-                item_2: players[index].item_2,
-                item_3: players[index].item_3,
-                item_4: players[index].item_4,
-                item_5: players[index].item_5,
-              };
-              // Add data available in parsed matches
-              if (
-                Object.prototype.hasOwnProperty.call(
-                  players[index],
-                  "purchase_log"
-                ) &&
-                players[index].purchase_log != null
-              ) {
-                matchData["purchase_log"] = players[index].purchase_log;
-                //for (const itemPurchase of matches[i].purchase_log) {
-                // format itemPurchse: {"time": -89, "key": "tango", "charges": 6}
-
-                //}
-              } else {
-                matchData["purchase_log"] = [];
-              }
-              items.push(matchData);
-            }
-          })
-          .catch((error) => {
-            DotaLogger.warn(
-              `openDotaAPI.getRecentItems(): Match ${matchId} could not be loaded`
-            );
-            errors.push(error);
-          })
-          .finally(() => {
-            counter--;
-            //DotaLogger.log(`openDotaAPI.getRecentItems(): Completed, number of matches remaining ${counter}`)
-            if (counter == 0) {
-              if (errors.length > 0) {
-                reject(errors[0]);
-              } else {
-                resolve(
-                  items.sort((a, b) => {
-                    return b.start_time - a.start_time;
-                  })
-                );
-              }
-            }
-          });
+        }
       }
-    });
+    );
   });
 }
 
