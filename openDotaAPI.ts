@@ -76,6 +76,9 @@ export function getPlayerProfile(steamId32: string): Promise<PlayerProfile> {
   },
  *
  * Sample API call: https://api.opendota.com/api/players/361606936/matches?limit=4&hero_id=104
+ * parameters: https://docs.opendota.com/#tag/players%2Fpaths%2F~1players~1%7Baccount_id%7D~1matches%2Fget
+ * 
+ * 
  * 
  * @param steamId32
  * @param options (if null, provides matches with any hero)
@@ -112,7 +115,7 @@ export async function getMatches(
 
 export interface getMatchesOptions {
   limit?: number; // number of matches
-  days?: number; // number of days
+  date?: number; // number of days
   hero_id?: number; // hero id, e.g. 104 for legion commander
 }
 
