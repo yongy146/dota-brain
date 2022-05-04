@@ -1,6 +1,6 @@
 # How to use git?
 
-We strongly recommend you to use the git command line tool (https://https://git-scm.com/docs/git).
+We strongly recommend you to use the git command line tool (https://git-scm.com/docs/git).
 
 In the past we had issues with GitHub Desktop and therefore do not recommend to use it.
 
