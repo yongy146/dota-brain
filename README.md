@@ -1,11 +1,13 @@
 # How to use git?
 
-GitHub desktop is problematic and should therefor not be used.
+We strongly recommend to use the git command line too.
+
+In the past we had issues with GitHub Desktop and therefore do not recommend to use it.
 
 ## Downloading repository
 
 1. create dotacoach directory on your filesystem
-2. download repository: git clone https://github.com/roserens/dota2.git
+2. download repository: git clone https://github.com/dota-coach/dota-brain.git
 3. create own brach: 'git branch <your name>' (you need to be in the dota2 directory for it to work)
 
 ## Update repository (task before you do any change)
