@@ -238,7 +238,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
 
 export const heroBuilds: { [key: string]: HeroContent } = {
   Abaddon: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -432,7 +432,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Alchemist: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -722,7 +722,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Ancient Apparition": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -887,7 +887,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Anti-Mage": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -1058,7 +1058,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Arc Warden": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -1262,7 +1262,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Axe: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
@@ -1436,7 +1436,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Bane: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -1598,7 +1598,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Batrider: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -1882,7 +1882,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Beastmaster: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -2052,7 +2052,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Bloodseeker: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -2325,7 +2325,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Bounty Hunter": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -2508,7 +2508,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Brewmaster: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -2674,7 +2674,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Bristleback: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -2865,7 +2865,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Broodmother: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -3041,7 +3041,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Centaur Warrunner": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -3199,7 +3199,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Chaos Knight": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3461,7 +3461,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Chen: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -3579,7 +3579,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clinkz: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3717,7 +3717,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clockwerk: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -3870,7 +3870,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Crystal Maiden": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4035,7 +4035,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dark Seer": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4210,7 +4210,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dark Willow": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4393,7 +4393,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Dawnbreaker: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -4672,7 +4672,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Dazzle: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -4838,7 +4838,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Death Prophet": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -5036,7 +5036,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Disruptor: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5184,7 +5184,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Doom: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -5326,7 +5326,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dragon Knight": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5486,7 +5486,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Drow Ranger": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5653,7 +5653,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Earth Spirit": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5820,7 +5820,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Earthshaker: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5964,7 +5964,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Elder Titan": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -6120,7 +6120,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Ember Spirit": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -6302,7 +6302,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Enchantress: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -6451,7 +6451,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Enigma: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -6726,7 +6726,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Faceless Void": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -6897,7 +6897,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Grimstroke: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -7064,7 +7064,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Gyrocopter: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -7338,7 +7338,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Hoodwink: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -7531,7 +7531,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Huskar: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -7704,7 +7704,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Invoker: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -7991,7 +7991,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Io: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8136,7 +8136,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Jakiro: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8299,7 +8299,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Juggernaut: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -8480,7 +8480,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Keeper of the Light": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8676,7 +8676,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Kunkka: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -8947,7 +8947,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Legion Commander": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -9116,7 +9116,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Leshrac: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -9287,7 +9287,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lich: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -9463,7 +9463,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lifestealer: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9663,7 +9663,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lina: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -9953,7 +9953,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lion: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -10101,7 +10101,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Lone Druid": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10279,7 +10279,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Luna: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -10449,7 +10449,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lycan: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10697,7 +10697,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Magnus: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -11056,7 +11056,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Marci: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -11376,7 +11376,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Mars: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -11574,7 +11574,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Medusa: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -11747,7 +11747,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Meepo: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -11889,7 +11889,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Mirana: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -12062,7 +12062,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Monkey King": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -12364,7 +12364,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Morphling: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -12530,7 +12530,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Naga Siren": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -12723,7 +12723,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Nature's Prophet": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -13124,7 +13124,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Necrophos: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -13438,7 +13438,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Night Stalker": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -13635,7 +13635,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Nyx Assassin": {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -13783,7 +13783,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Ogre Magi": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -13955,7 +13955,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Omniknight: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
@@ -14016,10 +14016,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "glimmer_cape",
             "mekansm",
             "force_staff",
-            "ghost", 
+            "ghost",
             "blink",
           ],
-          late_game: [ "wraith_pact", "ultimate_scepter", "octarine_core"],
+          late_game: ["wraith_pact", "ultimate_scepter", "octarine_core"],
           situational: ["guardian_greaves", "lotus_orb"],
           core: ["arcane_boots", "holy_locket", "solar_crest", "blink"],
           neutral: [
@@ -14140,7 +14140,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Oracle: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14314,7 +14314,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   "Outworld Devourer": {
     // not `Outworld Destroyer`
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -14561,7 +14561,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Pangolier: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -14968,7 +14968,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Phantom Assassin": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -15150,7 +15150,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Phantom Lancer": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -15308,7 +15308,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Phoenix: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -15487,7 +15487,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Primal Beast": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -15532,7 +15532,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "gauntlets",
             "branches",
             "branches",
-
           ],
           early_game: [
             "soul_ring",
@@ -15607,7 +15606,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2765463290",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-
           "primal_beast_uproar", // 1
           "primal_beast_trample", // 2
           "primal_beast_trample", // 3
@@ -15731,22 +15729,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       `primal_beast_trample`,
     ],
     counter_items: {
-      laning_phase: { 
+      laning_phase: {
         all: [
           {
-          item: "magic_stick",
-          info: "Primal Beast tends to use a lot of spells early on to contest the lane.",
-        },
-        {
-          item: "boots",
-          info: "To outrun the Primal Beast while he is using Trample."
-        },
-        ], support: [], core: [] },
-       mid_game: { all: [], 
-        support: [
-          { item: "glimmer_cape" },
-          { item: "force_staff" }
-        ], 
+            item: "magic_stick",
+            info: "Primal Beast tends to use a lot of spells early on to contest the lane.",
+          },
+          {
+            item: "boots",
+            info: "To outrun the Primal Beast while he is using Trample.",
+          },
+        ],
+        support: [],
+        core: [],
+      },
+      mid_game: {
+        all: [],
+        support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           { item: "mage_slayer" },
           { item: "hood_of_defiance" },
@@ -15758,20 +15757,28 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "hurricane_pike" },
           { item: "sange_and_yasha", info: "For status resistance" },
           { item: "kaya_and_sange", info: "For status resistance" },
-        ] },
-      late_game: { all: [], support: [], 
-        core: [ 
-          
-        { item: "bloodthorn", info: "To burst this tanky hero and reduce his spell damage output." },
-        { item: "sheepstick" },
-        { item: "shivas_guard", info: "To reduce his regen and slows his movement speed as a main source of dealing damage." }
-       ] 
+        ],
+      },
+      late_game: {
+        all: [],
+        support: [],
+        core: [
+          {
+            item: "bloodthorn",
+            info: "To burst this tanky hero and reduce his spell damage output.",
+          },
+          { item: "sheepstick" },
+          {
+            item: "shivas_guard",
+            info: "To reduce his regen and slows his movement speed as a main source of dealing damage.",
+          },
+        ],
       },
     },
   },
 
   Puck: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -15940,7 +15947,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Pudge: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -16238,7 +16245,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Pugna: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -16547,7 +16554,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Queen of Pain": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -16819,7 +16826,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Razor: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -17201,7 +17208,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Riki: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -17443,7 +17450,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Rubick: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -17582,7 +17589,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Sand King": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -17773,7 +17780,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Demon": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -17950,7 +17957,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Fiend": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -18226,7 +18233,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Shaman": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -18376,7 +18383,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Silencer: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -18555,7 +18562,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Skywrath Mage": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -18720,7 +18727,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Slardar: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -18879,7 +18886,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Slark: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -19067,7 +19074,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Snapfire: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -19261,7 +19268,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Sniper: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -19551,7 +19558,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Spectre: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -19710,7 +19717,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Spirit Breaker": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -19976,7 +19983,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Storm Spirit": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -20138,7 +20145,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Sven: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -20318,7 +20325,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Techies: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -20594,7 +20601,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Templar Assassin": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -20905,7 +20912,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Terrorblade: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -21117,7 +21124,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tidehunter: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -21296,7 +21303,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Timbersaw: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
@@ -21496,7 +21503,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tinker: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -21707,7 +21714,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tiny: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -22109,7 +22116,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Treant Protector": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -22296,7 +22303,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Troll Warlord": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -22489,7 +22496,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tusk: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -22757,7 +22764,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Underlord: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -22952,7 +22959,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Undying: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -23118,7 +23125,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Ursa: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -23309,7 +23316,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Vengeful Spirit": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -23477,7 +23484,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Venomancer: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -23798,7 +23805,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Viper: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -24082,7 +24089,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Visage: {
-    gameplay_version: `7.31b`,
+    gameplay_version: `7.31c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -24348,7 +24355,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Void Spirit": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -24635,7 +24642,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Warlock: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -24810,7 +24817,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Weaver: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -25121,7 +25128,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Windranger: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -25560,7 +25567,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Winter Wyvern": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -25746,7 +25753,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Witch Doctor": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -25919,7 +25926,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Wraith King": {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -26105,7 +26112,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Zeus: {
-    gameplay_version: "7.31b",
+    gameplay_version: "7.31c",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
