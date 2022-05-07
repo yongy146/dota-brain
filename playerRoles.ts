@@ -1,8 +1,8 @@
 /**
  * Library to manage player roles
  */
-import { storageItems } from "../../consts";
-import { HeroBuild } from "../../submodules/dota2/heroBuilds";
+import { storageItems } from "../../src/app/consts";
+import { HeroBuild } from "./heroBuilds";
 
 // Steam Guide Roles
 export enum STEAM_GUIDE_ROLE { // <None> is treated by not providing any role

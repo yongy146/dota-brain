@@ -3,7 +3,6 @@
  *
  * (C) Dota Coach, 2021
  */
-import { windowNames } from "../../consts";
 
 /**
  * The function information on Dota 2 screens. This information can be used to position elements in the game.
