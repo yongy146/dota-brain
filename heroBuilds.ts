@@ -666,7 +666,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that allows you to deliver the damage while being in the middle of the fight.",
       aghanims_shard: "For extra dispel and buff.",
       ultimate_scepter:
-        "To gift it to your teammates while at same time your recieve a stacking buff for each Aghanim`s Scepter given away.",
+        "To gift it to your teammates while at same time your receive a stacking buff for each Aghanim`s Scepter given away.",
       mjollnir: "Great against illusion-based heroes.",
       overwhelming_blink:
         "Against illusion-based heroes and to tank yourself up.",
