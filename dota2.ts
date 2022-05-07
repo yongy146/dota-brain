@@ -11,11 +11,11 @@ import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json";
 import dota2Items from "./dota2Items.json";
 import dota2Heroes from "../../submodules/dota2/dota2Heroes.json";
-import * as DotaLogger from "../../src/utility/log";
+import * as DotaLogger from "../../submodules/utilities/log";
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "../../submodules/dota2/playerRoles";
-import { UIItem, UIAbility } from "../../src/UI/dotaCoachUI";
-import * as DotaCoachUI from "../../src/UI/dotaCoachUI";
+import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI";
+import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI";
 
 // Colors for radiant & dire
 export const colorRadiant = "#67dd98"; //'#47661f'
