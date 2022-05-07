@@ -29,6 +29,16 @@ export const colorIntelligenceTransparent = "rgba(0, 0, 255, 0.35)";
 export const colorAgility = "#009000";
 export const colorAgilityTransparent = "rgba(0, 255, 0, 0.35)";
 
+type ErrorHandler = (error?: { source?: string; message?: string }) => void;
+let errorHandler: ErrorHandler = () => undefined;
+
+/**
+ * Function can be used to register an expefic error handler, should the library report an error
+ */
+export function setErrorHandler(handler: ErrorHandler) {
+  errorHandler = handler;
+}
+
 /**
  * Hero type based on information extracted by Dota Coach form Dota 2
  */
@@ -1163,6 +1173,8 @@ export namespace hero_abilities {
 
     // This ability is not shown in dota2 Heroes and therefore needs to be treated manually
     if (ability == "lone_druid_entangling_claws") return "Lone Druid";
+    if (ability == "brewmaster_earth_hurl_boulder") return "Brewmaster";
+    if (ability == "brewmaster_storm_cyclone") return "Brewmaster";
 
     for (const hero of Object.keys(dota2Heroes)) {
       //DotaLogger.log(`dota2.hero.getHeroName(): Hero=${hero}`);
@@ -1175,7 +1187,12 @@ export namespace hero_abilities {
         return dota2Heroes[hero].localized_name;
       }
     }
-    DotaLogger.error(`Dota2.getHeroName(): Hero of ${ability} not found`);
+    const errorMessage = `dota2.hero_abilities.getHeroName(): Hero of ${ability} not found`;
+    DotaLogger.error(errorMessage);
+    errorHandler({
+      source: "dota2.hero_abilities.getHeroName",
+      message: errorMessage,
+    });
     return "Unknown hero";
   }
 
