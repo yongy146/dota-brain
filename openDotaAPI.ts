@@ -5,8 +5,8 @@
  *
  * Copyright (C) Dota Coach, 2022
  */
-import * as DotaLogger from "../../src/utility/log";
-import * as WebAccess from "../../src/utility/webAccess";
+import * as DotaLogger from "../utilities/log";
+import * as WebAccess from "../utilities/webAccess";
 //import * as WebAccess from '../../src/utility/webAccessNode'
 import * as Dota2 from "../../submodules/dota2/dota2";
 import {
