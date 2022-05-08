@@ -742,7 +742,7 @@ export const ScreenSizes: ScreenDefinitions = {
       subtitles: {
         // Position where to put the subtitles
         xPos: 560, // Middle hero radiant
-        yPos: 115, // One line above 'STRATEGY/LOADOUT / GUIDES'
+        yPos: 115, // One line above 'STRATEGY / LOADOUT / GUIDES'
         width: 800, // From middle hero radiant to middle hero dire
         height: 60, // High such that longest 'hero selection' text can be shown
       },
@@ -1048,7 +1048,67 @@ export const ScreenSizes: ScreenDefinitions = {
   },
   "2560x1600": { reuse: "2560x1440" },
   "2715x1527": { reuse: "2560x1440" },
-  "3440x1440": { reuse: "2560x1440" },
+
+  "3440x1440": {
+    fontSize: 17,
+    preGame: {
+      heroesRadiantTopLeftXPos: 721,
+      heroesDireTopLeftXPos: 1915,
+      heroesWidth: 801,
+      subtitles: {
+        xPos: 1106,
+        yPos: 133,
+        width: 1228,
+        height: 60,
+      },
+      appButton: {
+        xPos: 150,
+        yPos: 21,
+        size: 34,
+      },
+    },
+    inGame: {
+      heroesRadiantBottomLeftXPos: 1172,
+      heroesDireBottomLeftXPos: 1856,
+      heroesHeight: 68,
+      heroesWidth: 411,
+      tracker: {
+        performance: {
+          xPos: 220,
+          yPos: 80,
+          nonDotaPlus: {
+            height: 58,
+            yPosKDA: -2,
+          },
+          dotaPlus: {
+            height: 115,
+            yPosKDA: 25,
+          },
+        },
+        items: {
+          xPos: 2777,
+          yPos: 1440,
+          width: 288,
+        },
+      },
+      subtitles: {
+        xPos: 2281,
+        yPos: 3,
+        width: 793,
+        height: 100,
+      },
+    },
+    roshanGlyph: {
+      xPos: 382,
+      yPos: 1067,
+      size: 134,
+    },
+    appButton: {
+      xPos: 5,
+      yPos: 1034,
+      size: 31,
+    },
+  },
 
   "3840x1080": {
     fontSize: 13,
