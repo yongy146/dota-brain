@@ -10,10 +10,10 @@ import * as HeroBuilds from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json";
 import dota2Items from "./dota2Items.json";
-import dota2Heroes from "../../submodules/dota2/dota2Heroes.json";
+import dota2Heroes from "./dota2Heroes.json";
 import * as DotaLogger from "../../submodules/utilities/log";
 import { channeling_interrupts, silence, root, disables } from "./disables";
-import * as PlayerRoles from "../../submodules/dota2/playerRoles";
+import * as PlayerRoles from "./playerRoles";
 import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI";
 

@@ -1,7 +1,6 @@
 /**
  * Library to manage player roles
  */
-import { storageItems } from "../../src/app/consts";
 import { HeroBuild } from "./heroBuilds";
 
 // Steam Guide Roles
@@ -174,18 +173,6 @@ export function getRoleImage(role: DOTA_COACH_ROLE): string {
       return "../img/roles/hardSupport.png";
     }
   }
-}
-
-export function getPlayerRole(): DOTA_COACH_ROLE {
-  return localStorage.getItem(storageItems.playerRole) as DOTA_COACH_ROLE;
-}
-
-export function setPlayerRole(role: DOTA_COACH_ROLE) {
-  localStorage.setItem(storageItems.playerRole, role);
-}
-
-export function isPlayerSupport() {
-  return isSupport(getPlayerRole());
 }
 
 export function isSupport(role: DOTA_COACH_ROLE) {

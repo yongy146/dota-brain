@@ -28,7 +28,7 @@
   (C) Dota Coch, 2022
 
 */
-import { DOTA_COACH_GUIDE_ROLE } from "../../submodules/dota2/playerRoles";
+import { DOTA_COACH_GUIDE_ROLE } from "./playerRoles";
 
 /**
  * Searches dotacoachmessages array for a given category values and
