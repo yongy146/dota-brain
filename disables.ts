@@ -15,7 +15,7 @@
 
 /*export const teleport_interrupt =			["stun", "cyclone", "hex", "sleep", "mute", "fear", "taunt", "stop", "hide", "leash", "root"]
 export const channeling_skills_interrupt =	["stun", "cyclone", "hex", "sleep", "mute", "fear", "taunt", "stop", "hide", "leash", "silence"]*/
-//import * as Dota2 from "../../submodules/dota2/dota2";
+//import * as Dota2 from "../../submodules/dota-brain/dota2";
 
 export const channeling_interrupts = [
   "stun",

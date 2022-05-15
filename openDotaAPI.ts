@@ -8,7 +8,7 @@
 import * as DotaLogger from "../utilities/log";
 import * as WebAccess from "../utilities/webAccess";
 //import * as WebAccess from '../../src/utility/webAccessNode'
-import * as Dota2 from "../../submodules/dota2/dota2";
+import * as Dota2 from "../../submodules/dota-brain/dota2";
 import {
   PlayerProfile,
   PlayerMatch,
