@@ -29,7 +29,8 @@ import {
   DOTA_COACH_GUIDE_ROLE,
   //DOTA_COACH_ROLE,
   STEAM_GUIDE_ROLE,
-} from "./playerRoles.js";
+} from "./playerRoles";
+//} from "./playerRoles.js";
 
 export enum ContentCreator {
   TBD = "TBD",
