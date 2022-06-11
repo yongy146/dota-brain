@@ -1343,7 +1343,11 @@ export namespace hero_abilities {
       switch (abilities[ability].is_passive) {
         case "yes":
         case "partial": {
-          result.push(ability);
+          if (ability == "tiny_grow") {
+            // Some passives can't be broken and should not be added
+          } else {
+            result.push(ability);
+          }
           break;
         }
         default: {
