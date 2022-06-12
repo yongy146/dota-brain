@@ -1,7 +1,7 @@
 /**
  * Library to manage player roles
  */
-import { HeroBuild } from "./heroBuilds";
+import { HeroBuild } from "./heroBuilds.js";
 
 // Steam Guide Roles
 export enum STEAM_GUIDE_ROLE { // <None> is treated by not providing any role

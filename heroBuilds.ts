@@ -30,6 +30,7 @@ import {
   //DOTA_COACH_ROLE,
   STEAM_GUIDE_ROLE,
 } from "./playerRoles";
+//} from "./playerRoles.js";
 
 export enum ContentCreator {
   TBD = "TBD",
@@ -174,16 +175,18 @@ export function getItemTooltip(
   heroContent: HeroContent,
   heroBuild: HeroBuild,
   item: string
-): string {
-  if (Object.prototype.hasOwnProperty.call(heroBuild, "item_tooltips")) {
-    if (Object.prototype.hasOwnProperty.call(heroBuild.item_tooltips, item)) {
-      return heroBuild.item_tooltips[item];
-    }
+): string | null {
+  if (
+    heroBuild.item_tooltips != undefined &&
+    heroBuild.item_tooltips.item != undefined
+  ) {
+    return heroBuild.item_tooltips[item];
   }
-  if (Object.prototype.hasOwnProperty.call(heroContent, "item_tooltips")) {
-    if (Object.prototype.hasOwnProperty.call(heroContent.item_tooltips, item)) {
-      return heroContent.item_tooltips[item];
-    }
+  if (
+    heroContent.item_tooltips != undefined &&
+    heroContent.item_tooltips.item != undefined
+  ) {
+    return heroContent.item_tooltips[item];
   }
   return null; // There is no tooltip for the item
 }
@@ -200,23 +203,18 @@ export function getAbilityTooltip(
   heroContent: HeroContent,
   heroBuild: HeroBuild,
   ability: string
-): string {
-  if (Object.prototype.hasOwnProperty.call(heroBuild, "ability_tooltips")) {
-    if (
-      Object.prototype.hasOwnProperty.call(heroBuild.ability_tooltips, ability)
-    ) {
-      return heroBuild.ability_tooltips[ability];
-    }
+): string | null {
+  if (
+    heroBuild.ability_tooltips != undefined &&
+    heroBuild.ability_tooltips.ability != undefined
+  ) {
+    return heroBuild.ability_tooltips[ability];
   }
-  if (Object.prototype.hasOwnProperty.call(heroContent, "ability_tooltips")) {
-    if (
-      Object.prototype.hasOwnProperty.call(
-        heroContent.ability_tooltips,
-        ability
-      )
-    ) {
-      return heroContent.ability_tooltips[ability];
-    }
+  if (
+    heroContent.ability_tooltips != undefined &&
+    heroContent.ability_tooltips.ability != undefined
+  ) {
+    return heroContent.ability_tooltips[ability];
   }
   return null; // There is no tooltip for the item
 }
