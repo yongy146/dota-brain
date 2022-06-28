@@ -1176,10 +1176,10 @@ export namespace hero_images {
         break;
       }
     }
-    const result =
-      "../img/heroes/" +
-      localizedName.replace(/ /gi, "_") +
-      "_minimap_icon.png";
+    const result = `${process.env.IMGPATH}/heroes/${localizedName.replace(
+      / /gi,
+      "_"
+    )}_minimap_icon.png`;
     return result;
   }
   export function localizedNameToImgName(heroName: string): string {
@@ -1193,7 +1193,8 @@ export namespace hero_images {
         break;
       }
     }
-    return "../img/heroes/" + heroName.replace(/ /gi, "_") + ".png";
+    //return "../img/heroes/" + heroName.replace(/ /gi, "_") + ".png";
+    return `${process.env.IMGPATH}/heroes/${heroName.replace(/ /gi, "_")}.png`;
   }
 
   export function localizedNameToMinimapImgName(heroName: string): string {
@@ -1754,7 +1755,7 @@ export namespace items {
    */
   export function getItemImage(itemId: number): string | null {
     const name = getItemName(itemId);
-    if (name) return "../img/items/" + name + ".png";
+    if (name) return `${process.env.IMGPATH}/items/${name}.png`;
     return null;
   }
 
