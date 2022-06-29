@@ -1,7 +1,7 @@
 /**
  * Library to manage player roles
  */
-import { HeroBuild } from "./heroBuilds.js";
+import { HeroBuild } from "./heroBuilds";
 
 // Steam Guide Roles
 export enum STEAM_GUIDE_ROLE { // <None> is treated by not providing any role
@@ -88,9 +88,7 @@ export function getRolesString(heroBuild: HeroBuild) {
  * @param role
  * @returns
  */
-export function getDotaCoachGuideRoleString(
-  role: DOTA_COACH_GUIDE_ROLE
-): string {
+export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
