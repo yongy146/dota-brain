@@ -1,20 +1,26 @@
 {
 	"armor": {
+		"id": "dota_coach_1",
 		"name": "Armor"
 	},
 	"DamageItems": {
+		"id": "dota_coach_2",
 		"name": "Damage Items"
 	},
 	"SentryDustGem": {
+		"id": "dota_coach_3",
 		"name": "Sentry, Dust & Gem"
 	},
 	"SentryGem": {
+		"id": "dota_coach_4",
 		"name": "Sentry & Gem"
 	},
 	"SentryDust": {
+		"id": "dota_coach_5",
 		"name": "Sentry & Dust"
 	},
 	"AttackSpeed": {
+		"id": "dota_coach_6",
 		"name": "Attack Speed"
 	},
 	"item_blink": {

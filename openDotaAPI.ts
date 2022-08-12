@@ -9,10 +9,54 @@ import * as DotaLogger from "../utilities/log";
 import * as WebAccess from "../utilities/webAccess";
 //import * as WebAccess from '../../src/utility/webAccessNode'
 import * as Dota2 from "../../submodules/dota-brain/dota2";
-import {
-  PlayerProfile,
-  PlayerMatch,
-} from "../../src/app/background/dataManager";
+
+export interface PlayerProfile {
+  tracked_until: string; // "1649864266"
+  profile?: {
+    // if profile is not provided; it is a private profile
+    account_id: number; //361606936;
+    personaname: string; // "DotaCoachApp";
+    name: string; // null;
+    plus: boolean; //false;
+    cheese: number; //0;
+    steamid: string; // "76561198321872664";
+    avatar: string; // "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2a/2ab25776486cc9252f0d1e32b3da1dfe755cd0b6.jpg";
+    avatarmedium: string; // "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2a/2ab25776486cc9252f0d1e32b3da1dfe755cd0b6_medium.jpg";
+    avatarfull: string; // "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2a/2ab25776486cc9252f0d1e32b3da1dfe755cd0b6_full.jpg";
+    profileurl: string; //"https://steamcommunity.com/profiles/76561198321872664/";
+    last_login: string; //"2021-11-14T19:20:26.143Z";
+    loccountrycode: string; //null;
+    is_contributor: boolean; // false
+  };
+  leaderboard_rank: number; // null;
+  rank_tier: number; // 51;
+  rank_medal?: string; // Added by DataManager, e.g. "Divine"
+  solo_competitive_rank: number; // 3239,
+  mmr_estimate: {
+    estimate: number; // 3267
+  };
+  competitive_rank: number; // 2129
+}
+
+export interface PlayerMatch {
+  match_id: number;
+  player_slot: number; // Slot of player
+  radiant_win: boolean;
+  is_victory?: boolean; // Field ist added by DataManager
+  hero_id: number; // Player's hero
+  duration: number; // Match duration
+  game_mode: number;
+  lobby_type: number;
+  start_time: number;
+  version: number;
+  kills: number;
+  deaths: number;
+  assists: number;
+  skill: null;
+  leaver_status: number;
+  party_size: number;
+}
+
 
 export class Player {
   "account_id": number; // steam ID (32 bit)
@@ -98,9 +142,8 @@ export async function getMatches(
     .join("&");
 
   //const heroIdParam = heroId == undefined ? "" : `&hero_id=${heroId}`;
-  const url = `https://api.opendota.com/api/players/${steamId32}/matches${
-    params == "" ? "" : "?" + params
-  }`;
+  const url = `https://api.opendota.com/api/players/${steamId32}/matches${params == "" ? "" : "?" + params
+    }`;
 
   return new Promise((resolve, reject) => {
     WebAccess.getRequestJSON(url, 3)
@@ -183,11 +226,11 @@ export async function getRecentItems(
   return new Promise((resolve, reject) => {
     getMatches(steamId32, { limit: numberOfMatches, hero_id: heroId }).then(
       (matches) => {
-        const items = [];
+        const items: any = [];
         let counter = matches.length;
         if (counter == 0) resolve(items); // If there are not matches, return immediatly
 
-        const errors = [];
+        const errors: any = [];
 
         //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
         for (let i = 0; i < numberOfMatches && i < matches.length; i++) {
@@ -201,7 +244,7 @@ export async function getRecentItems(
               if (index != -1) {
                 //DotaLogger.log(`getRecentItems: matches[i]=${JSON.stringify(matchFull)}`)
                 // Add data available in unparsed matches
-                const matchData = {
+                const matchData: any = {
                   match_id: matchFull.match_id,
                   start_time: matchFull.start_time,
                   account_id: players[index].account_id,
@@ -245,7 +288,7 @@ export async function getRecentItems(
                   reject(errors[0]);
                 } else {
                   resolve(
-                    items.sort((a, b) => {
+                    items.sort((a: any, b: any) => {
                       return b.start_time - a.start_time;
                     })
                   );
@@ -279,13 +322,12 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
         .then(async (matches) => {
           //DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Matches = ${JSON.stringify(matches)}`)
           DotaLogger.log(
-            `openDotaAPI.getAbilityUpgrades(): Loading ${
-              matches.length
+            `openDotaAPI.getAbilityUpgrades(): Loading ${matches.length
             } matches for hero ${Dota2.hero_names.idToLocalizedName(heroId)}`
           );
           successful = true;
           let abilityUpgradesMax = 0;
-          let abilityUpgrades = [];
+          let abilityUpgrades: any = [];
           let matchCounts = matches.length;
           let matchCounter = 1;
           let matchSuccess = 0;
@@ -367,8 +409,7 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
                   DotaLogger.log(
                     `openDotaAPI.getAbilityUpgrades(): Match loading for ${Dota2.hero_names.idToLocalizedName(
                       heroId
-                    )} completed (successes: ${matchSuccess}/${
-                      matches.length
+                    )} completed (successes: ${matchSuccess}/${matches.length
                     }, errors: ${matchError}/${matches.length})`
                   );
                   resolve(abilityUpgrades);

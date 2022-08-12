@@ -29,6 +29,7 @@ import {
   DOTA_COACH_GUIDE_ROLE,
   //DOTA_COACH_ROLE,
   STEAM_GUIDE_ROLE,
+  getRolesString
 } from "./playerRoles";
 //} from "./playerRoles.js";
 
@@ -126,6 +127,19 @@ export interface HeroBuild {
   items: ItemBuild;
   item_tooltips?: Tooltips;
 }
+
+
+/**
+ * 
+ * @param heroBuild 
+ * @returns Returns name of role (e.g. "Mid QW" for Invoker)
+ */
+export function getRoleName(heroBuild: HeroBuild): string {
+  return `${getRolesString(heroBuild)}${Object.prototype.hasOwnProperty.call(heroBuild, "type")
+    ? " " + heroBuild.type
+    : ""}`
+}
+
 
 export interface ItemBuild {
   starting: string[];
@@ -1621,7 +1635,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "batrider_flaming_lasso", // 12
           "batrider_flamebreak", // 13
           "batrider_flamebreak", // 14
-          "special_bonus_movement_speed_20", // 15  Michel: We have to use 'special_bonus_movement_speed_20' insted of 'special_bonus_movement_speed_25'
+          "special_bonus_movement_speed_20", // 15  Michel: We have to use 'special_bonus_movement_speed_25", insted of 'special_bonus_movement_speed_25'
           "batrider_flamebreak", // 16
           "special_bonus_attributes", // 17
           "batrider_flaming_lasso", // 18

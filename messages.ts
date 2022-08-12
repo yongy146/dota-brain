@@ -37,7 +37,7 @@ import { DOTA_COACH_GUIDE_ROLE } from "./playerRoles";
  * @param categoryValue category value to search for
  * @returns Dotacoachmessage object
  */
-export function _findCategory(categoryValue: string): DotaCoachMessage {
+export function _findCategory(categoryValue: string): DotaCoachMessage | undefined {
   return dotaCoachMessages.find(
     (dotaCoachMessages) => dotaCoachMessages.category === categoryValue
   );
@@ -106,7 +106,7 @@ export function getOwnHeroMessagesForRoles(
  * @param hero Hero name, e.g. "Anti-Mage"
  * @returns Array of message objects
  */
-export function getEnemyHeroMessages(hero): any[] {
+export function getEnemyHeroMessages(hero: string): any[] {
   if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
 
   return dotaCoachMessages.filter(
@@ -138,17 +138,17 @@ export const ROLE_SUPPORT_HARD = 'HardSupport';*/
 export interface DotaCoachMessage {
   //  Category of the message. This field allows the app to turn on/off certain messages based on the user's preference
   category:
-    | "BountyRunes"
-    | "WaterRunes"
-    | "PowerRunes"
-    | "NeutralItems"
-    | "SmokeOfDeceit"
-    | "AghanimsShard"
-    | "TomeOfKnowledge"
-    | "SiegeCreeps"
-    | "DayTime"
-    | "EnemyHero"
-    | "OwnHero";
+  | "BountyRunes"
+  | "WaterRunes"
+  | "PowerRunes"
+  | "NeutralItems"
+  | "SmokeOfDeceit"
+  | "AghanimsShard"
+  | "TomeOfKnowledge"
+  | "SiegeCreeps"
+  | "DayTime"
+  | "EnemyHero"
+  | "OwnHero";
   // Localized hero name, only needed for categories 'EnemyHero' and 'OwnHero'
   hero?: string; // Localized name
   // Folder and name of audio file (the app adds '.mp3' to the file name)
