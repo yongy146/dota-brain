@@ -11068,7 +11068,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Marci: {
-    gameplay_version: `7.31d`,
+    gameplay_version: `7.32`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -11079,8 +11079,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959380",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          `marci_companion_run`, // 1	equals to dispose
-          `marci_grapple`, // 2	equals to rebound
+          `marci_companion_run`, // 1	equals to rebound
+          `marci_grapple`, // 2	equals to dispose
           "marci_companion_run", // 3
           "marci_grapple", // 4
           "marci_guardian", // 5
