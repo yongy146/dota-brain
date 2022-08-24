@@ -116,6 +116,11 @@ export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
   return result;
 }
 
+/**
+ *
+ * @param role react-intl message ID
+ * @returns
+ */
 export function getRoleString(role: DOTA_COACH_ROLE): string {
   switch (role) {
     case DOTA_COACH_ROLE.CARRY: {
@@ -128,10 +133,10 @@ export function getRoleString(role: DOTA_COACH_ROLE): string {
       return "Offlane";
     }
     case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-      return "Soft Support";
+      return "SoftSupport";
     }
     case DOTA_COACH_ROLE.HARD_SUPPORT: {
-      return "Hard Support";
+      return "HardSupport";
     }
   }
 }

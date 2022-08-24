@@ -387,10 +387,10 @@ export namespace hero_names {
   export function heropediaNameToNPCName(heropediaName: string): string {
     for (const hero of Object.values(dota2Heroes)) {
       if (NPCNameToHeropediaName(hero.name) == heropediaName) {
-        return hero.name
+        return hero.name;
       }
     }
-    return ""
+    return "";
   }
 
   /**
@@ -609,7 +609,7 @@ export namespace hero_damage_types {
    * Returns the damage type of a hero as a string.
    *
    * @param heroName Localized hero name
-   * @returns The damage type, e.g. 'Magical damage'
+   * @returns The damage type, e.g. 'MagicalDamage' (ID for react-intl)
    */
   export function getDamageType(heroName: string): string {
     //DotaLogger.log("Dota2.hero_damage_types.getDamageType: localized_name='"+ localized_name + "', damageType[localized_name]='" + damageType[localized_name] + "'")
@@ -618,20 +618,20 @@ export namespace hero_damage_types {
     if (heroContent != null) {
       switch (heroContent.damage_type) {
         case "magical": {
-          return "Magical damage";
+          return "MagicalDamage";
         }
         case "physical": {
-          return "Physical damage";
+          return "PhysicalDamage";
         }
         case "pure": {
-          return "Pure damage";
+          return "PureDamage";
         }
         case "neutral": {
-          return "Neutral damage";
+          return "NeutralDamage";
         }
       }
     }
-    return "Unknown damage type";
+    return "UnknownDamage";
   }
 
   /**
@@ -699,10 +699,10 @@ export namespace hero_attributes {
     if (h == null) {
       console.error(
         "Dota2.hero_attributes.getAttributeColor(heroName: " +
-        heroName +
-        ", isTransparent: " +
-        isTransparent +
-        "): Hero not found."
+          heroName +
+          ", isTransparent: " +
+          isTransparent +
+          "): Hero not found."
       );
     } else {
       switch (h.primary_attr) {
@@ -718,12 +718,12 @@ export namespace hero_attributes {
         default: {
           console.error(
             "Dota2.hero_attributes.getAttributeColor(heroName: " +
-            heroName +
-            ", isTransparent: " +
-            isTransparent +
-            "): Unknown primary attribute (" +
-            h.primary_attr +
-            ")"
+              heroName +
+              ", isTransparent: " +
+              isTransparent +
+              "): Unknown primary attribute (" +
+              h.primary_attr +
+              ")"
           );
           break;
         }
@@ -807,7 +807,7 @@ export namespace hero_item_builds {
 
     const result: any = [];
     for (const s of standard) {
-      const r: { name: string, info?: string, isCore?: boolean } = { name: s };
+      const r: { name: string; info?: string; isCore?: boolean } = { name: s };
       const tooltip = HeroBuilds.getItemTooltip(heroBuilds, heroBuilds.builds[0], s);
       if (tooltip) {
         r["info"] = tooltip;
@@ -893,9 +893,9 @@ export namespace hero_item_builds {
 
     function transformItem(item: string, core_items: string[]): UIItem {
       const result: {
-        name: string,
-        info?: string,
-        isCore?: boolean
+        name: string;
+        info?: string;
+        isCore?: boolean;
       } = { name: item };
       if (Object.prototype.hasOwnProperty.call(item_tooltips, item))
         result["info"] = item_tooltips[item];
@@ -908,8 +908,8 @@ export namespace hero_item_builds {
       starting_bear:
         build.items.starting_bear != undefined
           ? build.items.starting_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
-          )
+              transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            )
           : undefined,
       early_game:
         build.items.early_game != undefined
@@ -927,15 +927,15 @@ export namespace hero_item_builds {
       situational_bear:
         build.items.situational_bear != undefined
           ? build.items.situational_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
-          )
+              transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            )
           : undefined,
       neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
       neutral_bear:
         build.items.neutral_bear != undefined
           ? build.items.neutral_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
-          )
+              transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            )
           : undefined,
 
       roles: PlayerRoles.rolesToString(heroBuild.roles),
@@ -1072,8 +1072,8 @@ export namespace hero_ability_builds {
 
     return heroBuild.abilities.map((ability) => {
       const result: {
-        name: string,
-        info?: string
+        name: string;
+        info?: string;
       } = {
         name: ability,
       };
@@ -1129,11 +1129,16 @@ export namespace hero_images {
         break;
       }
     }
-    const result = `${process.env.IMGPATH}/heroes/${localizedName.replace(
-      / /gi,
-      "_"
-    )}_minimap_icon.png`;
+    const result = `${process.env.IMGPATH}/heroes/${localizedName.replace(/ /gi, "_")}.png`;
     return result;
+  }
+  export function NPCShortNameToImgName(NPCShortName: string): string {
+    return idToImgName(hero_names.NPCSortNameToId(NPCShortName));
+  }
+
+  export function idToMinimapImgName(heroId: number): string {
+    //DotaLogger.log(`dota2.localizedNameToMinimapImgName(${heroName}): Called`)
+    return idToImgName(heroId).replace(".png", "_minimap_icon.png");
   }
   export function localizedNameToImgName(heroName: string): string {
     //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
@@ -1215,7 +1220,7 @@ export namespace hero_abilities {
     for (const hero of Object.keys(dota2Abilities)) {
       for (const a of Object.keys(dota2Abilities[hero as keyof typeof dota2Abilities])) {
         if (a == ability) {
-          const heroAbilities = dota2Abilities[hero as keyof typeof dota2Abilities]
+          const heroAbilities = dota2Abilities[hero as keyof typeof dota2Abilities];
           return heroAbilities[a as keyof typeof heroAbilities];
         }
       }
@@ -1235,7 +1240,7 @@ export namespace hero_abilities {
     if (Object.prototype.hasOwnProperty.call(dota2Abilities, npcHeroName)) {
       for (const a of Object.keys(dota2Abilities[npcHeroName as keyof typeof dota2Abilities])) {
         if (a == talent) {
-          const heroAbilities = dota2Abilities[npcHeroName as keyof typeof dota2Abilities]
+          const heroAbilities = dota2Abilities[npcHeroName as keyof typeof dota2Abilities];
           return heroAbilities[a as keyof typeof heroAbilities];
         }
       }
@@ -1246,10 +1251,10 @@ export namespace hero_abilities {
   export function getTalentDescription(npcHeroName: string, talent: string): string | null {
     DotaLogger.log(`dota2.getTalentName(npcHeroName: ${npcHeroName}, talent: ${talent})`);
 
-    const ability = getTalent(npcHeroName, talent)
+    const ability = getTalent(npcHeroName, talent);
     DotaLogger.log(`dota2.getTalentName(): talent = ${JSON.stringify(ability)}`);
-    if (ability == null) return null
-    return ability.description
+    if (ability == null) return null;
+    return ability.description;
   }
 
   /**
@@ -1265,7 +1270,7 @@ export namespace hero_abilities {
     }
 
     if (ability == "special_bonus_attributes") {
-      return "Attribute Bonus"
+      return "Attribute Bonus";
     }
 
     const a = getAbility(ability);
@@ -1310,7 +1315,8 @@ export namespace hero_abilities {
    */
   export function getBreakablePassives(heroName: string): string[] {
     //DotaLogger.log(`dota.getBreakablePassives(heroName: ${heroName}): Called`)
-    const abilities = dota2Abilities[hero_names.localizedNameToNPCName(heroName) as keyof typeof dota2Abilities];
+    const abilities =
+      dota2Abilities[hero_names.localizedNameToNPCName(heroName) as keyof typeof dota2Abilities];
     const result: any = [];
     for (const [key, value] of Object.entries(abilities)) {
       if (Object.prototype.hasOwnProperty.call(value, "is_passive")) {
@@ -1400,7 +1406,7 @@ export namespace hero_abilities {
         const cooldownReduction = parseInt(
           ability.replace("special_bonus_cooldown_reduction_", "")
         );
-        const a = abilities[ability as keyof typeof abilities]
+        const a = abilities[ability as keyof typeof abilities];
         if (Object.prototype.hasOwnProperty.call(a, "talent_level")) {
           const talentLevel = (a as { talent_level: number }).talent_level;
           result = new Talent(talentLevel, cooldownReduction);
@@ -1643,7 +1649,7 @@ export namespace items {
 
     if (Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`)) {
       // It is a standard Dota 2 item
-      const item_ = dota2Items[`item_${item}` as keyof typeof dota2Items]
+      const item_ = dota2Items[`item_${item}` as keyof typeof dota2Items];
       if (Object.prototype.hasOwnProperty.call(item_, "cooldown")) {
         const result = (item_ as { cooldown: number }).cooldown;
         DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Result=${result}`);
