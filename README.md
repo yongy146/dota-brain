@@ -48,4 +48,4 @@ Yes, absolutely. More advance users will defintly use git (https://git-scm.com/d
 
 # Contact
 
-You can contact us via e-mail (info@dota-coach.com) or join our Discord server (https://discord.com/invite/9WhAANq).
+You can contact us via e-mail (info@dota-coach.com) or join our Discord server (https://discord.com/invite/zgrYW8p3kV).
