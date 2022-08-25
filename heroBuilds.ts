@@ -533,7 +533,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "misericorde",
-            "lance_of_pirsuit",
+            "lance_of_pursuit",
             "dagger_of_ristul",
             "paladin_sword",
             "elven_tunic",
@@ -639,7 +639,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "misericorde",
-            "lance_of_pirsuit",
+            "lance_of_pursuit",
             "dagger_of_ristul",
             "paladin_sword",
             "elven_tunic",
@@ -972,7 +972,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "possessed_mask",
             "broom_handle",
-            "lance_of_pirsuit",
+            "lance_of_pursuit",
             "ring_of_aquila",
             "dagger_of_ristul",
             "vambrace",
@@ -2122,7 +2122,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "possessed_mask",
-            "lance_of_pirsuit",
+            "lance_of_pursuit",
             "misericorde",
             "dagger_of_ristul",
             "elven_tunic",
@@ -6759,7 +6759,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["power_treads", "mask_of_madness", "maelstrom"],
           neutral: [
             "possessed_mask",
-            "lance_of_pirsuit",
+            "lance_of_pursuit",
             "broom_handle",
             "misericorde",
             "dagger_of_ristul",
@@ -7542,7 +7542,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           late_game: ["assault", "satanic"],
           situational: [
             "magic_wand",
-            "boots_of_travel",
+            "travel_boots",
             "lotus_orb",
             "blink",
             "overwhelming_blink",
@@ -10780,7 +10780,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "magnataur_reverse_polarity", // 12
           "magnataur_skewer", // 13
           "magnataur_skewer", // 14
-          "special_bonus_strength_12", // 15
+          "special_bonus_unique_magnus_7", // 15
           "magnataur_skewer", // 16
           "special_bonus_attributes", // 17
           "magnataur_reverse_polarity", // 18
