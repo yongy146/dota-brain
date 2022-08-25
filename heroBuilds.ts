@@ -2137,7 +2137,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
           
           ],
-          mid_game: ["cyclone", "ancient_janggo", "force_staff", "ghost"],
+          mid_game: ["cyclone", "ancient_janggo", "force_staff", "ghost" ],
           late_game: ["octarine_core", "ultimate_scepter", "sheepstick", "boots_of_bearing"],
           situational: [
             "guardian_greaves",
