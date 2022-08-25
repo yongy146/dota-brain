@@ -6564,7 +6564,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Hoodwink: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
