@@ -6908,7 +6908,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Invoker: {
-    gameplay_version: "7.32",
+    gameplay_version: "7.31d",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
