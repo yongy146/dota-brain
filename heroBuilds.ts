@@ -6954,7 +6954,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "circlet",
             "branches",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
             "null_talisman",
