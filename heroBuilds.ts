@@ -6908,7 +6908,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Invoker: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -6939,12 +6939,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "invoker_wex", // 17
           "invoker_wex", // 18
           "invoker_quas", // 19
-          "special_bonus_unique_invoker_6", // 20
+          "special_bonus_unique_invoker_10", // 20
           "special_bonus_unique_invoker_9", // 21
           "special_bonus_unique_invoker_5", // 22
           "invoker_quas", // 23
           "invoker_quas", // 24
-          "special_bonus_unique_invoker_2", // 25
+          "special_bonus_unique_invoker_13", // 25
         ],
         items: {
           starting: [
@@ -6953,20 +6953,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "faerie_fire",
             "circlet",
             "branches",
+            "branches",
             "ward_observer",
           ],
           early_game: [
             "null_talisman",
-            "robe",
             "urn_of_shadows",
             "boots",
             "hand_of_midas",
             "magic_wand",
           ],
-          mid_game: ["travel_boots", "ultimate_scepter", "witch_blade", "orchid", "force_staff"],
-          late_game: ["sheepstick", "refresher", "octarine_core"],
+          mid_game: ["travel_boots","orchid", "black_king_bar", "ultimate_scepter" ],
+          late_game: ["sheepstick", "refresher", "octarine_core","overwhelming_blink"],
           situational: [
-            "infused_raindrop",
+            "witch_blade",
             "spirit_vessel",
             "black_king_bar",
             "ethereal_blade",
@@ -6978,11 +6978,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["urn_of_shadows", "hand_of_midas", "travel_boots", "ultimate_scepter"],
           neutral: [
             "mysterious_hat",
+            "occult_bracelet",
             "pogo_stick",
             "grove_bow",
-            "essence_ring",
+            "specialists_array",
+            "eye_of_the_vizier",
             "vambrace",
-            "quicksilver_amulet",
             "quickening_charm",
             "mind_breaker",
             "timeless_relic",
@@ -7025,7 +7026,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "invoker_wex", // 17
           "invoker_wex", // 18
           "invoker_quas", // 19
-          "special_bonus_unique_invoker_6", // 20
+          "special_bonus_unique_invoker_10", // 20
           "special_bonus_unique_invoker_9", // 21
           "special_bonus_unique_invoker_5", // 22
           "invoker_quas", // 23
@@ -7046,20 +7047,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           mid_game: ["travel_boots", "ultimate_scepter", "blink"],
           late_game: ["sheepstick", "refresher", "octarine_core"],
           situational: [
-            "infused_raindrop",
             "black_king_bar",
             "aghanims_shard",
             "sphere",
             "aeon_disk",
           ],
-          core: ["hand_of_midas", "travel_boots", "ultimate_scepter", "blink"],
+          core: ["hand_of_midas", "travel_boots","black_king_bar", "ultimate_scepter", "blink"],
           neutral: [
             "mysterious_hat",
+            "occult_bracelet",
             "pogo_stick",
             "grove_bow",
+            "specialists_array",
+            "eye_of_the_vizier",
             "vambrace",
-            "essence_ring",
-            "quicksilver_amulet",
             "quickening_charm",
             "mind_breaker",
             "timeless_relic",
@@ -7074,11 +7075,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_invoker_10:
-        "On level 20, take the level 20 talent over this one. The dota 2 client disallows me to indicate that in graphics above. The other Tornado talent can be better than Alacrity one, if you need more control or dispel.",
       special_bonus_unique_invoker_9:
         "You can take the Forged Spirit talent if you need to splitpush and extend the game.",
-      special_bonus_unique_invoker_6: "This talent should be taken at level 22.",
     },
     item_tooltips: {
       magic_stick: "Start with it if you expect high frequency of spells being used on the lane.",
@@ -8015,7 +8013,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Legion Commander": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -8034,7 +8032,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "legion_commander_press_the_attack", // 7
           "legion_commander_press_the_attack", // 8
           "legion_commander_moment_of_courage", // 9
-          "special_bonus_unique_legion_commander_7", // 10
+          "special_bonus_unique_legion_commander", // 10
           "legion_commander_moment_of_courage", // 11
           "legion_commander_duel", // 12
           "legion_commander_overwhelming_odds", // 13
@@ -8056,39 +8054,39 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
+            "gauntlets",
             "branches",
             "ring_of_protection",
-            "faerie_fire",
-            "enchanted_mango",
-            "magic_stick",
+
           ],
           early_game: [
-            "helm_of_iron_will",
             "phase_boots",
             "soul_ring",
             "magic_wand",
             "bracer",
-            "orb_of_corrosion",
+            
           ],
-          mid_game: ["armlet", "blink", "black_king_bar", "aghanims_shard", "blade_mail"],
+          mid_game: ["armlet", "blink","blade_mail", "black_king_bar", "aghanims_shard" ],
           late_game: [
             "assault",
             "invis_sword",
-            "ultimate_scepter",
+            "silver_edge",
             "overwhelming_blink",
             "swift_blink",
             "moon_shard",
+            
           ],
-          situational: ["heavens_halberd", "monkey_king_bar"],
+          situational: ["orb_of_venom","heavens_halberd", "ultimate_scepter", "monkey_king_bar"],
           core: ["phase_boots", "armlet", "blink", "black_king_bar", "aghanims_shard"],
           neutral: [
             "broom_handle",
-            "chipped_vest",
+            "lance_of_pursuit",
             "misericorde",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "elven_tunic",
+            "ogre_seal_totem",
             "paladin_sword",
-            "the_leveller",
+            "havoc_hammer",
             "ninja_gear",
             "pirate_hat",
             "desolator_2",
@@ -8099,8 +8097,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       legion_commander_press_the_attack:
         "You can skill this spell on level 1 if you are being harassed by a dispellable damage-over-time spell like Thunder Strike and Poison Touch.",
-      special_bonus_unique_legion_commander:
-        "Take this talent over the other if you think your team lacks damage and you play more for yourself rather than your teammates.",
     },
     item_tooltips: {
       magic_stick: "Start with it if you expect high frequency of spells being used on the lane.",
@@ -8169,7 +8165,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Leshrac: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -8194,7 +8190,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "leshrac_pulse_nova", // 13
           "leshrac_lightning_storm", // 14
           "leshrac_lightning_storm", // 15
-          "special_bonus_unique_leshrac_6", // 16
+          "special_bonus_movement_speed_25", // 16
           "special_bonus_attributes", // 17
           "leshrac_pulse_nova", // 18
           "special_bonus_attributes", // 19
@@ -8210,36 +8206,37 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "faerie_fire",
             "branches",
-            "circlet",
-            "mantle",
+            "branches",
+            "branches",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: ["bottle", "null_talisman", "arcane_boots", "magic_wand"],
           mid_game: [
-            "cyclone",
             "travel_boots",
             "eternal_shroud",
+            "black_king_bar",
+            "blink",
             "kaya",
             "aghanims_shard",
             "kaya_and_sange",
-            "ghost",
+           
           ],
           late_game: ["bloodstone", "shivas_guard", "sheepstick", "wind_waker"],
           situational: [
-            "infused_raindrop",
-            "black_king_bar",
-            "blink",
+            "cyclone",
             "ultimate_scepter",
-            "sphere",
+            "sphere", 
+            "ghost",
             "aeon_disk",
+            "wind_waker",
           ],
-          core: ["arcane_boots", "cyclone", "kaya", "bloodstone", "travel_boots", "aghanims_shard"],
+          core: ["arcane_boots", "cyclone", "kaya_and_sange", "bloodstone", "travel_boots", "aghanims_shard"],
           neutral: [
             "mysterious_hat",
+            "occult_bracelet",
             "pogo_stick",
-            "essence_ring",
             "vambrace",
+            "eye_of_the_vizier",
             "ceremonial_robe",
             "black_powder_bag",
             "ceremonial_robe",
@@ -8253,8 +8250,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_movement_speed_25:
-        "You can take this level 15 talent over the suggested one if you are being kited. Since Leshrac is already a fast hero naturally and Boots of Travel is a core item, I prefer the suggested talent. ",
       special_bonus_strength_20:
         "You can take this level 20 talent over the suggested one if you are burstable by opponents.",
     },
@@ -9197,7 +9192,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Luna: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -9231,11 +9226,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_luna_5", // 25
+          "special_bonus_unique_luna_3", // 25
         ],
         items: {
-          starting: ["tango", "branches", "slippers", "faerie_fire", "circlet", "magic_stick"],
-          early_game: ["power_treads", "mask_of_madness", "magic_wand", "wraith_band"],
+          starting: ["tango", "branches", "slippers", "branches", "circlet"],
+          early_game: ["power_treads", "mask_of_madness", "magic_wand"],
           mid_game: ["dragon_lance", "manta", "black_king_bar", "aghanims_shard", "lesser_crit"],
           late_game: ["greater_crit", "skadi", "satanic", "butterfly"],
           situational: ["hurricane_pike", "silver_edge", "ultimate_scepter", "monkey_king_bar"],
@@ -9252,10 +9247,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
+            "specialists_array",
+            "dagger_of_ristul",
             "quicksilver_amulet",
             "titan_sliver",
             "elven_tunic",
-            "the_leveller",
             "ninja_gear",
             "ex_machina",
             "desolator_2",
@@ -9677,7 +9673,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "magnataur_reverse_polarity", // 12
           "magnataur_skewer", // 13
           "magnataur_skewer", // 14
-          "special_bonus_strength_12", // 15
+          "special_bonus_unique_magnus_7", // 15
           "magnataur_skewer", // 16
           "special_bonus_attributes", // 17
           "magnataur_reverse_polarity", // 18
@@ -10169,7 +10165,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Mars: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -10188,13 +10184,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "mars_spear", // 7
           "mars_gods_rebuke", // 8
           "mars_gods_rebuke", // 9
-          "mars_bulwark", // 10
+          "special_bonus_unique_mars_rebuke_radius", // 10
           "mars_bulwark", // 11
           "mars_arena_of_blood", // 12
           "mars_bulwark", // 13
           "mars_bulwark", // 14
-          "special_bonus_unique_mars_rebuke_slow", // 15
-          "special_bonus_unique_mars_rebuke_cooldown", // 16
+          "special_bonus_unique_mars_rebuke_cooldown", // 15
+          "mars_bulwark", // 16
           "special_bonus_attributes", // 17
           "mars_arena_of_blood", // 18
           "special_bonus_attributes", // 19
@@ -10210,17 +10206,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
+            "gauntlets",
             "branches",
             "ring_of_protection",
-            "faerie_fire",
-            "magic_stick",
           ],
           early_game: [
             "phase_boots",
             "soul_ring",
-            "helm_of_iron_will",
-            "ring_of_health",
-            "infused_raindrop",
             "magic_wand",
             "bracer",
           ],
@@ -10230,7 +10222,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "armlet",
             "desolator",
-            "hood_of_defiance",
           ],
           late_game: ["refresher", "overwhelming_blink", "assault", "satanic", "greater_crit"],
           situational: ["heavens_halberd", "lotus_orb", "cyclone"],
@@ -10239,11 +10230,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pogo_stick",
             "possessed_mask",
             "dragon_scale",
+            "dagger_of_ristul",
             "vambrace",
             "cloak_of_flames",
             "black_powder_bag",
             "trickster_cloak",
             "titan_sliver",
+            "havoc_hammer",
             "ascetic_cap",
             "fallen_sky",
             "force_field",
@@ -10255,8 +10248,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       mars_bulwark:
         "You can take a point in this spell early into the laning stage if you are being harassed a lot by right-clicks especially ranged heroes.",
-      special_bonus_unique_mars_rebuke_slow:
-        "Skip this talent until you are level 16, you can take the level 15 talent BEFORE taking this one.",
       special_bonus_unique_mars_gods_rebuke_extra_crit:
         "You can choose this talent over the other if you have build into high dmg items such as Desolator and Satanic. Pick the other if you are playing a utility Mars.",
     },
