@@ -2666,7 +2666,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Crystal Maiden_2_Level Frostbite",
     messageTime: 45,
     textMessage:
-      "Consider skilling Frostbite on level 2 for a kill attempt if you have enough mana for both active spells.",
+      `Consider skilling Frostbite on level 2 for a kill attempt with your mana regen consumables.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_frostbite" },
   },
