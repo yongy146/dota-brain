@@ -10760,7 +10760,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Monkey King": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -10801,14 +10801,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "orb_of_venom",
-            "faerie_fire",
             "slippers",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
             "orb_of_corrosion",
+            "phase_boots",
             "power_treads",
             "phase_boots",
             "magic_wand",
@@ -10816,25 +10816,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             "echo_sabre",
+            "maelstrom",
             "black_king_bar",
             "skadi",
             "basher",
-            "diffusal_blade",
             "desolator",
-            "maelstrom",
+            
           ],
           late_game: ["abyssal_blade", "greater_crit", "mjollnir", "satanic", "ultimate_scepter"],
-          situational: ["infused_raindrop", "blink", "silver_edge", "monkey_king_bar", "nullifier"],
+          situational: ["diffusal_blade","blink", "silver_edge", "monkey_king_bar", "nullifier", "gungir"],
           core: ["orb_of_corrosion", "echo_sabre", "black_king_bar", "skadi", "basher"],
           neutral: [
             "arcane_ring",
             "broom_handle",
+            "lance_of_pursuit",
             "misericorde",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "mind_breaker",
             "paladin_sword",
-            "penta_edged_sword",
-            "the_leveller",
+            "penta_edged_sword",,
             "desolator_2",
             "ex_machina",
           ],
@@ -10902,20 +10902,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "orb_of_venom",
-            "flask",
-            "faerie_fire",
             "branches",
-            "enchanted_mango",
+            "branches",
+            "branches",
             "ward_sentry",
             "ward_observer",
-            "magic_stick",
+            
           ],
-          early_game: ["orb_of_corrosion", "boots", "magic_wand", "urn_of_shadows"],
-          mid_game: ["orchid", "solar_crest", "ghost", "cyclone", "rod_of_atos"],
+          early_game: ["magic_wand", "orb_of_corrosion", "urn_of_shadows","ancient_janggo" ],
+          mid_game: ["orchid", "solar_crest", "rod_of_atos"],
           late_game: ["skadi", "basher", "sheepstick"],
           situational: [
-            "infused_raindrop",
             "spirit_vessel",
+            "meteor_hammer",
+            "cyclone",
+            "ghost",
             "lotus_orb",
             "black_king_bar",
             "mage_slayer",
@@ -10923,6 +10924,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["orb_of_corrosion", "orchid", "solar_crest"],
           neutral: [
             "arcane_ring",
+            "seeds_of_serenity",
             "unstable_wand",
             "bullwhip",
             "ring_of_aquila",
@@ -11028,7 +11030,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Morphling: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
@@ -11068,25 +11070,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "branches",
+            "branches",
+            "branches",
             "circlet",
             "slippers",
-            "faerie_fire",
-            "ward_observer",
             "magic_stick",
           ],
           early_game: ["bottle", "lifesteal", "power_treads", "magic_wand", "wraith_band"],
-          mid_game: ["dragon_lance", "manta", "black_king_bar", "falcon_blade", "lesser_crit"],
+          mid_game: ["dragon_lance", "manta", "black_king_bar"],
           late_game: ["skadi", "satanic", "butterfly", "greater_crit"],
-          situational: ["bottle", "infused_raindrop", "sphere", "ultimate_scepter", "blink"],
+          situational: ["bottle", "silver_edge", "sphere", "ultimate_scepter", "blink"],
           core: ["lifesteal", "power_treads", "manta", "black_king_bar"],
           neutral: [
             "possessed_mask",
+            "seeds_of_serenity",
             "unstable_wand",
+            "specialists_array",
+            "dagger_of_ristul",
             "pupils_gift",
             "vambrace",
             "titan_sliver",
             "paladin_sword",
-            "the_leveller",
             "ninja_gear",
             "ex_machina",
             "fallen_sky",
@@ -11680,7 +11684,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Necrophos: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -11700,7 +11704,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "necrolyte_heartstopper_aura", // 8
           "necrolyte_heartstopper_aura", // 9
           "necrolyte_heartstopper_aura", // 10
-          "special_bonus_strength_8", // 11
+          "special_bonus_unique_necrophos_heartstopper_regen_duration", // 11
           "necrolyte_reapers_scythe", // 12
           "necrolyte_sadist", // 13
           "necrolyte_sadist", // 14
@@ -11714,26 +11718,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_necrophos", // 25
+          "special_bonus_unique_necrophos_2", // 25
         ],
         items: {
-          starting: ["tango", "faerie_fire", "branches", "circlet", "mantle", "magic_stick"],
+          starting: ["tango", "faerie_fire", "branches", "branches", "circlet", "mantle", "magic_stick"],
           early_game: ["null_talisman", "boots", "magic_wand", "power_treads"],
           mid_game: [
             "hood_of_defiance",
-            "cyclone",
-            "kaya_and_sange",
-            "force_staff",
             "aghanims_shard",
+            "kaya_and_sange",
             "blink",
             "sange",
-            "mekansm",
             "eternal_shroud",
           ],
           late_game: ["shivas_guard", "sheepstick", "octarine_core"],
           situational: [
-            "infused_raindrop",
+            "cyclone",
+            "force_staff",
+            "radiance",
+            "dagon",
             "pipe",
+            "aeon_disk",
             "heavens_halberd",
             "ultimate_scepter",
             "lotus_orb",
@@ -11742,18 +11747,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "power_treads",
             "magic_wand",
             "hood_of_defiance",
-            "cyclone",
-            "kaya_and_sange",
             "aghanims_shard",
+            "kaya_and_sange",
           ],
           neutral: [
             "unstable_wand",
+            "seeds_of_serenity",
+            "occult_bracelet",
             "pogo_stick",
-            "essence_ring",
+            "eye_of_the_vizier",
             "pupils_gift",
             "quickening_charm",
-            "spider_legs",
             "ascetic_cap",
+            "havoc_hammer",
             "trickster_cloak",
             "ex_machina",
             "force_field",
@@ -11778,14 +11784,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
           "necrolyte_death_pulse", // 3
-          "necrolyte_heartstopper_aura", // 4   equals to `ghost shroud`
+          "necrolyte_sadist", // 4   equals to `ghost shroud`
           "necrolyte_death_pulse", // 5
           "necrolyte_reapers_scythe", // 6
           "necrolyte_death_pulse", // 7
           "necrolyte_heartstopper_aura", // 8
           "necrolyte_heartstopper_aura", // 9
-          "necrolyte_sadist", // 10
-          "special_bonus_unique_necrophos_6", // 11
+          "necrolyte_heartstopper_aura", // 10
+          "special_bonus_unique_necrophos_heartstopper_regen_duration", // 11
           "necrolyte_reapers_scythe", // 12
           "necrolyte_sadist", // 13
           "necrolyte_sadist", // 14
@@ -11799,10 +11805,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_necrophos", // 25
+          "special_bonus_unique_necrophos_2", // 25
         ],
         items: {
-          starting: ["tango", "faerie_fire", "branches", "circlet", "mantle", "magic_stick"],
+          starting: ["tango", "faerie_fire", "branches","branches","branches", "circlet", "mantle",],
           early_game: ["boots", "null_talisman", "magic_wand", "hood_of_defiance"],
           mid_game: [
             "travel_boots",
@@ -11810,18 +11816,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "dagon",
             "blink",
-            "cyclone",
             "eternal_shroud",
           ],
-          late_game: ["shivas_guard", "aeon_disk", "sheepstick", "octarine_core"],
+          late_game: ["shivas_guard", "sheepstick", "octarine_core"],
           situational: [
-            "infused_raindrop",
-            "guardian_greaves",
-            "holy_locket",
-            "pipe",
+            "cyclone",
+            "force_staff",
             "radiance",
-            "lotus_orb",
+            "dagon",
+            "pipe",
+            "aeon_disk",
+            "heavens_halberd",
             "ultimate_scepter",
+            "lotus_orb",
           ],
           core: [
             "magic_wand",
@@ -11832,19 +11839,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "keen_optic",
+            "seeds_of_serenity",
+            "occult_bracelet",
             "pogo_stick",
-            "essence_ring",
-            "nether_shawl",
+            "eye_of_the_vizier",
             "pupils_gift",
             "quickening_charm",
-            "spider_legs",
-            "ceremonial_robe",
-            "stormcrafter",
             "ascetic_cap",
+            "havoc_hammer",
             "trickster_cloak",
             "ex_machina",
-            "fallen_sky",
+            "force_field",
           ],
         },
         item_tooltips: {
@@ -12417,7 +12422,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Omniknight: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
@@ -12427,21 +12432,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "omniknight_purification", // 1
-          "omniknight_hammer_of_purity", // 2
-          "omniknight_purification", // 3
+          "omniknight_hammer_of_purity", // 1
+          "omniknight_purification", // 2
+          "omniknight_martyr", // 3
           "omniknight_martyr", // 4
-          "omniknight_purification", // 5
+          "omniknight_martyr", // 5
           "omniknight_guardian_angel", // 6
-          "omniknight_purification", // 7
-          "omniknight_martyr", // 8
-          "omniknight_martyr", // 9
-          "omniknight_martyr", // 10
+          "omniknight_martyr", // 7
+          "omniknight_purification", // 8
+          "omniknight_purification", // 9
+          "omniknight_purification", // 10
           "special_bonus_unique_omniknight_5", // 11
           "omniknight_guardian_angel", // 12
           "omniknight_hammer_of_purity", // 13
           "omniknight_hammer_of_purity", // 14
-          "special_bonus_unique_omniknight_6", // 15
+          "special_bonus_unique_omniknight_7", // 15
           "omniknight_hammer_of_purity", // 16
           "special_bonus_attributes", // 17
           "omniknight_guardian_angel", // 18
@@ -12459,6 +12464,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "flask",
             "enchanted_mango",
             "enchanted_mango",
+            "sobi_mask",
             "orb_of_venom",
             "branches",
             "ward_observer",
@@ -12466,6 +12472,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: ["arcane_boots", "magic_wand", "soul_ring", "ring_of_basilius"],
           mid_game: [
+            "ancient_janggo",
             "aether_lens",
             "holy_locket",
             "solar_crest",
@@ -12475,15 +12482,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ghost",
             "blink",
           ],
-          late_game: ["wraith_pact", "ultimate_scepter", "octarine_core"],
+          late_game: ["guardian_greaves", "wraith_pact", "ultimate_scepter", "octarine_core"],
           situational: ["guardian_greaves", "lotus_orb"],
           core: ["arcane_boots", "holy_locket", "solar_crest", "blink"],
           neutral: [
-            "keen_optic",
             "arcane_ring",
+            "pogo_stick",
+            "seeds_of_serenity",
             "philosophers_stone",
             "bullwhip",
-            "spider_legs",
             "psychic_headband",
             "spy_gadget",
             "spell_prism",
@@ -12498,8 +12505,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         " Consider putting a skill point in this spell if you are able to run down an opponent. Goes well with Orb Of venom.",
       omniknight_guardian_angel:
         "You don`t have to skill this spell on level 6. Sometimes it is better to max out the Heavenly Grace and Purification before taking a point in Guardian Angel.",
-      special_bonus_unique_omniknight_7:
-        "On level 25, you can take this talent over the suggested one if you are close or having Aghanim`s Scepter, and opponents don`t have many ways of dispelling Guardian Angel.",
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
@@ -13351,7 +13356,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Phantom Assassin": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -13380,23 +13385,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "phantom_assassin_coup_de_grace", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_phantom_assassin_5", // 20
+          "special_bonus_unique_phantom_assassin_strike_aspd", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_phantom_assassin_2", // 25
+          "special_bonus_unique_phantom_assassin", // 25
         ],
         items: {
           starting: [
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "slippers",
+            "circlet",
             "faerie_fire",
-            "magic_stick",
-            "blight_stone",
-            "orb_of_venom",
           ],
           early_game: ["ring_of_health", "power_treads", "magic_wand", "orb_of_corrosion"],
           mid_game: ["bfury", "desolator", "black_king_bar", "aghanims_shard", "basher"],
@@ -13414,8 +13418,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "possessed_mask",
             "broom_handle",
+            "lance_of_pursuit",
             "misericorde",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "ring_of_aquila",
             "mind_breaker",
             "paladin_sword",
@@ -13433,8 +13438,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "You can skill this spell at level 2 already if you are being right clicked a lot.",
       special_bonus_unique_phantom_assassin_3:
         "You can take this level 20 talent over the suggested one if the opponents still don`t have item counters to evasion.",
-      special_bonus_unique_phantom_assassin:
-        "You can take this level 25 talent over the suggested one if you are in need of more AoE damage. Will burst heal you with Satanic on.",
     },
     item_tooltips: {
       blight_stone: "If you can pressure the opponents early into the laning stage.",
