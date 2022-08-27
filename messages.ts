@@ -2666,7 +2666,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Crystal Maiden_2_Level Frostbite",
     messageTime: 45,
     textMessage:
-      `Consider skilling Frostbite on level 2 for a kill attempt with your mana regen consumables.`,
+      "Consider skilling Frostbite on level 2 for a kill attempt if you have enough mana for both active spells.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_frostbite" },
   },
@@ -3158,7 +3158,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Dazzle_3_Grave heal",
     messageTimes: [3 * 60, 9 * 60, 15 * 60],
     textMessage:
-      `Use Shadow Wave and Bad Juju as Shallow Grave is about to expire to provide a burst of heal.`,
+      "Use Shadow Wave and other sources of healing as Shallow Grave is about to expire.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_shallow_grave" },
   },
@@ -3192,7 +3192,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Avoid showing yourself to opponents at the start of the fight. You are number 1 priority for them to kill.",
     audience: [Audience.ROLE_SUPPORT],
   },
-/*   {
+  {
     category: "OwnHero",
     hero: "Dazzle",
     audioFile: "ownHero/Dazzle_7_Juju stacking",
@@ -3201,7 +3201,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Percentage cooldown reductions from items or runes don't stack with Bad Juju. Higher value prevails.",
     audience: [Audience.ALL],
-  }, */
+  },
   {
     category: "OwnHero",
     hero: "Dazzle",
@@ -3935,7 +3935,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Earth Spirit_3_Creep equilibrium",
     messageTime: 15,
     textMessage:
-      `The further the opponents are from their tower, the deadlier you are. You can potentially roll-kick an opponent under your tower.`,
+      "The further the opponents are from their tower, the deadlier you are. You can roll-kick an opponent under the tower.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "earth_spirit_boulder_smash" },
   },
@@ -3973,7 +3973,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Earth Spirit_7_Existing stones",
     messageTimes: [10 * 60 + 15, 18 * 60 + 15],
     textMessage:
-      `Make use of existing stones in the fights as much as you can. Avoid over using Stone Remnants.`,
+      "Make use of existing stones in the fights as much as you can. Avoid overusing Stone Remnants.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "earth_spirit_stone_caller" },
   },
@@ -7830,7 +7830,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: -30,
     repeatTime: 20 * 60,
     textMessage:
-      `Look to Dispose an enemy in direction of your allies or to slow more enemies on landing.`,
+      "Look to Dispose an enemy in direction of your allies or to stun more enemies on landing.",
     audience: [Audience.ALL],
   },
   {
@@ -7853,7 +7853,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "You can save an ally by using Rebound on him as it provides movement speed bonus.",
     audience: [Audience.ALL],
   },
-/*   {
+  {
     category: "OwnHero",
     hero: "Marci",
     audioFile: "ownHero/Marci_4_Dispel",
@@ -7862,7 +7862,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Be aware of spells and items that can dispel by Sidekick or Rebound.",
     audience: [Audience.ALL],
-  }, */
+  },
   {
     category: "OwnHero",
     hero: "Marci",
