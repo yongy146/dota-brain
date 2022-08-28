@@ -11904,15 +11904,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Monkey King": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_id: 1640804218,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "monkey_king_boundless_strike", // 1
@@ -11946,14 +11945,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "orb_of_venom",
-            "faerie_fire",
             "slippers",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
             "orb_of_corrosion",
+            "phase_boots",
             "power_treads",
             "phase_boots",
             "magic_wand",
@@ -11961,37 +11960,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             "echo_sabre",
-            "black_king_bar",
-            "skadi",
-            "basher",
-            "diffusal_blade",
-            "desolator",
             "maelstrom",
-          ],
-          late_game: [
-            "abyssal_blade",
-            "greater_crit",
-            "mjollnir",
-            "satanic",
-            "ultimate_scepter",
-          ],
-          situational: [
-            "infused_raindrop",
-            "blink",
-            "silver_edge",
-            "monkey_king_bar",
-            "nullifier",
-          ],
-          core: [
-            "orb_of_corrosion",
-            "echo_sabre",
             "black_king_bar",
             "skadi",
             "basher",
+            "desolator",
+            
           ],
+          late_game: ["abyssal_blade", "greater_crit", "mjollnir", "satanic", "ultimate_scepter"],
+          situational: ["infused_raindrop", "blink", "silver_edge", "monkey_king_bar", "nullifier"],
+          core: ["orb_of_corrosion", "echo_sabre", "black_king_bar", "skadi", "basher"],
           neutral: [
-            "arcane_ring",
+            "possessed_mask",
             "broom_handle",
+            "lance_of_pursuit",
             "misericorde",
             "quicksilver_amulet",
             "mind_breaker",
@@ -11999,6 +11981,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "penta_edged_sword",
             "the_leveller",
             "desolator_2",
+            "apex",
             "ex_machina",
           ],
         },
@@ -12021,8 +12004,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item which works well with Wukong`s command. Especially good against immobile tanky and ranged heroes.",
           desolator:
             "Boundless Strike and Wukongs Command synergize very well with this item. Especially good against low armor heroes.",
-          basher:
-            "A core item that allows you to lock down the opponent you are focusing.",
+          basher: "A core item that allows you to lock down the opponent you are focusing.",
           blink: "Allows you to find a nice spot to unleash Wukong`s Command.",
           silver_edge: "For break effect and to reposition.",
           monkey_king_bar: "Against evasion and miss chance.",
@@ -12033,8 +12015,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1642101493,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2718158708",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2718158708",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "monkey_king_tree_dance", // 1
@@ -12067,31 +12048,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "orb_of_venom",
-            "flask",
-            "faerie_fire",
             "branches",
-            "enchanted_mango",
+            "branches",
+            "branches",
             "ward_sentry",
             "ward_observer",
-            "magic_stick",
+            
           ],
-          early_game: [
-            "orb_of_corrosion",
-            "boots",
-            "magic_wand",
-            "urn_of_shadows",
-          ],
-          mid_game: [
-            "orchid",
-            "solar_crest",
-            "ghost",
-            "cyclone",
-            "rod_of_atos",
-          ],
+          early_game: ["magic_wand", "orb_of_corrosion", "urn_of_shadows","ancient_janggo" ],
+          mid_game: ["orchid", "solar_crest", "rod_of_atos"],
           late_game: ["skadi", "basher", "sheepstick"],
           situational: [
-            "infused_raindrop",
             "spirit_vessel",
+            "meteor_hammer",
+            "cyclone",
+            "ghost",
             "lotus_orb",
             "black_king_bar",
             "mage_slayer",
@@ -12099,6 +12070,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["orb_of_corrosion", "orchid", "solar_crest"],
           neutral: [
             "arcane_ring",
+            "seeds_of_serenity",
             "unstable_wand",
             "bullwhip",
             "ring_of_aquila",
@@ -12125,8 +12097,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item to buff one of your right-clicking cores or debuff the hero you are looking to burst as a team.",
           rod_of_atos:
             "A good item that provides a little bit of extra control. Synergizes well with all of Monkey Kings skill set.",
-          mage_slayer:
-            "Against heavy magical damage lineups. Your statues apply debuff as well.",
+          mage_slayer: "Against heavy magical damage lineups. Your statues apply debuff as well.",
           lotus_orb: "For reflect, dispel and armor.",
           black_king_bar:
             "An item that allows you to stand your ground and fight. Wukong`s command makes you resistant against physical damage and Black King Bar sorts out most of the other sources of damage.",
@@ -12140,8 +12111,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Use this spell as the game starts and transform into a courier which sets your movespeed to 380 and try killing some of the couriers that opponents send right outside of fountain. ",
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_stick: "Start with it if you expect high frequency of spells being used on the lane.",
       orb_of_corrosion:
         "A core item that allows you to pressure early on and works well with Wukong`s Command later.",
       infused_raindrop: "On hero against magical burst.",
@@ -12206,15 +12176,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Morphling: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_id: 1640804228,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960135",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960135",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "morphling_morph_agi", // 1
@@ -12247,43 +12216,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "branches",
+            "branches",
+            "branches",
             "circlet",
             "slippers",
-            "faerie_fire",
-            "ward_observer",
             "magic_stick",
           ],
-          early_game: [
-            "bottle",
-            "lifesteal",
-            "power_treads",
-            "magic_wand",
-            "wraith_band",
-          ],
-          mid_game: [
-            "dragon_lance",
-            "manta",
-            "black_king_bar",
-            "falcon_blade",
-            "lesser_crit",
-          ],
+          early_game: ["bottle", "lifesteal", "power_treads", "magic_wand", "wraith_band"],
+          mid_game: ["dragon_lance", "manta", "black_king_bar"],
           late_game: ["skadi", "satanic", "butterfly", "greater_crit"],
-          situational: [
-            "bottle",
-            "infused_raindrop",
-            "sphere",
-            "ultimate_scepter",
-            "blink",
-          ],
+          situational: ["bottle", "silver_edge", "sphere", "ultimate_scepter", "blink"],
           core: ["lifesteal", "power_treads", "manta", "black_king_bar"],
           neutral: [
             "possessed_mask",
+            "seeds_of_serenity",
             "unstable_wand",
+            "specialists_array",
+            "dagger_of_ristul",
             "pupils_gift",
             "vambrace",
             "titan_sliver",
             "paladin_sword",
-            "the_leveller",
             "ninja_gear",
             "ex_machina",
             "fallen_sky",
@@ -12298,8 +12251,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "You can put a point in ultimate at level 6 if you can go for a kill. Otherwise skip it and max out Waveform.",
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_stick: "Start with it if you expect high frequency of spells being used on the lane.",
       bottle: "If you are playing midlane Morphling.",
       lifesteal: "A core item that provides you with hp sustain.",
       infused_raindrop:
@@ -12309,12 +12261,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       manta:
         "A core item that provides you with mix of stats. Manta applies dispel on cast so it is good against Spirit Vessel - a common Morph counter. Using Manta illusions frequently will boost your farming speed.",
       sphere: "Great agaist powerful single-target disables and debuffs.",
-      black_king_bar:
-        "A core item that allows you to deliver the damage in the fights.",
+      black_king_bar: "A core item that allows you to deliver the damage in the fights.",
       ultimate_scepter:
         "A situational item that helps you gain Status Resistance, Movement speed or Spell Amplification when used on an enemy hero.",
-      blink:
-        "To gap-close quickly and can be upgraded to Swift Blink down the road.",
+      blink: "To gap-close quickly and can be upgraded to Swift Blink down the road.",
     },
     combo: [],
     counter_items: {
@@ -12966,15 +12916,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Necrophos: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640804267,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "necrolyte_death_pulse", // 1
@@ -12987,7 +12936,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "necrolyte_heartstopper_aura", // 8
           "necrolyte_heartstopper_aura", // 9
           "necrolyte_heartstopper_aura", // 10
-          "special_bonus_strength_8", // 11
+          "special_bonus_unique_necrophos_heartstopper_regen_duration", // 11
           "necrolyte_reapers_scythe", // 12
           "necrolyte_sadist", // 13
           "necrolyte_sadist", // 14
@@ -13001,33 +12950,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_necrophos", // 25
+          "special_bonus_unique_necrophos_2", // 25
         ],
         items: {
-          starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "circlet",
-            "mantle",
-            "magic_stick",
-          ],
+          starting: ["tango", "faerie_fire", "branches", "branches", "circlet", "mantle", "magic_stick"],
           early_game: ["null_talisman", "boots", "magic_wand", "power_treads"],
           mid_game: [
             "hood_of_defiance",
-            "cyclone",
-            "kaya_and_sange",
-            "force_staff",
             "aghanims_shard",
+            "kaya_and_sange",
             "blink",
             "sange",
-            "mekansm",
             "eternal_shroud",
           ],
           late_game: ["shivas_guard", "sheepstick", "octarine_core"],
           situational: [
-            "infused_raindrop",
+            "cyclone",
+            "force_staff",
+            "radiance",
+            "dagon",
             "pipe",
+            "aeon_disk",
             "heavens_halberd",
             "ultimate_scepter",
             "lotus_orb",
@@ -13036,18 +12979,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "power_treads",
             "magic_wand",
             "hood_of_defiance",
-            "cyclone",
-            "kaya_and_sange",
             "aghanims_shard",
+            "kaya_and_sange",
           ],
           neutral: [
             "unstable_wand",
+            "seeds_of_serenity",
+            "occult_bracelet",
             "pogo_stick",
-            "essence_ring",
+            "eye_of_the_vizier",
             "pupils_gift",
             "quickening_charm",
-            "spider_legs",
             "ascetic_cap",
+            "havoc_hammer",
             "trickster_cloak",
             "ex_machina",
             "force_field",
@@ -13066,21 +13010,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_id: 1642148016,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666066",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666066",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
           "necrolyte_death_pulse", // 3
-          "necrolyte_heartstopper_aura", // 4   equals to `ghost shroud`
+          "necrolyte_sadist", // 4   equals to `ghost shroud`
           "necrolyte_death_pulse", // 5
           "necrolyte_reapers_scythe", // 6
           "necrolyte_death_pulse", // 7
           "necrolyte_heartstopper_aura", // 8
           "necrolyte_heartstopper_aura", // 9
-          "necrolyte_sadist", // 10
-          "special_bonus_unique_necrophos_6", // 11
+          "necrolyte_heartstopper_aura", // 10
+          "special_bonus_unique_necrophos_heartstopper_regen_duration", // 11
           "necrolyte_reapers_scythe", // 12
           "necrolyte_sadist", // 13
           "necrolyte_sadist", // 14
@@ -13094,46 +13037,30 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_necrophos", // 25
+          "special_bonus_unique_necrophos_2", // 25
         ],
         items: {
-          starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "circlet",
-            "mantle",
-            "magic_stick",
-          ],
-          early_game: [
-            "boots",
-            "null_talisman",
-            "magic_wand",
-            "hood_of_defiance",
-          ],
+          starting: ["tango", "faerie_fire", "branches","branches","branches", "circlet", "mantle",],
+          early_game: ["boots", "null_talisman", "magic_wand", "hood_of_defiance"],
           mid_game: [
             "travel_boots",
             "kaya_and_sange",
             "aghanims_shard",
             "dagon",
             "blink",
-            "cyclone",
             "eternal_shroud",
           ],
-          late_game: [
-            "shivas_guard",
-            "aeon_disk",
-            "sheepstick",
-            "octarine_core",
-          ],
+          late_game: ["shivas_guard", "sheepstick", "octarine_core"],
           situational: [
-            "infused_raindrop",
-            "guardian_greaves",
-            "holy_locket",
-            "pipe",
+            "cyclone",
+            "force_staff",
             "radiance",
-            "lotus_orb",
+            "dagon",
+            "pipe",
+            "aeon_disk",
+            "heavens_halberd",
             "ultimate_scepter",
+            "lotus_orb",
           ],
           core: [
             "magic_wand",
@@ -13144,19 +13071,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "keen_optic",
+            "seeds_of_serenity",
+            "occult_bracelet",
             "pogo_stick",
-            "essence_ring",
-            "nether_shawl",
+            "eye_of_the_vizier",
             "pupils_gift",
             "quickening_charm",
-            "spider_legs",
-            "ceremonial_robe",
-            "stormcrafter",
             "ascetic_cap",
+            "havoc_hammer",
             "trickster_cloak",
             "ex_machina",
-            "fallen_sky",
+            "force_field",
           ],
         },
         item_tooltips: {
@@ -13185,8 +13110,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "An upgrade to Hood of Defience that pairs up nicely with Death Pulse and Radiance.",
       kaya_and_sange:
         "A core item that provides you with mix of offensive and defensive stats. Self healing amplification from Sange goes well with Ghost Shroud.",
-      aghanims_shard:
-        "A core item to save an ally, heal and amplify the magical damage on target.",
+      aghanims_shard: "A core item to save an ally, heal and amplify the magical damage on target.",
       blink: "For extra mobility and to get Reaper`s Scythe off easier.",
       lotus_orb: "For reflect, dispel and armor.",
       ultimate_scepter: "Against heavy physical damage lineups.",
@@ -13782,32 +13706,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Omniknight: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_id: 1640804315,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "omniknight_purification", // 1
-          "omniknight_hammer_of_purity", // 2
-          "omniknight_purification", // 3
+          "omniknight_hammer_of_purity", // 1
+          "omniknight_purification", // 2
+          "omniknight_martyr", // 3
           "omniknight_martyr", // 4
-          "omniknight_purification", // 5
+          "omniknight_martyr", // 5
           "omniknight_guardian_angel", // 6
-          "omniknight_purification", // 7
-          "omniknight_martyr", // 8
-          "omniknight_martyr", // 9
-          "omniknight_martyr", // 10
+          "omniknight_martyr", // 7
+          "omniknight_purification", // 8
+          "omniknight_purification", // 9
+          "omniknight_purification", // 10
           "special_bonus_unique_omniknight_5", // 11
           "omniknight_guardian_angel", // 12
           "omniknight_hammer_of_purity", // 13
           "omniknight_hammer_of_purity", // 14
-          "special_bonus_unique_omniknight_6", // 15
+          "special_bonus_unique_omniknight_7", // 15
           "omniknight_hammer_of_purity", // 16
           "special_bonus_attributes", // 17
           "omniknight_guardian_angel", // 18
@@ -13825,18 +13748,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "flask",
             "enchanted_mango",
             "enchanted_mango",
+            "sobi_mask",
             "orb_of_venom",
             "branches",
             "ward_observer",
             "ward_sentry",
           ],
-          early_game: [
-            "arcane_boots",
-            "magic_wand",
-            "soul_ring",
-            "ring_of_basilius",
-          ],
+          early_game: ["arcane_boots", "magic_wand", "soul_ring", "ring_of_basilius"],
           mid_game: [
+            "ancient_janggo",
             "aether_lens",
             "holy_locket",
             "solar_crest",
@@ -13846,15 +13766,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ghost",
             "blink",
           ],
-          late_game: ["wraith_pact", "ultimate_scepter", "octarine_core"],
+          late_game: ["guardian_greaves", "wraith_pact", "ultimate_scepter", "octarine_core"],
           situational: ["guardian_greaves", "lotus_orb"],
           core: ["arcane_boots", "holy_locket", "solar_crest", "blink"],
           neutral: [
-            "keen_optic",
             "arcane_ring",
+            "pogo_stick",
+            "seeds_of_serenity",
             "philosophers_stone",
             "bullwhip",
-            "spider_legs",
             "psychic_headband",
             "spy_gadget",
             "spell_prism",
@@ -13869,15 +13789,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         " Consider putting a skill point in this spell if you are able to run down an opponent. Goes well with Orb Of venom.",
       omniknight_guardian_angel:
         "You don`t have to skill this spell on level 6. Sometimes it is better to max out the Heavenly Grace and Purification before taking a point in Guardian Angel.",
-      special_bonus_unique_omniknight_7:
-        "On level 25, you can take this talent over the suggested one if you are close or having Aghanim`s Scepter, and opponents don`t have many ways of dispelling Guardian Angel.",
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
-      orb_of_venom:
-        "If you see yourself being able to hit the opponents on the lane often.",
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      orb_of_venom: "If you see yourself being able to hit the opponents on the lane often.",
+      magic_stick: "Start with it if you expect high frequency of spells being used on the lane.",
       ring_of_basilius: "If your laning partner also uses a lot of mana early.",
       soul_ring:
         "Lets you use your Purification more frequently. Also if Purification is used on yourself, covers the HP loss from the soulring.",
@@ -13885,8 +13801,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Holy Locket. Get Tranquil Boots afterwards.",
       holy_locket:
         "A core item that provides you with the ability to burst heal and replenish mana on yourself or your allies.",
-      solar_crest:
-        "A core item that goes well with the buffing and saving theme of the hero.",
+      solar_crest: "A core item that goes well with the buffing and saving theme of the hero.",
       blink:
         "A core item that allows you to stay back and hidden but also be able to get your spells off in the best way.",
       vladmir:
@@ -13919,10 +13834,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         core: [],
       },
       mid_game: {
-        all: [
-          { item: "spirit_vessel" },
-          { item: "cyclone", info: "To dispel Heavenly Grace." },
-        ],
+        all: [{ item: "spirit_vessel" }, { item: "cyclone", info: "To dispel Heavenly Grace." }],
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           {
@@ -14795,15 +14707,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Phantom Assassin": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1640804354,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303",
+        steam_guide_link: "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "phantom_assassin_stifling_dagger", // 1
@@ -14825,45 +14736,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "phantom_assassin_coup_de_grace", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_phantom_assassin_5", // 20
+          "special_bonus_unique_phantom_assassin_strike_aspd", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_phantom_assassin_2", // 25
+          "special_bonus_unique_phantom_assassin", // 25
         ],
         items: {
           starting: [
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "slippers",
+            "circlet",
             "faerie_fire",
-            "magic_stick",
-            "blight_stone",
-            "orb_of_venom",
           ],
-          early_game: [
-            "ring_of_health",
-            "power_treads",
-            "magic_wand",
-            "orb_of_corrosion",
-          ],
-          mid_game: [
-            "bfury",
-            "desolator",
-            "black_king_bar",
-            "aghanims_shard",
-            "basher",
-          ],
+          early_game: ["ring_of_health", "power_treads", "magic_wand", "orb_of_corrosion"],
+          mid_game: ["bfury", "desolator", "black_king_bar", "aghanims_shard", "basher"],
           late_game: ["satanic", "abyssal_blade", "ultimate_scepter"],
-          situational: [
-            "manta",
-            "ultimate_scepter",
-            "sphere",
-            "monkey_king_bar",
-            "nullifier",
-          ],
+          situational: ["manta", "ultimate_scepter", "sphere", "monkey_king_bar", "nullifier"],
           core: [
             "power_treads",
             "bfury",
@@ -14876,8 +14769,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "possessed_mask",
             "broom_handle",
+            "lance_of_pursuit",
             "misericorde",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "ring_of_aquila",
             "mind_breaker",
             "paladin_sword",
@@ -14895,20 +14789,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "You can skill this spell at level 2 already if you are being right clicked a lot.",
       special_bonus_unique_phantom_assassin_3:
         "You can take this level 20 talent over the suggested one if the opponents still don`t have item counters to evasion.",
-      special_bonus_unique_phantom_assassin:
-        "You can take this level 25 talent over the suggested one if you are in need of more AoE damage. Will burst heal you with Satanic on.",
     },
     item_tooltips: {
-      blight_stone:
-        "If you can pressure the opponents early into the laning stage.",
-      orb_of_venom:
-        "If you can pressure the opponents early into the laning stage.",
-      magic_stick:
-        "If you expect high frequency of spells being used on the lane.",
-      orb_of_corrosion:
-        "If you can pressure the opponents early into the laning stage.",
-      ring_of_health:
-        "Helps with the hp sustain on the lane and incorporates into Battle Fury.",
+      blight_stone: "If you can pressure the opponents early into the laning stage.",
+      orb_of_venom: "If you can pressure the opponents early into the laning stage.",
+      magic_stick: "If you expect high frequency of spells being used on the lane.",
+      orb_of_corrosion: "If you can pressure the opponents early into the laning stage.",
+      ring_of_health: "Helps with the hp sustain on the lane and incorporates into Battle Fury.",
       power_treads:
         "A core boots upgrade that improves your farming speed through attack speed increase and mana savings.",
       bfury: "A core farming item.",
@@ -14916,10 +14803,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that adds to your burst, allows you to take buildings down faster and kill Roshan. You can delay this item in favor of Black King Bar if you need to fight earlier.",
       black_king_bar:
         "A core item that allows you to deliver the damage under spell-immunity. You can buy this item immediately after Battle Fury if you need to fight earlier.",
-      ultimate_scepter:
-        "Provides your Blur to have a dispel and lowers its cooldown tremendously.",
-      aghanims_shard:
-        "A core item that provides break effect and adds to your burst potential.",
+      ultimate_scepter: "Provides your Blur to have a dispel and lowers its cooldown tremendously.",
+      aghanims_shard: "A core item that provides break effect and adds to your burst potential.",
       basher:
         "A core item that provides control against elusive heroes and makes delivering damage a lot easier. Can be upgraded to Abyssal Blade.",
       satanic:
@@ -14944,11 +14829,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
       mid_game: {
         all: [],
-        support: [
-          { item: "ghost" },
-          { item: "glimmer_cape" },
-          { item: "force_staff" },
-        ],
+        support: [{ item: "ghost" }, { item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           { item: "hurricane_pike" },
           { item: "monkey_king_bar" },
