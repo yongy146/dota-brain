@@ -51,12 +51,7 @@ export const ContentCreatorLinks = {
     link_http: "https://www.gamersensei.com/senseis/zograf",
     link_text: "Click here to be coached by him.",
   },
-  ZoGraF: {
-    image: "https://i.imgur.com/QZzNRhz.png",
-    text: "This guide was written by 9k Professional Coach ZoGraF.",
-    link_http: "https://www.gamersensei.com/senseis/zograf",
-    link_text: "Click here to be coached by him.",
-  },*/
+
   /*  AlexDota: {
     image: "https://i.imgur.com/QZzNRhz.png", // Create imgur file ...
     text: "This guide was written by 10k Professional Player AlexDota.",
@@ -80,6 +75,12 @@ export const ContentCreatorLinks = {
     text: "This guide was written by Hammad.",
     link_http: "https://www.fiverr.com/share/k0bmRk",
     link_text: "Click here to book a coaching session with him.",
+  },
+  ZoGraF: {
+    image: "https://i.imgur.com/QZzNRhz.png",
+    text: "This guide was written by 9k Professional Coach ZoGraF.",
+    link_http: "https://www.gamersensei.com/senseis/zograf",
+    link_text: "Click here to be coached by him.",
   },
 };
 
