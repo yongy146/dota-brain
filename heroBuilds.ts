@@ -76,12 +76,12 @@ export const ContentCreatorLinks = {
     link_http: "https://www.fiverr.com/share/k0bmRk",
     link_text: "Click here to book a coaching session with him.",
   },
-  ZoGraF: {
+  /*ZoGraF: {
     image: "https://i.imgur.com/QZzNRhz.png",
     text: "This guide was written by 9k Professional Coach ZoGraF.",
     link_http: "https://www.gamersensei.com/senseis/zograf",
     link_text: "Click here to be coached by him.",
-  },
+  },*/
 };
 
 export enum DamageType {
