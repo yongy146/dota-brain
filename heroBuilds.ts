@@ -17604,7 +17604,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Fiend": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -17641,16 +17641,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_nevermore_4", // 25
+          "special_bonus_unique_nevermore_shadowraze_cooldown", // 25
         ],
         items: {
           starting: [
             "enchanted_mango",
+            "enchanted_mango",
             "tango",
             "branches",
-            "faerie_fire",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: ["bottle", "boots", "cyclone", "magic_wand"],
           mid_game: ["blink", "travel_boots", "black_king_bar"],
@@ -17661,16 +17660,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ultimate_scepter",
           ],
           situational: [
-            "infused_raindrop",
             "sphere",
             "aeon_disk",
             "kaya_and_sange",
           ],
           core: [
+            "travel_boots",
             "bottle",
             "cyclone",
             "blink",
-            "travel_boots",
             "black_king_bar",
             "arcane_blink",
             "sheepstick",
@@ -17678,10 +17676,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "pogo_stick",
+            "occult_bracelet",
             "mysterious_hat",
             "nether_shawl",
             "vambrace",
-            "quickening_charm",
             "psychic_headband",
             "timeless_relic",
             "spell_prism",
@@ -17743,7 +17741,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_nevermore_5", // 25
+          "special_bonus_unique_nevermore_raze_procsattacks", // 25
         ],
         items: {
           starting: [
@@ -17752,16 +17750,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "branches",
             "branches",
-            "faerie_fire",
           ],
-          early_game: ["power_treads", "magic_wand", "dragon_lance"],
-          mid_game: ["invis_sword", "black_king_bar", "silver_edge", "satanic"],
-          late_game: ["butterfly", "skadi", "greater_crit"],
+          early_game: ["bottle", "boots", "power_treads", "magic_wand", ],
+          mid_game: ["dragon_lance", "invis_sword", "black_king_bar", "silver_edge", ],
+          late_game: ["greater_crit" , "satanic", "butterfly"],
           situational: [
-            "infused_raindrop",
             "manta",
             "blink",
-            "aghanims_shard",
+            "skadi",
             "hurricane_pike",
             "monkey_king_bar",
             "sphere",
@@ -17771,20 +17767,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_lance",
             "black_king_bar",
             "silver_edge",
+            "aghanims_shard",
+            "greater_crit",
             "satanic",
             "butterfly",
-            "greater_crit",
+            
           ],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
-            "quicksilver_amulet",
+            "specialists_array",
+            "dagger_of_ristul",
             "ring_of_aquila",
             "vambrace",
             "paladin_sword",
             "elven_tunic",
-            "the_leveller",
             "ninja_gear",
             "desolator_2",
             "pirate_hat",
@@ -18370,7 +18368,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Slardar: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -18383,8 +18381,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "slardar_slithereen_crush", // 1
           "slardar_bash", // 2
-          "slardar_bash", // 3
-          "slardar_sprint", // 4
+          "slardar_sprint", // 3
+          "slardar_bash", // 4
           "slardar_bash", // 5
           "slardar_amplify_damage", // 6
           "slardar_bash", // 7
@@ -18410,30 +18408,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
+            "tango",
             "quelling_blade",
             "gauntlets",
             "branches",
-            "circlet",
-            "faerie_fire",
-            "bracer",
-            "magic_stick",
+            "branches",
           ],
           early_game: [
             "bracer",
-            "power_treads",
-            "mask_of_madness",
+            "boots",
             "magic_wand",
-            "armlet",
-            "orb_of_corrosion",
+            "power_treads",
+            "echo_sabre",
+            
           ],
           mid_game: [
             "blink",
             "black_king_bar",
-            "orchid",
             "aghanims_shard",
-            "echo_sabre",
             "ultimate_scepter",
-            "hood_of_defiance",
           ],
           late_game: [
             "assault",
@@ -18442,24 +18435,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ultimate_scepter",
             "swift_blink",
           ],
-          situational: ["infused_raindrop", "hand_of_midas", "heavens_halberd"],
+          situational: ["mask_of_madness", "hand_of_midas", "heavens_halberd", "orchid", "lotus_orb",],
           core: [
             "power_treads",
-            "mask_of_madness",
             "blink",
             "black_king_bar",
             "aghanims_shard",
+            "ultimate_scepter",
             "assault",
+            "moon_shard",
           ],
           neutral: [
             "broom_handle",
             "possessed_mask",
-            "quicksilver_amulet",
+            "lance_of_pursuit",
+            "dagger_of_ristul",
             "misericorde",
             "mind_breaker",
             "elven_tunic",
-            "the_leveller",
             "penta_edged_sword",
+            "havoc_hammer",
             "desolator_2",
             "pirate_hat",
           ],
@@ -18529,7 +18524,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Slark: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -18549,8 +18544,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "slark_dark_pact", // 7
           "slark_pounce", // 8
           "slark_pounce", // 9
-          "special_bonus_unique_slark_6", // 10
-          "slark_pounce", // 11
+          "slark_pounce", // 10
+          "special_bonus_unique_slark_6", // 11
           "slark_shadow_dance", // 12
           "slark_essence_shift", // 13
           "slark_essence_shift", // 14
@@ -18559,7 +18554,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "slark_shadow_dance", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_slark_5", // 20
+          "special_bonus_unique_slark_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -18571,33 +18566,32 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
-            "slippers",
             "circlet",
-            "faerie_fire",
-            "orb_of_venom",
             "magic_stick",
+            "orb_of_venom",
+            
           ],
           early_game: [
-            "power_treads",
+            "boots",
             "magic_wand",
-            "soul_ring",
-            "falcon_blade",
             "wraith_band",
-            "orb_of_corrosion",
+            "power_treads",
           ],
           mid_game: [
-            "echo_sabre",
-            "silver_edge",
+            "falcon_blade",
+            "diffusal_blade",
             "black_king_bar",
             "aghanims_shard",
+            "invis_sword",
             "basher",
-            "diffusal_blade",
-            "sange_and_yasha",
+        
           ],
-          late_game: ["skadi", "abyssal_blade", "ultimate_scepter", "satanic"],
+          late_game: ["silver_edge", "skadi", "abyssal_blade", "satanic"],
           situational: [
-            "infused_raindrop",
+            "orb_of_corrosion",
             "hand_of_midas",
+            "sange_and_yasha",
+            "ultimate_scepter",
             "sphere",
             "blink",
             "monkey_king_bar",
@@ -18605,21 +18599,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: [
             "power_treads",
-            "echo_sabre",
-            "silver_edge",
+            "diffusal_blade",
             "black_king_bar",
             "aghanims_shard",
+            "invis_sword",
             "basher",
             "skadi",
           ],
           neutral: [
+            "lance_of_pursuit",
             "arcane_ring",
             "possessed_mask",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "misericorde",
             "mind_breaker",
             "elven_tunic",
-            "the_leveller",
             "penta_edged_sword",
             "pirate_hat",
             "apex",
@@ -18629,7 +18623,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       slark_dark_pact:
-        "You can skill this spell on level 1 if you are being harassed by a dispellable spell(Poision Touch, Thunder Strike).",
+        "You can skill this spell on level 1 if you are being harassed by a dispellable spell(Poison Touch, Thunder Strike).",
       slark_essence_shift:
         "You can put 2 points in this spell during laning stage if you are laning against double melee.",
     },
@@ -18911,7 +18905,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Sniper: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -18928,16 +18922,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "sniper_take_aim", // 4
           "sniper_shrapnel", // 5
           "sniper_assassinate", // 6
-          "sniper_headshot", // 7
+          "sniper_shrapnel", // 7
           "sniper_headshot", // 8
-          "sniper_headshot", // 9
-          "special_bonus_attack_damage_15", // 10
+          "sniper_take_aim", // 9
+          "special_bonus_unique_sniper_4", // 10
           "sniper_take_aim", // 11
-          "sniper_take_aim", // 12
+          "sniper_assassinate", // 12
           "sniper_take_aim", // 13
-          "sniper_shrapnel", // 14
+          "sniper_headshot", // 14
           "special_bonus_attack_speed_30", // 15
-          "sniper_assassinate", // 16
+          "sniper_headshot", // 16
           "special_bonus_attributes", // 17
           "sniper_assassinate", // 18
           "special_bonus_attributes", // 19
@@ -18951,57 +18945,64 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "quelling_blade",
             "slippers",
-            "faerie_fire",
+            "slippers",
+            "circlet",
             "branches",
-            "boots",
-            "magic_stick",
           ],
           early_game: [
+            "wraith_band",
+            "wraith_band",
+            "boots",
             "power_treads",
             "mask_of_madness",
-            "wraith_band",
-            "magic_wand",
+            
+            
           ],
           mid_game: [
             "dragon_lance",
-            "silver_edge",
-            "black_king_bar",
             "maelstrom",
-            "hurricane_pike",
-            "ultimate_scepter",
+            "black_king_bar",
+            
           ],
           late_game: [
-            "satanic",
-            "butterfly",
-            "skadi",
-            "mjollnir",
-            "greater_crit",
+           "hurricane_pike",
+           "mjollnir", 
+           "greater_crit",
+            
           ],
           situational: [
+            "magic_wand",
             "hand_of_midas",
+            "falcon_blade",
             "aghanims_shard",
+            "silver_edge",
             "monkey_king_bar",
+            "manta",
+            "satanic",
+            "skadi",
             "blink",
+            "bloodthorn",
           ],
           core: [
             "power_treads",
-            "mask_of_madness",
             "dragon_lance",
-            "silver_edge",
+            "maelstrom",
             "black_king_bar",
-            "satanic",
-            "butterfly",
+            "hurricane_pike",
+            "mjollnir",
+            "greater_crit",
+           
           ],
           neutral: [
             "unstable_wand",
             "possessed_mask",
+            "dagger_of_ristul",
             "grove_bow",
-            "quicksilver_amulet",
+            "specialists_array",
             "mind_breaker",
+            "paladin_sword",
             "elven_tunic",
-            "the_leveller",
             "ninja_gear",
             "pirate_hat",
             "apex",
@@ -19071,48 +19072,39 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "blight_stone",
-            "faerie_fire",
-            "branches",
-            "flask",
-            "circlet",
             "boots",
-            "magic_stick",
+            "ward_observer"
           ],
-          early_game: ["urn_of_shadows", "tranquil_boots", "magic_wand"],
+          early_game: [ "tranquil_boots", "magic_wand","ring_of_basilius", "point_booster" ],
           mid_game: [
-            "veil_of_discord",
             "ultimate_scepter",
             "aghanims_shard",
-            "glimmer_cape",
             "force_staff",
-            "ghost",
-            "solar_crest",
-            "cyclone",
           ],
           late_game: [
             "octarine_core",
+            "sheepstick",
             "aeon_disk",
             "ethereal_blade",
-            "sheepstick",
+            
           ],
-          situational: ["infused_raindrop", "spirit_vessel", "blink"],
+          situational: ["spirit_vessel","glimmer_cape","ghost","solar_crest","cyclone","ancient_janggo", "blink", "wraith_pact"],
           core: [
-            "urn_of_shadows",
             "tranquil_boots",
-            "veil_of_discord",
             "ultimate_scepter",
             "aghanims_shard",
             "octarine_core",
+            "boots_of_bearing",
           ],
           neutral: [
             "mysterious_hat",
-            "keen_optic",
+            "seeds_of_serenity",
             "philosophers_stone",
             "bullwhip",
             "quickening_charm",
-            "spider_legs",
             "timeless_relic",
+            "ceremonial_robe",
+            "spy_gadget",
             "spell_prism",
             "seer_stone",
             "book_of_shadows",
@@ -19201,7 +19193,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Spectre: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -19241,25 +19233,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
+            "tango",
             "quelling_blade",
             "branches",
+            "branches",
+            "branches",
             "slippers",
-            "faerie_fire",
-            "circlet",
-            "magic_stick",
           ],
-          early_game: ["power_treads", "magic_wand", "wraith_band"],
+          early_game: ["wraith_band","boots", "magic_wand","power_treads", ],
           mid_game: [
-            "diffusal_blade",
-            "echo_sabre",
             "manta",
             "ultimate_scepter",
             "skadi",
             "basher",
-            "blade_mail",
+            
           ],
           late_game: ["abyssal_blade", "butterfly", "moon_shard"],
           situational: [
+            "falcon_blade",
+            "diffusal_blade",
             "hand_of_midas",
             "blade_mail",
             "orchid",
@@ -19268,25 +19260,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "nullifier",
             "sheepstick",
             "heart",
+            "refresher",
+            "butterfly",
           ],
           core: [
             "power_treads",
-            "diffusal_blade",
             "manta",
             "ultimate_scepter",
             "skadi",
             "basher",
-            "butterfly",
+            "abyssal_blade",
           ],
           neutral: [
-            "chipped_vest",
             "possessed_mask",
+            "lance_of_pursuit",
+            "seeds_of_serenity",
             "vambrace",
+            "dagger_of_ristul",
             "ring_of_aquila",
             "pupils_gift",
             "mind_breaker",
             "elven_tunic",
-            "the_leveller",
             "ninja_gear",
             "pirate_hat",
             "apex",
