@@ -16924,7 +16924,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Riki: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
