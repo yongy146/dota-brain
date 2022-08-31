@@ -1715,8 +1715,14 @@ export namespace items {
    */
   export function getItemImage(itemId: number): string | null {
     const name = getItemName(itemId);
-    if (name) return `${process.env.IMGPATH} /items/${name}.png`;
+    if (name) return getItemImageFromName(name);
     return null;
+    /*if (name) return `${process.env.IMGPATH}/items/${name}.png`;
+    return null;*/
+  }
+
+  export function getItemImageFromName(name: string): string | null {
+    return `${process.env.IMGPATH}/items/${name}.png`;
   }
 
   /**
