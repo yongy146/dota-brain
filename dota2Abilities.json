@@ -273,7 +273,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_bonus_armor} Berseker's Call Armor"
+			"description": "+{s:bonus_bonus_armor} Berserker's Call Armor"
 		},
 		"special_bonus_unique_axe_8": {
 			"id": 9401,
@@ -944,6 +944,9 @@
 				0
 			],
 			"mana_cost": [
+				9,
+				10,
+				11,
 				12
 			],
 			"name": "Frost Arrows",
@@ -1481,7 +1484,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_healing_ward_bonus_health} Healing Ward Health"
+			"description": "+{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill"
 		}
 	},
 	"npc_dota_hero_mirana": {
@@ -1898,10 +1901,10 @@
 				10
 			],
 			"mana_cost": [
+				40,
 				50,
 				60,
-				70,
-				80
+				70
 			],
 			"name": "Adaptive Strike (Agility)",
 			"description": "The Morphling calls upon his elements to crush his opponents with waves.",
@@ -1916,10 +1919,10 @@
 				10
 			],
 			"mana_cost": [
+				40,
 				50,
 				60,
-				70,
-				80
+				70
 			],
 			"name": "Adaptive Strike (Strength)",
 			"description": "The Morphling calls upon his elements to crush his opponents with waves.",
@@ -2251,7 +2254,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+8% Juxtapose Damage"
+			"description": "+10% Juxtapose Damage"
 		},
 		"special_bonus_unique_phantom_lancer_4": {
 			"id": 6850,
@@ -2289,9 +2292,9 @@
 				0
 			],
 			"mana_cost": [
-				80,
-				100,
+				110,
 				120,
+				130,
 				140
 			],
 			"name": "Illusory Orb",
@@ -3907,7 +3910,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-2s Windrun Cooldown"
+			"description": "-3s Windrun Cooldown"
 		},
 		"special_bonus_unique_windranger_3": {
 			"id": 6562,
@@ -4199,10 +4202,7 @@
 				10
 			],
 			"mana_cost": [
-				90,
-				100,
-				110,
-				120
+				100
 			],
 			"name": "Torrent",
 			"description": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral.",
@@ -5931,6 +5931,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				20,
+				18,
+				16,
 				14
 			],
 			"mana_cost": [
@@ -6016,7 +6019,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Eidolon Attack Speed"
+			"description": "+12 Eidolon Attack Speed"
 		},
 		"special_bonus_unique_enigma_6": {
 			"id": 461,
@@ -6081,7 +6084,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+50 Eidolon Damage"
+			"description": "+40 Eidolon Damage"
 		},
 		"special_bonus_unique_enigma_2": {
 			"id": 6510,
@@ -6280,7 +6283,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_cooldown_reduction}% Defense Matrix Cooldown Reduction"
+			"description": "Defense Matrix Grants {s:bonus_cooldown_reduction}%  Cooldown Reduction"
 		},
 		"special_bonus_unique_tinker_5": {
 			"id": 413,
@@ -6951,12 +6954,12 @@
 			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
-				50
+				40
 			],
 			"mana_cost": [
 				100
 			],
-			"name": "Drums Of Slom",
+			"name": "Drums of Slom",
 			"description": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom.",
 			"is_ultimate": false,
 			"is_passive": "no"
@@ -6994,7 +6997,7 @@
 				0,
 				0
 			],
-			"name": "Drums Of Slom Cancel",
+			"name": "Drums of Slom Cancel",
 			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no"
@@ -7012,8 +7015,8 @@
 			"talent_level": 1,
 			"description": "+30 Damage"
 		},
-		"special_bonus_unique_beastmaster_4": {
-			"id": 6612,
+		"special_bonus_unique_beastmaster_9": {
+			"id": 901,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -7023,7 +7026,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_bonus_attack_speed} Inner Beast Attack Speed"
+			"description": "+{s:bonus_damage_amp}% Wild Axes Damage Amp Per Stack"
 		},
 		"special_bonus_unique_beastmaster_5": {
 			"id": 506,
@@ -7038,8 +7041,8 @@
 			"talent_level": 2,
 			"description": "+{s:bonus_ms} Movespeed Beastmaster Controlled"
 		},
-		"special_bonus_unique_beastmaster_9": {
-			"id": 901,
+		"special_bonus_unique_beastmaster_4": {
+			"id": 6612,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -7049,7 +7052,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_damage_amp}% Wild Axes Damage Amp Per Stack"
+			"description": "+{s:bonus_bonus_attack_speed} Inner Beast Attack Speed"
 		},
 		"special_bonus_unique_beastmaster_2": {
 			"id": 6517,
@@ -7116,10 +7119,10 @@
 				4
 			],
 			"mana_cost": [
-				110,
-				120,
-				130,
-				140
+				125,
+				135,
+				145,
+				155
 			],
 			"name": "Shadow Strike",
 			"description": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims.",
@@ -7420,7 +7423,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "{s:bonus_movement_speed}% Poison Sting Slow"
+			"description": "+{s:bonus_movement_speed}% Poison Sting Slow"
 		},
 		"special_bonus_unique_venomancer_4": {
 			"id": 6980,
@@ -7862,9 +7865,9 @@
 			],
 			"mana_cost": [
 				80,
-				95,
-				110,
-				125
+				90,
+				100,
+				110
 			],
 			"name": "Crypt Swarm",
 			"description": "Krobelus' many trips to the grave gather a flock of the damned.",
@@ -7915,9 +7918,9 @@
 				150
 			],
 			"mana_cost": [
-				250,
-				350,
-				450
+				200,
+				300,
+				400
 			],
 			"name": "Exorcism",
 			"description": "Over time, the banshee remnants of her previous lives return to haunt the present.",
@@ -9285,7 +9288,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+50 Shadow Wave Heal / Damage"
+			"description": "+45 Shadow Wave Heal / Damage"
 		},
 		"special_bonus_unique_dazzle_poison_touch_attack_range_bonus": {
 			"id": 1018,
@@ -9311,7 +9314,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+225 Heal On Shallow Grave End"
+			"description": "+200 Heal On Shallow Grave End"
 		},
 		"special_bonus_unique_dazzle_3": {
 			"id": 6528,
@@ -9365,7 +9368,7 @@
 				18
 			],
 			"mana_cost": [
-				100
+				90
 			],
 			"name": "Battery Assault",
 			"description": "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver.",
@@ -9413,7 +9416,7 @@
 				50
 			],
 			"mana_cost": [
-				150
+				90
 			],
 			"name": "Overclocking",
 			"description": "Rattletrap understands the limitations of his armor. Just as he understands the risks of pushing past them in times of need.",
@@ -9445,8 +9448,8 @@
 				30
 			],
 			"mana_cost": [
-				150,
-				150,
+				100,
+				125,
 				150
 			],
 			"name": "Hookshot",
@@ -10374,10 +10377,10 @@
 				18
 			],
 			"mana_cost": [
-				40,
-				55,
-				70,
-				85
+				45,
+				60,
+				75,
+				90
 			],
 			"name": "Burning Barrage",
 			"description": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver.",
@@ -11265,7 +11268,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_bonus_status_resist_night}% Hunter In The Night Status Resistance"
+			"description": "+{s:bonus_bonus_status_resist_night}% Hunter in the Night Status Resistance"
 		},
 		"special_bonus_unique_night_stalker_6": {
 			"id": 799,
@@ -11539,9 +11542,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				12,
 				9,
-				6,
+				7,
+				5,
 				3
 			],
 			"mana_cost": [
@@ -11976,7 +11979,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-{s:bonus_slow_movement_speed_pct}%/{s:bonus_slow_attack_speed_pct} Dual Breath Attack/Movement Speed Slow"
+			"description": "-{s:bonus_slow_movement_speed_pct}%/{s:bonus_slow_attack_speed_pct} Dual Breath Movement/Attack Speed Slow"
 		},
 		"special_bonus_unique_jakiro_4": {
 			"id": 6661,
@@ -12041,7 +12044,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "{s:bonus_AbilityCastRange}% Dual Breath Damage and Range"
+			"description": "+{s:bonus_AbilityCastRange}% Dual Breath Damage and Range"
 		},
 		"special_bonus_unique_jakiro_6": {
 			"id": 526,
@@ -12199,8 +12202,8 @@
 			"talent_level": 2,
 			"description": "-{s:bonus_AbilityCooldown}s Flaming Lasso Cooldown"
 		},
-		"special_bonus_unique_batrider_4": {
-			"id": 512,
+		"special_bonus_unique_batrider_1": {
+			"id": 6087,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -12210,7 +12213,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_damage} Sticky Napalm Damage"
+			"description": "+{s:bonus_duration}s Firefly Duration"
 		},
 		"special_bonus_unique_batrider_5": {
 			"id": 572,
@@ -12225,8 +12228,8 @@
 			"talent_level": 3,
 			"description": "{s:bonus_AbilityCharges} Flamebreak Charges"
 		},
-		"special_bonus_unique_batrider_1": {
-			"id": 6087,
+		"special_bonus_unique_batrider_4": {
+			"id": 512,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -12236,7 +12239,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_duration}s Firefly Duration"
+			"description": "+{s:bonus_damage} Sticky Napalm Damage"
 		},
 		"special_bonus_unique_batrider_2": {
 			"id": 6229,
@@ -12389,7 +12392,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-40s Hand of God Cooldown"
+			"description": "-30s Hand of God Cooldown"
 		},
 		"special_bonus_unique_chen_4": {
 			"id": 6535,
@@ -13709,7 +13712,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_damage} Damage per Greevil Greed stack"
+			"description": "+{s:bonus_damage} Damage per Greevil's Greed stack"
 		},
 		"special_bonus_unique_alchemist_8": {
 			"id": 1003,
@@ -13986,7 +13989,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_damage_per_mana_pct}% EMP Mana Burnt"
+			"description": "+{s:bonus_damage_per_mana_pct}% E.M.P. Mana Burnt"
 		},
 		"special_bonus_unique_invoker_3": {
 			"id": 6099,
@@ -14246,7 +14249,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_bounce_count} Glaives Of Wisdom Bounces"
+			"description": "{s:bonus_bounce_count} Glaives of Wisdom Bounces"
 		},
 		"special_bonus_unique_silencer_2": {
 			"id": 6878,
@@ -14864,7 +14867,7 @@
 			"mana_cost": [
 				100
 			],
-			"name": "DISSEMINATE",
+			"name": "Disseminate",
 			"description": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no"
@@ -15332,7 +15335,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-75% Phantasm Illusion Incoming Damage"
+			"description": "--75% Phantasm Illusion Incoming Damage"
 		},
 		"special_bonus_unique_chaos_knight_3": {
 			"id": 6619,
@@ -16051,10 +16054,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
+				90,
 				85,
 				80,
-				75,
-				70
+				75
 			],
 			"mana_cost": [
 				120,
@@ -16362,7 +16365,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-10% Fade Bolt Damage Reduction"
+			"description": "-12% Fade Bolt Damage Reduction"
 		},
 		"special_bonus_unique_rubick_6": {
 			"id": 518,
@@ -16401,7 +16404,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-4s Fade Bolt Cooldown"
+			"description": "-5s Fade Bolt Cooldown"
 		},
 		"special_bonus_unique_rubick": {
 			"id": 6041,
@@ -17570,7 +17573,7 @@
 				10
 			],
 			"mana_cost": [
-				90
+				100
 			],
 			"name": "Grave Chill",
 			"description": "The warmth of the sun is never felt in the dark cold of the Narrow Maze.",
@@ -17582,9 +17585,6 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				4,
-				4,
-				4,
 				4
 			],
 			"mana_cost": [
@@ -18410,7 +18410,7 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				60
+				45
 			],
 			"mana_cost": [
 				75
@@ -20155,7 +20155,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Press the Attack grants 2s Spell Immunity"
+			"description": "Press the Attack grants 1.5s Spell Immunity"
 		}
 	},
 	"npc_dota_hero_ember_spirit": {
@@ -20383,7 +20383,7 @@
 				4
 			],
 			"mana_cost": [
-				70
+				50
 			],
 			"name": "Rolling Boulder",
 			"description": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
@@ -22860,8 +22860,8 @@
 			],
 			"mana_cost": [
 				150,
-				175,
-				200
+				200,
+				250
 			],
 			"name": "Arena Of Blood",
 			"description": "The long-dead members of the Ash Legion, assembled from the finest warriors to ever test the might of Mars, still revel in the thrill of combat, gladly beholden to the hand that fell them for as long as he so commands.",
@@ -22892,7 +22892,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_redirect_chance}% Bulwark Redirect Chance"
+			"description": "+{s:bonus_redirect_chance}% Bulwark Active Redirect Chance"
 		},
 		"special_bonus_unique_mars_rebuke_cooldown": {
 			"id": 545,
@@ -23700,7 +23700,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+25 Starbreaker Swipe/Smash Damage"
+			"description": "+18 Starbreaker Swipe/Smash Damage"
 		},
 		"special_bonus_unique_dawnbreaker_celestial_hammer_slow": {
 			"id": 7942,
@@ -23713,7 +23713,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15% Celestial Hammer Slow"
+			"description": "+12% Celestial Hammer Slow"
 		},
 		"special_bonus_unique_dawnbreaker_luminosity_crit": {
 			"id": 7937,
@@ -24068,9 +24068,7 @@
 				24
 			],
 			"mana_cost": [
-				100,
-				115,
-				130
+				100
 			],
 			"name": "Pulverize",
 			"description": "Though none are certain whether his utterances have true meaning, most concede the Beast's powerful grip and tendency to smash his enemies into naught but pulp and pieces communicates his intent well enough.",
