@@ -12951,7 +12951,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Snapfire_8_Push sidelanes",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around the 15 minute mark as it adds another disable and sets up a Firesnap Cookie.",
+      `Pick up Aghanims Shard around the 15 minute mark to provide a layer of burst to Firesnap Cookie.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16225,7 +16225,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "visage_summon_familiars" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Visage",
     audioFile: "ownHero/Visage_4_Dont overrotate",
@@ -16234,7 +16234,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Don't over-rotate. Work your way to Orchid as it allows you to solo kill most of the heroes.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "orchid" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Visage",
