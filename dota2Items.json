@@ -1963,7 +1963,7 @@
 	"item_recipe_soul_ring": {
 		"id": "177",
 		"name": "Soul Ring Recipe",
-		"cost": 245,
+		"cost": 400,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -1971,7 +1971,7 @@
 		"id": "178",
 		"name": "Soul Ring",
 		"mana_cost": 0,
-		"cost": 700,
+		"cost": 855,
 		"cooldown": 25,
 		"is_recipe": false,
 		"is_neutral": false
