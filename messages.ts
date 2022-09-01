@@ -5506,7 +5506,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Io_1_Trees",
     messageTime: -75,
     textMessage:
-      "Tether breaks trees which is useful when laning against Treant Protector or to optimize farming routes.",
+      `Tether breaks trees which is useful at making tree line paths or optimize farming routes.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "wisp_tether" },
   },
@@ -9969,7 +9969,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Oracle_9_UltiItems",
     messageTime: 10 * 60 + 30,
     textMessage:
-      "Items like Aether Lens or Blink Dagger allow yout to get your Ulti off well. If you False Promise yourself you can blink out even under attack as you take no damage.",
+      `Items like Aether Lens or Blink Dagger allow you to get your Ulti off well. If you False Promise yourself you can blink out even under attack as you take no damage.`,
     audience: [Audience.ALL],
   },
   {
@@ -10036,7 +10036,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: -90,
     textMessage:
       "Rush Meteor Hammer as it provides sustain, solo kill potential, waveclear and tower damage.",
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "meteor_hammer" },
   },
   {
@@ -16625,8 +16625,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Weaver",
     audioFile: "ownHero/Weaver_9_Aghanims Shard",
     messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanim's Shard around minute 15 as it allows you to detect invisible heroes but also improves dps.`,
-    audience: [Audience.ROLE_SUPPORT, Audience.ROLE_OFFLANE],
+    textMessage: `Pick up Aghanims Shard once you have your damage items in the late game to further improve your dps.`,
+    audience: [Audience.ROLE_CARRY],
     image: { type: "item", name: "aghanims_shard" },
   },
   {
