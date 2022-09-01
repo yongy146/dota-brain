@@ -3157,7 +3157,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Chaos Knight": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3169,8 +3169,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
-          "chaos_knight_chaos_strike", // 2
-          "chaos_knight_reality_rift", // 3
+          "chaos_knight_reality_rift", // 2
+          "chaos_knight_chaos_strike", // 3
           "chaos_knight_chaos_strike", // 4
           "chaos_knight_chaos_strike", // 5
           "chaos_knight_phantasm", // 6
@@ -3182,7 +3182,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "chaos_knight_phantasm", // 12
           "chaos_knight_chaos_bolt", // 13
           "chaos_knight_chaos_bolt", // 14
-          "special_bonus_strength_12", // 15
+          "special_bonus_unique_chaos_knight_8", // 15
           "chaos_knight_chaos_bolt", // 16
           "special_bonus_attributes", // 17
           "chaos_knight_phantasm", // 18
@@ -3195,8 +3195,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_chaos_knight_5", // 25
         ],
         ability_tooltips: {
-          /*chaos_knight_chaos_reality_rift:
-            "You can take this on level 2 instead of level 3 if you have a strong lane partner or tri-lane in order to get kills.",*/
+          chaos_knight_chaos_strike:
+            "If you need more regen earlier and have no kill potential on your lane, you can consider leveling this on 2 instead of reality rift.",
           chaos_knight_phantasm:
             "In the early game you should be using this ability off-cooldown in order to farm faster and push out waves. Only keep this ready if you think a fight will break out soon.",
         },
@@ -3205,26 +3205,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
-            "gauntlets",
+            "circlet",
             "branches",
-            "enchanted_mango",
-            "magic_stick",
+            "branches"
           ],
           early_game: [
             "magic_wand",
             "power_treads",
             "bracer",
-            "soul_ring",
-            "helm_of_iron_will",
+            "helm_of_iron_will",           
           ],
           mid_game: [
             "armlet",
             "echo_sabre",
-            "sange_and_yasha",
-            "aghanims_shard",
             "black_king_bar",
+            "mage_slayer",
+            "blink",
+            "orchid",
+            "aghanims_shard",
           ],
           late_game: [
+            "bloodthorn",
             "heart",
             "assault",
             "satanic",
@@ -3233,18 +3234,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "overwhelming_blink",
           ],
           situational: [
+            "ultimate_scepter",
+            "infused_raindrop",
             "hand_of_midas",
-            "blink",
-            "black_king_bar",
+            "sange_and_yasha",
             "silver_edge",
-            "orchid",
+            "manta",
+            "soul_ring"
           ],
           core: ["power_treads", "armlet", "black_king_bar"],
           neutral: [
             "unstable_wand",
             "broom_handle",
             "possessed_mask",
-            "chipped_vest",
             "vambrace",
             "pupils_gift",
             "ring_of_aquila",
@@ -3252,7 +3254,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "paladin_sword",
             "titan_sliver",
             "mind_breaker",
-            "the_leveller",
             "spell_prism",
             "penta_edged_sword",
             "flicker",
@@ -3264,13 +3265,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           magic_stick:
             "If you are laning against a hero that spams alot of spells in the lane (eg. Bristleback/Batrider) then you should start with a stick.",
           bracer: "Don`t get more than two bracers",
-          soul_ring: "Get this instead of bracers or with 1 bracer.",
+          soul_ring: "Get this instead of bracers or with 1 bracer if you need the mana.",
+          echo_saber: "You should disassemble this item and use the ogre axe to make bkb. Turn the oblivion staff into mage-slayer and later bloodthorn.",
           orchid:
-            "Good item to buy after your armlet if you`re playing against some slippery heroes with a lack of disable.",
+            "Build this into a bloodthorn with your mage-slayer after blink.",
           hand_of_midas:
-            "If you can get it early. Your illusions benefit from the attack speed as well.",
+            "If you can get it early it can be good.",
           blink:
-            "Allows you to use Phantasm, blink in and pull the illusions onto the opponent with Reality Rift.",
+            "Generally after bkb.",
+          bloodthorn: 
+          "This item is really great with your illusions and fits your build up perfectly. After you have blink, bkb, mageslayer you can turn your mageslayer into bloodthorn.",
           flicker:
             "Can be really good in the late game if your enemies are controlling you with slows,silences etc.",
         },
@@ -3285,46 +3289,47 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "chaos_knight_chaos_bolt", // 1
           "chaos_knight_reality_rift", // 2
           "chaos_knight_chaos_strike", // 3
-          "chaos_knight_chaos_bolt", // 4
-          "chaos_knight_chaos_bolt", // 5
+          "chaos_knight_chaos_strike", // 4
+          "chaos_knight_chaos_strike", // 5
           "chaos_knight_phantasm", // 6
-          "chaos_knight_chaos_bolt", // 7
+          "chaos_knight_chaos_strike", // 7
           "chaos_knight_reality_rift", // 8
           "chaos_knight_reality_rift", // 9
           "chaos_knight_reality_rift", // 10
           "special_bonus_unique_chaos_knight_2", // 11
           "chaos_knight_phantasm", // 12
-          "chaos_knight_chaos_strike", // 13
-          "chaos_knight_chaos_strike", // 14
+          "chaos_knight_chaos_bolt", // 13
+          "chaos_knight_chaos_bolt", // 14
           "special_bonus_unique_chaos_knight_8", // 15
-          "chaos_knight_chaos_strike", // 16
+          "chaos_knight_chaos_bolt", // 16
           "special_bonus_attributes", // 17
           "chaos_knight_phantasm", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_chaos_knight_3", // 20
+          "special_bonus_unique_chaos_knight", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_chaos_knight_4", // 25
+          "special_bonus_unique_chaos_knight_5", // 25
         ],
         items: {
           starting: [
             "tango",
             "quelling_blade",
             "gauntlets",
+            "gauntlets",
             "branches",
-            "enchanted_mango",
-            "magic_stick",
+            "branches",
           ],
-          early_game: ["magic_wand", "power_treads", "soul_ring", "bracer"],
+          early_game: ["magic_wand", "power_treads", "bracer", "bracer"],
           mid_game: ["armlet", "blink", "ultimate_scepter", "aghanims_shard"],
-          late_game: ["assault", "octarine_core"],
-          situational: ["heavens_halberd", "black_king_bar", "silver_edge"],
+          late_game: ["assault", "overwhelming_blink", "bloodthorn", "heart"],
+          situational: ["heavens_halberd", "black_king_bar", "silver_edge", "manta", "sange_and_yasha"],
           core: [
             "power_treads",
             "armlet",
             "blink",
+            "black_king_bar",
             "ultimate_scepter",
             "aghanims_shard",
           ],
@@ -3335,7 +3340,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pupils_gift",
             "elven_tunic",
             "paladin_sword",
-            "the_leveller",
             "spell_prism",
             "pirate_hat",
             "apex",
@@ -3347,7 +3351,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item that allows you to use Phantasm, blink in and pull the illusions onto the opponent with Reality Rift.",
           ultimate_scepter:
             "A core item that makes Phantasm create an extra illusion of Chaos Knight and of each ally. Applies a basic dispel on cast.",
-          heavens_halberd: "Especially good against ranged right-clickers.",
+          heavens_halberd: 
+            "Especially good against ranged right-clickers.",
           aghanims_shard:
             "A core item that improves cast range of Chaos Bolt and creates an Chaos Knight illusion to attack the target by default.",
         },
@@ -3360,6 +3365,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
+      bracer: 
+      "You can rush two bracers in the lane to make you tankier.",
       power_treads:
         "A core item that allows you to farm faster due to attack speed increase. The movement speed, attributes and attack speed also affect the illusions.",
       armlet:
@@ -3537,7 +3544,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clinkz: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3578,10 +3585,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "branches",
+            "branches",
             "slippers",
             "circlet",
             "quelling_blade",
-            "magic_stick",
           ],
           early_game: [
             "maelstrom",
@@ -3592,12 +3599,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             "dragon_lance",
-            "aghanims_shard",
-            "skadi",
             "gungir",
+            "hurricane_pike",
+            "aghanims_shard",
             "lesser_crit",
+            "black_king_bar"
           ],
-          late_game: ["greater_crit", "satanic", "bloodthorn", "sheepstick"],
+          late_game: [
+            "nullifier",
+            "greater_crit", 
+            "satanic", 
+            "bloodthorn", 
+            "sheepstick",
+            "skadi",
+          ],
           situational: [
             "infused_raindrop",
             "black_king_bar",
@@ -3606,7 +3621,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ultimate_scepter",
             "orchid",
           ],
-          core: ["maelstrom", "power_treads", "dragon_lance", "skadi"],
+          core: ["gungir", "power_treads", "dragon_lance", "black_king_bar"],
           neutral: [
             "arcane_ring",
             "possessed_mask",
@@ -3616,7 +3631,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "paladin_sword",
             "mind_breaker",
             "spell_prism",
-            "the_leveller",
             "desolator_2",
             "apex",
           ],
@@ -3627,8 +3641,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
-      infused_raindrop: "Against magical burst.",
-      maelstrom: "A core farming item that can proc with Burning Barrage.",
+      infused_raindrop: 
+        "Against magical burst.",
+      maelstrom: 
+        "A core farming item that can proc with Burning Barrage.",
+      gungir:
+        "A core mid-game item that helps with setting up kills.",
       power_treads:
         "A core item that allows you to farm faster due to attack speed increase and mana savings by toggling it.",
       dragon_lance:
@@ -3637,7 +3655,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that tanks you up and keeps the opponents in Burning Barrage for longer.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
-      monkey_king_bar: "Against evasion.",
+      monkey_king_bar: 
+        "Against evasion.",
       sphere:
         "Against powerful single target spells like Duel, Lasso, Hex or Doom.",
       ultimate_scepter:
@@ -5272,26 +5291,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dragon Knight": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803808,
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "dragon_knight_breathe_fire", // 1
+          "dragon_knight_dragon_tail", // 1
           "dragon_knight_dragon_blood", // 2
           "dragon_knight_dragon_blood", // 3
           "dragon_knight_breathe_fire", // 4
-          "dragon_knight_dragon_tail", // 5
+          "dragon_knight_dragon_blood", // 5
           "dragon_knight_elder_dragon_form", // 6
           "dragon_knight_breathe_fire", // 7
           "dragon_knight_breathe_fire", // 8
-          "dragon_knight_dragon_blood", // 9
+          "dragon_knight_breathe_fire", // 9
           "special_bonus_attack_damage_15", // 10
           "dragon_knight_dragon_tail", // 11
           "dragon_knight_elder_dragon_form", // 12
@@ -5302,7 +5321,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "dragon_knight_elder_dragon_form", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_strength_20", // 20
+          "special_bonus_unique_dragon_knight_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -5314,18 +5333,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "gauntlets",
             "gauntlets",
-            "circlet",
-            "magic_stick",
           ],
-          early_game: ["bracer", "power_treads", "magic_wand", "bottle"],
+          early_game: [
+            "bracer",
+            "soul_ring",
+            "power_treads",
+            "magic_wand",
+          ],
           mid_game: [
             "blink",
-            "black_king_bar",
-            "orchid",
-            "armlet",
             "aghanims_shard",
+            "black_king_bar",
+            "ultimate_scepter"
           ],
           late_game: [
             "ultimate_scepter",
@@ -5340,14 +5362,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "heavens_halberd",
             "silver_edge",
             "nullifier",
-            "aghanims_shard",
+            "manta",
+            "armlet",
+            "radiance"
           ],
-          core: ["power_treads", "blink", "black_king_bar"],
+          core: ["power_treads", "soul_ring", "blink", "aghanims_shard", "black_king_bar"],
           neutral: [
             "pogo_stick",
-            "chipped_vest",
+            "broom_handle",
             "vambrace",
-            "nether_shawl",
             "quickening_charm",
             "spider_legs",
             "trickster_cloak",
@@ -5360,7 +5383,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       dragon_knight_dragon_tail:
-        "You can skill a point in this spell earlier than suggested if you can setup a kill or apply pressure.",
+        "You should use this to stun and deny creeps in the laning stage. If you are against a ranged laner you can skip it and take breath fire.",
+      dragon_knight_breathe_fire:
+        "You can put extra points in this over dragon blood if you don't need the tankiness and want to farm abit faster. ",
+      dragon_knight_elder_dragon_form:
+        "You should try to pressure the tower as much as possible when you get this spell. Your level 1 ULT does DPS to towers so try to get value out of that. ",
     },
     item_tooltips: {
       ward_observer:
@@ -5369,15 +5396,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "If you expect high frequency of spells being used on the lane. eg. batrider/brisle",
       power_treads:
         "A core boots upgrade that provides you with attack speed increase and some mana savings by toggling it.",
-      hand_of_midas: "If you can get it early usually on mid Dragon Knight.",
+      hand_of_midas: 
+        "If you can get it early usually on mid Dragon Knight. If you think the game is going to be slow.",
       blink:
         "A core item that helps you initiate the fights. Can be coupled with Bloodthorn down the road to burst the stunned hero.",
+      aghanims_shard:
+        "A core item that helps with farming alot. Try to get asap.",
       radiance:
         " A good item versus illusions and summons. Goes well with Elder Dragons Splash attack.",
       black_king_bar:
         "Allows you to stay in the middle of the fight. Dragon Blood provides you with physical damage resistance and Black King Bar negates most of the magical damage and disables.",
-      heavens_halberd: "Especially good against ranged right-clickers.",
-      silver_edge: "For break effect.",
+      heavens_halberd: 
+        "Especially good against ranged right-clickers.",
+      silver_edge: 
+        "For break effect.",
     },
     combo: [],
     counter_items: {
@@ -5432,7 +5464,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Drow Ranger": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5447,16 +5479,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "drow_ranger_multishot", // 2
           "drow_ranger_frost_arrows", // 3
           "drow_ranger_multishot", // 4
-          "drow_ranger_multishot", // 5
+          "drow_ranger_frost_arrows", // 5
           "drow_ranger_marksmanship", // 6
           "drow_ranger_multishot", // 7
           "drow_ranger_wave_of_silence", // 8
-          "drow_ranger_frost_arrows", // 9
-          "special_bonus_unique_drow_ranger_2", // 10
-          "drow_ranger_frost_arrows", // 11
+          "drow_ranger_multishot", // 9
+          "drow_ranger_frost_arrows", // 10
+          "drow_ranger_wave_of_silence", // 11
           "drow_ranger_marksmanship", // 12
           "drow_ranger_wave_of_silence", // 13
-          "drow_ranger_wave_of_silence", // 14
+          "special_bonus_unique_drow_ranger_2", // 14
           "special_bonus_unique_drow_ranger_6", // 15
           "drow_ranger_wave_of_silence", // 16
           "special_bonus_attributes", // 17
@@ -5467,54 +5499,56 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_drow_ranger_8", // 25
+          "special_bonus_unique_drow_ranger_3", // 25
         ],
         items: {
           starting: [
             "tango",
             "slippers",
-            "slippers",
+            "branches",
             "branches",
             "circlet",
-            "magic_stick",
+            "quelling_blade"
           ],
           early_game: [
             "power_treads",
             "magic_wand",
-            "falcon_blade",
+            "ring_of_basilius",
             "wraith_band",
+            "dragon_lance"
           ],
           mid_game: [
-            "dragon_lance",
             "yasha",
             "manta",
-            "lesser_crit",
+            "hurricane_pike",
             "black_king_bar",
+            "aghanims_shard"
           ],
-          late_game: ["greater_crit", "skadi", "butterfly", "satanic"],
+          late_game: ["greater_crit", "skadi", "butterfly", "satanic", "swift_blink"],
           situational: [
             "infused_raindrop",
             "sange_and_yasha",
             "ultimate_scepter",
-            "black_king_bar",
             "blink",
             "aghanims_shard",
             "silver_edge",
             "sphere",
             "mjollnir",
+            "falcon_blade"
           ],
-          core: ["power_treads", "dragon_lance", "manta"],
+          core: ["power_treads", "dragon_lance", "manta", "black_king_bar", "aghanims_shard"],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
             "vambrace",
+            "ring_of_aquila",
             "titan_sliver",
             "elven_tunic",
             "ninja_gear",
-            "the_leveller",
             "apex",
             "force_boots",
+            "mirror_shield"
           ],
         },
       },
