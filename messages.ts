@@ -8344,7 +8344,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Meepo_5_Gank sidelanes",
     messageTimes: [12 * 60 + 30, 22 * 60 + 30],
     textMessage:
-      "Keep sidelines pushed in and linger around with a clone to gank the opponents that appear depushing.",
+      `Keep side lanes pushed in and linger around with a clone to gank the opponents that appear depushing.`,
     audience: [Audience.ROLE_CORE],
   },
   {
