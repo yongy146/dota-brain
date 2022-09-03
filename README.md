@@ -3,7 +3,7 @@
 This repository contains the core knowledge of Dota Coach, which is used by the following resources:
 
 - Dota Coach App (https://www.overwolf.com/app/dota-coach.com-Dota_Coach)
-- Our Website (https://dota-coach.com)
+- Our Website (https://dotacoach.gg)
 - Steam Guides (https://steamcommunity.com/id/DotaCoachApp/myworkshopfiles/?section=guides)
 
 The key files in the repository are:
@@ -48,4 +48,4 @@ Yes, absolutely. More advance users will defintly use git (https://git-scm.com/d
 
 # Contact
 
-You can contact us via e-mail (info@dota-coach.com) or join our Discord server (https://discord.com/invite/zgrYW8p3kV).
+You can contact us via e-mail (info@dotacoach.gg) or join our Discord server (https://discord.gg/CvTUQKg2nt).
