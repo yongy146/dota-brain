@@ -1701,7 +1701,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_batrider_1", // 25
+          "special_bonus_unique_batrider_4", // 25
         ],
         items: {
           starting: [
