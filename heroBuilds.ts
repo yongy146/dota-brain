@@ -9392,7 +9392,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lifestealer: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32d",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9994,7 +9994,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Lone Druid": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10018,13 +10018,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "lone_druid_savage_roar", // 11
           "lone_druid_true_form", // 12
           "lone_druid_savage_roar", // 13
-          "special_bonus_unique_lone_druid_11", // 14
+          "special_bonus_hp_200", // 14
           "special_bonus_unique_lone_druid_4", // 15
           "lone_druid_savage_roar", // 16
           "special_bonus_attributes", // 17
           "lone_druid_true_form", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_lone_druid_9", // 20
+          "special_bonus_unique_lone_druid_8", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -10033,21 +10033,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting_bear: [
-            "quelling_blade",
             "blight_stone",
             "branches",
             "branches",
+            "branches"
           ],
           starting: ["tango", "ward_observer"],
           core_bear: [
-            "orb_of_corrosion",
             "phase_boots",
             "mask_of_madness",
             "desolator",
             "basher",
             "assault",
           ],
-          core: ["boots", "aghanims_shard", "wraith_band", "magic_wand"],
+          core: ["boots", "aghanims_shard", "wraith_band", "wraith_band", "wraith_band", "wraith_band", "wraith_band" ],
           situational_bear: [
             "hand_of_midas",
             "maelstrom",
@@ -10061,21 +10060,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "butterfly",
           ],
           situational: [
-            "buckler",
             "cloak",
             "ghost",
-            "solar_crest",
             "ultimate_scepter",
             "refresher",
           ],
           neutral_bear: [
             "broom_handle",
-            "chipped_vest",
+            "lance_of_pursuit",
             "misericorde",
             "dragon_scale",
             "mind_breaker",
             "elven_tunic",
-            "the_leveller",
+            "paladin_sword",
             "penta_edged_sword",
             "desolator_2",
             "pirate_hat",
@@ -10084,6 +10081,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "unstable_wand",
             "trusty_shovel",
             "ring_of_aquila",
+            "philosophers_stone",
             "bullwhip",
             "black_powder_bag",
             "spider_legs",
@@ -10096,6 +10094,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
+
+      lone_druid_spirit_link:
+        "If your hero is getting gone on make sure to attack with your bear as it will heal your hero alot.",
       lone_druid_savage_roar:
         "You can skill this spell earlier than suggested if you are being pressured or expect to be ganked. It comes at the cost of slowing your farming speed a bit.",
       lone_druid_true_form:
@@ -10108,7 +10109,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Start with it if you expect high frequency of spells being used on the lane.",
       orb_of_corrosion:
         "A core item that allows Bear to dish out more damage and be kitted less.",
-      phase_boots: "A core boots upgrade that allows Bear to gap-close faster.",
+      phase_boots: 
+        "A core boots upgrade that allows Bear to gap-close faster.",
       mask_of_madness:
         "A core item that allows you to farm quicker with Bear but also allows you to burst heroes and buildings.",
       desolator:
@@ -10127,6 +10129,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       ultimate_scepter:
         "Amazing for split-pushing and ratting. If you feel you cannot take fights or are slot-maxxed.",
       ghost: "Against high physical damage heroes (eg. ursa/templar assassin)",
+      wraith_band:
+        "After 25 minutes you should fill your heroes item slots with wraith bands as its very good value with double stats.",
     },
     combo: [],
     counter_items: {
@@ -10331,7 +10335,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lycan: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10374,14 +10378,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "branches",
-            "gauntlets",
+            "branches",
+            "sobi_mask"
           ],
           early_game: [
             "helm_of_iron_will",
             "helm_of_the_dominator",
             "ring_of_basilius",
             "boots",
-            "bracer",
           ],
           mid_game: [
             "helm_of_the_overlord",
@@ -10396,6 +10400,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "assault",
             "sheepstick",
             "black_king_bar",
+            "bloodthorn",
+            "abyssal_blade"
           ],
           situational: [
             "aghanims_shard",
@@ -10403,6 +10409,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "black_king_bar",
             "heavens_halberd",
             "nullifier",
+            "sheepstick",
+            "wraith_pact"
           ],
           core: [
             "helm_of_the_dominator",
@@ -10419,7 +10427,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_scale",
             "mind_breaker",
             "quickening_charm",
-            "the_leveller",
+            "spell_prism",
             "penta_edged_sword",
             "demonicon",
             "desolator_2",
@@ -10471,14 +10479,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "helm_of_the_dominator",
             "ring_of_basilius",
             "boots",
-            "bracer",
           ],
           mid_game: [
             "helm_of_the_overlord",
-            "ancient_janggo",
+            "aghanims_shard",
+            "power_treads",
             "assault",
             "black_king_bar",
-            "basher",
+            "basher"
           ],
           late_game: [
             "ultimate_scepter",
@@ -10486,22 +10494,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "assault",
             "sheepstick",
             "abyssal_blade",
-            "heart",
+            "silver_edge",
           ],
           situational: [
             "orchid",
             "black_king_bar",
             "heavens_halberd",
             "nullifier",
-            "desolator",
-            "solar_crest",
           ],
           core: [
             "vladmir",
             "helm_of_the_overlord",
-            "ancient_janggo",
+            "aghanims_shard",
             "assault",
-            "ultimate_scepter",
             "black_king_bar",
             "abyssal_blade",
           ],
@@ -10512,7 +10517,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_scale",
             "mind_breaker",
             "quickening_charm",
-            "the_leveller",
+            "spell_prism",
             "penta_edged_sword",
             "demonicon",
             "desolator_2",
@@ -10531,8 +10536,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Try to use this for a kill or teamfights when it's off cooldown. When it's on cooldown you should be avoiding engagements and farming.",
     },
     item_tooltips: {
-      bracer:
-        "Usually you only buy this if you feel you will be punished too hard for rushing helm of iron will. Will make you stronger earlier in the lane and double after 25:00min.",
       helm_of_iron_will:
         "You can rush this in the laning stage as your first item to sustain through any harras.",
       helm_of_the_dominator:
@@ -12364,7 +12367,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Naga Siren": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -12405,15 +12408,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "quelling_blade",
             "tango",
+            "tango",
             "branches",
             "slippers",
             "circlet",
           ],
-          early_game: ["power_treads", "magic_wand", "wraith_band", "yasha"],
-          mid_game: ["manta", "skadi", "diffusal_blade", "orchid"],
+          early_game: ["power_treads", "wraith_band", "yasha"],
+          mid_game: ["manta", "orchid", "heart"],
           late_game: [
+            "skadi",
             "bloodthorn",
-            "heart",
             "butterfly",
             "sheepstick",
             "swift_blink",
@@ -12430,6 +12434,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "abyssal_blade",
             "swift_blink",
             "monkey_king_bar",
+            "sphere"
           ],
           core: [
             "manta",
@@ -12446,10 +12451,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pupils_gift",
             "elven_tunic",
             "titan_sliver",
-            "the_leveller",
+            "spell_prism",
             "ninja_gear",
             "apex",
             "fallen_sky",
+            "mirror_shield"
           ],
         },
       },
@@ -12557,7 +12563,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Nature's Prophet": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -12577,7 +12583,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_force_of_nature", // 7
           "furion_teleportation", // 8
           "furion_teleportation", // 9
-          "special_bonus_unique_furion_6", // 10
+          "special_bonus_unique_furion_5", // 10
           "furion_teleportation", // 11
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
@@ -12587,7 +12593,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_furion_4", // 20
+          "special_bonus_unique_furion_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -12596,28 +12602,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "blight_stone",
+            "robe",
             "branches",
             "branches",
-            "faerie_fire",
-            "magic_stick",
+            "branches",
           ],
-          early_game: ["power_treads", "magic_wand"],
+          early_game: ["tango", "power_treads", "magic_wand"],
           mid_game: [
             "orchid",
             "black_king_bar",
             "aghanims_shard",
-            "witch_blade",
-            "maelstrom",
+            "assault",
           ],
           late_game: [
             "satanic",
-            "assault",
             "bloodthorn",
-            "ultimate_scepter",
             "sheepstick",
-            "mjollnir",
+            "ultimate_scepter",
+            "mjollnir"
           ],
           situational: [
             "infused_raindrop",
@@ -12626,27 +12628,30 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "monkey_king_bar",
             "hurricane_pike",
             "nullifier",
-            "solar_crest",
+            "wraith_pact",
             "silver_edge",
             "gungir",
+            "hand_of_midas",
+            "witch_blade",
+            "ultimate_scepter"
           ],
           core: [
+            "power_treads",
             "orchid",
             "black_king_bar",
             "aghanims_shard",
             "assault",
-            "satanic",
           ],
           neutral: [
             "unstable_wand",
-            "broom_handle",
-            "essence_ring",
-            "quicksilver_amulet",
+            "seeds_of_serenity",
+            "misericorde",
             "grove_bow",
+            "specialists_array",
             "enchanted_quiver",
-            "elven_tunic",
-            "the_leveller",
-            "ninja_gear",
+            "mind_breaker",
+            "ascetic_cap",
+            "trickster_cloak",
             "desolator_2",
             "pirate_hat",
           ],
@@ -12690,7 +12695,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_force_of_nature", // 7
           "furion_teleportation", // 8
           "furion_teleportation", // 9
-          "special_bonus_unique_furion_6", // 10
+          "special_bonus_unique_furion_5", // 10
           "furion_teleportation", // 11
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
@@ -12700,7 +12705,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_furion_4", // 20
+          "special_bonus_unique_furion_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -12709,27 +12714,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "blight_stone",
-            "branches",
-            "branches",
-            "branches",
-            "faerie_fire",
+           "robe",
+           "branches",
+           "branches",
+           "branches"
           ],
-          early_game: ["power_treads", "magic_wand"],
+          early_game: ["tangos", "power_treads", "magic_wand", "hand_of_midas",],
           mid_game: [
-            "witch_blade",
             "maelstrom",
-            "orchid",
             "black_king_bar",
-            "lesser_crit",
-            "aghanims_shard",
+            "silver_edge",
+            "assault"
           ],
           late_game: [
-            "assault",
             "satanic",
             "skadi",
-            "bloodthorn",
             "ultimate_scepter",
             "mjollnir",
             "greater_crit",
@@ -12742,25 +12741,32 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "gungir",
             "silver_edge",
             "sheepstick",
+            "bloodthorn",
+            "desolator",
+            "aghanims_shard",
+            "witch_blade"
           ],
           core: [
             "power_treads",
-            "orchid",
+            "maelstrom",
             "black_king_bar",
-            "aghanims_shard",
+            "assault",
             "silver_edge",
           ],
           neutral: [
             "unstable_wand",
-            "broom_handle",
-            "quicksilver_amulet",
+            "possessed_mask",
+            "misericorde",
             "grove_bow",
+            "specialists_array",
             "enchanted_quiver",
-            "elven_tunic",
-            "the_leveller",
+            "mind_breaker",
+            "titan_sliver",
             "ninja_gear",
+            "trickster_cloak",
             "desolator_2",
             "pirate_hat",
+            "ex_machina"
           ],
         },
         item_tooltips: {
@@ -12771,7 +12777,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           assault:
             "Core item for nature's prophet tanking him up versus physical damage aswell as buffing allies and summons.",
           orchid:
-            "A core item that allows you to pick-off heroes. Should upgrade to bloodthorn later.",
+            "A situational item that allows you to pick-off heroes. Should upgrade to bloodthorn later.",
           witch_blade:
             "Covers a lot of hero`s weaknesses like low armor, attack speed and burst.",
           maelstrom: "A farming item. Good against illusions.",
@@ -12812,7 +12818,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_furion_4", // 20
+          "special_bonus_unique_furion_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -12826,52 +12832,43 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "faerie_fire",
-            "flask",
-            "boots",
             "ward_sentry",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
-            "boots",
             "magic_wand",
-            "medallion_of_courage",
-            "urn_of_shadows",
-            "ancient_janggo",
+            "boots"
           ],
           mid_game: [
-            "ancient_janggo",
             "mekansm",
-            "solar_crest",
             "aghanims_shard",
-            "ultimate_scepter",
-            "meteor_hammer",
-            "ghost",
-            "force_staff",
-            "glimmer_cape",
-            "boots_of_bearing",
-            "orchid",
+            "glimmer_cape"
           ],
-          late_game: ["assault", "sheepstick", "refresher"],
+          late_game: ["octarine_core", "sheepstick", "refresher", "ultimate_scepter"],
           situational: [
             "infused_raindrop",
             "spirit_vessel",
             "heavens_halberd",
             "blink",
             "lotus_orb",
+            "force_staff",
+            "orchid",
+            "ghost_scepter",
+            "hand_of_midas",
+            "ancient_janggo"
           ],
           core: [
-            "ancient_janggo",
-            "solar_crest",
+            "mekansm",
             "aghanims_shard",
-            "ultimate_scepter",
+            "glimmer_cape",
+            "octarine"
           ],
           neutral: [
             "arcane_ring",
             "trusty_shovel",
             "dragon_scale",
             "pupils_gift",
-            "spider_legs",
+            "psychic_headband",
             "quickening_charm",
             "spy_gadget",
             "spell_prism",
@@ -12894,20 +12891,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           blink: "For gap-closing and safer split-push.",
           lotus_orb: "For reflect, dispel and some armor.",
           mekansm:
-            "Good if you get it early after a good laning stage and want to push with your team.",
+            "Rush this item on support natures prophet.",
         },
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_furion_4:
-        "Very strong talent if coupled with Aghanim`s Shard.",
+      furion_teleportation: "You can use this to fully heal in the laning stage by tping home with your TPS and using your spell to TP back to lane. You should try to split push during the mid and late game.",
+      furion_force_of_nature: "Try to harras opponents in lane with your treants especially ranged heroes that struggle to deal with summons.",
+      furion_wrath_of_nature: "Try to keep this spell ready for teamfights especially in early game teamfights."
     },
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       infused_raindrop: "Against magical burst.",
       aghanims_shard:
-        "A core item that adds to the push but also serves as a `disable` in mid to late game when Quelling Blades are no longer around. Goes well with level 20 talent.",
+        "A decent shard for teamfighting and early fights.",
     },
     combo: [],
     counter_items: {
@@ -16285,7 +16283,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Queen of Pain": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -16341,8 +16339,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "kaya_and_sange",
             "aghanims_shard",
             "black_king_bar",
-            "orchid",
-            "cyclone",
           ],
           late_game: [
             "shivas_guard",
@@ -16352,14 +16348,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ethereal_blade",
             "assault",
           ],
-          situational: ["infused_raindrop", "sphere"],
+          situational: ["infused_raindrop", "sphere", "witch_blade", "octarine_core", "cyclone" ],
           core: [
             "kaya_and_sange",
             "black_king_bar",
             "aghanims_shard",
-            "orchid",
             "shivas_guard",
-            "sheepstick",
           ],
           neutral: [
             "arcane_ring",
@@ -16377,6 +16371,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         item_tooltips: {
           bottle:
             "A core item that provides you with sustain and allows you to gank with stored rune. Rush this as your first item.",
+          witch_blade:
+            "You can rush this item over kaya&sange if you prefer the slow and damage for the game.",
+          aghanims_shard:
+            "really strong aghanims shard that creates more kill oppurtuniy."
         },
       },
       {
@@ -16417,24 +16415,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "circlet",
             "branches",
+            "branches",
             "faerie_fire",
             "mantle",
-            "ward_observer",
-            "magic_stick",
           ],
           early_game: [
+            "urn_of_shadows",
             "null_talisman",
             "power_treads",
-            "null_talisman",
             "magic_wand",
           ],
           mid_game: [
             "kaya_and_sange",
             "aghanims_shard",
-            "shivas_guard",
             "black_king_bar",
           ],
           late_game: [
+            "sphere",
             "shivas_guard",
             "sheepstick",
             "refresher",
@@ -16445,18 +16442,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "infused_raindrop",
             "spirit_vessel",
             "lotus_orb",
-            "sphere",
-            "urn_of_shadows",
             "orchid",
             "cyclone",
+            "octarine",
+            "ultimate_scepter"
           ],
           core: [
             "kaya_and_sange",
             "black_king_bar",
             "aghanims_shard",
             "shivas_guard",
-            "refresher",
-            "sheepstick",
           ],
           neutral: [
             "arcane_ring",
@@ -16474,7 +16469,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         item_tooltips: {
           urn_of_shadows:
             "Can buy if nobody else is going to and you're having a decent early game, If you need spirit vessel in the game then you can also use that as a reason to buy this item.",
-          spirit_vessel: "Against a heavy-healing lineup",
+          spirit_vessel: "Against a heavy-healing lineup. eg.(alchemist, morphling)",
           lotus_orb:
             "For reflect, dispel and some armor, an alternative to Shiva`s Guard.",
         },
@@ -20236,7 +20231,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Templar Assassin": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -20256,11 +20251,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "templar_assassin_refraction", // 7
           "templar_assassin_psi_blades", // 8
           "templar_assassin_meld", // 9
-          "special_bonus_attack_speed_20", // 10
+          "templar_assassin_meld", // 10
           "templar_assassin_meld", // 11
           "templar_assassin_psionic_trap", // 12
-          "templar_assassin_meld", // 13
-          "templar_assassin_psi_blades", // 14
+          "templar_assassin_psi_blades", // 13
+          "special_bonus_unique_templar_assassin_refraction_damage", // 14
           "special_bonus_unique_templar_assassin_8", // 15
           "templar_assassin_psi_blades", // 16
           "special_bonus_attributes", // 17
@@ -20284,18 +20279,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "power_treads",
-            "orb_of_destruction",
-            "magic_wand",
             "wraith_band",
+            "magic_stick",
             "dragon_lance",
           ],
           mid_game: [
             "desolator",
             "blink",
             "black_king_bar",
-            "aghanims_shard",
-            "orchid",
-            "lesser_crit",
+            "lesser_crit"
           ],
           late_game: [
             "greater_crit",
@@ -20313,6 +20305,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sheepstick",
             "assault",
             "hurricane_pike",
+            "silver_edge",
+            "infused_raindrop"
           ],
           core: [
             "power_treads",
@@ -20320,19 +20314,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "desolator",
             "blink",
             "black_king_bar",
-            "aghanims_shard",
-            "greater_crit",
-            "swift_blink",
+            "greater_crit"
           ],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "ring_of_aquila",
             "grove_bow",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
+            "specialists_array",
             "mind_breaker",
             "enchanted_quiver",
-            "the_leveller",
+            "flicker",
             "ninja_gear",
             "desolator_2",
             "apex",
@@ -20342,7 +20335,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           templar_assassin_refraction:
             "Use this for extra psi-blade harras damage on enemy heroes in lane and to block damage instances.",
           templar_assassin_meld:
-            "You can surprise the opponents on the first wave by melding yourself in their offlaner`s creep blocking path. You can get a double meld hit off.",
+            "You can surprise the opponents on the first wave by melding yourself in their offlaner`s creep blocking path. You can get a double meld hit off. If you are laning against only range heroes rather level psi-blades on lvl1.",
           templar_assassin_psi_blades:
             "Try to connect as many psi-blades onto enemy heroes in the lane. Keep in mind that sometimes you don't want the lane to push so position your hero in a way that you don't spill psi-blades onto other creeps.",
           templar_assassin_psionic_trap:
@@ -20386,7 +20379,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "faerie_fire",
-            "quelling_blade",
             "branches",
             "branches",
             "branches",
@@ -20397,9 +20389,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "desolator",
             "blink",
             "black_king_bar",
-            "aghanims_shard",
-            "lesser_crit",
-            "orchid",
+            "lesser_crit"
           ],
           late_game: [
             "greater_crit",
@@ -20417,34 +20407,34 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sheepstick",
             "hurricane_pike",
             "travel_boots",
+            "orchid"
           ],
           core: [
             "dragon_lance",
             "desolator",
             "blink",
             "black_king_bar",
-            "aghanims_shard",
             "greater_crit",
-            "swift_blink",
           ],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
-            "quicksilver_amulet",
+            "specialists_array",
             "mind_breaker",
             "enchanted_quiver",
-            "the_leveller",
+            "heavy-blade",
             "ninja_gear",
             "desolator_2",
             "apex",
+            "mirror_shield"
           ],
         },
         ability_tooltips: {
           templar_assassin_refraction:
             "Use this to tank damage from enemy heroes and tower hits. Try to get psi-blade hits while you have extra damage from refraction active.",
           templar_assassin_meld:
-            "You can surprise the opponents on the first wave by melding yourself in their offlaner`s creep blocking path.",
+            "You can level this on 1 if you are laning against a melee opponent.",
           templar_assassin_psi_blades:
             "Try to harras the enemy midlaner as much as possible with psi-blade spills. You can use psi-blades to push in the lane as a rune is about to spawn making it harder for the enemy midder to contest. ",
           templar_assassin_psionic_trap:
@@ -20452,7 +20442,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         },
         item_tooltips: {
           bottle:
-            "A core item that provides you with sustain and allows you to fight with stored rune. Try to get it before first rune spawn in mid.",
+            "A core item that provides you with sustain and allows you to fight with stored rune. Try to get it before 2minutes (first rune spawn in mid).",
+          ultimate_scepter:
+            "If you absolutely cannot fight you can consider getting this 3rd or 4th item in order to maximize farm and split push.",
+          dragon_lance:
+            "You can skip this and go for desolator or blink dagger if you feel you need the faster timing.",
+          desolator:
+            "You can rosh really easily when you get your deso and melt supports.",
         },
       },
     ],
@@ -20547,7 +20543,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Terrorblade: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -20592,58 +20588,55 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "slippers",
             "branches",
             "circlet",
-            "magic_stick",
           ],
-          early_game: ["power_treads", "yasha", "magic_wand", "wraith_band"],
-          mid_game: ["manta", "dragon_lance", "skadi", "black_king_bar"],
+          early_game: ["power_treads", "magic_wand", "wraith_band", "yasha"],
+          mid_game: ["manta", "skadi", "black_king_bar"],
           late_game: [
             "satanic",
             "greater_crit",
             "butterfly",
-            "ultimate_scepter",
             "refresher",
             "swift_blink",
           ],
           situational: [
             "infused_raindrop",
             "hurricane_pike",
+            "dragon_lance",
             "blink",
             "monkey_king_bar",
             "falcon_blade",
             "sange_and_yasha",
             "sphere",
-            "assault",
             "bloodthorn",
+            "silver_edge"
           ],
           core: [
             "manta",
-            "sange_and_yasha",
-            "dragon_lance",
             "skadi",
             "black_king_bar",
-            "satanic",
             "greater_crit",
-            "butterfly",
           ],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
-            "quicksilver_amulet",
+            "pupils_gift",
             "ring_of_aquila",
             "titan_sliver",
             "elven_tunic",
-            "the_leveller",
+            "mind_breaker",
+            "spell_prism",
             "ninja_gear",
             "apex",
             "ex_machina",
+            "mirror_shield"
           ],
         },
       },
     ],
     ability_tooltips: {
-      /*terrorblade_mirror_image:
-        "You can use this in the laning stage to harras and setup kills with your support.",*/
+      terrorblade_mirror_image:
+        "You can use this in the laning stage to harras and setup kills with your support.",
       terrorblade_conjure_image:
         "This will be your main farming tool throught the game. Use your illusion to help you farm the jungle in the early game and after that to push out lanes. Try to have your illusions with you when fights start.",
       terrorblade_metamorphosis:
@@ -20661,7 +20654,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       manta:
         "A core item that provide a mix of useful stats. Proper Manta illusion usage can further accelerate your farm and in the fights significantly increase your damage output.",
       sange_and_yasha:
-        "In games where the enemy lineup has a lot of aoe and burst damage, Sange&Yasha will be better than manta as it will help you survive.",
+        "In games where the enemy lineup has stun lock and burst damage, Sange&Yasha will be better than manta as it will help you survive. eg.(earthshaker)",
       dragon_lance:
         "A core item that provides you with a lot of needed attributes and improves attack range during Metamorphosis. Can be disassembled.",
       skadi:
@@ -21892,7 +21885,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Troll Warlord": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -21910,19 +21903,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "troll_warlord_whirling_axes_ranged", // 5
           "troll_warlord_battle_trance", // 6
           "troll_warlord_whirling_axes_ranged", // 7
-          "troll_warlord_berserkers_rage", // 8
+          "troll_warlord_fervor", // 8
           "troll_warlord_berserkers_rage", // 9
-          "special_bonus_unique_troll_warlord_2", // 10
+          "troll_warlord_berserkers_rage", // 10
           "troll_warlord_berserkers_rage", // 11
           "troll_warlord_battle_trance", // 12
           "troll_warlord_fervor", // 13
-          "troll_warlord_fervor", // 14
-          "troll_warlord_fervor", // 15
-          "special_bonus_unique_troll_warlord_3", // 16
+          "special_bonus_unique_troll_warlord_3", // 14
+          "special_bonus_unique_troll_warlord_2", // 15
+          "troll_warlord_fervor", // 16
           "special_bonus_attributes", // 17
           "troll_warlord_battle_trance", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_attack_damage_30", // 20
+          "special_bonus_unique_troll_warlord", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -21937,10 +21930,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "slippers",
             "circlet",
-            "magic_stick",
           ],
           early_game: [
-            "power_treads",
+            "phase_boots",
             "ring_of_health",
             "magic_wand",
             "wraith_band",
@@ -21949,14 +21941,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bfury",
             "sange_and_yasha",
             "black_king_bar",
-            "basher",
-            "maelstrom",
-            "manta",
+            "basher"
           ],
           late_game: ["satanic", "abyssal_blade", "skadi", "butterfly"],
           situational: [
             "infused_raindrop",
             "blink",
+            "swift_blink",
             "monkey_king_bar",
             "sphere",
             "silver_edge",
@@ -21965,6 +21956,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "greater_crit",
             "aghanims_shard",
             "maelstrom",
+            "falcon_blade",
+            "manta",
+            "power_treads"
           ],
           core: [
             "bfury",
@@ -21972,19 +21966,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "black_king_bar",
             "abyssal_blade",
             "satanic",
-            "monkey_king_bar",
-            "skadi",
           ],
           neutral: [
             "possessed_mask",
             "broom_handle",
             "ring_of_aquila",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "misericorde",
             "elven_tunic",
             "titan_sliver",
             "paladin_sword",
-            "the_leveller",
+            "ninja_gear",
             "penta_edged_sword",
             "desolator_2",
             "apex",
@@ -22009,8 +22001,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       infused_raindrop: "Against magical burst.",
-      power_treads:
-        "A core boots upgrade that allows you to build up Fervor stacks faster due to attack speed increase. Allows you to save some mana through toggling as well.",
+      phase_boots:
+        "You want to rush this in the laning stage. If you get it before the enemy offlaner has his spike you can dominate the lane.",
       maelstrom:
         "An alternative to Battle Fury especially good against illusion-based heroes. You will likely need Falcon Blade before it for mana sustain.",
       bfury:
@@ -22019,7 +22011,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Buy this item when you aren't going battlefury, Maelstrom + falcon blade is a good alternative.",
       sange_and_yasha:
         "A core item that provides you with useful stats and makes you less kitable. Self heal amplification works well with Battle Trance and Satanic.",
-      sphere: "Against powerful single-target disables and debuffs.",
+      sphere: 
+        "Against powerful single-target disables and debuffs.",
       black_king_bar:
         "A core item that goes well with Battle Trance making you less kitable.",
       basher:
@@ -24611,7 +24604,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Windranger: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -24623,9 +24616,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "windrunner_windrun", // 1
-          "windrunner_powershot", // 2
+          "windrunner_shackleshot", // 2
           "windrunner_powershot", // 3
-          "windrunner_shackleshot", // 4
+          "windrunner_powershot", // 4
           "windrunner_powershot", // 5
           "windrunner_focusfire", // 6
           "windrunner_powershot", // 7
@@ -24641,34 +24634,29 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "windrunner_focusfire", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_windranger_6", // 20
+          "special_bonus_unique_windranger_8", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_windranger_7", // 25
+          "special_bonus_unique_windranger_windrun_undispellable", // 25
         ],
         items: {
           starting: [
             "tango",
-            "flask",
+            "tango",
             "faerie_fire",
-            "circlet",
-            "branches",
-            "blight_stone",
-            "mantle",
-            "ward_observer",
             "ward_sentry",
-            "magic_stick",
+            "branches",
+            "branches",
+            "circlet"
           ],
           early_game: [
-            "urn_of_shadows",
+            "magic_stick",
             "boots",
-            "magic_wand",
-            "medallion_of_courage",
-            "null_talisman",
+            "arcane_boots"
           ],
-          mid_game: ["blink", "force_staff", "aghanims_shard", "maelstrom"],
+          mid_game: ["aghanims_shard", "blink", "force_staff"],
           late_game: [
             "black_king_bar",
             "octarine_core",
@@ -24688,15 +24676,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "meteor_hammer",
             "tranquil_boots",
             "arcane_boots",
+            "maelstrom"
           ],
 
           core: [
-            "urn_of_shadows",
+            "boots",
+            "magic_stick",
             "blink",
-            "force_staff",
-            "aghanims_shard",
-            "octarine_core",
-            "black_king_bar",
+            "aghanims_shard"
           ],
           neutral: [
             "keen_optic",
@@ -24764,7 +24751,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_windranger_2", // 25
+          "special_bonus_unique_windranger_windrun_undispellable", // 25
         ],
         items: {
           starting: [
@@ -24777,11 +24764,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "bottle",
-            "boots",
-            "javelin",
-            "maelstrom",
+            "power_treads",
             "magic_wand",
-            "null_talisman",
+            "maelstrom",
           ],
           mid_game: [
             "black_king_bar",
@@ -24793,15 +24778,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           late_game: [
             "ultimate_scepter",
             "sheepstick",
-            "arcane_blink",
-            "gungir",
-            "refresher",
+            "mjollnir",
+            "sphere",
             "bloodthorn",
             "greater_crit",
           ],
           situational: [
             "infused_raindrop",
-            "sphere",
             "silver_edge",
             "aghanims_shard",
             "nullifier",
@@ -24810,17 +24793,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "maelstrom",
             "black_king_bar",
             "blink",
-            "travel_boots",
-            "monkey_king_bar",
-            "ultimate_scepter",
+            "greater_crit",
           ],
           neutral: [
-            "arcane_ring",
-            "possessed_mask",
+            "lance_of_pursuit",
+            "unstable_wand",
             "grove_bow",
             "misericorde",
             "mind_breaker",
+            "specialists_array",
             "enchanted_quiver",
+            "mind_breaker",
             "spell_prism",
             "heavy_blade",
             "desolator_2",
@@ -24829,9 +24812,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         },
         item_tooltips: {
           bottle:
-            "A core item that helps with sustain and allows you to gank with a stored active rune.",
-          boots:
-            "A core item that will be upgraded to Boots of Travel down the road.",
+            "A core item that helps with sustain and allows you to gank with a stored active rune. Try get it before 2:00 minute mark.",
+          power_treads:
+            "A core item that helps with farming speed and efficiency in the early game.",
           maelstrom:
             "A core farming item but also kill item. Maelstrom procs very often during Focus Fire. Whenever it procs, that attack can`t miss.",
           black_king_bar:
@@ -24845,6 +24828,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           monkey_king_bar:
             "A core major damaging item of choice. It procs frequently during Focus Fire and procs pierce spell-immunity. It deals with evasion and miss chance as well.",
           ultimate_scepter: "A core item that makes you more elusive.",
+          greater_crit:
+            "Mass DPS."
         },
         ability_tooltips: {
           windrunner_shackleshot:
@@ -24888,7 +24873,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_windranger_2", // 25
+          "special_bonus_unique_windranger_windrun_undispellable", // 25
         ],
         items: {
           starting: [
@@ -24898,38 +24883,36 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "circlet",
             "mantle",
-            "magic_stick",
           ],
           early_game: [
             "boots",
-            "power_treads",
             "maelstrom",
             "magic_wand",
-            "null_talisman",
           ],
           mid_game: [
             "black_king_bar",
             "blink",
-            "travel_boots",
             "aghanims_shard",
-            "monkey_king_bar",
-            "gungir",
-            "rod_of_atos",
+            "lesser_crit",
           ],
           late_game: [
-            "ultimate_scepter",
+            "greater_crit",
             "sheepstick",
-            "arcane_blink",
-            "bloodthorn",
+            "boots_of_travel",
+            "gungir",
+            "octarine"
           ],
           situational: [
             "infused_raindrop",
+            "monkey_king_bar",
             "sphere",
             "silver_edge",
             "nullifier",
-            "meteor_hammer",
-            "greater_crit",
+            "bloodthorn",
             "refresher",
+            "null_talisman",
+            "power_treads",
+            "bottle",
           ],
           core: [
             "maelstrom",
@@ -24937,12 +24920,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "blink",
             "travel_boots",
             "aghanims_shard",
-            "monkey_king_bar",
-            "ultimate_scepter",
           ],
           neutral: [
             "arcane_ring",
-            "possessed_mask",
+            "unstable_wand",
             "grove_bow",
             "misericorde",
             "mind_breaker",
@@ -25407,7 +25388,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Wraith King": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -25420,15 +25401,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "skeleton_king_hellfire_blast", // 1
           "skeleton_king_vampiric_aura", // 2
-          "skeleton_king_vampiric_aura", // 3
-          "skeleton_king_mortal_strike", // 4
+          "skeleton_king_mortal_strike", // 3
+          "skeleton_king_vampiric_aura", // 4
           "skeleton_king_vampiric_aura", // 5
           "skeleton_king_reincarnation", // 6
           "skeleton_king_vampiric_aura", // 7
           "skeleton_king_mortal_strike", // 8
           "skeleton_king_mortal_strike", // 9
           "skeleton_king_mortal_strike", // 10
-          "special_bonus_attack_speed_15", // 11
+          "special_bonus_unique_wraith_king_vampiric_skeleton_duration", // 11
           "skeleton_king_reincarnation", // 12
           "skeleton_king_hellfire_blast", // 13
           "skeleton_king_hellfire_blast", // 14
@@ -25452,14 +25433,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "gauntlets",
             "circlet",
-            "magic_stick",
           ],
           early_game: [
-            "helm_of_iron_will",
             "phase_boots",
+            "helm_of_iron_will",
             "armlet",
             "magic_wand",
-            "soul_ring",
             "bracer",
           ],
           mid_game: [
@@ -25467,11 +25446,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "blink",
             "black_king_bar",
             "basher",
-            "invis_sword",
           ],
           late_game: [
             "assault",
-            "swift_blink",
             "overwhelming_blink",
             "abyssal_blade",
             "bloodthorn",
@@ -25486,7 +25463,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "radiance",
             "bloodthorn",
             "swift_blink",
-            "butterfly",
+            "hand_of_midas",
+            "manta",
+            "soul_ring"
+
           ],
           core: [
             "armlet",
@@ -25495,32 +25475,34 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "black_king_bar",
             "assault",
             "aghanims_shard",
-            "invis_sword",
           ],
           neutral: [
             "broom_handle",
-            "chipped_vest",
-            "quicksilver_amulet",
+            "lance_of_pursuit",
+            "dagger_of_ristul",
             "misericorde",
             "elven_tunic",
             "mind_breaker",
-            "the_leveller",
+            "titan_sliver",
+            "paladin_sword",
+            "havoc_hammer",
             "penta_edged_sword",
             "desolator_2",
             "pirate_hat",
+            "mirror_shield"
           ],
         },
       },
     ],
     ability_tooltips: {
       skeleton_king_hellfire_blast:
-        "You can skill this spell on level 1 but I recommend to skill Vampiric Spirit, build up 2 skeleton charges on first and second wave, and at level 2 release them with follow up Wraithfire Blast stun. Use your stun to secure ranged creep last hits in the laning stage.",
+        "You should use your stun to secure ranged creeps during the laning stage.",
       skeleton_king_vampiric_aura:
         "Use your skeleton charges to push out waves when you leave your lane and during the mid game.",
       skeleton_king_mortal_strike:
         "Try use the extra damage from the guaranteed crit to secure last hits and extra harras during the lane.",
       skeleton_king_reincarnation:
-        "You should save a spell point at level 6 and invest it in Reincarnation if you are being ganked and if you can escape with second life. Otherwise, if you end up jungling, you can invest spell point in Mortal Strike or Vampiric Spirit.",
+        "You should save a spell point at level 6 and invest it in Reincarnation if you are being ganked and if you can escape with second life. Otherwise, if you end up jungling, you can invest points in Mortal Strike or Vampiric Spirit.",
     },
     item_tooltips: {
       magic_stick:
