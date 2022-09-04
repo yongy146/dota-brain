@@ -6161,7 +6161,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "radiance",
             "travel_boots",
             "cyclone",
-            "skadi"
+            "skadi",
           ],
           core: [
             "maelstrom",
@@ -6188,7 +6188,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       ember_spirit_searing_chains:
-      "You can get more levels in this earlier than suggested if you feel your team lacks disable and want more kill threat. In that case you would want to max sleight and chains.",
+        "You can get more levels in this earlier than suggested if you feel your team lacks disable and want more kill threat. In that case you would want to max sleight and chains.",
       ember_spirit_sleight_of_fist:
         "You can max this over flameguard in matchup`s where you want to dodge projectiles or harrass low armour ranged heroes. Works really well with orb of corrosion and phase boots in the early game.",
       ember_spirit_flame_guard:
@@ -6197,13 +6197,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "You should try to farm more dangerous lanes when your team can't by placing remnants far away and using them to escape. Also when you get 6 in the laning stage place a remnant on one side and go to the opposite in order to secure power runes.",
     },
     item_tooltips: {
-      bottle: 
+      bottle:
         "You want to rush bottle every game. It's really good if you can get it before the 2mins rune spawn.",
       magic_stick:
         "If you are laning against spell spammers start with this (eg. Batirder/Zeus).",
-      infused_raindrop: 
-        "Against magical burst.",
-      orb_of_corrosion: 
+      infused_raindrop: "Against magical burst.",
+      orb_of_corrosion:
         "A core item that works well with Sleight of Fist. Rush this item if you are maxing sleight of fist in the lane.",
       phase_boots:
         "A core boots upgrade. Make sure to activate Phase Boots before using dropping a Fire Remnant as it will travel faster.",
@@ -7067,14 +7066,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "power_treads",
             "magic_wand",
             "wraith_band",
-            "ring_of_basilius"
+            "ring_of_basilius",
           ],
           mid_game: [
             "maelstrom",
             "ultimate_scepter",
             "black_king_bar",
             "lesser_crit",
-
           ],
           late_game: ["satanic", "greater_crit", "skadi", "butterfly"],
           situational: [
@@ -7086,7 +7084,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sphere",
             "sange_and_yasha",
             "falcon_blade",
-            "phase_boots"
+            "phase_boots",
           ],
           core: [
             "black_king_bar",
@@ -7108,13 +7106,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "apex",
             "mirror_shield",
             "ex_machina",
-            "pirate_hat"
+            "pirate_hat",
           ],
         },
         ability_tooltips: {
           gyrocopter_rocket_barrage:
             "You can also not level this spell and instead level stats. Upside is faster farming in the early game and more survivability, Downside is that you have less damage in the lane and early game fights. In this case you would get 1 your 1 lvl in rocket and then max flak and then stats until you can't anymore.",
-          gyrocopter_homing_missle:
+          gyrocopter_homing_missile:
             "You should use this spell to secure ranged creeps in the laning stage, by timing the missle as ranged creeps get low.",
           gyrocopter_flak_cannon:
             "This is your main tool for farming throught out the game so use it off cooldown, but rememeber that you need it for fights too.",
@@ -7203,7 +7201,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "force_staff",
             "glimmer_cape",
           ],
-          late_game: ["ethereal_blade", "sheepstick", "refresher", "boots_of_bearing"],
+          late_game: [
+            "ethereal_blade",
+            "sheepstick",
+            "refresher",
+            "boots_of_bearing",
+          ],
           situational: [
             "infused_raindrop",
             "spirit_vessel",
@@ -9435,23 +9438,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
           ],
-          early_game: [
-            "bracer",
-            "phase_boots",
-            "magic_wand",
-            "armlet",
-          ],
-          mid_game: [
-           "desolator",
-           "basher",
-           "sange"
-          ],
-          late_game: [
-            "skadi",
-            "assault",
-            "satanic",
-            "abyssal_blade",
-          ],
+          early_game: ["bracer", "phase_boots", "magic_wand", "armlet"],
+          mid_game: ["desolator", "basher", "sange"],
+          late_game: ["skadi", "assault", "satanic", "abyssal_blade"],
           situational: [
             "heavens_halberd",
             "sange_and_yasha",
@@ -9466,16 +9455,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "hand_of_midas",
             "greater_crit",
             "orb_of_corrosion",
-            "blink"
-
+            "blink",
           ],
-          core: [
-            "armlet",
-            "desolator",
-            "basher",
-            "assault",
-            "skadi",
-          ],
+          core: ["armlet", "desolator", "basher", "assault", "skadi"],
           neutral: [
             "lance_of_pursuit",
             "broom_handle",
