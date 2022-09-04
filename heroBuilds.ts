@@ -6093,7 +6093,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Ember Spirit": {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -6104,8 +6104,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "ember_spirit_sleight_of_fist", // 1
-          "ember_spirit_flame_guard", // 2
+          "ember_spirit_flame_guard", // 1
+          "ember_spirit_sleight_of_fist", // 2
           "ember_spirit_flame_guard", // 3
           "ember_spirit_searing_chains", // 4
           "ember_spirit_flame_guard", // 5
@@ -6118,7 +6118,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "ember_spirit_searing_chains", // 12
           "ember_spirit_searing_chains", // 13
           "special_bonus_attack_damage_15", // 14
-          "special_bonus_unique_ember_spirit_3", // 15
+          "special_bonus_unique_ember_spirit_2", // 15
           "ember_spirit_fire_remnant", // 16
           "special_bonus_attributes", // 17
           "ember_spirit_fire_remnant", // 18
@@ -6128,7 +6128,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_ember_spirit_5", // 25
+          "special_bonus_unique_ember_spirit_4", // 25
         ],
         items: {
           starting: [
@@ -6149,26 +6149,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           mid_game: [
             "maelstrom",
             "black_king_bar",
+            "aghanims_shard",
             "ultimate_scepter",
             "kaya_and_sange",
-            "cyclone",
           ],
-          late_game: ["refresher", "shivas_guard", "greater_crit"],
+          late_game: ["gungir", "refresher", "shivas_guard", "octarine_core"],
           situational: [
             "infused_raindrop",
-            "black_king_bar",
-            "aghanims_shard",
             "sphere",
             "desolator",
-            "gungir",
             "radiance",
             "travel_boots",
+            "cyclone",
+            "skadi"
           ],
           core: [
             "maelstrom",
             "ultimate_scepter",
             "black_king_bar",
-            "shivas_guard",
+            "aghanims_shard",
             "kaya_and_sange",
           ],
           neutral: [
@@ -6188,14 +6187,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
+      ember_spirit_searing_chains:
+      "You can get more levels in this earlier than suggested if you feel your team lacks disable and want more kill threat. In that case you would want to max sleight and chains.",
       ember_spirit_sleight_of_fist:
         "You can max this over flameguard in matchup`s where you want to dodge projectiles or harrass low armour ranged heroes. Works really well with orb of corrosion and phase boots in the early game.",
+      ember_spirit_flame_guard:
+        "This spell is your most useful farming tool while also being good for kills and defensive purposes. Try to be as efficient and possible and make sure you don't use this to farm if a fight is going to happen soon.",
+      ember_spirit_fire_remnant:
+        "You should try to farm more dangerous lanes when your team can't by placing remnants far away and using them to escape. Also when you get 6 in the laning stage place a remnant on one side and go to the opposite in order to secure power runes.",
     },
     item_tooltips: {
+      bottle: 
+        "You want to rush bottle every game. It's really good if you can get it before the 2mins rune spawn.",
       magic_stick:
         "If you are laning against spell spammers start with this (eg. Batirder/Zeus).",
-      infused_raindrop: "Against magical burst.",
-      orb_of_corrosion: "A core item that works well with Sleight of Fist.",
+      infused_raindrop: 
+        "Against magical burst.",
+      orb_of_corrosion: 
+        "A core item that works well with Sleight of Fist. Rush this item if you are maxing sleight of fist in the lane.",
       phase_boots:
         "A core boots upgrade. Make sure to activate Phase Boots before using dropping a Fire Remnant as it will travel faster.",
       maelstrom:
@@ -7008,7 +7017,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Gyrocopter: {
-    gameplay_version: "7.31d",
+    gameplay_version: "7.32b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -7020,15 +7029,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "gyrocopter_homing_missile", // 1
-          "gyrocopter_flak_cannon", // 2
-          "gyrocopter_flak_cannon", // 3
-          "gyrocopter_rocket_barrage", // 4
+          "gyrocopter_rocket_barrage", // 2
+          "gyrocopter_rocket_barrage", // 3
+          "gyrocopter_flak_cannon", // 4
           "gyrocopter_flak_cannon", // 5
           "gyrocopter_call_down", // 6
           "gyrocopter_flak_cannon", // 7
-          "gyrocopter_rocket_barrage", // 8
+          "gyrocopter_flak_cannon", // 8
           "gyrocopter_rocket_barrage", // 9
-          "special_bonus_unique_gyrocopter_4", // 10
+          "special_bonus_hp_200", // 10
           "gyrocopter_rocket_barrage", // 11
           "gyrocopter_call_down", // 12
           "gyrocopter_homing_missile", // 13
@@ -7038,7 +7047,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "gyrocopter_call_down", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_movement_speed_30", // 20
+          "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -7050,21 +7059,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "slippers",
-            "slippers",
-            "magic_stick",
+            "circlet",
           ],
           early_game: [
             "power_treads",
             "magic_wand",
             "wraith_band",
-            "falcon_blade",
+            "ring_of_basilius"
           ],
           mid_game: [
-            "lesser_crit",
+            "maelstrom",
             "ultimate_scepter",
-            "dragon_lance",
             "black_king_bar",
+            "lesser_crit",
+
           ],
           late_game: ["satanic", "greater_crit", "skadi", "butterfly"],
           situational: [
@@ -7075,35 +7085,37 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "swift_blink",
             "sphere",
             "sange_and_yasha",
+            "falcon_blade",
+            "phase_boots"
           ],
           core: [
             "black_king_bar",
+            "maelstrom",
             "lesser_crit",
             "ultimate_scepter",
             "satanic",
-            "greater_crit",
           ],
           neutral: [
             "possessed_mask",
             "unstable_wand",
             "grove_bow",
-            "quicksilver_amulet",
             "ring_of_aquila",
             "paladin_sword",
             "elven_tunic",
             "mind_breaker",
-            "the_leveller",
+            "titan_sliver",
             "ninja_gear",
             "apex",
             "mirror_shield",
             "ex_machina",
+            "pirate_hat"
           ],
         },
         ability_tooltips: {
           gyrocopter_rocket_barrage:
-            "You can also not level this spell and instead level stats. Upside is faster farming in the early game and more survivability, Downside is that you have less damage in the lane and early game fights.",
-          /*gyrocopter_homing_missle:
-            "You should use this spell to secure ranged creeps in the laning stage, by timing the missle as ranged creeps get low.",*/
+            "You can also not level this spell and instead level stats. Upside is faster farming in the early game and more survivability, Downside is that you have less damage in the lane and early game fights. In this case you would get 1 your 1 lvl in rocket and then max flak and then stats until you can't anymore.",
+          gyrocopter_homing_missle:
+            "You should use this spell to secure ranged creeps in the laning stage, by timing the missle as ranged creeps get low.",
           gyrocopter_flak_cannon:
             "This is your main tool for farming throught out the game so use it off cooldown, but rememeber that you need it for fights too.",
         },
@@ -7114,6 +7126,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "Decent stats in the lane and early game and double the stats 25:00mins+ ;)",
           falcon_blade:
             "You can get this item if you feel you`re having mana issues, Decent item overall",
+          ring_of_basilius:
+            "You should either get this or falcon blade if you are leveling rocket as you will have mana issues.",
           power_treads:
             "You want to get PT as fast as possibe to increase farming speed and strenght in the lane.",
           lesser_crit:
@@ -7165,32 +7179,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "flask",
             "branches",
-            "enchanted_mango",
+            "branches",
+            "branches",
+            "branches",
             "faerie_fire",
-            "sobi_mask",
             "ward_sentry",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: [
+            "enchanted_mango",
+            "magic_wand",
             "ring_of_basilius",
             "tranquil_boots",
-            "arcane_boots",
-            "medallion_of_courage",
-            "urn_of_shadows",
           ],
           mid_game: [
+            "clarity",
+            "ward_observer",
+            "ward_sentry",
+            "ancient_janggo",
             "veil_of_discord",
             "aghanims_shard",
-            "solar_crest",
             "force_staff",
             "glimmer_cape",
-            "ghost",
-            "cyclone",
           ],
-          late_game: ["ethereal_blade", "sheepstick", "refresher"],
+          late_game: ["ethereal_blade", "sheepstick", "refresher", "boots_of_bearing"],
           situational: [
             "infused_raindrop",
             "spirit_vessel",
@@ -9389,24 +9402,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "life_stealer_feast", // 1
           "life_stealer_ghoul_frenzy", // 2
-          "life_stealer_feast", // 3
-          "life_stealer_ghoul_frenzy", // 4
-          "life_stealer_rage", // 5
+          "life_stealer_ghoul_frenzy", // 3
+          "life_stealer_rage", // 4
+          "life_stealer_feast", // 5
           "life_stealer_infest", // 6
           "life_stealer_ghoul_frenzy", // 7
           "life_stealer_ghoul_frenzy", // 8
           "life_stealer_feast", // 9
-          "special_bonus_attack_speed_30", // 10
-          "life_stealer_feast", // 11
+          "lifestealer_feast", // 10
+          "life_stealer_rage", // 11
           "life_stealer_infest", // 12
           "life_stealer_rage", // 13
-          "life_stealer_rage", // 14
-          "life_stealer_rage", // 15
-          "special_bonus_attack_damage_25", // 16
+          "special_bonus_unique_lifestealer_2", // 14
+          "special_bonus_hp_325", // 15
+          "life_stealer_rage", // 16
           "special_bonus_attributes", // 17
           "life_stealer_infest", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_evasion_16", // 20
+          "special_bonus_unique_lifestealer_6", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -9418,63 +9431,61 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
-            "gauntlets",
+            "circlet",
             "branches",
             "branches",
           ],
           early_game: [
-            "helm_of_iron_will",
-            "phase_boots",
-            "armlet",
-            "magic_wand",
-            "orb_of_corrosion",
             "bracer",
+            "phase_boots",
+            "magic_wand",
+            "armlet",
           ],
           mid_game: [
-            "sange",
-            "skadi",
-            "sange_and_yasha",
-            "basher",
-            "desolator",
-            "maelstrom",
+           "desolator",
+           "basher",
+           "sange"
           ],
           late_game: [
             "skadi",
             "assault",
             "satanic",
             "abyssal_blade",
-            "ultimate_scepter",
-            "mjollnir",
           ],
           situational: [
             "heavens_halberd",
+            "sange_and_yasha",
             "aghanims_shard",
             "silver_edge",
             "monkey_king_bar",
             "nullifier",
             "black_king_bar",
-            "blink",
-            "swift_blink",
-            "orchid",
             "bloodthorn",
+            "mjollnir",
+            "ultimate_scepter",
+            "hand_of_midas",
+            "greater_crit",
+            "orb_of_corrosion",
+            "blink"
+
           ],
           core: [
             "armlet",
-            "sange",
-            "sange_and_yasha",
+            "desolator",
             "basher",
+            "assault",
             "skadi",
-            "satanic",
           ],
           neutral: [
-            "chipped_vest",
+            "lance_of_pursuit",
             "broom_handle",
-            "quicksilver_amulet",
+            "dagger_of_ristul",
             "misericorde",
             "mind_breaker",
-            "elven_tunic",
-            "the_leveller",
+            "paladin_sword",
+            "titan_sliver",
             "penta_edged_sword",
+            "havoc_hammer",
             "desolator_2",
             "pirate_hat",
           ],
@@ -9489,7 +9500,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       life_stealer_ghoul_frenzy:
         "Helps with early game farming speed, Max as soon as possible.",
       life_stealer_infest:
-        "Will save you alot in alot of games towards the end of the laning stage. Make sure to pick a mobile teammate to infest that can iniate for you.",
+        "Will save you alot in alot of games towards the end of the laning stage. Make sure to pick a mobile teammate to infest that can iniate for you. If you don't need the spell at level 6 rather level up ghoul frenzy for farming speed.",
     },
     item_tooltips: {
       orb_of_venom:
@@ -9497,7 +9508,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane (eg. batrider/bristleback).",
       helm_of_iron_will:
-        "On high harras lanes(mostly ranged heroes), you can rush this component of Armlet that solves your hp sustain issues.",
+        "On high harras lanes(mostly ranged heroes), you can rush this component of Armlet that solve your hp sustain issues.",
       phase_boots:
         "The earlier you get this in the lane the more effective it will be.",
       bracer: "Good stats early and double after 25:00min ;)",
