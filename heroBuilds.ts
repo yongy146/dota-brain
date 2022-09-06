@@ -20316,17 +20316,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "templar_assassin_psi_blades", // 1
           "templar_assassin_refraction", // 2
           "templar_assassin_refraction", // 3
-          "templar_assassin_meld", // 4
+          "templar_assassin_psi_blades", // 4
           "templar_assassin_refraction", // 5
           "templar_assassin_psionic_trap", // 6
           "templar_assassin_refraction", // 7
-          "templar_assassin_psi_blades", // 8
+          "templar_assassin_meld", // 8
           "templar_assassin_meld", // 9
-          "special_bonus_unique_templar_assassin_refraction_damage", // 10
+          "templar_assassin_meld", // 10
           "templar_assassin_meld", // 11
           "templar_assassin_psionic_trap", // 12
-          "templar_assassin_meld", // 13
-          "templar_assassin_psi_blades", // 14
+          "templar_assassin_psi_blades", // 13
+          "special_bonus_unique_templar_assassin_refraction_damage", // 14
           "special_bonus_unique_templar_assassin_8", // 15
           "templar_assassin_psi_blades", // 16
           "special_bonus_attributes", // 17
