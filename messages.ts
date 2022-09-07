@@ -2186,7 +2186,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Chaos Knight_1_Aggressive",
     messageTime: 15,
     textMessage:
-      "Chaos Knight's spells allow you to play aggressively on the lane against most of the match-ups.",
+      "Try to get level 2 before your opponent and go for a kill with your support. Chaos knight has good kill potential with levels try to catch your enemy out.",
     audience: [Audience.ALL],
   },
   {
@@ -2226,7 +2226,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Burst an opponent at the start of the fight. Your illusion will generally be killed off as the fight continues.",
+      "Try to target and burst enemy supports and save heroes at the start of fights. Your illusions will generally be killed off as the fight continues.",
     audience: [Audience.ALL],
   },
   {
@@ -3648,7 +3648,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 30,
     textMessage:
       "Try to use Breathe Fire or Dragon Tail in order to secure ranged creeps during the laning stage.",
-    audience: [Audience.ROLE_MID],
+    audience: [Audience.ALL],
     image: { type: "ability", name: "dragon_knight_breathe_fire" },
   },
   {
@@ -4947,7 +4947,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Gyrocopter_3_Waveclear",
     messageTime: 4 * 60 + 45,
     textMessage:
-      "Gyro has great waveclear early on. Push out waves from level 5 onwards and farming nearby camps.",
+      "Gyro has great waveclear early on. Push out waves from level 5 onwards and start farming nearby camps.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "gyrocopter_flak_cannon" },
   },
@@ -7221,7 +7221,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lone Druid_6_Roshan",
     messageTime: 16 * 60 + 15,
     textMessage:
-      "You can take Roshan fairy early by yourself or with minimal help. Tank with hero as the bear will heal you.",
+      "You can take Roshan fairly early by yourself or with minimal help. Tank with hero as the bear will heal you.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -7486,7 +7486,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_5_Powerspike",
     messageTime: 4 * 60 + 45,
     textMessage:
-      "Lycan's laning power spike is Helm of Dominator and level 6. Make use of it to score a kill and push the tower.",
+      "Lycan's laning power spike is Helm of Dominator and level 6. Try to get a kill or force the enemy out of the lane and you can take the tower fast.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
@@ -7567,7 +7567,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_13_Rat",
     messageTimes: [28 * 60 + 15, 33 * 60 + 15],
     textMessage:
-      "In tough late game scenarios, resort to ratting and Aghanim's Shard makes it easier.",
+      "In tough late game scenarios resort to ratting, Aghanim's Shard will keep your lanes pushed in and make it easier to rat.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8910,7 +8910,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Naga Siren_3_Unblock camps",
     messageTime: -45,
     textMessage:
-      "Make sure pull camps are unblocked as the lane will be pushing frequently due to Rip Tide.",
+      "Make sure pull camps are unblocked as the lane will be pushing frequently due to Rip Tide. Ask your support to start with a sentry.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_sentry" },
   },
@@ -8939,7 +8939,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Naga Siren_5_Ensnare kill",
     messageTime: 2 * 60,
     textMessage:
-      "Consider putting a point in Ensnare but only if you can get a kill out of it.",
+      "Consider putting a point in Ensnare around level 4 but only if you can get a kill out of it.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "naga_siren_ensnare" },
   },
@@ -11342,7 +11342,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Queen of Pain_1_Shadow strike",
     messageTime: -60,
     textMessage:
-      "Queen of Pain's Shadow Strike is a great harassing spell. Buy extra consumables.",
+      "Queen of Pain's Shadow Strike is a great harassing spell. Buy extra consumables or dodge it if your hero has a spell that can.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -14005,8 +14005,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Templar Assassin_3_Stack small camp",
     messageTimes: [105, 3 * 60 + 45],
     textMessage:
-      "Stack a small camp and farm it after clearing the next wave of lane creeps.",
-    audience: [Audience.ROLE_MID],
+      "Try to get your level 6 as soon as possible and force your opponent out of the lane. ",
+    audience: [Audience.ALL],
     image: { type: "ability", name: "templar_assassin_psi_blades" },
   },
   {
@@ -14065,7 +14065,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Templar Assassin_9_Roshan",
     messageTime: 15 * 60 + 15,
     textMessage:
-      "Templar Assassin is great at taking Roshan early on with minimal or no help. Kill Roshan by the 20 minute mark.",
+      "Templar Assassin is great at taking Roshan early, Look for opportunities to rosh once you have desolator. ",
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
   },
@@ -14175,7 +14175,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Terrorblade_1_Reflection harass",
     messageTime: 10,
     textMessage:
-      "Spam Reflection to harass the opponents or in combination with Metamorphosis to inflict greater damage.",
+      "Use your reflection when your support is harrasing the opponents or in combination with Metamorphosis to inflict greater damage.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "terrorblade_reflection" },
   },
@@ -15232,7 +15232,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Troll Warlord",
     audioFile: "enemyHero/Troll Warlord_1_Extra consumables",
     messageTime: -60,
-    textMessage: "Troll Warlord is a strong laner. Buy extra healing items.",
+    textMessage: "Troll Warlord is a strong laner. Buy extra healing items and take good trades.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -17204,7 +17204,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "skeleton_king_reincarnation" },
   },
-  {
+  /*{
     category: "OwnHero",
     hero: "Wraith King",
     audioFile: "ownHero/Wraith King_6_Blink",
@@ -17213,7 +17213,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Once you have a Blink Dagger, focus on killing backliners or supports first.",
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Wraith King",
@@ -17230,7 +17230,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Wraith King_8_Mana burn",
     messageTime: 14 * 60,
     textMessage:
-      "Mana burn is a big problem for the Wraith King. Consider aghanims shard to deal with this.",
+      "Mana burn is a big problem for the Wraith King. Consider aghanims shard when playing against heroes that have mana burn or buy diffusal.",
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
