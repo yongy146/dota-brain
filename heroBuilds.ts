@@ -9412,7 +9412,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "life_stealer_ghoul_frenzy", // 7
           "life_stealer_ghoul_frenzy", // 8
           "life_stealer_feast", // 9
-          "lifestealer_feast", // 10
+          "life_stealer_feast", // 10
           "life_stealer_rage", // 11
           "life_stealer_infest", // 12
           "life_stealer_rage", // 13
