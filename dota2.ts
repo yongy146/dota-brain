@@ -1493,7 +1493,8 @@ export namespace hero_abilities {
       heroName == "Phantom Lancer" ||
       heroName == "Templar Assassin" ||
       heroName == "Void Spirit" ||
-      heroName == "Invoker"
+      heroName == "Invoker" ||
+      heroName == "Tinker"
     );
   }
 
