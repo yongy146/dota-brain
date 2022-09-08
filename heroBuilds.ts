@@ -14319,29 +14319,29 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "magic_stick" },
           { item: "ring_of_regen", info: "For sustain on the lane" },
           { item: "infused_raindrop" },
-          {
+          /* {
             item: "urn_of_shadows",
             info: "For Spirit Vessel to negate the healing on the hero that False Promise was used on. Apply Vessel towards end of the False promise and be mindful that Fortune`s End dispels Vessel debuff",
-          },
+          }, */
         ],
         support: [],
         core: [],
       },
       mid_game: {
         all: [
-          { item: "spirit_vessel" },
-          { item: "blink", info: "To close the gap to Oracle" },
+          { item: `black_king_bar` },
+          { item: "blink", info: `To close the gap and kill Outworld Devourer.` },
         ],
         support: [{ item: "force_staff" }],
-        core: [{ item: "orchid" }, { item: "black_king_bar" }],
+        core: [{ item: "orchid" }, { item: `heavens_halberd` }],
       },
       late_game: {
         all: [],
         support: [],
         core: [
           { item: "skadi" },
-          { item: "shivas_guard" },
-          { item: "satanic", info: "To dispel Fate`s Edict and Fortune`s End" },
+          { item: `sheepstick` },
+          { item: `abyssal_blade`, info: `To stun lock and kill the Outworld Devourer at the start of the fight.` },
         ],
       },
     },
