@@ -1646,14 +1646,14 @@ export namespace items {
    * @returns Cooldown of item if it is an real Dota 2 item (otherwise 0, e.g. in case of armor or other selfmade items)
    */
   export function getItemCooldown(item: string): number {
-    DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Called`);
+    //DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Called`);
 
     if (Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`)) {
       // It is a standard Dota 2 item
       const item_ = dota2Items[`item_${item}` as keyof typeof dota2Items];
       if (Object.prototype.hasOwnProperty.call(item_, "cooldown")) {
         const result = (item_ as { cooldown: number }).cooldown;
-        DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Result=${result}`);
+        //DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Result=${result}`);
         return result; //dota2Items[`item_${item} `].cooldown;
       }
     }
