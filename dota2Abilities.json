@@ -2591,8 +2591,8 @@
 			"talent_level": 1,
 			"description": "-16% Rot Slow"
 		},
-		"special_bonus_spell_lifesteal_10": {
-			"id": 6564,
+		"special_bonus_spell_lifesteal_8": {
+			"id": 6565,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -2602,7 +2602,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+10% Spell Lifesteal"
+			"description": "+8% Spell Lifesteal"
 		},
 		"special_bonus_unique_pudge_7": {
 			"id": 507,
@@ -4496,8 +4496,8 @@
 			"is_ultimate": true,
 			"is_passive": "no"
 		},
-		"special_bonus_attack_damage_25": {
-			"id": 6009,
+		"special_bonus_attack_damage_20": {
+			"id": 5960,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -4507,7 +4507,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+25 Damage"
+			"description": "+20 Damage"
 		},
 		"special_bonus_unique_lina_1": {
 			"id": 6212,
@@ -6034,8 +6034,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_damage} Black Hole Damage Per Second"
 		},
-		"special_bonus_hp_350": {
-			"id": 6195,
+		"special_bonus_hp_250": {
+			"id": 5903,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -6045,7 +6045,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+350 Health"
+			"description": "+250 Health"
 		},
 		"special_bonus_unique_enigma_5": {
 			"id": 7658,
@@ -6765,7 +6765,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				170
+				160
 			],
 			"mana_cost": [
 				250,
@@ -6814,7 +6814,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+10 Upheaval Attack Speed per second on Allies"
+			"description": "+12 Upheaval Attack Speed per second on Allies"
 		},
 		"special_bonus_unique_warlock_3": {
 			"id": 6412,
@@ -7299,6 +7299,9 @@
 				0
 			],
 			"mana_cost": [
+				95,
+				105,
+				115,
 				125
 			],
 			"name": "Venomous Gale",
@@ -7604,7 +7607,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-1.5s Time Walk Cooldown"
+			"description": "-1.0s Time Walk Cooldown"
 		},
 		"special_bonus_unique_faceless_void_8": {
 			"id": 868,
@@ -7630,7 +7633,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+120 Attack Speed during Chronosphere"
+			"description": "+95 Attack Speed during Chronosphere"
 		},
 		"special_bonus_unique_faceless_void_3": {
 			"id": 6807,
@@ -7797,7 +7800,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+24 Skeletons Attack Damage"
+			"description": "+26 Skeletons Attack Damage"
 		},
 		"special_bonus_cleave_25": {
 			"id": 6801,
@@ -7858,10 +7861,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				9,
 				8,
 				7,
-				6,
-				5
+				6
 			],
 			"mana_cost": [
 				80,
@@ -9090,7 +9093,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+0.5s Dragon Tail"
+			"description": "+0.5s Dragon Tail Stun"
 		},
 		"special_bonus_hp_400": {
 			"id": 5976,
@@ -9353,7 +9356,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+0.5 Bad Juju Armor Reduction"
+			"description": "+0.5 Bad Juju Armor Reduction/Increase"
 		}
 	},
 	"npc_dota_hero_rattletrap": {
@@ -9824,7 +9827,7 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				20
+				18
 			],
 			"mana_cost": [
 				80
@@ -9842,9 +9845,9 @@
 				85
 			],
 			"mana_cost": [
-				150,
-				175,
-				200
+				130,
+				160,
+				190
 			],
 			"name": "Wrath of Nature",
 			"description": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
@@ -10028,9 +10031,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				100,
-				75,
-				50
+				0
 			],
 			"mana_cost": [
 				100,
@@ -10210,10 +10211,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				19,
-				16,
-				13,
-				10
+				18,
+				15,
+				12,
+				9
 			],
 			"mana_cost": [
 				35,
@@ -11204,8 +11205,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				150,
 				140,
+				135,
 				130
 			],
 			"mana_cost": [
@@ -12340,7 +12341,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "Penitence Deals 250 Damage"
+			"description": "Penitence Deals 225 Damage"
 		},
 		"special_bonus_unique_chen_3": {
 			"id": 6363,
@@ -13429,13 +13430,13 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				20
+				18
 			],
 			"mana_cost": [
+				40,
 				50,
 				60,
-				70,
-				80
+				70
 			],
 			"name": "Flak Cannon",
 			"description": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
@@ -14289,9 +14290,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				24,
-				20,
+				18,
 				16,
+				14,
 				12
 			],
 			"mana_cost": [
@@ -14838,9 +14839,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				29,
 				26,
-				23,
+				24,
+				22,
 				20
 			],
 			"mana_cost": [
@@ -14949,8 +14950,8 @@
 			"talent_level": 1,
 			"description": "+15% Shadow Poison Damage"
 		},
-		"special_bonus_strength_10": {
-			"id": 6137,
+		"special_bonus_strength_12": {
+			"id": 5928,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -14960,7 +14961,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10 Strength"
+			"description": "+12 Strength"
 		},
 		"special_bonus_movement_speed_25": {
 			"id": 5919,
@@ -16018,9 +16019,6 @@
 				4
 			],
 			"mana_cost": [
-				85,
-				90,
-				95,
 				100
 			],
 			"name": "Decay",
@@ -17567,10 +17565,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				16,
-				14,
-				12,
-				10
+				17,
+				15,
+				13,
+				11
 			],
 			"mana_cost": [
 				100
@@ -17750,7 +17748,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+25 Visage and Familiars Movement Speed"
+			"description": "+20 Visage and Familiars Movement Speed"
 		},
 		"special_bonus_unique_visage_5": {
 			"id": 6984,
@@ -17879,7 +17877,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-1s Dark Pact Cooldown"
+			"description": "-0.5s Dark Pact Cooldown"
 		},
 		"special_bonus_unique_slark": {
 			"id": 6147,
@@ -18659,7 +18657,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+0.5s Shockwave Slow Duration"
+			"description": "+{s:bonus_basic_slow_duration}s Shockwave Slow Duration"
 		},
 		"special_bonus_unique_magnus_reverse_polarity_strength": {
 			"id": 1037,
@@ -19776,10 +19774,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				14,
-				13,
-				12,
-				11
+				0
 			],
 			"mana_cost": [
 				100
@@ -19913,7 +19908,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+75 Echo Stomp Damage"
+			"description": "+{s:bonus_stomp_damage} Echo Stomp Damage"
 		},
 		"special_bonus_unique_elder_titan": {
 			"id": 6171,
@@ -19978,7 +19973,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+450 Echo Stomp Wake Damage"
+			"description": "+{s:bonus_wake_damage_limit} Echo Stomp Wake Damage"
 		}
 	},
 	"npc_dota_hero_legion_commander": {
@@ -21078,9 +21073,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				110,
-				85,
-				60
+				0
 			],
 			"mana_cost": [
 				100,
@@ -21116,7 +21109,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10 Armor False Promise"
+			"description": "+{s:bonus_bonus_armor} Armor False Promise"
 		},
 		"special_bonus_unique_oracle_fortunes_end_damage": {
 			"id": 1052,
@@ -21155,7 +21148,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-20s False Promise Cooldown"
+			"description": "-{s:bonus_AbilityCooldown}s False Promise Cooldown"
 		},
 		"special_bonus_unique_oracle_8": {
 			"id": 681,
@@ -21194,7 +21187,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.5s False Promise Duration"
+			"description": "+{s:bonus_duration}s False Promise Duration"
 		}
 	},
 	"npc_dota_hero_techies": {

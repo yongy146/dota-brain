@@ -3804,6 +3804,7 @@
 			"AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL",
 			"AbilityCastPoint": "0.0",
 			"AbilityCooldown": "180.0",
+			"AbilitySharedCooldown": "refresher",
 			"AbilityManaCost": "350",
 			"ItemCost": "5000",
 			"ItemShopTags": "regen_health;regen_mana;hard_to_tag",
@@ -4087,7 +4088,7 @@
 				"spell_lifesteal": "30",
 				"buff_duration": "6",
 				"lifesteal_multiplier": "2.5",
-				"hp_cost": "10"
+				"hp_cost": "0"
 			}
 		},
 		"item_recipe_sphere": {
@@ -4416,8 +4417,9 @@
 			"FightRecapLevel": "2",
 			"Model": "models/props_gameplay/refresher_shard.vmdl",
 			"Effect": "particles/generic_gameplay/dropped_refresher_shard.vpcf",
-			"AbilityCooldown": "200.0",
+			"AbilityCooldown": "180.0",
 			"AbilityManaCost": "200",
+			"AbilitySharedCooldown": "refresher",
 			"ItemCost": "1000",
 			"ItemShopTags": "",
 			"ItemQuality": "consumable",
@@ -5248,7 +5250,7 @@
 				"unholy_bonus_strength": "25",
 				"unholy_bonus_armor": "4",
 				"unholy_health_drain_per_second": "45",
-				"toggle_cooldown": "0.036f"
+				"toggle_cooldown": "0.036"
 			}
 		},
 		"item_recipe_invis_sword": {
@@ -6127,7 +6129,6 @@
 			"ID": "180",
 			"AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET",
 			"AbilityCooldown": "55.0",
-			"AbilityCastRange": "1200",
 			"AbilityManaCost": "0",
 			"ItemCost": "1300",
 			"ItemShopTags": "move_speed;boost_mana;mana_pool",
@@ -6418,7 +6419,6 @@
 			"ItemPermanent": "1",
 			"FightRecapLevel": "1",
 			"AbilityCooldown": "30.0",
-			"AbilityCastRange": "1200",
 			"ItemCost": "4125",
 			"ItemShopTags": "str;agi;int;damage;move_speed;attack_speed;hard_to_tag",
 			"ItemQuality": "rare",
@@ -6730,7 +6730,6 @@
 			"AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET",
 			"FightRecapLevel": "1",
 			"AbilityCooldown": "40",
-			"AbilityCastRange": "1200",
 			"AbilityManaCost": "0",
 			"ItemCost": "5050",
 			"ItemShopTags": "int;armor;regen_health;hard_to_tag",
@@ -9847,7 +9846,7 @@
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
 				"cast_range_bonus": "125",
-				"mana_reduction_pct": "20"
+				"mana_reduction_pct": "15"
 			}
 		},
 		"item_manacles_of_power": {
@@ -9937,7 +9936,7 @@
 			"ItemPurchasable": "0",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
-				"aspd": "10",
+				"aspd": "15",
 				"bonus_damage": "40",
 				"duration": "8",
 				"health_sacrifice": "100"

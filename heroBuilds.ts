@@ -12715,7 +12715,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "hurricane_pike",
             "nullifier",
             "gungir",
-            "silver_edge",
             "sheepstick",
             "bloodthorn",
             "desolator",

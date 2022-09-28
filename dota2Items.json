@@ -1431,7 +1431,7 @@
 		"name": "Refresher Shard",
 		"mana_cost": 200,
 		"cost": 1000,
-		"cooldown": 200,
+		"cooldown": 180,
 		"is_recipe": false,
 		"is_neutral": false
 	},
