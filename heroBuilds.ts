@@ -12701,7 +12701,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: ["robe", "branches", "branches", "branches"],
           early_game: ["tango", "power_treads", "magic_wand", "hand_of_midas"],
-          mid_game: ["maelstrom", "black_king_bar", "silver_edge", "assault"],
+          mid_game: ["maelstrom", "black_king_bar", "assault"],
           late_game: [
             "satanic",
             "skadi",
@@ -12720,13 +12720,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "desolator",
             "aghanims_shard",
             "witch_blade",
+            "butterfly"
           ],
           core: [
             "power_treads",
             "maelstrom",
             "black_king_bar",
             "assault",
-            "silver_edge",
           ],
           neutral: [
             "unstable_wand",
