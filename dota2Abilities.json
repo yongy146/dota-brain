@@ -56,7 +56,7 @@
 			"is_ultimate": false,
 			"is_passive": "partial",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -97,7 +97,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -231,7 +231,7 @@
 			"lore": "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -260,7 +260,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -303,7 +303,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -435,7 +435,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -477,7 +477,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -502,7 +502,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -652,7 +652,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -678,7 +678,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -719,7 +719,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -741,7 +741,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -867,7 +867,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -887,7 +887,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -1077,7 +1077,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -1099,7 +1099,7 @@
 			"lore": "Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -1276,7 +1276,7 @@
 			"lore": "The Nishian totem splits the world to its core with tectonic force.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -1301,7 +1301,7 @@
 			"lore": "Raigor's gorilla strength can destroy mountains.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -1324,7 +1324,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1480,7 +1480,7 @@
 			"lore": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1544,7 +1544,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -1566,7 +1566,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -1721,7 +1721,7 @@
 			"lore": "Lunar energies make the Princess of the Moon's arrows more deadly than most.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -1743,7 +1743,7 @@
 			"lore": "None can fail to recognize Mirana's iconic white beast in the heat of battle.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1764,7 +1764,7 @@
 			"lore": "Her tenure with Selemene allows Mirana to eclipse the ground, wrapping her allies in a cloak of shadows.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1892,7 +1892,7 @@
 			"lore": "Nevermore's trademark for harvesting souls.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1914,7 +1914,7 @@
 			"lore": "Nevermore's trademark for harvesting souls.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1936,7 +1936,7 @@
 			"lore": "Nevermore's trademark for harvesting souls.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -1995,7 +1995,7 @@
 			"lore": "The captured souls of those past slain are released to ravage their former allies.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -2170,7 +2170,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -2231,7 +2231,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -2250,7 +2250,7 @@
 			"lore": "n/a",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -2394,7 +2394,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -2438,7 +2438,7 @@
 			"lore": "Azwraith knows that on the field of battle, speed can mean everything.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -2610,7 +2610,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -2677,7 +2677,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -2850,7 +2850,7 @@
 			"lore": "The Butcher gives new meaning to the words 'meat shield.'",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -2890,7 +2890,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -3024,7 +3024,7 @@
 			"lore": "The Lightning Revenant rules the Underscape with plasmatic power.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3047,7 +3047,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -3089,7 +3089,7 @@
 			"lore": "Ride the lightning.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3221,7 +3221,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -3246,7 +3246,7 @@
 			"lore": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3266,7 +3266,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3289,7 +3289,7 @@
 			"lore": "Many an explorer was lost to the quicksands of the Scintillant Waste.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3442,7 +3442,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -3465,7 +3465,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3615,7 +3615,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -3662,7 +3662,7 @@
 			"lore": "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3685,7 +3685,7 @@
 			"lore": "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -3817,7 +3817,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -3871,7 +3871,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -4060,7 +4060,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -4088,7 +4088,7 @@
 			"lore": "Shendel's haunting voice hints at her approaching vindication.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -4131,7 +4131,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -4266,7 +4266,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -4315,7 +4315,7 @@
 			"lore": "Lyralei enchants gusts of winds to fight incoming attacks.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -4357,7 +4357,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -4535,7 +4535,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -4727,7 +4727,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -4772,7 +4772,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -4794,7 +4794,7 @@
 			"lore": "A hundred leagues of dry land couldn't keep these seas at bay.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -4813,7 +4813,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -4834,7 +4834,7 @@
 			"lore": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -5009,7 +5009,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -5032,7 +5032,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -5051,7 +5051,7 @@
 			"lore": "A natural defense equally suited to keeping anything from unwanted sisters to snarling hellbeasts at bay.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -5201,7 +5201,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -5227,7 +5227,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -5253,7 +5253,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -5276,7 +5276,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -5300,7 +5300,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -5429,7 +5429,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -5455,7 +5455,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -5484,7 +5484,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -5661,7 +5661,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -5690,7 +5690,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -5844,7 +5844,7 @@
 			"lore": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -5863,7 +5863,7 @@
 			"lore": "A swift crush of might and water breaks even the toughest of defenses.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -5886,7 +5886,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -5909,7 +5909,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -6038,7 +6038,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -6082,7 +6082,7 @@
 			"lore": "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -6101,7 +6101,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -6124,7 +6124,7 @@
 			"lore": "Calling to the abyssal god Maelrawn has resulted in entire armadas being lost at sea.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -6259,7 +6259,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -6287,7 +6287,7 @@
 			"lore": "Zharvakko's hocus pocus is not limited only to hexxing his opponents and is quite adept at curing ailments.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -6313,7 +6313,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -6332,7 +6332,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -6484,7 +6484,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -6551,7 +6551,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -6571,7 +6571,7 @@
 			"is_ultimate": true,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -6703,7 +6703,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -6914,7 +6914,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -6958,7 +6958,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -6978,7 +6978,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -7144,7 +7144,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -7186,7 +7186,7 @@
 			"is_ultimate": false,
 			"is_passive": "partial",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -7206,7 +7206,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -7230,7 +7230,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -7379,7 +7379,7 @@
 			"lore": "Rotund'jere uses the souls of his victims as bridge from life to afterlife.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -7399,7 +7399,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -7419,7 +7419,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -7441,7 +7441,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -7576,7 +7576,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -7599,7 +7599,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -7622,7 +7622,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -7644,7 +7644,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -7772,7 +7772,7 @@
 			"lore": "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -7853,7 +7853,7 @@
 			"lore": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -7875,7 +7875,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -8034,7 +8034,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -8228,7 +8228,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -8248,7 +8248,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -8289,7 +8289,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -8312,7 +8312,7 @@
 			"lore": "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -8464,7 +8464,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -8484,7 +8484,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -8529,7 +8529,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -8664,7 +8664,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -8733,7 +8733,7 @@
 			"is_ultimate": true,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -8890,7 +8890,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -8913,7 +8913,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -8934,7 +8934,7 @@
 			"lore": "Over time, the banshee remnants of her previous lives return to haunt the present.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9060,7 +9060,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -9086,7 +9086,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -9109,7 +9109,7 @@
 			"is_ultimate": false,
 			"is_passive": "partial",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -9297,7 +9297,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -9340,7 +9340,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -9471,7 +9471,7 @@
 			"lore": "Manipulating her psionic veil, Lanaya bends nature's law to her will.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9496,7 +9496,7 @@
 			"lore": "Lanaya is as elusive as her covenant with the Hidden Temple.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9534,7 +9534,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9575,7 +9575,7 @@
 			"lore": "Calling upon the reach of the Hidden Temple, none escape the eye of the Templar.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9701,7 +9701,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -9740,7 +9740,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9760,7 +9760,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -9780,7 +9780,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -9906,7 +9906,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -9968,7 +9968,7 @@
 			"lore": "In times of great need, Selemene herself descends into the world, blocking out the light and hope of the opposed.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -10100,7 +10100,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -10126,7 +10126,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -10191,7 +10191,7 @@
 			"lore": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -10323,7 +10323,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -10349,7 +10349,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -10411,7 +10411,7 @@
 			"lore": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -10539,7 +10539,7 @@
 			"lore": "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -10604,7 +10604,7 @@
 			"lore": "Rattletrap understands the limitations of his armor. Just as he understands the risks of pushing past them in times of need.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -10623,7 +10623,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -10646,7 +10646,7 @@
 			"lore": "A somewhat unwieldy device, the Hookshot sends the otherwise clunky Clockwerk armor flying through the air.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -10781,7 +10781,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -10809,7 +10809,7 @@
 			"lore": "Chronoptic energy bursts from one plane to the other, evaporating anything it touches.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -10832,7 +10832,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -10851,7 +10851,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -10873,7 +10873,7 @@
 			"lore": "If necessary, the Tormented Soul can manipulate space time itself, ravaging lesser beings.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -11029,7 +11029,7 @@
 			"lore": "The Prophet keeps his sentinel over the forest, protecting it when in need.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -11067,7 +11067,7 @@
 			"lore": "Though powerful, Nature's Prophet's gifts do not include all-sight, and he must rely heavily upon reconnaissance and aid from a long-standing network of stalwart friends.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -11089,7 +11089,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -11220,7 +11220,7 @@
 			"lore": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -11259,7 +11259,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -11279,7 +11279,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -11301,7 +11301,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -11451,7 +11451,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -11477,7 +11477,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -11503,7 +11503,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -11718,7 +11718,7 @@
 			"lore": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -11758,7 +11758,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -11915,7 +11915,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -11938,7 +11938,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -11980,7 +11980,7 @@
 			"lore": "The All Seeing One casts down his protection over those that Purist calls friend.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12134,7 +12134,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -12153,7 +12153,7 @@
 			"lore": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12191,7 +12191,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -12211,7 +12211,7 @@
 			"is_ultimate": true,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12339,7 +12339,7 @@
 			"lore": "Not even Huskar's own flesh can contain the unending expansion of his life force.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12365,7 +12365,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -12408,7 +12408,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -12540,7 +12540,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -12565,7 +12565,7 @@
 			"lore": "A vision of the twisted maw of Balanar etches itself into the minds of the poor souls unlucky enough to cross his path.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -12610,7 +12610,7 @@
 			"lore": "It is a humbling sight to see when the mightiest of warriors become afraid of the dark.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12741,7 +12741,7 @@
 			"lore": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12761,7 +12761,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -12787,7 +12787,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -12806,7 +12806,7 @@
 			"lore": "The slightest tremor of her web is all Arachnia needs to find her prey.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -12828,7 +12828,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13000,7 +13000,7 @@
 			"lore": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -13020,7 +13020,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13148,7 +13148,7 @@
 			"lore": "Skitskurr opens a gap in the space time fabric, allowing young Weavers to slip through and aid him in combat.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13170,7 +13170,7 @@
 			"lore": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13343,7 +13343,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13362,7 +13362,7 @@
 			"lore": "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -13388,7 +13388,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13408,7 +13408,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13431,7 +13431,7 @@
 			"lore": "Ice and fire combine to rip the battlefield to shreds with extreme temperatures.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13560,7 +13560,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13586,7 +13586,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13608,7 +13608,7 @@
 			"lore": "When an enemy escapes into the Yama Raskav Jungle, most would cut through the brush to find the fugitive.  Batrider just chooses to destroy the jungle along with his foes.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13627,7 +13627,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13649,7 +13649,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -13784,7 +13784,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -13807,7 +13807,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13827,7 +13827,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -13850,7 +13850,7 @@
 			"lore": "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -13982,7 +13982,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -14208,7 +14208,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -14230,7 +14230,7 @@
 			"lore": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14253,7 +14253,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -14278,7 +14278,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -14411,7 +14411,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -14437,7 +14437,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14457,7 +14457,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -14479,7 +14479,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14624,7 +14624,7 @@
 			"lore": "The very steps of a male ursine shake the ground as well as the resolve of opposing warriors.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14649,7 +14649,7 @@
 			"lore": "For a behemoth of his size, Ursa is deceptively nimble.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14669,7 +14669,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14692,7 +14692,7 @@
 			"lore": "Ulfsaar succumbs to his ancient spirit, becoming the most ferocious creature on the battlefield.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14821,7 +14821,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -14849,7 +14849,7 @@
 			"lore": "Barathrum warps the fabric of reality around him, lessening its influence on his physical form.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14872,7 +14872,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -14894,7 +14894,7 @@
 			"lore": "Barathrum's unyielding focus forms a pocket of planar convergence from which not even the most powerful arcane energies can escape.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -14918,7 +14918,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -15049,7 +15049,7 @@
 			"lore": "Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15075,7 +15075,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -15100,7 +15100,7 @@
 			"lore": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15124,7 +15124,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15271,7 +15271,7 @@
 			"lore": "A silver lining to the failure of turning a mountain into gold, this volatile solution has destructive potential.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -15313,7 +15313,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -15334,7 +15334,7 @@
 			"lore": "The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15478,7 +15478,7 @@
 			"lore": "",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15497,7 +15497,7 @@
 			"lore": "",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15516,7 +15516,7 @@
 			"lore": "",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15554,7 +15554,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -15576,7 +15576,7 @@
 			"lore": "Myrault's Hinder-Gast.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15595,7 +15595,7 @@
 			"lore": "Claws of Tornarus.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -15637,7 +15637,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -15656,7 +15656,7 @@
 			"lore": "Tarak's Descent of Fire.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15712,7 +15712,7 @@
 			"lore": "Killing Wall of Koryx.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15731,7 +15731,7 @@
 			"lore": "Buluphont's Aureal Incapacitator.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15863,7 +15863,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -15883,7 +15883,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -15909,7 +15909,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -15935,7 +15935,7 @@
 			"lore": "With a shock to the ground, all magic and sound pauses, and Nortrom fulfills his prophecy.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -16089,7 +16089,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -16289,7 +16289,7 @@
 			"lore": "Blood-curdling wolf cries signal to opponents that Banehallow is among them.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16330,7 +16330,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -16351,7 +16351,7 @@
 			"lore": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16479,7 +16479,7 @@
 			"lore": "A slam of Mangix' mighty keg starts the festivities.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16505,7 +16505,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16524,7 +16524,7 @@
 			"lore": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16543,7 +16543,7 @@
 			"lore": "Mangix doesn't hold to it by rule, but he vaguely recalls an old master musing that, if one could manage, scaring up a companion was always preferable to drinking alone.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16566,7 +16566,7 @@
 			"lore": "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16698,7 +16698,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -16743,7 +16743,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16783,7 +16783,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -16805,7 +16805,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -16952,7 +16952,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -16974,7 +16974,7 @@
 			"lore": "Sylla studies and masters the arts of the lost Bear Clan, enhancing his attunement with the wild.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -16996,7 +16996,7 @@
 			"lore": "The mighty bear is the king of the forest, possessing the throne through raw power.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -17128,7 +17128,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -17154,7 +17154,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -17325,7 +17325,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -17387,7 +17387,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -17409,7 +17409,7 @@
 			"is_ultimate": true,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -17565,7 +17565,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -17588,7 +17588,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -17647,7 +17647,7 @@
 			"lore": "Rooftrellen calls the ancestral spirit of nature, releasing its power through all of his kin.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -17782,7 +17782,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -17808,7 +17808,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -17834,7 +17834,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -17854,7 +17854,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -17874,7 +17874,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -18022,7 +18022,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -18092,7 +18092,7 @@
 			"lore": "The flesh of the recently dead add to the power of Dirge's plague.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -18221,7 +18221,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -18250,7 +18250,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -18293,7 +18293,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -18517,7 +18517,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -18540,7 +18540,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -18589,7 +18589,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -18724,7 +18724,7 @@
 			"lore": "All zealot scarabs possess intimate knowledge of underground pathways, using them to their advantage.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -18777,7 +18777,7 @@
 			"lore": "While their carapace is relatively thin, it's guarded by a retractable field of razor-sharp spikes.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -18799,7 +18799,7 @@
 			"lore": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -18822,7 +18822,7 @@
 			"lore": "The scarab kills for the glory of his queen.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -18993,7 +18993,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -19016,7 +19016,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19035,7 +19035,7 @@
 			"lore": "Even the youngest Slithereen are well schooled in trawling for prey with nothing but their wits and nets.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19058,7 +19058,7 @@
 			"lore": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -19234,7 +19234,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -19276,7 +19276,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19296,7 +19296,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -19320,7 +19320,7 @@
 			"lore": "In a flash of light, Ezalor reveals his true nature.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19397,7 +19397,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -19526,7 +19526,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -19551,7 +19551,7 @@
 			"lore": "Io twists the particles of the universe with its unimaginable capabilities.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19576,7 +19576,7 @@
 			"lore": "Drawing on the energy of matter from all worlds, Io begins the unravelling of time.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19633,7 +19633,7 @@
 			"lore": "Io is the embodiment of the mystery of the universe.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19783,7 +19783,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -19840,7 +19840,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19859,7 +19859,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -19904,7 +19904,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20056,7 +20056,7 @@
 			"lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -20079,7 +20079,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20122,7 +20122,7 @@
 			"is_ultimate": true,
 			"is_passive": "partial",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20247,7 +20247,7 @@
 			"lore": "All who encounter the cursed Gorgon will feel her rage.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20285,7 +20285,7 @@
 			"lore": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20323,7 +20323,7 @@
 			"lore": "The beauty of Medusa is legendary.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -20474,7 +20474,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -20493,7 +20493,7 @@
 			"lore": "Keep your enemies close.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20513,7 +20513,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20532,7 +20532,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20551,7 +20551,7 @@
 			"lore": "An adrenaline rush of pure hatred quickens your blades.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -20682,7 +20682,7 @@
 			"lore": "When the mighty hoof of the Warrunner touches soil, the tremors are felt far and wide.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -20727,7 +20727,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20747,7 +20747,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -20768,7 +20768,7 @@
 			"lore": "The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -20922,7 +20922,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -20947,7 +20947,7 @@
 			"lore": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -20969,7 +20969,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -20990,7 +20990,7 @@
 			"lore": "Magnus fights with the fury of the erupting Mt. Joerlak.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -21121,7 +21121,7 @@
 			"lore": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21162,7 +21162,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21204,7 +21204,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -21228,7 +21228,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21397,7 +21397,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -21422,7 +21422,7 @@
 			"lore": "An enforcer's honor can be a prickly thing.  So can his quills.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21461,7 +21461,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -21481,7 +21481,7 @@
 			"is_ultimate": true,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21634,7 +21634,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -21659,7 +21659,7 @@
 			"lore": "Even far from Cobalt, Tusk carries the 'Barrier Chill' in his very bones.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -21679,7 +21679,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -21719,7 +21719,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -21893,7 +21893,7 @@
 			"lore": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21916,7 +21916,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -22112,7 +22112,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -22132,7 +22132,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -22154,7 +22154,7 @@
 			"is_ultimate": true,
 			"is_passive": "partial",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -22279,7 +22279,7 @@
 			"lore": "The force of creation still echoes in the stomp of the Titan.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -22308,7 +22308,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -22368,7 +22368,7 @@
 			"lore": "That which he created, the titan tears asunder.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -22520,7 +22520,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -22543,7 +22543,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -22587,7 +22587,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -22721,7 +22721,7 @@
 			"lore": "Xin's harshest lessons often employed the use of red-hot chains.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -22768,7 +22768,7 @@
 			"lore": "An enemy should never be allowed to approach without difficulty.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -22935,7 +22935,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -22979,7 +22979,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true,
 			"disable": [
@@ -23020,7 +23020,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -23041,7 +23041,7 @@
 			"lore": "At the Earth Spirit's call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23170,7 +23170,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23210,7 +23210,7 @@
 			"lore": "Temper, temper. The rage rises up and takes control.  Meet Terrorblade's own worst self.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23229,7 +23229,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23248,7 +23248,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23399,7 +23399,7 @@
 			"lore": "Though no stranger to travelling the cosmic void, soaring within an atmosphere offers unique pleasures.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23421,7 +23421,7 @@
 			"lore": "The ever-collapsing core of Phoenix often emits short-lived bursts of conscious light.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23443,7 +23443,7 @@
 			"lore": "The vent through which such stellar energy flows is mere atoms wide.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23482,7 +23482,7 @@
 			"lore": "The solar crucible of a Supernova may be fatal, yet from its flames arise new beacons to wander infinity.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true,
 			"disable": [
@@ -23675,7 +23675,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -23701,7 +23701,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -23721,7 +23721,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -23762,7 +23762,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -23894,7 +23894,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -23916,7 +23916,7 @@
 			"lore": "A steady bomb hand prefers an abundance of personal space.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -23942,7 +23942,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -24113,7 +24113,7 @@
 			"lore": "The same organ where some dragons stoke their inner flame is, in Auroth, a crucible of unimaginable cold. From deep within her frosty gullet, an exhalation sends enemies into burning agony.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -24136,7 +24136,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -24162,7 +24162,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true,
 			"disable": [
@@ -24315,7 +24315,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -24508,7 +24508,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -24534,7 +24534,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -24557,7 +24557,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -24578,7 +24578,7 @@
 			"lore": "They come without warning, leaving fire and blood where kingdoms once flourished.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -24706,7 +24706,7 @@
 			"lore": "The legendary Jingu Bang grows to match its master's will, ensuring no enemy can escape the Monkey King's reach.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -24754,7 +24754,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -24774,7 +24774,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -25010,7 +25010,7 @@
 			"lore": "Only in the midst of his enemies does the Pangolier truly thrive.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -25030,7 +25030,7 @@
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -25049,7 +25049,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -25090,7 +25090,7 @@
 			"lore": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -25240,7 +25240,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -25268,7 +25268,7 @@
 			"lore": "What you can't see will most definitely hurt you.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -25294,7 +25294,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -25318,7 +25318,7 @@
 			"lore": "You'll have to excuse my friend Jex. He's really into murder.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -25340,7 +25340,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -25474,7 +25474,7 @@
 			"lore": "The corruptive force of Grimstroke's ink, drawn from the reservoir of his fallen people, consumes any enemy caught in its path.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -25500,7 +25500,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -25526,7 +25526,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true,
 			"disable": [
@@ -25572,7 +25572,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "unit_area",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -25703,7 +25703,7 @@
 			"lore": "The legendary Spear of Mars still glows with the heat of the forge god's fires.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -25891,7 +25891,7 @@
 			"lore": "Inai exists far beyond the scope of a single point in space and time.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -25940,7 +25940,7 @@
 			"lore": "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -26089,7 +26089,7 @@
 			"lore": "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -26109,7 +26109,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": true,
 			"disable": [
@@ -26175,7 +26175,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -26199,7 +26199,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false
 		},
@@ -26353,7 +26353,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -26393,7 +26393,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -26413,7 +26413,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true
 		},
@@ -26434,7 +26434,7 @@
 			"lore": "While her first arbalest was a chance discovery, Hoodwink now takes great care in carving and caring for her own -- of course with some necessary components pilfered or otherwise cleverly procured.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -26607,7 +26607,7 @@
 			"lore": "The Brightmaul is Valora's oldest companion and sole remaining connection to the glow of her creators.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -26645,7 +26645,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -26817,7 +26817,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true,
 			"disable": [
@@ -26843,7 +26843,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "strong",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": true,
 			"disable": [
@@ -26872,7 +26872,7 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -26895,7 +26895,7 @@
 			"lore": "Though some have sought to understand its origins, Marci rebuffs all attempts to divine the source of her power.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true
 		},
@@ -27023,7 +27023,7 @@
 			"lore": "The Beast's single-minded focus on chosen prey leaves all other considerations scattered in his ruinous wake.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "basic",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
 			"disable": [
@@ -27048,7 +27048,7 @@
 			"lore": "As the only member of his species to arrive on this world, locals can only speculate on the Beast's size relative to his kin. Such observation would prove easier of course if the subject didn't eat everything it sees and destroy most of what it doesn't.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -27067,7 +27067,7 @@
 			"lore": "Already draped in a broken patchwork of barding and chains upon appearing in the mistwoods, the Beast tolerates no further attempts at subjugation.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"dispellable": "no",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
