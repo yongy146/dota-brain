@@ -112,8 +112,14 @@ export interface Ability {
   mana_cost: number[];
   name: string;
   description: string;
+  lore?: string; // talents do not have lores
   is_ultimate: boolean;
   is_passive: string; // "yes", "partial", "no"
+  is_breakable?: boolean;
+  affects?: string; // "unit", "unit_area", "area"
+  is_debuff?: boolean; // "yes", "partial", "no"
+  is_buff?: boolean; // "yes", "partial", "no"
+  is_dispellable?: string; // "no", "basic", "strong"
 }
 
 export enum AbilityAffects {
@@ -1323,11 +1329,7 @@ export namespace hero_abilities {
         switch ((value as { is_passive: string }).is_passive) {
           case "yes":
           case "partial": {
-            if (key == "tiny_grow") {
-              // Some passives can't be broken and should not be added
-            } else {
-              result.push(key);
-            }
+            result.push(key);
             break;
           }
           default: {
