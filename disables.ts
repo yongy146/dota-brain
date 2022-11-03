@@ -6,7 +6,7 @@
  * Copyright Dota Coach, 2022
  */
 
-// Root and Silence are the disables  that make the difference between interrupting teleport and channeling skills
+// Root and Silence are the disables that make the difference between interrupting teleport and channeling skills
 // https://dota2.gamepedia.com/Disable	There is no need to differentiate between disables that precisely I believe. If there is a need for it, let me know.
 // Some spells are AbilityAffects.HERO and "area"(Telekinesis, Winter's Curse, Unstable Concoction...). These spells are classified as area
 //	Silence won't interrupt channeling items like TP, Storm Hammer, etc.

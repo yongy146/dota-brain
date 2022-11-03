@@ -100,6 +100,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -262,7 +263,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"axe_counter_helix": {
 			"id": 5009,
@@ -305,7 +307,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"special_bonus_unique_axe_7": {
 			"id": 974,
@@ -437,7 +440,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"bane_brain_sap": {
 			"id": 5011,
@@ -505,6 +509,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -654,7 +659,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"bloodseeker_blood_bath": {
 			"id": 5016,
@@ -721,7 +727,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"bloodseeker_rupture": {
 			"id": 5018,
@@ -743,7 +750,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_bloodseeker_5": {
 			"id": 482,
@@ -869,7 +877,8 @@
 			"affects": "area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"crystal_maiden_frostbite": {
 			"id": 5127,
@@ -890,6 +899,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"root"
 			]
@@ -1079,7 +1089,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"drow_ranger_wave_of_silence": {
 			"id": 5632,
@@ -1279,6 +1290,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -1304,6 +1316,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -1546,7 +1559,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"juggernaut_omni_slash": {
 			"id": 5030,
@@ -1568,7 +1582,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_all_stats_5": {
 			"id": 5921,
@@ -2173,6 +2188,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -2232,8 +2248,9 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "no",
-			"is_debuff": true,
-			"is_buff": true
+			"is_debuff": false,
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"morphling_morph_replicate": {
 			"id": 5058,
@@ -2396,7 +2413,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"phantom_lancer_doppelwalk": {
 			"id": 5066,
@@ -2893,6 +2911,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -3049,7 +3068,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"razor_unstable_current": {
 			"id": 5084,
@@ -3224,6 +3244,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -3445,6 +3466,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -3618,6 +3640,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -3873,7 +3896,9 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "no"
 		},
 		"tiny_tree_channel": {
 			"id": 7850,
@@ -4063,6 +4088,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -4132,8 +4158,9 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "basic",
-			"is_debuff": true,
+			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -4269,6 +4296,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -4359,7 +4387,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_windranger": {
 			"id": 6144,
@@ -4775,6 +4804,8 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no",
 			"disable": [
 				"stop"
 			]
@@ -4815,7 +4846,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"kunkka_ghostship": {
 			"id": 5035,
@@ -5203,7 +5235,8 @@
 			"affects": "unit_area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"lich_frost_shield": {
 			"id": 5136,
@@ -5229,7 +5262,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"lich_sinister_gaze": {
 			"id": 7325,
@@ -5256,6 +5290,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -5302,7 +5337,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_lich_8": {
 			"id": 775,
@@ -5432,6 +5468,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -5458,6 +5495,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"hex"
 			]
@@ -5486,7 +5524,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"lion_finger_of_death": {
 			"id": 5047,
@@ -5664,6 +5703,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"hex"
 			]
@@ -5693,6 +5733,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -5911,7 +5952,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_slardar_7": {
 			"id": 852,
@@ -6040,7 +6082,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"tidehunter_kraken_shell": {
 			"id": 5119,
@@ -6103,7 +6146,8 @@
 			"is_passive": "no",
 			"is_dispellable": "strong",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "strong"
 		},
 		"tidehunter_ravage": {
 			"id": 5121,
@@ -6262,6 +6306,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -6553,7 +6598,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"riki_backstab": {
 			"id": 5144,
@@ -6706,6 +6752,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -6916,7 +6963,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"tinker_heat_seeking_missile": {
 			"id": 5151,
@@ -6960,7 +7008,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"tinker_warp_grenade": {
 			"id": 909,
@@ -6980,7 +7029,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"tinker_keen_teleport": {
 			"id": 4646,
@@ -7208,7 +7258,8 @@
 			"affects": "area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"sniper_assassinate": {
 			"id": 5157,
@@ -7232,7 +7283,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_sniper_4": {
 			"id": 6897,
@@ -7401,7 +7453,8 @@
 			"is_breakable": true,
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"necrolyte_death_seeker": {
 			"id": 661,
@@ -7421,7 +7474,9 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "basic"
 		},
 		"necrolyte_reapers_scythe": {
 			"id": 5161,
@@ -7444,6 +7499,7 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "no",
 			"disable": [
 				"stun"
 			]
@@ -7578,7 +7634,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"warlock_shadow_word": {
 			"id": 5163,
@@ -7601,7 +7658,9 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "basic"
 		},
 		"warlock_upheaval": {
 			"id": 5164,
@@ -7774,7 +7833,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"beastmaster_call_of_the_wild_boar": {
 			"id": 7230,
@@ -7878,6 +7938,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -8036,7 +8097,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"queenofpain_blink": {
 			"id": 5174,
@@ -8291,7 +8353,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"venomancer_poison_nova": {
 			"id": 5181,
@@ -8667,6 +8730,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -8735,7 +8799,8 @@
 			"is_breakable": true,
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"special_bonus_unique_wraith_king_2": {
 			"id": 6088,
@@ -8915,7 +8980,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"death_prophet_exorcism": {
 			"id": 5093,
@@ -9062,7 +9128,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"phantom_assassin_phantom_strike": {
 			"id": 5191,
@@ -9087,8 +9154,9 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "basic",
-			"is_debuff": true,
-			"is_buff": true
+			"is_debuff": false,
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"phantom_assassin_blur": {
 			"id": 5192,
@@ -9111,7 +9179,8 @@
 			"is_breakable": true,
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"phantom_assassin_fan_of_knives": {
 			"id": 662,
@@ -9299,7 +9368,9 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "basic"
 		},
 		"pugna_nether_ward": {
 			"id": 5188,
@@ -9342,7 +9413,9 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no"
 		},
 		"special_bonus_movement_speed_20": {
 			"id": 5918,
@@ -9703,7 +9776,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"viper_nethertoxin": {
 			"id": 5219,
@@ -9782,7 +9856,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_viper_4": {
 			"id": 6820,
@@ -9909,6 +9984,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -9970,7 +10046,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"special_bonus_unique_luna_7": {
 			"id": 847,
@@ -10102,7 +10179,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"dragon_knight_dragon_tail": {
 			"id": 5227,
@@ -10129,6 +10207,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -10325,7 +10404,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"dazzle_shallow_grave": {
 			"id": 5234,
@@ -10351,7 +10431,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"dazzle_shadow_wave": {
 			"id": 5235,
@@ -10784,6 +10865,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -10811,7 +10893,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"leshrac_lightning_storm": {
 			"id": 5243,
@@ -10834,7 +10917,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"leshrac_greater_lightning_storm": {
 			"id": 539,
@@ -10853,7 +10937,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"leshrac_pulse_nova": {
 			"id": 5244,
@@ -10875,7 +10960,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_mp_regen_175": {
 			"id": 6926,
@@ -11069,7 +11155,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"furion_wrath_of_nature": {
 			"id": 5248,
@@ -11091,7 +11178,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_furion_6": {
 			"id": 926,
@@ -11261,7 +11349,8 @@
 			"is_breakable": true,
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"life_stealer_open_wounds": {
 			"id": 5251,
@@ -11281,7 +11370,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"life_stealer_infest": {
 			"id": 5252,
@@ -11302,8 +11392,9 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "no",
-			"is_debuff": true,
-			"is_buff": true
+			"is_debuff": false,
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"life_stealer_consume": {
 			"id": 5253,
@@ -11479,7 +11570,9 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "basic"
 		},
 		"dark_seer_surge": {
 			"id": 5257,
@@ -11505,7 +11598,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"dark_seer_normal_punch": {
 			"id": 687,
@@ -11917,7 +12011,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"omniknight_hammer_of_purity": {
 			"id": 656,
@@ -11940,7 +12035,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"omniknight_degen_aura": {
 			"id": 5265,
@@ -12136,7 +12232,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"enchantress_natures_attendants": {
 			"id": 5269,
@@ -12193,7 +12290,8 @@
 			"affects": "unit_area",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"enchantress_untouchable": {
 			"id": 5267,
@@ -12367,7 +12465,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"huskar_berserkers_blood": {
 			"id": 5273,
@@ -12410,7 +12509,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_huskar_3": {
 			"id": 6655,
@@ -12543,6 +12643,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -12789,7 +12890,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"broodmother_sticky_snare": {
 			"id": 873,
@@ -12808,7 +12910,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"broodmother_spawn_spiderlings": {
 			"id": 5279,
@@ -12830,7 +12933,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_broodmother_3": {
 			"id": 6361,
@@ -13002,7 +13106,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"bounty_hunter_track": {
 			"id": 5288,
@@ -13022,7 +13127,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_bounty_hunter_5": {
 			"id": 869,
@@ -13345,7 +13451,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"jakiro_ice_path": {
 			"id": 5298,
@@ -13365,6 +13472,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -13390,7 +13498,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"jakiro_liquid_ice": {
 			"id": 553,
@@ -13410,7 +13519,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"jakiro_macropyre": {
 			"id": 5300,
@@ -13433,7 +13543,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_attack_range_275": {
 			"id": 481,
@@ -13561,8 +13672,9 @@
 			"is_passive": "no",
 			"affects": "area",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"batrider_flamebreak": {
 			"id": 5321,
@@ -13587,8 +13699,9 @@
 			"is_passive": "no",
 			"affects": "area",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"batrider_firefly": {
 			"id": 5322,
@@ -13652,6 +13765,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -13786,7 +13900,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"chen_holy_persuasion": {
 			"id": 5330,
@@ -13829,7 +13944,8 @@
 			"is_breakable": true,
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"chen_hand_of_god": {
 			"id": 5331,
@@ -13984,7 +14100,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"spectre_desolate": {
 			"id": 5335,
@@ -14209,8 +14326,9 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "no",
-			"is_debuff": true,
-			"is_buff": true
+			"is_debuff": false,
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"doom_bringer_scorched_earth": {
 			"id": 5340,
@@ -14256,6 +14374,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -14279,8 +14398,8 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "no",
-			"is_debuff": true,
-			"is_buff": true,
+			"is_debuff": false,
+			"is_buff": false,
 			"disable": [
 				"silence",
 				"mute"
@@ -14414,6 +14533,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -14459,7 +14579,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"ancient_apparition_ice_blast": {
 			"id": 5348,
@@ -14824,6 +14945,7 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "no",
 			"disable": [
 				"stun"
 			]
@@ -14920,7 +15042,8 @@
 			"affects": "unit",
 			"is_dispellable": "strong",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "strong"
 		},
 		"special_bonus_night_vision_500": {
 			"id": 7022,
@@ -15078,6 +15201,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -15315,7 +15439,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"alchemist_chemical_rage": {
 			"id": 5369,
@@ -15557,6 +15682,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -15577,8 +15703,9 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"is_dispellable": "no",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"invoker_tornado": {
 			"id": 5382,
@@ -15639,7 +15766,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"invoker_chaos_meteor": {
 			"id": 5385,
@@ -15864,8 +15992,9 @@
 			"is_passive": "no",
 			"affects": "area",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"silencer_glaives_of_wisdom": {
 			"id": 5378,
@@ -15885,7 +16014,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"silencer_last_word": {
 			"id": 5379,
@@ -15912,6 +16042,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"silence"
 			]
@@ -16092,6 +16223,8 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no",
 			"disable": [
 				"hide"
 			]
@@ -16290,8 +16423,9 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"lycan_feral_impulse": {
 			"id": 5397,
@@ -16332,7 +16466,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"lycan_shapeshift": {
 			"id": 5398,
@@ -16701,6 +16836,8 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no",
 			"disable": [
 				"hide"
 			]
@@ -16785,7 +16922,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"shadow_demon_demonic_purge": {
 			"id": 5425,
@@ -16807,7 +16945,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_shadow_demon_4": {
 			"id": 6873,
@@ -17131,6 +17270,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -17156,7 +17296,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"chaos_knight_chaos_strike": {
 			"id": 5428,
@@ -17411,7 +17552,8 @@
 			"is_breakable": true,
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_strength_6": {
 			"id": 6048,
@@ -17567,7 +17709,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"treant_living_armor": {
 			"id": 5436,
@@ -17590,7 +17733,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"treant_eyes_in_the_forest": {
 			"id": 5649,
@@ -17785,6 +17929,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -17810,7 +17955,8 @@
 			"affects": "unit_area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"ogre_magi_bloodlust": {
 			"id": 5440,
@@ -17836,7 +17982,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"ogre_magi_unrefined_fireblast": {
 			"id": 5466,
@@ -17856,7 +18003,8 @@
 			"affects": "unit",
 			"is_dispellable": "strong",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "strong"
 		},
 		"ogre_magi_smash": {
 			"id": 648,
@@ -17876,7 +18024,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"ogre_magi_multicast": {
 			"id": 5441,
@@ -18224,6 +18373,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -18252,7 +18402,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"rubick_arcane_supremacy": {
 			"id": 7320,
@@ -18295,7 +18446,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"rubick_telekinesis_land": {
 			"id": 5449,
@@ -18519,7 +18671,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"disruptor_glimpse": {
 			"id": 5459,
@@ -18543,6 +18696,7 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "no",
 			"disable": [
 				"stop"
 			]
@@ -18727,6 +18881,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -18996,6 +19151,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"root"
 			]
@@ -19236,7 +19392,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"keeper_of_the_light_chakra_magic": {
 			"id": 5473,
@@ -19277,8 +19434,9 @@
 			"is_passive": "no",
 			"affects": "area",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"keeper_of_the_light_will_o_wisp": {
 			"id": 7316,
@@ -19299,6 +19457,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -19399,7 +19558,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"special_bonus_unique_keeper_of_the_light_8": {
 			"id": 657,
@@ -19528,7 +19688,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"wisp_spirits": {
 			"id": 5486,
@@ -19785,7 +19946,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"visage_soul_assumption": {
 			"id": 5481,
@@ -20476,7 +20638,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"troll_warlord_whirling_axes_melee": {
 			"id": 5510,
@@ -20552,8 +20715,9 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"is_dispellable": "no",
-			"is_debuff": true,
-			"is_buff": true
+			"is_debuff": false,
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"special_bonus_unique_troll_warlord_whirling_axes_debuff_duration": {
 			"id": 1010,
@@ -20749,7 +20913,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"centaur_stampede": {
 			"id": 5517,
@@ -20924,7 +21089,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"magnataur_skewer": {
 			"id": 5520,
@@ -20971,7 +21137,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"magnataur_reverse_polarity": {
 			"id": 5521,
@@ -21206,7 +21373,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"shredder_chakram": {
 			"id": 5527,
@@ -21399,7 +21567,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"bristleback_quill_spray": {
 			"id": 5549,
@@ -21463,7 +21632,8 @@
 			"affects": "area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"bristleback_warpath": {
 			"id": 5551,
@@ -21637,6 +21807,7 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "no",
 			"disable": [
 				"stun"
 			]
@@ -21661,7 +21832,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"tusk_walrus_kick": {
 			"id": 5672,
@@ -21681,7 +21853,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"tusk_frozen_sigil": {
 			"id": 5567,
@@ -21722,6 +21895,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -21894,8 +22068,9 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"skywrath_mage_ancient_seal": {
 			"id": 5583,
@@ -21919,6 +22094,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"silence"
 			]
@@ -22114,7 +22290,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"abaddon_frostmourne": {
 			"id": 5587,
@@ -22371,6 +22548,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -22545,7 +22723,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"legion_commander_moment_of_courage": {
 			"id": 5597,
@@ -22590,6 +22769,7 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "no",
 			"disable": [
 				"stun"
 			]
@@ -22935,9 +23115,11 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"is_dispellable": "strong",
+			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no"
 		},
 		"earth_spirit_rolling_boulder": {
 			"id": 5609,
@@ -22982,6 +23164,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "basic",
 			"disable": [
 				"silence"
 			]
@@ -23022,7 +23205,9 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no"
 		},
 		"earth_spirit_magnetize": {
 			"id": 5612,
@@ -23171,8 +23356,9 @@
 			"is_passive": "no",
 			"affects": "area",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"terrorblade_conjure_image": {
 			"id": 5620,
@@ -23485,6 +23671,7 @@
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "no",
 			"disable": [
 				"stun"
 			]
@@ -23678,6 +23865,8 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "basic",
 			"disable": [
 				"root"
 			]
@@ -23703,7 +23892,9 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "basic"
 		},
 		"oracle_purifying_flames": {
 			"id": 5639,
@@ -23722,8 +23913,8 @@
 			"is_passive": "no",
 			"affects": "unit",
 			"is_dispellable": "basic",
-			"is_debuff": true,
-			"is_buff": true
+			"is_debuff": false,
+			"is_buff": false
 		},
 		"oracle_rain_of_destiny": {
 			"id": 932,
@@ -23764,7 +23955,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"special_bonus_unique_oracle_2": {
 			"id": 6540,
@@ -23918,7 +24110,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"techies_suicide": {
 			"id": 5601,
@@ -23945,6 +24138,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"silence"
 			]
@@ -24114,8 +24308,10 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"is_dispellable": "no",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": true,
+			"is_debuff_dispellable": "basic",
+			"is_buff_dispellable": "no"
 		},
 		"winter_wyvern_splinter_blast": {
 			"id": 5652,
@@ -24138,7 +24334,8 @@
 			"affects": "unit_area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"winter_wyvern_cold_embrace": {
 			"id": 5653,
@@ -24165,6 +24362,7 @@
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "no",
 			"disable": [
 				"stun"
 			]
@@ -24317,7 +24515,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"arc_warden_magnetic_field": {
 			"id": 5678,
@@ -24360,8 +24559,9 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "area",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"arc_warden_tempest_double": {
 			"id": 5683,
@@ -24509,8 +24709,9 @@
 			"is_passive": "no",
 			"affects": "area",
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"abyssal_underlord_pit_of_malice": {
 			"id": 5614,
@@ -24559,7 +24760,8 @@
 			"is_breakable": true,
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"abyssal_underlord_dark_portal": {
 			"id": 865,
@@ -24709,6 +24911,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -24732,8 +24935,9 @@
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"monkey_king_primal_spring": {
 			"id": 5724,
@@ -25031,8 +25235,9 @@
 			"is_passive": "yes",
 			"is_breakable": true,
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"pangolier_rollup": {
 			"id": 8027,
@@ -25243,6 +25448,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"root"
 			]
@@ -25297,6 +25503,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"root"
 			]
@@ -25320,7 +25527,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"dark_willow_terrorize": {
 			"id": 8340,
@@ -25343,6 +25551,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"fear"
 			]
@@ -25502,7 +25711,8 @@
 			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"grimstroke_spirit_walk": {
 			"id": 8007,
@@ -25529,6 +25739,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -25574,7 +25785,8 @@
 			"affects": "unit_area",
 			"is_dispellable": "no",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_grimstroke_8": {
 			"id": 774,
@@ -25706,6 +25918,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -25894,6 +26107,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
@@ -26091,7 +26305,8 @@
 			"is_passive": "no",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"snapfire_firesnap_cookie": {
 			"id": 6483,
@@ -26112,6 +26327,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -26177,7 +26393,8 @@
 			"affects": "area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"snapfire_mortimer_kisses": {
 			"id": 6482,
@@ -26201,7 +26418,8 @@
 			"affects": "area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": false
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_snapfire_7": {
 			"id": 384,
@@ -26415,7 +26633,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"hoodwink_sharpshooter": {
 			"id": 8106,
@@ -26819,7 +27038,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
-			"is_buff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"slow"
 			]
@@ -26846,6 +27066,7 @@
 			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": true,
+			"is_buff_dispellable": "strong",
 			"disable": [
 				"stun"
 			]
@@ -26874,7 +27095,8 @@
 			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "basic"
 		},
 		"marci_unleash": {
 			"id": 8198,
@@ -26897,7 +27119,8 @@
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": false,
-			"is_buff": true
+			"is_buff": true,
+			"is_buff_dispellable": "no"
 		},
 		"special_bonus_unique_marci_lunge_range": {
 			"id": 8243,
@@ -27026,6 +27249,7 @@
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
+			"is_debuff_dispellable": "basic",
 			"disable": [
 				"stun"
 			]
