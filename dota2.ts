@@ -14,8 +14,8 @@ import dota2Heroes from "./dota2Heroes.json"; //assert { type: "json" };
 import * as DotaLogger from "../../submodules/utilities/log";
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
-import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI";
-import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI";
+import { UIItem, UIAbility } from "../../submodules/utilities/react/dota/Types";
+import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 
 /*
 import * as HeroBuilds from "./heroBuilds.js";
@@ -1638,7 +1638,7 @@ export namespace items {
   export function isItem(item: string): boolean {
     return (
       Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`) ||
-      Object.prototype.hasOwnProperty.call(dota2Items, item) // To cover customized itesm such as armor, DamageItems, SentryDustGem, etc.
+      Object.prototype.hasOwnProperty.call(dota2Items, item) // To cover customized items such as armor, DamageItems, SentryDustGem, etc.
     );
   }
 
