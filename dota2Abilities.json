@@ -7284,7 +7284,7 @@
 			"is_dispellable": "no",
 			"is_debuff": true,
 			"is_buff": false,
-			"is_debuff_dispellable": "no"
+			"is_debuff_dispellable": "strong"
 		},
 		"special_bonus_unique_sniper_4": {
 			"id": 6897,
