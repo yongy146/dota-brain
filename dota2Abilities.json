@@ -12052,10 +12052,11 @@
 			"description": "Greatly degenerates the movement capabilities of enemy units that stray too near.",
 			"lore": "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith.",
 			"is_ultimate": false,
-			"is_passive": "yes",
-			"is_breakable": true,
-			"is_debuff": false,
-			"is_buff": false
+			"is_passive": "no",
+			"is_dispellable": "no",
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"omniknight_guardian_angel": {
 			"id": 5266,
