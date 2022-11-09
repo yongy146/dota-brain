@@ -8796,11 +8796,11 @@
 			"lore": "Conspirators against the Wraith King wonder why he never stays dead.",
 			"is_ultimate": true,
 			"is_passive": "yes",
-			"is_breakable": true,
+			"is_breakable": false,
 			"is_dispellable": "basic",
-			"is_debuff": false,
-			"is_buff": true,
-			"is_buff_dispellable": "basic"
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"special_bonus_unique_wraith_king_2": {
 			"id": 6088,
