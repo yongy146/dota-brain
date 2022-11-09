@@ -1408,13 +1408,13 @@ export namespace hero_abilities {
           } else if (
             ability.disable.includes("stun") ||
             ability.disable.includes("hex") ||
-            ability.disable.includes("fear") ||
             ability.disable.includes("mute")
           ) {
             result.debuffsDisablesStrongDispel.push(ability);
           } else if (
             ability.disable.includes("sleep") ||
             ability.disable.includes("silence") ||
+            ability.disable.includes("fear") ||
             ability.disable.includes("root")
           ) {
             result.debuffsDisablesBasicDispel.push(ability);
