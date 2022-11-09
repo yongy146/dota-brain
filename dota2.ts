@@ -105,6 +105,8 @@ export class Talent {
 
 export interface Ability {
   id: number;
+  key?: string; // e.g. 'antimage_mana_overload'; added by dota2 library for convenience
+  npcName?: string; // e.g. 'npc_dota_hero_sven'; added by dota2 library for convenience
   sequence: string; // e.g. Ability2
   is_talent: boolean;
   talent_level?: number; // 1, 2, 3 or 4
@@ -117,9 +119,12 @@ export interface Ability {
   is_passive: string; // "yes", "partial", "no"
   is_breakable?: boolean;
   affects?: string; // "unit", "unit_area", "area"
-  is_debuff?: boolean; // "yes", "partial", "no"
-  is_buff?: boolean; // "yes", "partial", "no"
-  is_dispellable?: string; // "no", "basic", "strong"
+  is_dispellable?: string; // "no", "basic", "strong" (general information provided by valve)
+  is_buff?: boolean;
+  is_buff_dispellable?: string; // "no", "basic", "strong"
+  is_debuff?: boolean;
+  is_debuff_dispellable?: string; // "no", "basic", "strong"
+  disable: string[]; // e.g. "stun", ""
 }
 
 export enum AbilityAffects {
@@ -1157,6 +1162,7 @@ export namespace hero_images {
     }
     //return "../img/heroes/" + heroName.replace(/ /gi, "_") + ".png";
     return `${process.env.IMGPATH}/heroes/${heroName.replace(/ /gi, "_")}.png`;
+    //SHOULD BE CHANGED TO LATER ON: https://dotacoach.gg/img/dota/heroes/...png
   }
 
   export function localizedNameToMinimapImgName(heroName: string): string {
@@ -1312,6 +1318,141 @@ export namespace hero_abilities {
       }
     }
     return null;
+  }
+
+  export interface AnalyzedHeroAbilities {
+    buffsBasicDispel: Ability[];
+    debuffsDisablesBasicDispel: Ability[];
+    debuffsDisablesStrongDispel: Ability[];
+    spellsNonDispellable: Ability[];
+    passivesBreakable: Ability[];
+    passivesNonBreakable: Ability[];
+  }
+
+  export function analyzeHeroAbilities(heroIds: number[]): AnalyzedHeroAbilities {
+    const result: AnalyzedHeroAbilities = {
+      buffsBasicDispel: [],
+      debuffsDisablesBasicDispel: [],
+      debuffsDisablesStrongDispel: [],
+      spellsNonDispellable: [],
+      passivesBreakable: [],
+      passivesNonBreakable: [],
+    };
+    for (const heroId of heroIds) {
+      const npcName = hero_names.idToNPCName(heroId);
+      const abilities = dota2Abilities[npcName];
+      for (const [name, ability_] of Object.entries(abilities)) {
+        const ability = ability_ as Ability;
+
+        if (ability.is_talent === true) continue;
+
+        ability.key = name;
+        ability.npcName = npcName;
+        // Buffs
+        if (ability.is_buff === true) {
+          switch (ability.is_buff_dispellable) {
+            case "strong": {
+              // This should not exist
+              console.error(
+                `Dota2.analyzeHeroAbilities(): Found buff with strong dispel  (${ability.name})`
+              );
+              break;
+            }
+            case "basic": {
+              result.buffsBasicDispel.push(ability);
+              break;
+            }
+            case "no": {
+              result.spellsNonDispellable.push(ability);
+              break;
+            }
+            default: {
+              console.error(
+                `Dota2.analyzeHeroAbilities(): Unknow is_buff_dispellable value (${ability.is_buff_dispellable})`
+              );
+            }
+          }
+        }
+        // Debuffs
+        if (ability.is_debuff === true) {
+          switch (ability.is_debuff_dispellable) {
+            case "strong": {
+              result.debuffsDisablesStrongDispel.push(ability);
+              break;
+            }
+            case "basic": {
+              result.debuffsDisablesBasicDispel.push(ability);
+              break;
+            }
+            case "no": {
+              result.spellsNonDispellable.push(ability);
+              break;
+            }
+            default: {
+              console.error(
+                `Dota2.analyzeHeroAbilities(): Unknow is_debuff_dispellable value (${ability.is_buff_dispellable})`
+              );
+            }
+          }
+        }
+        // Disables
+        if (Array.isArray(ability.disable)) {
+          // Translate disables into dispellability
+          if (
+            ability.disable.includes("cyclone") ||
+            ability.disable.includes("stop") ||
+            ability.disable.includes("leash") ||
+            ability.disable.includes("taunt")
+          ) {
+            result.spellsNonDispellable.push(ability);
+          } else if (
+            ability.disable.includes("stun") ||
+            ability.disable.includes("hex") ||
+            ability.disable.includes("fear") ||
+            ability.disable.includes("mute")
+          ) {
+            result.debuffsDisablesStrongDispel.push(ability);
+          } else if (
+            ability.disable.includes("sleep") ||
+            ability.disable.includes("silence") ||
+            ability.disable.includes("root")
+          ) {
+            result.debuffsDisablesBasicDispel.push(ability);
+          } else {
+            // Error
+            console.error(
+              `Dota2.analyzeHeroAbilities(): Disable not processd: ${JSON.stringify(
+                ability.disable
+              )}`
+            );
+          }
+        }
+        // Remove duplicates
+        result.debuffsDisablesBasicDispel = result.debuffsDisablesBasicDispel.filter(
+          (item, pos) => {
+            return result.debuffsDisablesBasicDispel.indexOf(item) === pos;
+          }
+        );
+        result.debuffsDisablesStrongDispel = result.debuffsDisablesStrongDispel.filter(
+          (item, pos) => {
+            return result.debuffsDisablesStrongDispel.indexOf(item) === pos;
+          }
+        );
+        result.spellsNonDispellable = result.spellsNonDispellable.filter((item, pos) => {
+          return result.spellsNonDispellable.indexOf(item) === pos;
+        });
+
+        // Passives
+        if (ability.is_passive !== "no") {
+          if (ability.is_breakable === true) {
+            result.passivesBreakable.push(ability);
+          } else {
+            result.passivesNonBreakable.push(ability);
+          }
+        }
+      }
+    }
+    return result;
   }
 
   /**
