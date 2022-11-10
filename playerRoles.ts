@@ -30,6 +30,18 @@ export enum DOTA_COACH_ROLE {
   HARD_SUPPORT = "hard_support",
 }
 
+export function getDotaCoachRole(role: DOTA_COACH_GUIDE_ROLE): DOTA_COACH_ROLE {
+  switch (role) {
+    case DOTA_COACH_GUIDE_ROLE.CARRY:
+      return DOTA_COACH_ROLE.CARRY;
+    case DOTA_COACH_GUIDE_ROLE.MID:
+      return DOTA_COACH_ROLE.MID;
+    case DOTA_COACH_GUIDE_ROLE.OFFLANE:
+      return DOTA_COACH_ROLE.OFFLANE;
+  }
+  return DOTA_COACH_ROLE.HARD_SUPPORT;
+}
+
 // Roles stored in localSotrage / isPlayerSupport
 /*export const HARD_SUPPORT = 'Hard Support'
 export const SOFT_SUPPORT = 'Soft Support'

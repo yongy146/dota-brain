@@ -852,7 +852,7 @@ export namespace hero_item_builds {
 
     let heroBuild: HeroBuilds.HeroBuild | null = null;
 
-    if (playerRole == null) {
+    if (playerRole === undefined || playerRole === null) {
       heroBuild = hero_builds.getDefaultHeroBuild(h);
     } else {
       heroBuild = hero_builds.getHeroBuild(h, playerRole);
@@ -860,7 +860,7 @@ export namespace hero_item_builds {
     }
 
     const heroContent = hero.getHeroContent(h);
-    if (heroContent != null && heroBuild != null) {
+    if (heroContent !== null && heroBuild !== null) {
       return getItemBuild(heroContent, heroBuild);
     } else {
       return null;
