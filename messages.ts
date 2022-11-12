@@ -138,6 +138,8 @@ export interface DotaCoachMessage {
     | "BountyRunes"
     | "WaterRunes"
     | "PowerRunes"
+    | "Stacking"
+    | "Pulling"
     | "NeutralItems"
     | "SmokeOfDeceit"
     | "AghanimsShard"
@@ -156,12 +158,18 @@ export interface DotaCoachMessage {
   //messageTimes?: number[];
   // Time interval to repeat the message (this fields can be used with single message times or arrays)
   repeatTime?: number;
+  // Number of times repeated, it not provided, indefinitly
+  repetitions?: number;
   // Message spoken by narrator and displayed in the game
   textMessage: string;
   // Optional parameter to specify chat messages (relevant when text message is too long). Max lenght is 109 characters.
   chatMessage?: string;
   // two possible values: 'All' and 'Lane' (All: ; Lane: )
+  // Idea...make it optional, when nothing there, then play it for all
   audience: Audience[];
+  // Retruns true if the message is to be played on the position on the map
+  // Positions are between -8192 and +8192, team is 'radiant' or 'dire
+  position?: (xPos: number, yPos: number, team: string) => boolean;
   // Image to be displayed on web-page. Only works for messages that are short enough to allow for an image to be displayed
   image?: {
     type: "item" | "ability" | "rune";
@@ -195,11 +203,115 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   // PowerRunes
   {
     category: "PowerRunes",
+    audioFile: "general/PowerRuneMid",
+    messageTime: [6 * 60 - 15, 8 * 60 - 15, 10 * 60 - 15],
+    textMessage: "Push lane to secure river rune",
+    audience: [Audience.ROLE_MID],
+  },
+  {
+    category: "PowerRunes",
+    audioFile: "general/PowerRuneSupport",
+    messageTime: [6 * 60 - 25, 8 * 60 - 25, 10 * 60 - 25],
+    textMessage: "Contest river rune",
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: "PowerRunes",
     audioFile: "general/PowerRune",
-    messageTime: 6 * 60 - 15,
+    messageTime: 12 * 60 - 20,
     repeatTime: 2 * 60,
     textMessage: "Power rune will appear soon",
     audience: [Audience.ALL],
+  },
+
+  // Stacking
+  {
+    category: "Stacking",
+    audioFile: "general/Stacking",
+    messageTime: [2 * 60 - 15],
+    repeatTime: 1 * 60,
+    repetitions: 18,
+    textMessage: "Stack",
+    audience: [Audience.ALL],
+    position: (xPos: number, yPos: number, team: string): boolean => {
+      const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      if (team === "radiant") {
+        return (
+          (xPosGrid >= 1 && xPosGrid <= 4 && yPosGrid >= 5 && yPosGrid <= 9) ||
+          (xPosGrid >= 5 && xPosGrid <= 11 && yPosGrid >= 1 && yPosGrid <= 5)
+        );
+      } else if (team === "dire") {
+        return (
+          (xPosGrid >= 5 && xPosGrid <= 8 && yPosGrid >= 10 && yPosGrid <= 14) ||
+          (xPosGrid >= 9 && xPosGrid <= 10 && yPosGrid >= 10 && yPosGrid <= 12) ||
+          (xPosGrid >= 10 && xPosGrid <= 14 && yPosGrid >= 6 && yPosGrid <= 9)
+        );
+      } else {
+        return false;
+      }
+    },
+  },
+
+  // Pulling
+  {
+    // Pulling timing for radiant safelane & dire offlane
+    category: "Pulling",
+    audioFile: "general/Pulling",
+    messageTime: [1 * 60 + 8],
+    repeatTime: 30,
+    repetitions: 18,
+    textMessage: "Pull",
+    audience: [Audience.ROLE_SUPPORT],
+    position: (xPos: number, yPos: number, team: string): boolean => {
+      const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      if (team === "radiant") {
+        return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+      } else if (team === "dire") {
+        return xPosGrid >= 11 && xPosGrid <= 15 && yPosGrid >= 0 && yPosGrid <= 4;
+      } else {
+        return false;
+      }
+    },
+  },
+  {
+    // Pulling timing for radiant offlane
+    category: "Pulling",
+    audioFile: "general/Pulling",
+    messageTime: [1 * 60 + 9],
+    repeatTime: 30,
+    repetitions: 18,
+    textMessage: "Pull",
+    audience: [Audience.ROLE_SUPPORT],
+    position: (xPos: number, yPos: number, team: string): boolean => {
+      const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      if (team === "radiant") {
+        return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+      } else {
+        return false;
+      }
+    },
+  },
+  {
+    // Pulling timing for dire safelane
+    category: "Pulling",
+    audioFile: "general/Pulling",
+    messageTime: [1 * 60 + 5],
+    repeatTime: 30,
+    repetitions: 18,
+    textMessage: "Pull",
+    audience: [Audience.ROLE_SUPPORT],
+    position: (xPos: number, yPos: number, team: string): boolean => {
+      const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      if (team === "dire") {
+        return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+      } else {
+        return false;
+      }
+    },
   },
 
   // NeutralItems
@@ -286,8 +398,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "Creeps",
     audioFile: "general/FlagCreeps", // Flagbearer
-    messageTime: [2 * 60, 4 * 60, 6 * 60, 8 * 60],
-    repeatTime: 10 * 60,
+    messageTime: [2 * 60, 4 * 60, 6 * 60, 8 * 60, 10 * 60, 12 * 60],
     textMessage: "Flagbaerer creeps just spawned",
     audience: [Audience.ALL],
   },
