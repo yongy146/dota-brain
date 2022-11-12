@@ -12,10 +12,12 @@ import dota2Abilities from "./dota2Abilities.json"; //assert { type: "json" };
 import dota2Items from "./dota2Items.json"; //assert { type: "json" };
 import dota2Heroes from "./dota2Heroes.json"; //assert { type: "json" };
 import * as DotaLogger from "../../submodules/utilities/log";
+// disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
 import { UIItem, UIAbility } from "../../submodules/utilities/react/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
+import { NoAdultContentOutlined } from "@mui/icons-material";
 
 /*
 import * as HeroBuilds from "./heroBuilds.js";
@@ -127,11 +129,7 @@ export interface Ability {
   disable: string[]; // e.g. "stun", ""
 }
 
-export enum AbilityAffects {
-  AREA = "AREA", // Area effect
-  HERO_AREA = "HERO_AREA", // Targets hero and effect area
-  HERO = "HERO", // Effects only targeted hero
-}
+export type AbilityAffects = "area" | "unit_area" | "unit";
 
 export interface UIHeroItemBuild {
   starting?: UIItem[]; // CHANGE FROM NULL TO UNDEIFNED FOR ALL ITEMS... CHECK IF IT STILL WORKS IN THE APP!!!
@@ -1310,14 +1308,10 @@ export namespace hero_abilities {
    * @returns null, if ability is not a disable
    */
   export function getAffects(ability: string): AbilityAffects | null {
-    for (const disables_ of Object.values(disables)) {
-      for (const disable of disables_) {
-        if (disable.skill == ability) {
-          return disable.affects;
-        }
-      }
-    }
-    return null;
+    const abilityObj = getAbility(ability);
+    if (abilityObj === null) return null;
+    if (abilityObj.affects === undefined) return null;
+    return abilityObj.affects as AbilityAffects;
   }
 
   export interface AnalyzedHeroAbilities {
@@ -1698,7 +1692,7 @@ export namespace hero_abilities {
     //DotaLogger.log("Dota2.hero.ability.getCooldown(): cd='" + cd + "')")
 
     return Array.isArray(cd) ? cd.join(" / ") : cd;
-  }
+  } /*
 
   // Returns the ability type
   // Possible value: 'Unit target', '...
