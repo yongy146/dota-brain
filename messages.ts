@@ -98,6 +98,9 @@ export function getOwnHeroMessagesForRoles(hero: string, roles: DOTA_COACH_GUIDE
   });
 }
 
+export const bountyRuneRepeatTime = 3 * 60;
+export const powerRuneRepeatTime = 2 * 60;
+
 /**
  *
  * @param hero Hero name, e.g. "Anti-Mage"
@@ -108,6 +111,34 @@ export function getEnemyHeroMessages(hero: string): any[] {
 
   return dotaCoachMessages.filter(
     (message) => message.hero == hero && message.category == "EnemyHero"
+  );
+}
+
+export function getGridPositions(
+  xPos: number,
+  yPos: number
+): { xPosGrid: number; yPosGrid: number } {
+  const xPosGrid = Math.floor((xPos + 8192) / 1024);
+  const yPosGrid = Math.floor((yPos + 8192) / 1024);
+  return { xPosGrid, yPosGrid };
+}
+export function inTopLane(xPosGrid: number, yPosGrid: number) {
+  return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+}
+export function inBottomLane(xPosGrid: number, yPosGrid: number) {
+  return xPosGrid >= 11 && xPosGrid <= 15 && yPosGrid >= 0 && yPosGrid <= 4;
+}
+export function inRadiantJungle(xPosGrid: number, yPosGrid: number) {
+  return (
+    (xPosGrid >= 1 && xPosGrid <= 4 && yPosGrid >= 5 && yPosGrid <= 9) ||
+    (xPosGrid >= 5 && xPosGrid <= 11 && yPosGrid >= 1 && yPosGrid <= 5)
+  );
+}
+export function inDireJungle(xPosGrid: number, yPosGrid: number) {
+  return (
+    (xPosGrid >= 5 && xPosGrid <= 8 && yPosGrid >= 10 && yPosGrid <= 14) ||
+    (xPosGrid >= 9 && xPosGrid <= 10 && yPosGrid >= 10 && yPosGrid <= 12) ||
+    (xPosGrid >= 10 && xPosGrid <= 14 && yPosGrid >= 6 && yPosGrid <= 9)
   );
 }
 
@@ -186,7 +217,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "BountyRunes",
     audioFile: "general/BountyRunes",
     messageTime: 3 * 60 - 30,
-    repeatTime: 3 * 60,
+    repeatTime: bountyRuneRepeatTime,
     textMessage: "Bounty runes will appear soon",
     audience: [Audience.ALL],
   },
@@ -219,7 +250,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "PowerRunes",
     audioFile: "general/PowerRune",
     messageTime: 12 * 60 - 20,
-    repeatTime: 2 * 60,
+    repeatTime: powerRuneRepeatTime,
     textMessage: "Power rune will appear soon",
     audience: [Audience.ALL],
   },
@@ -234,19 +265,13 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Stack",
     audience: [Audience.ALL],
     position: (xPos: number, yPos: number, team: string): boolean => {
-      const xPosGrid = Math.floor((xPos + 8192) / 1024);
-      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      const { xPosGrid, yPosGrid } = getGridPositions(xPos, yPos);
+      //const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      //const yPosGrid = Math.floor((yPos + 8192) / 1024);
       if (team === "radiant") {
-        return (
-          (xPosGrid >= 1 && xPosGrid <= 4 && yPosGrid >= 5 && yPosGrid <= 9) ||
-          (xPosGrid >= 5 && xPosGrid <= 11 && yPosGrid >= 1 && yPosGrid <= 5)
-        );
+        return inRadiantJungle(xPosGrid, yPosGrid);
       } else if (team === "dire") {
-        return (
-          (xPosGrid >= 5 && xPosGrid <= 8 && yPosGrid >= 10 && yPosGrid <= 14) ||
-          (xPosGrid >= 9 && xPosGrid <= 10 && yPosGrid >= 10 && yPosGrid <= 12) ||
-          (xPosGrid >= 10 && xPosGrid <= 14 && yPosGrid >= 6 && yPosGrid <= 9)
-        );
+        return inDireJungle(xPosGrid, yPosGrid);
       } else {
         return false;
       }
@@ -264,12 +289,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Pull",
     audience: [Audience.ROLE_SUPPORT],
     position: (xPos: number, yPos: number, team: string): boolean => {
-      const xPosGrid = Math.floor((xPos + 8192) / 1024);
-      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      const { xPosGrid, yPosGrid } = getGridPositions(xPos, yPos);
+
+      /*const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);*/
       if (team === "radiant") {
-        return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+        return inBottomLane(xPosGrid, yPosGrid);
       } else if (team === "dire") {
-        return xPosGrid >= 11 && xPosGrid <= 15 && yPosGrid >= 0 && yPosGrid <= 4;
+        return inBottomLane(xPosGrid, yPosGrid);
       } else {
         return false;
       }
@@ -285,10 +312,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Pull",
     audience: [Audience.ROLE_SUPPORT],
     position: (xPos: number, yPos: number, team: string): boolean => {
-      const xPosGrid = Math.floor((xPos + 8192) / 1024);
-      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      const { xPosGrid, yPosGrid } = getGridPositions(xPos, yPos);
+
+      /*const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);*/
       if (team === "radiant") {
-        return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+        return inTopLane(xPosGrid, yPosGrid);
       } else {
         return false;
       }
@@ -304,10 +333,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Pull",
     audience: [Audience.ROLE_SUPPORT],
     position: (xPos: number, yPos: number, team: string): boolean => {
-      const xPosGrid = Math.floor((xPos + 8192) / 1024);
-      const yPosGrid = Math.floor((yPos + 8192) / 1024);
+      const { xPosGrid, yPosGrid } = getGridPositions(xPos, yPos);
+
+      /*      const xPosGrid = Math.floor((xPos + 8192) / 1024);
+      const yPosGrid = Math.floor((yPos + 8192) / 1024);*/
       if (team === "dire") {
-        return xPosGrid >= 0 && xPosGrid <= 4 && yPosGrid >= 11 && yPosGrid <= 15;
+        return inTopLane(xPosGrid, yPosGrid);
       } else {
         return false;
       }
@@ -16201,7 +16232,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Warlock",
     audioFile: "enemyHero/Warlock_4_Spell immunity",
     messageTime: 12 * 60 + 20,
-    textMessage: "Spell immunity is great against Warlocks spells.",
+    textMessage: "Spell immunity is great against Warlock's spells.",
     audience: [Audience.ALL],
   },
   {

@@ -195,11 +195,11 @@ export function isSupport(role: DOTA_COACH_ROLE) {
 }
 
 export function isSoftSupport(role: DOTA_COACH_ROLE) {
-  return role == DOTA_COACH_ROLE.SOFT_SUPPORT;
+  return role === DOTA_COACH_ROLE.SOFT_SUPPORT;
 }
 
 export function isHardSupport(role: DOTA_COACH_ROLE) {
-  return role == DOTA_COACH_ROLE.HARD_SUPPORT;
+  return role === DOTA_COACH_ROLE.HARD_SUPPORT;
 }
 
 export function isCore(role: DOTA_COACH_ROLE) {
@@ -207,13 +207,13 @@ export function isCore(role: DOTA_COACH_ROLE) {
 }
 
 export function isCarry(role: DOTA_COACH_ROLE) {
-  return role == DOTA_COACH_ROLE.CARRY;
+  return role === DOTA_COACH_ROLE.CARRY;
 }
 
 export function isMid(role: DOTA_COACH_ROLE) {
-  return role == DOTA_COACH_ROLE.MID;
+  return role === DOTA_COACH_ROLE.MID;
 }
 
 export function isOfflane(role: DOTA_COACH_ROLE) {
-  return role == DOTA_COACH_ROLE.OFFLANE;
+  return role === DOTA_COACH_ROLE.OFFLANE;
 }
