@@ -255,13 +255,13 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
 
-  // Stacking
+  // Stacking (from minute 2 to 30)
   {
     category: "Stacking",
     audioFile: "general/Stacking",
     messageTime: [2 * 60 - 15],
     repeatTime: 1 * 60,
-    repetitions: 18,
+    repetitions: 28,
     textMessage: "Stack",
     audience: [Audience.ALL],
     position: (xPos: number, yPos: number, team: string): boolean => {
