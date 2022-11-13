@@ -24,7 +24,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				12,
+				10,
+				8,
+				6
 			],
 			"mana_cost": [
 				45
@@ -84,7 +87,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				70
 			],
 			"mana_cost": [
 				100,
@@ -448,7 +451,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				17,
+				15,
+				13,
+				11
 			],
 			"mana_cost": [
 				100,
@@ -470,7 +476,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				24,
+				21,
+				18,
+				15
 			],
 			"mana_cost": [
 				165
@@ -493,7 +502,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				120,
+				110,
+				100
 			],
 			"mana_cost": [
 				200,
@@ -864,7 +875,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				11,
+				10,
+				9,
+				8
 			],
 			"mana_cost": [
 				0
@@ -885,7 +899,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				9,
+				8,
+				7,
+				6
 			],
 			"mana_cost": [
 				0
@@ -928,7 +945,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				100
 			],
 			"mana_cost": [
 				0
@@ -1894,7 +1911,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				10
 			],
 			"mana_cost": [
 				75,
@@ -1916,7 +1933,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				10
 			],
 			"mana_cost": [
 				75,
@@ -1938,7 +1955,7 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				10
 			],
 			"mana_cost": [
 				75,
@@ -1998,7 +2015,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				120,
+				110,
+				100
 			],
 			"mana_cost": [
 				150,
@@ -2590,7 +2609,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				12,
+				11,
+				10,
+				9
 			],
 			"mana_cost": [
 				110,
@@ -2813,7 +2835,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				18,
+				16,
+				14,
+				12
 			],
 			"mana_cost": [
 				110
@@ -2895,7 +2920,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				30,
+				25,
+				20
 			],
 			"mana_cost": [
 				100,
@@ -4551,7 +4578,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				26,
+				22,
+				18,
+				14
 			],
 			"mana_cost": [
 				50,
@@ -4768,7 +4798,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				13,
+				10,
+				7,
+				4
 			],
 			"mana_cost": [
 				0
@@ -4854,7 +4887,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				80,
+				70,
+				60
 			],
 			"mana_cost": [
 				125,
@@ -5002,7 +5037,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				9
 			],
 			"mana_cost": [
 				100,
@@ -5092,7 +5127,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				70,
+				60,
+				50
 			],
 			"mana_cost": [
 				150,
@@ -5219,7 +5256,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				7
 			],
 			"mana_cost": [
 				110,
@@ -5451,7 +5488,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				12
 			],
 			"mana_cost": [
 				85,
@@ -5478,7 +5515,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				24,
+				20,
+				16,
+				12
 			],
 			"mana_cost": [
 				125,
@@ -7421,7 +7461,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				28,
+				24,
+				20,
+				16
 			],
 			"mana_cost": [
 				50
@@ -7642,7 +7685,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				14
 			],
 			"mana_cost": [
 				120,
@@ -7821,7 +7864,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				8
 			],
 			"mana_cost": [
 				65
@@ -7865,7 +7908,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				60,
+				50,
+				40,
+				30
 			],
 			"mana_cost": [
 				30
@@ -7922,7 +7968,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				100,
+				80,
+				60
 			],
 			"mana_cost": [
 				150,
@@ -8150,7 +8198,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				125
 			],
 			"mana_cost": [
 				250,
@@ -8276,7 +8324,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				21,
+				20,
+				19,
+				18
 			],
 			"mana_cost": [
 				95,
@@ -8740,7 +8791,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				50
 			],
 			"mana_cost": [
 				70,
@@ -9398,7 +9449,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				7
 			],
 			"mana_cost": [
 				125,
@@ -9843,7 +9894,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				50,
+				40,
+				30
 			],
 			"mana_cost": [
 				0
@@ -9970,7 +10023,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				9,
+				8,
+				7,
+				6
 			],
 			"mana_cost": [
 				0
@@ -10032,7 +10088,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				140,
+				130,
+				120
 			],
 			"mana_cost": [
 				150,
@@ -10632,7 +10690,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				15
 			],
 			"mana_cost": [
 				80
@@ -10653,7 +10711,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				20,
+				18,
+				16,
+				14
 			],
 			"mana_cost": [
 				35,
@@ -11378,7 +11439,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				100,
+				75,
+				50
 			],
 			"mana_cost": [
 				100,
@@ -12019,7 +12082,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				16,
+				14,
+				12,
+				10
 			],
 			"mana_cost": [
 				40,
@@ -12425,7 +12491,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				17,
+				15,
+				13,
+				11
 			],
 			"mana_cost": [
 				75,
@@ -13095,7 +13164,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				18,
+				17,
+				16,
+				15
 			],
 			"mana_cost": [
 				65
@@ -13460,7 +13532,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				18,
+				15,
+				12,
+				9
 			],
 			"mana_cost": [
 				100
@@ -13750,7 +13825,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				120,
+				115,
+				110
 			],
 			"mana_cost": [
 				150,
@@ -14385,7 +14462,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				145,
+				145,
+				145
 			],
 			"mana_cost": [
 				150,
@@ -14544,7 +14623,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				7,
+				6,
+				5,
+				4
 			],
 			"mana_cost": [
 				40,
@@ -14567,7 +14649,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				12,
+				9,
+				6,
+				3
 			],
 			"mana_cost": [
 				0
@@ -14736,7 +14821,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				14,
+				12,
+				10,
+				8
 			],
 			"mana_cost": [
 				95
@@ -15669,7 +15757,7 @@
 			"sequence": "Ability7",
 			"is_talent": false,
 			"cooldown": [
-				0
+				20
 			],
 			"mana_cost": [
 				100
@@ -15693,7 +15781,7 @@
 			"sequence": "Ability8",
 			"is_talent": false,
 			"cooldown": [
-				0
+				35
 			],
 			"mana_cost": [
 				175
@@ -15713,7 +15801,7 @@
 			"sequence": "Ability9",
 			"is_talent": false,
 			"cooldown": [
-				0
+				30
 			],
 			"mana_cost": [
 				150
@@ -15775,7 +15863,7 @@
 			"sequence": "Ability12",
 			"is_talent": false,
 			"cooldown": [
-				0
+				55
 			],
 			"mana_cost": [
 				200
@@ -18680,7 +18768,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				24,
+				22,
+				20,
+				18
 			],
 			"mana_cost": [
 				55,
@@ -19135,7 +19226,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				21,
+				18,
+				15,
+				12
 			],
 			"mana_cost": [
 				70,
@@ -19353,7 +19447,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				13
 			],
 			"mana_cost": [
 				100,
@@ -19507,7 +19601,7 @@
 			"sequence": "Ability8",
 			"is_talent": false,
 			"cooldown": [
-				0
+				13
 			],
 			"mana_cost": [
 				100,
@@ -20419,7 +20513,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				10
 			],
 			"mana_cost": [
 				0
@@ -20476,7 +20570,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				90
 			],
 			"mana_cost": [
 				0
@@ -20626,7 +20720,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				9
 			],
 			"mana_cost": [
 				0
@@ -20647,7 +20741,7 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				9
 			],
 			"mana_cost": [
 				0
@@ -20705,7 +20799,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				90,
+				80,
+				70
 			],
 			"mana_cost": [
 				150
@@ -20922,7 +21018,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				100
 			],
 			"mana_cost": [
 				150,
@@ -22319,7 +22415,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				60,
+				50,
+				40
 			],
 			"mana_cost": [
 				0,
@@ -22447,7 +22545,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				14,
+				13,
+				12,
+				11
 			],
 			"mana_cost": [
 				100
@@ -22754,7 +22855,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				50
 			],
 			"mana_cost": [
 				75,
@@ -23342,7 +23443,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				28,
+				24,
+				20,
+				16
 			],
 			"mana_cost": [
 				35,
@@ -23941,7 +24045,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				0
+				110,
+				85,
+				60
 			],
 			"mana_cost": [
 				100,
@@ -24695,7 +24801,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				15,
+				14,
+				13,
+				12
 			],
 			"mana_cost": [
 				110,
@@ -25929,7 +26038,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				16,
+				14,
+				12,
+				10
 			],
 			"mana_cost": [
 				90
@@ -26092,7 +26204,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				0
+				17,
+				15,
+				13,
+				11
 			],
 			"mana_cost": [
 				75,
@@ -26314,7 +26429,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				21,
+				19,
+				17,
+				15
 			],
 			"mana_cost": [
 				100
@@ -27050,7 +27168,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				24,
+				20,
+				16,
+				12
 			],
 			"mana_cost": [
 				70,
@@ -27260,7 +27381,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0
+				30,
+				27,
+				24,
+				21
 			],
 			"mana_cost": [
 				90,
