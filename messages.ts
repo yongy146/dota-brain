@@ -175,7 +175,11 @@ export interface DotaCoachMessage {
     | "SmokeOfDeceit"
     | "AghanimsShard"
     | "TomeOfKnowledge"
-    | "Creeps"
+    | "SiegeCreeps"
+    | "SiegeCreepsNoFlag"
+    | "FlagCreeps"
+    | "FlagCreepsNoSiege"
+    | "SiegeFlagCreeps"
     | "DayTime"
     | "EnemyHero"
     | "OwnHero";
@@ -419,7 +423,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // Creeps
   {
-    category: "Creeps",
+    category: "SiegeCreeps",
     audioFile: "general/SiegeCreeps",
     messageTime: 5 * 60,
     repeatTime: 10 * 60,
@@ -427,14 +431,29 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
   {
-    category: "Creeps",
+    category: "SiegeCreepsNoFlag",
+    audioFile: "general/SiegeCreeps",
+    messageTime: 10 * 60,
+    repeatTime: 10 * 60,
+    textMessage: "Siege creeps just spawned",
+    audience: [Audience.ALL],
+  },
+  {
+    category: "FlagCreeps",
     audioFile: "general/FlagCreeps", // Flagbearer
-    messageTime: [2 * 60, 4 * 60, 6 * 60, 8 * 60, 10 * 60, 12 * 60],
+    messageTime: [2 * 60, 4 * 60, 6 * 60, 8 * 60, 12 * 60],
     textMessage: "Flagbaerer creeps just spawned",
     audience: [Audience.ALL],
   },
   {
-    category: "Creeps",
+    category: "FlagCreepsNoSiege",
+    audioFile: "general/FlagCreeps", // Flagbearer
+    messageTime: [10 * 60],
+    textMessage: "Flagbaerer creeps just spawned",
+    audience: [Audience.ALL],
+  },
+  {
+    category: "SiegeFlagCreeps",
     audioFile: "general/SiegeFlagCreeps", // Flagbearer
     messageTime: 10 * 60,
     repeatTime: 10 * 60,

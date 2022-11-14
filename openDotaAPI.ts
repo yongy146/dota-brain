@@ -9,6 +9,7 @@ import * as DotaLogger from "../utilities/log";
 import * as WebAccess from "../utilities/webAccess";
 //import * as WebAccess from '../../src/utility/webAccessNode'
 import * as Dota2 from "../../submodules/dota-brain/dota2";
+import { resolve } from "path";
 
 export interface PlayerProfile {
   tracked_until: string; // "1649864266"
@@ -143,7 +144,12 @@ export async function getMatches(
 ): Promise<PlayerMatch[]> {
   //DotaLogger.log(`openDotaAPI.getMatches(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`)
 
-  if (options == undefined) options = {};
+  if (steamId32 === "0") {
+    // Bot players have steam id of '0'
+    return [];
+  }
+
+  if (options === undefined) options = {};
   const params = Object.entries(options)
     .map((val) => val.join("="))
     .join("&");
