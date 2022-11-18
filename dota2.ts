@@ -7,7 +7,7 @@
  * Copyright Dota Coach, 2022. All rights reserved
  */
 
-/*
+// Version webpack
 import * as HeroBuilds from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json"; //assert { type: "json" };
@@ -19,9 +19,9 @@ import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
 import { UIItem, UIAbility } from "../../submodules/utilities/react/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
-*/
 
 // Version node.js
+/*
 import * as HeroBuilds from "./heroBuilds.js";
 import { dispellableBuffs } from "./dispellableBuffs.js";
 import dota2Abilities from "./dota2Abilities.json" assert { type: "json" };
@@ -32,6 +32,7 @@ import { channeling_interrupts, silence, root, disables } from "./disables.js";
 import * as PlayerRoles from "./playerRoles.js";
 import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI.js";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI.js";
+*/
 
 // Colors for radiant & dire
 export const colorRadiant = "#67dd98"; //'#47661f'

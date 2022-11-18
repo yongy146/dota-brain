@@ -30,8 +30,8 @@ import {
   //DOTA_COACH_ROLE,
   STEAM_GUIDE_ROLE,
   getRolesString,
-  //} from "./playerRoles";
-} from "./playerRoles.js";
+} from "./playerRoles";
+//} from "./playerRoles.js";
 
 export enum ContentCreator {
   TBD = "TBD",
