@@ -7,7 +7,6 @@
  * Copyright Dota Coach, 2022. All rights reserved
  */
 
-// Version webpack
 import * as HeroBuilds from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json"; //assert { type: "json" };
@@ -21,8 +20,7 @@ import { UIItem, UIAbility } from "../../submodules/utilities/react/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 
 // Version node.js
-/*
-import * as HeroBuilds from "./heroBuilds.js";
+/*import * as HeroBuilds from "./heroBuilds.js";
 import { dispellableBuffs } from "./dispellableBuffs.js";
 import dota2Abilities from "./dota2Abilities.json" assert { type: "json" };
 import dota2Items from "./dota2Items.json" assert { type: "json" };
