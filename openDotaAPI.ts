@@ -3,6 +3,8 @@
  *
  * Source: https://api.opendota.com/
  *
+ * MOVE PURE API CALLS OUT TO utility/dota/api... etc.
+ *
  * Copyright (C) Dota Coach, 2022
  */
 import * as DotaLogger from "../log";
