@@ -1536,16 +1536,17 @@ export namespace hero_abilities {
   }
 
   /**
+   * Function searches for cooldown redution talents
    *
    * @param heroName Localized hero name (e.g. 'Anti-Mage' or 'Legion Commander')
    * @returns Talent object or null if there is not cooldown reduction talent
    */
-  export function getCooldownReductionTalent(heroName: string): Talent | null {
+  export function getCooldownReductionTalent(heroName: string): Talent | undefined {
     //DotaLogger.log("Dota2.hero.ability.getCooldownReductionTalent(heroName='" + heroName + "'): Called" )
     const heroNameNPC = hero_names.localizedNameToNPCName(heroName);
     const abilities = dota2Abilities[heroNameNPC as keyof typeof dota2Abilities];
 
-    let result: Talent | null = null;
+    let result: Talent | undefined = undefined;
 
     for (const ability of Object.keys(abilities)) {
       if (ability.startsWith("special_bonus_cooldown_reduction_")) {
@@ -1575,21 +1576,11 @@ export namespace hero_abilities {
       "Dota2.hero.ability.getAbilities(heroName='" + heroName + "'): Called"
     );*/
     const heroNameNPC = hero_names.localizedNameToNPCName(heroName);
-    /*        return Object.keys(dota2Abilities[heroNameNPC])*/
-    /*if (!npc_heroes.DOTAHeroes.hasOwnProperty(heroNameNPC)) return []
 
-        const heroData = npc_heroes.DOTAHeroes[heroNameNPC]*/
+    if (dota2Heroes[heroNameNPC as keyof typeof dota2Heroes])
+      return dota2Heroes[heroNameNPC].abilities;
 
-    /*var result = []*/
-
-    /*        for (var i=1; i<10; i++) {
-            if (heroData.hasOwnProperty(`Ability${i}`)) {
-                result.push(hero[`Ability${i}`])
-            }
-        }*/
-    if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroNameNPC)) return [];
-
-    return dota2Heroes[heroNameNPC as keyof typeof dota2Heroes].abilities;
+    return [];
   }
 
   /**
@@ -1597,32 +1588,39 @@ export namespace hero_abilities {
    * @param heroName
    * @returns Hero ultimate as a string
    */
-  export function getUltimate(heroName: string): string | null {
+  export function getUltimate(heroName: string): string | undefined {
     //DotaLogger.log("Dota2.hero.ability.getUltimate(heroName='" + heroName + "'): Called" )
-    if (heroName == null) {
-      return null;
-    } else {
-      if (heroName == "Outworld Devourer") heroName = "Outworld Destroyer";
-      return getAbilities(heroName)[5];
+    if (heroName) {
+      if (heroName === "Outworld Devourer") heroName = "Outworld Destroyer";
+      const abilities = getAbilities(heroName as keyof typeof dota2Heroes);
+      if (Array.isArray(abilities) && abilities.length > 5) return abilities[5];
     }
+    return undefined;
   }
 
   /**
    *
    * @param heroName Localized hero name
+   * @return Array of cooldown values, first number is cooldown of first level of ultimate
    */
   export function getUltimateCooldown(heroName: string): number[] {
     const ultimate = getUltimate(heroName);
-    if (ultimate != null) {
-      return getCooldown(ultimate);
-    } else {
-      // Maybe report an error to Google Analytics?
-      return [];
-    }
+    if (ultimate) return getCooldown(ultimate);
+
+    // Maybe report an error to Google Analytics?
+    return [];
   }
 
+  /**
+   *
+   * @param heroName
+   * @returns true if hero has ultimate. If hero is not found, it returns false
+   */
   export function hasUltimateTimer(heroName: string): boolean {
     const cd = getUltimateCooldown(heroName);
+
+    if (!cd) return false;
+
     const result = !(
       cd.length == 0 ||
       (cd.length == 1 && cd[0] == 0) ||
