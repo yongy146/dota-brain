@@ -2064,14 +2064,14 @@
 	"item_recipe_ancient_janggo": {
 		"id": "184",
 		"name": "Drum of Endurance Recipe",
-		"cost": 550,
+		"cost": 500,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_ancient_janggo": {
 		"id": "185",
 		"name": "Drum of Endurance",
-		"cost": 1700,
+		"cost": 1650,
 		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false
@@ -2086,7 +2086,7 @@
 	"item_boots_of_bearing": {
 		"id": "931",
 		"name": "Boots of Bearing",
-		"cost": 4125,
+		"cost": 4075,
 		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false
@@ -2170,7 +2170,7 @@
 	"item_recipe_guardian_greaves": {
 		"id": "230",
 		"name": "Guardian Greaves Recipe",
-		"cost": 1550,
+		"cost": 1450,
 		"is_recipe": true,
 		"is_neutral": false
 	},
@@ -2178,7 +2178,7 @@
 		"id": "231",
 		"name": "Guardian Greaves",
 		"mana_cost": 0,
-		"cost": 5050,
+		"cost": 4950,
 		"cooldown": 40,
 		"is_recipe": false,
 		"is_neutral": false
