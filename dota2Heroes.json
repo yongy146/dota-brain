@@ -389,6 +389,7 @@
 		"id": 7,
 		"localized_name": "Earthshaker",
 		"aliases": [
+			"es"
 		],
 		"similar_heroes": [
 			29,
@@ -698,7 +699,7 @@
 			"special_bonus_agility_15",
 			"special_bonus_unique_morphling_4",
 			"special_bonus_unique_morphling_10",
-			"special_bonus_unique_morphling_6",
+			"special_bonus_unique_morphling_waveform_cooldown",
 			"special_bonus_strength_35"
 		]
 	},
@@ -865,7 +866,7 @@
 		"intelligence_gain": 1,
 		"agility_base": 14,
 		"agility_gain": 1,
-		"health_status_regen": 2,
+		"health_status_regen": 1,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/pudge.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/pudge.png",
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/pudge.png",
@@ -949,7 +950,7 @@
 		],
 		"talents": [
 			"special_bonus_unique_razor_4",
-			"special_bonus_agility_9",
+			"special_bonus_agility_12",
 			"special_bonus_unique_razor",
 			"special_bonus_strength_14",
 			"special_bonus_unique_razor_5",
@@ -987,7 +988,7 @@
 		"armor": 0,
 		"attack_speed": 110,
 		"attack_rate": 1,
-		"attack_damage_min": 23,
+		"attack_damage_min": 25,
 		"attack_damage_max": 33,
 		"attack_animation_point": 0,
 		"attack_acquisition_range": 600,
@@ -1315,8 +1316,8 @@
 		"armor": -1,
 		"attack_speed": 100,
 		"attack_rate": 1,
-		"attack_damage_min": 24,
-		"attack_damage_max": 36,
+		"attack_damage_min": 26,
+		"attack_damage_max": 38,
 		"attack_animation_point": 0,
 		"attack_acquisition_range": 800,
 		"strength_base": 18,
@@ -2685,7 +2686,7 @@
 		],
 		"talents": [
 			"special_bonus_attack_damage_30",
-			"special_bonus_magic_resistance_12",
+			"special_bonus_magic_resistance_14",
 			"special_bonus_unique_death_prophet_3",
 			"special_bonus_unique_death_prophet_2",
 			"special_bonus_unique_death_prophet_4",
@@ -2730,7 +2731,7 @@
 		"intelligence_gain": 1,
 		"agility_base": 23,
 		"agility_gain": 3,
-		"health_status_regen": 0,
+		"health_status_regen": 1,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phantom_assassin.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png",
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/phantom_assassin.png",
@@ -3038,8 +3039,8 @@
 		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1,
-		"attack_damage_min": 32,
-		"attack_damage_max": 38,
+		"attack_damage_min": 34,
+		"attack_damage_max": 40,
 		"attack_animation_point": 0,
 		"attack_acquisition_range": 600,
 		"strength_base": 21,
@@ -3254,7 +3255,7 @@
 			"leshrac_pulse_nova"
 		],
 		"talents": [
-			"special_bonus_mp_regen_175",
+			"special_bonus_mp_regen_150",
 			"special_bonus_unique_leshrac_5",
 			"special_bonus_unique_leshrac_6",
 			"special_bonus_movement_speed_25",
@@ -5416,8 +5417,8 @@
 		"armor": 1,
 		"attack_speed": 100,
 		"attack_rate": 1,
-		"attack_damage_min": 24,
-		"attack_damage_max": 30,
+		"attack_damage_min": 27,
+		"attack_damage_max": 33,
 		"attack_animation_point": 0,
 		"attack_acquisition_range": 800,
 		"strength_base": 21,
@@ -5613,7 +5614,7 @@
 		"attack_type": "Melee",
 		"primary_attr": "Agility",
 		"movement_speed": 330,
-		"armor": 3,
+		"armor": 2,
 		"attack_speed": 110,
 		"attack_rate": 1,
 		"attack_damage_min": 23,
@@ -5683,8 +5684,8 @@
 		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1,
-		"attack_damage_min": 18,
-		"attack_damage_max": 25,
+		"attack_damage_min": 20,
+		"attack_damage_max": 27,
 		"attack_animation_point": 0,
 		"attack_acquisition_range": 800,
 		"strength_base": 18,
@@ -6019,7 +6020,7 @@
 		"strength_gain": 2,
 		"intelligence_base": 13,
 		"intelligence_gain": 1,
-		"agility_base": 21,
+		"agility_base": 23,
 		"agility_gain": 3,
 		"health_status_regen": 0,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/troll_warlord.png",
@@ -6285,7 +6286,7 @@
 		"intelligence_gain": 2,
 		"agility_base": 17,
 		"agility_gain": 1,
-		"health_status_regen": 0,
+		"health_status_regen": 1,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/bristleback.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/bristleback.png",
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/bristleback.png",
@@ -6509,7 +6510,8 @@
 		"localized_name": "Elder Titan",
 		"aliases": [
 			"TC",
-			"Cairne"
+			"Cairne",
+			"et"
 		],
 		"similar_heroes": [
 			55,
@@ -7140,7 +7142,7 @@
 		],
 		"talents": [
 			"special_bonus_unique_arc_warden_5",
-			"special_bonus_hp_225",
+			"special_bonus_hp_200",
 			"special_bonus_unique_arc_warden_4",
 			"special_bonus_unique_arc_warden_3",
 			"special_bonus_unique_arc_warden",
@@ -7155,7 +7157,8 @@
 		"localized_name": "Underlord",
 		"aliases": [
 			"PitLord",
-			"Azgalor"
+			"Azgalor",
+			"ul"
 		],
 		"similar_heroes": [
 			29,
