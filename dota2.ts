@@ -375,15 +375,20 @@ export namespace hero_names {
     return idToNPCName(heroId).replace("npc_dota_hero_", "");
   }
 
-  export function localizedNameToId(localized_name: string): number {
+  /**
+   *
+   * @param localized_name
+   * @returns undefined if hero is not found
+   */
+  export function localizedNameToId(localized_name: string): number | undefined {
     //DotaLogger.log("dota2.localizedNameToId(" + localized_name + "): Called")
     for (const hero of Object.values(dota2Heroes)) {
-      if (hero.localized_name == localized_name) {
+      if (hero.localized_name === localized_name) {
         //DotaLogger.log("dota2.localizedNameToId(): Returned id = '" + Heroes[i].id + "'")
         return hero.id;
       }
     }
-    return -1; // equals to not found
+    return undefined; // equals to not found
   }
 
   export function NPCNameToHeropediaName(heroNPCName: string): string {
@@ -412,11 +417,10 @@ export namespace hero_names {
    * @param heroName localized name, e.g. Anti-Mage
    * @returns NPC name, e.g. npc_dota_hero_antimage
    */
-  export function localizedNameToNPCName(heroName: string): string {
+  export function localizedNameToNPCName(heroName: string): string | undefined {
     //DotaLogger.log("dota2.localizedNameToNPCName(" + heroName + "): Called")
-
     const id = localizedNameToId(heroName);
-    return idToNPCName(id);
+    return id === undefined ? undefined : idToNPCName(id);
   }
 
   export function localizedNameToNPCShortName(heroName: string): string {
@@ -752,13 +756,13 @@ export namespace hero_attributes {
    * @param heroName Localized hero name
    * @returns Strength, Intelligence or Agility if hero is known. If hero is not known it returns null
    */
-  export function getAttribute(heroName: string): string | null {
+  export function getAttribute(heroName: string): string | undefined {
     const h = hero.getHero(hero_names.localizedNameToNPCName(heroName));
-    if (h == null) {
+    if (h === undefined) {
       DotaLogger.log(
         `dota2.getAttribute(heroName: ${heroName}): could not find hero's primary attribute.`
       );
-      return null;
+      return undefined;
     }
 
     return h.primary_attr;
@@ -1592,7 +1596,7 @@ export namespace hero_abilities {
     //DotaLogger.log("Dota2.hero.ability.getUltimate(heroName='" + heroName + "'): Called" )
     if (heroName) {
       if (heroName === "Outworld Devourer") heroName = "Outworld Destroyer";
-      const abilities = getAbilities(heroName as keyof typeof dota2Heroes);
+      const abilities = getAbilities(heroName);
       if (Array.isArray(abilities) && abilities.length > 5) return abilities[5];
     }
     return undefined;
