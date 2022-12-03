@@ -638,6 +638,54 @@ export namespace hero_builds {
     // No relevant guide found
     return null;
   }
+
+  /**
+   * Returns all items used in hero builds, e.g.
+   */
+  export function getItemNames(): string[] {
+    const result: any = {};
+    for (const [heroName, heroContent] of Object.entries(
+      HeroBuilds.heroBuilds
+    )) {
+      for (const build of heroContent.builds) {
+        for (const itemBuild of Object.values(build.items)) {
+          for (const item of itemBuild) {
+            if (result[item] === undefined) {
+              result[item] = true;
+            }
+          }
+        }
+      }
+      for (const phaseValues of Object.values(heroContent.counter_items)) {
+        for (const roleValues of Object.values(
+          phaseValues
+        ) as HeroBuilds.CounterItem[][]) {
+          for (const item of roleValues) {
+            result[item.item] = true;
+          }
+        }
+      }
+    }
+    return Object.keys(result).sort();
+  }
+  /**
+   * Returns all abilities and talents used.
+   */
+  export function getAbilityNames(): string[] {
+    const result: any = {};
+    for (const [heroName, heroContent] of Object.entries(
+      HeroBuilds.heroBuilds
+    )) {
+      for (const build of heroContent.builds) {
+        for (const ability of build.abilities) {
+          if (result[ability] === undefined) {
+            result[ability] = true;
+          }
+        }
+      }
+    }
+    return Object.keys(result).sort();
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
