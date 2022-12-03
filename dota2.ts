@@ -219,9 +219,9 @@ export namespace hero {
    * @param heroName NPC hero name
    * @returns Hero based on Dota static data; null if there is no such hero
    */
-  export function getHero(heroName: string): Hero | null {
+  export function getHero(heroName: string): Hero | undefined {
     if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
-      return null;
+      return undefined;
 
     return dota2Heroes[heroName as keyof typeof dota2Heroes];
   }
@@ -380,15 +380,22 @@ export namespace hero_names {
     return idToNPCName(heroId).replace("npc_dota_hero_", "");
   }
 
-  export function localizedNameToId(localized_name: string): number {
+  /**
+   *
+   * @param localized_name
+   * @returns undefined if hero is not found
+   */
+  export function localizedNameToId(
+    localized_name: string
+  ): number | undefined {
     //DotaLogger.log("dota2.localizedNameToId(" + localized_name + "): Called")
     for (const hero of Object.values(dota2Heroes)) {
-      if (hero.localized_name == localized_name) {
+      if (hero.localized_name === localized_name) {
         //DotaLogger.log("dota2.localizedNameToId(): Returned id = '" + Heroes[i].id + "'")
         return hero.id;
       }
     }
-    return -1; // equals to not found
+    return undefined; // equals to not found
   }
 
   export function NPCNameToHeropediaName(heroNPCName: string): string {
@@ -425,15 +432,19 @@ export namespace hero_names {
    * @param heroName localized name, e.g. Anti-Mage
    * @returns NPC name, e.g. npc_dota_hero_antimage
    */
-  export function localizedNameToNPCName(heroName: string): string {
+  export function localizedNameToNPCName(heroName: string): string | undefined {
     //DotaLogger.log("dota2.localizedNameToNPCName(" + heroName + "): Called")
-
     const id = localizedNameToId(heroName);
-    return idToNPCName(id);
+    return id === undefined ? undefined : idToNPCName(id);
   }
 
-  export function localizedNameToNPCShortName(heroName: string): string {
-    return localizedNameToNPCName(heroName).replace("npc_dota_hero_", "");
+  export function localizedNameToNPCShortName(
+    heroName: string
+  ): string | undefined {
+    const npcShortName = localizedNameToNPCName(heroName);
+    return npcShortName === undefined
+      ? undefined
+      : npcShortName.replace("npc_dota_hero_", "");
   }
 
   /* Returns -1 if hero not found
@@ -831,13 +842,15 @@ export namespace hero_attributes {
    * @param heroName Localized hero name
    * @returns Strength, Intelligence or Agility if hero is known. If hero is not known it returns null
    */
-  export function getAttribute(heroName: string): string | null {
-    const h = hero.getHero(hero_names.localizedNameToNPCName(heroName));
-    if (h == null) {
+  export function getAttribute(heroName: string): string | undefined {
+    const npcName = hero_names.localizedNameToNPCName(heroName);
+    if (npcName === undefined) return undefined;
+    const h = hero.getHero(npcName);
+    if (h === undefined) {
       DotaLogger.log(
         `dota2.getAttribute(heroName: ${heroName}): could not find hero's primary attribute.`
       );
-      return null;
+      return undefined;
     }
 
     return h.primary_attr;
@@ -1413,14 +1426,14 @@ export namespace hero_abilities {
     npcHeroName: string,
     talent: string
   ): string | null {
-    DotaLogger.log(
+    /*DotaLogger.log(
       `dota2.getTalentName(npcHeroName: ${npcHeroName}, talent: ${talent})`
-    );
+    );*/
 
     const ability = getTalent(npcHeroName, talent);
-    DotaLogger.log(
+    /*DotaLogger.log(
       `dota2.getTalentName(): talent = ${JSON.stringify(ability)}`
-    );
+    );*/
     if (ability == null) return null;
     return ability.description;
   }
@@ -1750,7 +1763,7 @@ export namespace hero_abilities {
     //DotaLogger.log("Dota2.hero.ability.getUltimate(heroName='" + heroName + "'): Called" )
     if (heroName) {
       if (heroName === "Outworld Devourer") heroName = "Outworld Destroyer";
-      const abilities = getAbilities(heroName as keyof typeof dota2Heroes);
+      const abilities = getAbilities(heroName);
       if (Array.isArray(abilities) && abilities.length > 5) return abilities[5];
     }
     return undefined;
