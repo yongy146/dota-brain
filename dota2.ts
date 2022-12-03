@@ -273,6 +273,14 @@ export namespace hero {
   }
 
   /**
+   *
+   * @returns Array of localized hero names, e.g. Anti-Mage
+   */
+  export function getHeroNPCNames(): string[] {
+    return Object.keys(dota2Heroes);
+  }
+
+  /**
    * @heroName: Localized name
    */
   export function isHeroMelee(heroName: string): boolean {
