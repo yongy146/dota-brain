@@ -20,6 +20,7 @@
 	"dota.Strength": "力量",
 	"dota.Intelligence": "智力",
 	"dota.Agility": "敏捷",
+	"dota.abilities.special_bonus_attributes": "属性附加",
 	"dota.Lobby": "房间",
 	"dota.Ranked": "天梯比赛",
 	"dota.Unranked": "普通比赛",

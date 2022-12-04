@@ -20,6 +20,7 @@
 	"dota.Strength": "Stärke",
 	"dota.Intelligence": "Intelligenz",
 	"dota.Agility": "Agilität",
+	"dota.abilities.special_bonus_attributes": "Attributsbonus",
 	"dota.Lobby": "Lobby",
 	"dota.Ranked": "Rangliste",
 	"dota.Unranked": "Ungewertet",

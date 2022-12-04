@@ -20,6 +20,7 @@
 	"dota.Strength": "de fuerza",
 	"dota.Intelligence": "de inteligencia",
 	"dota.Agility": "de agilidad",
+	"dota.abilities.special_bonus_attributes": "Bonificación de Atributos",
 	"dota.Lobby": "Sala de espera",
 	"dota.Ranked": "Clasificatoria",
 	"dota.Unranked": "No clasificatoria",
