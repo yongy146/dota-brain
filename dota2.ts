@@ -219,9 +219,9 @@ export namespace hero {
    * @param heroName NPC hero name
    * @returns Hero based on Dota static data; null if there is no such hero
    */
-  export function getHero(heroName: string): Hero | null {
+  export function getHero(heroName: string): Hero | undefined {
     if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
-      return null;
+      return undefined;
 
     return dota2Heroes[heroName as keyof typeof dota2Heroes];
   }
@@ -270,6 +270,14 @@ export namespace hero {
       result.push(dota2Heroes[key as keyof typeof dota2Heroes].localized_name);
     }
     return result;
+  }
+
+  /**
+   *
+   * @returns Array of localized hero names, e.g. Anti-Mage
+   */
+  export function getHeroNPCNames(): string[] {
+    return Object.keys(dota2Heroes);
   }
 
   /**
@@ -385,7 +393,9 @@ export namespace hero_names {
    * @param localized_name
    * @returns undefined if hero is not found
    */
-  export function localizedNameToId(localized_name: string): number | undefined {
+  export function localizedNameToId(
+    localized_name: string
+  ): number | undefined {
     //DotaLogger.log("dota2.localizedNameToId(" + localized_name + "): Called")
     for (const hero of Object.values(dota2Heroes)) {
       if (hero.localized_name === localized_name) {
@@ -436,8 +446,13 @@ export namespace hero_names {
     return id === undefined ? undefined : idToNPCName(id);
   }
 
-  export function localizedNameToNPCShortName(heroName: string): string {
-    return localizedNameToNPCName(heroName).replace("npc_dota_hero_", "");
+  export function localizedNameToNPCShortName(
+    heroName: string
+  ): string | undefined {
+    const npcShortName = localizedNameToNPCName(heroName);
+    return npcShortName === undefined
+      ? undefined
+      : npcShortName.replace("npc_dota_hero_", "");
   }
 
   /* Returns -1 if hero not found
@@ -642,6 +657,54 @@ export namespace hero_builds {
     // No relevant guide found
     return null;
   }
+
+  /**
+   * Returns all items used in hero builds, e.g.
+   */
+  export function getItemNames(): string[] {
+    const result: any = {};
+    for (const [heroName, heroContent] of Object.entries(
+      HeroBuilds.heroBuilds
+    )) {
+      for (const build of heroContent.builds) {
+        for (const itemBuild of Object.values(build.items)) {
+          for (const item of itemBuild) {
+            if (result[item] === undefined) {
+              result[item] = true;
+            }
+          }
+        }
+      }
+      for (const phaseValues of Object.values(heroContent.counter_items)) {
+        for (const roleValues of Object.values(
+          phaseValues
+        ) as HeroBuilds.CounterItem[][]) {
+          for (const item of roleValues) {
+            result[item.item] = true;
+          }
+        }
+      }
+    }
+    return Object.keys(result).sort();
+  }
+  /**
+   * Returns all abilities and talents used.
+   */
+  export function getAbilityNames(): string[] {
+    const result: any = {};
+    for (const [heroName, heroContent] of Object.entries(
+      HeroBuilds.heroBuilds
+    )) {
+      for (const build of heroContent.builds) {
+        for (const ability of build.abilities) {
+          if (result[ability] === undefined) {
+            result[ability] = true;
+          }
+        }
+      }
+    }
+    return Object.keys(result).sort();
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -788,7 +851,9 @@ export namespace hero_attributes {
    * @returns Strength, Intelligence or Agility if hero is known. If hero is not known it returns null
    */
   export function getAttribute(heroName: string): string | undefined {
-    const h = hero.getHero(hero_names.localizedNameToNPCName(heroName));
+    const npcName = hero_names.localizedNameToNPCName(heroName);
+    if (npcName === undefined) return undefined;
+    const h = hero.getHero(npcName);
     if (h === undefined) {
       DotaLogger.log(
         `dota2.getAttribute(heroName: ${heroName}): could not find hero's primary attribute.`
@@ -1369,14 +1434,14 @@ export namespace hero_abilities {
     npcHeroName: string,
     talent: string
   ): string | null {
-    DotaLogger.log(
+    /*DotaLogger.log(
       `dota2.getTalentName(npcHeroName: ${npcHeroName}, talent: ${talent})`
-    );
+    );*/
 
     const ability = getTalent(npcHeroName, talent);
-    DotaLogger.log(
+    /*DotaLogger.log(
       `dota2.getTalentName(): talent = ${JSON.stringify(ability)}`
-    );
+    );*/
     if (ability == null) return null;
     return ability.description;
   }

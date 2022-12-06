@@ -2889,7 +2889,7 @@
 				80
 			],
 			"name": "Flesh Heap",
-			"description": "Gives Pudge a guaranteed damage block against all types of attack. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
+			"description": "Gives Pudge damage block against all sources. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
 			"lore": "The Butcher gives new meaning to the words 'meat shield.'",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2930,7 +2930,7 @@
 				170
 			],
 			"name": "Dismember",
-			"description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge gets healed for the same amount he damages. Lasts longer on creeps.",
+			"description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge pulls the unit at a rate of %pull_units_per_second% units, up to a minimum of %pull_distance_limit% range. Pudge gets healed for the same amount he damages. Lasts longer on creeps.",
 			"lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -7083,7 +7083,7 @@
 				75
 			],
 			"name": "Keen Conveyance",
-			"description": "CHANNELED - After channeling for %abilitychanneltime%s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
+			"description": "CHANNELED - Teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
 			"lore": "As Boush likes to say, 'There is nothing the arcane can accomplish that the curious mind cannot reproduce given time. And proper funding, of course.'",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -7271,7 +7271,7 @@
 				50
 			],
 			"name": "Take Aim",
-			"description": "Extends the attack range of Sniper's rifle. Can be activated to provide %headshot_chance%%% Headshot chance for 3 seconds. Slows you by %slow%%% for the duration.",
+			"description": "Extends the attack range of Sniper's rifle. Can be activated to provide %headshot_chance%%% Headshot chance. Slows you by %slow%%% for the duration.",
 			"lore": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
 			"is_ultimate": false,
 			"is_passive": "partial",
