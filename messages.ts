@@ -189,6 +189,7 @@ export interface DotaCoachMessage {
   audioFile: string;
   // Time when message is played in seconds (time is based on game time) ; -90 means that the message is played at hero selection
   messageTime: number | number[];
+  turboTime?: number | number[];
   // Array of times when message is played
   //messageTimes?: number[];
   // Time interval to repeat the message (this fields can be used with single message times or arrays)
@@ -354,6 +355,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "NeutralItems",
     audioFile: "general/NeutralItemsTier1",
     messageTime: 7 * 60 - 2,
+    turboTime: 3 * 60 + 30 - 2,
     textMessage: "Neutral items tier 1 are available now",
     audience: [Audience.ALL],
   },
@@ -361,6 +363,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "NeutralItems",
     audioFile: "general/NeutralItemsTier2",
     messageTime: 17 * 60 - 2,
+    turboTime: 8 * 60 + 30 - 2,
     textMessage: "Neutral items tier 2 are available now",
     audience: [Audience.ALL],
   },
@@ -368,6 +371,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "NeutralItems",
     audioFile: "general/NeutralItemsTier3",
     messageTime: 27 * 60 - 2,
+    turboTime: 13 * 60 + 30 - 2,
     textMessage: "Neutral items tier 3 are available now",
     audience: [Audience.ALL],
   },
@@ -375,6 +379,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "NeutralItems",
     audioFile: "general/NeutralItemsTier4",
     messageTime: 37 * 60 - 2,
+    turboTime: 18 * 60 + 30 - 2,
     textMessage: "Neutral items tier 4 are available now",
     audience: [Audience.ALL],
   },
@@ -382,6 +387,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "NeutralItems",
     audioFile: "general/NeutralItemsTier5",
     messageTime: 60 * 60 - 2,
+    turboTime: 30 * 60 - 2,
     textMessage: "Neutral items tier 5 are available now",
     audience: [Audience.ALL],
   },
@@ -391,6 +397,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "SmokeOfDeceit",
     audioFile: "general/SmokeOfDeceit1",
     messageTime: 5 * 60 + 30 - 1,
+    turboTime: 6 * 60 - 1,
     textMessage: "Smoke of deceit is available in the shop",
     audience: [Audience.ALL],
   },
@@ -407,6 +414,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "TomeOfKnowledge",
     audioFile: "general/TomeOfKnowledge",
     messageTime: 10 * 60 - 2,
+    turboTime: 10 * 60 + 30 - 2,
     repeatTime: 10 * 60,
     textMessage: "Tome of knowledge is available in the shop",
     audience: [Audience.ALL],
@@ -417,6 +425,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "AghanimsShard",
     audioFile: "general/AghanimsShard",
     messageTime: 15 * 60 - 2,
+    turboTime: 9 * 60 + 45 - 2,
     textMessage: "Aghanim's Shard is available in the shop",
     audience: [Audience.ALL],
   },
