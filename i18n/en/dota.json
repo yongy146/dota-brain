@@ -3,6 +3,8 @@
 	"dota.skills.Ability": "Ability",
 	"dota.Public": "Public",
 	"dota.Private": "Private",
+	"dota.SiegeCreeps": "Siege Creep",
+	"dota.FlagbearerCreeps": "Flagbearer Creep",
 	"dota.roles.Core": "Core",
 	"dota.roles.Initiator": "Initiator",
 	"dota.roles.Offlane": "Offlane",

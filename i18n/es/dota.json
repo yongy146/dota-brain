@@ -3,6 +3,8 @@
 	"dota.skills.Ability": "Habilidad",
 	"dota.Public": "Pública",
 	"dota.Private": "Privada",
+	"dota.SiegeCreeps": "Creep de Asedio",
+	"dota.FlagbearerCreeps": "Creep Portaestandartes",
 	"dota.roles.Core": "Principal",
 	"dota.roles.Initiator": "Iniciador",
 	"dota.roles.Offlane": "Lateral",

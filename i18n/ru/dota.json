@@ -3,6 +3,8 @@
 	"dota.skills.Ability": "Способность",
 	"dota.Public": "Открытый",
 	"dota.Private": "Скрытый",
+	"dota.SiegeCreeps": "Катапульта",
+	"dota.FlagbearerCreeps": "Крип-знаменосец",
 	"dota.roles.Core": "Основа",
 	"dota.roles.Initiator": "Инициатор",
 	"dota.roles.Offlane": "Оффлэйн",
