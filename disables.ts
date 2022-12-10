@@ -32,8 +32,8 @@ export const channeling_interrupts = [
 export const silence = ["silence"];
 export const root = ["root"];
 
-export interface Disables {
-  [key: string]: Disable[]; // Localized Hero name
+export interface IDisables {
+  [key: string]: IDisable[]; // Localized Hero name
 }
 
 export enum AbilityAffects {
@@ -42,13 +42,13 @@ export enum AbilityAffects {
   HERO = "HERO", // Effects only targeted hero
 }
 
-export interface Disable {
+export interface IDisable {
   skill: string;
   affects: AbilityAffects;
   disables: string[];
 }
 
-export const disables: Disables = {
+export const disables: IDisables = {
   Alchemist: [
     {
       skill: "alchemist_unstable_concoction",

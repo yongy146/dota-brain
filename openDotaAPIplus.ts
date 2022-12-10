@@ -143,11 +143,11 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
             await new Promise((resolve) => setTimeout(resolve, 200)); // Wait 100 ms to ensure only 10 reqquests are made per second
 
             OpentDotaAPI.getMatch(m)
-              .then((match: OpentDotaAPI.Match) => {
+              .then((match: OpentDotaAPI.IMatch) => {
                 //DotaLogger.log(`match ${matchGets_} received`)
                 const players = match.players;
                 // Find player with hero id
-                let player: OpentDotaAPI.MatchPlayer | undefined;
+                let player: OpentDotaAPI.IMatchPlayer | undefined;
                 for (const p of players) {
                   if (p.hero_id == heroId) {
                     player = p;

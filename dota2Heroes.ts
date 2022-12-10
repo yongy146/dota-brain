@@ -1,8 +1,8 @@
-export interface Dota2Heroes {
-  [key: string]: Dota2Hero; // key is the hero's full NPC name
+export interface IDota2Heroes {
+  [key: string]: IDota2Hero; // key is the hero's full NPC name
 }
 
-export interface Dota2Hero {
+export interface IDota2Hero {
   name: string; // "npc_dota_hero_antimage"
   id: number; // 1
   localized_name: string; // e.g., "Anti-Mage"
