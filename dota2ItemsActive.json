@@ -24,7 +24,11 @@
 		"cost": 6800,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"duration": 6,
+			"activeRelative": 40
+		}
 	},
 	"item_arcane_blink": {
 		"id": "604",
@@ -149,7 +153,10 @@
 		"name": "Wind Lace",
 		"cost": 250,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 20
+		}
 	},
 	"item_ring_of_protection": {
 		"id": "12",
@@ -304,7 +311,10 @@
 		"name": "Boots of Speed",
 		"cost": 500,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 45
+		}
 	},
 	"item_gem": {
 		"id": "30",
@@ -470,14 +480,20 @@
 		"name": "Boots of Travel",
 		"cost": 2500,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 90
+		}
 	},
 	"item_travel_boots_2": {
 		"id": "220",
 		"name": "Boots of Travel 2",
 		"cost": 4500,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 110
+		}
 	},
 	"item_phase_boots": {
 		"id": "50",
@@ -485,7 +501,12 @@
 		"cost": 1500,
 		"cooldown": 8,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 45,
+			"activeAbsolute": 20,
+			"duration": 3
+		}
 	},
 	"item_demon_edge": {
 		"id": "51",
@@ -576,7 +597,10 @@
 		"name": "Power Treads",
 		"cost": 1400,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 45
+		}
 	},
 	"item_recipe_hand_of_midas": {
 		"id": "64",
@@ -863,7 +887,10 @@
 		"cost": 2725,
 		"cooldown": 23,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 20
+		}
 	},
 	"item_recipe_wind_waker": {
 		"id": "612",
@@ -879,7 +906,10 @@
 		"cost": 6825,
 		"cooldown": 18,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 50
+		}
 	},
 	"item_recipe_aether_lens": {
 		"id": "233",
@@ -1402,7 +1432,10 @@
 		"cost": 4600,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"activeRelative": 8
+		}
 	},
 	"item_recipe_lesser_crit": {
 		"id": "148",
@@ -1453,7 +1486,11 @@
 		"cost": 3000,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"duration": 14,
+			"activeRelative": 20
+		}
 	},
 	"item_recipe_silver_edge": {
 		"id": "248",
@@ -1469,14 +1506,21 @@
 		"cost": 5450,
 		"cooldown": 20,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"duration": 14,
+			"activeRelative": 25
+		}
 	},
 	"item_sange_and_yasha": {
 		"id": "154",
 		"name": "Sange and Yasha",
 		"cost": 4100,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"percent": 10
+		}
 	},
 	"item_kaya_and_sange": {
 		"id": "273",
@@ -1490,7 +1534,10 @@
 		"name": "Yasha and Kaya",
 		"cost": 4100,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"percent": 10
+		}
 	},
 	"item_recipe_satanic": {
 		"id": "155",
@@ -1618,7 +1665,10 @@
 		"name": "Yasha",
 		"cost": 2050,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"percent": 8
+		}
 	},
 	"item_mask_of_madness": {
 		"id": "172",
@@ -1627,7 +1677,11 @@
 		"cost": 1775,
 		"cooldown": 16,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"activeAbsolute": 30,
+			"duration": 6
+		}
 	},
 	"item_recipe_diffusal_blade": {
 		"id": "173",
@@ -1684,7 +1738,10 @@
 		"cost": 1300,
 		"cooldown": 55,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 45
+		}
 	},
 	"item_octarine_core": {
 		"id": "235",
@@ -1762,7 +1819,12 @@
 		"cost": 1650,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"auraAbsolute": 20,
+			"percent": 13,
+			"duration": 6
+		}
 	},
 	"item_recipe_boots_of_bearing": {
 		"id": "930",
@@ -1777,7 +1839,13 @@
 		"cost": 4075,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"auraAbsolute": 20,
+			"duration": 1.5,
+			"absolute": 65,
+			"activePercent": 15
+		}
 	},
 	"item_medallion_of_courage": {
 		"id": "187",
@@ -1800,7 +1868,10 @@
 		"cost": 2625,
 		"cooldown": 12,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 20
+		}
 	},
 	"item_smoke_of_deceit": {
 		"id": "188",
@@ -1808,7 +1879,11 @@
 		"cost": 50,
 		"cooldown": 1,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"duration": 35,
+			"activeAbsolute": 15
+		}
 	},
 	"item_tome_of_knowledge": {
 		"id": "257",
@@ -1863,7 +1938,10 @@
 		"cost": 4950,
 		"cooldown": 40,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"absolute": 50
+		}
 	},
 	"item_recipe_rod_of_atos": {
 		"id": "205",
@@ -1927,7 +2005,11 @@
 		"cost": 925,
 		"cooldown": 13,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"speed": {
+			"brokenAbsolute": 40,
+			"absolute": 65
+		}
 	},
 	"item_shadow_amulet": {
 		"id": "215",
@@ -1989,7 +2071,10 @@
 		"cost": 0,
 		"cooldown": 8,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"speed": {
+			"absolute": 115
+		}
 	},
 	"item_desolator_2": {
 		"id": "292",
@@ -2064,7 +2149,10 @@
 		"cost": 0,
 		"cooldown": 5,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"speed": {
+			"absolute": 35
+		}
 	},
 	"item_spy_gadget": {
 		"id": "336",
@@ -2123,7 +2211,12 @@
 		"cost": 0,
 		"cooldown": 45,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"speed": {
+			"absolute": 25,
+			"duration": 35,
+			"activeRelative": 20
+		}
 	},
 	"item_havoc_hammer": {
 		"id": "364",
@@ -2267,7 +2360,10 @@
 		"name": "Giant's Ring",
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"speed": {
+			"absolute": 50
+		}
 	},
 	"item_stormcrafter": {
 		"id": "585",
