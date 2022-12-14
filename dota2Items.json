@@ -2278,14 +2278,6 @@
 		"is_recipe": false,
 		"is_neutral": false
 	},
-	"item_keen_optic": {
-		"id": "287",
-		"name": "Keen Optic",
-		"is_active": true,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
 	"item_grove_bow": {
 		"id": "288",
 		"name": "Grove Bow",
