@@ -48,7 +48,7 @@
 		"is_neutral": false,
 		"speed": {
 			"duration": 6,
-			"activeRelative": 40
+			"activePercent": 40
 		}
 	},
 	"item_arcane_blink": {
@@ -1674,7 +1674,7 @@
 		"is_neutral": false,
 		"speed": {
 			"duration": 14,
-			"activeRelative": 20
+			"activePercent": 20
 		}
 	},
 	"item_recipe_silver_edge": {
@@ -1696,7 +1696,7 @@
 		"is_neutral": false,
 		"speed": {
 			"duration": 14,
-			"activeRelative": 25
+			"activePercent": 25
 		}
 	},
 	"item_sange_and_yasha": {
@@ -2472,7 +2472,7 @@
 		"speed": {
 			"absolute": 25,
 			"duration": 35,
-			"activeRelative": 20
+			"activePercent": 20
 		}
 	},
 	"item_havoc_hammer": {
