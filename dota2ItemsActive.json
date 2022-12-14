@@ -964,30 +964,6 @@
 		"is_recipe": true,
 		"is_neutral": false
 	},
-	"item_recipe_dagon_2": {
-		"id": "197",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_3": {
-		"id": "198",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_4": {
-		"id": "199",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_5": {
-		"id": "200",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
 	"item_dagon": {
 		"id": "104",
 		"name": "Dagon",
