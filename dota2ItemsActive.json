@@ -1434,7 +1434,7 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"speed": {
-			"activeRelative": 8
+			"absolute": 8
 		}
 	},
 	"item_recipe_lesser_crit": {
