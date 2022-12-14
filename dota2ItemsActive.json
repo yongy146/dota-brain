@@ -1539,13 +1539,6 @@
 			"percent": 10
 		}
 	},
-	"item_recipe_satanic": {
-		"id": "155",
-		"name": "Satanic Recipe",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
 	"item_satanic": {
 		"id": "156",
 		"name": "Satanic",
