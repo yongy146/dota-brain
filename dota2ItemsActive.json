@@ -1,26 +1,7 @@
 {
-	"armor": {
-		"name": "Armor"
-	},
-	"DamageItems": {
-		"name": "Damage Items"
-	},
-	"SentryDustGem": {
-		"name": "Sentry, Dust & Gem"
-	},
-	"SentryGem": {
-		"name": "Sentry & Gem"
-	},
-	"SentryDust": {
-		"name": "Sentry & Dust"
-	},
-	"AttackSpeed": {
-		"name": "Attack Speed"
-	},
 	"item_blink": {
 		"id": "1",
 		"name": "Blink Dagger",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 2250,
 		"cooldown": 15,
@@ -30,7 +11,6 @@
 	"item_overwhelming_blink": {
 		"id": "600",
 		"name": "Overwhelming Blink",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 6800,
 		"cooldown": 15,
@@ -40,7 +20,6 @@
 	"item_swift_blink": {
 		"id": "603",
 		"name": "Swift Blink",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 6800,
 		"cooldown": 15,
@@ -50,7 +29,6 @@
 	"item_arcane_blink": {
 		"id": "604",
 		"name": "Arcane Blink",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 6800,
 		"cooldown": 15,
@@ -60,7 +38,6 @@
 	"item_recipe_arcane_blink": {
 		"id": "606",
 		"name": "Arcane Blink Recipe",
-		"is_active": true,
 		"cost": 1750,
 		"is_recipe": true,
 		"is_neutral": false
@@ -68,7 +45,6 @@
 	"item_recipe_swift_blink": {
 		"id": "607",
 		"name": "Swift Blink Recipe",
-		"is_active": true,
 		"cost": 1750,
 		"is_recipe": true,
 		"is_neutral": false
@@ -76,7 +52,6 @@
 	"item_recipe_overwhelming_blink": {
 		"id": "608",
 		"name": "Overwhelming Blink Recipe",
-		"is_active": true,
 		"cost": 1750,
 		"is_recipe": true,
 		"is_neutral": false
@@ -84,7 +59,6 @@
 	"item_blades_of_attack": {
 		"id": "2",
 		"name": "Blades of Attack",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": false,
 		"is_neutral": false
@@ -92,7 +66,6 @@
 	"item_broadsword": {
 		"id": "3",
 		"name": "Broadsword",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -100,7 +73,6 @@
 	"item_chainmail": {
 		"id": "4",
 		"name": "Chainmail",
-		"is_active": true,
 		"cost": 550,
 		"is_recipe": false,
 		"is_neutral": false
@@ -108,7 +80,6 @@
 	"item_claymore": {
 		"id": "5",
 		"name": "Claymore",
-		"is_active": true,
 		"cost": 1350,
 		"is_recipe": false,
 		"is_neutral": false
@@ -116,7 +87,6 @@
 	"item_helm_of_iron_will": {
 		"id": "6",
 		"name": "Helm of Iron Will",
-		"is_active": true,
 		"cost": 975,
 		"is_recipe": false,
 		"is_neutral": false
@@ -124,7 +94,6 @@
 	"item_javelin": {
 		"id": "7",
 		"name": "Javelin",
-		"is_active": true,
 		"cost": 1100,
 		"is_recipe": false,
 		"is_neutral": false
@@ -132,7 +101,6 @@
 	"item_mithril_hammer": {
 		"id": "8",
 		"name": "Mithril Hammer",
-		"is_active": true,
 		"cost": 1600,
 		"is_recipe": false,
 		"is_neutral": false
@@ -140,7 +108,6 @@
 	"item_platemail": {
 		"id": "9",
 		"name": "Platemail",
-		"is_active": true,
 		"cost": 1400,
 		"is_recipe": false,
 		"is_neutral": false
@@ -148,7 +115,6 @@
 	"item_quarterstaff": {
 		"id": "10",
 		"name": "Quarterstaff",
-		"is_active": true,
 		"cost": 875,
 		"is_recipe": false,
 		"is_neutral": false
@@ -156,7 +122,6 @@
 	"item_quelling_blade": {
 		"id": "11",
 		"name": "Quelling Blade",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 100,
 		"cooldown": 4,
@@ -166,7 +131,6 @@
 	"item_faerie_fire": {
 		"id": "237",
 		"name": "Faerie Fire",
-		"is_active": true,
 		"cost": 70,
 		"cooldown": 5,
 		"is_recipe": false,
@@ -175,7 +139,6 @@
 	"item_infused_raindrop": {
 		"id": "265",
 		"name": "Infused Raindrops",
-		"is_active": true,
 		"cost": 225,
 		"cooldown": 7,
 		"is_recipe": false,
@@ -184,7 +147,6 @@
 	"item_wind_lace": {
 		"id": "244",
 		"name": "Wind Lace",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": false,
 		"is_neutral": false
@@ -192,7 +154,6 @@
 	"item_ring_of_protection": {
 		"id": "12",
 		"name": "Ring of Protection",
-		"is_active": true,
 		"cost": 175,
 		"is_recipe": false,
 		"is_neutral": false
@@ -200,7 +161,6 @@
 	"item_stout_shield": {
 		"id": "182",
 		"name": "Stout Shield",
-		"is_active": true,
 		"cost": 100,
 		"is_recipe": false,
 		"is_neutral": false
@@ -208,7 +168,6 @@
 	"item_moon_shard": {
 		"id": "247",
 		"name": "Moon Shard",
-		"is_active": true,
 		"cost": 4000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -216,7 +175,6 @@
 	"item_gauntlets": {
 		"id": "13",
 		"name": "Gauntlets of Strength",
-		"is_active": true,
 		"cost": 140,
 		"is_recipe": false,
 		"is_neutral": false
@@ -224,7 +182,6 @@
 	"item_slippers": {
 		"id": "14",
 		"name": "Slippers of Agility",
-		"is_active": true,
 		"cost": 140,
 		"is_recipe": false,
 		"is_neutral": false
@@ -232,7 +189,6 @@
 	"item_mantle": {
 		"id": "15",
 		"name": "Mantle of Intelligence",
-		"is_active": true,
 		"cost": 140,
 		"is_recipe": false,
 		"is_neutral": false
@@ -240,7 +196,6 @@
 	"item_branches": {
 		"id": "16",
 		"name": "Iron Branch",
-		"is_active": true,
 		"cost": 50,
 		"cooldown": 0,
 		"is_recipe": false,
@@ -249,7 +204,6 @@
 	"item_belt_of_strength": {
 		"id": "17",
 		"name": "Belt of Strength",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": false,
 		"is_neutral": false
@@ -257,7 +211,6 @@
 	"item_robe": {
 		"id": "19",
 		"name": "Robe of the Magi",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": false,
 		"is_neutral": false
@@ -265,7 +218,6 @@
 	"item_circlet": {
 		"id": "20",
 		"name": "Circlet",
-		"is_active": true,
 		"cost": 155,
 		"is_recipe": false,
 		"is_neutral": false
@@ -273,7 +225,6 @@
 	"item_crown": {
 		"id": "261",
 		"name": "Crown",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": false,
 		"is_neutral": false
@@ -281,7 +232,6 @@
 	"item_ogre_axe": {
 		"id": "21",
 		"name": "Ogre Axe",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -289,7 +239,6 @@
 	"item_blade_of_alacrity": {
 		"id": "22",
 		"name": "Blade of Alacrity",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -297,7 +246,6 @@
 	"item_staff_of_wizardry": {
 		"id": "23",
 		"name": "Staff of Wizardry",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -305,7 +253,6 @@
 	"item_ultimate_orb": {
 		"id": "24",
 		"name": "Ultimate Orb",
-		"is_active": true,
 		"cost": 2050,
 		"is_recipe": false,
 		"is_neutral": false
@@ -313,7 +260,6 @@
 	"item_gloves": {
 		"id": "25",
 		"name": "Gloves of Haste",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": false,
 		"is_neutral": false
@@ -321,7 +267,6 @@
 	"item_blitz_knuckles": {
 		"id": "485",
 		"name": "Blitz Knuckles",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -329,7 +274,6 @@
 	"item_lifesteal": {
 		"id": "26",
 		"name": "Morbid Mask",
-		"is_active": true,
 		"cost": 900,
 		"is_recipe": false,
 		"is_neutral": false
@@ -337,7 +281,6 @@
 	"item_voodoo_mask": {
 		"id": "473",
 		"name": "Voodoo Mask",
-		"is_active": true,
 		"cost": 700,
 		"is_recipe": false,
 		"is_neutral": false
@@ -345,7 +288,6 @@
 	"item_ring_of_regen": {
 		"id": "27",
 		"name": "Ring of Regen",
-		"is_active": true,
 		"cost": 175,
 		"is_recipe": false,
 		"is_neutral": false
@@ -353,7 +295,6 @@
 	"item_sobi_mask": {
 		"id": "28",
 		"name": "Sage's Mask",
-		"is_active": true,
 		"cost": 175,
 		"is_recipe": false,
 		"is_neutral": false
@@ -361,7 +302,6 @@
 	"item_boots": {
 		"id": "29",
 		"name": "Boots of Speed",
-		"is_active": true,
 		"cost": 500,
 		"is_recipe": false,
 		"is_neutral": false
@@ -369,7 +309,6 @@
 	"item_gem": {
 		"id": "30",
 		"name": "Gem of True Sight",
-		"is_active": true,
 		"cost": 900,
 		"cooldown": 12,
 		"is_recipe": false,
@@ -378,7 +317,6 @@
 	"item_cloak": {
 		"id": "31",
 		"name": "Cloak",
-		"is_active": true,
 		"cost": 500,
 		"is_recipe": false,
 		"is_neutral": false
@@ -386,7 +324,6 @@
 	"item_talisman_of_evasion": {
 		"id": "32",
 		"name": "Talisman of Evasion",
-		"is_active": true,
 		"cost": 1300,
 		"is_recipe": false,
 		"is_neutral": false
@@ -394,7 +331,6 @@
 	"item_cheese": {
 		"id": "33",
 		"name": "Cheese",
-		"is_active": true,
 		"cost": 1000,
 		"cooldown": 40,
 		"is_recipe": false,
@@ -403,7 +339,6 @@
 	"item_magic_stick": {
 		"id": "34",
 		"name": "Magic Stick",
-		"is_active": true,
 		"cost": 200,
 		"cooldown": 13,
 		"is_recipe": false,
@@ -412,7 +347,6 @@
 	"item_recipe_magic_wand": {
 		"id": "35",
 		"name": "Magic Wand Recipe",
-		"is_active": true,
 		"cost": 150,
 		"is_recipe": true,
 		"is_neutral": false
@@ -420,7 +354,6 @@
 	"item_magic_wand": {
 		"id": "36",
 		"name": "Magic Wand",
-		"is_active": true,
 		"cost": 450,
 		"cooldown": 13,
 		"is_recipe": false,
@@ -429,7 +362,6 @@
 	"item_ghost": {
 		"id": "37",
 		"name": "Ghost Scepter",
-		"is_active": true,
 		"cost": 1500,
 		"cooldown": 22,
 		"is_recipe": false,
@@ -438,7 +370,6 @@
 	"item_clarity": {
 		"id": "38",
 		"name": "Clarity",
-		"is_active": true,
 		"cost": 50,
 		"is_recipe": false,
 		"is_neutral": false
@@ -446,7 +377,6 @@
 	"item_enchanted_mango": {
 		"id": "216",
 		"name": "Enchanted Mango",
-		"is_active": true,
 		"cost": 65,
 		"is_recipe": false,
 		"is_neutral": false
@@ -454,7 +384,6 @@
 	"item_flask": {
 		"id": "39",
 		"name": "Healing Salve",
-		"is_active": true,
 		"cost": 100,
 		"is_recipe": false,
 		"is_neutral": false
@@ -462,7 +391,6 @@
 	"item_dust": {
 		"id": "40",
 		"name": "Dust of Appearance",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 80,
 		"cooldown": 30,
@@ -472,7 +400,6 @@
 	"item_bottle": {
 		"id": "41",
 		"name": "Bottle",
-		"is_active": true,
 		"cost": 675,
 		"cooldown": 0.5,
 		"is_recipe": false,
@@ -481,7 +408,6 @@
 	"item_ward_observer": {
 		"id": "42",
 		"name": "Observer Ward",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 1,
 		"is_recipe": false,
@@ -490,7 +416,6 @@
 	"item_ward_sentry": {
 		"id": "43",
 		"name": "Sentry Ward",
-		"is_active": true,
 		"cost": 50,
 		"cooldown": 1,
 		"is_recipe": false,
@@ -499,7 +424,6 @@
 	"item_ward_dispenser": {
 		"id": "218",
 		"name": "Observer and Sentry Wards",
-		"is_active": true,
 		"cost": 50,
 		"cooldown": 0,
 		"is_recipe": false,
@@ -508,7 +432,6 @@
 	"item_tango": {
 		"id": "44",
 		"name": "Tango",
-		"is_active": true,
 		"cost": 90,
 		"is_recipe": false,
 		"is_neutral": false
@@ -516,7 +439,6 @@
 	"item_tango_single": {
 		"id": "241",
 		"name": "Tango (Shared)",
-		"is_active": true,
 		"cost": 30,
 		"is_recipe": false,
 		"is_neutral": false
@@ -524,7 +446,6 @@
 	"item_tpscroll": {
 		"id": "46",
 		"name": "Town Portal Scroll",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 100,
 		"cooldown": 80,
@@ -534,14 +455,12 @@
 	"item_recipe_travel_boots": {
 		"id": "47",
 		"name": "Boots of Travel Recipe",
-		"is_active": true,
 		"cost": 2000,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_recipe_travel_boots_2": {
 		"id": "219",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
@@ -549,7 +468,6 @@
 	"item_travel_boots": {
 		"id": "48",
 		"name": "Boots of Travel",
-		"is_active": true,
 		"cost": 2500,
 		"is_recipe": false,
 		"is_neutral": false
@@ -557,7 +475,6 @@
 	"item_travel_boots_2": {
 		"id": "220",
 		"name": "Boots of Travel 2",
-		"is_active": true,
 		"cost": 4500,
 		"is_recipe": false,
 		"is_neutral": false
@@ -565,7 +482,6 @@
 	"item_phase_boots": {
 		"id": "50",
 		"name": "Phase Boots",
-		"is_active": true,
 		"cost": 1500,
 		"cooldown": 8,
 		"is_recipe": false,
@@ -574,7 +490,6 @@
 	"item_demon_edge": {
 		"id": "51",
 		"name": "Demon Edge",
-		"is_active": true,
 		"cost": 2200,
 		"is_recipe": false,
 		"is_neutral": false
@@ -582,7 +497,6 @@
 	"item_eagle": {
 		"id": "52",
 		"name": "Eaglesong",
-		"is_active": true,
 		"cost": 2800,
 		"is_recipe": false,
 		"is_neutral": false
@@ -590,7 +504,6 @@
 	"item_reaver": {
 		"id": "53",
 		"name": "Reaver",
-		"is_active": true,
 		"cost": 2800,
 		"is_recipe": false,
 		"is_neutral": false
@@ -598,7 +511,6 @@
 	"item_relic": {
 		"id": "54",
 		"name": "Sacred Relic",
-		"is_active": true,
 		"cost": 3750,
 		"is_recipe": false,
 		"is_neutral": false
@@ -606,7 +518,6 @@
 	"item_hyperstone": {
 		"id": "55",
 		"name": "Hyperstone",
-		"is_active": true,
 		"cost": 2000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -614,7 +525,6 @@
 	"item_ring_of_health": {
 		"id": "56",
 		"name": "Ring of Health",
-		"is_active": true,
 		"cost": 825,
 		"is_recipe": false,
 		"is_neutral": false
@@ -622,7 +532,6 @@
 	"item_void_stone": {
 		"id": "57",
 		"name": "Void Stone",
-		"is_active": true,
 		"cost": 825,
 		"is_recipe": false,
 		"is_neutral": false
@@ -630,7 +539,6 @@
 	"item_mystic_staff": {
 		"id": "58",
 		"name": "Mystic Staff",
-		"is_active": true,
 		"cost": 2800,
 		"is_recipe": false,
 		"is_neutral": false
@@ -638,7 +546,6 @@
 	"item_energy_booster": {
 		"id": "59",
 		"name": "Energy Booster",
-		"is_active": true,
 		"cost": 800,
 		"is_recipe": false,
 		"is_neutral": false
@@ -646,7 +553,6 @@
 	"item_point_booster": {
 		"id": "60",
 		"name": "Point Booster",
-		"is_active": true,
 		"cost": 1200,
 		"is_recipe": false,
 		"is_neutral": false
@@ -654,7 +560,6 @@
 	"item_vitality_booster": {
 		"id": "61",
 		"name": "Vitality Booster",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -662,7 +567,6 @@
 	"item_fluffy_hat": {
 		"id": "593",
 		"name": "Fluffy Hat",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": false,
 		"is_neutral": false
@@ -670,7 +574,6 @@
 	"item_power_treads": {
 		"id": "63",
 		"name": "Power Treads",
-		"is_active": true,
 		"cost": 1400,
 		"is_recipe": false,
 		"is_neutral": false
@@ -678,7 +581,6 @@
 	"item_recipe_hand_of_midas": {
 		"id": "64",
 		"name": "Hand of Midas Recipe",
-		"is_active": true,
 		"cost": 1750,
 		"is_recipe": true,
 		"is_neutral": false
@@ -686,7 +588,6 @@
 	"item_hand_of_midas": {
 		"id": "65",
 		"name": "Hand of Midas",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 2200,
 		"cooldown": 90,
@@ -696,7 +597,6 @@
 	"item_oblivion_staff": {
 		"id": "67",
 		"name": "Oblivion Staff",
-		"is_active": true,
 		"cost": 1500,
 		"is_recipe": false,
 		"is_neutral": false
@@ -704,7 +604,6 @@
 	"item_recipe_witch_blade": {
 		"id": "533",
 		"name": "Witch Blade Recipe",
-		"is_active": true,
 		"cost": 600,
 		"is_recipe": true,
 		"is_neutral": false
@@ -712,7 +611,6 @@
 	"item_witch_blade": {
 		"id": "534",
 		"name": "Witch Blade",
-		"is_active": true,
 		"cost": 2600,
 		"cooldown": 9,
 		"is_recipe": false,
@@ -721,7 +619,6 @@
 	"item_pers": {
 		"id": "69",
 		"name": "Perseverance",
-		"is_active": true,
 		"cost": 1650,
 		"is_recipe": false,
 		"is_neutral": false
@@ -729,7 +626,6 @@
 	"item_recipe_bracer": {
 		"id": "72",
 		"name": "Bracer Recipe",
-		"is_active": true,
 		"cost": 210,
 		"is_recipe": true,
 		"is_neutral": false
@@ -737,7 +633,6 @@
 	"item_bracer": {
 		"id": "73",
 		"name": "Bracer",
-		"is_active": true,
 		"cost": 505,
 		"is_recipe": false,
 		"is_neutral": false
@@ -745,7 +640,6 @@
 	"item_recipe_wraith_band": {
 		"id": "74",
 		"name": "Wraith Band Recipe",
-		"is_active": true,
 		"cost": 210,
 		"is_recipe": true,
 		"is_neutral": false
@@ -753,7 +647,6 @@
 	"item_wraith_band": {
 		"id": "75",
 		"name": "Wraith Band",
-		"is_active": true,
 		"cost": 505,
 		"is_recipe": false,
 		"is_neutral": false
@@ -761,7 +654,6 @@
 	"item_recipe_null_talisman": {
 		"id": "76",
 		"name": "Null Talisman Recipe",
-		"is_active": true,
 		"cost": 210,
 		"is_recipe": true,
 		"is_neutral": false
@@ -769,7 +661,6 @@
 	"item_null_talisman": {
 		"id": "77",
 		"name": "Null Talisman",
-		"is_active": true,
 		"cost": 505,
 		"is_recipe": false,
 		"is_neutral": false
@@ -777,7 +668,6 @@
 	"item_recipe_mekansm": {
 		"id": "78",
 		"name": "Mekansm Recipe",
-		"is_active": true,
 		"cost": 800,
 		"is_recipe": true,
 		"is_neutral": false
@@ -785,7 +675,6 @@
 	"item_mekansm": {
 		"id": "79",
 		"name": "Mekansm",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 1775,
 		"cooldown": 50,
@@ -795,7 +684,6 @@
 	"item_recipe_vladmir": {
 		"id": "80",
 		"name": "Vladmir's Offering Recipe",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": true,
 		"is_neutral": false
@@ -803,7 +691,6 @@
 	"item_vladmir": {
 		"id": "81",
 		"name": "Vladmir's Offering",
-		"is_active": true,
 		"cost": 2450,
 		"is_recipe": false,
 		"is_neutral": false
@@ -811,7 +698,6 @@
 	"item_recipe_wraith_pact": {
 		"id": "907",
 		"name": "Wraith Pact Recipe",
-		"is_active": true,
 		"cost": 400,
 		"is_recipe": true,
 		"is_neutral": false
@@ -819,7 +705,6 @@
 	"item_wraith_pact": {
 		"id": "908",
 		"name": "Wraith Pact",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 4050,
 		"cooldown": 60,
@@ -829,7 +714,6 @@
 	"item_recipe_buckler": {
 		"id": "85",
 		"name": "Buckler Recipe",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": true,
 		"is_neutral": false
@@ -837,7 +721,6 @@
 	"item_buckler": {
 		"id": "86",
 		"name": "Buckler",
-		"is_active": true,
 		"cost": 425,
 		"is_recipe": false,
 		"is_neutral": false
@@ -845,7 +728,6 @@
 	"item_recipe_ring_of_basilius": {
 		"id": "87",
 		"name": "Ring of Basilius Recipe",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": true,
 		"is_neutral": false
@@ -853,7 +735,6 @@
 	"item_ring_of_basilius": {
 		"id": "88",
 		"name": "Ring of Basilius",
-		"is_active": true,
 		"cost": 425,
 		"is_recipe": false,
 		"is_neutral": false
@@ -861,7 +742,6 @@
 	"item_recipe_holy_locket": {
 		"id": "268",
 		"name": "Holy Locket Recipe",
-		"is_active": true,
 		"cost": 475,
 		"is_recipe": true,
 		"is_neutral": false
@@ -869,7 +749,6 @@
 	"item_holy_locket": {
 		"id": "269",
 		"name": "Holy Locket",
-		"is_active": true,
 		"cost": 2400,
 		"cooldown": 13,
 		"is_recipe": false,
@@ -878,7 +757,6 @@
 	"item_recipe_pipe": {
 		"id": "89",
 		"name": "Pipe of Insight Recipe",
-		"is_active": true,
 		"cost": 1550,
 		"is_recipe": true,
 		"is_neutral": false
@@ -886,7 +764,6 @@
 	"item_pipe": {
 		"id": "90",
 		"name": "Pipe of Insight",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 3475,
 		"cooldown": 60,
@@ -896,7 +773,6 @@
 	"item_recipe_urn_of_shadows": {
 		"id": "91",
 		"name": "Urn of Shadows Recipe",
-		"is_active": true,
 		"cost": 375,
 		"is_recipe": true,
 		"is_neutral": false
@@ -904,7 +780,6 @@
 	"item_urn_of_shadows": {
 		"id": "92",
 		"name": "Urn of Shadows",
-		"is_active": true,
 		"cost": 880,
 		"cooldown": 7,
 		"is_recipe": false,
@@ -913,7 +788,6 @@
 	"item_recipe_headdress": {
 		"id": "93",
 		"name": "Headdress Recipe",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": true,
 		"is_neutral": false
@@ -921,7 +795,6 @@
 	"item_headdress": {
 		"id": "94",
 		"name": "Headdress",
-		"is_active": true,
 		"cost": 425,
 		"is_recipe": false,
 		"is_neutral": false
@@ -929,7 +802,6 @@
 	"item_sheepstick": {
 		"id": "96",
 		"name": "Scythe of Vyse",
-		"is_active": true,
 		"mana_cost": 250,
 		"cost": 5675,
 		"cooldown": 20,
@@ -939,7 +811,6 @@
 	"item_recipe_orchid": {
 		"id": "97",
 		"name": "Orchid Malevolence Recipe",
-		"is_active": true,
 		"cost": 300,
 		"is_recipe": true,
 		"is_neutral": false
@@ -947,7 +818,6 @@
 	"item_orchid": {
 		"id": "98",
 		"name": "Orchid Malevolence",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 3475,
 		"cooldown": 18,
@@ -957,7 +827,6 @@
 	"item_recipe_bloodthorn": {
 		"id": "245",
 		"name": "Bloodthorn Recipe",
-		"is_active": true,
 		"cost": 925,
 		"is_recipe": true,
 		"is_neutral": false
@@ -965,7 +834,6 @@
 	"item_bloodthorn": {
 		"id": "250",
 		"name": "Bloodthorn",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 6800,
 		"cooldown": 15,
@@ -975,7 +843,6 @@
 	"item_echo_sabre": {
 		"id": "252",
 		"name": "Echo Sabre",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 2500,
 		"cooldown": 6,
@@ -985,7 +852,6 @@
 	"item_recipe_cyclone": {
 		"id": "99",
 		"name": "Eul's Scepter Recipe",
-		"is_active": true,
 		"cost": 650,
 		"is_recipe": true,
 		"is_neutral": false
@@ -993,7 +859,6 @@
 	"item_cyclone": {
 		"id": "100",
 		"name": "Eul's Scepter of Divinity",
-		"is_active": true,
 		"mana_cost": 175,
 		"cost": 2725,
 		"cooldown": 23,
@@ -1003,7 +868,6 @@
 	"item_recipe_wind_waker": {
 		"id": "612",
 		"name": "Wind Waker Recipe",
-		"is_active": true,
 		"cost": 1300,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1011,7 +875,6 @@
 	"item_wind_waker": {
 		"id": "610",
 		"name": "Wind Waker",
-		"is_active": true,
 		"mana_cost": 175,
 		"cost": 6825,
 		"cooldown": 18,
@@ -1021,7 +884,6 @@
 	"item_recipe_aether_lens": {
 		"id": "233",
 		"name": "Aether Lens Recipe",
-		"is_active": true,
 		"cost": 650,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1029,7 +891,6 @@
 	"item_aether_lens": {
 		"id": "232",
 		"name": "Aether Lens",
-		"is_active": true,
 		"cost": 2275,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1037,7 +898,6 @@
 	"item_recipe_force_staff": {
 		"id": "101",
 		"name": "Force Staff Recipe",
-		"is_active": true,
 		"cost": 950,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1045,7 +905,6 @@
 	"item_force_staff": {
 		"id": "102",
 		"name": "Force Staff",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 2200,
 		"cooldown": 19,
@@ -1055,7 +914,6 @@
 	"item_recipe_hurricane_pike": {
 		"id": "262",
 		"name": "Hurricane Pike Recipe",
-		"is_active": true,
 		"cost": 350,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1063,7 +921,6 @@
 	"item_hurricane_pike": {
 		"id": "263",
 		"name": "Hurricane Pike",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 4450,
 		"cooldown": 19,
@@ -1073,35 +930,30 @@
 	"item_recipe_dagon": {
 		"id": "103",
 		"name": "Dagon Recipe",
-		"is_active": true,
 		"cost": 1250,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_recipe_dagon_2": {
 		"id": "197",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_recipe_dagon_3": {
 		"id": "198",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_recipe_dagon_4": {
 		"id": "199",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
 	},
 	"item_recipe_dagon_5": {
 		"id": "200",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1109,7 +961,6 @@
 	"item_dagon": {
 		"id": "104",
 		"name": "Dagon",
-		"is_active": true,
 		"mana_cost": 120,
 		"cost": 2700,
 		"cooldown": 35,
@@ -1119,7 +970,6 @@
 	"item_dagon_2": {
 		"id": "201",
 		"name": "Dagon",
-		"is_active": true,
 		"mana_cost": 120,
 		"cost": 3950,
 		"cooldown": 35,
@@ -1129,7 +979,6 @@
 	"item_dagon_3": {
 		"id": "202",
 		"name": "Dagon",
-		"is_active": true,
 		"mana_cost": 120,
 		"cost": 5200,
 		"cooldown": 35,
@@ -1139,7 +988,6 @@
 	"item_dagon_4": {
 		"id": "203",
 		"name": "Dagon",
-		"is_active": true,
 		"mana_cost": 120,
 		"cost": 6450,
 		"cooldown": 35,
@@ -1149,7 +997,6 @@
 	"item_dagon_5": {
 		"id": "204",
 		"name": "Dagon",
-		"is_active": true,
 		"mana_cost": 120,
 		"cost": 7700,
 		"cooldown": 35,
@@ -1159,7 +1006,6 @@
 	"item_ultimate_scepter": {
 		"id": "108",
 		"name": "Aghanim's Scepter",
-		"is_active": true,
 		"cost": 4200,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1167,7 +1013,6 @@
 	"item_recipe_ultimate_scepter_2": {
 		"id": "270",
 		"name": "Aghanim's Blessing Recipe",
-		"is_active": true,
 		"cost": 1600,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1175,7 +1020,6 @@
 	"item_ultimate_scepter_2": {
 		"id": "271",
 		"name": "Aghanim's Blessing",
-		"is_active": true,
 		"cost": 5800,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1183,7 +1027,6 @@
 	"item_ultimate_scepter_roshan": {
 		"id": "727",
 		"name": "Aghanim's Blessing - Roshan",
-		"is_active": true,
 		"cost": 5800,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1191,7 +1034,6 @@
 	"item_aghanims_shard": {
 		"id": "609",
 		"name": "Aghanim's Shard",
-		"is_active": true,
 		"cost": 1400,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1199,7 +1041,6 @@
 	"item_aghanims_shard_roshan": {
 		"id": "725",
 		"name": "Aghanim's Shard - Roshan",
-		"is_active": true,
 		"cost": 1400,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1207,7 +1048,6 @@
 	"item_recipe_refresher": {
 		"id": "109",
 		"name": "Refresher Orb Recipe",
-		"is_active": true,
 		"cost": 1700,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1215,7 +1055,6 @@
 	"item_refresher": {
 		"id": "110",
 		"name": "Refresher Orb",
-		"is_active": true,
 		"mana_cost": 350,
 		"cost": 5000,
 		"cooldown": 180,
@@ -1225,7 +1064,6 @@
 	"item_recipe_assault": {
 		"id": "111",
 		"name": "Assault Cuirass Recipe",
-		"is_active": true,
 		"cost": 1300,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1233,7 +1071,6 @@
 	"item_assault": {
 		"id": "112",
 		"name": "Assault Cuirass",
-		"is_active": true,
 		"cost": 5125,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1241,7 +1078,6 @@
 	"item_recipe_heart": {
 		"id": "113",
 		"name": "Heart of Tarrasque Recipe",
-		"is_active": true,
 		"cost": 1200,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1249,7 +1085,6 @@
 	"item_heart": {
 		"id": "114",
 		"name": "Heart of Tarrasque",
-		"is_active": true,
 		"cost": 5000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1257,7 +1092,6 @@
 	"item_recipe_black_king_bar": {
 		"id": "115",
 		"name": "Black King Bar Recipe",
-		"is_active": true,
 		"cost": 1450,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1265,7 +1099,6 @@
 	"item_black_king_bar": {
 		"id": "116",
 		"name": "Black King Bar",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 4050,
 		"cooldown": 90,
@@ -1275,7 +1108,6 @@
 	"item_aegis": {
 		"id": "117",
 		"name": "Aegis of the Immortal",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1283,7 +1115,6 @@
 	"item_recipe_shivas_guard": {
 		"id": "118",
 		"name": "Shiva's Guard Recipe",
-		"is_active": true,
 		"cost": 650,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1291,7 +1122,6 @@
 	"item_shivas_guard": {
 		"id": "119",
 		"name": "Shiva's Guard",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 4850,
 		"cooldown": 27,
@@ -1301,7 +1131,6 @@
 	"item_recipe_bloodstone": {
 		"id": "120",
 		"name": "Bloodstone Recipe",
-		"is_active": true,
 		"cost": 700,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1309,7 +1138,6 @@
 	"item_bloodstone": {
 		"id": "121",
 		"name": "Bloodstone",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 4400,
 		"cooldown": 30,
@@ -1319,7 +1147,6 @@
 	"item_recipe_sphere": {
 		"id": "122",
 		"name": "Linken's Sphere Recipe",
-		"is_active": true,
 		"cost": 900,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1327,7 +1154,6 @@
 	"item_sphere": {
 		"id": "123",
 		"name": "Linken's Sphere",
-		"is_active": true,
 		"cost": 4600,
 		"cooldown": 14,
 		"is_recipe": false,
@@ -1336,7 +1162,6 @@
 	"item_lotus_orb": {
 		"id": "226",
 		"name": "Lotus Orb",
-		"is_active": true,
 		"mana_cost": 175,
 		"cost": 3850,
 		"cooldown": 15,
@@ -1346,7 +1171,6 @@
 	"item_recipe_meteor_hammer": {
 		"id": "222",
 		"name": "Meteor Hammer Recipe",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1354,7 +1178,6 @@
 	"item_meteor_hammer": {
 		"id": "223",
 		"name": "Meteor Hammer",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 2350,
 		"cooldown": 24,
@@ -1364,7 +1187,6 @@
 	"item_nullifier": {
 		"id": "225",
 		"name": "Nullifier",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 4725,
 		"cooldown": 10,
@@ -1374,7 +1196,6 @@
 	"item_recipe_aeon_disk": {
 		"id": "255",
 		"name": "Aeon Disk Recipe",
-		"is_active": true,
 		"cost": 1200,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1382,7 +1203,6 @@
 	"item_aeon_disk": {
 		"id": "256",
 		"name": "Aeon Disk",
-		"is_active": true,
 		"cost": 3000,
 		"cooldown": 105,
 		"is_recipe": false,
@@ -1391,7 +1211,6 @@
 	"item_recipe_kaya": {
 		"id": "258",
 		"name": "Kaya Recipe",
-		"is_active": true,
 		"cost": 600,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1399,7 +1218,6 @@
 	"item_kaya": {
 		"id": "259",
 		"name": "Kaya",
-		"is_active": true,
 		"cost": 2050,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1407,7 +1225,6 @@
 	"item_refresher_shard": {
 		"id": "260",
 		"name": "Refresher Shard",
-		"is_active": true,
 		"mana_cost": 200,
 		"cost": 1000,
 		"cooldown": 180,
@@ -1417,7 +1234,6 @@
 	"item_recipe_spirit_vessel": {
 		"id": "266",
 		"name": "Spirit Vessel Recipe",
-		"is_active": true,
 		"cost": 1100,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1425,7 +1241,6 @@
 	"item_spirit_vessel": {
 		"id": "267",
 		"name": "Spirit Vessel",
-		"is_active": true,
 		"cost": 2980,
 		"cooldown": 7,
 		"is_recipe": false,
@@ -1434,7 +1249,6 @@
 	"item_vanguard": {
 		"id": "125",
 		"name": "Vanguard",
-		"is_active": true,
 		"cost": 1825,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1442,7 +1256,6 @@
 	"item_recipe_crimson_guard": {
 		"id": "243",
 		"name": "Crimson Guard Recipe",
-		"is_active": true,
 		"cost": 800,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1450,7 +1263,6 @@
 	"item_crimson_guard": {
 		"id": "242",
 		"name": "Crimson Guard",
-		"is_active": true,
 		"cost": 3600,
 		"cooldown": 35,
 		"is_recipe": false,
@@ -1459,7 +1271,6 @@
 	"item_recipe_blade_mail": {
 		"id": "126",
 		"name": "Blade Mail Recipe",
-		"is_active": true,
 		"cost": 550,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1467,7 +1278,6 @@
 	"item_blade_mail": {
 		"id": "127",
 		"name": "Blade Mail",
-		"is_active": true,
 		"mana_cost": 25,
 		"cost": 2100,
 		"cooldown": 25,
@@ -1477,7 +1287,6 @@
 	"item_soul_booster": {
 		"id": "129",
 		"name": "Soul Booster",
-		"is_active": true,
 		"cost": 3000,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1485,7 +1294,6 @@
 	"item_hood_of_defiance": {
 		"id": "131",
 		"name": "Hood of Defiance",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 1500,
 		"cooldown": 60,
@@ -1495,7 +1303,6 @@
 	"item_recipe_eternal_shroud": {
 		"id": "691",
 		"name": "Eternal Shroud Recipe",
-		"is_active": true,
 		"cost": 1100,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1503,7 +1310,6 @@
 	"item_eternal_shroud": {
 		"id": "692",
 		"name": "Eternal Shroud",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 3300,
 		"cooldown": 45,
@@ -1513,7 +1319,6 @@
 	"item_rapier": {
 		"id": "133",
 		"name": "Divine Rapier",
-		"is_active": true,
 		"cost": 5950,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1521,7 +1326,6 @@
 	"item_recipe_monkey_king_bar": {
 		"id": "134",
 		"name": "Monkey King Bar Recipe",
-		"is_active": true,
 		"cost": 675,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1529,7 +1333,6 @@
 	"item_monkey_king_bar": {
 		"id": "135",
 		"name": "Monkey King Bar",
-		"is_active": true,
 		"cost": 4975,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1537,7 +1340,6 @@
 	"item_radiance": {
 		"id": "137",
 		"name": "Radiance",
-		"is_active": true,
 		"cost": 5050,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1545,7 +1347,6 @@
 	"item_butterfly": {
 		"id": "139",
 		"name": "Butterfly",
-		"is_active": true,
 		"cost": 4975,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1553,7 +1354,6 @@
 	"item_recipe_greater_crit": {
 		"id": "140",
 		"name": "Daedalus Recipe",
-		"is_active": true,
 		"cost": 1000,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1561,7 +1361,6 @@
 	"item_greater_crit": {
 		"id": "141",
 		"name": "Daedalus",
-		"is_active": true,
 		"cost": 5150,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1569,7 +1368,6 @@
 	"item_recipe_basher": {
 		"id": "142",
 		"name": "Skull Basher Recipe",
-		"is_active": true,
 		"cost": 825,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1577,7 +1375,6 @@
 	"item_basher": {
 		"id": "143",
 		"name": "Skull Basher",
-		"is_active": true,
 		"cost": 2875,
 		"cooldown": 2.3,
 		"is_recipe": false,
@@ -1586,7 +1383,6 @@
 	"item_bfury": {
 		"id": "145",
 		"name": "Battle Fury",
-		"is_active": true,
 		"cost": 4100,
 		"cooldown": 4,
 		"is_recipe": false,
@@ -1595,7 +1391,6 @@
 	"item_recipe_manta": {
 		"id": "146",
 		"name": "Manta Style Recipe",
-		"is_active": true,
 		"cost": 500,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1603,7 +1398,6 @@
 	"item_manta": {
 		"id": "147",
 		"name": "Manta Style",
-		"is_active": true,
 		"mana_cost": 125,
 		"cost": 4600,
 		"cooldown": 30,
@@ -1613,7 +1407,6 @@
 	"item_recipe_lesser_crit": {
 		"id": "148",
 		"name": "Crystalys Recipe",
-		"is_active": true,
 		"cost": 500,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1621,14 +1414,12 @@
 	"item_lesser_crit": {
 		"id": "149",
 		"name": "Crystalys",
-		"is_active": true,
 		"cost": 1950,
 		"is_recipe": false,
 		"is_neutral": false
 	},
 	"item_recipe_dragon_lance": {
 		"id": "234",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1636,7 +1427,6 @@
 	"item_dragon_lance": {
 		"id": "236",
 		"name": "Dragon Lance",
-		"is_active": true,
 		"cost": 1900,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1644,7 +1434,6 @@
 	"item_recipe_armlet": {
 		"id": "150",
 		"name": "Armlet of Mordiggian Recipe",
-		"is_active": true,
 		"cost": 625,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1652,7 +1441,6 @@
 	"item_armlet": {
 		"id": "151",
 		"name": "Armlet of Mordiggian",
-		"is_active": true,
 		"cost": 2500,
 		"cooldown": 0,
 		"is_recipe": false,
@@ -1661,7 +1449,6 @@
 	"item_invis_sword": {
 		"id": "152",
 		"name": "Shadow Blade",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 3000,
 		"cooldown": 25,
@@ -1671,7 +1458,6 @@
 	"item_recipe_silver_edge": {
 		"id": "248",
 		"name": "Silver Edge Recipe",
-		"is_active": true,
 		"cost": 500,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1679,7 +1465,6 @@
 	"item_silver_edge": {
 		"id": "249",
 		"name": "Silver Edge",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 5450,
 		"cooldown": 20,
@@ -1689,7 +1474,6 @@
 	"item_sange_and_yasha": {
 		"id": "154",
 		"name": "Sange and Yasha",
-		"is_active": true,
 		"cost": 4100,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1697,7 +1481,6 @@
 	"item_kaya_and_sange": {
 		"id": "273",
 		"name": "Kaya and Sange",
-		"is_active": true,
 		"cost": 4100,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1705,7 +1488,6 @@
 	"item_yasha_and_kaya": {
 		"id": "277",
 		"name": "Yasha and Kaya",
-		"is_active": true,
 		"cost": 4100,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1713,7 +1495,6 @@
 	"item_recipe_satanic": {
 		"id": "155",
 		"name": "Satanic Recipe",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1721,7 +1502,6 @@
 	"item_satanic": {
 		"id": "156",
 		"name": "Satanic",
-		"is_active": true,
 		"cost": 5050,
 		"cooldown": 30,
 		"is_recipe": false,
@@ -1730,7 +1510,6 @@
 	"item_recipe_mjollnir": {
 		"id": "157",
 		"name": "Mjollnir Recipe",
-		"is_active": true,
 		"cost": 900,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1738,7 +1517,6 @@
 	"item_mjollnir": {
 		"id": "158",
 		"name": "Mjollnir",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 5600,
 		"cooldown": 35,
@@ -1748,7 +1526,6 @@
 	"item_skadi": {
 		"id": "160",
 		"name": "Eye of Skadi",
-		"is_active": true,
 		"cost": 5300,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1756,7 +1533,6 @@
 	"item_recipe_sange": {
 		"id": "161",
 		"name": "Sange Recipe",
-		"is_active": true,
 		"cost": 600,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1764,7 +1540,6 @@
 	"item_sange": {
 		"id": "162",
 		"name": "Sange",
-		"is_active": true,
 		"cost": 2050,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1772,7 +1547,6 @@
 	"item_recipe_helm_of_the_dominator": {
 		"id": "163",
 		"name": "Helm of the Dominator Recipe",
-		"is_active": true,
 		"cost": 975,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1780,7 +1554,6 @@
 	"item_helm_of_the_dominator": {
 		"id": "164",
 		"name": "Helm of the Dominator",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 2400,
 		"cooldown": 45,
@@ -1790,7 +1563,6 @@
 	"item_recipe_helm_of_the_overlord": {
 		"id": "633",
 		"name": "Helm of the Overlord Recipe",
-		"is_active": true,
 		"cost": 1325,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1798,7 +1570,6 @@
 	"item_helm_of_the_overlord": {
 		"id": "635",
 		"name": "Helm of the Overlord",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 6175,
 		"cooldown": 45,
@@ -1808,7 +1579,6 @@
 	"item_maelstrom": {
 		"id": "166",
 		"name": "Maelstrom",
-		"is_active": true,
 		"cost": 2700,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1816,7 +1586,6 @@
 	"item_recipe_gungir": {
 		"id": "1565",
 		"name": "Gleipnir Recipe",
-		"is_active": true,
 		"cost": 700,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1824,7 +1593,6 @@
 	"item_gungir": {
 		"id": "1466",
 		"name": "Gleipnir",
-		"is_active": true,
 		"mana_cost": 200,
 		"cost": 6150,
 		"cooldown": 18,
@@ -1834,7 +1602,6 @@
 	"item_desolator": {
 		"id": "168",
 		"name": "Desolator",
-		"is_active": true,
 		"cost": 3500,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1842,7 +1609,6 @@
 	"item_recipe_yasha": {
 		"id": "169",
 		"name": "Yasha Recipe",
-		"is_active": true,
 		"cost": 600,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1850,7 +1616,6 @@
 	"item_yasha": {
 		"id": "170",
 		"name": "Yasha",
-		"is_active": true,
 		"cost": 2050,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1858,7 +1623,6 @@
 	"item_mask_of_madness": {
 		"id": "172",
 		"name": "Mask of Madness",
-		"is_active": true,
 		"mana_cost": 25,
 		"cost": 1775,
 		"cooldown": 16,
@@ -1868,7 +1632,6 @@
 	"item_recipe_diffusal_blade": {
 		"id": "173",
 		"name": "Diffusal Blade Recipe",
-		"is_active": true,
 		"cost": 1050,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1876,7 +1639,6 @@
 	"item_diffusal_blade": {
 		"id": "174",
 		"name": "Diffusal Blade",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 2500,
 		"cooldown": 15,
@@ -1886,7 +1648,6 @@
 	"item_recipe_ethereal_blade": {
 		"id": "175",
 		"name": "Ethereal Blade Recipe",
-		"is_active": true,
 		"cost": 1100,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1894,7 +1655,6 @@
 	"item_ethereal_blade": {
 		"id": "176",
 		"name": "Ethereal Blade",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 4650,
 		"cooldown": 22,
@@ -1904,7 +1664,6 @@
 	"item_recipe_soul_ring": {
 		"id": "177",
 		"name": "Soul Ring Recipe",
-		"is_active": true,
 		"cost": 400,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1912,7 +1671,6 @@
 	"item_soul_ring": {
 		"id": "178",
 		"name": "Soul Ring",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 855,
 		"cooldown": 25,
@@ -1922,7 +1680,6 @@
 	"item_arcane_boots": {
 		"id": "180",
 		"name": "Arcane Boots",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 1300,
 		"cooldown": 55,
@@ -1932,7 +1689,6 @@
 	"item_octarine_core": {
 		"id": "235",
 		"name": "Octarine Core",
-		"is_active": true,
 		"cost": 5275,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1940,7 +1696,6 @@
 	"item_orb_of_venom": {
 		"id": "181",
 		"name": "Orb of Venom",
-		"is_active": true,
 		"cost": 275,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1948,7 +1703,6 @@
 	"item_blight_stone": {
 		"id": "240",
 		"name": "Blight Stone",
-		"is_active": true,
 		"cost": 300,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1956,7 +1710,6 @@
 	"item_recipe_orb_of_corrosion": {
 		"id": "640",
 		"name": "Orb of Corrosion Recipe",
-		"is_active": true,
 		"cost": 100,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1964,7 +1717,6 @@
 	"item_orb_of_corrosion": {
 		"id": "569",
 		"name": "Orb of Corrosion",
-		"is_active": true,
 		"cost": 925,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1972,7 +1724,6 @@
 	"item_recipe_falcon_blade": {
 		"id": "599",
 		"name": "Falcon Blade Recipe",
-		"is_active": true,
 		"cost": 250,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1980,7 +1731,6 @@
 	"item_falcon_blade": {
 		"id": "596",
 		"name": "Falcon Blade",
-		"is_active": true,
 		"cost": 1125,
 		"is_recipe": false,
 		"is_neutral": false
@@ -1988,7 +1738,6 @@
 	"item_recipe_mage_slayer": {
 		"id": "597",
 		"name": "Mage Slayer Recipe",
-		"is_active": true,
 		"cost": 400,
 		"is_recipe": true,
 		"is_neutral": false
@@ -1996,7 +1745,6 @@
 	"item_mage_slayer": {
 		"id": "598",
 		"name": "Mage Slayer",
-		"is_active": true,
 		"cost": 2400,
 		"is_recipe": false,
 		"is_neutral": false
@@ -2004,7 +1752,6 @@
 	"item_recipe_ancient_janggo": {
 		"id": "184",
 		"name": "Drum of Endurance Recipe",
-		"is_active": true,
 		"cost": 500,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2012,7 +1759,6 @@
 	"item_ancient_janggo": {
 		"id": "185",
 		"name": "Drum of Endurance",
-		"is_active": true,
 		"cost": 1650,
 		"cooldown": 30,
 		"is_recipe": false,
@@ -2021,7 +1767,6 @@
 	"item_recipe_boots_of_bearing": {
 		"id": "930",
 		"name": "Boots of Bearing Recipe",
-		"is_active": true,
 		"cost": 1500,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2029,7 +1774,6 @@
 	"item_boots_of_bearing": {
 		"id": "931",
 		"name": "Boots of Bearing",
-		"is_active": true,
 		"cost": 4075,
 		"cooldown": 30,
 		"is_recipe": false,
@@ -2038,7 +1782,6 @@
 	"item_medallion_of_courage": {
 		"id": "187",
 		"name": "Medallion of Courage",
-		"is_active": true,
 		"cost": 1025,
 		"cooldown": 12,
 		"is_recipe": false,
@@ -2047,7 +1790,6 @@
 	"item_recipe_solar_crest": {
 		"id": "227",
 		"name": "Solar Crest Recipe",
-		"is_active": true,
 		"cost": 900,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2055,7 +1797,6 @@
 	"item_solar_crest": {
 		"id": "229",
 		"name": "Solar Crest",
-		"is_active": true,
 		"cost": 2625,
 		"cooldown": 12,
 		"is_recipe": false,
@@ -2064,7 +1805,6 @@
 	"item_smoke_of_deceit": {
 		"id": "188",
 		"name": "Smoke of Deceit",
-		"is_active": true,
 		"cost": 50,
 		"cooldown": 1,
 		"is_recipe": false,
@@ -2073,7 +1813,6 @@
 	"item_tome_of_knowledge": {
 		"id": "257",
 		"name": "Tome of Knowledge",
-		"is_active": true,
 		"cost": 75,
 		"is_recipe": false,
 		"is_neutral": false
@@ -2081,7 +1820,6 @@
 	"item_recipe_veil_of_discord": {
 		"id": "189",
 		"name": "Veil of Discord Recipe",
-		"is_active": true,
 		"cost": 650,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2089,7 +1827,6 @@
 	"item_veil_of_discord": {
 		"id": "190",
 		"name": "Veil of Discord",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 1525,
 		"cooldown": 22,
@@ -2099,7 +1836,6 @@
 	"item_recipe_revenants_brooch": {
 		"id": "910",
 		"name": "Revenant's Brooch Recipe",
-		"is_active": true,
 		"cost": 800,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2107,7 +1843,6 @@
 	"item_revenants_brooch": {
 		"id": "911",
 		"name": "Revenant's Brooch",
-		"is_active": true,
 		"mana_cost": 300,
 		"cost": 6200,
 		"cooldown": 25,
@@ -2117,7 +1852,6 @@
 	"item_recipe_guardian_greaves": {
 		"id": "230",
 		"name": "Guardian Greaves Recipe",
-		"is_active": true,
 		"cost": 1450,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2125,7 +1859,6 @@
 	"item_guardian_greaves": {
 		"id": "231",
 		"name": "Guardian Greaves",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 4950,
 		"cooldown": 40,
@@ -2135,7 +1868,6 @@
 	"item_recipe_rod_of_atos": {
 		"id": "205",
 		"name": "Rod of Atos Recipe",
-		"is_active": true,
 		"cost": 850,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2143,7 +1875,6 @@
 	"item_rod_of_atos": {
 		"id": "206",
 		"name": "Rod of Atos",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 2750,
 		"cooldown": 18,
@@ -2153,7 +1884,6 @@
 	"item_recipe_abyssal_blade": {
 		"id": "207",
 		"name": "Abyssal Blade Recipe",
-		"is_active": true,
 		"cost": 1550,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2161,7 +1891,6 @@
 	"item_abyssal_blade": {
 		"id": "208",
 		"name": "Abyssal Blade",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 6250,
 		"cooldown": 35,
@@ -2171,7 +1900,6 @@
 	"item_recipe_heavens_halberd": {
 		"id": "209",
 		"name": "Heaven's Halberd Recipe",
-		"is_active": true,
 		"cost": 200,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2179,7 +1907,6 @@
 	"item_heavens_halberd": {
 		"id": "210",
 		"name": "Heaven's Halberd",
-		"is_active": true,
 		"mana_cost": 100,
 		"cost": 3550,
 		"cooldown": 18,
@@ -2189,7 +1916,6 @@
 	"item_ring_of_aquila": {
 		"id": "212",
 		"name": "Ring of Aquila",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2197,7 +1923,6 @@
 	"item_tranquil_boots": {
 		"id": "214",
 		"name": "Tranquil Boots",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 925,
 		"cooldown": 13,
@@ -2207,7 +1932,6 @@
 	"item_shadow_amulet": {
 		"id": "215",
 		"name": "Shadow Amulet",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 1000,
 		"cooldown": 7,
@@ -2217,7 +1941,6 @@
 	"item_recipe_glimmer_cape": {
 		"id": "253",
 		"name": "Glimmer Cape Recipe",
-		"is_active": true,
 		"cost": 450,
 		"is_recipe": true,
 		"is_neutral": false
@@ -2225,7 +1948,6 @@
 	"item_glimmer_cape": {
 		"id": "254",
 		"name": "Glimmer Cape",
-		"is_active": true,
 		"mana_cost": 90,
 		"cost": 1950,
 		"cooldown": 14,
@@ -2235,7 +1957,6 @@
 	"item_keen_optic": {
 		"id": "287",
 		"name": "Keen Optic",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2243,7 +1964,6 @@
 	"item_grove_bow": {
 		"id": "288",
 		"name": "Grove Bow",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2251,7 +1971,6 @@
 	"item_quickening_charm": {
 		"id": "289",
 		"name": "Quickening Charm",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2259,7 +1978,6 @@
 	"item_philosophers_stone": {
 		"id": "290",
 		"name": "Philosopher's Stone",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2267,7 +1985,6 @@
 	"item_force_boots": {
 		"id": "291",
 		"name": "Force Boots",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 0,
 		"cooldown": 8,
@@ -2277,7 +1994,6 @@
 	"item_desolator_2": {
 		"id": "292",
 		"name": "Stygian Desolator",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2285,7 +2001,6 @@
 	"item_seer_stone": {
 		"id": "294",
 		"name": "Seer Stone",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 60,
 		"is_recipe": false,
@@ -2294,7 +2009,6 @@
 	"item_force_field": {
 		"id": "829",
 		"name": "Arcanist's Armor",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 20,
 		"is_recipe": false,
@@ -2303,7 +2017,6 @@
 	"item_black_powder_bag": {
 		"id": "834",
 		"name": "Blast Rig",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 20,
 		"is_recipe": false,
@@ -2312,7 +2025,6 @@
 	"item_timeless_relic": {
 		"id": "300",
 		"name": "Timeless Relic",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2320,7 +2032,6 @@
 	"item_mirror_shield": {
 		"id": "301",
 		"name": "Mirror Shield",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2328,7 +2039,6 @@
 	"item_pupils_gift": {
 		"id": "306",
 		"name": "Pupil's Gift",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2336,7 +2046,6 @@
 	"item_mind_breaker": {
 		"id": "309",
 		"name": "Mind Breaker",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 12,
 		"is_recipe": false,
@@ -2345,7 +2054,6 @@
 	"item_spell_prism": {
 		"id": "311",
 		"name": "Spell Prism",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2353,7 +2061,6 @@
 	"item_flicker": {
 		"id": "335",
 		"name": "Flicker",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 5,
 		"is_recipe": false,
@@ -2362,7 +2069,6 @@
 	"item_spy_gadget": {
 		"id": "336",
 		"name": "Telescope",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2370,7 +2076,6 @@
 	"item_vambrace": {
 		"id": "331",
 		"name": "Vambrace",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2378,7 +2083,6 @@
 	"item_broom_handle": {
 		"id": "355",
 		"name": "Broom Handle",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2386,7 +2090,6 @@
 	"item_trusty_shovel": {
 		"id": "356",
 		"name": "Trusty Shovel",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 50,
 		"is_recipe": false,
@@ -2395,7 +2098,6 @@
 	"item_nether_shawl": {
 		"id": "357",
 		"name": "Nether Shawl",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2403,7 +2105,6 @@
 	"item_dragon_scale": {
 		"id": "358",
 		"name": "Dragon Scale",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2411,7 +2112,6 @@
 	"item_enchanted_quiver": {
 		"id": "361",
 		"name": "Enchanted Quiver",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 4,
 		"is_recipe": false,
@@ -2420,7 +2120,6 @@
 	"item_ninja_gear": {
 		"id": "362",
 		"name": "Ninja Gear",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 45,
 		"is_recipe": false,
@@ -2429,7 +2128,6 @@
 	"item_havoc_hammer": {
 		"id": "364",
 		"name": "Havoc Hammer",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 10,
 		"is_recipe": false,
@@ -2438,7 +2136,6 @@
 	"item_apex": {
 		"id": "366",
 		"name": "Apex",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2446,7 +2143,6 @@
 	"item_demonicon": {
 		"id": "370",
 		"name": "Book of the Dead",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 80,
 		"is_recipe": false,
@@ -2455,7 +2151,6 @@
 	"item_fallen_sky": {
 		"id": "371",
 		"name": "Fallen Sky",
-		"is_active": true,
 		"cost": 4751,
 		"cooldown": 15,
 		"is_recipe": false,
@@ -2464,7 +2159,6 @@
 	"item_pirate_hat": {
 		"id": "372",
 		"name": "Pirate Hat",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 40,
 		"is_recipe": false,
@@ -2473,7 +2167,6 @@
 	"item_ex_machina": {
 		"id": "374",
 		"name": "Ex Machina",
-		"is_active": true,
 		"mana_cost": 350,
 		"cost": 0,
 		"cooldown": 25,
@@ -2483,7 +2176,6 @@
 	"item_paladin_sword": {
 		"id": "376",
 		"name": "Paladin Sword",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2491,7 +2183,6 @@
 	"item_arcane_ring": {
 		"id": "349",
 		"name": "Arcane Ring",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 45,
 		"is_recipe": false,
@@ -2500,7 +2191,6 @@
 	"item_titan_sliver": {
 		"id": "381",
 		"name": "Titan Sliver",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2508,7 +2198,6 @@
 	"item_elven_tunic": {
 		"id": "573",
 		"name": "Elven Tunic",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2516,7 +2205,6 @@
 	"item_cloak_of_flames": {
 		"id": "574",
 		"name": "Cloak of Flames",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2524,7 +2212,6 @@
 	"item_trickster_cloak": {
 		"id": "571",
 		"name": "Trickster Cloak",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 25,
 		"is_recipe": false,
@@ -2533,7 +2220,6 @@
 	"item_possessed_mask": {
 		"id": "577",
 		"name": "Possessed Mask",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2541,7 +2227,6 @@
 	"item_penta_edged_sword": {
 		"id": "638",
 		"name": "Penta-Edged Sword",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2549,7 +2234,6 @@
 	"item_bullwhip": {
 		"id": "680",
 		"name": "Bullwhip",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 11,
 		"is_recipe": false,
@@ -2558,7 +2242,6 @@
 	"item_psychic_headband": {
 		"id": "675",
 		"name": "Psychic Headband",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 20,
 		"is_recipe": false,
@@ -2567,7 +2250,6 @@
 	"item_ceremonial_robe": {
 		"id": "676",
 		"name": "Ceremonial Robe",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2575,7 +2257,6 @@
 	"item_book_of_shadows": {
 		"id": "677",
 		"name": "Book of Shadows",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 8,
 		"is_recipe": false,
@@ -2584,7 +2265,6 @@
 	"item_giants_ring": {
 		"id": "678",
 		"name": "Giant's Ring",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2592,7 +2272,6 @@
 	"item_stormcrafter": {
 		"id": "585",
 		"name": "Stormcrafter",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 0,
 		"cooldown": 25,
@@ -2602,7 +2281,6 @@
 	"item_mysterious_hat": {
 		"id": "589",
 		"name": "Fairy's Trinket",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 8,
 		"is_recipe": false,
@@ -2611,7 +2289,6 @@
 	"item_ascetic_cap": {
 		"id": "825",
 		"name": "Ascetic's Cap",
-		"is_active": true,
 		"mana_cost": 0,
 		"cost": 0,
 		"cooldown": 30,
@@ -2621,7 +2298,6 @@
 	"item_misericorde": {
 		"id": "828",
 		"name": "Brigand's Blade",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2629,7 +2305,6 @@
 	"item_heavy_blade": {
 		"id": "837",
 		"name": "Witchbane",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 0,
 		"cooldown": 20,
@@ -2639,7 +2314,6 @@
 	"item_unstable_wand": {
 		"id": "838",
 		"name": "Pig Pole",
-		"is_active": true,
 		"mana_cost": 50,
 		"cost": 0,
 		"cooldown": 25,
@@ -2649,7 +2323,6 @@
 	"item_pogo_stick": {
 		"id": "840",
 		"name": "Tumbler's Toy",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 15,
 		"is_recipe": false,
@@ -2658,7 +2331,6 @@
 	"item_seeds_of_serenity": {
 		"id": "945",
 		"name": "Seeds of Serenity",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 40,
 		"is_recipe": false,
@@ -2667,7 +2339,6 @@
 	"item_lance_of_pursuit": {
 		"id": "946",
 		"name": "Lance of Pursuit",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2675,7 +2346,6 @@
 	"item_occult_bracelet": {
 		"id": "947",
 		"name": "Occult Bracelet",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2683,7 +2353,6 @@
 	"item_ogre_seal_totem": {
 		"id": "949",
 		"name": "Ogre Seal Totem",
-		"is_active": true,
 		"mana_cost": 75,
 		"cost": 0,
 		"cooldown": 40,
@@ -2693,7 +2362,6 @@
 	"item_eye_of_the_vizier": {
 		"id": "990",
 		"name": "Eye of the Vizier",
-		"is_active": true,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true
@@ -2701,7 +2369,6 @@
 	"item_specialists_array": {
 		"id": "1076",
 		"name": "Specialist's Array",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 12,
 		"is_recipe": false,
@@ -2710,7 +2377,6 @@
 	"item_dagger_of_ristul": {
 		"id": "1077",
 		"name": "Dagger of Ristul",
-		"is_active": true,
 		"cost": 0,
 		"cooldown": 30,
 		"is_recipe": false,
