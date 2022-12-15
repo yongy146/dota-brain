@@ -21,14 +21,37 @@ export interface IItem {
     activePercent?: number; // e.g. 40 for 40%
     duration?: number;
   };
+
   // Armor information
   armor?: number;
   armor_aura?: number;
   armor_activated?: number;
   armor_reduction?: number;
+
   // Status resistance
   status_resistance?: number;
+
+  // Evasion
+  evasion?: number;
+
+  // Critical strike
+  crit_multiplier?: number;
+  crit_multiplier_target?: number;
+  crit_chance?: number;
+
+  // Attack speed
+  attack_speed?: number; // absolute values
+  attack_speed_aura?: number; // absolute values
+  attack_speed_active?: number; // absolute values
+  //attack_speed_percent?: number;
+  attack_speed_target?: number; // absolute values
+
+  // Attack slow
+  attack_slow?: number;
+  attack_slow_melee?: number;
+  attack_slow_ranged?: number;
 }
+
 /**
  * Calcualted the speed with actication
  *
