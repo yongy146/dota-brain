@@ -1917,7 +1917,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"evastion": 15
+		"evasion": 15
 	},
 	"item_butterfly": {
 		"id": "139",
@@ -3220,7 +3220,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"evastion": 16,
+		"evasion": 16,
 		"attack_speed": 26
 	},
 	"item_cloak_of_flames": {
@@ -3244,7 +3244,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"evastion": 20
+		"evasion": 20
 	},
 	"item_possessed_mask": {
 		"id": "577",
