@@ -1285,7 +1285,7 @@
 		"cost": 5800,
 		"is_recipe": false,
 		"is_neutral": false,
-		"is_roshan": false,
+		"is_roshan": true,
 		"is_purchasable": false
 	},
 	"item_aghanims_shard": {
