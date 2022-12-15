@@ -99,7 +99,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 4
 	},
 	"item_claymore": {
 		"id": "5",
@@ -117,7 +118,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 6
 	},
 	"item_javelin": {
 		"id": "7",
@@ -144,7 +146,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 10
 	},
 	"item_quarterstaff": {
 		"id": "10",
@@ -205,7 +208,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 2
 	},
 	"item_moon_shard": {
 		"id": "247",
@@ -615,6 +619,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"armor": 4,
 		"speed": {
 			"absolute": 45,
 			"activeAbsolute": 20,
@@ -787,7 +792,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 6
 	},
 	"item_pers": {
 		"id": "69",
@@ -832,7 +838,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 2
 	},
 	"item_recipe_null_talisman": {
 		"id": "76",
@@ -870,7 +877,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 4
 	},
 	"item_recipe_vladmir": {
 		"id": "80",
@@ -888,7 +896,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor_aura": 3
 	},
 	"item_recipe_wraith_pact": {
 		"id": "907",
@@ -908,7 +917,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor_aura": 3
 	},
 	"item_recipe_buckler": {
 		"id": "85",
@@ -926,7 +936,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 1
 	},
 	"item_recipe_ring_of_basilius": {
 		"id": "87",
@@ -1002,7 +1013,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 2
 	},
 	"item_recipe_headdress": {
 		"id": "93",
@@ -1342,7 +1354,10 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 10,
+		"armor_aura": 5,
+		"armor_reduction": -5
 	},
 	"item_recipe_heart": {
 		"id": "113",
@@ -1409,7 +1424,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 15
 	},
 	"item_recipe_bloodstone": {
 		"id": "120",
@@ -1459,7 +1475,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 10
 	},
 	"item_recipe_meteor_hammer": {
 		"id": "222",
@@ -1490,7 +1507,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 10
 	},
 	"item_recipe_aeon_disk": {
 		"id": "255",
@@ -1509,7 +1527,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"status_resistance": 75
 	},
 	"item_recipe_kaya": {
 		"id": "258",
@@ -1557,7 +1576,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 2
 	},
 	"item_vanguard": {
 		"id": "125",
@@ -1585,7 +1605,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 8
 	},
 	"item_recipe_blade_mail": {
 		"id": "126",
@@ -1605,7 +1626,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 6
 	},
 	"item_soul_booster": {
 		"id": "129",
@@ -1814,7 +1836,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 6,
+		"armor_activated": 4
 	},
 	"item_invis_sword": {
 		"id": "152",
@@ -1863,6 +1887,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"status_resistance": 20,
 		"speed": {
 			"percent": 10
 		}
@@ -1874,7 +1899,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"status_resistance": 20
 	},
 	"item_yasha_and_kaya": {
 		"id": "277",
@@ -1943,7 +1969,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"status_resistance": 12
 	},
 	"item_recipe_helm_of_the_dominator": {
 		"id": "163",
@@ -1963,7 +1990,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 6
 	},
 	"item_recipe_helm_of_the_overlord": {
 		"id": "633",
@@ -1983,7 +2011,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 7,
+		"armor_aura": 3
 	},
 	"item_maelstrom": {
 		"id": "166",
@@ -2021,7 +2051,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor_reduction": -6
 	},
 	"item_recipe_yasha": {
 		"id": "169",
@@ -2054,6 +2085,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"armor_activated": 8,
 		"speed": {
 			"activeAbsolute": 30,
 			"duration": 6
@@ -2117,7 +2149,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 2
 	},
 	"item_arcane_boots": {
 		"id": "180",
@@ -2158,7 +2191,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor_reduction": -2
 	},
 	"item_recipe_orb_of_corrosion": {
 		"id": "640",
@@ -2176,7 +2210,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 3
 	},
 	"item_recipe_falcon_blade": {
 		"id": "599",
@@ -2271,7 +2306,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 5,
+		"armor_reduction": -5
 	},
 	"item_recipe_solar_crest": {
 		"id": "227",
@@ -2291,6 +2328,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"armor": 6,
 		"speed": {
 			"absolute": 20
 		}
@@ -2356,7 +2394,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"armor": 8
 	},
 	"item_recipe_guardian_greaves": {
 		"id": "230",
@@ -2377,6 +2416,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"armor": 4,
 		"speed": {
 			"absolute": 50
 		}
@@ -2439,7 +2479,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"status_resistance": 16
 	},
 	"item_ring_of_aquila": {
 		"id": "212",
@@ -2448,7 +2489,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor_aura": 2
 	},
 	"item_tranquil_boots": {
 		"id": "214",
@@ -2544,7 +2586,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor_reduction": -10
 	},
 	"item_seer_stone": {
 		"id": "294",
@@ -2564,7 +2607,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 5
 	},
 	"item_black_powder_bag": {
 		"id": "834",
@@ -2574,7 +2618,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 7
 	},
 	"item_timeless_relic": {
 		"id": "300",
@@ -2660,7 +2705,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 4
 	},
 	"item_trusty_shovel": {
 		"id": "356",
@@ -2679,7 +2725,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 2
 	},
 	"item_dragon_scale": {
 		"id": "358",
@@ -2688,7 +2735,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 5
 	},
 	"item_enchanted_quiver": {
 		"id": "361",
@@ -2773,7 +2821,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 20
 	},
 	"item_paladin_sword": {
 		"id": "376",
@@ -2792,7 +2841,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 2
 	},
 	"item_titan_sliver": {
 		"id": "381",
@@ -2801,7 +2851,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"status_resistance": 12
 	},
 	"item_elven_tunic": {
 		"id": "573",
@@ -2819,7 +2870,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"armor": 4
 	},
 	"item_trickster_cloak": {
 		"id": "571",
@@ -2876,7 +2928,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"status_resistance": 10
 	},
 	"item_book_of_shadows": {
 		"id": "677",
@@ -2930,7 +2983,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"status_resistance": 40
 	},
 	"item_misericorde": {
 		"id": "828",
