@@ -26,6 +26,8 @@ export interface IItem {
   armor_aura?: number;
   armor_activated?: number;
   armor_reduction?: number;
+  // Status resistance
+  status_resistance?: number;
 }
 /**
  * Calcualted the speed with actication
