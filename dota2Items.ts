@@ -50,6 +50,14 @@ export interface IItem {
   attack_slow?: number;
   attack_slow_melee?: number;
   attack_slow_ranged?: number;
+
+  // Lifesteam (all are in %, except for abolsute)
+  lifesteal_attack?: number;
+  lifesteal_attack_active?: number;
+  lifesteal_attack_absolute?: number;
+  lifesteal_spell?: number;
+  lifesteal_multiplier?: number;
+  lifesteal_spell_amplifier?: number;
 }
 
 /**
