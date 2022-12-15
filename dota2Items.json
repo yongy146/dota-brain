@@ -506,15 +506,6 @@
 		"is_recipe": false,
 		"is_neutral": false
 	},
-	"item_ward_dispenser": {
-		"id": "218",
-		"name": "Observer and Sentry Wards",
-		"is_active": true,
-		"cost": 50,
-		"cooldown": 0,
-		"is_recipe": false,
-		"is_neutral": false
-	},
 	"item_tango": {
 		"id": "44",
 		"name": "Tango",
