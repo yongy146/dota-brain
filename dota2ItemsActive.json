@@ -2651,7 +2651,7 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": false
 	},
 	"item_broom_handle": {
 		"id": "355",
