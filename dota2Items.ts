@@ -21,8 +21,12 @@ export interface IItem {
     activePercent?: number; // e.g. 40 for 40%
     duration?: number;
   };
+  // Armor information
+  armor?: number;
+  armor_aura?: number;
+  armor_activated?: number;
+  armor_reduction?: number;
 }
-
 /**
  * Calcualted the speed with actication
  *
