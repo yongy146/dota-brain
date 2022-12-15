@@ -10,7 +10,9 @@ export interface IItem {
   cost?: number; // 2250; //
   cooldown?: number; // 15;
   is_recipe?: boolean;
+  is_purchasable?: boolean;
   is_neutral?: boolean;
+  is_roshan?: boolean;
   speed?: {
     absolute?: number;
     percent?: number;
@@ -40,4 +42,30 @@ export function getSpeed(item: IItem): number {
       speed += (300 * item.speed.auraAbsolute) / 100;
   }
   return speed;
+}
+
+/**
+ *
+ * @param item e.g. item_blink
+ * @returns
+ */
+export function getRoshanItemOrder(itemName: string): number {
+  switch (itemName) {
+    case "item_aegis": {
+      return 100;
+    }
+    case "item_ultimate_scepter_roshan": {
+      return 99;
+    }
+    case "item_refresher_shard": {
+      return 98;
+    }
+    case "item_aghanims_shard_roshan": {
+      return 97;
+    }
+    case "item_cheese": {
+      return 96;
+    }
+  }
+  return 0;
 }
