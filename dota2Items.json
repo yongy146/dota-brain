@@ -2809,7 +2809,7 @@
 		"attack_slow": -50,
 		"all_attributes_": 5,
 		"armor": 6,
-		"armor_reduction": 6,
+		"armor_reduction": "6",
 		"speed": {
 			"absolute": 20
 		}
