@@ -2,6 +2,28 @@ export interface IDotaItems {
   [key: string]: IDotaItem;
 }
 
+export enum ItemFilter {
+  AllItems = "AllItems",
+  Strength = "dota.Strength",
+  Agility = "dota.Agility",
+  Intelligence = "dota.Intelligence",
+  Damage = "Damage",
+  AttackSpeed = "AttackSpeed",
+  CriticalStrike = "CriticalStrike",
+  AttackRange = "AttackRange",
+  ArmorReduction = "ArmorReduction",
+  AttackLifesteal = "AttackLifesteal",
+  AttackSlow = "AttackSlow",
+  Armor = "Armor",
+  Evasion = "Evasion",
+  SpellAmplification = "SpellAmplification",
+  SpellLifesteal = "SpellLifesteal",
+  MagicResistance = "MagicResistance",
+  StatusResistance = "StatusResistance",
+  HealthRegenReduction = "HealthRegenReduction",
+  MovementSpeed = "MovementSpeed",
+}
+
 export interface IDotaItem {
   name: string; // Maybe change to code?! and move name to internationalizatio?`!
   id?: string; // Maybe change to number?
@@ -97,6 +119,7 @@ export interface IDotaItem {
   intelligence?: number;
   intelligence_percent?: number; // item_psychic_headband
   all_attributes?: number;
+  selected_attribute?: number; // for Vambrace
 }
 
 export class DotaItem implements IDotaItem {
@@ -196,6 +219,7 @@ export class DotaItem implements IDotaItem {
   intelligence_?: number;
   intelligence_percent_?: number; // item_psychic_headband
   all_attributes_?: number;
+  selected_attribute?: number; // for Vambrace
 
   constructor(key: string, name: string) {
     this.key = key;
@@ -251,18 +275,348 @@ export class DotaItem implements IDotaItem {
     return value === 0 ? undefined : value;
   }
   get strength(): number | undefined {
-    const value = (this.strength_ || 0) + (this.all_attributes_ || 0);
+    const value =
+      (this.strength_ || 0) +
+      (this.all_attributes_ || 0) +
+      (this.selected_attribute || 0);
     return value === 0 ? undefined : value;
   }
   get agility(): number | undefined {
-    const value = (this.agility_ || 0) + (this.all_attributes_ || 0);
+    const value =
+      (this.agility_ || 0) +
+      (this.all_attributes_ || 0) +
+      (this.selected_attribute || 0);
     return value === 0 ? undefined : value;
   }
   get intelligence(): number | undefined {
-    const value = (this.intelligence || 0) + (this.all_attributes_ || 0);
+    const value =
+      (this.intelligence_ || 0) +
+      (this.all_attributes_ || 0) +
+      (this.selected_attribute || 0);
     return value === 0 ? undefined : value;
   }
+
+  public isVisible(
+    filter: ItemFilter,
+    includePurchasable: boolean,
+    includeNeutral: boolean,
+    includeRoshan: boolean
+  ): boolean {
+    if (this.is_recipe) return false;
+    if (includePurchasable === false && this.is_purchasable === true)
+      return false;
+    if (includeNeutral === false && this.is_neutral === true) return false;
+    if (includeRoshan === false && this.is_roshan === true) return false;
+
+    switch (filter) {
+      case ItemFilter.AllItems: {
+        return true;
+      }
+      case ItemFilter.Strength: {
+        return this.strength !== undefined;
+      }
+      case ItemFilter.Agility: {
+        return this.agility !== undefined;
+      }
+      case ItemFilter.Intelligence: {
+        return this.intelligence !== undefined;
+      }
+      case ItemFilter.Damage: {
+        return true;
+        break;
+      }
+      case ItemFilter.AttackSpeed: {
+        return true;
+        break;
+      }
+      case ItemFilter.CriticalStrike: {
+        return true;
+        break;
+      }
+      case ItemFilter.AttackRange: {
+        return true;
+        break;
+      }
+      case ItemFilter.ArmorReduction: {
+        return true;
+        break;
+      }
+      case ItemFilter.AttackLifesteal: {
+        return true;
+        break;
+      }
+      case ItemFilter.AttackSlow: {
+        return true;
+        break;
+      }
+      case ItemFilter.Armor: {
+        return true;
+        break;
+      }
+      case ItemFilter.Evasion: {
+        return true;
+        break;
+      }
+      case ItemFilter.SpellAmplification: {
+        return true;
+        break;
+      }
+      case ItemFilter.SpellLifesteal: {
+        return true;
+        break;
+      }
+      case ItemFilter.MagicResistance: {
+        return true;
+        break;
+      }
+      case ItemFilter.StatusResistance: {
+        return true;
+        break;
+      }
+      case ItemFilter.HealthRegenReduction: {
+        return true;
+        break;
+      }
+      case ItemFilter.MovementSpeed: {
+        return true;
+      }
+      default: {
+        // We should never get here through
+        return false;
+      }
+    }
+  }
 }
+/*
+      case "AllItems": {
+        const selectedItems = itemArray.filter((item) => isItemVisible(item));
+        selectedItems.sort((itemA, itemB) =>
+          itemA.name > itemB.name ? 1 : -1
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "dota.Strength": {
+        const selectedItems = itemArray.filter(
+          (item) => item.strength !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort((itemA, itemB) => itemB.strength! - itemA.strength!);
+        setItems(selectedItems);
+        break;
+      }
+      case "dota.Agility": {
+        const selectedItems = itemArray.filter(
+          (item) => item.agility !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort((itemA, itemB) => itemB.agility! - itemA.agility!);
+        setItems(selectedItems);
+        break;
+      }
+      case "dota.Intelligence": {
+        const selectedItems = itemArray.filter(
+          (item) =>
+            (item.intelligence !== undefined ||
+              item.intelligence_percent !== undefined) &&
+            isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA, itemB) =>
+            (itemB.intelligence || 0) +
+            (itemB.intelligence_percent || 0) * 0.35 -
+            (itemA.intelligence || 0) -
+            (itemA.intelligence_percent || 0) * 0.35
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "Damage": {
+        const selectedItems = itemArray.filter(
+          (item) => item.damage_index !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA, itemB) => itemB.damage_index! - itemA.damage_index!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "AttackRange": {
+        const selectedItems = itemArray.filter(
+          (item) => item.attack_range_sum !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA, itemB) => itemB.attack_range_sum! - itemA.attack_range_sum!
+        );
+        setItems(selectedItems);
+        break;
+      }
+
+      case "Armor": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.armor_total !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemB.armor_total! - itemA.armor_total!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "ArmorReduction": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.armor_reduction !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemA.armor_reduction! - itemB.armor_reduction!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "StatusResistance": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.status_resistance !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemB.status_resistance! - itemA.status_resistance!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "Evasion": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.evasion !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort((itemA: DotaItem, itemB: DotaItem) =>
+          itemB.evasion! === itemA.evasion!
+            ? (itemB.cost || 0) - (itemA.cost || 0)
+            : itemB.evasion! - itemA.evasion!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "CriticalStrike": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.crit_chance !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort((itemA: DotaItem, itemB: DotaItem) =>
+          itemB.crit_effect === itemA.crit_effect!
+            ? itemB.cost! - itemA.cost!
+            : itemB.crit_effect! - itemA.crit_effect!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "AttackSpeed": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.attack_speed_total !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            Math.abs(itemB.attack_speed_total!) -
+            Math.abs(itemA.attack_speed_total!)
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "AttackSlow": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.attack_slow_mixed !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemA.attack_slow_mixed! - itemB.attack_slow_mixed!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "AttackLifesteal": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) =>
+            ((item as any).attack_lifesteal !== undefined ||
+              (item as any).attack_lifesteal_absolute !== undefined) &&
+            isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            (itemB.attack_lifesteal || 0) - (itemA.attack_lifesteal || 0)
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "SpellLifesteal": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) =>
+            (item as any).spell_lifesteal_index !== undefined &&
+            isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemB.spell_lifesteal_index! - itemA.spell_lifesteal_index!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "SpellAmplification": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => (item as any).spell_amp !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemB.spell_amp! - itemA.spell_amp!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "MagicResistance": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) =>
+            ((item as any).magic_resist !== undefined ||
+              (item as any).magic_resist_aura !== undefined) &&
+            isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            itemB.magic_resist! - itemA.magic_resist!
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "HealthRegenReduction": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) =>
+            ((item as any).heal_reduction !== undefined ||
+              (item as any).heal_reduction_aura !== undefined) &&
+            isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            (itemB.heal_reduction || 0) +
+            (itemB.heal_reduction_aura || 0) -
+            (itemA.heal_reduction || 0) -
+            (itemA.heal_reduction_aura || 0)
+        );
+        setItems(selectedItems);
+        break;
+      }
+      case "MovementSpeed": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => (item as any).speed !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            getSpeed(itemB) - getSpeed(itemA)
+        );
+        /*absolute?: number;
+            percent?: number;
+            brokenAbsolute?: number;
+            activeAbsolute?: number;
+            activeRelative
+            auraAbsolute*/
+/*
+        setItems(selectedItems);
+        break;
+      }*/
 
 /*export function getSortValue(item: IItem): number {
 \
