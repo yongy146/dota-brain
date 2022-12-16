@@ -83,6 +83,10 @@ export interface IItem {
   attack_range?: number; // Atack range for ranged heroes only
   attack_range_melee?: number; // Attack range for melee heroes only
 
+  // Health regen reduction
+  heal_reduction?: number;
+  heal_reduction_aura?: number;
+
   // Attributes
   strength?: number;
   strength_active?: number; // for armlet
