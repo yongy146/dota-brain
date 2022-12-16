@@ -58,6 +58,13 @@ export interface IItem {
   lifesteal_spell?: number; // X
   lifesteal_multiplier?: number; // only for item Bloodstone X
   lifesteal_spell_amplifier?: number;
+
+  // Spell amp
+  spell_amp?: number;
+
+  // Magic resistance
+  magic_resist?: number;
+  magic_resist_aura?: number;
 }
 
 /**
