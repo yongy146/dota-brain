@@ -93,6 +93,7 @@ export interface IItem {
   agility?: number;
   intelligence?: number;
   intelligence_percent?: number; // item_psychic_headband
+  all_attributes?: number;
 }
 
 /**
