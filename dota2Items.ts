@@ -51,13 +51,15 @@ export interface IItem {
   attack_slow_melee?: number;
   attack_slow_ranged?: number;
 
-  // Lifesteam (all are in %, except for abolsute)
-  lifesteal_attack?: number; // X
-  lifesteal_attack_active?: number; // Satanic
-  lifesteal_attack_absolute?: number; // x
-  lifesteal_spell?: number; // X
-  lifesteal_multiplier?: number; // only for item Bloodstone X
-  lifesteal_spell_amplifier?: number;
+  // Attack lifesteam (all are in %, except for absolue)
+  attack_lifesteal?: number; // X
+  attack_lifesteal_active?: number; // Satanic
+  attack_lifesteal_absolute?: number; // x
+
+  // Spell lifesteal
+  spell_lifesteal?: number; // X
+  spell_lifesteal_multiplier?: number; // only for item Bloodstone X
+  spell_lifesteal_amplifier?: number;
 
   // Spell amp
   spell_amp?: number;
