@@ -58,6 +58,13 @@ export interface IItem {
   lifesteal_spell?: number;
   lifesteal_multiplier?: number;
   lifesteal_spell_amplifier?: number;
+
+  // Spell amp
+  spell_amp?: number;
+
+  // Magic resistance
+  magic_resist?: number;
+  magic_resist_aura?: number;
 }
 
 /**

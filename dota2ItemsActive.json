@@ -1009,7 +1009,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"magic_resist": 30,
+		"magic_resist_aura": 15
 	},
 	"item_recipe_urn_of_shadows": {
 		"id": "91",
@@ -1573,7 +1575,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell_amplifier": 24
+		"lifesteal_spell_amplifier": 24,
+		"spell_amp": 8
 	},
 	"item_refresher_shard": {
 		"id": "260",
@@ -1674,7 +1677,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"magic_resist": 18
 	},
 	"item_recipe_eternal_shroud": {
 		"id": "691",
@@ -1695,7 +1699,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell": 20
+		"lifesteal_spell": 20,
+		"magic_resist": 25
 	},
 	"item_rapier": {
 		"id": "133",
@@ -1944,7 +1949,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"status_resistance": 20,
-		"lifesteal_spell_amplifier": 30
+		"lifesteal_spell_amplifier": 30,
+		"spell_amp": 16
 	},
 	"item_yasha_and_kaya": {
 		"id": "277",
@@ -1956,6 +1962,7 @@
 		"is_purchasable": true,
 		"attack_speed": 12,
 		"lifesteal_spell_amplifier": 30,
+		"spell_amp": 16,
 		"speed": {
 			"percent": 10
 		}
@@ -2186,7 +2193,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell_amplifier": 24
+		"lifesteal_spell_amplifier": 24,
+		"spell_amp": 12
 	},
 	"item_recipe_soul_ring": {
 		"id": "177",
@@ -2436,7 +2444,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"spell_amp": 18
 	},
 	"item_recipe_revenants_brooch": {
 		"id": "910",
@@ -2692,7 +2701,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"spell_amp": 15
 	},
 	"item_mirror_shield": {
 		"id": "301",
@@ -2762,7 +2772,9 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 10
+		"attack_speed": 10,
+		"spell_amp": 6,
+		"magic_resist": 10
 	},
 	"item_broom_handle": {
 		"id": "355",
@@ -2792,6 +2804,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"spell_amp": 6,
+		"magic_resist": 20,
 		"armor": 2
 	},
 	"item_dragon_scale": {
@@ -2924,7 +2938,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"status_resistance": 12
+		"status_resistance": 12,
+		"magic_resist": 16
 	},
 	"item_elven_tunic": {
 		"id": "573",
@@ -2945,6 +2960,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"magic_resist": 10,
 		"armor": 4
 	},
 	"item_trickster_cloak": {
@@ -2956,7 +2972,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"evasion": 20
+		"evasion": 20,
+		"magic_resist": 20
 	},
 	"item_possessed_mask": {
 		"id": "577",
@@ -3006,7 +3023,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"status_resistance": 10
+		"status_resistance": 10,
+		"magic_resist": 10
 	},
 	"item_book_of_shadows": {
 		"id": "677",
@@ -3049,7 +3067,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"spell_amp": 5
 	},
 	"item_ascetic_cap": {
 		"id": "825",
