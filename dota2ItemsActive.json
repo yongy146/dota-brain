@@ -439,7 +439,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"magic_resist": 15
 	},
 	"item_talisman_of_evasion": {
 		"id": "32",
@@ -2434,6 +2435,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 20,
+		"magic_resist": 25,
 		"damage": 20,
 		"intelligence": 10
 	},
@@ -2743,7 +2745,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"magic_resist": 20
 	},
 	"item_grove_bow": {
 		"id": "288",
