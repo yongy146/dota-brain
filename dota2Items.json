@@ -211,6 +211,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"damage": 8,
 		"damage_ranged": 4
 	},
 	"item_faerie_fire": {
@@ -3129,6 +3130,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"damage": 8,
+		"attack_range_melee": 50,
 		"armor": 4
 	},
 	"item_trusty_shovel": {
@@ -3176,7 +3178,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 225
+		"damage": 225,
+		"attack_range": 350
 	},
 	"item_ninja_gear": {
 		"id": "362",
@@ -3362,7 +3365,8 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_slow": -60,
-		"undefined": 45
+		"undefined": 45,
+		"attack_range_melee": 100
 	},
 	"item_bullwhip": {
 		"id": "680",
