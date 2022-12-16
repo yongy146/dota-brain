@@ -66,7 +66,7 @@ export interface IItem {
 
   // Magic resistance
   magic_resist?: number;
-  magic_resist_aura?: number;
+  magic_resist_aura?: number; // Auro is not commulative (only availalbe on Pipe of Insight)
 
   // Physical damage
   damage?: number; // Absolute value per hit
