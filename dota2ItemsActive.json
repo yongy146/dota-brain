@@ -779,6 +779,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 25,
+		"selected_attribute": 10,
 		"movement_speed": 45
 	},
 	"item_recipe_hand_of_midas": {
@@ -2908,7 +2909,8 @@
 		"is_purchasable": false,
 		"attack_speed": 10,
 		"spell_amp": 6,
-		"magic_resist": 10
+		"magic_resist": 10,
+		"selected_attribute": 10
 	},
 	"item_broom_handle": {
 		"id": "355",
