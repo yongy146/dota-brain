@@ -1474,6 +1474,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_aura": -45,
+		"heal_reduction_aura": 25,
 		"armor": 15
 	},
 	"item_recipe_bloodstone": {
@@ -1631,6 +1632,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"heal_reduction": 45,
 		"armor": 2
 	},
 	"item_vanguard": {
@@ -2053,7 +2055,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_slow_melee": -30,
-		"attack_slow_ranged": -60
+		"attack_slow_ranged": -60,
+		"heal_reduction": 40
 	},
 	"item_recipe_sange": {
 		"id": "161",
