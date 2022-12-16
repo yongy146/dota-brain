@@ -1775,7 +1775,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"spell_lifesteal_amplifier?: number": 24,
+		"spell_lifesteal_amplifier": 24,
 		"spell_amp": 8
 	},
 	"item_refresher_shard": {
@@ -2202,7 +2202,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"status_resistance": 20,
-		"spell_lifesteal_amplifier?: number": 30,
+		"spell_lifesteal_amplifier": 30,
 		"spell_amp": 16
 	},
 	"item_yasha_and_kaya": {
@@ -2215,7 +2215,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 12,
-		"spell_lifesteal_amplifier?: number": 30,
+		"spell_lifesteal_amplifier": 30,
 		"spell_amp": 16,
 		"speed": {
 			"percent": 10
@@ -2475,7 +2475,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"spell_lifesteal_amplifier?: number": 24,
+		"spell_lifesteal_amplifier": 24,
 		"spell_amp": 12
 	},
 	"item_recipe_soul_ring": {
