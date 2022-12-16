@@ -82,6 +82,13 @@ export interface IItem {
   // Attack range
   attack_range?: number; // Atack range for ranged heroes only
   attack_range_melee?: number; // Attack range for melee heroes only
+
+  // Attributes
+  strength?: number;
+  strength_active?: number; // for armlet
+  agility?: number;
+  intelligence?: number;
+  intelligence_percent?: number; // item_psychic_headband
 }
 
 /**

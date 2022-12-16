@@ -20,7 +20,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_slow": -50
+		"attack_slow": -50,
+		"strength": 25
 	},
 	"item_swift_blink": {
 		"id": "603",
@@ -32,6 +33,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"agility": 25,
 		"speed": {
 			"duration": 6,
 			"activePercent": 40
@@ -46,7 +48,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 25
 	},
 	"item_recipe_arcane_blink": {
 		"id": "606",
@@ -239,7 +242,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"strength": 3
 	},
 	"item_slippers": {
 		"id": "14",
@@ -248,7 +252,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"agility": 3
 	},
 	"item_mantle": {
 		"id": "15",
@@ -257,7 +262,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 3
 	},
 	"item_branches": {
 		"id": "16",
@@ -276,7 +282,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"strength": 6
 	},
 	"item_robe": {
 		"id": "19",
@@ -285,7 +292,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 6
 	},
 	"item_circlet": {
 		"id": "20",
@@ -312,7 +320,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"strength": 10
 	},
 	"item_blade_of_alacrity": {
 		"id": "22",
@@ -321,7 +330,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"agility": 10
 	},
 	"item_staff_of_wizardry": {
 		"id": "23",
@@ -330,7 +340,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 10
 	},
 	"item_ultimate_orb": {
 		"id": "24",
@@ -662,7 +673,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"agility": 25
 	},
 	"item_reaver": {
 		"id": "53",
@@ -671,7 +683,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"strength": 25
 	},
 	"item_relic": {
 		"id": "54",
@@ -718,7 +731,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 25
 	},
 	"item_energy_booster": {
 		"id": "59",
@@ -799,7 +813,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 10,
-		"damage": 15
+		"damage": 15,
+		"intelligence": 10
 	},
 	"item_recipe_witch_blade": {
 		"id": "533",
@@ -820,6 +835,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 35,
+		"intelligence": 12,
 		"armor": 6
 	},
 	"item_pers": {
@@ -848,7 +864,10 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 2
+		"damage": 2,
+		"strength": 5,
+		"agility": 2,
+		"intelligence": 2
 	},
 	"item_recipe_wraith_band": {
 		"id": "74",
@@ -868,6 +887,9 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 6,
+		"agility": 5,
+		"strength": 2,
+		"intelligence": 2,
 		"armor": 2
 	},
 	"item_recipe_null_talisman": {
@@ -886,7 +908,10 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 5,
+		"strength": 2,
+		"agility": 2
 	},
 	"item_recipe_mekansm": {
 		"id": "78",
@@ -1078,7 +1103,10 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"strength": 10,
+		"agility": 10,
+		"intelligence": 35
 	},
 	"item_recipe_orchid": {
 		"id": "97",
@@ -1124,7 +1152,8 @@
 		"crit_multiplier_target": 130,
 		"crit_chance": 100,
 		"attack_speed": 60,
-		"damage": 50
+		"damage": 50,
+		"intelligence": 20
 	},
 	"item_echo_sabre": {
 		"id": "252",
@@ -1137,7 +1166,9 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 10,
-		"damage": 15
+		"damage": 15,
+		"strength": 13,
+		"intelligence": 10
 	},
 	"item_recipe_cyclone": {
 		"id": "99",
@@ -1158,6 +1189,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"intelligence": 10,
 		"speed": {
 			"absolute": 20
 		}
@@ -1181,6 +1213,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"intelligence": 35,
 		"speed": {
 			"absolute": 50
 		}
@@ -1221,7 +1254,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 10
 	},
 	"item_recipe_hurricane_pike": {
 		"id": "262",
@@ -1243,7 +1277,10 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 100,
-		"attack_range": 150
+		"attack_range": 150,
+		"intelligence": 15,
+		"agility": 20,
+		"strength": 15
 	},
 	"item_recipe_dagon": {
 		"id": "103",
@@ -1422,7 +1459,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"strength": 45
 	},
 	"item_recipe_black_king_bar": {
 		"id": "115",
@@ -1443,7 +1481,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 24
+		"damage": 24,
+		"strength": 10
 	},
 	"item_aegis": {
 		"id": "117",
@@ -1475,6 +1514,7 @@
 		"is_purchasable": true,
 		"attack_speed_aura": -45,
 		"heal_reduction_aura": 25,
+		"intelligence": 30,
 		"armor": 15
 	},
 	"item_recipe_bloodstone": {
@@ -1601,7 +1641,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"spell_lifesteal_amplifier": 24,
-		"spell_amp": 8
+		"spell_amp": 8,
+		"intelligence": 16
 	},
 	"item_refresher_shard": {
 		"id": "260",
@@ -1783,7 +1824,8 @@
 		"is_purchasable": true,
 		"evasion": 35,
 		"attack_speed": 30,
-		"damage": 25
+		"damage": 25,
+		"agility": 35
 	},
 	"item_recipe_greater_crit": {
 		"id": "140",
@@ -1825,7 +1867,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage": 25,
-		"damage_bonus_chance": 100
+		"damage_bonus_chance": 100,
+		"strength": 10
 	},
 	"item_bfury": {
 		"id": "145",
@@ -1858,6 +1901,9 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 12,
+		"strength": 10,
+		"agility": 26,
+		"intelligence": 10,
 		"speed": {
 			"absolute": 8
 		}
@@ -1899,7 +1945,9 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_range": 150
+		"attack_range": 150,
+		"agility": 15,
+		"strength": 12
 	},
 	"item_recipe_armlet": {
 		"id": "150",
@@ -1922,6 +1970,7 @@
 		"attack_speed": 25,
 		"damage": 15,
 		"damage_active": 35,
+		"strength_active": 25,
 		"armor": 6,
 		"armor_activated": 4
 	},
@@ -1980,6 +2029,8 @@
 		"is_purchasable": true,
 		"status_resistance": 20,
 		"attack_speed": 12,
+		"strength": 16,
+		"agility": 16,
 		"speed": {
 			"percent": 10
 		}
@@ -1994,7 +2045,9 @@
 		"is_purchasable": true,
 		"status_resistance": 20,
 		"spell_lifesteal_amplifier": 30,
-		"spell_amp": 16
+		"spell_amp": 16,
+		"strength": 16,
+		"intelligence": 16
 	},
 	"item_yasha_and_kaya": {
 		"id": "277",
@@ -2007,6 +2060,8 @@
 		"attack_speed": 12,
 		"spell_lifesteal_amplifier": 30,
 		"spell_amp": 16,
+		"agility": 16,
+		"intelligence": 16,
 		"speed": {
 			"percent": 10
 		}
@@ -2022,7 +2077,8 @@
 		"is_purchasable": true,
 		"attack_lifesteal": 30,
 		"attack_lifesteal_active": 145,
-		"damage": 38
+		"damage": 38,
+		"strength": 25
 	},
 	"item_recipe_mjollnir": {
 		"id": "157",
@@ -2075,7 +2131,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"status_resistance": 12
+		"status_resistance": 12,
+		"strength": 16
 	},
 	"item_recipe_helm_of_the_dominator": {
 		"id": "163",
@@ -2151,7 +2208,10 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 30
+		"damage": 30,
+		"agility": 14,
+		"intelligence": 24,
+		"strength": 14
 	},
 	"item_desolator": {
 		"id": "168",
@@ -2182,6 +2242,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 12,
+		"agility": 16,
 		"speed": {
 			"percent": 8
 		}
@@ -2224,7 +2285,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"agility": 15,
+		"intelligence": 10
 	},
 	"item_recipe_ethereal_blade": {
 		"id": "175",
@@ -2246,7 +2309,10 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"spell_lifesteal_amplifier": 24,
-		"spell_amp": 12
+		"spell_amp": 12,
+		"agility": 5,
+		"strength": 5,
+		"intelligence": 25
 	},
 	"item_recipe_soul_ring": {
 		"id": "177",
@@ -2267,6 +2333,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"strength": 6,
 		"armor": 2
 	},
 	"item_arcane_boots": {
@@ -2367,7 +2434,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 20,
-		"damage": 20
+		"damage": 20,
+		"intelligence": 10
 	},
 	"item_recipe_ancient_janggo": {
 		"id": "184",
@@ -2521,6 +2589,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 40,
+		"intelligence": 45,
 		"armor": 8
 	},
 	"item_recipe_guardian_greaves": {
@@ -2565,7 +2634,10 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"intelligence": 24,
+		"strength": 12,
+		"agility": 12
 	},
 	"item_recipe_abyssal_blade": {
 		"id": "207",
@@ -2587,7 +2659,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage_bonus_chance": 120,
-		"damage": 25
+		"damage": 25,
+		"strength": 10
 	},
 	"item_recipe_heavens_halberd": {
 		"id": "209",
@@ -2609,7 +2682,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"status_resistance": 16,
-		"evasion": 20
+		"evasion": 20,
+		"strength": 20
 	},
 	"item_ring_of_aquila": {
 		"id": "212",
@@ -2620,6 +2694,9 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"damage": 3,
+		"strength": 3,
+		"agility": 9,
+		"intelligence": 3,
 		"armor_aura": 2
 	},
 	"item_tranquil_boots": {
@@ -2902,6 +2979,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"agility": 25,
 		"speed": {
 			"absolute": 25,
 			"duration": 35,
@@ -2917,7 +2995,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 12
+		"damage": 12,
+		"strength": 12
 	},
 	"item_apex": {
 		"id": "366",
@@ -2936,7 +3015,9 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"strength": 30,
+		"intelligence": 30
 	},
 	"item_fallen_sky": {
 		"id": "371",
@@ -2946,7 +3027,9 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"strength": 15,
+		"intelligence": 15
 	},
 	"item_pirate_hat": {
 		"id": "372",
@@ -2995,6 +3078,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"intelligence": 8,
 		"armor": 2
 	},
 	"item_titan_sliver": {
@@ -3083,7 +3167,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"intelligence_percent": 15
 	},
 	"item_ceremonial_robe": {
 		"id": "676",
@@ -3114,6 +3199,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"strength": 35,
 		"speed": {
 			"absolute": 50
 		}
@@ -3232,7 +3318,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"strength": 10
 	},
 	"item_eye_of_the_vizier": {
 		"id": "990",
