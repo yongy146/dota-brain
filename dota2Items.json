@@ -1283,6 +1283,7 @@
 		"crit_multiplier_target": 130,
 		"crit_chance": 100,
 		"attack_speed": 60,
+		"magic_resist": 25,
 		"damage": 50,
 		"intelligence": 20
 	},
