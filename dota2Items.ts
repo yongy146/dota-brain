@@ -184,11 +184,12 @@ export class DotaItem implements IDotaItem {
   heal_reduction_aura?: number;
 
   // Attributes
-  strength?: number;
-  strength_active?: number; // for armlet
-  agility?: number;
-  intelligence?: number;
-  intelligence_percent?: number; // item_psychic_headband
+  strength_?: number;
+  strength_active_?: number; // for armlet
+  agility_?: number;
+  intelligence_?: number;
+  intelligence_percent_?: number; // item_psychic_headband
+  all_attributes_?: number;
 
   constructor(key: string, name: string) {
     this.key = key;
@@ -241,6 +242,18 @@ export class DotaItem implements IDotaItem {
   get spell_lifesteal_index(): number | undefined {
     const value =
       (this.spell_lifesteal || 0) + (this.spell_lifesteal_amplifier || 0);
+    return value === 0 ? undefined : value;
+  }
+  get strength(): number | undefined {
+    const value = (this.strength_ || 0) + (this.all_attributes_ || 0);
+    return value === 0 ? undefined : value;
+  }
+  get agility(): number | undefined {
+    const value = (this.agility_ || 0) + (this.all_attributes_ || 0);
+    return value === 0 ? undefined : value;
+  }
+  get intelligence(): number | undefined {
+    const value = (this.intelligence || 0) + (this.all_attributes_ || 0);
     return value === 0 ? undefined : value;
   }
 }
