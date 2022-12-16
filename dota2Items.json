@@ -424,7 +424,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_attack": 18
+		"attack_lifesteal": 18
 	},
 	"item_voodoo_mask": {
 		"id": "473",
@@ -435,7 +435,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell": 10
+		"spell_lifesteal": 10
 	},
 	"item_ring_of_regen": {
 		"id": "27",
@@ -1037,7 +1037,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_attack": 20,
+		"attack_lifesteal": 20,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
 	},
@@ -1062,7 +1062,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_attack": 24,
+		"attack_lifesteal": 24,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
 	},
@@ -1661,8 +1661,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell": 30,
-		"lifesteal_spell_multiplier": 2
+		"spell_lifesteal": 30,
+		"spell_lifesteal_multiplier": 2
 	},
 	"item_recipe_sphere": {
 		"id": "122",
@@ -1775,7 +1775,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell_amplifier": 24,
+		"spell_lifesteal_amplifier?: number": 24,
 		"spell_amp": 8
 	},
 	"item_refresher_shard": {
@@ -1912,7 +1912,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell": 20,
+		"spell_lifesteal": 20,
 		"magic_resist": 25
 	},
 	"item_rapier": {
@@ -2202,7 +2202,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"status_resistance": 20,
-		"lifesteal_spell_amplifier": 30,
+		"spell_lifesteal_amplifier?: number": 30,
 		"spell_amp": 16
 	},
 	"item_yasha_and_kaya": {
@@ -2215,7 +2215,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 12,
-		"lifesteal_spell_amplifier": 30,
+		"spell_lifesteal_amplifier?: number": 30,
 		"spell_amp": 16,
 		"speed": {
 			"percent": 10
@@ -2231,8 +2231,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_attack": 30,
-		"lifesteal_attack_active": 145,
+		"attack_lifesteal": 30,
+		"attack_lifesteal_active": 145,
 		"damage": 38
 	},
 	"item_recipe_mjollnir": {
@@ -2336,7 +2336,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_attack": 20,
+		"attack_lifesteal": 20,
 		"damage_aura_percent": 18,
 		"armor": 7,
 		"armor_aura": 3
@@ -2424,7 +2424,7 @@
 		"is_purchasable": true,
 		"attack_speed": 10,
 		"attack_speed_active": 110,
-		"lifesteal_attack": 24,
+		"attack_lifesteal": 24,
 		"damage": 10,
 		"armor_activated": 8,
 		"speed": {
@@ -2475,7 +2475,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"lifesteal_spell_amplifier": 24,
+		"spell_lifesteal_amplifier?: number": 24,
 		"spell_amp": 12
 	},
 	"item_recipe_soul_ring": {
@@ -3279,8 +3279,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"lifesteal_attack": 16,
-		"lifesteal_spell": 8,
+		"attack_lifesteal": 16,
+		"spell_lifesteal": 8,
 		"damage": 16
 	},
 	"item_arcane_ring": {
@@ -3354,7 +3354,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"lifesteal_attack_absolute": 7
+		"attack_lifesteal_absolute": 7
 	},
 	"item_penta_edged_sword": {
 		"id": "638",
