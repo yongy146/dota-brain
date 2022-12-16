@@ -41,7 +41,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_slow": -50,
-		"strength_": 25
+		"strength_": 25,
+		"duration": 6
 	},
 	"item_swift_blink": {
 		"id": "603",
@@ -55,10 +56,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"agility_": 25,
-		"speed": {
-			"duration": 6,
-			"activePercent": 40
-		}
+		"duration": 6,
+		"movement_speed_percent_active": 40
 	},
 	"item_arcane_blink": {
 		"id": "604",
@@ -71,7 +70,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"intelligence_": 25
+		"intelligence_": 25,
+		"duration": 6
 	},
 	"item_recipe_arcane_blink": {
 		"id": "606",
@@ -249,9 +249,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"absolute": 20
-		}
+		"movement_speed": 20
 	},
 	"item_ring_of_protection": {
 		"id": "12",
@@ -481,9 +479,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"absolute": 45
-		}
+		"movement_speed": 45
 	},
 	"item_gem": {
 		"id": "30",
@@ -494,7 +490,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"duration": 4
 	},
 	"item_cloak": {
 		"id": "31",
@@ -572,7 +569,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"all_attributes_": 5
+		"all_attributes_": 5,
+		"duration": 4
 	},
 	"item_clarity": {
 		"id": "38",
@@ -614,7 +612,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"duration": 12
 	},
 	"item_bottle": {
 		"id": "41",
@@ -709,9 +708,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"absolute": 90
-		}
+		"movement_speed": 90
 	},
 	"item_travel_boots_2": {
 		"id": "220",
@@ -722,9 +719,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"absolute": 110
-		}
+		"movement_speed": 110
 	},
 	"item_phase_boots": {
 		"id": "50",
@@ -738,12 +733,10 @@
 		"is_purchasable": true,
 		"damage_melee": 18,
 		"damage_ranged": 12,
+		"duration": 3,
 		"armor": 4,
-		"speed": {
-			"absolute": 45,
-			"activeAbsolute": 20,
-			"duration": 3
-		}
+		"movement_speed": 45,
+		"movement_speed_active": 20
 	},
 	"item_demon_edge": {
 		"id": "51",
@@ -881,9 +874,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 25,
-		"speed": {
-			"absolute": 45
-		}
+		"movement_speed": 45
 	},
 	"item_recipe_hand_of_midas": {
 		"id": "64",
@@ -1206,6 +1197,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"all_attributes_": 2,
+		"duration": 8,
 		"armor": 2
 	},
 	"item_recipe_headdress": {
@@ -1293,7 +1285,8 @@
 		"attack_speed": 60,
 		"magic_resist": 25,
 		"damage": 50,
-		"intelligence_": 20
+		"intelligence_": 20,
+		"duration": 6
 	},
 	"item_echo_sabre": {
 		"id": "252",
@@ -1333,9 +1326,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"intelligence_": 10,
-		"speed": {
-			"absolute": 20
-		}
+		"movement_speed": 20
 	},
 	"item_recipe_wind_waker": {
 		"id": "612",
@@ -1359,9 +1350,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"intelligence_": 35,
-		"speed": {
-			"absolute": 50
-		}
+		"movement_speed": 50
 	},
 	"item_recipe_aether_lens": {
 		"id": "233",
@@ -1654,7 +1643,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage": 24,
-		"strength_": 10
+		"strength_": 10,
+		"duration": 9
 	},
 	"item_aegis": {
 		"id": "117",
@@ -1749,6 +1739,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"duration": 6,
 		"armor": 10
 	},
 	"item_recipe_meteor_hammer": {
@@ -1867,6 +1858,7 @@
 		"is_purchasable": true,
 		"heal_reduction": 45,
 		"all_attributes_": 2,
+		"duration": 8,
 		"armor": 2
 	},
 	"item_vanguard": {
@@ -1899,6 +1891,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"duration": 12,
 		"armor": 8
 	},
 	"item_recipe_blade_mail": {
@@ -1923,6 +1916,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage": 28,
+		"duration": 5.5,
 		"armor": 6
 	},
 	"item_soul_booster": {
@@ -2118,9 +2112,7 @@
 		"strength_": 10,
 		"agility_": 26,
 		"intelligence_": 10,
-		"speed": {
-			"absolute": 8
-		}
+		"movement_speed": 8
 	},
 	"item_recipe_lesser_crit": {
 		"id": "148",
@@ -2207,10 +2199,8 @@
 		"is_purchasable": true,
 		"attack_speed": 35,
 		"damage": 20,
-		"speed": {
-			"duration": 14,
-			"activePercent": 20
-		}
+		"duration": 14,
+		"movement_speed_percent_active": 20
 	},
 	"item_recipe_silver_edge": {
 		"id": "248",
@@ -2237,10 +2227,8 @@
 		"crit_multiplier": 160,
 		"attack_speed": 35,
 		"damage": 52,
-		"speed": {
-			"duration": 14,
-			"activePercent": 25
-		}
+		"duration": 14,
+		"movement_speed_percent_active": 25
 	},
 	"item_sange_and_yasha": {
 		"id": "154",
@@ -2255,9 +2243,7 @@
 		"attack_speed": 12,
 		"strength_": 16,
 		"agility_": 16,
-		"speed": {
-			"percent": 10
-		}
+		"movement_speed_percent": 10
 	},
 	"item_kaya_and_sange": {
 		"id": "273",
@@ -2288,9 +2274,7 @@
 		"spell_amp": 16,
 		"agility_": 16,
 		"intelligence_": 16,
-		"speed": {
-			"percent": 10
-		}
+		"movement_speed_percent": 10
 	},
 	"item_satanic": {
 		"id": "156",
@@ -2451,7 +2435,8 @@
 		"damage": 30,
 		"agility_": 14,
 		"intelligence_": 24,
-		"strength_": 14
+		"strength_": 14,
+		"duration": 2
 	},
 	"item_desolator": {
 		"id": "168",
@@ -2486,9 +2471,7 @@
 		"is_purchasable": true,
 		"attack_speed": 12,
 		"agility_": 16,
-		"speed": {
-			"percent": 8
-		}
+		"movement_speed_percent": 8
 	},
 	"item_mask_of_madness": {
 		"id": "172",
@@ -2505,11 +2488,9 @@
 		"attack_speed_active": 110,
 		"attack_lifesteal": 24,
 		"damage": 10,
-		"armor_activated": 8,
-		"speed": {
-			"activeAbsolute": 30,
-			"duration": 6
-		}
+		"duration": 6,
+		"armor_activated": -8,
+		"movement_speed": 30
 	},
 	"item_recipe_diffusal_blade": {
 		"id": "173",
@@ -2560,7 +2541,8 @@
 		"spell_amp": 12,
 		"agility_": 5,
 		"strength_": 5,
-		"intelligence_": 25
+		"intelligence_": 25,
+		"duration": 4
 	},
 	"item_recipe_soul_ring": {
 		"id": "177",
@@ -2584,6 +2566,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"strength_": 6,
+		"duration": 10,
 		"armor": 2
 	},
 	"item_arcane_boots": {
@@ -2597,9 +2580,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"absolute": 45
-		}
+		"movement_speed": 45
 	},
 	"item_octarine_core": {
 		"id": "235",
@@ -2651,7 +2632,9 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"armor": 3
+		"duration": 3,
+		"armor": 3,
+		"armor_reduction": -3
 	},
 	"item_recipe_falcon_blade": {
 		"id": "599",
@@ -2696,7 +2679,8 @@
 		"attack_speed": 20,
 		"magic_resist": 25,
 		"damage": 20,
-		"intelligence_": 10
+		"intelligence_": 10,
+		"duration": 6
 	},
 	"item_recipe_ancient_janggo": {
 		"id": "184",
@@ -2719,11 +2703,9 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 45,
-		"speed": {
-			"auraAbsolute": 20,
-			"percent": 13,
-			"duration": 6
-		}
+		"duration": 6,
+		"movement_speed_aura": 20,
+		"movement_speed_percent": 13
 	},
 	"item_recipe_boots_of_bearing": {
 		"id": "930",
@@ -2746,12 +2728,10 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 50,
-		"speed": {
-			"auraAbsolute": 20,
-			"duration": 1.5,
-			"absolute": 65,
-			"activePercent": 15
-		}
+		"duration": 1.5,
+		"movement_speed_aura": 20,
+		"movement_speed": 65,
+		"movement_speed_percent_active": 15
 	},
 	"item_medallion_of_courage": {
 		"id": "187",
@@ -2763,6 +2743,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"duration": 12,
 		"armor": 5,
 		"armor_reduction": -5
 	},
@@ -2789,11 +2770,10 @@
 		"attack_speed_target": 50,
 		"attack_slow": -50,
 		"all_attributes_": 5,
+		"duration": 12,
 		"armor": 6,
-		"armor_reduction": "6",
-		"speed": {
-			"absolute": 20
-		}
+		"armor_reduction": -6,
+		"movement_speed": 20
 	},
 	"item_smoke_of_deceit": {
 		"id": "188",
@@ -2805,10 +2785,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"duration": 35,
-			"activeAbsolute": 15
-		}
+		"duration": 35,
+		"movement_speed_percent_active": 15
 	},
 	"item_tome_of_knowledge": {
 		"id": "257",
@@ -2867,6 +2845,7 @@
 		"is_purchasable": true,
 		"attack_speed": 40,
 		"intelligence_": 45,
+		"duration": 15,
 		"armor": 8
 	},
 	"item_recipe_guardian_greaves": {
@@ -2891,9 +2870,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"armor": 4,
-		"speed": {
-			"absolute": 50
-		}
+		"movement_speed": 50
 	},
 	"item_recipe_rod_of_atos": {
 		"id": "205",
@@ -2918,7 +2895,8 @@
 		"is_purchasable": true,
 		"intelligence_": 24,
 		"strength_": 12,
-		"agility_": 12
+		"agility_": 12,
+		"duration": 2
 	},
 	"item_recipe_abyssal_blade": {
 		"id": "207",
@@ -2996,10 +2974,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"speed": {
-			"brokenAbsolute": 40,
-			"absolute": 65
-		}
+		"movement_speed_broke": 40,
+		"movement_speed": 65
 	},
 	"item_shadow_amulet": {
 		"id": "215",
@@ -3034,7 +3010,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"magic_resist": 20
+		"magic_resist": 20,
+		"duration": 5
 	},
 	"item_grove_bow": {
 		"id": "288",
@@ -3080,9 +3057,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"speed": {
-			"absolute": 115
-		}
+		"movement_speed": 115
 	},
 	"item_desolator_2": {
 		"id": "292",
@@ -3105,7 +3080,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"duration": 6
 	},
 	"item_force_field": {
 		"id": "829",
@@ -3172,7 +3148,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 25
+		"attack_speed": 25,
+		"duration": 1.75
 	},
 	"item_spell_prism": {
 		"id": "311",
@@ -3195,9 +3172,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"speed": {
-			"absolute": 35
-		}
+		"movement_speed": 35
 	},
 	"item_spy_gadget": {
 		"id": "336",
@@ -3268,6 +3243,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"duration": 3,
 		"armor": 5
 	},
 	"item_enchanted_quiver": {
@@ -3294,11 +3270,9 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"agility_": 25,
-		"speed": {
-			"absolute": 25,
-			"duration": 35,
-			"activePercent": 20
-		}
+		"duration": 35,
+		"movement_speed": 25,
+		"movement_speed_percent_active": 20
 	},
 	"item_havoc_hammer": {
 		"id": "364",
@@ -3360,9 +3334,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_speed": 150,
-		"speed": {
-			"absolute": 15
-		}
+		"movement_speed": 15
 	},
 	"item_ex_machina": {
 		"id": "374",
@@ -3451,7 +3423,8 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"evasion": 20,
-		"magic_resist": 20
+		"magic_resist": 20,
+		"duration": 6
 	},
 	"item_possessed_mask": {
 		"id": "577",
@@ -3486,7 +3459,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"duration": 4
 	},
 	"item_psychic_headband": {
 		"id": "675",
@@ -3522,7 +3496,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"all_attributes_": 13
+		"all_attributes_": 13,
+		"duration": 4
 	},
 	"item_giants_ring": {
 		"id": "678",
@@ -3534,9 +3509,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"strength_": 35,
-		"speed": {
-			"absolute": 50
-		}
+		"movement_speed": 50
 	},
 	"item_stormcrafter": {
 		"id": "585",
@@ -3573,7 +3546,8 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"status_resistance": 40
+		"status_resistance": 40,
+		"duration": 3
 	},
 	"item_misericorde": {
 		"id": "828",
@@ -3609,7 +3583,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"duration": 4
 	},
 	"item_pogo_stick": {
 		"id": "840",
@@ -3631,7 +3606,8 @@
 		"is_recipe": false,
 		"is_neutral": true,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"duration": 14
 	},
 	"item_lance_of_pursuit": {
 		"id": "946",
@@ -3699,6 +3675,7 @@
 		"is_neutral": true,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 40
+		"damage": 40,
+		"duration": 8
 	}
 }

@@ -13,14 +13,17 @@ export interface IDotaItem {
   is_purchasable?: boolean;
   is_neutral?: boolean;
   is_roshan?: boolean;
-  speed?: {
-    absolute?: number;
-    percent?: number;
-    auraAbsolute?: number;
-    activeAbsolute?: number;
-    activePercent?: number; // e.g. 40 for 40%
-    duration?: number;
-  };
+
+  // Movement speed
+  movement_speed?: number; // Absolute additional speed
+  movement_speed_active?: number; // Additional speed when activated
+  movement_speed_broke?: number;
+  movement_speed_aura?: number;
+  movement_speed_percent?: number;
+  movement_speed_percent_active?: number; // Additional speed when activated
+
+  // Duration of item when activated
+  duration?: number;
 
   // Armor information
   armor?: number;
@@ -109,14 +112,17 @@ export class DotaItem implements IDotaItem {
   is_purchasable?: boolean;
   is_neutral?: boolean;
   is_roshan?: boolean;
-  speed?: {
-    absolute?: number;
-    percent?: number;
-    auraAbsolute?: number;
-    activeAbsolute?: number;
-    activePercent?: number; // e.g. 40 for 40%
-    duration?: number;
-  };
+
+  // Movement speed
+  movement_speed?: number; // Absolute additional speed
+  movement_speed_active?: number; // Additional speed when activated
+  movement_speed_broke?: number;
+  movement_speed_aura?: number;
+  movement_speed_percent?: number;
+  movement_speed_percent_active?: number; // Additional speed when activated
+
+  // Duration of item when activated
+  duration?: number;
 
   // Armor information
   armor?: number;
