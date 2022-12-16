@@ -67,6 +67,21 @@ export interface IItem {
   // Magic resistance
   magic_resist?: number;
   magic_resist_aura?: number;
+
+  // Physical damage
+  damage?: number; // Absolute value per hit
+  damage_melee?: number; // Absolute value per hit
+  damage_ranged?: number; // Absolute value per hit
+  damage_active?: number; // Absolute value per hit
+  damage_base_percent?: number; // Damage w/o items and effects
+  damage_bonus?: number; // Absolute value per hit
+  damage_bonus_chance?: number;
+  damage_aura?: number; // Absolute value per second
+  damage_aura_percent?: number;
+
+  // Attack range
+  attack_range?: number; // Atack range for ranged heroes only
+  attack_range_melee?: number; // Attack range for melee heroes only
 }
 
 /**
