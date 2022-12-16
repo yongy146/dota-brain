@@ -637,6 +637,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage_melee": 18,
+		"damage_ranged": 12,
 		"armor": 4,
 		"speed": {
 			"absolute": 45,
