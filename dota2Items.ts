@@ -170,7 +170,7 @@ export class DotaItem implements IDotaItem {
   duration?: number;
 
   // Armor information
-  armor?: number;
+  armor_?: number;
   armor_aura?: number;
   armor_activated?: number;
   armor_reduction?: number;
@@ -248,10 +248,14 @@ export class DotaItem implements IDotaItem {
   }
 
   // Getter and setters of enhanced values
-  get hasArmor(): boolean {}
-  get hasArmorReduction(): boolean {}
-  get armor_total(): number | undefined {
-    const value = (this.armor || 0) + (this.armor_aura || 0);
+  get hasArmor(): boolean {
+    return this.armor !== undefined;
+  }
+  get hasArmorReduction(): boolean {
+    return this.armor_reduction !== undefined;
+  }
+  get armor(): number | undefined {
+    const value = (this.armor_ || 0) + (this.armor_aura || 0);
     return value === 0 ? undefined : value;
   }
   get hasCriticalStrike(): boolean {
