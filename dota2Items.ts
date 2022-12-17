@@ -7,9 +7,9 @@ export interface IDotaItems {
 export enum ItemFilter {
   AllItems = "AllItems",
   Health = "dota.Health",
-  HealthRegen = "", // Implemented later on
+  HealthRegen = "health_regen", // Implemented later on
   Mana = "dota.Mana", // Implemented later on
-  ManaRegen = "", // Implemented later on
+  ManaRegen = "mana_regen", // Implemented later on
   Dispel = "", // Implemented later on
   Silence = "", // Implemented later on
   Stun = "", // Implemented later on
@@ -56,9 +56,20 @@ export interface IDotaItem {
   drop_time?: string;
   drop_rate?: number;
 
-  // Health & mana
-  health?: number;
-  mana?: number;
+  // Health
+  health_?: number;
+  health_regen_?: number;
+  health_regen_percent?: number;
+  health_regen_aura?: number;
+  health_regen_amp?: number;
+  health_regen_bonus?: number; // Guardian greaves, when health falls below 25%
+
+  // Mana
+  mana_?: number;
+  mana_regen_?: number;
+  mana_regen_amp?: number;
+  mana_regen_aura?: number;
+  mana_regen_percent?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -176,9 +187,20 @@ export class DotaItem implements IDotaItem {
   drop_time?: string;
   drop_rate?: number;
 
-  // Health & mana
-  health?: number;
-  mana?: number;
+  // Health
+  health_?: number;
+  health_regen_?: number;
+  health_regen_percent?: number;
+  health_regen_aura?: number;
+  health_regen_amp?: number;
+  health_regen_bonus?: number; // Guardian greaves, when health falls below 25%
+
+  // Mana
+  mana_?: number;
+  mana_regen_?: number;
+  mana_regen_amp?: number;
+  mana_regen_aura?: number;
+  mana_regen_percent?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -321,6 +343,32 @@ export class DotaItem implements IDotaItem {
   // Passives
   get breaksPassives(): boolean {
     return this.breaks_passives === true;
+  }
+
+  // Health
+  get health(): number | undefined {
+    const value =
+      (this.health_ || 0) + (this.strength || 0) * attributeFactors.str.health;
+    return value === 0 ? undefined : value;
+  }
+  get health_regen(): number | undefined {
+    const value =
+      (this.health_regen_ || 0) +
+      (this.strength || 0) * attributeFactors.str.health_regen;
+    return value === 0 ? undefined : value;
+  }
+
+  // Mana
+  get mana(): number | undefined {
+    const value =
+      (this.mana_ || 0) + (this.intelligence || 0) * attributeFactors.int.mana;
+    return value === 0 ? undefined : value;
+  }
+  get mana_regen(): number | undefined {
+    const value =
+      (this.mana_regen_ || 0) +
+      (this.intelligence || 0) * attributeFactors.int.mana_regen;
+    return value === 0 ? undefined : value;
   }
 
   // Health regen reduction
@@ -556,10 +604,16 @@ export class DotaItem implements IDotaItem {
         return true;
       }
       case ItemFilter.Health: {
-        return this.health !== undefined || this.strength !== undefined;
+        return this.health !== undefined;
+      }
+      case ItemFilter.HealthRegen: {
+        return this.health_regen !== undefined;
       }
       case ItemFilter.Mana: {
-        return this.mana !== undefined || this.intelligence !== undefined;
+        return this.mana !== undefined;
+      }
+      case ItemFilter.ManaRegen: {
+        return this.mana_regen !== undefined;
       }
       case ItemFilter.Strength: {
         return this.strength !== undefined;
@@ -652,29 +706,39 @@ export class DotaItem implements IDotaItem {
         return undefined;
       }
       case ItemFilter.Health: {
-        if (this.health === undefined && this.strength === undefined)
-          return undefined;
-        const value =
-          (this.health || 0) +
-          (this.strength || 0) * attributeFactors.str.health;
+        if (this.health === undefined) return undefined;
         return {
-          value,
-          efficiency: this.getEfficiency(value),
+          value: this.health,
+          efficiency: this.getEfficiency(this.health),
           isPercent: false,
         };
       }
+      case ItemFilter.HealthRegen: {
+        if (this.health_regen === undefined) return undefined;
+        return {
+          value: this.health_regen,
+          efficiency: this.getEfficiency(this.health_regen),
+          isPercent: false,
+        };
+      }
+
       case ItemFilter.Mana: {
-        if (this.mana === undefined && this.intelligence === undefined)
-          return undefined;
-        const value =
-          (this.mana || 0) +
-          (this.intelligence || 0) * attributeFactors.int.mana;
+        if (this.mana === undefined) return undefined;
         return {
-          value,
-          efficiency: this.getEfficiency(value),
+          value: this.mana,
+          efficiency: this.getEfficiency(this.mana),
           isPercent: false,
         };
       }
+      case ItemFilter.ManaRegen: {
+        if (this.mana_regen === undefined) return undefined;
+        return {
+          value: this.mana_regen,
+          efficiency: this.getEfficiency(this.mana_regen),
+          isPercent: false,
+        };
+      }
+
       case ItemFilter.Strength: {
         if (this.strength === undefined) return undefined;
         return {
