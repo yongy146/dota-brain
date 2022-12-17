@@ -774,7 +774,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana": 175
+		"mana": 175,
+		"health": 175
 	},
 	"item_vitality_booster": {
 		"id": 61,
@@ -783,7 +784,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"health": 250
 	},
 	"item_fluffy_hat": {
 		"id": 593,
@@ -792,7 +794,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"health": 125
 	},
 	"item_power_treads": {
 		"id": 63,
@@ -998,6 +1001,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_lifesteal_": 24,
+		"health": 250,
 		"mana": 250,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
@@ -1057,6 +1061,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 250,
 		"mana": 300,
 		"all_attributes_": 3
 	},
@@ -1282,6 +1287,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 175,
 		"intelligence_": 10
 	},
 	"item_recipe_hurricane_pike": {
@@ -1304,6 +1310,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 100,
+		"health": 200,
 		"attack_range_ranged": 150,
 		"intelligence_": 15,
 		"agility_": 20,
@@ -1381,6 +1388,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 175,
 		"mana": 175,
 		"all_attributes_": 10
 	},
@@ -1489,6 +1497,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 250,
 		"strength_": 45
 	},
 	"item_recipe_black_king_bar": {
@@ -1568,6 +1577,7 @@
 		"is_purchasable": true,
 		"spell_lifesteal": 30,
 		"spell_lifesteal_multiplier": 2,
+		"health": 500,
 		"mana": 500
 	},
 	"item_recipe_sphere": {
@@ -1657,6 +1667,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"status_resistance": 75,
+		"health": 250,
 		"mana": 300
 	},
 	"item_recipe_kaya": {
@@ -1709,6 +1720,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 250,
 		"heal_reduction": 45,
 		"all_attributes_": 2,
 		"duration": 8,
@@ -1721,7 +1733,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"health": 250
 	},
 	"item_recipe_crimson_guard": {
 		"id": 243,
@@ -1741,6 +1754,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 250,
 		"duration": 12,
 		"armor_": 8
 	},
@@ -1775,6 +1789,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 425,
 		"mana": 425
 	},
 	"item_hood_of_defiance": {
@@ -2147,6 +2162,7 @@
 		"is_purchasable": true,
 		"attack_slow_melee": -30,
 		"attack_slow_ranged": -60,
+		"health": 220,
 		"mana": 220,
 		"heal_reduction": 40,
 		"all_attributes_": 22
@@ -2393,6 +2409,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 425,
 		"mana": 725
 	},
 	"item_orb_of_venom": {
@@ -2452,6 +2469,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 200,
 		"damage_": 14
 	},
 	"item_recipe_mage_slayer": {
@@ -2697,6 +2715,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"health": 250,
 		"damage_bonus_chance": 120,
 		"damage_": 25,
 		"strength_": 10
@@ -3034,7 +3053,8 @@
 		"drop_time": "7:00",
 		"drop_rate": 14,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"health": 75
 	},
 	"item_nether_shawl": {
 		"id": 357,
@@ -3401,7 +3421,8 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"spell_amp": 5
+		"spell_amp": 5,
+		"health": 75
 	},
 	"item_ascetic_cap": {
 		"id": 825,
@@ -3417,6 +3438,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"status_resistance": 40,
+		"health": 250,
 		"duration": 3
 	},
 	"item_misericorde": {
@@ -3488,6 +3510,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"health": 100,
 		"duration": 14
 	},
 	"item_lance_of_pursuit": {
