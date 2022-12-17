@@ -80,10 +80,9 @@ export interface IDotaItem {
   crit_chance?: number;
 
   // Attack speed
-  attack_speed?: number; // absolute values
+  attack_speed_?: number; // absolute values
   attack_speed_aura?: number; // absolute values
   attack_speed_active?: number; // absolute values
-  //attack_speed_percent?: number;
   attack_speed_target?: number; // absolute values
 
   // Attack slow
@@ -187,10 +186,9 @@ export class DotaItem implements IDotaItem {
   crit_chance?: number;
 
   // Attack speed
-  attack_speed?: number; // absolute values
+  attack_speed_?: number; // absolute values
   attack_speed_aura?: number; // absolute values
   attack_speed_active?: number; // absolute values
-  //attack_speed_percent?: number;
   attack_speed_target?: number; // absolute values
 
   // Attack slow
@@ -262,6 +260,14 @@ export class DotaItem implements IDotaItem {
     const critEffect = (critMulti - 100) * (this.crit_chance || 0);
     return critEffect === 0 ? undefined : critEffect;
   }
+  get hasAttackSpeed(): boolean {
+    const value =
+      (this.attack_speed || 0) +
+      (this.attack_speed_aura || 0) +
+      (this.attack_speed_active || 0) +
+      (this.attack_speed_target || 0);
+    return value > 0;
+  }
   get attack_speed_total(): number | undefined {
     const value =
       (this.attack_speed || 0) +
@@ -277,15 +283,25 @@ export class DotaItem implements IDotaItem {
       (this.attack_slow_ranged || 0) * 0.5;
     return value === 0 ? undefined : value;
   }
-  get damage(): number | undefined {
-    const value =
+  get damageLeftClick(): number | undefined {
+    let value =
       (this.damage_ || 0) +
       (this.damage_melee || 0) +
-      (this.damage_ranged || 0) +
-      (this.damage_active || 0) +
-      //(this.damage_ranged || 0)) *
-      //(this.damage_ranged !== undefined ? 0.5 : 1.0) +
-      (this.damage_base_percent || 0); // assuming base damage of about 100
+      (this.damage_ranged || 0);
+
+    if (this.damage_ranged !== undefined) {
+      value /= 2;
+    }
+
+    value +=
+      ((this.damage_bonus || 0) * (this.damage_bonus_chance || 100)) / 100;
+
+    value += (this.damage_active || 0) + (this.damage_base_percent || 0); // assuming base damage of about 100
+
+    return value === 0 ? undefined : value;
+  }
+  get damageAura(): number | undefined {
+    const value = (this.damage_aura || 0) + (this.damage_aura_percent || 0);
     return value === 0 ? undefined : value;
   }
 
@@ -379,8 +395,7 @@ export class DotaItem implements IDotaItem {
         return this.doesDamageAura;
       }
       case ItemFilter.AttackSpeed: {
-        return true;
-        break;
+        return this.hasAttackSpeed;
       }
       case ItemFilter.CriticalStrike: {
         return true;
@@ -443,7 +458,8 @@ export class DotaItem implements IDotaItem {
   public getValue(filter: ItemFilter):
     | {
         value: number;
-        efficiency: number | undefined;
+        chance?: number; // e.g. 30 if there is a 30% chance a value gets tiggered
+        efficiency?: number;
         isPercent: boolean;
       }
     | undefined {
@@ -475,17 +491,45 @@ export class DotaItem implements IDotaItem {
           isPercent: this.intelligence_percent_ !== undefined,
         };
       }
-      case ItemFilter.Damage: {
-        if (this.doesDamage === false) return undefined;
+      case ItemFilter.DamageLeftClick: {
+        if (this.doesDamageLeftClick === false) return undefined;
+        //console.log(`this.key doesDamage=${this.doesDamage}`);
         return {
-          value: this.damage || 0,
-          efficiency: this.getEfficiency(this.damage || 0),
-          isPercent: this.intelligence_percent_ !== undefined,
+          value: this.damageLeftClick || 0,
+          efficiency: this.getEfficiency(
+            this.damageLeftClick || 0,
+            this.damage_bonus_chance
+          ),
+          chance: this.damage_bonus_chance,
+          isPercent: this.damage_base_percent !== undefined,
         };
-        //...return item.damage_index;
+      }
+      case ItemFilter.DamageAura: {
+        if (this.doesDamageAura === false) return undefined;
+        //console.log(`this.key doesDamage=${this.doesDamage}`);
+        return {
+          value: this.damageAura || 0,
+          efficiency: this.getEfficiency(this.damageAura || 0),
+          isPercent: this.damage_aura_percent !== undefined,
+        };
       }
       case ItemFilter.AttackSpeed: {
         return undefined;
+
+              case "AttackSpeed": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) => item.attack_speed_total !== undefined && isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            Math.abs(itemB.attack_speed_total!) -
+            Math.abs(itemA.attack_speed_total!)
+        );
+        setItems(selectedItems);
+        break;
+      }
+
+      
       }
       case ItemFilter.CriticalStrike: {
         return undefined;
@@ -533,64 +577,13 @@ export class DotaItem implements IDotaItem {
     }
   }
 
-  private getEfficiency(value: number): number | undefined {
+  private getEfficiency(value: number, chance?: number): number | undefined {
     return !this.cost || this.is_neutral === true || value === 0
       ? undefined
-      : this.cost / value;
+      : this.cost / ((value * (chance || 100)) / 100);
   }
 }
 /*
-      case "AllItems": {
-        const selectedItems = itemArray.filter((item) => isItemVisible(item));
-        selectedItems.sort((itemA, itemB) =>
-          itemA.name > itemB.name ? 1 : -1
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "dota.Strength": {
-        const selectedItems = itemArray.filter(
-          (item) => item.strength !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort((itemA, itemB) => itemB.strength! - itemA.strength!);
-        setItems(selectedItems);
-        break;
-      }
-      case "dota.Agility": {
-        const selectedItems = itemArray.filter(
-          (item) => item.agility !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort((itemA, itemB) => itemB.agility! - itemA.agility!);
-        setItems(selectedItems);
-        break;
-      }
-      case "dota.Intelligence": {
-        const selectedItems = itemArray.filter(
-          (item) =>
-            (item.intelligence !== undefined ||
-              item.intelligence_percent !== undefined) &&
-            isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA, itemB) =>
-            (itemB.intelligence || 0) +
-            (itemB.intelligence_percent || 0) * 0.35 -
-            (itemA.intelligence || 0) -
-            (itemA.intelligence_percent || 0) * 0.35
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "Damage": {
-        const selectedItems = itemArray.filter(
-          (item) => item.damage_index !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA, itemB) => itemB.damage_index! - itemA.damage_index!
-        );
-        setItems(selectedItems);
-        break;
-      }
       case "AttackRange": {
         const selectedItems = itemArray.filter(
           (item) => item.attack_range_sum !== undefined && isItemVisible(item)
@@ -655,18 +648,6 @@ export class DotaItem implements IDotaItem {
           itemB.crit_effect === itemA.crit_effect!
             ? itemB.cost! - itemA.cost!
             : itemB.crit_effect! - itemA.crit_effect!
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "AttackSpeed": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.attack_speed_total !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            Math.abs(itemB.attack_speed_total!) -
-            Math.abs(itemA.attack_speed_total!)
         );
         setItems(selectedItems);
         break;
