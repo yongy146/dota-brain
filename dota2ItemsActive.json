@@ -184,7 +184,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 0
+		"mana_regen_": 0.8
 	},
 	"item_wind_lace": {
 		"id": 244,
@@ -365,7 +365,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 1
+		"health_regen_": 1.25
 	},
 	"item_sobi_mask": {
 		"id": 28,
@@ -374,7 +374,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 0
+		"mana_regen_": 0.7
 	},
 	"item_boots": {
 		"id": 29,
@@ -478,7 +478,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 0
+		"health_regen_": 0.6
 	},
 	"item_flask": {
 		"id": 39,
@@ -661,7 +661,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 6
+		"health_regen_": 6.5
 	},
 	"item_void_stone": {
 		"id": 57,
@@ -670,7 +670,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 2
+		"mana_regen_": 2.25
 	},
 	"item_mystic_staff": {
 		"id": 58,
@@ -756,7 +756,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 10,
-		"mana_regen_": 1,
+		"mana_regen_": 1.25,
 		"damage_": 15,
 		"intelligence_": 10
 	},
@@ -787,8 +787,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 6,
-		"mana_regen_": 2
+		"health_regen_": 6.5,
+		"mana_regen_": 2.25
 	},
 	"item_recipe_bracer": {
 		"id": 72,
@@ -805,7 +805,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 0,
+		"health_regen_": 0.75,
 		"damage_": 2,
 		"strength_": 5,
 		"agility_": 2,
@@ -847,7 +847,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 0,
+		"mana_regen_": 0.75,
 		"intelligence_": 5,
 		"strength_": 2,
 		"agility_": 2
@@ -869,7 +869,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_aura": 2,
+		"health_regen_aura": 2.5,
 		"armor_": 4
 	},
 	"item_recipe_vladmir": {
@@ -888,7 +888,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_lifesteal_": 20,
-		"mana_regen_aura": 1,
+		"mana_regen_aura": 1.75,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
 	},
@@ -948,7 +948,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 0,
+		"mana_regen_": 0.5,
 		"mana_regen_aura": 1
 	},
 	"item_recipe_holy_locket": {
@@ -991,8 +991,8 @@
 		"is_purchasable": true,
 		"magic_resist": 30,
 		"magic_resist_aura": 15,
-		"health_regen_": 8,
-		"health_regen_aura": 2
+		"health_regen_": 8.5,
+		"health_regen_aura": 2.5
 	},
 	"item_recipe_urn_of_shadows": {
 		"id": 91,
@@ -1010,7 +1010,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 1,
+		"mana_regen_": 1.4,
 		"all_attributes_": 2,
 		"duration": 8,
 		"armor_": 2
@@ -1030,7 +1030,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 0,
+		"health_regen_": 0.5,
 		"health_regen_aura": 2
 	},
 	"item_sheepstick": {
@@ -1104,7 +1104,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 10,
-		"mana_regen_": 1,
+		"mana_regen_": 1.75,
 		"damage_": 15,
 		"strength_": 13,
 		"intelligence_": 10
@@ -1126,7 +1126,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_": 2,
+		"mana_regen_": 2.5,
 		"intelligence_": 10,
 		"movement_speed": 20
 	},
@@ -1167,7 +1167,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_": 300,
-		"mana_regen_": 2
+		"mana_regen_": 2.5
 	},
 	"item_recipe_force_staff": {
 		"id": 101,
@@ -1379,7 +1379,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 250,
-		"health_regen_percent": 1,
+		"health_regen_percent": 1.6,
 		"strength_": 45
 	},
 	"item_recipe_black_king_bar": {
@@ -1485,7 +1485,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 6,
+		"health_regen_": 6.5,
 		"mana_regen_": 4,
 		"mana_": 250,
 		"duration": 6,
@@ -1508,8 +1508,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 6,
-		"mana_regen_": 2,
+		"health_regen_": 6.5,
+		"mana_regen_": 2.5,
 		"all_attributes_": 8
 	},
 	"item_nullifier": {
@@ -1593,7 +1593,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 250,
-		"mana_regen_": 1,
+		"mana_regen_": 1.75,
 		"heal_reduction": 45,
 		"all_attributes_": 2,
 		"duration": 8,
@@ -1671,7 +1671,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"magic_resist": 18,
-		"health_regen_": 8
+		"health_regen_": 8.5
 	},
 	"item_recipe_eternal_shroud": {
 		"id": 691,
@@ -1692,7 +1692,7 @@
 		"is_purchasable": true,
 		"spell_lifesteal": 20,
 		"magic_resist": 25,
-		"health_regen_": 8
+		"health_regen_": 8.5
 	},
 	"item_rapier": {
 		"id": 133,
@@ -1793,8 +1793,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 7,
-		"mana_regen_": 2,
+		"health_regen_": 7.5,
+		"mana_regen_": 2.75,
 		"damage_": 60
 	},
 	"item_recipe_manta": {
@@ -2296,7 +2296,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 200,
-		"mana_regen_": 1,
+		"mana_regen_": 1.8,
 		"damage_": 14
 	},
 	"item_recipe_mage_slayer": {
@@ -2373,7 +2373,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_percent": 1,
+		"mana_regen_percent": 1.5,
 		"duration": 12,
 		"armor_": 5,
 		"armor_reduction": -5
@@ -2396,7 +2396,7 @@
 		"is_purchasable": true,
 		"attack_speed_target": 50,
 		"attack_slow_": -50,
-		"mana_regen_percent": 1,
+		"mana_regen_percent": 1.75,
 		"all_attributes_": 5,
 		"duration": 12,
 		"armor_": 6,
@@ -2441,7 +2441,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"spell_amp": 18,
-		"mana_regen_aura": 1,
+		"mana_regen_aura": 1.75,
 		"all_attributes_": 5
 	},
 	"item_recipe_revenants_brooch": {
@@ -2484,8 +2484,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_": 250,
-		"health_regen_aura": 2,
-		"health_regen_bonus": 18,
+		"health_regen_aura": 2.5,
+		"health_regen_bonus": 18.5,
 		"armor_": 4,
 		"movement_speed": 50
 	},
@@ -2566,7 +2566,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"mana_regen_aura": 1,
+		"mana_regen_aura": 1.25,
 		"damage_": 3,
 		"strength_": 3,
 		"agility_": 9,
@@ -3116,7 +3116,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"health_regen_": 3,
-		"mana_regen_": 2,
+		"mana_regen_": 2.5,
 		"duration": 4
 	},
 	"item_psychic_headband": {
@@ -3308,7 +3308,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"mana_regen_": 0,
+		"mana_regen_": 0.5,
 		"all_attributes_": 3
 	},
 	"item_ogre_seal_totem": {
