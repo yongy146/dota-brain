@@ -80,10 +80,10 @@ export interface IDotaItem {
   crit_chance?: number;
 
   // Attack speed
-  attack_speed_?: number; // absolute values
-  attack_speed_aura?: number; // absolute values
-  attack_speed_active?: number; // absolute values
-  attack_speed_target?: number; // absolute values
+  attack_speed_?: number; // absolute value
+  attack_speed_aura?: number; // absolute value
+  attack_speed_active?: number; // absolute value
+  attack_speed_target?: number; // absolute value
 
   // Attack slow
   attack_slow?: number;
@@ -261,16 +261,11 @@ export class DotaItem implements IDotaItem {
     return critEffect === 0 ? undefined : critEffect;
   }
   get hasAttackSpeed(): boolean {
-    const value =
-      (this.attack_speed || 0) +
-      (this.attack_speed_aura || 0) +
-      (this.attack_speed_active || 0) +
-      (this.attack_speed_target || 0);
-    return value > 0;
+    return this.attack_speed !== undefined;
   }
-  get attack_speed_total(): number | undefined {
+  get attack_speed(): number | undefined {
     const value =
-      (this.attack_speed || 0) +
+      (this.attack_speed_ || 0) +
       (this.attack_speed_aura || 0) +
       (this.attack_speed_active || 0) +
       (this.attack_speed_target || 0);
@@ -514,22 +509,12 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.AttackSpeed: {
-        return undefined;
-
-              case "AttackSpeed": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.attack_speed_total !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            Math.abs(itemB.attack_speed_total!) -
-            Math.abs(itemA.attack_speed_total!)
-        );
-        setItems(selectedItems);
-        break;
-      }
-
-      
+        if (this.hasAttackSpeed === false) return undefined;
+        return {
+          value: this.attack_speed || 0,
+          efficiency: this.getEfficiency(this.attack_speed || 0),
+          isPercent: false,
+        };
       }
       case ItemFilter.CriticalStrike: {
         return undefined;
