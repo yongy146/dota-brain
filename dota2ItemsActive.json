@@ -3017,8 +3017,8 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"status_resistance": 10,
-		"magic_resist": 10
+		"status_resistance_reduction_aura": 10,
+		"magic_resist_reduction_aura": 10
 	},
 	"item_book_of_shadows": {
 		"id": 677,
