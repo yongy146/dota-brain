@@ -1299,7 +1299,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 100,
-		"attack_range": 150,
+		"attack_range_ranged": 150,
 		"intelligence_": 15,
 		"agility_": 20,
 		"strength_": 15
@@ -1975,7 +1975,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_range": 150,
+		"attack_range_ranged": 150,
 		"agility_": 15,
 		"strength_": 12
 	},
@@ -2787,7 +2787,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_speed_": 20,
-		"attack_range": 100
+		"attack_range_ranged": 100
 	},
 	"item_quickening_charm": {
 		"id": 289,
@@ -3063,7 +3063,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"damage_": 225,
-		"attack_range": 350
+		"attack_range_ranged": 350
 	},
 	"item_ninja_gear": {
 		"id": 362,
