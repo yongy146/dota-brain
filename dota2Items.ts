@@ -23,6 +23,9 @@ export enum ItemFilter {
   StatusResistance = "StatusResistance",
   HealthRegenReduction = "HealthRegenReduction",
   MovementSpeed = "MovementSpeed",
+  Invisibility = "Invisibility",
+  TrueSight = "TrueSight",
+  PassiveBreak = "PassiveBreak",
 }
 
 export interface IDotaItem {
@@ -171,6 +174,13 @@ export class DotaItem implements IDotaItem {
   // Duration of item when activated
   duration?: number;
 
+  // Invisiblitiy
+  grants_invisibility?: boolean;
+  grants_true_sight?: boolean;
+
+  // Passive break
+  breaks_passives?: boolean;
+
   // Armor information
   armor_?: number;
   armor_aura?: number;
@@ -278,6 +288,19 @@ export class DotaItem implements IDotaItem {
     return (
       this.magic_resist !== undefined || this.magic_resist_aura !== undefined
     );
+  }
+
+  // Visibility
+  get grantsInvisibility(): boolean {
+    return this.grants_invisibility === true;
+  }
+  get grantsTrueSight(): boolean {
+    return this.grants_true_sight === true;
+  }
+
+  // Passives
+  get breaksPassives(): boolean {
+    return this.breaks_passives === true;
   }
 
   // Health regen reduction
@@ -569,6 +592,15 @@ export class DotaItem implements IDotaItem {
       case ItemFilter.MovementSpeed: {
         return this.hasMovementSpeed;
       }
+      case ItemFilter.Invisibility: {
+        return this.grantsInvisibility;
+      }
+      case ItemFilter.TrueSight: {
+        return this.grantsTrueSight;
+      }
+      case ItemFilter.PassiveBreak: {
+        return this.breaksPassives;
+      }
       default: {
         // We should never get here through
         return false;
@@ -748,11 +780,23 @@ export class DotaItem implements IDotaItem {
         if (this.hasMovementSpeed === false) return undefined;
         return {
           value: this.estimatedTotalSpeed || 0,
-          /*efficiency: this.getEfficiency(this.totalSpeed || 0),*/
+          efficiency: this.getEfficiency(this.estimatedTotalSpeed || 0),
           isPercent: false,
           /*this.movement_speed_percent !== undefined ||
             this.movement_speed_percent_active !== undefined,*/
         };
+      }
+      case ItemFilter.Invisibility:
+      case ItemFilter.TrueSight:
+      case ItemFilter.PassiveBreak: {
+        /*if (this.cost) {
+          return {
+            value: this.cost,
+            isPercent: false,
+          };
+        } else {*/
+        return undefined;
+        //}
       }
       default: {
         // We should never get here through
