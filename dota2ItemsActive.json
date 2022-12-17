@@ -672,7 +672,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"mana": 250
 	},
 	"item_point_booster": {
 		"id": 60,
@@ -680,7 +681,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"mana": 175
 	},
 	"item_vitality_booster": {
 		"id": 61,
@@ -883,6 +885,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_lifesteal_": 24,
+		"mana": 250,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
 	},
@@ -935,6 +938,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"mana": 300,
 		"all_attributes_": 3
 	},
 	"item_recipe_pipe": {
@@ -1119,7 +1123,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"mana": 300
 	},
 	"item_recipe_force_staff": {
 		"id": 101,
@@ -1228,6 +1233,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"mana": 175,
 		"all_attributes_": 10
 	},
 	"item_recipe_ultimate_scepter_2": {
@@ -1395,7 +1401,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"spell_lifesteal": 30,
-		"spell_lifesteal_multiplier": 2
+		"spell_lifesteal_multiplier": 2,
+		"mana": 500
 	},
 	"item_recipe_sphere": {
 		"id": 122,
@@ -1424,6 +1431,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"mana": 250,
 		"duration": 6,
 		"armor_": 10
 	},
@@ -1474,7 +1482,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"status_resistance": 75
+		"status_resistance": 75,
+		"mana": 300
 	},
 	"item_recipe_kaya": {
 		"id": 258,
@@ -1580,7 +1589,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"mana": 425
 	},
 	"item_hood_of_defiance": {
 		"id": 131,
@@ -1921,6 +1931,7 @@
 		"is_purchasable": true,
 		"attack_slow_melee": -30,
 		"attack_slow_ranged": -60,
+		"mana": 220,
 		"heal_reduction": 40,
 		"all_attributes_": 22
 	},
@@ -2135,6 +2146,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"mana": 250,
 		"movement_speed": 45
 	},
 	"item_octarine_core": {
@@ -2143,7 +2155,8 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"mana": 725
 	},
 	"item_orb_of_venom": {
 		"id": 181,
@@ -2377,6 +2390,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"mana": 250,
 		"armor_": 4,
 		"movement_speed": 50
 	},
@@ -2538,6 +2552,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"mana": 200,
 		"damage_": -30
 	},
 	"item_force_boots": {
@@ -3018,7 +3033,8 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"status_resistance_reduction_aura": 10,
-		"magic_resist_reduction_aura": 10
+		"magic_resist_reduction_aura": 10,
+		"mana": 250
 	},
 	"item_book_of_shadows": {
 		"id": 677,
@@ -3138,7 +3154,8 @@
 		"drop_time": "7:00",
 		"drop_rate": 14,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"mana": 200
 	},
 	"item_seeds_of_serenity": {
 		"id": 945,
@@ -3162,7 +3179,8 @@
 		"drop_time": "7:00",
 		"drop_rate": 14,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"mana": 200
 	},
 	"item_occult_bracelet": {
 		"id": 947,
