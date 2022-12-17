@@ -25,16 +25,23 @@ export enum ItemFilter {
 }
 
 export interface IDotaItem {
-  name: string; // Maybe change to code?! and move name to internationalizatio?`!
+  //name: string; // Moved to localization
   id?: string; // Maybe change to number?
   is_active?: boolean; // Not availabe in dota2ItemsActive.json
   mana_cost?: number; // 0 if no mana is needed
   cost?: number; // 2250; //
   cooldown?: number; // 15;
   is_recipe?: boolean;
+
+  // Item source
   is_purchasable?: boolean;
   is_neutral?: boolean;
   is_roshan?: boolean;
+
+  // Neutral items
+  neutral_level?: number;
+  drop_time?: string;
+  drop_rate?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -46,6 +53,13 @@ export interface IDotaItem {
 
   // Duration of item when activated
   duration?: number;
+
+  // Invisiblitiy
+  grants_invisibility?: boolean;
+  grants_true_sight?: boolean;
+
+  // Passive break
+  breaks_passives?: boolean;
 
   // Armor information
   armor?: number;
@@ -125,16 +139,23 @@ export interface IDotaItem {
 export class DotaItem implements IDotaItem {
   // Variables as defined in the interface
   key: string; // e.g. item_blink
-  name: string;
+  //name: string; // Moved to localization...
   id?: string;
   is_active?: boolean;
   mana_cost?: number;
   cost?: number;
   cooldown?: number;
   is_recipe?: boolean;
+
+  // Item source
   is_purchasable?: boolean;
   is_neutral?: boolean;
   is_roshan?: boolean;
+
+  // Neutral items
+  neutral_level?: number;
+  drop_time?: string;
+  drop_rate?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -221,9 +242,8 @@ export class DotaItem implements IDotaItem {
   all_attributes_?: number;
   selected_attribute?: number; // for Vambrace
 
-  constructor(key: string, name: string) {
+  constructor(key: string) {
     this.key = key;
-    this.name = name;
   }
 
   // Getter and setters of enhanced values
