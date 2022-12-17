@@ -1,4 +1,4 @@
-import { attributeFactors } from "./attritbutes";
+import { attributeFactors } from "./attributes";
 
 export interface IDotaItems {
   [key: string]: IDotaItem;
