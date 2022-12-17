@@ -1,12 +1,21 @@
+import { attributeFactors } from "./attritbutes";
+
 export interface IDotaItems {
   [key: string]: IDotaItem;
 }
 
 export enum ItemFilter {
   AllItems = "AllItems",
-  Strength = "dota.Strength",
-  Agility = "dota.Agility",
-  Intelligence = "dota.Intelligence",
+  Health = "dota.Health",
+  HealthRegen = "", // Implemented later on
+  Mana = "dota.Mana", // Implemented later on
+  ManaRegen = "", // Implemented later on
+  Dispel = "", // Implemented later on
+  Silence = "", // Implemented later on
+  Stun = "", // Implemented later on
+  Strength = "dota.Strength", // Currently not displayed on Itempedia
+  Agility = "dota.Agility", // Currently not displayed on Itempedia
+  Intelligence = "dota.Intelligence", // Currently not displayed on Itempedia
   DamageLeftClick = "DamageLeftClick",
   DamageAura = "DamageAura",
   AttackSpeed = "AttackSpeed",
@@ -46,6 +55,10 @@ export interface IDotaItem {
   neutral_level?: number;
   drop_time?: string;
   drop_rate?: number;
+
+  // Health & mana
+  health?: number;
+  mana?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -163,6 +176,10 @@ export class DotaItem implements IDotaItem {
   drop_time?: string;
   drop_rate?: number;
 
+  // Health & mana
+  health?: number;
+  mana?: number;
+
   // Movement speed
   movement_speed?: number; // Absolute additional speed
   movement_speed_active?: number; // Additional speed when activated
@@ -263,13 +280,16 @@ export class DotaItem implements IDotaItem {
 
   // Getter and setters of enhanced values
   get hasArmor(): boolean {
-    return this.armor !== undefined;
+    return this.armor !== undefined || this.agility !== undefined;
   }
   get hasArmorReduction(): boolean {
     return this.armor_reduction !== undefined;
   }
   get armor(): number | undefined {
-    const value = (this.armor_ || 0) + (this.armor_aura || 0);
+    const value =
+      (this.armor_ || 0) +
+      (this.armor_aura || 0) +
+      (this.agility || 0) * attributeFactors.agi.armor;
     return value === 0 ? undefined : value;
   }
 
@@ -335,14 +355,15 @@ export class DotaItem implements IDotaItem {
     return critEffect === 0 ? undefined : critEffect;
   }
   get hasAttackSpeed(): boolean {
-    return this.attack_speed !== undefined;
+    return this.attack_speed !== undefined || this.agility !== undefined;
   }
   get attack_speed(): number | undefined {
     const value =
       (this.attack_speed_ || 0) +
       (this.attack_speed_aura || 0) +
       (this.attack_speed_active || 0) +
-      (this.attack_speed_target || 0);
+      (this.attack_speed_target || 0) +
+      (this.agility || 0) * attributeFactors.agi.attack_speed;
     return value === 0 ? undefined : value;
   }
   get hasAttackSlow(): boolean {
@@ -514,6 +535,7 @@ export class DotaItem implements IDotaItem {
     includePurchasable: boolean,
     includeNeutral: boolean,
     includeRoshan: boolean
+    /*includeAttributeEffect: boolean*/
   ): boolean {
     if (this.is_recipe) return false;
 
@@ -532,6 +554,12 @@ export class DotaItem implements IDotaItem {
     switch (filter) {
       case ItemFilter.AllItems: {
         return true;
+      }
+      case ItemFilter.Health: {
+        return this.health !== undefined || this.strength !== undefined;
+      }
+      case ItemFilter.Mana: {
+        return this.mana !== undefined || this.intelligence !== undefined;
       }
       case ItemFilter.Strength: {
         return this.strength !== undefined;
@@ -608,7 +636,10 @@ export class DotaItem implements IDotaItem {
     }
   }
 
-  public getValue(filter: ItemFilter):
+  public getValue(
+    filter: ItemFilter
+    //includeAttributeEffect: boolean
+  ):
     | {
         value: number;
         chance?: number; // e.g. 30 if there is a 30% chance a value gets tiggered
@@ -619,6 +650,30 @@ export class DotaItem implements IDotaItem {
     switch (filter) {
       case ItemFilter.AllItems: {
         return undefined;
+      }
+      case ItemFilter.Health: {
+        if (this.health === undefined && this.strength === undefined)
+          return undefined;
+        const value =
+          (this.health || 0) +
+          (this.strength || 0) * attributeFactors.str.health;
+        return {
+          value,
+          efficiency: this.getEfficiency(value),
+          isPercent: false,
+        };
+      }
+      case ItemFilter.Mana: {
+        if (this.mana === undefined && this.intelligence === undefined)
+          return undefined;
+        const value =
+          (this.mana || 0) +
+          (this.intelligence || 0) * attributeFactors.int.mana;
+        return {
+          value,
+          efficiency: this.getEfficiency(value),
+          isPercent: false,
+        };
       }
       case ItemFilter.Strength: {
         if (this.strength === undefined) return undefined;
