@@ -38,7 +38,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_slow": -50,
+		"attack_slow_": -50,
 		"strength_": 25,
 		"duration": 6
 	},
@@ -2543,7 +2543,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_target": 50,
-		"attack_slow": -50,
+		"attack_slow_": -50,
 		"all_attributes_": 5,
 		"duration": 12,
 		"armor": 6,
@@ -3284,7 +3284,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_slow": -60,
+		"attack_slow_": -60,
 		"damage_": 45,
 		"attack_range_melee": 100
 	},
