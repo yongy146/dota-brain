@@ -75,9 +75,9 @@ export interface IDotaItem {
   evasion?: number;
 
   // Critical strike
-  crit_multiplier?: number;
+  crit_multiplier_?: number; // multiplicator, e.g. 230
   crit_multiplier_target?: number;
-  crit_chance?: number;
+  crit_chance?: number; // change, e.g. 130
 
   // Attack speed
   attack_speed_?: number; // absolute value
@@ -86,10 +86,10 @@ export interface IDotaItem {
   attack_speed_target?: number; // absolute value
 
   // Attack slow
-  attack_slow_?: number;
-  attack_slow_melee?: number;
-  attack_slow_ranged?: number;
-  attack_slow_aura?: number;
+  attack_slow_?: number; // absolute value
+  attack_slow_melee?: number; // absolute value
+  attack_slow_ranged?: number; // absolute value
+  attack_slow_aura?: number; // absolute value
 
   // Attack lifesteam (all are in %, except for absolue)
   attack_lifesteal?: number; // X
@@ -120,7 +120,7 @@ export interface IDotaItem {
   damage_aura_percent?: number;
 
   // Attack range
-  attack_range?: number; // Atack range for ranged heroes only
+  attack_range_?: number; // Atack range for ranged heroes only
   attack_range_melee?: number; // Attack range for melee heroes only
 
   // Health regen reduction
@@ -182,7 +182,7 @@ export class DotaItem implements IDotaItem {
   evasion?: number;
 
   // Critical strike
-  crit_multiplier?: number;
+  crit_multiplier_?: number;
   crit_multiplier_target?: number;
   crit_chance?: number;
 
@@ -227,7 +227,7 @@ export class DotaItem implements IDotaItem {
   damage_aura_percent?: number;
 
   // Attack range
-  attack_range?: number; // Atack range for ranged heroes only
+  attack_range_?: number; // Atack range for ranged heroes only
   attack_range_melee?: number; // Attack range for melee heroes only
 
   // Health regen reduction
@@ -252,14 +252,21 @@ export class DotaItem implements IDotaItem {
     const value = (this.armor || 0) + (this.armor_aura || 0);
     return value === 0 ? undefined : value;
   }
-  get crit_multi(): number | undefined {
+  get hasCriticalStrike(): boolean {
+    return (
+      this.crit_multiplier_ !== undefined ||
+      this.crit_multiplier_target !== undefined ||
+      this.crit_chance !== undefined
+    );
+  }
+  get crit_multiplier(): number | undefined {
     const value =
-      (this.crit_multiplier || 0) + (this.crit_multiplier_target || 0);
+      (this.crit_multiplier_ || 0) + (this.crit_multiplier_target || 0);
     return value === 0 ? undefined : value;
   }
   get crit_effect(): number | undefined {
-    const critMulti = (this.armor || 0) + (this.armor_aura || 0);
-    const critEffect = (critMulti - 100) * (this.crit_chance || 0);
+    const critEffect =
+      ((this.crit_multiplier || 0) * (this.crit_chance || 0)) / 100;
     return critEffect === 0 ? undefined : critEffect;
   }
   get hasAttackSpeed(): boolean {
@@ -278,10 +285,10 @@ export class DotaItem implements IDotaItem {
   }
   get attack_slow(): number | undefined {
     const value =
-      (this.attack_speed_ || 0) +
-      (this.attack_speed_aura || 0) +
-      (this.attack_speed_active || 0) +
-      (this.attack_speed_target || 0);
+      (this.attack_slow_ || 0) +
+      (this.attack_slow_melee || 0) +
+      (this.attack_slow_ranged || 0) +
+      (this.attack_slow_aura || 0);
     return value === 0 ? undefined : value;
   }
   get attack_slow_mixed(): number | undefined {
@@ -406,7 +413,7 @@ export class DotaItem implements IDotaItem {
         return this.hasAttackSpeed;
       }
       case ItemFilter.CriticalStrike: {
-        return this.hasAttackSlow;
+        return this.hasCriticalStrike;
       }
       case ItemFilter.AttackRange: {
         return true;
@@ -421,8 +428,7 @@ export class DotaItem implements IDotaItem {
         break;
       }
       case ItemFilter.AttackSlow: {
-        return true;
-        break;
+        return this.hasAttackSlow;
       }
       case ItemFilter.Armor: {
         return true;
@@ -529,10 +535,19 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.CriticalStrike: {
-        return undefined;
+        if (this.hasCriticalStrike === false) return undefined;
+        return {
+          value: this.crit_effect || 0,
+          //chance: this.crit_chance,
+          efficiency: this.getEfficiency(
+            this.crit_multiplier || 0,
+            this.crit_chance
+          ),
+          isPercent: true,
+        };
       }
       case ItemFilter.AttackRange: {
-        return undefined;
+        if (this.hasAttackRage === false) return undefined;
       }
       case ItemFilter.ArmorReduction: {
         return undefined;
@@ -541,7 +556,12 @@ export class DotaItem implements IDotaItem {
         return undefined;
       }
       case ItemFilter.AttackSlow: {
-        return undefined;
+        if (this.hasAttackSlow === false) return undefined;
+        return {
+          value: this.attack_slow || 0,
+          efficiency: this.getEfficiency(this.attack_slow || 0),
+          isPercent: false,
+        };
       }
       case ItemFilter.Armor: {
         return undefined;
@@ -577,7 +597,7 @@ export class DotaItem implements IDotaItem {
   private getEfficiency(value: number, chance?: number): number | undefined {
     return !this.cost || this.is_neutral === true || value === 0
       ? undefined
-      : this.cost / ((value * (chance || 100)) / 100);
+      : this.cost / ((Math.abs(value) * (chance || 100)) / 100);
   }
 }
 /*
@@ -633,18 +653,6 @@ export class DotaItem implements IDotaItem {
           itemB.evasion! === itemA.evasion!
             ? (itemB.cost || 0) - (itemA.cost || 0)
             : itemB.evasion! - itemA.evasion!
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "CriticalStrike": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.crit_chance !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort((itemA: DotaItem, itemB: DotaItem) =>
-          itemB.crit_effect === itemA.crit_effect!
-            ? itemB.cost! - itemA.cost!
-            : itemB.crit_effect! - itemA.crit_effect!
         );
         setItems(selectedItems);
         break;
