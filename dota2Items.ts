@@ -14,9 +14,10 @@ export enum ItemFilter {
   //Silence = "", // Implemented later on
   //Stun = "", // Implemented later on
   // Pierce evasion
-  Strength = "dota.Strength", // Currently not displayed on Itempedia
-  Agility = "dota.Agility", // Currently not displayed on Itempedia
-  Intelligence = "dota.Intelligence", // Currently not displayed on Itempedia
+  // Attributes: Some skills take attributes into calculation (Centaur's Double Edge, Pudge's Dismember, Silencer's Last Word, etc) and it would be cool to know which item gives the best attribute
+  Strength = "dota.Strength",
+  Agility = "dota.Agility",
+  Intelligence = "dota.Intelligence",
   DamageLeftClick = "DamageLeftClick",
   DamageAura = "DamageAura",
   AttackSpeed = "AttackSpeed",
