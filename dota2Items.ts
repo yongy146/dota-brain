@@ -92,14 +92,14 @@ export interface IDotaItem {
   attack_slow_aura?: number; // absolute value
 
   // Attack lifesteam (all are in %, except for absolue)
-  attack_lifesteal?: number; // X
+  attack_lifesteal_?: number; // X
   attack_lifesteal_active?: number; // Satanic
   attack_lifesteal_absolute?: number; // x
 
   // Spell lifesteal
-  spell_lifesteal?: number; // X
-  spell_lifesteal_multiplier?: number; // only for item Bloodstone X
-  spell_lifesteal_amplifier?: number;
+  spell_lifesteal?: number; // lifesteal in percent
+  spell_lifesteal_multiplier?: number; // only for item Bloodstone
+  spell_lifesteal_amplifier?: number; // lifesteal aplifier in percent
 
   // Spell amp
   spell_amp?: number;
@@ -199,7 +199,7 @@ export class DotaItem implements IDotaItem {
   attack_slow_aura?: number;
 
   // Attack lifesteam (all are in %, except for absolue)
-  attack_lifesteal?: number; // X
+  attack_lifesteal_?: number; // X
   attack_lifesteal_active?: number; // Satanic
   attack_lifesteal_absolute?: number; // x
 
@@ -349,11 +349,33 @@ export class DotaItem implements IDotaItem {
       (this.attack_range_ranged || 0) + (this.attack_range_melee || 0);
     return value === 0 ? undefined : value;
   }
+
+  // Lifesteal
+  get hasAttackLifesteal(): boolean {
+    return (
+      this.attack_lifesteal_ !== undefined ||
+      this.attack_lifesteal_active !== undefined ||
+      this.attack_lifesteal_absolute !== undefined
+    );
+  }
+  get hasSpellLifesteal(): boolean {
+    return (
+      this.spell_lifesteal !== undefined //||
+      //this.spell_lifesteal_multiplier !== undefined ||
+      //this.spell_lifesteal_amplifier !== undefined
+    );
+  }
+  get attack_lifesteal(): number | undefined {
+      return (this.attack_lifesteal_ || 0) + (this.attack_lifesteal_active || 0) + (this.attack_lifesteal_absolute || 0)
+  }
+
   get spell_lifesteal_index(): number | undefined {
+    // STILL NEEDED?!
     const value =
       (this.spell_lifesteal || 0) + (this.spell_lifesteal_amplifier || 0);
     return value === 0 ? undefined : value;
   }
+
   get strength(): number | undefined {
     const value =
       (this.strength_ || 0) +
@@ -429,19 +451,16 @@ export class DotaItem implements IDotaItem {
         return this.hasAttackRange;
       }
       case ItemFilter.ArmorReduction: {
-        return true;
-        break;
+        return this.hasArmorReduction;
       }
       case ItemFilter.AttackLifesteal: {
-        return true;
-        break;
+        return this.hasAttackLifesteal;
       }
       case ItemFilter.AttackSlow: {
         return this.hasAttackSlow;
       }
       case ItemFilter.Armor: {
-        return true;
-        break;
+        return this.hasArmor;
       }
       case ItemFilter.Evasion: {
         return true;
@@ -452,8 +471,7 @@ export class DotaItem implements IDotaItem {
         break;
       }
       case ItemFilter.SpellLifesteal: {
-        return true;
-        break;
+        return this.hasSpellLifesteal;
       }
       case ItemFilter.MagicResistance: {
         return true;
@@ -564,10 +582,38 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.ArmorReduction: {
-        return undefined;
+        if (this.hasArmorReduction === false) return undefined;
+        return {
+          value: this.armor_reduction || 0,
+          efficiency: this.getEfficiency(this.armor_reduction || 0),
+          isPercent: false,
+        };
       }
       case ItemFilter.AttackLifesteal: {
-        return undefined;
+        if (this.hasAttackLifesteal === false) return undefined;
+        
+                return {
+          value: this.attack_lifesteal || 0,
+          efficiency: this.getEfficiency(this.spell_lifesteal || 0),
+          isPercent: true,
+        };
+              case "AttackLifesteal": {
+        const selectedItems: DotaItem[] = itemArray.filter(
+          (item) =>
+            ((item as any).attack_lifesteal !== undefined ||
+              (item as any).attack_lifesteal_absolute !== undefined) &&
+            isItemVisible(item)
+        );
+        selectedItems.sort(
+          (itemA: DotaItem, itemB: DotaItem) =>
+            (itemB.attack_lifesteal || 0) - (itemA.attack_lifesteal || 0)
+        );
+        setItems(selectedItems);
+        break;
+      }
+
+
+
       }
       case ItemFilter.AttackSlow: {
         if (this.hasAttackSlow === false) return undefined;
@@ -578,7 +624,12 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.Armor: {
-        return undefined;
+        if (this.hasArmor === false) return undefined;
+        return {
+          value: this.armor || 0,
+          efficiency: this.getEfficiency(this.armor || 0),
+          isPercent: false,
+        };
       }
       case ItemFilter.Evasion: {
         return undefined;
@@ -587,7 +638,12 @@ export class DotaItem implements IDotaItem {
         return undefined;
       }
       case ItemFilter.SpellLifesteal: {
-        return undefined;
+        if (this.hasSpellLifesteal === false) return undefined;
+        return {
+          value: this.spell_lifesteal || 0,
+          efficiency: this.getEfficiency(this.spell_lifesteal || 0),
+          isPercent: true,
+        };
       }
       case ItemFilter.MagicResistance: {
         return undefined;
@@ -626,28 +682,7 @@ export class DotaItem implements IDotaItem {
         break;
       }
 
-      case "Armor": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.armor_total !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemB.armor_total! - itemA.armor_total!
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "ArmorReduction": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.armor_reduction !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemA.armor_reduction! - itemB.armor_reduction!
-        );
-        setItems(selectedItems);
-        break;
-      }
+
       case "StatusResistance": {
         const selectedItems: DotaItem[] = itemArray.filter(
           (item) => item.status_resistance !== undefined && isItemVisible(item)
@@ -682,33 +717,7 @@ export class DotaItem implements IDotaItem {
         setItems(selectedItems);
         break;
       }
-      case "AttackLifesteal": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) =>
-            ((item as any).attack_lifesteal !== undefined ||
-              (item as any).attack_lifesteal_absolute !== undefined) &&
-            isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            (itemB.attack_lifesteal || 0) - (itemA.attack_lifesteal || 0)
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "SpellLifesteal": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) =>
-            (item as any).spell_lifesteal_index !== undefined &&
-            isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemB.spell_lifesteal_index! - itemA.spell_lifesteal_index!
-        );
-        setItems(selectedItems);
-        break;
-      }
+
       case "SpellAmplification": {
         const selectedItems: DotaItem[] = itemArray.filter(
           (item) => (item as any).spell_amp !== undefined && isItemVisible(item)
