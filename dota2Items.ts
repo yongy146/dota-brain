@@ -421,11 +421,17 @@ export class DotaItem implements IDotaItem {
     return this.attack_slow !== undefined;
   }
   get attack_slow(): number | undefined {
-    const value =
+    let value =
       (this.attack_slow_ || 0) +
       (this.attack_slow_melee || 0) +
-      (this.attack_slow_ranged || 0) +
-      (this.attack_slow_aura || 0);
+      (this.attack_slow_ranged || 0);
+
+    if (this.attack_slow_ranged !== undefined) {
+      value /= 2;
+    }
+
+    value += this.attack_slow_aura || 0;
+
     return value === 0 ? undefined : value;
   }
   get attack_slow_mixed(): number | undefined {
