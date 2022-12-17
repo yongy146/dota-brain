@@ -59,9 +59,9 @@ export interface IDotaItem {
   // Health
   health_?: number;
   health_regen_?: number;
-  health_regen_percent?: number;
-  health_regen_aura?: number;
-  health_regen_amp?: number;
+  health_regen_percent?: number; // Heart of Tarrasque
+  health_regen_aura?: number; // Additive, in points
+  health_regen_amp?: number; // Currently not used
   health_regen_bonus?: number; // Guardian greaves, when health falls below 25%
 
   // Mana
@@ -69,7 +69,6 @@ export interface IDotaItem {
   mana_regen_?: number;
   mana_regen_amp?: number;
   mana_regen_aura?: number;
-  mana_regen_percent?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -200,7 +199,6 @@ export class DotaItem implements IDotaItem {
   mana_regen_?: number;
   mana_regen_amp?: number;
   mana_regen_aura?: number;
-  mana_regen_percent?: number;
 
   // Movement speed
   movement_speed?: number; // Absolute additional speed
@@ -354,6 +352,8 @@ export class DotaItem implements IDotaItem {
   get health_regen(): number | undefined {
     const value =
       (this.health_regen_ || 0) +
+      ((this.health_regen_percent || 0) * 2845) / 100 + // Health is +2'500 when Heart is bougth; value chosen here is to get 50 healing per second
+      (this.health_regen_aura || 0) +
       (this.strength || 0) * attributeFactors.str.health_regen;
     return value === 0 ? undefined : value;
   }
@@ -367,6 +367,7 @@ export class DotaItem implements IDotaItem {
   get mana_regen(): number | undefined {
     const value =
       (this.mana_regen_ || 0) +
+      (this.mana_regen_aura || 0) +
       (this.intelligence || 0) * attributeFactors.int.mana_regen;
     return value === 0 ? undefined : value;
   }
