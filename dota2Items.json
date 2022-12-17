@@ -2420,7 +2420,7 @@
 		"is_purchasable": true,
 		"duration": 3,
 		"armor_": 3,
-		"armor_reduction": NaN
+		"armor_reduction": -3
 	},
 	"item_recipe_falcon_blade": {
 		"id": 599,
