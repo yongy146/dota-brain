@@ -406,6 +406,84 @@ export class DotaItem implements IDotaItem {
       }
     }
   }
+
+  public getValue(filter: ItemFilter):
+    | {
+        value: number;
+        efficiency: number | undefined;
+        isPercent: boolean;
+      }
+    | undefined {
+    switch (filter) {
+      case ItemFilter.AllItems: {
+        return undefined;
+      }
+      case ItemFilter.Strength: {
+        if (this.strength === undefined) return undefined;
+        return {
+          value: this.strength,
+          efficiency:
+            this.cost === undefined ? undefined : this.cost / this.strength,
+          isPercent: false,
+        };
+      }
+      case ItemFilter.Agility: {
+        return undefined;
+      }
+      case ItemFilter.Intelligence: {
+        return undefined;
+      }
+      case ItemFilter.Damage: {
+        return undefined;
+      }
+      case ItemFilter.AttackSpeed: {
+        return undefined;
+      }
+      case ItemFilter.CriticalStrike: {
+        return undefined;
+      }
+      case ItemFilter.AttackRange: {
+        return undefined;
+      }
+      case ItemFilter.ArmorReduction: {
+        return undefined;
+      }
+      case ItemFilter.AttackLifesteal: {
+        return undefined;
+      }
+      case ItemFilter.AttackSlow: {
+        return undefined;
+      }
+      case ItemFilter.Armor: {
+        return undefined;
+      }
+      case ItemFilter.Evasion: {
+        return undefined;
+      }
+      case ItemFilter.SpellAmplification: {
+        return undefined;
+      }
+      case ItemFilter.SpellLifesteal: {
+        return undefined;
+      }
+      case ItemFilter.MagicResistance: {
+        return undefined;
+      }
+      case ItemFilter.StatusResistance: {
+        return undefined;
+      }
+      case ItemFilter.HealthRegenReduction: {
+        return undefined;
+      }
+      case ItemFilter.MovementSpeed: {
+        return undefined;
+      }
+      default: {
+        // We should never get here through
+        return undefined;
+      }
+    }
+  }
 }
 /*
       case "AllItems": {
