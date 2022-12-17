@@ -63,7 +63,7 @@ export interface IDotaItem {
   breaks_passives?: boolean;
 
   // Armor information
-  armor?: number;
+  armor_?: number;
   armor_aura?: number;
   armor_activated?: number;
   armor_reduction?: number;
@@ -120,7 +120,7 @@ export interface IDotaItem {
   damage_aura_percent?: number;
 
   // Attack range
-  attack_range_?: number; // Atack range for ranged heroes only
+  attack_range_ranged?: number; // Atack range for ranged heroes only
   attack_range_melee?: number; // Attack range for melee heroes only
 
   // Health regen reduction
@@ -227,7 +227,7 @@ export class DotaItem implements IDotaItem {
   damage_aura_percent?: number;
 
   // Attack range
-  attack_range_?: number; // Atack range for ranged heroes only
+  attack_range_ranged?: number; // Atack range for ranged heroes only
   attack_range_melee?: number; // Attack range for melee heroes only
 
   // Health regen reduction
@@ -248,6 +248,8 @@ export class DotaItem implements IDotaItem {
   }
 
   // Getter and setters of enhanced values
+  get hasArmor(): boolean {}
+  get hasArmorReduction(): boolean {}
   get armor_total(): number | undefined {
     const value = (this.armor || 0) + (this.armor_aura || 0);
     return value === 0 ? undefined : value;
@@ -335,8 +337,12 @@ export class DotaItem implements IDotaItem {
     return (this.damage_aura || 0) + (this.damage_aura_percent || 0) > 0;
   }
 
-  get attack_range_sum(): number | undefined {
-    const value = (this.attack_range || 0) + (this.attack_range_melee || 0);
+  get hasAttackRange(): boolean {
+    return this.attack_range !== undefined;
+  }
+  get attack_range(): number | undefined {
+    const value =
+      (this.attack_range_ranged || 0) + (this.attack_range_melee || 0);
     return value === 0 ? undefined : value;
   }
   get spell_lifesteal_index(): number | undefined {
@@ -416,8 +422,7 @@ export class DotaItem implements IDotaItem {
         return this.hasCriticalStrike;
       }
       case ItemFilter.AttackRange: {
-        return true;
-        break;
+        return this.hasAttackRange;
       }
       case ItemFilter.ArmorReduction: {
         return true;
@@ -547,7 +552,12 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.AttackRange: {
-        if (this.hasAttackRage === false) return undefined;
+        if (this.hasAttackRange === false) return undefined;
+        return {
+          value: this.attack_range || 0,
+          efficiency: this.getEfficiency(this.attack_range || 0),
+          isPercent: false,
+        };
       }
       case ItemFilter.ArmorReduction: {
         return undefined;
