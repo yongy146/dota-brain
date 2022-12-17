@@ -70,6 +70,7 @@ export interface IDotaItem {
 
   // Status resistance
   status_resistance?: number;
+  status_resistance_reduction_aura?: number; // item_ceremonial_robe
 
   // Evasion
   evasion?: number;
@@ -93,7 +94,7 @@ export interface IDotaItem {
 
   // Attack lifesteam (all are in %, except for absolue)
   attack_lifesteal_?: number; // X
-  attack_lifesteal_active?: number; // Satanic
+  attack_lifesteal_active?: number; // Satanic, needs to be added with attack_lifesteal_ to get total value
   attack_lifesteal_absolute?: number; // x
 
   // Spell lifesteal
@@ -106,7 +107,8 @@ export interface IDotaItem {
 
   // Magic resistance
   magic_resist?: number;
-  magic_resist_aura?: number; // Auro is not commulative (only availalbe on Pipe of Insight)
+  magic_resist_aura?: number; // Auro is not cummulative (only availalbe on Pipe of Insight)
+  magic_resist_reduction_aura?: number; // item_ceremonial_robe
 
   // Physical damage
   damage_?: number; // Absolute value per hit
@@ -177,6 +179,7 @@ export class DotaItem implements IDotaItem {
 
   // Status resistance
   status_resistance?: number;
+  status_resistance_reduction_aura?: number; // item_ceremonial_robe
 
   // Evasion
   evasion?: number;
@@ -213,7 +216,8 @@ export class DotaItem implements IDotaItem {
 
   // Magic resistance
   magic_resist?: number;
-  magic_resist_aura?: number; // Auro is not commulative (only availalbe on Pipe of Insight)
+  magic_resist_aura?: number; // Aura is not commulative (only availalbe on Pipe of Insight)
+  magic_resist_reduction_aura?: number; // item_ceremonial_robe
 
   // Physical damage
   damage_?: number; // Absolute value per hit
@@ -258,6 +262,30 @@ export class DotaItem implements IDotaItem {
     const value = (this.armor_ || 0) + (this.armor_aura || 0);
     return value === 0 ? undefined : value;
   }
+
+  // Evasion
+  get hasEvasion(): boolean {
+    return this.evasion !== undefined;
+  }
+
+  // Spell amplification
+  get hasSpellAmplification(): boolean {
+    return this.spell_amp !== undefined;
+  }
+
+  // Magic resistance
+  get hasMagicResistance(): boolean {
+    return (
+      this.magic_resist !== undefined || this.magic_resist_aura !== undefined
+    );
+  }
+
+  // Magic resistance
+  get hasStatusResistance(): boolean {
+    return this.status_resistance !== undefined;
+  }
+
+  // Critical strike
   get hasCriticalStrike(): boolean {
     return (
       this.crit_multiplier_ !== undefined ||
@@ -366,7 +394,11 @@ export class DotaItem implements IDotaItem {
     );
   }
   get attack_lifesteal(): number | undefined {
-      return (this.attack_lifesteal_ || 0) + (this.attack_lifesteal_active || 0) + (this.attack_lifesteal_absolute || 0)
+    return (
+      (this.attack_lifesteal_ || 0) +
+      (this.attack_lifesteal_active || 0) +
+      (this.attack_lifesteal_absolute || 0)
+    );
   }
 
   get spell_lifesteal_index(): number | undefined {
@@ -463,23 +495,19 @@ export class DotaItem implements IDotaItem {
         return this.hasArmor;
       }
       case ItemFilter.Evasion: {
-        return true;
-        break;
+        return this.hasEvasion;
       }
       case ItemFilter.SpellAmplification: {
-        return true;
-        break;
+        return this.hasSpellAmplification;
       }
       case ItemFilter.SpellLifesteal: {
         return this.hasSpellLifesteal;
       }
       case ItemFilter.MagicResistance: {
-        return true;
-        break;
+        return this.hasMagicResistance;
       }
       case ItemFilter.StatusResistance: {
-        return true;
-        break;
+        return this.hasStatusResistance;
       }
       case ItemFilter.HealthRegenReduction: {
         return true;
@@ -591,29 +619,12 @@ export class DotaItem implements IDotaItem {
       }
       case ItemFilter.AttackLifesteal: {
         if (this.hasAttackLifesteal === false) return undefined;
-        
-                return {
+
+        return {
           value: this.attack_lifesteal || 0,
-          efficiency: this.getEfficiency(this.spell_lifesteal || 0),
-          isPercent: true,
+          efficiency: this.getEfficiency(this.attack_lifesteal || 0),
+          isPercent: this.attack_lifesteal_absolute === undefined,
         };
-              case "AttackLifesteal": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) =>
-            ((item as any).attack_lifesteal !== undefined ||
-              (item as any).attack_lifesteal_absolute !== undefined) &&
-            isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            (itemB.attack_lifesteal || 0) - (itemA.attack_lifesteal || 0)
-        );
-        setItems(selectedItems);
-        break;
-      }
-
-
-
       }
       case ItemFilter.AttackSlow: {
         if (this.hasAttackSlow === false) return undefined;
@@ -632,10 +643,20 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.Evasion: {
-        return undefined;
+        if (this.hasEvasion === false) return undefined;
+        return {
+          value: this.evasion || 0,
+          efficiency: this.getEfficiency(this.evasion || 0),
+          isPercent: true,
+        };
       }
       case ItemFilter.SpellAmplification: {
-        return undefined;
+        if (this.hasSpellAmplification === false) return undefined;
+        return {
+          value: this.spell_amp || 0,
+          efficiency: this.getEfficiency(this.spell_amp || 0),
+          isPercent: true,
+        };
       }
       case ItemFilter.SpellLifesteal: {
         if (this.hasSpellLifesteal === false) return undefined;
@@ -646,10 +667,20 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.MagicResistance: {
-        return undefined;
+        if (this.hasMagicResistance === false) return undefined;
+        return {
+          value: this.magic_resist || 0,
+          efficiency: this.getEfficiency(this.magic_resist || 0),
+          isPercent: true,
+        };
       }
       case ItemFilter.StatusResistance: {
-        return undefined;
+        if (this.hasStatusResistance === false) return undefined;
+        return {
+          value: this.status_resistance || 0,
+          efficiency: this.getEfficiency(this.status_resistance || 0),
+          isPercent: true,
+        };
       }
       case ItemFilter.HealthRegenReduction: {
         return undefined;
@@ -683,17 +714,6 @@ export class DotaItem implements IDotaItem {
       }
 
 
-      case "StatusResistance": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.status_resistance !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemB.status_resistance! - itemA.status_resistance!
-        );
-        setItems(selectedItems);
-        break;
-      }
       case "Evasion": {
         const selectedItems: DotaItem[] = itemArray.filter(
           (item) => item.evasion !== undefined && isItemVisible(item)
