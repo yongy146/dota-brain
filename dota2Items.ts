@@ -108,7 +108,7 @@ export interface IDotaItem {
   magic_resist_aura?: number; // Auro is not commulative (only availalbe on Pipe of Insight)
 
   // Physical damage
-  damage?: number; // Absolute value per hit
+  damage_?: number; // Absolute value per hit
   damage_melee?: number; // Absolute value per hit
   damage_ranged?: number; // Absolute value per hit
   damage_active?: number; // Absolute value per hit
@@ -215,7 +215,7 @@ export class DotaItem implements IDotaItem {
   magic_resist_aura?: number; // Auro is not commulative (only availalbe on Pipe of Insight)
 
   // Physical damage
-  damage?: number; // Absolute value per hit
+  damage_?: number; // Absolute value per hit
   damage_melee?: number; // Absolute value per hit
   damage_ranged?: number; // Absolute value per hit
   damage_active?: number; // Absolute value per hit
@@ -276,15 +276,32 @@ export class DotaItem implements IDotaItem {
       (this.attack_slow_ranged || 0) * 0.5;
     return value === 0 ? undefined : value;
   }
-  get damage_index(): number | undefined {
+  get damage(): number | undefined {
     const value =
-      (this.damage || 0) +
+      (this.damage_ || 0) +
       (this.damage_melee || 0) +
+      (this.damage_ranged || 0) +
+      (this.damage_active || 0) +
       //(this.damage_ranged || 0)) *
       //(this.damage_ranged !== undefined ? 0.5 : 1.0) +
       (this.damage_base_percent || 0); // assuming base damage of about 100
     return value === 0 ? undefined : value;
   }
+
+  get doesDamage(): boolean {
+    return (
+      (this.damage_ || 0) +
+        (this.damage_melee || 0) +
+        (this.damage_ranged || 0) +
+        (this.damage_active || 0) +
+        (this.damage_base_percent || 0) +
+        (this.damage_bonus || 0) +
+        (this.damage_aura || 0) +
+        (this.damage_aura_percent || 0) >
+      0
+    );
+  }
+
   get attack_range_sum(): number | undefined {
     const value = (this.attack_range || 0) + (this.attack_range_melee || 0);
     return value === 0 ? undefined : value;
@@ -297,6 +314,7 @@ export class DotaItem implements IDotaItem {
   get strength(): number | undefined {
     const value =
       (this.strength_ || 0) +
+      (this.strength_active_ || 0) +
       (this.all_attributes_ || 0) +
       (this.selected_attribute || 0);
     return value === 0 ? undefined : value;
@@ -311,6 +329,7 @@ export class DotaItem implements IDotaItem {
   get intelligence(): number | undefined {
     const value =
       (this.intelligence_ || 0) +
+      (this.intelligence_percent_ || 0) +
       (this.all_attributes_ || 0) +
       (this.selected_attribute || 0);
     return value === 0 ? undefined : value;
@@ -323,10 +342,18 @@ export class DotaItem implements IDotaItem {
     includeRoshan: boolean
   ): boolean {
     if (this.is_recipe) return false;
-    if (includePurchasable === false && this.is_purchasable === true)
+
+    if (
+      (includePurchasable === true &&
+        (this.is_purchasable === true || this.key === "item_tango_single")) ||
+      (includeNeutral === true && this.is_neutral === true) ||
+      (includeRoshan === true && this.is_roshan === true)
+    ) {
+      // Item shall be included
+    } else {
+      // Item shall not be included
       return false;
-    if (includeNeutral === false && this.is_neutral === true) return false;
-    if (includeRoshan === false && this.is_roshan === true) return false;
+    }
 
     switch (filter) {
       case ItemFilter.AllItems: {
@@ -423,18 +450,34 @@ export class DotaItem implements IDotaItem {
         return {
           value: this.strength,
           efficiency:
-            this.cost === undefined ? undefined : this.cost / this.strength,
+            !this.cost || this.is_neutral === true
+              ? undefined
+              : this.cost / this.strength,
           isPercent: false,
         };
       }
       case ItemFilter.Agility: {
-        return undefined;
+        if (this.agility === undefined) return undefined;
+        return {
+          value: this.agility,
+          efficiency:
+            !this.cost || this.is_neutral === true
+              ? undefined
+              : this.cost / this.agility,
+          isPercent: false,
+        };
       }
       case ItemFilter.Intelligence: {
-        return undefined;
+        if (this.intelligence === undefined) return undefined;
+        return {
+          value: this.intelligence,
+          efficiency: this.getEfficiency(this.intelligence),
+          isPercent: this.intelligence_percent_ !== undefined,
+        };
       }
       case ItemFilter.Damage: {
-        return undefined;
+        if (this.damage === undefined) return undefined;
+        //...return item.damage_index;
       }
       case ItemFilter.AttackSpeed: {
         return undefined;
@@ -483,6 +526,12 @@ export class DotaItem implements IDotaItem {
         return undefined;
       }
     }
+  }
+
+  private getEfficiency(value: number): number | undefined {
+    return !this.cost || this.is_neutral === true
+      ? undefined
+      : this.cost / value;
   }
 }
 /*
