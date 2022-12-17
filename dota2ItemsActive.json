@@ -78,7 +78,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 9
+		"damage_": 9
 	},
 	"item_broadsword": {
 		"id": 3,
@@ -87,7 +87,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 15
+		"damage_": 15
 	},
 	"item_chainmail": {
 		"id": 4,
@@ -105,7 +105,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 20
+		"damage_": 20
 	},
 	"item_helm_of_iron_will": {
 		"id": 6,
@@ -133,7 +133,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 24
+		"damage_": 24
 	},
 	"item_platemail": {
 		"id": 9,
@@ -151,7 +151,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 10
+		"damage_": 10
 	},
 	"item_quelling_blade": {
 		"id": 11,
@@ -162,7 +162,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 8,
+		"damage_": 8,
 		"damage_ranged": 4
 	},
 	"item_faerie_fire": {
@@ -173,7 +173,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 2
+		"damage_": 2
 	},
 	"item_infused_raindrop": {
 		"id": 265,
@@ -603,7 +603,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 40
+		"damage_": 40
 	},
 	"item_eagle": {
 		"id": 52,
@@ -630,7 +630,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 60
+		"damage_": 60
 	},
 	"item_hyperstone": {
 		"id": 55,
@@ -736,7 +736,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 10,
-		"damage": 15,
+		"damage_": 15,
 		"intelligence_": 10
 	},
 	"item_recipe_witch_blade": {
@@ -782,7 +782,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 2,
+		"damage_": 2,
 		"strength_": 5,
 		"agility_": 2,
 		"intelligence_": 2
@@ -1024,7 +1024,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 40,
-		"damage": 30
+		"damage_": 30
 	},
 	"item_recipe_bloodthorn": {
 		"id": 245,
@@ -1047,7 +1047,7 @@
 		"crit_chance": 100,
 		"attack_speed": 60,
 		"magic_resist": 25,
-		"damage": 50,
+		"damage_": 50,
 		"intelligence_": 20,
 		"duration": 6
 	},
@@ -1061,7 +1061,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 10,
-		"damage": 15,
+		"damage_": 15,
 		"strength_": 13,
 		"intelligence_": 10
 	},
@@ -1343,7 +1343,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 24,
+		"damage_": 24,
 		"strength_": 10,
 		"duration": 9
 	},
@@ -1455,7 +1455,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 80,
+		"damage_": 80,
 		"armor": 10
 	},
 	"item_recipe_aeon_disk": {
@@ -1570,7 +1570,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 28,
+		"damage_": 28,
 		"duration": 5.5,
 		"armor": 6
 	},
@@ -1620,7 +1620,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 350
+		"damage_": 350
 	},
 	"item_recipe_monkey_king_bar": {
 		"id": 134,
@@ -1638,7 +1638,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 45,
-		"damage": 40,
+		"damage_": 40,
 		"damage_bonus": 80,
 		"damage_bonus_chance": 70
 	},
@@ -1650,7 +1650,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"evasion": 15,
-		"damage": 60,
+		"damage_": 60,
 		"damage_aura": 60
 	},
 	"item_butterfly": {
@@ -1662,7 +1662,7 @@
 		"is_purchasable": true,
 		"evasion": 35,
 		"attack_speed": 30,
-		"damage": 25,
+		"damage_": 25,
 		"agility_": 35
 	},
 	"item_recipe_greater_crit": {
@@ -1682,7 +1682,7 @@
 		"is_purchasable": true,
 		"crit_chance": 30,
 		"crit_multiplier": 225,
-		"damage": 88
+		"damage_": 88
 	},
 	"item_recipe_basher": {
 		"id": 142,
@@ -1700,7 +1700,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 25,
+		"damage_": 25,
 		"damage_bonus_chance": 100,
 		"strength_": 10
 	},
@@ -1712,7 +1712,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 60
+		"damage_": 60
 	},
 	"item_recipe_manta": {
 		"id": 146,
@@ -1754,7 +1754,7 @@
 		"is_purchasable": true,
 		"crit_chance": 30,
 		"crit_multiplier": 160,
-		"damage": 32
+		"damage_": 32
 	},
 	"item_recipe_dragon_lance": {
 		"id": 234,
@@ -1792,7 +1792,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 25,
-		"damage": 15,
+		"damage_": 15,
 		"damage_active": 35,
 		"strength_active_": 25,
 		"armor": 6,
@@ -1809,7 +1809,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 35,
-		"damage": 20,
+		"damage_": 20,
 		"duration": 14,
 		"movement_speed_percent_active": 20
 	},
@@ -1835,7 +1835,7 @@
 		"crit_chance": 30,
 		"crit_multiplier": 160,
 		"attack_speed": 35,
-		"damage": 52,
+		"damage_": 52,
 		"duration": 14,
 		"movement_speed_percent_active": 25
 	},
@@ -1889,7 +1889,7 @@
 		"is_purchasable": true,
 		"attack_lifesteal": 30,
 		"attack_lifesteal_active": 145,
-		"damage": 38,
+		"damage_": 38,
 		"strength_": 25
 	},
 	"item_recipe_mjollnir": {
@@ -1910,7 +1910,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed": 70,
-		"damage": 24
+		"damage_": 24
 	},
 	"item_skadi": {
 		"id": 160,
@@ -1990,7 +1990,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 24
+		"damage_": 24
 	},
 	"item_recipe_gungir": {
 		"id": 1565,
@@ -2009,7 +2009,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 30,
+		"damage_": 30,
 		"agility_": 14,
 		"intelligence_": 24,
 		"strength_": 14,
@@ -2022,7 +2022,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 50,
+		"damage_": 50,
 		"armor_reduction": -6
 	},
 	"item_recipe_yasha": {
@@ -2056,7 +2056,7 @@
 		"attack_speed": 10,
 		"attack_speed_active": 110,
 		"attack_lifesteal": 24,
-		"damage": 10,
+		"damage_": 10,
 		"duration": 6,
 		"armor_activated": -8,
 		"movement_speed": 30
@@ -2196,7 +2196,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage": 14
+		"damage_": 14
 	},
 	"item_recipe_mage_slayer": {
 		"id": 597,
@@ -2215,7 +2215,7 @@
 		"is_purchasable": true,
 		"attack_speed": 20,
 		"magic_resist": 25,
-		"damage": 20,
+		"damage_": 20,
 		"intelligence_": 10,
 		"duration": 6
 	},
@@ -2420,7 +2420,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage_bonus_chance": 120,
-		"damage": 25,
+		"damage_": 25,
 		"strength_": 10
 	},
 	"item_recipe_heavens_halberd": {
@@ -2454,7 +2454,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 3,
+		"damage_": 3,
 		"strength_": 3,
 		"agility_": 9,
 		"intelligence_": 3,
@@ -2538,7 +2538,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": -30
+		"damage_": -30
 	},
 	"item_force_boots": {
 		"id": 291,
@@ -2564,7 +2564,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 60,
+		"damage_": 60,
 		"armor_reduction": -10
 	},
 	"item_seer_stone": {
@@ -2716,7 +2716,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 8,
+		"damage_": 8,
 		"attack_range_melee": 50,
 		"armor": 4
 	},
@@ -2770,7 +2770,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 225,
+		"damage_": 225,
 		"attack_range": 350
 	},
 	"item_ninja_gear": {
@@ -2800,7 +2800,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 12,
+		"damage_": 12,
 		"strength_": 12
 	},
 	"item_apex": {
@@ -2882,7 +2882,7 @@
 		"is_purchasable": false,
 		"attack_lifesteal": 16,
 		"spell_lifesteal": 8,
-		"damage": 16
+		"damage_": 16
 	},
 	"item_arcane_ring": {
 		"id": 349,
@@ -2977,7 +2977,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_slow": -60,
-		"undefined": 45,
+		"damage_": 45,
 		"attack_range_melee": 100
 	},
 	"item_bullwhip": {
@@ -3097,7 +3097,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 10
+		"damage_": 10
 	},
 	"item_heavy_blade": {
 		"id": 837,
@@ -3211,7 +3211,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 10
+		"damage_": 10
 	},
 	"item_dagger_of_ristul": {
 		"id": 1077,
@@ -3224,7 +3224,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage": 40,
+		"damage_": 40,
 		"duration": 8
 	}
 }
