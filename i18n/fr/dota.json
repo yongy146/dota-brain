@@ -23,6 +23,8 @@
 	"dota.Intelligence": "d'intelligence",
 	"dota.Agility": "d'agilité",
 	"dota.abilities.special_bonus_attributes": "Bonus d'attributs",
+	"dota.Health": "PV",
+	"dota.Mana": "de mana",
 	"dota.Lobby": "Lobby",
 	"dota.Ranked": "Classé",
 	"dota.Unranked": "Non classé",

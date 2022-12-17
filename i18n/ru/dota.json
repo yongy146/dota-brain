@@ -23,6 +23,8 @@
 	"dota.Intelligence": "к интеллекту",
 	"dota.Agility": "к ловкости",
 	"dota.abilities.special_bonus_attributes": "Бонус к атрибутам",
+	"dota.Health": "к здоровью",
+	"dota.Mana": "к мане",
 	"dota.Lobby": "Лобби",
 	"dota.Ranked": "Рейтинговая",
 	"dota.Unranked": "Нерейтинговая",

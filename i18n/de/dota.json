@@ -23,6 +23,8 @@
 	"dota.Intelligence": "Intelligenz",
 	"dota.Agility": "Agilität",
 	"dota.abilities.special_bonus_attributes": "Attributsbonus",
+	"dota.Health": "Lebenspunkte",
+	"dota.Mana": "Mana",
 	"dota.Lobby": "Lobby",
 	"dota.Ranked": "Rangliste",
 	"dota.Unranked": "Ungewertet",

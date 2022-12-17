@@ -23,6 +23,8 @@
 	"dota.Intelligence": "de inteligencia",
 	"dota.Agility": "de agilidad",
 	"dota.abilities.special_bonus_attributes": "Bonificación de Atributos",
+	"dota.Health": "de vida",
+	"dota.Mana": "de maná",
 	"dota.Lobby": "Sala de espera",
 	"dota.Ranked": "Clasificatoria",
 	"dota.Unranked": "No clasificatoria",
