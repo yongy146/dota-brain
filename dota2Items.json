@@ -2623,7 +2623,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"mana_regen_percent": 1.5,
+		"mana_regen_": 1.5,
 		"duration": 12,
 		"armor_": 5,
 		"armor_reduction": -5
@@ -2648,7 +2648,7 @@
 		"is_purchasable": true,
 		"attack_speed_target": 50,
 		"attack_slow_": -50,
-		"mana_regen_percent": 1.75,
+		"mana_regen_": 1.75,
 		"all_attributes_": 5,
 		"duration": 12,
 		"armor_": 6,
