@@ -249,7 +249,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 140
+		"attack_speed_": 140
 	},
 	"item_gauntlets": {
 		"id": 13,
@@ -380,7 +380,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 20
+		"attack_speed_": 20
 	},
 	"item_blitz_knuckles": {
 		"id": 485,
@@ -390,7 +390,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 35
+		"attack_speed_": 35
 	},
 	"item_lifesteal": {
 		"id": 26,
@@ -726,7 +726,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 60
+		"attack_speed_": 60
 	},
 	"item_ring_of_health": {
 		"id": 56,
@@ -800,7 +800,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 25,
+		"attack_speed_": 25,
 		"selected_attribute": 10,
 		"movement_speed": 45
 	},
@@ -823,7 +823,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 40
+		"attack_speed_": 40
 	},
 	"item_oblivion_staff": {
 		"id": 67,
@@ -833,7 +833,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 10,
+		"attack_speed_": 10,
 		"damage_": 15,
 		"intelligence_": 10
 	},
@@ -855,7 +855,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 35,
+		"attack_speed_": 35,
 		"intelligence_": 12,
 		"armor": 6
 	},
@@ -907,7 +907,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 6,
+		"attack_speed_": 6,
 		"agility_": 5,
 		"strength_": 2,
 		"intelligence_": 2,
@@ -1151,7 +1151,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 40,
+		"attack_speed_": 40,
 		"damage_": 30
 	},
 	"item_recipe_bloodthorn": {
@@ -1175,7 +1175,7 @@
 		"is_purchasable": true,
 		"crit_multiplier_target": 130,
 		"crit_chance": 100,
-		"attack_speed": 60,
+		"attack_speed_": 60,
 		"magic_resist": 25,
 		"damage_": 50,
 		"intelligence_": 20,
@@ -1191,7 +1191,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 10,
+		"attack_speed_": 10,
 		"damage_": 15,
 		"strength_": 13,
 		"intelligence_": 10
@@ -1298,7 +1298,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 100,
+		"attack_speed_": 100,
 		"attack_range": 150,
 		"intelligence_": 15,
 		"agility_": 20,
@@ -1460,7 +1460,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 30,
+		"attack_speed_": 30,
 		"attack_speed_aura": 30,
 		"armor": 10,
 		"armor_aura": 5,
@@ -1828,7 +1828,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 45,
+		"attack_speed_": 45,
 		"damage_": 40,
 		"damage_bonus": 80,
 		"damage_bonus_chance": 70
@@ -1854,7 +1854,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"evasion": 35,
-		"attack_speed": 30,
+		"attack_speed_": 30,
 		"damage_": 25,
 		"agility_": 35
 	},
@@ -1931,7 +1931,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 12,
+		"attack_speed_": 12,
 		"strength_": 10,
 		"agility_": 26,
 		"intelligence_": 10,
@@ -1997,7 +1997,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 25,
+		"attack_speed_": 25,
 		"damage_": 15,
 		"damage_active": 35,
 		"strength_active_": 25,
@@ -2015,7 +2015,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 35,
+		"attack_speed_": 35,
 		"damage_": 20,
 		"duration": 14,
 		"movement_speed_percent_active": 20
@@ -2043,7 +2043,7 @@
 		"is_purchasable": true,
 		"crit_chance": 30,
 		"crit_multiplier": 160,
-		"attack_speed": 35,
+		"attack_speed_": 35,
 		"damage_": 52,
 		"duration": 14,
 		"movement_speed_percent_active": 25
@@ -2057,7 +2057,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"status_resistance": 20,
-		"attack_speed": 12,
+		"attack_speed_": 12,
 		"strength_": 16,
 		"agility_": 16,
 		"movement_speed_percent": 10
@@ -2084,7 +2084,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 12,
+		"attack_speed_": 12,
 		"spell_lifesteal_amplifier": 30,
 		"spell_amp": 16,
 		"agility_": 16,
@@ -2124,7 +2124,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 70,
+		"attack_speed_": 70,
 		"damage_": 24
 	},
 	"item_skadi": {
@@ -2268,7 +2268,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 12,
+		"attack_speed_": 12,
 		"agility_": 16,
 		"movement_speed_percent": 8
 	},
@@ -2282,7 +2282,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 10,
+		"attack_speed_": 10,
 		"attack_speed_active": 110,
 		"attack_lifesteal": 24,
 		"damage_": 10,
@@ -2458,7 +2458,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 20,
+		"attack_speed_": 20,
 		"magic_resist": 25,
 		"damage_": 20,
 		"intelligence_": 10,
@@ -2482,7 +2482,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 45,
+		"attack_speed_": 45,
 		"duration": 6,
 		"movement_speed_aura": 20,
 		"movement_speed_percent": 13
@@ -2505,7 +2505,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 50,
+		"attack_speed_": 50,
 		"duration": 1.5,
 		"movement_speed_aura": 20,
 		"movement_speed": 65,
@@ -2613,7 +2613,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed": 40,
+		"attack_speed_": 40,
 		"intelligence_": 45,
 		"duration": 15,
 		"armor": 8
@@ -2786,7 +2786,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 20,
+		"attack_speed_": 20,
 		"attack_range": 100
 	},
 	"item_quickening_charm": {
@@ -2935,7 +2935,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 25,
+		"attack_speed_": 25,
 		"duration": 1.75
 	},
 	"item_spell_prism": {
@@ -2988,7 +2988,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 10,
+		"attack_speed_": 10,
 		"spell_amp": 6,
 		"magic_resist": 10,
 		"selected_attribute": 10
@@ -3151,7 +3151,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 150,
+		"attack_speed_": 150,
 		"movement_speed": 15
 	},
 	"item_ex_machina": {
@@ -3226,7 +3226,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"evasion": 16,
-		"attack_speed": 26
+		"attack_speed_": 26
 	},
 	"item_cloak_of_flames": {
 		"id": 574,
@@ -3429,7 +3429,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed": 20
+		"attack_speed_": 20
 	},
 	"item_unstable_wand": {
 		"id": 838,
