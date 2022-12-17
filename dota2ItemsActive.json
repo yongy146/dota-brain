@@ -1681,7 +1681,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"crit_chance": 30,
-		"crit_multiplier": 225,
+		"crit_multiplier_": 225,
 		"damage_": 88
 	},
 	"item_recipe_basher": {
@@ -1753,7 +1753,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"crit_chance": 30,
-		"crit_multiplier": 160,
+		"crit_multiplier_": 160,
 		"damage_": 32
 	},
 	"item_recipe_dragon_lance": {
@@ -1833,7 +1833,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"crit_chance": 30,
-		"crit_multiplier": 160,
+		"crit_multiplier_": 160,
 		"attack_speed_": 35,
 		"damage_": 52,
 		"duration": 14,
