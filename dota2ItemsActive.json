@@ -1372,7 +1372,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed_aura": -45,
+		"attack_slow_aura": -45,
 		"heal_reduction_aura": 25,
 		"intelligence_": 30,
 		"armor": 15
