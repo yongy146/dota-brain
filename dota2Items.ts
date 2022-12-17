@@ -280,6 +280,14 @@ export class DotaItem implements IDotaItem {
     );
   }
 
+  // Health regen reduction
+  get hasHealReduction(): boolean {
+    return (
+      this.heal_reduction !== undefined ||
+      this.heal_reduction_aura !== undefined
+    );
+  }
+
   // Magic resistance
   get hasStatusResistance(): boolean {
     return this.status_resistance !== undefined;
@@ -401,12 +409,58 @@ export class DotaItem implements IDotaItem {
     );
   }
 
-  get spell_lifesteal_index(): number | undefined {
-    // STILL NEEDED?!
-    const value =
-      (this.spell_lifesteal || 0) + (this.spell_lifesteal_amplifier || 0);
-    return value === 0 ? undefined : value;
+  // Movement speed
+  get hasMovementSpeed(): boolean {
+    return (
+      this.movement_speed !== undefined ||
+      this.movement_speed_active !== undefined ||
+      this.movement_speed_aura !== undefined ||
+      this.movement_speed_percent !== undefined ||
+      this.movement_speed_percent_active !== undefined
+    );
   }
+  get estimatedTotalSpeed(): number | undefined {
+    const ts =
+      (this.movement_speed || 0) +
+      (this.movement_speed_active || 0) +
+      (this.movement_speed_aura || 0) +
+      (this.movement_speed_percent || 0) * 3 +
+      (this.movement_speed_percent_active || 0) * 3;
+    return ts ? ts : undefined;
+  }
+  public getMovementSpeed(): number | undefined {
+    const ts =
+      (this.movement_speed || 0) +
+      //(this.movement_speed_active || 0) +
+      (this.movement_speed_aura || 0);
+    return ts ? ts : undefined;
+  }
+  public getMovementSpeedPercent(): number | undefined {
+    const ts = this.movement_speed_percent || 0; //+
+    //(this.movement_speed_percent_active || 0);
+    return ts ? ts : undefined;
+  }
+
+  /**
+   * Calcualted the speed with actication
+   *
+   * It assumes a speed of 300 for percentage information
+   * @param item
+   */
+  /*export function getSpeed(item: DotaItem): number {
+  let speed = 0;
+  if (item.speed !== undefined) {
+    if (item.speed.absolute) speed += item.speed.absolute;
+    if (item.speed.percent) speed += (300 * item.speed.percent) / 100;
+    if (item.speed.activeAbsolute) speed += item.speed.activeAbsolute;
+    if (item.speed.activePercent)
+      speed += (300 * item.speed.activePercent) / 100;
+    // Add aura speed if no other added
+    if (speed === 0 && item.speed.auraAbsolute)
+      speed += (300 * item.speed.auraAbsolute) / 100;
+  }
+  return speed;
+}*/
 
   get strength(): number | undefined {
     const value =
@@ -510,11 +564,10 @@ export class DotaItem implements IDotaItem {
         return this.hasStatusResistance;
       }
       case ItemFilter.HealthRegenReduction: {
-        return true;
-        break;
+        return this.hasHealReduction;
       }
       case ItemFilter.MovementSpeed: {
-        return true;
+        return this.hasMovementSpeed;
       }
       default: {
         // We should never get here through
@@ -683,10 +736,23 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.HealthRegenReduction: {
-        return undefined;
+        if (this.hasHealReduction === false) return undefined;
+        const hr = (this.heal_reduction || 0) + (this.heal_reduction_aura || 0);
+        return {
+          value: hr,
+          efficiency: this.getEfficiency(hr || 0),
+          isPercent: true,
+        };
       }
       case ItemFilter.MovementSpeed: {
-        return undefined;
+        if (this.hasMovementSpeed === false) return undefined;
+        return {
+          value: this.estimatedTotalSpeed || 0,
+          /*efficiency: this.getEfficiency(this.totalSpeed || 0),*/
+          isPercent: false,
+          /*this.movement_speed_percent !== undefined ||
+            this.movement_speed_percent_active !== undefined,*/
+        };
       }
       default: {
         // We should never get here through
@@ -701,107 +767,6 @@ export class DotaItem implements IDotaItem {
       : this.cost / ((Math.abs(value) * (chance || 100)) / 100);
   }
 }
-/*
-      case "AttackRange": {
-        const selectedItems = itemArray.filter(
-          (item) => item.attack_range_sum !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA, itemB) => itemB.attack_range_sum! - itemA.attack_range_sum!
-        );
-        setItems(selectedItems);
-        break;
-      }
-
-
-      case "Evasion": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.evasion !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort((itemA: DotaItem, itemB: DotaItem) =>
-          itemB.evasion! === itemA.evasion!
-            ? (itemB.cost || 0) - (itemA.cost || 0)
-            : itemB.evasion! - itemA.evasion!
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "AttackSlow": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => item.attack_slow_mixed !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemA.attack_slow_mixed! - itemB.attack_slow_mixed!
-        );
-        setItems(selectedItems);
-        break;
-      }
-
-      case "SpellAmplification": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => (item as any).spell_amp !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemB.spell_amp! - itemA.spell_amp!
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "MagicResistance": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) =>
-            ((item as any).magic_resist !== undefined ||
-              (item as any).magic_resist_aura !== undefined) &&
-            isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            itemB.magic_resist! - itemA.magic_resist!
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "HealthRegenReduction": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) =>
-            ((item as any).heal_reduction !== undefined ||
-              (item as any).heal_reduction_aura !== undefined) &&
-            isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            (itemB.heal_reduction || 0) +
-            (itemB.heal_reduction_aura || 0) -
-            (itemA.heal_reduction || 0) -
-            (itemA.heal_reduction_aura || 0)
-        );
-        setItems(selectedItems);
-        break;
-      }
-      case "MovementSpeed": {
-        const selectedItems: DotaItem[] = itemArray.filter(
-          (item) => (item as any).speed !== undefined && isItemVisible(item)
-        );
-        selectedItems.sort(
-          (itemA: DotaItem, itemB: DotaItem) =>
-            getSpeed(itemB) - getSpeed(itemA)
-        );
-        /*absolute?: number;
-            percent?: number;
-            brokenAbsolute?: number;
-            activeAbsolute?: number;
-            activeRelative
-            auraAbsolute*/
-/*
-        setItems(selectedItems);
-        break;
-      }*/
-
-/*export function getSortValue(item: IItem): number {
-\
-}*/
 
 /**
  *
