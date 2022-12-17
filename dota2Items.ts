@@ -7,7 +7,8 @@ export enum ItemFilter {
   Strength = "dota.Strength",
   Agility = "dota.Agility",
   Intelligence = "dota.Intelligence",
-  Damage = "Damage",
+  DamageLeftClick = "DamageLeftClick",
+  DamageAura = "DamageAura",
   AttackSpeed = "AttackSpeed",
   CriticalStrike = "CriticalStrike",
   AttackRange = "AttackRange",
@@ -288,18 +289,19 @@ export class DotaItem implements IDotaItem {
     return value === 0 ? undefined : value;
   }
 
-  get doesDamage(): boolean {
+  get doesDamageLeftClick(): boolean {
     return (
       (this.damage_ || 0) +
         (this.damage_melee || 0) +
         (this.damage_ranged || 0) +
         (this.damage_active || 0) +
         (this.damage_base_percent || 0) +
-        (this.damage_bonus || 0) +
-        (this.damage_aura || 0) +
-        (this.damage_aura_percent || 0) >
+        (this.damage_bonus || 0) >
       0
     );
+  }
+  get doesDamageAura(): boolean {
+    return (this.damage_aura || 0) + (this.damage_aura_percent || 0) > 0;
   }
 
   get attack_range_sum(): number | undefined {
@@ -368,9 +370,13 @@ export class DotaItem implements IDotaItem {
       case ItemFilter.Intelligence: {
         return this.intelligence !== undefined;
       }
-      case ItemFilter.Damage: {
-        return true;
-        break;
+      case ItemFilter.DamageLeftClick: {
+        //console.log(`this.key doesDamage=${this.doesDamage}`);
+        return this.doesDamageLeftClick;
+      }
+      case ItemFilter.DamageAura: {
+        //console.log(`this.key doesDamage=${this.doesDamage}`);
+        return this.doesDamageAura;
       }
       case ItemFilter.AttackSpeed: {
         return true;
@@ -449,10 +455,7 @@ export class DotaItem implements IDotaItem {
         if (this.strength === undefined) return undefined;
         return {
           value: this.strength,
-          efficiency:
-            !this.cost || this.is_neutral === true
-              ? undefined
-              : this.cost / this.strength,
+          efficiency: this.getEfficiency(this.strength),
           isPercent: false,
         };
       }
@@ -460,10 +463,7 @@ export class DotaItem implements IDotaItem {
         if (this.agility === undefined) return undefined;
         return {
           value: this.agility,
-          efficiency:
-            !this.cost || this.is_neutral === true
-              ? undefined
-              : this.cost / this.agility,
+          efficiency: this.getEfficiency(this.agility),
           isPercent: false,
         };
       }
@@ -476,7 +476,12 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.Damage: {
-        if (this.damage === undefined) return undefined;
+        if (this.doesDamage === false) return undefined;
+        return {
+          value: this.damage || 0,
+          efficiency: this.getEfficiency(this.damage || 0),
+          isPercent: this.intelligence_percent_ !== undefined,
+        };
         //...return item.damage_index;
       }
       case ItemFilter.AttackSpeed: {
@@ -529,7 +534,7 @@ export class DotaItem implements IDotaItem {
   }
 
   private getEfficiency(value: number): number | undefined {
-    return !this.cost || this.is_neutral === true
+    return !this.cost || this.is_neutral === true || value === 0
       ? undefined
       : this.cost / value;
   }
@@ -768,27 +773,6 @@ export class DotaItem implements IDotaItem {
 /*export function getSortValue(item: IItem): number {
 \
 }*/
-
-/**
- * Calcualted the speed with actication
- *
- * It assumes a speed of 300 for percentage information
- * @param item
- */
-export function getSpeed(item: DotaItem): number {
-  let speed = 0;
-  if (item.speed !== undefined) {
-    if (item.speed.absolute) speed += item.speed.absolute;
-    if (item.speed.percent) speed += (300 * item.speed.percent) / 100;
-    if (item.speed.activeAbsolute) speed += item.speed.activeAbsolute;
-    if (item.speed.activePercent)
-      speed += (300 * item.speed.activePercent) / 100;
-    // Add aura speed if no other added
-    if (speed === 0 && item.speed.auraAbsolute)
-      speed += (300 * item.speed.auraAbsolute) / 100;
-  }
-  return speed;
-}
 
 /**
  *
