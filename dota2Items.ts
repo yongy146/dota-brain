@@ -7,12 +7,13 @@ export interface IDotaItems {
 export enum ItemFilter {
   AllItems = "AllItems",
   Health = "dota.Health",
-  HealthRegen = "health_regen", // Implemented later on
+  HealthRegen = "HealthRegen", // Implemented later on
   Mana = "dota.Mana", // Implemented later on
-  ManaRegen = "mana_regen", // Implemented later on
-  Dispel = "", // Implemented later on
-  Silence = "", // Implemented later on
-  Stun = "", // Implemented later on
+  ManaRegen = "ManaRegen", // Implemented later on
+  //Dispel = "", // Implemented later on
+  //Silence = "", // Implemented later on
+  //Stun = "", // Implemented later on
+  // Pierce evasion
   Strength = "dota.Strength", // Currently not displayed on Itempedia
   Agility = "dota.Agility", // Currently not displayed on Itempedia
   Intelligence = "dota.Intelligence", // Currently not displayed on Itempedia
@@ -24,15 +25,15 @@ export enum ItemFilter {
   ArmorReduction = "ArmorReduction",
   AttackLifesteal = "AttackLifesteal",
   AttackSlow = "AttackSlow",
-  Armor = "Armor",
-  Evasion = "Evasion",
+  Armor = "dota.Armor",
+  Evasion = "dota.Evasion",
   SpellAmplification = "SpellAmplification",
   SpellLifesteal = "SpellLifesteal",
   MagicResistance = "MagicResistance",
   StatusResistance = "StatusResistance",
   HealthRegenReduction = "HealthRegenReduction",
   MovementSpeed = "MovementSpeed",
-  Invisibility = "Invisibility",
+  Invisibility = "dota.Invisibility",
   TrueSight = "TrueSight",
   PassiveBreak = "PassiveBreak",
 }
