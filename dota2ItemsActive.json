@@ -2238,7 +2238,7 @@
 		"attack_speed_": 45,
 		"duration": 6,
 		"movement_speed_aura": 20,
-		"movement_speed_percent": 13
+		"movement_speed_percent_active": 13
 	},
 	"item_recipe_boots_of_bearing": {
 		"id": 930,
@@ -2259,8 +2259,8 @@
 		"attack_speed_": 50,
 		"duration": 1.5,
 		"movement_speed_aura": 20,
-		"movement_speed": 65,
-		"movement_speed_percent_active": 15
+		"movement_speed_percent_active": 15,
+		"movement_speed": 65
 	},
 	"item_medallion_of_courage": {
 		"id": 187,
