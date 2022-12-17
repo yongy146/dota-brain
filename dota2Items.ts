@@ -86,9 +86,10 @@ export interface IDotaItem {
   attack_speed_target?: number; // absolute value
 
   // Attack slow
-  attack_slow?: number;
+  attack_slow_?: number;
   attack_slow_melee?: number;
   attack_slow_ranged?: number;
+  attack_slow_aura?: number;
 
   // Attack lifesteam (all are in %, except for absolue)
   attack_lifesteal?: number; // X
@@ -192,9 +193,10 @@ export class DotaItem implements IDotaItem {
   attack_speed_target?: number; // absolute values
 
   // Attack slow
-  attack_slow?: number;
+  attack_slow_?: number;
   attack_slow_melee?: number;
   attack_slow_ranged?: number;
+  attack_slow_aura?: number;
 
   // Attack lifesteam (all are in %, except for absolue)
   attack_lifesteal?: number; // X
@@ -264,6 +266,17 @@ export class DotaItem implements IDotaItem {
     return this.attack_speed !== undefined;
   }
   get attack_speed(): number | undefined {
+    const value =
+      (this.attack_speed_ || 0) +
+      (this.attack_speed_aura || 0) +
+      (this.attack_speed_active || 0) +
+      (this.attack_speed_target || 0);
+    return value === 0 ? undefined : value;
+  }
+  get hasAttackSlow(): boolean {
+    return this.attack_slow !== undefined;
+  }
+  get attack_slow(): number | undefined {
     const value =
       (this.attack_speed_ || 0) +
       (this.attack_speed_aura || 0) +
@@ -393,8 +406,7 @@ export class DotaItem implements IDotaItem {
         return this.hasAttackSpeed;
       }
       case ItemFilter.CriticalStrike: {
-        return true;
-        break;
+        return this.hasAttackSlow;
       }
       case ItemFilter.AttackRange: {
         return true;
