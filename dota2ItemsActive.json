@@ -2936,6 +2936,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"magic_resist": 10,
+		"damage_aura": 45,
 		"armor": 4
 	},
 	"item_trickster_cloak": {
