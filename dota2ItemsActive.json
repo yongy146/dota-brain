@@ -345,7 +345,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_lifesteal": 18
+		"attack_lifesteal_": 18
 	},
 	"item_voodoo_mask": {
 		"id": 473,
@@ -861,7 +861,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_lifesteal": 20,
+		"attack_lifesteal_": 20,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
 	},
@@ -882,7 +882,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_lifesteal": 24,
+		"attack_lifesteal_": 24,
 		"damage_aura_percent": 18,
 		"armor_aura": 3
 	},
@@ -1887,7 +1887,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_lifesteal": 30,
+		"attack_lifesteal_": 30,
 		"attack_lifesteal_active": 145,
 		"damage_": 38,
 		"strength_": 25
@@ -1978,7 +1978,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_lifesteal": 20,
+		"attack_lifesteal_": 20,
 		"damage_aura_percent": 18,
 		"armor_": 7,
 		"armor_aura": 3
@@ -2055,7 +2055,7 @@
 		"is_purchasable": true,
 		"attack_speed_": 10,
 		"attack_speed_active": 110,
-		"attack_lifesteal": 24,
+		"attack_lifesteal_": 24,
 		"damage_": 10,
 		"duration": 6,
 		"armor_activated": -8,
@@ -2880,7 +2880,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_lifesteal": 16,
+		"attack_lifesteal_": 16,
 		"spell_lifesteal": 8,
 		"damage_": 16
 	},
