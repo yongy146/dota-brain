@@ -153,6 +153,7 @@ export interface IDotaItem {
   //damage_magical?: boolean; // True if item does magical damage
   damage_ability_?: number; // ability's physical damage
   damage_ability_magical?: number; // ability's physical damage
+  damage_ability_magical_chance?: number; // if there is a probabilty of generating the given damage
   damage_ability_magical_percent?: number; // ability's physical damage
 
   // Attack range
