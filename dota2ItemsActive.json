@@ -3405,7 +3405,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_ability": 40,
+		"damage_ability_": 40,
 		"duration": 8
 	}
 }
