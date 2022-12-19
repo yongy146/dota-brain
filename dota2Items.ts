@@ -495,6 +495,12 @@ export class DotaItem implements IDotaItem {
   get doesDamageAoE(): boolean {
     return (this.damage_aoe || 0) + (this.damage_aoe_percent || 0) > 0;
   }
+  get damage_magical(): boolean {
+    return (
+      this.damage_ability_magical !== undefined ||
+      this.damage_ability_magical_percent !== undefined
+    );
+  }
 
   get hasAttackRange(): boolean {
     return this.attack_range !== undefined;
@@ -664,7 +670,7 @@ export class DotaItem implements IDotaItem {
         return this.doesDamageAoE;
       }
       case ItemFilter.DamageMagical: {
-        return this.damage_magical === true;
+        return this.damage_magical !== undefined;
       }
       case ItemFilter.AttackSpeed: {
         return this.hasAttackSpeed;
@@ -820,7 +826,7 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.DamageMagical: {
-        if (this.damage_magical !== true) return undefined;
+        if (this.damage_magical === undefined) return undefined;
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         // Retruns same value as right-click damage
         const damage = (this.DamageRightClick || 0) + (this.DamageAoE || 0);
