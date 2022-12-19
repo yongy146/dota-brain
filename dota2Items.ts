@@ -20,6 +20,7 @@ export enum ItemFilter {
   Intelligence = "dota.Intelligence",
   DamageRightClick = "DamageRightClick",
   DamageAura = "DamageAura",
+  DamageMagical = "DamageMagical",
   AttackSpeed = "AttackSpeed",
   CriticalStrike = "CriticalStrike",
   AttackRange = "AttackRange",
@@ -148,6 +149,7 @@ export interface IDotaItem {
   damage_bonus_chance?: number;
   damage_aura?: number; // Absolute value per second
   damage_aura_percent?: number;
+  damage_magical?: boolean; // True if item does magical damage
 
   // Attack range
   attack_range_ranged?: number; // Atack range for ranged heroes only
@@ -278,6 +280,7 @@ export class DotaItem implements IDotaItem {
   damage_bonus_chance?: number;
   damage_aura?: number; // Absolute value per second
   damage_aura_percent?: number;
+  damage_magical?: boolean; // True if item does magical damage
 
   // Attack range
   attack_range_ranged?: number; // Atack range for ranged heroes only
@@ -641,6 +644,9 @@ export class DotaItem implements IDotaItem {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         return this.doesDamageAura;
       }
+      case ItemFilter.DamageMagical: {
+        return this.damage_magical === true;
+      }
       case ItemFilter.AttackSpeed: {
         return this.hasAttackSpeed;
       }
@@ -792,6 +798,20 @@ export class DotaItem implements IDotaItem {
           value: this.damageAura || 0,
           efficiency: this.getEfficiency(this.damageAura || 0),
           isPercent: this.damage_aura_percent !== undefined,
+        };
+      }
+      case ItemFilter.DamageMagical: {
+        if (this.damage_magical !== true) return undefined;
+        //console.log(`this.key doesDamage=${this.doesDamage}`);
+        // Retruns same value as right-click damage
+        return {
+          value: this.DamageRightClick || 0,
+          efficiency: this.getEfficiency(
+            this.DamageRightClick || 0,
+            this.damage_bonus_chance
+          ),
+          chance: this.damage_bonus_chance,
+          isPercent: this.damage_base_percent !== undefined,
         };
       }
       case ItemFilter.AttackSpeed: {
