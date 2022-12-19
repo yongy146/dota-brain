@@ -1093,15 +1093,22 @@ export function sortItems(
   selections: (ItemFilter | undefined)[],
   sortByEfficiency: boolean
 ) {
-  // Create copy if there is more then one selection
-  const numberOfSelections = selections.reduce(
-    (counter, selection) => (selection !== undefined ? 1 : 0),
-    0
+  // Remove all irrelevant selections
+  selections = selections.filter(
+    (selection) => selection !== undefined && selection !== ItemFilter.AllItems
   );
+  // Remove all duplicates (as the douplicated would be weighted double)
+  selections = selections.filter(
+    (selection, i) => selections.indexOf(selection) === i
+  );
+  // Make usre there is at least one selection
+  if (selections.length === 0) {
+    selections.push(ItemFilter.AllItems);
+  }
 
   // Create list for each selection
   sortItems_(items, selections[0]!, sortByEfficiency);
-  if (numberOfSelections === 1) {
+  if (selections.length === 1) {
     return items;
   }
   const itemsLists: (DotaItem[] | undefined)[] = [
@@ -1128,7 +1135,7 @@ export function sortItems(
           ? 0
           : itemsLists[i]!.findIndex((item) => item.id === itemB.id);
     }
-    return sumOfRanksB - sumOfRanksA;
+    return sumOfRanksA - sumOfRanksB;
   });
 
   // Return list
