@@ -161,6 +161,7 @@ export interface IDotaItem {
   damage_ability_magical_aoe?: number; // shiva's guard
   //damage_ability_magical_chance?: number; // if there is a probabilty of generating the given damage
   damage_ability_magical_percent?: number; // ability's magical damage in percent
+  damage_ability_magical_conversion?: boolean; // item_revenants_brooch converts 100% of attack damage to magical damage
 
   // Attack range
   attack_range_ranged?: number; // Atack range for ranged heroes only
@@ -302,6 +303,7 @@ export class DotaItem implements IDotaItem {
   damage_ability_magical_aoe?: number; // shiva's guard
   //damage_ability_magical_chance?: number; // if there is a probabilty of generating the given damage
   damage_ability_magical_percent?: number; // ability's magical damage in percent
+  damage_ability_magical_conversion?: boolean; // item_revenants_brooch converts 100% of attack damage to magical damage
 
   // Attack range
   attack_range_ranged?: number; // Atack range for ranged heroes only
@@ -518,7 +520,8 @@ export class DotaItem implements IDotaItem {
       this.damage_magical_ !== undefined ||
       this.damage_ability_magical !== undefined ||
       this.damage_ability_magical_aoe !== undefined ||
-      this.damage_ability_magical_percent !== undefined
+      this.damage_ability_magical_percent !== undefined ||
+      this.damage_ability_magical_conversion !== undefined
     );
   }
   get damage_magical(): number | undefined {
@@ -527,7 +530,8 @@ export class DotaItem implements IDotaItem {
         100 +
       (this.damage_ability_magical || 0) +
       (this.damage_ability_magical_aoe || 0) +
-      (this.damage_ability_magical_percent || 0);
+      (this.damage_ability_magical_percent || 0) +
+      (this.damage_ability_magical_conversion === true ? 100 : 0);
     return damage ? damage : undefined;
   }
 
@@ -913,7 +917,9 @@ export class DotaItem implements IDotaItem {
             this.damage_magical_chance
           ),
           chance: this.damage_magical_chance,
-          isPercent: this.damage_ability_magical_percent !== undefined,
+          isPercent:
+            this.damage_ability_magical_percent !== undefined ||
+            this.damage_ability_magical_conversion !== undefined,
         };
       }
       case ItemFilter.AttackSpeed: {
