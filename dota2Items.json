@@ -1002,7 +1002,7 @@
 		"is_purchasable": true,
 		"attack_lifesteal_": 20,
 		"mana_regen_aura": 1.75,
-		"damage_aura_percent": 18,
+		"damage_aoe_percent": 18,
 		"armor_aura": 3
 	},
 	"item_recipe_wraith_pact": {
@@ -1028,7 +1028,7 @@
 		"health_": 250,
 		"mana_": 250,
 		"mana_regen_aura": 2,
-		"damage_aura_percent": 18,
+		"damage_aoe_percent": 18,
 		"armor_aura": 3
 	},
 	"item_recipe_buckler": {
@@ -1958,7 +1958,7 @@
 		"is_purchasable": true,
 		"evasion": 15,
 		"damage_": 60,
-		"damage_aura": 60
+		"damage_aoe": 60
 	},
 	"item_butterfly": {
 		"id": 139,
@@ -2330,7 +2330,7 @@
 		"attack_lifesteal_": 20,
 		"health_regen_": 7,
 		"mana_regen_aura": 2,
-		"damage_aura_percent": 18,
+		"damage_aoe_percent": 18,
 		"armor_": 7,
 		"armor_aura": 3
 	},
@@ -3045,7 +3045,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 250,
+		"damage_aoe": 250,
 		"armor_": 7
 	},
 	"item_timeless_relic": {
@@ -3409,7 +3409,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"magic_resist": 10,
-		"damage_aura": 45,
+		"damage_aoe": 45,
 		"armor_": 4
 	},
 	"item_trickster_cloak": {
