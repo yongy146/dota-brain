@@ -1265,6 +1265,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 2.5,
+		"damage_": 50,
 		"intelligence_": 10,
 		"movement_speed": 20
 	},
@@ -1289,6 +1290,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 6,
+		"damage_": 50,
 		"intelligence_": 35,
 		"movement_speed": 50
 	},
@@ -1626,6 +1628,7 @@
 		"is_purchasable": true,
 		"attack_slow_aura": -45,
 		"heal_reduction_aura": 25,
+		"damage_aoe": 200,
 		"intelligence_": 30,
 		"armor_": 15
 	},
@@ -2466,6 +2469,7 @@
 		"spell_lifesteal_amplifier": 24,
 		"spell_amp": 12,
 		"mana_regen_amp": 75,
+		"damage_": 50,
 		"agility_": 5,
 		"strength_": 5,
 		"intelligence_": 25,
@@ -2527,7 +2531,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_melee": 2,
+		"damage_ranged": 2
 	},
 	"item_blight_stone": {
 		"id": 240,
