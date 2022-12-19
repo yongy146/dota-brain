@@ -501,7 +501,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 25,
+		"damage_ability_magical": 25,
 		"duration": 12
 	},
 	"item_bottle": {
@@ -1069,7 +1069,8 @@
 		"is_purchasable": true,
 		"attack_speed_": 40,
 		"mana_regen_": 3,
-		"damage_": 30
+		"damage_": 30,
+		"damage_ability_magical_percent": 30
 	},
 	"item_recipe_bloodthorn": {
 		"id": 245,
@@ -1095,6 +1096,7 @@
 		"magic_resist": 25,
 		"mana_regen_": 5,
 		"damage_": 50,
+		"damage_ability_magical_percent": 30,
 		"intelligence_": 20,
 		"duration": 6
 	},
@@ -1132,7 +1134,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 2.5,
-		"damage_": 50,
+		"damage_ability_magical": 50,
 		"intelligence_": 10,
 		"movement_speed": 20
 	},
@@ -1155,7 +1157,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 6,
-		"damage_": 50,
+		"damage_ability_magical": 50,
 		"intelligence_": 35,
 		"movement_speed": 50
 	},
@@ -1239,7 +1241,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 400,
+		"damage_ability_magical": 400,
 		"intelligence_": 14,
 		"strength_": 6,
 		"agility_": 6
@@ -1254,7 +1256,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 500,
+		"damage_ability_magical": 500,
 		"intelligence_": 16,
 		"strength_": 8,
 		"agility_": 8
@@ -1269,7 +1271,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 600,
+		"damage_ability_magical": 600,
 		"intelligence_": 18,
 		"strength_": 10,
 		"agility_": 10
@@ -1284,7 +1286,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 700,
+		"damage_ability_magical": 700,
 		"intelligence_": 20,
 		"strength_": 12,
 		"agility_": 12
@@ -1299,7 +1301,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 800,
+		"damage_ability_magical": 800,
 		"intelligence_": 22,
 		"strength_": 14,
 		"agility_": 14
@@ -1931,6 +1933,7 @@
 		"is_purchasable": true,
 		"attack_speed_": 35,
 		"damage_": 20,
+		"damage_ability": 175,
 		"duration": 14,
 		"movement_speed_percent_active": 20
 	},
@@ -1957,6 +1960,7 @@
 		"crit_multiplier_": 160,
 		"attack_speed_": 35,
 		"damage_": 52,
+		"damage_ability": 175,
 		"duration": 14,
 		"movement_speed_percent_active": 25
 	},
@@ -2236,7 +2240,7 @@
 		"spell_lifesteal_amplifier": 24,
 		"spell_amp": 12,
 		"mana_regen_amp": 75,
-		"damage_": 50,
+		"damage_ability_magical": 50,
 		"agility_": 5,
 		"strength_": 5,
 		"intelligence_": 25,
