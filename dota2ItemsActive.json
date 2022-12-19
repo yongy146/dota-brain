@@ -119,6 +119,7 @@
 	},
 	"item_javelin": {
 		"id": 7,
+		"damage_magical": true,
 		"cost": 1100,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -1057,6 +1058,7 @@
 	},
 	"item_orchid": {
 		"id": 98,
+		"damage_magical": true,
 		"mana_cost": 100,
 		"cost": 3475,
 		"cooldown": 18,
@@ -1078,6 +1080,7 @@
 	},
 	"item_bloodthorn": {
 		"id": 250,
+		"damage_magical": true,
 		"mana_cost": 100,
 		"cost": 6800,
 		"cooldown": 15,
@@ -1119,6 +1122,7 @@
 	},
 	"item_cyclone": {
 		"id": 100,
+		"damage_magical": true,
 		"mana_cost": 175,
 		"cost": 2725,
 		"cooldown": 23,
@@ -1140,6 +1144,7 @@
 	},
 	"item_wind_waker": {
 		"id": 610,
+		"damage_magical": true,
 		"mana_cost": 175,
 		"cost": 6825,
 		"cooldown": 18,
@@ -1223,6 +1228,7 @@
 	},
 	"item_dagon": {
 		"id": 104,
+		"damage_magical": true,
 		"mana_cost": 120,
 		"cost": 2700,
 		"cooldown": 35,
@@ -1233,6 +1239,7 @@
 	},
 	"item_dagon_2": {
 		"id": 201,
+		"damage_magical": true,
 		"mana_cost": 120,
 		"cost": 3950,
 		"cooldown": 35,
@@ -1243,6 +1250,7 @@
 	},
 	"item_dagon_3": {
 		"id": 202,
+		"damage_magical": true,
 		"mana_cost": 120,
 		"cost": 5200,
 		"cooldown": 35,
@@ -1253,6 +1261,7 @@
 	},
 	"item_dagon_4": {
 		"id": 203,
+		"damage_magical": true,
 		"mana_cost": 120,
 		"cost": 6450,
 		"cooldown": 35,
@@ -1263,6 +1272,7 @@
 	},
 	"item_dagon_5": {
 		"id": 204,
+		"damage_magical": true,
 		"mana_cost": 120,
 		"cost": 7700,
 		"cooldown": 35,
@@ -1421,6 +1431,7 @@
 	},
 	"item_shivas_guard": {
 		"id": 119,
+		"damage_magical": true,
 		"mana_cost": 100,
 		"cost": 4850,
 		"cooldown": 27,
@@ -1713,6 +1724,7 @@
 	},
 	"item_monkey_king_bar": {
 		"id": 135,
+		"damage_magical": true,
 		"cost": 4975,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -1725,6 +1737,7 @@
 	},
 	"item_radiance": {
 		"id": 137,
+		"damage_magical": true,
 		"cost": 5050,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -1990,6 +2003,7 @@
 	},
 	"item_mjollnir": {
 		"id": 158,
+		"damage_magical": true,
 		"mana_cost": 50,
 		"cost": 5600,
 		"cooldown": 35,
@@ -2079,6 +2093,7 @@
 	},
 	"item_maelstrom": {
 		"id": 166,
+		"damage_magical": true,
 		"cost": 2700,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -2096,6 +2111,7 @@
 	},
 	"item_gungir": {
 		"id": 1466,
+		"damage_magical": true,
 		"mana_cost": 200,
 		"cost": 6150,
 		"cooldown": 18,
@@ -2185,6 +2201,7 @@
 	},
 	"item_ethereal_blade": {
 		"id": 176,
+		"damage_magical": true,
 		"mana_cost": 100,
 		"cost": 4650,
 		"cooldown": 22,
@@ -2246,6 +2263,7 @@
 	},
 	"item_orb_of_venom": {
 		"id": 181,
+		"damage_magical": true,
 		"cost": 275,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -2882,6 +2900,7 @@
 	},
 	"item_enchanted_quiver": {
 		"id": 361,
+		"damage_magical": true,
 		"cost": 0,
 		"cooldown": 4,
 		"is_recipe": false,
@@ -2912,6 +2931,7 @@
 	},
 	"item_havoc_hammer": {
 		"id": 364,
+		"damage_magical": true,
 		"cost": 0,
 		"cooldown": 10,
 		"is_recipe": false,

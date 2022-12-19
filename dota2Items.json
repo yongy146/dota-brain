@@ -149,6 +149,7 @@
 	},
 	"item_javelin": {
 		"id": 7,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 1100,
 		"is_recipe": false,
@@ -1184,6 +1185,7 @@
 	},
 	"item_orchid": {
 		"id": 98,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 100,
 		"cost": 3475,
@@ -1207,6 +1209,7 @@
 	},
 	"item_bloodthorn": {
 		"id": 250,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 100,
 		"cost": 6800,
@@ -1251,6 +1254,7 @@
 	},
 	"item_cyclone": {
 		"id": 100,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 175,
 		"cost": 2725,
@@ -1274,6 +1278,7 @@
 	},
 	"item_wind_waker": {
 		"id": 610,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 175,
 		"cost": 6825,
@@ -1365,6 +1370,7 @@
 	},
 	"item_dagon": {
 		"id": 104,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 120,
 		"cost": 2700,
@@ -1376,6 +1382,7 @@
 	},
 	"item_dagon_2": {
 		"id": 201,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 120,
 		"cost": 3950,
@@ -1387,6 +1394,7 @@
 	},
 	"item_dagon_3": {
 		"id": 202,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 120,
 		"cost": 5200,
@@ -1398,6 +1406,7 @@
 	},
 	"item_dagon_4": {
 		"id": 203,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 120,
 		"cost": 6450,
@@ -1409,6 +1418,7 @@
 	},
 	"item_dagon_5": {
 		"id": 204,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 120,
 		"cost": 7700,
@@ -1584,6 +1594,7 @@
 	},
 	"item_shivas_guard": {
 		"id": 119,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 100,
 		"cost": 4850,
@@ -1903,6 +1914,7 @@
 	},
 	"item_monkey_king_bar": {
 		"id": 135,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 4975,
 		"is_recipe": false,
@@ -1916,6 +1928,7 @@
 	},
 	"item_radiance": {
 		"id": 137,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 5050,
 		"is_recipe": false,
@@ -2204,6 +2217,7 @@
 	},
 	"item_mjollnir": {
 		"id": 158,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 50,
 		"cost": 5600,
@@ -2301,6 +2315,7 @@
 	},
 	"item_maelstrom": {
 		"id": 166,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 2700,
 		"is_recipe": false,
@@ -2320,6 +2335,7 @@
 	},
 	"item_gungir": {
 		"id": 1466,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 200,
 		"cost": 6150,
@@ -2417,6 +2433,7 @@
 	},
 	"item_ethereal_blade": {
 		"id": 176,
+		"damage_magical": true,
 		"is_active": true,
 		"mana_cost": 100,
 		"cost": 4650,
@@ -2483,6 +2500,7 @@
 	},
 	"item_orb_of_venom": {
 		"id": 181,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 275,
 		"is_recipe": false,
@@ -3173,6 +3191,7 @@
 	},
 	"item_enchanted_quiver": {
 		"id": 361,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 0,
 		"cooldown": 4,
@@ -3205,6 +3224,7 @@
 	},
 	"item_havoc_hammer": {
 		"id": 364,
+		"damage_magical": true,
 		"is_active": true,
 		"cost": 0,
 		"cooldown": 10,
