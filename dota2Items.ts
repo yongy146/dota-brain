@@ -19,6 +19,7 @@ export enum ItemFilter {
   Agility = "dota.Agility",
   Intelligence = "dota.Intelligence",
   DamageRightClick = "DamageRightClick",
+  DamageAbility = "DamageAbility",
   DamageAoE = "DamageAoE",
   DamageMagical = "DamageMagical",
   AttackSpeed = "AttackSpeed",
@@ -149,7 +150,10 @@ export interface IDotaItem {
   damage_bonus_chance?: number;
   damage_aoe?: number; // Absolute value per second
   damage_aoe_percent?: number;
-  damage_magical?: boolean; // True if item does magical damage
+  //damage_magical?: boolean; // True if item does magical damage
+  damage_ability_?: number; // ability's physical damage
+  damage_ability_magical?: number; // ability's physical damage
+  damage_ability_magical_percent?: number; // ability's physical damage
 
   // Attack range
   attack_range_ranged?: number; // Atack range for ranged heroes only
@@ -280,7 +284,10 @@ export class DotaItem implements IDotaItem {
   damage_bonus_chance?: number;
   damage_aoe?: number; // Absolute value per second
   damage_aoe_percent?: number;
-  damage_magical?: boolean; // True if item does magical damage
+  //damage_magical?: boolean; // True if item does magical damage
+  damage_ability_?: number; // ability's physical damage
+  damage_ability_magical?: number; // ability's physical damage
+  damage_ability_magical_percent?: number; // ability's physical damage
 
   // Attack range
   attack_range_ranged?: number; // Atack range for ranged heroes only
@@ -477,8 +484,22 @@ export class DotaItem implements IDotaItem {
       0
     );
   }
+  get damage_ability(): number | undefined {
+    const damage =
+      (this.damage_ability_ || 0) +
+      (this.damage_ability_magical || 0) +
+      (this.damage_ability_magical_percent || 0);
+
+    return damage ? damage : undefined;
+  }
   get doesDamageAoE(): boolean {
     return (this.damage_aoe || 0) + (this.damage_aoe_percent || 0) > 0;
+  }
+  get damage_magical(): boolean {
+    return (
+      this.damage_ability_magical !== undefined ||
+      this.damage_ability_magical_percent !== undefined
+    );
   }
 
   get hasAttackRange(): boolean {
@@ -640,12 +661,16 @@ export class DotaItem implements IDotaItem {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         return this.doesDamageRightClick;
       }
+      case ItemFilter.DamageAbility: {
+        //console.log(`this.key doesDamage=${this.doesDamage}`);
+        return this.damage_ability !== undefined;
+      }
       case ItemFilter.DamageAoE: {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         return this.doesDamageAoE;
       }
       case ItemFilter.DamageMagical: {
-        return this.damage_magical === true;
+        return this.damage_magical !== undefined;
       }
       case ItemFilter.AttackSpeed: {
         return this.hasAttackSpeed;
@@ -801,15 +826,13 @@ export class DotaItem implements IDotaItem {
         };
       }
       case ItemFilter.DamageMagical: {
-        if (this.damage_magical !== true) return undefined;
+        if (this.damage_magical === undefined) return undefined;
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         // Retruns same value as right-click damage
+        const damage = (this.DamageRightClick || 0) + (this.DamageAoE || 0);
         return {
-          value: this.DamageRightClick || 0,
-          efficiency: this.getEfficiency(
-            this.DamageRightClick || 0,
-            this.damage_bonus_chance
-          ),
+          value: damage,
+          efficiency: this.getEfficiency(damage, this.damage_bonus_chance),
           chance: this.damage_bonus_chance,
           isPercent: this.damage_base_percent !== undefined,
         };
