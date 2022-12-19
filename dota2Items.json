@@ -155,8 +155,8 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_bonus": 30,
-		"damage_bonus_chance": 70
+		"damage_ability_magical": 30,
+		"damage_ability_magical_chance": 70
 	},
 	"item_mithril_hammer": {
 		"id": 8,
@@ -1937,8 +1937,8 @@
 		"is_purchasable": true,
 		"attack_speed_": 45,
 		"damage_": 40,
-		"damage_bonus": 80,
-		"damage_bonus_chance": 70
+		"damage_ability_magical": 80,
+		"damage_ability_magical_chance": 70
 	},
 	"item_radiance": {
 		"id": 137,
@@ -2241,7 +2241,9 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 70,
-		"damage_": 24
+		"damage_": 24,
+		"damage_ability_magical_chance": 30,
+		"damage_ability_magical": 180
 	},
 	"item_skadi": {
 		"id": 160,
@@ -2335,7 +2337,9 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 24
+		"damage_": 24,
+		"damage_ability_magical_chance": 30,
+		"damage_ability_magical": 140
 	},
 	"item_recipe_gungir": {
 		"id": 1565,
@@ -2357,6 +2361,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage_": 30,
+		"damage_ability_magical_chance": 30,
+		"damage_ability_magical": 160,
 		"agility_": 14,
 		"intelligence_": 24,
 		"strength_": 14,
@@ -3219,7 +3225,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 225,
+		"damage_ability_magical": 225,
 		"attack_range_ranged": 350
 	},
 	"item_ninja_gear": {
@@ -3252,6 +3258,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"damage_": 12,
+		"damage_ability_magical": 175,
 		"strength_": 12
 	},
 	"item_apex": {
@@ -3724,7 +3731,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 40,
+		"damage_ability": 40,
 		"duration": 8
 	}
 }
