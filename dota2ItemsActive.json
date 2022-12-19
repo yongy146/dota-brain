@@ -891,7 +891,7 @@
 		"is_purchasable": true,
 		"attack_lifesteal_": 20,
 		"mana_regen_aura": 1.75,
-		"damage_aura_percent": 18,
+		"damage_aoe_percent": 18,
 		"armor_aura": 3
 	},
 	"item_recipe_wraith_pact": {
@@ -915,7 +915,7 @@
 		"health_": 250,
 		"mana_": 250,
 		"mana_regen_aura": 2,
-		"damage_aura_percent": 18,
+		"damage_aoe_percent": 18,
 		"armor_aura": 3
 	},
 	"item_recipe_buckler": {
@@ -1132,6 +1132,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 2.5,
+		"damage_": 50,
 		"intelligence_": 10,
 		"movement_speed": 20
 	},
@@ -1154,6 +1155,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 6,
+		"damage_": 50,
 		"intelligence_": 35,
 		"movement_speed": 50
 	},
@@ -1462,6 +1464,7 @@
 		"is_purchasable": true,
 		"attack_slow_aura": -45,
 		"heal_reduction_aura": 25,
+		"damage_aoe": 200,
 		"intelligence_": 30,
 		"armor_": 15
 	},
@@ -1766,7 +1769,7 @@
 		"is_purchasable": true,
 		"evasion": 15,
 		"damage_": 60,
-		"damage_aura": 60
+		"damage_aoe": 60
 	},
 	"item_butterfly": {
 		"id": 139,
@@ -2108,7 +2111,7 @@
 		"attack_lifesteal_": 20,
 		"health_regen_": 7,
 		"mana_regen_aura": 2,
-		"damage_aura_percent": 18,
+		"damage_aoe_percent": 18,
 		"armor_": 7,
 		"armor_aura": 3
 	},
@@ -2233,6 +2236,7 @@
 		"spell_lifesteal_amplifier": 24,
 		"spell_amp": 12,
 		"mana_regen_amp": 75,
+		"damage_": 50,
 		"agility_": 5,
 		"strength_": 5,
 		"intelligence_": 25,
@@ -2289,7 +2293,9 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_melee": 2,
+		"damage_ranged": 2
 	},
 	"item_blight_stone": {
 		"id": 240,
@@ -2766,7 +2772,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 250,
+		"damage_aoe": 250,
 		"armor_": 7
 	},
 	"item_timeless_relic": {
@@ -3105,7 +3111,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"magic_resist": 10,
-		"damage_aura": 45,
+		"damage_aoe": 45,
 		"armor_": 4
 	},
 	"item_trickster_cloak": {
