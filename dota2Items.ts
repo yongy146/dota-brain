@@ -18,7 +18,7 @@ export enum ItemFilter {
   Strength = "dota.Strength",
   Agility = "dota.Agility",
   Intelligence = "dota.Intelligence",
-  DamageLeftClick = "DamageLeftClick",
+  DamageRightClick = "DamageRightClick",
   DamageAura = "DamageAura",
   AttackSpeed = "AttackSpeed",
   CriticalStrike = "CriticalStrike",
@@ -441,7 +441,7 @@ export class DotaItem implements IDotaItem {
       (this.attack_slow_ranged || 0) * 0.5;
     return value === 0 ? undefined : value;
   }
-  get damageLeftClick(): number | undefined {
+  get DamageRightClick(): number | undefined {
     let value =
       (this.damage_ || 0) +
       (this.damage_melee || 0) +
@@ -463,7 +463,7 @@ export class DotaItem implements IDotaItem {
     return value === 0 ? undefined : value;
   }
 
-  get doesDamageLeftClick(): boolean {
+  get doesDamageRightClick(): boolean {
     return (
       (this.damage_ || 0) +
         (this.damage_melee || 0) +
@@ -633,9 +633,9 @@ export class DotaItem implements IDotaItem {
       case ItemFilter.Intelligence: {
         return this.intelligence !== undefined;
       }
-      case ItemFilter.DamageLeftClick: {
+      case ItemFilter.DamageRightClick: {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
-        return this.doesDamageLeftClick;
+        return this.doesDamageRightClick;
       }
       case ItemFilter.DamageAura: {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
@@ -772,13 +772,13 @@ export class DotaItem implements IDotaItem {
           isPercent: this.intelligence_percent_ !== undefined,
         };
       }
-      case ItemFilter.DamageLeftClick: {
-        if (this.doesDamageLeftClick === false) return undefined;
+      case ItemFilter.DamageRightClick: {
+        if (this.doesDamageRightClick === false) return undefined;
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         return {
-          value: this.damageLeftClick || 0,
+          value: this.DamageRightClick || 0,
           efficiency: this.getEfficiency(
-            this.damageLeftClick || 0,
+            this.DamageRightClick || 0,
             this.damage_bonus_chance
           ),
           chance: this.damage_bonus_chance,
