@@ -19,7 +19,7 @@ export enum ItemFilter {
   Agility = "dota.Agility",
   Intelligence = "dota.Intelligence",
   DamageRightClick = "DamageRightClick",
-  DamageAura = "DamageAura",
+  DamageAoE = "DamageAoE",
   DamageMagical = "DamageMagical",
   AttackSpeed = "AttackSpeed",
   CriticalStrike = "CriticalStrike",
@@ -147,8 +147,8 @@ export interface IDotaItem {
   damage_base_percent?: number; // Damage w/o items and effects
   damage_bonus?: number; // Absolute value per hit
   damage_bonus_chance?: number;
-  damage_aura?: number; // Absolute value per second
-  damage_aura_percent?: number;
+  damage_aoe?: number; // Absolute value per second
+  damage_aoe_percent?: number;
   damage_magical?: boolean; // True if item does magical damage
 
   // Attack range
@@ -278,8 +278,8 @@ export class DotaItem implements IDotaItem {
   damage_base_percent?: number; // Damage w/o items and effects
   damage_bonus?: number; // Absolute value per hit
   damage_bonus_chance?: number;
-  damage_aura?: number; // Absolute value per second
-  damage_aura_percent?: number;
+  damage_aoe?: number; // Absolute value per second
+  damage_aoe_percent?: number;
   damage_magical?: boolean; // True if item does magical damage
 
   // Attack range
@@ -461,8 +461,8 @@ export class DotaItem implements IDotaItem {
 
     return value === 0 ? undefined : value;
   }
-  get damageAura(): number | undefined {
-    const value = (this.damage_aura || 0) + (this.damage_aura_percent || 0);
+  get DamageAoE(): number | undefined {
+    const value = (this.damage_aoe || 0) + (this.damage_aoe_percent || 0);
     return value === 0 ? undefined : value;
   }
 
@@ -477,8 +477,8 @@ export class DotaItem implements IDotaItem {
       0
     );
   }
-  get doesDamageAura(): boolean {
-    return (this.damage_aura || 0) + (this.damage_aura_percent || 0) > 0;
+  get doesDamageAoE(): boolean {
+    return (this.damage_aoe || 0) + (this.damage_aoe_percent || 0) > 0;
   }
 
   get hasAttackRange(): boolean {
@@ -640,9 +640,9 @@ export class DotaItem implements IDotaItem {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         return this.doesDamageRightClick;
       }
-      case ItemFilter.DamageAura: {
+      case ItemFilter.DamageAoE: {
         //console.log(`this.key doesDamage=${this.doesDamage}`);
-        return this.doesDamageAura;
+        return this.doesDamageAoE;
       }
       case ItemFilter.DamageMagical: {
         return this.damage_magical === true;
@@ -791,13 +791,13 @@ export class DotaItem implements IDotaItem {
           isPercent: this.damage_base_percent !== undefined,
         };
       }
-      case ItemFilter.DamageAura: {
-        if (this.doesDamageAura === false) return undefined;
+      case ItemFilter.DamageAoE: {
+        if (this.doesDamageAoE === false) return undefined;
         //console.log(`this.key doesDamage=${this.doesDamage}`);
         return {
-          value: this.damageAura || 0,
-          efficiency: this.getEfficiency(this.damageAura || 0),
-          isPercent: this.damage_aura_percent !== undefined,
+          value: this.DamageAoE || 0,
+          efficiency: this.getEfficiency(this.DamageAoE || 0),
+          isPercent: this.damage_aoe_percent !== undefined,
         };
       }
       case ItemFilter.DamageMagical: {
