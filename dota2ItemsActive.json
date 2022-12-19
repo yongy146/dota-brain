@@ -2509,6 +2509,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 40,
+		"damage_ability_magical_conversion": true,
 		"intelligence_": 45,
 		"duration": 15,
 		"armor_": 8
