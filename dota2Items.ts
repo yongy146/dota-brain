@@ -50,6 +50,9 @@ export interface IDotaItem {
   cooldown?: number; // 15;
   is_recipe?: boolean;
 
+  // Item level (currently only used for Dagon
+  level?: number;
+
   // Item source
   is_purchasable?: boolean;
   is_neutral?: boolean;
@@ -187,6 +190,9 @@ export class DotaItem implements IDotaItem {
   cost?: number;
   cooldown?: number;
   is_recipe?: boolean;
+
+  // Item level (currently only used for Dagon
+  level?: number;
 
   // Item source
   is_purchasable?: boolean;
@@ -635,12 +641,34 @@ export class DotaItem implements IDotaItem {
   }
 
   public isVisible(
-    filter: ItemFilter,
+    selections: (ItemFilter | undefined)[],
     includePurchasable: boolean,
     includeNeutral: boolean,
     includeRoshan: boolean
-    /*includeAttributeEffect: boolean*/
   ): boolean {
+    for (const selection of selections) {
+      if (
+        selection !== undefined &&
+        !this.isVisible_(
+          selection,
+          includePurchasable,
+          includeNeutral,
+          includeRoshan
+        )
+      ) {
+        return false;
+      }
+    }
+    // Item passed all selections, return true
+    return true;
+  }
+
+  private isVisible_(
+    selection: ItemFilter,
+    includePurchasable: boolean,
+    includeNeutral: boolean,
+    includeRoshan: boolean
+  ) {
     if (this.is_recipe) return false;
 
     if (
@@ -655,7 +683,7 @@ export class DotaItem implements IDotaItem {
       return false;
     }
 
-    switch (filter) {
+    switch (selection) {
       case ItemFilter.AllItems: {
         return true;
       }
@@ -748,6 +776,25 @@ export class DotaItem implements IDotaItem {
         return false;
       }
     }
+  }
+
+  public getValues(filters: (ItemFilter | undefined)[]): (
+    | {
+        value: number;
+        chance?: number; // e.g. 30 if there is a 30% chance a value gets tiggered
+        efficiency?: number;
+        isPercent: boolean;
+      }
+    | undefined
+  )[] {
+    const result = new Array(3).fill(undefined);
+
+    for (let i = 0; i < filters.length; i++) {
+      if (filters[i]) {
+        result[i] = this.getValue(filters[i]!);
+      }
+    }
+    return result;
   }
 
   public getValue(
@@ -1039,4 +1086,123 @@ export function getRoshanItemOrder(itemName: string): number {
     }
   }
   return 0;
+}
+
+export function sortItems(
+  items: DotaItem[],
+  selections: (ItemFilter | undefined)[],
+  sortByEfficiency: boolean
+) {
+  // Create copy if there is more then one selection
+  const numberOfSelections = selections.reduce(
+    (counter, selection) => (selection !== undefined ? 1 : 0),
+    0
+  );
+
+  // Create list for each selection
+  sortItems_(items, selections[0]!, sortByEfficiency);
+  if (numberOfSelections === 1) {
+    return items;
+  }
+  const itemsLists: (DotaItem[] | undefined)[] = [
+    [...items],
+    selections[1] === undefined
+      ? undefined
+      : sortItems_([...items], selections[1], sortByEfficiency),
+    selections[2] === undefined
+      ? undefined
+      : sortItems_([...items], selections[2], sortByEfficiency),
+  ];
+
+  // Merge lists
+  items.sort((itemA: DotaItem, itemB: DotaItem) => {
+    let sumOfRanksA = 0;
+    let sumOfRanksB = 0;
+    for (let i = 0; i < selections.length; i++) {
+      sumOfRanksA +=
+        itemsLists[i] === undefined
+          ? 0
+          : itemsLists[i]!.findIndex((item) => item.id === itemA.id);
+      sumOfRanksB +=
+        itemsLists[i] === undefined
+          ? 0
+          : itemsLists[i]!.findIndex((item) => item.id === itemB.id);
+    }
+    return sumOfRanksB - sumOfRanksA;
+  });
+
+  // Return list
+}
+
+export function sortItems_(
+  items: DotaItem[],
+  selection: ItemFilter,
+  sortByEfficiency: boolean
+): DotaItem[] {
+  return items.sort((itemA, itemB) => {
+    const valueA = itemA.getValue(selection); //, checkboxAttributes);
+    const valueB = itemB.getValue(selection); //, checkboxAttributes);
+
+    // Treat cases where both values are undefined (case: ItemFilter.AllItems)
+    if (valueB === undefined && valueB === undefined) {
+      // Maybe better sort logic? Name doesn't work, as it diffes per language... buy maybe we can take loclized name... let's check
+      return (itemB.cost || 0) - (itemA.cost || 0);
+    }
+
+    // Filter chase where one of the values is undefined (should never happen though)
+    if (valueA === undefined) {
+      return -1;
+    }
+    if (valueB === undefined) {
+      return 1;
+    }
+
+    // Assuming average intelligence value of 35 and movement speed of 300
+    const percentFactorA =
+      valueA.isPercent === false
+        ? 1
+        : selection === ItemFilter.Intelligence
+        ? 0.35
+        : selection === ItemFilter.MovementSpeed
+        ? 3
+        : 1;
+    valueA.value *= percentFactorA;
+    const percentFactorB =
+      valueB.isPercent === false
+        ? 1
+        : selection === ItemFilter.Intelligence
+        ? 0.35
+        : selection === ItemFilter.MovementSpeed
+        ? 3
+        : 1;
+    valueB.value *= percentFactorB;
+
+    // Treat case where user is focused on item efficiency
+    if (sortByEfficiency === true) {
+      // Case: At least one item has an efficiency value
+      if (valueA.efficiency !== undefined || valueB.efficiency !== undefined) {
+        /*if (valueA?.efficiency === undefined) {
+            return 1;
+          }
+          if (valueB?.efficiency === undefined) {
+            return -1;
+          }*/
+        return (valueA.efficiency || 100000) - (valueB.efficiency || 100000);
+      }
+    }
+
+    // All remaining cases
+    if (valueA.value === valueB.value) {
+      return (itemB.cost || 0) - (itemA.cost || 0);
+    }
+    if (
+      selection === ItemFilter.AttackSlow ||
+      selection === ItemFilter.ArmorReduction
+    ) {
+      // Inverted sort for negative values
+      return (valueA.value || 0) - (valueB.value || 0);
+    } else {
+      return (valueB.value || 0) - (valueA.value || 0);
+    }
+  });
 }
