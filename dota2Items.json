@@ -2243,7 +2243,7 @@
 		"attack_speed_": 70,
 		"damage_": 24,
 		"damage_magical_chance": 30,
-		"damage_magical": 180
+		"damage_magical_": 180
 	},
 	"item_skadi": {
 		"id": 160,
@@ -2339,7 +2339,7 @@
 		"is_purchasable": true,
 		"damage_": 24,
 		"damage_magical_chance": 30,
-		"damage_magical": 140
+		"damage_magical_": 140
 	},
 	"item_recipe_gungir": {
 		"id": 1565,
@@ -2362,7 +2362,7 @@
 		"is_purchasable": true,
 		"damage_": 30,
 		"damage_magical_chance": 30,
-		"damage_magical": 160,
+		"damage_magical_": 160,
 		"agility_": 14,
 		"intelligence_": 24,
 		"strength_": 14,
@@ -3225,7 +3225,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_magical": 225,
+		"damage_magical_": 225,
 		"attack_range_ranged": 350
 	},
 	"item_ninja_gear": {
