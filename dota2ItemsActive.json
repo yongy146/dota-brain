@@ -501,6 +501,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"damage_": 25,
 		"duration": 12
 	},
 	"item_bottle": {
@@ -1235,7 +1236,11 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_": 400,
+		"intelligence_": 14,
+		"strength_": 6,
+		"agility_": 6
 	},
 	"item_dagon_2": {
 		"id": 201,
@@ -1246,7 +1251,11 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_": 500,
+		"intelligence_": 16,
+		"strength_": 8,
+		"agility_": 8
 	},
 	"item_dagon_3": {
 		"id": 202,
@@ -1257,7 +1266,11 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_": 600,
+		"intelligence_": 18,
+		"strength_": 10,
+		"agility_": 10
 	},
 	"item_dagon_4": {
 		"id": 203,
@@ -1268,7 +1281,11 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_": 700,
+		"intelligence_": 20,
+		"strength_": 12,
+		"agility_": 12
 	},
 	"item_dagon_5": {
 		"id": 204,
@@ -1279,7 +1296,11 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"damage_": 800,
+		"intelligence_": 22,
+		"strength_": 14,
+		"agility_": 14
 	},
 	"item_ultimate_scepter": {
 		"id": 108,
@@ -2294,6 +2315,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
+		"damage_": 3,
 		"duration": 3,
 		"armor_": 3,
 		"armor_reduction": -3
@@ -2356,6 +2378,8 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 45,
+		"strength_": 7,
+		"intelligence_": 7,
 		"duration": 6,
 		"movement_speed_aura": 20,
 		"movement_speed_percent_active": 13
@@ -2378,6 +2402,8 @@
 		"is_purchasable": true,
 		"attack_speed_": 50,
 		"health_regen_": 15,
+		"strength_": 8,
+		"intelligence_": 8,
 		"duration": 1.5,
 		"movement_speed_aura": 20,
 		"movement_speed_percent_active": 15,
@@ -2699,7 +2725,6 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 60,
 		"armor_reduction": -10
 	},
 	"item_seer_stone": {
@@ -2741,6 +2766,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
+		"damage_": 250,
 		"armor_": 7
 	},
 	"item_timeless_relic": {
@@ -3205,7 +3231,8 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"mana_regen_": 4
+		"mana_regen_": 4,
+		"damage_": 200
 	},
 	"item_mysterious_hat": {
 		"id": 589,
@@ -3262,7 +3289,8 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed_": 20
+		"attack_speed_": 20,
+		"damage_": 4
 	},
 	"item_unstable_wand": {
 		"id": 838,
