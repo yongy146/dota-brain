@@ -674,6 +674,7 @@ export class DotaItem implements IDotaItem {
     includeRoshan: boolean
   ) {
     if (this.is_recipe) return false;
+    if (this.key === "item_ward_dispenser") return false;
 
     if (
       (includePurchasable === true &&
