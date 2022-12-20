@@ -531,6 +531,16 @@
 		"is_roshan": false,
 		"is_purchasable": true
 	},
+	"item_ward_dispenser": {
+		"id": 218,
+		"cost": 50,
+		"cooldown": 0,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_": 75
+	},
 	"item_tango": {
 		"id": 44,
 		"cost": 90,
