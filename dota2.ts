@@ -21,6 +21,7 @@ import {
   IUIAbility,
 } from "../../submodules/utilities/react/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
+import i18nDota from "./i18n/en/dota.json";
 
 // Version node.js
 /*import * as HeroBuilds from "./heroBuilds.js";
@@ -2163,16 +2164,19 @@ export namespace other {
    * @returns error if the ability or item does not exist
    */
   export function getAbilityOrItemName(abilityOrItem: string): string {
-    if (abilityOrItem == "attack") {
+    if (abilityOrItem === "attack") {
       return "Attack"; // Create imgur file for attack
       //    } else if (Object.prototype.hasOwnProperty.call(dota2Items, itemName)) {
     } else if (
       Object.prototype.hasOwnProperty.call(dota2Items, `item_${abilityOrItem}`)
     ) {
       // It is an item
-      return (
+      /*return (
         dota2Items[`item_${abilityOrItem}` as keyof typeof dota2Items] as any
-      ).name;
+      ).name;*/
+      return (i18nDota as Record<string, string>)[
+        `dota.items.item_${abilityOrItem}`
+      ];
     } else {
       // It must be an ability
       const a = hero_abilities.getAbility(abilityOrItem);

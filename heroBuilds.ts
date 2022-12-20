@@ -142,6 +142,7 @@ export function getRoleName(heroBuild: HeroBuild): string {
 }
 
 export interface ItemBuild {
+  // Total costs for starting & starting_bear should be below 600. If the are below 550, then there needs to be a good reason why not all gold is used
   starting: string[];
   starting_bear?: string[];
   early_game?: string[]; // provided for all heroes, except for Lone Druid
@@ -1285,7 +1286,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "quelling_blade",
             "tango",
-            "flask",
+            "tango",
             "gauntlets",
             "ring_of_protection",
           ],
@@ -1709,7 +1710,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "faerie_fire",
-            "wind_lace",
+            "enchanted_mango", // Added
+            //"wind_lace", // Removed, as total costs were 765
             "circlet",
           ],
           early_game: [
@@ -4812,7 +4814,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "death_prophet_silence", // 8
           `death_prophet_spirit_siphon`, // 9
           `death_prophet_spirit_siphon`, // 10
-          `special_bonus_magic_resistance_12`, // 11
+          `special_bonus_magic_resistance_14`, // 11
           "death_prophet_exorcism", // 12
           "death_prophet_silence", // 13
           `death_prophet_silence`, // 14
@@ -4896,7 +4898,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_magic_resistance_12: `You can take the damage talent over this suggested one on mid Death Prophet.`,
+      special_bonus_magic_resistance_14: `You can take the damage talent over this suggested one on mid Death Prophet.`,
       /* special_bonus_unique_death_prophet_5:
         "You can take this talent at level 25 over the suggested one. Usually, having 5 Spirit Siphons per fight due to Aghanim`s Shard should be more than enough thus I prefer the Exorcism talent. Also, if you have Refresher Orb or Shard in late game, the Siphon talent is redundant.", */
     },
@@ -5358,7 +5360,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             "vambrace",
             "quickening_charm",
-            "spider_legs",
             "trickster_cloak",
             "spell_prism",
             "fallen_sky",
@@ -7219,7 +7220,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             "quickening_charm",
-            "spider_legs",
             "spy_gadget",
             "timeless_relic",
             "force_field",
@@ -7523,7 +7523,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_huskar_5", // 25
         ],
         items: {
-          starting: ["tango", "gauntlets", "gauntlets", "gauntlets", "bracer"],
+          starting: [
+            "tango",
+            "faerie_fire",
+            "gauntlets",
+            "gauntlets",
+            "gauntlets",
+          ],
           early_game: ["armlet", "boots", "bracer"],
           mid_game: [
             "sange",
@@ -7803,8 +7809,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "faerie_fire",
             "circlet",
             "branches",
+            "branches",
             "ward_observer",
-            "magic_stick",
           ],
           early_game: ["hand_of_midas", "boots", "null_talisman", "magic_wand"],
           mid_game: ["travel_boots", "ultimate_scepter", "blink"],
@@ -10087,7 +10093,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             "black_powder_bag",
-            "spider_legs",
             "trickster_cloak",
             "ascetic_cap",
             "book_of_shadows",
@@ -10246,7 +10251,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "grove_bow",
             "specialists_array",
             "dagger_of_ristul",
-            "quicksilver_amulet",
             "titan_sliver",
             "elven_tunic",
             "ninja_gear",
@@ -11952,7 +11956,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "orb_of_venom",
-            "slippers",
+            //"slippers", // total costs > 600, removed slippers
             "ward_observer",
           ],
           early_game: [
@@ -11997,11 +12001,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             "lance_of_pursuit",
             "misericorde",
-            "quicksilver_amulet",
             "mind_breaker",
             "paladin_sword",
             "penta_edged_sword",
-            "the_leveller",
             "desolator_2",
             "apex",
             "ex_machina",
@@ -12241,7 +12243,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_morphling_6", // 25
+          "special_bonus_unique_morphling_waveform_cooldown", // 25
         ],
         items: {
           starting: [
@@ -12251,7 +12253,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "circlet",
             "slippers",
-            "magic_stick",
+            //"magic_stick", removed as total costs were above 600
           ],
           early_game: [
             "bottle",
@@ -12409,7 +12411,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "quelling_blade",
             "tango",
-            "tango",
+            "branches",
             "branches",
             "slippers",
             "circlet",
@@ -12805,7 +12807,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "blight_stone",
             "branches",
-            "branches",
+            // "branches", total costs were 610, removed one branches
             "faerie_fire",
             "ward_sentry",
             "ward_observer",
@@ -13327,7 +13329,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             `lance_of_pursuit`,
-            "quicksilver_amulet",
             `dagger_of_ristul`,
             `vambrace`,
             `titan_sliver`,
@@ -14828,7 +14829,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mind_breaker",
             "paladin_sword",
             "penta_edged_sword",
-            "the_leveller",
             "desolator_2",
             "apex",
             "ex_machina",
@@ -16547,7 +16547,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "razor_unstable_current", // 8
           "razor_static_link", // 9
           `razor_static_link`, // 10
-          `special_bonus_agility_9`, // 11
+          `special_bonus_agility_12`, // 11
           "razor_eye_of_the_storm", // 12
           "razor_unstable_current", // 13
           "razor_unstable_current", // 14
@@ -18587,8 +18587,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
-            "circlet",
-            "magic_stick",
+            "branches",
+            //"circlet",  replaced two items with one branches, as total costs were 870
+            //"magic_stick",
             "orb_of_venom",
           ],
           early_game: ["boots", "magic_wand", "wraith_band", "power_treads"],
@@ -19466,12 +19467,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "gauntlets",
-            "branches",
+            //"branches",
             "faerie_fire",
-            "bracer",
+            //"bracer", // Costs were too high. moved bracer to early game
             "magic_stick",
           ],
-          early_game: ["phase_boots", "wind_lace", "magic_wand", "soul_ring"],
+          early_game: [
+            "phase_boots",
+            "wind_lace",
+            "magic_wand",
+            "bracer",
+            "soul_ring",
+          ],
           mid_game: [
             "invis_sword",
             "ultimate_scepter",
@@ -19498,10 +19505,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            "chipped_vest",
-            "quicksilver_amulet",
-            "paintball",
-            "spider_legs",
             "elven_tunic",
             "flicker",
             "ninja_gear",
@@ -23133,7 +23136,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "tango",
+            //"tango", // replaced tango with branches, as total costs were 615
+            "branches",
             "wind_lace",
             "faerie_fire",
             "enchanted_mango",
@@ -24456,7 +24460,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "possessed_mask",
             `lance_of_pursuit`,
-            "quicksilver_amulet",
             `vambrace`,
             "grove_bow",
             "mind_breaker",
@@ -24629,7 +24632,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
           core: ["boots", "magic_stick", "blink", "aghanims_shard"],
           neutral: [
-            "keen_optic",
             "arcane_ring",
             "philosophers_stone",
             "grove_bow",
