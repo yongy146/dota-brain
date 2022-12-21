@@ -1,82 +1,10 @@
 /**
- * This class provides information on the screens in Dota 2 for the app to be able to properly position windows
+ * Module provides all information about Dota 2 monitor sizes for the app to properly position windows.
  *
  * (C) Dota Coach, 2021
  */
-
-/**
- * The function information on Dota 2 screens. This information can be used to position elements in the game.
- *
- * If there is not details availalbe for proivded screenSitze, the it returns information for the default screen size, which is 1920x1080
- *
- * @param screenSize Screen size, e.g. 1920x1080
- * @returns
- */
-export function getScreenDetails(screenSize: string): ScreenDefinition {
-  let frame = Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize)
-    ? ScreenSizes[screenSize]
-    : ScreenSizes["1920x1080"];
-  if (Object.prototype.hasOwnProperty.call(frame, "reuse"))
-    frame = ScreenSizes[(<ScreenReuse>frame).reuse];
-
-  frame = <ScreenDefinition>frame;
-
-  // Add calculated fields by the performance tracker
-  frame.inGame.tracker.performance.width =
-    (frame.inGame.tracker.performance.xPos / 159) * 230;
-  frame.inGame.tracker.performance.heightTwoKPIs =
-    frame.inGame.tracker.performance.nonDotaPlus.height;
-  frame.inGame.tracker.performance.spacer =
-    (frame.inGame.tracker.performance.nonDotaPlus.height / 44) * 5;
-  frame.inGame.tracker.performance.statusWidth =
-    (frame.inGame.tracker.performance.xPos / 159) * 12;
-
-  frame.inGame.tracker.performance.xPosStatus =
-    (frame.inGame.tracker.performance.xPos / 159) * 38;
-  frame.inGame.tracker.performance.xPosCurrent =
-    (frame.inGame.tracker.performance.xPos / 159) * 57;
-  frame.inGame.tracker.performance.xPosGoal0 =
-    (frame.inGame.tracker.performance.xPos / 159) * 131;
-  frame.inGame.tracker.performance.xPosSeparator =
-    (frame.inGame.tracker.performance.xPos / 159) * 141;
-  frame.inGame.tracker.performance.xPosGoal1 =
-    (frame.inGame.tracker.performance.xPos / 159) * 151;
-
-  frame.inGame.tracker.items.xPosGoal0 =
-    (frame.inGame.tracker.items.width / 219) * 155;
-  frame.inGame.tracker.items.xPosSeparator =
-    (frame.inGame.tracker.items.width / 219) * 163;
-  frame.inGame.tracker.items.xPosGoal1 =
-    (frame.inGame.tracker.items.width / 219) * 175;
-
-  return frame;
-}
-
-export function isScreenCustomized(screenSize: string): boolean {
-  return Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize);
-}
-
-/**
- *
- * @param screenSize String containing <width x height>, e.g. '1920x1080'
- * @returns "piggy backed", "customized" or "not configured"
- */
-export function getScreenCustomization(screenSize: string): string {
-  if (Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize)) {
-    const frame = Object.prototype.hasOwnProperty.call(ScreenSizes, screenSize);
-    if (Object.prototype.hasOwnProperty.call(frame, "reuse")) {
-      return "piggy backed";
-    } else {
-      return "customized";
-    }
-  } else {
-    return "not configured";
-  }
-}
-
-export interface ScreenDefinition {
+export interface IMonitorMeasurements {
   fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
-  // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
   preGame: {
     // Heroes: Excluding the grey shaded box
     heroesRadiantTopLeftXPos: number;
@@ -162,15 +90,11 @@ export interface ScreenDefinition {
   };
 }
 
-export interface ScreenReuse {
+export interface IMonitorReuse {
   reuse: string /* e.g. '1920x1080' */;
 }
 
-export interface ScreenDefinitions {
-  [key: string /* e.g. '1920x1080' */]: ScreenDefinition | ScreenReuse;
-}
-
-export const ScreenSizes: ScreenDefinitions = {
+export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> = {
   "1024x768": {
     fontSize: 9,
     preGame: {
