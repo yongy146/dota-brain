@@ -8,7 +8,7 @@
  * Copyright Dota Coach, 2022
  */
 
-export const dispellableBuffs = {
+export const dispellableBuffs: Record<string, string[]> = {
   Abaddon: ["abaddon_aphotic_shield", "abaddon_frostmourne"],
   Alchemist: [],
   "Ancient Apparition": [],

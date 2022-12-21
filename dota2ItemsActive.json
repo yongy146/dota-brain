@@ -1,2481 +1,3427 @@
 {
 	"item_blink": {
-		"id": "1",
-		"name": "Blink Dagger",
+		"id": 1,
 		"mana_cost": 0,
 		"cost": 2250,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_overwhelming_blink": {
-		"id": "600",
-		"name": "Overwhelming Blink",
-		"mana_cost": 0,
-		"cost": 6800,
-		"cooldown": 15,
-		"is_recipe": false,
-		"is_neutral": false
-	},
-	"item_swift_blink": {
-		"id": "603",
-		"name": "Swift Blink",
+		"id": 600,
 		"mana_cost": 0,
 		"cost": 6800,
 		"cooldown": 15,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"duration": 6,
-			"activeRelative": 40
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_slow_": -50,
+		"strength_": 25,
+		"duration": 6
 	},
-	"item_arcane_blink": {
-		"id": "604",
-		"name": "Arcane Blink",
+	"item_swift_blink": {
+		"id": 603,
 		"mana_cost": 0,
 		"cost": 6800,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"agility_": 25,
+		"duration": 6,
+		"movement_speed_percent_active": 40
+	},
+	"item_arcane_blink": {
+		"id": 604,
+		"mana_cost": 0,
+		"cost": 6800,
+		"cooldown": 15,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"intelligence_": 25,
+		"duration": 6
 	},
 	"item_recipe_arcane_blink": {
-		"id": "606",
-		"name": "Arcane Blink Recipe",
+		"id": 606,
 		"cost": 1750,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_swift_blink": {
-		"id": "607",
-		"name": "Swift Blink Recipe",
+		"id": 607,
 		"cost": 1750,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_overwhelming_blink": {
-		"id": "608",
-		"name": "Overwhelming Blink Recipe",
+		"id": 608,
 		"cost": 1750,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_blades_of_attack": {
-		"id": "2",
-		"name": "Blades of Attack",
+		"id": 2,
 		"cost": 450,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 9
 	},
 	"item_broadsword": {
-		"id": "3",
-		"name": "Broadsword",
+		"id": 3,
 		"cost": 1000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 15
 	},
 	"item_chainmail": {
-		"id": "4",
-		"name": "Chainmail",
+		"id": 4,
 		"cost": 550,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"armor_": 4
 	},
 	"item_claymore": {
-		"id": "5",
-		"name": "Claymore",
+		"id": 5,
 		"cost": 1350,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 20
 	},
 	"item_helm_of_iron_will": {
-		"id": "6",
-		"name": "Helm of Iron Will",
+		"id": 6,
 		"cost": 975,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 5,
+		"armor_": 6
 	},
 	"item_javelin": {
-		"id": "7",
-		"name": "Javelin",
+		"id": 7,
 		"cost": 1100,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_magical_": 30,
+		"damage_magical_chance": 70
 	},
 	"item_mithril_hammer": {
-		"id": "8",
-		"name": "Mithril Hammer",
+		"id": 8,
 		"cost": 1600,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 24
 	},
 	"item_platemail": {
-		"id": "9",
-		"name": "Platemail",
+		"id": 9,
 		"cost": 1400,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"armor_": 10
 	},
 	"item_quarterstaff": {
-		"id": "10",
-		"name": "Quarterstaff",
+		"id": 10,
 		"cost": 875,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 10
 	},
 	"item_quelling_blade": {
-		"id": "11",
-		"name": "Quelling Blade",
+		"id": 11,
 		"mana_cost": 0,
 		"cost": 100,
 		"cooldown": 4,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 8,
+		"damage_ranged": 4
 	},
 	"item_faerie_fire": {
-		"id": "237",
-		"name": "Faerie Fire",
+		"id": 237,
 		"cost": 70,
 		"cooldown": 5,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 2
 	},
 	"item_infused_raindrop": {
-		"id": "265",
-		"name": "Infused Raindrops",
+		"id": 265,
 		"cost": 225,
 		"cooldown": 7,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 0.8
 	},
 	"item_wind_lace": {
-		"id": "244",
-		"name": "Wind Lace",
+		"id": 244,
 		"cost": 250,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 20
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"movement_speed": 20
 	},
 	"item_ring_of_protection": {
-		"id": "12",
-		"name": "Ring of Protection",
+		"id": 12,
 		"cost": 175,
 		"is_recipe": false,
-		"is_neutral": false
-	},
-	"item_stout_shield": {
-		"id": "182",
-		"name": "Stout Shield",
-		"cost": 100,
-		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"armor_": 2
 	},
 	"item_moon_shard": {
-		"id": "247",
-		"name": "Moon Shard",
+		"id": 247,
 		"cost": 4000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 140
 	},
 	"item_gauntlets": {
-		"id": "13",
-		"name": "Gauntlets of Strength",
+		"id": 13,
 		"cost": 140,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"strength_": 3
 	},
 	"item_slippers": {
-		"id": "14",
-		"name": "Slippers of Agility",
+		"id": 14,
 		"cost": 140,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"agility_": 3
 	},
 	"item_mantle": {
-		"id": "15",
-		"name": "Mantle of Intelligence",
+		"id": 15,
 		"cost": 140,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"intelligence_": 3
 	},
 	"item_branches": {
-		"id": "16",
-		"name": "Iron Branch",
+		"id": 16,
 		"cost": 50,
 		"cooldown": 0,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"all_attributes_": 1
 	},
 	"item_belt_of_strength": {
-		"id": "17",
-		"name": "Belt of Strength",
+		"id": 17,
 		"cost": 450,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"strength_": 6
 	},
 	"item_robe": {
-		"id": "19",
-		"name": "Robe of the Magi",
+		"id": 19,
 		"cost": 450,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"intelligence_": 6
 	},
 	"item_circlet": {
-		"id": "20",
-		"name": "Circlet",
+		"id": 20,
 		"cost": 155,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"all_attributes_": 2
 	},
 	"item_crown": {
-		"id": "261",
-		"name": "Crown",
+		"id": 261,
 		"cost": 450,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"all_attributes_": 4
 	},
 	"item_ogre_axe": {
-		"id": "21",
-		"name": "Ogre Axe",
+		"id": 21,
 		"cost": 1000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"strength_": 10
 	},
 	"item_blade_of_alacrity": {
-		"id": "22",
-		"name": "Blade of Alacrity",
+		"id": 22,
 		"cost": 1000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"agility_": 10
 	},
 	"item_staff_of_wizardry": {
-		"id": "23",
-		"name": "Staff of Wizardry",
+		"id": 23,
 		"cost": 1000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"intelligence_": 10
 	},
 	"item_ultimate_orb": {
-		"id": "24",
-		"name": "Ultimate Orb",
+		"id": 24,
 		"cost": 2050,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"all_attributes_": 10
 	},
 	"item_gloves": {
-		"id": "25",
-		"name": "Gloves of Haste",
+		"id": 25,
 		"cost": 450,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 20
 	},
 	"item_blitz_knuckles": {
-		"id": "485",
-		"name": "Blitz Knuckles",
+		"id": 485,
 		"cost": 1000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 35
 	},
 	"item_lifesteal": {
-		"id": "26",
-		"name": "Morbid Mask",
+		"id": 26,
 		"cost": 900,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_lifesteal_": 18
 	},
 	"item_voodoo_mask": {
-		"id": "473",
-		"name": "Voodoo Mask",
+		"id": 473,
 		"cost": 700,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"spell_lifesteal": 10
 	},
 	"item_ring_of_regen": {
-		"id": "27",
-		"name": "Ring of Regen",
+		"id": 27,
 		"cost": 175,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 1.25
 	},
 	"item_sobi_mask": {
-		"id": "28",
-		"name": "Sage's Mask",
+		"id": 28,
 		"cost": 175,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 0.7
 	},
 	"item_boots": {
-		"id": "29",
-		"name": "Boots of Speed",
+		"id": 29,
 		"cost": 500,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 45
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"movement_speed": 45
 	},
 	"item_gem": {
-		"id": "30",
-		"name": "Gem of True Sight",
+		"id": 30,
+		"grants_true_sight": true,
 		"cost": 900,
 		"cooldown": 12,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"duration": 4
 	},
 	"item_cloak": {
-		"id": "31",
-		"name": "Cloak",
+		"id": 31,
 		"cost": 500,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"magic_resist": 15
 	},
 	"item_talisman_of_evasion": {
-		"id": "32",
-		"name": "Talisman of Evasion",
+		"id": 32,
 		"cost": 1300,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"evasion": 15
 	},
 	"item_cheese": {
-		"id": "33",
-		"name": "Cheese",
+		"id": 33,
 		"cost": 1000,
 		"cooldown": 40,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": true,
+		"is_purchasable": false
 	},
 	"item_magic_stick": {
-		"id": "34",
-		"name": "Magic Stick",
+		"id": 34,
 		"cost": 200,
 		"cooldown": 13,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_magic_wand": {
-		"id": "35",
-		"name": "Magic Wand Recipe",
+		"id": 35,
 		"cost": 150,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_magic_wand": {
-		"id": "36",
-		"name": "Magic Wand",
+		"id": 36,
 		"cost": 450,
 		"cooldown": 13,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"all_attributes_": 3
 	},
 	"item_ghost": {
-		"id": "37",
-		"name": "Ghost Scepter",
+		"id": 37,
 		"cost": 1500,
 		"cooldown": 22,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"all_attributes_": 5,
+		"duration": 4
 	},
 	"item_clarity": {
-		"id": "38",
-		"name": "Clarity",
+		"id": 38,
 		"cost": 50,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 6,
+		"durattion": 25
 	},
 	"item_enchanted_mango": {
-		"id": "216",
-		"name": "Enchanted Mango",
+		"id": 216,
 		"cost": 65,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 0.6
 	},
 	"item_flask": {
-		"id": "39",
-		"name": "Healing Salve",
+		"id": 39,
 		"cost": 100,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 30,
+		"durattion": 13
 	},
 	"item_dust": {
-		"id": "40",
-		"name": "Dust of Appearance",
+		"id": 40,
+		"grants_true_sight": true,
 		"mana_cost": 0,
 		"cost": 80,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_ability_magical": 25,
+		"duration": 12
 	},
 	"item_bottle": {
-		"id": "41",
-		"name": "Bottle",
+		"id": 41,
 		"cost": 675,
 		"cooldown": 0.5,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ward_observer": {
-		"id": "42",
-		"name": "Observer Ward",
+		"id": 42,
 		"cost": 0,
 		"cooldown": 1,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ward_sentry": {
-		"id": "43",
-		"name": "Sentry Ward",
+		"id": 43,
+		"grants_true_sight": true,
 		"cost": 50,
 		"cooldown": 1,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ward_dispenser": {
-		"id": "218",
-		"name": "Observer and Sentry Wards",
+		"id": 218,
 		"cost": 50,
 		"cooldown": 0,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_": 75
 	},
 	"item_tango": {
-		"id": "44",
-		"name": "Tango",
+		"id": 44,
 		"cost": 90,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 7,
+		"durattion": 16
 	},
 	"item_tango_single": {
-		"id": "241",
-		"name": "Tango (Shared)",
+		"id": 241,
 		"cost": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_regen_": 7,
+		"durattion": 16
 	},
 	"item_tpscroll": {
-		"id": "46",
-		"name": "Town Portal Scroll",
+		"id": 46,
 		"mana_cost": 75,
 		"cost": 100,
 		"cooldown": 80,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_travel_boots": {
-		"id": "47",
-		"name": "Boots of Travel Recipe",
+		"id": 47,
 		"cost": 2000,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_travel_boots_2": {
-		"id": "219",
+		"id": 219,
 		"cost": 0,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_travel_boots": {
-		"id": "48",
-		"name": "Boots of Travel",
+		"id": 48,
 		"cost": 2500,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 90
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"movement_speed": 90
 	},
 	"item_travel_boots_2": {
-		"id": "220",
-		"name": "Boots of Travel 2",
+		"id": 220,
 		"cost": 4500,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 110
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"movement_speed": 110
 	},
 	"item_phase_boots": {
-		"id": "50",
-		"name": "Phase Boots",
+		"id": 50,
 		"cost": 1500,
 		"cooldown": 8,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 45,
-			"activeAbsolute": 20,
-			"duration": 3
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_melee": 18,
+		"damage_ranged": 12,
+		"duration": 3,
+		"armor_": 4,
+		"movement_speed": 45,
+		"movement_speed_active": 20
 	},
 	"item_demon_edge": {
-		"id": "51",
-		"name": "Demon Edge",
+		"id": 51,
 		"cost": 2200,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 40
 	},
 	"item_eagle": {
-		"id": "52",
-		"name": "Eaglesong",
+		"id": 52,
 		"cost": 2800,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"agility_": 25
 	},
 	"item_reaver": {
-		"id": "53",
-		"name": "Reaver",
+		"id": 53,
 		"cost": 2800,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"strength_": 25
 	},
 	"item_relic": {
-		"id": "54",
-		"name": "Sacred Relic",
+		"id": 54,
 		"cost": 3750,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 60
 	},
 	"item_hyperstone": {
-		"id": "55",
-		"name": "Hyperstone",
+		"id": 55,
 		"cost": 2000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 60
 	},
 	"item_ring_of_health": {
-		"id": "56",
-		"name": "Ring of Health",
+		"id": 56,
 		"cost": 825,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 6.5
 	},
 	"item_void_stone": {
-		"id": "57",
-		"name": "Void Stone",
+		"id": 57,
 		"cost": 825,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 2.25
 	},
 	"item_mystic_staff": {
-		"id": "58",
-		"name": "Mystic Staff",
+		"id": 58,
 		"cost": 2800,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"intelligence_": 25
 	},
 	"item_energy_booster": {
-		"id": "59",
-		"name": "Energy Booster",
+		"id": 59,
 		"cost": 800,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_": 250
 	},
 	"item_point_booster": {
-		"id": "60",
-		"name": "Point Booster",
+		"id": 60,
 		"cost": 1200,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_": 175,
+		"health_": 175
 	},
 	"item_vitality_booster": {
-		"id": "61",
-		"name": "Vitality Booster",
+		"id": 61,
 		"cost": 1000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250
 	},
 	"item_fluffy_hat": {
-		"id": "593",
-		"name": "Fluffy Hat",
+		"id": 593,
 		"cost": 250,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 125
 	},
 	"item_power_treads": {
-		"id": "63",
-		"name": "Power Treads",
+		"id": 63,
 		"cost": 1400,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 45
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 25,
+		"selected_attribute": 10,
+		"movement_speed": 45
 	},
 	"item_recipe_hand_of_midas": {
-		"id": "64",
-		"name": "Hand of Midas Recipe",
+		"id": 64,
 		"cost": 1750,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_hand_of_midas": {
-		"id": "65",
-		"name": "Hand of Midas",
+		"id": 65,
 		"mana_cost": 0,
 		"cost": 2200,
 		"cooldown": 90,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 40
 	},
 	"item_oblivion_staff": {
-		"id": "67",
-		"name": "Oblivion Staff",
+		"id": 67,
 		"cost": 1500,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 10,
+		"mana_regen_": 1.25,
+		"damage_": 15,
+		"intelligence_": 10
 	},
 	"item_recipe_witch_blade": {
-		"id": "533",
-		"name": "Witch Blade Recipe",
+		"id": 533,
 		"cost": 600,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_witch_blade": {
-		"id": "534",
-		"name": "Witch Blade",
+		"id": 534,
 		"cost": 2600,
 		"cooldown": 9,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 35,
+		"intelligence_": 12,
+		"armor_": 6
 	},
 	"item_pers": {
-		"id": "69",
-		"name": "Perseverance",
+		"id": 69,
 		"cost": 1650,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 6.5,
+		"mana_regen_": 2.25
 	},
 	"item_recipe_bracer": {
-		"id": "72",
-		"name": "Bracer Recipe",
+		"id": 72,
 		"cost": 210,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_bracer": {
-		"id": "73",
-		"name": "Bracer",
+		"id": 73,
 		"cost": 505,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 0.75,
+		"damage_": 2,
+		"strength_": 5,
+		"agility_": 2,
+		"intelligence_": 2
 	},
 	"item_recipe_wraith_band": {
-		"id": "74",
-		"name": "Wraith Band Recipe",
+		"id": 74,
 		"cost": 210,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_wraith_band": {
-		"id": "75",
-		"name": "Wraith Band",
+		"id": 75,
 		"cost": 505,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 6,
+		"agility_": 5,
+		"strength_": 2,
+		"intelligence_": 2,
+		"armor_": 2
 	},
 	"item_recipe_null_talisman": {
-		"id": "76",
-		"name": "Null Talisman Recipe",
+		"id": 76,
 		"cost": 210,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_null_talisman": {
-		"id": "77",
-		"name": "Null Talisman",
+		"id": 77,
 		"cost": 505,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 0.75,
+		"intelligence_": 5,
+		"strength_": 2,
+		"agility_": 2
 	},
 	"item_recipe_mekansm": {
-		"id": "78",
-		"name": "Mekansm Recipe",
+		"id": 78,
 		"cost": 800,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_mekansm": {
-		"id": "79",
-		"name": "Mekansm",
+		"id": 79,
 		"mana_cost": 100,
 		"cost": 1775,
 		"cooldown": 50,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_aura": 2.5,
+		"armor_": 4
 	},
 	"item_recipe_vladmir": {
-		"id": "80",
-		"name": "Vladmir's Offering Recipe",
+		"id": 80,
 		"cost": 250,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_vladmir": {
-		"id": "81",
-		"name": "Vladmir's Offering",
+		"id": 81,
 		"cost": 2450,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_lifesteal_": 20,
+		"mana_regen_aura": 1.75,
+		"damage_aoe_percent": 18,
+		"armor_aura": 3
 	},
 	"item_recipe_wraith_pact": {
-		"id": "907",
-		"name": "Wraith Pact Recipe",
+		"id": 907,
 		"cost": 400,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_wraith_pact": {
-		"id": "908",
-		"name": "Wraith Pact",
+		"id": 908,
 		"mana_cost": 100,
 		"cost": 4050,
 		"cooldown": 60,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_lifesteal_": 24,
+		"health_": 250,
+		"mana_": 250,
+		"mana_regen_aura": 2,
+		"damage_aoe_percent": 18,
+		"armor_aura": 3
 	},
 	"item_recipe_buckler": {
-		"id": "85",
-		"name": "Buckler Recipe",
+		"id": 85,
 		"cost": 250,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_buckler": {
-		"id": "86",
-		"name": "Buckler",
+		"id": 86,
 		"cost": 425,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"armor_": 1
 	},
 	"item_recipe_ring_of_basilius": {
-		"id": "87",
-		"name": "Ring of Basilius Recipe",
+		"id": 87,
 		"cost": 250,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ring_of_basilius": {
-		"id": "88",
-		"name": "Ring of Basilius",
+		"id": 88,
 		"cost": 425,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 0.5,
+		"mana_regen_aura": 1
 	},
 	"item_recipe_holy_locket": {
-		"id": "268",
-		"name": "Holy Locket Recipe",
+		"id": 268,
 		"cost": 475,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_holy_locket": {
-		"id": "269",
-		"name": "Holy Locket",
+		"id": 269,
 		"cost": 2400,
 		"cooldown": 13,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250,
+		"mana_": 300,
+		"health_regen_aura": 3,
+		"all_attributes_": 3
 	},
 	"item_recipe_pipe": {
-		"id": "89",
-		"name": "Pipe of Insight Recipe",
+		"id": 89,
 		"cost": 1550,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_pipe": {
-		"id": "90",
-		"name": "Pipe of Insight",
+		"id": 90,
 		"mana_cost": 100,
 		"cost": 3475,
 		"cooldown": 60,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"magic_resist": 30,
+		"magic_resist_aura": 15,
+		"health_regen_": 8.5,
+		"health_regen_aura": 2.5
 	},
 	"item_recipe_urn_of_shadows": {
-		"id": "91",
-		"name": "Urn of Shadows Recipe",
+		"id": 91,
 		"cost": 375,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_urn_of_shadows": {
-		"id": "92",
-		"name": "Urn of Shadows",
+		"id": 92,
 		"cost": 880,
 		"cooldown": 7,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 1.4,
+		"all_attributes_": 2,
+		"duration": 8,
+		"armor_": 2
 	},
 	"item_recipe_headdress": {
-		"id": "93",
-		"name": "Headdress Recipe",
+		"id": 93,
 		"cost": 250,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_headdress": {
-		"id": "94",
-		"name": "Headdress",
+		"id": 94,
 		"cost": 425,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 0.5,
+		"health_regen_aura": 2
 	},
 	"item_sheepstick": {
-		"id": "96",
-		"name": "Scythe of Vyse",
+		"id": 96,
 		"mana_cost": 250,
 		"cost": 5675,
 		"cooldown": 20,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 9,
+		"strength_": 10,
+		"agility_": 10,
+		"intelligence_": 35
 	},
 	"item_recipe_orchid": {
-		"id": "97",
-		"name": "Orchid Malevolence Recipe",
+		"id": 97,
 		"cost": 300,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_orchid": {
-		"id": "98",
-		"name": "Orchid Malevolence",
+		"id": 98,
 		"mana_cost": 100,
 		"cost": 3475,
 		"cooldown": 18,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 40,
+		"mana_regen_": 3,
+		"damage_": 30,
+		"damage_ability_magical_percent": 30
 	},
 	"item_recipe_bloodthorn": {
-		"id": "245",
-		"name": "Bloodthorn Recipe",
+		"id": 245,
 		"cost": 925,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_bloodthorn": {
-		"id": "250",
-		"name": "Bloodthorn",
+		"id": 250,
 		"mana_cost": 100,
 		"cost": 6800,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"crit_multiplier_target": 130,
+		"crit_chance": 100,
+		"attack_speed_": 60,
+		"magic_resist": 25,
+		"mana_regen_": 5,
+		"damage_": 50,
+		"damage_ability_magical_percent": 30,
+		"intelligence_": 20,
+		"duration": 6
 	},
 	"item_echo_sabre": {
-		"id": "252",
-		"name": "Echo Sabre",
+		"id": 252,
 		"mana_cost": 0,
 		"cost": 2500,
 		"cooldown": 6,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 10,
+		"mana_regen_": 1.75,
+		"damage_": 15,
+		"strength_": 13,
+		"intelligence_": 10
 	},
 	"item_recipe_cyclone": {
-		"id": "99",
-		"name": "Eul's Scepter Recipe",
+		"id": 99,
 		"cost": 650,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_cyclone": {
-		"id": "100",
-		"name": "Eul's Scepter of Divinity",
+		"id": 100,
 		"mana_cost": 175,
 		"cost": 2725,
 		"cooldown": 23,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 20
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 2.5,
+		"damage_ability_magical": 50,
+		"intelligence_": 10,
+		"movement_speed": 20
 	},
 	"item_recipe_wind_waker": {
-		"id": "612",
-		"name": "Wind Waker Recipe",
+		"id": 612,
 		"cost": 1300,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_wind_waker": {
-		"id": "610",
-		"name": "Wind Waker",
+		"id": 610,
 		"mana_cost": 175,
 		"cost": 6825,
 		"cooldown": 18,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 50
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 6,
+		"damage_ability_magical": 50,
+		"intelligence_": 35,
+		"movement_speed": 50
 	},
 	"item_recipe_aether_lens": {
-		"id": "233",
-		"name": "Aether Lens Recipe",
+		"id": 233,
 		"cost": 650,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_aether_lens": {
-		"id": "232",
-		"name": "Aether Lens",
+		"id": 232,
 		"cost": 2275,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_": 300,
+		"mana_regen_": 2.5
 	},
 	"item_recipe_force_staff": {
-		"id": "101",
-		"name": "Force Staff Recipe",
+		"id": 101,
 		"cost": 950,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_force_staff": {
-		"id": "102",
-		"name": "Force Staff",
+		"id": 102,
 		"mana_cost": 100,
 		"cost": 2200,
 		"cooldown": 19,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 175,
+		"intelligence_": 10
 	},
 	"item_recipe_hurricane_pike": {
-		"id": "262",
-		"name": "Hurricane Pike Recipe",
+		"id": 262,
 		"cost": 350,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_hurricane_pike": {
-		"id": "263",
-		"name": "Hurricane Pike",
+		"id": 263,
 		"mana_cost": 100,
 		"cost": 4450,
 		"cooldown": 19,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 100,
+		"health_": 200,
+		"attack_range_ranged": 150,
+		"intelligence_": 15,
+		"agility_": 20,
+		"strength_": 15
 	},
 	"item_recipe_dagon": {
-		"id": "103",
-		"name": "Dagon Recipe",
+		"id": 103,
 		"cost": 1250,
 		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_2": {
-		"id": "197",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_3": {
-		"id": "198",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_4": {
-		"id": "199",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
-	},
-	"item_recipe_dagon_5": {
-		"id": "200",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_dagon": {
-		"id": "104",
-		"name": "Dagon",
+		"id": 104,
 		"mana_cost": 120,
 		"cost": 2700,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"level": 1,
+		"damage_ability_magical": 400,
+		"intelligence_": 14,
+		"strength_": 6,
+		"agility_": 6
 	},
 	"item_dagon_2": {
-		"id": "201",
-		"name": "Dagon",
+		"id": 201,
 		"mana_cost": 120,
 		"cost": 3950,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"level": 2,
+		"damage_ability_magical": 500,
+		"intelligence_": 16,
+		"strength_": 8,
+		"agility_": 8
 	},
 	"item_dagon_3": {
-		"id": "202",
-		"name": "Dagon",
+		"id": 202,
 		"mana_cost": 120,
 		"cost": 5200,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"level": 3,
+		"damage_ability_magical": 600,
+		"intelligence_": 18,
+		"strength_": 10,
+		"agility_": 10
 	},
 	"item_dagon_4": {
-		"id": "203",
-		"name": "Dagon",
+		"id": 203,
 		"mana_cost": 120,
 		"cost": 6450,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"level": 4,
+		"damage_ability_magical": 700,
+		"intelligence_": 20,
+		"strength_": 12,
+		"agility_": 12
 	},
 	"item_dagon_5": {
-		"id": "204",
-		"name": "Dagon",
+		"id": 204,
 		"mana_cost": 120,
 		"cost": 7700,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"level": 5,
+		"damage_ability_magical": 800,
+		"intelligence_": 22,
+		"strength_": 14,
+		"agility_": 14
 	},
 	"item_ultimate_scepter": {
-		"id": "108",
-		"name": "Aghanim's Scepter",
+		"id": 108,
 		"cost": 4200,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 175,
+		"mana_": 175,
+		"all_attributes_": 10
 	},
 	"item_recipe_ultimate_scepter_2": {
-		"id": "270",
-		"name": "Aghanim's Blessing Recipe",
+		"id": 270,
 		"cost": 1600,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ultimate_scepter_2": {
-		"id": "271",
-		"name": "Aghanim's Blessing",
+		"id": 271,
 		"cost": 5800,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ultimate_scepter_roshan": {
-		"id": "727",
-		"name": "Aghanim's Blessing - Roshan",
+		"id": 727,
 		"cost": 5800,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": true,
+		"is_purchasable": false
 	},
 	"item_aghanims_shard": {
-		"id": "609",
-		"name": "Aghanim's Shard",
+		"id": 609,
 		"cost": 1400,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_aghanims_shard_roshan": {
-		"id": "725",
-		"name": "Aghanim's Shard - Roshan",
+		"id": 725,
 		"cost": 1400,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": true,
+		"is_purchasable": false
 	},
 	"item_recipe_refresher": {
-		"id": "109",
-		"name": "Refresher Orb Recipe",
+		"id": 109,
 		"cost": 1700,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_refresher": {
-		"id": "110",
-		"name": "Refresher Orb",
+		"id": 110,
 		"mana_cost": 350,
 		"cost": 5000,
 		"cooldown": 180,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 13,
+		"mana_regen_": 7
 	},
 	"item_recipe_assault": {
-		"id": "111",
-		"name": "Assault Cuirass Recipe",
+		"id": 111,
 		"cost": 1300,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_assault": {
-		"id": "112",
-		"name": "Assault Cuirass",
+		"id": 112,
 		"cost": 5125,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 30,
+		"attack_speed_aura": 30,
+		"armor_": 10,
+		"armor_aura": 5,
+		"armor_reduction": -5
 	},
 	"item_recipe_heart": {
-		"id": "113",
-		"name": "Heart of Tarrasque Recipe",
+		"id": 113,
 		"cost": 1200,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_heart": {
-		"id": "114",
-		"name": "Heart of Tarrasque",
+		"id": 114,
 		"cost": 5000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250,
+		"health_regen_percent": 1.6,
+		"strength_": 45
 	},
 	"item_recipe_black_king_bar": {
-		"id": "115",
-		"name": "Black King Bar Recipe",
+		"id": 115,
 		"cost": 1450,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_black_king_bar": {
-		"id": "116",
-		"name": "Black King Bar",
+		"id": 116,
 		"mana_cost": 50,
 		"cost": 4050,
 		"cooldown": 90,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 24,
+		"strength_": 10,
+		"duration": 9
 	},
 	"item_aegis": {
-		"id": "117",
-		"name": "Aegis of the Immortal",
+		"id": 117,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": true,
+		"is_purchasable": false
 	},
 	"item_recipe_shivas_guard": {
-		"id": "118",
-		"name": "Shiva's Guard Recipe",
+		"id": 118,
 		"cost": 650,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_shivas_guard": {
-		"id": "119",
-		"name": "Shiva's Guard",
+		"id": 119,
 		"mana_cost": 100,
 		"cost": 4850,
 		"cooldown": 27,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_slow_aura": -45,
+		"heal_reduction_aura": 25,
+		"damage_ability_magical_aoe": 200,
+		"intelligence_": 30,
+		"armor_": 15
 	},
 	"item_recipe_bloodstone": {
-		"id": "120",
-		"name": "Bloodstone Recipe",
+		"id": 120,
 		"cost": 700,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_bloodstone": {
-		"id": "121",
-		"name": "Bloodstone",
+		"id": 121,
 		"mana_cost": 0,
 		"cost": 4400,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"spell_lifesteal": 30,
+		"spell_lifesteal_multiplier": 2,
+		"health_": 500,
+		"mana_": 500,
+		"durattion": 6
 	},
 	"item_recipe_sphere": {
-		"id": "122",
-		"name": "Linken's Sphere Recipe",
+		"id": 122,
 		"cost": 900,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_sphere": {
-		"id": "123",
-		"name": "Linken's Sphere",
+		"id": 123,
 		"cost": 4600,
 		"cooldown": 14,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 7,
+		"mana_regen_": 5,
+		"all_attributes_": 16
 	},
 	"item_lotus_orb": {
-		"id": "226",
-		"name": "Lotus Orb",
+		"id": 226,
 		"mana_cost": 175,
 		"cost": 3850,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 6.5,
+		"mana_regen_": 4,
+		"mana_": 250,
+		"duration": 6,
+		"armor_": 10
 	},
 	"item_recipe_meteor_hammer": {
-		"id": "222",
-		"name": "Meteor Hammer Recipe",
+		"id": 222,
 		"cost": 250,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_meteor_hammer": {
-		"id": "223",
-		"name": "Meteor Hammer",
+		"id": 223,
 		"mana_cost": 100,
 		"cost": 2350,
 		"cooldown": 24,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 6.5,
+		"mana_regen_": 2.5,
+		"all_attributes_": 8
 	},
 	"item_nullifier": {
-		"id": "225",
-		"name": "Nullifier",
+		"id": 225,
 		"mana_cost": 0,
 		"cost": 4725,
 		"cooldown": 10,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 6,
+		"damage_": 80,
+		"armor_": 10
 	},
 	"item_recipe_aeon_disk": {
-		"id": "255",
-		"name": "Aeon Disk Recipe",
+		"id": 255,
 		"cost": 1200,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_aeon_disk": {
-		"id": "256",
-		"name": "Aeon Disk",
+		"id": 256,
 		"cost": 3000,
 		"cooldown": 105,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"status_resistance": 75,
+		"health_": 250,
+		"mana_": 300,
+		"durattion": 2.5
 	},
 	"item_recipe_kaya": {
-		"id": "258",
-		"name": "Kaya Recipe",
+		"id": 258,
 		"cost": 600,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_kaya": {
-		"id": "259",
-		"name": "Kaya",
+		"id": 259,
 		"cost": 2050,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"spell_lifesteal_amplifier": 24,
+		"spell_amp": 8,
+		"mana_regen_amp": 50,
+		"intelligence_": 16
 	},
 	"item_refresher_shard": {
-		"id": "260",
-		"name": "Refresher Shard",
+		"id": 260,
 		"mana_cost": 200,
 		"cost": 1000,
 		"cooldown": 180,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": true,
+		"is_purchasable": false
 	},
 	"item_recipe_spirit_vessel": {
-		"id": "266",
-		"name": "Spirit Vessel Recipe",
+		"id": 266,
 		"cost": 1100,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_spirit_vessel": {
-		"id": "267",
-		"name": "Spirit Vessel",
+		"id": 267,
 		"cost": 2980,
 		"cooldown": 7,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250,
+		"mana_regen_": 1.75,
+		"heal_reduction": 45,
+		"all_attributes_": 2,
+		"duration": 8,
+		"armor_": 2
 	},
 	"item_vanguard": {
-		"id": "125",
-		"name": "Vanguard",
+		"id": 125,
 		"cost": 1825,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250,
+		"health_regen_": 7
 	},
 	"item_recipe_crimson_guard": {
-		"id": "243",
-		"name": "Crimson Guard Recipe",
+		"id": 243,
 		"cost": 800,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_crimson_guard": {
-		"id": "242",
-		"name": "Crimson Guard",
+		"id": 242,
 		"cost": 3600,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250,
+		"health_regen_": 12,
+		"duration": 12,
+		"armor_": 8
 	},
 	"item_recipe_blade_mail": {
-		"id": "126",
-		"name": "Blade Mail Recipe",
+		"id": 126,
 		"cost": 550,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_blade_mail": {
-		"id": "127",
-		"name": "Blade Mail",
+		"id": 127,
 		"mana_cost": 25,
 		"cost": 2100,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 28,
+		"duration": 5.5,
+		"armor_": 6
 	},
 	"item_soul_booster": {
-		"id": "129",
-		"name": "Soul Booster",
+		"id": 129,
 		"cost": 3000,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 425,
+		"mana_": 425
 	},
 	"item_hood_of_defiance": {
-		"id": "131",
-		"name": "Hood of Defiance",
+		"id": 131,
 		"mana_cost": 50,
 		"cost": 1500,
 		"cooldown": 60,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"magic_resist": 18,
+		"health_regen_": 8.5
 	},
 	"item_recipe_eternal_shroud": {
-		"id": "691",
-		"name": "Eternal Shroud Recipe",
+		"id": 691,
 		"cost": 1100,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_eternal_shroud": {
-		"id": "692",
-		"name": "Eternal Shroud",
+		"id": 692,
 		"mana_cost": 50,
 		"cost": 3300,
 		"cooldown": 45,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"spell_lifesteal": 20,
+		"magic_resist": 25,
+		"health_regen_": 8.5
 	},
 	"item_rapier": {
-		"id": "133",
-		"name": "Divine Rapier",
+		"id": 133,
 		"cost": 5950,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 350
 	},
 	"item_recipe_monkey_king_bar": {
-		"id": "134",
-		"name": "Monkey King Bar Recipe",
+		"id": 134,
 		"cost": 675,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_monkey_king_bar": {
-		"id": "135",
-		"name": "Monkey King Bar",
+		"id": 135,
 		"cost": 4975,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 45,
+		"damage_": 40,
+		"damage_magical_": 80,
+		"damage_magical_chance": 70
 	},
 	"item_radiance": {
-		"id": "137",
-		"name": "Radiance",
+		"id": 137,
 		"cost": 5050,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"evasion": 15,
+		"damage_": 60,
+		"damage_aoe": 60
 	},
 	"item_butterfly": {
-		"id": "139",
-		"name": "Butterfly",
+		"id": 139,
 		"cost": 4975,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"evasion": 35,
+		"attack_speed_": 30,
+		"damage_": 25,
+		"agility_": 35
 	},
 	"item_recipe_greater_crit": {
-		"id": "140",
-		"name": "Daedalus Recipe",
+		"id": 140,
 		"cost": 1000,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_greater_crit": {
-		"id": "141",
-		"name": "Daedalus",
+		"id": 141,
 		"cost": 5150,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"crit_chance": 30,
+		"crit_multiplier_": 225,
+		"damage_": 88
 	},
 	"item_recipe_basher": {
-		"id": "142",
-		"name": "Skull Basher Recipe",
+		"id": 142,
 		"cost": 825,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_basher": {
-		"id": "143",
-		"name": "Skull Basher",
+		"id": 143,
 		"cost": 2875,
 		"cooldown": 2.3,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 25,
+		"damage_bonus_chance": 100,
+		"strength_": 10
 	},
 	"item_bfury": {
-		"id": "145",
-		"name": "Battle Fury",
+		"id": 145,
 		"cost": 4100,
 		"cooldown": 4,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 7.5,
+		"mana_regen_": 2.75,
+		"damage_": 60
 	},
 	"item_recipe_manta": {
-		"id": "146",
-		"name": "Manta Style Recipe",
+		"id": 146,
 		"cost": 500,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_manta": {
-		"id": "147",
-		"name": "Manta Style",
+		"id": 147,
 		"mana_cost": 125,
 		"cost": 4600,
 		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 8
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 12,
+		"strength_": 10,
+		"agility_": 26,
+		"intelligence_": 10,
+		"movement_speed": 8
 	},
 	"item_recipe_lesser_crit": {
-		"id": "148",
-		"name": "Crystalys Recipe",
+		"id": 148,
 		"cost": 500,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_lesser_crit": {
-		"id": "149",
-		"name": "Crystalys",
+		"id": 149,
 		"cost": 1950,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"crit_chance": 30,
+		"crit_multiplier_": 160,
+		"damage_": 32
 	},
 	"item_recipe_dragon_lance": {
-		"id": "234",
+		"id": 234,
 		"cost": 450,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_dragon_lance": {
-		"id": "236",
-		"name": "Dragon Lance",
+		"id": 236,
 		"cost": 1900,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_range_ranged": 150,
+		"agility_": 15,
+		"strength_": 12
 	},
 	"item_recipe_armlet": {
-		"id": "150",
-		"name": "Armlet of Mordiggian Recipe",
+		"id": 150,
 		"cost": 625,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_armlet": {
-		"id": "151",
-		"name": "Armlet of Mordiggian",
+		"id": 151,
 		"cost": 2500,
 		"cooldown": 0,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 25,
+		"health_regen_": 5,
+		"damage_": 15,
+		"damage_active": 35,
+		"strength_active_": 25,
+		"armor_": 6,
+		"armor_activated": 4
 	},
 	"item_invis_sword": {
-		"id": "152",
-		"name": "Shadow Blade",
+		"id": 152,
+		"grants_invisibility": true,
 		"mana_cost": 75,
 		"cost": 3000,
 		"cooldown": 25,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"duration": 14,
-			"activeRelative": 20
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 35,
+		"damage_": 20,
+		"damage_ability_": 175,
+		"duration": 14,
+		"movement_speed_percent_active": 20
 	},
 	"item_recipe_silver_edge": {
-		"id": "248",
-		"name": "Silver Edge Recipe",
+		"id": 248,
 		"cost": 500,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_silver_edge": {
-		"id": "249",
-		"name": "Silver Edge",
+		"id": 249,
+		"grants_invisibility": true,
+		"breaks_passives": true,
 		"mana_cost": 75,
 		"cost": 5450,
 		"cooldown": 20,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"duration": 14,
-			"activeRelative": 25
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"crit_chance": 30,
+		"crit_multiplier_": 160,
+		"attack_speed_": 35,
+		"damage_": 52,
+		"damage_ability_": 175,
+		"duration": 14,
+		"movement_speed_percent_active": 25
 	},
 	"item_sange_and_yasha": {
-		"id": "154",
-		"name": "Sange and Yasha",
+		"id": 154,
 		"cost": 4100,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"percent": 10
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"status_resistance": 20,
+		"attack_speed_": 12,
+		"health_regen_amp": 22,
+		"strength_": 16,
+		"agility_": 16,
+		"movement_speed_percent": 10
 	},
 	"item_kaya_and_sange": {
-		"id": "273",
-		"name": "Kaya and Sange",
-		"cost": 4100,
-		"is_recipe": false,
-		"is_neutral": false
-	},
-	"item_yasha_and_kaya": {
-		"id": "277",
-		"name": "Yasha and Kaya",
+		"id": 273,
 		"cost": 4100,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"percent": 10
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"status_resistance": 20,
+		"spell_lifesteal_amplifier": 30,
+		"spell_amp": 16,
+		"mana_regen_amp": 50,
+		"health_regen_amp": 22,
+		"strength_": 16,
+		"intelligence_": 16
 	},
-	"item_recipe_satanic": {
-		"id": "155",
-		"name": "Satanic Recipe",
-		"cost": 0,
-		"is_recipe": true,
-		"is_neutral": false
+	"item_yasha_and_kaya": {
+		"id": 277,
+		"cost": 4100,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 12,
+		"spell_lifesteal_amplifier": 30,
+		"spell_amp": 16,
+		"mana_regen_amp": 50,
+		"agility_": 16,
+		"intelligence_": 16,
+		"movement_speed_percent": 10
 	},
 	"item_satanic": {
-		"id": "156",
-		"name": "Satanic",
+		"id": 156,
 		"cost": 5050,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_lifesteal_": 30,
+		"attack_lifesteal_active": 145,
+		"damage_": 38,
+		"strength_": 25
 	},
 	"item_recipe_mjollnir": {
-		"id": "157",
-		"name": "Mjollnir Recipe",
+		"id": 157,
 		"cost": 900,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_mjollnir": {
-		"id": "158",
-		"name": "Mjollnir",
+		"id": 158,
 		"mana_cost": 50,
 		"cost": 5600,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 70,
+		"damage_": 24,
+		"damage_magical_chance": 30,
+		"damage_magical_": 180
 	},
 	"item_skadi": {
-		"id": "160",
-		"name": "Eye of Skadi",
+		"id": 160,
 		"cost": 5300,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_slow_melee": -30,
+		"attack_slow_ranged": -60,
+		"health_": 220,
+		"mana_": 220,
+		"heal_reduction": 40,
+		"all_attributes_": 22
 	},
 	"item_recipe_sange": {
-		"id": "161",
-		"name": "Sange Recipe",
+		"id": 161,
 		"cost": 600,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_sange": {
-		"id": "162",
-		"name": "Sange",
+		"id": 162,
 		"cost": 2050,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"status_resistance": 12,
+		"health_regen_amp": 20,
+		"strength_": 16
 	},
 	"item_recipe_helm_of_the_dominator": {
-		"id": "163",
-		"name": "Helm of the Dominator Recipe",
+		"id": 163,
 		"cost": 975,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_helm_of_the_dominator": {
-		"id": "164",
-		"name": "Helm of the Dominator",
+		"id": 164,
 		"mana_cost": 0,
 		"cost": 2400,
 		"cooldown": 45,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 6,
+		"armor_": 6
 	},
 	"item_recipe_helm_of_the_overlord": {
-		"id": "633",
-		"name": "Helm of the Overlord Recipe",
+		"id": 633,
 		"cost": 1325,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_helm_of_the_overlord": {
-		"id": "635",
-		"name": "Helm of the Overlord",
+		"id": 635,
 		"mana_cost": 0,
 		"cost": 6175,
 		"cooldown": 45,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_lifesteal_": 20,
+		"health_regen_": 7,
+		"mana_regen_aura": 2,
+		"damage_aoe_percent": 18,
+		"armor_": 7,
+		"armor_aura": 3
 	},
 	"item_maelstrom": {
-		"id": "166",
-		"name": "Maelstrom",
+		"id": 166,
 		"cost": 2700,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 24,
+		"damage_magical_chance": 30,
+		"damage_magical_": 140
 	},
 	"item_recipe_gungir": {
-		"id": "1565",
-		"name": "Gleipnir Recipe",
+		"id": 1565,
 		"cost": 700,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_gungir": {
-		"id": "1466",
-		"name": "Gleipnir",
+		"id": 1466,
 		"mana_cost": 200,
 		"cost": 6150,
 		"cooldown": 18,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 30,
+		"damage_magical_chance": 30,
+		"damage_magical_": 160,
+		"agility_": 14,
+		"intelligence_": 24,
+		"strength_": 14,
+		"duration": 2
 	},
 	"item_desolator": {
-		"id": "168",
-		"name": "Desolator",
+		"id": 168,
 		"cost": 3500,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 50,
+		"armor_reduction": -6
 	},
 	"item_recipe_yasha": {
-		"id": "169",
-		"name": "Yasha Recipe",
+		"id": 169,
 		"cost": 600,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_yasha": {
-		"id": "170",
-		"name": "Yasha",
+		"id": 170,
 		"cost": 2050,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"percent": 8
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 12,
+		"agility_": 16,
+		"movement_speed_percent": 8
 	},
 	"item_mask_of_madness": {
-		"id": "172",
-		"name": "Mask of Madness",
+		"id": 172,
 		"mana_cost": 25,
 		"cost": 1775,
 		"cooldown": 16,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"activeAbsolute": 30,
-			"duration": 6
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 10,
+		"attack_speed_active": 110,
+		"attack_lifesteal_": 24,
+		"damage_": 10,
+		"duration": 6,
+		"armor_activated": -8,
+		"movement_speed_active": 30
 	},
 	"item_recipe_diffusal_blade": {
-		"id": "173",
-		"name": "Diffusal Blade Recipe",
+		"id": 173,
 		"cost": 1050,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_diffusal_blade": {
-		"id": "174",
-		"name": "Diffusal Blade",
+		"id": 174,
 		"mana_cost": 0,
 		"cost": 2500,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"agility_": 15,
+		"intelligence_": 10
 	},
 	"item_recipe_ethereal_blade": {
-		"id": "175",
-		"name": "Ethereal Blade Recipe",
+		"id": 175,
 		"cost": 1100,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ethereal_blade": {
-		"id": "176",
-		"name": "Ethereal Blade",
+		"id": 176,
 		"mana_cost": 100,
 		"cost": 4650,
 		"cooldown": 22,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"spell_lifesteal_amplifier": 24,
+		"spell_amp": 12,
+		"mana_regen_amp": 75,
+		"damage_ability_magical": 50,
+		"agility_": 5,
+		"strength_": 5,
+		"intelligence_": 25,
+		"duration": 4
 	},
 	"item_recipe_soul_ring": {
-		"id": "177",
-		"name": "Soul Ring Recipe",
+		"id": 177,
 		"cost": 400,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_soul_ring": {
-		"id": "178",
-		"name": "Soul Ring",
+		"id": 178,
 		"mana_cost": 0,
 		"cost": 855,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"strength_": 6,
+		"duration": 10,
+		"armor_": 2
 	},
 	"item_arcane_boots": {
-		"id": "180",
-		"name": "Arcane Boots",
+		"id": 180,
 		"mana_cost": 0,
 		"cost": 1300,
 		"cooldown": 55,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 45
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_": 250,
+		"movement_speed": 45
 	},
 	"item_octarine_core": {
-		"id": "235",
-		"name": "Octarine Core",
+		"id": 235,
 		"cost": 5275,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 425,
+		"mana_": 725,
+		"mana_regen_": 3
 	},
 	"item_orb_of_venom": {
-		"id": "181",
-		"name": "Orb of Venom",
+		"id": 181,
 		"cost": 275,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_melee": 2,
+		"damage_ranged": 2
 	},
 	"item_blight_stone": {
-		"id": "240",
-		"name": "Blight Stone",
+		"id": 240,
 		"cost": 300,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"armor_reduction": -2
 	},
 	"item_recipe_orb_of_corrosion": {
-		"id": "640",
-		"name": "Orb of Corrosion Recipe",
+		"id": 640,
 		"cost": 100,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_orb_of_corrosion": {
-		"id": "569",
-		"name": "Orb of Corrosion",
+		"id": 569,
 		"cost": 925,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"damage_": 3,
+		"duration": 3,
+		"armor_": 3,
+		"armor_reduction": -3
 	},
 	"item_recipe_falcon_blade": {
-		"id": "599",
-		"name": "Falcon Blade Recipe",
+		"id": 599,
 		"cost": 250,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_falcon_blade": {
-		"id": "596",
-		"name": "Falcon Blade",
+		"id": 596,
 		"cost": 1125,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 200,
+		"mana_regen_": 1.8,
+		"damage_": 14
 	},
 	"item_recipe_mage_slayer": {
-		"id": "597",
-		"name": "Mage Slayer Recipe",
+		"id": 597,
 		"cost": 400,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_mage_slayer": {
-		"id": "598",
-		"name": "Mage Slayer",
+		"id": 598,
 		"cost": 2400,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 20,
+		"magic_resist": 25,
+		"mana_regen_": 2,
+		"damage_": 20,
+		"intelligence_": 10,
+		"duration": 6
 	},
 	"item_recipe_ancient_janggo": {
-		"id": "184",
-		"name": "Drum of Endurance Recipe",
+		"id": 184,
 		"cost": 500,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_ancient_janggo": {
-		"id": "185",
-		"name": "Drum of Endurance",
+		"id": 185,
 		"cost": 1650,
 		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"auraAbsolute": 20,
-			"percent": 13,
-			"duration": 6
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 45,
+		"strength_": 7,
+		"intelligence_": 7,
+		"duration": 6,
+		"movement_speed_aura": 20,
+		"movement_speed_percent_active": 13
 	},
 	"item_recipe_boots_of_bearing": {
-		"id": "930",
-		"name": "Boots of Bearing Recipe",
+		"id": 930,
 		"cost": 1500,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_boots_of_bearing": {
-		"id": "931",
-		"name": "Boots of Bearing",
+		"id": 931,
 		"cost": 4075,
 		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"auraAbsolute": 20,
-			"duration": 1.5,
-			"absolute": 65,
-			"activePercent": 15
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 50,
+		"health_regen_": 15,
+		"strength_": 8,
+		"intelligence_": 8,
+		"duration": 1.5,
+		"movement_speed_aura": 20,
+		"movement_speed_percent_active": 15,
+		"movement_speed": 65
 	},
 	"item_medallion_of_courage": {
-		"id": "187",
-		"name": "Medallion of Courage",
+		"id": 187,
 		"cost": 1025,
 		"cooldown": 12,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_regen_": 1.5,
+		"duration": 12,
+		"armor_": 5,
+		"armor_reduction": -5
 	},
 	"item_recipe_solar_crest": {
-		"id": "227",
-		"name": "Solar Crest Recipe",
+		"id": 227,
 		"cost": 900,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_solar_crest": {
-		"id": "229",
-		"name": "Solar Crest",
+		"id": 229,
 		"cost": 2625,
 		"cooldown": 12,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 20
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_target": 50,
+		"attack_slow_": -50,
+		"mana_regen_": 1.75,
+		"all_attributes_": 5,
+		"duration": 12,
+		"armor_": 6,
+		"armor_reduction": -6,
+		"movement_speed": 20
 	},
 	"item_smoke_of_deceit": {
-		"id": "188",
-		"name": "Smoke of Deceit",
+		"id": 188,
+		"grants_invisibility": true,
 		"cost": 50,
 		"cooldown": 1,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"duration": 35,
-			"activeAbsolute": 15
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"duration": 35,
+		"movement_speed_percent_active": 15
 	},
 	"item_tome_of_knowledge": {
-		"id": "257",
-		"name": "Tome of Knowledge",
+		"id": 257,
 		"cost": 75,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_veil_of_discord": {
-		"id": "189",
-		"name": "Veil of Discord Recipe",
+		"id": 189,
 		"cost": 650,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_veil_of_discord": {
-		"id": "190",
-		"name": "Veil of Discord",
+		"id": 190,
 		"mana_cost": 50,
 		"cost": 1525,
 		"cooldown": 22,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"spell_amp": 18,
+		"mana_regen_aura": 1.75,
+		"all_attributes_": 5
 	},
 	"item_recipe_revenants_brooch": {
-		"id": "910",
-		"name": "Revenant's Brooch Recipe",
+		"id": 910,
 		"cost": 800,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_revenants_brooch": {
-		"id": "911",
-		"name": "Revenant's Brooch",
+		"id": 911,
 		"mana_cost": 300,
 		"cost": 6200,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 40,
+		"damage_ability_magical_conversion": true,
+		"intelligence_": 45,
+		"duration": 15,
+		"armor_": 8
 	},
 	"item_recipe_guardian_greaves": {
-		"id": "230",
-		"name": "Guardian Greaves Recipe",
+		"id": 230,
 		"cost": 1450,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_guardian_greaves": {
-		"id": "231",
-		"name": "Guardian Greaves",
+		"id": 231,
 		"mana_cost": 0,
 		"cost": 4950,
 		"cooldown": 40,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"absolute": 50
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"mana_": 250,
+		"health_regen_aura": 2.5,
+		"health_regen_bonus": 18.5,
+		"armor_": 4,
+		"movement_speed": 50
 	},
 	"item_recipe_rod_of_atos": {
-		"id": "205",
-		"name": "Rod of Atos Recipe",
+		"id": 205,
 		"cost": 850,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_rod_of_atos": {
-		"id": "206",
-		"name": "Rod of Atos",
+		"id": 206,
 		"mana_cost": 50,
 		"cost": 2750,
 		"cooldown": 18,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"intelligence_": 24,
+		"strength_": 12,
+		"agility_": 12,
+		"duration": 2
 	},
 	"item_recipe_abyssal_blade": {
-		"id": "207",
-		"name": "Abyssal Blade Recipe",
+		"id": 207,
 		"cost": 1550,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_abyssal_blade": {
-		"id": "208",
-		"name": "Abyssal Blade",
+		"id": 208,
 		"mana_cost": 75,
 		"cost": 6250,
 		"cooldown": 35,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_": 250,
+		"health_regen_": 10,
+		"damage_bonus_chance": 120,
+		"damage_": 25,
+		"strength_": 10
 	},
 	"item_recipe_heavens_halberd": {
-		"id": "209",
-		"name": "Heaven's Halberd Recipe",
+		"id": 209,
 		"cost": 200,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_heavens_halberd": {
-		"id": "210",
-		"name": "Heaven's Halberd",
+		"id": 210,
 		"mana_cost": 100,
 		"cost": 3550,
 		"cooldown": 18,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"status_resistance": 16,
+		"evasion": 20,
+		"health_regen_amp": 20,
+		"strength_": 20
 	},
 	"item_ring_of_aquila": {
-		"id": "212",
-		"name": "Ring of Aquila",
+		"id": 212,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_regen_aura": 1.25,
+		"damage_": 3,
+		"strength_": 3,
+		"agility_": 9,
+		"intelligence_": 3,
+		"armor_aura": 2
 	},
 	"item_tranquil_boots": {
-		"id": "214",
-		"name": "Tranquil Boots",
+		"id": 214,
 		"mana_cost": 0,
 		"cost": 925,
 		"cooldown": 13,
 		"is_recipe": false,
 		"is_neutral": false,
-		"speed": {
-			"brokenAbsolute": 40,
-			"absolute": 65
-		}
+		"is_roshan": false,
+		"is_purchasable": true,
+		"health_regen_": 14,
+		"movement_speed_broke": 40,
+		"movement_speed": 65
 	},
 	"item_shadow_amulet": {
-		"id": "215",
-		"name": "Shadow Amulet",
+		"id": 215,
+		"grants_invisibility": true,
 		"mana_cost": 0,
 		"cost": 1000,
 		"cooldown": 7,
 		"is_recipe": false,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_recipe_glimmer_cape": {
-		"id": "253",
-		"name": "Glimmer Cape Recipe",
+		"id": 253,
 		"cost": 450,
 		"is_recipe": true,
-		"is_neutral": false
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true
 	},
 	"item_glimmer_cape": {
-		"id": "254",
-		"name": "Glimmer Cape",
+		"id": 254,
+		"grants_invisibility": true,
 		"mana_cost": 90,
 		"cost": 1950,
 		"cooldown": 14,
 		"is_recipe": false,
-		"is_neutral": false
-	},
-	"item_keen_optic": {
-		"id": "287",
-		"name": "Keen Optic",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"magic_resist": 20,
+		"duration": 5
 	},
 	"item_grove_bow": {
-		"id": "288",
-		"name": "Grove Bow",
+		"id": 288,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_speed_": 20,
+		"attack_range_ranged": 100
 	},
 	"item_quickening_charm": {
-		"id": "289",
-		"name": "Quickening Charm",
+		"id": 289,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_regen_": 10
 	},
 	"item_philosophers_stone": {
-		"id": "290",
-		"name": "Philosopher's Stone",
+		"id": 290,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_": 200,
+		"damage_": -30
 	},
 	"item_force_boots": {
-		"id": "291",
-		"name": "Force Boots",
+		"id": 291,
 		"mana_cost": 75,
 		"cost": 0,
 		"cooldown": 8,
 		"is_recipe": false,
 		"is_neutral": true,
-		"speed": {
-			"absolute": 115
-		}
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_regen_": 30,
+		"movement_speed": 115
 	},
 	"item_desolator_2": {
-		"id": "292",
-		"name": "Stygian Desolator",
+		"id": 292,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"armor_reduction": -10
 	},
 	"item_seer_stone": {
-		"id": "294",
-		"name": "Seer Stone",
+		"id": 294,
+		"grants_true_sight": true,
 		"cost": 0,
 		"cooldown": 60,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_regen_": 10,
+		"duration": 6
 	},
 	"item_force_field": {
-		"id": "829",
-		"name": "Arcanist's Armor",
+		"id": 829,
 		"cost": 0,
 		"cooldown": 20,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"armor_": 5
 	},
 	"item_black_powder_bag": {
-		"id": "834",
-		"name": "Blast Rig",
+		"id": 834,
 		"cost": 0,
 		"cooldown": 20,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_aoe": 250,
+		"armor_": 7
 	},
 	"item_timeless_relic": {
-		"id": "300",
-		"name": "Timeless Relic",
+		"id": 300,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"spell_amp": 15
 	},
 	"item_mirror_shield": {
-		"id": "301",
-		"name": "Mirror Shield",
+		"id": 301,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false
 	},
 	"item_pupils_gift": {
-		"id": "306",
-		"name": "Pupil's Gift",
+		"id": 306,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false
 	},
 	"item_mind_breaker": {
-		"id": "309",
-		"name": "Mind Breaker",
+		"id": 309,
 		"cost": 0,
 		"cooldown": 12,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_speed_": 25,
+		"duration": 1.75
 	},
 	"item_spell_prism": {
-		"id": "311",
-		"name": "Spell Prism",
+		"id": 311,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_regen_": 4,
+		"all_attributes_": 8
 	},
 	"item_flicker": {
-		"id": "335",
-		"name": "Flicker",
+		"id": 335,
 		"cost": 0,
 		"cooldown": 5,
 		"is_recipe": false,
 		"is_neutral": true,
-		"speed": {
-			"absolute": 35
-		}
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"movement_speed": 35
 	},
 	"item_spy_gadget": {
-		"id": "336",
-		"name": "Telescope",
+		"id": 336,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false
 	},
 	"item_vambrace": {
-		"id": "331",
-		"name": "Vambrace",
+		"id": 331,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_speed_": 10,
+		"spell_amp": 6,
+		"magic_resist": 10,
+		"selected_attribute": 10
 	},
 	"item_broom_handle": {
-		"id": "355",
-		"name": "Broom Handle",
+		"id": 355,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_": 8,
+		"attack_range_melee": 50,
+		"armor_": 4
 	},
 	"item_trusty_shovel": {
-		"id": "356",
-		"name": "Trusty Shovel",
+		"id": 356,
 		"cost": 0,
 		"cooldown": 50,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_": 75
 	},
 	"item_nether_shawl": {
-		"id": "357",
-		"name": "Nether Shawl",
+		"id": 357,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"spell_amp": 6,
+		"magic_resist": 20,
+		"armor_": 2
 	},
 	"item_dragon_scale": {
-		"id": "358",
-		"name": "Dragon Scale",
+		"id": 358,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_regen_": 5,
+		"duration": 3,
+		"armor_": 5
 	},
 	"item_enchanted_quiver": {
-		"id": "361",
-		"name": "Enchanted Quiver",
+		"id": 361,
 		"cost": 0,
 		"cooldown": 4,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_magical_": 225,
+		"attack_range_ranged": 350
 	},
 	"item_ninja_gear": {
-		"id": "362",
-		"name": "Ninja Gear",
+		"id": 362,
 		"cost": 0,
 		"cooldown": 45,
 		"is_recipe": false,
 		"is_neutral": true,
-		"speed": {
-			"absolute": 25,
-			"duration": 35,
-			"activeRelative": 20
-		}
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"agility_": 25,
+		"duration": 35,
+		"movement_speed": 25,
+		"movement_speed_percent_active": 20
 	},
 	"item_havoc_hammer": {
-		"id": "364",
-		"name": "Havoc Hammer",
+		"id": 364,
 		"cost": 0,
 		"cooldown": 10,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_": 12,
+		"damage_ability_magical": 175,
+		"strength_": 12
 	},
 	"item_apex": {
-		"id": "366",
-		"name": "Apex",
+		"id": 366,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false
 	},
 	"item_demonicon": {
-		"id": "370",
-		"name": "Book of the Dead",
+		"id": 370,
 		"cost": 0,
 		"cooldown": 80,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"strength_": 30,
+		"intelligence_": 30
 	},
 	"item_fallen_sky": {
-		"id": "371",
-		"name": "Fallen Sky",
+		"id": 371,
 		"cost": 4751,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_regen_": 15,
+		"mana_regen_": 10,
+		"strength_": 15,
+		"intelligence_": 15
 	},
 	"item_pirate_hat": {
-		"id": "372",
-		"name": "Pirate Hat",
+		"id": 372,
 		"cost": 0,
 		"cooldown": 40,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_speed_": 150,
+		"movement_speed": 15
 	},
 	"item_ex_machina": {
-		"id": "374",
-		"name": "Ex Machina",
+		"id": 374,
 		"mana_cost": 350,
 		"cost": 0,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"armor_": 20
 	},
 	"item_paladin_sword": {
-		"id": "376",
-		"name": "Paladin Sword",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_arcane_ring": {
-		"id": "349",
-		"name": "Arcane Ring",
-		"cost": 0,
-		"cooldown": 45,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_titan_sliver": {
-		"id": "381",
-		"name": "Titan Sliver",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_elven_tunic": {
-		"id": "573",
-		"name": "Elven Tunic",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_cloak_of_flames": {
-		"id": "574",
-		"name": "Cloak of Flames",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_trickster_cloak": {
-		"id": "571",
-		"name": "Trickster Cloak",
-		"cost": 0,
-		"cooldown": 25,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_possessed_mask": {
-		"id": "577",
-		"name": "Possessed Mask",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_penta_edged_sword": {
-		"id": "638",
-		"name": "Penta-Edged Sword",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_bullwhip": {
-		"id": "680",
-		"name": "Bullwhip",
-		"cost": 0,
-		"cooldown": 11,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_psychic_headband": {
-		"id": "675",
-		"name": "Psychic Headband",
-		"cost": 0,
-		"cooldown": 20,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_ceremonial_robe": {
-		"id": "676",
-		"name": "Ceremonial Robe",
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_book_of_shadows": {
-		"id": "677",
-		"name": "Book of Shadows",
-		"cost": 0,
-		"cooldown": 8,
-		"is_recipe": false,
-		"is_neutral": true
-	},
-	"item_giants_ring": {
-		"id": "678",
-		"name": "Giant's Ring",
+		"id": 376,
 		"cost": 0,
 		"is_recipe": false,
 		"is_neutral": true,
-		"speed": {
-			"absolute": 50
-		}
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_lifesteal_": 16,
+		"spell_lifesteal": 8,
+		"damage_": 16
+	},
+	"item_arcane_ring": {
+		"id": 349,
+		"cost": 0,
+		"cooldown": 45,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"intelligence_": 8,
+		"armor_": 2
+	},
+	"item_titan_sliver": {
+		"id": 381,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"status_resistance": 12,
+		"magic_resist": 16,
+		"damage_base_percent": 20
+	},
+	"item_elven_tunic": {
+		"id": 573,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"evasion": 16,
+		"attack_speed_": 26
+	},
+	"item_cloak_of_flames": {
+		"id": 574,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"magic_resist": 10,
+		"damage_aoe": 45,
+		"armor_": 4
+	},
+	"item_trickster_cloak": {
+		"id": 571,
+		"grants_invisibility": true,
+		"cost": 0,
+		"cooldown": 25,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"evasion": 20,
+		"magic_resist": 20,
+		"duration": 6
+	},
+	"item_possessed_mask": {
+		"id": 577,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_lifesteal_absolute": 7
+	},
+	"item_penta_edged_sword": {
+		"id": 638,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_slow_": -60,
+		"damage_": 45,
+		"attack_range_melee": 100
+	},
+	"item_bullwhip": {
+		"id": 680,
+		"cost": 0,
+		"cooldown": 11,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_regen_": 3,
+		"mana_regen_": 2.5,
+		"duration": 4
+	},
+	"item_psychic_headband": {
+		"id": 675,
+		"cost": 0,
+		"cooldown": 20,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"intelligence_percent_": 15
+	},
+	"item_ceremonial_robe": {
+		"id": 676,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"status_resistance_reduction_aura": 10,
+		"magic_resist_reduction_aura": 10,
+		"mana_": 250
+	},
+	"item_book_of_shadows": {
+		"id": 677,
+		"cost": 0,
+		"cooldown": 8,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"all_attributes_": 13,
+		"duration": 4
+	},
+	"item_giants_ring": {
+		"id": 678,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 5,
+		"drop_time": "60:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"strength_": 35,
+		"movement_speed": 50
 	},
 	"item_stormcrafter": {
-		"id": "585",
-		"name": "Stormcrafter",
+		"id": 585,
 		"mana_cost": 50,
 		"cost": 0,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_regen_": 4,
+		"damage_": 200
 	},
 	"item_mysterious_hat": {
-		"id": "589",
-		"name": "Fairy's Trinket",
+		"id": 589,
 		"cost": 0,
 		"cooldown": 8,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"spell_amp": 5,
+		"health_": 75
 	},
 	"item_ascetic_cap": {
-		"id": "825",
-		"name": "Ascetic's Cap",
+		"id": 825,
 		"mana_cost": 0,
 		"cost": 0,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"status_resistance": 40,
+		"health_": 250,
+		"health_regen_": 15,
+		"duration": 3
 	},
 	"item_misericorde": {
-		"id": "828",
-		"name": "Brigand's Blade",
+		"id": 828,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_": 10
 	},
 	"item_heavy_blade": {
-		"id": "837",
-		"name": "Witchbane",
+		"id": 837,
 		"mana_cost": 75,
 		"cost": 0,
 		"cooldown": 20,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 4,
+		"drop_time": "37:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_speed_": 20,
+		"damage_": 4
 	},
 	"item_unstable_wand": {
-		"id": "838",
-		"name": "Pig Pole",
+		"id": 838,
 		"mana_cost": 50,
 		"cost": 0,
 		"cooldown": 25,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"duration": 4
 	},
 	"item_pogo_stick": {
-		"id": "840",
-		"name": "Tumbler's Toy",
+		"id": 840,
 		"cost": 0,
 		"cooldown": 15,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_": 200
 	},
 	"item_seeds_of_serenity": {
-		"id": "945",
-		"name": "Seeds of Serenity",
+		"id": 945,
 		"cost": 0,
 		"cooldown": 40,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"health_": 100,
+		"health_regen_aura": 8,
+		"duration": 14
 	},
 	"item_lance_of_pursuit": {
-		"id": "946",
-		"name": "Lance of Pursuit",
+		"id": 946,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_": 200
 	},
 	"item_occult_bracelet": {
-		"id": "947",
-		"name": "Occult Bracelet",
+		"id": 947,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_regen_": 0.5,
+		"all_attributes_": 3
 	},
 	"item_ogre_seal_totem": {
-		"id": "949",
-		"name": "Ogre Seal Totem",
+		"id": 949,
 		"mana_cost": 75,
 		"cost": 0,
 		"cooldown": 40,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 3,
+		"drop_time": "27:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"strength_": 10
 	},
 	"item_eye_of_the_vizier": {
-		"id": "990",
-		"name": "Eye of the Vizier",
+		"id": 990,
 		"cost": 0,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false
 	},
 	"item_specialists_array": {
-		"id": "1076",
-		"name": "Specialist's Array",
+		"id": 1076,
 		"cost": 0,
 		"cooldown": 12,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_": 10
 	},
 	"item_dagger_of_ristul": {
-		"id": "1077",
-		"name": "Dagger of Ristul",
+		"id": 1077,
 		"cost": 0,
 		"cooldown": 30,
 		"is_recipe": false,
-		"is_neutral": true
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"damage_ability_": 40,
+		"duration": 8
 	}
 }
