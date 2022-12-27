@@ -1,6 +1,6 @@
 *
-!monitor_sizes
-!monitor_sizes/**
+!monitorSizes
+!monitorSizes/**
 !parsed
 !parsed/**
 !i18n
