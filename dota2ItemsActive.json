@@ -3244,8 +3244,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"mana_regen_": 4,
-		"damage_": 200
+		"mana_regen_": 4
 	},
 	"item_mysterious_hat": {
 		"id": 589,
