@@ -16519,7 +16519,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Windranger_4_BladeMail",
     messageTime: 7 * 60 + 15,
     textMessage: "Blade Mail is a decent counter against her ultimate",
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: "EnemyHero",
