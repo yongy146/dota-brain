@@ -40,7 +40,12 @@
 		"is_purchasable": true,
 		"attack_slow_": -50,
 		"strength_": 25,
-		"duration": 6
+		"duration": 6,
+		"requirements": [
+			"item_blink",
+			"item_reaver",
+			"item_recipe_overwhelming_blink"
+		]
 	},
 	"item_swift_blink": {
 		"id": 603,
@@ -54,7 +59,12 @@
 		"is_purchasable": true,
 		"agility_": 25,
 		"duration": 6,
-		"movement_speed_percent_active": 40
+		"movement_speed_percent_active": 40,
+		"requirements": [
+			"item_blink",
+			"item_eagle",
+			"item_recipe_swift_blink"
+		]
 	},
 	"item_arcane_blink": {
 		"id": 604,
@@ -67,7 +77,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"intelligence_": 25,
-		"duration": 6
+		"duration": 6,
+		"requirements": [
+			"item_blink",
+			"item_mystic_staff",
+			"item_recipe_arcane_blink"
+		]
 	},
 	"item_recipe_arcane_blink": {
 		"id": 606,
@@ -251,7 +266,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed_": 140
+		"attack_speed_": 140,
+		"requirements": [
+			"item_hyperstone",
+			"item_hyperstone"
+		]
 	},
 	"item_gauntlets": {
 		"id": 13,
@@ -514,7 +533,13 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"all_attributes_": 3
+		"all_attributes_": 3,
+		"requirements": [
+			"item_magic_stick",
+			"item_branches",
+			"item_branches",
+			"item_recipe_magic_wand"
+		]
 	},
 	"item_ghost": {
 		"id": 37,
@@ -614,7 +639,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"health_": 75
+		"health_": 75,
+		"requirements": [
+			"item_ward_sentry",
+			"item_ward_observer"
+		]
 	},
 	"item_tango": {
 		"id": 44,
@@ -675,7 +704,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"movement_speed": 90
+		"movement_speed": 90,
+		"requirements": [
+			"item_boots",
+			"item_recipe_travel_boots"
+		]
 	},
 	"item_travel_boots_2": {
 		"id": 220,
@@ -685,7 +718,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"movement_speed": 110
+		"movement_speed": 110,
+		"requirements": [
+			"item_travel_boots",
+			"item_recipe_travel_boots"
+		]
 	},
 	"item_phase_boots": {
 		"id": 50,
@@ -701,7 +738,12 @@
 		"duration": 3,
 		"armor_": 4,
 		"movement_speed": 45,
-		"movement_speed_active": 20
+		"movement_speed_active": 20,
+		"requirements": [
+			"item_boots",
+			"item_chainmail",
+			"item_blades_of_attack"
+		]
 	},
 	"item_demon_edge": {
 		"id": 51,
@@ -834,7 +876,12 @@
 		"is_purchasable": true,
 		"attack_speed_": 25,
 		"selected_attribute": 10,
-		"movement_speed": 45
+		"movement_speed": 45,
+		"requirements": [
+			"item_boots",
+			"item_gloves",
+			"item_belt_of_strength"
+		]
 	},
 	"item_recipe_hand_of_midas": {
 		"id": 64,
@@ -855,7 +902,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed_": 40
+		"attack_speed_": 40,
+		"requirements": [
+			"item_gloves",
+			"item_recipe_hand_of_midas"
+		]
 	},
 	"item_oblivion_staff": {
 		"id": 67,
@@ -868,7 +919,12 @@
 		"attack_speed_": 10,
 		"mana_regen_": 1.25,
 		"damage_": 15,
-		"intelligence_": 10
+		"intelligence_": 10,
+		"requirements": [
+			"item_quarterstaff",
+			"item_sobi_mask",
+			"item_robe"
+		]
 	},
 	"item_recipe_witch_blade": {
 		"id": 533,
@@ -890,7 +946,13 @@
 		"is_purchasable": true,
 		"attack_speed_": 35,
 		"intelligence_": 12,
-		"armor_": 6
+		"armor_": 6,
+		"requirements": [
+			"item_blitz_knuckles",
+			"item_robe",
+			"item_chainmail",
+			"item_recipe_witch_blade"
+		]
 	},
 	"item_pers": {
 		"id": 69,
@@ -901,7 +963,11 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_": 6.5,
-		"mana_regen_": 2.25
+		"mana_regen_": 2.25,
+		"requirements": [
+			"item_ring_of_health",
+			"item_void_stone"
+		]
 	},
 	"item_recipe_bracer": {
 		"id": 72,
@@ -924,7 +990,12 @@
 		"damage_": 2,
 		"strength_": 5,
 		"agility_": 2,
-		"intelligence_": 2
+		"intelligence_": 2,
+		"requirements": [
+			"item_circlet",
+			"item_gauntlets",
+			"item_recipe_bracer"
+		]
 	},
 	"item_recipe_wraith_band": {
 		"id": 74,
@@ -947,7 +1018,12 @@
 		"agility_": 5,
 		"strength_": 2,
 		"intelligence_": 2,
-		"armor_": 2
+		"armor_": 2,
+		"requirements": [
+			"item_circlet",
+			"item_slippers",
+			"item_recipe_wraith_band"
+		]
 	},
 	"item_recipe_null_talisman": {
 		"id": 76,
@@ -969,7 +1045,12 @@
 		"mana_regen_": 0.75,
 		"intelligence_": 5,
 		"strength_": 2,
-		"agility_": 2
+		"agility_": 2,
+		"requirements": [
+			"item_circlet",
+			"item_mantle",
+			"item_recipe_null_talisman"
+		]
 	},
 	"item_recipe_mekansm": {
 		"id": 78,
@@ -991,7 +1072,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_aura": 2.5,
-		"armor_": 4
+		"armor_": 4,
+		"requirements": [
+			"item_headdress",
+			"item_chainmail",
+			"item_recipe_mekansm"
+		]
 	},
 	"item_recipe_vladmir": {
 		"id": 80,
@@ -1013,7 +1099,14 @@
 		"attack_lifesteal_": 20,
 		"mana_regen_aura": 1.75,
 		"damage_aoe_percent": 18,
-		"armor_aura": 3
+		"armor_aura": 3,
+		"requirements": [
+			"item_buckler",
+			"item_ring_of_basilius",
+			"item_lifesteal",
+			"item_blades_of_attack",
+			"item_recipe_vladmir"
+		]
 	},
 	"item_recipe_wraith_pact": {
 		"id": 907,
@@ -1039,7 +1132,12 @@
 		"mana_": 250,
 		"mana_regen_aura": 2,
 		"damage_aoe_percent": 18,
-		"armor_aura": 3
+		"armor_aura": 3,
+		"requirements": [
+			"item_vladmir",
+			"item_point_booster",
+			"item_recipe_wraith_pact"
+		]
 	},
 	"item_recipe_buckler": {
 		"id": 85,
@@ -1058,7 +1156,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"armor_": 1
+		"armor_": 1,
+		"requirements": [
+			"item_ring_of_protection",
+			"item_recipe_buckler"
+		]
 	},
 	"item_recipe_ring_of_basilius": {
 		"id": 87,
@@ -1078,7 +1180,11 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_regen_": 0.5,
-		"mana_regen_aura": 1
+		"mana_regen_aura": 1,
+		"requirements": [
+			"item_sobi_mask",
+			"item_recipe_ring_of_basilius"
+		]
 	},
 	"item_recipe_holy_locket": {
 		"id": 268,
@@ -1101,7 +1207,14 @@
 		"health_": 250,
 		"mana_": 300,
 		"health_regen_aura": 3,
-		"all_attributes_": 3
+		"all_attributes_": 3,
+		"requirements": [
+			"item_headdress",
+			"item_fluffy_hat",
+			"item_energy_booster",
+			"item_magic_wand",
+			"item_recipe_holy_locket"
+		]
 	},
 	"item_recipe_pipe": {
 		"id": 89,
@@ -1125,7 +1238,12 @@
 		"magic_resist": 30,
 		"magic_resist_aura": 15,
 		"health_regen_": 8.5,
-		"health_regen_aura": 2.5
+		"health_regen_aura": 2.5,
+		"requirements": [
+			"item_hood_of_defiance",
+			"item_headdress",
+			"item_recipe_pipe"
+		]
 	},
 	"item_recipe_urn_of_shadows": {
 		"id": 91,
@@ -1148,7 +1266,13 @@
 		"mana_regen_": 1.4,
 		"all_attributes_": 2,
 		"duration": 8,
-		"armor_": 2
+		"armor_": 2,
+		"requirements": [
+			"item_sobi_mask",
+			"item_ring_of_protection",
+			"item_circlet",
+			"item_recipe_urn_of_shadows"
+		]
 	},
 	"item_recipe_headdress": {
 		"id": 93,
@@ -1168,7 +1292,11 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_": 0.5,
-		"health_regen_aura": 2
+		"health_regen_aura": 2,
+		"requirements": [
+			"item_ring_of_regen",
+			"item_recipe_headdress"
+		]
 	},
 	"item_sheepstick": {
 		"id": 96,
@@ -1183,7 +1311,12 @@
 		"mana_regen_": 9,
 		"strength_": 10,
 		"agility_": 10,
-		"intelligence_": 35
+		"intelligence_": 35,
+		"requirements": [
+			"item_mystic_staff",
+			"item_ultimate_orb",
+			"item_void_stone"
+		]
 	},
 	"item_recipe_orchid": {
 		"id": 97,
@@ -1207,7 +1340,13 @@
 		"attack_speed_": 40,
 		"mana_regen_": 3,
 		"damage_": 30,
-		"damage_ability_magical_percent": 30
+		"damage_ability_magical_percent": 30,
+		"requirements": [
+			"item_blitz_knuckles",
+			"item_claymore",
+			"item_void_stone",
+			"item_recipe_orchid"
+		]
 	},
 	"item_recipe_bloodthorn": {
 		"id": 245,
@@ -1236,7 +1375,12 @@
 		"damage_": 50,
 		"damage_ability_magical_percent": 30,
 		"intelligence_": 20,
-		"duration": 6
+		"duration": 6,
+		"requirements": [
+			"item_orchid",
+			"item_mage_slayer",
+			"item_recipe_bloodthorn"
+		]
 	},
 	"item_echo_sabre": {
 		"id": 252,
@@ -1252,7 +1396,11 @@
 		"mana_regen_": 1.75,
 		"damage_": 15,
 		"strength_": 13,
-		"intelligence_": 10
+		"intelligence_": 10,
+		"requirements": [
+			"item_ogre_axe",
+			"item_oblivion_staff"
+		]
 	},
 	"item_recipe_cyclone": {
 		"id": 99,
@@ -1276,7 +1424,13 @@
 		"mana_regen_": 2.5,
 		"damage_ability_magical": 50,
 		"intelligence_": 10,
-		"movement_speed": 20
+		"movement_speed": 20,
+		"requirements": [
+			"item_staff_of_wizardry",
+			"item_void_stone",
+			"item_wind_lace",
+			"item_recipe_cyclone"
+		]
 	},
 	"item_recipe_wind_waker": {
 		"id": 612,
@@ -1300,7 +1454,12 @@
 		"mana_regen_": 6,
 		"damage_ability_magical": 50,
 		"intelligence_": 35,
-		"movement_speed": 50
+		"movement_speed": 50,
+		"requirements": [
+			"item_cyclone",
+			"item_mystic_staff",
+			"item_recipe_wind_waker"
+		]
 	},
 	"item_recipe_aether_lens": {
 		"id": 233,
@@ -1320,7 +1479,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_": 300,
-		"mana_regen_": 2.5
+		"mana_regen_": 2.5,
+		"requirements": [
+			"item_energy_booster",
+			"item_void_stone",
+			"item_recipe_aether_lens"
+		]
 	},
 	"item_recipe_force_staff": {
 		"id": 101,
@@ -1342,7 +1506,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 175,
-		"intelligence_": 10
+		"intelligence_": 10,
+		"requirements": [
+			"item_staff_of_wizardry",
+			"item_fluffy_hat",
+			"item_recipe_force_staff"
+		]
 	},
 	"item_recipe_hurricane_pike": {
 		"id": 262,
@@ -1368,7 +1537,12 @@
 		"attack_range_ranged": 150,
 		"intelligence_": 15,
 		"agility_": 20,
-		"strength_": 15
+		"strength_": 15,
+		"requirements": [
+			"item_force_staff",
+			"item_dragon_lance",
+			"item_recipe_hurricane_pike"
+		]
 	},
 	"item_recipe_dagon": {
 		"id": 103,
@@ -1393,7 +1567,12 @@
 		"damage_ability_magical": 400,
 		"intelligence_": 14,
 		"strength_": 6,
-		"agility_": 6
+		"agility_": 6,
+		"requirements": [
+			"item_staff_of_wizardry",
+			"item_crown",
+			"item_recipe_dagon"
+		]
 	},
 	"item_dagon_2": {
 		"id": 201,
@@ -1469,7 +1648,13 @@
 		"is_purchasable": true,
 		"health_": 175,
 		"mana_": 175,
-		"all_attributes_": 10
+		"all_attributes_": 10,
+		"requirements": [
+			"item_point_booster",
+			"item_staff_of_wizardry",
+			"item_ogre_axe",
+			"item_blade_of_alacrity"
+		]
 	},
 	"item_recipe_ultimate_scepter_2": {
 		"id": 270,
@@ -1487,7 +1672,11 @@
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
-		"is_purchasable": true
+		"is_purchasable": true,
+		"requirements": [
+			"item_ultimate_scepter",
+			"item_recipe_ultimate_scepter_2"
+		]
 	},
 	"item_ultimate_scepter_roshan": {
 		"id": 727,
@@ -1536,7 +1725,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_": 13,
-		"mana_regen_": 7
+		"mana_regen_": 7,
+		"requirements": [
+			"item_pers",
+			"item_pers",
+			"item_recipe_refresher"
+		]
 	},
 	"item_recipe_assault": {
 		"id": 111,
@@ -1559,7 +1753,13 @@
 		"attack_speed_aura": 30,
 		"armor_": 10,
 		"armor_aura": 5,
-		"armor_reduction": -5
+		"armor_reduction": -5,
+		"requirements": [
+			"item_platemail",
+			"item_hyperstone",
+			"item_buckler",
+			"item_recipe_assault"
+		]
 	},
 	"item_recipe_heart": {
 		"id": 113,
@@ -1580,7 +1780,12 @@
 		"is_purchasable": true,
 		"health_": 250,
 		"health_regen_percent": 1.6,
-		"strength_": 45
+		"strength_": 45,
+		"requirements": [
+			"item_vitality_booster",
+			"item_reaver",
+			"item_recipe_heart"
+		]
 	},
 	"item_recipe_black_king_bar": {
 		"id": 115,
@@ -1603,7 +1808,12 @@
 		"is_purchasable": true,
 		"damage_": 24,
 		"strength_": 10,
-		"duration": 9
+		"duration": 9,
+		"requirements": [
+			"item_ogre_axe",
+			"item_mithril_hammer",
+			"item_recipe_black_king_bar"
+		]
 	},
 	"item_aegis": {
 		"id": 117,
@@ -1637,7 +1847,12 @@
 		"heal_reduction_aura": 25,
 		"damage_ability_magical_aoe": 200,
 		"intelligence_": 30,
-		"armor_": 15
+		"armor_": 15,
+		"requirements": [
+			"item_platemail",
+			"item_mystic_staff",
+			"item_recipe_shivas_guard"
+		]
 	},
 	"item_recipe_bloodstone": {
 		"id": 120,
@@ -1662,7 +1877,12 @@
 		"spell_lifesteal_multiplier": 2,
 		"health_": 500,
 		"mana_": 500,
-		"durattion": 6
+		"durattion": 6,
+		"requirements": [
+			"item_voodoo_mask",
+			"item_soul_booster",
+			"item_recipe_bloodstone"
+		]
 	},
 	"item_recipe_sphere": {
 		"id": 122,
@@ -1684,7 +1904,12 @@
 		"is_purchasable": true,
 		"health_regen_": 7,
 		"mana_regen_": 5,
-		"all_attributes_": 16
+		"all_attributes_": 16,
+		"requirements": [
+			"item_ultimate_orb",
+			"item_pers",
+			"item_recipe_sphere"
+		]
 	},
 	"item_lotus_orb": {
 		"id": 226,
@@ -1700,7 +1925,12 @@
 		"mana_regen_": 4,
 		"mana_": 250,
 		"duration": 6,
-		"armor_": 10
+		"armor_": 10,
+		"requirements": [
+			"item_pers",
+			"item_platemail",
+			"item_energy_booster"
+		]
 	},
 	"item_recipe_meteor_hammer": {
 		"id": 222,
@@ -1723,7 +1953,12 @@
 		"is_purchasable": true,
 		"health_regen_": 6.5,
 		"mana_regen_": 2.5,
-		"all_attributes_": 8
+		"all_attributes_": 8,
+		"requirements": [
+			"item_pers",
+			"item_crown",
+			"item_recipe_meteor_hammer"
+		]
 	},
 	"item_nullifier": {
 		"id": 225,
@@ -1737,7 +1972,11 @@
 		"is_purchasable": true,
 		"health_regen_": 6,
 		"damage_": 80,
-		"armor_": 10
+		"armor_": 10,
+		"requirements": [
+			"item_relic",
+			"item_helm_of_iron_will"
+		]
 	},
 	"item_recipe_aeon_disk": {
 		"id": 255,
@@ -1760,7 +1999,12 @@
 		"status_resistance": 75,
 		"health_": 250,
 		"mana_": 300,
-		"durattion": 2.5
+		"durattion": 2.5,
+		"requirements": [
+			"item_vitality_booster",
+			"item_energy_booster",
+			"item_recipe_aeon_disk"
+		]
 	},
 	"item_recipe_kaya": {
 		"id": 258,
@@ -1782,7 +2026,12 @@
 		"spell_lifesteal_amplifier": 24,
 		"spell_amp": 8,
 		"mana_regen_amp": 50,
-		"intelligence_": 16
+		"intelligence_": 16,
+		"requirements": [
+			"item_staff_of_wizardry",
+			"item_robe",
+			"item_recipe_kaya"
+		]
 	},
 	"item_refresher_shard": {
 		"id": 260,
@@ -1818,7 +2067,12 @@
 		"heal_reduction": 45,
 		"all_attributes_": 2,
 		"duration": 8,
-		"armor_": 2
+		"armor_": 2,
+		"requirements": [
+			"item_urn_of_shadows",
+			"item_vitality_booster",
+			"item_recipe_spirit_vessel"
+		]
 	},
 	"item_vanguard": {
 		"id": 125,
@@ -1829,7 +2083,11 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 250,
-		"health_regen_": 7
+		"health_regen_": 7,
+		"requirements": [
+			"item_ring_of_health",
+			"item_vitality_booster"
+		]
 	},
 	"item_recipe_crimson_guard": {
 		"id": 243,
@@ -1852,7 +2110,12 @@
 		"health_": 250,
 		"health_regen_": 12,
 		"duration": 12,
-		"armor_": 8
+		"armor_": 8,
+		"requirements": [
+			"item_vanguard",
+			"item_helm_of_iron_will",
+			"item_recipe_crimson_guard"
+		]
 	},
 	"item_recipe_blade_mail": {
 		"id": 126,
@@ -1875,7 +2138,12 @@
 		"is_purchasable": true,
 		"damage_": 28,
 		"duration": 5.5,
-		"armor_": 6
+		"armor_": 6,
+		"requirements": [
+			"item_broadsword",
+			"item_chainmail",
+			"item_recipe_blade_mail"
+		]
 	},
 	"item_soul_booster": {
 		"id": 129,
@@ -1886,7 +2154,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 425,
-		"mana_": 425
+		"mana_": 425,
+		"requirements": [
+			"item_vitality_booster",
+			"item_energy_booster",
+			"item_point_booster"
+		]
 	},
 	"item_hood_of_defiance": {
 		"id": 131,
@@ -1899,7 +2172,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"magic_resist": 18,
-		"health_regen_": 8.5
+		"health_regen_": 8.5,
+		"requirements": [
+			"item_ring_of_health",
+			"item_cloak",
+			"item_ring_of_regen"
+		]
 	},
 	"item_recipe_eternal_shroud": {
 		"id": 691,
@@ -1922,7 +2200,12 @@
 		"is_purchasable": true,
 		"spell_lifesteal": 20,
 		"magic_resist": 25,
-		"health_regen_": 8.5
+		"health_regen_": 8.5,
+		"requirements": [
+			"item_voodoo_mask",
+			"item_hood_of_defiance",
+			"item_recipe_eternal_shroud"
+		]
 	},
 	"item_rapier": {
 		"id": 133,
@@ -1932,7 +2215,11 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 350
+		"damage_": 350,
+		"requirements": [
+			"item_relic",
+			"item_demon_edge"
+		]
 	},
 	"item_recipe_monkey_king_bar": {
 		"id": 134,
@@ -1954,7 +2241,13 @@
 		"attack_speed_": 45,
 		"damage_": 40,
 		"damage_magical_": 80,
-		"damage_magical_chance": 70
+		"damage_magical_chance": 70,
+		"requirements": [
+			"item_demon_edge",
+			"item_javelin",
+			"item_blitz_knuckles",
+			"item_recipe_monkey_king_bar"
+		]
 	},
 	"item_radiance": {
 		"id": 137,
@@ -1966,7 +2259,11 @@
 		"is_purchasable": true,
 		"evasion": 15,
 		"damage_": 60,
-		"damage_aoe": 60
+		"damage_aoe": 60,
+		"requirements": [
+			"item_relic",
+			"item_talisman_of_evasion"
+		]
 	},
 	"item_butterfly": {
 		"id": 139,
@@ -1979,7 +2276,12 @@
 		"evasion": 35,
 		"attack_speed_": 30,
 		"damage_": 25,
-		"agility_": 35
+		"agility_": 35,
+		"requirements": [
+			"item_eagle",
+			"item_talisman_of_evasion",
+			"item_quarterstaff"
+		]
 	},
 	"item_recipe_greater_crit": {
 		"id": 140,
@@ -2000,7 +2302,12 @@
 		"is_purchasable": true,
 		"crit_chance": 30,
 		"crit_multiplier_": 225,
-		"damage_": 88
+		"damage_": 88,
+		"requirements": [
+			"item_lesser_crit",
+			"item_demon_edge",
+			"item_recipe_greater_crit"
+		]
 	},
 	"item_recipe_basher": {
 		"id": 142,
@@ -2022,7 +2329,12 @@
 		"is_purchasable": true,
 		"damage_": 25,
 		"damage_bonus_chance": 100,
-		"strength_": 10
+		"strength_": 10,
+		"requirements": [
+			"item_mithril_hammer",
+			"item_belt_of_strength",
+			"item_recipe_basher"
+		]
 	},
 	"item_bfury": {
 		"id": 145,
@@ -2035,7 +2347,13 @@
 		"is_purchasable": true,
 		"health_regen_": 7.5,
 		"mana_regen_": 2.75,
-		"damage_": 60
+		"damage_": 60,
+		"requirements": [
+			"item_broadsword",
+			"item_claymore",
+			"item_pers",
+			"item_quelling_blade"
+		]
 	},
 	"item_recipe_manta": {
 		"id": 146,
@@ -2060,7 +2378,12 @@
 		"strength_": 10,
 		"agility_": 26,
 		"intelligence_": 10,
-		"movement_speed": 8
+		"movement_speed": 8,
+		"requirements": [
+			"item_yasha",
+			"item_ultimate_orb",
+			"item_recipe_manta"
+		]
 	},
 	"item_recipe_lesser_crit": {
 		"id": 148,
@@ -2081,7 +2404,12 @@
 		"is_purchasable": true,
 		"crit_chance": 30,
 		"crit_multiplier_": 160,
-		"damage_": 32
+		"damage_": 32,
+		"requirements": [
+			"item_broadsword",
+			"item_blades_of_attack",
+			"item_recipe_lesser_crit"
+		]
 	},
 	"item_recipe_dragon_lance": {
 		"id": 234,
@@ -2102,7 +2430,12 @@
 		"is_purchasable": true,
 		"attack_range_ranged": 150,
 		"agility_": 15,
-		"strength_": 12
+		"strength_": 12,
+		"requirements": [
+			"item_blade_of_alacrity",
+			"item_belt_of_strength",
+			"item_recipe_dragon_lance"
+		]
 	},
 	"item_recipe_armlet": {
 		"id": 150,
@@ -2128,7 +2461,13 @@
 		"damage_active": 35,
 		"strength_active_": 25,
 		"armor_": 6,
-		"armor_activated": 4
+		"armor_activated": 4,
+		"requirements": [
+			"item_helm_of_iron_will",
+			"item_gloves",
+			"item_blades_of_attack",
+			"item_recipe_armlet"
+		]
 	},
 	"item_invis_sword": {
 		"id": 152,
@@ -2145,7 +2484,12 @@
 		"damage_": 20,
 		"damage_ability_": 175,
 		"duration": 14,
-		"movement_speed_percent_active": 20
+		"movement_speed_percent_active": 20,
+		"requirements": [
+			"item_shadow_amulet",
+			"item_blitz_knuckles",
+			"item_broadsword"
+		]
 	},
 	"item_recipe_silver_edge": {
 		"id": 248,
@@ -2174,7 +2518,12 @@
 		"damage_": 52,
 		"damage_ability_": 175,
 		"duration": 14,
-		"movement_speed_percent_active": 25
+		"movement_speed_percent_active": 25,
+		"requirements": [
+			"item_invis_sword",
+			"item_lesser_crit",
+			"item_recipe_silver_edge"
+		]
 	},
 	"item_sange_and_yasha": {
 		"id": 154,
@@ -2189,7 +2538,11 @@
 		"health_regen_amp": 22,
 		"strength_": 16,
 		"agility_": 16,
-		"movement_speed_percent": 10
+		"movement_speed_percent": 10,
+		"requirements": [
+			"item_yasha",
+			"item_sange"
+		]
 	},
 	"item_kaya_and_sange": {
 		"id": 273,
@@ -2205,7 +2558,11 @@
 		"mana_regen_amp": 50,
 		"health_regen_amp": 22,
 		"strength_": 16,
-		"intelligence_": 16
+		"intelligence_": 16,
+		"requirements": [
+			"item_sange",
+			"item_kaya"
+		]
 	},
 	"item_yasha_and_kaya": {
 		"id": 277,
@@ -2221,7 +2578,11 @@
 		"mana_regen_amp": 50,
 		"agility_": 16,
 		"intelligence_": 16,
-		"movement_speed_percent": 10
+		"movement_speed_percent": 10,
+		"requirements": [
+			"item_kaya",
+			"item_yasha"
+		]
 	},
 	"item_satanic": {
 		"id": 156,
@@ -2235,7 +2596,12 @@
 		"attack_lifesteal_": 30,
 		"attack_lifesteal_active": 145,
 		"damage_": 38,
-		"strength_": 25
+		"strength_": 25,
+		"requirements": [
+			"item_lifesteal",
+			"item_claymore",
+			"item_reaver"
+		]
 	},
 	"item_recipe_mjollnir": {
 		"id": 157,
@@ -2259,7 +2625,12 @@
 		"attack_speed_": 70,
 		"damage_": 24,
 		"damage_magical_chance": 30,
-		"damage_magical_": 180
+		"damage_magical_": 180,
+		"requirements": [
+			"item_maelstrom",
+			"item_hyperstone",
+			"item_recipe_mjollnir"
+		]
 	},
 	"item_skadi": {
 		"id": 160,
@@ -2274,7 +2645,12 @@
 		"health_": 220,
 		"mana_": 220,
 		"heal_reduction": 40,
-		"all_attributes_": 22
+		"all_attributes_": 22,
+		"requirements": [
+			"item_ultimate_orb",
+			"item_ultimate_orb",
+			"item_point_booster"
+		]
 	},
 	"item_recipe_sange": {
 		"id": 161,
@@ -2295,7 +2671,12 @@
 		"is_purchasable": true,
 		"status_resistance": 12,
 		"health_regen_amp": 20,
-		"strength_": 16
+		"strength_": 16,
+		"requirements": [
+			"item_ogre_axe",
+			"item_belt_of_strength",
+			"item_recipe_sange"
+		]
 	},
 	"item_recipe_helm_of_the_dominator": {
 		"id": 163,
@@ -2317,7 +2698,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_": 6,
-		"armor_": 6
+		"armor_": 6,
+		"requirements": [
+			"item_helm_of_iron_will",
+			"item_crown",
+			"item_recipe_helm_of_the_dominator"
+		]
 	},
 	"item_recipe_helm_of_the_overlord": {
 		"id": 633,
@@ -2343,7 +2729,12 @@
 		"mana_regen_aura": 2,
 		"damage_aoe_percent": 18,
 		"armor_": 7,
-		"armor_aura": 3
+		"armor_aura": 3,
+		"requirements": [
+			"item_helm_of_the_dominator",
+			"item_vladmir",
+			"item_recipe_helm_of_the_overlord"
+		]
 	},
 	"item_maelstrom": {
 		"id": 166,
@@ -2355,7 +2746,11 @@
 		"is_purchasable": true,
 		"damage_": 24,
 		"damage_magical_chance": 30,
-		"damage_magical_": 140
+		"damage_magical_": 140,
+		"requirements": [
+			"item_mithril_hammer",
+			"item_javelin"
+		]
 	},
 	"item_recipe_gungir": {
 		"id": 1565,
@@ -2382,7 +2777,12 @@
 		"agility_": 14,
 		"intelligence_": 24,
 		"strength_": 14,
-		"duration": 2
+		"duration": 2,
+		"requirements": [
+			"item_maelstrom",
+			"item_rod_of_atos",
+			"item_recipe_gungir"
+		]
 	},
 	"item_desolator": {
 		"id": 168,
@@ -2393,7 +2793,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"damage_": 50,
-		"armor_reduction": -6
+		"armor_reduction": -6,
+		"requirements": [
+			"item_mithril_hammer",
+			"item_mithril_hammer",
+			"item_blight_stone"
+		]
 	},
 	"item_recipe_yasha": {
 		"id": 169,
@@ -2414,7 +2819,12 @@
 		"is_purchasable": true,
 		"attack_speed_": 12,
 		"agility_": 16,
-		"movement_speed_percent": 8
+		"movement_speed_percent": 8,
+		"requirements": [
+			"item_blade_of_alacrity",
+			"item_boots_of_elves",
+			"item_recipe_yasha"
+		]
 	},
 	"item_mask_of_madness": {
 		"id": 172,
@@ -2432,7 +2842,11 @@
 		"damage_": 10,
 		"duration": 6,
 		"armor_activated": -8,
-		"movement_speed_active": 30
+		"movement_speed_active": 30,
+		"requirements": [
+			"item_lifesteal",
+			"item_quarterstaff"
+		]
 	},
 	"item_recipe_diffusal_blade": {
 		"id": 173,
@@ -2454,7 +2868,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"agility_": 15,
-		"intelligence_": 10
+		"intelligence_": 10,
+		"requirements": [
+			"item_blade_of_alacrity",
+			"item_robe",
+			"item_recipe_diffusal_blade"
+		]
 	},
 	"item_recipe_ethereal_blade": {
 		"id": 175,
@@ -2482,7 +2901,12 @@
 		"agility_": 5,
 		"strength_": 5,
 		"intelligence_": 25,
-		"duration": 4
+		"duration": 4,
+		"requirements": [
+			"item_kaya",
+			"item_ghost",
+			"item_recipe_ethereal_blade"
+		]
 	},
 	"item_recipe_soul_ring": {
 		"id": 177,
@@ -2505,7 +2929,13 @@
 		"is_purchasable": true,
 		"strength_": 6,
 		"duration": 10,
-		"armor_": 2
+		"armor_": 2,
+		"requirements": [
+			"item_ring_of_protection",
+			"item_gauntlets",
+			"item_gauntlets",
+			"item_recipe_soul_ring"
+		]
 	},
 	"item_arcane_boots": {
 		"id": 180,
@@ -2518,7 +2948,11 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"mana_": 250,
-		"movement_speed": 45
+		"movement_speed": 45,
+		"requirements": [
+			"item_boots",
+			"item_energy_booster"
+		]
 	},
 	"item_octarine_core": {
 		"id": 235,
@@ -2530,7 +2964,11 @@
 		"is_purchasable": true,
 		"health_": 425,
 		"mana_": 725,
-		"mana_regen_": 3
+		"mana_regen_": 3,
+		"requirements": [
+			"item_aether_lens",
+			"item_soul_booster"
+		]
 	},
 	"item_orb_of_venom": {
 		"id": 181,
@@ -2573,7 +3011,13 @@
 		"damage_": 3,
 		"duration": 3,
 		"armor_": 3,
-		"armor_reduction": -3
+		"armor_reduction": -3,
+		"requirements": [
+			"item_orb_of_venom",
+			"item_blight_stone",
+			"item_fluffy_hat",
+			"item_recipe_orb_of_corrosion"
+		]
 	},
 	"item_recipe_falcon_blade": {
 		"id": 599,
@@ -2594,7 +3038,13 @@
 		"is_purchasable": true,
 		"health_": 200,
 		"mana_regen_": 1.8,
-		"damage_": 14
+		"damage_": 14,
+		"requirements": [
+			"item_fluffy_hat",
+			"item_sobi_mask",
+			"item_blades_of_attack",
+			"item_recipe_falcon_blade"
+		]
 	},
 	"item_recipe_mage_slayer": {
 		"id": 597,
@@ -2618,7 +3068,12 @@
 		"mana_regen_": 2,
 		"damage_": 20,
 		"intelligence_": 10,
-		"duration": 6
+		"duration": 6,
+		"requirements": [
+			"item_cloak",
+			"item_oblivion_staff",
+			"item_recipe_mage_slayer"
+		]
 	},
 	"item_recipe_ancient_janggo": {
 		"id": 184,
@@ -2643,7 +3098,13 @@
 		"intelligence_": 7,
 		"duration": 6,
 		"movement_speed_aura": 20,
-		"movement_speed_percent_active": 13
+		"movement_speed_percent_active": 13,
+		"requirements": [
+			"item_belt_of_strength",
+			"item_robe",
+			"item_wind_lace",
+			"item_recipe_ancient_janggo"
+		]
 	},
 	"item_recipe_boots_of_bearing": {
 		"id": 930,
@@ -2670,7 +3131,12 @@
 		"duration": 1.5,
 		"movement_speed_aura": 20,
 		"movement_speed_percent_active": 15,
-		"movement_speed": 65
+		"movement_speed": 65,
+		"requirements": [
+			"item_tranquil_boots",
+			"item_ancient_janggo",
+			"item_recipe_boots_of_bearing"
+		]
 	},
 	"item_medallion_of_courage": {
 		"id": 187,
@@ -2684,7 +3150,12 @@
 		"mana_regen_": 1.5,
 		"duration": 12,
 		"armor_": 5,
-		"armor_reduction": -5
+		"armor_reduction": -5,
+		"requirements": [
+			"item_chainmail",
+			"item_sobi_mask",
+			"item_blight_stone"
+		]
 	},
 	"item_recipe_solar_crest": {
 		"id": 227,
@@ -2711,7 +3182,13 @@
 		"duration": 12,
 		"armor_": 6,
 		"armor_reduction": -6,
-		"movement_speed": 20
+		"movement_speed": 20,
+		"requirements": [
+			"item_medallion_of_courage",
+			"item_crown",
+			"item_wind_lace",
+			"item_recipe_solar_crest"
+		]
 	},
 	"item_smoke_of_deceit": {
 		"id": 188,
@@ -2756,7 +3233,12 @@
 		"is_purchasable": true,
 		"spell_amp": 18,
 		"mana_regen_aura": 1.75,
-		"all_attributes_": 5
+		"all_attributes_": 5,
+		"requirements": [
+			"item_ring_of_basilius",
+			"item_crown",
+			"item_recipe_veil_of_discord"
+		]
 	},
 	"item_recipe_revenants_brooch": {
 		"id": 910,
@@ -2781,7 +3263,12 @@
 		"damage_ability_magical_conversion": true,
 		"intelligence_": 45,
 		"duration": 15,
-		"armor_": 8
+		"armor_": 8,
+		"requirements": [
+			"item_witch_blade",
+			"item_mystic_staff",
+			"item_recipe_revenants_brooch"
+		]
 	},
 	"item_recipe_guardian_greaves": {
 		"id": 230,
@@ -2806,7 +3293,13 @@
 		"health_regen_aura": 2.5,
 		"health_regen_bonus": 18.5,
 		"armor_": 4,
-		"movement_speed": 50
+		"movement_speed": 50,
+		"requirements": [
+			"item_mekansm",
+			"item_arcane_boots",
+			"item_buckler",
+			"item_recipe_guardian_greaves"
+		]
 	},
 	"item_recipe_rod_of_atos": {
 		"id": 205,
@@ -2830,7 +3323,13 @@
 		"intelligence_": 24,
 		"strength_": 12,
 		"agility_": 12,
-		"duration": 2
+		"duration": 2,
+		"requirements": [
+			"item_staff_of_wizardry",
+			"item_crown",
+			"item_crown",
+			"item_recipe_rod_of_atos"
+		]
 	},
 	"item_recipe_abyssal_blade": {
 		"id": 207,
@@ -2855,7 +3354,12 @@
 		"health_regen_": 10,
 		"damage_bonus_chance": 120,
 		"damage_": 25,
-		"strength_": 10
+		"strength_": 10,
+		"requirements": [
+			"item_basher",
+			"item_vanguard",
+			"item_recipe_abyssal_blade"
+		]
 	},
 	"item_recipe_heavens_halberd": {
 		"id": 209,
@@ -2879,7 +3383,12 @@
 		"status_resistance": 16,
 		"evasion": 20,
 		"health_regen_amp": 20,
-		"strength_": 20
+		"strength_": 20,
+		"requirements": [
+			"item_sange",
+			"item_talisman_of_evasion",
+			"item_recipe_heavens_halberd"
+		]
 	},
 	"item_ring_of_aquila": {
 		"id": 212,
@@ -2911,7 +3420,12 @@
 		"is_purchasable": true,
 		"health_regen_": 14,
 		"movement_speed_broke": 40,
-		"movement_speed": 65
+		"movement_speed": 65,
+		"requirements": [
+			"item_boots",
+			"item_wind_lace",
+			"item_ring_of_regen"
+		]
 	},
 	"item_shadow_amulet": {
 		"id": 215,
@@ -2946,7 +3460,12 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"magic_resist": 20,
-		"duration": 5
+		"duration": 5,
+		"requirements": [
+			"item_shadow_amulet",
+			"item_cloak",
+			"item_recipe_glimmer_cape"
+		]
 	},
 	"item_grove_bow": {
 		"id": 288,
@@ -3320,7 +3839,13 @@
 		"health_regen_": 15,
 		"mana_regen_": 10,
 		"strength_": 15,
-		"intelligence_": 15
+		"intelligence_": 15,
+		"requirements": [
+			"item_blink",
+			"item_meteor_hammer",
+			"",
+			"item_recipe_fallen_sky"
+		]
 	},
 	"item_pirate_hat": {
 		"id": 372,
