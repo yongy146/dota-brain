@@ -179,6 +179,8 @@ export interface IDotaItem {
   intelligence_percent?: number; // item_psychic_headband
   all_attributes?: number;
   selected_attribute?: number; // for Vambrace
+
+  requirements?: string[]; // items needed to build this one, e.g. for balde mail: "item_broadsword", "item_chainmail", "item_recipe_blade_mail"
 }
 
 export class DotaItem implements IDotaItem {
@@ -321,6 +323,8 @@ export class DotaItem implements IDotaItem {
   intelligence_percent_?: number; // item_psychic_headband
   all_attributes_?: number;
   selected_attribute?: number; // for Vambrace
+
+  requirements?: string[];
 
   constructor(key: string) {
     this.key = key;
@@ -645,16 +649,18 @@ export class DotaItem implements IDotaItem {
   }
 
   public isVisible(
-    selections: (ItemFilter | undefined)[],
+    selections: (ItemFilter | ItemFilter[] | undefined)[],
     includePurchasable: boolean,
     includeNeutral: boolean,
     includeRoshan: boolean
   ): boolean {
+    if (selections.length === 0) return false;
+
     for (const selection of selections) {
       if (
         selection !== undefined &&
         !this.isVisible_(
-          selection,
+          Array.isArray(selection) ? selection[0] : selection,
           includePurchasable,
           includeNeutral,
           includeRoshan
@@ -673,6 +679,8 @@ export class DotaItem implements IDotaItem {
     includeNeutral: boolean,
     includeRoshan: boolean
   ) {
+    //console.log(`isVisible_(this.id: ${this.id}, selection: ${selection})`);
+
     if (this.is_recipe) return false;
     if (this.key === "item_ward_dispenser") return false;
 
@@ -687,6 +695,7 @@ export class DotaItem implements IDotaItem {
       // Item shall not be included
       return false;
     }
+    //console.log(`this.agility = ${this.agility}`);
 
     switch (selection) {
       case ItemFilter.AllItems: {
@@ -708,6 +717,7 @@ export class DotaItem implements IDotaItem {
         return this.strength !== undefined;
       }
       case ItemFilter.Agility: {
+        //console.log(`this.agility = ${this.agility}`);
         return this.agility !== undefined;
       }
       case ItemFilter.Intelligence: {
@@ -1097,24 +1107,31 @@ export function getRoshanItemOrder(itemName: string): number {
 
 export function sortItems(
   items: DotaItem[],
-  selections: (ItemFilter | undefined)[],
+  selections: (ItemFilter | ItemFilter[] | undefined)[],
   sortByEfficiency: boolean
 ) {
-  // Remove all irrelevant selections
-  selections = selections.filter(
-    (selection) => selection !== undefined && selection !== ItemFilter.AllItems
+  // Convert arrays of ItemFilters to ItemFilter
+  selections = selections.map((selection) =>
+    Array.isArray(selection) ? selection[0] : selection
   );
+
+  // Remove all irrelevant selections
+  let selections_: ItemFilter[] = selections.filter(
+    (selection) => selection !== undefined && selection !== ItemFilter.AllItems
+  ) as ItemFilter[];
+
   // Remove all duplicates (as the douplicated would be weighted double)
-  selections = selections.filter(
+  selections_ = selections_.filter(
     (selection, i) => selections.indexOf(selection) === i
   );
-  // Make usre there is at least one selection
-  if (selections.length === 0) {
+
+  // Make sure there is at least one selection
+  if (selections_.length === 0) {
     selections.push(ItemFilter.AllItems);
   }
 
   // Create list for each selection
-  sortItems_(items, selections[0]!, sortByEfficiency);
+  sortItems_(items, selections_[0]!, sortByEfficiency);
   if (selections.length === 1) {
     return items;
   }
@@ -1122,10 +1139,10 @@ export function sortItems(
     [...items],
     selections[1] === undefined
       ? undefined
-      : sortItems_([...items], selections[1], sortByEfficiency),
+      : sortItems_([...items], selections_[1], sortByEfficiency),
     selections[2] === undefined
       ? undefined
-      : sortItems_([...items], selections[2], sortByEfficiency),
+      : sortItems_([...items], selections_[2], sortByEfficiency),
   ];
 
   // Merge lists
