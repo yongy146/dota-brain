@@ -3,7 +3,7 @@
  *
  * Source: https://api.opendota.com/
  *
- * Copyright (C) Dota Coach, 2022
+ * Copyright Copyright (C) Dota Coach, 2023. All rights reserved.
  */
 import * as DotaLogger from "../utilities/log";
 import * as WebAccess from "../utilities/webAccess";
@@ -81,7 +81,9 @@ export class Friend extends Player {
  * @param steamId32
  * @return Player's profile
  */
-export function getPlayerProfile(steamId32: string): Promise<PlayerProfile | undefined> {
+export function getPlayerProfile(
+  steamId32: string
+): Promise<PlayerProfile | undefined> {
   DotaLogger.log(`openDotaAPI.getPlayer(steamId32: ${steamId32}): Called`);
 
   const url = `https://api.opendota.com/api/players/${steamId32}`;
@@ -238,73 +240,80 @@ export async function getRecentItems(
     `openDotaAPI.getRecentItems(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`
   );
   return new Promise((resolve, reject) => {
-    getMatches(steamId32, { limit: numberOfMatches, hero_id: heroId }).then((matches) => {
-      const items: any = [];
-      let counter = matches.length;
-      if (counter == 0) resolve(items); // If there are not matches, return immediatly
+    getMatches(steamId32, { limit: numberOfMatches, hero_id: heroId }).then(
+      (matches) => {
+        const items: any = [];
+        let counter = matches.length;
+        if (counter == 0) resolve(items); // If there are not matches, return immediatly
 
-      const errors: any = [];
+        const errors: any = [];
 
-      //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
-      for (let i = 0; i < numberOfMatches && i < matches.length; i++) {
-        const matchId = matches[i].match_id;
-        getMatch(matchId)
-          .then((matchFull) => {
-            const players = matchFull.players as any[];
-            const index = players.findIndex((value) => {
-              return value.hero_id == heroId;
+        //DotaLogger.log(`openDotaAPI.getRecentItems(): Number of matches ${counter}`)
+        for (let i = 0; i < numberOfMatches && i < matches.length; i++) {
+          const matchId = matches[i].match_id;
+          getMatch(matchId)
+            .then((matchFull) => {
+              const players = matchFull.players as any[];
+              const index = players.findIndex((value) => {
+                return value.hero_id == heroId;
+              });
+              if (index != -1) {
+                //DotaLogger.log(`getRecentItems: matches[i]=${JSON.stringify(matchFull)}`)
+                // Add data available in unparsed matches
+                const matchData: any = {
+                  match_id: matchFull.match_id,
+                  start_time: matchFull.start_time,
+                  account_id: players[index].account_id,
+                  item_0: players[index].item_0,
+                  item_1: players[index].item_1,
+                  item_2: players[index].item_2,
+                  item_3: players[index].item_3,
+                  item_4: players[index].item_4,
+                  item_5: players[index].item_5,
+                };
+                // Add data available in parsed matches
+                if (
+                  Object.prototype.hasOwnProperty.call(
+                    players[index],
+                    "purchase_log"
+                  ) &&
+                  players[index].purchase_log != null
+                ) {
+                  matchData["purchase_log"] = players[index].purchase_log;
+                  //for (const itemPurchase of matches[i].purchase_log) {
+                  // format itemPurchse: {"time": -89, "key": "tango", "charges": 6}
+
+                  //}
+                } else {
+                  matchData["purchase_log"] = [];
+                }
+                items.push(matchData);
+              }
+            })
+            .catch((error) => {
+              DotaLogger.warn(
+                `openDotaAPI.getRecentItems(): Match ${matchId} could not be loaded`
+              );
+              errors.push(error);
+            })
+            .finally(() => {
+              counter--;
+              //DotaLogger.log(`openDotaAPI.getRecentItems(): Completed, number of matches remaining ${counter}`)
+              if (counter == 0) {
+                if (errors.length > 0) {
+                  reject(errors[0]);
+                } else {
+                  resolve(
+                    items.sort((a: any, b: any) => {
+                      return b.start_time - a.start_time;
+                    })
+                  );
+                }
+              }
             });
-            if (index != -1) {
-              //DotaLogger.log(`getRecentItems: matches[i]=${JSON.stringify(matchFull)}`)
-              // Add data available in unparsed matches
-              const matchData: any = {
-                match_id: matchFull.match_id,
-                start_time: matchFull.start_time,
-                account_id: players[index].account_id,
-                item_0: players[index].item_0,
-                item_1: players[index].item_1,
-                item_2: players[index].item_2,
-                item_3: players[index].item_3,
-                item_4: players[index].item_4,
-                item_5: players[index].item_5,
-              };
-              // Add data available in parsed matches
-              if (
-                Object.prototype.hasOwnProperty.call(players[index], "purchase_log") &&
-                players[index].purchase_log != null
-              ) {
-                matchData["purchase_log"] = players[index].purchase_log;
-                //for (const itemPurchase of matches[i].purchase_log) {
-                // format itemPurchse: {"time": -89, "key": "tango", "charges": 6}
-
-                //}
-              } else {
-                matchData["purchase_log"] = [];
-              }
-              items.push(matchData);
-            }
-          })
-          .catch((error) => {
-            DotaLogger.warn(`openDotaAPI.getRecentItems(): Match ${matchId} could not be loaded`);
-            errors.push(error);
-          })
-          .finally(() => {
-            counter--;
-            //DotaLogger.log(`openDotaAPI.getRecentItems(): Completed, number of matches remaining ${counter}`)
-            if (counter == 0) {
-              if (errors.length > 0) {
-                reject(errors[0]);
-              } else {
-                resolve(
-                  items.sort((a: any, b: any) => {
-                    return b.start_time - a.start_time;
-                  })
-                );
-              }
-            }
-          });
+        }
       }
-    });
+    );
   });
 }
 
@@ -322,7 +331,9 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
     let successful = false;
 
     while (!successful && attempts > 0) {
-      DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Attemp #${6 - attempts}`);
+      DotaLogger.log(
+        `openDotaAPI.getAbilityUpgrades(): Attemp #${6 - attempts}`
+      );
       await getMatchesOfHero(heroId)
         .then(async (matches) => {
           //DotaLogger.log(`openDotaAPI.getAbilityUpgrades(): Matches = ${JSON.stringify(matches)}`)
@@ -363,7 +374,10 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
                 //DotaLogger.log(`Match = ${JSON.stringify(match)}`)
                 // Register matches with highest ability upgrades
                 if (
-                  Object.prototype.hasOwnProperty.call(player, "ability_upgrades_arr") &&
+                  Object.prototype.hasOwnProperty.call(
+                    player,
+                    "ability_upgrades_arr"
+                  ) &&
                   player.ability_upgrades_arr != null
                 ) {
                   // Only analyze ability upgrades if they are available and not null
@@ -422,7 +436,9 @@ export async function getAbilityUpgrades(heroId: number): Promise<any> {
           }
         })
         .catch((error) => {
-          DotaLogger.error(`openDotaAPI.getAbilityUpgrades(): ${JSON.stringify(error)}`);
+          DotaLogger.error(
+            `openDotaAPI.getAbilityUpgrades(): ${JSON.stringify(error)}`
+          );
           attempts--;
           if (attempts == 0) {
             reject(error);
@@ -691,7 +707,9 @@ export function fetchPeers(steamId32: string): Promise<Friend[]> {
           //}
         }
 
-        DotaLogger.log("openDotaAPI.fetchPeers(): peers: " + JSON.stringify(result));
+        DotaLogger.log(
+          "openDotaAPI.fetchPeers(): peers: " + JSON.stringify(result)
+        );
         resolve(result);
       })
       .catch((error) => {
