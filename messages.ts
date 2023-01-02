@@ -25,7 +25,7 @@
 
   ***CHANGED 7.30*** labels changed in 7.30f
   
-  (C) Dota Coch, 2022
+  Copyright (C) Dota Coach, 2023. All rights reserved.
 
 */
 import { DOTA_COACH_GUIDE_ROLE } from "./playerRoles";

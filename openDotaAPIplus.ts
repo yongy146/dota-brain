@@ -5,7 +5,7 @@
  *
  * MOVE PURE API CALLS OUT TO utility/dota/api... etc.
  *
- * Copyright (C) Dota Coach, 2022
+ * Copyright Copyright (C) Dota Coach, 2023. All rights reserved.
  */
 import * as DotaLogger from "../utilities/log";
 import * as WebAccess from "../utilities/webAccess"; // MIGRATE TO axios!
