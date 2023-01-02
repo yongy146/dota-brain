@@ -5,10 +5,10 @@
  *
  * Unfortunately file can't be replaced with static data from Dota 2 (24.2.2022)
  *
- * Copyright Dota Coach, 2022
+ * Copyright (C) Dota Coach, 2023. All rights reserved.
  */
 
-export const dispellableBuffs = {
+export const dispellableBuffs: Record<string, string[]> = {
   Abaddon: ["abaddon_aphotic_shield", "abaddon_frostmourne"],
   Alchemist: [],
   "Ancient Apparition": [],
@@ -55,10 +55,7 @@ export const dispellableBuffs = {
   Juggernaut: [],
   "Keeper of the Light": ["keeper_of_the_light_chakra_magic"],
   Kunkka: [],
-  "Legion Commander": [
-    "legion_commander_overwhelming_odds",
-    "legion_commander_press_the_attack",
-  ],
+  "Legion Commander": ["legion_commander_overwhelming_odds", "legion_commander_press_the_attack"],
   Leshrac: [],
   Lich: ["lich_frost_shield"],
   Lifestealer: [],
@@ -86,10 +83,7 @@ export const dispellableBuffs = {
   Omniknight: ["omniknight_guardian_angel", "omniknight_hammer_of_purity"],
   Oracle: ["oracle_purifying_flames"],
   "Outworld Destroyer": ["obsidian_destroyer_equilibrium"],
-  "Primal Beast": [
-    "primal_beast_onslaught",
-    "primal_beast_trample" /* Strong dispel only */,
-  ],
+  "Primal Beast": ["primal_beast_onslaught", "primal_beast_trample" /* Strong dispel only */],
   Pangolier: ["pangolier_shield_crash"],
   "Phantom Assassin": ["phantom_assassin_phantom_strike"],
   "Phantom Lancer": ["phantom_lancer_phantom_edge"],

@@ -436,7 +436,7 @@
 				70
 			],
 			"name": "Enfeeble",
-			"description": "Lowers the enemy's total attack damage, cast range, and regeneration.",
+			"description": "Lowers the enemy's total attack damage, cast range, and heal/regeneration.",
 			"lore": "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -754,7 +754,7 @@
 				200
 			],
 			"name": "Rupture",
-			"description": "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved.  The damage is dealt through spell immunity.",
+			"description": "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved.",
 			"lore": "When the Bloodseeker hunts you, injuries become fatalities.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -1114,9 +1114,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				16,
+				19,
+				17,
 				15,
-				14,
 				13
 			],
 			"mana_cost": [
@@ -1151,7 +1151,7 @@
 				110
 			],
 			"name": "Multishot",
-			"description": "Channeling. Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying longer duration Frost Arrows. Lasts up to %abilitychanneltime% seconds.",
+			"description": "CHANNELED - Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying longer duration Frost Arrows. Lasts up to %abilitychanneltime% seconds.",
 			"lore": "In the ranger's youth, learning to fire multiple arrows at once was considered a distracting frivolity. In the war of the Ancients, such technique has become strange necessity.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2112,7 +2112,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.4s Requiem Fear per line"
+			"description": "+0.3s Requiem Fear per line"
 		},
 		"special_bonus_unique_nevermore_shadowraze_cooldown": {
 			"id": 929,
@@ -2147,10 +2147,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				20,
-				17,
-				14,
-				11
+				21,
+				18,
+				15,
+				12
 			],
 			"mana_cost": [
 				130
@@ -2386,8 +2386,8 @@
 			"talent_level": 3,
 			"description": "+{s:bonus_stun_max}s Adaptive Strike Stun Duration"
 		},
-		"special_bonus_unique_morphling_6": {
-			"id": 7052,
+		"special_bonus_unique_morphling_waveform_cooldown": {
+			"id": 6383,
 			"sequence": "Ability21",
 			"is_talent": true,
 			"cooldown": [
@@ -2397,7 +2397,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "{s:bonus_AbilityCharges} Waveform Charges"
+			"description": "-{s:bonus_AbilityCooldown}% Waveform Cooldown"
 		},
 		"special_bonus_strength_35": {
 			"id": 7135,
@@ -2878,9 +2878,9 @@
 			"is_talent": false,
 			"cooldown": [
 				20,
+				19,
 				18,
-				16,
-				14
+				17
 			],
 			"mana_cost": [
 				35,
@@ -2889,7 +2889,7 @@
 				80
 			],
 			"name": "Flesh Heap",
-			"description": "Gives Pudge a guaranteed damage block against all types of attack. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
+			"description": "Gives Pudge damage block against all sources. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
 			"lore": "The Butcher gives new meaning to the words 'meat shield.'",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2930,7 +2930,7 @@
 				170
 			],
 			"name": "Dismember",
-			"description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge gets healed for the same amount he damages. Lasts longer on creeps.",
+			"description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge pulls the unit at a rate of %pull_units_per_second% units, up to a minimum of %pull_distance_limit% range. Pudge gets healed for the same amount he damages. Lasts longer on creeps.",
 			"lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -3153,8 +3153,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_damage_min} Plasma Field Damage"
 		},
-		"special_bonus_agility_9": {
-			"id": 749,
+		"special_bonus_agility_12": {
+			"id": 7386,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -3164,7 +3164,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+9 Agility"
+			"description": "+12 Agility"
 		},
 		"special_bonus_unique_razor": {
 			"id": 6028,
@@ -3216,7 +3216,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-0.1s Eye of the Storm Strike Interval"
+			"description": "--0.10s Eye of the Storm Strike Interval"
 		},
 		"special_bonus_unique_razor_plasmafield_second_ring": {
 			"id": 1064,
@@ -3417,7 +3417,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_epicenter_radius} Epicenter Radius"
+			"description": "+{s:bonus_epicenter_radius_base} Epicenter Base Radius"
 		},
 		"special_bonus_unique_sand_king": {
 			"id": 6207,
@@ -3932,13 +3932,13 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				15
+				17
 			],
 			"mana_cost": [
 				200
 			],
 			"name": "Tree Volley",
-			"description": "Tiny channels to throw random trees within range towards the targeted area. Deals Tiny's attack damage to enemies in that area with each tree thrown.",
+			"description": "CHANNELED - Tiny channels to throw random trees within range towards the targeted area. Deals Tiny's attack damage to enemies in that area with each tree thrown.",
 			"lore": "Sticks thrown from stones are like to shatter many bones.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -4179,7 +4179,7 @@
 				200
 			],
 			"name": "Nether Swap",
-			"description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target. Enemy Swapped units take %damage% damage, Allied swapped units receive less damage for a short duration.",
+			"description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target. Enemy Swapped units take damage. Allied swapped units receive less damage for a short duration.",
 			"lore": "Martyrdom is a small price to pay for vengeance.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -4229,7 +4229,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-2 Wave of Terror Armor"
+			"description": "--2 Wave of Terror Armor"
 		},
 		"special_bonus_unique_vengeful_spirit_5": {
 			"id": 6978,
@@ -4345,7 +4345,7 @@
 				120
 			],
 			"name": "Powershot",
-			"description": "Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced.",
+			"description": "CHANNELED - Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced.",
 			"lore": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -4385,7 +4385,7 @@
 				150
 			],
 			"name": "Gale Force",
-			"description": "Summons a strong wind that pushes all enemies in the target area towards the target direction. Vector Targeted.",
+			"description": "Vector Targeted. Summons a strong wind that pushes all enemies in the target area towards the target direction.",
 			"lore": "At last Lyralei has learned to call upon the might of her true birthright.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -5265,7 +5265,7 @@
 				140
 			],
 			"name": "Frost Blast",
-			"description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for %abilityduration% seconds.  The primary target receives both base and area damage and extra attack speed slow.",
+			"description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for %abilityduration% seconds.  The primary target receives both base and area damage.",
 			"lore": "Frost-mage Ethreain has not forgotten even the simplest of ice manipulation.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -5708,9 +5708,9 @@
 			],
 			"mana_cost": [
 				100,
-				120,
-				140,
-				160
+				115,
+				130,
+				145
 			],
 			"name": "Ether Shock",
 			"description": "Creates a cone of ethereal energy that strikes multiple enemy units.",
@@ -5812,7 +5812,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+140 Shackles Total Damage"
+			"description": "+155 Shackles Total Damage"
 		},
 		"special_bonus_unique_shadow_shaman_5": {
 			"id": 6877,
@@ -6612,7 +6612,7 @@
 				55
 			],
 			"name": "Tricks of the Trade",
-			"description": "Riki phases out of the world while striking random enemy units from behind in an area around him.",
+			"description": "CHANNELED - Riki phases out of the world while striking random enemy units from behind in an area around him.",
 			"lore": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -7083,7 +7083,7 @@
 				75
 			],
 			"name": "Keen Conveyance",
-			"description": "After channeling for %abilitychanneltime%s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
+			"description": "CHANNELED - Teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
 			"lore": "As Boush likes to say, 'There is nothing the arcane can accomplish that the curious mind cannot reproduce given time. And proper funding, of course.'",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -7226,7 +7226,7 @@
 				0
 			],
 			"mana_cost": [
-				50
+				75
 			],
 			"name": "Shrapnel",
 			"description": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every %abilitychargerestoretime% seconds.",
@@ -7249,7 +7249,7 @@
 				0
 			],
 			"name": "Headshot",
-			"description": "Sniper increases his accuracy, giving him a chance to deal extra damage and knock back his enemies. Headshots  briefly slow enemy movement and attack speed slowed by %slow%%%.",
+			"description": "Sniper increases his accuracy, giving him a chance to deal extra damage and knock back his enemies. Headshots briefly slow enemy movement and attack speed by %slow%%%.",
 			"lore": "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -7271,7 +7271,7 @@
 				50
 			],
 			"name": "Take Aim",
-			"description": "Extends the attack range of Sniper's rifle. Can be activated to provide %headshot_chance%%% Headshot chance for 3 seconds. Slows you by %slow%%% for the duration.",
+			"description": "Extends the attack range of Sniper's rifle. Can be activated to provide %headshot_chance%%% Headshot chance. Slows you by %slow%%% for the duration.",
 			"lore": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
 			"is_ultimate": false,
 			"is_passive": "partial",
@@ -7376,7 +7376,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-14% Shrapnel Slow"
+			"description": "+-14% Shrapnel Slow"
 		},
 		"special_bonus_unique_sniper_3": {
 			"id": 6896,
@@ -7719,7 +7719,7 @@
 				100
 			],
 			"name": "Upheaval",
-			"description": "CHANNELED - A powerful slowing and damaging current that grows stronger as it's channelled. Lasts up to %abilitychanneltime% seconds. Enemies are slowed for %duration% seconds after leaving the area or the spell ends.",
+			"description": "CHANNELED - A powerful slowing and damaging current that grows stronger as it's channeled. Lasts up to %abilitychanneltime% seconds. Enemies are slowed for %duration% seconds after leaving the area or the spell ends.",
 			"lore": "Demnok manipulates space-time, impairing entire armies.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -8052,7 +8052,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_ms} Movespeed Beastmaster Controlled"
+			"description": "+{s:bonus_ms} Movespeed Aura to Beastmaster and his units"
 		},
 		"special_bonus_unique_beastmaster_4": {
 			"id": 6612,
@@ -8078,7 +8078,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_boar_bonus_damage} Boar Damage"
+			"description": "+{s:bonus_boar_bonus_damage} Boar Attack Damage"
 		},
 		"special_bonus_unique_beastmaster_6": {
 			"id": 613,
@@ -8091,7 +8091,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_hp} Health Beastmaster Controlled"
+			"description": "+{s:bonus_hp} Max Health Aura to Beastmaster and his units"
 		},
 		"special_bonus_unique_beastmaster_wild_axe_cooldown": {
 			"id": 1007,
@@ -8198,7 +8198,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				125
+				110,
+				100,
+				90
 			],
 			"mana_cost": [
 				250,
@@ -8773,7 +8775,7 @@
 				140
 			],
 			"name": "Wraithfire Blast",
-			"description": "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target.",
+			"description": "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target. Summoned skeletons around the target will receive bonus movement and attack speed for the duration of the debuff.",
 			"lore": "Ostarion calls on his damned lineage, laying waste to his opponents.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -9068,8 +9070,8 @@
 			"talent_level": 1,
 			"description": "+30 Damage"
 		},
-		"special_bonus_magic_resistance_12": {
-			"id": 6299,
+		"special_bonus_magic_resistance_14": {
+			"id": 1089,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -9079,7 +9081,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+12% Magic Resistance"
+			"description": "+{s:value}% Magic Resistance"
 		},
 		"special_bonus_unique_death_prophet_3": {
 			"id": 6628,
@@ -9194,9 +9196,9 @@
 			],
 			"mana_cost": [
 				35,
+				40,
 				45,
-				55,
-				65
+				50
 			],
 			"name": "Phantom Strike",
 			"description": "Teleports to a unit, friendly or enemy, and grants bonus attack speed and lifesteal while attacking if it's an enemy unit.",
@@ -9223,7 +9225,7 @@
 				50
 			],
 			"name": "Blur",
-			"description": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks. Can be activated to blur her body, causing her to be impossible to see until near enemy heroes.\n\nStacks diminishingly with other sources of Evasion.",
+			"description": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks. Can be activated to blur her body, causing her to be impossible to see until near enemy heroes, towers, or outposts.\n\nStacks diminishingly with other sources of Evasion.",
 			"lore": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
 			"is_ultimate": false,
 			"is_passive": "partial",
@@ -9673,7 +9675,7 @@
 				50
 			],
 			"name": "Psionic Projection",
-			"description": "Allows Templar Assassin to teleport to any Psionic Trap after channeling for %abilitychanneltime% seconds, detonating it upon arrival. Channeling Psionic Projection does not break Meld.",
+			"description": "CHANNELED - Allows Templar Assassin to teleport to any Psionic Trap after channeling for %abilitychanneltime% seconds, detonating it upon arrival. Channeling Psionic Projection does not break Meld.",
 			"lore": "In reward for her service, Lanaya has been granted access to secrets that unlock new techniques for her psionic gifts.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -9838,7 +9840,7 @@
 				14
 			],
 			"mana_cost": [
-				85
+				70
 			],
 			"name": "Nethertoxin",
 			"description": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Disables passives of affected units.",
@@ -9936,7 +9938,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+13 Corrosive Skin Damage"
+			"description": "+{s:bonus_damage} Corrosive Skin Damage Per Second"
 		},
 		"special_bonus_unique_viper_3": {
 			"id": 6819,
@@ -10313,10 +10315,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				115,
-				110,
-				105,
-				100
+				105
 			],
 			"mana_cost": [
 				50,
@@ -10449,9 +10448,9 @@
 				15
 			],
 			"mana_cost": [
-				110,
-				120,
+				125,
 				130,
+				135,
 				140
 			],
 			"name": "Poison Touch",
@@ -10643,7 +10642,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "{s:bonus_slow}% Poison Touch Slow"
+			"description": "+{s:bonus_slow}% Poison Touch Slow"
 		},
 		"special_bonus_unique_dazzle_4": {
 			"id": 6626,
@@ -10936,9 +10935,6 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				22,
-				22,
-				22,
 				22
 			],
 			"mana_cost": [
@@ -11024,8 +11020,8 @@
 			"is_buff": false,
 			"is_debuff_dispellable": "no"
 		},
-		"special_bonus_mp_regen_175": {
-			"id": 6926,
+		"special_bonus_mp_regen_150": {
+			"id": 7132,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -11035,7 +11031,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+1.75 Mana Regen"
+			"description": "+1.5 Mana Regen"
 		},
 		"special_bonus_unique_leshrac_5": {
 			"id": 509,
@@ -11160,9 +11156,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				65,
-				50,
-				35,
+				62,
+				48,
+				34,
 				20
 			],
 			"mana_cost": [
@@ -11654,7 +11650,7 @@
 				50
 			],
 			"name": "Surge",
-			"description": "Charges a target friendly unit with power, giving it a brief burst of movement speed and removes unit collisions. Allows the unit to reach maximum movement speed and cannot be slowed.",
+			"description": "Charges a target friendly unit with power, giving it a brief burst of phased movement speed. Allows the unit to reach maximum movement speed and cannot be slowed.",
 			"lore": "Ish'Kafel once used his speed of mind to navigate the maze between the walls.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -11675,7 +11671,7 @@
 				0
 			],
 			"name": "Normal Punch",
-			"description": "Passive cooldown attack. Causes Dark Seer's next attack on a hero to have True Strike, knock a replica out of the victim, damaging and stunning them based on how far Dark Seer has moved in the past %recent_duration% seconds. Max power is reached after %max_distance% distance moved.",
+			"description": "Passive ability. Causes Dark Seer's next attack on a hero to have True Strike, knock a replica out of the victim, damaging and stunning them based on how far Dark Seer has moved in the past %recent_duration% seconds. Max power is reached after %max_distance% distance moved.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -11698,7 +11694,7 @@
 				375
 			],
 			"name": "Wall of Replica",
-			"description": "Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
+			"description": "Vector Targeted. Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
 			"lore": "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -11828,7 +11824,7 @@
 				90
 			],
 			"name": "Burning Barrage",
-			"description": "Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers.",
+			"description": "CHANNELED - Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers.",
 			"lore": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -11890,7 +11886,7 @@
 				150
 			],
 			"name": "Burning Army",
-			"description": "Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
+			"description": "Vector Targeted. Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
 			"lore": "Existing on the brink of life and death, Clinkz has learned to temporarily bridge the gap between the two.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -12443,7 +12439,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-65 Untouchable Slow"
+			"description": "+-65 Untouchable Attack Slow"
 		},
 		"special_bonus_unique_enchantress_1": {
 			"id": 6331,
@@ -12953,7 +12949,7 @@
 				85
 			],
 			"name": "Silken Bola",
-			"description": "Slows the target enemy, causes them to miss and deals impact damage. Units that attack the target deal bonus magic damage.",
+			"description": "Deals impact damage, then slows the target and causes them to miss some attacks. Units that attack the target deal bonus magic damage.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13173,7 +13169,7 @@
 				65
 			],
 			"name": "Shadow Walk",
-			"description": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability.  If he breaks the invisibility with an attack, that attack will slow the target's movement speed.",
+			"description": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability.  If he breaks the invisibility with an attack, that attack will slow the target's movement and attack speed.",
 			"lore": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13214,7 +13210,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_slow}% Shadow Walk Slow"
+			"description": "+{s:bonus_slow}/{s:bonus_slow}% Shadow Walk Attack/Move Slow"
 		},
 		"special_bonus_unique_bounty_hunter_4": {
 			"id": 484,
@@ -13567,7 +13563,7 @@
 				0
 			],
 			"name": "Liquid Fire",
-			"description": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks. Deals 75% damage to buildings.",
+			"description": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks.",
 			"lore": "The left maw of Jakiro opens, laying waste to any in its path.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13588,7 +13584,7 @@
 				0
 			],
 			"name": "Liquid Frost",
-			"description": "Jakiro adds a frost effect to his attack, stunning enemies. Enemies hit are slowed and receive a percent their max health per second plus a base amount as damage every %tick_rate% second for %duration% seconds.",
+			"description": "Jakiro adds a frost effect to his attack, stunning enemies. Enemies hit are slowed for %duration% seconds and are damaged for a percent of their max health plus a base amount every %tick_rate% second for %duration% seconds.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -14040,7 +14036,7 @@
 				400
 			],
 			"name": "Hand of God",
-			"description": "Heals all allied heroes on the map as well as all units under Chen's control. A large heal is applied at first and a slow heal over time is applied for %hot_duration% afterwards.",
+			"description": "Heals all allied heroes on the map as well as all units under Chen's control. A large heal is applied at first and a slow heal over time is applied for %hot_duration% seconds afterwards.",
 			"lore": "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -14248,7 +14244,7 @@
 				180
 			],
 			"name": "Shadow Step",
-			"description": "Allows Spectre to perform a single target unit Haunt. Casts a Spectral Dagger on the target.",
+			"description": "Allows Spectre to perform a single target Haunt on a visible enemy. Casts a Spectral Dagger on the target.",
 			"lore": "With great focus of will, Mercurial can sometimes limit the extent of her division.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -14462,8 +14458,6 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				145,
-				145,
 				145
 			],
 			"mana_cost": [
@@ -14773,7 +14767,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "{s:bonus_movement_speed_pct}% Ice Vortex Slow/Resistance"
+			"description": "+{s:bonus_movement_speed_pct}% Ice Vortex Slow/Increased Magic Damage"
 		},
 		"special_bonus_unique_ancient_apparition_2": {
 			"id": 6291,
@@ -15455,10 +15449,7 @@
 				22
 			],
 			"mana_cost": [
-				130,
-				140,
-				150,
-				160
+				130
 			],
 			"name": "Acid Spray",
 			"description": "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take damage per second and have their armor reduced.",
@@ -15521,7 +15512,7 @@
 				100
 			],
 			"name": "Berserk Potion",
-			"description": "Alchemist throws a potion at an ally, applying a basic dispel and giving them attack speed, movement speed and HP regen.",
+			"description": "Alchemist throws a potion at an ally, applying a basic dispel and giving them attack speed, movement speed and HP regen.<br><br>DISPEL TYPE: Basic Dispel",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -15688,7 +15679,7 @@
 				0
 			],
 			"name": "Quas",
-			"description": "Allows manipulation of ice elements. Passively grants +2 Strength per level. Each <font color='#7998b5'>Quas</font> instance provides increased health regeneration.\n",
+			"description": "Allows manipulation of ice elements. Passively grants +2 Strength per level. Each <font color='#7998b5'>Quas</font> instance provides increased health regeneration.",
 			"lore": "",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16075,7 +16066,7 @@
 				145
 			],
 			"name": "Arcane Curse",
-			"description": "Curses the target area, dealing damage and causing enemy heroes to take damage over time and slowing their movement speed. Silenced enemies take %penalty_multiplier%x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The cooldown is paused as long as the target is silenced.",
+			"description": "Curses the target area, dealing damage and causing enemy heroes to take damage over time and slowing their movement speed. Silenced enemies take %penalty_multiplier%x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The duration is paused as long as the target is silenced.",
 			"lore": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16096,7 +16087,7 @@
 				15
 			],
 			"name": "Glaives of Wisdom",
-			"description": "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's Intelligence with each hit. If Silencer kills an affected enemy hero, he permanently steals %permanent_int_steal_amount% Intelligence.",
+			"description": "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's Intelligence with each hit. If Silencer kills an enemy hero, he permanently steals %permanent_int_steal_amount% Intelligence.",
 			"lore": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16507,7 +16498,7 @@
 				50
 			],
 			"name": "Howl",
-			"description": "Strikes fear into enemies, reducing armor and attack damage to all enemies within %radius% range of Lycan and his wolves. At night Howl is global.",
+			"description": "Strikes fear into enemies, reducing armor and attack damage of all enemies within %radius% range of Lycan and his wolves. At night Howl is global.",
 			"lore": "Blood-curdling wolf cries signal to opponents that Banehallow is among them.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16744,7 +16735,7 @@
 				0
 			],
 			"name": "Drunken Brawler",
-			"description": "Brewmaster can switch stances based on the elements he controls gaining passive bonuses that improve against enemies when Brewed Up.\n<font color=\"#9acd32\">Earth Brawler</font> - Grants %armor% armor and %magic_resist%%% Magic Resistance. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#87ceeb\">Storm Brawler</font> - Grants %dodge_chance%%% evasion and %bonus_move_speed%%% Bonus Move Speed. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#FF0000\">Fire Brawler</font> - Grants %crit_chance%%% chance to crit for %crit_multiplier%%% of your attack damage. Chance is %active_multiplier%x when Brewed Up.",
+			"description": "Brewmaster can switch stances based on the elements he controls, gaining passive bonuses that improve against enemies when Brewed Up.\n<font color=\"#9acd32\">Earth Brawler</font> - Grants %armor% armor and %magic_resist%%% Magic Resistance. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#87ceeb\">Storm Brawler</font> - Grants %dodge_chance%%% evasion and %bonus_move_speed%%% Bonus Move Speed. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#FF0000\">Fire Brawler</font> - Grants %crit_chance%%% chance to critical strike for %crit_multiplier%%% of your attack damage. Chance is %active_multiplier%x when Brewed Up.",
 			"lore": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16765,7 +16756,7 @@
 			"name": "Primal Companion",
 			"description": "Creates a Brewling based on Brewmaster's current Drunken Brawler Stance. If the Brewling moves %disable_distance% range away from Brewmaster, it can no longer cast spells and is slowed by %movement_slow_when_out_of_range%%%. Otherwise, all of the Brewling spells have a %cooldown_penalty_pct%%% cooldown penalty. <br><br>A new Brewling cannot be resummoned for %cooldown_on_take_damage%s if the current one takes damage from enemy Heroes or hero-controlled units. If the Brewling dies, the ability goes on cooldown for %cooldown_on_death% seconds.<br><br>Only one Brewling can exist at a time. If Brewmaster uses Primal Split, the existing Brewling disappears.",
 			"lore": "Mangix doesn't hold to it by rule, but he vaguely recalls an old master musing that, if one could manage, scaring up a companion was always preferable to drinking alone.",
-			"is_ultimate": true,
+			"is_ultimate": false,
 			"is_passive": "no",
 			"is_dispellable": "no",
 			"is_debuff": false,
@@ -17004,7 +16995,7 @@
 				200
 			],
 			"name": "Demonic Cleanse",
-			"description": "Cleanses the target allied unit, removing negative buffs for the duration.  At the end of the duration, the unit is healed. Units under the effect of Disruption can still be affected by Demonic Cleanse.\n\nDISPEL TYPE: Basic Dispel",
+			"description": "Cleanses the target allied unit, removing negative buffs for the duration.  At the end of the duration, the unit is healed. Units under the effect of Disruption can still be affected by Demonic Cleanse.<br><br>DISPEL TYPE: Basic Dispel",
 			"lore": "n/a",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -17317,7 +17308,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-0.1 Spirit Bear Attack Time"
+			"description": "--0.1 Spirit Bear Base Attack Time"
 		},
 		"special_bonus_unique_lone_druid_7": {
 			"id": 6680,
@@ -17399,7 +17390,7 @@
 				0
 			],
 			"name": "Chaos Strike",
-			"description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals %creep_multiplier%x damage to creeps.",
+			"description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Deals %creep_multiplier%x damage to creeps.",
 			"lore": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -17490,7 +17481,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.5 Min/Max Chaos Bolt Duration"
+			"description": "+0.75 Min/Max Chaos Bolt Duration"
 		},
 		"special_bonus_unique_chaos_knight": {
 			"id": 6133,
@@ -17503,7 +17494,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "Reality Rift Pierces Spell Immune"
+			"description": "Reality Rift Pierces Spell Immunity"
 		},
 		"special_bonus_unique_chaos_knight_5": {
 			"id": 510,
@@ -17613,7 +17604,7 @@
 				125
 			],
 			"name": "Dig",
-			"description": "Digs into the ground for a short duration, dispelling Meepo and causing him to become invulnerable and untargetable for %duration%s. Restores %hp_restore%%% of his max health over that duration. Can’t be cast while rooted.",
+			"description": "Digs into the ground for a short duration, dispelling Meepo and causing him to become invulnerable and untargetable for %duration%s. Restores %hp_restore%%% of his max health over that duration.<br><br>DISPEL TYPE: Basic Dispel",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -18106,7 +18097,7 @@
 				50
 			],
 			"name": "Fire Shield",
-			"description": "Creates a shield around the target ally, absorbing a percentage of the damage of next %attacks% attacks from enemy heroes. When damage is absorbed, a fireball is launched at the attacker.",
+			"description": "Creates a shield around the target ally, absorbing a percentage of the damage of next %attacks% attacks from enemy heroes. When damage is absorbed, a fireball is launched at the attacker. Can be cast on towers.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -18371,7 +18362,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+22 Tombstone Zombie Damage"
+			"description": "+20 Tombstone Zombie Damage"
 		},
 		"special_bonus_unique_undying_6": {
 			"id": 616,
@@ -18384,7 +18375,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+12 Soul Rip Damage/Heal"
+			"description": "+10 Soul Rip Damage/Heal"
 		},
 		"special_bonus_unique_undying_3": {
 			"id": 6546,
@@ -18774,10 +18765,10 @@
 				18
 			],
 			"mana_cost": [
-				55,
 				70,
 				85,
-				100
+				100,
+				115
 			],
 			"name": "Glimpse",
 			"description": "Teleports the target hero back to where it was 4 seconds ago.  Instantly kills illusions. Deals damage based on distance glimpsed, with max damage dealt at %max_distance% distance.",
@@ -18945,7 +18936,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+250 Static Storm AoE"
+			"description": "+200 Static Storm Radius"
 		}
 	},
 	"npc_dota_hero_nyx_assassin": {
@@ -19438,7 +19429,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-7 Rip Tide Armor"
+			"description": "--7 Rip Tide Armor"
 		}
 	},
 	"npc_dota_hero_keeper_of_the_light": {
@@ -19456,7 +19447,7 @@
 				175
 			],
 			"name": "Illuminate",
-			"description": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.",
+			"description": "CHANNELED - Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.",
 			"lore": "Ezalor's hidden light reveals itself in marvelous fashion.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -19776,7 +19767,7 @@
 				40
 			],
 			"name": "Tether",
-			"description": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a larger portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether.",
+			"description": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether. Tether briefly slows enemies touching it.",
 			"lore": "The benevolent touch of Io brings strength from between the planes.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -19885,7 +19876,7 @@
 				175
 			],
 			"name": "Relocate",
-			"description": "Teleports Io and any tethered ally to any location. After the spell expires Io and any tethered ally will return to their original location. Double-click to teleport to your team's base fountain.",
+			"description": "Teleports Io and a tethered ally to any location. After the spell expires, Io and the tethered ally will return to their original location. Double-click to teleport to your team's base fountain.",
 			"lore": "Io is the embodiment of the mystery of the universe.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -20135,7 +20126,7 @@
 				150
 			],
 			"name": "Summon Familiars",
-			"description": "Conjures two blind Familiars to fight for Visage.  Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing.  While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health.  Familiars grant high bounty when killed.",
+			"description": "Conjures blind Familiars to fight for Visage.  Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing.  While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health.  Familiars grant high bounty when killed.",
 			"lore": "Guardians of the Narrow Maze, Necro'lic's Familiars stand watch over his domain.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -20309,7 +20300,7 @@
 				75
 			],
 			"name": "Pounce",
-			"description": "Slark leaps forward, grabbing the first hero he connects with and applying Essence Shift Stacks.  That unit is leashed, and can only move a limited distance away from Slark's landing position. ",
+			"description": "Slark leaps forward, leashing the first hero he connects with and applying Essence Shift Stacks.  That unit can only move a limited distance away from Slark's landing position. ",
 			"lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -20519,7 +20510,7 @@
 				0
 			],
 			"name": "Mystic Snake",
-			"description": "A mystic snake made of energy jumps from target to target dealing damage that increases with each jump. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake returns %snake_mana_steal%%% mana based on the targets' total mana.",
+			"description": "A mystic snake made of energy jumps from target to target dealing damage. Damage and speed increases with each jump. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake returns %snake_mana_steal%%% mana based on the targets' total mana.",
 			"lore": "The Gorgon's curse is her greatest strength.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -20807,7 +20798,7 @@
 				150
 			],
 			"name": "Battle Trance",
-			"description": "Troll unleashes a powerful battle trance, that forces you to continuously attack the closest enemy unit within %range% range, prioritizing heroes. Damage does not kill you during this mode. Grants you bonus lifesteal, attack speed and movement speed. Applies a Basic Dispel.",
+			"description": "Troll unleashes a powerful battle trance, that forces you to continuously attack the closest enemy unit within %range% range, prioritizing heroes. Damage does not kill you during this mode. Grants you bonus lifesteal, attack speed and movement speed. Applies a Basic Dispel.\n\nDISPEL TYPE: Basic Dispel",
 			"lore": "An adrenaline rush of pure hatred quickens your blades.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -20968,7 +20959,7 @@
 			"lore": "In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"affects": "unit",
+			"affects": "unit_area",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -21626,7 +21617,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+10% Whirling Death Attribute Reduction"
+			"description": "+12% Whirling Death Attribute Reduction"
 		},
 		"special_bonus_unique_timbersaw_3": {
 			"id": 6949,
@@ -21943,7 +21934,7 @@
 				100
 			],
 			"name": "Walrus Kick",
-			"description": "Kicks the closest enemy unit in a targeted direction, stunning, damaging, and slowing them. Also deals damage to all heroes within %search_radius% radius of its landing area. Cooldown is reduced by %creep_cooldown_reduction_pct%%% if kicking a creep.",
+			"description": "Vector Targeted. Kicks the closest enemy unit in the drawn direction, stunning, damaging, and slowing them. Also deals damage to all heroes within %search_radius% radius of its landing area. Cooldown is reduced by %creep_cooldown_reduction_pct%%% if kicking a creep.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22314,7 +22305,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-12% Ancient Seal Magic Resistance Reduction"
+			"description": "+-12% Ancient Seal Increased Magic Damage"
 		},
 		"special_bonus_unique_skywrath_6": {
 			"id": 411,
@@ -22554,7 +22545,7 @@
 				100
 			],
 			"name": "Echo Stomp",
-			"description": "Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage.",
+			"description": "CHANNELED - Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage.",
 			"lore": "The force of creation still echoes in the stomp of the Titan.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22764,7 +22755,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-60 Earth Splitter Cooldown"
+			"description": "-60s Earth Splitter Cooldown"
 		},
 		"special_bonus_unique_elder_titan_4": {
 			"id": 7350,
@@ -22952,7 +22943,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+10% Moment of Courage Proc Chance"
+			"description": "+12% Moment of Courage Proc Chance"
 		},
 		"special_bonus_unique_legion_commander_7": {
 			"id": 880,
@@ -23212,7 +23203,7 @@
 				100
 			],
 			"name": "Boulder Smash",
-			"description": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest Stone Remnant in a %remnant_smash_radius_tooltip% radius. The travelling unit or Remnant damages all enemy units it hits.  If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units.",
+			"description": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest unit in a %remnant_smash_radius_tooltip% radius, prioritizing Stone Remnants. The travelling unit or Remnant damages all enemy units it hits.  If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units.",
 			"lore": "It is with the power of a mountain that Earth Spirit strikes his enemies.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23241,6 +23232,7 @@
 			"lore": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
 			"is_ultimate": false,
 			"is_passive": "no",
+			"is_dispellable": "strong",
 			"is_debuff": false,
 			"is_buff": false,
 			"disable": [
@@ -23443,9 +23435,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				28,
-				24,
-				20,
+				25,
+				22,
+				19,
 				16
 			],
 			"mana_cost": [
@@ -23516,7 +23508,7 @@
 				0
 			],
 			"name": "Demon Zeal",
-			"description": "Costs part of Terrorblade's current HP to cast, dispelling Terrorblade and providing bonus movement and attack speed.  The bonuses are stronger out of Metamorphosis.",
+			"description": "Costs part of Terrorblade's current HP to cast, dispelling Terrorblade and providing bonus movement and attack speed.  The bonuses are stronger out of Metamorphosis.<br><br>DISPEL TYPE: Basic Dispel",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23962,7 +23954,7 @@
 				100
 			],
 			"name": "Fortune's End",
-			"description": "CHANNELED - Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and purges enemies of buffs in an area around the target. If target is an ally it will only purge debuffs. The root duration is equal to the time spent channeling.\n\nDISPEL TYPE: Basic Dispel",
+			"description": "CHANNELED - Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and dispels enemies of buffs in an area around the target. If target is an ally it will only dispel debuffs. The root duration is equal to the time spent channeling.\n\nDISPEL TYPE: Basic Dispel",
 			"lore": "The astral orb crackles with power while raw energy lances out, temporarily disrupting an enemy's connection to their own body.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24434,7 +24426,7 @@
 				150
 			],
 			"name": "Splinter Blast",
-			"description": "Launches a ball of brittle ice toward an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a %split_radius% radius. Enemies struck by these splinters are slowed by %movespeed_slow_tooltip%%%.",
+			"description": "Launches a ball of brittle ice toward an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a %split_radius% base radius. Enemies struck by these splinters are slowed by %movespeed_slow_tooltip%%%.",
 			"lore": "Produced slowly by specialized vesicles in her frozen gullet, Winter Wyvern blast shards of ice at her enemies.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24703,8 +24695,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_AbilityCastRange} Flux Cast Range"
 		},
-		"special_bonus_hp_225": {
-			"id": 6405,
+		"special_bonus_hp_200": {
+			"id": 5959,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -24714,7 +24706,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+225 Health"
+			"description": "+200 Health"
 		},
 		"special_bonus_unique_arc_warden_4": {
 			"id": 7105,
@@ -25063,7 +25055,7 @@
 				100
 			],
 			"name": "Primal Spring",
-			"description": "Monkey King springs out from his tree perch, damaging and slowing enemies in the area where he lands. Damage and slow amounts are in proportion to channel duration.",
+			"description": "CHANNELED - Monkey King springs out from his tree perch, damaging and slowing enemies in the area where he lands. Damage and slow amounts are in proportion to channel duration.",
 			"lore": "Leaping from the safety of cover into the midst of his enemies, Sun Wukong attacks without mercy.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -25519,7 +25511,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-3s Swashbuckle Cooldown"
+			"description": "--3s Swashbuckle Cooldown"
 		},
 		"special_bonus_unique_pangolier_5": {
 			"id": 9062,
@@ -26505,7 +26497,7 @@
 				0
 			],
 			"name": "Spit Out",
-			"description": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit that slows and applies damage over time.",
+			"description": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit that slows and applies damage over time. Spit Out has a no minimum launch range.",
 			"lore": "",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -26551,7 +26543,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+60 Scatterblast Damage"
+			"description": "+70 Scatterblast Damage"
 		},
 		"special_bonus_unique_snapfire_5": {
 			"id": 6479,
@@ -26685,7 +26677,7 @@
 				120
 			],
 			"name": "Bushwhack",
-			"description": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area.  Affected enemies take damage and are pulled towards the tree nearest to them, and have their vision reduced to 0 for the duration of the stun.",
+			"description": "Tosses a net trap that stuns enemies if they are near a tree in the area.  Affected enemies take damage over time and are pulled towards the tree nearest to them within the target area, and have their vision reduced to 0 for the duration of the stun.",
 			"lore": "Hoodwink favors Ironwood groves for ambushes, but the wary step carefully in all areas of the mistwoods.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -27002,7 +26994,7 @@
 				250
 			],
 			"name": "Solar Guardian",
-			"description": "Dawnbreaker creates a pulsing effect at a location within %max_offset_distance% units of an allied hero anywhere on the map, damaging enemies and healing allies with each pulse. After a short duration, she flies to the target location, dealing additional damage and stunning enemies upon landing. Once channeled, Dawnbreaker cannot stop the ability.",
+			"description": "CHANNELED - Dawnbreaker creates a pulsing effect at a location within %max_offset_distance% units of an allied hero anywhere on the map, damaging enemies and healing allies with each pulse. After a short duration, she flies to the target location, dealing additional damage and stunning enemies upon landing. Once channeled, Dawnbreaker cannot stop the ability.",
 			"lore": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -27067,7 +27059,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+50% Luminosity Crit"
+			"description": "+50% Luminosity Critical Strike Damage"
 		},
 		"special_bonus_unique_dawnbreaker_solar_guardian_cooldown": {
 			"id": 7938,
@@ -27470,7 +27462,7 @@
 				100
 			],
 			"name": "Pulverize",
-			"description": "Primal Beast channels his rage, grabbing the target enemy and slamming them into the ground repeatedly, damaging and mini-stunning any enemies caught in the AoE. Lasts %channel_time% seconds.",
+			"description": "CHANNELED - Primal Beast channels his rage, grabbing the target enemy and slamming them into the ground repeatedly, damaging and mini-stunning any enemies caught in the AoE. Lasts %channel_time% seconds.",
 			"lore": "Though none are certain whether his utterances have true meaning, most concede the Beast's powerful grip and tendency to smash his enemies into naught but pulp and pieces communicates his intent well enough.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -27531,7 +27523,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Beast dispells himself when activating Uproar"
+			"description": "Beast dispels himself when activating Uproar"
 		},
 		"special_bonus_unique_primal_beast_trample_attack_damage": {
 			"id": 7742,

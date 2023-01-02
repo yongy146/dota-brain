@@ -129,26 +129,27 @@ export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
 }
 
 /**
+ * Converts role to react-intl message id
  *
- * @param role react-intl message ID
- * @returns
+ * @param role
+ * @returns react-intl message id
  */
-export function getRoleString(role: DOTA_COACH_ROLE): string {
+export function roleToMessageId(role: DOTA_COACH_ROLE): string {
   switch (role) {
     case DOTA_COACH_ROLE.CARRY: {
-      return "Carry";
+      return "dota.roles.Carry";
     }
     case DOTA_COACH_ROLE.MID: {
-      return "Mid";
+      return "dota.roles.Mid";
     }
     case DOTA_COACH_ROLE.OFFLANE: {
-      return "Offlane";
+      return "dota.roles.Offlane";
     }
     case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-      return "SoftSupport";
+      return "dota.roles.SoftSupport";
     }
     case DOTA_COACH_ROLE.HARD_SUPPORT: {
-      return "HardSupport";
+      return "dota.roles.HardSupport";
     }
   }
 }
