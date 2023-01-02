@@ -3,7 +3,7 @@
  *
  * Note: Automatic production of this file based on static data provided by Dota 2 is not possible. Sample issue:  Anti-Mage's mana break ability has a silence_duration in the file, but not in the game.
  *
- * Copyright Dota Coach, 2022
+ * Copyright (C) Dota Coach, 2023. All rights reserved.
  */
 
 // Root and Silence are the disables that make the difference between interrupting teleport and channeling skills
@@ -32,8 +32,8 @@ export const channeling_interrupts = [
 export const silence = ["silence"];
 export const root = ["root"];
 
-export interface Disables {
-  [key: string]: Disable[]; // Localized Hero name
+export interface IDisables {
+  [key: string]: IDisable[]; // Localized Hero name
 }
 
 export enum AbilityAffects {
@@ -42,13 +42,13 @@ export enum AbilityAffects {
   HERO = "HERO", // Effects only targeted hero
 }
 
-export interface Disable {
+export interface IDisable {
   skill: string;
   affects: AbilityAffects;
   disables: string[];
 }
 
-export const disables: Disables = {
+export const disables: IDisables = {
   Alchemist: [
     {
       skill: "alchemist_unstable_concoction",
