@@ -13,6 +13,22 @@ import * as WebAccess from "../utilities/webAccess"; // MIGRATE TO axios!
 import * as Dota2 from "../dota-brain/dota2";
 import * as OpentDotaAPI from "../../submodules/utilities/openDota/openDotaAPI";
 
+export interface IRecentItems {
+  match_id: number;
+  start_time: number;
+  account_id: number;
+  item_0: number;
+  item_1: number;
+  item_2: number;
+  item_3: number;
+  item_4: number;
+  item_5: number;
+  purchase_log: {
+    time: number;
+    key: string; // e.g. "tango" or "ring_of_regen"
+  }[];
+}
+
 /**
  *
  * @param steamId32
@@ -25,7 +41,7 @@ export async function getRecentItems(
   steamId32: string,
   heroId: number,
   numberOfMatches: number
-): Promise<any> {
+): Promise<IRecentItems[]> {
   DotaLogger.log(
     `openDotaAPI.getRecentItems(steamId32: ${steamId32}, heroId: ${heroId}, numberOfMatches: ${numberOfMatches}): Called`
   );
