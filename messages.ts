@@ -13536,7 +13536,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
 
-  // 99. Techies
+  // 99. Techies - Needs to be reworked. I removed the wrong messages
   {
     category: "OwnHero",
     hero: "Techies",
@@ -13555,7 +13555,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_suicide" },
   },
-  {
+  /*{
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_3_MineTreelines",
@@ -13572,7 +13572,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "You can make it harder for opponents to destroy mines by sitting on top of them.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_land_mines" },
-  },
+  },*/
   {
     category: "OwnHero",
     hero: "Techies",
@@ -13583,7 +13583,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "arcane_boots" },
   },
-  {
+  /*{
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_6_Vision",
@@ -13592,8 +13592,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Remote and Proximity Mines provide limited vision so you can place them on pillars, runes or Roshpit.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_remote_mines" },
-  },
-  {
+  },*/
+  /*{
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_7_LookAround",
@@ -13601,7 +13601,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Look around frequently to timely detonate Remote Mines.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_remote_mines" },
-  },
+  },*/
   {
     category: "OwnHero",
     hero: "Techies",
@@ -13632,7 +13632,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "If your teammates are pressuring, move with them, mine around them and Blast Off! when opponents clump up.",
     audience: [Audience.ALL],
   },
-  {
+  /*{
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_11_Roshpit",
@@ -13642,7 +13642,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "There are spots in Roshpit at the edge of the entrance where your Remote Mines are hard to see.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_remote_mines" },
-  },
+  },*/
   {
     category: "OwnHero",
     hero: "Techies",
@@ -13653,7 +13653,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
-  {
+  /*{
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_13_ForceIntoMines",
@@ -13662,7 +13662,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Consider purchasing Force Staff to push opponents into mines when they try to remove them.",
     audience: [Audience.ALL],
     image: { type: "item", name: "force_staff" },
-  },
+  },*/
 
   {
     category: "EnemyHero",
@@ -13673,7 +13673,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Against Techies, deliver extra consumables and an Observer Ward to keep track of him.",
     audience: [Audience.IN_LANE],
   },
-  {
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_2_Quell",
@@ -13681,8 +13681,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Quell the trees in the area so you can spot Proximity mines and see Techies doing Blast Off!",
     audience: [Audience.IN_LANE],
-  },
-  {
+  },*/
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_3_ProximityMines",
@@ -13690,7 +13690,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Proximity Mines explode 1.6 seconds after you hear the beep. Destroy them or move away quickly.",
     audience: [Audience.ALL],
-  },
+  },*/
   {
     category: "EnemyHero",
     hero: "Techies",
@@ -13700,22 +13700,22 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Keep track of Techies' movements and notice which part of the map is being mined.",
     audience: [Audience.ALL],
   },
-  {
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_5_BringSentries",
     messageTime: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage: "Bring sentries whenever you're making a move on the opponent side of the map.",
     audience: [Audience.ALL],
-  },
-  {
+  },*/
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_6_AvoidTrees",
     messageTime: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage: "Avoid being next to trees in the lane as he can hide the Remote Mines in there.",
     audience: [Audience.ALL],
-  },
+  },*/
   {
     category: "EnemyHero",
     hero: "Techies",
@@ -13725,7 +13725,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Avoid walking up highground or in Roshpit without vision. You might run into mines.",
     audience: [Audience.ALL],
   },
-  {
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_8_AntispellItems",
@@ -13733,9 +13733,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Magic resistance items, Black King Bar and Aeon Disk are great against Techies' Remote Mines.",
     audience: [Audience.ALL],
-  },
+  },*/
   // {category: "EnemyHero", hero: "Techie", audioFile: "enemyHero/Techie_9_Necrobook 3", messageTime: (12*60+10), textMessage: "Consider buying Necrobook level3 on someone for true sight.", audience: [Audience.ALL]}, |patch 7.29| MESSAGE REMOVED
-  {
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_10_Aegis",
@@ -13743,15 +13743,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Getting Aegis of Immortal is great against Remote mines. Take Roshan as early as possible.",
     audience: [Audience.ALL],
-  },
-  {
+  },*/
+  /*{
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_11_Gem",
     messageTime: 20 * 60 + 10,
     textMessage: "Buy a Gem of True Sight around 20min when you start grouping up as team.",
     audience: [Audience.ALL],
-  },
+  },*/
 
   // 100. Templar Assassin
   {
