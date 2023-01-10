@@ -8,7 +8,7 @@ import { IMonitorMeasurements, IMonitorReuse, measurements } from "./measurement
 export class MonitorMeasurements {
   public readonly width: number;
   public readonly height: number;
-  public readonly measurements: IMonitorMeasurements;
+  public measurements: IMonitorMeasurements;
   public readonly customization: "piggy backed" | "customized" | "not configured";
 
   get isCustomized(): boolean {
@@ -38,15 +38,24 @@ export class MonitorMeasurements {
     if (measurements[screenSize] === undefined) {
       this.measurements = <IMonitorMeasurements>measurements["1920x1080"];
       this.customization = "not configured";
+      this.measurements.isCustomized = false;
     } else if ((<IMonitorReuse>measurements[screenSize]).reuse !== undefined) {
       this.measurements = <IMonitorMeasurements>(
         measurements[(<IMonitorReuse>measurements[screenSize]).reuse]
       );
       this.customization = "piggy backed";
+      this.measurements.isCustomized = true;
     } else {
       this.measurements = <IMonitorMeasurements>measurements[screenSize];
       this.customization = "customized";
+      this.measurements.isCustomized = true;
     }
+
+    this.measurements = JSON.parse(JSON.stringify(this.measurements));
+
+    this.measurements.width = width;
+    this.measurements.height = height;
+    this.measurements.fontSizeSmall = this.measurements.fontSize * 0.8;
 
     // Add calculated fields by the performance tracker
     this.measurements.inGame.tracker.performance.width =

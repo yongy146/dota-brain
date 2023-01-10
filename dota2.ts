@@ -19,6 +19,7 @@ import * as PlayerRoles from "./playerRoles";
 import { IUIItem, IUIAbility } from "../../submodules/utilities/react/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 import i18nDota from "./i18n/en/dota.json";
+import { LogManager } from "../../src/app/utility/logManager";
 
 // Version node.js
 /*import * as HeroBuilds from "./heroBuilds.js";
@@ -1224,6 +1225,10 @@ export namespace hero_images {
     //DotaLogger.log(`dota2.idToMinimapImgName(${heroId}): Called`);
     return idToImgName(heroId).replace(".png", "_minimap_icon.png");
   }
+  export function NPCShortNameToMinimapImgName(NPCShortName: string): string {
+    //DotaLogger.log(`dota2.idToMinimapImgName(${heroId}): Called`);
+    return NPCShortNameToImgName(NPCShortName).replace(".png", "_minimap_icon.png");
+  }
   export function localizedNameToImgName(heroName: string): string {
     //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
     switch (heroName) {
@@ -1420,6 +1425,11 @@ export namespace hero_abilities {
       passivesBreakable: [],
       passivesNonBreakable: [],
     };
+
+    DotaLogger.log(
+      `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(heroIds)}): Called`
+    );
+
     for (const heroId of heroIds) {
       const npcName = hero_names.idToNPCName(heroId);
       const abilities = dota2Abilities[npcName as keyof typeof dota2Abilities];
@@ -1534,6 +1544,11 @@ export namespace hero_abilities {
         }
       }
     }
+    DotaLogger.log(
+      `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(
+        heroIds
+      )}): Result: ${JSON.stringify(result)}`
+    );
     return result;
   }
 

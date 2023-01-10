@@ -5,6 +5,10 @@
  */
 export interface IMonitorMeasurements {
   fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
+  fontSizeSmall?: number; // Added by script
+  isCustomized?: boolean; // Calculated field
+  width?: number; // Added by script
+  height?: number; // Added by script
   preGame: {
     // Heroes: Excluding the grey shaded box
     heroesRadiantTopLeftXPos: number;
@@ -718,9 +722,9 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         size: 106,
       },
       appButton: {
-        xPos: 5,
-        yPos: 805,
-        size: 30,
+        xPos: 9,
+        yPos: 800, // 805 ajacent
+        size: 25,
       },
     },
   },
