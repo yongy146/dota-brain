@@ -59,7 +59,7 @@ export class MonitorMeasurements {
 
     // Add calculated fields by the performance tracker
     this.measurements.inGame.tracker.performance.width =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 230;
+      (this.measurements.inGame.tracker.performance.xPos / 159) * 230; // Probably no longer needed...
     this.measurements.inGame.tracker.performance.heightTwoKPIs =
       this.measurements.inGame.tracker.performance.nonDotaPlus.height;
     this.measurements.inGame.tracker.performance.spacer =

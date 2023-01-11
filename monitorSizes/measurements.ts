@@ -690,11 +690,11 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
 
       tracker: {
         performance: {
-          xPos: 159, // xPos of end of 'Current' of last zero (white area) with Dota Plus
-          yPos: 60, // yPos of upper end of Dota 2 tracker
+          xPos: 159, //XXX xPos of end of 'Current' of last zero (white area) with Dota Plus
+          yPos: 60, //XXX yPos of upper end of Dota 2 tracker (including the last line)
           nonDotaPlus: {
-            height: 44,
-            yPosKDA: -2,
+            height: 44, // NOT NEEDED
+            yPosKDA: -2, // NOT NEEDED...
           },
           dotaPlus: {
             height: 87,
