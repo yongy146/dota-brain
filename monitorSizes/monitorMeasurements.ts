@@ -56,33 +56,5 @@ export class MonitorMeasurements {
     this.measurements.width = width;
     this.measurements.height = height;
     this.measurements.fontSizeSmall = this.measurements.fontSize * 0.8;
-
-    // Add calculated fields by the performance tracker
-    this.measurements.inGame.tracker.performance.width =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 230; // Probably no longer needed...
-    this.measurements.inGame.tracker.performance.heightTwoKPIs =
-      this.measurements.inGame.tracker.performance.nonDotaPlus.height;
-    this.measurements.inGame.tracker.performance.spacer =
-      (this.measurements.inGame.tracker.performance.nonDotaPlus.height / 44) * 5;
-    this.measurements.inGame.tracker.performance.statusWidth =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 12;
-
-    this.measurements.inGame.tracker.performance.xPosStatus =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 38;
-    this.measurements.inGame.tracker.performance.xPosCurrent =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 57;
-    this.measurements.inGame.tracker.performance.xPosGoal0 =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 131;
-    this.measurements.inGame.tracker.performance.xPosSeparator =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 141;
-    this.measurements.inGame.tracker.performance.xPosGoal1 =
-      (this.measurements.inGame.tracker.performance.xPos / 159) * 151;
-
-    this.measurements.inGame.tracker.items.xPosGoal0 =
-      (this.measurements.inGame.tracker.items.width / 219) * 155;
-    this.measurements.inGame.tracker.items.xPosSeparator =
-      (this.measurements.inGame.tracker.items.width / 219) * 163;
-    this.measurements.inGame.tracker.items.xPosGoal1 =
-      (this.measurements.inGame.tracker.items.width / 219) * 175;
   }
 }

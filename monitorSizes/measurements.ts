@@ -41,36 +41,14 @@ export interface IMonitorMeasurements {
 
     tracker: {
       performance: {
-        xPos: number; // xPos of end of 'Current' of last zero (white area) with Dota Plus
-        yPos: number; // yPos of upper end of Dota 2 tracker
-        nonDotaPlus: {
-          height: number; // height of KDA & LH/DN provided by app
-          yPosKDA: number;
-        };
-        dotaPlus: {
-          height: number;
-          yPosKDA: number;
-        };
-        width?: number; // calcuated value
-        heightTwoKPIs?: number; // calcuated value
-        spacer?: number; // calcuated value
-        statusWidth?: number; // calcuated value
-
-        xPosStatus?: number; // calcuated value
-        xPosCurrent?: number; // calcuated value
-        xPosGoal0?: number; // calcuated value
-        xPosSeparator?: number; // calcuated value
-        xPosGoal1?: number; // calcuated value
+        xPos: number; // xPos of end of 'Current' of last zero (white area) with Dota Plus [also w/o?!]
+        yPos: number; // yPos of upper end of Dota 2 tracker (same for Dota Plus subscribers and non-subscribers)
       };
       items: {
         // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
         yPos: number; // yPos of where the next element on the window starts
         xPos: number; // xPos of HUD element where TP ends
         width: number; // width to HUD element where gold starts
-
-        xPosGoal0?: number; // calcuated value
-        xPosSeparator?: number; // calcuated value
-        xPosGoal1?: number; // calcuated value
       };
     };
 
@@ -126,14 +104,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 111,
           yPos: 43,
-          nonDotaPlus: {
-            height: 28,
-            yPosKDA: -1,
-          },
-          dotaPlus: {
-            height: 60,
-            yPosKDA: 13,
-          },
         },
         items: {
           xPos: 0,
@@ -189,14 +159,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 116,
           yPos: 40,
-          nonDotaPlus: {
-            height: 30,
-            yPosKDA: -2,
-          },
-          dotaPlus: {
-            height: 59,
-            yPosKDA: 13,
-          },
         },
         items: {
           xPos: 959,
@@ -253,14 +215,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 122,
           yPos: 53,
-          nonDotaPlus: {
-            height: 36, // Not yet verfiied with Dota Plus...
-            yPosKDA: -3, //-2, // Not yet verfiied with Dota Plus...
-          },
-          dotaPlus: {
-            height: 53,
-            yPosKDA: 13,
-          },
         },
         items: {
           xPos: 1133 /* 1280 - 147 */,
@@ -314,14 +268,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 157,
           yPos: 57,
-          nonDotaPlus: {
-            height: 40,
-            yPosKDA: -1,
-          },
-          dotaPlus: {
-            height: 80,
-            yPosKDA: 18,
-          },
         },
         items: {
           xPos: 0,
@@ -375,14 +321,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 122,
           yPos: 43,
-          nonDotaPlus: {
-            height: 32,
-            yPosKDA: 0,
-          },
-          dotaPlus: {
-            height: 62,
-            yPosKDA: 14,
-          },
         },
         items: {
           xPos: 1024,
@@ -437,14 +375,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 137,
           yPos: 50,
-          nonDotaPlus: {
-            height: 36,
-            yPosKDA: -2,
-          },
-          dotaPlus: {
-            height: 72,
-            yPosKDA: 16,
-          },
         },
         items: {
           xPos: 0,
@@ -499,14 +429,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 137,
           yPos: 50,
-          nonDotaPlus: {
-            height: 36,
-            yPosKDA: -1,
-          },
-          dotaPlus: {
-            height: 72,
-            yPosKDA: 16,
-          },
         },
         items: {
           xPos: 1199,
@@ -562,14 +484,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 159,
           yPos: 58,
-          nonDotaPlus: {
-            height: 42,
-            yPosKDA: -2,
-          },
-          dotaPlus: {
-            height: 83,
-            yPosKDA: 18,
-          },
         },
         items: {
           xPos: 0,
@@ -624,14 +538,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 150,
           yPos: 55,
-          nonDotaPlus: {
-            height: 40,
-            yPosKDA: -2, // WRONG
-          },
-          dotaPlus: {
-            height: 79,
-            yPosKDA: 16,
-          },
         },
         items: {
           xPos: 1325,
@@ -692,14 +598,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 159, //XXX xPos of end of 'Current' of last zero (white area) with Dota Plus
           yPos: 60, //XXX yPos of upper end of Dota 2 tracker (including the last line)
-          nonDotaPlus: {
-            height: 44, // NOT NEEDED
-            yPosKDA: -2, // NOT NEEDED...
-          },
-          dotaPlus: {
-            height: 87,
-            yPosKDA: 19,
-          },
         },
         items: {
           // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
@@ -757,14 +655,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 178,
           yPos: 67,
-          nonDotaPlus: {
-            height: 50,
-            yPosKDA: -1,
-          },
-          dotaPlus: {
-            height: 98,
-            yPosKDA: 20,
-          },
         },
         items: {
           xPos: 0,
@@ -819,14 +709,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 224,
           yPos: 80,
-          nonDotaPlus: {
-            height: 56,
-            yPosKDA: -3,
-          },
-          dotaPlus: {
-            height: 112,
-            yPosKDA: 23,
-          },
         },
         items: {
           xPos: 0,
@@ -880,14 +762,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 159,
           yPos: 60,
-          nonDotaPlus: {
-            height: 44, // WRONG
-            yPosKDA: -2, // WRONG
-          },
-          dotaPlus: {
-            height: 87,
-            yPosKDA: 19,
-          },
         },
         items: {
           xPos: 2279 - 219,
@@ -941,14 +815,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 209,
           yPos: 80,
-          nonDotaPlus: {
-            height: 58, // WRONG
-            yPosKDA: -2, // WRONG
-          },
-          dotaPlus: {
-            height: 115,
-            yPosKDA: 25,
-          },
         },
         items: {
           xPos: 1949,
@@ -1004,14 +870,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 220,
           yPos: 80,
-          nonDotaPlus: {
-            height: 58,
-            yPosKDA: -2,
-          },
-          dotaPlus: {
-            height: 115,
-            yPosKDA: 25,
-          },
         },
         items: {
           xPos: 2777,
@@ -1065,14 +923,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 159,
           yPos: 60,
-          nonDotaPlus: {
-            height: 44,
-            yPosKDA: -2,
-          },
-          dotaPlus: {
-            height: 87,
-            yPosKDA: 19,
-          },
         },
         items: {
           xPos: 3577 - 264,
@@ -1126,14 +976,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 312,
           yPos: 120,
-          nonDotaPlus: {
-            height: 88, // WRONG
-            yPosKDA: -2, // WRONG
-          },
-          dotaPlus: {
-            height: 174,
-            yPosKDA: 37,
-          },
         },
         items: {
           xPos: 2876,
@@ -1188,14 +1030,6 @@ export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> 
         performance: {
           xPos: 209,
           yPos: 80,
-          nonDotaPlus: {
-            height: 58,
-            yPosKDA: -2,
-          },
-          dotaPlus: {
-            height: 115,
-            yPosKDA: 28,
-          },
         },
         items: {
           xPos: 4760 - 264,
