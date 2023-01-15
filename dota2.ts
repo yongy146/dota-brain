@@ -1989,6 +1989,11 @@ export namespace items {
     return null;*/
   }
 
+  /**
+   *
+   * @param name
+   * @returns
+   */
   export function getItemImageFromName(name: string): string | null {
     return `${process.env.IMGPATH}/items/${name}.png`;
   }
