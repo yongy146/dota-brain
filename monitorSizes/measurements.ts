@@ -30,7 +30,7 @@ export interface IMonitorMeasurementsHTML {
  * All fields needed to position and size overwolf frames.
  */
 export interface IMonitorMeasurementsOverwolf {
-  fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
+  fontSize: number; // Used for tracker and subtitle (take KDA font size and add ~20%)
   preGame: {
     // Heroes: Excluding the grey shaded box
     heroesRadiantTopLeftXPos: number;
@@ -49,26 +49,23 @@ export interface IMonitorMeasurementsOverwolf {
     appButton: {
       xPos: number;
       yPos: number;
-      size: number;
+      size: number; // Probably there is only one size needed... should be the same in-game and during hero-selection, I think
     };
   };
   inGame: {
-    heroesRadiantTopLeftXPos?: number;
-    heroesDireTopLeftXPos?: number;
     heroesRadiantBottomLeftXPos: number; // Infoboxes need to be migrated to TopLeft... and not bottom left.
     heroesDireBottomLeftXPos: number;
-
     heroesWidth: number; // width of 5 heroes
     heroesHeight: number; // height of heroes display by Dota 2
 
     tracker: {
       performance: {
-        xPos: number; // xPos of end of 'Current' of last zero (white area) with Dota Plus [also w/o?!]
+        xPos: number; // xPos of end of 'Current' of last zero (white area) with Dota Plus | w/o Dota Plus a little more right than last 0 (such that the spacing would be similar to the Dota icons; including last line)
         yPos: number; // yPos of upper end of Dota 2 tracker (same for Dota Plus subscribers and non-subscribers)
       };
       items: {
         // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
-        yPos: number; // yPos of where the next element on the window starts
+        yPos: number; // Currently we take the bottom of the window (i.e. the height of the window)
         xPos: number; // xPos of HUD element where TP ends
         width: number; // width to HUD element where gold starts
       };
@@ -81,15 +78,17 @@ export interface IMonitorMeasurementsOverwolf {
       width: number; // 4 pixels from loss in / out
       height: number; // high such that longes text is visble
     };
+
     roshanGlyph: {
       xPos: number;
       yPos: number;
-      size: number; // Roshan glyph window has same widht and height
+      size: number; // Roshan glyph window has same width and height; about 2.585x size of Scan and Glyph sign
     };
+
     appButton: {
       xPos: number;
       yPos: number;
-      size: number;
+      size: number; // Hight between Dota 2's size of settings cogs or hambuger menu
     };
   };
 }
@@ -587,20 +586,16 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
   },
 
   "1920x1080": {
-    fontSize: 13.5, // used for tracker and subtitle
-    // How to use the font size: document.documentElement.style.setProperty("--font_size", `${this.screen.fontSize/window.devicePixelRatio}px`)
+    fontSize: 13.5,
     preGame: {
-      // Heroes: Excluding the grey shaded box
       heroesRadiantTopLeftXPos: 210,
       heroesDireTopLeftXPos: 1107,
       heroesWidth: 603,
-
       subtitles: {
-        // Position where to put the subtitles
-        xPos: 560, // Middle hero radiant
-        yPos: 115, // One line above 'STRATEGY / LOADOUT / GUIDES'
-        width: 800, // From middle hero radiant to middle hero dire
-        height: 60, // High such that longest 'hero selection' text can be shown
+        xPos: 560,
+        yPos: 115,
+        width: 800,
+        height: 60,
       },
       appButton: {
         xPos: 113,
@@ -609,32 +604,28 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
     inGame: {
-      heroesRadiantTopLeftXPos: 545,
       heroesRadiantBottomLeftXPos: 549,
-      heroesDireTopLeftXPos: 1066,
       heroesDireBottomLeftXPos: 1062,
       heroesHeight: 39,
       heroesWidth: 308,
 
       tracker: {
         performance: {
-          xPos: 159, //XXX xPos of end of 'Current' of last zero (white area) with Dota Plus
-          yPos: 60, //XXX yPos of upper end of Dota 2 tracker (including the last line)
+          xPos: 159,
+          yPos: 60,
         },
         items: {
-          // Based on KOTL with 6 skills (incl. aghanim's shard and level 6)
-          yPos: 1080, // yPos of where the next element below can be placed
-          xPos: 1439, // xPos of HUD element where TP ends
-          width: 219, // width to HUD element where gold starts
+          yPos: 1080,
+          xPos: 1439,
+          width: 219,
         },
       },
 
       subtitles: {
-        // Position and sizing of the subtitles
-        xPos: 1381, // 4 pixels right of hero icons
-        yPos: 4, // 4 pixels form top of screen
-        width: 362, // 4 pixels from loss in / out
-        height: 140, // high such that longes text is visble
+        xPos: 1381,
+        yPos: 4,
+        width: 362,
+        height: 140,
       },
       roshanGlyph: {
         xPos: 250,
@@ -643,7 +634,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
       appButton: {
         xPos: 9,
-        yPos: 800, // 805 ajacent
+        yPos: 800, // 805 adjacent
         size: 25,
       },
     },
@@ -862,8 +853,62 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-  "2560x1600": { reuse: "2560x1440" },
+
   "2715x1527": { reuse: "2560x1440" },
+
+  "2560x1600": {
+    // Added 19.1.2023
+    fontSize: 19,
+    preGame: {
+      heroesRadiantTopLeftXPos: 131,
+      heroesDireTopLeftXPos: 1535,
+      heroesWidth: 893,
+      subtitles: {
+        xPos: 592,
+        yPos: 180,
+        width: 1370,
+        height: 80,
+      },
+      appButton: {
+        xPos: 14,
+        yPos: 66,
+        size: 33,
+      },
+    },
+    inGame: {
+      heroesRadiantBottomLeftXPos: 671,
+      heroesDireBottomLeftXPos: 1431,
+      heroesHeight: 59,
+      heroesWidth: 459,
+      tracker: {
+        performance: {
+          xPos: 250,
+          yPos: 89,
+        },
+        items: {
+          yPos: 1600,
+          xPos: 1887,
+          width: 285,
+        },
+      },
+      subtitles: {
+        xPos: 1902,
+        yPos: 5,
+        width: 396,
+        height: 170,
+      },
+      roshanGlyph: {
+        xPos: 372,
+        yPos: 1239,
+        size: 160,
+      },
+      appButton: {
+        xPos: 11,
+        yPos: 1229,
+        size: 33,
+      },
+    },
+  },
 
   "3440x1440": {
     fontSize: 17,

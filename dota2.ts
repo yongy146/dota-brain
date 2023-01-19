@@ -1424,11 +1424,11 @@ export namespace hero_abilities {
       passivesBreakable: [],
       passivesNonBreakable: [],
     };
-
+    /*
     DotaLogger.log(
       `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(heroIds)}): Called`
     );
-
+    */
     for (const heroId of heroIds) {
       const npcName = hero_names.idToNPCName(heroId);
       const abilities = dota2Abilities[npcName as keyof typeof dota2Abilities];
@@ -1543,11 +1543,13 @@ export namespace hero_abilities {
         }
       }
     }
+    /*
     DotaLogger.log(
       `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(
         heroIds
       )}): Result: ${JSON.stringify(result)}`
     );
+    */
     return result;
   }
 
