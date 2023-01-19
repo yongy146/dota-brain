@@ -1,6 +1,7 @@
 *
 !monitorSizes
 !monitorSizes/**
+monitorSizes/*.png
 !parsed
 !parsed/**
 !i18n

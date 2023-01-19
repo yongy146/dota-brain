@@ -3,12 +3,34 @@
  *
  * (C) Dota Coach, 2021
  */
+
 export interface IMonitorMeasurements {
+  width: number; // Added by script
+  height: number; // Added by script
+  isCustomized: boolean; // Added by script
+  customization: "piggy backed" | "customized" | "not configured"; // Added by script
+  overwolf: IMonitorMeasurementsOverwolf; // This could be shortened by defining specific interface...
+  html: IMonitorMeasurementsHTML;
+}
+
+/**
+ * Only adding fields that are needed to render HTML content
+ */
+export interface IMonitorMeasurementsHTML {
   fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
-  fontSizeSmall?: number; // Added by script
-  isCustomized?: boolean; // Calculated field
-  width?: number; // Added by script
-  height?: number; // Added by script
+  fontSizeSmall: number; // Added by script
+
+  inGame: {
+    heroesWidth: number;
+    heroesHeight: number;
+  };
+}
+
+/**
+ * All fields needed to position and size overwolf frames.
+ */
+export interface IMonitorMeasurementsOverwolf {
+  fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
   preGame: {
     // Heroes: Excluding the grey shaded box
     heroesRadiantTopLeftXPos: number;
@@ -76,7 +98,7 @@ export interface IMonitorReuse {
   reuse: string /* e.g. '1920x1080' */;
 }
 
-export const measurements: Record<string, IMonitorMeasurements | IMonitorReuse> = {
+export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> | IMonitorReuse> = {
   "1024x768": {
     fontSize: 9,
     preGame: {
