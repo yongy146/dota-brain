@@ -16,7 +16,7 @@ The key files in the repository are:
 
 # Can I contribute?
 
-Yes, absolutely! Our aim is to provide users with the best possible Dota 2 playing experience. Any suggestions for improvements are welcome.
+Yes, absolutely! Our aim is to provide our users with the best possible Dota 2 playing experience. Any suggestions for improvements are welcome.
 
 # How can I contribute?
 
