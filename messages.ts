@@ -11338,6 +11338,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "razor_plasma_field" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Razor`,
+    audioFile: `ownHero/Razor_9_Aggression`,
+    messageTime: 15 * 60,
+    textMessage: `Once you have bloodstone and Aghanim shard, play aggressively on the map and take fights and objectives.`,
+    audience: [Audience.Offlane],
+    image: { type: `item`, name: `aghanims_shard` },
+  },
 
   {
     category: "EnemyHero",
@@ -11563,6 +11572,24 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Be patient in the fights and make sure to steal a high impact spell.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_spell_steal" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Rubick`,
+    audioFile: `ownHero/Rubick_6_Fadebolt`,
+    messageTime: 20 * 60,
+    textMessage: `Spam your Fade Bolt by using it on the first target you see, rather than keeping it for a KS.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `rubick_fade_bolt` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Rubick`,
+    audioFile: `ownHero/Rubick_7_WaveclearSpell2`,
+    messageTime: 13 * 60,
+    textMessage: `Use your level 4 Fade Bolt on the ranged creep first to one shot it.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `rubick_fade_bolt` },
   },
 
   {
@@ -13541,8 +13568,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_1_ExtraConsumables",
-    messageTime: -90,
-    textMessage: "Bring a lot of health consumables to the lane and use Blast Off! frequently.",
+    messageTime: 2 * 60,
+    textMessage: `Ferry some health consumables with your courier to use Blast Off! frequently.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_suicide" },
   },
@@ -13583,16 +13610,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "arcane_boots" },
   },
-  /*{
+  {
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_6_Vision",
     messageTime: [9 * 60, 15 * 60, 21 * 60],
     textMessage:
-      "Remote and Proximity Mines provide limited vision so you can place them on pillars, runes or Roshpit.",
+      `Sticky Bombs and Proximity Mines provide limited vision so you can scout pillars, runes or Roshpit.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "techies_remote_mines" },
-  },*/
+    image: { type: "ability", name: `techies_sticky_bomb` },
+  },
   /*{
     category: "OwnHero",
     hero: "Techies",
@@ -13619,7 +13646,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Techies_9_Signal",
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage: "Signal your teammates to play around your mines.",
+    textMessage: `Look for pickoffs or join teamfights with your massive burst potential.`,
     audience: [Audience.ALL],
   },
   {
@@ -13632,24 +13659,24 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "If your teammates are pressuring, move with them, mine around them and Blast Off! when opponents clump up.",
     audience: [Audience.ALL],
   },
-  /*{
+  {
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_11_Roshpit",
     messageTime: 14 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "There are spots in Roshpit at the edge of the entrance where your Remote Mines are hard to see.",
+      `Place a couple of Proximity Mines at the entrance of rosh pit to scout enemy movement.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "techies_remote_mines" },
-  },*/
+    image: { type: "ability", name: `techies_land_mines` },
+  },
   {
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_12_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as provides additional control in the fights.",
+      `Pick up Aghanims Shard around minute 15 as it provides additional control in the fights.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -13663,6 +13690,26 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "force_staff" },
   },*/
+  {
+    category: `OwnHero`,
+    hero: `Techies`,
+    audioFile: `ownHero/Techies_14_Aggression`,
+    messageTime: 12 * 60,
+    textMessage:
+      `Play aggressively in lanes and the enemy jungle with your level 7 as you have massive kill potential.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `techies_land_mines` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Techies`,
+    audioFile: `ownHero/Techies_15_Eblade`,
+    messageTime: 25 * 60,
+    textMessage:
+      `With your Ethereal Blade, you can burst down just about any hero on the map with your combo.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `ethereal_blade` },
+  },
 
   {
     category: "EnemyHero",
