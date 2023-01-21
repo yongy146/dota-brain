@@ -100,7 +100,9 @@ export function getRolesString(heroBuild: HeroBuild) {
  * @param role
  * @returns
  */
-export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
+export function getDotaCoachGuideRoleString(
+  role: DOTA_COACH_GUIDE_ROLE
+): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
