@@ -3839,13 +3839,7 @@
 		"health_regen_": 15,
 		"mana_regen_": 10,
 		"strength_": 15,
-		"intelligence_": 15,
-		"requirements": [
-			"item_blink",
-			"item_meteor_hammer",
-			"",
-			"item_recipe_fallen_sky"
-		]
+		"intelligence_": 15
 	},
 	"item_pirate_hat": {
 		"id": 372,
