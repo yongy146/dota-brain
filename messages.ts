@@ -15779,7 +15779,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out the sidelines even without showing yourself.",
+      `When not much is happening, push out the side lanes with Gale and Plague Wards.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "venomancer_plague_ward" },
   },
@@ -15789,7 +15789,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Venomancer_10_Aghanims",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard and Scepter as the game progresses as they're huge damage increase.",
+      `Pick up Aghanims Scepter as the game progresses to amplify your damage output.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -15862,20 +15862,20 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Viper_3_Slow",
     messageTime: [2 * 60 + 45, 7 * 60 + 45],
     textMessage:
-      "Viper is insanely slow. Consider getting a casual Wind Lace and perhaps even Boots of Travel in the long run.",
+      `Viper is insanely slow. Consider getting a casual Wind Lace and Boots of Travel in the long run.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "wind_lace" },
   },
-  /*   {
+  {
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_4_NethertoxinUsage",
-    messageTime: [8 * 60 + 45, 16 * 60 + 45],
+    messageTime: [8 * 60 + 45],
     textMessage:
-      "Viper is insanely slow. Consider getting a casual Wind Lace and perhaps even Boots of Travel in the long run.",
+      `You can kill tanky heroes around the map with the break effect from your Nethertoxin.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "viper_nethertoxin" },
-  }, */
+    image: { type: `ability`, name: `viper_nethertoxin` },
+  },
   {
     category: "OwnHero",
     hero: "Viper",
@@ -15887,7 +15887,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "viper_nethertoxin" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_6_NotTanky",
@@ -15895,15 +15895,33 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Although you are very tanky in early stages, you aren't nearly as tanky around the 20 minute mark.",
     audience: [Audience.ROLE_CORE],
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_7_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage: `Pick up Aghanims Shard around minute 15 to further increase your dps and building damage.`,
-    audience: [Audience.ALL],
+    audience: [Audience.Offlane],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Viper`,
+    audioFile: `ownHero/Viper_8_Bloodstone`,
+    messageTime: 18 * 60 + 50,
+    textMessage: `Once you have Aghanims Scepter and Bloodstone, look to take fights and objectives around the map.`,
+    audience: [Audience.ROLE_CORE],
+    image: { type: `item`, name: `travel_boots` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Viper`,
+    audioFile: `ownHero/Viper_9_EternalShroud`,
+    messageTime: 25 * 60,
+    textMessage: `Start running at enemy heroes with your Aghanims Scepter, Bloodstone and Eternal Shroud.`,
+    audience: [Audience.ROLE_CORE],
+    image: { type: `item`, name: `eternal_shroud` },
   },
 
   {
