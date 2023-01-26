@@ -15775,21 +15775,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Venomancer",
-    audioFile: "ownHero/Venomancer_9_PushSidelanes",
+    audioFile: "ownHero/Venomancer_9_PushSidelanes_v2",
     messageTime: 11 * 60 + 45,
     repeatTime: 10 * 60,
-    textMessage:
-      `When not much is happening, push out the side lanes with Gale and Plague Wards.`,
+    textMessage: `When not much is happening, push out the side lanes with Gale and Plague Wards.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "venomancer_plague_ward" },
   },
   {
     category: "OwnHero",
     hero: "Venomancer",
-    audioFile: "ownHero/Venomancer_10_Aghanims",
+    audioFile: "ownHero/Venomancer_10_Aghanims_v2",
     messageTime: 19 * 60,
-    textMessage:
-      `Pick up Aghanims Scepter as the game progresses to amplify your damage output.`,
+    textMessage: `Pick up Aghanims Scepter as the game progresses to amplify your damage output.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -15859,20 +15857,18 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Viper",
-    audioFile: "ownHero/Viper_3_Slow",
+    audioFile: "ownHero/Viper_3_Slow_v2",
     messageTime: [2 * 60 + 45, 7 * 60 + 45],
-    textMessage:
-      `Viper is insanely slow. Consider getting a casual Wind Lace and Boots of Travel in the long run.`,
+    textMessage: `Viper is insanely slow. Consider getting a casual Wind Lace and Boots of Travel in the long run.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "wind_lace" },
   },
   {
     category: "OwnHero",
     hero: "Viper",
-    audioFile: "ownHero/Viper_4_NethertoxinUsage",
+    audioFile: "ownHero/Viper_4_NethertoxinUsage_v2",
     messageTime: [8 * 60 + 45],
-    textMessage:
-      `You can kill tanky heroes around the map with the break effect from your Nethertoxin.`,
+    textMessage: `You can kill tanky heroes around the map with the break effect from your Nethertoxin.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `viper_nethertoxin` },
   },
@@ -15887,7 +15883,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "viper_nethertoxin" },
   },
-/*   {
+  /*   {
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_6_NotTanky",
@@ -15899,10 +15895,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Viper",
-    audioFile: "ownHero/Viper_7_AghanimsShard",
+    audioFile: "ownHero/Viper_7_AghanimsShard_v2",
     messageTime: 14 * 60 + 50,
     textMessage: `Pick up Aghanims Shard around minute 15 to further increase your dps and building damage.`,
-    audience: [Audience.Offlane],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "aghanims_shard" },
   },
   {
