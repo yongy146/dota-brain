@@ -427,10 +427,13 @@ export namespace hero_names {
 
   /**
    *
-   * @param heropediaName It doesn't matter if letters are capitalized or not
-   * @returns
+   * @param heropediaName Function works with capital and minor letters
+   * @returns npc dota name, e.g. npc_dota_hero_antimage
    */
   export function heropediaNameToNPCName(heropediaName: string): string {
+    if (heropediaName === "Furion") heropediaName = "NaturesProphet";
+    if (heropediaName === "OutworldDestroyer")
+      heropediaName = "OutworldDevourer";
     for (const hero of Object.values(dota2Heroes)) {
       if (
         NPCNameToHeropediaName(hero.name).toLowerCase() ===
