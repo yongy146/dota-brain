@@ -32,6 +32,10 @@ export const channeling_interrupts = [
 export const silence = ["silence"];
 export const root = ["root"];
 
+// Additional value:
+//  - "slow_move"
+//  - "slow_attack"
+
 export interface IDisables {
   [key: string]: IDisable[]; // Localized Hero name
 }
@@ -39,7 +43,7 @@ export interface IDisables {
 export enum AbilityAffects {
   AREA = "AREA", // Area effect
   HERO_AREA = "HERO_AREA", // Targets hero and effect area
-  HERO = "HERO", // Effects only targeted hero
+  HERO = "HERO", // Effects only targeted hero (Note: Muerta can also taget trees)
 }
 
 export interface IDisable {
@@ -559,6 +563,18 @@ export const disables: IDisables = {
     },
     // typo skill: "morphling_adaptive_strike_agi" should be strength and not agility.
     // With level 25 talent "+3 Multishot Adaptive Strike" it also affects two other heroes besides the one targeted with it. Maybe "area" then?
+  ],
+  Muerta: [
+    {
+      skill: "muerta_dead_shot",
+      affects: AbilityAffects.HERO,
+      disables: ["slow_move", "fear"],
+    },
+    {
+      skill: "muerta_the_calling",
+      affects: AbilityAffects.AREA,
+      disables: ["slow_move", "slow_attack", "silence"],
+    },
   ],
   "Naga Siren": [
     {

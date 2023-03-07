@@ -1,2 +1,2 @@
 
-export const noOfDota2Heroes = 123
+export const noOfDota2Heroes = 124

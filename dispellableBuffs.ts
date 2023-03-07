@@ -74,6 +74,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   Mirana: ["mirana_leap"],
   "Monkey King": ["monkey_king_jingu_mastery", "monkey_king_mischief"],
   Morphling: [],
+  Muerta: [],
   "Naga Siren": [],
   "Nature's Prophet": [],
   Necrophos: ["necrolyte_sadist"],
