@@ -78,14 +78,13 @@
 			"Initiator",
 			"Durable",
 			"Disabler",
-			"Jungler",
 			"Carry"
 		],
 		"complexity": 1,
 		"attack_range": 150,
 		"attack_type": "Melee",
 		"primary_attr": "Strength",
-		"movement_speed": 310,
+		"movement_speed": 315,
 		"armor": -1,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
@@ -156,11 +155,11 @@
 		"attack_damage_max": 39,
 		"attack_animation_point": 0.3,
 		"attack_acquisition_range": 800,
-		"strength_base": 22,
+		"strength_base": 23,
 		"strength_gain": 2.5,
-		"intelligence_base": 22,
+		"intelligence_base": 23,
 		"intelligence_gain": 2.5,
-		"agility_base": 22,
+		"agility_base": 23,
 		"agility_gain": 2.5,
 		"health_status_regen": 0.25,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/bane.png",
@@ -206,7 +205,6 @@
 		"roles": [
 			"Carry",
 			"Disabler",
-			"Jungler",
 			"Nuker",
 			"Initiator"
 		],
@@ -273,8 +271,7 @@
 		"roles": [
 			"Support",
 			"Disabler",
-			"Nuker",
-			"Jungler"
+			"Nuker"
 		],
 		"complexity": 1,
 		"attack_range": 600,
@@ -473,8 +470,8 @@
 		"armor": 0,
 		"attack_speed": 110,
 		"attack_rate": 1.4,
-		"attack_damage_min": 16,
-		"attack_damage_max": 20,
+		"attack_damage_min": 19,
+		"attack_damage_max": 21,
 		"attack_animation_point": 0.33,
 		"attack_acquisition_range": 600,
 		"strength_base": 20,
@@ -579,7 +576,8 @@
 		"id": 11,
 		"localized_name": "Shadow Fiend",
 		"aliases": [
-			"sf"
+			"sf",
+			"nevermore"
 		],
 		"similar_heroes": [
 			25,
@@ -977,8 +975,7 @@
 			"Disabler",
 			"Support",
 			"Nuker",
-			"Escape",
-			"Jungler"
+			"Escape"
 		],
 		"complexity": 2,
 		"attack_range": 150,
@@ -1053,7 +1050,7 @@
 		"movement_speed": 285,
 		"armor": 1,
 		"attack_speed": 115,
-		"attack_rate": 1.7,
+		"attack_rate": 1.6,
 		"attack_damage_min": 24,
 		"attack_damage_max": 34,
 		"attack_animation_point": 0.5,
@@ -1539,7 +1536,7 @@
 		"talents": [
 			"special_bonus_attack_damage_20",
 			"special_bonus_unique_lina_1",
-			"special_bonus_hp_350",
+			"special_bonus_hp_250",
 			"special_bonus_unique_lina_3",
 			"special_bonus_spell_amplify_11",
 			"special_bonus_unique_lina_2",
@@ -1578,7 +1575,7 @@
 		"strength_base": 20,
 		"strength_gain": 2.1,
 		"intelligence_base": 24,
-		"intelligence_gain": 3.6,
+		"intelligence_gain": 3.8,
 		"agility_base": 17,
 		"agility_gain": 2,
 		"health_status_regen": 0.5,
@@ -1631,7 +1628,7 @@
 		"attack_type": "Ranged",
 		"primary_attr": "Intelligence",
 		"movement_speed": 290,
-		"armor": -1,
+		"armor": 0,
 		"attack_speed": 115,
 		"attack_rate": 1.7,
 		"attack_damage_min": 29,
@@ -1642,7 +1639,7 @@
 		"strength_gain": 2.2,
 		"intelligence_base": 18,
 		"intelligence_gain": 3.5,
-		"agility_base": 18,
+		"agility_base": 15,
 		"agility_gain": 1.5,
 		"health_status_regen": 0.25,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/lion.png",
@@ -2004,7 +2001,6 @@
 		"projectile_speed": 900,
 		"roles": [
 			"Disabler",
-			"Jungler",
 			"Initiator",
 			"Pusher"
 		],
@@ -2395,8 +2391,8 @@
 		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1.5,
-		"attack_damage_min": 24,
-		"attack_damage_max": 30,
+		"attack_damage_min": 26,
+		"attack_damage_max": 32,
 		"attack_animation_point": 0.56,
 		"attack_acquisition_range": 800,
 		"strength_base": 18,
@@ -2663,9 +2659,9 @@
 		"attack_animation_point": 0.5,
 		"attack_acquisition_range": 800,
 		"strength_base": 21,
-		"strength_gain": 3.1,
+		"strength_gain": 2.9,
 		"intelligence_base": 24,
-		"intelligence_gain": 3.3,
+		"intelligence_gain": 3,
 		"agility_base": 16,
 		"agility_gain": 2,
 		"health_status_regen": 0.25,
@@ -2686,11 +2682,11 @@
 		],
 		"talents": [
 			"special_bonus_attack_damage_30",
-			"special_bonus_magic_resistance_14",
-			"special_bonus_unique_death_prophet_3",
+			"special_bonus_magic_resistance_12",
+			"special_bonus_hp_300",
 			"special_bonus_unique_death_prophet_2",
 			"special_bonus_unique_death_prophet_4",
-			"special_bonus_hp_400",
+			"special_bonus_unique_death_prophet_3",
 			"special_bonus_unique_death_prophet_5",
 			"special_bonus_unique_death_prophet"
 		]
@@ -2849,7 +2845,7 @@
 		"attack_damage_max": 36,
 		"attack_animation_point": 0.3,
 		"attack_acquisition_range": 800,
-		"strength_base": 21,
+		"strength_base": 23,
 		"strength_gain": 2.4,
 		"intelligence_base": 20,
 		"intelligence_gain": 2,
@@ -3128,7 +3124,7 @@
 			"dazzle_bad_juju"
 		],
 		"talents": [
-			"special_bonus_attack_damage_50",
+			"special_bonus_attack_damage_60",
 			"special_bonus_mp_regen_175",
 			"special_bonus_unique_dazzle_2",
 			"special_bonus_unique_dazzle_poison_touch_attack_range_bonus",
@@ -3280,7 +3276,6 @@
 		"projectile_speed": 1125,
 		"roles": [
 			"Carry",
-			"Jungler",
 			"Pusher",
 			"Escape",
 			"Nuker"
@@ -3300,9 +3295,9 @@
 		"strength_base": 21,
 		"strength_gain": 2.6,
 		"intelligence_base": 23,
-		"intelligence_gain": 3.7,
-		"agility_base": 22,
-		"agility_gain": 3.6,
+		"intelligence_gain": 3.5,
+		"agility_base": 20,
+		"agility_gain": 3.4,
 		"health_status_regen": 0.25,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/furion.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/furion.png",
@@ -3337,6 +3332,7 @@
 		"id": 54,
 		"localized_name": "Lifestealer",
 		"aliases": [
+			"ls"
 		],
 		"similar_heroes": [
 			104,
@@ -3347,7 +3343,6 @@
 		"roles": [
 			"Carry",
 			"Durable",
-			"Jungler",
 			"Escape",
 			"Disabler"
 		],
@@ -3412,7 +3407,6 @@
 		"projectile_speed": 900,
 		"roles": [
 			"Initiator",
-			"Jungler",
 			"Escape",
 			"Disabler"
 		],
@@ -3599,7 +3593,6 @@
 		"projectile_speed": 900,
 		"roles": [
 			"Support",
-			"Jungler",
 			"Pusher",
 			"Durable",
 			"Disabler"
@@ -4042,7 +4035,6 @@
 		"projectile_speed": 900,
 		"roles": [
 			"Initiator",
-			"Jungler",
 			"Disabler",
 			"Escape"
 		],
@@ -4106,7 +4098,6 @@
 		"projectile_speed": 1100,
 		"roles": [
 			"Support",
-			"Jungler",
 			"Pusher"
 		],
 		"complexity": 3,
@@ -4359,7 +4350,6 @@
 		"projectile_speed": 900,
 		"roles": [
 			"Carry",
-			"Jungler",
 			"Durable",
 			"Disabler"
 		],
@@ -4822,7 +4812,6 @@
 		"roles": [
 			"Carry",
 			"Pusher",
-			"Jungler",
 			"Durable",
 			"Escape"
 		],
@@ -5017,7 +5006,6 @@
 		"roles": [
 			"Carry",
 			"Pusher",
-			"Jungler",
 			"Durable"
 		],
 		"complexity": 3,
@@ -5673,8 +5661,7 @@
 		"roles": [
 			"Support",
 			"Nuker",
-			"Disabler",
-			"Jungler"
+			"Disabler"
 		],
 		"complexity": 2,
 		"attack_range": 600,
@@ -6466,7 +6453,7 @@
 		"movement_speed": 325,
 		"armor": -1,
 		"attack_speed": 120,
-		"attack_rate": 1.7,
+		"attack_rate": 1.5,
 		"attack_damage_min": 28,
 		"attack_damage_max": 38,
 		"attack_animation_point": 0.56,
@@ -6577,7 +6564,8 @@
 		"localized_name": "Legion Commander",
 		"aliases": [
 			"Tresdin",
-			"Legion"
+			"Legion",
+			"lc"
 		],
 		"similar_heroes": [
 			2,
@@ -6693,7 +6681,7 @@
 			"ember_spirit_fire_remnant"
 		],
 		"talents": [
-			"special_bonus_attack_damage_15",
+			"special_bonus_attack_damage_12",
 			"special_bonus_unique_ember_spirit_1",
 			"special_bonus_unique_ember_spirit_3",
 			"special_bonus_unique_ember_spirit_2",
@@ -7253,7 +7241,7 @@
 		"strength_gain": 2.8,
 		"intelligence_base": 20,
 		"intelligence_gain": 1.8,
-		"agility_base": 22,
+		"agility_base": 23,
 		"agility_gain": 3.7,
 		"health_status_regen": 1,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/monkey_king.png",
@@ -7924,6 +7912,67 @@
 			"special_bonus_unique_primal_beast_uproar_armor",
 			"special_bonus_unique_primal_beast_pulverize_pierces_magic_immunity",
 			"special_bonus_unique_primal_beast_pulverize_duration"
+		]
+	},
+	"npc_dota_hero_muerta": {
+		"name": "npc_dota_hero_muerta",
+		"id": 138,
+		"localized_name": "Muerta",
+		"aliases": [
+		],
+		"similar_heroes": [
+		],
+		"projectile_speed": 3000,
+		"roles": [
+			"Carry",
+			"Nuker",
+			"Disabler"
+		],
+		"complexity": 1,
+		"attack_range": 575,
+		"attack_type": "Ranged",
+		"primary_attr": "Intelligence",
+		"movement_speed": 295,
+		"armor": -1,
+		"attack_speed": 100,
+		"attack_rate": 1.7,
+		"attack_damage_min": 24,
+		"attack_damage_max": 32,
+		"attack_animation_point": 0.35,
+		"attack_acquisition_range": 800,
+		"strength_base": 19,
+		"strength_gain": 2,
+		"intelligence_base": 24,
+		"intelligence_gain": 3.3,
+		"agility_base": 22,
+		"agility_gain": 3,
+		"health_status_regen": 0.25,
+		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.png",
+		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/muerta.png",
+		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/muerta.png",
+		"video": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.webm",
+		"steam_guide": [
+		],
+		"abilities": [
+			"muerta_dead_shot",
+			"muerta_the_calling",
+			"muerta_gunslinger",
+			"generic_hidden",
+			"generic_hidden",
+			"muerta_pierce_the_veil",
+			"generic_hidden",
+			"generic_hidden",
+			"generic_hidden"
+		],
+		"talents": [
+			"special_bonus_unique_muerta_dead_shot_damage",
+			"special_bonus_strength_8",
+			"special_bonus_unique_muerta_dead_shot_range",
+			"special_bonus_attack_damage_25",
+			"special_bonus_unique_muerta_dead_shot_charges",
+			"special_bonus_unique_muerta_the_calling_num_revenants",
+			"special_bonus_unique_muerta_gunslinger_double_shot_chance",
+			"special_bonus_magic_resistance_25"
 		]
 	}
 }

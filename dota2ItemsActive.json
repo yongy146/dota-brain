@@ -503,7 +503,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 0.6
+		"health_regen_": 0.4
 	},
 	"item_flask": {
 		"id": 39,
@@ -691,12 +691,12 @@
 	},
 	"item_relic": {
 		"id": 54,
-		"cost": 3750,
+		"cost": 3400,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"damage_": 60
+		"damage_": 55
 	},
 	"item_hyperstone": {
 		"id": 55,
@@ -908,7 +908,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"attack_speed_": 6,
+		"attack_speed_": 5,
 		"agility_": 5,
 		"strength_": 2,
 		"intelligence_": 2,
@@ -1358,7 +1358,7 @@
 	},
 	"item_force_staff": {
 		"id": 102,
-		"mana_cost": 100,
+		"mana_cost": 150,
 		"cost": 2200,
 		"cooldown": 19,
 		"is_recipe": false,
@@ -1383,7 +1383,7 @@
 	},
 	"item_hurricane_pike": {
 		"id": 263,
-		"mana_cost": 100,
+		"mana_cost": 150,
 		"cost": 4450,
 		"cooldown": 19,
 		"is_recipe": false,
@@ -1710,7 +1710,7 @@
 		"spell_lifesteal_multiplier": 2,
 		"health_": 500,
 		"mana_": 500,
-		"durattion": 6,
+		"durattion": 5,
 		"requirements": [
 			"item_voodoo_mask",
 			"item_soul_booster",
@@ -1791,14 +1791,14 @@
 	"item_nullifier": {
 		"id": 225,
 		"mana_cost": 0,
-		"cost": 4725,
+		"cost": 4375,
 		"cooldown": 10,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_": 6,
-		"damage_": 80,
+		"damage_": 75,
 		"armor_": 10,
 		"requirements": [
 			"item_relic",
@@ -2020,7 +2020,7 @@
 	},
 	"item_rapier": {
 		"id": 133,
-		"cost": 5950,
+		"cost": 5600,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -2059,13 +2059,13 @@
 	},
 	"item_radiance": {
 		"id": 137,
-		"cost": 5050,
+		"cost": 4700,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
 		"evasion": 15,
-		"damage_": 60,
+		"damage_": 55,
 		"damage_aoe": 60,
 		"requirements": [
 			"item_relic",
@@ -2522,7 +2522,7 @@
 		"is_purchasable": true,
 		"damage_": 24,
 		"damage_magical_chance": 30,
-		"damage_magical_": 140,
+		"damage_magical_": 135,
 		"requirements": [
 			"item_mithril_hammer",
 			"item_javelin"
@@ -2548,9 +2548,9 @@
 		"damage_": 30,
 		"damage_magical_chance": 30,
 		"damage_magical_": 160,
-		"agility_": 14,
 		"intelligence_": 24,
 		"strength_": 14,
+		"agility_": 14,
 		"duration": 2,
 		"requirements": [
 			"item_maelstrom",
@@ -2925,11 +2925,11 @@
 		"attack_speed_target": 50,
 		"attack_slow_": -50,
 		"mana_regen_": 1.75,
-		"all_attributes_": 5,
+		"all_attributes_": 6,
 		"duration": 12,
 		"armor_": 6,
 		"armor_reduction": -6,
-		"movement_speed": 20,
+		"movement_speed": 25,
 		"requirements": [
 			"item_medallion_of_courage",
 			"item_crown",
@@ -3030,7 +3030,7 @@
 		"is_purchasable": true,
 		"mana_": 250,
 		"health_regen_aura": 2.5,
-		"health_regen_bonus": 18.5,
+		"health_regen_bonus": 14.5,
 		"armor_": 4,
 		"movement_speed": 50,
 		"requirements": [
@@ -3088,7 +3088,7 @@
 		"health_": 250,
 		"health_regen_": 10,
 		"damage_bonus_chance": 120,
-		"damage_": 25,
+		"damage_": 30,
 		"strength_": 10,
 		"requirements": [
 			"item_basher",
@@ -3941,5 +3941,47 @@
 		"is_purchasable": false,
 		"damage_ability_": 40,
 		"duration": 8
+	},
+	"item_ofrenda": {
+		"id": 4300,
+		"mana_cost": 0,
+		"cost": 0,
+		"cooldown": 3,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false
+	},
+	"item_ofrenda_shovel": {
+		"id": 4301,
+		"mana_cost": 0,
+		"cost": 0,
+		"cooldown": 8,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false
+	},
+	"item_ofrenda_pledge": {
+		"id": 4302,
+		"mana_cost": 0,
+		"cost": 0,
+		"cooldown": 0.5,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false
+	},
+	"item_muertas_gun": {
+		"id": 1090,
+		"mana_cost": 160,
+		"cost": 0,
+		"cooldown": 10,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"spell_amp": 100,
+		"damage_": 300
 	}
 }

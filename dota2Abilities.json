@@ -1169,7 +1169,7 @@
 				0
 			],
 			"name": "Marksmanship",
-			"description": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their base armor. Grants Drow and nearby ranged heroes with bonus agility based on Drow's current agility. This ability is disabled if there is an enemy hero within %disable_range% range.",
+			"description": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their base armor. Grants Drow and nearby ranged heroes with bonus agility based on Drow's current agility, with allies receiving %agility_multiplier_ally%%% of the bonus Drow receives. This ability is disabled if there is an enemy hero within %disable_range% range.",
 			"lore": "The Drow Ranger is the epitome of archery prowess.",
 			"is_ultimate": true,
 			"is_passive": "yes",
@@ -1626,7 +1626,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+75 Blade Fury Radius"
+			"description": "+100 Blade Fury Radius"
 		},
 		"special_bonus_unique_juggernaut_5": {
 			"id": 628,
@@ -2930,7 +2930,7 @@
 				170
 			],
 			"name": "Dismember",
-			"description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge pulls the unit at a rate of %pull_units_per_second% units, up to a minimum of %pull_distance_limit% range. Pudge gets healed for the same amount he damages. Lasts longer on creeps.",
+			"description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Damage is increased by Pudge's Strength and heals him for the total amount. Pudge pulls the unit at a rate of %pull_units_per_second% units, up to a minimum of %pull_distance_limit% range. Lasts longer on creeps.",
 			"lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -3391,7 +3391,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+100 Caustic Finale Damage"
+			"description": "+120 Caustic Finale Damage"
 		},
 		"special_bonus_unique_sand_king_7": {
 			"id": 498,
@@ -4950,7 +4950,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_ally_ms}% X Mark the Spot Move Speed"
+			"description": "+{s:bonus_ally_ms}% X Marks the Spot Move Speed"
 		},
 		"special_bonus_unique_kunkka_7": {
 			"id": 766,
@@ -5037,6 +5037,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				12,
+				11,
+				10,
 				9
 			],
 			"mana_cost": [
@@ -5065,9 +5068,6 @@
 				7
 			],
 			"mana_cost": [
-				100,
-				105,
-				110,
 				115
 			],
 			"name": "Light Strike Array",
@@ -5171,8 +5171,8 @@
 			"talent_level": 1,
 			"description": "-{s:bonus_AbilityCooldown}s Dragon Slave Cooldown"
 		},
-		"special_bonus_hp_350": {
-			"id": 6195,
+		"special_bonus_hp_250": {
+			"id": 5903,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -5182,7 +5182,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+350 Health"
+			"description": "+250 Health"
 		},
 		"special_bonus_unique_lina_3": {
 			"id": 6388,
@@ -5572,8 +5572,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				160,
-				100,
+				140,
+				90,
 				40
 			],
 			"mana_cost": [
@@ -5838,7 +5838,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+120 Serpent Wards Attack Range"
+			"description": "+140 Serpent Wards Attack Range"
 		},
 		"special_bonus_unique_shadow_shaman_2": {
 			"id": 6295,
@@ -6517,7 +6517,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+20% Maledict Burst Damage"
+			"description": "+25% Maledict Burst Damage"
 		},
 		"special_bonus_unique_witch_doctor_2": {
 			"id": 6298,
@@ -6625,7 +6625,7 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				12
+				15
 			],
 			"mana_cost": [
 				75
@@ -7444,9 +7444,9 @@
 			],
 			"mana_cost": [
 				100,
-				130,
-				160,
-				190
+				120,
+				140,
+				160
 			],
 			"name": "Death Pulse",
 			"description": "Necrophos releases a wave of death around him, dealing damage to enemy units and healing allied units.",
@@ -7764,7 +7764,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+3% Fatal Bonds Damage"
+			"description": "+4% Fatal Bonds Damage"
 		},
 		"special_bonus_unique_warlock_upheaval_aoe": {
 			"id": 1038,
@@ -7896,7 +7896,7 @@
 				75
 			],
 			"name": "Call of the Wild Boar",
-			"description": "Beastmaster calls forth a Boar to aid in the battlefield.",
+			"description": "Beastmaster calls forth a Boar to aid in the battlefield. The Boar has a passive poison attack that slows attack and movement speeds.",
 			"lore": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -9070,8 +9070,8 @@
 			"talent_level": 1,
 			"description": "+30 Damage"
 		},
-		"special_bonus_magic_resistance_14": {
-			"id": 1089,
+		"special_bonus_magic_resistance_12": {
+			"id": 6299,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -9081,10 +9081,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:value}% Magic Resistance"
+			"description": "+12% Magic Resistance"
 		},
-		"special_bonus_unique_death_prophet_3": {
-			"id": 6628,
+		"special_bonus_hp_300": {
+			"id": 5993,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -9094,7 +9094,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_damage} Spirit Siphon Damage/Heal"
+			"description": "+300 Health"
 		},
 		"special_bonus_unique_death_prophet_2": {
 			"id": 6367,
@@ -9122,8 +9122,8 @@
 			"talent_level": 3,
 			"description": "-20% Spirit Siphon Move Speed Slow"
 		},
-		"special_bonus_hp_400": {
-			"id": 5976,
+		"special_bonus_unique_death_prophet_3": {
+			"id": 6628,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -9133,7 +9133,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+400 Health"
+			"description": "+{s:bonus_damage} Spirit Siphon Damage/Heal"
 		},
 		"special_bonus_unique_death_prophet_5": {
 			"id": 698,
@@ -9250,6 +9250,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -10299,7 +10300,7 @@
 				20
 			],
 			"mana_cost": [
-				100
+				80
 			],
 			"name": "Fireball",
 			"description": "Ignites an area, dealing damage over time that lingers on enemies in it. Has reduced cast range when melee.",
@@ -10315,7 +10316,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				105
+				100
 			],
 			"mana_cost": [
 				50,
@@ -10553,8 +10554,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_damage_50": {
-			"id": 5941,
+		"special_bonus_attack_damage_60": {
+			"id": 6366,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -10564,7 +10565,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+50 Damage"
+			"description": "+60 Damage"
 		},
 		"special_bonus_mp_regen_175": {
 			"id": 6926,
@@ -11694,7 +11695,7 @@
 				375
 			],
 			"name": "Wall of Replica",
-			"description": "Vector Targeted. Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
+			"description": "Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
 			"lore": "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -11867,7 +11868,7 @@
 				80
 			],
 			"name": "Skeleton Walk",
-			"description": "Clinkz moves invisibly through units until the moment he attacks or uses items.",
+			"description": "Clinkz moves invisibly through units until the moment he attacks or uses items. %skeleton_count% Burning Army Skeletons are created when leaving invisibility.",
 			"lore": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -11886,7 +11887,7 @@
 				150
 			],
 			"name": "Burning Army",
-			"description": "Vector Targeted. Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
+			"description": "Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
 			"lore": "Existing on the brink of life and death, Clinkz has learned to temporarily bridge the gap between the two.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -12276,10 +12277,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				28,
+				30,
 				24,
-				20,
-				16
+				18,
+				12
 			],
 			"mana_cost": [
 				40,
@@ -12654,7 +12655,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-4s Life Break Cooldown"
+			"description": "-5s Life Break Cooldown"
 		},
 		"special_bonus_unique_huskar": {
 			"id": 6204,
@@ -13735,7 +13736,7 @@
 				3
 			],
 			"mana_cost": [
-				20
+				25
 			],
 			"name": "Sticky Napalm",
 			"description": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area.  Additional casts of Sticky Napalm continue to increase damage, up to %max_stacks% stacks. Applies a small amount of damage with each cast.",
@@ -16054,10 +16055,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				22,
 				20,
 				18,
-				16,
-				14
+				16
 			],
 			"mana_cost": [
 				130,
@@ -16190,7 +16191,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-25s Global Silence Cooldown"
+			"description": "-20s Global Silence Cooldown"
 		},
 		"special_bonus_unique_silencer_4": {
 			"id": 6880,
@@ -16343,7 +16344,7 @@
 				450
 			],
 			"name": "Sanity's Eclipse",
-			"description": "Unleashes a psychic blast that deals damage to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment.",
+			"description": "Unleashes a psychic blast that deals damage to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment. Deals bonus damage to illusions.",
 			"lore": "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -16940,7 +16941,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"affects": "unit",
+			"affects": "unit_area",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -17336,10 +17337,7 @@
 				10
 			],
 			"mana_cost": [
-				110,
-				120,
-				130,
-				140
+				110
 			],
 			"name": "Chaos Bolt",
 			"description": "Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage.",
@@ -17846,7 +17844,7 @@
 				0
 			],
 			"name": "Nature's Guise",
-			"description": "Provides Treant with Tree Walking whenever he hasn't taken damage for %cooldown_time% seconds. While active, Treant gains movement speed bonus and amplified healing and regeneration on himself.",
+			"description": "Provides Treant with Tree Walking whenever he hasn't taken damage for %cooldown_time% seconds. While active, Treant gains bonus movement speed.",
 			"lore": "The Protectors don't often come into vision; their natural state being nestled within their leafy brethren.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -18266,9 +18264,6 @@
 				6
 			],
 			"mana_cost": [
-				90,
-				100,
-				110,
 				120
 			],
 			"name": "Soul Rip",
@@ -18336,7 +18331,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+60 Decay Damage"
+			"description": "+50 Decay Damage"
 		},
 		"special_bonus_unique_undying_7": {
 			"id": 807,
@@ -18632,7 +18627,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+175 Telekinesis Landing Damage"
+			"description": "+150 Telekinesis Landing Damage"
 		},
 		"special_bonus_unique_rubick_2": {
 			"id": 6862,
@@ -19253,7 +19248,7 @@
 				0
 			],
 			"name": "Rip Tide",
-			"description": "Every %hits% attack from naga and her illusions, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for %duration% seconds.",
+			"description": "Every %hits% attacks from naga and her illusions, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for %duration% seconds.",
 			"lore": "A torrent from the Deep Ones crushes the defenses of the Siren's enemies.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -19286,8 +19281,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				160,
-				120,
+				180,
+				130,
 				80
 			],
 			"mana_cost": [
@@ -20288,10 +20283,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				20,
-				16,
-				12,
-				8
+				22,
+				18,
+				14,
+				10
 			],
 			"mana_cost": [
 				75,
@@ -20988,13 +20983,13 @@
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				45
+				30
 			],
 			"mana_cost": [
 				75
 			],
 			"name": "Hitch A Ride",
-			"description": "Centaur tosses an ally into a cart hitched behind him. While in the cart, the ally can still cast and attack normally, but cannot move independently or be targeted by opponents. Non-targeted effects can still affect the hitched ally. Increases the attack range of melee heroes by %melee_attack_range%.",
+			"description": "Centaur tosses an ally into a cart hitched behind him. While in the cart, Centaur gains the benefit of Stampede and the ally can still cast and attack normally, but cannot move independently or be targeted by opponents. Non-targeted effects can still affect the hitched ally. Increases the attack range of melee heroes by %melee_attack_range%.",
 			"lore": "The needs of Bradwarden's ample pride pale greatly in the face of his demand for victory.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -21934,7 +21929,7 @@
 				100
 			],
 			"name": "Walrus Kick",
-			"description": "Vector Targeted. Kicks the closest enemy unit in the drawn direction, stunning, damaging, and slowing them. Also deals damage to all heroes within %search_radius% radius of its landing area. Cooldown is reduced by %creep_cooldown_reduction_pct%%% if kicking a creep.",
+			"description": "Kicks the closest enemy unit in the drawn direction, stunning, damaging, and slowing them. Also deals damage to all heroes within %search_radius% radius of its landing area. Cooldown is reduced by %creep_cooldown_reduction_pct%%% if kicking a creep.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22151,7 +22146,7 @@
 				95
 			],
 			"name": "Concussive Shot",
-			"description": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range.  Upon impact, it deals damage and slows in an area of effect.",
+			"description": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range.  Upon impact, it deals damage and slows in an area of effect. Deals %creep_damage_pct%%% damage to creeps.",
 			"lore": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23083,8 +23078,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_damage_15": {
-			"id": 5938,
+		"special_bonus_attack_damage_12": {
+			"id": 6159,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -23094,7 +23089,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Damage"
+			"description": "+12 Damage"
 		},
 		"special_bonus_unique_ember_spirit_1": {
 			"id": 6172,
@@ -23159,7 +23154,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+65 Sleight of Fist Hero Damage"
+			"description": "+55 Sleight of Fist Hero Damage"
 		},
 		"special_bonus_unique_ember_spirit_4": {
 			"id": 7050,
@@ -24279,6 +24274,7 @@
 			"is_ultimate": true,
 			"is_passive": "no",
 			"affects": "area",
+			"is_dispellable": "basic",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -24479,7 +24475,7 @@
 				250
 			],
 			"name": "Winter's Curse",
-			"description": "Winter Wyvern freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of Winter Wyvern or her controlled units.",
+			"description": "Winter Wyvern dispells then freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of Winter Wyvern or her controlled units.",
 			"lore": "The oldest of the bookwurm’s spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -25288,7 +25284,7 @@
 				90
 			],
 			"name": "Swashbuckle",
-			"description": "Vector Targeted. Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
+			"description": "Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
 			"lore": "The Pangolier's blade is even nimbler than his tongue.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -25870,8 +25866,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				90,
 				70,
+				60,
 				50
 			],
 			"mana_cost": [
@@ -26208,7 +26204,7 @@
 				90
 			],
 			"name": "Aether Remnant",
-			"description": "Vector targeted. Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
+			"description": "Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
 			"lore": "Inai exists far beyond the scope of a single point in space and time.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -27172,7 +27168,7 @@
 				100
 			],
 			"name": "Rebound",
-			"description": "Vector targeted. Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies where she lands.\n\n The ally receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s.",
+			"description": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies where she lands.\n\n The ally receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s.",
 			"lore": "With a friendly or brazen boost, Marci can find her way into the midst of any fight.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -27576,6 +27572,204 @@
 			],
 			"talent_level": 4,
 			"description": "+{s:bonus_channel_time}% Pulverize Duration"
+		}
+	},
+	"npc_dota_hero_muerta": {
+		"muerta_dead_shot": {
+			"id": 5751,
+			"sequence": "Ability1",
+			"is_talent": false,
+			"cooldown": [
+				16,
+				14,
+				12,
+				10
+			],
+			"mana_cost": [
+				100,
+				120,
+				140,
+				160
+			],
+			"name": "n/a",
+			"description": "n/a",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"affects": "unit",
+			"is_dispellable": "basic",
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
+		},
+		"muerta_the_calling": {
+			"id": 5752,
+			"sequence": "Ability2",
+			"is_talent": false,
+			"cooldown": [
+				30
+			],
+			"mana_cost": [
+				150,
+				175,
+				200,
+				225
+			],
+			"name": "n/a",
+			"description": "n/a",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"affects": "area",
+			"is_dispellable": "basic",
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"muerta_gunslinger": {
+			"id": 5753,
+			"sequence": "Ability3",
+			"is_talent": false,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "n/a",
+			"description": "n/a",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "yes",
+			"is_breakable": true,
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"muerta_pierce_the_veil": {
+			"id": 5754,
+			"sequence": "Ability6",
+			"is_talent": false,
+			"cooldown": [
+				75,
+				60,
+				45
+			],
+			"mana_cost": [
+				150,
+				250,
+				350
+			],
+			"name": "n/a",
+			"description": "n/a",
+			"lore": "n/a",
+			"is_ultimate": true,
+			"is_passive": "no",
+			"is_dispellable": "no",
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"special_bonus_unique_muerta_dead_shot_damage": {
+			"id": 5756,
+			"sequence": "Ability10",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 1,
+			"description": "+{s:bonus_damage} Dead Shot damage"
+		},
+		"special_bonus_strength_8": {
+			"id": 5982,
+			"sequence": "Ability11",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 1,
+			"description": "+8 Strength"
+		},
+		"special_bonus_unique_muerta_dead_shot_range": {
+			"id": 5757,
+			"sequence": "Ability12",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 2,
+			"description": "+{s:bonus_AbilityCastRange} Dead Shot Cast Range"
+		},
+		"special_bonus_attack_damage_25": {
+			"id": 6009,
+			"sequence": "Ability13",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 2,
+			"description": "+25 Damage"
+		},
+		"special_bonus_unique_muerta_dead_shot_charges": {
+			"id": 5755,
+			"sequence": "Ability14",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 3,
+			"description": "2 Dead Shot Charges"
+		},
+		"special_bonus_unique_muerta_the_calling_num_revenants": {
+			"id": 5758,
+			"sequence": "Ability15",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 3,
+			"description": "The Calling summons {s:bonus_num_revenants} additional revenants"
+		},
+		"special_bonus_unique_muerta_gunslinger_double_shot_chance": {
+			"id": 5759,
+			"sequence": "Ability16",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 4,
+			"description": "+{s:bonus_double_shot_chance}% Gunslinger chance"
+		},
+		"special_bonus_magic_resistance_25": {
+			"id": 6091,
+			"sequence": "Ability17",
+			"is_talent": true,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"talent_level": 4,
+			"description": "+25% Magic Resistance"
 		}
 	}
 }
