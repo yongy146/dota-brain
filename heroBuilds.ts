@@ -12377,7 +12377,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     damage_type: DamageType.magical,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_id: 1678177438,
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2943493038",
@@ -12532,28 +12532,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `branches`,
             `branches`,
             `branches`,
-			`ward_observer`,
-			`ward_sentry`,
+            `ward_observer`,
+            `ward_sentry`,
           ],
           early_game: [
             `arcane_boots`,
             `null_talisman`,
             "magic_wand",
             `wind_lace`,
-			`infused_raindrop`,
+            `infused_raindrop`,
           ],
-          mid_game: [
-            `guardian_greaves`,
-            `force_staff`,
-            `rod_of_atos`,
-            `blink`,
-          ],
-          late_game: [
-            `octarine_core`,
-            `gungir`,
-            `sheepstick`,
-            `bloodthorn`,
-          ],
+          mid_game: [`guardian_greaves`, `force_staff`, `rod_of_atos`, `blink`],
+          late_game: [`octarine_core`, `gungir`, `sheepstick`, `bloodthorn`],
           situational: [
             `spirit_vessel`,
             `lotus_orb`,
