@@ -12435,7 +12435,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ethereal_blade`,
             `revenants_brooch`,
             `skadi`,
-            `swift-blink`,
+            `swift_blink`,
           ],
           situational: [
             `witch_blade`,
@@ -12501,19 +12501,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "muerta_dead_shot", // 1
           "muerta_the_calling", // 2
           "muerta_dead_shot", // 3
-          `muerta_gunslinger`, // 4
+          `muerta_the_calling`, // 4
           "muerta_dead_shot", // 5
           "muerta_pierce_the_veil", // 6
-          `muerta_gunslinger`, // 7
-          `muerta_gunslinger`, // 8
-          `muerta_gunslinger`, // 9
-          `muerta_dead_shot`, // 10
-          `special_bonus_unique_muerta_dead_shot_damage`, // 11
+          `muerta_dead_shot`, // 7
+          `muerta_the_calling`, // 8
+          `muerta_the_calling`, // 9
+          `special_bonus_unique_muerta_dead_shot_damage`, // 10
+          `muerta_gunslinger`, // 11
           "muerta_pierce_the_veil", // 12
-          `muerta_the_calling`, // 13
-          `muerta_the_calling`, // 14
-          "special_bonus_attack_damage_25", // 15
-          `muerta_the_calling`, // 16
+          `muerta_gunslinger`, // 13
+          `muerta_gunslinger`, // 14
+          `special_bonus_unique_muerta_dead_shot_range`, // 15
+          `muerta_gunslinger`, // 16
           "special_bonus_attributes", // 17
           "muerta_pierce_the_veil", // 18
           "special_bonus_attributes", // 19
@@ -12527,63 +12527,60 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             `tango`,
-            `quelling_blade`,
-            `mantle`,
             `circlet`,
             `branches`,
             `branches`,
+            `branches`,
+            `branches`,
+			`ward_observer`,
+			`ward_sentry`,
           ],
           early_game: [
-            `falcon_blade`,
-            `power_treads`,
+            `arcane_boots`,
             `null_talisman`,
             "magic_wand",
-            "maelstrom",
+            `wind_lace`,
+			`infused_raindrop`,
           ],
           mid_game: [
-            `black_king_bar`,
-            `hurricane_pike`,
-            `gungir`,
-            `greater_crit`,
+            `guardian_greaves`,
+            `force_staff`,
+            `rod_of_atos`,
+            `blink`,
           ],
           late_game: [
-            `ethereal_blade`,
-            `revenants_brooch`,
-            `skadi`,
-            `swift-blink`,
-          ],
-          situational: [
-            `witch_blade`,
-            `blink`,
-            "monkey_king_bar",
-            `sphere`,
-            "satanic",
-            `kaya_and_sange`,
-            `silver_edge`,
-            `mage_slayer`,
+            `octarine_core`,
+            `gungir`,
             `sheepstick`,
             `bloodthorn`,
+          ],
+          situational: [
+            `spirit_vessel`,
+            `lotus_orb`,
+            `ethereal_blade`,
+            `wind_waker`,
+            `pipe`,
+            `aeon_disk`,
             `travel_boots`,
           ],
           core: [
-            `falcon_blade`,
-            `power_treads`,
-            `hurricane_pike`,
-            `black_king_bar`,
+            `arcane_boots`,
+            `guardian_greaves`,
+            `blink`,
+            `octarine_core`,
             `gungir`,
-            `greater_crit`,
           ],
           neutral: [
-            `possessed_mask`,
-            `lance_of_pursuit`,
-            `grove_bow`,
-            `specialists_array`,
-            `mind_breaker`,
-            `paladin_sword`,
-            `ninja_gear`,
+            `arcane_ring`,
+            `trusty_shovel`,
+            `bullwhip`,
+            `dragon_scale`,
+            `quickening_charm`,
+            `enchanted_quiver`,
+            `spy_gadget`,
             `heavy_blade`,
-            `desolator_2`,
-            `ex_machina`,
+            `force_boots`,
+            `fallen_sky`,
           ],
         },
         ability_tooltips: {
