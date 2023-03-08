@@ -12386,19 +12386,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "muerta_dead_shot", // 1
           "muerta_the_calling", // 2
           "muerta_dead_shot", // 3
-          "muerta_the_calling", // 4
+          `muerta_gunslinger`, // 4
           "muerta_dead_shot", // 5
           "muerta_pierce_the_veil", // 6
-          "muerta_dead_shot", // 7
-          "muerta_the_calling", // 8
-          "muerta_the_calling", // 9
-          "special_bonus_unique_muerta_dead_shot_damage", // 10
-          "muerta_gunslinger", // 11
+          `muerta_gunslinger`, // 7
+          `muerta_gunslinger`, // 8
+          `muerta_gunslinger`, // 9
+          `muerta_dead_shot`, // 10
+          `special_bonus_unique_muerta_dead_shot_damage`, // 11
           "muerta_pierce_the_veil", // 12
-          "muerta_gunslinger", // 13
-          "muerta_gunslinger", // 14
+          `muerta_the_calling`, // 13
+          `muerta_the_calling`, // 14
           "special_bonus_attack_damage_25", // 15
-          "muerta_gunslinger", // 16
+          `muerta_the_calling`, // 16
           "special_bonus_attributes", // 17
           "muerta_pierce_the_veil", // 18
           "special_bonus_attributes", // 19
@@ -12410,25 +12410,103 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_muerta_gunslinger_double_shot_chance", // 25
         ],
         items: {
-          starting: ["tango", "branches", "branches", "branches"],
-          early_game: ["power_treads", "magic_wand", "maelstrom"],
-          mid_game: ["dragon_lance", "maelstrom", "black_king_bar"],
-          late_game: ["gungir", "greater_crit", "mjollnir"],
+          starting: [
+			`tango`,
+			`quelling_blade`,
+			`mantle`,
+			`circlet`,
+			`branches`,
+			`branches`,
+		  ],
+          early_game: [
+			`falcon_blade`,
+			`power_treads`,
+			`null_talisman`,
+			"magic_wand",
+			"maelstrom",
+		  ],
+          mid_game: [
+			`black_king_bar`,
+			`hurricane_pike`,
+			`gungir`,
+			`greater_crit`,
+		  ],
+          late_game: [
+			`ethereal_blade`,
+			`revenants_brooch`,
+			`skadi`,
+			`swift-blink`,
+		  ],
           situational: [
+			`witch_blade`,
+			`blink`,
             "monkey_king_bar",
-            "swift_blink",
+            `sphere`,
             "satanic",
-            "hurricane_pike",
-            "silver_edge",
+            `kaya_and_sange`,
+            `silver_edge`,
+			`mage_slayer`,
+			`sheepstick`,
+			`bloodthorn`,
+			`travel_boots`,
           ],
-          core: ["gungir", "black_king_bar", "greater_crit", "mjollnir"],
-          neutral: [],
+          core: [`falcon_blade`, `power_treads`, `hurricane_pike`, `black_king_bar`, `gungir`, `greater_crit`],
+          neutral: [
+			`possessed_mask`,
+			`lance_of_pursuit`,
+			`grove_bow`,
+			`specialists_array`,
+			`mind_breaker`,
+			`paladin_sword`,
+			`ninja_gear`,
+			`heavy_blade`,
+			`desolator_2`,
+			`ex_machina`,
+		  ],
         },
       },
     ],
-    ability_tooltips: {},
-    item_tooltips: {},
-    combo: [],
+    ability_tooltips: {
+		muerta_dead_shot:
+			`A powerful nuke for farming and disabling enemy heroes. You can bounce it off trees for a better direction on the feat effect.`,
+		muerta_the_calling:
+			`An incredible ability to slow enemy heroes and let you stay on top of them. Works well in combination with Dead Shot.`,
+		muerta_pierce_the_veil:
+			`An ability similar to Revenant Brooch which also allows you to hit ethereal units. Be careful not to use it against BKB or spell immunity as you will do no damage.`,
+	},
+    item_tooltips: {
+		magic_wand:
+			`Start with magic stick if you expect high frequency of spells from enemy heroes in your lane.`,
+		falcon_blade:
+			`An effective damage and mana regen item for Muerta in the early game.`,
+		power_treads:
+			`Provides you with necessary stats and attack speed in the early game.`,
+		maelstrom:
+			`Lets you farm efficiently on the map and works extremely well with Gunslinger.`,
+		hurricane_pike:
+			`Provides you with some much needed tankiness and mobility in the mid game. The added attack range is another big boost to your kill threat.`,
+		black_king_bar:
+			`Lets you play fights freely and right click enemy heroes without interruption.`,
+		gungir:
+			`A core item that gives you lockdown on top of your other disables.`,
+		greater_crit:
+			`A core item that massively boosts your damage and kill threat on the map.`,
+		ethereal_blade:
+			`An incredible late game pick up that works well with your ultimate. It greatly increases your damage under the effect of Pierce the Veil.`,
+		revenants_brooch:
+			`A luxury late game item with similar usage as Pierce the Veil. Be careful not to use it when the enemy hero has active spell immunity.`,
+		skadi:
+			`Another item that helps you stick on top of enemy heroes, similar to Gleipnir. Also effective against lifesteal and high HP regenerating heroes.`,
+		swift-blink:
+			`A late game pick up that boosts your movement speed and right clicking ability. You can replace Power Treads with it once you have a full inventory.`,
+	},
+    combo: [
+		`muerta_pierce_the_veil`,
+		`ethereal_blade`,
+		`gungir`,
+		`muerta_the_calling`,
+		`muerta_dead_shot`,
+	],
     counter_items: {
       laning_phase: {
         all: [],
