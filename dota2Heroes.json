@@ -7947,12 +7947,13 @@
 		"agility_base": 22,
 		"agility_gain": 3,
 		"health_status_regen": 0.25,
-		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.png",
+		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/muerta.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/muerta.png",
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/muerta.png",
 		"video": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.webm",
 		"steam_guide": [
-			"https://steamcommunity.com/sharedfiles/filedetails/?id=2943493038"
+			"https://steamcommunity.com/sharedfiles/filedetails/?id=2943493038",
+			"https://steamcommunity.com/sharedfiles/filedetails/?id=2943887000"
 		],
 		"abilities": [
 			"muerta_dead_shot",

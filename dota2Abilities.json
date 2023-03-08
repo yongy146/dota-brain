@@ -25132,7 +25132,7 @@
 			"mana_cost": [
 				0
 			],
-			"name": "n/a",
+			"name": "Spring Early",
 			"description": "n/a",
 			"lore": "n/a",
 			"is_ultimate": false,
@@ -26947,7 +26947,7 @@
 			"mana_cost": [
 				0
 			],
-			"name": "n/a",
+			"name": "Luminosity",
 			"description": "n/a",
 			"lore": "n/a",
 			"is_ultimate": false,
@@ -27591,7 +27591,7 @@
 				140,
 				160
 			],
-			"name": "n/a",
+			"name": "Dead Shot",
 			"description": "n/a",
 			"lore": "n/a",
 			"is_ultimate": false,
@@ -27615,7 +27615,7 @@
 				200,
 				225
 			],
-			"name": "n/a",
+			"name": "The Calling",
 			"description": "n/a",
 			"lore": "n/a",
 			"is_ultimate": false,
@@ -27635,7 +27635,7 @@
 			"mana_cost": [
 				0
 			],
-			"name": "n/a",
+			"name": "Gunslinger",
 			"description": "n/a",
 			"lore": "n/a",
 			"is_ultimate": false,
@@ -27658,7 +27658,7 @@
 				250,
 				350
 			],
-			"name": "n/a",
+			"name": "Pierce the Veil",
 			"description": "n/a",
 			"lore": "n/a",
 			"is_ultimate": true,
