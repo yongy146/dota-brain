@@ -15779,7 +15779,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Venomancer",
-    audioFile: "ownHero/Venomancer_9_PushSidelanes_v2",
+    audioFile: "ownHero/Venomancer_9_PushSidelanes",
     messageTime: 11 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage: `When not much is happening, push out the side lanes with Gale and Plague Wards.`,
@@ -15789,7 +15789,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Venomancer",
-    audioFile: "ownHero/Venomancer_10_Aghanims_v2",
+    audioFile: "ownHero/Venomancer_10_Aghanims",
     messageTime: 19 * 60,
     textMessage: `Pick up Aghanims Scepter as the game progresses to amplify your damage output.`,
     audience: [Audience.ALL],
