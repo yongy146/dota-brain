@@ -177,7 +177,7 @@ export interface CounterItems {
 }
 
 export interface CounterItem {
-  item: string; // Name of item, as in dota2Items.json, but without prefix `item_`
+  item: string; // Name of item, as in dota2Items.json, but without prefix `item_`. Special names added by Dota Coach are: "armor", "magicResistance" and "statusResistance"
   info?: string; // Optional info to be displayed on webpage and in the app
 }
 
@@ -12604,40 +12604,63 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-			{ item: `infused_raindrop`, info: `Protects against Dead Shot burst` },
-			{ item: `boots`, info: `To get out of The Calling AOE` },
-			{ item: `wind_lace`, info: `To get out of The Calling AOE` },
-		],
+          {
+            item: `infused_raindrop`,
+            info: `Protects against Dead Shot burst`,
+          },
+          { item: `boots`, info: `To get out of The Calling AOE` },
+          { item: `wind_lace`, info: `To get out of The Calling AOE` },
+        ],
         support: [],
         core: [],
       },
       mid_game: {
-        all: [{ item: `magicResistance`, info: `Buy magic resistance to protect against Muerta magic right clicks` }],
-        support: [
-			{ item: `glimmer_cape` },
-			{ item: `force_staff` },
-		],
+        all: [
+          {
+            item: `magicResistance`,
+            info: `Buy magic resistance to protect against Muerta magic right clicks`,
+          },
+        ],
+        support: [{ item: `glimmer_cape` }, { item: `force_staff` }],
         core: [
-			{ item: `black_king_bar`, info: `Muerta does no damage with her ulti through spell immunity` },
-			{ item: `hood_of_defiance` },
-			{ item: `pipe` },
-			{ item: `eternal_shroud` },
-			{ item: `heavens_halberd` },
-			{ item: `mage_slayer`, info: `Heavily reduce magic right click damage of Muerta` },
-		],
+          {
+            item: `black_king_bar`,
+            info: `Muerta does no damage with her ulti through spell immunity`,
+          },
+          { item: `hood_of_defiance` },
+          { item: `pipe` },
+          { item: `eternal_shroud` },
+          { item: `heavens_halberd` },
+          {
+            item: `mage_slayer`,
+            info: `Heavily reduce magic right click damage of Muerta`,
+          },
+        ],
       },
       late_game: {
         all: [],
         support: [
-			{ item: `aeon_disk`, info: `Defends against getting bursted in the late game` }
-			{ item: `wind_waker`, info: `Dispel yourself and get away from Muerta` }
-		],
+          {
+            item: `aeon_disk`,
+            info: `Defends against getting bursted in the late game`,
+          },
+          {
+            item: `wind_waker`,
+            info: `Dispel yourself and get away from Muerta`,
+          },
+        ],
         core: [
-			{ item: `sheepstick`, info: `Lockdown and burst Muerta` }
-			{ item: `abyssal_blade`, info: `Lockdown and burst Muerta` }
-			{ item: `satanic`, info: `Dispel yourself and fight back against Muerta` }
-			{ item: `bloodthorn`, info: `Silence and burst down Muerta while reducing her spell damage` }
-		],
+          { item: `sheepstick`, info: `Lockdown and burst Muerta` },
+          { item: `abyssal_blade`, info: `Lockdown and burst Muerta` },
+          {
+            item: `satanic`,
+            info: `Dispel yourself and fight back against Muerta`,
+          },
+          {
+            item: `bloodthorn`,
+            info: `Silence and burst down Muerta while reducing her spell damage`,
+          },
+        ],
       },
     },
   },
