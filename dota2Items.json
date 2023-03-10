@@ -2,6 +2,12 @@
 	"armor": {
 		"name": "Armor"
 	},
+	"margicResistance": {
+		"name": "Magic Resistance"
+	},
+	"statusResistance": {
+		"name": "Status Resistance"
+	},
 	"DamageItems": {
 		"name": "Damage Items"
 	},
