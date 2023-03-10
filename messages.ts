@@ -8889,7 +8889,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Morphling",
     audioFile: "ownHero/Morphling_1_Outlasthit",
     messageTime: 10,
-    textMessage: "Focus on outlasthiting opponents with high base damage.",
+    textMessage: "Focus on outlasthiting opponents with high base damage, Shifting more agility will help with last hitting but can be risky.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "morphling_morph_agi" },
   },
@@ -8899,7 +8899,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Morphling_2_AvoidHarass",
     messageTime: 20,
     textMessage:
-      "Avoid taking much harass damage early as you'll be forced to attribute shift to strength.",
+      "Be careful when playing versus ranged heroes. You don't want to allow them to harras you too much and force you to morph strength.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "morphling_morph_str" },
   },
@@ -8968,9 +8968,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Morphling_9_EtherealBlade",
     messageTime: 9 * 60 + 30,
     textMessage:
-      "Rush Ethereal Blade if you don't need Manta as you can burst squishier heroes with it.",
+      "Your main powerspike is eye of skadi, In cases where manta isn't required you can go skadi after yasha.",
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "ethereal_blade" },
+    image: { type: "item", name: "skadi" },
   },
   {
     category: "OwnHero",
@@ -9025,7 +9025,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Morphling_5_Ethereal",
     messageTime: 13 * 60,
     textMessage:
-      "Be aware of Ethereal Blade timing on Morphling. He can solo kill most of the heroes.",
+      "Morphling is likely to be farming safe areas of the map like the triangle, If possible try to gank with smokes and pressure the hero.",
     audience: [Audience.ALL],
   },
   {
