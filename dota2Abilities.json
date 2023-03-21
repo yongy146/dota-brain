@@ -27706,8 +27706,8 @@
 			"talent_level": 2,
 			"description": "+{s:bonus_AbilityCastRange} Dead Shot Cast Range"
 		},
-		"special_bonus_attack_damage_25": {
-			"id": 6009,
+		"special_bonus_attack_damage_35": {
+			"id": 6164,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -27717,7 +27717,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Damage"
+			"description": "+35 Damage"
 		},
 		"special_bonus_unique_muerta_dead_shot_charges": {
 			"id": 5755,
@@ -27732,8 +27732,8 @@
 			"talent_level": 3,
 			"description": "2 Dead Shot Charges"
 		},
-		"special_bonus_unique_muerta_the_calling_num_revenants": {
-			"id": 5758,
+		"special_bonus_unique_muerta_gunslinger_double_shot_chance": {
+			"id": 5759,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -27743,10 +27743,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "The Calling summons {s:bonus_num_revenants} additional revenants"
+			"description": "+{s:bonus_double_shot_chance}% Gunslinger chance"
 		},
-		"special_bonus_unique_muerta_gunslinger_double_shot_chance": {
-			"id": 5759,
+		"special_bonus_unique_muerta_the_calling_num_revenants": {
+			"id": 5758,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -27756,7 +27756,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_double_shot_chance}% Gunslinger chance"
+			"description": "The Calling summons {s:bonus_num_revenants} additional revenants"
 		},
 		"special_bonus_magic_resistance_25": {
 			"id": 6091,

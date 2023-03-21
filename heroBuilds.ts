@@ -12397,7 +12397,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "muerta_pierce_the_veil", // 12
           `muerta_the_calling`, // 13
           `muerta_the_calling`, // 14
-          "special_bonus_attack_damage_25", // 15
+          "special_bonus_attack_damage_35", // 15
           `muerta_the_calling`, // 16
           "special_bonus_attributes", // 17
           "muerta_pierce_the_veil", // 18

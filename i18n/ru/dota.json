@@ -652,6 +652,7 @@
 	"dota.items.item_lesser_crit": "Crystalys",
 	"dota.items.item_lesser_crit.description": "<h1>Пассивное: Critical Strike</h1> Каждая атака может с вероятностью в <value>30</value>% нанести <value>160</value>% урона.",
 	"dota.items.item_lesser_crit.effect": "<item>+ <value>32</value> к урону</item>",
+	"dota.items.item_recipe_dragon_lance": "Рецепт: Dragon Lance",
 	"dota.items.item_dragon_lance": "Dragon Lance",
 	"dota.items.item_dragon_lance.description": "<h1>Пассивное: Dragon's Reach</h1> Увеличивает дальность атаки героев дальнего боя.",
 	"dota.items.item_dragon_lance.effect": "<item>+ <value>15</value> к ловкости</item><item>+ <value>12</value> к силе</item><item>+ <value>150</value> к дальности атаки <font_7d7d7d>(в дальнем бою)</font_7d7d7d></item>",

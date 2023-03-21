@@ -655,6 +655,7 @@
 	"dota.items.item_lesser_crit": "Crystalys",
 	"dota.items.item_lesser_crit.description": "<h1>Passive: Critical Strike</h1>Grants each attack a <value>30</value>% chance to deal <value>160</value>% damage.",
 	"dota.items.item_lesser_crit.effect": "<item>+ <value>32</value> Damage</item>",
+	"dota.items.item_recipe_dragon_lance": "Dragon Lance Recipe",
 	"dota.items.item_dragon_lance": "Dragon Lance",
 	"dota.items.item_dragon_lance.description": "<h1>Passive: Dragon's Reach</h1> Increases attack range of ranged heroes.",
 	"dota.items.item_dragon_lance.effect": "<item>+ <value>15</value> Agility</item><item>+ <value>12</value> Strength</item><item>+ <value>150</value> Attack Range <font_7d7d7d>(Ranged Only)</font_7d7d7d></item>",
