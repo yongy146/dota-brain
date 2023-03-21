@@ -8817,6 +8817,188 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
 
+// 124. Muerta
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_1_FalconBlade`,
+    messageTime: 1 * 60,
+    textMessage:
+      `Rush Falcon Blade to spam Dead Shot for farm and lane control.`,
+    audience: [Audience.ROLE_CORE],
+    image: { type: `item`, name: `falcon_blade` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_2_DeadShot`,
+    messageTime: 30,
+    textMessage:
+      `Use Dead Shot to secure last hits and damage enemy heroes.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_dead_shot` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_3_FearThreat`,
+    messageTime: 2 * 60 + 30,
+    textMessage: `Look for angles to fear enemies under tower with Dead Shot.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_dead_shot` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_4_SpellCombo`,
+    messageTime: 3 * 60 + 30,
+    textMessage:
+      `Use Dead Shot to fear enemy heroes into The Calling spirits.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_the_calling` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_5_SpellImmunity`,
+    messageTime: [10 * 60 + 15, 20 * 60 + 15],
+    textMessage:
+      `be careful not to use Pierce the Veil against spell immune heroes.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_pierce_the_veil` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_6_PhysicalImmunity`,
+    messageTime: 12 * 60,
+    textMessage: `Pierce the Veil makes you immune to all physical damage. Use it to evade attacks.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_pierce_the_veil` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_7_DodgeProjectiles`,
+    messageTime: 14 * 60,
+    textMessage:
+      `You can dodge mid air projectiles like Vengeful Spirit stun with Pierce the Veil.`,
+    audience: [Audience.ROLE_CORE],
+    image: { type: `ability`, name: `muerta_pierce_the_veil` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_8_CarefulPositioning`,
+    messageTime: 17 * 60,
+    textMessage: `Be careful about your positioning in teamfights as your hero is slow and immobile without Blink or Hurricane Pike.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `hurricane_pike` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_9_FearDirection`,
+    messageTime: 18 * 60,
+    textMessage:
+      `Look to keep enemy heroes within your attack range with the Dead Shot.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_dead_shot` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_10_MidGameFighting`,
+    messageTime: 22 * 60 + 30,
+    textMessage:
+      `Be patient using Pierce the Veil when enemy heroes have BKBs.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_pierce_the_veil` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_11_ArmorCounter`,
+    messageTime: 30 * 60 + 30,
+    textMessage:
+      `Use Pierce the Veil to burst down high armor heroes with your Pierce the Veil magical burst.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `muerta_pierce_the_veil` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_12_Eblade`,
+    messageTime: 34 * 60,
+    textMessage:
+      `Use Ethereal Blade in combination with Pierce the Veil for massive magical burst damage.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `ethereal_blade` },
+  },
+
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_1_Positioning`,
+    messageTime: 30,
+    textMessage:
+      `Be careful about last hitting close to the enemy tower against Dead Shot fear.`,
+    audience: [Audience.IN_LANE],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_2_MovementSpeed`,
+    messageTime: 2 * 60,
+    textMessage:
+      `Get some movement speed with Boots and Wind Lace to get out of The Calling AOE.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_3_Manfight`,
+    messageTime: 7 * 60 + 10,
+    textMessage:
+      `Try not to fight Muerta solo as she can hit you with double attacks with Gunslinger.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_4_Bkb`,
+    messageTime: 12 * 60,
+    textMessage: `Get an early bkb against Muerta to render her ulti completely useless.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_5_MagicResistance`,
+    messageTime: 14 * 60,
+    textMessage:
+      `Magic resistance items are incredible against Muertas magical burst.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_6_DamageReduction`,
+    messageTime: 16 * 60,
+    textMessage:
+      `Get items like Mage Slayer and Heavens Halberd to severely reduce Muertas damage output.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Muerta`,
+    audioFile: `enemyHero/Muerta_7_Mobility`,
+    messageTime: 18 * 60,
+    textMessage:
+      `Buy mobility items like Blink and Force Staff to close the gap on Muerta.`,
+    audience: [Audience.ALL],
+  },
+  
   // 64. Naga Siren
   {
     category: "OwnHero",

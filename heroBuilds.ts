@@ -12402,12 +12402,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "muerta_pierce_the_veil", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_muerta_dead_shot_charges", // 20
+          `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_muerta_gunslinger_double_shot_chance", // 25
+          `special_bonus_unique_muerta_the_calling_num_revenants`, // 25
         ],
         items: {
           starting: [
@@ -12522,7 +12522,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_muerta_gunslinger_double_shot_chance", // 25
+          `special_bonus_unique_muerta_the_calling_num_revenants`, // 25
         ],
         items: {
           starting: [
