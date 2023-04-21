@@ -3552,6 +3552,19 @@
 		"mana_regen_": 10,
 		"duration": 6
 	},
+	"item_vampire_fangs": {
+		"id": 297,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"attack_lifesteal_": 15,
+		"spell_lifesteal": 6
+	},
 	"item_force_field": {
 		"id": 829,
 		"cost": 0,
@@ -3820,6 +3833,19 @@
 		"is_purchasable": false,
 		"armor_": 20
 	},
+	"item_faded_broach": {
+		"id": 375,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_": 200,
+		"movement_speed": 20
+	},
 	"item_paladin_sword": {
 		"id": 376,
 		"cost": 0,
@@ -3833,6 +3859,19 @@
 		"attack_lifesteal_": 16,
 		"spell_lifesteal": 8,
 		"damage_": 16
+	},
+	"item_orb_of_destruction": {
+		"id": 378,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 2,
+		"drop_time": "17:00",
+		"drop_rate": 10,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"duration": 4,
+		"armor_reduction": 3
 	},
 	"item_arcane_ring": {
 		"id": 349,
