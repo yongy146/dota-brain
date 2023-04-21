@@ -3820,19 +3820,6 @@
 		"is_purchasable": false,
 		"armor_": 20
 	},
-	"item_faded_broach": {
-		"id": 375,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": 1,
-		"drop_time": "7:00",
-		"drop_rate": 14,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"mana_": 200,
-		"movement_speed": 20
-	},
 	"item_paladin_sword": {
 		"id": 376,
 		"cost": 0,
