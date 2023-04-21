@@ -4657,61 +4657,6 @@
 		"spell_amp": 100,
 		"damage_": 300
 	},
-	"item_tier1_token": {
-		"id": 2091,
-		"is_active": true,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false
-	},
-	"item_tier2_token": {
-		"id": 2092,
-		"is_active": true,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false
-	},
-	"item_tier3_token": {
-		"id": 2093,
-		"is_active": true,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false
-	},
-	"item_tier4_token": {
-		"id": 2094,
-		"is_active": true,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false
-	},
-	"item_tier5_token": {
-		"id": 2095,
-		"is_active": true,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false
-	},
 	"item_vindicators_axe": {
 		"id": 2096,
 		"is_active": true,
