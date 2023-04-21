@@ -3873,21 +3873,6 @@
 		"is_purchasable": false,
 		"armor_": 5
 	},
-	"item_black_powder_bag": {
-		"id": 834,
-		"is_active": true,
-		"cost": 0,
-		"cooldown": 20,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"damage_aoe": 250,
-		"armor_": 7
-	},
 	"item_timeless_relic": {
 		"id": 300,
 		"is_active": true,
@@ -3953,20 +3938,6 @@
 		"is_purchasable": false,
 		"mana_regen_": 4,
 		"all_attributes_": 8
-	},
-	"item_flicker": {
-		"id": 335,
-		"is_active": true,
-		"cost": 0,
-		"cooldown": 5,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"movement_speed": 35
 	},
 	"item_spy_gadget": {
 		"id": 336,
@@ -4038,21 +4009,6 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"health_": 75
-	},
-	"item_nether_shawl": {
-		"id": 357,
-		"is_active": true,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"spell_amp": 6,
-		"magic_resist": 20,
-		"armor_": 2
 	},
 	"item_dragon_scale": {
 		"id": 358,
@@ -4191,6 +4147,20 @@
 		"is_purchasable": false,
 		"armor_": 20
 	},
+	"item_faded_broach": {
+		"id": 375,
+		"is_active": true,
+		"cost": 0,
+		"is_recipe": false,
+		"is_neutral": true,
+		"neutral_level": 1,
+		"drop_time": "7:00",
+		"drop_rate": 14,
+		"is_roshan": false,
+		"is_purchasable": false,
+		"mana_": 200,
+		"movement_speed": 20
+	},
 	"item_paladin_sword": {
 		"id": 376,
 		"is_active": true,
@@ -4281,19 +4251,6 @@
 		"evasion": 20,
 		"magic_resist": 20,
 		"duration": 6
-	},
-	"item_possessed_mask": {
-		"id": 577,
-		"is_active": true,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"attack_lifesteal_absolute": 7
 	},
 	"item_penta_edged_sword": {
 		"id": 638,
@@ -4431,35 +4388,6 @@
 		"health_regen_": 15,
 		"duration": 3
 	},
-	"item_misericorde": {
-		"id": 828,
-		"is_active": true,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"damage_": 10
-	},
-	"item_heavy_blade": {
-		"id": 837,
-		"is_active": true,
-		"mana_cost": 75,
-		"cost": 0,
-		"cooldown": 20,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"attack_speed_": 20,
-		"damage_": 4
-	},
 	"item_unstable_wand": {
 		"id": 838,
 		"is_active": true,
@@ -4596,21 +4524,6 @@
 		"is_purchasable": false,
 		"damage_": 10
 	},
-	"item_dagger_of_ristul": {
-		"id": 1077,
-		"is_active": true,
-		"cost": 0,
-		"cooldown": 30,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"damage_ability_": 40,
-		"duration": 8
-	},
 	"item_ofrenda": {
 		"id": 4300,
 		"is_active": true,
@@ -4686,35 +4599,6 @@
 		"attack_speed_": 15,
 		"damage_": 10
 	},
-	"item_horizons_equilibrium": {
-		"id": 2098,
-		"is_active": true,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"attack_lifesteal_": 24,
-		"spell_lifesteal": 12
-	},
-	"item_blighted_spirit": {
-		"id": 2099,
-		"is_active": true,
-		"cost": 0,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"magic_resist": 15,
-		"heal_reduction": 25,
-		"duration": 3
-	},
 	"item_dandelion_amulet": {
 		"id": 2190,
 		"is_active": true,
@@ -4727,21 +4611,6 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false
-	},
-	"item_turtle_shell": {
-		"id": 2191,
-		"is_active": true,
-		"cost": 0,
-		"cooldown": 30,
-		"is_recipe": false,
-		"is_neutral": true,
-		"neutral_level": -1,
-		"drop_time": "",
-		"drop_rate": 0,
-		"is_roshan": false,
-		"is_purchasable": false,
-		"duration": 15,
-		"armor_": 5
 	},
 	"item_martyrs_plate": {
 		"id": 2192,
