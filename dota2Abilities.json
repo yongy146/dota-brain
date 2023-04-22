@@ -24,9 +24,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				12,
-				10,
-				8,
+				13.5,
+				11,
+				8.5,
 				6
 			],
 			"mana_cost": [
@@ -280,7 +280,7 @@
 				0
 			],
 			"name": "Counter Helix",
-			"description": "When attacked, Axe has a chance to perform a helix counter attack, dealing pure damage to all nearby enemies.",
+			"description": "After a set number of attacks, Axe will perform a helix counter attack, dealing pure damage to all nearby enemies.",
 			"lore": "Axe is the only reinforcement this army needs.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -430,13 +430,13 @@
 				7
 			],
 			"mana_cost": [
-				40,
-				50,
-				60,
-				70
+				120,
+				135,
+				150,
+				165
 			],
 			"name": "Enfeeble",
-			"description": "Lowers the enemy's total attack damage, cast range, and heal/regeneration.",
+			"description": "Deals damage every second and lowers the enemy's total attack damage and cast range.",
 			"lore": "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -482,10 +482,13 @@
 				15
 			],
 			"mana_cost": [
-				165
+				120,
+				130,
+				140,
+				150
 			],
 			"name": "Nightmare",
-			"description": "Puts the target enemy or friendly Hero to sleep. Sleeping units are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack nightmared targets freely. Enemy Units take Pure Damage Per Second while in Nightmare.",
+			"description": "Puts the target enemy or friendly Hero to sleep. Sleeping units are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack nightmared targets freely.",
 			"lore": "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -543,8 +546,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_unique_bane_10": {
-			"id": 978,
+		"special_bonus_unique_bane_8": {
+			"id": 720,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -554,7 +557,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "Nightmare Damage Heals Bane"
+			"description": "-{s:bonus_AbilityCooldown}s Brain Sap Cooldown"
 		},
 		"special_bonus_unique_bane_11": {
 			"id": 979,
@@ -569,8 +572,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_cast_reduction}% Enfeeble Cast Range Reduction"
 		},
-		"special_bonus_unique_bane_8": {
-			"id": 720,
+		"special_bonus_unique_bane_10": {
+			"id": 978,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -580,7 +583,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-{s:bonus_AbilityCooldown}s Brain Sap Cooldown"
+			"description": "+{s:bonus_enfeeble_tick_damage} Enfeeble Damage Per Second"
 		},
 		"special_bonus_unique_bane_9": {
 			"id": 779,
@@ -732,7 +735,7 @@
 				0
 			],
 			"name": "Blood Mist",
-			"description": "Bloodseeker sprays his blood continuously in the area around him, damaging himself to damage and slow his enemies. While active, Thirst's healing is increased. Cannot be turned off while on cooldown.",
+			"description": "Bloodseeker sprays his blood continuously in the area around him, losing health to damage and slow his enemies. While active, Thirst's healing is increased. Cannot be turned off while on cooldown. Additionally, passively turns all your overheal from your own abilities into an all damage barrier up to 50% of Bloodseeker's Max Health. Barrier amount decays by 0.5% per second.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -746,7 +749,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				70
+				75,
+				70,
+				65
 			],
 			"mana_cost": [
 				100,
@@ -945,7 +950,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				100
+				100,
+				95,
+				90
 			],
 			"mana_cost": [
 				0
@@ -1028,8 +1035,8 @@
 			"talent_level": 2,
 			"description": "-{s:bonus_AbilityCooldown}s Crystal Nova Cooldown"
 		},
-		"special_bonus_attack_speed_200": {
-			"id": 6622,
+		"special_bonus_attack_speed_225": {
+			"id": 6623,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -1039,7 +1046,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+200 Attack Speed"
+			"description": "+225 Attack Speed"
 		},
 		"special_bonus_unique_crystal_maiden_3": {
 			"id": 6520,
@@ -1158,6 +1165,24 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
+		"drow_ranger_glacier": {
+			"id": 1121,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				20
+			],
+			"mana_cost": [
+				50
+			],
+			"name": "Glacier",
+			"description": "Drow Ranger creates a hill of ice beneath her. While standing on the hill, attackers gain bonus attack range and high ground advantage - they cannot miss and gain flying vision. Drow Ranger additionally gets bonus Multishot arrows per wave while on the hill. The front of the hill obscures vision and cannot be moved through.",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"is_debuff": false,
+			"is_buff": false
+		},
 		"drow_ranger_marksmanship": {
 			"id": 5022,
 			"sequence": "Ability6",
@@ -1201,7 +1226,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Frost Arrow Damage"
+			"description": "+{s:bonus_damage} Frost Arrow Damage"
 		},
 		"special_bonus_unique_drow_ranger_gust_invis": {
 			"id": 1087,
@@ -1446,7 +1471,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+40 Echo Damage"
+			"description": "+50 Echo Damage"
 		},
 		"special_bonus_unique_earthshaker_3": {
 			"id": 6511,
@@ -1459,7 +1484,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+320 Fissure Range"
+			"description": "+300 Fissure Range"
 		},
 		"special_bonus_unique_earthshaker_5": {
 			"id": 8041,
@@ -1485,7 +1510,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-1.5s Enchant Totem Cooldown"
+			"description": "-2s Enchant Totem Cooldown"
 		}
 	},
 	"npc_dota_hero_juggernaut": {
@@ -1506,7 +1531,7 @@
 				90
 			],
 			"name": "Blade Fury",
-			"description": "Causes a bladestorm of destructive force around Juggernaut, rendering him immune to magic and dealing damage to nearby enemy units. \n\nDISPEL TYPE: Basic Dispel",
+			"description": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune, increasing his magic resistance by 80%%, and dealing damage to nearby enemy units. \n\nDISPEL TYPE: Basic Dispel",
 			"lore": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -1584,7 +1609,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				130
+				120
 			],
 			"mana_cost": [
 				200,
@@ -1720,9 +1745,9 @@
 			],
 			"mana_cost": [
 				80,
-				95,
-				110,
-				125
+				90,
+				100,
+				110
 			],
 			"name": "Starstorm",
 			"description": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a %starfall_secondary_radius% radius will be struck a second time for %secondary_starfall_damage_percent%%% of the damage.",
@@ -1743,10 +1768,7 @@
 				16
 			],
 			"mana_cost": [
-				100,
-				100,
-				100,
-				100
+				90
 			],
 			"name": "Sacred Arrow",
 			"description": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from %arrow_min_stun% to %arrow_max_stun% seconds, with bonus damage up to %arrow_bonus_damage% added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
@@ -1920,7 +1942,7 @@
 				90
 			],
 			"name": "Shadowraze",
-			"description": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack. Each consecutive stack also decreases turn rate and movement speed.",
+			"description": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack. Each consecutive stack also decreases movement speed.",
 			"lore": "Nevermore's trademark for harvesting souls.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -1942,7 +1964,7 @@
 				90
 			],
 			"name": "Shadowraze",
-			"description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack. Each consecutive stack also decreases turn rate and movement speed.",
+			"description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack. Each consecutive stack also decreases movement speed.",
 			"lore": "Nevermore's trademark for harvesting souls.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -1964,7 +1986,7 @@
 				90
 			],
 			"name": "Shadowraze",
-			"description": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack. Each consecutive stack also decreases turn rate and movement speed.",
+			"description": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack. Each consecutive stack also decreases movement speed.",
 			"lore": "Nevermore's trademark for harvesting souls.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -1996,13 +2018,13 @@
 			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
-				10
+				0
 			],
 			"mana_cost": [
 				0
 			],
 			"name": "Presence of the Dark Lord",
-			"description": "Shadow Fiend's presence reduces the armor of nearby enemies.",
+			"description": "Shadow Fiend's presence reduces the armor of nearby enemies. Every enemy hero killed nearby further improves armor reduction by %bonus_armor_per_stack% for %kill_buff_duration%s.",
 			"lore": "Even being near Nevermore eats away at one's soul.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -2112,7 +2134,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.3s Requiem Fear per line"
+			"description": "+0.25s Requiem Fear per line"
 		},
 		"special_bonus_unique_nevermore_shadowraze_cooldown": {
 			"id": 929,
@@ -2177,7 +2199,7 @@
 				70
 			],
 			"name": "Adaptive Strike (Agility)",
-			"description": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. \n\n Also puts Adaptive Strike (Strength) on a %shared_cooldown% second cooldown.",
+			"description": "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. Passively grants bonus Agility. \n\n Also puts Adaptive Strike (Strength) on a %shared_cooldown% second cooldown.",
 			"lore": "The Morphling calls upon his elements to crush his opponents with waves.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2199,7 +2221,7 @@
 				70
 			],
 			"name": "Adaptive Strike (Strength)",
-			"description": "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun/knockback is dealt. \n\n Also puts Adaptive Strike (Agility) on a %shared_cooldown% second cooldown.",
+			"description": "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun/knockback is dealt. Passively grants bonus Strength. \n\n Also puts Adaptive Strike (Agility) on a %shared_cooldown% second cooldown.",
 			"lore": "The Morphling calls upon his elements to crush his opponents with waves.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2223,7 +2245,7 @@
 				0
 			],
 			"name": "Attribute Shift (Agility Gain)",
-			"description": "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Agility.",
+			"description": "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.",
 			"lore": "Shifting water makes it difficult to discern the nature of Morphling.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2241,7 +2263,7 @@
 				0
 			],
 			"name": "Attribute Shift (Strength Gain)",
-			"description": "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Strength.",
+			"description": "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.",
 			"lore": "Shifting water makes it difficult to discern the nature of Morphling.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -2484,7 +2506,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				40
+				15
 			],
 			"mana_cost": [
 				75
@@ -2615,10 +2637,10 @@
 				9
 			],
 			"mana_cost": [
+				100,
 				110,
 				120,
-				130,
-				140
+				130
 			],
 			"name": "Illusory Orb",
 			"description": "Puck launches a magic orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the orb's location using Ethereal Jaunt.",
@@ -2813,10 +2835,10 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Dream Coil Pierces Magic Immunity"
+			"description": "Dream Coil Pierces Debuff Immunity"
 		},
-		"special_bonus_unique_puck_3": {
-			"id": 6855,
+		"special_bonus_unique_puck_rift_radius": {
+			"id": 1129,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -2826,7 +2848,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Dream Coil Rapid Fire"
+			"description": "+{s:bonus_radius} Waning Rift Radius/Max Distance"
 		}
 	},
 	"npc_dota_hero_pudge": {
@@ -3079,10 +3101,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				50,
 				40,
-				35,
 				30,
-				25
+				20
 			],
 			"mana_cost": [
 				65
@@ -3263,7 +3285,7 @@
 				140
 			],
 			"name": "Burrowstrike",
-			"description": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.",
+			"description": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces. Adds Caustic Finale poison to heroes hit.",
 			"lore": "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -3352,7 +3374,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Sand Storm Damage Per Second"
+			"description": "+{s:bonus_sand_storm_damage} Sand Storm Damage Per Second"
 		},
 		"special_bonus_unique_sand_king_burrowstrike_stun": {
 			"id": 1066,
@@ -3378,7 +3400,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+125 Sand Storm Radius"
+			"description": "+{s:bonus_sand_storm_radius} Sand Storm Radius"
 		},
 		"special_bonus_unique_sand_king_8": {
 			"id": 890,
@@ -3430,7 +3452,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+5 Epicenter Pulses"
+			"description": "+{s:bonus_epicenter_pulses} Epicenter Pulses"
 		},
 		"special_bonus_unique_sand_king_4": {
 			"id": 475,
@@ -3599,7 +3621,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_AbilityDuration}s Electric Vortex"
+			"description": "+{s:bonus_AbilityDuration}s Electric Vortex Duration"
 		},
 		"special_bonus_unique_storm_spirit_8": {
 			"id": 762,
@@ -3683,7 +3705,7 @@
 				0
 			],
 			"name": "Great Cleave",
-			"description": "Sven strikes with great force, cleaving all nearby enemy units with his attack.",
+			"description": "Sven strikes with great force, cleaving all nearby enemy units with his attack. Passively grants bonus Strength.",
 			"lore": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -3696,9 +3718,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				32,
-				28,
-				24,
+				35,
+				30,
+				25,
 				20
 			],
 			"mana_cost": [
@@ -3841,7 +3863,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.25s Storm Hammer Stun Duration"
+			"description": "+1.0s Storm Hammer Stun Duration"
 		}
 	},
 	"npc_dota_hero_tiny": {
@@ -3879,9 +3901,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				20,
 				17,
-				15,
-				13,
+				14,
 				11
 			],
 			"mana_cost": [
@@ -3907,10 +3929,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
+				22,
 				19,
 				16,
-				13,
-				10
+				13
 			],
 			"mana_cost": [
 				40
@@ -4283,8 +4305,8 @@
 			"talent_level": 4,
 			"description": "+16% Vengeance Aura Base Damage Bonus"
 		},
-		"special_bonus_unique_vengeful_spirit_3": {
-			"id": 6057,
+		"special_bonus_unique_vengeful_spirit_swap_damage_reduction": {
+			"id": 1233,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -4294,7 +4316,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Magic Missile Pierces Spell Immunity"
+			"description": "+{s:bonus_damage_reduction}% Nether Swap Damage Reduction"
 		}
 	},
 	"npc_dota_hero_windrunner": {
@@ -4480,7 +4502,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.8s Shackleshot Duration"
+			"description": "+0.65s Shackleshot Duration"
 		},
 		"special_bonus_unique_windranger_8": {
 			"id": 7889,
@@ -4537,7 +4559,7 @@
 				95
 			],
 			"name": "Arc Lightning",
-			"description": "Hurls a bolt of lightning that leaps through nearby enemy units.",
+			"description": "Hurls a bolt of lightning that leaps through nearby enemy units that deal a base damage and a percentage of their current health.",
 			"lore": "Arc Lightning is Zeus' favorite spell to use against puny mortals.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -4590,7 +4612,7 @@
 				80
 			],
 			"name": "Heavenly Jump",
-			"description": "Zeus performs a Heavenly Jump shocking the closest visible nearby enemy (prioritizing heroes), dealing damage, reducing their movement, attack speed and increasing their cast time. If Zeus was moving forward, he will jump towards that direction. Zeus gets 900 unobstructed vision around him for 3 seconds.",
+			"description": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets 900 unobstructed vision around him for 3 seconds.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -4620,8 +4642,8 @@
 				"stun"
 			]
 		},
-		"zuus_static_field": {
-			"id": 5112,
+		"zuus_lightning_hands": {
+			"id": 1110,
 			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
@@ -4630,14 +4652,16 @@
 			"mana_cost": [
 				0
 			],
-			"name": "Static Field",
-			"description": "Zeus shocks any enemy that he attacks or is hit by his abilities, causing damage equal to %damage_health_pct%%% of their current health.",
-			"lore": "The air crackles with static when the Thundergod walks the world.",
+			"name": "Lightning Hands",
+			"description": "Zeus's gains bonus attack range and his attacks create Arc Lightnings that deal a percentage of it's damage.",
+			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
-			"is_debuff": false,
-			"is_buff": false
+			"is_dispellable": "basic",
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
 		"zuus_thundergods_wrath": {
 			"id": 5113,
@@ -4654,7 +4678,7 @@
 				500
 			],
 			"name": "Thundergod's Wrath",
-			"description": "Strikes all enemy heroes with a bolt of lightning, no matter where they may be.  Thundergod's Wrath also provides True Sight around each hero struck.  If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location.",
+			"description": "Strikes all enemy heroes with a bolt of lightning, no matter where they may be.<br><br>Thundergod's Wrath also provides True Sight around each hero struck.  If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location.",
 			"lore": "The Lord of Heaven smites all who oppose him, near or far.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -4713,8 +4737,8 @@
 			"talent_level": 2,
 			"description": "+{s:bonus_targets} Heavenly Jump Target"
 		},
-		"special_bonus_unique_zeus_4": {
-			"id": 611,
+		"special_bonus_unique_zeus_2": {
+			"id": 6501,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -4724,7 +4748,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+100 Thundergod's Wrath Damage"
+			"description": "+{s:bonus_damage_health_pct}% Arc Lightning Current Health As Damage"
 		},
 		"special_bonus_unique_zeus_3": {
 			"id": 6518,
@@ -4737,7 +4761,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.4s Lightning Bolt Ministun"
+			"description": "+0.3s Lightning Bolt Ministun"
 		},
 		"special_bonus_unique_zeus_5": {
 			"id": 8038,
@@ -4752,8 +4776,8 @@
 			"talent_level": 4,
 			"description": "325 AOE Lightning Bolt"
 		},
-		"special_bonus_unique_zeus_2": {
-			"id": 6501,
+		"special_bonus_unique_zeus_4": {
+			"id": 611,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -4763,7 +4787,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+100 Arc Lightning Damage"
+			"description": "+{s:bonus_damage} Thundergod's Wrath Damage"
 		}
 	},
 	"npc_dota_hero_kunkka": {
@@ -4858,6 +4882,7 @@
 			"lore": "A hundred leagues of dry land couldn't keep these seas at bay.",
 			"is_ultimate": false,
 			"is_passive": "no",
+			"affects": "area",
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
@@ -5114,7 +5139,7 @@
 				50
 			],
 			"name": "Flame Cloak",
-			"description": "Grants Lina unobstructed movement and increases her spell damage and magic resistance",
+			"description": "Grants Lina unobstructed movement and increases her spell damage and magic resistance. Grants max fiery soul stacks on activation.",
 			"lore": "A natural defense equally suited to keeping anything from unwanted sisters to snarling hellbeasts at bay.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -5247,7 +5272,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Laguna Blade damage is Pure and pierces Spell Immunity"
+			"description": "Laguna Blade damage is Pure"
 		}
 	},
 	"npc_dota_hero_lich": {
@@ -5319,7 +5344,7 @@
 				80
 			],
 			"name": "Sinister Gaze",
-			"description": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.",
+			"description": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana. If cast on a creep lasts %creep_duration_multiplier%x longer and deals %creep_damage% damage per second.",
 			"lore": "Mind the cold...",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -5491,10 +5516,10 @@
 				12
 			],
 			"mana_cost": [
-				85,
+				90,
 				110,
-				135,
-				160
+				130,
+				150
 			],
 			"name": "Earth Spike",
 			"description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
@@ -5726,13 +5751,13 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				13
+				12
 			],
 			"mana_cost": [
-				70,
-				110,
+				50,
+				100,
 				150,
-				190
+				200
 			],
 			"name": "Hex",
 			"description": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities.",
@@ -5759,9 +5784,9 @@
 				10
 			],
 			"mana_cost": [
+				125,
 				140,
-				150,
-				160,
+				155,
 				170
 			],
 			"name": "Shackles",
@@ -5812,7 +5837,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+155 Shackles Total Damage"
+			"description": "+170 Shackles Total Damage"
 		},
 		"special_bonus_unique_shadow_shaman_5": {
 			"id": 6877,
@@ -5825,7 +5850,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-3s Hex Cooldown"
+			"description": "-2s Hex Cooldown"
 		},
 		"special_bonus_unique_shadow_shaman_8": {
 			"id": 793,
@@ -5851,7 +5876,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+1s Shackles Duration"
+			"description": "+1.0s Shackles Duration"
 		},
 		"special_bonus_unique_shadow_shaman_7": {
 			"id": 760,
@@ -5890,7 +5915,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+380 Ether Shock Damage"
+			"description": "+400 Ether Shock Damage"
 		},
 		"special_bonus_unique_shadow_shaman_4": {
 			"id": 6521,
@@ -6155,10 +6180,10 @@
 				4
 			],
 			"mana_cost": [
-				40,
+				45,
 				50,
-				60,
-				70
+				55,
+				60
 			],
 			"name": "Anchor Smash",
 			"description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
@@ -6199,7 +6224,7 @@
 				150
 			],
 			"mana_cost": [
-				150,
+				125,
 				225,
 				325
 			],
@@ -6304,7 +6329,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_duration}s Ravage Stun"
+			"description": "+{s:bonus_duration}s Ravage Stun Duration"
 		},
 		"special_bonus_unique_tidehunter_8": {
 			"id": 7979,
@@ -6620,27 +6645,6 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"riki_poison_dart": {
-			"id": 550,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				15
-			],
-			"mana_cost": [
-				75
-			],
-			"name": "Sleeping Dart",
-			"description": "Fires a dart at the target enemy, putting them to sleep.  The target will wake up at the end of the duration or if they take too much damage. Upon waking up, the target takes damage and is slowed.",
-			"lore": "n/a",
-			"is_ultimate": false,
-			"is_passive": "no",
-			"affects": "unit",
-			"is_dispellable": "basic",
-			"is_debuff": true,
-			"is_buff": false,
-			"is_debuff_dispellable": "basic"
-		},
 		"riki_backstab": {
 			"id": 5144,
 			"sequence": "Ability6",
@@ -6652,7 +6656,7 @@
 				0
 			],
 			"name": "Cloak and Dagger",
-			"description": "Riki fades into the shadows, becoming invisible. Every time Riki strikes his enemy from behind, he deals bonus damage based on his Agility. Bonus damage is doubled against non-hero units. When Riki attacks, he becomes visible.",
+			"description": "Riki fades into the shadows, becoming invisible. Every time Riki strikes his enemy from behind, he deals bonus damage based on his Agility. Bonus damage is doubled against non-hero units. When Riki attacks, he becomes visible. Grants bonus experience for hero kills and assists.",
 			"lore": "Riki comes for you.",
 			"is_ultimate": true,
 			"is_passive": "yes",
@@ -6674,8 +6678,8 @@
 			"talent_level": 1,
 			"description": "+60 Smoke Screen Radius"
 		},
-		"special_bonus_unique_riki_2": {
-			"id": 6193,
+		"special_bonus_unique_riki_8": {
+			"id": 782,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -6685,10 +6689,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_slow}s Blink Strike Slow"
+			"description": "+8% Cloak and Dagger Movement Speed"
 		},
-		"special_bonus_unique_riki_8": {
-			"id": 782,
+		"special_bonus_unique_riki_2": {
+			"id": 6193,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -6698,7 +6702,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "8% Cloak and Dagger Movement Speed"
+			"description": "+{s:bonus_agility_pct}% Tricks of the Trade Agility Increase"
 		},
 		"special_bonus_unique_riki_3": {
 			"id": 6865,
@@ -6984,10 +6988,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				22,
 				20,
 				18,
-				16,
-				14
+				16
 			],
 			"mana_cost": [
 				95,
@@ -7041,7 +7045,7 @@
 				100
 			],
 			"name": "Defense Matrix",
-			"description": "Targets an allied unit, applying a barrier to them that blocks some damage and provides Status Resistance.",
+			"description": "Targets an allied unit, applying an all damage barrier to them that also provides Status Resistance.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -7376,7 +7380,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+-14% Shrapnel Slow"
+			"description": "+-15% Shrapnel Movement Slow"
 		},
 		"special_bonus_unique_sniper_3": {
 			"id": 6896,
@@ -7389,7 +7393,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_knockback_distance} Knockback Distance Headshot"
+			"description": "+{s:bonus_knockback_distance} Headshot Knockback Distance"
 		},
 		"special_bonus_unique_sniper_1": {
 			"id": 6305,
@@ -7402,7 +7406,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+24 Shrapnel DPS"
+			"description": "+25 Shrapnel DPS"
 		},
 		"special_bonus_attack_range_100": {
 			"id": 5943,
@@ -7510,7 +7514,7 @@
 				125
 			],
 			"name": "Death Seeker",
-			"description": "Spawns a fast moving large Death Pulse towards the target enemy or ally, causing the target to become ethereal. Reduces enemy magic resistance. Spreads towards nearby enemies and allies after impact.",
+			"description": "Necrophos turns into a large Death Pulse towards the target unit's position. Once it arrives to the location, the Death Pulse spreads towards nearby enemies and allies.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -7584,7 +7588,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_movement_speed}% Ghost Shroud Slow"
+			"description": "+{s:bonus_movement_speed}% Ghost Shroud Movement Slow"
 		},
 		"special_bonus_unique_necrophos_4": {
 			"id": 7111,
@@ -7597,7 +7601,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+32 Death Pulse Heal"
+			"description": "+30 Death Pulse Heal"
 		},
 		"special_bonus_unique_necrophos_sadist_heal_bonus": {
 			"id": 1050,
@@ -7741,7 +7745,7 @@
 				500
 			],
 			"name": "Chaotic Offering",
-			"description": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives %golem_duration% seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
+			"description": "Summons a Golem from the depths, stunning enemies for %stun_duration% seconds. The Golem lives %golem_duration% seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
 			"lore": "Demnok unleashes the captive spirit in his Dreadwood staff, causing destruction in enemy ranks.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -7792,8 +7796,8 @@
 			"talent_level": 2,
 			"description": "+12 Upheaval Attack Speed per second on Allies"
 		},
-		"special_bonus_unique_warlock_3": {
-			"id": 6412,
+		"special_bonus_unique_warlock_7": {
+			"id": 764,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -7803,7 +7807,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-{s:bonus_AbilityCooldown}s Shadow Word Cooldown"
+			"description": "+{s:bonus_damage} Shadow Word Heal/Damage"
 		},
 		"special_bonus_unique_warlock_4": {
 			"id": 6505,
@@ -7818,8 +7822,8 @@
 			"talent_level": 3,
 			"description": "Summons a Golem on death"
 		},
-		"special_bonus_unique_warlock_7": {
-			"id": 764,
+		"special_bonus_unique_warlock_3": {
+			"id": 6412,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -7829,7 +7833,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_damage} Shadow Word Damage/Heal"
+			"description": "+{s:bonus_spell_aoe} Shadow Word AoE"
 		},
 		"special_bonus_unique_warlock_2": {
 			"id": 6054,
@@ -7867,7 +7871,7 @@
 				8
 			],
 			"mana_cost": [
-				65
+				50
 			],
 			"name": "Wild Axes",
 			"description": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path.  Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units.",
@@ -7949,16 +7953,17 @@
 			"sequence": "Ability5",
 			"is_talent": false,
 			"cooldown": [
-				40
+				0
 			],
 			"mana_cost": [
-				100
+				0
 			],
 			"name": "Drums of Slom",
-			"description": "Beastmaster beats his drums with ever-increasing speed. Each strike deals damage to enemies around him, healing Beastmaster and units under his control for a portion of damage dealt. Beastmaster cannot strike his drums if he is silenced or stunned.",
+			"description": "Attacks from Beastmaster or a nearby unit he controls will cause him bang his drum, dealing damage to nearby units and  healing Beastmaster and units under his control for a portion of the damage dealt. Every attack decreases the interval between drum hits down to a minimum of %min_drum_hit_interval%s between hits after %max_stacks% attacks. If no attacks are made, the intervals gradually increase.<br><br>Using Primal Roar counts as 10/15/20 attacks, based on the current level of Primal Roar.",
 			"lore": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom.",
 			"is_ultimate": false,
-			"is_passive": "no",
+			"is_passive": "yes",
+			"is_breakable": true,
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
@@ -7973,9 +7978,9 @@
 				60
 			],
 			"mana_cost": [
-				150,
-				175,
-				200
+				100,
+				125,
+				150
 			],
 			"name": "Primal Roar",
 			"description": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain %movement_speed%%% movement speed for 3 seconds.",
@@ -8411,26 +8416,48 @@
 		},
 		"venomancer_poison_nova": {
 			"id": 5181,
+			"sequence": "Ability5",
+			"is_talent": false,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "Poison Nova",
+			"description": "Whenever Venomancer dies or the effects of Venomous Gale end prematurely on an enemy hero, a spreading ring of poison erupts. Enemies hit by the poison will take non-lethal magic damage over time and have their magic resistance reduced. This effect can trigger every %trigger_cd% seconds and cannot be refreshed.",
+			"lore": "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle.",
+			"is_ultimate": false,
+			"is_passive": "yes",
+			"is_breakable": true,
+			"is_dispellable": "no",
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"venomancer_noxious_plague": {
+			"id": 1105,
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				140,
 				120,
-				100
+				100,
+				80
 			],
 			"mana_cost": [
 				200,
 				300,
 				400
 			],
-			"name": "Poison Nova",
-			"description": "A spreading ring of poison that does damage over time to enemy units around Venomancer.  Poison Nova cannot deal lethal damage; targets will be left with at least 1 health.",
-			"lore": "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle.",
+			"name": "Noxious Plague",
+			"description": "Infects an enemy with a deadly plague that does an initial burst of damage and additional damage over time based on the unit's maximum health. The plague slows the target and nearby enemies based on their distance to the target. When the target dies or the debuff expires, all nearby enemies are infected with a noncommunicable version of the plague.",
+			"lore": "n/a",
 			"is_ultimate": true,
 			"is_passive": "no",
+			"affects": "unit",
 			"is_dispellable": "no",
-			"is_debuff": false,
-			"is_buff": false
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
 		"special_bonus_unique_venomancer_3": {
 			"id": 6979,
@@ -8495,7 +8522,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+5.0s Poison Nova Duration"
+			"description": "+{s:bonus_health_damage}% Noxious Plague Max HP Damage"
 		},
 		"special_bonus_unique_venomancer_gale_plagueward": {
 			"id": 1083,
@@ -8521,7 +8548,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Poison Nova reduces {s:bonus_aspd_slow} Attack Speed"
+			"description": "Noxious Plague Aura reduces {s:bonus_attack_slow} Attack Speed"
 		},
 		"special_bonus_unique_venomancer": {
 			"id": 6058,
@@ -8576,7 +8603,7 @@
 				90
 			],
 			"name": "Time Dilation",
-			"description": "Faceless Void traps all nearby enemies in a time dilation field for %duration% seconds, extending their cooldowns and slowing their movement and attack speed by %slow%%% for each cooldown extended. Deals bonus damage per second for each cooldown.",
+			"description": "Faceless Void traps all nearby enemies in a time dilation field for %duration% seconds, extending their cooldowns and slowing their movement and attack speed by %slow%%% for each cooldown extended. Deals bonus damage per second for each cooldown. The debuff does not tick down while inside Chronosphere.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -8640,7 +8667,7 @@
 				300
 			],
 			"name": "Chronosphere",
-			"description": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it.  Only Faceless Void and any units he controls are unaffected.  Invisible enemies in the sphere will be revealed.",
+			"description": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it.  All ability and item cooldowns are frozen. Only Faceless Void and any units he controls are unaffected.  Invisible enemies in the sphere will be revealed.",
 			"lore": "When a rift opens to Claszureme, all poor souls caught within will likely never return.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -8802,7 +8829,7 @@
 				100
 			],
 			"name": "Vampiric Spirit",
-			"description": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. For every two kills Wraith King or any unit he controls accrue on enemy units, Vampiric Aura adds a skeleton charge. Skeletons respawn once when killed. ",
+			"description": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. For every two kills Wraith King or any unit he controls accrue on enemy units, Vampiric Aura adds a skeleton charge. Skeletons respawn once when killed.<br><br> Skeletons deal less damage to buildings.",
 			"lore": "Wraith King's blade drains his enemy's essence to feed his aura.",
 			"is_ultimate": false,
 			"is_passive": "partial",
@@ -8837,19 +8864,19 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				200,
-				130,
-				60
+				180,
+				140,
+				100
 			],
 			"mana_cost": [
-				180
+				0
 			],
 			"name": "Reincarnation",
-			"description": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius will be slowed.",
+			"description": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle.  Upon death, enemy units in a %slow_radius% radius will be slowed, and spawn %shard_skeleton_count% skeleton(s) to attack each nearby enemy hero. Can be self-cast to kill Wraith King instantly.",
 			"lore": "Conspirators against the Wraith King wonder why he never stays dead.",
 			"is_ultimate": true,
-			"is_passive": "yes",
-			"is_breakable": false,
+			"is_passive": "no",
+			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
@@ -8892,7 +8919,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+0.7s Wraithfire Blast Stun Duration"
+			"description": "+0.5s Wraithfire Blast Stun Duration"
 		},
 		"special_bonus_unique_wraith_king_6": {
 			"id": 6822,
@@ -8905,7 +8932,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+26 Skeletons Attack Damage"
+			"description": "+{s:bonus_skeleton_damage_tooltip} Skeletons Attack Damage"
 		},
 		"special_bonus_cleave_25": {
 			"id": 6801,
@@ -9049,7 +9076,7 @@
 				400
 			],
 			"name": "Exorcism",
-			"description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts %abilityduration% seconds.<br/> Passively grants Movement Speed.",
+			"description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. Spirits deal more damage the closer Death Prophet is to the target, and need to return back to her in order to attack again. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts %abilityduration% seconds.<br/> Passively grants Movement Speed.",
 			"lore": "Over time, the banshee remnants of her previous lives return to haunt the present.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -9120,7 +9147,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-20% Spirit Siphon Move Speed Slow"
+			"description": "-25% Spirit Siphon Move Speed Slow"
 		},
 		"special_bonus_unique_death_prophet_3": {
 			"id": 6628,
@@ -9146,7 +9173,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-20.0s Spirit Siphon Replenish Time"
+			"description": "-22.0s Spirit Siphon Replenish Time"
 		},
 		"special_bonus_unique_death_prophet": {
 			"id": 6191,
@@ -9415,7 +9442,7 @@
 				80
 			],
 			"name": "Decrepify",
-			"description": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Afflicted units take extra magic damage. Can be cast while channeling.",
+			"description": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Healing on affected allies is increased, while afflicted enemies take extra magic damage instead. Can be cast while channeling.",
 			"lore": "A now-mastered relic from his childhood, Pugna delights in banishing others into the Nether Realm, whether for good, evil, or simple enjoyment.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -9521,7 +9548,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+3 Nether Ward Health"
+			"description": "+{s:bonus_attacks_to_destroy} Nether Ward Health"
 		},
 		"special_bonus_unique_pugna_1": {
 			"id": 6220,
@@ -9573,7 +9600,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.75 Nether Ward Damage Per Mana"
+			"description": "+{s:bonus_mana_multiplier} Nether Ward Damage Per Mana"
 		}
 	},
 	"npc_dota_hero_templar_assassin": {
@@ -9588,10 +9615,7 @@
 				17
 			],
 			"mana_cost": [
-				85,
-				90,
-				95,
-				100
+				90
 			],
 			"name": "Refraction",
 			"description": "Templar Assassin becomes highly elusive, avoiding damage and gaining a bonus to her damage.  The damage and avoidance effects are separate, and have a limited number of instances.",
@@ -9657,7 +9681,7 @@
 				0
 			],
 			"name": "Trap",
-			"description": "Springs the nearest trap, slowing nearby enemies.",
+			"description": "Springs the trap nearest to Templar Assassin, slowing nearby enemies. <br><br>If the ability is in autocast state, springs the trap that is closest to the mouse cursor.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -10078,7 +10102,7 @@
 				0
 			],
 			"name": "Lunar Blessing",
-			"description": "Increases the attack damage for Luna and nearby allied heroes. At night Lunar Blessing is global, and Luna is blessed with increased vision range.",
+			"description": "Increases the attack damage for Luna and nearby allied heroes, with Luna receiving %self_increase_pct%%% of the attack damage bonus allies receive. At night Lunar Blessing is global, and Luna is blessed with increased vision range.",
 			"lore": "The Goddess of the Moon smiles upon her kin.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -10233,7 +10257,7 @@
 				105
 			],
 			"name": "Breathe Fire",
-			"description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.",
+			"description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.<br><br>While in Dragon Form, applies the corresponding debuff from Corrosive Breath and Frost Breath when in those forms.",
 			"lore": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -10369,7 +10393,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+0.5s Dragon Tail Stun"
+			"description": "+0.4s Dragon Tail Stun"
 		},
 		"special_bonus_hp_400": {
 			"id": 5976,
@@ -10395,7 +10419,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+175 Elder Dragon Form Attack Range"
+			"description": "+150 Elder Dragon Form Attack Range"
 		},
 		"special_bonus_unique_dragon_knight_9": {
 			"id": 1043,
@@ -10514,39 +10538,18 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"dazzle_good_juju": {
-			"id": 933,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				0
-			],
-			"mana_cost": [
-				0
-			],
-			"name": "Good Juju",
-			"description": "Whenever Dazzle Casts a Spell, all other abilities currently on cooldown have their cooldowns reduced.",
-			"lore": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
-			"is_ultimate": true,
-			"is_passive": "yes",
-			"is_breakable": true,
-			"is_debuff": false,
-			"is_buff": false
-		},
 		"dazzle_bad_juju": {
 			"id": 7304,
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				15
+				3
 			],
 			"mana_cost": [
-				50,
-				75,
-				100
+				0
 			],
 			"name": "Bad Juju",
-			"description": "Whenever a Unit is affected by Dazzle's spells they temporarily gain/lose armor.\n  Can be activated to heal/deal damage to units based on the amount of charges they have.",
+			"description": "Whenever a Unit is affected by Dazzle's spells they temporarily gain/lose armor.\n  The spell can be activated by spending health to decrease the remaining cooldown of all other abilities and items. Casting Bad Juju temporarily increases its health cost.",
 			"lore": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -10554,8 +10557,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_damage_60": {
-			"id": 6366,
+		"special_bonus_attack_speed_30": {
+			"id": 5907,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -10565,7 +10568,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+60 Damage"
+			"description": "+30 Attack Speed"
 		},
 		"special_bonus_mp_regen_175": {
 			"id": 6926,
@@ -10696,7 +10699,7 @@
 				80
 			],
 			"name": "Power Cogs",
-			"description": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near.  Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down.  Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
+			"description": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Allies in the cogs when they are created receive a magic damage barrier. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down.  Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
 			"lore": "One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -10723,7 +10726,7 @@
 				50
 			],
 			"name": "Rocket Flare",
-			"description": "Fires a global range flare that explodes over a given area, damaging enemies and providing vision for %duration% seconds.",
+			"description": "Fires a global range flare that explodes over a given area. Upon impact, enemies in the area take damage and are briefly slowed. Rocket flare provides vision over the impact area for %duration% seconds.",
 			"lore": "What started as a festive display has become a useful scouting and bombardment tool.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -10860,8 +10863,8 @@
 			"talent_level": 3,
 			"description": "Rocket Flare True Sight"
 		},
-		"special_bonus_unique_clockwerk_2": {
-			"id": 6364,
+		"special_bonus_unique_clockwerk_flare_damage": {
+			"id": 8252,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -10871,7 +10874,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "Power Cogs Leash Units Inside"
+			"description": "+{s:bonus_damage} Rocket Flare Damage"
 		},
 		"special_bonus_unique_clockwerk_6": {
 			"id": 614,
@@ -10884,7 +10887,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Spell Immunity Inside Power Cogs"
+			"description": "Debuff Immunity Inside Power Cogs"
 		},
 		"special_bonus_unique_clockwerk": {
 			"id": 5977,
@@ -11060,8 +11063,8 @@
 			"talent_level": 2,
 			"description": "+100 Lightning Storm Damage"
 		},
-		"special_bonus_movement_speed_25": {
-			"id": 5919,
+		"special_bonus_unique_leshrac_7": {
+			"id": 9418,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -11071,10 +11074,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Movement Speed"
+			"description": "+{s:bonus_bonus_movespeed}% Movement Speed during Pulse Nova"
 		},
-		"special_bonus_strength_20": {
-			"id": 6080,
+		"special_bonus_unique_leshrac_4": {
+			"id": 7101,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -11084,7 +11087,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+20 Strength"
+			"description": "+{s:bonus_damage_resistance}% Damage Reduction during Pulse Nova"
 		},
 		"special_bonus_unique_leshrac_3": {
 			"id": 6672,
@@ -11132,10 +11135,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				12,
 				11,
 				10,
-				9,
-				8
+				9
 			],
 			"mana_cost": [
 				70,
@@ -11144,7 +11147,7 @@
 				130
 			],
 			"name": "Sprout",
-			"description": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a %vision_range% radius.",
+			"description": "Sprouts a ring of trees around a unit, trapping it in place and providing vision in a %vision_range% radius.",
 			"lore": "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -11157,22 +11160,23 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				62,
-				48,
-				34,
-				20
+				65,
+				55,
+				45,
+				35
 			],
 			"mana_cost": [
 				50,
-				50,
-				50,
-				50
+				60,
+				70,
+				80
 			],
 			"name": "Teleportation",
-			"description": "Teleports to any point on the map.",
+			"description": "Teleports to any point on the map. After teleporting, Nature's Prophet gains stacks of bonus attack damage. Every attack consumes a stack of bonus damage to increase Nature Prophet's armor.",
 			"lore": "The Prophet keeps his sentinel over the forest, protecting it when in need.",
 			"is_ultimate": false,
 			"is_passive": "no",
+			"affects": "area",
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
@@ -11229,7 +11233,7 @@
 				190
 			],
 			"name": "Wrath of Nature",
-			"description": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage. Enemies that die under this spell grant you bonus damage for %kill_damage_duration% seconds.",
+			"description": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage.",
 			"lore": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -11250,7 +11254,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-8s Nature's Call Cooldown"
+			"description": "-{s:bonus_AbilityCooldown}s Nature's Call Cooldown"
 		},
 		"special_bonus_unique_furion_5": {
 			"id": 470,
@@ -11263,10 +11267,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+30 Wrath of Nature Base Damage"
+			"description": "+{s:bonus_damage} Wrath of Nature Base Damage"
 		},
-		"special_bonus_attack_speed_25": {
-			"id": 6016,
+		"special_bonus_unique_furion_2": {
+			"id": 6500,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -11276,10 +11280,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+25 Attack Speed"
+			"description": "+{s:bonus_max_treants} Treants Summoned"
 		},
-		"special_bonus_unique_furion_2": {
-			"id": 6500,
+		"special_bonus_unique_furion_teleportation_max_stacks": {
+			"id": 1118,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -11289,7 +11293,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+5 Treants Summoned"
+			"description": "+{s:bonus_max_stacks} Teleportation Max Stacks"
 		},
 		"special_bonus_unique_furion_7": {
 			"id": 927,
@@ -11315,7 +11319,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "100% Miss chance for Sprouted units"
+			"description": "{s:bonus_blind_pct}% Miss chance for Sprouted units"
 		},
 		"special_bonus_unique_furion_3": {
 			"id": 6539,
@@ -11341,7 +11345,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "2.5x Treant HP/Damage"
+			"description": "{s:bonus_treant_health}x Treant HP/Damage"
 		}
 	},
 	"npc_dota_hero_life_stealer": {
@@ -11362,7 +11366,7 @@
 				150
 			],
 			"name": "Rage",
-			"description": "Launch into a maddened rage, becoming Spell Immune, and gaining increased movement speed.\n\nDISPEL TYPE: Basic Dispel",
+			"description": "Launch into a maddened rage, becoming Debuff Immune, increasing magic resistance by 80%%, and gaining increased movement speed.\n\nDISPEL TYPE: Basic Dispel",
 			"lore": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -11809,69 +11813,74 @@
 	},
 	"npc_dota_hero_clinkz": {
 		"clinkz_strafe": {
-			"id": 5259,
+			"id": 1120,
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
 				30,
-				26,
-				22,
-				18
+				25,
+				20,
+				15
 			],
 			"mana_cost": [
-				45,
-				60,
 				75,
+				80,
+				85,
 				90
 			],
-			"name": "Burning Barrage",
-			"description": "CHANNELED - Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers.",
-			"lore": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver.",
+			"name": "Strafe",
+			"description": "Clinkz gains attack speed and has bonus attack range. Any current Burning Skeleton Archers skeletons within a %strafe_skeleton_radius% radius of Clinkz also gain bonus attack range and %archer_attack_speed_pct%%% of the attack speed bonus. <br><br> Casting Strafe does not break Skeleton Walk invisibility.",
+			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"is_debuff": false,
-			"is_buff": false
+			"is_dispellable": "no",
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "no"
 		},
-		"clinkz_searing_arrows": {
-			"id": 5260,
+		"clinkz_tar_bomb": {
+			"id": 1119,
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				0,
-				0,
-				0,
-				0
+				7,
+				6,
+				5,
+				4
 			],
 			"mana_cost": [
-				10
+				40,
+				45,
+				50,
+				55
 			],
-			"name": "Searing Arrows",
-			"description": "Imbues Clinkz's arrows with fire for extra damage.",
-			"lore": "Clinkz simply lights his arrows from his flaming essence for quite the destructive effect.",
+			"name": "Tar Bomb",
+			"description": "Clinkz throws a projectile filled with tar at the target enemy, dealing Magic damage on impact. After impact, the tar spills onto the ground and stays there for %ground_duration% seconds. Any enemy that walks across it gets slowed, and attacks from Clinkz or his Burning Army Skeleton Archers will deal bonus physical damage.<br><br> When the Tar Bomb hits, any Burning Army skeletons within attack range will attack the target.",
+			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"affects": "unit",
-			"is_debuff": false,
-			"is_buff": false
+			"affects": "unit_area",
+			"is_dispellable": "basic",
+			"is_debuff": true,
+			"is_buff": false,
+			"is_debuff_dispellable": "basic"
 		},
-		"clinkz_wind_walk": {
-			"id": 5261,
+		"clinkz_death_pact": {
+			"id": 5262,
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				20,
-				19,
-				18,
-				17
+				0
 			],
 			"mana_cost": [
-				80
+				60
 			],
-			"name": "Skeleton Walk",
-			"description": "Clinkz moves invisibly through units until the moment he attacks or uses items. %skeleton_count% Burning Army Skeletons are created when leaving invisibility.",
-			"lore": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
+			"name": "Death Pact",
+			"description": "Clinkz consumes the target enemy creep or friendly creep and creates a Burning Skeleton Archer in their place, healing and gaining max health. Does not take Clinkz out of Skeleton Walk. <br><br>Archers are immobile and die within several attacks from a hero. Skeletons deal a percentage of Clinkz' damage. Attack range is equal to Clinkz's attack range. Only one archer can be summoned from Death Pact at a time.<br><br> Skeletons deal %skeleton_building_damage_reduction%%% less damage to buildings",
+			"lore": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
 			"is_ultimate": false,
 			"is_passive": "no",
+			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
@@ -11887,31 +11896,51 @@
 				150
 			],
 			"name": "Burning Army",
-			"description": "Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
+			"description": "Summons a row of Burning Skeleton Archers in the target location.",
 			"lore": "Existing on the brink of life and death, Clinkz has learned to temporarily bridge the gap between the two.",
 			"is_ultimate": false,
 			"is_passive": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"clinkz_death_pact": {
-			"id": 5262,
+		"clinkz_burning_barrage": {
+			"id": 5259,
+			"sequence": "Ability5",
+			"is_talent": false,
+			"cooldown": [
+				22
+			],
+			"mana_cost": [
+				45,
+				60,
+				75,
+				90
+			],
+			"name": "Burning Barrage",
+			"description": "CHANNELED - Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers, and dousing enemies with Tar Bomb slow.",
+			"lore": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver.",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"clinkz_wind_walk": {
+			"id": 5261,
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				80,
-				70,
-				60
+				18
 			],
 			"mana_cost": [
-				100
+				80,
+				105,
+				130
 			],
-			"name": "Death Pact",
-			"description": "Clinkz consumes the target enemy creep or friendly creep, gaining max health and damage based on its maximum health. Does not take Clinkz out of Skeleton Walk.",
-			"lore": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
+			"name": "Skeleton Walk",
+			"description": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Burning Skeleton Archers",
+			"lore": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
 			"is_ultimate": true,
 			"is_passive": "no",
-			"affects": "unit",
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
@@ -11927,7 +11956,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Searing Arrows Damage"
+			"description": "+{s:bonus_damage_bonus} Tar Bomb Bonus Attack Damage"
 		},
 		"special_bonus_unique_clinkz_10": {
 			"id": 523,
@@ -11940,10 +11969,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-3s Skeleton Walk Cooldown"
+			"description": "-{s:bonus_AbilityCooldown}s Skeleton Walk Cooldown"
 		},
-		"special_bonus_unique_clinkz_8": {
-			"id": 495,
+		"special_bonus_attack_range_75": {
+			"id": 6027,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -11953,10 +11982,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20% Death Pact Health"
+			"description": "+75 Attack Range"
 		},
-		"special_bonus_unique_clinkz_2": {
-			"id": 6231,
+		"special_bonus_unique_clinkz_9": {
+			"id": 554,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -11966,10 +11995,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Death Pact Steal creep abilities"
+			"description": "+{s:bonus_AbilityCharges} Death Pact Charge"
 		},
-		"special_bonus_attack_range_125": {
-			"id": 5944,
+		"special_bonus_unique_clinkz_8": {
+			"id": 495,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -11979,10 +12008,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+125 Attack Range"
+			"description": "+{s:bonus_health_gain} Death Pact Health"
 		},
-		"special_bonus_unique_clinkz_12": {
-			"id": 617,
+		"special_bonus_unique_clinkz_7": {
+			"id": 494,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -11992,7 +12021,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+3 Burning Barrage arrows"
+			"description": "+{s:bonus_attack_speed_bonus} Strafe Attack Speed"
 		},
 		"special_bonus_unique_clinkz_4": {
 			"id": 7878,
@@ -12005,7 +12034,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_damage_pct}% Burning Barrage Damage"
+			"description": "-{s:bonus_AbilityCooldown}s Strafe Cooldown"
 		},
 		"special_bonus_unique_clinkz_3": {
 			"id": 6620,
@@ -12018,7 +12047,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Searing Arrows Multishot"
+			"description": "Tar Bomb Multishot"
 		}
 	},
 	"npc_dota_hero_omniknight": {
@@ -12100,26 +12129,6 @@
 			"is_debuff": true,
 			"is_buff": false,
 			"is_debuff_dispellable": "basic"
-		},
-		"omniknight_degen_aura": {
-			"id": 5265,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				0
-			],
-			"mana_cost": [
-				0
-			],
-			"name": "Degen Aura",
-			"description": "Greatly degenerates the movement capabilities of enemy units that stray too near.",
-			"lore": "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith.",
-			"is_ultimate": false,
-			"is_passive": "no",
-			"is_dispellable": "no",
-			"is_debuff": true,
-			"is_buff": false,
-			"is_debuff_dispellable": "no"
 		},
 		"omniknight_guardian_angel": {
 			"id": 5266,
@@ -12289,7 +12298,7 @@
 				70
 			],
 			"name": "Enchant",
-			"description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health. Only one creep can be controlled at a time.\n\nDISPEL TYPE: Basic Dispel",
+			"description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health.\n\nDISPEL TYPE: Basic Dispel",
 			"lore": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -12377,8 +12386,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_magic_resistance_10": {
-			"id": 5937,
+		"special_bonus_magic_resistance_8": {
+			"id": 5936,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -12388,7 +12397,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10% Magic Resistance"
+			"description": "+8% Magic Resistance"
 		},
 		"special_bonus_unique_enchantress_6": {
 			"id": 8432,
@@ -12442,8 +12451,8 @@
 			"talent_level": 3,
 			"description": "+-65 Untouchable Attack Slow"
 		},
-		"special_bonus_unique_enchantress_1": {
-			"id": 6331,
+		"special_bonus_unique_enchantress_enchant_health_damage": {
+			"id": 1130,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -12453,7 +12462,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "Enchant Affects Ancients"
+			"description": "+{s:bonus_enchant_health}% Enchanted Creep Health/Damage"
 		},
 		"special_bonus_unique_enchantress_4": {
 			"id": 6515,
@@ -12569,7 +12578,7 @@
 				0
 			],
 			"name": "Life Break",
-			"description": "Huskar draws upon his health to break an enemy's life, leaping at a target to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Spell Immune.\n\nDISPEL TYPE: Basic Dispel",
+			"description": "Huskar draws upon his health to break an enemy's life, leaping at a target to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Debuff Immune and has 50%% increases magic resistance.\n\nDISPEL TYPE: Basic Dispel",
 			"lore": "No matter the danger, Huskar thrusts himself into melees that only he can survive.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -12642,7 +12651,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+30% Berserker's Blood Regen"
+			"description": "+25% Berserker's Blood Regen"
 		},
 		"special_bonus_unique_huskar_7": {
 			"id": 688,
@@ -13040,7 +13049,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-{s:bonus_AbilityChargeRestoreTime}s Spin Web Recharge Time"
+			"description": "-{s:bonus_AbilityChargeRestoreTime}s Spin Web Restore Time"
 		},
 		"special_bonus_unique_broodmother_7": {
 			"id": 1039,
@@ -13068,8 +13077,8 @@
 			"talent_level": 3,
 			"description": "{s:bonus_aoe} AoE Silken Bola"
 		},
-		"special_bonus_agility_25": {
-			"id": 6150,
+		"special_bonus_attack_speed_35": {
+			"id": 6196,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -13079,7 +13088,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+25 Agility"
+			"description": "+35 Attack Speed"
 		},
 		"special_bonus_unique_broodmother_1": {
 			"id": 6257,
@@ -13123,7 +13132,7 @@
 				80
 			],
 			"name": "Shuriken Toss",
-			"description": "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target.  The shuriken will bounce to any Tracked units who are within a %bounce_aoe% radius of each other.  Deals bonus damage to Tracked targets.",
+			"description": "Hurls a deadly shuriken at an enemy unit, dealing damage and briefly slowing the target.  The shuriken will bounce to any Tracked units who are within a %bounce_aoe% radius of each other.  Deals bonus damage to Tracked targets.",
 			"lore": "While the shuriken may be small, Gondar's precise aim can cause critical damage.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13170,7 +13179,7 @@
 				65
 			],
 			"name": "Shadow Walk",
-			"description": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability.  If he breaks the invisibility with an attack, that attack will slow the target's movement and attack speed.",
+			"description": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability.  If he breaks the invisibility with an attack, that attack will stun the target for a short duration.",
 			"lore": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13211,7 +13220,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_slow}/{s:bonus_slow}% Shadow Walk Attack/Move Slow"
+			"description": "+{s:bonus_slow_duration}s Shuriken Toss Slow"
 		},
 		"special_bonus_unique_bounty_hunter_4": {
 			"id": 484,
@@ -13224,7 +13233,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+40 Jinada Damage"
+			"description": "+{s:bonus_bonus_damage} Jinada Damage"
 		},
 		"special_bonus_unique_bounty_hunter_9": {
 			"id": 959,
@@ -13237,7 +13246,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "{s:bonus_silence_duration}s Silence on Hit With Shadow Walk"
+			"description": "-{s:bonus_damage_reduction_pct}% Damage Taken in Shadow Walk"
 		},
 		"special_bonus_unique_bounty_hunter_6": {
 			"id": 876,
@@ -13263,7 +13272,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "Track Grants 600 Ground Vision"
+			"description": "Track Grants Shared Vision"
 		},
 		"special_bonus_unique_bounty_hunter": {
 			"id": 6018,
@@ -13276,7 +13285,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+50 Jinada Gold Steal"
+			"description": "+{s:bonus_gold_steal} Jinada Gold Steal"
 		},
 		"special_bonus_unique_bounty_hunter_7": {
 			"id": 877,
@@ -13355,10 +13364,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				9,
 				7,
-				5,
-				3
+				5.5,
+				4,
+				2.5
 			],
 			"mana_cost": [
 				0
@@ -13483,7 +13492,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "{s:bonus_AbilityCharges} Shukuchi Charges"
+			"description": "-{s:bonus_AbilityCooldown}s Shukuchi Cooldown"
 		},
 		"special_bonus_unique_weaver_5": {
 			"id": 6990,
@@ -13585,7 +13594,7 @@
 				0
 			],
 			"name": "Liquid Frost",
-			"description": "Jakiro adds a frost effect to his attack, stunning enemies. Enemies hit are slowed for %duration% seconds and are damaged for a percent of their max health plus a base amount every %tick_rate% second for %duration% seconds.",
+			"description": "Jakiro adds a frost effect to his attack. Enemies hit are slowed for %duration% seconds and are damaged for a percent of their max health plus a base amount every %tick_rate% second for %duration% seconds.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13605,9 +13614,9 @@
 				60
 			],
 			"mana_cost": [
-				220,
-				330,
-				440
+				230,
+				340,
+				450
 			],
 			"name": "Macropyre",
 			"description": "Jakiro exhales a wide line of lasting flames, which deals damage per second to any enemy units caught in the fire.",
@@ -13754,10 +13763,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				18,
-				17,
+				22,
+				19,
 				16,
-				15
+				13
 			],
 			"mana_cost": [
 				110,
@@ -13766,7 +13775,7 @@
 				125
 			],
 			"name": "Flamebreak",
-			"description": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, and dealing damage over time to enemies in the area.",
+			"description": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, slowing and dealing damage over time to enemies in the area.",
 			"lore": "A molotov cocktail is the weapon of choice for Batrider.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13790,7 +13799,7 @@
 				125
 			],
 			"name": "Firefly",
-			"description": "Batrider takes to the skies, laying down a trail of flames from the air.  The fire damages any enemies it touches, and destroys trees below Batrider. Batrider has bonus day/night vision while Firefly is active.",
+			"description": "Batrider takes to the skies, laying down a trail of flames from the air.  The fire damages any enemies it touches, and destroys trees below Batrider.",
 			"lore": "When an enemy escapes into the Yama Raskav Jungle, most would cut through the brush to find the fugitive.  Batrider just chooses to destroy the jungle along with his foes.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -13822,9 +13831,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				120,
-				115,
-				110
+				90,
+				75,
+				60
 			],
 			"mana_cost": [
 				150,
@@ -13992,7 +14001,7 @@
 				150
 			],
 			"name": "Holy Persuasion",
-			"description": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage. \n\nCan be cast on converted creeps to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage will dispel the buff.",
+			"description": "Chen takes control of an enemy or neutral creep and receives gold equal to its bounty. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage. \n\nCan be cast on converted creeps to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage will dispel the buff.",
 			"lore": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -14095,7 +14104,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+12% Penitence Slow"
+			"description": "+14% Penitence Slow"
 		},
 		"special_bonus_unique_chen_7": {
 			"id": 7653,
@@ -14325,7 +14334,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+100 Spectral Dagger Damage"
+			"description": "+80 Spectral Dagger Damage"
 		},
 		"special_bonus_hp_350": {
 			"id": 6195,
@@ -14364,7 +14373,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+32% Haunt Illusion Damage"
+			"description": "+30% Haunt Illusion Damage"
 		},
 		"special_bonus_unique_spectre_5": {
 			"id": 6903,
@@ -14504,7 +14513,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Scorched Earth Damage"
+			"description": "+15 Scorched Earth Damage"
 		},
 		"special_bonus_unique_doom_6": {
 			"id": 7123,
@@ -14618,9 +14627,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				7,
+				10,
+				8,
 				6,
-				5,
 				4
 			],
 			"mana_cost": [
@@ -14630,7 +14639,7 @@
 				70
 			],
 			"name": "Ice Vortex",
-			"description": "Creates a vortex of icy energy that slows and increases magic damage done to enemies in its range.",
+			"description": "Creates a vortex of icy energy that deals damage, slows and increases magic damage done to enemies in its range.",
 			"lore": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -15192,7 +15201,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+10% Greater Bash Chance"
+			"description": "+13% Greater Bash Chance"
 		},
 		"special_bonus_unique_spirit_breaker_4": {
 			"id": 830,
@@ -15205,7 +15214,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+175 Charge of Darkness Move Speed"
+			"description": "+175 Charge of Darkness Bonus Speed"
 		},
 		"special_bonus_unique_spirit_breaker_3": {
 			"id": 6543,
@@ -15220,8 +15229,8 @@
 			"talent_level": 4,
 			"description": "+25% Greater Bash Damage"
 		},
-		"special_bonus_hp_800": {
-			"id": 6905,
+		"special_bonus_unique_spirit_breaker_shield": {
+			"id": 8254,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -15231,7 +15240,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+800 Health"
+			"description": "Bulldoze {s:bonus_damage_barrier} All Damage Barrier"
 		}
 	},
 	"npc_dota_hero_gyrocopter": {
@@ -15265,10 +15274,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				26,
-				21,
-				16,
-				11
+				30,
+				24,
+				18,
+				12
 			],
 			"mana_cost": [
 				120,
@@ -15373,7 +15382,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+0.4s Homing Missile Stun Duration"
+			"description": "+0.3s Homing Missile Stun Duration"
 		},
 		"special_bonus_unique_gyrocopter_2": {
 			"id": 6312,
@@ -15412,7 +15421,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+16 Rocket Barrage Damage"
+			"description": "+14 Rocket Barrage Damage"
 		},
 		"special_bonus_unique_gyrocopter_1": {
 			"id": 6216,
@@ -15447,10 +15456,13 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				22
+				22,
+				21,
+				20,
+				19
 			],
 			"mana_cost": [
-				130
+				120
 			],
 			"name": "Acid Spray",
 			"description": "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take damage per second and have their armor reduced.",
@@ -15483,8 +15495,8 @@
 				"stun"
 			]
 		},
-		"alchemist_goblins_greed": {
-			"id": 5368,
+		"alchemist_corrosive_weaponry": {
+			"id": 1116,
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
@@ -15493,9 +15505,9 @@
 			"mana_cost": [
 				0
 			],
-			"name": "Greevil's Greed",
-			"description": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next %duration% seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
-			"lore": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets.",
+			"name": "Corrosive Weaponry",
+			"description": "Alchemist coats his weapons with an acid that applies a stacking slow and status resistance reduction to enemies hit.",
+			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
@@ -15522,6 +15534,25 @@
 			"is_debuff": false,
 			"is_buff": true,
 			"is_buff_dispellable": "basic"
+		},
+		"alchemist_goblins_greed": {
+			"id": 5368,
+			"sequence": "Ability5",
+			"is_talent": false,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "Greevil's Greed",
+			"description": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next %duration% seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
+			"lore": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets.",
+			"is_ultimate": false,
+			"is_passive": "yes",
+			"is_breakable": true,
+			"is_debuff": false,
+			"is_buff": false
 		},
 		"alchemist_chemical_rage": {
 			"id": 5369,
@@ -15944,8 +15975,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_unique_invoker_10": {
-			"id": 7390,
+		"special_bonus_unique_invoker_ice_wall_dps": {
+			"id": 5761,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -15955,7 +15986,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_damage_per_mana_pct}% E.M.P. Mana Burnt"
+			"description": "+{s:bonus_damage_per_second} Ice Wall DPS"
 		},
 		"special_bonus_unique_invoker_3": {
 			"id": 6099,
@@ -15996,8 +16027,8 @@
 			"talent_level": 2,
 			"description": "-{s:bonus_AbilityCooldown}s Cold Snap Cooldown"
 		},
-		"special_bonus_unique_invoker_6": {
-			"id": 6811,
+		"special_bonus_unique_invoker_additional_chaos_meteors": {
+			"id": 5762,
 			"sequence": "Ability21",
 			"is_talent": true,
 			"cooldown": [
@@ -16007,7 +16038,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_main_damage}% Chaos Meteor Damage"
+			"description": "+{s:bonus_meteor_count} Chaos Meteors"
 		},
 		"special_bonus_unique_invoker_5": {
 			"id": 6657,
@@ -16469,10 +16500,10 @@
 				30
 			],
 			"mana_cost": [
+				115,
+				120,
 				125,
-				130,
-				135,
-				140
+				130
 			],
 			"name": "Summon Wolves",
 			"description": "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple that gives 20% chance to cripple the target, causing 8 damage per second and lose 60 attack speed for 4 seconds.",
@@ -16493,13 +16524,10 @@
 				16
 			],
 			"mana_cost": [
-				35,
-				40,
-				45,
-				50
+				40
 			],
 			"name": "Howl",
-			"description": "Strikes fear into enemies, reducing armor and attack damage of all enemies within %radius% range of Lycan and his wolves. At night Howl is global.",
+			"description": "Strikes fear into enemies, reducing armor and attack damage of all enemies within %radius% range of Lycan and his wolves. Non-hero controlled units flee for a short time. At night Howl's armor and attack damage reductions are global.",
 			"lore": "Blood-curdling wolf cries signal to opponents that Banehallow is among them.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16736,7 +16764,7 @@
 				0
 			],
 			"name": "Drunken Brawler",
-			"description": "Brewmaster can switch stances based on the elements he controls, gaining passive bonuses that improve against enemies when Brewed Up.\n<font color=\"#9acd32\">Earth Brawler</font> - Grants %armor% armor and %magic_resist%%% Magic Resistance. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#87ceeb\">Storm Brawler</font> - Grants %dodge_chance%%% evasion and %bonus_move_speed%%% Bonus Move Speed. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#FF0000\">Fire Brawler</font> - Grants %crit_chance%%% chance to critical strike for %crit_multiplier%%% of your attack damage. Chance is %active_multiplier%x when Brewed Up.",
+			"description": "Brewmaster can switch stances based on the elements he controls, gaining passive bonuses that improve against enemies when Brewed Up.\n<font color=\"#9acd32\">Earth Brawler</font> - Grants %armor% armor and %magic_resist%%% Magic Resistance. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#87ceeb\">Storm Brawler</font> - Grants %dodge_chance%%% evasion and %bonus_move_speed%%% Bonus Move Speed. Bonuses are %active_multiplier%x when Brewed Up.\n<font color=\"#FF0000\">Fire Brawler</font> - Grants %crit_chance%%% chance to critical strike for %crit_multiplier%%% of your attack damage. Chance is %active_multiplier%x when Brewed Up.\n <font color=\"#662375\">Void Brawler</font> - Grants %bonus_status_resist%%% bonus Status Resistance to Brewmaster and applies a %movespeed%%% Slow for %slow_duration%s on attack. Slow and Status Resistance are %active_multiplier%x when affected by Cinder Brew.",
 			"lore": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -16778,7 +16806,7 @@
 				175
 			],
 			"name": "Primal Split",
-			"description": "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival, each with their own abilities. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.",
+			"description": "Splits Brewmaster into elements, forming 4 specialized warriors, adept at survival, each with their own abilities. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.",
 			"lore": "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -16786,8 +16814,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_damage_15": {
-			"id": 5938,
+		"special_bonus_unique_brewmaster_2": {
+			"id": 6359,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -16797,7 +16825,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+15 Damage"
+			"description": "+{s:bonus_bonus_damage} Brewlings Damage"
 		},
 		"special_bonus_unique_brewmaster_7": {
 			"id": 732,
@@ -16849,7 +16877,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+1200 Brewlings Health"
+			"description": "+{s:bonus_bonus_brewling_hp} Brewlings Health"
 		},
 		"special_bonus_attack_speed_80": {
 			"id": 6030,
@@ -16929,9 +16957,9 @@
 			"is_talent": false,
 			"cooldown": [
 				30,
-				26,
-				22,
-				18
+				25,
+				20,
+				15
 			],
 			"mana_cost": [
 				100
@@ -17068,8 +17096,8 @@
 			"talent_level": 2,
 			"description": "+25 Movement Speed"
 		},
-		"special_bonus_unique_shadow_demon_1": {
-			"id": 6208,
+		"special_bonus_unique_shadow_demon_3": {
+			"id": 6542,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -17079,7 +17107,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+200 Demonic Purge Damage"
+			"description": "-1s Shadow Poison Cooldown"
 		},
 		"special_bonus_unique_shadow_demon_disseminate_damage": {
 			"id": 1004,
@@ -17094,8 +17122,8 @@
 			"talent_level": 3,
 			"description": "+{s:bonus_damage_reflection_pct}% Disseminate Shared Damage"
 		},
-		"special_bonus_unique_shadow_demon_3": {
-			"id": 6542,
+		"special_bonus_unique_shadow_demon_1": {
+			"id": 6208,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -17105,7 +17133,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-1.25s Shadow Poison Cooldown"
+			"description": "+200 Demonic Purge/Cleanse Damage/Heal"
 		},
 		"special_bonus_unique_shadow_demon_9": {
 			"id": 752,
@@ -17388,7 +17416,7 @@
 				0
 			],
 			"name": "Chaos Strike",
-			"description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Deals %creep_multiplier%x damage to creeps.",
+			"description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Deals %creep_multiplier%x damage to creeps, but lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.",
 			"lore": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -17427,7 +17455,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+22% Chaos Strike Lifesteal"
+			"description": "+25% Chaos Strike Lifesteal"
 		},
 		"special_bonus_unique_chaos_knight_2": {
 			"id": 6618,
@@ -17479,7 +17507,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.75 Min/Max Chaos Bolt Duration"
+			"description": "+0.6 Min/Max Chaos Bolt Duration"
 		},
 		"special_bonus_unique_chaos_knight": {
 			"id": 6133,
@@ -17565,7 +17593,7 @@
 				80
 			],
 			"name": "Poof",
-			"description": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after channeling for %abilitycastpoint% seconds, damaging the enemy in both the departure and arrival locations.",
+			"description": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after channeling for %abilitycastpoint% seconds, damaging the enemy in both the departure and arrival locations. <br><br>If the ability is in autocast state, all Meepos will also cast Poof to the target. When cast on the ground, all Meepos except the selected one will Poof to the closest location.",
 			"lore": "Sometimes breaking one of the Riftshadow Crystals can be just the trick for getting yourself out of a bind.  Or your other self.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -17610,14 +17638,31 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
+		"meepo_megameepo": {
+			"id": 1109,
+			"sequence": "Ability5",
+			"is_talent": false,
+			"cooldown": [
+				60
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "MegaMeepo",
+			"description": "Primary Meepo mounts all other Meepos in a %radius% radius around him on top of his shoulders. While in this form, he gains %stats_pct%%% of the other Meepo stats and can Fling them at enemies, dealing damage and slowing them.\n\n When cast, Earthbind generates additional nets and Poof deals bonus damage based on the amount of Meepos riding on top.",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"is_dispellable": "no",
+			"is_debuff": false,
+			"is_buff": false
+		},
 		"meepo_divided_we_stand": {
 			"id": 5433,
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				18,
-				16,
-				14
+				0
 			],
 			"mana_cost": [
 				0
@@ -17628,6 +17673,25 @@
 			"is_ultimate": true,
 			"is_passive": "yes",
 			"is_breakable": true,
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"meepo_megameepo_fling": {
+			"id": 329,
+			"sequence": "Ability7",
+			"is_talent": false,
+			"cooldown": [
+				0.5
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "MegaMeepo Fling",
+			"description": "n/a",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
@@ -17913,7 +17977,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+15% Leech Seed Movement Slow"
+			"description": "+18% Leech Seed Movement Slow"
 		},
 		"special_bonus_unique_treant_9": {
 			"id": 340,
@@ -17952,10 +18016,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+40 Leech Seed Damage/Heal"
+			"description": "+45 Leech Seed Damage/Heal"
 		},
-		"special_bonus_unique_treant_11": {
-			"id": 342,
+		"special_bonus_unique_treant_14": {
+			"id": 1131,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -17965,7 +18029,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Overgrowth Undispellable"
+			"description": "-{s:bonus_AbilityCooldown}s Overgrowth Cooldown"
 		},
 		"special_bonus_unique_treant_7": {
 			"id": 7115,
@@ -18119,6 +18183,25 @@
 			"description": "Enables Ogre Magi to cast his abilities and items multiple times with each use.",
 			"lore": "Despite being largely incapacitated by his IQ, the Ogre Magi's success in battle is attributed to pure skill.",
 			"is_ultimate": true,
+			"is_passive": "yes",
+			"is_breakable": true,
+			"is_debuff": false,
+			"is_buff": false
+		},
+		"ogre_magi_dumb_luck": {
+			"id": 1115,
+			"sequence": "Ability7",
+			"is_talent": false,
+			"cooldown": [
+				0
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "Dumb Luck",
+			"description": "n/a",
+			"lore": "n/a",
+			"is_ultimate": false,
 			"is_passive": "yes",
 			"is_breakable": true,
 			"is_debuff": false,
@@ -18299,12 +18382,31 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
+		"undying_tombstone_grab": {
+			"id": 1108,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				10
+			],
+			"mana_cost": [
+				0
+			],
+			"name": "Grab Ally",
+			"description": "Load an ally into the nearest available tombstone.",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"affects": "unit",
+			"is_debuff": false,
+			"is_buff": false
+		},
 		"undying_flesh_golem": {
 			"id": 5447,
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				125
+				140
 			],
 			"mana_cost": [
 				100,
@@ -18331,7 +18433,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+50 Decay Damage"
+			"description": "+{s:bonus_decay_damage} Decay Damage"
 		},
 		"special_bonus_unique_undying_7": {
 			"id": 807,
@@ -18357,7 +18459,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+20 Tombstone Zombie Damage"
+			"description": "+{s:bonus_zombie_damage_tooltip} Tombstone Zombie Damage"
 		},
 		"special_bonus_unique_undying_6": {
 			"id": 616,
@@ -18398,8 +18500,8 @@
 			"talent_level": 3,
 			"description": "-2s Decay Cooldown"
 		},
-		"special_bonus_reincarnation_300": {
-			"id": 449,
+		"special_bonus_unique_undying_4": {
+			"id": 6971,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -18409,7 +18511,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Gains Reincarnation 300 CD"
+			"description": "+{s:bonus_str_percentage}% Flesh Golem Strength Bonus"
 		},
 		"special_bonus_unique_undying_5": {
 			"id": 6972,
@@ -18422,7 +18524,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+6 Tombstone Attacks to Destroy"
+			"description": "+{s:bonus_hits_to_destroy_tooltip} Tombstone Attacks to Destroy"
 		}
 	},
 	"npc_dota_hero_rubick": {
@@ -18666,7 +18768,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+0.6s Telekinesis Lift Duration"
+			"description": "+0.4s Telekinesis Lift Duration"
 		},
 		"special_bonus_unique_rubick_3": {
 			"id": 6863,
@@ -18784,10 +18886,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				19,
-				16,
-				13,
-				10
+				20,
+				17,
+				14,
+				11
 			],
 			"mana_cost": [
 				70
@@ -18853,7 +18955,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+30 Thunder Strike Damage"
+			"description": "+{s:bonus_radius} Thunder Strike Radius"
 		},
 		"special_bonus_unique_disruptor_9": {
 			"id": 788,
@@ -18879,7 +18981,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+2s Static Storm Duration"
+			"description": "+1.5s Static Storm Duration"
 		},
 		"special_bonus_unique_disruptor_5": {
 			"id": 6812,
@@ -18905,7 +19007,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+3 Thunder Strike Hits"
+			"description": "+{s:bonus_slow_duration}s Thunder Strike Slow Duration"
 		},
 		"special_bonus_unique_disruptor_4": {
 			"id": 6630,
@@ -18952,7 +19054,7 @@
 				130
 			],
 			"name": "Impale",
-			"description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
+			"description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage.",
 			"lore": "All zealot scarabs possess intimate knowledge of underground pathways, using them to their advantage.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -18964,25 +19066,22 @@
 				"stun"
 			]
 		},
-		"nyx_assassin_mana_burn": {
-			"id": 5463,
+		"nyx_assassin_jolt": {
+			"id": 1104,
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				20,
-				15,
+				13,
 				10,
-				5
+				7,
+				4
 			],
 			"mana_cost": [
-				70,
-				80,
-				90,
 				100
 			],
-			"name": "Mana Burn",
-			"description": "Destroys the target hero's mana equal to a multiplier of its Intelligence, and deals damage equal to the mana burned.",
-			"lore": "The tome in Ultimyr describes one scarab with the ability eat away at the mind of lesser beings.",
+			"name": "Mind Flare",
+			"description": "Deals damages to the enemy equal to a multiplier of its Intelligence. Additionally deals damage equal to a percentage of damage the target received from Nyx in the past %damage_echo_duration%s.",
+			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
 			"affects": "unit_area",
@@ -19051,7 +19150,7 @@
 				300
 			],
 			"name": "Vendetta",
-			"description": "Allows Nyx Assassin to become invisible and gain a speed bonus.  If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack. ",
+			"description": "Allows Nyx Assassin to become invisible and gain a speed bonus.  If Nyx Assassin attacks to break the invisibility, %mana_removal_pct%%% of the target's max mana is removed and massive bonus damage is dealt with the attack. ",
 			"lore": "The scarab kills for the glory of his queen.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -19101,7 +19200,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+0.25s Impale Stun Duration"
+			"description": "+0.2s Impale Stun Duration"
 		},
 		"special_bonus_unique_nyx_carapace_reflect_duration": {
 			"id": 1051,
@@ -19127,7 +19226,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_float_multiplier}x Mana Burn Intelligence Multiplier"
+			"description": "+{s:bonus_float_multiplier}x Mind Flare Intelligence Multiplier"
 		},
 		"special_bonus_unique_nyx_6": {
 			"id": 891,
@@ -19166,7 +19265,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "{s:bonus_aoe} Mana Burn Radius"
+			"description": "{s:bonus_aoe} Mind Flare Radius"
 		},
 		"special_bonus_unique_nyx_3": {
 			"id": 6814,
@@ -19385,7 +19484,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_radius} Song of the Siren Radius"
+			"description": "-{s:value}s Song of the Siren Cooldown"
 		},
 		"special_bonus_unique_naga_siren": {
 			"id": 6205,
@@ -19424,7 +19523,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "--7 Rip Tide Armor"
+			"description": "--1 Attack to Trigger Rip Tide"
 		}
 	},
 	"npc_dota_hero_keeper_of_the_light": {
@@ -19449,28 +19548,28 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"keeper_of_the_light_radiant_bind": {
-			"id": 532,
+		"keeper_of_the_light_blinding_light": {
+			"id": 5476,
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				23,
+				22,
 				20,
-				17,
-				14
+				18,
+				16
 			],
 			"mana_cost": [
-				60,
-				80,
-				100,
-				120
+				120,
+				130,
+				140,
+				150
 			],
-			"name": "Solar Bind",
-			"description": "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves.",
-			"lore": "n/a",
+			"name": "Blinding Light",
+			"description": "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is %knockback_distance% range over %knockback_duration% seconds.",
+			"lore": "The Primordial light turns the tides of battle in favor of Ezalor and his allies.",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"affects": "unit",
+			"affects": "area",
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
@@ -19498,22 +19597,22 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"keeper_of_the_light_blinding_light": {
-			"id": 5476,
+		"keeper_of_the_light_radiant_bind": {
+			"id": 532,
 			"sequence": "Ability4",
 			"is_talent": false,
 			"cooldown": [
-				18
+				14
 			],
 			"mana_cost": [
-				150
+				120
 			],
-			"name": "Blinding Light",
-			"description": "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is %knockback_distance% range over %knockback_duration% seconds.",
-			"lore": "The Primordial light turns the tides of battle in favor of Ezalor and his allies.",
+			"name": "Solar Bind",
+			"description": "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves.",
+			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"affects": "area",
+			"affects": "unit",
 			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
@@ -19783,10 +19882,7 @@
 				20
 			],
 			"mana_cost": [
-				100,
-				110,
-				120,
-				130
+				0
 			],
 			"name": "Spirits",
 			"description": "Summon five particle spirits that dance in a circle around Io. If a particle collides with an enemy hero, it explodes, damaging all enemy units in an area around it.  Creeps take minor damage from touching a particle spirit, but do not cause them to explode.  When its duration ends, any remaining Spirits explode.",
@@ -19950,7 +20046,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+55 Spirits Hero Damage"
+			"description": "+{s:bonus_hero_damage} Spirits Hero Damage"
 		},
 		"special_bonus_unique_wisp_10": {
 			"id": 7073,
@@ -20017,7 +20113,7 @@
 				11
 			],
 			"mana_cost": [
-				100
+				90
 			],
 			"name": "Grave Chill",
 			"description": "Visage drains the movement and attack speed of the targeted unit, gaining it for itself and nearby familiars.",
@@ -20038,7 +20134,7 @@
 				4
 			],
 			"mana_cost": [
-				135
+				125
 			],
 			"name": "Soul Assumption",
 			"description": "Visage gathers charges of soul essence each time nearby heroes take more than %damage_limit% damage. When the essence is released, it deals base damage as well as damage for each gathered soul charge.",
@@ -20445,7 +20541,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+75 Shadow Dance Attack Speed"
+			"description": "+80 Shadow Dance Attack Speed"
 		},
 		"special_bonus_unique_slark_3": {
 			"id": 6893,
@@ -20527,7 +20623,8 @@
 			"description": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity.",
 			"lore": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
 			"is_ultimate": false,
-			"is_passive": "no",
+			"is_passive": "yes",
+			"is_breakable": true,
 			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
@@ -20586,8 +20683,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_movement_slow}% Mystic Snake Turn and Movement Speed Slow"
 		},
-		"special_bonus_unique_medusa_6": {
-			"id": 920,
+		"special_bonus_unique_medusa_8": {
+			"id": 1345,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -20597,7 +20694,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_damage_per_mana} Mana Shield Damage per Mana"
+			"description": "+{s:bonus_bonus_physical_damage}% Stone Gaze Bonus Physical Damage"
 		},
 		"special_bonus_unique_medusa_2": {
 			"id": 6392,
@@ -20651,8 +20748,8 @@
 			"talent_level": 3,
 			"description": "+{s:bonus_duration}s Stone Gaze Duration"
 		},
-		"special_bonus_intelligence_75": {
-			"id": 528,
+		"special_bonus_unique_medusa_6": {
+			"id": 920,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -20662,7 +20759,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+75 Intelligence"
+			"description": "+{s:bonus_damage_per_mana} Mana Shield Damage per Mana"
 		},
 		"special_bonus_unique_medusa_4": {
 			"id": 6803,
@@ -21137,10 +21234,10 @@
 				10
 			],
 			"mana_cost": [
+				70,
 				80,
 				90,
-				100,
-				110
+				100
 			],
 			"name": "Shockwave",
 			"description": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for a brief period.",
@@ -21160,9 +21257,9 @@
 			],
 			"mana_cost": [
 				45,
-				60,
-				75,
-				90
+				55,
+				65,
+				75
 			],
 			"name": "Empower",
 			"description": "Gives an allied unit bonus damage and cleave on attack. Magnus receives %self_multiplier%%% larger bonus.",
@@ -21214,7 +21311,7 @@
 				125
 			],
 			"name": "Horn Toss",
-			"description": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies take damage, spend %air_duration% seconds in the air, and then are heavily slowed upon landing.",
+			"description": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies take damage, spend %air_duration% seconds in the air, and then are stunned upon landing.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -21258,7 +21355,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+10s Empower Duration"
+			"description": "+{s:bonus_empower_duration}s Empower Duration"
 		},
 		"special_bonus_unique_magnus_6": {
 			"id": 525,
@@ -21273,7 +21370,7 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_basic_slow_duration}s Shockwave Slow Duration"
 		},
-		"special_bonus_unique_magnus_reverse_polarity_strength": {
+		"special_bonus_unique_magnus_reverse_polarity_stats": {
 			"id": 1037,
 			"sequence": "Ability12",
 			"is_talent": true,
@@ -21284,7 +21381,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_strength_per_stack} Strength per hero hit with Reverse Polarity"
+			"description": "+{s:bonus_stats_per_stack} All Stats per hero hit with Reverse Polarity"
 		},
 		"special_bonus_unique_magnus_7": {
 			"id": 712,
@@ -21336,7 +21433,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+10% Empower Damage/Cleave"
+			"description": "+{s:bonus_bonus_damage_pct}% Empower Damage/Cleave"
 		},
 		"special_bonus_unique_magnus_5": {
 			"id": 6691,
@@ -21401,7 +21498,7 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				0
+				45
 			],
 			"mana_cost": [
 				0
@@ -21575,8 +21672,8 @@
 			"talent_level": 2,
 			"description": "+6 Reactive Armor Stacks and Duration"
 		},
-		"special_bonus_strength_16": {
-			"id": 447,
+		"special_bonus_magic_resistance_20": {
+			"id": 6000,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -21586,7 +21683,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+16 Strength"
+			"description": "+20% Magic Resistance"
 		},
 		"special_bonus_unique_timbersaw_4": {
 			"id": 6951,
@@ -21612,7 +21709,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+12% Whirling Death Attribute Reduction"
+			"description": "Second Chakram"
 		},
 		"special_bonus_unique_timbersaw_3": {
 			"id": 6949,
@@ -21705,7 +21802,7 @@
 				20
 			],
 			"mana_cost": [
-				100
+				75
 			],
 			"name": "Hairball",
 			"description": "Coughs a quill-packed hairball towards the target location. Erupts at the location, hitting enemies in with Viscous Nasal Goo and stacks of Quill Spray.",
@@ -22012,7 +22109,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+25 Tag Team Damage"
+			"description": "+{s:bonus_bonus_damage} Tag Team Damage"
 		},
 		"special_bonus_unique_tusk_7": {
 			"id": 414,
@@ -22121,7 +22218,7 @@
 				95
 			],
 			"name": "Arcane Bolt",
-			"description": "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based on Skywrath Mage's intelligence.",
+			"description": "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based on Skywrath Mage's intelligence. Upon impact, leaves a debuff that increases Skywrath Mage's spell lifesteal against the target.",
 			"lore": "Within the Ghastly Eyrie's endless intrigue, only the clever and calm can hope to survive.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22224,8 +22321,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_hp_175": {
-			"id": 6034,
+		"special_bonus_hp_200": {
+			"id": 5959,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -22235,7 +22332,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+175 Health"
+			"description": "+200 Health"
 		},
 		"special_bonus_intelligence_8": {
 			"id": 5925,
@@ -22300,7 +22397,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+-12% Ancient Seal Increased Magic Damage"
+			"description": "+-10% Ancient Seal Increased Magic Damage"
 		},
 		"special_bonus_unique_skywrath_6": {
 			"id": 411,
@@ -22326,7 +22423,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+450 Mystic Flare Damage"
+			"description": "+400 Mystic Flare Damage"
 		}
 	},
 	"npc_dota_hero_abaddon": {
@@ -22366,7 +22463,7 @@
 				130
 			],
 			"name": "Aphotic Shield",
-			"description": "Summons dark energies around an ally unit, creating a shield that absorbs a set amount of damage before expiring. When the shield is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it. Removes certain types of negative buffs and stuns on cast.\n\nDISPEL TYPE: Strong Dispel",
+			"description": "Summons dark energies around an ally unit, creating an all damage barrier that absorbs a set amount of damage before expiring. When the barrier is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it. Removes certain types of negative buffs and stuns on cast.\n\nDISPEL TYPE: Strong Dispel",
 			"lore": "The powers of the black mist rise to absorb attacks like the black mist absorbs light.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22401,9 +22498,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
+				70,
 				60,
-				50,
-				40
+				50
 			],
 			"mana_cost": [
 				0,
@@ -22483,10 +22580,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_damage_absorb} Aphotic Shield Health"
+			"description": "+{s:bonus_damage_absorb} Aphotic Shield Barrier Amount"
 		},
-		"special_bonus_unique_abaddon_5": {
-			"id": 7340,
+		"special_bonus_unique_abaddon_immolation": {
+			"id": 8251,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -22496,7 +22593,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-{s:bonus_AbilityCooldown}s Borrowed Time Cooldown"
+			"description": "{s:bonus_immolate_damage} DPS Borrowed Time Immolation"
 		},
 		"special_bonus_unique_abaddon_3": {
 			"id": 6602,
@@ -22781,7 +22878,7 @@
 				130
 			],
 			"name": "Overwhelming Odds",
-			"description": "Turns the enemies' numbers against them, dealing damage and granting you bonus movement speed per unit or per hero.  Deals bonus damage to illusions and summoned units as a percent of their current health.",
+			"description": "Turns the enemies' numbers against them, dealing damage per unit or per hero and granting you bonus attack speed . Deals bonus damage to illusions and summoned units as a percent of their current health. Can be cast during Duel.",
 			"lore": "The archers of Stonehall are ready at Tresdin's command.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22804,7 +22901,7 @@
 				110
 			],
 			"name": "Press The Attack",
-			"description": "Removes debuffs and disables from the target friendly unit, and grants bonus attack speed and health regen for a short time.\n\nDISPEL TYPE: Strong Dispel",
+			"description": "Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and health regen for a short time.\n\nDISPEL TYPE: Strong Dispel",
 			"lore": "The rallying horn of the Bronze Legion is able to inspire any heart.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22849,7 +22946,7 @@
 				75
 			],
 			"name": "Duel",
-			"description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities.  If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
+			"description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
 			"lore": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -22862,8 +22959,8 @@
 				"stun"
 			]
 		},
-		"special_bonus_unique_legion_commander_2": {
-			"id": 6449,
+		"special_bonus_unique_legion_commander_9": {
+			"id": 1113,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -22873,7 +22970,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+100 Overwhelming Odds Radius"
+			"description": "-{s:bonus_AbilityCooldown}s Overwhelming Odds Cooldown"
 		},
 		"special_bonus_unique_legion_commander": {
 			"id": 6218,
@@ -22912,7 +23009,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+100 Overwhelming Odds Hero Damage"
+			"description": "+{s:bonus_damage_per_hero} Overwhelming Odds Damage per Hero"
 		},
 		"special_bonus_unique_legion_commander_5": {
 			"id": 7395,
@@ -22964,7 +23061,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Press the Attack grants 1.5s Spell Immunity"
+			"description": "Press the Attack grants 1.5s Debuff Immunity"
 		}
 	},
 	"npc_dota_hero_ember_spirit": {
@@ -23032,7 +23129,7 @@
 				110
 			],
 			"name": "Flame Guard",
-			"description": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken.  Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active.  If the shield is broken, the damage is also lost.",
+			"description": "Ember Spirit surrounds himself with a ring of fire that creates a magic damage barrier, absorbing a percentage of the damage taken.  Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active.  If the barrier is broken, the damage is also lost.",
 			"lore": "An enemy should never be allowed to approach without difficulty.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23102,7 +23199,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+200 Flame Guard Absorption"
+			"description": "+200 Flame Guard Barrier Amount"
 		},
 		"special_bonus_unique_ember_spirit_3": {
 			"id": 6647,
@@ -23198,7 +23295,7 @@
 				100
 			],
 			"name": "Boulder Smash",
-			"description": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest unit in a %remnant_smash_radius_tooltip% radius, prioritizing Stone Remnants. The travelling unit or Remnant damages all enemy units it hits.  If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units.",
+			"description": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest unit in a %remnant_smash_radius_tooltip% radius, prioritizing Stone Remnants. The travelling unit or Remnant damages all enemy units it hits.  If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units. Deals %creep_multiplier%x damage to creeps.",
 			"lore": "It is with the power of a mountain that Earth Spirit strikes his enemies.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23269,7 +23366,7 @@
 				0
 			],
 			"name": "Stone Remnant",
-			"description": "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time.",
+			"description": "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time. Gains additional charges every %hero_level_increment% hero levels.",
 			"lore": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23332,8 +23429,8 @@
 			"talent_level": 1,
 			"description": "+325 Rolling Boulder Distance"
 		},
-		"special_bonus_unique_earth_spirit_6": {
-			"id": 7661,
+		"special_bonus_spell_amplify_8": {
+			"id": 5949,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -23343,7 +23440,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_damage_duration}s Magnetize Duration"
+			"description": "+8% Spell Amplification"
 		},
 		"special_bonus_unique_earth_spirit_8": {
 			"id": 977,
@@ -23356,7 +23453,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_damage_per_second} Magnetize Damage Per Second"
+			"description": "+{s:value}% Magnetize Damage & Duration"
 		},
 		"special_bonus_unique_earth_spirit": {
 			"id": 6203,
@@ -23371,8 +23468,8 @@
 			"talent_level": 2,
 			"description": "+120 Rolling Boulder Damage"
 		},
-		"special_bonus_unique_earth_spirit_2": {
-			"id": 6514,
+		"special_bonus_unique_earth_spirit_6": {
+			"id": 7661,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -23382,7 +23479,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "Geomagnetic Grip Targets Allies"
+			"description": "+{s:bonus_rock_damage} Boulder Smash Damage"
 		},
 		"special_bonus_unique_earth_spirit_5": {
 			"id": 7657,
@@ -23395,10 +23492,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+3s Geomagnetic Grip Silence"
+			"description": "-{s:bonus_AbilityCooldown}s Geomagnetic Grip Cooldown"
 		},
-		"special_bonus_spell_amplify_25": {
-			"id": 6327,
+		"special_bonus_unique_earth_spirit_2": {
+			"id": 6514,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -23408,7 +23505,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+25% Spell Amplification"
+			"description": "Magnetize Undispellable"
 		},
 		"special_bonus_unique_earth_spirit_3": {
 			"id": 6640,
@@ -23421,7 +23518,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+0.6s Rolling Boulder Stun Duration"
+			"description": "+0.5s Rolling Boulder Stun Duration"
 		}
 	},
 	"npc_dota_hero_terrorblade": {
@@ -23442,7 +23539,7 @@
 				50
 			],
 			"name": "Reflection",
-			"description": "Terrorblade brings forth an invulnerable dark reflection of all enemy heroes in a target area. Affected enemy heroes are slowed and attacked by their reflection.",
+			"description": "Terrorblade brings forth an invulnerable dark reflection of all enemy heroes in a target area. Affected enemy heroes have movement and attack speeds slowed and attacked by their reflection.",
 			"lore": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy.  Now it is a lesson he teaches others.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -23603,7 +23700,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_move_slow}% Reflection Slow"
+			"description": "+{s:bonus_move_slow}% Reflection Slow/Damage"
 		},
 		"special_bonus_all_stats_10": {
 			"id": 6168,
@@ -23642,7 +23739,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-34s Sunder Cooldown"
+			"description": "-30s Sunder Cooldown"
 		},
 		"special_bonus_unique_terrorblade_3": {
 			"id": 6943,
@@ -23905,7 +24002,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.5s Supernova Stun Duration"
+			"description": "+0.4s Supernova Stun Duration"
 		},
 		"special_bonus_unique_phoenix_1": {
 			"id": 6227,
@@ -23968,16 +24065,16 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				20,
 				17,
 				14,
-				11,
-				8
+				11
 			],
 			"mana_cost": [
 				50
 			],
 			"name": "Fate's Edict",
-			"description": "Oracle enraptures a target, disarming them and granting them %magic_damage_resistance_pct_tooltip%%% magic damage resistance. Can be cast on allies and enemies.",
+			"description": "Oracle enraptures a target, disarming them if they are an enemy and granting them %magic_damage_resistance_pct_tooltip%%% magic damage resistance if they are an ally.",
 			"lore": "An unbreakable prophecy resounds: a chosen ally shall briefly suffer no magics.  Other kinds of suffering however...",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24224,7 +24321,7 @@
 				175
 			],
 			"name": "Blast Off!",
-			"description": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their current health.",
+			"description": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and stun enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their current health.",
 			"lore": "Where we going?",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24575,7 +24672,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.5s Winter's Curse Duration"
+			"description": "+1.25s Winter's Curse Duration"
 		},
 		"special_bonus_unique_winter_wyvern_4": {
 			"id": 6994,
@@ -24603,7 +24700,7 @@
 				75
 			],
 			"name": "Flux",
-			"description": "Infuses a lone enemy unit with swirling, volatile energy, slowing its movement speed and dealing damage over time. The damage is not applied if another enemy unit is near the target.",
+			"description": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time. The damage is not applied if another enemy unit is near the target. <br><br> <h2>Arc Warden:</h2> Slows the target's movement speed. <br><br><h2>Tempest Double:</h2> Movement speed slow is decreased, but damage is increased.",
 			"lore": "An infinitesimal fraction of the power which imprisoned the Ancients.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24627,7 +24724,7 @@
 				110
 			],
 			"name": "Magnetic Field",
-			"description": "Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field.",
+			"description": "<h2>Arc Warden:</h2> Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field. <br><br> <h2>Tempest Double:</h2> Allies gain bonus attack range and deal bonus magic damage with their attacks. Duration is increased.",
 			"lore": "Time and space are of little consequence to one as old as Zet.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24649,7 +24746,7 @@
 				80
 			],
 			"name": "Spark Wraith",
-			"description": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
+			"description": "<h2>Arc Warden:</h2> Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.<br><br> <h2>Tempest Double:</h2> Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
 			"lore": "Lesser fragments of Zet's original self.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24663,15 +24760,15 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				60,
-				50,
+				56,
+				48,
 				40
 			],
 			"mana_cost": [
 				0
 			],
 			"name": "Tempest Double",
-			"description": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.  The Tempest Double gives bounty gold to enemies when killed. The Tempest Double loses its sense of self if he is too far away from Arc Warden and deals less attack damage.",
+			"description": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.  The Tempest Double gives bounty gold to enemies when killed. The Tempest Double loses its sense of self if he is too far away from Arc Warden and deals less attack damage.",
 			"lore": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -24728,7 +24825,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_attack_speed_bonus} Magnetic Field Attack Speed"
+			"description": "+{s:bonus_attack_speed_bonus} Magnetic Field Attack Speed/Bonus Magic Damage"
 		},
 		"special_bonus_unique_arc_warden": {
 			"id": 6287,
@@ -24741,10 +24838,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_spark_damage} Spark Wraith Damage"
+			"description": "+{s:bonus_spark_damage_base}% Spark Wraith Damage"
 		},
-		"special_bonus_unique_arc_warden_2": {
-			"id": 6354,
+		"special_bonus_unique_arc_warden_9": {
+			"id": 1112,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -24754,10 +24851,10 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+{s:bonus_damage_per_second} Flux Damage"
+			"description": "-{s:bonus_AbilityCooldown}s Magnetic Field Cooldown"
 		},
-		"special_bonus_unique_arc_warden_7": {
-			"id": 975,
+		"special_bonus_unique_arc_warden_8": {
+			"id": 1111,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -24767,7 +24864,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_tempest_double_cooldown_reduction}% Tempest Double Cooldown Reduction"
+			"description": "No Damage Penalty Distance For Tempest Double"
 		},
 		"special_bonus_unique_arc_warden_6": {
 			"id": 685,
@@ -24796,9 +24893,9 @@
 			],
 			"mana_cost": [
 				110,
-				120,
-				130,
-				140
+				125,
+				140,
+				155
 			],
 			"name": "Firestorm",
 			"description": "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time.",
@@ -24866,9 +24963,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				120,
 				110,
-				100
+				100,
+				90
 			],
 			"mana_cost": [
 				100
@@ -25213,8 +25310,8 @@
 			"talent_level": 2,
 			"description": "+130 Jingu Mastery Damage"
 		},
-		"special_bonus_unique_monkey_king_11": {
-			"id": 822,
+		"special_bonus_unique_monkey_king_8": {
+			"id": 747,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -25224,7 +25321,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+2 Jingu Mastery Charges"
+			"description": "0 Cooldown Primal Spring"
 		},
 		"special_bonus_unique_monkey_king_10": {
 			"id": 802,
@@ -25239,8 +25336,8 @@
 			"talent_level": 3,
 			"description": "-7s Boundless Strike Cooldown"
 		},
-		"special_bonus_unique_monkey_king_8": {
-			"id": 747,
+		"special_bonus_unique_monkey_king_11": {
+			"id": 822,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -25250,7 +25347,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "0 Cooldown Primal Spring"
+			"description": "-{s:bonus_required_hits} Jingu Mastery Required Hits"
 		},
 		"special_bonus_unique_monkey_king_6": {
 			"id": 7025,
@@ -25302,10 +25399,10 @@
 				12
 			],
 			"mana_cost": [
-				75,
-				85,
-				95,
-				105
+				70,
+				80,
+				90,
+				100
 			],
 			"name": "Shield Crash",
 			"description": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
@@ -25348,7 +25445,7 @@
 				50
 			],
 			"name": "Roll Up",
-			"description": "Pangolier curls into an immobile protective ball, gaining magic immunity and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker, applying Rolling Thunder damage/stun if there are enemies in the way.",
+			"description": "Pangolier curls into an immobile protective ball, gaining debuff immunity, 50%% magic resistance, and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker, applying Rolling Thunder damage/stun if there are enemies in the way.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -25379,9 +25476,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				80,
-				75,
-				70
+				90,
+				85,
+				80
 			],
 			"mana_cost": [
 				100,
@@ -25389,7 +25486,7 @@
 				200
 			],
 			"name": "Rolling Thunder",
-			"description": "Pangolier curls into a spell-immune ball and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\nDISPEL TYPE: Basic Dispel",
+			"description": "Pangolier curls into a debuff immune ball with 50%% additional magic resistance and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.\n\nDISPEL TYPE: Basic Dispel",
 			"lore": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -25442,7 +25539,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+400 Swashbuckle Slash Range"
+			"description": "+350 Swashbuckle Slash Range"
 		},
 		"special_bonus_unique_pangolier_2": {
 			"id": 6463,
@@ -25481,7 +25578,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+30 Swashbuckle Damage"
+			"description": "+25 Swashbuckle Damage"
 		},
 		"special_bonus_unique_pangolier_shield_crash_herostacks": {
 			"id": 1053,
@@ -25520,7 +25617,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-20.0s Rolling Thunder Cooldown"
+			"description": "-18.0s Rolling Thunder Cooldown"
 		}
 	},
 	"npc_dota_hero_dark_willow": {
@@ -25665,7 +25762,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+0.5s Cursed Crown Stun Duration"
+			"description": "+0.4s Cursed Crown Stun Duration"
 		},
 		"special_bonus_unique_dark_willow_5": {
 			"id": 514,
@@ -25745,8 +25842,8 @@
 			"talent_level": 4,
 			"description": "+100 Attack Speed"
 		},
-		"special_bonus_unique_dark_willow_2": {
-			"id": 6465,
+		"special_bonus_unique_dark_willow_bedlam_targets": {
+			"id": 1133,
 			"sequence": "Ability17",
 			"is_talent": true,
 			"cooldown": [
@@ -25756,7 +25853,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Bedlam Pierces Magic Immunity"
+			"description": "+{s:bonus_target_count} Bedlam Attack Targets"
 		}
 	},
 	"npc_dota_hero_grimstroke": {
@@ -25817,9 +25914,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				30,
-				26,
-				22,
+				27,
+				24,
+				21,
 				18
 			],
 			"mana_cost": [
@@ -25897,7 +25994,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+50 Phantom's Embrace DPS"
+			"description": "+65 Phantom's Embrace DPS"
 		},
 		"special_bonus_unique_grimstroke_7": {
 			"id": 705,
@@ -25988,7 +26085,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+50% Stroke of Fate Damage"
+			"description": "+60% Stroke of Fate Damage"
 		}
 	},
 	"npc_dota_hero_mars": {
@@ -26157,7 +26254,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.8s Spear of Mars Stun"
+			"description": "+0.6s Spear of Mars Stun"
 		},
 		"special_bonus_unique_mars_gods_rebuke_extra_crit": {
 			"id": 6756,
@@ -26254,7 +26351,7 @@
 				130
 			],
 			"name": "Resonant Pulse",
-			"description": "Void Spirit wraps himself in a protective shield that absorbs physical damage and emits a single damaging pulse around him. The shield gains increased damage absorption for each enemy hero the pulse hits.",
+			"description": "Void Spirit wraps himself in a physical damage barrier and emits a single damaging pulse around him. The barrier gains increased damage absorption for each enemy hero the pulse hits.",
 			"lore": "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -27029,7 +27126,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+18 Starbreaker Swipe/Smash Damage"
+			"description": "+{s:bonus_swipe_damage} Starbreaker Swipe/Smash Damage"
 		},
 		"special_bonus_unique_dawnbreaker_celestial_hammer_slow": {
 			"id": 7942,
@@ -27042,7 +27139,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+12% Celestial Hammer Slow"
+			"description": "+{s:bonus_move_slow}% Celestial Hammer Slow"
 		},
 		"special_bonus_unique_dawnbreaker_luminosity_crit": {
 			"id": 7937,
@@ -27096,8 +27193,8 @@
 			"talent_level": 3,
 			"description": "-1 Luminosity Attacks Required"
 		},
-		"special_bonus_unique_dawnbreaker_fire_wreath_charges": {
-			"id": 7939,
+		"special_bonus_unique_dawnbreaker_fire_wreath_cooldown": {
+			"id": 7931,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -27107,7 +27204,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "2 Starbreaker Charges"
+			"description": "-{s:bonus_AbilityCooldown}s Starbreaker Cooldown"
 		},
 		"special_bonus_unique_dawnbreaker_celestial_hammer_cast_range": {
 			"id": 7934,
@@ -27120,7 +27217,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1100 Celestial Hammer Cast Range"
+			"description": "+{s:bonus_range}% Celestial Hammer Cast Range/Speed"
 		}
 	},
 	"npc_dota_hero_marci": {
@@ -27243,7 +27340,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+125 Rebound Cast/Jump Range"
+			"description": "+100 Rebound Cast/Jump Range"
 		},
 		"special_bonus_unique_marci_grapple_damage": {
 			"id": 8246,
@@ -27310,8 +27407,8 @@
 			"talent_level": 3,
 			"description": "+{s:bonus_bonus_movespeed}% Unleash Movement Speed"
 		},
-		"special_bonus_unique_marci_unleash_silence": {
-			"id": 8241,
+		"special_bonus_unique_marci_dispose_range": {
+			"id": 8347,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -27321,7 +27418,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "1.5s Unleash Pulse Silence"
+			"description": "+{s:bonus_throw_distance_behind} Dispose Throw Distance"
 		},
 		"special_bonus_unique_marci_guardian_magic_immune": {
 			"id": 8239,
@@ -27334,7 +27431,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "1.5s Sidekick Spell Immunity"
+			"description": "1.5s Sidekick Debuff Immunity"
 		}
 	},
 	"npc_dota_hero_primal_beast": {
@@ -27450,9 +27547,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
+				36,
 				32,
-				28,
-				24
+				28
 			],
 			"mana_cost": [
 				100
@@ -27547,8 +27644,8 @@
 			"talent_level": 3,
 			"description": "+{s:bonus_roared_bonus_armor} Uproar Armor Per Stack"
 		},
-		"special_bonus_unique_primal_beast_pulverize_pierces_magic_immunity": {
-			"id": 904,
+		"special_bonus_unique_primal_beast_trample_unslowable": {
+			"id": 1132,
 			"sequence": "Ability16",
 			"is_talent": true,
 			"cooldown": [
@@ -27558,7 +27655,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Pulverize Pierces Magic Immunity"
+			"description": "Cannot be slowed or rooted during Trample"
 		},
 		"special_bonus_unique_primal_beast_pulverize_duration": {
 			"id": 7743,
@@ -27644,6 +27741,28 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
+		"muerta_parting_shot": {
+			"id": 5760,
+			"sequence": "Ability4",
+			"is_talent": false,
+			"cooldown": [
+				45
+			],
+			"mana_cost": [
+				250
+			],
+			"name": "Parting Shot",
+			"description": "Muerta precisely shoots a hero in their soul, separating it from their physical body and knocking it %knockback_distance% units away.<br>The soul is untargetable, muted, disarmed, and invulnerable for %debuff_duration% seconds.<br>The body is stunned and has %damage_reduction_percent%%% damage reduction for this duration.<br><br>After the effect ends the hero's soul is forcefully returned to their body applying a strong dispel. The soul will survive until the end of the effect even if the hero is killed.",
+			"lore": "n/a",
+			"is_ultimate": false,
+			"is_passive": "no",
+			"affects": "unit",
+			"is_dispellable": "no",
+			"is_debuff": true,
+			"is_buff": true,
+			"is_debuff_dispellable": "no",
+			"is_buff_dispellable": "no"
+		},
 		"muerta_pierce_the_veil": {
 			"id": 5754,
 			"sequence": "Ability6",
@@ -27678,7 +27797,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_damage} Dead Shot damage"
+			"description": "+{s:bonus_damage} Dead Shot Damage"
 		},
 		"special_bonus_strength_8": {
 			"id": 5982,
