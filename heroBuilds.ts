@@ -3186,7 +3186,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
     // eidendota plays hero
   "Chaos Knight": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3275,7 +3275,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "unstable_wand",
             "broom_handle",
-            "possessed_mask",
+            "lance_of_pursuit",
             "vambrace",
             "pupils_gift",
             "ring_of_aquila",
@@ -3285,7 +3285,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mind_breaker",
             "spell_prism",
             "penta_edged_sword",
-            "flicker",
+            "desolator_2",
             "pirate_hat",
             "apex",
           ],
@@ -3370,12 +3370,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "possessed_mask",
+            "lance_of_pursuit",
             "vambrace",
             "pupils_gift",
             "elven_tunic",
             "paladin_sword",
             "spell_prism",
+            "mind_breaker",
+            "ninja_gear",
             "pirate_hat",
             "apex",
           ],
