@@ -885,182 +885,190 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
     // eidendota plays hero
-  "Anti-Mage": {
-    gameplay_version: "7.32e",
-    creator: ContentCreator.eidandota,
-    damage_type: DamageType.physical,
-    builds: [
-      {
-        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_id: 1640719725,
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        abilities: [
-          "antimage_mana_break",
-          "antimage_blink",
-          "antimage_mana_break",
-          "antimage_counterspell",
-          "antimage_blink",
-          "antimage_mana_void",
-          "antimage_blink",
-          "antimage_blink",
-          "antimage_mana_break",
-          "special_bonus_unique_antimage",
-          "antimage_mana_break",
-          "antimage_mana_void",
-          "antimage_counterspell",
-          "antimage_counterspell",
-          "antimage_counterspell",
-          "special_bonus_unique_antimage_7",
-          "special_bonus_attributes",
-          "antimage_mana_void",
-          "special_bonus_attributes",
-          "special_bonus_unique_antimage_3",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_antimage_2",
-        ],
-        items: {
-          starting: [
-            "quelling_blade",
-            "tango",
-            "slippers",
-            "circlet",
-            "branches",
-            "branches",
+    "Anti-Mage": {
+      gameplay_version: "7.33",
+      creator: ContentCreator.TNTCNz,
+      damage_type: DamageType.physical,
+      builds: [
+        {
+          roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+          steam_guide_id: 1640719725,
+          steam_guide_link:
+            "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
+          steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+          abilities: [
+            "antimage_mana_break",
+            "antimage_blink",
+            "antimage_mana_break",
+            "antimage_counterspell",
+            "antimage_mana_break",
+            "antimage_mana_void",
+            "antimage_blink",
+            "antimage_blink",
+            "antimage_blink",
+            "special_bonus_unique_antimage",
+            "antimage_mana_break",
+            "antimage_mana_void",
+            "antimage_counterspell",
+            "antimage_counterspell",
+            "antimage_counterspell",
+            "special_bonus_unique_antimage_7",
+            "special_bonus_attributes",
+            "antimage_mana_void",
+            "special_bonus_attributes",
+            "special_bonus_unique_antimage_3",
+            "special_bonus_attributes",
+            "special_bonus_attributes",
+            "special_bonus_attributes",
+            "special_bonus_attributes",
+            "special_bonus_unique_antimage_2",
           ],
-          early_game: ["ring_of_health", "wraith_band", "power_treads"],
-          mid_game: ["bfury", "manta", "skadi", "basher"],
-          late_game: [
-            "abyssal_blade",
-            "satanic",
-            "butterfly",
-            "ultimate_scepter",
+          items: {
+            starting: [
+              "quelling_blade",
+              "tango",
+              "magic_stick",
+              "circlet",
+              "branches",
+            ],
+            early_game: ["cornucopia", "power_treads", "magic_wand"],
+            mid_game: ["bfury", "manta", "basher"],
+            late_game: [
+              "skadi",
+              "abyssal_blade",
+              "satanic",
+              "butterfly",
+              "ultimate_scepter",
+            ],
+            situational: [
+              "vanguard",
+              "wraith_band",
+              "black_king_bar",
+              "monkey_king_bar",
+              "sphere",
+              "aghanims_shard",
+              "assault",
+            ],
+            core: [
+              "power_treads",
+              "bfury",
+              "manta",
+              "abyssal_blade",
+            ],
+            neutral: [
+              "broom_handle",
+              "lance_of_pursuit",
+              "ring_of_aquila",
+              "pupils_gift",
+              "vambrace",
+              "titan_sliver",
+              "elven_tunic",
+              "ninja_gear",
+              "mind_breaker",
+              "penta_edged_sword",
+              "mirror_shield",
+              "pirate_hat",
+              "apex",
+              
+            ],
+          },
+        },
+      ],
+      ability_tooltips: {
+        // For first level spell choice
+        antimage_mana_break:
+          "Try to hit the enemy as much as possible as early as possible in order to burn they're mana.",
+        antimage_blink:
+          "You can level this spell earlier if you need it to survive.",
+        antimage_counterspell:
+          "Skill Counterspell at level one if you exptect to be harrassed by single-target magical-damage spells like Skywraths Arcane Bolt.",
+      },
+      item_tooltips: {
+        magic_stick:
+          "Start with it if you expect high frequency of spells being used on the lane.",
+        orb_of_venom:
+          "If you see yourself being able to hit and chase down the opponents on the lane often.",
+        ring_of_health: "To solve hp sustain issues.",
+        power_treads:
+          "Allows you to extract more value from Battle Fury due to attack speed.",
+        orb_of_corrosion:  
+          "If you can pressure on the lane.",
+        bfury:
+          "A core items that solves sustain issues and allows you to farm insanely fast.",
+        manta: 
+          "Allows you to burn the jumped target`s mana quickly.",
+        skadi:
+          "A core item that tanks you up and disallows opponents to run away. It reduces target`s healing significantly and especially good versus ranged heroes as it slows them by 50%.",
+        basher:
+          "It procs frequently due to attack speed of Anti-Mage allowing you to burn even more mana before Mana Voiding.",
+        monkey_king_bar: 
+          "Against evasion.",
+        black_king_bar: 
+          "Against a lot of disables and as a dispel.",
+        sphere:
+          "Against powerful single target spells like Duel, Lasso, Hex or Doom.",
+        aghanims_shard: 
+          "Against heavy magical damage lineups.",
+        assault: 
+          "Against heavy armor reduction lineups.",
+        ultimate_scepter: 
+          "Great for causing chaos in the fights.",
+      },
+      combo: [`antimage_blink`, `abyssal_blade`, `manta`, `attack`, `antimage_mana_void`],
+      counter_items: {
+        laning_phase: {
+          all: [
+            { item: "magic_stick" },
+            {
+              item: "enchanted_mango",
+              info: "Anti-Mage burns mana and Enchanted Mangoes will allow you to offset that",
+            },
+            {
+              item: "arcane_boots",
+              info: "Anti-Mage burns mana and Arcane Boots will allow you to offset that",
+            },
           ],
-          situational: [
-            "orb_of_corrosion",
-            "magic_wand",
-            "black_king_bar",
-            "monkey_king_bar",
-            "sphere",
-            "aghanims_shard",
-            "assault",
+          support: [],
+          core: [{ item: "soul_ring" }],
+        },
+        mid_game: {
+          all: [{ item: "rod_of_atos" }],
+          support: [
+            { item: "ward_dispenser", info: "Use wards to block camps" },
+            { item: "glimmer_cape" },
+            { item: "ghost" },
           ],
           core: [
-            "power_treads",
-            "bfury",
-            "manta",
-            "skadi",
-            "abyssal_blade",
-            "butterfly",
+            {
+              item: "orchid",
+              info: "If you can get it before his Manta Style timing",
+            },
+            { item: "desolator" },
+            {
+              item: "invis_sword",
+              info: "To find him while he`s jungling or splitpushing",
+            },
+            { item: "diffusal_blade" },
+            { item: "hurricane_pike" },
+            { item: "travel_boots" },
+            { item: "gungir" },
           ],
-          neutral: [
-            "possessed_mask",
-            "broom_handle",
-            "lance_of_pursuit",
-            "ring_of_aquila",
-            "dagger_of_ristul",
-            "vambrace",
-            "mind_breaker",
-            "elven_tunic",
-            "ninja_gear",
-            "pirate_hat",
-            "apex",
+        },
+        late_game: {
+          all: [
+            { item: "sheepstick" },
+            { item: "sphere" },
+            { item: "aeon_disk" },
+          ],
+          support: [{ item: "travel_boots" }],
+          core: [
+            { item: "abyssal_blade" },
+            { item: "butterfly" },
+            { item: "assault" },
           ],
         },
       },
-    ],
-    ability_tooltips: {
-      // For first level spell choice
-      antimage_counterspell:
-        "Skill Counterspell at level one if you exptect to be harrassed by single-target magical-damage spells like Skywraths Arcane Bolt.",
-      special_bonus_unique_antimage_2:
-        "If there`s a lot of magical damage against you or you have mana issues, skill the other talent.",
-      special_bonus_strength_9:
-        "Consider skilling this talent if you are scared of a burst combo.",
     },
-    item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
-      orb_of_venom:
-        "If you see yourself being able to hit and chase down the opponents on the lane often.",
-      ring_of_health: "To solve hp sustain issues.",
-      power_treads:
-        "Allows you to extract more value from Battle Fury due to attack speed.",
-      orb_of_corrosion: "If you can pressure on the lane.",
-      bfury:
-        "A core items that solves sustain issues and allows you to farm insanely fast.",
-      manta: "Allows you to burn the jumped target`s mana quickly.",
-      skadi:
-        "A core item that tanks you up and disallows opponents to run away. It reduces target`s healing significantly and especially good versus ranged heroes as it slows them by 50%.",
-      basher:
-        "It procs frequently due to attack speed of Anti-Mage allowing you to burn even more mana before Mana Voiding.",
-      monkey_king_bar: "Against evasion.",
-      black_king_bar: "Against a lot of disables and as a dispel.",
-      sphere:
-        "Against powerful single target spells like Duel, Lasso, Hex or Doom.",
-      aghanims_shard: "Against heavy magical damage lineups.",
-      assault: "Against heavy armor reduction lineups.",
-      ultimate_scepter: "Great for causing chaos in the fights.",
-    },
-    combo: [`antimage_blink`, `manta`, `attack`, `antimage_mana_void`],
-    counter_items: {
-      laning_phase: {
-        all: [
-          { item: "magic_stick" },
-          {
-            item: "enchanted_mango",
-            info: "Anti-Mage burns mana and Enchanted Mangoes will allow you to offset that",
-          },
-          {
-            item: "arcane_boots",
-            info: "Anti-Mage burns mana and Arcane Boots will allow you to offset that",
-          },
-        ],
-        support: [],
-        core: [{ item: "soul_ring" }],
-      },
-      mid_game: {
-        all: [{ item: "rod_of_atos" }],
-        support: [
-          { item: "ward_dispenser", info: "Use wards to block camps" },
-          { item: "glimmer_cape" },
-          { item: "ghost" },
-        ],
-        core: [
-          {
-            item: "orchid",
-            info: "If you can get it before his MantaStyle timing",
-          },
-          { item: "desolator" },
-          {
-            item: "invis_sword",
-            info: "To find him while he`s jungling or splitpushing",
-          },
-          { item: "diffusal_blade" },
-          { item: "hurricane_pike" },
-          { item: "travel_boots" },
-          { item: "gungir" },
-        ],
-      },
-      late_game: {
-        all: [
-          { item: "sheepstick" },
-          { item: "sphere" },
-          { item: "aeon_disk" },
-        ],
-        support: [{ item: "travel_boots" }],
-        core: [
-          { item: "abyssal_blade" },
-          { item: "butterfly" },
-          { item: "assault" },
-        ],
-      },
-    },
-  },
 
   "Arc Warden": {
     gameplay_version: `7.32e`,
