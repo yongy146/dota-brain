@@ -887,7 +887,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     // eidendota plays hero
     "Anti-Mage": {
       gameplay_version: "7.33",
-      creator: ContentCreator.TNTCNz,
+      creator: ContentCreator.eidandota,
       damage_type: DamageType.physical,
       builds: [
         {
