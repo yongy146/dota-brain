@@ -162,6 +162,27 @@ export enum Audience {
   IN_LANE = "InLane", // Players playing against the hero in the lane get messages
 }
 
+export enum ECagtegories {
+  BountyRunes = "BountyRunes", // inclused healtin lotus
+  WaterRunes = "WaterRunes",
+  PowerRunes = "PowerRunes",
+  Stacking = "Stacking",
+  Pulling = "Pulling",
+  NeutralItems = "NeutralItems",
+  SmokeOfDeceit = "SmokeOfDeceit",
+  AghanimsShard = "AghanimsShard",
+  //| "TomeOfKnowledge" Removed in patch 7.33
+  WisdomRunes = "WisdomRunes", // Introduced in patch 7.33
+  SiegeCreeps = "SiegeCreeps",
+  SiegeCreepsNoFlag = "SiegeCreepsNoFlag",
+  FlagCreeps = "FlagCreeps",
+  FlagCreepsNoSiege = "FlagCreepsNoSiege",
+  SiegeFlagCreeps = "SiegeFlagCreeps",
+  DayTime = "DayTime",
+  EnemyHero = "EnemyHero",
+  OwnHero = "OwnHero",
+}
+
 export interface DotaCoachMessage {
   //  Category of the message. This field allows the app to turn on/off certain messages based on the user's preference
   category:
