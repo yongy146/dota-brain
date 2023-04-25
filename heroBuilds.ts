@@ -349,7 +349,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             `dragon_scale`,
             "psychic_headband",
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "spy_gadget",
             `ascetic_cap`,
             "force_field",
@@ -520,9 +520,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            "misericorde",
+            //"misericorde",
             "lance_of_pursuit",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "paladin_sword",
             "elven_tunic",
             "ogre_seal_totem",
@@ -626,9 +626,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            "misericorde",
+            //"misericorde",
             "lance_of_pursuit",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "paladin_sword",
             "elven_tunic",
             "ogre_seal_totem",
@@ -811,7 +811,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "trusty_shovel",
             "arcane_ring",
             "philosophers_stone",
-            `nether_shawl`,
+            //`nether_shawl`,
             "psychic_headband",
             `ceremonial_robe`,
             `spy_gadget`,
@@ -884,9 +884,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Anti-Mage": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -958,11 +958,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "butterfly",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "broom_handle",
             "lance_of_pursuit",
             "ring_of_aquila",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "vambrace",
             "mind_breaker",
             "elven_tunic",
@@ -1098,7 +1098,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
-          `special_bonus_unique_arc_warden_7`,
+          `special_bonus_unique_arc_warden_8`,
         ],
         items: {
           starting: [
@@ -1151,7 +1151,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "enchanted_quiver",
             `quickening_charm`,
             `spell_prism`,
-            `flicker`,
+            //`flicker`,
             `demonicon`,
             `ex_machina`,
           ],
@@ -1418,7 +1418,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Bane: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -1431,31 +1431,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "bane_brain_sap",
-          "bane_nightmare",
-          "bane_brain_sap",
-          "bane_nightmare",
-          "bane_nightmare",
-          "bane_fiends_grip",
-          "bane_nightmare",
-          "bane_enfeeble",
-          `bane_brain_sap`,
-          `bane_brain_sap`,
-          `special_bonus_unique_bane_10`,
-          "bane_fiends_grip",
-          `bane_enfeeble`,
-          `bane_enfeeble`,
-          `special_bonus_unique_bane_8`,
-          `bane_enfeeble`,
-          "special_bonus_attributes",
-          "bane_fiends_grip",
-          "special_bonus_attributes",
-          "special_bonus_unique_bane_5",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          `special_bonus_unique_bane_3`,
+          "bane_brain_sap", // 1
+          "bane_nightmare", // 2
+          "bane_brain_sap", // 3
+          "bane_nightmare", // 4
+          "bane_nightmare", // 5
+          "bane_fiends_grip", // 6
+          "bane_nightmare", // 7
+          "bane_enfeeble", // 8
+          `bane_brain_sap`, // 9
+          `bane_brain_sap`, // 10
+          `special_bonus_unique_bane_11`, // 11 | Enfeeble Cast Range Reduction
+          "bane_fiends_grip", // 12
+          `bane_enfeeble`, // 13
+          `bane_enfeeble`, // 14
+          `special_bonus_unique_bane_9`, // 15
+          `bane_enfeeble`, // 16
+          "special_bonus_attributes", // 17
+          "bane_fiends_grip", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_movement_speed_30", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          `special_bonus_unique_bane_3`, // 25
         ],
         items: {
           starting: [
@@ -1660,7 +1660,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bullwhip",
             "psychic_headband",
             "timeless_relic",
-            "flicker",
+            //"flicker", Removed in 7.33
             "force_boots",
             "fallen_sky",
             "seer_stone",
@@ -1762,7 +1762,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bullwhip",
             "psychic_headband",
             "timeless_relic",
-            "flicker",
+            //"flicker", Removed in 7.33
             "force_boots",
             "fallen_sky",
             "seer_stone",
@@ -1940,7 +1940,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "seeds_of_serenity",
             "vambrace",
             "dragon_scale",
-            "black_powder_bag",
+            //"black_powder_bag",
             "ogre_seal_totem",
             "quickening_charm",
             "spell_prism",
@@ -2027,9 +2027,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Bloodseeker: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -2105,10 +2105,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "basher",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
-            "misericorde",
-            "dagger_of_ristul",
+            //"misericorde",
+            //"dagger_of_ristul", Removed in 7.33
             "elven_tunic",
             "paladin_sword",
             "penta_edged_sword",
@@ -2189,7 +2189,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             "unstable_wand",
             "ring_of_aquila",
-            "nether_shawl",
+            //"nether_shawl",
             "ogre_seal_totem",
             "quickening_charm",
             "cloak_of_flames",
@@ -2373,7 +2373,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "eye_of_the_vizier",
             "ring_of_aquila",
             "quickening_charm",
-            "flicker",
+            //"flicker", Removed in 7.33
             "havoc_hammer",
             "fallen_sky",
             "seer_stone",
@@ -2637,7 +2637,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero (eidendota would play him as well, but YoonA had him already in the past)
+  // YoonA plays hero (eidendota would play him as well, but YoonA had him already in the past)
   Bristleback: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -2729,7 +2729,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `occult_bracelet`,
             `broom_handle`,
             `vambrace`,
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             `cloak_of_flames`,
             `ogre_seal_totem`,
             `havoc_hammer`,
@@ -2914,7 +2914,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "paladin_sword",
             `quickening_charm`,
             `penta_edged_sword`,
-            `heavy_blade`,
+            //`heavy_blade`,
             "desolator_2",
             `mirror_shield`,
           ],
@@ -3172,9 +3172,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Chaos Knight": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3263,7 +3263,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "unstable_wand",
             "broom_handle",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "vambrace",
             "pupils_gift",
             "ring_of_aquila",
@@ -3273,7 +3273,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mind_breaker",
             "spell_prism",
             "penta_edged_sword",
-            "flicker",
+            //"flicker", Removed in 7.33
             "pirate_hat",
             "apex",
           ],
@@ -3292,8 +3292,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           blink: "Generally after bkb.",
           bloodthorn:
             "This item is really great with your illusions and fits your build up perfectly. After you have blink, bkb, mageslayer you can turn your mageslayer into bloodthorn.",
-          flicker:
+          /*flicker:
             "Can be really good in the late game if your enemies are controlling you with slows,silences etc.",
+            */
         },
       },
       {
@@ -3358,7 +3359,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "vambrace",
             "pupils_gift",
             "elven_tunic",
@@ -3528,7 +3529,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `seeds_of_serenity`,
             "philosophers_stone",
             "bullwhip",
-            `black_powder_bag`,
+            //`black_powder_bag`,
             `ceremonial_robe`,
             "spy_gadget",
             `ascetic_cap`,
@@ -3645,7 +3646,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["gungir", "power_treads", "dragon_lance", "black_king_bar"],
           neutral: [
             "arcane_ring",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "grove_bow",
             "ring_of_aquila",
             "enchanted_quiver",
@@ -3781,7 +3782,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `dragon_scale`,
             `bullwhip`,
             `ogre_seal_totem`,
-            "black_powder_bag",
+            //"black_powder_bag",
             "ascetic_cap",
             `havoc_hammer`,
             "force_field",
@@ -3854,7 +3855,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Crystal Maiden": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -3942,7 +3943,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "psychic_headband",
             `ceremonial_robe`,
             "spy_gadget",
-            `heavy_blade`,
+            //`heavy_blade`,
             "seer_stone",
             "book_of_shadows",
           ],
@@ -4108,7 +4109,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             `occult_bracelet`,
             "philosophers_stone",
-            `nether_shawl`,
+            //`nether_shawl`,
             "quickening_charm",
             `cloak_of_flames`,
             `spell_prism`,
@@ -4184,7 +4185,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Dark Willow": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -4555,7 +4556,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `broom_handle`,
             `occult_bracelet`,
             `vambrace`,
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             "cloak_of_flames",
             `ogre_seal_totem`,
             `havoc_hammer`,
@@ -4645,7 +4646,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Dazzle: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -4737,9 +4738,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "spy_gadget",
-            `heavy_blade`,
+            //`heavy_blade`,
             "seer_stone",
             "book_of_shadows",
             `force_field`,
@@ -4806,7 +4807,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Death Prophet": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -4903,9 +4904,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `bullwhip`,
             `dragon_scale`,
             "quickening_charm",
-            `black_powder_bag`,
+            //`black_powder_bag`,
             `spell_prism`,
-            `flicker`,
+            //`flicker`,
             `mirror_shield`,
             `demonicon`,
           ],
@@ -5002,7 +5003,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Disruptor: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -5083,7 +5084,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "psychic_headband",
             `ceremonial_robe`,
             "spy_gadget",
-            `heavy_blade`,
+            //`heavy_blade`,
             "seer_stone",
             "book_of_shadows",
           ],
@@ -5211,7 +5212,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_scale",
             "pupils_gift",
             "quickening_charm",
-            "black_powder_bag",
+            //"black_powder_bag",
             "ogre_seal_totem",
             "timeless_relic",
             "havoc_hammer",
@@ -5464,7 +5465,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Drow Ranger": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -5552,7 +5553,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "vambrace",
@@ -6032,9 +6033,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bullwhip",
             `dragon_scale`,
             `ogre_seal_totem`,
-            `black_powder_bag`,
+            //`black_powder_bag`,
             `havoc_hammer`,
-            `heavy_blade`,
+            //`heavy_blade`,
             "pirate_hat",
             "desolator_2",
           ],
@@ -6109,7 +6110,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Ember Spirit": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -6372,10 +6373,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `seeds_of_serenity`,
             `dragon_scale`,
             `pupils_gift`,
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "enchanted_quiver",
             "spy_gadget",
-            `heavy_blade`,
+            //`heavy_blade`,
             "force_field",
             "book_of_shadows",
           ],
@@ -6695,7 +6696,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Faceless Void": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -6763,11 +6764,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: ["power_treads", "mask_of_madness", "maelstrom"],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
             "broom_handle",
-            "misericorde",
-            "dagger_of_ristul",
+            //"misericorde",
+            //"dagger_of_ristul", Removed in 7.33
             "elven_tunic",
             "titan_sliver",
             "mind_breaker",
@@ -6960,7 +6961,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `bullwhip`,
             `ceremonial_robe`,
             `psychic_headband`,
-            `heavy_blade`,
+            //`heavy_blade`,
             `spy_gadget`,
             `book_of_shadows`,
             `seer_stone`,
@@ -7034,7 +7035,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Gyrocopter: {
     gameplay_version: "7.32e",
     creator: ContentCreator.YoonA,
@@ -7114,7 +7115,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "satanic",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "ring_of_aquila",
@@ -7398,7 +7399,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "trusty_shovel",
             "seeds_of_serenity",
             "philosophers_stone",
-            "nether_shawl",
+            //"nether_shawl",
             "grove_bow",
             "psychic_headband",
             "spy_gadget",
@@ -7570,12 +7571,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: ["armlet", "sange", "ultimate_scepter", "black_king_bar"],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "specialists_array",
             "vambrace",
-            "misericorde",
+            //"misericorde",
             "paladin_sword",
             "titan_sliver",
             "trickster_cloak",
@@ -7972,7 +7973,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Io: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -8049,7 +8050,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             `ceremonial_robe`,
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "ascetic_cap",
             `spy_gadget`,
             "book_of_shadows",
@@ -8114,7 +8115,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Jakiro: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -8269,7 +8270,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Juggernaut: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -8355,14 +8356,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `satanic`,
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "broom_handle",
             `vambrace`,
             `ring_of_aquila`,
             "mind_breaker",
             "elven_tunic",
             `penta_edged_sword`,
-            `flicker`,
+            //`flicker`,
             "pirate_hat",
             `apex`,
           ],
@@ -8454,7 +8455,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Keeper of the Light": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -8643,7 +8644,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Kunkka: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -8729,10 +8730,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             `unstable_wand`,
             "vambrace",
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             "titan_sliver",
             `paladin_sword`,
-            `heavy_blade`,
+            //`heavy_blade`,
             `penta_edged_sword`,
             "desolator_2",
             `ex_machina`,
@@ -8833,10 +8834,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `broom_handle`,
             `unstable_wand`,
             `vambrace`,
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             `titan_sliver`,
             `paladin_sword`,
-            `heavy_blade`,
+            //`heavy_blade`,
             `penta_edged_sword`,
             `desolator_2`,
             `ex_machina`,
@@ -8991,8 +8992,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "lance_of_pursuit",
-            "misericorde",
-            "dagger_of_ristul",
+            //"misericorde",
+            //"dagger_of_ristul", Removed in 7.33
             "elven_tunic",
             "ogre_seal_totem",
             "paladin_sword",
@@ -9082,7 +9083,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Leshrac: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -9164,7 +9165,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "vambrace",
             "eye_of_the_vizier",
             "ceremonial_robe",
-            "black_powder_bag",
+            //"black_powder_bag",
             "ceremonial_robe",
             "spell_prism",
             "timeless_relic",
@@ -9252,7 +9253,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Lich: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -9350,7 +9351,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "psychic_headband",
             `ceremonial_robe`,
             "spy_gadget",
-            `heavy_blade`,
+            //`heavy_blade`,
             "seer_stone",
             "book_of_shadows",
           ],
@@ -9429,7 +9430,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Lifestealer: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -9500,8 +9501,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "lance_of_pursuit",
             "broom_handle",
-            "dagger_of_ristul",
-            "misericorde",
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "mind_breaker",
             "paladin_sword",
             "titan_sliver",
@@ -9607,7 +9608,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Lina: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -9688,7 +9689,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `specialists_array`,
             "mind_breaker",
             "enchanted_quiver",
-            `flicker`,
+            //`flicker`,
             `stormcrafter`,
             "desolator_2",
             "ex_machina",
@@ -10106,7 +10107,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral_bear: [
             "broom_handle",
             "lance_of_pursuit",
-            "misericorde",
+            //"misericorde",
             "dragon_scale",
             "mind_breaker",
             "elven_tunic",
@@ -10121,7 +10122,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ring_of_aquila",
             "philosophers_stone",
             "bullwhip",
-            "black_powder_bag",
+            //"black_powder_bag",
             "trickster_cloak",
             "ascetic_cap",
             "book_of_shadows",
@@ -10210,7 +10211,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Luna: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -10276,11 +10277,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "greater_crit",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "specialists_array",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "titan_sliver",
             "elven_tunic",
             "ninja_gear",
@@ -10458,7 +10459,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "arcane_ring",
-            "misericorde",
+            //"misericorde",
             "dragon_scale",
             "mind_breaker",
             "quickening_charm",
@@ -10548,7 +10549,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "arcane_ring",
-            "misericorde",
+            //"misericorde",
             "dragon_scale",
             "mind_breaker",
             "quickening_charm",
@@ -10796,10 +10797,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "refresher",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
-            "dagger_of_ristul",
-            "misericorde",
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "elven_tunic",
             "ogre_seal_totem",
             "titan_sliver",
@@ -11156,7 +11157,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             `vambrace`,
             `dragon_scale`,
             `ogre_seal_totem`,
@@ -11344,12 +11345,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["phase_boots", "soul_ring", "blink", "black_king_bar"],
           neutral: [
             "pogo_stick",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "dragon_scale",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "vambrace",
             "cloak_of_flames",
-            "black_powder_bag",
+            //"black_powder_bag",
             "trickster_cloak",
             "titan_sliver",
             "havoc_hammer",
@@ -11466,7 +11467,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Medusa: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -11545,14 +11546,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `satanic`,
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             `unstable_wand`,
             "grove_bow",
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             "elven_tunic",
             `titan_sliver`,
             `ninja_gear`,
-            `flicker`,
+            //`flicker`,
             `mirror_shield`,
             `apex`,
           ],
@@ -11708,7 +11709,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "vambrace",
             "ring_of_aquila",
             "titan_sliver",
@@ -11942,7 +11943,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Monkey King": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -12029,10 +12030,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "basher",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "broom_handle",
             "lance_of_pursuit",
-            "misericorde",
+            //"misericorde",
             "mind_breaker",
             "paladin_sword",
             "penta_edged_sword",
@@ -12136,10 +12137,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "unstable_wand",
             "bullwhip",
             "ring_of_aquila",
-            "black_powder_bag",
+            //"black_powder_bag",
             "quickening_charm",
             "penta_edged_sword",
-            "heavy_blade",
+            //"heavy_blade",
             "desolator_2",
             "book_of_shadows",
           ],
@@ -12239,7 +12240,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Morphling: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -12306,11 +12307,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: ["lifesteal", "power_treads", "manta", "black_king_bar"],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "seeds_of_serenity",
             "unstable_wand",
             "specialists_array",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "pupils_gift",
             "vambrace",
             "titan_sliver",
@@ -12490,14 +12491,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `greater_crit`,
           ],
           neutral: [
-            `possessed_mask`,
+            //"possessed_mask", Removed in 7.33
             `lance_of_pursuit`,
             `grove_bow`,
             `specialists_array`,
             `mind_breaker`,
             `paladin_sword`,
             `ninja_gear`,
-            `heavy_blade`,
+            //`heavy_blade`,
             `desolator_2`,
             `ex_machina`,
           ],
@@ -12599,7 +12600,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `quickening_charm`,
             `enchanted_quiver`,
             `spy_gadget`,
-            `heavy_blade`,
+            //`heavy_blade`,
             `force_boots`,
             `fallen_sky`,
           ],
@@ -12696,7 +12697,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Naga Siren": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -12775,7 +12776,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ultimate_scepter",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "vambrace",
             "ring_of_aquila",
@@ -12893,7 +12894,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Nature's Prophet": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -12967,7 +12968,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "unstable_wand",
             "seeds_of_serenity",
-            "misericorde",
+            //"misericorde",
             "grove_bow",
             "specialists_array",
             "enchanted_quiver",
@@ -13061,8 +13062,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: ["power_treads", "maelstrom", "black_king_bar", "assault"],
           neutral: [
             "unstable_wand",
-            "possessed_mask",
-            "misericorde",
+            //"possessed_mask", Removed in 7.33
+            //"misericorde",
             "grove_bow",
             "specialists_array",
             "enchanted_quiver",
@@ -13567,7 +13568,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Night Stalker": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -13659,7 +13660,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             `lance_of_pursuit`,
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             `vambrace`,
             `titan_sliver`,
             `mind_breaker`,
@@ -13905,7 +13906,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Ogre Magi": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -14256,7 +14257,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Oracle: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -14354,7 +14355,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "spy_gadget",
             `stormcrafter`,
             "seer_stone",
@@ -14975,7 +14976,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             `occult_bracelet`,
             `broom_handle`,
-            `dagger_of_ristul`,
+            //`dagger_of_ristul`,
             `bullwhip`,
             `quickening_charm`,
             `mind_breaker`,
@@ -15073,7 +15074,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Phantom Assassin": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -15153,11 +15154,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "satanic",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "broom_handle",
             "lance_of_pursuit",
-            "misericorde",
-            "dagger_of_ristul",
+            //"misericorde",
+            //"dagger_of_ristul", Removed in 7.33
             "ring_of_aquila",
             "mind_breaker",
             "paladin_sword",
@@ -15253,7 +15254,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Phantom Lancer": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -15320,11 +15321,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
             "unstable_wand",
             "vambrace",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "pupils_gift",
             "titan_sliver",
             "elven_tunic",
@@ -15411,7 +15412,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Phoenix: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -15491,7 +15492,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "trusty_shovel",
             `seeds_of_serenity`,
             "philosophers_stone",
-            `nether_shawl`,
+            //`nether_shawl`,
             "quickening_charm",
             "ceremonial_robe",
             "spell_prism",
@@ -15649,12 +15650,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "pogo_stick",
             "vambrace",
-            "dagger_of_ristul",
-            "nether_shawl",
+            //"dagger_of_ristul", Removed in 7.33
+            //"nether_shawl",
             "dragon_scale",
             "ogre_seal_totem",
             "cloak_of_flames",
-            "black_powder_bag",
+            //"black_powder_bag",
             "spell_prism",
             "timeless_relic",
             "giants_ring",
@@ -16020,7 +16021,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Pudge: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -16205,7 +16206,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_scale",
             "eye_of_the_vizier",
             "cloak_of_flames",
-            "black_powder_bag",
+            //"black_powder_bag",
             "trickster_cloak",
             "havoc_hammer",
             "ascetic_cap",
@@ -16386,7 +16387,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "mysterious_hat",
             `arcane_ring`,
-            `nether_shawl`,
+            //`nether_shawl`,
             `bullwhip`,
             "psychic_headband",
             "quickening_charm",
@@ -16487,7 +16488,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `trusty_shovel`,
             "philosophers_stone",
             "bullwhip",
-            `nether_shawl`,
+            //`nether_shawl`,
             "psychic_headband",
             `quickening_charm`,
             "spy_gadget",
@@ -16593,7 +16594,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Queen of Pain": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -16862,7 +16863,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Razor: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -16952,13 +16953,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             `lance_of_pursuit`,
-            `possessed_mask`,
+            //`possessed_mask`,
             "vambrace",
             `grove_bow`,
             "elven_tunic",
             "mind_breaker",
             "ninja_gear",
-            `flicker`,
+            //`flicker`,
             `ex_machina`,
             `mirror_shield`,
           ],
@@ -17055,10 +17056,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `arcane_ring`,
             `vambrace`,
             `ring_of_aquila`,
-            `black_powder_bag`,
+            //`black_powder_bag`,
             `titan_sliver`,
             `trickster_cloak`,
-            `heavy_blade`,
+            //`heavy_blade`,
             `fallen_sky`,
             `mirror_shield`,
           ],
@@ -17161,13 +17162,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             `lance_of_pursuit`,
-            `possessed_mask`,
+            //`possessed_mask`,
             `vambrace`,
             `grove_bow`,
             `elven_tunic`,
             `mind_breaker`,
             `ninja_gear`,
-            `flicker`,
+            //`flicker`,
             `ex_machina`,
             `mirror_shield`,
           ],
@@ -17326,10 +17327,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
             "vambrace",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "ring_of_aquila",
             "elven_tunic",
             "titan_sliver",
@@ -17417,7 +17418,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bullwhip",
             "ogre_seal_totem",
             "spell_prism",
-            "flicker",
+            //"flicker", Removed in 7.33
             "fallen_sky",
             "demonicon",
           ],
@@ -17710,7 +17711,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "seeds_of_serenity",
             "vambrace",
-            "nether_shawl",
+            //"nether_shawl",
             "ceremonial_robe",
             "ogre_seal_totem",
             "cloak_of_flames",
@@ -17985,7 +17986,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Shadow Fiend": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -18057,7 +18058,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pogo_stick",
             "occult_bracelet",
             "mysterious_hat",
-            "nether_shawl",
+            //"nether_shawl",
             "vambrace",
             "psychic_headband",
             "timeless_relic",
@@ -18157,11 +18158,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "butterfly",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "specialists_array",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "ring_of_aquila",
             "vambrace",
             "paladin_sword",
@@ -18412,7 +18413,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Silencer: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -18586,7 +18587,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Skywrath Mage": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -18839,10 +18840,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
-            "dagger_of_ristul",
-            "misericorde",
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "mind_breaker",
             "elven_tunic",
             "penta_edged_sword",
@@ -18915,7 +18916,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Slark: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -18996,9 +18997,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "lance_of_pursuit",
             "arcane_ring",
-            "possessed_mask",
-            "dagger_of_ristul",
-            "misericorde",
+            //"possessed_mask", Removed in 7.33
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "mind_breaker",
             "elven_tunic",
             "penta_edged_sword",
@@ -19353,8 +19354,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "unstable_wand",
-            "possessed_mask",
-            "dagger_of_ristul",
+            //"possessed_mask", Removed in 7.33
+            //"dagger_of_ristul", Removed in 7.33
             "grove_bow",
             "specialists_array",
             "mind_breaker",
@@ -19554,7 +19555,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Spectre: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -19629,11 +19630,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "abyssal_blade",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
             "seeds_of_serenity",
             "vambrace",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "ring_of_aquila",
             "pupils_gift",
             "mind_breaker",
@@ -19778,10 +19779,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "dragon_scale",
             "pupils_gift",
             "cloak_of_flames",
-            "black_powder_bag",
+            //"black_powder_bag",
             "ogre_seal_totem",
             "elven_tunic",
-            "flicker",
+            //"flicker", Removed in 7.33
             "ninja_gear",
             "force_boots",
             "giants_ring",
@@ -19877,7 +19878,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "elven_tunic",
-            "flicker",
+            //"flicker", Removed in 7.33
             "ninja_gear",
             "force_boots",
             "giants_ring",
@@ -20121,7 +20122,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Sven: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -20204,8 +20205,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             "unstable_wand",
             "lance_of_pursuit",
-            "dagger_of_ristul",
-            "misericorde",
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "elven_tunic",
             "mind_breaker",
             "havoc_hammer",
@@ -20378,7 +20379,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             `mysterious_hat`,
             "philosophers_stone",
-            `nether_shawl`,
+            //`nether_shawl`,
             "psychic_headband",
             "ceremonial_robe",
             "spell_prism",
@@ -20461,7 +20462,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `arcane_ring`,
             `mysterious_hat`,
             `bullwhip`,
-            `nether_shawl`,
+            //`nether_shawl`,
             `psychic_headband`,
             `ceremonial_robe`,
             `spell_prism`,
@@ -20575,7 +20576,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Templar Assassin": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -20658,15 +20659,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "greater_crit",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "ring_of_aquila",
             "grove_bow",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "specialists_array",
             "mind_breaker",
             "enchanted_quiver",
-            "flicker",
+            //"flicker", Removed in 7.33
             "ninja_gear",
             "desolator_2",
             "apex",
@@ -20753,13 +20754,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "greater_crit",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "specialists_array",
             "mind_breaker",
             "enchanted_quiver",
-            "heavy_blade",
+            //"heavy_blade",
             "ninja_gear",
             "desolator_2",
             "apex",
@@ -20878,7 +20879,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Terrorblade: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -20949,7 +20950,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: ["manta", "skadi", "black_king_bar", "greater_crit"],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "grove_bow",
             "pupils_gift",
@@ -21352,10 +21353,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "seeds_of_serenity",
             "mysterious_hat",
-            "nether_shawl",
+            //"nether_shawl",
             "dragon_scale",
             "pupils_gift",
-            "black_powder_bag",
+            //"black_powder_bag",
             "ceremonial_robe",
             "cloak_of_flames",
             "ogre_seal_totem",
@@ -21541,7 +21542,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mysterious_hat",
             `pogo_stick`,
             "philosophers_stone",
-            `nether_shawl`,
+            //`nether_shawl`,
             "psychic_headband",
             "ceremonial_robe",
             "timeless_relic",
@@ -21733,7 +21734,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pogo_stick",
             "arcane_ring",
             "philosophers_stone",
-            "nether_shawl",
+            //"nether_shawl",
             "pupils_gift",
             "bullwhip",
             "ceremonial_robe",
@@ -21838,7 +21839,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pogo_stick",
             "arcane_ring",
             "pupils_gift",
-            "misericorde",
+            //"misericorde",
             "mind_breaker",
             "elven_tunic",
             "penta_edged_sword",
@@ -21942,7 +21943,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "unstable_wand",
             "pupils_gift",
             "ring_of_aquila",
-            "misericorde",
+            //"misericorde",
             "mind_breaker",
             "elven_tunic",
             "penta_edged_sword",
@@ -22034,7 +22035,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Treant Protector": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -22216,7 +22217,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Troll Warlord": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -22296,11 +22297,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "satanic",
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "broom_handle",
             "ring_of_aquila",
-            "dagger_of_ristul",
-            "misericorde",
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "elven_tunic",
             "titan_sliver",
             "paladin_sword",
@@ -22484,8 +22485,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pogo_stick",
             "bullwhip",
             "dragon_scale",
-            "dagger_of_ristul",
-            "black_powder_bag",
+            //"dagger_of_ristul", Removed in 7.33
+            //"black_powder_bag",
             "ogre_seal_totem",
             "cloak_of_flames",
             "trickster_cloak",
@@ -22572,8 +22573,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bullwhip",
             "dragon_scale",
             "pupils_gift",
-            "misericorde",
-            "black_powder_bag",
+            //"misericorde",
+            //"black_powder_bag",
             "titan_sliver",
             "cloak_of_flames",
             "trickster_cloak",
@@ -22749,7 +22750,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "seeds_of_serenity",
             "dragon_scale",
             "vambrace",
-            "nether_shawl",
+            //"nether_shawl",
             "cloak_of_flames",
             "ogre_seal_totem",
             "trickster_cloak",
@@ -22856,7 +22857,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Undying: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -22958,7 +22959,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             `ogre_seal_totem`,
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "spy_gadget",
             `ascetic_cap`,
             "force_field",
@@ -23018,7 +23019,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Ursa: {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -23100,12 +23101,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
             "ring_of_aquila",
-            "dagger_of_ristul",
+            //"dagger_of_ristul", Removed in 7.33
             "vambrace",
-            "misericorde",
+            //"misericorde",
             "mind_breaker",
             "titan_sliver",
             "penta_edged_sword",
@@ -23293,7 +23294,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bullwhip",
             `psychic_headband`,
             `ceremonial_robe`,
-            `heavy_blade`,
+            //`heavy_blade`,
             "seer_stone",
             `force_field`,
           ],
@@ -23355,7 +23356,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   Venomancer: {
     gameplay_version: "7.32e",
     creator: ContentCreator.YoonA,
@@ -23445,7 +23446,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mysterious_hat",
             "seeds_of_serenity",
             "grove_bow",
-            "nether_shawl",
+            //"nether_shawl",
             "ceremonial_robe",
             "ogre_seal_totem",
             "timeless_relic",
@@ -23558,7 +23559,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mysterious_hat",
             "seeds_of_serenity",
             "philosophers_stone",
-            "nether_shawl",
+            //"nether_shawl",
             "ceremonial_robe",
             "timeless_relic",
             "spell_prism",
@@ -23759,7 +23760,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "enchanted_quiver",
             `elven_tunic`,
             `trickster_cloak`,
-            `flicker`,
+            //`flicker`, Removed in 7.33
             `pirate_hat`,
             `mirror_shield`,
           ],
@@ -23856,7 +23857,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ogre_seal_totem`,
             `quickening_charm`,
             `trickster_cloak`,
-            `flicker`,
+            //`flicker`,
             `pirate_hat`,
             `mirror_shield`,
           ],
@@ -24032,7 +24033,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `dragon_scale`,
             `mind_breaker`,
             "enchanted_quiver",
-            `heavy_blade`,
+            //`heavy_blade`,
             `spy_gadget`,
             `desolator_2`,
             `mirror_shield`,
@@ -24121,7 +24122,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `dragon_scale`,
             `mind_breaker`,
             "enchanted_quiver",
-            `heavy_blade`,
+            //`heavy_blade`,
             "spell_prism",
             `desolator_2`,
             `mirror_shield`,
@@ -24274,7 +24275,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "mysterious_hat",
             "arcane_ring",
-            "nether_shawl",
+            //"nether_shawl",
             "vambrace",
             "grove_bow",
             "ceremonial_robe",
@@ -24363,10 +24364,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "mysterious_hat",
             "arcane_ring",
-            "nether_shawl",
+            //"nether_shawl",
             "vambrace",
             "grove_bow",
-            "black_powder_bag",
+            //"black_powder_bag",
             "ogre_seal_totem",
             "ceremonial_robe",
             "timeless_relic",
@@ -24566,7 +24567,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             "quickening_charm",
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "spy_gadget",
             "spell_prism",
             "book_of_shadows",
@@ -24639,7 +24640,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   Weaver: {
     gameplay_version: `7.32e`,
     creator: ContentCreator.eidandota,
@@ -24729,10 +24730,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "trusty_shovel",
             "ring_of_aquila",
             `dragon_scale`,
-            `black_powder_bag`,
+            //`black_powder_bag`,
             "enchanted_quiver",
             `stormcrafter`,
-            `heavy_blade`,
+            //`heavy_blade`,
             "seer_stone",
             `mirror_shield`,
           ],
@@ -24839,14 +24840,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `satanic`,
           ],
           neutral: [
-            "possessed_mask",
+            //"possessed_mask", Removed in 7.33
             `lance_of_pursuit`,
             `vambrace`,
             "grove_bow",
             "mind_breaker",
             "titan_sliver",
-            `heavy_blade`,
-            `flicker`,
+            //`heavy_blade`,
+            //`flicker`,
             "desolator_2",
             "apex",
           ],
@@ -25115,13 +25116,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "lance_of_pursuit",
             "unstable_wand",
             "grove_bow",
-            "misericorde",
+            //"misericorde",
             "mind_breaker",
             "specialists_array",
             "enchanted_quiver",
             "mind_breaker",
             "spell_prism",
-            "heavy_blade",
+            //"heavy_blade",
             "desolator_2",
             "mirror_shield",
           ],
@@ -25236,11 +25237,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "unstable_wand",
             "grove_bow",
-            "misericorde",
+            //"misericorde",
             "mind_breaker",
             "enchanted_quiver",
             "spell_prism",
-            "heavy_blade",
+            //"heavy_blade",
             "desolator_2",
             "mirror_shield",
           ],
@@ -25341,7 +25342,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // YoonA plays hero
+  // YoonA plays hero
   "Winter Wyvern": {
     gameplay_version: `7.32e`,
     creator: ContentCreator.YoonA,
@@ -25699,7 +25700,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
   },
 
-    // eidendota plays hero
+  // eidendota plays hero
   "Wraith King": {
     gameplay_version: "7.32e",
     creator: ContentCreator.eidandota,
@@ -25786,8 +25787,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             "lance_of_pursuit",
-            "dagger_of_ristul",
-            "misericorde",
+            //"dagger_of_ristul", Removed in 7.33
+            //"misericorde",
             "elven_tunic",
             "mind_breaker",
             "titan_sliver",
@@ -25952,7 +25953,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "philosophers_stone",
             "eye_of_the_vizier",
-            "nether_shawl",
+            //"nether_shawl",
             "vambrace",
             "psychic_headband",
             "timeless_relic",
