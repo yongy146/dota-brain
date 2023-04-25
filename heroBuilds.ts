@@ -2481,7 +2481,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `brewmaster_cinder_brew`,
           `brewmaster_thunder_clap`,
           `brewmaster_thunder_clap`,
-          `special_bonus_attack_damage_15`,
+          `special_bonus_unique_brewmaster_7`,
           `brewmaster_thunder_clap`,
           "brewmaster_primal_split",
           `brewmaster_drunken_brawler`,
@@ -2853,7 +2853,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "broodmother_spawn_spiderlings", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_agility_25`, // 20
+          `special_bonus_attack_speed_35`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -3575,26 +3575,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916348",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "clinkz_searing_arrows", // 1
+          "clinkz_tar_bomb", // 1
           "clinkz_strafe", // 2
-          "clinkz_searing_arrows", // 3
+          "clinkz_tar_bomb", // 3
           "clinkz_strafe", // 4
-          "clinkz_strafe", // 5
+          "clinkz_tar_bomb", // 5
           "clinkz_death_pact", // 6
-          "clinkz_strafe", // 7
-          "clinkz_wind_walk", // 8
-          "clinkz_wind_walk", // 9
-          "clinkz_wind_walk", // 10
-          "clinkz_wind_walk", // 11
-          "clinkz_death_pact", // 12
-          "clinkz_searing_arrows", // 13
-          "special_bonus_unique_clinkz_10", // 14
-          "special_bonus_unique_clinkz_8", // 15
-          "clinkz_searing_arrows", // 16
+          "clinkz_wind_walk", // 7
+          "clinkz_tar_bomb", // 8
+          "clinkz_strafe", // 9
+          "special_bonus_unique_clinkz_1", // 10
+          "clinkz_death_pact", // 11
+          "clinkz_wind_walk", // 12
+          "clinkz_strafe", // 13
+          "clinkz_death_pact", // 14
+          "special_bonus_attack_range_75", // 15
+          "clinkz_death_pact", // 16
           "special_bonus_attributes", // 17
-          "clinkz_death_pact", // 18
+          "clinkz_wind_walk", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_clinkz_12", // 20
+          "special_bonus_unique_clinkz_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -3740,7 +3740,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "rattletrap_hookshot", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_clockwerk_2`, // 20
+          `special_bonus_unique_clockwerk_4`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -3790,7 +3790,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_clockwerk_2: `The leash makes sure an enemy hero cannot get out of Power Cogs with their mobility spells, such as Mirana Leap or Phoenix Dive.`,
+      /*special_bonus_unique_clockwerk_2: `The leash makes sure an enemy hero cannot get out of Power Cogs with their mobility spells, such as Mirana Leap or Phoenix Dive.`,*/
       special_bonus_unique_clockwerk_6:
         "You can take this talent over the other one if the opponents become short on damage once you become spell-immune.",
     },
@@ -3950,8 +3950,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       crystal_maiden_freezing_field: `You can skill your ultimate at level 6 if the enemy team does not have ways of cancellation.`,
-      special_bonus_attack_speed_200:
-        "You can skill this talent over recommended one if you want to destroy a phoenix egg or undying tombstone.",
+      /*special_bonus_attack_speed_200:
+        "You can skill this talent over recommended one if you want to destroy a phoenix egg or undying tombstone.",*/
       special_bonus_unique_crystal_maiden_2:
         "You can skill this talent over recommended one if you are against mega creeps.",
     },
@@ -4220,7 +4220,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_dark_willow_2", // 25
+          "special_bonus_attack_speed_100", // 25
         ],
         items: {
           starting: [
@@ -4282,7 +4282,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_dark_willow_2: `You can take the attack speed talent over this one if you have the Aghanims Scepter.`,
+      /*special_bonus_unique_dark_willow_2: `You can take the attack speed talent over this one if you have the Aghanims Scepter.`,*/
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
@@ -4400,7 +4400,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_dawnbreaker_fire_wreath_charges`, // 25
+          `special_bonus_unique_dawnbreaker_fire_wreath_cooldown`, // 25
         ],
         items: {
           starting: [
@@ -4503,7 +4503,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_dawnbreaker_fire_wreath_charges", // 25
+          "special_bonus_unique_dawnbreaker_fire_wreath_cooldown", // 25
         ],
         items: {
           starting: [
@@ -4662,19 +4662,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "dazzle_poison_touch", // 3
           "dazzle_shallow_grave", // 4
           `dazzle_shadow_wave`, // 5
-          "dazzle_good_juju", // 6  Comment Michel: Use 'dazzle_good_juju' instaed of 'dazzle_bad_juju' (Dota 2 converion issue)
+          "dazzle_bad_juju", // 6
           `dazzle_shadow_wave`, // 7
           `dazzle_shadow_wave`, // 8
           `dazzle_shallow_grave`, // 9
           `dazzle_shallow_grave`, // 10
           `dazzle_shallow_grave`, // 11
-          "dazzle_good_juju", // 12
+          "dazzle_bad_juju", // 12
           `special_bonus_mp_regen_175`, // 13
           `dazzle_poison_touch`, // 14
           `special_bonus_unique_dazzle_2`, // 15
           `dazzle_poison_touch`, // 16
           "special_bonus_attributes", // 17
-          "dazzle_good_juju", // 18
+          "dazzle_bad_juju", // 18
           "special_bonus_attributes", // 19
           "special_bonus_unique_dazzle_5", // 20
           "special_bonus_attributes", // 21
@@ -6324,7 +6324,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `enchantress_natures_attendants`, // 11
           "enchantress_untouchable", // 12
           `enchantress_natures_attendants`, // 13
-          `special_bonus_magic_resistance_10`, // 14
+          `special_bonus_magic_resistance_8`, // 14
           `special_bonus_unique_enchantress_2`, // 15
           `enchantress_enchant`, // 16
           "special_bonus_attributes", // 17
@@ -7711,7 +7711,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "invoker_wex", // 17
           "invoker_wex", // 18
           "invoker_quas", // 19
-          "special_bonus_unique_invoker_10", // 20
+          "special_bonus_unique_invoker_3", // 20
           "special_bonus_unique_invoker_9", // 21
           "special_bonus_unique_invoker_5", // 22
           "invoker_quas", // 23
@@ -7814,7 +7814,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "invoker_wex", // 17
           "invoker_wex", // 18
           "invoker_quas", // 19
-          "special_bonus_unique_invoker_10", // 20
+          "special_bonus_unique_invoker_3", // 20
           "special_bonus_unique_invoker_9", // 21
           "special_bonus_unique_invoker_5", // 22
           "invoker_quas", // 23
@@ -9109,7 +9109,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "leshrac_pulse_nova", // 13
           "leshrac_lightning_storm", // 14
           "leshrac_lightning_storm", // 15
-          "special_bonus_movement_speed_25", // 16
+          "special_bonus_unique_leshrac_6", // 16
           "special_bonus_attributes", // 17
           "leshrac_pulse_nova", // 18
           "special_bonus_attributes", // 19
@@ -9175,8 +9175,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_strength_20:
-        "You can take this level 20 talent over the suggested one if you are burstable by opponents.",
+      /*special_bonus_strength_20:
+        "You can take this level 20 talent over the suggested one if you are burstable by opponents.",*/
     },
     item_tooltips: {
       magic_stick:
@@ -11115,7 +11115,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_marci_unleash_silence`, // 25
+          `special_bonus_unique_marci_guardian_magic_immune`, // 25
         ],
         items: {
           starting: [
@@ -11487,7 +11487,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `medusa_split_shot`, // 7
           "medusa_split_shot", // 8
           `medusa_mystic_snake`, // 9
-          `special_bonus_unique_medusa_6`, // 10
+          `special_bonus_unique_medusa_7`, // 10
           "medusa_stone_gaze", // 11
           "medusa_mana_shield", // 12
           "medusa_mana_shield", // 13
@@ -12919,7 +12919,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
           "furion_sprout", // 14
-          "special_bonus_attack_speed_25", // 15
+          "special_bonus_unique_furion_2", // 15
           "furion_sprout", // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -13021,7 +13021,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
           "furion_sprout", // 14
-          "special_bonus_attack_speed_25", // 15
+          "special_bonus_unique_furion_2", // 15
           "furion_sprout", // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -13778,15 +13778,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "nyx_assassin_impale", // 5
           "nyx_assassin_vendetta", // 6
           "nyx_assassin_impale", // 7
-          "nyx_assassin_mana_burn", // 8
+          "nyx_assassin_jolt", // 8
           `nyx_assassin_spiked_carapace`, // 9
           `nyx_assassin_spiked_carapace`, // 10
           `special_bonus_unique_nyx_4`, // 11
           "nyx_assassin_vendetta", // 12
-          `nyx_assassin_mana_burn`, // 13
-          `nyx_assassin_mana_burn`, // 14
+          `nyx_assassin_jolt`, // 13
+          `nyx_assassin_jolt`, // 14
           `special_bonus_unique_nyx_carapace_reflect_duration`, // 15
-          `nyx_assassin_mana_burn`, // 16
+          `nyx_assassin_jolt`, // 16
           "special_bonus_attributes", // 17
           "nyx_assassin_vendetta", // 18
           "special_bonus_attributes", // 19
@@ -13850,7 +13850,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      nyx_assassin_mana_burn: `You can skill this spell on level 4 if you are playing against a high intelligence enemy hero in lane. Use it off cd in that case.`,
+      /*nyx_assassin_mana_burn: `You can skill this spell on level 4 if you are playing against a high intelligence enemy hero in lane. Use it off cd in that case.`,*/
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
@@ -13869,7 +13869,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     combo: [
       `nyx_assassin_vendetta`,
       `nyx_assassin_impale`,
-      `nyx_assassin_mana_burn`,
+      `nyx_assassin_jolt`,
       `nyx_assassin_burrow`,
       `nyx_assassin_spiked_carapace`,
     ],
@@ -17273,12 +17273,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "riki_blink_strike", // 7
           "riki_smoke_screen", // 8
           "riki_tricks_of_the_trade", // 9
-          "special_bonus_unique_riki_2", // 10
+          "special_bonus_unique_riki_7", // 10
           "riki_tricks_of_the_trade", // 11
           "riki_backstab", // 12
           "riki_smoke_screen", // 13
           "riki_smoke_screen", // 14
-          "special_bonus_unique_riki_8", // 15
+          "special_bonus_unique_riki_2", // 15
           "riki_smoke_screen", // 16
           "special_bonus_attributes", // 17
           "riki_backstab", // 18
@@ -17834,16 +17834,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "shadow_demon_disruption", // 8
           "shadow_demon_disruption", // 9
           `shadow_demon_disruption`, // 10
-          `special_bonus_strength_12`, // 11
+          `special_bonus_unique_shadow_demon_4`, // 11
           "shadow_demon_demonic_purge", // 12
           `shadow_demon_disseminate`, // 13
           `shadow_demon_disseminate`, // 14
-          `special_bonus_unique_shadow_demon_1`, // 15
+          `special_bonus_unique_shadow_demon_3`, // 15
           `shadow_demon_disseminate`, // 16
           "special_bonus_attributes", // 17
           "shadow_demon_demonic_purge", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_shadow_demon_3`, // 20
+          `special_bonus_unique_shadow_demon_1`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -18608,7 +18608,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "skywrath_mage_ancient_seal", // 8
           "skywrath_mage_ancient_seal", // 9
           `skywrath_mage_ancient_seal`, // 10
-          `special_bonus_hp_175`, // 11
+          `special_bonus_hp_200`, // 11
           `skywrath_mage_mystic_flare`, // 12
           `skywrath_mage_concussive_shot`, // 13
           `skywrath_mage_concussive_shot`, // 14
@@ -21296,7 +21296,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "shredder_chakram", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_strength_16", // 20
+          "special_bonus_magic_resistance_20", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -22070,7 +22070,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_treant_11`, // 25
+          `special_bonus_unique_treant_14`, // 25
         ],
         items: {
           starting: [
@@ -22892,7 +22892,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_reincarnation_300", // 25
+          "special_bonus_unique_undying_4", // 25
         ],
         items: {
           starting: [
@@ -23243,7 +23243,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_vengeful_spirit_3`, // 25
+          `special_bonus_unique_vengeful_spirit_swap_damage_reduction`, // 25
         ],
         items: {
           starting: [
