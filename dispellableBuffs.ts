@@ -123,7 +123,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   Underlord: [],
   Undying: [],
   Ursa: ["ursa_overpower"],
-  "Vengeful Spirit": [],
+  "Vengeful Spirit": [`vengefulspirit_nether_swap`],
   Venomancer: [],
   Viper: [],
   Visage: ["visage_grave_chill"],

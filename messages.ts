@@ -1352,7 +1352,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "bane_nightmare" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Bane",
     audioFile: "ownHero/Bane_5_Enfeeble",
@@ -1361,7 +1361,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Enfeeble is improved version of Spirit Vessel as it reduces healing and regeneration significantly aside from damage reduction.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "bane_enfeeble" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Bane",
@@ -1391,6 +1391,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Avoid showing yourself at the start of the teamfight. Let opponents focus your allies so you can get your spells off easier.",
     audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Bane`,
+    audioFile: `ownHero/Bane_9_AghsFiendsGrip`,
+    messageTime: 32 * 60,
+    textMessage:
+      `Once you have Aghanims Scepter, you can cancel Fiends Grip channel with your hero without interrupting the ability.`,
+    audience: [Audience.ALL],
+	image: { type: `item`, name: `ultimate_scepter` },
   },
 
   {
@@ -1430,7 +1440,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Lotus Orb, Linken's Sphere and status resistance items are good at countering Bane's spells.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "EnemyHero",
     hero: "Bane",
     audioFile: "enemyHero/Bane_5_Enfeeble",
@@ -1438,7 +1448,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Avoid overpurchasing healing and regenerating items as Bane's Enfeeble reduces their effect.",
     audience: [Audience.ALL],
-  },
+  }, */
 
   // 8. Batrider
   {
@@ -2880,6 +2890,26 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_freezing_field" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Crystal Maiden`,
+    audioFile: `ownHero/CrystalMaiden_8_Roaming`,
+    messageTime: 7 * 60 + 15,
+    textMessage:
+      `Use the portals to roam around the map and set up kills with your control spells.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `crystal_maiden_frostbite` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Crystal Maiden`,
+    audioFile: `ownHero/CrystalMaiden_9_AghsShardUltimate`,
+    messageTime: 19 * 60 + 15,
+    textMessage:
+      `Remember to use Boots of Bearing to gain movespeed during Freezing Field with Aghamins Shard.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `boots_of_bearing` },
+  },
 
   {
     category: "EnemyHero",
@@ -3559,11 +3589,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Disruptor",
     audioFile: "ownHero/Disruptor_4_GlimpseIllusion",
     messageTime: [8 * 60 + 15, 15 * 60 + 15, 22 * 60 + 15],
-    textMessage: "Glimpe instantly destroys basic illusions.",
+    textMessage: `Glimpse instantly destroys basic illusions.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "disruptor_glimpse" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Disruptor",
     audioFile: "ownHero/Disruptor_5_AghanimsShard",
@@ -3571,7 +3601,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Pick up Aghanim's Shard as soon as possible to help your team move faster around enemy targets.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Disruptor",
@@ -4961,6 +4991,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Aghanim's Scepter allows you to scale well into lategame by creating illusions of opponents right-clickers.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Grimstroke`
+    audioFile: `ownHero/Grimstroke_7_Roaming`,
+    messageTime: 7 * 60 + 15,
+    textMessage:
+      `Use the portals to roam around the map and set up kills with your control spells.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `grimstroke_spirit_walk` },
   },
 
   {
@@ -12139,7 +12179,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowDemon_8_DisruptCores",
     messageTime: 13 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: "You can use Disrupt on your cores to push out waves or to make deception plays.",
+    textMessage: `You can use Disruption on your cores to push out waves or to make deception plays.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "shadow_demon_disruption" },
   },
@@ -12635,7 +12675,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Skywrath Mage",
     audioFile: "ownHero/SkywrathMage_2_SecureRanged",
     messageTime: 15,
-    textMessage: "Use Arcane Bolt or Concussive Shot to secure ranged creep lastihts.",
+    textMessage: `Use Arcane Bolt or Concussive Shot to secure ranged creep last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "skywrath_mage_arcane_bolt" },
   },
@@ -15924,6 +15964,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Vengeful Spirit`,
+    audioFile: `ownHero/VengefulSpirit_6_AghsShard`,
+    messageTime: 14 * 60 + 55,
+    textMessage:
+      `Pick up Aghanims Shard at the 15 minute mark as it massively improves your impact in teamfights.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `aghanims_shard` },
+  },
 
   {
     category: "EnemyHero",
@@ -16905,7 +16955,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 2 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "If you feel like you might be gone on, it is good to play close to trees or cliffs, so you can escape with Arctic Burn.",
+      `It is good to play close to trees or cliffs in dangerous spots on the map, so you can escape with Arctic Burn.`,
     audience: [Audience.ALL],
   },
   //@Alex: What doy ou mean be "might be gone"? Might die? Might want to leave the fight?
@@ -17129,7 +17179,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Don't clump up because of Witch Doctor's Paralyzing Cask.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "EnemyHero",
     hero: "Witch Doctor",
     audioFile: "enemyHero/WitchDoctor_2_ParalyzingCaskSummons",
@@ -17137,7 +17187,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Paralyzing Cask stuns creeps for 5 seconds. Keep your summons away from Witch Doctor.",
     audience: [Audience.ALL],
-  },
+  }, */
   {
     category: "EnemyHero",
     hero: "Witch Doctor",

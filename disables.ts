@@ -513,7 +513,7 @@ export const disables: IDisables = {
   ],
   Marci: [
     {
-      skill: "marci_grapple",
+      skill: `marci_companion_run`,
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
