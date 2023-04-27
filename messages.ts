@@ -2866,7 +2866,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 8 * 60,
     textMessage:
-      "Avoid showing yourself at the start of the fight. Keep distance and spam Crystal Nova,Frostbite, and use items.",
+      `Avoid showing yourself at the start of the fight. Keep distance and spam Crystal Nova, Frostbite, and use items.`,
     audience: [Audience.ALL],
   },
   {
@@ -2876,7 +2876,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 16 * 60 + 15,
     repeatTime: 8 * 60,
     textMessage:
-      "Don't rush with using Freezing Field in fights unless you can support it with Black King Bar and Blink.",
+      `Dont rush with using Freezing Field in fights unless you can support it with Aghanims Shard and Glimmer Cape.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_freezing_field" },
   },
@@ -2929,7 +2929,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/CrystalMaiden_5_FreezingField",
     messageTime: [17 * 60 + 15, 27 * 60 + 15, 37 * 60 + 15, 47 * 60 + 17],
     textMessage:
-      "Look to disrupt den's Freezing Field channeling in fights. She will try to protect herself with Glimmer Cape or BKB",
+      `Look to interrupt the Crystal Maiden Freezing Field in fights. She will try to protect herself with Glimmer Cape or BKB`,
     chatMessage:
       "Disrupt Chrystal Maiden's Freezing Field channeling in fights. She might use with Glimmer Cape or BKB",
     audience: [Audience.ALL],
@@ -3301,7 +3301,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Dazzle",
     audioFile: "ownHero/Dazzle_3_GraveHeal",
     messageTime: [3 * 60, 9 * 60, 15 * 60],
-    textMessage: `Use Shadow Wave and Bad Juju as Shallow Grave is about to expire to provide a burst of heal.`,
+    textMessage: `Use Shadow Wave as Shallow Grave is about to expire to provide a burst of heal.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_shallow_grave" },
   },
@@ -3320,7 +3320,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Dazzle_5_ActivatableItems",
     messageTime: [6 * 60 + 15, 14 * 60 + 15, 22 * 60 + 15],
     textMessage:
-      "Prioritize purchasing and using activatable items and neutral items to take advantage of Aghanims Scepter.",
+      `Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_bad_juju" },
   },
@@ -3352,6 +3352,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Purchase Aghanim's Shard at 15 minute mark as it provides extra control and kills off basic illusions.",
     audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Dazzle`,
+    audioFile: `ownHero/Dazzle_9_HandofMidas`,
+    messageTime: 13 * 60 + 15,
+    textMessage:
+      `Use Hand of Midas as often as you can with the active of Bad Juju.`,
+    audience: [Audience.ALL],
+	image: { type: `item`, name: `hand_of_midas` },
   },
 
   {
@@ -4063,16 +4073,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/EarthSpirit_5_Roll",
     messageTime: 45,
     textMessage:
-      "Ideally roll from the fog when an opponent is somewhat stationary, for example when going for lasthit.",
+      `Ideally roll from the fog when an opponent is somewhat stationary, for example when going for last hit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "earth_spirit_rolling_boulder" },
   },
   {
     category: "OwnHero",
     hero: "Earth Spirit",
-    audioFile: "ownHero/EarthSpirit_6_SecureMid",
+    audioFile: `ownHero/EarthSpirit_6_Roaming`,
     messageTime: [5 * 60 + 30, 7 * 60 + 30, 9 * 60 + 30],
-    textMessage: "Secure active runes and gank midlane if the situation allows.",
+    textMessage: `Secure active runes and use the portals to gank other lanes.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -4098,8 +4108,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Earth Spirit",
     audioFile: "ownHero/EarthSpirit_9_AghanimsShard",
-    messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanim's Shard at minute 15 as it is a big quality of life improvent among other things.`,
+    messageTime: 27 * 60,
+    textMessage: `Pick up Aghanims Shard with max Geomagnetic Grip to save allied heroes.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -4550,7 +4560,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Enchantress",
-    audioFile: "ownHero/Enchantress_2_Nuetrals",
+    audioFile: `ownHero/Enchantress_2_Neutrals`,
     messageTime: 15,
     textMessage: "Make sure the nearby neutral camps are unblocked so you can use Enchant.",
     audience: [Audience.ALL],
@@ -4591,7 +4601,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Enchantress",
-    audioFile: "ownHero/Enchantress_5_Tanky",
+    audioFile: `ownHero/Enchantress_5_Break`,
     messageTime: [10 * 60 + 30, 20 * 60 + 30],
     textMessage:
       "Break effects and healing reduction are problematic but you can counter them with items or playstyle adjustments.",
@@ -5722,7 +5732,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Jakiro",
     audioFile: "ownHero/Jakiro_2_Tanky",
     messageTime: 15,
-    textMessage: "Jakiro is tanky so look to play ahead of your core as much as you can.",
+    textMessage: `Jakiro is tanky, so look to soak up damage for your core in the lane.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -5741,7 +5751,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_4_DefendTowers",
     messageTime: [8 * 60, 14 * 60],
     textMessage:
-      "Jakiro is great at defending towers due to Macropyre and your cores can splitpush in meantime.",
+      `Jakiro is great at defending towers due to Macropyre and your cores can split push in meantime.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_macropyre" },
   },
@@ -5751,7 +5761,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_5_TowerDamage",
     messageTime: [8 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "Jakiro applies a lot of pressure on buildings by waveclearing and through Liquid Fire and Frost.",
+      `Use Liquid Fire and Frost to apply pressure on enemy buildings.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_liquid_fire" },
   },
@@ -5772,7 +5782,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening on the map, you can splitpush easily without even showing yourself.",
+      `When not much is happening on the map, you can split push easily without even showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_dual_breath" },
   },
@@ -5782,7 +5792,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 15 as it provides additional disable and damage boost.",
+      `Pick up Aghanim's Shard at minute 15 as it provides additional control and damage boost.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -6159,7 +6169,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Keeper of the Light is great at defending towers alone. Jump him or consider glyphing the wave.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "EnemyHero",
     hero: "Keeper of the Light",
     audioFile: "enemyHero/KeeperOfTheLight_5_Daytime",
@@ -6167,7 +6177,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Look to fight during night-time so Keeper of the Light can't heal his allies with Illuminate.",
     audience: [Audience.ALL],
-  },
+  }, */
   // {category: "EnemyHero", hero: "Keeper of the Light", audioFile: "enemyHero/KeeperOfTheLight_5_Recall", messageTime: [(10*60+20), (20*60+20), (30*60+20)], textMessage: "Keeper of the Light can Recall additional hero to the fight. Count on them having an extra hero.", audience: [Audience.ALL]}, |patch 7.29| NEW MESSAGE
 
   {
@@ -6671,7 +6681,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_2_SecureRanged",
     messageTime: 30,
     textMessage:
-      "Secure ranged creep lasthit with right-click or Frost Blast when your core can't.",
+      `Secure ranged creep last hit with right-click or Frost Blast when your core cant.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -6724,6 +6734,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "When not much is happening, push out sidelanes with Frost Shield and Blast.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_frost_shield" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Lich`,
+    audioFile: `ownHero/Lich_8_Jungling`,
+    messageTime: 5 * 60,
+    repeatTime: 9 * 60,
+    textMessage: `You can quickly farm the big creep in jungle camps using Sinister Gaze.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `lich_sinister_gaze` },
   },
 
   {
@@ -7832,7 +7852,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Look to Dispose an enemy in direction of your allies or to slow more enemies on landing.`,
     audience: [Audience.ALL],
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Marci",
     audioFile: "ownHero/Marci_2_Dispose2",
@@ -7841,7 +7861,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "You can Dispose an ally out of trouble, even from spells like Chronosphere or Black Hole.",
     audience: [Audience.ALL],
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Marci",
@@ -7888,6 +7908,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 20 * 60,
     textMessage: "Unleash and Sidekick are great tools for killing Roshan.",
     audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Marci`,
+    audioFile: `ownHero/Marci_8_Sidekick`,
+    messageTime: 13 * 60,
+    textMessage: `Look to play with one of your cores with Sidekick to get kills on the map.`,
+    audience: [Audience.ROLE_SUPPORT],
   },
 
   {
@@ -9670,7 +9698,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Nyx is a fairly weak laner. Focus on creep equilibrium, pulling and securing runes for midlaner.",
     audience: [Audience.ROLE_SUPPORT],
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Nyx Assassin",
     audioFile: "ownHero/NyxAssassin_2_ManaBurnLane",
@@ -9678,7 +9706,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `You can skill Mana Burn on level 2 or 4 if laning against an intelligence hero that harasses a lot with spells.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_mana_burn" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Nyx Assassin",
@@ -9717,7 +9745,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_vendetta" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Nyx Assassin",
     audioFile: "ownHero/NyxAssassin_7_ManaBurnFrequently",
@@ -9727,7 +9755,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Mana Burn frequently in the fights. Intelligence heroes will take more damage. Other types will run out of mana quicker.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_mana_burn" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Nyx Assassin",
@@ -9736,6 +9764,23 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Pick up Aghanim's Scepter as it improves most of your spells among other things.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Nyx Assassin`,
+    audioFile: `ownHero/NyxAssassin_9_MindFlare`,
+    messageTime: [13 * 60 + 15, 28 * 60],
+    textMessage: `Remember to use Mind Flare only after you have used all your other damage dealing spells and items.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `nyx_assassin_jolt` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Nyx Assassin`,
+    audioFile: `ownHero/NyxAssassin_10_Roaming`,
+    messageTime: [7 * 60 + 15],
+    textMessage: `Use portals to roam between lanes and get kills with your Impale and Carapace setup.`,
+    audience: [Audience.ALL],
   },
 
   {
@@ -9747,14 +9792,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Be careful not to use a major damaging spell when Spiked Carapace is on or Nyx Assassin is about to use it.",
     audience: [Audience.ALL],
   },
-  {
+/*   {
     category: "EnemyHero",
     hero: "Nyx Assassin",
     audioFile: "enemyHero/NyxAssassin_2_StickManaBoots",
     messageTime: 40,
     textMessage: "To counter Nyx Assassin's mana burn, get a Magic Stick or Arcane Boots.",
     audience: [Audience.ALL],
-  },
+  }, */
   {
     category: "EnemyHero",
     hero: "Nyx Assassin",
@@ -9768,7 +9813,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Nyx Assassin",
     audioFile: "enemyHero/NyxAssassin_4_Detection",
     messageTime: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
-    textMessage: "Carry detection on multiple heros.",
+    textMessage: `Carry detection on multiple heroes.`,
     audience: [Audience.ALL],
   },
   {
@@ -9782,10 +9827,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     hero: "Nyx Assassin",
-    audioFile: "enemyHero/NyxAssassin_6_ManaBurn",
+    audioFile: `enemyHero/NyxAssassin_6_MindFlare`,
     messageTime: 12 * 60,
     textMessage:
-      "Avoid buying too many intelligence giving items against Nyx Assassin's Mana Burn.",
+      `Avoid buying too many intelligence giving items against Nyx Assassins Mind Flare.`,
     audience: [Audience.ALL],
   },
 
@@ -9828,9 +9873,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Ogre Magi",
-    audioFile: "ownHero/OgreMagi_5_Squishy",
-    messageTime: 15 * 60,
-    textMessage: "You become a lot squishier as the game progresses, so don't play too aggressive.",
+    audioFile: `ownHero/OgreMagi_5_Tankiness`,
+    messageTime: 35 * 60,
+    textMessage: `Look to play in the front and soak up damage to make use of your level 20 talent.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -9850,7 +9895,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/OgreMagi_1_PhysicalDamage",
     messageTime: -15,
     textMessage:
-      "Physical damage doesn't do much against Ogre as he has high starting armor and HP regeneration. Either ignore him or try to inflict a lot of damage in a short period of time",
+      `Physical damage doesn't do much against Ogre as he has high starting armor. Either ignore him or try to inflict a lot of damage in a short period of time.`,
     chatMessage:
       "Ogre is resistant to physical damage. Either ignore him or try to inflict a lot of damage quickly",
     audience: [Audience.IN_LANE],
@@ -11224,7 +11269,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Pugna",
     audioFile: "ownHero/Pugna_2_DecrepifyForLasthits",
     messageTime: 60,
-    textMessage: "Use Decrepify to ruin lasthits for the opponents.",
+    textMessage: `Use Decrepify to ruin last hits for the opponents.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pugna_decrepify" },
   },
@@ -11285,6 +11330,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Place Nether Ward close enough to opponents but out of their sight.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "pugna_nether_ward" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Pugna`,
+    audioFile: `ownHero/Pugna_9_DecrepifySave2`,
+    messageTime: [21 * 60 + 45, 32 * 60 + 45],
+    textMessage: `You can Decrepify yourself or anyone within range while channeling Life Drain.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `pugna_decrepify` },
   },
 
   {
@@ -12392,7 +12446,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 30 * 60,
     repeatTime: 20 * 60,
     textMessage:
-      "Aghanim's Scepter and a Refresher Orb in late game, allow you to breach high ground and end the game.",
+      `Aghanim's Scepter and a Refresher Orb in late game allow you to breach high ground and end the game.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Shadow Shaman`,
+    audioFile: `ownHero/ShadowShaman_9_Roaming`,
+    messageTime: 7 * 60 + 15,
+    textMessage:
+      `Use the portals to move around the map and setup kills with your lengthy disables.`,
     audience: [Audience.ALL],
   },
 
@@ -12411,7 +12474,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ShadowShaman_2_DisablingSpells",
     messageTime: 30,
     textMessage:
-      "Shadow Shaman has long lasting but short cast range disables. Keep distance from him.",
+      `Shadow Shaman has long lasting stuns but short cast range disables. Keep distance from him.`,
     audience: [Audience.ALL],
   },
   {
