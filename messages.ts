@@ -103,6 +103,7 @@ export function getOwnHeroMessagesForRoles(
 
 export const bountyRuneRepeatTime = 3 * 60;
 export const powerRuneRepeatTime = 2 * 60;
+export const wisdomRuneRepeatTime = 7 * 60;
 
 /**
  *
