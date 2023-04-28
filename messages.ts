@@ -163,10 +163,15 @@ export enum Audience {
   IN_LANE = "InLane", // Players playing against the hero in the lane get messages
 }
 
+/**
+ * The available message categories.
+ *
+ */
 export enum ECagtegories {
   BountyRunes = "BountyRunes", // inclused healtin lotus
   WaterRunes = "WaterRunes",
   PowerRunes = "PowerRunes",
+  Tormentor = "Tormentor",
   Stacking = "Stacking",
   Pulling = "Pulling",
   NeutralItems = "NeutralItems",
@@ -190,6 +195,7 @@ export interface DotaCoachMessage {
     | "BountyRunes" // inclused healtin lotus
     | "WaterRunes"
     | "PowerRunes"
+    | "Tormentor"
     | "Stacking"
     | "Pulling"
     | "NeutralItems"
@@ -289,6 +295,22 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 7 * 60 - 10,
     repeatTime: 7 * 60,
     textMessage: "Wisdom rune will appear soon",
+    audience: [Audience.ALL],
+  },
+
+  // Tormentor - Added in patch 7.33
+  {
+    category: "Tormentor",
+    audioFile: "general/TormentorSpawn",
+    messageTime: 20 * 60 - 20,
+    textMessage: "Tormentor will spawn soon",
+    audience: [Audience.ALL],
+  },
+  {
+    category: "Tormentor",
+    audioFile: "general/TormentorRespawn",
+    messageTime: 32 * 60 - 10,
+    textMessage: "Check if Tormentor respawned",
     audience: [Audience.ALL],
   },
 
@@ -1398,10 +1420,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Bane`,
     audioFile: `ownHero/Bane_9_AghsFiendsGrip`,
     messageTime: 32 * 60,
-    textMessage:
-      `Once you have Aghanims Scepter, you can cancel Fiends Grip channel with your hero without interrupting the ability.`,
+    textMessage: `Once you have Aghanims Scepter, you can cancel Fiends Grip channel with your hero without interrupting the ability.`,
     audience: [Audience.ALL],
-	image: { type: `item`, name: `ultimate_scepter` },
+    image: { type: `item`, name: `ultimate_scepter` },
   },
 
   {
@@ -2876,8 +2897,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CrystalMaiden_6_AvoidShowing",
     messageTime: 10 * 60 + 15,
     repeatTime: 8 * 60,
-    textMessage:
-      `Avoid showing yourself at the start of the fight. Keep distance and spam Crystal Nova, Frostbite, and use items.`,
+    textMessage: `Avoid showing yourself at the start of the fight. Keep distance and spam Crystal Nova, Frostbite, and use items.`,
     audience: [Audience.ALL],
   },
   {
@@ -2886,8 +2906,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CrystalMaiden_7_DontUlt",
     messageTime: 16 * 60 + 15,
     repeatTime: 8 * 60,
-    textMessage:
-      `Dont rush with using Freezing Field in fights unless you can support it with Aghanims Shard and Glimmer Cape.`,
+    textMessage: `Dont rush with using Freezing Field in fights unless you can support it with Aghanims Shard and Glimmer Cape.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_freezing_field" },
   },
@@ -2896,8 +2915,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Crystal Maiden`,
     audioFile: `ownHero/CrystalMaiden_8_Roaming`,
     messageTime: 7 * 60 + 15,
-    textMessage:
-      `Use the portals to roam around the map and set up kills with your control spells.`,
+    textMessage: `Use portals to roam around the map and set up kills with your control spells.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `crystal_maiden_frostbite` },
   },
@@ -2906,8 +2924,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Crystal Maiden`,
     audioFile: `ownHero/CrystalMaiden_9_AghsShardUltimate`,
     messageTime: 19 * 60 + 15,
-    textMessage:
-      `Remember to use Boots of Bearing to gain movespeed during Freezing Field with Aghamins Shard.`,
+    textMessage: `Remember to use Boots of Bearing to gain movespeed during Freezing Field with Aghamins Shard.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `boots_of_bearing` },
   },
@@ -2959,8 +2976,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Crystal Maiden",
     audioFile: "enemyHero/CrystalMaiden_5_FreezingField",
     messageTime: [17 * 60 + 15, 27 * 60 + 15, 37 * 60 + 15, 47 * 60 + 17],
-    textMessage:
-      `Look to interrupt the Crystal Maiden Freezing Field in fights. She will try to protect herself with Glimmer Cape or BKB`,
+    textMessage: `Look to interrupt the Crystal Maiden Freezing Field in fights. She will try to protect herself with Glimmer Cape or BKB`,
     chatMessage:
       "Disrupt Chrystal Maiden's Freezing Field channeling in fights. She might use with Glimmer Cape or BKB",
     audience: [Audience.ALL],
@@ -3350,8 +3366,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Dazzle",
     audioFile: "ownHero/Dazzle_5_ActivatableItems",
     messageTime: [6 * 60 + 15, 14 * 60 + 15, 22 * 60 + 15],
-    textMessage:
-      `Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.`,
+    textMessage: `Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_bad_juju" },
   },
@@ -3389,10 +3404,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Dazzle`,
     audioFile: `ownHero/Dazzle_9_HandofMidas`,
     messageTime: 13 * 60 + 15,
-    textMessage:
-      `Use Hand of Midas as often as you can with the active of Bad Juju.`,
+    textMessage: `Use Hand of Midas as often as you can with the active of Bad Juju.`,
     audience: [Audience.ALL],
-	image: { type: `item`, name: `hand_of_midas` },
+    image: { type: `item`, name: `hand_of_midas` },
   },
 
   {
@@ -4103,8 +4117,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Earth Spirit",
     audioFile: "ownHero/EarthSpirit_5_Roll",
     messageTime: 45,
-    textMessage:
-      `Ideally roll from the fog when an opponent is somewhat stationary, for example when going for last hit.`,
+    textMessage: `Ideally roll from the fog when an opponent is somewhat stationary, for example when going for last hit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "earth_spirit_rolling_boulder" },
   },
@@ -4113,7 +4126,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Earth Spirit",
     audioFile: `ownHero/EarthSpirit_6_Roaming`,
     messageTime: [5 * 60 + 30, 7 * 60 + 30, 9 * 60 + 30],
-    textMessage: `Secure active runes and use the portals to gank other lanes.`,
+    textMessage: `Secure active runes and use portals to gank other lanes.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -4995,11 +5008,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: `OwnHero`,
-    hero: `Grimstroke`
+    hero: `Grimstroke`,
     audioFile: `ownHero/Grimstroke_7_Roaming`,
     messageTime: 7 * 60 + 15,
-    textMessage:
-      `Use the portals to roam around the map and set up kills with your control spells.`,
+    textMessage: `Use portals to roam around the map and set up kills with your control spells.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `grimstroke_spirit_walk` },
   },
@@ -5791,8 +5803,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Jakiro",
     audioFile: "ownHero/Jakiro_4_DefendTowers",
     messageTime: [8 * 60, 14 * 60],
-    textMessage:
-      `Jakiro is great at defending towers due to Macropyre and your cores can split push in meantime.`,
+    textMessage: `Jakiro is great at defending towers due to Macropyre and your cores can split push in meantime.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_macropyre" },
   },
@@ -5801,8 +5812,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Jakiro",
     audioFile: "ownHero/Jakiro_5_TowerDamage",
     messageTime: [8 * 60 + 15, 14 * 60 + 15],
-    textMessage:
-      `Use Liquid Fire and Frost to apply pressure on enemy buildings.`,
+    textMessage: `Use Liquid Fire and Frost to apply pressure on enemy buildings.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_liquid_fire" },
   },
@@ -5822,8 +5832,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_7_Splitpush",
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
-    textMessage:
-      `When not much is happening on the map, you can split push easily without even showing yourself.`,
+    textMessage: `When not much is happening on the map, you can split push easily without even showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_dual_breath" },
   },
@@ -5832,8 +5841,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Jakiro",
     audioFile: "ownHero/Jakiro_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
-    textMessage:
-      `Pick up Aghanim's Shard at minute 15 as it provides additional control and damage boost.`,
+    textMessage: `Pick up Aghanim's Shard at minute 15 as it provides additional control and damage boost.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -6721,8 +6729,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Lich",
     audioFile: "ownHero/Lich_2_SecureRanged",
     messageTime: 30,
-    textMessage:
-      `Secure ranged creep last hit with right-click or Frost Blast when your core cant.`,
+    textMessage: `Secure ranged creep last hit with right-click or Frost Blast when your core cant.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7893,7 +7900,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Look to Dispose an enemy in direction of your allies or to slow more enemies on landing.`,
     audience: [Audience.ALL],
   },
-/*   {
+  /*   {
     category: "OwnHero",
     hero: "Marci",
     audioFile: "ownHero/Marci_2_Dispose2",
@@ -9833,7 +9840,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Be careful not to use a major damaging spell when Spiked Carapace is on or Nyx Assassin is about to use it.",
     audience: [Audience.ALL],
   },
-/*   {
+  /*   {
     category: "EnemyHero",
     hero: "Nyx Assassin",
     audioFile: "enemyHero/NyxAssassin_2_StickManaBoots",
@@ -9870,8 +9877,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Nyx Assassin",
     audioFile: `enemyHero/NyxAssassin_6_MindFlare`,
     messageTime: 12 * 60,
-    textMessage:
-      `Avoid buying too many intelligence giving items against Nyx Assassins Mind Flare.`,
+    textMessage: `Avoid buying too many intelligence giving items against Nyx Assassins Mind Flare.`,
     audience: [Audience.ALL],
   },
 
@@ -9935,8 +9941,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Ogre Magi",
     audioFile: "enemyHero/OgreMagi_1_PhysicalDamage",
     messageTime: -15,
-    textMessage:
-      `Physical damage doesn't do much against Ogre as he has high starting armor. Either ignore him or try to inflict a lot of damage in a short period of time.`,
+    textMessage: `Physical damage doesn't do much against Ogre as he has high starting armor. Either ignore him or try to inflict a lot of damage in a short period of time.`,
     chatMessage:
       "Ogre is resistant to physical damage. Either ignore him or try to inflict a lot of damage quickly",
     audience: [Audience.IN_LANE],
@@ -12486,8 +12491,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowShaman_8_Items",
     messageTime: 30 * 60,
     repeatTime: 20 * 60,
-    textMessage:
-      `Aghanim's Scepter and a Refresher Orb in late game allow you to breach high ground and end the game.`,
+    textMessage: `Aghanim's Scepter and a Refresher Orb in late game allow you to breach high ground and end the game.`,
     audience: [Audience.ALL],
   },
   {
@@ -12495,8 +12499,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Shadow Shaman`,
     audioFile: `ownHero/ShadowShaman_9_Roaming`,
     messageTime: 7 * 60 + 15,
-    textMessage:
-      `Use the portals to move around the map and setup kills with your lengthy disables.`,
+    textMessage: `Use portals to move around the map and setup kills with your lengthy disables.`,
     audience: [Audience.ALL],
   },
 
@@ -12514,8 +12517,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Shadow Shaman",
     audioFile: "enemyHero/ShadowShaman_2_DisablingSpells",
     messageTime: 30,
-    textMessage:
-      `Shadow Shaman has long lasting stuns but short cast range disables. Keep distance from him.`,
+    textMessage: `Shadow Shaman has long lasting stuns but short cast range disables. Keep distance from him.`,
     audience: [Audience.ALL],
   },
   {
@@ -15970,8 +15972,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Vengeful Spirit`,
     audioFile: `ownHero/VengefulSpirit_6_AghsShard`,
     messageTime: 14 * 60 + 55,
-    textMessage:
-      `Pick up Aghanims Shard at the 15 minute mark as it massively improves your impact in teamfights.`,
+    textMessage: `Pick up Aghanims Shard at the 15 minute mark as it massively improves your impact in teamfights.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `aghanims_shard` },
   },
@@ -16955,8 +16956,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/WinterWyvern_4_ArcticBurn2",
     messageTime: 2 * 60 + 30,
     repeatTime: 10 * 60,
-    textMessage:
-      `It is good to play close to trees or cliffs in dangerous spots on the map, so you can escape with Arctic Burn.`,
+    textMessage: `It is good to play close to trees or cliffs in dangerous spots on the map, so you can escape with Arctic Burn.`,
     audience: [Audience.ALL],
   },
   //@Alex: What doy ou mean be "might be gone"? Might die? Might want to leave the fight?
