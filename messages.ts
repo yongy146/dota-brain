@@ -851,9 +851,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/AncientAppartion_5_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Grab Aghanim's Shard at 15 minute mark as it allows you to clear waves, deal additional damage in the fights and cancel Blink Daggers.",
+      `Grab Aghanims Shard at 15 minute mark as it gives you a massive area of effect stun with Ice Blast.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Ancient Apparition`,
+    audioFile: `ownHero/AncientAppartion_6_Farming`,
+    messageTime: 16 * 60,
+    textMessage:
+      `When not much is happening on the map, use Ice Vortex to farm creep waves without showing yourself.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `ancient_apparition_ice_vortex` },
   },
 
   {
@@ -2069,10 +2079,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Bristleback",
-    audioFile: "ownHero/Bristleback_4_StackCamps",
+    audioFile: `ownHero/Bristleback_4_Aggression`,
     messageTime: [6 * 60 + 45, 9 * 60 + 45, 12 * 60 + 45],
     textMessage:
-      "Bristleback is not the best at moving around and ganking. Rather, make the opponents come to you by being aggressive.",
+      `Apply aggression on the map as Bristleback by taking and defending towers, as well as rotating through portals.`,
     audience: [Audience.ALL],
   },
   {
@@ -3266,7 +3276,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 8 * 60 + 15,
     textMessage:
-      "Play seperately from your team, push out lanes and mask team's smoke moves as you can connect to your team with ulty.",
+      `Play seperately from your team, push out lanes and mask team's smoke moves as you can connect to your team with ultimate.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "dawnbreaker_solar_guardian" },
   },
@@ -8532,6 +8542,24 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "mirana_invis" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Mirana`,
+    audioFile: `ownHero/Mirana_6_Neutrals`,
+    messageTime: 2 * 60,
+    textMessage: `Use Arrow to one shot hero controlled creeps. Especially useful against Chen, Enchantress, and Beastmaster.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `mirana_arrow` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Mirana`,
+    audioFile: `ownHero/Mirana_7_Roaming`,
+    messageTime: 7 * 60 + 15,
+    textMessage: `Use the portals to roam around the map and set up kills with your lockdown.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `mirana_arrow` },
+  },
 
   {
     category: "EnemyHero",
@@ -10333,7 +10361,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Pangolier",
     audioFile: "ownHero/Pangolier_1_CrashLasthits",
     messageTime: 10,
-    textMessage: "Secure lasthits and damage the opponents at the same time with Shield Crash.",
+    textMessage: `Secure last hits and damage the opponents at the same time with Shield Crash.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pangolier_shield_crash" },
   },
@@ -10400,7 +10428,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Pangolier",
     audioFile: "ownHero/Pangolier_8_Roshan2",
     messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanims Shard at minute 15 as it allows you to escape roots and leashes, among other things.`,
+    textMessage: `Pick up Aghanims Shard at minute 15 as it gives you another survivability tool.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -10454,7 +10482,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Pangolier_6_SpellImmunityPiercing",
     messageTime: 12 * 60 + 20,
     textMessage:
-      "Spell immunity piercing spells and items are great at dealing with Pangolier's Rolling Thunder.",
+      `Spell immunity piercing stuns are great at dealing with Pangolier's Rolling Thunder.`,
     audience: [Audience.ALL],
   },
 
@@ -10465,6 +10493,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 30,
     textMessage:
       "Items and spells that can dispel enemies are great at removing Shield Crash buff from Pangolier.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Pangolier`,
+    audioFile: `enemyHero/Pangolier_8_CounterRoll`,
+    messageTime: 9 * 60 + 30,
+    textMessage:
+      `When Pangolier is about to hit you with Rolling Thunder, stand right at the edge of a high ground or low ground to avoid getting chain stunned.`,
     audience: [Audience.ALL],
   },
 
@@ -16220,8 +16257,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Viper",
     audioFile: "ownHero/Viper_7_AghanimsShard_v2",
     messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanims Shard around minute 15 to further increase your dps and building damage.`,
-    audience: [Audience.ROLE_OFFLANE],
+    textMessage: `Pick up Aghanims Shard later on to further increase your dps and building damage.`,
+    audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
   {
@@ -16230,17 +16267,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: `ownHero/Viper_8_Bloodstone`,
     messageTime: 18 * 60 + 50,
     textMessage: `Once you have Aghanims Scepter and Bloodstone, look to take fights and objectives around the map.`,
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ALL],
     image: { type: `item`, name: `travel_boots` },
   },
   {
     category: `OwnHero`,
     hero: `Viper`,
-    audioFile: `ownHero/Viper_9_EternalShroud`,
+    audioFile: `ownHero/Viper_9_Aggression`,
     messageTime: 25 * 60,
-    textMessage: `Start running at enemy heroes with your Aghanims Scepter, Bloodstone and Eternal Shroud.`,
-    audience: [Audience.ROLE_CORE],
-    image: { type: `item`, name: `eternal_shroud` },
+    textMessage: `Start running at enemy heroes with your Aghanims Scepter, Bloodstone and Cloak.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `bloodstone` },
   },
 
   {
@@ -16292,7 +16329,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Visage",
     audioFile: "ownHero/Visage_1_WeakLaner",
     messageTime: -30,
-    textMessage: "Visage is fairly weak until level 6. Play for lasthits and lane control.",
+    textMessage: `Visage is fairly weak until level 6. Play for last hits and lane control.`,
     audience: [Audience.ALL],
   },
   {
