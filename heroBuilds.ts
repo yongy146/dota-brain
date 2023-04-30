@@ -3570,7 +3570,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clinkz: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3582,18 +3582,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "clinkz_tar_bomb", // 1
-          "clinkz_strafe", // 2
+          "clinkz_death_pact", // 2
           "clinkz_tar_bomb", // 3
           "clinkz_strafe", // 4
           "clinkz_tar_bomb", // 5
-          "clinkz_death_pact", // 6
-          "clinkz_wind_walk", // 7
-          "clinkz_tar_bomb", // 8
+          "clinkz_wind_walk", // 6
+          "clinkz_tar_bomb", // 7
+          "clinkz_strafe", // 8
           "clinkz_strafe", // 9
           "special_bonus_unique_clinkz_1", // 10
-          "clinkz_death_pact", // 11
+          "clinkz_strafe", // 11
           "clinkz_wind_walk", // 12
-          "clinkz_strafe", // 13
+          "clinkz_death_pact", // 13
           "clinkz_death_pact", // 14
           "special_bonus_attack_range_75", // 15
           "clinkz_death_pact", // 16
@@ -3605,7 +3605,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_clinkz_4", // 25
+          "special_bonus_unique_clinkz_3", // 25
         ],
         items: {
           starting: [
@@ -3617,47 +3617,46 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
           ],
           early_game: [
-            "maelstrom",
-            "power_treads",
-            "magic_wand",
             "falcon_blade",
-            "wraith_band",
+            "power_treads",
+            "maelstrom",
+            "magic_wand",
           ],
           mid_game: [
             "dragon_lance",
             "gungir",
-            "hurricane_pike",
             "aghanims_shard",
             "lesser_crit",
-            "black_king_bar",
           ],
           late_game: [
-            "nullifier",
-            "greater_crit",
-            "satanic",
-            "bloodthorn",
             "sheepstick",
+            "greater_crit",
             "skadi",
+            "hurricane_pike",
+            "bloodthorn",            
           ],
           situational: [
             "infused_raindrop",
+            "nullifier",
             "black_king_bar",
             "monkey_king_bar",
             "sphere",
             "ultimate_scepter",
             "orchid",
+            "desolator"
           ],
-          core: ["gungir", "power_treads", "dragon_lance", "black_king_bar"],
+          core: ["gungir", "black_king_bar", "dragon_lance", "greater_crit"],
           neutral: [
-            "arcane_ring",
-            //"possessed_mask", Removed in 7.33
+            "lance_of_pursuit",
+            "faded_broach",
             "grove_bow",
             "ring_of_aquila",
             "enchanted_quiver",
-            "paladin_sword",
+            "elven_tunic",
             "mind_breaker",
             "spell_prism",
             "desolator_2",
+            "ex_machina",
             "apex",
           ],
         },
@@ -3689,16 +3688,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       laning_phase: {
         all: [
           { item: "armor", info: "Buy armor items" },
-          {
-            item: "ring_of_regen",
-            info: "One or two, for sustain on the lane against the pressure from the Clinkz",
-          },
+          { item: "regen", info: "As a support extra consumables or as a core items that provide regen."}
         ],
         support: [{ item: "ward_sentry" }, { item: "dust" }],
         core: [{ item: "ring_of_health" }],
       },
       mid_game: {
-        all: [],
+        all: [ { item: "blink", info: "On heroes that have disables, Blink is great at catching clinkz."}],
         support: [
           { item: "SentryDust" },
           { item: "glimmer_cape" },
