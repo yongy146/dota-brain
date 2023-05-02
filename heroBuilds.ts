@@ -4815,12 +4815,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Death Prophet": {
-    gameplay_version: `7.32e`,
+    gameplay_version: `7.33`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_id: 1640803776,
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
@@ -4828,14 +4828,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "death_prophet_carrion_swarm", // 1
           "death_prophet_spirit_siphon", // 2
-          "death_prophet_carrion_swarm", // 3
-          "death_prophet_spirit_siphon", // 4
-          `death_prophet_carrion_swarm`, // 5
+          "death_prophet_spirit_siphon", // 3
+          "death_prophet_carrion_swarm", // 4
+          `death_prophet_spirit_siphon`, // 5
           "death_prophet_exorcism", // 6
-          `death_prophet_carrion_swarm`, // 7
+          `death_prophet_spirit_siphon`, // 7
           "death_prophet_silence", // 8
-          `death_prophet_spirit_siphon`, // 9
-          `death_prophet_spirit_siphon`, // 10
+          `death_prophet_carrion_swarm`, // 9
+          `death_prophet_carrion_swarm`, // 10
           `special_bonus_magic_resistance_12`, // 11 Talent
           "death_prophet_exorcism", // 12
           "death_prophet_silence", // 13
@@ -4845,7 +4845,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "death_prophet_exorcism", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_death_prophet_4", // 20
+          "special_bonus_unique_death_prophet_3", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -4855,25 +4855,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "faerie_fire",
+            "branches",
             `branches`,
             `branches`,
             "circlet",
-            "mantle",
-            `ward_observer`,
+            "slippers",
           ],
           early_game: [
-            `bottle`,
-            `null_talisman`,
-            `null_talisman`,
-            `boots`,
+            `wraith_band`,
+            `arcane_boots`,
             `magic_wand`,
             `infused_raindrop`,
+            "mekansm",
           ],
           mid_game: [
-            "cyclone",
-            "travel_boots",
-            "black_king_bar",
+            "guardian_greaves",
             "kaya_and_sange",
             "aghanims_shard",
           ],
@@ -4882,39 +4878,33 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `octarine_core`,
             `refresher`,
             `aeon_disk`,
-            `ultimate_scepter`,
+            `sheepstick`,
           ],
           situational: [
-            `power_treads`,
             `blink`,
-            `solar_crest`,
             `ghost`,
             `heavens_halberd`,
             `assault`,
-            `eternal_shroud`,
+            `pipe`,
             `sphere`,
-            `arcane_blink`,
-            `travel_boots_2`,
           ],
           core: [
-            "cyclone",
-            "travel_boots",
-            "black_king_bar",
+            "gaurdian_greaves",
             "kaya_and_sange",
             `aghanims_shard`,
-            `shivas_guard`,
           ],
           neutral: [
             "arcane_ring",
-            `mysterious_hat`,
+            `faded_broach`,
             `bullwhip`,
             `dragon_scale`,
+            "eye_of_vizier",
             "quickening_charm",
-            //`black_powder_bag`,
+            `defiant_shell`,
             `spell_prism`,
-            //`flicker`,
             `mirror_shield`,
-            `demonicon`,
+            `force_boots`,
+            "ex_machina",
           ],
         },
       },
