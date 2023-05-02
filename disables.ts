@@ -68,6 +68,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Level 25 talent makes Cold Feet be AoE and is cast in "area".
+	// The Aghanim's Shard on Ancient Apparition gives an Area stun on Ice Blast.
   ],
   "Anti-Mage": [
     {
@@ -223,7 +224,9 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Dazzle: [],
+  Dazzle: [
+	// Dazzle Aghanim's Shard gives him a Hero targeted Hex on Poison Touch.
+  ],
   "Death Prophet": [
     {
       skill: "death_prophet_silence",
@@ -400,7 +403,9 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Io: [],
+  Io: [
+	// Io Aghanim's Shard gives it an area stun on Tether.
+  ],
   Juggernaut: [],
   "Keeper of the Light": [
     {
@@ -934,15 +939,14 @@ export const disables: IDisables = {
     },
   ],
   Venomancer: [],
-  Viper: [
-    // Level 25 talent "Nethertoxin Silences" makes Nethertoxin be an area silence.
-  ],
+  Viper: [],
   Visage: [
     {
       skill: "visage_summon_familiars",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
+	// The Aghanim's Shard on Visage gives him another Area stun with self Stone Form.
   ],
   "Void Spirit": [
     {
