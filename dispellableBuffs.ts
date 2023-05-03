@@ -40,7 +40,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   "Drow Ranger": [],
   "Earth Spirit": [],
   Earthshaker: ["earthshaker_enchant_totem"],
-  "Elder Titan": [`elder_titan_ancestral_spirit`],
+  `Elder Titan`: [`elder_titan_ancestral_spirit`],
   "Ember Spirit": ["ember_spirit_flame_guard"],
   Enchantress: [],
   Enigma: [],
