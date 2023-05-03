@@ -53,6 +53,13 @@ export interface IDisable {
 }
 
 export const disables: IDisables = {
+  Abaddon: [
+    {
+      skill: "abaddon_frostmourne",
+      affects: AbilityAffects.HERO,
+      disables: ["slow_move", "silence"],
+    },
+  ],
   Alchemist: [
     {
       skill: "alchemist_unstable_concoction",
@@ -68,7 +75,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Level 25 talent makes Cold Feet be AoE and is cast in "area".
-	// The Aghanim's Shard on Ancient Apparition gives an Area stun on Ice Blast.
+    // The Aghanim's Shard on Ancient Apparition gives an Area stun on Ice Blast.
   ],
   "Anti-Mage": [
     {
@@ -225,7 +232,7 @@ export const disables: IDisables = {
     },
   ],
   Dazzle: [
-	// Dazzle Aghanim's Shard gives him a Hero targeted Hex on Poison Touch.
+    // Dazzle Aghanim's Shard gives him a Hero targeted Hex on Poison Touch.
   ],
   "Death Prophet": [
     {
@@ -404,7 +411,7 @@ export const disables: IDisables = {
     },
   ],
   Io: [
-	// Io Aghanim's Shard gives it an area stun on Tether.
+    // Io Aghanim's Shard gives it an area stun on Tether.
   ],
   Juggernaut: [],
   "Keeper of the Light": [
@@ -946,7 +953,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
-	// The Aghanim's Shard on Visage gives him another Area stun with self Stone Form.
+    // The Aghanim's Shard on Visage gives him another Area stun with self Stone Form.
   ],
   "Void Spirit": [
     {
