@@ -554,7 +554,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Abaddon_1_AphoticShield",
     messageTime: 10,
     textMessage:
-      "Apply Aphotic Shield preemptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.",
+      `Apply Aphotic Shield pre emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
@@ -2797,7 +2797,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Clockwerk_2_Pray",
     messageTime: 30,
     textMessage:
-      "Play in tree lines and pray on isolated heroes as Battery Assault does all the damage to the single hero.",
+      `Play in tree lines and prey on isolated heroes as Battery Assault does all the damage to the single hero.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rattletrap_battery_assault" },
   },
@@ -3199,7 +3199,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Dark Willow",
     audioFile: "ownHero/DarkWillow_1_LastHitRange",
     messageTime: 15,
-    textMessage: "Consider using Shadow Realm to secure range creep lasthits.",
+    textMessage: `Consider using Shadow Realm to secure range creep last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "dark_willow_shadow_realm" },
   },
@@ -13397,7 +13397,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Snapfire_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Secure ranged creep lasthits with Scatteblast and damage the opponents at the same time.",
+      `Secure ranged creep last hits with Scatteblast and damage the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "snapfire_scatterblast" },
   },
@@ -13468,6 +13468,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Pick up Aghanims Shard around the 15 minute mark to provide a layer of burst to Firesnap Cookie.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Snapfire`,
+    audioFile: `ownHero/Snapfire_9_Dewarding`,
+    messageTime: [3 * 60, 13 * 60, 23 * 60, 33 * 60],
+    textMessage: `Use Lil Shredder to quickly hit enemy wards twice to deward them.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `snapfire_lil_shredder` },
   },
 
   {
@@ -15664,9 +15673,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     hero: "Treant Protector",
     audioFile: "enemyHero/TreantProtector_5_Invisible",
-    messageTime: [12 * 60, 20 * 60, 30 * 60],
+    messageTime: 15 * 60 + 30,
     textMessage:
-      "Treant Protector becomes invisible with his level10 talent. Carry detection on multiple heroes.",
+      `Treant Protector becomes invisible with his aghanims shard upgrade. Carry detection on multiple heroes.`,
     audience: [Audience.ALL],
   },
   {
@@ -16126,7 +16135,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Undying_1_DoubleDecay",
     messageTime: 15,
     textMessage:
-      "Catch both opponents on the lane with Decay and use the extra damage to harass or secure lasthits.",
+      `Catch both opponents on the lane with Decay and use the extra damage to harass or secure last hits.`,
     audience: [Audience.ROLE_SUPPORT, Audience.ROLE_OFFLANE],
     image: { type: "ability", name: "undying_decay" },
   },

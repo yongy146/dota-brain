@@ -208,7 +208,7 @@ export const disables: IDisables = {
     {
       skill: "dark_willow_cursed_crown",
       affects: AbilityAffects.HERO_AREA,
-      disables: ["root"],
+      disables: [`stun`],
     },
     {
       skill: "dark_willow_terrorize",
@@ -902,6 +902,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["root"],
     },
+	// The Aghanims Shard on Treant Protector is a hero stun with Natures Guise.
   ],
   "Troll Warlord": [
     {
