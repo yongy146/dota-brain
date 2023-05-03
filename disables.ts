@@ -198,6 +198,7 @@ export const disables: IDisables = {
   ],
   "Dark Seer": [
     // Vacuum acts as area stun(forced movement by dota2.gamepedia.com).
+	// The Aghanims Scepter gives a Hero stun with the Normal Punch ability.
   ],
   "Dark Willow": [
     {

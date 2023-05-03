@@ -3091,7 +3091,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/DarkSeer_3_Creepskip",
     messageTime: [4 * 60 + 50, 6 * 60 + 50],
     textMessage:
-      "If you can't pressure on the lane consider creepskipping and farming neutral camps nearby.",
+      `If you can't pressure on the lane consider creep skipping and farming neutral camps nearby.`,
     audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT_SOFT],
     image: { type: "ability", name: "dark_seer_ion_shell" },
   },
@@ -4486,7 +4486,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ElderTitan_5_SpiritsMovementSpeed",
     messageTime: [2 * 60, 12 * 60],
     textMessage:
-      "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
+      `Astral Spirits movement speed is equal to your heros at Astral Spirit cast, e.g. pop Boots of Bearing or Phase Boots before casting.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "elder_titan_ancestral_spirit" },
   },
@@ -10504,8 +10504,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/OutworldDestroyer_1_MeteorHammer",
     messageTime: -90,
     textMessage:
-      "Rush Meteor Hammer as it provides sustain, solo kill potential, waveclear and tower damage.",
-    audience: [Audience.ROLE_OFFLANE],
+      `Rush Meteor Hammer as it provides sustain, solo kill potential, wave clear and tower damage.`,
+    audience: [Audience.ALL],
     image: { type: "item", name: "meteor_hammer" },
   },
   {
