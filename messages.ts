@@ -4324,7 +4324,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Earthshaker_2_EnchantTotem",
     messageTime: 75,
     textMessage:
-      "Use Enchant Totem to harass opponents or secure creep lasthits, especially ranged ones.",
+      `Use Enchant Totem to harass opponents or secure creep last hits, especially ranged ones.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "earthshaker_enchant_totem" },
   },
@@ -4412,7 +4412,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Earthshaker",
     audioFile: "enemyHero/Earthshaker_5_Dagger3",
     messageTime: 15 * 60 + 15,
-    textMessage: "Earthshaker is like to have Dagger by now",
+    textMessage: `Earthshaker is likely to have Dagger by now`,
     audience: [Audience.ALL],
   },
   {
@@ -5852,6 +5852,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Io is one of the best Cheese carriers in the game as you can extract double the value through the Tether.",
     audience: [Audience.ALL],
     image: { type: "item", name: "cheese" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Io`,
+    audioFile: `ownHero/Io_10_Lotus`,
+    messageTime: [2 * 60 + 50, 5 * 60 + 50, 8 * 60 + 50, 11 * 60 + 50, 14 * 60 + 50],
+    textMessage:
+      `Grab the healing lotus to have a burst of HP and mana regen for yourself and the tethered ally.`,
+    audience: [Audience.ALL],
   },
 
   {
@@ -8408,7 +8417,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Medusa_2_SnakeManaBack",
     messageTime: 30,
     textMessage:
-      "In order to get most of the mana back, Mystic snake needs to hit opponents and ranged creep.",
+      `In order to get most of the mana back, Mystic snake needs to hit heroes and ranged creeps.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "medusa_mystic_snake" },
   },
@@ -8525,6 +8534,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "rapier" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Medusa`,
+    audioFile: `ownHero/Medusa_14_ManaPool`,
+    messageTime: [1 * 60, 3 * 60, 7 * 60, 11 * 60],
+    textMessage:
+      `Your mana pool also acts as your HP pool. So remain aware of your current mana and keep it high with clarities and lotuses.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `medusa_mana_shield` },
+  },
 
   {
     category: "EnemyHero",
@@ -8568,6 +8587,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Crimson Guard, armor items and Heaven's Halberd are great against Medusa.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Medusa`,
+    audioFile: `enemyHero/Medusa_6_LowHP`,
+    messageTime: [1 * 60, 3 * 60, 7 * 60, 11 * 60],
+    textMessage:
+      `Medusa is extremely squishy once her mana pool is gone as she has a very small HP pool.`,
     audience: [Audience.ALL],
   },
 
@@ -9175,7 +9203,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 124. Muerta
-  {
+  /* {
     category: `OwnHero`,
     hero: `Muerta`,
     audioFile: `ownHero/Muerta_1_FalconBlade`,
@@ -9183,7 +9211,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Rush Falcon Blade to spam Dead Shot for farm and lane control.`,
     audience: [Audience.ROLE_CORE],
     image: { type: `item`, name: `falcon_blade` },
-  },
+  }, */
   {
     category: `OwnHero`,
     hero: `Muerta`,
@@ -9216,7 +9244,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Muerta`,
     audioFile: `ownHero/Muerta_5_SpellImmunity`,
     messageTime: [10 * 60 + 15, 20 * 60 + 15],
-    textMessage: `Be careful not to use Pierce the Veil against spell immune heroes.`,
+    textMessage: `Be careful not to use Pierce the Veil against spell immunity and heavy magic resistance.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `muerta_pierce_the_veil` },
   },
@@ -9313,7 +9341,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Muerta`,
     audioFile: `enemyHero/Muerta_4_Bkb`,
     messageTime: 12 * 60,
-    textMessage: `Get an early BKB against Muerta to render her ulti completely useless.`,
+    textMessage: `Get an early BKB against Muerta to reduce her spell damage with Pierce the Veil.`,
     audience: [Audience.ALL],
   },
   {
@@ -11966,6 +11994,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_OFFLANE],
     image: { type: `item`, name: `aghanims_shard` },
   },
+  {
+    category: `OwnHero`,
+    hero: `Razor`,
+    audioFile: `ownHero/Razor_10_Targeting`,
+    messageTime: 18 * 60,
+    textMessage: `When you have your BKB, target the enemy carry in fights and run at them with all your spells.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `black_king_bar` },
+  },
 
   {
     category: "EnemyHero",
@@ -12177,7 +12214,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Rubick_3_WaveclearSpell",
     messageTime: [9 * 60 + 45, 12 * 60 + 45],
     textMessage:
-      "In midgame, get hold of the wave-clearing spell when the game slows down to be able to depush.",
+      `In the mid game, get hold of the wave-clearing spell when the game slows down to be able to depush.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_spell_steal" },
   },
@@ -12266,7 +12303,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Rubick_5_LotusOrb",
     messageTime: [10 * 60 + 30, 20 * 60 + 30],
     textMessage:
-      "Lotus Orb is an effective item against Rubick as both of his damage spells are targetable",
+      `Lotus Orb is an effective item against Rubick as his damage and control spells are targetable.`,
     audience: [Audience.ALL],
   },
   {
@@ -14380,20 +14417,20 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Techies",
     audioFile: "ownHero/Techies_12_AghanimsShard",
     messageTime: 14 * 60,
-    textMessage: `Pick up Aghanims Shard around minute 15 as it provides additional control in the fights.`,
+    textMessage: `Pick up Aghanims Shard in the late game for some extra damage on Reactive Tazer.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
-  /*{
+  {
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_13_ForceIntoMines",
-    messageTime: 20 * 60 + 15,
+    messageTime: 30 * 60 + 15,
     textMessage:
-      "Consider purchasing Force Staff to push opponents into mines when they try to remove them.",
+      `Consider using Force Staff on enemy heroes to push them onto high grounds where you have Proximity Mines.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "force_staff" },
-  },*/
+  },
   {
     category: `OwnHero`,
     hero: `Techies`,
@@ -14431,15 +14468,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Quell the trees in the area so you can spot Proximity mines and see Techies doing Blast Off!",
     audience: [Audience.IN_LANE],
   },*/
-  /*{
+  {
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_3_ProximityMines",
     messageTime: -40,
     textMessage:
-      "Proximity Mines explode 1.6 seconds after you hear the beep. Destroy them or move away quickly.",
+      `Proximity Mines explode 1 seconds after you hear the beep. Destroy them or move away quickly.`,
     audience: [Audience.ALL],
-  },*/
+  },
   {
     category: "EnemyHero",
     hero: "Techies",
@@ -14474,15 +14511,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Avoid walking up highground or in Roshpit without vision. You might run into mines.",
     audience: [Audience.ALL],
   },
-  /*{
+  {
     category: "EnemyHero",
     hero: "Techies",
     audioFile: "enemyHero/Techies_8_AntispellItems",
     messageTime: 12 * 60,
     textMessage:
-      "Magic resistance items, Black King Bar and Aeon Disk are great against Techies' Remote Mines.",
+      `Magic resistance items, Black King Bar and Aeon Disk are great against Techies to avoid getting bursted.`,
     audience: [Audience.ALL],
-  },*/
+  },
   // {category: "EnemyHero", hero: "Techie", audioFile: "enemyHero/Techie_9_Necrobook 3", messageTime: (12*60+10), textMessage: "Consider buying Necrobook level3 on someone for true sight.", audience: [Audience.ALL]}, |patch 7.29| MESSAGE REMOVED
   /*{
     category: "EnemyHero",
@@ -14501,6 +14538,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Buy a Gem of True Sight around 20min when you start grouping up as team.",
     audience: [Audience.ALL],
   },*/
+  {
+    category: `EnemyHero`,
+    hero: `Techies`,
+    audioFile: `enemyHero/Techies_12_DodgeStickyBomb`,
+    messageTime: [15, 2 * 60, 5 * 60, 9 * 60],
+    textMessage:
+      `Make it tricky for Techies to land Sticky Bombs on you by making sharp turns.`,
+    audience: [Audience.ALL],
+  },
 
   // 100. Templar Assassin
   {
@@ -14872,7 +14918,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tidehunter_1_SecureLasthits",
     messageTime: 15,
     textMessage:
-      "Use Anchor Smash to secure lasthits and damage the opponents at the same time.",
+      `Use Anchor Smash to secure last hits and damage the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "tidehunter_anchor_smash" },
   },
@@ -17037,6 +17083,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Pick up Aghanim's Shard around minute 15 as it improves your waveclear and healing significantly.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Warlock`,
+    audioFile: `ownHero/Warlock_7_Farming`,
+    messageTime: 16 * 60,
+    textMessage: `Once you have Aghanim Shard, you can use Upheavel to farm creep waves from a distance.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `warlock_upheaval` },
   },
 
   {
