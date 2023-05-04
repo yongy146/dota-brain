@@ -860,7 +860,7 @@ export const disables: IDisables = {
     {
       skill: "techies_suicide",
       affects: AbilityAffects.AREA,
-      disables: ["silence"],
+      disables: [`stun`],
     },
     /*{
       skill: "techies_stasis_trap",
@@ -880,6 +880,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
+	// The Aghanims Shard gives Tidehunter another Area stun with Tendrils of the Deep.
   ],
   Timbersaw: [],
   Tinker: [
