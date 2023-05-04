@@ -298,7 +298,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `blood_grenade`,
             "enchanted_mango",
             `orb_of_venom`,
-			`branches`,
+            `branches`,
             "ward_observer",
             "ward_sentry",
           ],
@@ -328,7 +328,104 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `spirit_vessel`,
             `heavens_halberd`,
             `guardian_greaves`,
-			`aether_lens`,
+            `aether_lens`,
+            `crimson_guard`,
+            `blade_mail`,
+            `wind_waker`,
+            "aghanims_shard",
+            `travel_boots`,
+          ],
+          core: [
+            `tranquil_boots`,
+            `pavise`,
+            `boots_of_bearing`,
+            `force_staff`,
+            "ultimate_scepter",
+          ],
+          neutral: [
+            `faded_broach`,
+            `unstable_wand`,
+            `pupils_gift`,
+            `dragon_scale`,
+            `ogre_seal_totem`,
+            `quickening_charm`,
+            "spy_gadget",
+            `martyrs_plate`,
+            "force_field",
+            `giants_ring`,
+          ],
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2971195954",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "abaddon_aphotic_shield",
+          "abaddon_frostmourne" /* equals to `curse of avernus` */,
+          `abaddon_aphotic_shield`,
+          `abaddon_death_coil`,
+          "abaddon_aphotic_shield",
+          "abaddon_borrowed_time",
+          "abaddon_aphotic_shield",
+          "abaddon_death_coil",
+          "abaddon_death_coil",
+          `abaddon_death_coil`,
+          `special_bonus_strength_8`,
+          "abaddon_borrowed_time",
+          "abaddon_frostmourne",
+          "abaddon_frostmourne",
+          "special_bonus_unique_abaddon_2",
+          "abaddon_frostmourne",
+          "special_bonus_attributes",
+          "abaddon_borrowed_time",
+          "special_bonus_attributes",
+          "special_bonus_unique_abaddon",
+          "special_bonus_attributes",
+          "special_bonus_attributes",
+          "special_bonus_attributes",
+          "special_bonus_attributes",
+          "special_bonus_unique_abaddon_4",
+          //25 levels, no need for more than that as they are automatic afterwards
+        ],
+        items: {
+          starting: [
+            "tango",
+            `blood_grenade`,
+            "enchanted_mango",
+            `orb_of_venom`,
+            `branches`,
+            "ward_observer",
+            "ward_sentry",
+          ],
+          early_game: [
+            `tranquil_boots`,
+            "magic_wand",
+            `wind_lace`,
+            `infused_raindrop`,
+          ],
+          mid_game: [
+            `pavise`,
+            `boots_of_bearing`,
+            `glimmer_cape`,
+            `force_staff`,
+          ],
+          late_game: [
+            "ultimate_scepter",
+            `lotus_orb`,
+            `pipe`,
+            `overwhelming_blink`,
+          ],
+          situational: [
+            `ring_of_basilius`,
+            `solar_crest`,
+            `holy_locket`,
+            `ghost`,
+            `spirit_vessel`,
+            `heavens_halberd`,
+            `guardian_greaves`,
+            `aether_lens`,
             `crimson_guard`,
             `blade_mail`,
             `wind_waker`,
@@ -367,10 +464,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       ward_sentry: "To block or unblock a pull camp.",
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       orb_of_venom: "Helps you chase enemy heroes to apply Curse of Avernus.",
-      guardian_greaves:
-        `An incredible aura item to buff your team and provide even more sustain. Buy Arcane Boots instead of Tranquil Boots if you plan to get Greaves.`,
-      holy_locket:
-        `A situational item to further increase your healing output. It provides a burst of healing and mana on cast as well.`,
+      guardian_greaves: `An incredible aura item to buff your team and provide even more sustain. Buy Arcane Boots instead of Tranquil Boots if you plan to get Greaves.`,
+      holy_locket: `A situational item to further increase your healing output. It provides a burst of healing and mana on cast as well.`,
       tranquil_boots: `A core boots upgrade to give you some much needed HP regen and movement speed.`,
       solar_crest: `A situational item to buff one of your right-clicking cores or to debuff the target your team is focusing.`,
       ultimate_scepter:
@@ -378,7 +473,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       lotus_orb: "For reflect, dispel and armor.",
       // wraith_pact: `A core item that buffs the tankiness of your entire team.`,
       boots_of_bearing: `An incredible aura item that benefits you and your team for the attack and movement speed.`,
-	  pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
+      pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
     },
     combo: [
       `abaddon_aphotic_shield`,
@@ -775,12 +870,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wind_lace",
             `infused_raindrop`,
           ],
-          mid_game: [
-            "glimmer_cape",
-            `force_staff`,
-            `aghanims_shard`,
-            `pavise`,
-          ],
+          mid_game: ["glimmer_cape", `force_staff`, `aghanims_shard`, `pavise`],
           late_game: [
             `boots_of_bearing`,
             `ultimate_scepter`,
@@ -791,7 +881,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `urn_of_shadows`,
-			`aether_lens`,
+            `aether_lens`,
             `rod_of_atos`,
             `ethereal_blade`,
             `octarine_core`,
@@ -1486,7 +1576,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `ring_of_basilius`,
-			`pavise`,
+            `pavise`,
             `lotus_orb`,
             `ghost`,
             `aeon_disk`,
@@ -3726,7 +3816,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `special_bonus_unique_clockwerk_6`, // 25
         ],
         items: {
-          starting: [`tango`, `blood_grenade`, `wind_lace`, `enchanted_mango`, `branches`, `branches`, `ward_observer`],
+          starting: [
+            `tango`,
+            `blood_grenade`,
+            `wind_lace`,
+            `enchanted_mango`,
+            `branches`,
+            `branches`,
+            `ward_observer`,
+          ],
           early_game: [
             `ward_sentry`,
             `tranquil_boots`,
@@ -3735,7 +3833,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wind_lace`,
           ],
           mid_game: [`pavise`, `force_staff`, `glimmer_cape`, `aghanims_shard`],
-          late_game: [`ultimate_scepter`, `boots_of_bearing`, `shivas_guard`, `octarine_core`],
+          late_game: [
+            `ultimate_scepter`,
+            `boots_of_bearing`,
+            `shivas_guard`,
+            `octarine_core`,
+          ],
           situational: [
             `spirit_vessel`,
             `pipe`,
@@ -3749,7 +3852,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `guardian_greaves`,
             `travel_boots`,
           ],
-          core: [`tranquil_boots`, `pavise`, `force_staff`, `aghanims_shard`, `ultimate_scepter`],
+          core: [
+            `tranquil_boots`,
+            `pavise`,
+            `force_staff`,
+            `aghanims_shard`,
+            `ultimate_scepter`,
+          ],
           neutral: [
             `pogo_stick`,
             `unstable_wand`,
@@ -3781,7 +3890,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       boots_of_bearing: `An excellent upgrade for tranquil boots in the late game.`,
       heavens_halberd: "Especially good against ranged right-clickers.",
       ultimate_scepter: `A core item that upgrades all your spells and improves your impact in fights.`,
-	  pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
+      pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
       lotus_orb: "For reflect, dispel and armor.",
     },
     combo: [
@@ -4040,21 +4149,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `branches`,
             `branches`,
             `branches`,
-			`clarity`,
+            `clarity`,
             `ward_observer`,
           ],
-          early_game: [
-            `vanguard`,
-            `soul_ring`,
-            "arcane_boots",
-            `magic_wand`,
-          ],
-          mid_game: [
-            `guardian_greaves`,
-            `pipe`,
-            `blink`,
-            `aghanims_shard`,
-          ],
+          early_game: [`vanguard`, `soul_ring`, "arcane_boots", `magic_wand`],
+          mid_game: [`guardian_greaves`, `pipe`, `blink`, `aghanims_shard`],
           late_game: [
             `ultimate_scepter`,
             `octarine_core`,
@@ -4063,17 +4162,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `ring_of_basilius`,
-			`null_talisman`,
-			`crimson_guard`,
+            `null_talisman`,
+            `crimson_guard`,
             `shivas_guard`,
             `helm_of_the_dominator`,
-			`black_king_bar`,
+            `black_king_bar`,
             `aeon_disk`,
             `heavens_halberd`,
             `solar_crest`,
             `force_staff`,
             `lotus_orb`,
-			`overwhelming_blink`,
+            `overwhelming_blink`,
             `travel_boots`,
           ],
           core: [
@@ -4082,7 +4181,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `pipe`,
             `blink`,
             `aghanims_shard`,
-			`ultimate_scepter`,
+            `ultimate_scepter`,
           ],
           neutral: [
             "arcane_ring",
@@ -4210,7 +4309,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `circlet`,
             `enchanted_mango`,
             `branches`,
-			`branches`,
+            `branches`,
             `ward_observer`,
           ],
           early_game: [
@@ -4229,7 +4328,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `glimmer_cape`,
-			`aether_lens`,
+            `aether_lens`,
             `ghost`,
             "spirit_vessel",
             `lotus_orb`,
@@ -4243,8 +4342,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "cyclone",
             "aghanims_shard",
             `blink`,
-			`force_staff`,
-			`ultimate_scepter`,
+            `force_staff`,
+            `ultimate_scepter`,
           ],
           neutral: [
             `pogo_stick`,
@@ -4683,7 +4782,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           mid_game: [
             `glimmer_cape`,
             `aghanims_shard`,
-			`pavise`,
+            `pavise`,
             `boots_of_bearing`,
             "force_staff",
           ],
@@ -5028,7 +5127,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `guardian_greaves`,
-			`aether_lens`,
+            `aether_lens`,
             `lotus_orb`,
             `aghanims_shard`,
             `ethereal_blade`,
@@ -5822,12 +5921,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_wand",
             `infused_raindrop`,
           ],
-          mid_game: [
-            "blink",
-            `force_staff`,
-            `aghanims_shard`,
-            `aether_lens`,
-          ],
+          mid_game: ["blink", `force_staff`, `aghanims_shard`, `aether_lens`],
           late_game: [
             "ultimate_scepter",
             `octarine_core`,
@@ -5839,7 +5933,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `boots_of_bearing`,
             `soul_ring`,
             `aeon_disk`,
-			`black_king_bar`,
+            `black_king_bar`,
             `invis_sword`,
             `arcane_blink`,
             `wind_waker`,
@@ -5961,8 +6055,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             `blood_grenade`,
             `enchanted_mango`,
-			`wind_lace`,
-			`branches`,
+            `wind_lace`,
+            `branches`,
             `ward_observer`,
             `ward_sentry`,
           ],
@@ -5976,22 +6070,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `boots_of_bearing`,
             `force_staff`,
             `solar_crest`,
-			`glimmer_cape`,
+            `glimmer_cape`,
           ],
-          late_game: [`ultimate_scepter`, `aghanims_shard`, `harpoon`, `refresher`],
+          late_game: [
+            `ultimate_scepter`,
+            `aghanims_shard`,
+            `harpoon`,
+            `refresher`,
+          ],
           situational: [
             `orb_of_venom`,
-			`phase_boots`,
+            `phase_boots`,
             `spirit_vessel`,
-			`pavise`,
+            `pavise`,
             `pipe`,
             `guardian_greaves`,
             `ghost`,
             `lotus_orb`,
             `shivas_guard`,
             `heavens_halberd`,
-			`octarine_core`,
-			`aeon_disk`,
+            `octarine_core`,
+            `aeon_disk`,
             `travel_boots`,
           ],
           core: [
@@ -6024,8 +6123,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       orb_of_venom:
         "If you see yourself being able to hit the opponents on the lane often.",
-      phase_boots:
-        `An alternate boots upgrade that lets you play a little more greedy with armor and damage.`,
+      phase_boots: `An alternate boots upgrade that lets you play a little more greedy with armor and damage.`,
       spirit_vessel: "Against heavy healing lineup.",
       ultimate_scepter:
         "A core item that allows you to deliver right-clicks as you become spell immune based on the number of heroes your spirit passed through.",
@@ -8015,18 +8113,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ward_sentry`,
             "magic_wand",
             `mekansm`,
-			`ring_of_basilius`,
-			`infused_raindrop`,
+            `ring_of_basilius`,
+            `infused_raindrop`,
           ],
           mid_game: [`holy_locket`, `aghanims_shard`, `glimmer_cape`, `pavise`],
-          late_game: [`guardian_greaves`, `solar_crest`, `force_staff`, `heart`],
+          late_game: [
+            `guardian_greaves`,
+            `solar_crest`,
+            `force_staff`,
+            `heart`,
+          ],
           situational: [
             `bottle`,
             `spirit_vessel`,
             `ultimate_scepter`,
             `ethereal_blade`,
-			`vladmir`,
-			`pipe`,
+            `vladmir`,
+            `pipe`,
             "lotus_orb",
             `heavens_halberd`,
             `desolator`,
@@ -8039,7 +8142,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             `glimmer_cape`,
             `pavise`,
-			`heart`,
+            `heart`,
           ],
           neutral: [
             `arcane_ring`,
@@ -8067,9 +8170,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       aghanims_shard: "For extra control and mobility.",
       lotus_orb: "For reflect, dispel and armor.",
       desolator: `Get this only after you take your level 25 talent.`,
-	  pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
-	  solar_crest: `Makes you more tanky and provides another buff for your tethered ally.`,
-	  heart: `A late game pick up that makes you more tanky and provides massive HP regen for yourself and the tethered ally.`,
+      pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
+      solar_crest: `Makes you more tanky and provides another buff for your tethered ally.`,
+      heart: `A late game pick up that makes you more tanky and provides massive HP regen for yourself and the tethered ally.`,
     },
     combo: [],
     counter_items: {
@@ -8526,7 +8629,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `spirit_vessel`,
             `veil_of_discord`,
-			`pavise`,
+            `pavise`,
             `solar_crest`,
             `octarine_core`,
             "lotus_orb",
@@ -9327,7 +9430,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `ghost`,
-			`phylactery`,
+            `phylactery`,
             `aether_lens`,
             "lotus_orb",
             `solar_crest`,
@@ -11546,7 +11649,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           late_game: [`butterfly`, `sheepstick`, `greater_crit`, `swift_blink`],
           situational: [
             `falcon_blade`,
-			`mask_of_madness`,
+            `mask_of_madness`,
             `sange_and_yasha`,
             `black_king_bar`,
             `blink`,
@@ -11554,8 +11657,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `sphere`,
             "monkey_king_bar",
             `silver_edge`,
-			`mjollnir`,
-			`satanic`,
+            `mjollnir`,
+            `satanic`,
             `ultimate_scepter`,
             `aghanims_shard`,
             `travel_boots`,
@@ -11567,7 +11670,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `skadi`,
             `hurricane_pike`,
             `butterfly`,
-			`sheepstick`,
+            `sheepstick`,
           ],
           neutral: [
             `duelist_gloves`,
@@ -12503,22 +12606,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `mask_of_madness`,
-			`falcon_blade`,
-			`witch_blade`,
-			`manta`,
-			`skadi`,
+            `falcon_blade`,
+            `witch_blade`,
+            `manta`,
+            `skadi`,
             `blink`,
-			`ethereal_blade`,
+            `ethereal_blade`,
             "monkey_king_bar",
             `sphere`,
             "satanic",
             `ultimate_scepter`,
-			`gungir`,
+            `gungir`,
             `silver_edge`,
             `mage_slayer`,
             `sheepstick`,
             `bloodthorn`,
-			`moon_shard`,
+            `moon_shard`,
             `travel_boots`,
           ],
           core: [
@@ -12560,11 +12663,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           revenants_brooch: `A luxury late game item with similar usage as Pierce the Veil. Be careful not to use it when the enemy hero has active spell immunity.`,
           skadi: `Another item that helps you stick on top of enemy heroes, similar to Gleipnir. Also effective against lifesteal and high HP regenerating heroes.`,
           swift_blink: `A late game pick up that boosts your movement speed and right clicking ability. You can replace Power Treads with it once you have a full inventory.`,
-		  mask_of_madness: `An early game farming tool that gives you some much needed attack speed and sustain. Can be disassembled for Satanic in the late game.`,
-		  yasha_and_kaya: `Provides damage amplification with all the spells and Pierce the Veil right clicks. Also gives some much needed movement and attack speed.`,
-		  manta: `An alternative to Yasha and Kaya when you need a dispel against roots and silences.`,
-		  mjollnir: `A late game upgrade for Maelstrom in the late game to boost your attack speed.`,
-		  silver_edge: `A situational item for games when you need the break effect against an enemy hero. Also acts as a mobility tool.`,
+          mask_of_madness: `An early game farming tool that gives you some much needed attack speed and sustain. Can be disassembled for Satanic in the late game.`,
+          yasha_and_kaya: `Provides damage amplification with all the spells and Pierce the Veil right clicks. Also gives some much needed movement and attack speed.`,
+          manta: `An alternative to Yasha and Kaya when you need a dispel against roots and silences.`,
+          mjollnir: `A late game upgrade for Maelstrom in the late game to boost your attack speed.`,
+          silver_edge: `A situational item for games when you need the break effect against an enemy hero. Also acts as a mobility tool.`,
         },
       },
       {
@@ -12603,9 +12706,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             `tango`,
-			`tango`,
-			`blood_grenade`,
-			`enchanted_mango`,
+            `tango`,
+            `blood_grenade`,
+            `enchanted_mango`,
             `circlet`,
             `branches`,
             `branches`,
@@ -12621,10 +12724,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           late_game: [`sheepstick`, `octarine_core`, `gungir`, `bloodthorn`],
           situational: [
             `null_talisman`,
-			`veil_of_discord`,
-			`spirit_vessel`,
-			`glimmer_cape`,
-			`pavise`,
+            `veil_of_discord`,
+            `spirit_vessel`,
+            `glimmer_cape`,
+            `pavise`,
             `lotus_orb`,
             `ethereal_blade`,
             `wind_waker`,
@@ -12635,7 +12738,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: [
             `arcane_boots`,
             `guardian_greaves`,
-			`force_staff`,
+            `force_staff`,
             `blink`,
             `sheepstick`,
             `gungir`,
@@ -12671,18 +12774,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           revenants_brooch: `A luxury late game item with similar usage as Pierce the Veil. Be careful not to use it when the enemy hero has active spell immunity.`,
           skadi: `Another item that helps you stick on top of enemy heroes, similar to Gleipnir. Also effective against lifesteal and high HP regenerating heroes.`,
           swift_blink: `A late game pick up that boosts your movement speed and right clicking ability. You can replace Power Treads with it once you have a full inventory.`,
-		  guardian_greaves: `A mid game aura and sustain item that helps your team group up and take objectives.`,
-		  force_staff: `An essential mobility item for Muerta to get into fights and help allies.`,
-		  blink: `An incredible mobility item that lets you initiate fights with Dead Shot.`,
-		  sheepstick: `A core item in the late game that works well with Blink Dagger to disable enemy heroes.`,
+          guardian_greaves: `A mid game aura and sustain item that helps your team group up and take objectives.`,
+          force_staff: `An essential mobility item for Muerta to get into fights and help allies.`,
+          blink: `An incredible mobility item that lets you initiate fights with Dead Shot.`,
+          sheepstick: `A core item in the late game that works well with Blink Dagger to disable enemy heroes.`,
         },
       },
     ],
-    combo: [
-      `muerta_dead_shot`,
-      `muerta_the_calling`,
-      `muerta_pierce_the_veil`,
-    ],
+    combo: [`muerta_dead_shot`, `muerta_the_calling`, `muerta_pierce_the_veil`],
     counter_items: {
       laning_phase: {
         all: [
@@ -14368,8 +14467,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "enchanted_mango",
             `enchanted_mango`,
             `branches`,
-			`branches`,
-			`clarity`,
+            `branches`,
+            `clarity`,
             "ward_observer",
             "ward_sentry",
           ],
@@ -14380,21 +14479,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [
-            `pavise`,
-            `glimmer_cape`,
-            `aether_lens`,
-            "force_staff",
-          ],
+          mid_game: [`pavise`, `glimmer_cape`, `aether_lens`, "force_staff"],
           late_game: [
             `blink`,
-			`aghanims_shard`,
+            `aghanims_shard`,
             `aeon_disk`,
             `ultimate_scepter`,
           ],
           situational: [
             `ring_of_basilius`,
-			`spirit_vessel`,
+            `spirit_vessel`,
             `holy_locket`,
             `ghost`,
             `wind_waker`,
@@ -14412,7 +14506,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `glimmer_cape`,
             `aether_lens`,
             `force_staff`,
-			`aghanims_shard`,
+            `aghanims_shard`,
             "aeon_disk",
           ],
           neutral: [
@@ -14439,13 +14533,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
       flask: `You can apply a Salve with False Promise as it doesnt get canceled.`,
-      arcane_boots:
-        `A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Holy Locket or Aether Lens. Get Tranquil Boots afterwards.`,
+      arcane_boots: `A core boots upgrade that helps with mana sustain. Can be disassembled and Energy Booster used for Holy Locket or Aether Lens. Get Tranquil Boots afterwards.`,
       boots_of_bearing: `You can upgrade Tranquil Boots to Boots of Bearing in the late game for more auras and movement speed.`,
       holy_locket: `A situational item that lets you burst heal and replenish mana on yourself or your allies. Works well with False Promise.`,
       blink: `A situational item that allows you to stay back and hidden but also be able to get spells off in the best way.`,
-      aghanims_shard:
-        `A core item that gives you another healing and damage tool in an area.`,
+      aghanims_shard: `A core item that gives you another healing and damage tool in an area.`,
       lotus_orb: "For reflect, dispel and armor.",
       ultimate_scepter: `An incredible upgrade for False Promise to give yourself or your ally better chances of survival.`,
       aeon_disk:
@@ -14531,20 +14623,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [`tango`, `crown`, `branches`, `ward_observer`],
-          early_game: [
-            `meteor_hammer`,
-            `boots`,
-            `magic_wand`,
-            `wind_lace`,
-          ],
+          early_game: [`meteor_hammer`, `boots`, `magic_wand`, `wind_lace`],
           mid_game: [
             `black_king_bar`,
             `blink`,
-			`travel_boots`,
+            `travel_boots`,
             `hurricane_pike`,
             `aghanims_shard`,
           ],
-          late_game: [`sheepstick`, `refresher`, `octarine_core`, `ultimate_scepter`],
+          late_game: [
+            `sheepstick`,
+            `refresher`,
+            `octarine_core`,
+            `ultimate_scepter`,
+          ],
           situational: [
             `hand_of_midas`,
             `aether_lens`,
@@ -14563,7 +14655,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `blink`,
             `hurricane_pike`,
             `aghanims_shard`,
-			`refresher`,
+            `refresher`,
           ],
           neutral: [
             `mysterious_hat`,
@@ -14580,8 +14672,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         },
         item_tooltips: {
           black_king_bar: `A core item against a lot of disables, magical damage and as a dispel.`,
-          ultimate_scepter:
-            `A late game pick up that acts as another survivability tool.`,
+          ultimate_scepter: `A late game pick up that acts as another survivability tool.`,
           aghanims_shard:
             "A core item that allows your allies to reposition during Astral Imprisonment even in Chronosphere or Black Hole.",
           aeon_disk: `A situational item that protects you from being bursted. Also provides mana pool which increases the damage of Sanitys Eclipse.`,
@@ -14621,12 +14712,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_outworld_devourer", // 25
         ],
         items: {
-          starting: [
-            `tango`,
-            `crown`,
-            `branches`,
-            `ward_observer`,
-          ],
+          starting: [`tango`, `crown`, `branches`, `ward_observer`],
           early_game: [
             `meteor_hammer`,
             `power_treads`,
@@ -14651,11 +14737,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aether_lens`,
             `aghanims_shard`,
             `octarine_core`,
-			`refresher`,
+            `refresher`,
             `kaya_and_sange`,
             `sphere`,
             `shivas_guard`,
-			`swift_blink`,
+            `swift_blink`,
             `travel_boots`,
           ],
           core: [
@@ -15533,7 +15619,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `urn_of_shadows`,
             "infused_raindrop",
           ],
-          mid_game: [`aghanims_shard`, `pavise`, `boots_of_bearing`, `shivas_guard`],
+          mid_game: [
+            `aghanims_shard`,
+            `pavise`,
+            `boots_of_bearing`,
+            `shivas_guard`,
+          ],
           late_game: [`refresher`, `aeon_disk`, `sheepstick`, `octarine_core`],
           situational: [
             `guardian_greaves`,
@@ -16993,7 +17084,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             `blood_grenade`,
-			`branches`,
+            `branches`,
             `branches`,
             `circlet`,
             "circlet",
@@ -17005,13 +17096,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wraith_band",
             `wind_lace`,
           ],
-          mid_game: [`black_king_bar`, `platemail`, `refresher`, `aghanims_shard`],
-          late_game: [
-            `blink`,
-            `assault`,
-            `ultimate_scepter`,
-            `satanic`,
+          mid_game: [
+            `black_king_bar`,
+            `platemail`,
+            `refresher`,
+            `aghanims_shard`,
           ],
+          late_game: [`blink`, `assault`, `ultimate_scepter`, `satanic`],
           situational: [
             `phase_boots`,
             `hurricane_pike`,
@@ -17024,8 +17115,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `shivas_guard`,
             `monkey_king_bar`,
             `butterfly`,
-			`skadi`,
-			`swift_blink`,
+            `skadi`,
+            `swift_blink`,
             `travel_boots`,
           ],
           core: [
@@ -17099,7 +17190,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           early_game: [
             `boots`,
             `wraith_band`,
-			`wraith_band`,
+            `wraith_band`,
             `magic_wand`,
             `wind_lace`,
             `voodoo_mask`,
@@ -17109,7 +17200,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aghanims_shard`,
             `eternal_shroud`,
             `kaya_and_sange`,
-			`travel_boots`,
+            `travel_boots`,
           ],
           late_game: [
             `black_king_bar`,
@@ -17120,7 +17211,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `phase_boots`,
-			`boots_of_bearing`,
+            `boots_of_bearing`,
             `cyclone`,
             `lotus_orb`,
             `vanguard`,
@@ -17129,7 +17220,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `sheepstick`,
             `hurricane_pike`,
             `blade_mail`,
-			`sphere`,
+            `sphere`,
             `travel_boots_2`,
           ],
           core: [
@@ -17206,7 +17297,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "faerie_fire",
             `branches`,
             `branches`,
-			`branches`,
+            `branches`,
             "circlet",
             `ward_observer`,
           ],
@@ -17217,7 +17308,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wraith_band`,
             `wind_lace`,
           ],
-          mid_game: [`black_king_bar`, `travel_boots`, `platemail`, `refresher`],
+          mid_game: [
+            `black_king_bar`,
+            `travel_boots`,
+            `platemail`,
+            `refresher`,
+          ],
           late_game: [
             `blink`,
             `assault`,
@@ -17238,15 +17334,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `shivas_guard`,
             `monkey_king_bar`,
             `butterfly`,
-			`skadi`,
-			`swift_blink`,
+            `skadi`,
+            `swift_blink`,
             `travel_boots_2`,
           ],
           core: [
             `bottle`,
             `boots`,
             `black_king_bar`,
-			`travel_boots`,
+            `travel_boots`,
             `refresher`,
             `assault`,
             `satanic`,
@@ -17624,13 +17720,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "tango",
             `blood_grenade`,
-			`enchanted_mango`,
-			`circlet`,
+            `enchanted_mango`,
+            `circlet`,
             `branches`,
             `branches`,
             "ward_observer",
           ],
-          early_game: [`ward_sentry`, `arcane_boots`, `magic_wand`, `wind_lace`, `infused_raindrop`],
+          early_game: [
+            `ward_sentry`,
+            `arcane_boots`,
+            `magic_wand`,
+            `wind_lace`,
+            `infused_raindrop`,
+          ],
           mid_game: ["aether_lens", `tranquil_boots`, `force_staff`, `blink`],
           late_game: [
             `aghanims_shard`,
@@ -17639,15 +17741,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `octarine_core`,
           ],
           situational: [
-			`spirit_vessel`,
+            `spirit_vessel`,
             `veil_of_discord`,
             "lotus_orb",
             `ethereal_blade`,
             `glimmer_cape`,
             `wind_waker`,
-			`pavise`,
-			`aeon_disk`,
-			`boots_of_bearing`,
+            `pavise`,
+            `aeon_disk`,
+            `boots_of_bearing`,
             `travel_boots`,
           ],
           core: [
@@ -17657,7 +17759,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `force_staff`,
             `blink`,
             `aghanims_shard`,
-			`ultimate_scepter`,
+            `ultimate_scepter`,
           ],
           neutral: [
             "pogo_stick",
@@ -18757,7 +18859,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `pavise`,
-			`blink`,
+            `blink`,
             `cyclone`,
             `ghost`,
             `glimmer_cape`,
@@ -19248,21 +19350,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             `ward_sentry`,
-			`arcane_boots`,
+            `arcane_boots`,
             `magic_wand`,
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [`guardian_greaves`, `aghanims_shard`, `force_staff`, `pavise`],
+          mid_game: [
+            `guardian_greaves`,
+            `aghanims_shard`,
+            `force_staff`,
+            `pavise`,
+          ],
           late_game: [
             "ultimate_scepter",
             `blink`,
-			`octarine_core`,
+            `octarine_core`,
             `aeon_disk`,
           ],
           situational: [
             `ring_of_basilius`,
-			`glimmer_cape`,
+            `glimmer_cape`,
             `solar_crest`,
             `ethereal_blade`,
             `boots_of_bearing`,
@@ -19303,11 +19410,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       ward_sentry: "To block or unblock a pull camp.",
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
-      arcane_boots:
-        `A core boots upgrade that helps with mana sustain. Can build into Guardian Greaves later in the game.`,
+      arcane_boots: `A core boots upgrade that helps with mana sustain. Can build into Guardian Greaves later in the game.`,
       blink: `A core item that goes well with Aghanims Scepter. Allows you to position yourself nicely.`,
       aghanims_shard: `A core upgrade that adds more burst to your Firesnap Cookie.`,
-	  pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
+      pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
       lotus_orb: "To reflect, dispel and armor.",
       ultimate_scepter:
         "A core item that allows you to save or to toss in an ally. Adds even more disable and damage.",
@@ -20442,25 +20548,40 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             `tango`,
-			`blood_grenade`,
-			`enchanted_mango`,
+            `blood_grenade`,
+            `enchanted_mango`,
             `circlet`,
             `branches`,
             `branches`,
             `ward_observer`,
           ],
-          early_game: [`arcane_boots`, `magic_wand`, `wind_lace`, `infused_raindrop`],
-          mid_game: [`aether_lens`, `tranquil_boots`, `ethereal_blade`, `ultimate_scepter`],
-          late_game: [`force_staff`, `boots_of_bearing`, `octarine_core`, `sheepstick`],
+          early_game: [
+            `arcane_boots`,
+            `magic_wand`,
+            `wind_lace`,
+            `infused_raindrop`,
+          ],
+          mid_game: [
+            `aether_lens`,
+            `tranquil_boots`,
+            `ethereal_blade`,
+            `ultimate_scepter`,
+          ],
+          late_game: [
+            `force_staff`,
+            `boots_of_bearing`,
+            `octarine_core`,
+            `sheepstick`,
+          ],
           situational: [
             `soul_ring`,
             `veil_of_discord`,
             `wind_waker`,
             "glimmer_cape",
             `guardian_greaves`,
-			`pavise`,
+            `pavise`,
             `veil_of_discord`,
-			`aghanims_shard`,
+            `aghanims_shard`,
             "blink",
             `aeon_disk`,
             `travel_boots`,
@@ -20528,10 +20649,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `branches`,
             "branches",
             `branches`,
-			`ward_observer`,
+            `ward_observer`,
           ],
-          early_game: [`bottle`, `arcane_boots`, `magic_wand`, `wind_lace`, `infused_raindrop`],
-          mid_game: [`ethereal_blade`, `aether_lens`, `travel_boots`, `ultimate_scepter`],
+          early_game: [
+            `bottle`,
+            `arcane_boots`,
+            `magic_wand`,
+            `wind_lace`,
+            `infused_raindrop`,
+          ],
+          mid_game: [
+            `ethereal_blade`,
+            `aether_lens`,
+            `travel_boots`,
+            `ultimate_scepter`,
+          ],
           late_game: [
             `bloodstone`,
             `octarine_core`,
@@ -20540,7 +20672,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `null_talisman`,
-			`ring_of_basilius`,
+            `ring_of_basilius`,
             "black_king_bar",
             "aeon_disk",
             "sphere",
@@ -20548,8 +20680,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `pipe`,
             `wind_waker`,
             `force_staff`,
-			`dagon_5`,
-			`aghanims_shard`,
+            `dagon_5`,
+            `aghanims_shard`,
             `travel_boots_2`,
           ],
           core: [
@@ -20558,7 +20690,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ethereal_blade`,
             `aether_lens`,
             `travel_boots`,
-			`ultimate_scepter`,
+            `ultimate_scepter`,
             "octarine_core",
           ],
           neutral: [
@@ -20601,8 +20733,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that increases your cast range as well as reducing the cooldown of your skills and items.",
       /* moon_shard:
         "Only purchase this item if you take your last 252 damage talent as your right clicks become way stronger and you can right click enemies.", */
-      aghanims_shard:
-        `A luxury late game item that provides extra damage and versatility with Reactive Tazer.`,
+      aghanims_shard: `A luxury late game item that provides extra damage and versatility with Reactive Tazer.`,
       bloodstone:
         "Increases your spell lifesteal by a big margin that synergizes well with your skill set. Can be activated when using spells to gain hp and mana back.",
       blink: "For extra mobility around the map.",
@@ -21242,13 +21373,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `bracer`,
             `wind_lace`,
           ],
-          mid_game: [
-            `guardian_greaves`,
-            `blink`,
-            `pipe`,
-            `aghanims_shard`,
+          mid_game: [`guardian_greaves`, `blink`, `pipe`, `aghanims_shard`],
+          late_game: [
+            `force_staff`,
+            `ultimate_scepter`,
+            `refresher`,
+            `shivas_guard`,
           ],
-          late_game: [`force_staff`, `ultimate_scepter`, `refresher`, `shivas_guard`],
           situational: [
             `phase_boots`,
             `meteor_hammer`,
@@ -21256,8 +21387,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "heavens_halberd",
             `lotus_orb`,
             `vladmir`,
-			`black_king_bar`,
-			`sphere`,
+            `black_king_bar`,
+            `sphere`,
             `aeon_disk`,
             `assault`,
             `overwhelming_blink`,
@@ -21300,9 +21431,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       soul_ring:
         "A core item that helps with mana sustain and provides useful stats.",
-      phase_boots:
-        `A situational boots upgrade that fixes movement speed and armor issues that Tidehunter has.`,
-     /*  hood_of_defiance:
+      phase_boots: `A situational boots upgrade that fixes movement speed and armor issues that Tidehunter has.`,
+      /*  hood_of_defiance:
         "A core defensive item that negates magical damage. Kraken Shell protects Tidehunter from right-clicks and Hood against magical damage.", */
       pipe: "Against heavy magical damage lineup.",
       blink: "A core item that allows you to land multi-hero Ravage.",
@@ -21626,7 +21756,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           late_game: [
             `phylactery`,
-			`ethereal_blade`,
+            `ethereal_blade`,
             `ultimate_scepter`,
             `bloodstone`,
             `wind_waker`,
@@ -22193,7 +22323,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `blood_grenade`,
             "orb_of_venom",
             `enchanted_mango`,
-			`branches`,
+            `branches`,
             "ward_observer",
             "ward_sentry",
           ],
@@ -22203,12 +22333,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [
-            `pavise`,
-            `aghanims_shard`,
-            `blink`,
-            `force_staff`,
-          ],
+          mid_game: [`pavise`, `aghanims_shard`, `blink`, `force_staff`],
           late_game: [
             `ultimate_scepter`,
             `refresher`,
@@ -22217,9 +22342,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `soul_ring`,
-			`ring_of_basilius`,
-			`holy_locket`,
-			`guardian_greaves`,
+            `ring_of_basilius`,
+            `holy_locket`,
+            `guardian_greaves`,
             `meteor_hammer`,
             `solar_crest`,
             `wind_waker`,
@@ -22236,7 +22361,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aghanims_shard`,
             `blink`,
             `ultimate_scepter`,
-			`refresher`,
+            `refresher`,
           ],
           neutral: [
             `faded_broach`,
@@ -22268,11 +22393,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       lotus_orb: "For reflect, dispel and armor.",
       boots_of_bearing: `An upgrade for Tranquil Boots that helps immensely in teamfights.`,
       // wraith_pact: `An aura item that makes it hard for the enemy team to fight into your team.`,
-	  pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
+      pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
     },
     combo: [
       `blink`,
-	  `treant_overgrowth`,
+      `treant_overgrowth`,
       `meteor_hammer`,
       `treant_natures_grasp`,
       `treant_leech_seed`,
@@ -22981,7 +23106,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
@@ -23037,12 +23161,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `glimmer_cape`,
             `pavise`,
           ],
-          late_game: [
-            `force_staff`,
-            `pipe`,
-            `ultimate_scepter`,
-            `refresher`,
-          ],
+          late_game: [`force_staff`, `pipe`, `ultimate_scepter`, `refresher`],
           situational: [
             `ring_of_basilius`,
             `spirit_vessel`,
@@ -23066,7 +23185,104 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aghanims_shard`,
             `pavise`,
             `force_staff`,
-			`ultimate_scepter`,
+            `ultimate_scepter`,
+          ],
+          neutral: [
+            "trusty_shovel",
+            `faded_broach`,
+            `dragon_scale`,
+            "bullwhip",
+            `ogre_seal_totem`,
+            `quickening_charm`,
+            "spy_gadget",
+            `spell_prism`,
+            "force_field",
+            `giants_ring`,
+          ],
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        steam_guide_link:
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521",
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        abilities: [
+          "undying_decay", // 1
+          `undying_tombstone`, // 2
+          `undying_decay`, // 3
+          `undying_tombstone`, // 4
+          "undying_tombstone", // 5
+          "undying_flesh_golem", // 6
+          "undying_tombstone", // 7
+          `undying_soul_rip`, // 8
+          `undying_decay`, // 9
+          `undying_decay`, // 10
+          `special_bonus_unique_undying_8`, // 11
+          "undying_flesh_golem", // 12
+          `undying_soul_rip`, // 13
+          `undying_soul_rip`, // 14
+          `undying_soul_rip`, // 15
+          `special_bonus_unique_undying_6`, // 16
+          "special_bonus_attributes", // 17
+          "undying_flesh_golem", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_undying_3", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          `special_bonus_unique_undying_5`, // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            `tango`,
+            `blood_grenade`,
+            `clarity`,
+            `enchanted_mango`,
+            `enchanted_mango`,
+            `branches`,
+            `branches`,
+            "ward_observer",
+            "ward_sentry",
+          ],
+          early_game: [
+            "arcane_boots",
+            "magic_wand",
+            `wind_lace`,
+            `infused_raindrop`,
+          ],
+          mid_game: [
+            `guardian_greaves`,
+            `aghanims_shard`,
+            `glimmer_cape`,
+            `pavise`,
+          ],
+          late_game: [`force_staff`, `pipe`, `ultimate_scepter`, `refresher`],
+          situational: [
+            `ring_of_basilius`,
+            `spirit_vessel`,
+            `solar_crest`,
+            `boots_of_bearing`,
+            `vladmir`,
+            `ghost`,
+            `wind_waker`,
+            `lotus_orb`,
+            `blade_mail`,
+            `crimson_guard`,
+            `aeon_disk`,
+            `octarine_core`,
+            `holy_locket`,
+            `shivas_guard`,
+            `travel_boots`,
+          ],
+          core: [
+            "arcane_boots",
+            `guardian_greaves`,
+            `aghanims_shard`,
+            `pavise`,
+            `force_staff`,
+            `ultimate_scepter`,
           ],
           neutral: [
             "trusty_shovel",
@@ -23092,8 +23308,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
       arcane_boots: `A core boots upgrade for mana sustain. Can build into Guardian Greaves later in the game.`,
-      holy_locket:
-        `A situational item that improves healing coming from Soul Rip but also provides you with burst of healing and mana on cast.`,
+      holy_locket: `A situational item that improves healing coming from Soul Rip but also provides you with burst of healing and mana on cast.`,
       // tranquil_boots: `You can upgrade Brown Boots to Tranquils once you have the Holy Locket.`,
       solar_crest: `A situational buffing item for one of your right-clicking cores. It allows you to take Roshan earlier and faster.`,
       lotus_orb: "For reflect, dispel and armor.",
@@ -24649,17 +24864,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             `ward_sentry`,
-			`arcane_boots`,
+            `arcane_boots`,
             "magic_wand",
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [
-            `glimmer_cape`,
-            `pavise`,
-            `aghanims_shard`,
-            `force_staff`,
-          ],
+          mid_game: [`glimmer_cape`, `pavise`, `aghanims_shard`, `force_staff`],
           late_game: [
             `aether_lens`,
             `ultimate_scepter`,
@@ -24669,12 +24879,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `hand_of_midas`,
-			`holy_locket`,
+            `holy_locket`,
             `guardian_greaves`,
-			`boots_of_bearing`,
+            `boots_of_bearing`,
             `solar_crest`,
             `ghost`,
-			`blink`,
+            `blink`,
             `aeon_disk`,
             `lotus_orb`,
             `wind_waker`,
@@ -24683,8 +24893,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: [
             "arcane_boots",
             `glimmer_cape`,
-			`pavise`,
-			`aghanims_shard`,
+            `pavise`,
+            `aghanims_shard`,
             `force_staff`,
             `ultimate_scepter`,
             `refresher`,
@@ -24715,15 +24925,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       infused_raindrop: "Against magical burst.",
       arcane_boots:
         "A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Holy Locket. You can assemble Tranquil Boots afterwards or Arcane Boots again.",
-      holy_locket:
-        `A situational item that improves healing coming from Shadow Word and its active provides burst of healing and mana.`,
+      holy_locket: `A situational item that improves healing coming from Shadow Word and its active provides burst of healing and mana.`,
       tranquil_boots: `You can upgrade Brown Boots to Tranquils once you have the Holy Locket.`,
       solar_crest: `A situational item to buff one of your right-clicking cores or Golem. You can use it offensively to kill-off an opponent or Roshan faster.`,
-      aghanims_shard:
-        `A core upgrade to improve your teamfight impact as well as farming ability.`,
+      aghanims_shard: `A core upgrade to improve your teamfight impact as well as farming ability.`,
       lotus_orb: "For reflect, dispel and armor.",
       boots_of_bearing: `An incredible late game item to buff your team and the golems in teamfights or when pushing.`,
-	  pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
+      pavise: `A core item to gain some mana regen and buff yourself and your cores against physical damage.`,
     },
     combo: [
       `warlock_fatal_bonds`,
@@ -25543,7 +25751,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `holy_locket`,
-			`pavise`,
+            `pavise`,
             `glimmer_cape`,
             `refresher`,
             `bloodthorn`,
@@ -25705,12 +25913,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [
-            `aghanims_shard`,
-            `glimmer_cape`,
-            `force_staff`,
-            `pavise`,
-          ],
+          mid_game: [`aghanims_shard`, `glimmer_cape`, `force_staff`, `pavise`],
           late_game: [
             `ultimate_scepter`,
             `blink`,
@@ -25719,7 +25922,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `ring_of_basilius`,
-			`aether_lens`,
+            `aether_lens`,
             `solar_crest`,
             `spirit_vessel`,
             `wind_waker`,
