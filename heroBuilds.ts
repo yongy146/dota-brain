@@ -983,7 +983,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Anti-Mage": {
-    gameplay_version: "7.33",
+    gameplay_version: "7.33b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -2130,7 +2130,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Bloodseeker: {
-    gameplay_version: "7.33",
+    gameplay_version: "7.33b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -3281,7 +3281,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Chaos Knight": {
-    gameplay_version: "7.33",
+    gameplay_version: "7.33b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3679,7 +3679,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clinkz: {
-    gameplay_version: "7.33",
+    gameplay_version: "7.33b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -4938,7 +4938,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Death Prophet": {
-    gameplay_version: `7.33`,
+    gameplay_version: `7.33b`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
