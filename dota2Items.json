@@ -4514,6 +4514,27 @@
 		"is_roshan": false,
 		"is_purchasable": true
 	},
+	"item_harpoon": {
+		"id": 939,
+		"is_active": true,
+		"cost": 4500,
+		"cooldown": 19,
+		"is_recipe": false,
+		"is_neutral": false,
+		"is_roshan": false,
+		"is_purchasable": true,
+		"attack_speed_": 15,
+		"mana_regen_": 2,
+		"damage_": 15,
+		"strength_": 20,
+		"agility_": 10,
+		"intelligence_": 16,
+		"requirements": [
+			"item_echo_sabre",
+			"item_diadem",
+			"item_recipe_harpoon"
+		]
+	},
 	"item_defiant_shell": {
 		"id": 950,
 		"is_active": true,
