@@ -975,7 +975,7 @@
 	},
 	"item_recipe_phylactery": {
 		"id": 1106,
-		"cost": 200,
+		"cost": 0,
 		"is_recipe": true,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -983,7 +983,7 @@
 	},
 	"item_phylactery": {
 		"id": 1107,
-		"cost": 2400,
+		"cost": 2375,
 		"cooldown": 6,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -991,11 +991,12 @@
 		"is_purchasable": true,
 		"health_": 200,
 		"mana_": 200,
+		"mana_regen_": 0.7,
 		"all_attributes_": 7,
 		"requirements": [
 			"item_point_booster",
 			"item_diadem",
-			"item_recipe_phylactery"
+			"item_sobi_mask"
 		]
 	},
 	"item_recipe_hand_of_midas": {
@@ -3760,9 +3761,9 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 14,
+		"damage_": 16,
 		"damage_ability_magical": 175,
-		"strength_": 14
+		"strength_": 16
 	},
 	"item_apex": {
 		"id": 366,
@@ -3791,7 +3792,7 @@
 	},
 	"item_fallen_sky": {
 		"id": 371,
-		"cost": 4751,
+		"cost": 0,
 		"cooldown": 15,
 		"is_recipe": false,
 		"is_neutral": true,
@@ -3843,7 +3844,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"mana_": 200,
+		"mana_": 125,
 		"movement_speed": 20
 	},
 	"item_paladin_sword": {
@@ -4038,7 +4039,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"mana_regen_": 4,
-		"movement_speed": 25
+		"movement_speed": 30
 	},
 	"item_mysterious_hat": {
 		"id": 589,
@@ -4058,7 +4059,7 @@
 		"id": 825,
 		"mana_cost": 0,
 		"cost": 0,
-		"cooldown": 30,
+		"cooldown": 25,
 		"is_recipe": false,
 		"is_neutral": true,
 		"neutral_level": 4,
@@ -4069,7 +4070,7 @@
 		"status_resistance": 40,
 		"health_": 250,
 		"health_regen_": 15,
-		"duration": 3
+		"duration": 4
 	},
 	"item_unstable_wand": {
 		"id": 838,
@@ -4101,7 +4102,7 @@
 	"item_seeds_of_serenity": {
 		"id": 945,
 		"cost": 0,
-		"cooldown": 40,
+		"cooldown": 35,
 		"is_recipe": false,
 		"is_neutral": true,
 		"neutral_level": 1,
@@ -4182,7 +4183,8 @@
 		"drop_time": "17:00",
 		"drop_rate": 10,
 		"is_roshan": false,
-		"is_purchasable": false
+		"is_purchasable": false,
+		"mana_regen_": 0.5
 	},
 	"item_specialists_array": {
 		"id": 1076,
@@ -4195,7 +4197,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 10
+		"damage_": 12
 	},
 	"item_ofrenda": {
 		"id": 4300,
@@ -4249,9 +4251,9 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed_": 25,
+		"attack_speed_": 30,
 		"damage_": 30,
-		"armor_": 15
+		"armor_": 20
 	},
 	"item_duelist_gloves": {
 		"id": 2097,

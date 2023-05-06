@@ -114,7 +114,7 @@
 			"ID": "604",
 			"AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT",
 			"AbilityCastRange": "1400",
-			"AbilityOvershootCastRange": "960",
+			"AbilityOvershootCastRange": "1120",
 			"AbilityCastPoint": "0.0",
 			"AbilityCooldown": "7.0",
 			"AbilityManaCost": "0",
@@ -1225,6 +1225,8 @@
 			"ItemShopTags": "consumable",
 			"ItemQuality": "consumable",
 			"ItemAliases": "grenade",
+			"ItemStackable": "1",
+			"ItemStackableMax": "3",
 			"ItemStockMax": "3",
 			"ItemStockInitial": "3",
 			"ItemStockTime": "120",
@@ -1722,7 +1724,7 @@
 				"bonus_movement_speed": "110",
 				"maximum_distance": "800",
 				"vision_radius": "200",
-				"tp_cooldown": "30",
+				"tp_cooldown": "40",
 				"tp_channel_time": "2"
 			}
 		},
@@ -2137,19 +2139,19 @@
 		"item_recipe_phylactery": {
 			"ID": "1106",
 			"Model": "models/props_gameplay/recipe.vmdl",
-			"ItemCost": "200",
+			"ItemCost": "0",
 			"ItemShopTags": "",
 			"ItemRecipe": "1",
 			"ItemResult": "item_phylactery",
 			"ItemRequirements": {
-				"01": "item_point_booster;item_diadem"
+				"01": "item_point_booster;item_diadem;item_sobi_mask"
 			}
 		},
 		"item_phylactery": {
 			"ID": "1107",
 			"AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_PASSIVE",
 			"AbilityCooldown": "6.0",
-			"ItemCost": "2400",
+			"ItemCost": "2375",
 			"ItemShopTags": "hard_to_tag",
 			"ItemQuality": "common",
 			"ItemAliases": "phylactery",
@@ -2158,9 +2160,10 @@
 				"bonus_health": "200",
 				"bonus_mana": "200",
 				"bonus_all_stats": "7",
+				"bonus_mana_regen": ".7",
 				"slow": "50",
-				"bonus_spell_damage": "125",
-				"slow_duration": "1.2"
+				"bonus_spell_damage": "150",
+				"slow_duration": "1.5"
 			}
 		},
 		"item_grandmasters_glaive": {
@@ -2660,6 +2663,7 @@
 			"ItemCost": "400",
 			"ItemPurchasable": "0",
 			"ItemShopTags": "",
+			"IsObsolete": "1",
 			"ItemRecipe": "1",
 			"ItemResult": "item_wraith_pact",
 			"ItemRequirements": {
@@ -2673,6 +2677,7 @@
 			"FightRecapLevel": "1",
 			"AbilitySound": "Hero_Pugna.NetherWard",
 			"AbilityUnitDamageType": "DAMAGE_TYPE_MAGICAL",
+			"IsObsolete": "1",
 			"AbilityCastPoint": "0.2 0.2 0.2 0.2",
 			"AbilityCastRange": "350",
 			"AbilityCooldown": "60",
@@ -3319,9 +3324,7 @@
 				"bonus_health": "175",
 				"push_length": "600",
 				"enemy_cast_range": "850",
-				"push_time": "0.5",
-				"dizzy_duration": "0",
-				"dizzy_distance_pct": "0"
+				"push_time": "0.5"
 			}
 		},
 		"item_recipe_hurricane_pike": {
@@ -4742,7 +4745,7 @@
 				"block_damage_active": "70",
 				"block_chance_active": "100",
 				"tooltip_reapply_time": "35",
-				"strength_pct": "60"
+				"strength_pct": "50"
 			}
 		},
 		"item_recipe_blade_mail": {
@@ -4835,6 +4838,7 @@
 			"ID": "130",
 			"ItemCost": "0",
 			"ItemShopTags": "",
+			"IsObsolete": "1",
 			"ItemRecipe": "1",
 			"ItemResult": "item_hood_of_defiance",
 			"ItemPurchasable": "0",
@@ -4852,6 +4856,7 @@
 			"ItemAliases": "hood of defiance",
 			"ItemDeclarations": "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS",
 			"ItemPurchasable": "0",
+			"IsObsolete": "1",
 			"AbilityValues": {
 				"bonus_spell_resist": "18",
 				"bonus_health_regen": "8.5",
@@ -6619,6 +6624,7 @@
 			"ItemDeclarations": "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS",
 			"ItemSupport": "1",
 			"IsTempestDoubleClonable": "0",
+			"IsObsolete": "1",
 			"AbilitySpecial": {
 				"01": {
 					"var_type": "FIELD_INTEGER",
@@ -8043,6 +8049,7 @@
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
 			"ItemSellable": "0",
+			"IsObsolete": "1",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilitySpecial": {
 				"01": {
@@ -8069,8 +8076,8 @@
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
 				"scan_cooldown_reduction": "50",
-				"attack_range": "100",
-				"cast_range": "100",
+				"attack_range": "125",
+				"cast_range": "125",
 				"aura_range": "1200"
 			}
 		},
@@ -8267,6 +8274,7 @@
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
 			"ItemSellable": "0",
+			"IsObsolete": "1",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilitySpecial": {
 				"01": {
@@ -8447,11 +8455,11 @@
 				},
 				"01": {
 					"var_type": "FIELD_INTEGER",
-					"bonus_damage": "14"
+					"bonus_damage": "16"
 				},
 				"02": {
 					"var_type": "FIELD_INTEGER",
-					"bonus_strength": "14"
+					"bonus_strength": "16"
 				},
 				"03": {
 					"var_type": "FIELD_INTEGER",
@@ -8618,7 +8626,7 @@
 		},
 		"item_recipe_fallen_sky": {
 			"ID": "317",
-			"ItemCost": "1",
+			"ItemCost": "0",
 			"ItemShopTags": "",
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
@@ -8628,7 +8636,6 @@
 			"ItemRecipe": "1",
 			"ItemResult": "item_fallen_sky",
 			"ItemRequirements": {
-				"01": "item_blink;item_meteor_hammer;"
 			}
 		},
 		"item_fallen_sky": {
@@ -8636,7 +8643,7 @@
 			"AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES",
 			"AbilityCastRange": "1200",
 			"AbilityCooldown": "15.0",
-			"ItemCost": "4751",
+			"ItemCost": "0",
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
 			"ItemSellable": "0",
@@ -8717,7 +8724,7 @@
 			"AbilitySpecial": {
 				"01": {
 					"var_type": "FIELD_INTEGER",
-					"bonus_mana": "200"
+					"bonus_mana": "125"
 				},
 				"02": {
 					"var_type": "FIELD_INTEGER",
@@ -9077,6 +9084,7 @@
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
 			"ItemSellable": "0",
+			"ItemDisassembleRule": "DOTA_ITEM_DISASSEMBLE_ALWAYS",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilitySpecial": {
 				"01": {
@@ -9403,10 +9411,10 @@
 				"damage": "200",
 				"interval": "3",
 				"slow": "40",
-				"slow_duration": "0.3",
+				"slow_duration": "0.4",
 				"bonus_mana_regen": "4",
 				"max_targets": "2",
-				"passive_movement_bonus": "25"
+				"passive_movement_bonus": "30"
 			}
 		},
 		"item_overflowing_elixir": {
@@ -9488,13 +9496,13 @@
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
 			"ItemSellable": "0",
-			"AbilityCooldown": "30.0",
+			"AbilityCooldown": "25.0",
 			"AbilityManaCost": "0",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
 				"status_resistance": "40",
 				"bonus_health": "250",
-				"duration": "3",
+				"duration": "4",
 				"hp_regen": "15"
 			}
 		},
@@ -9706,13 +9714,13 @@
 			"ItemIsNeutralDrop": "1",
 			"ItemPurchasable": "0",
 			"ItemSellable": "0",
-			"AbilityCooldown": "40.0",
+			"AbilityCooldown": "35.0",
 			"AbilityCastRange": "350",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
 				"bonus_health": "150",
 				"aura_health_regen": "10",
-				"radius": "350",
+				"radius": "400",
 				"duration": "14"
 			}
 		},
@@ -9780,9 +9788,9 @@
 				"leap_distance": "400",
 				"leap_speed": "800.0",
 				"leap_acceleration": "1250.0",
-				"radius": "225",
+				"radius": "275",
 				"flop_damage": "150",
-				"slow_duration": "1.0",
+				"slow_duration": "1.5",
 				"slow": "-100",
 				"max_bounces": "2"
 			}
@@ -9852,7 +9860,6 @@
 			"AbilityCastRange": "700",
 			"AbilityCastPoint": "0.0",
 			"AbilityCooldown": "19.0",
-			"AbilitySharedCooldown": "force",
 			"ItemCost": "4500",
 			"ItemPurchasable": "1",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
@@ -9936,7 +9943,8 @@
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
 				"cast_range_bonus": "125",
-				"mana_reduction_pct": "15"
+				"mana_reduction_pct": "15",
+				"bonus_mana_regen": "0.5"
 			}
 		},
 		"item_manacles_of_power": {
@@ -10017,8 +10025,9 @@
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
 				"all_stats": "5",
-				"bonus_damage": "10",
-				"count": "2"
+				"bonus_damage": "12",
+				"count": "2",
+				"secondary_target_range_bonus": "225"
 			}
 		},
 		"item_dagger_of_ristul": {
@@ -10206,9 +10215,9 @@
 			"ItemSellable": "0",
 			"Model": "models/props_gameplay/neutral_box.vmdl",
 			"AbilityValues": {
-				"bonus_attack_speed": "25",
+				"bonus_attack_speed": "30",
 				"bonus_damage": "30",
-				"bonus_armor": "15"
+				"bonus_armor": "20"
 			}
 		},
 		"item_duelist_gloves": {
