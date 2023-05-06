@@ -609,7 +609,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     repeatTime: 10 * 60,
     textMessage:
       "You can position more aggressively than rest of your team, as opponents usually don't want to go on you due to Borrowed Time.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "ability", name: "abaddon_borrowed_time" },
   },
   {
@@ -1063,7 +1063,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ArcWarden_1_LastHit",
     messageTime: -30,
     textMessage:
-      "Make use of Spark Wraiths to secure creep lasthits, especially ranged creep.",
+      `Make use of Spark Wraiths to secure creep last hits, especially ranged creep.`,
     audience: [Audience.IN_LANE, Audience.ROLE_CORE],
     image: { type: "ability", name: "arc_warden_spark_wraith" },
   },
@@ -1103,7 +1103,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ArcWarden_5_Splitpush",
     messageTime: [9 * 60, 17 * 60],
     textMessage:
-      "Use Tempest Double as frequently as possible to splitpush the sidelanes and damage buildings.",
+      `Use Tempest Double as frequently as possible to split push the sidelanes and damage buildings.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "arc_warden_tempest_double" },
   },
@@ -1123,7 +1123,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Whenever opponents teleport back on a hero or two to address your splitpush, look to fight the remaining opponents, smoke up or take Roshan.",
+      `Whenever opponents teleport back on a hero or two to address your split push, look to fight the remaining opponents, smoke up or take Roshan.`,
     audience: [Audience.ROLE_CORE],
   },
 
@@ -1141,9 +1141,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     hero: "Arc Warden",
     audioFile: "enemyHero/ArcWarden_2_SparkWraith",
-    messageTime: -50,
+    messageTime: 7 * 60,
     textMessage:
-      "Arc Warden's Spark Wraith takes two seconds to charge which gives you time to dodge it.",
+      `Arc Wardens Tempest Spark Wraith takes two seconds to charge which gives you time to dodge it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "arc_warden_spark_wraith" },
   },
@@ -1996,7 +1996,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "urn_of_shadows" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Brewmaster",
     audioFile: "ownHero/Brewmaster_2_DrunkenBrawler",
@@ -2004,7 +2004,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Take a point in Drunken Brawler on a tough lane.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "brewmaster_drunken_brawler" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Brewmaster",
@@ -2046,6 +2046,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "The Earth Panda carries all the auras and AoE effects like Radiance or Cloak of Flames.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "brewmaster_primal_split" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Brewmaster`,
+    audioFile: `ownHero/Brewmaster_7_ItemUsage`,
+    messageTime: [6 * 60 + 30, 16 * 60 + 30],
+    textMessage:
+      `Look to use your aura items like Crimson Guard and Pipe before Primal Split. But beware of your mana pool.`,
+    audience: [Audience.ALL],
   },
 
   {
@@ -2204,7 +2213,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Broodmother_1_UntilLevel6",
     messageTime: 15,
     textMessage:
-      "Broodmother is weak until level 6. Focus on lasthitting and sustaining health until you have Spawn Spiderlings.",
+      `Broodmother is weak until level 6. Focus on last hitting and sustaining health until you have Spawn Spiderlings.`,
     audience: [Audience.ALL],
   },
   {
@@ -2223,7 +2232,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Broodmother_3_PlayAggressive",
     messageTime: [6 * 60 + 30, 9 * 60 + 30],
     textMessage:
-      "Once you have buit up an army of spiderlings, try to play on the opponents side of the map as much as you can.",
+      `Once you have built up an army of spiderlings, try to play on the opponents side of the map as much as you can.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "broodmother_spawn_spiderlings" },
   },
@@ -2233,7 +2242,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Broodmother_4_PlaceWards",
     messageTime: [7 * 60, 10 * 60, 13 * 60],
     textMessage:
-      "Place Observer Wards and Sentries in the opponents' jungle so you feel comfortable playing there.",
+      `Place Observer Wards and Sentries in the enemy jungle so you feel comfortable playing there.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_dispenser" },
   },
@@ -2334,7 +2343,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CentaurWarrunner_1_Ring",
     messageTime: 15,
     textMessage:
-      "Focus on lasthitting to get Ring of Health purchased as soon as possible.",
+      `Focus on last hitting to get Ring of Health purchased as soon as possible.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "ring_of_health" },
   },
@@ -2344,7 +2353,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CentaurWarrunner_2_Creepskip",
     messageTime: 4 * 60 + 45,
     textMessage:
-      "If you can't pressure on the lane, consider creepskipping after minute 5 and farming neutral camps nearby.",
+      `If you cannot pressure on the lane, consider creep skipping after minute 5 and farming neutral camps nearby.`,
     audience: [Audience.ROLE_OFFLANE],
   },
   {
@@ -2556,7 +2565,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Chen_2_Harpy",
     messageTime: 55,
     textMessage:
-      "If you find Harpy Stormcrafter you can send it mid and zap the opponents' midlaner until it runs out of mana.",
+      `If you find Harpy Stormcrafter you will have massive kill potential with the slow from Penitence.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "chen_holy_persuasion" },
   },
@@ -2596,7 +2605,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening on the map, you can splitpush with your summons.",
+      `When not much is happening on the map, you can split push with your summons.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Chen`,
+    audioFile: `ownHero/Chen_7_Farming`,
+    messageTime: 7 * 60,
+    textMessage:
+      `Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Mekansm lets you snowball the game.`,
     audience: [Audience.ALL],
   },
 
@@ -2648,9 +2666,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     hero: "Chen",
     audioFile: "enemyHero/Chen_6_AghanimsScepter",
-    messageTime: [25 * 60 + 20, 35 * 60 + 20, 45 * 60 + 20],
+    messageTime: 40 * 60,
     textMessage:
-      "Be aware of Chen applying strong dispel with Hand of God once he has Aghanim's Scepter.",
+      `Be aware of Chen applying strong dispel with Hand of God if he has the level 25 talent.`,
     audience: [Audience.ALL],
   },
 
@@ -16243,6 +16261,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Undying allows the team to kill Roshan early due to zombie tanking and damage amplification from Flesh Golem.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Undying`,
+    audioFile: `ownHero/Undying_8_Aggression`,
+    messageTime: [11 * 60, 21 * 60, 31 * 60],
+    textMessage:
+      `Play as aggressively as you can in front of your team with Flesh Golem and Decay to absorb damage and chase down enemy heroes.`,
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: `ability`, name: `undying_flesh_golem` },
   },
 
   {
