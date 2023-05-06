@@ -149,6 +149,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["cyclone"],
     },
+	// The Level 25 talent gives a Fear effect on Cinder Brew.
   ],
   Bristleback: [],
   Broodmother: [],
