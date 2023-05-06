@@ -2990,7 +2990,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `power_treads`,
             `disperser`,
             `harpoon`,
-            `desolater`,
+            `desolator`,
             `abyssal_blade`,
             `butterfly`,
             `monkey_king_bar`,
@@ -3792,7 +3792,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         all: [
           { item: "armor", info: "Buy armor items" },
           {
-            item: "regen",
+            item: "ring_of_regen",
             info: "As a support extra consumables or as a core items that provide regen.",
           },
         ],
@@ -4647,7 +4647,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `infused_raindrop`,
           ],
           mid_game: [
-            `desolater`,
+            `desolator`,
             `black_king_bar`,
             `aghanims_shard`,
             `blink`,
@@ -4673,7 +4673,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: [
             `phase_boots`,
             `soul_ring`,
-            `desolater`,
+            `desolator`,
             `black_king_bar`,
             `aghanims_shard`,
             `basher`,
@@ -4700,7 +4700,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           phase_boots: "A core item that allows you to gap-close faster.",
           soul_ring: "A core item that helps with mana sustain.",
           echo_sabre: `A core item that boosts your damage output and tankiness. Choose between this item and Desolator based on whether you need more tankiness or damage. Builds into Harpoon in the late game.`,
-          desolater: `A core item that gives you massive burst potential with Starbreaker. Choose between this item and Echo Sabre based on whether you need more damage or some tankiness.`,
+          desolator: `A core item that gives you massive burst potential with Starbreaker. Choose between this item and Echo Sabre based on whether you need more damage or some tankiness.`,
           bloodthorn: `Allows you to land solo kills while disabling enemies with a silence.`,
           heavens_halberd: "Especially good against ranged right-clikers.",
           aghanims_shard:
@@ -5007,13 +5007,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `pipe`,
             `sphere`,
           ],
-          core: ["gaurdian_greaves", "kaya_and_sange", `aghanims_shard`],
+          core: ["guardian_greaves", "kaya_and_sange", `aghanims_shard`],
           neutral: [
             "arcane_ring",
             `faded_broach`,
             `bullwhip`,
             `dragon_scale`,
-            "eye_of_vizier",
+            "eye_of_the_vizier",
             "quickening_charm",
             `defiant_shell`,
             `spell_prism`,
@@ -9689,7 +9689,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       bracer: "Good stats early and double after 25:00min ;)",
       armlet: "A core item that provides you with useful stats and burst.",
       sange:
-        "Can buy a value sange after armlet for great survivability, And then you have many options (eg. sange&yasha, eye of skadi, satanic, desolater etc.) ",
+        "Can buy a value sange after armlet for great survivability, And then you have many options (eg. sange&yasha, eye of skadi, satanic, desolator etc.) ",
       skadi:
         "Really good stats and lockdown against enemy heroes, I highly recommend this 3rd/4th item.",
       heavens_halberd:
@@ -23248,7 +23248,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2971195922",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "undying_decay", // 1
