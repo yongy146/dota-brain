@@ -1232,7 +1232,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_3_CreepSkipping",
     messageTime: [5 * 60, 6 * 60 + 30],
     textMessage:
-      "If you can't pressure opponents' carry on the lane, consider creepskiping and farming neutrals in their jungle past 5 minute mark.",
+      `If you can't pressure opponents' carry on the lane, consider creep skiping and farming neutrals in their jungle past 5 minute mark.`,
     audience: [Audience.IN_LANE, Audience.ROLE_OFFLANE],
   },
   {
@@ -1590,7 +1590,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 9. Beastmaster
-  {
+  /* {
     category: "OwnHero",
     hero: "Beastmaster",
     audioFile: "ownHero/Beastmaster_1_HelmOfIronWill",
@@ -1599,16 +1599,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Save some of your starting gold to get Helm of Iron Will as soon as possible.",
     audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_iron_will" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Beastmaster",
-    audioFile: "ownHero/Beastmaster_2_WildAxes",
-    messageTime: -60,
+    audioFile: `ownHero/Beastmaster_2_BoarCounters`,
+    messageTime: 1 * 60,
     textMessage:
-      "If laning against Chen, Enchantress or Naga Siren, consider skilling Wild Axes on level 1 and investing more spell points into it.",
+      `If laning against Chen, Enchantress or Crystal Maiden, consider not summoning Boars as they deal with summons easily.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "beastmaster_wild_axes" },
+    image: { type: "ability", name: `beastmaster_call_of_the_wild_boar` },
   },
   {
     category: "OwnHero",
@@ -1639,7 +1639,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Beastmaster_5_HighDamage",
     messageTime: 30,
     textMessage:
-      "Utilize Beasmaster's high base damage and additional damage from boars to deny creeps and secure lasthits.",
+      `Utilize Beasmaster's high base damage and additional damage from boars to deny creeps and secure last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "beastmaster_call_of_the_wild_boar" },
   },
@@ -7964,8 +7964,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Magnus_3_WinLastHits",
     messageTime: 15,
     textMessage:
-      "Magnus has huge base damage that is further amplified by Empower. Use to win the lane lasthit wise.",
-    audience: [Audience.ROLE_CORE],
+      `Magnus has huge base damage that is further amplified by Empower. Use to win the lane last hit wise.`,
+    audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "magnataur_empower" },
   },
   {
@@ -8043,9 +8043,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Magnus",
     audioFile: "ownHero/Magnus_11_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at the 20 minute mark as it makes it easier for you to do your combos.",
+      `Pick up Aghanims Shard later in the game to boost your farming speed, damage output, and control.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -12074,7 +12074,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Riki",
     audioFile: "ownHero/Riki_1_SecureRanged",
     messageTime: 15,
-    textMessage: "Use Blink Strike to secure ranged creep lasthits.",
+    textMessage: `Use Blink Strike to secure ranged creep last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "riki_blink_strike" },
   },
@@ -12085,7 +12085,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 4 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "In trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.",
+      `When in trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "riki_blink_strike" },
   },
@@ -12135,11 +12135,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Riki",
     audioFile: "ownHero/Riki_7_AghanimsShard",
-    messageTime: 19 * 60,
-    repeatTime: 10 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 for extra control and Meteor Hammer setup if you have it.",
-    audience: [Audience.ROLE_SUPPORT],
+      `Pick up Aghanims Shard around minute 15 to isolate enemy heroes stuck in Smoke from getting help.`,
+    audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
 
@@ -12149,7 +12148,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Riki_1_DustOfAppearance",
     messageTime: 8 * 60,
     textMessage:
-      "Dust of Appearance doesn't reveal Riki while he's using Tricks of the Trade.",
+      `Dust of Appearance does not stick on Riki while he is using Tricks of the Trade.`,
     audience: [Audience.ALL],
   },
   {
@@ -12202,6 +12201,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Break effects disable Cloak and Dagger and prevent Riki from being invisible.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Riki`,
+    audioFile: `enemyHero/Riki_8_ForceStaff2`,
+    messageTime: 15 * 60,
+    textMessage:
+      `Once Riki gets Aghanims Shard, you will need your own mobility item to get out of Smoke.`,
     audience: [Audience.ALL],
   },
 
@@ -16029,7 +16037,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_1_Outlasthit",
     messageTime: 15,
     textMessage:
-      "Capitalize on attack damage difference to win the lane lasthit wise.",
+      `Capitalize on attack damage difference to win the lane last hit wise.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abyssal_underlord_atrophy_aura" },
   },
@@ -16049,9 +16057,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_3_ReplenishRift",
     messageTime: 7 * 60,
     textMessage:
-      "Feel free to use Dark Rift to replenish mana and hp during laning stage.",
+      `Feel free to use Fiends Gate to replenish mana and hp during laning stage.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "abyssal_underlord_dark_rift" },
+    image: { type: "ability", name: `abyssal_underlord_dark_portal` },
   },
   {
     category: "OwnHero",
@@ -16059,7 +16067,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_4_DefendTowers",
     messageTime: [8 * 60, 14 * 60],
     textMessage:
-      "Underlord is amazing at safely defending the towers. Your other cores can splitpush in the meantime.",
+      `Underlord is amazing at safely defending the towers. Your other cores can split push in the meantime.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abyssal_underlord_firestorm" },
   },
@@ -16091,9 +16099,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Begin channeling Dark Rift on a first sign of trouble and cancel it if the situation improves.",
+      `Begin channeling Fiends Gate on a first sign of trouble. You can always come back if the situation improves.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "abyssal_underlord_dark_rift" },
+    image: { type: "ability", name: `abyssal_underlord_dark_portal` },
   },
   {
     category: "OwnHero",
@@ -16112,9 +16120,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Consider using Dark Rift to bring your team closer to objectives after pick-off or won fight.",
+      `Consider using Fiends Gate to bring your team closer to objectives after pick-off or won fight.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "abyssal_underlord_dark_rift" },
+    image: { type: "ability", name: `abyssal_underlord_dark_portal` },
   },
   {
     category: "OwnHero",
@@ -16123,7 +16131,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, you can easily splitpush with Firestorm without showing yourself.",
+      `When not much is happening, you can easily split push with Firestorm without showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abyssal_underlord_firestorm" },
   },
@@ -16131,9 +16139,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Underlord",
     audioFile: "ownHero/Underlord_11_Splitpush2",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Purchase Aghanim's Shard upgrade at minute 20 as it improves your overall damage output greatly.",
+      `Purchase Aghanims Shard upgrade later in the game as it improves your overall damage output greatly.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },

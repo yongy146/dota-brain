@@ -1357,8 +1357,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Axe: {
-    gameplay_version: "7.32e",
-    creator: ContentCreator.TNTCNz,
+    gameplay_version: `7.33b`,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
       {
@@ -1381,65 +1381,71 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "axe_culling_blade",
           "axe_battle_hunger",
           "axe_battle_hunger",
-          "special_bonus_unique_axe_6",
+          `special_bonus_unique_axe_4`,
           "axe_battle_hunger",
           "special_bonus_attributes",
           "axe_culling_blade",
           "special_bonus_attributes",
-          "special_bonus_unique_axe_3",
+          `special_bonus_unique_axe_5`,
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
-          "special_bonus_unique_axe",
+          `special_bonus_unique_axe_2`,
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "tango",
-            "tango",
-            "gauntlets",
-            "ring_of_protection",
+            `tango`,
+            `quelling_blade`,
+            `blood_grenade`,
+            `branches`,
+            `branches`,
+			`ring_of_protection`,
+			`ward_observer`,
           ],
 
-          early_game: ["boots", "magic_wand", "vanguard"],
+          early_game: [`vanguard`, `boots`, `magic_wand`, `wind_lace`, `infused_raindrop`],
           mid_game: [
             "blink",
             "blade_mail",
-            "black_king_bar",
-            "travel_boots",
-            "aghanims_shard",
+            `crimson_guard`,
+			`travel_boots`,
           ],
-          late_game: ["overwhelming_blink", "heart", "shivas_guard"],
+          late_game: [`black_king_bar`, `aghanims_shard`, `overwhelming_blink`, `heart`],
           situational: [
-            "pipe",
-            "crimson_guard",
+            `phase_boots`,
+			`pipe`,
+            `kaya_and_sange`,
+			`assault`,
+			`shivas_guard`,
+			`sphere`,
+			`ultimate_scepter`,
+			`octarine_core`,
             "lotus_orb",
             "invis_sword",
-            "heavens_halberd",
+            `heavens_halberd`,
+			`travel_boots_2`,
           ],
           core: [
             "vanguard",
             "boots",
             "blink",
             "blade_mail",
-            "black_king_bar",
-            "aghanims_shard",
-            "travel_boots",
+            `crimson_guard`,
+            `travel_boots`,
+            `black_king_bar`,
           ],
           neutral: [
-            "broom_handle",
+            `faded_broach`,
             "occult_bracelet",
             "vambrace",
             "bullwhip",
-            "dragon_scale",
-            "cloak_of_flames",
+            `cloak_of_flames`,
             "ogre_seal_totem",
-            "ascetic_cap",
-            "trickster_cloak",
-            "havoc_hammer",
+            `havoc_hammer`,
+            `martyrs_plate`,
             "giants_ring",
-            "force_field",
+            `fallen_sky`,
           ],
         },
       },
@@ -1448,12 +1454,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       axe_battle_hunger:
         "If the opponents have an easy way of removing or dispelling Battle Hunger, you can skip skilling this spell during laning stage. Try using it when all creeps are high HP",
       axe_berserkers_call:
-        "Use this to prevent enemies from lasthitting a creep or use it so they don`t deny you one.",
+        `Use this to prevent enemies from last hitting a creep or use it so they dont deny you one.`,
     },
 
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       vanguard:
         "A core item that fixes your hp sustain issues and makes you exremely tanky. It can be disassembled.",
       boots:
@@ -1466,8 +1472,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that allows you to stay alive after initiating.",
       aghanims_shard:
         "A core upgrade for Counter Helix especially good against illusion, summon or clone based heroes.",
-      platemail:
-        "A core item that fixes armor issues. You can upgrade it to either Assault Cuirass, Lotus Orb or Shiva`s Guard down the road.",
+      /* platemail:
+        "A core item that fixes armor issues. You can upgrade it to either Assault Cuirass, Lotus Orb or Shiva`s Guard down the road.", */
       travel_boots:
         "A core boots upgrade that allows you to cover the map better.",
       lotus_orb: "For reflect, dispel and armor.",
@@ -1961,8 +1967,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Beastmaster: {
-    gameplay_version: "7.32e",
-    creator: ContentCreator.TNTCNz,
+    gameplay_version: `7.33b`,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -1972,21 +1978,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "beastmaster_wild_axes",
-          "beastmaster_call_of_the_wild_boar",
-          "beastmaster_call_of_the_wild_boar",
-          "beastmaster_inner_beast",
-          "beastmaster_call_of_the_wild_boar",
+          `beastmaster_inner_beast`,
+          `beastmaster_wild_axes`,
+          `beastmaster_call_of_the_wild_boar`,
+          `beastmaster_wild_axes`,
           "beastmaster_primal_roar",
-          "beastmaster_call_of_the_wild_boar",
-          "beastmaster_inner_beast",
-          "beastmaster_inner_beast",
-          "special_bonus_attack_damage_30",
-          "beastmaster_inner_beast",
-          "beastmaster_primal_roar",
-          "beastmaster_wild_axes",
-          "beastmaster_wild_axes",
-          "beastmaster_wild_axes",
-          "special_bonus_unique_beastmaster_5",
+          `beastmaster_wild_axes`,
+          `beastmaster_call_of_the_wild_boar`,
+          `beastmaster_call_of_the_wild_boar`,
+          `beastmaster_call_of_the_wild_boar`,
+          `special_bonus_unique_beastmaster_9`,
+          `beastmaster_primal_roar`,
+          `beastmaster_inner_beast`,
+          `beastmaster_inner_beast`,
+          `special_bonus_unique_beastmaster_5`,
+          `beastmaster_inner_beast`,
           "special_bonus_attributes",
           "beastmaster_primal_roar",
           "special_bonus_attributes",
@@ -2001,51 +2007,62 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "quelling_blade",
+            `sobi_mask`,
+			`enchanted_mango`,
             "branches",
-            "branches",
-            "branches",
+            `branches`,
+			`branches`,
+			`ward_observer`,
           ],
           early_game: [
-            "helm_of_iron_will",
-            "crown",
-            "helm_of_the_dominator",
-            "boots",
-            "ring_of_basilius",
-            "magic_wand",
+            `ring_of_basilius`,
+            `boots`,
+            `magic_wand`,
+            `helm_of_the_dominator`,
           ],
           mid_game: [
             "helm_of_the_overlord",
-            "aghanims_shard",
-            "ancient_janggo",
-            "blink",
-            "travel_boots",
+            `boots_of_bearing`,
+            `ultimate_scepter`,
+            `crimson_guard`,
           ],
           late_game: [
-            "assault",
-            "ultimate_scepter",
-            "refresher",
-            "octarine_core",
+            `pipe`,
+            `blink`,
+            `octarine_core`,
+            `black_king_bar`,
           ],
-          situational: ["black_king_bar", "lotus_orb", "pipe"],
+          situational: [
+			`guardian_greaves`,
+			`heavens_halberd`,
+			`solar_crest`,
+			`lotus_orb`,
+			`force_staff`,
+			`aghanims_shard`,
+			`bloodstone`,
+			`kaya_and_sange`,
+			`overwhelming_blink`,
+			`aeon_disk`,
+			`travel_boots`,
+		  ],
           core: [
-            "helm_of_the_dominator",
+            `ring_of_basilius`,
             "boots",
-            "solar_crest",
-            "blink",
-            "helm_of_the_overlord",
-            "aghanims_shard",
+            `helm_of_the_overlord`,
+            `boots_of_bearing`,
+            `crimson_guard`,
+            `pipe`,
+			`octarine_core`,
           ],
           neutral: [
-            "broom_handle",
-            "occult_bracelet",
-            "seeds_of_serenity",
+            `arcane_ring`,
+            `unstable_wand`,
+            `pupils_gift`,
             "vambrace",
-            "dragon_scale",
-            //"black_powder_bag",
-            "ogre_seal_totem",
-            "quickening_charm",
+            `cloak_of_flames`,
+            `quickening_charm`,
             "spell_prism",
-            "trickster_cloak",
+            `timeless_relic`,
             "fallen_sky",
             "demonicon",
           ],
@@ -2053,25 +2070,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      beastmaster_wild_axes:
-        "If you are laning against Chen or Enchantress, you might want to skill Wild Axes over Call of the Wild.",
+      /* beastmaster_wild_axes:
+        "If you are laning against Chen or Enchantress, you might want to skill Wild Axes over Call of the Wild.", */
       beastmaster_call_of_the_wild_boar:
-        " Preferably to have 2 boars active. Make sure the most recent one is not the one tanking damage or getting killed.",
+        `Preferably to have 2 boars active, make sure the most recent one is not the one tanking damage or getting killed.`,
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
-      helm_of_iron_will:
-        "Solves your HP sustain issues and builds into Helm of the Dominator. Get it as early as possible.",
+      magic_wand:
+        `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
+      /* helm_of_iron_will:
+        "Solves your HP sustain issues and builds into Helm of the Dominator. Get it as early as possible.", */
       helm_of_the_dominator:
         "A core item that synergizes well with the Inner Beast and allows you to push and pick-off heroes. Look to upgrade it to Helm of the Overlord.",
       boots:
-        "A core item that should be upgraded to Boots of Travel after core items are acquired.",
+        `A core item that should be upgraded to Boots of Bearing later in the game.`,
       aghanims_shard:
-        "A core item that improves vision game and adds another disable.",
+        `A situational item that improves vision game and adds another disable.`,
       ultimate_scepter:
-        "Particularly good against illusion based heroes and base defense.",
-      octarine_core: "Goes well with Aghanims Scepter. .",
+        `A core item that improves your damage and sustain in fights.`,
+      octarine_core: `A late game pick up that improves the cooldown on your spells and gives mana regen to spam Wild Axes.`,
+	  crimson_guard: `An incredible aura item that improves the tankiness of your team against physical damage. Also helps in taking the tormentor.`,
       blink:
         "To cast Primal Roar on a desired target and supports that often stay in the back.",
       black_king_bar:
@@ -2079,7 +2097,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       lotus_orb: "For reflecting, dispelling and armor.",
       pipe: "Against AOE damage. Protects your units and your teammates as they tend to move together with Beastmaster.",
     },
-    combo: [],
+    combo: [
+	  `beastmaster_call_of_the_wild_hawk`,
+	  `beastmaster_call_of_the_wild_boar`,
+	  `beastmaster_primal_roar`,
+	  `beastmaster_wild_axes`,
+	  `attack`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -10784,8 +10808,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Magnus: {
-    gameplay_version: "7.32e",
-    creator: ContentCreator.TNTCNz,
+    gameplay_version: `7.33b`,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -10796,20 +10820,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
           "magnataur_shockwave", // 1
-          "magnataur_empower", // 2
+          `magnataur_skewer`, // 2
           "magnataur_shockwave", // 3
           "magnataur_skewer", // 4
-          "magnataur_empower", // 5
+          `magnataur_shockwave`, // 5
           "magnataur_reverse_polarity", // 6
-          "magnataur_empower", // 7
+          `magnataur_shockwave`, // 7
           "magnataur_empower", // 8
-          "magnataur_shockwave", // 9
-          "special_bonus_unique_magnus_4", // 10
-          "magnataur_shockwave", // 11
+          `magnataur_empower`, // 9
+          `magnataur_empower`, // 10
+          `magnataur_empower`, // 11
           "magnataur_reverse_polarity", // 12
           "magnataur_skewer", // 13
           "magnataur_skewer", // 14
-          "magnataur_skewer", // 15
+          `special_bonus_unique_magnus_4`, // 15
           "special_bonus_unique_magnus_7", // 16
           "special_bonus_attributes", // 17
           "magnataur_reverse_polarity", // 18
@@ -10823,79 +10847,93 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "tango",
-            "tango",
+            `tango`,
+            `quelling_blade`,
+            `circlet`,
+			`circlet`,
             "branches",
-            "gauntlets",
-            "enchanted_mango",
+            `branches`,
+            `ward_observer`,
           ],
-          early_game: ["arcane_boots", "magic_wand", "soul_ring", "bracer"],
+          early_game: [`wraith_band`, `bracer`, `vanguard`, `arcane_boots`, `magic_wand`, `wind_lace`],
           mid_game: [
             "blink",
-            "aether_lens",
-            "force_staff",
-            "aghanims_shard",
-            "black_king_bar",
+            `guardian_greaves`,
+            `black_king_bar`,
+            `force_staff`,
           ],
           late_game: [
-            "refresher",
-            "invis_sword",
-            "assault",
-            "overwhelming_blink",
-            "arcane_blink",
+            `crimson_guard`,
+            `refresher`,
+            `aghanims_shard`,
+            `ultimate_scepter`,
             "octarine_core",
           ],
           situational: [
-            "cyclone",
-            "guardian_greaves",
-            "black_king_bar",
-            "lotus_orb",
+            `power_treads`,
+			`harpoon`,
+			`pipe`,
+			`aether_lens`,
+			`solar_crest`,
+			`silver_edge`,
+			`heavens_halberd`,
+            `wind_waker`,
+            `aeon_disk`,
+            `lotus_orb`,
+			`bloodthorn`,
+			`greater_crit`,
+			`assault`,
+			`sphere`,
+			`overwhelming_blink`,
+			`travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            `vanguard`,
+			`arcane_boots`,
             "blink",
-            "aether_lens",
-            "aghanims_shard",
+            `guardian_greaves`,
+            `black_king_bar`,
             "force_staff",
             "refresher",
           ],
           neutral: [
-            "pogo_stick",
+            `unstable_wand`,
             "arcane_ring",
-            "bullwhip",
-            "quickening_charm",
+            `pupils_gift`,
+            `vambrace`,
             "ogre_seal_totem",
-            "psychic_headband",
+            `quickening_charm`,
             "spell_prism",
-            "timeless_relic",
-            "ninja_gear",
-            "trickster_cloak",
-            "fallen_sky",
-            "seer_stone",
+            `ninja_gear`,
+            `fallen_sky`,
+            `apex`,
           ],
         },
         item_tooltips: {
           arcane_boots:
             "A core boots upgrade that helps with mana sustain. Can be disassembled for Aether Lens later on.",
-          cyclone: "Often used as a dispel, setup or disengaging item.",
-          mekansm:
-            "Can be a good item to pick up if you are looking to group up early and you don`t have to play around Reverse Polarity as much.",
+          wind_waker: `Often used as a dispel, setup or disengaging item. Also lets you reposition yourself in dangerous positions.`,
+          guardian_greaves:
+            `A core item that improves your impact in the game with auras and sustain. Makes you less reliant on just Reverse Polarity.`,
           aether_lens:
-            "A core item that Blink Dagger, Horn Toss and Skewer can make a great use of.",
+            `A situational item that Blink Dagger, Horn Toss and Skewer can make a great use of.`,
           aghanims_shard:
-            "A core item that allows you to reposition an enemy with ease, followed up by Skewer.",
+            `A core item that improves your damage output and control with Shockwave. Also helps in farming creep waves extremely fast.`,
           force_staff:
             "Extends the range from where you can start your sequence resulting in Reverse Polarity.",
           black_king_bar:
             "Can be helpful against silences and debuffs that prevent you from blinking or using Reverse Polarity.",
           refresher: "A core item that makes you a huge threat in late game.",
-          invis_sword: "Allows you to get off your combo easier.",
+          silver_edge: `A situational item when the break effect is useful against enemy heroes. Also allows you to find better angles to get into fights and make a big Reverse Polarity play.`,
+		  ultimate_scepter: `A core late game pick up that gives you another repositioning tool with Horn Toss. Has great synergy with Skewer.`,
+		  vanguard: `A core item to rush in the offlane to become tanky and apply pressure on the lane. Builds into Crimson Guard later in the game.`,
+		  pipe: `Another incredible aura item you can build to make your whole team more tanky against magic damage.`,
+		  harpoon: `A situational item for offlane Magnus that acts as another gap close on enemy heroes. Works well as your first major item if you are building as a right clicker with Echo Sabre rather than buying auras.`,
           lotus_orb: "For reflecting, dispelling and armor.",
         },
         ability_tooltips: {
-          magnataur_skewer:
-            "You can skill this spell on level 2 if you see yourself being able to pull off a Shockwave into Skewer combo.",
+          /* magnataur_skewer:
+            "You can skill this spell on level 2 if you see yourself being able to pull off a Shockwave into Skewer combo.", */
         },
       },
       {
@@ -10906,21 +10944,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "magnataur_shockwave", // 1
-          "magnataur_empower", // 2
+          `magnataur_skewer`, // 2
           "magnataur_empower", // 3
-          "magnataur_skewer", // 4
+          `magnataur_empower`, // 4
           "magnataur_empower", // 5
           "magnataur_reverse_polarity", // 6
           "magnataur_empower", // 7
           "magnataur_shockwave", // 8
           "magnataur_shockwave", // 9
-          "special_bonus_unique_magnus_4", // 10
-          "magnataur_shockwave", // 11
+          `magnataur_skewer`, // 10
+          `magnataur_skewer`, // 11
           "magnataur_reverse_polarity", // 12
           "magnataur_skewer", // 13
-          "magnataur_skewer", // 14
-          "special_bonus_unique_magnus_7", // 15
-          "magnataur_skewer", // 16
+          `magnataur_shockwave`, // 14
+          `special_bonus_unique_magnus_4`, // 15
+          `special_bonus_unique_magnus_7`, // 16
           "special_bonus_attributes", // 17
           "magnataur_reverse_polarity", // 18
           "special_bonus_attributes", // 19
@@ -10936,63 +10974,81 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
-            "faerie_fire",
+            `branches`,
+			`branches`,
+			`circlet`,
             "ward_observer",
           ],
-          early_game: ["bottle", "power_treads", "magic_wand", "bracer"],
-          mid_game: ["echo_sabre", "blink", "black_king_bar", "orchid"],
+          early_game: [`bottle`, `power_treads`, `wraith_band`, `magic_wand`, `wind_lace`],
+          mid_game: [`harpoon`, `blink`, `black_king_bar`, `octarine_core`],
           late_game: [
-            "bloodthorn",
-            "assault",
-            "greater_crit",
-            "satanic",
-            "overwhelming_blink",
-            "moon_shard",
+            `aghanims_shard`,
+			`refresher`,
+			`ultimate_scepter`,
+			`assault`,
           ],
-          situational: ["aghanims_shard", "sphere", "silver_edge"],
+          situational: [
+			`bracer`,
+			`force_staff`,
+			`crimson_guard`,
+			`guardian_greaves`,
+			`pipe`,
+			`solar_crest`,
+			`silver_edge`,
+			`heavens_halberd`,
+            `wind_waker`,
+            `sphere`,
+            `lotus_orb`,
+			`sange_and_yasha`,
+			`bloodthorn`,
+			`greater_crit`,
+			`assault`,
+			`sphere`,
+			`overwhelming_blink`,
+			`travel_boots`,
+		  ],
           core: [
             "bottle",
             "power_treads",
-            "echo_sabre",
+            `harpoon`,
             "blink",
-            "aghanims_shard",
-            "black_king_bar",
-            "greater_crit",
-            "orchid",
-            "bloodthorn",
-            "refresher",
+            `black_king_bar`,
+            `octarine_core`,
+            `refresher`,
+            `ultimate_scepter`,
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
-            "unstable_wand",
-            //"dagger_of_ristul", Removed in 7.33
-            //"misericorde",
-            "elven_tunic",
-            "ogre_seal_totem",
-            "titan_sliver",
-            "penta_edged_sword",
-            "havoc_hammer",
-            "pirate_hat",
-            "desolator_2",
+            `unstable_wand`,
+            `arcane_ring`,
+            `pupils_gift`,
+            `vambrace`,
+            `ogre_seal_totem`,
+            `quickening_charm`,
+            `spell_prism`,
+            `ninja_gear`,
+            `fallen_sky`,
+            `apex`,
           ],
         },
         ability_tooltips: {
-          magnataur_skewer:
-            "You can skill this spell on level 2 if you see yourself being able to pull off a Shockwave into Skewer combo.",
+          /* magnataur_skewer:
+            "You can skill this spell on level 2 if you see yourself being able to pull off a Shockwave into Skewer combo.", */
         },
         item_tooltips: {
           power_treads:
             "A core boots upgrade that improves your farming speed by increasing attack speed and saving you some mana through toggling.",
-          echo_sabre:
-            "A core item that grants you burst and improves your farming speed. Can be disassembled. Ogre Axe can be used for Black King Bar and Oblivion Staff for Mage Slayer if you choose to go for Bloodthorn. Not necessary to disassemble.",
+          harpoon:
+            `A core item for mid Magnus that acts as another gap close on enemy heroes. Boosts your right click damage while also making you more tanky.`,
           black_king_bar:
             "A core item that allows you to deliver the damage while being in the middle of the fight.",
-          aghanims_shard:
-            "Allows you to reposition an enemy with ease, followed up by Skewer.",
-          orchid:
-            "A core item that allows you to kill-off heroes without even needing to Reverse Polarity. It gives you great stats and covers your mana problems.",
+          ultimate_scepter:
+            `A core late game pick up that gives you another repositioning tool with Horn Toss. Has great synergy with Skewer.`,
           bloodthorn:
-            "A core item that allows you to burst heroes while they are stunned by Reverse Polarity. It silences, makes every attack crit and grants true strike on affected opponent.",
+            `A situational item that allows you to kill-off heroes without even needing to Reverse Polarity. The Mage Slayer also helps reduce the magic damage of enemy heroes who rely on it, such as Storm Spirit.`,
+          /* bloodthorn:
+            "A core item that allows you to burst heroes while they are stunned by Reverse Polarity. It silences, makes every attack crit and grants true strike on affected opponent.", */
+		  aghanims_shard:
+            `A core item that improves your damage output and control with Shockwave. Also helps in farming creep waves extremely fast.`,
           sphere: "Against powerful single-target disables and debuffs.",
           silver_edge:
             "Allows you to get off your combo easier, adds to the burst and applies break.",
@@ -11014,13 +11070,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "magnataur_empower", // 7
           "magnataur_shockwave", // 8
           "magnataur_shockwave", // 9
-          "special_bonus_unique_magnus_4", // 10
-          "magnataur_shockwave", // 11
+          `magnataur_skewer`, // 10
+          `magnataur_skewer`, // 11
           "magnataur_reverse_polarity", // 12
           "magnataur_skewer", // 13
-          "magnataur_skewer", // 14
-          "magnataur_skewer", // 15
-          "special_bonus_unique_magnus_7", // 16
+          `magnataur_shockwave`, // 14
+          `special_bonus_unique_magnus_4`, // 15
+          `special_bonus_unique_magnus_7`, // 16
           "special_bonus_attributes", // 17
           "magnataur_reverse_polarity", // 18
           "special_bonus_attributes", // 19
@@ -11032,34 +11088,47 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_magnus_5", // 25
         ],
         items: {
-          starting: ["tango", "boots", "ward_observer"],
-          early_game: ["arcane_boots", "magic_wand"],
+          starting: [`tango`, `blood_grenade`, `wind_lace`, `branches`, `branches`, `branches`, `ward_observer`],
+          early_game: [`ward_sentry`, `arcane_boots`, `magic_wand`, `wind_lace`, `infused_raindrop`],
           mid_game: [
             "blink",
-            "aghanims_shard",
-            "aether_lens",
-            "force_staff",
-            "ghost",
+            `force_staff`,
+			`guardian_greaves`,
+			`aghanims_shard`,
           ],
-          late_game: ["refresher", "invis_sword"],
-          situational: ["cyclone", "lotus_orb"],
+          late_game: [`ultimate_scepter`, `refresher`, `octarine_core`, `aeon_disk`],
+          situational: [
+			`glimmer_cape`,
+			`ghost`,
+			`pipe`,
+			`aether_lens`,
+			`wind_waker`,
+			`solar_crest`,
+			`lotus_orb`,
+			`assault`,
+            `invis_sword`,
+            `overwhelming_blink`,
+			`travel_boots`,
+		  ],
           core: [
             "arcane_boots",
             "blink",
-            "aghanims_shard",
-            "aether_lens",
-            "refresher",
+            `force_staff`,
+            `guardian_greaves`,
+            `aghanims_shard`,
+			`ultimate_scepter`,
+			`refresher`,
+			`octarine_core`,
           ],
           neutral: [
             "pogo_stick",
             "arcane_ring",
-            "occult_bracelet",
+            `philosophers_stone`,
             "bullwhip",
             "psychic_headband",
-            "ogre_seal_totem",
-            "eye_of_the_vizier",
-            "timeless_relic",
-            "trickster_cloak",
+            `quickening_charm`,
+            `spell_prism`,
+            `ninja_gear`,
             "fallen_sky",
             "seer_stone",
           ],
@@ -11068,27 +11137,39 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ward_sentry: "To block or unblock the pull camp.",
           arcane_boots:
             "A core boots upgrade that helps with mana sustain. Can be disassembled for Aether Lens later on. You can get Tranquil Boots after disassembling.",
-          aghanims_shard:
-            "A core item that allows you to reposition an enemy with ease, followed up by Skewer.",
+          ultimate_scepter:
+            `A core late game pick up that gives you another repositioning tool with Horn Toss. Has great synergy with Skewer.`,
+		  aghanims_shard:
+            `A core item that improves your damage output and control with Shockwave. Also helps in farming creep waves extremely fast.`,
           aether_lens:
-            "A core item that Blink Dagger, Horn Toss and Skewer can make a great use of.",
+            `A situational item that Blink Dagger, Horn Toss and Skewer can make a great use of.`,
           force_staff:
             "Extends the range from where you can start your sequence resulting in Reverse Polarity or save a teammate.",
           refresher: "A core item that makes you a huge threat in late game.",
           invis_sword: "Allows you to get off your combo easier.",
           lotus_orb: "For reflecting, dispelling and armor.",
-          cyclone: "Often used as a dispel, setup or disangage.",
+          wind_waker: `Often used as a dispel, setup or disengaging item. Also lets you reposition yourself in dangerous positions.`,
+		  guardian_greaves: `A core item that improves your impact in the game with auras and sustain. Makes you less reliant on just Reverse Polarity.`,
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+		  special_bonus_unique_magnus_4: `On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
+	},
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
       blink:
         "A core item that allows you to get Reverse Polarity off and to Skewer an enemy.",
     },
-    combo: [],
+    combo: [
+	  `magnataur_empower`,
+	  `blink`,
+      `magnataur_reverse_polarity`,
+      `magnataur_horn_toss`,
+      `magnataur_skewer`,
+      `magnataur_shockwave`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -17486,8 +17567,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Riki: {
-    gameplay_version: "7.32e",
-    creator: ContentCreator.TNTCNz,
+    gameplay_version: `7.33b`,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -17506,17 +17587,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "riki_blink_strike", // 7
           "riki_smoke_screen", // 8
           "riki_tricks_of_the_trade", // 9
-          "special_bonus_unique_riki_7", // 10
-          "riki_tricks_of_the_trade", // 11
+          `riki_tricks_of_the_trade`, // 10
+          `riki_smoke_screen`, // 11
           "riki_backstab", // 12
           "riki_smoke_screen", // 13
           "riki_smoke_screen", // 14
-          "special_bonus_unique_riki_2", // 15
-          "riki_smoke_screen", // 16
+          `special_bonus_unique_riki_7`, // 15
+          `special_bonus_unique_riki_2`, // 16
           "special_bonus_attributes", // 17
           "riki_backstab", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_riki_9", // 20
+          `special_bonus_unique_riki_1`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -17527,65 +17608,70 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "quelling_blade",
-            "branches",
-            "slippers",
-            "magic_stick",
+            `slippers`,
+            `circlet`,
+            `branches`,
+			`branches`,
           ],
           early_game: [
             "wraith_band",
-            "boots",
+            `power_treads`,
             "magic_wand",
-            "power_treads",
-            "orb_of_corrosion",
+            `wind_lace`,
           ],
-          mid_game: ["diffusal_blade", "manta", "aghanims_shard", "basher"],
-          late_game: ["skadi", "nullifier", "ultimate_scepter", "butterfly"],
+          mid_game: [`diffusal_blade`, `manta`, `aghanims_shard`, `ultimate_scepter`],
+          late_game: [`basher`, `greater_crit`, `abyssal_blade`, `disperser`],
           situational: [
-            "bfury",
+            `orb_of_corrosion`,
+			`battlefury`,
             "black_king_bar",
-            "blink",
-            "abyssal_blade",
-            "greater_crit",
-            "sphere",
+            `swift_blink`,
+            `meteor_hammer`,
+			`butterfly`,
+            `nullifier`,
+			`monkey_king_bar`,
+			`solar_crest`,
+			`skadi`,
+			`desolator`,
+            `sphere`,
+			`travel_boots`,
           ],
           core: [
             "power_treads",
             "diffusal_blade",
             "manta",
             "aghanims_shard",
-            "basher",
-            "nullifier",
+            `ultimate_scepter`,
+            `greater_crit`,
+			`abyssal_blade`,
           ],
           neutral: [
-            "unstable_wand",
-            //"possessed_mask", Removed in 7.33
-            "lance_of_pursuit",
+            `lance_of_pursuit`,
+            `broom_handle`,
+            `orb_of_destruction`,
             "vambrace",
-            //"dagger_of_ristul", Removed in 7.33
-            "ring_of_aquila",
-            "elven_tunic",
+            `elven_tunic`,
             "titan_sliver",
             "mind_breaker",
-            "ninja_gear",
-            "penta_edged_sword",
+            `penta_edged_sword`,
             "apex",
             "desolator_2",
           ],
         },
         item_tooltips: {
-          orb_of_corrosion:
-            "A core item that allows you to stay on top of opponent and amplifies physical damage output through armor reduction.",
+		  orb_of_corrosion:
+            `A situational item that allows you to stay on top of opponent and amplifies physical damage output through armor reduction.`,
           power_treads:
             "A core item that provides you with attack speed and agility. The more agility, the more damage you will do with backstabs.",
           diffusal_blade:
-            "A core item that provides you with tons of agility and ability to keep opponents under Smoke Screen longer.",
+            `A core item that provides you with tons of agility and ability to keep opponents under Smoke Screen longer. Builds into Disperser later in the game.`,
           manta:
             "A core item that dispels Dust of Appearance from you. Manta illusions can also backstab.",
           basher:
             "A core item that allows you to lock the target you are focusing.",
           black_king_bar:
             "Against a lot of disables, magical damage and as a dispel.",
-          blink: "To close the gap and jump out from Tricks of Trade.",
+          swift_blink: `A late game pick up in place of boots to maintain mobility and add more damage to Tricks of the Trade.`,
           nullifier:
             "To dispel defensive spells and items that prevent you from right-clicking the opponents.",
           sphere: "Against powerful single-target disables and debuffs.",
@@ -17612,70 +17698,86 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "riki_backstab", // 12
           "riki_tricks_of_the_trade", // 13
           "riki_tricks_of_the_trade", // 14
-          "special_bonus_unique_riki_3", // 15 // Michel changed, as it was 'special_bonus_unique_riki_2' previously
+          "special_bonus_unique_riki_3", // 15
           "riki_tricks_of_the_trade", // 16
           "special_bonus_attributes", // 17
           "riki_backstab", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_riki_9", // 20 // Michel changed, as it was 'special_bonus_unique_riki_3' previously
+          `special_bonus_unique_riki_1`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_riki_5", // 25
+          `special_bonus_unique_riki_6`, // 25
         ],
         items: {
-          starting: ["tango", "tango", "flask", "orb_of_venom"],
+          starting: [`tango`, `blood_grenade`, `orb_of_venom`, `enchanted_mango`, `branches`, `ward_observer`, `ward_sentry`],
           early_game: [
-            "tranquil_boots",
-            "magic_wand",
-            "meteor_hammer",
-            "diffusal_blade",
+            `meteor_hammer`,
+            `boots`,
+            `magic_wand`,
+            `wind_lace`,
           ],
-          mid_game: ["aghanims_shard", "blink"],
-          late_game: ["sheepstick", "aeon_disk", "octarine_core"],
+          mid_game: [`boots_of_bearing`, `aghanims_shard`, `diffusal_blade`, `blink`],
+          late_game: [`greater_crit`, `ultimate_scepter`, `abyssal_blade`, `disperser`],
           situational: [
-            "wraith_pact",
+            `orb_of_corrosion`,
+			`power_treads`,
             "lotus_orb",
-            "blink",
-            "ultimate_scepter",
+            `blink`,
+            `sheepstick`,
+			`octarine_core`,
+			`solar_crest`,
+			`force_staff`,
+			`aeon_disk`,
+			`nullifier`,
+			`wind_waker`,
+			`travel_boots`,
           ],
-          core: ["meteor_hammer", "tranquil_boots", "aghanims_shard"],
+          core: [`meteor_hammer`, `boots_of_bearing`, `aghanims_shard`, `diffusal_blade`, `abyssal_blade`, `disperser`],
           neutral: [
-            "unstable_wand",
-            "seeds_of_serenity",
-            "trusty_shovel",
-            "philosophers_stone",
-            "bullwhip",
-            "ogre_seal_totem",
-            "spell_prism",
-            //"flicker", Removed in 7.33
-            "fallen_sky",
-            "demonicon",
+            `lance_of_pursuit`,
+            `broom_handle`,
+            `vambrace`,
+            `orb_of_destruction`,
+            `elven_tunic`,
+            `quickening_charm`,
+            `penta_edged_sword`,
+            `mind_breaker`,
+            `apex`,
+            `desolator_2`,
           ],
         },
         item_tooltips: {
           ward_sentry: "To block or unblock a pull camp.",
           meteor_hammer:
             "A core item that provides you with waveclear and tower damage. Combines well with the Aghanim`s Shard down the road. You can cast it out of invisibility.",
-          tranquil_boots:
-            "A core boots upgrade that provides you with a lot of movement speed and hp sustain.",
-          cyclone:
-            "A core item that allows you to control opponents but also dispel dust off of yourself.",
+          boots_of_bearing:
+            `A core boots upgrade that provides you with HP sustain as well as the movement speed and attack speed from Drums for your team.`,
+          wind_waker:
+            `A situational item that allows you to control opponents and reposition yourself out of dangerous positions when the enemy team uses Dust.`,
           blink:
             "A core item that allows you to gap-close and get close to specific target you want to disables. You can blink out of Tricks of Trade and save yourself.",
           lotus_orb: "For reflect, dispel and some armor.",
         },
       },
     ],
-    ability_tooltips: {},
+    ability_tooltips: {
+		special_bonus_unique_magnus_4: `On core Riki, on level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
+	},
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
-      aghanims_shard: "A core item that provides you with extra control.",
+      aghanims_shard: `A core item that prevents enemy heroes stuck in Smoke from getting help by their teammates with a Force Staff.`,
     },
-    combo: [],
+    combo: [
+	  `riki_blink_strike`,
+	  `riki_smoke_screen`,
+      `diffusal_blade`,
+      `riki_tricks_of_the_trade`,
+      `riki_blink_strike`,
+	],
     counter_items: {
       laning_phase: {
         all: [
@@ -22949,8 +23051,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Underlord: {
-    gameplay_version: "7.32e",
-    creator: ContentCreator.TNTCNz,
+    gameplay_version: `7.33b`,
+    creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -22960,10 +23062,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964445",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         abilities: [
-          "abyssal_underlord_atrophy_aura", // 1
-          "abyssal_underlord_firestorm", // 2
-          "abyssal_underlord_atrophy_aura", // 3
-          "abyssal_underlord_firestorm", // 4
+          `abyssal_underlord_firestorm`, // 1
+          `abyssal_underlord_atrophy_aura`, // 2
+          `abyssal_underlord_firestorm`, // 3
+          `abyssal_underlord_atrophy_aura`, // 4
           "abyssal_underlord_firestorm", // 5
           "abyssal_underlord_dark_portal", // 6
           "abyssal_underlord_firestorm", // 7
@@ -22984,81 +23086,80 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_underlord_9", // 25
+          `special_bonus_unique_underlord`, // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "tango",
+            `tango`,
+            `quelling_blade`,
             "gauntlets",
             "gauntlets",
             "branches",
-            "branches",
+            `branches`,
+			`ward_observer`,
           ],
           early_game: [
             "vanguard",
-            "boots",
-            "magic_wand",
-            "power_treads",
-            "soul_ring",
+            `soul_ring`,
+            `arcane_boots`,
+            `magic_wand`,
+            `wind_lace`,
           ],
           mid_game: [
             "rod_of_atos",
-            "black_king_bar",
-            "aghanims_shard",
-            "lotus_orb",
+            `guardian_greaves`,
+            `crimson_guard`,
+            `pipe`,
           ],
-          late_game: ["shivas_guard", "sheepstick", "octarine_core"],
+          late_game: [`aghanims_shard`, `shivas_guard`, `assault`, `black_king_bar`],
           situational: [
-            "hood_of_defiance",
-            "arcane_boots",
-            "mekansm",
-            "guardian_greaves",
-            "crimson_guard",
-            "pipe",
-            "cyclone",
+            `solar_crest`,
+            `lotus_orb`,
+            `ultimate_scepter`,
+            `force_staff`,
             "blade_mail",
-            "blink",
+            `overwhelming_blink`,
             "radiance",
-            "heavens_halberd",
+            `heavens_halberd`,
+			`octarine_core`,
+			`sheepstick`,
+			`travel_boots`,
           ],
           core: [
-            "soul_ring",
-            "hood_of_defiance",
-            "rod_of_atos",
-            "lotus_orb",
-            "aghanims_shard",
+            `vanguard`,
+            `soul_ring`,
+			`arcane_boots`,
+			`rod_of_atos`,
+            `guardian_greaves`,
+            `crimson_guard`,
+            `pipe`,
+			`aghanims_shard`,
           ],
           neutral: [
-            "arcane_ring",
+            `occult_bracelet`,
             "broom_handle",
-            "seeds_of_serenity",
-            "dragon_scale",
-            "vambrace",
-            //"nether_shawl",
+            `vambrace`,
+            `bullwhip`,
             "cloak_of_flames",
             "ogre_seal_totem",
-            "trickster_cloak",
-            "spell_prism",
-            "timeless_relic",
-            "ascetic_cap",
-            "ex_machina",
-            "force_field",
-            "fallen_sky",
+            `havoc_hammer`,
+            `timeless_relic`,
+            `giants_ring`,
+            `fallen_sky`,
           ],
         },
       },
     ],
     ability_tooltips: {
-      abyssal_underlord_firestorm:
-        "You can skill this spell on level 1 instead of the suggested Atrophy Aura if you have a tough match-up. Its very important that you use this before using Pit of Malice to get an extra wave hit.",
+      /* abyssal_underlord_firestorm:
+        "You can skill this spell on level 1 instead of the suggested Atrophy Aura if you have a tough match-up. Its very important that you use this before using Pit of Malice to get an extra wave hit.", */
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_wand:
+        `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       soul_ring: "A core item that provides mana sustain and useful stats.",
-      phase_boots:
-        "A core item that fixes movement speed and armor issues of the hero.",
+      /* phase_boots:
+        "A core item that fixes movement speed and armor issues of the hero.", */
       rod_of_atos:
         "A core item that synergizes well with Pit of Malice. The full combo would be: Pit of Malice - Firestorm - Rod of Atos - Pit of Malice procs again. You can right-click the opponent few times as well.",
       crimson_guard:
@@ -23068,14 +23169,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       black_king_bar:
         "Against disables, silences, magical damage and as a dispel.",
       guardian_greaves:
-        "An alternative to Phase boots that is good against roots, silences and slows. Very effective if you group up with your teammates early on.",
+        `A core item that boosts your teamfight potential with auras and sustain.`,
       aghanims_shard:
-        "A core upgrade of Firestorm that increases your overall damage significantly. You can use Firestorm on yourself and move around with it. Goes well with Firestorm talents and Eternal Shroud.",
+        `A core upgrade of Firestorm that increases your overall damage significantly. You can use Firestorm on yourself and move around with it. Goes well with Firestorm talents.`,
       lotus_orb: "To reflect, dispel and armor.",
       assault:
-        "A situational item that improves your right-click potential while also providing a strong aura. It helps with taking buildings down after a won fight along with bonus damage coming from Atrophy Aura.",
+        `A core late game item that improves your right-click potential while also providing a strong armor aura. It helps with taking buildings down after a won fight along with bonus damage coming from Atrophy Aura.`,
       shivas_guard:
-        "An alternative to Assault Cuirass against heavy-healing and illusion-based lineups.",
+        `A situational late game pick up that boosts your armor and provides a healing reduction aura against enemy heroes.`,
     },
     combo: [
       `abyssal_underlord_firestorm`,
@@ -23125,7 +23226,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           { item: "mage_slayer" },
-          { item: "hood_of_defiance" },
+          /* { item: "hood_of_defiance" }, */
           { item: "pipe" },
           { item: "eternal_shroud" },
           { item: "black_king_bar" },
