@@ -1870,7 +1870,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/BountyHunter_2_Jinada",
     messageTime: -15,
     textMessage:
-      "Hit opponents with Jinada or secure range creep lasthits. The bonus damage doesn't work on denies.",
+      `Hit opponents with Jinada or secure range creep last hits. The bonus damage does not work on denies.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "bounty_hunter_jinada" },
   },
@@ -1912,7 +1912,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 8 * 60,
     textMessage:
-      "In mid to lategame, play ahead of your teammates, track opponents, break smokes, collect runes, place deep wards and snipe couriers.",
+      `In mid to late game, play ahead of your teammates, track opponents, break smokes, collect runes, place deep wards and snipe couriers.`,
     audience: [Audience.ROLE_SUPPORT],
   },
 
@@ -1922,7 +1922,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/BountyHunter_1_Detection",
     messageTime: -60,
     textMessage:
-      "Use Jinada off cooldown on opponents hero or to secure range creep lasthit.",
+      `Use Jinada off cooldown on opponents hero or to secure range creep last hit.`,
     audience: [Audience.IN_LANE],
     image: { type: "item", name: "ward_sentry" },
   },
@@ -3807,7 +3807,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 27. Doom
-  {
+  /* {
     category: "OwnHero",
     hero: "Doom",
     audioFile: "ownHero/Doom_1_DevourRanged",
@@ -3816,7 +3816,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Consider going behind the opponents t1 or t2 tower on the first wave to devour ranged creep even earlier.",
     audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "doom_bringer_devour" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Doom",
@@ -3879,6 +3879,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Check opponents' inventories for Linken's Spheres and Lotus Orbs. Be careful not to drop Doom on those.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "doom_bringer_doom" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Doom`,
+    audioFile: `ownHero/Doom_8_Devour`,
+    messageTime: 30,
+    textMessage:
+      `Look to use Devour as frequently as possible on lane creeps or neutral creeps to maintain your armor in the lane.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `doom_bringer_devour` },
   },
   {
     category: "EnemyHero",
@@ -6596,7 +6606,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LegionCommander_1_PressTheAttack",
     messageTime: -30,
     textMessage:
-      "Consider skilling Press the Attack on level 1 if you are being harassed by dispellable damage-over-time spells.",
+      `Consider skilling Press the Attack on level 1 or 2 if you are being harassed by dispellable damage-over-time spells.`,
     audience: [Audience.ALL],
   },
   {
@@ -9752,7 +9762,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_2_Sustain",
     messageTime: -30,
     textMessage:
-      "Necrophos typically wins the lane off of his sustain. Lasthitting needs to be on point.",
+      `Necrophos typically wins the lane off of his sustain. Last hitting needs to be on point.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_heartstopper_aura" },
   },
@@ -9762,7 +9772,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_3_DeathPulseMultitasking",
     messageTime: 10,
     textMessage:
-      "Do multiple things with Death Pulse at the same time - secure lasthit, harass opponents and heal an ally.",
+      `Do multiple things with Death Pulse at the same time - secure last hit, harass opponents and heal an ally.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_death_pulse" },
   },
@@ -9772,7 +9782,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_4_ScrewLasthits",
     messageTime: 20,
     textMessage:
-      "Mess around with opponents' lasthitting by healing the creeps and damaging opponents at the same time.",
+      `Mess around with opponents last hitting by healing the creeps and damaging opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_death_pulse" },
   },
@@ -9799,12 +9809,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Necrophos",
-    audioFile: "ownHero/Necrophos_7_HoodOfDefiance",
+    audioFile: `ownHero/Necrophos_8_Cloak`,
     messageTime: [3 * 60 + 15, 6 * 60 + 15],
     textMessage:
-      "Ghost Shroud makes you vulnerable to magical damage so you typically need a Hood of Defiance.",
+      `Ghost Shroud makes you vulnerable to magical damage so you typically need an early Cloak.`,
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "hood_of_defiance" },
+    image: { type: `item`, name: `cloak` },
   },
   {
     category: "OwnHero",
@@ -9840,9 +9850,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Necrophos",
     audioFile: "ownHero/Necrophos_11_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at the 20 minute mark as it provides additional offensive and defensive utilities.",
+      `Pick up Aghanims Shard at the 15 minute mark as it provides gap close and farming speed.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -11262,7 +11272,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PrimalBeast_1_Outlasthit",
     messageTime: 10,
     textMessage:
-      "Primal Beast's base damage and Uproar's passive and active effects allow you to outlasthit the opponents.",
+      `Your base damage and Uproar passive and active effects allow you to win the last hit battle against the opponents.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "primal_beast_uproar" },
   },
@@ -11272,7 +11282,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PrimalBeast_2_OnslaughtTiming",
     messageTime: [20, 4 * 60 + 20],
     textMessage:
-      "Use Onslaught when opponents are somewhat stationary, for example when they are going for a lasthit.",
+      `Use Onslaught when opponents are somewhat stationary, for example when they are going for a last hit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_onslaught" },
   },
@@ -11303,7 +11313,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Try to Pulverize an opponents that's in the middle of the opponents lineup so you can stun the rest as well.",
+      `Try to Pulverize an opponents standing in the middle of the opponents lineup so you can stun the rest as well.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_pulverize" },
   },
@@ -11322,11 +11332,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Primal Beast",
     audioFile: "ownHero/PrimalBeast_7_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it provides another disable among other things.",
+      `Pick up Aghanim's Shard around minute 15 as it provides another disable among other things.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_trample" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Primal Beast`,
+    audioFile: `ownHero/PrimalBeast_8_TrampleOnslaughtCombo`,
+    messageTime: [2 * 60 + 45, 9 * 60 + 45, 14 * 60 + 15, 18 * 60 + 45],
+    textMessage:
+      `Use Trample right as you exit the Onslaught channel to use the charging movement for Trample damage.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `primal_beast_trample` },
   },
 
   {
