@@ -524,6 +524,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
+	// The Aghanims Scepter gives Magnus another Area stun with Horn Toss.
   ],
   Marci: [
     {
