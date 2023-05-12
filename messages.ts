@@ -1516,7 +1516,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Batrider",
     audioFile: "ownHero/Batrider_2_KillAttempt",
-    messageTime: 45,
+    messageTime: 4 * 60,
     textMessage:
       "When you have 3 Sticky Napalms on an opponent, you can consider making a kill attempt.",
     audience: [Audience.IN_LANE, Audience.ALL],
@@ -1557,6 +1557,24 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [6 * 60 + 30, 16 * 60 + 30, 26 * 60 + 30],
     textMessage: "Sticky Napalm and Firefly provide flying vision.",
     audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Batrider`,
+    audioFile: `ownHero/Batrider_7_AghanimShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage: `Pick up Aghanim shard later in the game as you become a potent right clicker as a universal hero.`,
+    audience: [Audience.ALL],
+	image: { type: `item`, name: `aghanims_shard` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Batrider`,
+    audioFile: `ownHero/Batrider_8_StickyNapalmUsage`,
+    messageTime: 15,
+    textMessage: `Spam Sticky Napalm on the enemy mid laner to keep them low at all times. You need not worry about giving stick charges.`,
+    audience: [Audience.ROLE_MID],
+	image: { type: `ability`, name: `batrider_sticky_napalm` },
   },
 
   {
@@ -5379,7 +5397,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Acorn Shot to secure range creep lasthits and to harass the opponents at the same time.",
+      `Use Acorn Shot to secure range creep last hits and to harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_acorn_shot" },
   },
@@ -5389,7 +5407,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_2_BushwhackStraight",
     messageTime: 75,
     textMessage:
-      "Opt to Bushwhack straight instead of setting it up with Acorn Shot as the planted tree can be cut.",
+      `Opt to Bushwhack first if there is a tree to latch it without using Acorn Shot as the planted tree can be cut.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_bushwhack" },
   },
@@ -5408,7 +5426,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_4_AcornVision",
     messageTime: [3 * 60 + 30, 9 * 60 + 30, 15 * 60 + 30],
     textMessage:
-      "Acorn Shot provides vision. You can scout pillars for wards or Roshpit.",
+      `Acorn Shot provides vision. You can scout pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_acorn_shot" },
   },
@@ -5432,6 +5450,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "When not much is happening, you can push out sidelanes easily and escape in treeline if necessary.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_scurry" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Hoodwink`,
+    audioFile: `ownHero/Hoodwink_7_AcornShotAutocast`,
+    messageTime: [2 * 60, 5 * 60, 11 * 60, 17 * 60],
+    textMessage:
+      `You can keep Acorn Shot on autocast to always plant a tree on cast if you want to follow up with Bushwack.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `hoodwink_acorn_shot` },
   },
 
   {
@@ -8302,7 +8330,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Mars_4_DontRush",
     messageTime: [6 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "Don't rush spearing an enemy during Arena of Blood. It's oftentimes better to rebuke and spear with delay.",
+      `Dont rush spearing an enemy during Arena of Blood. It's often times better to rebuke and spear with delay.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "mars_arena_of_blood" },
   },
@@ -8340,9 +8368,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Mars",
     audioFile: "ownHero/Mars_8_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20 when dealing with illusion-based heroes.",
+      `Pick up Aghanims Shard after Blink and BKB to have even more damage and control with Spear of Mars.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8372,7 +8400,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Mars_2_Bulwark",
     messageTime: 30,
     textMessage:
-      "Mars takes reduced damage from front and sides. Hit him from the back if possible.",
+      `Mars takes reduced damage from front and sides once he levels up Bulwark. Hit him from the back if possible.`,
     audience: [Audience.ALL],
   },
   {
