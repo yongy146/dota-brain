@@ -5544,8 +5544,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: ["bracer", "soul_ring", "power_treads", "magic_wand"],
           mid_game: [
+            "hand_of_midas",
             "blink",
-            "aghanims_shard",
             "black_king_bar",
             "ultimate_scepter",
           ],
@@ -5557,8 +5557,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "satanic",
           ],
           situational: [
-            "ward_observer",
-            "hand_of_midas",
+            "meteor_hammer",
+            "aghanims_shard",
             "heavens_halberd",
             "silver_edge",
             "nullifier",
@@ -5570,8 +5570,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "power_treads",
             "soul_ring",
             "blink",
-            "aghanims_shard",
             "black_king_bar",
+            "aghanims_scepter"
           ],
           neutral: [
             "pogo_stick",
