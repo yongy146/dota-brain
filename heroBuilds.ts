@@ -5555,6 +5555,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bloodthorn",
             "overwhelming_blink",
             "satanic",
+            "manta",
           ],
           situational: [
             "meteor_hammer",
@@ -5562,7 +5563,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "heavens_halberd",
             "silver_edge",
             "nullifier",
-            "manta",
             "armlet",
             "radiance",
           ],
@@ -5574,14 +5574,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_scepter"
           ],
           neutral: [
-            "pogo_stick",
+            "duelist_gloves",
             "broom_handle",
             "vambrace",
-            "quickening_charm",
-            "trickster_cloak",
+            "gossamer_cape",
+            "titan_sliver",
+            "ogre_seal_totem",
+            "ninja_gear",
             "spell_prism",
             "fallen_sky",
-            "force_field",
+            "giants_ring",
           ],
         },
       },
@@ -5668,7 +5670,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Drow Ranger": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5682,12 +5684,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "drow_ranger_frost_arrows", // 1
           "drow_ranger_multishot", // 2
           "drow_ranger_frost_arrows", // 3
-          "drow_ranger_multishot", // 4
-          "drow_ranger_frost_arrows", // 5
+          "drow_ranger_wave_of_silence", // 4
+          "drow_ranger_multishot", // 5
           "drow_ranger_marksmanship", // 6
           "drow_ranger_multishot", // 7
-          "drow_ranger_wave_of_silence", // 8
-          "drow_ranger_multishot", // 9
+          "drow_ranger_multishot", // 8
+          "drow_ranger_frost_arrows", // 9
           "drow_ranger_frost_arrows", // 10
           "drow_ranger_wave_of_silence", // 11
           "drow_ranger_marksmanship", // 12
@@ -5716,9 +5718,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "power_treads",
+            "wraith_band",
             "magic_wand",
             "ring_of_basilius",
-            "wraith_band",
             "dragon_lance",
           ],
           mid_game: [
@@ -5729,39 +5731,37 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
           ],
           late_game: [
-            "greater_crit",
+            "silver_edge",
             "skadi",
             "butterfly",
             "satanic",
             "swift_blink",
           ],
           situational: [
+            "greater_crit",
             "infused_raindrop",
-            "sange_and_yasha",
             "ultimate_scepter",
+            "sange_and_yasha",
             "blink",
-            "aghanims_shard",
-            "silver_edge",
             "sphere",
             "mjollnir",
-            "falcon_blade",
           ],
           core: [
             "power_treads",
-            "dragon_lance",
+            "hurricane_pike",
             "manta",
             "black_king_bar",
             "aghanims_shard",
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
+            "lance_of_pursuit",
             "unstable_wand",
             "grove_bow",
-            "vambrace",
             "ring_of_aquila",
             "titan_sliver",
             "elven_tunic",
             "ninja_gear",
+            "mind_breaker",
             "apex",
             "force_boots",
             "mirror_shield",
@@ -6320,7 +6320,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Ember Spirit": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -6333,19 +6333,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "ember_spirit_flame_guard", // 1
           "ember_spirit_sleight_of_fist", // 2
-          "ember_spirit_flame_guard", // 3
+          "ember_spirit_sleight_of_fist", // 3
           "ember_spirit_searing_chains", // 4
-          "ember_spirit_flame_guard", // 5
+          "ember_spirit_sleight_of_fist", // 5
           "ember_spirit_fire_remnant", // 6
-          "ember_spirit_flame_guard", // 7
-          "ember_spirit_sleight_of_fist", // 8
-          "ember_spirit_sleight_of_fist", // 9
-          "ember_spirit_sleight_of_fist", // 10
-          "ember_spirit_searing_chains", // 11
-          "ember_spirit_searing_chains", // 12
-          "ember_spirit_searing_chains", // 13
-          "special_bonus_attack_damage_12", // 14
-          "special_bonus_unique_ember_spirit_2", // 15
+          "ember_spirit_sleight_of_fist", // 7
+          "ember_spirit_searing_chains", // 8
+          "ember_spirit_searing_chains", // 9
+          "ember_spirit_searing_chains", // 10
+          "ember_spirit_flame_guard", // 11
+          "ember_spirit_flame_guard", // 12
+          "ember_spirit_flame_guard", // 13
+          "special_bonus_unique_ember_spirit_1", // 14
+          "special_bonus_unique_ember_spirit_3", // 15
           "ember_spirit_fire_remnant", // 16
           "special_bonus_attributes", // 17
           "ember_spirit_fire_remnant", // 18
@@ -6368,17 +6368,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "bottle",
-            "boots",
             "orb_of_corrosion",
-            "phase_boots",
             "magic_wand",
+            "phase_boots",
           ],
           mid_game: [
             "maelstrom",
             "black_king_bar",
+            "kaya_and_sange",
             "aghanims_shard",
             "ultimate_scepter",
-            "kaya_and_sange",
+            
           ],
           late_game: ["gungir", "refresher", "shivas_guard", "octarine_core"],
           situational: [
@@ -6399,10 +6399,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "arcane_ring",
-            "pogo_stick",
+            "unstable_wand",
             "ring_of_aquila",
-            "dragon_scale",
+            "orb_of_destruction",
             "quickening_charm",
+            "cloak_of_flames",
             "mind_breaker",
             "spell_prism",
             "penta_edged_sword",
@@ -6430,7 +6431,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "If you are laning against spell spammers start with this (eg. Batirder/Zeus).",
       infused_raindrop: "Against magical burst.",
       orb_of_corrosion:
-        "A core item that works well with Sleight of Fist. Rush this item if you are maxing sleight of fist in the lane.",
+        "A core item that works well with Sleight of Fist. Rush this item and max sleight of fist in the lane.",
       phase_boots:
         "A core boots upgrade. Make sure to activate Phase Boots before using dropping a Fire Remnant as it will travel faster.",
       maelstrom:
@@ -6935,7 +6936,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Faceless Void": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -6948,12 +6949,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "faceless_void_time_walk", // 1
           "faceless_void_time_lock", // 2
-          "faceless_void_time_lock", // 3
+          "faceless_void_time_walk", // 3
           "faceless_void_time_dilation", // 4
           "faceless_void_time_walk", // 5
           "faceless_void_chronosphere", // 6
           "faceless_void_time_walk", // 7
-          "faceless_void_time_walk", // 8
+          "faceless_void_time_lock", // 8
           "faceless_void_time_lock", // 9
           "faceless_void_time_lock", // 10
           "faceless_void_time_dilation", // 11
@@ -6978,19 +6979,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "slippers",
-            "faerie_fire",
+            "circlet",
             "magic_stick",
           ],
           early_game: ["power_treads", "magic_wand", "wraith_band"],
           mid_game: [
-            "mask_of_madness",
+            "hand_of_midas",
             "maelstrom",
-            "sange_and_yasha",
             "manta",
             "black_king_bar",
           ],
-          late_game: ["mjollnir", "skadi", "satanic", "refresher"],
+          late_game: ["mjollnir", "skadi", "satanic", "butterfly", "refresher"],
           situational: [
+            "sange_and_yasha",
             "infused_raindrop",
             "hand_of_midas",
             "black_king_bar",
@@ -6999,13 +7000,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sphere",
             "monkey_king_bar",
           ],
-          core: ["power_treads", "mask_of_madness", "maelstrom"],
+          core: ["power_treads", "hand_of_midas", "mjollnir", "black_king_bar"],
           neutral: [
             //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
             "broom_handle",
             //"misericorde",
             //"dagger_of_ristul", Removed in 7.33
+            "ring_of_aquila",
+            "vambrace",
             "elven_tunic",
             "titan_sliver",
             "mind_breaker",
@@ -8535,7 +8538,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Juggernaut: {
-    gameplay_version: `7.32e`,
+    gameplay_version: `7.33c`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -8547,9 +8550,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "juggernaut_blade_fury",
-          "juggernaut_blade_dance",
-          "juggernaut_blade_fury",
           "juggernaut_healing_ward",
+          "juggernaut_blade_fury",
+          "juggernaut_blade_dance",
           "juggernaut_blade_fury",
           "juggernaut_omni_slash",
           "juggernaut_blade_fury",
@@ -8576,19 +8579,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             `branches`,
-            `branches`,
             "quelling_blade",
-            `slippers`,
+            `magic_stick`,
             `circlet`,
           ],
           early_game: [
-            `phase_boots`,
+            `power_treads`,
             "wraith_band",
             "magic_wand",
-            `maelstrom`,
-            `infused_raindrop`,
           ],
-          mid_game: [`manta`, `aghanims_shard`, `skadi`, `basher`],
+          mid_game: ["bfury", `manta`, `aghanims_shard`, `skadi`, `basher`],
           late_game: [
             `ultimate_scepter`,
             `satanic`,
@@ -8597,8 +8597,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `swift_blink`,
           ],
           situational: [
-            `power_treads`,
-            `bfury`,
             `diffusal_blade`,
             `sange_and_yasha`,
             `blink`,
@@ -8610,21 +8608,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `travel_boots`,
           ],
           core: [
-            `phase_boots`,
-            `maelstrom`,
+            `power_treads`,
+            `bfury`,
             `manta`,
             `aghanims_shard`,
-            `skadi`,
             `basher`,
-            `satanic`,
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
             "broom_handle",
-            `vambrace`,
+            "duelist_gloves",
+            `orb_of_destruction`,
             `ring_of_aquila`,
-            "mind_breaker",
             "elven_tunic",
+            "titan_sliver",
+            "mind_breaker",
             `penta_edged_sword`,
             //`flicker`,
             "pirate_hat",
@@ -8904,7 +8902,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Kunkka: {
-    gameplay_version: `7.32e`,
+    gameplay_version: `7.33c`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -8922,15 +8920,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "kunkka_tidebringer", // 5
           "kunkka_ghostship", // 6
           "kunkka_tidebringer", // 7
-          "kunkka_x_marks_the_spot", // 8
-          "kunkka_x_marks_the_spot", // 9
-          `special_bonus_unique_kunkka_tidebringer_slow`, // 10
-          "kunkka_x_marks_the_spot", // 11
+          "kunkka_torrent", // 8
+          "kunkka_torrent", // 9
+          `special_bonus_unique_kunkka_6`, // 10
+          "kunkka_torrent", // 11
           "kunkka_ghostship", // 12
-          "kunkka_torrent", // 13
-          "kunkka_torrent", // 14
+          "kunkka_x_marks_the_spot", // 13
+          "kunkka_x_marks_the_spot", // 14
           `special_bonus_attack_damage_45`, // 15
-          "kunkka_torrent", // 16
+          "kunkka_x_marks_the_spot", // 16
           "special_bonus_attributes", // 17
           "kunkka_ghostship", // 18
           "special_bonus_attributes", // 19
@@ -8939,22 +8937,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_kunkka_5", // 25
+          "special_bonus_unique_kunkka_3", // 25
         ],
         items: {
           starting: [
-            `tango`,
-            `faerie_fire`,
+            `gauntlets`,
             `quelling_blade`,
             `gauntlets`,
             `branches`,
             `branches`,
             `ward_observer`,
           ],
-          early_game: ["bottle", `boots`, "bracer", "magic_wand"],
+          early_game: ["bottle", "bracer", "bracer", "magic_wand", "phase_boots"],
           mid_game: [
-            `orchid`,
-            `travel_boots`,
+            `armlet`,
             `black_king_bar`,
             `lesser_crit`,
             "silver_edge",
@@ -8967,34 +8963,35 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `rapier`,
           ],
           situational: [
-            `armlet`,
+            "orchid",
             `heavens_halberd`,
             `blink`,
             `ultimate_scepter`,
             `aghanims_shard`,
             `greater_crit`,
             `sheepstick`,
-            `shivas_guard`,
-            `travel_boots_2`,
+            `travel_boots`,
           ],
           core: [
-            `orchid`,
-            `travel_boots`,
+            `armlet`,
+            `phase_boots`,
             "black_king_bar",
-            `assault`,
-            `satanic`,
+            `silver_edge`,
           ],
           neutral: [
             "broom_handle",
             `unstable_wand`,
             "vambrace",
+            "orb_of_destruction",
             //`dagger_of_ristul`,
             "titan_sliver",
             `paladin_sword`,
             //`heavy_blade`,
+            "mind_breaker",
             `penta_edged_sword`,
             "desolator_2",
             `ex_machina`,
+            "pirate_hat"
           ],
         },
         item_tooltips: {
@@ -9025,7 +9022,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "kunkka_x_marks_the_spot", // 8
           "kunkka_x_marks_the_spot", // 9
           "kunkka_x_marks_the_spot", // 10
-          `special_bonus_unique_kunkka_tidebringer_slow`, // 11
+          `special_bonus_unique_kunkka_6`, // 11
           "kunkka_ghostship", // 12
           "kunkka_torrent", // 13
           "kunkka_torrent", // 14
@@ -9046,19 +9043,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `tango`,
             "quelling_blade",
             `gauntlets`,
-            `gauntlets`,
             `branches`,
             `branches`,
-            `ward_observer`,
+            "branches",
           ],
           early_game: [
-            `bracer`,
-            `bracer`,
+            'vanguard',
             "phase_boots",
-            `urn_of_shadows`,
             `magic_wand`,
+            "soul_ring"
           ],
           mid_game: [
+            "pipe",
+            "crimson_guard",
             "black_king_bar",
             "ultimate_scepter",
             `aghanims_shard`,
@@ -9071,17 +9068,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `sheepstick`,
           ],
           situational: [
+            "guardian_greaves",
             `armlet`,
             `heavens_halberd`,
             `solar_crest`,
-            `pipe`,
             `silver_edge`,
             `bloodthorn`,
             `shivas_guard`,
             `travel_boots`,
           ],
           core: [
-            `bracer`,
+            `vanguard`,
             `bracer`,
             `phase_boots`,
             "black_king_bar",
@@ -9092,12 +9089,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `broom_handle`,
             `unstable_wand`,
             `vambrace`,
+            "orb_of_destruction",
             //`dagger_of_ristul`,
             `titan_sliver`,
-            `paladin_sword`,
+            `defiant_shell`,
             //`heavy_blade`,
-            `penta_edged_sword`,
-            `desolator_2`,
+            `havoc_hammer`,
+            "spell_prism",
+            `giants_ring`,
             `ex_machina`,
           ],
         },
@@ -9359,7 +9358,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Leshrac: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -9374,22 +9373,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "leshrac_lightning_storm", // 2
           "leshrac_lightning_storm", // 3
           "leshrac_split_earth", // 4
-          "leshrac_diabolic_edict", // 5
+          "leshrac_lightning_storm", // 5
           "leshrac_pulse_nova", // 6
-          "leshrac_diabolic_edict", // 7
+          "leshrac_lightning_storm", // 7
           "leshrac_diabolic_edict", // 8
           "leshrac_diabolic_edict", // 9
-          "leshrac_split_earth", // 10
-          "leshrac_split_earth", // 11
-          "special_bonus_unique_leshrac_5", // 12
-          "leshrac_pulse_nova", // 13
-          "leshrac_lightning_storm", // 14
-          "leshrac_lightning_storm", // 15
+          "leshrac_diabolic_edict", // 10
+          "leshrac_diabolic_edict", // 11
+          "leshrac_pulse_nova", // 12
+          "leshrac_split_earth", // 13
+          "leshrac_split_earth", // 14
+          "special_bonus_unique_leshrac_5", // 15
           "special_bonus_unique_leshrac_6", // 16
           "special_bonus_attributes", // 17
           "leshrac_pulse_nova", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_leshrac_3", // 20
+          "special_bonus_unique_leshrac_4", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -9405,17 +9404,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "ward_observer",
           ],
-          early_game: ["bottle", "null_talisman", "arcane_boots", "magic_wand"],
+          early_game: ["bottle", "arcane_boots", "magic_wand"],
           mid_game: [
+            "bloodstone",
             "travel_boots",
-            "eternal_shroud",
             "black_king_bar",
-            "blink",
             "kaya",
             "aghanims_shard",
-            "kaya_and_sange",
           ],
-          late_game: ["bloodstone", "shivas_guard", "sheepstick", "wind_waker"],
+          late_game: ["blink", "kaya_and_sange", "shivas_guard", "sheepstick", "ethereal_blade", "overwhelming_blink"],
           situational: [
             "cyclone",
             "ultimate_scepter",
@@ -9425,25 +9422,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wind_waker",
           ],
           core: [
-            "arcane_boots",
-            "cyclone",
-            "kaya_and_sange",
-            "bloodstone",
             "travel_boots",
+            "bloodstone",
+            "kaya_and_sange",
             "aghanims_shard",
+            "black_king_bar",
+            "blink"
           ],
           neutral: [
             "mysterious_hat",
             "occult_bracelet",
             "pogo_stick",
             "vambrace",
-            "eye_of_the_vizier",
-            "ceremonial_robe",
+            "vampire_fangs",
+            "gossamer_cape",
             //"black_powder_bag",
             "ceremonial_robe",
+            "dandelion_amulet",
             "spell_prism",
             "timeless_relic",
             "stormcrafter",
+            "force_field",
             "ex_machina",
             "fallen_sky",
           ],
