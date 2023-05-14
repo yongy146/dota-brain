@@ -536,7 +536,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Alchemist: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -556,7 +556,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "alchemist_unstable_concoction",
           "alchemist_unstable_concoction",
           "alchemist_corrosive_weaponry",
-          "special_bonus_unique_alchemist",
+          "special_bonus_unique_alchemist_5",
           "alchemist_chemical_rage",
           "alchemist_corrosive_weaponry",
           "alchemist_corrosive_weaponry",
@@ -576,21 +576,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "quelling_blade",
-            "magic_stick",
+            "circlet",
+            "gauntlets",
             "branches",
             "branches",
-            "blood_grenade",
           ],
           early_game: [
             "ring_of_basilius",
+            "bracer",
             "power_treads",
             "magic_wand",
             "radiance",
           ],
           mid_game: [
-            "radiance",
-            "black_king_bar",
             "blink",
+            "black_king_bar",
             "assault",
             "basher",
           ],
@@ -620,7 +620,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             "broom_handle",
             //"misericorde",
-            "lance_of_pursuit",
+            "duelist_gloves",
             //"dagger_of_ristul", Removed in 7.33
             "orb_of_destruction",
             "ring_of_aquila",
@@ -635,10 +635,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         item_tooltips: {
           power_treads:
             "A core boots upgrade that provides you with significant attack speed increase and mana savings through toggling.",
-          bfury:
-            "An item to consider for accelerating farm and against summons. Synergizes very well with Acid Spray.",
           radiance:
-            "An alternative to Battle Fury against illusion-based heroes. In general, illusions are susceptible to magical damage more than to physical damage. e.g Phantom Lancer & Templar Assassin against you.",
+            "A core item that you should try to finish before minute 12. If it is an early timing you can defend/fight for objectives with it.",
           blink:
             "A core item that allows you to channel Unstable Concoction, blink on the target and release the fully channeled stun.",
         },
@@ -649,22 +647,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730985550",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
+          "alchemist_unstable_concoction",
           "alchemist_acid_spray",
-          "alchemist_goblins_greed",
           "alchemist_acid_spray",
           "alchemist_unstable_concoction",
           "alchemist_acid_spray",
           "alchemist_chemical_rage",
           "alchemist_acid_spray",
-          "alchemist_goblins_greed",
-          "alchemist_goblins_greed",
-          "alchemist_goblins_greed",
+          "alchemist_unstable_concoction",
+          "alchemist_unstable_concoction",
+          "alchemist_corrosive_weaponry",
           "special_bonus_unique_alchemist_5",
           "alchemist_chemical_rage",
-          "alchemist_unstable_concoction",
-          "alchemist_unstable_concoction",
+          "alchemist_corrosive_weaponry",
+          "alchemist_corrosive_weaponry",
           "special_bonus_unique_alchemist_7",
-          "alchemist_unstable_concoction",
+          "alchemist_corrosive_weaponry",
           "special_bonus_attributes",
           "alchemist_chemical_rage",
           "special_bonus_attributes",
@@ -686,23 +684,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "bottle",
-            "phase_boots",
+            "power_treads",
             "magic_wand",
-            "soul_ring",
-            "bracer",
+            "radiance",
           ],
           mid_game: [
-            "radiance",
-            "black_king_bar",
             "blink",
-            "sange_and_yasha",
+            "black_king_bar",
             "assault",
             "basher",
           ],
           late_game: [
             "abyssal_blade",
             "overwhelming_blink",
-            "swift_blink",
             "heart",
             "ultimate_scepter",
           ],
@@ -715,25 +709,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: [
             "bottle",
-            "phase_boots",
-            "bfury",
-            "sange_and_yasha",
+            "power_treads",
+            "radiance",
             "blink",
             "assault",
             "black_king_bar",
-            "basher",
           ],
           neutral: [
             "broom_handle",
-            //"misericorde",
             "lance_of_pursuit",
-            //"dagger_of_ristul", Removed in 7.33
-            "paladin_sword",
-            "elven_tunic",
+            "deulist_gloves",
+            "orb_of_corrosion",
+            "ring_of_aquila",
             "ogre_seal_totem",
+            "titan_sliver",
             "penta_edged_sword",
-            "havoc_hammer",
-            "force_boots",
+            "ninja_gear",
+            "pirate_hat",
             "desolator_2",
           ],
         },
@@ -752,12 +744,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     item_tooltips: {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
-      bfury:
-        "A core farming item that provides you with sustain and great physical damage that synergizes well with Acid Spray.",
       radiance:
-        "An alternative to Battle Fury against illusion-based heroes. In general, illusions are susceptible to magical damage more than to physical damage.",
+        "A core item that you should try to fight with when completed. In general, illusions are susceptible to magical damage more than to physical damage.",
       sange_and_yasha:
-        "A core item that provides mix of offensive and defensive stats. Self heal amplification goes well with Chemical Rage.",
+        "Situational. Get it if you need status resistance. eg. (Earthshaker)",
       blink:
         "A core item that allows you to channel Unstable Concoction, blink on the target and release the fully channeled stun.",
       black_king_bar:
@@ -5506,7 +5496,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dragon Knight": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
