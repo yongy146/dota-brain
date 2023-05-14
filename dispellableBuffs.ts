@@ -47,7 +47,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   "Faceless Void": [],
   Grimstroke: ["grimstroke_spirit_walk"],
   Gyrocopter: ["gyrocopter_rocket_barrage"],
-  Hoodwink: [],
+  Hoodwink: [`hoodwink_scurry`],
   Huskar: [],
   Invoker: ["invoker_alacrity"],
   Jakiro: [],

@@ -1232,7 +1232,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_3_CreepSkipping",
     messageTime: [5 * 60, 6 * 60 + 30],
     textMessage:
-      "If you can't pressure opponents' carry on the lane, consider creepskiping and farming neutrals in their jungle past 5 minute mark.",
+      `If you can't pressure opponents' carry on the lane, consider creep skiping and farming neutrals in their jungle past 5 minute mark.`,
     audience: [Audience.IN_LANE, Audience.ROLE_OFFLANE],
   },
   {
@@ -1516,7 +1516,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Batrider",
     audioFile: "ownHero/Batrider_2_KillAttempt",
-    messageTime: 45,
+    messageTime: 4 * 60,
     textMessage:
       "When you have 3 Sticky Napalms on an opponent, you can consider making a kill attempt.",
     audience: [Audience.IN_LANE, Audience.ALL],
@@ -1558,6 +1558,24 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Sticky Napalm and Firefly provide flying vision.",
     audience: [Audience.ALL],
   },
+  {
+    category: `OwnHero`,
+    hero: `Batrider`,
+    audioFile: `ownHero/Batrider_7_AghanimShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage: `Pick up Aghanim shard later in the game as you become a potent right clicker as a universal hero.`,
+    audience: [Audience.ALL],
+	image: { type: `item`, name: `aghanims_shard` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Batrider`,
+    audioFile: `ownHero/Batrider_8_StickyNapalmUsage`,
+    messageTime: 15,
+    textMessage: `Spam Sticky Napalm on the enemy mid laner to keep them low at all times. You need not worry about giving stick charges.`,
+    audience: [Audience.ROLE_MID],
+	image: { type: `ability`, name: `batrider_sticky_napalm` },
+  },
 
   {
     category: "EnemyHero",
@@ -1590,7 +1608,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 9. Beastmaster
-  {
+  /* {
     category: "OwnHero",
     hero: "Beastmaster",
     audioFile: "ownHero/Beastmaster_1_HelmOfIronWill",
@@ -1599,16 +1617,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Save some of your starting gold to get Helm of Iron Will as soon as possible.",
     audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_iron_will" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Beastmaster",
-    audioFile: "ownHero/Beastmaster_2_WildAxes",
-    messageTime: -60,
+    audioFile: `ownHero/Beastmaster_2_BoarCounters`,
+    messageTime: 1 * 60,
     textMessage:
-      "If laning against Chen, Enchantress or Naga Siren, consider skilling Wild Axes on level 1 and investing more spell points into it.",
+      `If laning against Chen, Enchantress or Crystal Maiden, consider not summoning Boars as they deal with summons easily.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "beastmaster_wild_axes" },
+    image: { type: "ability", name: `beastmaster_call_of_the_wild_boar` },
   },
   {
     category: "OwnHero",
@@ -1639,7 +1657,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Beastmaster_5_HighDamage",
     messageTime: 30,
     textMessage:
-      "Utilize Beasmaster's high base damage and additional damage from boars to deny creeps and secure lasthits.",
+      `Utilize Beasmaster's high base damage and additional damage from boars to deny creeps and secure last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "beastmaster_call_of_the_wild_boar" },
   },
@@ -1870,7 +1888,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/BountyHunter_2_Jinada",
     messageTime: -15,
     textMessage:
-      "Hit opponents with Jinada or secure range creep lasthits. The bonus damage doesn't work on denies.",
+      `Hit opponents with Jinada or secure range creep last hits. The bonus damage does not work on denies.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "bounty_hunter_jinada" },
   },
@@ -1912,7 +1930,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 8 * 60,
     textMessage:
-      "In mid to lategame, play ahead of your teammates, track opponents, break smokes, collect runes, place deep wards and snipe couriers.",
+      `In mid to late game, play ahead of your teammates, track opponents, break smokes, collect runes, place deep wards and snipe couriers.`,
     audience: [Audience.ROLE_SUPPORT],
   },
 
@@ -1922,7 +1940,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/BountyHunter_1_Detection",
     messageTime: -60,
     textMessage:
-      "Use Jinada off cooldown on opponents hero or to secure range creep lasthit.",
+      `Use Jinada off cooldown on opponents hero or to secure range creep last hit.`,
     audience: [Audience.IN_LANE],
     image: { type: "item", name: "ward_sentry" },
   },
@@ -3807,7 +3825,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 27. Doom
-  {
+  /* {
     category: "OwnHero",
     hero: "Doom",
     audioFile: "ownHero/Doom_1_DevourRanged",
@@ -3816,7 +3834,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Consider going behind the opponents t1 or t2 tower on the first wave to devour ranged creep even earlier.",
     audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "doom_bringer_devour" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Doom",
@@ -3879,6 +3897,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Check opponents' inventories for Linken's Spheres and Lotus Orbs. Be careful not to drop Doom on those.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "doom_bringer_doom" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Doom`,
+    audioFile: `ownHero/Doom_8_Devour`,
+    messageTime: 30,
+    textMessage:
+      `Look to use Devour as frequently as possible on lane creeps or neutral creeps to maintain your armor in the lane.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `doom_bringer_devour` },
   },
   {
     category: "EnemyHero",
@@ -5369,7 +5397,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Acorn Shot to secure range creep lasthits and to harass the opponents at the same time.",
+      `Use Acorn Shot to secure range creep last hits and to harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_acorn_shot" },
   },
@@ -5379,7 +5407,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_2_BushwhackStraight",
     messageTime: 75,
     textMessage:
-      "Opt to Bushwhack straight instead of setting it up with Acorn Shot as the planted tree can be cut.",
+      `Opt to Bushwhack first if there is a tree to latch it without using Acorn Shot as the planted tree can be cut.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_bushwhack" },
   },
@@ -5398,7 +5426,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_4_AcornVision",
     messageTime: [3 * 60 + 30, 9 * 60 + 30, 15 * 60 + 30],
     textMessage:
-      "Acorn Shot provides vision. You can scout pillars for wards or Roshpit.",
+      `Acorn Shot provides vision. You can scout pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_acorn_shot" },
   },
@@ -5422,6 +5450,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "When not much is happening, you can push out sidelanes easily and escape in treeline if necessary.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_scurry" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Hoodwink`,
+    audioFile: `ownHero/Hoodwink_7_AcornShotAutocast`,
+    messageTime: [2 * 60, 5 * 60, 11 * 60, 17 * 60],
+    textMessage:
+      `You can keep Acorn Shot on autocast to always plant a tree on cast if you want to follow up with Bushwack.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `hoodwink_acorn_shot` },
   },
 
   {
@@ -6596,7 +6634,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LegionCommander_1_PressTheAttack",
     messageTime: -30,
     textMessage:
-      "Consider skilling Press the Attack on level 1 if you are being harassed by dispellable damage-over-time spells.",
+      `Consider skilling Press the Attack on level 1 or 2 if you are being harassed by dispellable damage-over-time spells.`,
     audience: [Audience.ALL],
   },
   {
@@ -7964,8 +8002,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Magnus_3_WinLastHits",
     messageTime: 15,
     textMessage:
-      "Magnus has huge base damage that is further amplified by Empower. Use to win the lane lasthit wise.",
-    audience: [Audience.ROLE_CORE],
+      `Magnus has huge base damage that is further amplified by Empower. Use to win the lane last hit wise.`,
+    audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "magnataur_empower" },
   },
   {
@@ -8043,9 +8081,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Magnus",
     audioFile: "ownHero/Magnus_11_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at the 20 minute mark as it makes it easier for you to do your combos.",
+      `Pick up Aghanims Shard later in the game to boost your farming speed, damage output, and control.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8292,7 +8330,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Mars_4_DontRush",
     messageTime: [6 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "Don't rush spearing an enemy during Arena of Blood. It's oftentimes better to rebuke and spear with delay.",
+      `Dont rush spearing an enemy during Arena of Blood. It's often times better to rebuke and spear with delay.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "mars_arena_of_blood" },
   },
@@ -8330,9 +8368,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Mars",
     audioFile: "ownHero/Mars_8_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 20 when dealing with illusion-based heroes.",
+      `Pick up Aghanims Shard after Blink and BKB to have even more damage and control with Spear of Mars.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8362,7 +8400,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Mars_2_Bulwark",
     messageTime: 30,
     textMessage:
-      "Mars takes reduced damage from front and sides. Hit him from the back if possible.",
+      `Mars takes reduced damage from front and sides once he levels up Bulwark. Hit him from the back if possible.`,
     audience: [Audience.ALL],
   },
   {
@@ -9752,7 +9790,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_2_Sustain",
     messageTime: -30,
     textMessage:
-      "Necrophos typically wins the lane off of his sustain. Lasthitting needs to be on point.",
+      `Necrophos typically wins the lane off of his sustain. Last hitting needs to be on point.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_heartstopper_aura" },
   },
@@ -9762,7 +9800,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_3_DeathPulseMultitasking",
     messageTime: 10,
     textMessage:
-      "Do multiple things with Death Pulse at the same time - secure lasthit, harass opponents and heal an ally.",
+      `Do multiple things with Death Pulse at the same time - secure last hit, harass opponents and heal an ally.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_death_pulse" },
   },
@@ -9772,7 +9810,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_4_ScrewLasthits",
     messageTime: 20,
     textMessage:
-      "Mess around with opponents' lasthitting by healing the creeps and damaging opponents at the same time.",
+      `Mess around with opponents last hitting by healing the creeps and damaging opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_death_pulse" },
   },
@@ -9799,12 +9837,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Necrophos",
-    audioFile: "ownHero/Necrophos_7_HoodOfDefiance",
+    audioFile: `ownHero/Necrophos_8_Cloak`,
     messageTime: [3 * 60 + 15, 6 * 60 + 15],
     textMessage:
-      "Ghost Shroud makes you vulnerable to magical damage so you typically need a Hood of Defiance.",
+      `Ghost Shroud makes you vulnerable to magical damage so you typically need an early Cloak.`,
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "hood_of_defiance" },
+    image: { type: `item`, name: `cloak` },
   },
   {
     category: "OwnHero",
@@ -9840,9 +9878,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Necrophos",
     audioFile: "ownHero/Necrophos_11_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at the 20 minute mark as it provides additional offensive and defensive utilities.",
+      `Pick up Aghanims Shard at the 15 minute mark as it provides gap close and farming speed.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -11262,7 +11300,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PrimalBeast_1_Outlasthit",
     messageTime: 10,
     textMessage:
-      "Primal Beast's base damage and Uproar's passive and active effects allow you to outlasthit the opponents.",
+      `Your base damage and Uproar passive and active effects allow you to win the last hit battle against the opponents.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "primal_beast_uproar" },
   },
@@ -11272,7 +11310,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PrimalBeast_2_OnslaughtTiming",
     messageTime: [20, 4 * 60 + 20],
     textMessage:
-      "Use Onslaught when opponents are somewhat stationary, for example when they are going for a lasthit.",
+      `Use Onslaught when opponents are somewhat stationary, for example when they are going for a last hit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_onslaught" },
   },
@@ -11303,7 +11341,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Try to Pulverize an opponents that's in the middle of the opponents lineup so you can stun the rest as well.",
+      `Try to Pulverize an opponents standing in the middle of the opponents lineup so you can stun the rest as well.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_pulverize" },
   },
@@ -11322,11 +11360,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Primal Beast",
     audioFile: "ownHero/PrimalBeast_7_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 as it provides another disable among other things.",
+      `Pick up Aghanim's Shard around minute 15 as it provides another disable among other things.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_trample" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Primal Beast`,
+    audioFile: `ownHero/PrimalBeast_8_TrampleOnslaughtCombo`,
+    messageTime: [2 * 60 + 45, 9 * 60 + 45, 14 * 60 + 15, 18 * 60 + 45],
+    textMessage:
+      `Use Trample right as you exit the Onslaught channel to use the charging movement for Trample damage.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `primal_beast_trample` },
   },
 
   {
@@ -12074,7 +12122,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Riki",
     audioFile: "ownHero/Riki_1_SecureRanged",
     messageTime: 15,
-    textMessage: "Use Blink Strike to secure ranged creep lasthits.",
+    textMessage: `Use Blink Strike to secure ranged creep last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "riki_blink_strike" },
   },
@@ -12085,7 +12133,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 4 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "In trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.",
+      `When in trouble, blink away, Tricks of Trade over a cliff or in treeline, or Smoke Screen and teleport out.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "riki_blink_strike" },
   },
@@ -12135,11 +12183,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Riki",
     audioFile: "ownHero/Riki_7_AghanimsShard",
-    messageTime: 19 * 60,
-    repeatTime: 10 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 for extra control and Meteor Hammer setup if you have it.",
-    audience: [Audience.ROLE_SUPPORT],
+      `Pick up Aghanims Shard around minute 15 to isolate enemy heroes stuck in Smoke from getting help.`,
+    audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
 
@@ -12149,7 +12196,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Riki_1_DustOfAppearance",
     messageTime: 8 * 60,
     textMessage:
-      "Dust of Appearance doesn't reveal Riki while he's using Tricks of the Trade.",
+      `Dust of Appearance does not stick on Riki while he is using Tricks of the Trade.`,
     audience: [Audience.ALL],
   },
   {
@@ -12202,6 +12249,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 20,
     textMessage:
       "Break effects disable Cloak and Dagger and prevent Riki from being invisible.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Riki`,
+    audioFile: `enemyHero/Riki_8_ForceStaff2`,
+    messageTime: 15 * 60,
+    textMessage:
+      `Once Riki gets Aghanims Shard, you will need your own mobility item to get out of Smoke.`,
     audience: [Audience.ALL],
   },
 
@@ -16029,7 +16085,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_1_Outlasthit",
     messageTime: 15,
     textMessage:
-      "Capitalize on attack damage difference to win the lane lasthit wise.",
+      `Capitalize on attack damage difference to win the lane last hit wise.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abyssal_underlord_atrophy_aura" },
   },
@@ -16049,9 +16105,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_3_ReplenishRift",
     messageTime: 7 * 60,
     textMessage:
-      "Feel free to use Dark Rift to replenish mana and hp during laning stage.",
+      `Feel free to use Fiends Gate to replenish mana and hp during laning stage.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "abyssal_underlord_dark_rift" },
+    image: { type: "ability", name: `abyssal_underlord_dark_portal` },
   },
   {
     category: "OwnHero",
@@ -16059,7 +16115,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_4_DefendTowers",
     messageTime: [8 * 60, 14 * 60],
     textMessage:
-      "Underlord is amazing at safely defending the towers. Your other cores can splitpush in the meantime.",
+      `Underlord is amazing at safely defending the towers. Your other cores can split push in the meantime.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abyssal_underlord_firestorm" },
   },
@@ -16091,9 +16147,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Begin channeling Dark Rift on a first sign of trouble and cancel it if the situation improves.",
+      `Begin channeling Fiends Gate on a first sign of trouble. You can always come back if the situation improves.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "abyssal_underlord_dark_rift" },
+    image: { type: "ability", name: `abyssal_underlord_dark_portal` },
   },
   {
     category: "OwnHero",
@@ -16112,9 +16168,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Consider using Dark Rift to bring your team closer to objectives after pick-off or won fight.",
+      `Consider using Fiends Gate to bring your team closer to objectives after pick-off or won fight.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "abyssal_underlord_dark_rift" },
+    image: { type: "ability", name: `abyssal_underlord_dark_portal` },
   },
   {
     category: "OwnHero",
@@ -16123,7 +16179,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, you can easily splitpush with Firestorm without showing yourself.",
+      `When not much is happening, you can easily split push with Firestorm without showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abyssal_underlord_firestorm" },
   },
@@ -16131,9 +16187,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Underlord",
     audioFile: "ownHero/Underlord_11_Splitpush2",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Purchase Aghanim's Shard upgrade at minute 20 as it improves your overall damage output greatly.",
+      `Purchase Aghanims Shard upgrade later in the game as it improves your overall damage output greatly.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },

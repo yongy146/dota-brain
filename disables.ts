@@ -132,11 +132,10 @@ export const disables: IDisables = {
   ],
   "Bounty Hunter": [
     {
-      skill: "bounty_hunter_shuriken_toss",
+      skill: `bounty_hunter_wind_walk`,
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
-    // Can bounce off to other tracked heroes nearby.
   ],
   Brewmaster: [
     {
@@ -524,6 +523,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
+	// The Aghanims Scepter gives Magnus another Area stun with Horn Toss.
   ],
   Marci: [
     {
@@ -690,6 +690,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	// The Aghanim Shard on Primal Beast gives another Area stun with Rock Throw.
   ],
   Puck: [
     {
