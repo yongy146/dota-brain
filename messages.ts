@@ -10350,7 +10350,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Omniknight",
     audioFile: "ownHero/Omniknight_2_WeakLaner",
-    messageTime: -30,
+    messageTime: 30,
     textMessage:
       "Omniknight is a fairly weak laner. Focus on creep equilibrium, pulling and zoning opponents' support.",
     audience: [Audience.ROLE_SUPPORT],
@@ -10359,9 +10359,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Omniknight",
     audioFile: "ownHero/Omniknight_3_PurificationValue",
-    messageTime: 15,
+    messageTime: 2 * 60,
     textMessage:
-      "Avoid using Purification only to heal. Secure a ranged creep lasthit or damage opponents at the same time.",
+      `Avoid using Purification only to heal. Secure a ranged creep last hit or damage opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "omniknight_purification" },
   },
@@ -10369,7 +10369,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Omniknight",
     audioFile: "ownHero/Omniknight_4_SkillHammerOfPurityOnLevel1",
-    messageTime: [9 * 60 + 45, 13 * 60 + 45],
+    messageTime: -30,
     textMessage:
       "If you can run down an opponent on the lane and have nothing to dispel, take Hammer of Purity on Level 1.",
     audience: [Audience.ROLE_SUPPORT],
@@ -11494,9 +11494,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Puck",
     audioFile: "ownHero/Puck_8_Backliners2",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shards around minute 20 to improve vision game and to snap the Mystic Coil.",
+      `Pick up Aghanims Shards in the mid to late game to insta kill creep waves with spells and do more damage in fights.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -11569,7 +11569,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Puck_8_AghanimsScepter",
     messageTime: 25 * 60 + 10,
     textMessage:
-      "Once Puck gets Aghanim's Scepter, Dream Coil pierces spell immunity and stuns for longer.",
+      `Once Puck gets Aghanim's Scepter, you might want to break the Dream Coil to not take additional right click damage.`,
     audience: [Audience.ALL],
   },
 
@@ -13247,7 +13247,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slardar_2_SecureRanged",
     messageTime: 20,
     textMessage:
-      "Use Slithereen Crush and Bash of the Deep to secure ranged creep lasthits.",
+      `Use Slithereen Crush and Bash of the Deep to secure ranged creep last hits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "slardar_slithereen_crush" },
   },

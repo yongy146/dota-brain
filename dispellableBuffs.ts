@@ -84,7 +84,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   "Night Stalker": [],
   "Nyx Assassin": [],
   "Ogre Magi": ["ogre_magi_bloodlust"],
-  Omniknight: ["omniknight_guardian_angel", "omniknight_hammer_of_purity"],
+  Omniknight: [`omniknight_martyr`, `omniknight_guardian_angel`],
   Oracle: ["oracle_fates_edict", "oracle_purifying_flames"],
   "Outworld Destroyer": [],
   "Primal Beast": [
