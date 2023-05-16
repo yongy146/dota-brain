@@ -9689,7 +9689,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Lifestealer: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9714,7 +9714,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "life_stealer_infest", // 12
           "life_stealer_rage", // 13
           "special_bonus_unique_lifestealer_2", // 14
-          "special_bonus_hp_325", // 15
+          "special_bonus_attack_damage_25", // 15
           "life_stealer_rage", // 16
           "special_bonus_attributes", // 17
           "life_stealer_infest", // 18
@@ -9739,6 +9739,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           mid_game: ["desolator", "basher", "sange"],
           late_game: ["skadi", "assault", "satanic", "abyssal_blade"],
           situational: [
+            "radiance",
             "heavens_halberd",
             "sange_and_yasha",
             "aghanims_shard",
