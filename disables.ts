@@ -744,6 +744,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // It is area although it acts as a targetable spells (can be countered by Linken's Spehere or Lotus Orb).
+	// The Aghanims Scepter on Sand King gives an added Area stun with Sand Storm.
   ],
   "Shadow Demon": [
     {
