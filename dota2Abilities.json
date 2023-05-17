@@ -1388,8 +1388,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				150,
 				130,
+				120,
 				110
 			],
 			"mana_cost": [
@@ -2108,7 +2108,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+100 Shadowraze Damage"
+			"description": "+115 Shadowraze Damage"
 		},
 		"special_bonus_unique_nevermore_1": {
 			"id": 6670,
@@ -2441,6 +2441,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				10,
+				9,
+				8,
 				7
 			],
 			"mana_cost": [
@@ -4553,10 +4556,10 @@
 				1.6
 			],
 			"mana_cost": [
+				75,
 				80,
 				85,
-				90,
-				95
+				90
 			],
 			"name": "Arc Lightning",
 			"description": "Hurls a bolt of lightning that leaps through nearby enemy units that deal a base damage and a percentage of their current health.",
@@ -4761,7 +4764,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.3s Lightning Bolt Ministun"
+			"description": "+0.5s Lightning Bolt Ministun"
 		},
 		"special_bonus_unique_zeus_5": {
 			"id": 8038,
@@ -5196,8 +5199,8 @@
 			"talent_level": 1,
 			"description": "-{s:bonus_AbilityCooldown}s Dragon Slave Cooldown"
 		},
-		"special_bonus_hp_250": {
-			"id": 5903,
+		"special_bonus_hp_275": {
+			"id": 6311,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -5207,7 +5210,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+250 Health"
+			"description": "+275 Health"
 		},
 		"special_bonus_unique_lina_3": {
 			"id": 6388,
@@ -5220,7 +5223,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+130 Light Strike Array Damage"
+			"description": "+150 Light Strike Array Damage"
 		},
 		"special_bonus_spell_amplify_11": {
 			"id": 444,
@@ -5513,7 +5516,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				12
+				11
 			],
 			"mana_cost": [
 				90,
@@ -6831,10 +6834,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				50,
-				45,
 				40,
-				35
+				35,
+				30,
+				25
 			],
 			"mana_cost": [
 				50,
@@ -7275,7 +7278,7 @@
 				50
 			],
 			"name": "Take Aim",
-			"description": "Extends the attack range of Sniper's rifle. Can be activated to provide %headshot_chance%%% Headshot chance. Slows you by %slow%%% for the duration.",
+			"description": "Extends the attack range of Sniper's rifle. Can be activated to provide %headshot_chance%%% Headshot chance and an additional %active_attack_range_bonus% attack range bonus. Slows you by %slow%%% for the duration.",
 			"lore": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
 			"is_ultimate": false,
 			"is_passive": "partial",
@@ -8826,7 +8829,7 @@
 				100
 			],
 			"name": "Vampiric Spirit",
-			"description": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. For every two kills Wraith King or any unit he controls accrue on enemy units, Vampiric Aura adds a skeleton charge. Skeletons respawn once when killed.<br><br> Skeletons deal less damage to buildings.",
+			"description": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. For every two kills Wraith King or any unit he controls accrue on enemy units, Vampiric Aura adds a skeleton charge. Skeletons respawn once when killed.<br><br> Skeletons deal less damage to buildings.<br><br>Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.",
 			"lore": "Wraith King's blade drains his enemy's essence to feed his aura.",
 			"is_ultimate": false,
 			"is_passive": "partial",
@@ -10554,8 +10557,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_speed_30": {
-			"id": 5907,
+		"special_bonus_attack_speed_35": {
+			"id": 6196,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -10565,7 +10568,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+30 Attack Speed"
+			"description": "+35 Attack Speed"
 		},
 		"special_bonus_mp_regen_175": {
 			"id": 6926,
@@ -11157,10 +11160,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				65,
-				55,
-				45,
-				35
+				60,
+				50,
+				40,
+				30
 			],
 			"mana_cost": [
 				50,
@@ -11351,10 +11354,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				21,
 				20,
 				19,
-				18
+				18,
+				17
 			],
 			"mana_cost": [
 				75,
@@ -11437,8 +11440,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				100,
-				75,
+				80,
+				65,
 				50
 			],
 			"mana_cost": [
@@ -13190,6 +13193,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
+				6,
+				5,
 				4
 			],
 			"mana_cost": [
@@ -15024,7 +15029,7 @@
 				11
 			],
 			"mana_cost": [
-				120
+				100
 			],
 			"name": "Charge of Darkness",
 			"description": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects.  All enemy units passed through and the targeted unit will be hit by a Greater Bash.  If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location.",
@@ -15070,10 +15075,7 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				1.5,
-				1.5,
-				1.5,
-				1.5
+				1.2
 			],
 			"mana_cost": [
 				0
@@ -15115,9 +15117,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				90,
 				70,
-				50
+				50,
+				30
 			],
 			"mana_cost": [
 				125,
@@ -15475,7 +15477,7 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				13
+				15
 			],
 			"mana_cost": [
 				100
@@ -16113,7 +16115,7 @@
 				0
 			],
 			"mana_cost": [
-				15
+				20
 			],
 			"name": "Glaives of Wisdom",
 			"description": "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's Intelligence with each hit. If Silencer kills an enemy hero, he permanently steals %permanent_int_steal_amount% Intelligence.",
@@ -17452,7 +17454,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+25% Chaos Strike Lifesteal"
+			"description": "+30% Chaos Strike Lifesteal"
 		},
 		"special_bonus_unique_chaos_knight_2": {
 			"id": 6618,
@@ -17491,7 +17493,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "--75% Phantasm Illusion Incoming Damage"
+			"description": "--100% Phantasm Illusion Incoming Damage"
 		},
 		"special_bonus_unique_chaos_knight_3": {
 			"id": 6619,
@@ -19124,7 +19126,7 @@
 				0
 			],
 			"name": "Burrow",
-			"description": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. Nyx gains damage reduction from all damage sources.",
+			"description": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mind Flare and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. Nyx gains damage reduction from all damage sources.",
 			"lore": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -19173,8 +19175,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_spell_amplify_8": {
-			"id": 5949,
+		"special_bonus_spell_amplify_6": {
+			"id": 5996,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -19184,7 +19186,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+8% Spell Amplification"
+			"description": "+6% Spell Amplification"
 		},
 		"special_bonus_unique_nyx_4": {
 			"id": 402,
@@ -19455,7 +19457,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+13% Mirror Image Damage"
+			"description": "+10% Mirror Image Damage"
 		},
 		"special_bonus_strength_15": {
 			"id": 6145,
@@ -19550,9 +19552,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				25,
 				22,
-				20,
-				18,
+				19,
 				16
 			],
 			"mana_cost": [
@@ -19775,7 +19777,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-4s Chakra Magic Cooldown"
+			"description": "-3s Chakra Magic Cooldown"
 		},
 		"special_bonus_unique_keeper_of_the_light_13": {
 			"id": 881,
@@ -20592,6 +20594,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				13,
+				12,
+				11,
 				10
 			],
 			"mana_cost": [
@@ -24036,9 +24041,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				15,
-				12,
-				9,
+				18,
+				14,
+				10,
 				6
 			],
 			"mana_cost": [
@@ -24070,9 +24075,9 @@
 				11
 			],
 			"mana_cost": [
-				80,
-				90,
+				95,
 				100,
+				105,
 				110
 			],
 			"name": "Fate's Edict",
@@ -24970,7 +24975,7 @@
 				90
 			],
 			"mana_cost": [
-				100
+				200
 			],
 			"name": "Fiend's Gate",
 			"description": "Opens 2 portals, one next to Underlord and one in the target location. Heroes can channel a portal for %warp_channel_duration% seconds to teleport to the other side. Allies that pass through the portal temporarily gain Damage Reduction and Movement Speed. Portals have to be at least %minimum_distance% away from each other.",
@@ -26093,10 +26098,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				15,
 				14,
 				13,
-				12
+				12,
+				11
 			],
 			"mana_cost": [
 				100,
@@ -26376,8 +26381,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_mp_regen_175": {
-			"id": 6926,
+		"special_bonus_mp_regen_150": {
+			"id": 7132,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -26387,7 +26392,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+1.75 Mana Regen"
+			"description": "+1.5 Mana Regen"
 		},
 		"special_bonus_unique_void_spirit_2": {
 			"id": 7707,
@@ -26465,7 +26470,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "Astral Step 160% Crit"
+			"description": "140% Astral Step Crit"
 		},
 		"special_bonus_unique_void_spirit_3": {
 			"id": 7708,
@@ -26744,10 +26749,10 @@
 				10
 			],
 			"mana_cost": [
+				70,
 				75,
-				85,
-				95,
-				105
+				80,
+				85
 			],
 			"name": "Acorn Shot",
 			"description": "Fires Hoodwink's attack with an acorn at the target unit.  The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.\nIf point targeted, a tree is created at the target position and the acorn will bounce to nearby targets.  The ability may be placed on auto-cast to force this behavior.",

@@ -224,7 +224,7 @@
 	"item_faerie_fire": {
 		"id": 237,
 		"is_active": true,
-		"cost": 70,
+		"cost": 65,
 		"cooldown": 5,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -896,7 +896,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 5.25
+		"health_regen_": 4.75
 	},
 	"item_void_stone": {
 		"id": 57,
@@ -1235,7 +1235,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_regen_": 0.75,
-		"damage_": 2,
+		"damage_": 3,
 		"strength_": 5,
 		"agility_": 2,
 		"intelligence_": 2,
@@ -1473,16 +1473,16 @@
 	"item_pipe": {
 		"id": 90,
 		"is_active": true,
-		"mana_cost": 100,
+		"mana_cost": 150,
 		"cost": 3375,
 		"cooldown": 60,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"magic_resist": 25,
+		"magic_resist": 20,
 		"magic_resist_aura": 10,
-		"health_regen_": 8.5,
+		"health_regen_": 6,
 		"health_regen_aura": 2.5,
 		"requirements": [
 			"item_cloak",
@@ -2334,7 +2334,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 250,
-		"health_regen_": 5.5,
+		"health_regen_": 4.75,
 		"requirements": [
 			"item_ring_of_health",
 			"item_vitality_booster"
@@ -2343,7 +2343,7 @@
 	"item_recipe_crimson_guard": {
 		"id": 243,
 		"is_active": true,
-		"cost": 925,
+		"cost": 1050,
 		"is_recipe": true,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -2352,7 +2352,8 @@
 	"item_crimson_guard": {
 		"id": 242,
 		"is_active": true,
-		"cost": 3600,
+		"mana_cost": 75,
+		"cost": 3725,
 		"cooldown": 35,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -2444,7 +2445,7 @@
 		"is_purchasable": true,
 		"magic_resist": 30,
 		"health_regen_": 7,
-		"strength_": 12,
+		"strength_": 14,
 		"requirements": [
 			"item_cloak",
 			"item_ogre_axe",
@@ -3387,7 +3388,7 @@
 	"item_recipe_boots_of_bearing": {
 		"id": 930,
 		"is_active": true,
-		"cost": 1500,
+		"cost": 1700,
 		"is_recipe": true,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -3396,7 +3397,7 @@
 	"item_boots_of_bearing": {
 		"id": 931,
 		"is_active": true,
-		"cost": 4075,
+		"cost": 4275,
 		"cooldown": 30,
 		"is_recipe": false,
 		"is_neutral": false,
@@ -3872,7 +3873,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_lifesteal_": 15,
-		"spell_lifesteal": 6
+		"spell_lifesteal": 10
 	},
 	"item_force_field": {
 		"id": 829,
@@ -3952,7 +3953,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"mana_regen_": 4,
-		"all_attributes_": 8
+		"all_attributes_": 6
 	},
 	"item_spy_gadget": {
 		"id": 336,
@@ -3980,7 +3981,7 @@
 		"attack_speed_": 10,
 		"spell_amp": 6,
 		"magic_resist": 10,
-		"selected_attribute": 10
+		"selected_attribute": 8
 	},
 	"item_spark_of_courage": {
 		"id": 1124,
@@ -3993,8 +3994,8 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 10,
-		"armor_": 5
+		"damage_": 18,
+		"armor_": 7
 	},
 	"item_broom_handle": {
 		"id": 355,
@@ -4015,7 +4016,7 @@
 		"id": 356,
 		"is_active": true,
 		"cost": 0,
-		"cooldown": 50,
+		"cooldown": 40,
 		"is_recipe": false,
 		"is_neutral": true,
 		"neutral_level": 1,
@@ -4053,7 +4054,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"damage_magical_": 225,
-		"attack_range_ranged": 50
+		"attack_range_ranged": 75
 	},
 	"item_ninja_gear": {
 		"id": 362,
@@ -4382,7 +4383,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"mana_regen_": 4,
-		"movement_speed": 30
+		"movement_speed": 35
 	},
 	"item_mysterious_hat": {
 		"id": 589,
@@ -4414,8 +4415,8 @@
 		"is_purchasable": false,
 		"status_resistance": 40,
 		"health_": 250,
-		"health_regen_": 15,
-		"duration": 4
+		"health_regen_": 20,
+		"duration": 5
 	},
 	"item_unstable_wand": {
 		"id": 838,
@@ -4459,6 +4460,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"health_": 150,
+		"health_regen_": 3,
 		"health_regen_aura": 10,
 		"duration": 14
 	},
@@ -4546,7 +4548,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"armor_": 5
+		"armor_": 7
 	},
 	"item_eye_of_the_vizier": {
 		"id": 990,
@@ -4559,7 +4561,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"mana_regen_": 0.5
+		"mana_regen_": 1.25
 	},
 	"item_specialists_array": {
 		"id": 1076,
@@ -4632,7 +4634,7 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed_": 30,
+		"attack_speed_": 35,
 		"damage_": 30,
 		"armor_": 20
 	},
@@ -4647,7 +4649,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"attack_speed_": 15,
+		"attack_speed_": 20,
 		"damage_": 10
 	},
 	"item_dandelion_amulet": {
@@ -4675,14 +4677,14 @@
 		"drop_rate": 10,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"magic_resist": 20,
+		"magic_resist": 25,
 		"duration": 8
 	},
 	"item_gossamer_cape": {
 		"id": 2193,
 		"is_active": true,
 		"cost": 0,
-		"cooldown": 5,
+		"cooldown": 4,
 		"is_recipe": false,
 		"is_neutral": true,
 		"neutral_level": 2,
