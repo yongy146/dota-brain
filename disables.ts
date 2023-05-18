@@ -824,9 +824,13 @@ export const disables: IDisables = {
     },
     // Firesnap Cookie is an area stun.
   ],
-  Sniper: [],
-  //{skill: "sniper_assassinate", affects: AbilityAffects.HERO, disables: ["stun"]}],
-  // Only with aghanim's scepter
+  Sniper: [
+	{
+      skill: `sniper_assassinate`,
+      affects: AbilityAffects.HERO,
+      disables: [`stun`],
+    },
+  ],
 
   Spectre: [],
   "Spirit Breaker": [
@@ -951,7 +955,9 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Venomancer: [],
+  Venomancer: [
+	//The Aghanim Shard on Venomancer provides a Hero stun with Latent Toxicity if it is dispelled.
+  ],
   Viper: [],
   Visage: [
     {

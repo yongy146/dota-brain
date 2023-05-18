@@ -5332,6 +5332,35 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "rapier" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Gyrocopter`,
+    audioFile: `ownHero/Gyrocopter_11_AvoidRushingIn`,
+    messageTime: [5 * 60 + 30, 10 * 60 + 30, 15 * 60 + 30, 20 * 60 + 30],
+    textMessage:
+      `Do not rush in with Rocket Barrage every time you stun a hero. You are squishy and easy to kill if you over extend.`,
+    audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Gyrocopter`,
+    audioFile: `ownHero/Gyrocopter_12_EbladeSpike`,
+    messageTime: 24 * 60,
+    textMessage:
+      `Once you pick up the Ethereal Blade, you can burst down pretty much any hero on the map with your item and spell combo.`,
+    audience: [Audience.ROLE_SUPPORT],
+	image: { type: `item`, name: `ethereal_blade` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Gyrocopter`,
+    audioFile: `ownHero/Gyrocopter_13_ForceStaffMissile`,
+    messageTime: 19 * 60,
+    textMessage:
+      `You can use Force Staff on your Homing Missile to push it forward and surprise enemy heroes.`,
+    audience: [Audience.ROLE_SUPPORT],
+	image: { type: `item`, name: `force_staff` },
+  },
 
   {
     category: "EnemyHero",
@@ -13934,7 +13963,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/SpiritBreaker_2_ChargeFurtherTarget",
     messageTime: [90, 11 * 60 + 30, 21 * 60 + 30],
     textMessage:
-      "Consider charging the further target and bash all the opponents' heroes on the way.",
+      `Consider charging the furthest target in a line to bash all the opponents heroes on the way.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "spirit_breaker_charge_of_darkness" },
   },
@@ -13969,7 +13998,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "spirit_breaker_charge_of_darkness" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Spirit Breaker",
     audioFile: "ownHero/SpiritBreaker_6_RoshCharge",
@@ -13978,7 +14007,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Careful about charging through Roshpit as you can get bashed.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "spirit_breaker_charge_of_darkness" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Spirit Breaker",
@@ -14129,7 +14158,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60,
     repeatTime: 15 * 60,
     textMessage:
-      "When leaving the fountain, you can Ball Lightning up to t3 tower while bottling and you will still be full mana.",
+      `When leaving the fountain, you can Ball Lightning beyond tier 4 towers while bottling and still be full mana.`,
     audience: [Audience.ALL],
   },
   {
@@ -14223,7 +14252,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     hero: "Storm Spirit",
     audioFile: "enemyHero/StormSpirit_4_OrchidMalevolence",
-    messageTime: 10 * 60 + 10,
+    messageTime: 16 * 60 + 10,
     textMessage:
       "Be aware of Storm Spirit's Orchid timing. He can solo kill most heroes with it.",
     audience: [Audience.ALL],
@@ -15108,7 +15137,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Timbersaw_1_SecureLasthits",
     messageTime: 10,
     textMessage:
-      "Use Whirling Death to secure lasthits, harass opponents and at the same time cut some trees with it.",
+      `Use Whirling Death to secure last hits, harass opponents and at the same time cut some trees with it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "shredder_whirling_death" },
   },
@@ -15196,9 +15225,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Timbersaw",
     audioFile: "ownHero/Timbersaw_10_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around the 20 minute mark. It improves dps and provides much needed building damage.",
+      `Pick up Aghanims Shard later in the game as it improves DPS and provides much needed building damage.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16024,6 +16053,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Tusk`,
+    audioFile: `ownHero/Tusk_8_SpellsDuringSnowball`,
+    messageTime: [6 * 60 + 30, 11 * 60 + 30, 21 * 60 + 30, 31 * 60 + 30],
+    textMessage:
+      `You can use both Tag Team and Ice Shard while Snowballed. Particularly helps in stopping enemy heroes fleeing from Snowball.`,
+    audience: [Audience.ALL],
+  },
 
   {
     category: "EnemyHero",
@@ -16617,7 +16655,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Venomancer_3_SecureKills",
     messageTime: 90,
     textMessage:
-      "Galed opponents can be denied, so do your best to secure a lasthit on a dying hero.",
+      `Galed opponents can be denied, so do your best to secure a last hit on a dying hero.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "venomancer_venomous_gale" },
   },
@@ -16670,7 +16708,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "In fights, look to affect as many heroes as possible with Poison Nova and Venomous Gale.",
+      `In fights, look to affect as many heroes as possible with Venomous Gale.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "venomancer_poison_nova" },
   },
@@ -16689,9 +16727,18 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Venomancer",
     audioFile: "ownHero/Venomancer_10_Aghanims",
     messageTime: 19 * 60,
-    textMessage: `Pick up Aghanims Scepter as the game progresses to amplify your damage output.`,
+    textMessage: `Pick up Aghanims Scepter as the game progresses to significantly improve your teamfighting.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Venomancer`,
+    audioFile: `ownHero/Venomancer_11_SnowballUltimate`,
+    messageTime: 9 * 60 + 30,
+    textMessage: `Noxious Plague will snowball a teamfight in your favour if you can burst down the first hero affected by it.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `venomancer_noxious_plague` },
   },
 
   {
@@ -17989,7 +18036,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Zeus_2_Lasthitting",
     messageTime: 15,
     textMessage:
-      "Use Arc Lightning to secure creep lastihits and damage the opponents at the same time.",
+      `Use Arc Lightning to secure creep last hits and damage the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "zuus_arc_lightning" },
   },
@@ -18070,7 +18117,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Zeus_10_AghanimsScepter",
     messageTime: 16 * 60 + 15,
     textMessage:
-      "Aghanim's Scepter is a huge powerspike so make sure to acquire it at decent time.",
+      `Aghanims Scepter is a huge power spike against backliners and evasive heroes, such as Tinker.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -18094,6 +18141,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "It is fine to use ultimate here and there in late game to scout for opponents.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "zuus_thundergods_wrath" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Zeus`,
+    audioFile: `ownHero/Zeus_13_MantaUsage`,
+    messageTime: 22 * 60 + 45,
+    textMessage:
+      `Once you have Manta Style with Aghanim Shard, use the illusions to safely shove lanes into the enemy team.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `manta` },
   },
 
   {
