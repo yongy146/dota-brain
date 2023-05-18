@@ -7256,7 +7256,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Gyrocopter: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
