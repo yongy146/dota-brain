@@ -9868,7 +9868,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Lina: {
-    gameplay_version: `7.32e`,
+    gameplay_version: `7.33c`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -9886,19 +9886,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "lina_dragon_slave", // 5
           "lina_laguna_blade", // 6
           "lina_dragon_slave", // 7
-          "lina_fiery_soul", // 8
-          "lina_fiery_soul", // 9
-          "lina_fiery_soul", // 10
-          "special_bonus_attack_damage_20", // 11
+          "lina_light_strike_array", // 8
+          "lina_light_strike_array", // 9
+          "special_bonus_unique_lina_1", // 10
+          "lina_light_strike_array", // 11
           "lina_laguna_blade", // 12
-          "lina_light_strike_array", // 13
-          "lina_light_strike_array", // 14
-          "special_bonus_hp_275", // 15
-          "lina_light_strike_array", // 16
+          "lina_fiery_soul", // 13
+          "lina_fiery_soul", // 14
+          "special_bonus_unique_lina_3", // 15
+          "lina_fiery_soul", // 16
           "special_bonus_attributes", // 17
           "lina_laguna_blade", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_lina_2", // 20
+          "special_bonus_spell_amplify_11", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -9911,46 +9911,47 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "faerie_fire",
             "branches",
             `branches`,
-            `mantle`,
+            `branches`,
+            "branches",
             "ward_observer",
           ],
           early_game: [
             `bottle`,
             `boots`,
-            `null_talisman`,
-            `soul_ring`,
             "magic_wand",
+            "arcane_boots",
+            "aether_lens"
           ],
           mid_game: [
             `travel_boots`,
-            `black_king_bar`,
-            `greater_crit`,
-            "satanic",
+            "aghanims_shard",
+            "blink",
+            "aghanims_scepter",
           ],
-          late_game: ["skadi", `blink`, "sheepstick", `sphere`],
+          late_game: ["black_king_bar", "sheepstick", `refresher`, "octarine_core"],
           situational: [
-            "hurricane_pike",
-            `silver_edge`,
-            `monkey_king_bar`,
-            `bloodthorn`,
-            `mjollnir`,
-            `ultimate_scepter`,
-            `aghanims_shard`,
-            `assault`,
+            "sphere",
             `travel_boots_2`,
+            "kaya_and_sange",
+            "ethereal_blade",
+            "aeon_disk",
+            "wind_waker"
           ],
-          core: ["travel_boots", "black_king_bar", `greater_crit`, "satanic"],
+          core: ["travel_boots", "aether_lens", `aghanims_shard`, "aghanims_scepter"],
           neutral: [
             "arcane_ring",
             `mysterious_hat`,
+            "faded_broach",
             "grove_bow",
-            `specialists_array`,
-            "mind_breaker",
-            "enchanted_quiver",
+            `pupils_gift`,
+            "psychic_headband",
+            "quickening_charm",
             //`flicker`,
-            `stormcrafter`,
-            "desolator_2",
+            `spell_prism`,
+            "timeless_relic",
+            "mirror_shield",
             "ex_machina",
+            "seer_stone"
           ],
         },
         ability_tooltips: {
@@ -9962,14 +9963,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           travel_boots:
             "A core item that goes well with Fiery Soul movement speed amp. Allows you to conver the map better.",
           black_king_bar:
-            "A core item that allows you to stand your ground and deliver the damage.",
-          silver_edge: `A situational item that grants you burst against tanky heroes with a passive like Bristleback or Tidehunter.`,
-          hurricane_pike:
-            "Helps you establish the distance against gap-closing heroes and to deliver the right-click damage from further away.",
-          satanic:
-            "A core item that allows you to stand your ground and right-click the opponents.",
-          monkey_king_bar: `Against eveasion and miss chance. Procs very often with max Fiery Soul stacks.`,
+            "A core item that allows you to survive fights and deliver the damage.",
           sphere: "Against powerful single target disables or debuffs.",
+          aether_lens: "Very strong early/mid game timing that will allow you to disable targets frequently from long range.",
+          aghanims_shard: "Very strong mid game timing that will increase your spell damage.",
+          aghanims_scepter: "Another one of linas strongest timings that will increase mobility and damage output by a ton. "
         },
       },
       {
@@ -10003,22 +10001,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_lina_6", // 25
+          "special_bonus_unique_lina_7", // 25
         ],
         items: {
           starting: [
             "tango",
-            "faerie_fire",
-            "flask",
-            "circlet",
-            `enchanted_mango`,
-            `branches`,
-            `branches`,
+            "magic_stick",
+            "branches",
+            "branches",
+            `blood_grenade`,
             "ward_observer",
+            "ward_sentry"
           ],
           early_game: [
-            `ward_sentry`,
-            `null_talisman`,
             "arcane_boots",
             "magic_wand",
             `wind_lace`,
@@ -10026,47 +10021,47 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             `aether_lens`,
-            `tranquil_boots`,
             "cyclone",
-            "ultimate_scepter",
             "aghanims_shard",
           ],
           late_game: [
+            "aghanims_scepter",
             `blink`,
             `ethereal_blade`,
             "aeon_disk",
             "sheepstick",
             "octarine_core",
+            "refresher"
           ],
           situational: [
-            `blink`,
             `black_king_bar`,
             `lotus_orb`,
             `wind_waker`,
             `gungir`,
             `revenants_brooch`,
-            `refresher`,
             `travel_boots`,
+            "sphere",
+            "force_staff"
           ],
           core: [
             "arcane_boots",
             `aether_lens`,
-            `tranquil_boots`,
             "cyclone",
             "ultimate_scepter",
             "aghanims_shard",
           ],
           neutral: [
-            `trusty_shovel`,
-            `pogo_stick`,
+            `faded_broach`,
+            `mysterious_hat`,
             "philosophers_stone",
             `bullwhip`,
             "psychic_headband",
-            `ceremonial_robe`,
-            "spy_gadget",
-            `stormcrafter`,
+            `quickening_charm`,
+            "spell_prism",
+            `timeless_relic`,
             "seer_stone",
-            "book_of_shadows",
+            "mirror_shield",
+            "force_boots",
           ],
         },
         item_tooltips: {
