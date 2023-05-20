@@ -136,7 +136,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   Venomancer: [],
   Viper: [],
   Visage: ["visage_grave_chill"],
-  "Void Spirit": [],
+  `Void Spirit`: [`void_spirit_resonant_pulse`],
   Warlock: ["warlock_shadow_word"],
   Weaver: [],
   Windranger: ["windrunner_windrun"],
