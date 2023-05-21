@@ -10480,7 +10480,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Luna: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -10816,15 +10816,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            "arcane_ring",
+            "occult_bracelet",
             //"misericorde",
             "dragon_scale",
+            "orb_of_destruction",
+            "paladin_sword",
+            "titan_sliver",
             "mind_breaker",
-            "quickening_charm",
-            "spell_prism",
             "penta_edged_sword",
             "demonicon",
             "desolator_2",
+            "pirate_hat"
           ],
         },
       },
@@ -12329,7 +12331,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Monkey King": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -12344,18 +12346,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "monkey_king_jingu_mastery", // 2
           "monkey_king_jingu_mastery", // 3
           "monkey_king_tree_dance", // 4
-          "monkey_king_tree_dance", // 5
+          "monkey_king_jingu_mastery", // 5
           "monkey_king_tree_dance", // 6
           "monkey_king_tree_dance", // 7
-          "monkey_king_boundless_strike", // 8
-          "monkey_king_boundless_strike", // 9
+          "monkey_king_tree_dance", // 8
+          "monkey_king_wukongs_command", // 9
           "monkey_king_boundless_strike", // 10
-          "monkey_king_jingu_mastery", // 11
+          "monkey_king_boundless_strike", // 11
           "monkey_king_wukongs_command", // 12
-          "monkey_king_jingu_mastery", // 13
+          "monkey_king_boundless_strike", // 13
           "special_bonus_unique_monkey_king_9", // 14
           "special_bonus_unique_monkey_king_2", // 15
-          "monkey_king_wukongs_command", // 16
+          "monkey_king_jingu_mastery", // 16
           "special_bonus_attributes", // 17
           "monkey_king_wukongs_command", // 18
           "special_bonus_attributes", // 19
@@ -12372,27 +12374,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "branches",
-            "orb_of_venom",
-            //"slippers", // total costs > 600, removed slippers
+            "circlet,
+            "slippers",
             "ward_observer",
           ],
           early_game: [
             "orb_of_corrosion",
-            "phase_boots",
             "power_treads",
-            "phase_boots",
             "magic_wand",
             "wraith_band",
           ],
           mid_game: [
             "echo_sabre",
-            "maelstrom",
+            "diffusal_blade",
             "black_king_bar",
-            "skadi",
-            "basher",
-            "desolator",
           ],
           late_game: [
+            "skadi",
             "abyssal_blade",
             "greater_crit",
             "mjollnir",
