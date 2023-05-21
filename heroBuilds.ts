@@ -12374,7 +12374,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "branches",
-            "circlet,
+            "circlet",
             "slippers",
             "ward_observer",
           ],
@@ -12393,20 +12393,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "skadi",
             "abyssal_blade",
             "greater_crit",
-            "mjollnir",
             "satanic",
             "ultimate_scepter",
+            "aghanims_shard"
           ],
           situational: [
             "infused_raindrop",
-            "blink",
             "silver_edge",
             "monkey_king_bar",
             "nullifier",
+            "mjollnir",
+            "manta",
+            "bfury",
+            "butterfly",
+            "radiance",
+            "sange_and_yasha",
+            "sphere"
           ],
           core: [
-            "orb_of_corrosion",
-            "echo_sabre",
+            "power_treads",
+            "harpoon",
             "black_king_bar",
             "skadi",
             "basher",
@@ -12416,8 +12422,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             "lance_of_pursuit",
             //"misericorde",
+            "ring_of_aquila",
+            "orb_of_destruction",
+            "titan_sliver",
+            "elven_tunic",
             "mind_breaker",
-            "paladin_sword",
             "penta_edged_sword",
             "desolator_2",
             "apex",
@@ -12464,10 +12473,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "monkey_king_tree_dance", // 3
           "monkey_king_boundless_strike", // 4
           "monkey_king_tree_dance", // 5
-          "monkey_king_boundless_strike", // 6
+          "monkey_king_wukongs_command", // 6
           "monkey_king_tree_dance", // 7
           "monkey_king_boundless_strike", // 8
-          "monkey_king_wukongs_command", // 9
+          "monkey_king_boundless_strike", // 9
           "special_bonus_unique_monkey_king_9", // 10
           "monkey_king_jingu_mastery", // 11
           "monkey_king_wukongs_command", // 12
@@ -12489,42 +12498,40 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "orb_of_venom",
+            "blood_grenade",
             "branches",
             "branches",
-            "branches",
-            "ward_sentry",
-            "ward_observer",
+            "faerie_fire"
           ],
           early_game: [
-            "magic_wand",
             "orb_of_corrosion",
-            "urn_of_shadows",
-            "ancient_janggo",
+            "power_treads",
+            "magic_wand",
           ],
-          mid_game: ["orchid", "solar_crest", "rod_of_atos"],
-          late_game: ["skadi", "basher", "sheepstick"],
+          mid_game: ["diffusal_blade", "echo_sabre", "black_king_bar"],
+          late_game: ["harpoon", "skadi", "basher", "sheepstick"],
           situational: [
             "spirit_vessel",
+            "ancient_janggo",
             "meteor_hammer",
-            "cyclone",
-            "ghost",
-            "lotus_orb",
             "black_king_bar",
             "mage_slayer",
           ],
-          core: ["orb_of_corrosion", "orchid", "solar_crest"],
+          core: ["power_treads", "orb_of_corrosion", "echo_sabre", "diffusal_blade"],
           neutral: [
-            "arcane_ring",
-            "seeds_of_serenity",
-            "unstable_wand",
-            "bullwhip",
+            "broom_handle",
+            "duelist_gloves",
+            "orb_of_destruction",
             "ring_of_aquila",
+            "elven_tunic",
+            "titan_sliver",
             //"black_powder_bag",
-            "quickening_charm",
+            "mind_breaker",
             "penta_edged_sword",
             //"heavy_blade",
             "desolator_2",
-            "book_of_shadows",
+            "pirate_hat",
+            "mirror_shield"
           ],
         },
         ability_tooltips: {
@@ -12624,7 +12631,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Morphling: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.3",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -12637,18 +12644,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "morphling_morph_agi", // 1
           "morphling_waveform", // 2
-          "morphling_morph_agi", // 3
+          "morphling_adaptive_strike_agi", // 3
           "morphling_waveform", // 4
-          "morphling_morph_agi", // 5
-          "morphling_waveform", // 6
-          "morphling_morph_agi", // 7
-          "morphling_waveform", // 8
-          "morphling_replicate", // 9
-          "special_bonus_unique_morphling_1", // 10
-          "morphling_adaptive_strike_agi", // 11
-          "morphling_adaptive_strike_agi", // 12
-          "morphling_adaptive_strike_agi", // 13
-          "morphling_adaptive_strike_agi", // 14
+          "morphling_waveform", // 5
+          "morphling_morph_agi", // 6
+          "morphling_waveform", // 7
+          "morphling_adaptive_strike_agi", // 8
+          "morphling_adaptive_strike_agi", // 9
+          "morphling_adaptive_strike_agi", // 10
+          "special_bonus_unique_morphling_1", // 11
+          "morphling_morph_agi", // 12
+          "morphling_replicate", // 13
+          "morphling_morph_agi", // 14
           "special_bonus_unique_morphling_8", // 15
           "morphling_replicate", // 16
           "special_bonus_attributes", // 17
@@ -12668,39 +12675,43 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
             "circlet",
-            "slippers",
-            //"magic_stick", removed as total costs were above 600
+            "magic_stick",
           ],
           early_game: [
-            "bottle",
-            "lifesteal",
             "power_treads",
             "magic_wand",
-            "wraith_band",
+            "falcon_blade",
+            "yasha"
           ],
-          mid_game: ["dragon_lance", "manta", "black_king_bar"],
-          late_game: ["skadi", "satanic", "butterfly", "greater_crit"],
+          mid_game: ["manta", "skadi", "aghanims_scepter"],
+          late_game: ["black_king_bar", "skadi", "satanic", "butterfly", "greater_crit"],
           situational: [
             "bottle",
             "silver_edge",
             "sphere",
-            "ultimate_scepter",
             "blink",
+            "aghanims_shard",
+            "hurricane_pike",
+            "diffusal_blade",
+            "sange_and_yasha",
           ],
-          core: ["lifesteal", "power_treads", "manta", "black_king_bar"],
+          core: ["power_treads", "manta", "skadi", "ultimate_scepter", "black_king_bar"],
           neutral: [
             //"possessed_mask", Removed in 7.33
-            "seeds_of_serenity",
+            "occult_bracelet",
             "unstable_wand",
             "specialists_array",
             //"dagger_of_ristul", Removed in 7.33
-            "pupils_gift",
-            "vambrace",
+            "grove_bow",
+            "ring_of_aquila",
             "titan_sliver",
             "paladin_sword",
+            "elven_tunic",
             "ninja_gear",
-            "ex_machina",
-            "fallen_sky",
+            "mind_breaker",
+            "mirror_shield",
+            "apex",
+            "force_boots"
           ],
         },
       },
@@ -13095,7 +13106,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Naga Siren": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -13109,14 +13120,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "naga_siren_mirror_image", // 1
           "naga_siren_rip_tide", // 2
           "naga_siren_mirror_image", // 3
-          "naga_siren_rip_tide", // 4
+          "naga_siren_ensnare", // 4
           "naga_siren_mirror_image", // 5
           "naga_siren_rip_tide", // 6
           "naga_siren_mirror_image", // 7
           "naga_siren_rip_tide", // 8
-          "naga_siren_song_of_the_siren", // 9
+          "naga_siren_rip_tide", // 9
           "special_bonus_unique_naga_siren_2", // 10
-          "naga_siren_ensnare", // 11
+          "naga_siren_song_of_the_siren", // 11
           "naga_siren_ensnare", // 12
           "naga_siren_ensnare", // 13
           "naga_siren_ensnare", // 14
@@ -13144,9 +13155,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           early_game: ["power_treads", "wraith_band", "yasha"],
           mid_game: ["manta", "orchid", "heart"],
           late_game: [
+            "butterfly",
             "skadi",
             "bloodthorn",
-            "butterfly",
             "sheepstick",
             "swift_blink",
           ],
@@ -13166,21 +13177,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: [
             "manta",
-            "skadi",
-            "diffusal_blade",
             "orchid",
-            "ultimate_scepter",
+            "heart",
+            "butterfly"
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
             "unstable_wand",
-            "vambrace",
+            "occult_bracelet",
             "ring_of_aquila",
             "pupils_gift",
             "elven_tunic",
             "titan_sliver",
-            "spell_prism",
+            "mind_breaker",
             "ninja_gear",
+            "penta_edged_sword",
             "apex",
             "fallen_sky",
             "mirror_shield",
@@ -13292,7 +13303,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Nature's Prophet": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -13317,7 +13328,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
           "furion_sprout", // 14
-          "special_bonus_unique_furion_2", // 15
+          "special_bonus_unique_furion_teleportation_max_stacks", // 15
           "furion_sprout", // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -13330,45 +13341,44 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_furion_3", // 25
         ],
         items: {
-          starting: ["robe", "branches", "branches", "branches"],
-          early_game: ["tango", "power_treads", "magic_wand"],
-          mid_game: ["orchid", "black_king_bar", "aghanims_shard", "assault"],
+          starting: ["blight_stone", "branches", "branches", "branches", "branches", "tango"],
+          early_game: ["power_treads", "magic_wand"],
+          mid_game: ["witch_blade", "ultimate_scepter", "black_king_bar"],
           late_game: [
+            "assault",
+            "gungir",
             "satanic",
             "bloodthorn",
             "sheepstick",
-            "ultimate_scepter",
             "mjollnir",
           ],
           situational: [
             "infused_raindrop",
-            "ancient_janggo",
             "heavens_halberd",
             "monkey_king_bar",
             "hurricane_pike",
             "nullifier",
             "silver_edge",
-            "gungir",
             "hand_of_midas",
-            "witch_blade",
-            "ultimate_scepter",
+            "crimson_guard",
+            "aghanims_shard",
           ],
           core: [
             "power_treads",
-            "orchid",
+            "witch_blade",
+            "ultimate_scepter",
             "black_king_bar",
-            "aghanims_shard",
             "assault",
           ],
           neutral: [
             "unstable_wand",
-            "seeds_of_serenity",
+            "lance_of_pursuit",
             //"misericorde",
             "grove_bow",
             "specialists_array",
             "enchanted_quiver",
+            "titan_sliver",
             "mind_breaker",
-            "ascetic_cap",
             "trickster_cloak",
             "desolator_2",
             "pirate_hat",
@@ -13418,7 +13428,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
           "furion_sprout", // 14
-          "special_bonus_unique_furion_2", // 15
+          "special_bonus_unique_furion_teleportation_max_stacks", // 15
           "furion_sprout", // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -13431,14 +13441,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_furion_3", // 25
         ],
         items: {
-          starting: ["robe", "branches", "branches", "branches"],
-          early_game: ["tango", "power_treads", "magic_wand", "hand_of_midas"],
+          starting: ["blight_stone", "branches", "branches", "branches", "branches", "tango"],
+          early_game: ["power_treads", "magic_wand", "hand_of_midas"],
           mid_game: ["maelstrom", "black_king_bar", "assault"],
           late_game: [
             "satanic",
             "skadi",
             "ultimate_scepter",
-            "mjollnir",
+            "gungir",
             "greater_crit",
           ],
           situational: [
@@ -13446,24 +13456,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "monkey_king_bar",
             "hurricane_pike",
             "nullifier",
-            "gungir",
+            "mjollnir",
             "sheepstick",
             "bloodthorn",
             "desolator",
             "aghanims_shard",
             "witch_blade",
             "butterfly",
+            "silver_edge"
           ],
           core: ["power_treads", "maelstrom", "black_king_bar", "assault"],
           neutral: [
             "unstable_wand",
+            "lance_of_pursuit",
             //"possessed_mask", Removed in 7.33
             //"misericorde",
             "grove_bow",
             "specialists_array",
             "enchanted_quiver",
-            "mind_breaker",
             "titan_sliver",
+            "mind_breaker",
             "ninja_gear",
             "trickster_cloak",
             "desolator_2",
@@ -13503,19 +13515,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "furion_force_of_nature", // 1
           "furion_teleportation", // 2
-          "furion_force_of_nature", // 3
+          "furion_teleportation", // 3
           "furion_sprout", // 4
-          "furion_force_of_nature", // 5
+          "furion_teleportation", // 5
           "furion_wrath_of_nature", // 6
-          "furion_force_of_nature", // 7
-          "furion_teleportation", // 8
-          "furion_teleportation", // 9
-          "special_bonus_unique_furion_6", // 10
-          "furion_teleportation", // 11
+          "furion_teleportation", // 7
+          "furion_force_of_nature", // 8
+          "furion_force_of_nature", // 9
+          "special_bonus_unique_furion_5", // 10
+          "furion_force_of_nature", // 11
           "furion_wrath_of_nature", // 12
           "furion_sprout", // 13
           "furion_sprout", // 14
-          "special_bonus_unique_furion_2", // 15
+          "special_bonus_unique_furion_teleportation_max_stacks", // 15
           "furion_sprout", // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -13525,7 +13537,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_furion", // 25
+          "special_bonus_unique_furion_3", // 25
         ],
         items: {
           starting: [
@@ -13534,16 +13546,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             // "branches", total costs were 610, removed one branches
             "faerie_fire",
-            "ward_sentry",
-            "ward_observer",
+            "blood_grenade",
           ],
-          early_game: ["magic_wand", "boots"],
-          mid_game: ["mekansm", "aghanims_shard", "glimmer_cape"],
+          early_game: ["medallion_of_courage", "magic_wand", "boots"],
+          mid_game: ["solar_crest", "pavise", "ultimate_scepter"],
           late_game: [
             "octarine_core",
             "sheepstick",
             "refresher",
-            "ultimate_scepter",
+            "bloodthorn",
           ],
           situational: [
             "infused_raindrop",
@@ -13557,13 +13568,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "hand_of_midas",
             "ancient_janggo",
           ],
-          core: ["mekansm", "aghanims_shard", "glimmer_cape", "octarine_core"],
+          core: ["solar_crest", "aghanims_shard", "ultimate_scepter", "sheepstick"],
           neutral: [
-            "arcane_ring",
+            "lance_of_pursuit",
             "trusty_shovel",
-            "dragon_scale",
+            "orb_of_destruction",
             "pupils_gift",
-            "psychic_headband",
+            "enchanted_quiver",
             "quickening_charm",
             "spy_gadget",
             "spell_prism",
@@ -13985,7 +13996,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Night Stalker": {
-    gameplay_version: `7.32e`,
+    gameplay_version: `7.33c`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -14005,12 +14016,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "night_stalker_void", // 7
           "night_stalker_crippling_fear", // 8
           "night_stalker_hunter_in_the_night", // 9
-          `special_bonus_unique_night_stalker_7`, // 10
-          `night_stalker_hunter_in_the_night`, // 11
+          `night_stalker_hunter_in_the_night`, // 10
+          `special_bonus_unique_night_stalker_7`, // 11
           "night_stalker_darkness", // 12
           "night_stalker_crippling_fear", // 13
           "night_stalker_crippling_fear", // 14
-          "special_bonus_unique_night_stalker_3", // 15
+          "special_bonus_strength_20", // 15
           "night_stalker_crippling_fear", // 16
           "special_bonus_attributes", // 17
           "night_stalker_darkness", // 18
@@ -14030,13 +14041,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `circlet`,
             `branches`,
             `branches`,
-            `ward_observer`,
           ],
           early_game: [
+            "vanguard",
             "phase_boots",
             "magic_wand",
             "bracer",
-            "infused_raindrop",
           ],
           mid_game: [
             "echo_sabre",
@@ -14053,16 +14063,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "overwhelming_blink",
           ],
           situational: [
-            `soul_ring`,
             `hand_of_midas`,
-            `armlet`,
             `sange_and_yasha`,
             `heavens_halberd`,
             `silver_edge`,
-            `lotus_orb`,
             `sphere`,
             `ultimate_scepter`,
-            `swift_blink`,
             `travel_boots`,
           ],
           core: [
@@ -14077,12 +14083,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `lance_of_pursuit`,
             //`dagger_of_ristul`,
             `vambrace`,
+            "orb_of_destruction",
             `titan_sliver`,
+            "ogre_seal_totem",
             `mind_breaker`,
             "penta_edged_sword",
-            `havoc_hammer`,
             "desolator_2",
             `giants_ring`,
+            "pirate_hat"
           ],
         },
       },
@@ -14093,6 +14101,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
     item_tooltips: {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
+      vanguard: "The early you get it the better. Will make you alot tankier in lane and allow you to lane vs most heroes",
       phase_boots:
         "A core boots upgrade that allows you to gap-close even quicker.",
       echo_sabre:
@@ -15558,19 +15567,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "slippers",
             "circlet",
-            "faerie_fire",
           ],
           early_game: [
-            "ring_of_health",
             "power_treads",
+            "cornucopia",
             "magic_wand",
-            "orb_of_corrosion",
+            "wraith_band",
           ],
           mid_game: [
             "bfury",
             "desolator",
             "black_king_bar",
-            "aghanims_shard",
             "basher",
           ],
           late_game: ["satanic", "abyssal_blade", "ultimate_scepter"],
@@ -15580,6 +15587,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sphere",
             "monkey_king_bar",
             "nullifier",
+            "aghanims_shard",
           ],
           core: [
             "power_treads",
@@ -15597,9 +15605,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             //"misericorde",
             //"dagger_of_ristul", Removed in 7.33
             "ring_of_aquila",
-            "mind_breaker",
+            "orb_of_destruction",
             "paladin_sword",
+            "titan_sliver",
             "penta_edged_sword",
+            "mind_breaker",
             "desolator_2",
             "apex",
             "ex_machina",
@@ -15693,7 +15703,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Phantom Lancer": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -15719,7 +15729,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "phantom_lancer_spirit_lance", // 13
           "phantom_lancer_spirit_lance", // 14
           "phantom_lancer_spirit_lance", // 15
-          "special_bonus_unique_phantom_lancer_5", // 16
+          "special_bonus_strength_15", // 16
           "special_bonus_attributes", // 17
           "phantom_lancer_juxtapose", // 18
           "special_bonus_attributes", // 19
@@ -15735,20 +15745,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "slippers",
             "circlet",
           ],
           early_game: ["power_treads", "magic_wand", "wraith_band"],
           mid_game: ["diffusal_blade", "manta", "heart", "aghanims_shard"],
-          late_game: ["skadi", "butterfly", "abyssal_blade"],
+          late_game: ["skadi", "butterfly", "abyssal_blade", "bloodthorn", "disperser"],
           situational: [
-            "hood_of_defiance",
             "monkey_king_bar",
             "sphere",
-            "bloodthorn",
             "silver_edge",
             "swift_blink",
             "octarine_core",
+            "sange_and_yasha",
+            "ultimate_scepter",
+            "mage_slayer"
           ],
           core: [
             "power_treads",
@@ -15759,14 +15771,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
+            "broom_handle",
             "lance_of_pursuit",
-            "unstable_wand",
-            "vambrace",
+            "ring_of_aquila",
             //"dagger_of_ristul", Removed in 7.33
             "pupils_gift",
+            "orb_of_destruction",
             "titan_sliver",
             "elven_tunic",
+            "mind_breaker",
             "ninja_gear",
+            "mirror_shield",
             "apex",
             "pirate_hat",
           ],
@@ -16508,7 +16523,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Pudge: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -16523,18 +16538,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "pudge_rot", // 2
           "pudge_rot", // 3
           "pudge_flesh_heap", // 4
-          "pudge_meat_hook", // 5
+          "pudge_rot", // 5
           "pudge_dismember", // 6
-          "pudge_meat_hook", // 7
-          "pudge_meat_hook", // 8
-          "pudge_rot", // 9
-          "pudge_rot", // 10
+          "pudge_rot", // 7
+          "pudge_flesh_heap", // 8
+          "pudge_flesh_heap", // 9
+          "pudge_flesh_heap", // 10
           "special_bonus_armor_4", // 11
           "pudge_dismember", // 12
-          "pudge_flesh_heap", // 13
-          "pudge_flesh_heap", // 14
+          "pudge_meat_hook", // 13
+          "pudge_meat_hook", // 14
           "special_bonus_unique_pudge_7", // 15
-          "pudge_flesh_heap", // 16
+          "pudge_meat_hook", // 16
           "special_bonus_attributes", // 17
           "pudge_dismember", // 18
           "special_bonus_attributes", // 19
@@ -16543,29 +16558,30 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_pudge_1", // 25
+          "special_bonus_unique_pudge_3", // 25
         ],
         items: {
           starting: [
             "tango",
-            "flask",
-            "enchanted_mango",
-            "enchanted_mango",
+            "blood_grenade",
             "wind_lace",
+            "enchanted_mango",
+            "branch",
             "ward_observer",
+            "ward_sentry"
           ],
           early_game: [
             "tranquil_boots",
-            "soul_ring",
             "magic_wand",
+            "urn_of_shadows",
             "smoke_of_deceit",
           ],
           mid_game: [
             "blink",
             "aether_lens",
+            "glimmer_cape",
             "aghanims_shard",
             "black_king_bar",
-            "blade_mail",
           ],
           late_game: [
             "octarine_core",
@@ -16579,10 +16595,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "force_staff",
             "rod_of_atos",
             "ghost",
-            "glimmer_cape",
             "pipe",
             "cyclone",
             "lotus_orb",
+            "pavise",
           ],
           core: [
             "tranquil_boots",
@@ -16625,13 +16641,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "pudge_rot", // 2
           "pudge_rot", // 3
           "pudge_flesh_heap", // 4
-          "pudge_flesh_heap", // 5
+          "pudge_rot", // 5
           "pudge_dismember", // 6
           "pudge_rot", // 7
-          "pudge_rot", // 8
+          "pudge_flesh_heap", // 8
           "pudge_flesh_heap", // 9
           "pudge_flesh_heap", // 10
-          "special_bonus_unique_pudge_4", // 11
+          "special_bonus_armor_4", // 11
           "pudge_dismember", // 12
           "pudge_meat_hook", // 13
           "pudge_meat_hook", // 14
@@ -16645,16 +16661,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_pudge_1", // 25
+          "special_bonus_unique_pudge_3", // 25
         ],
         items: {
-          starting: ["tango", "bracer"],
-          early_game: ["phase_boots", "magic_wand", "soul_ring", "vanguard"],
+          starting: ["tango", "gauntlets", "ring_of_protection", "blood_grenade", "branches", "branches" ],
+          early_game: ["vanguard", "phase_boots", "magic_wand", "soul_ring"],
           mid_game: [
             "blink",
             "black_king_bar",
             "ultimate_scepter",
-            "eternal_shroud",
+            "aghanims_shard",
           ],
           late_game: [
             "shivas_guard",
@@ -16666,7 +16682,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "pipe",
             "lotus_orb",
             "crimson_guard",
-            "bloodstone",
             "aghanims_shard",
             "cyclone",
             "force_staff",
@@ -16678,11 +16693,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: [
             "phase_boots",
-            "hood_of_defiance",
+            "vanguard",
             "ultimate_scepter",
             "black_king_bar",
             "blink",
-            "overwhelming_blink",
+            "aghanims_shard"
           ],
           neutral: [
             "arcane_ring",
@@ -17105,21 +17120,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "queenofpain_shadow_strike", // 1
-          "queenofpain_blink", // 2
+          "queenofpain_scream_of_pain", // 1
+          "queenofpain_shadow_strike", // 2
           "queenofpain_shadow_strike", // 3
-          "queenofpain_scream_of_pain", // 4
-          "queenofpain_scream_of_pain", // 5
+          "queenofpain_blink", // 4
+          "queenofpain_shadow_strike", // 5
           "queenofpain_sonic_wave", // 6
           "queenofpain_scream_of_pain", // 7
           "queenofpain_scream_of_pain", // 8
-          "queenofpain_blink", // 9
+          "queenofpain_scream_of_pain", // 9
           "special_bonus_strength_11", // 10
           "queenofpain_blink", // 11
           "queenofpain_sonic_wave", // 12
           "queenofpain_blink", // 13
-          "queenofpain_shadow_strike", // 14
-          "special_bonus_attack_speed_30", // 15
+          "queenofpain_blink", // 14
+          "special_bonus_unique_queen_of_pain_4", // 15
           "queenofpain_shadow_strike", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
@@ -17145,25 +17160,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "null_talisman",
             "magic_stick",
             "power_treads",
+            "kaya"
           ],
-          mid_game: ["kaya_and_sange", "aghanims_shard", "black_king_bar"],
+          mid_game: ["kaya_and_sange", "ultimate_scepter", "aghanims_shard", "black_king_bar"],
           late_game: [
             "shivas_guard",
+            "octarine_core",
             "sheepstick",
-            "refresher",
-            "bloodthorn",
             "ethereal_blade",
-            "assault",
           ],
           situational: [
             "infused_raindrop",
             "sphere",
             "witch_blade",
-            "octarine_core",
-            "cyclone",
+            "refresher",
+            "bloodthorn",
           ],
           core: [
             "kaya_and_sange",
+            "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
             "shivas_guard",
@@ -17172,8 +17187,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "mysterious_hat",
             "grove_bow",
-            "vambrace",
-            "mind_breaker",
+            "vampire_fangs",
+            "psychic_headband",
+            "dandelion_amulet",
             "quickening_charm",
             "spell_prism",
             "timeless_relic",
@@ -17211,7 +17227,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "queenofpain_sonic_wave", // 12
           "queenofpain_blink", // 13
           "queenofpain_blink", // 14
-          "special_bonus_attack_speed_30", // 15
+          "special_bonus_unique_queen_of_pain_4", // 15
           "queenofpain_shadow_strike", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
@@ -17227,37 +17243,36 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "circlet",
-            "branches",
+            "blood_grenade",
             "branches",
             "faerie_fire",
             "mantle",
           ],
           early_game: [
-            "urn_of_shadows",
             "null_talisman",
             "power_treads",
             "magic_wand",
+            "kaya"
           ],
-          mid_game: ["kaya_and_sange", "aghanims_shard", "black_king_bar"],
+          mid_game: ["kaya_and_sange", "ultimate_scepter", "aghanims_shard", "black_king_bar"],
           late_game: [
-            "sphere",
+            "octarine_core",
             "shivas_guard",
             "sheepstick",
-            "refresher",
-            "bloodthorn",
             "ethereal_blade",
           ],
           situational: [
+            "bloodthorn",
+            "refresher",
+            "sphere",
             "infused_raindrop",
             "spirit_vessel",
             "lotus_orb",
             "orchid",
-            "cyclone",
-            "octarine_core",
-            "ultimate_scepter",
           ],
           core: [
             "kaya_and_sange",
+            "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
             "shivas_guard",
@@ -17266,9 +17281,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "arcane_ring",
             "mysterious_hat",
             "grove_bow",
-            "vambrace",
+            "vampire_fangs",
             "quickening_charm",
-            "enchanted_quiver",
+            "psychic_headband",
             "spell_prism",
             "timeless_relic",
             "ex_machina",
@@ -18563,7 +18578,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Shadow Fiend": {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -18702,16 +18717,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "enchanted_mango",
             "enchanted_mango",
+            "enchanted_mango",
             "tango",
             "branches",
             "branches",
+            "branches"
           ],
-          early_game: ["bottle", "boots", "power_treads", "magic_wand"],
+          early_game: ["bottle", "boots", "power_treads", "magic_wand", "mask_of_madness"],
           mid_game: [
             "dragon_lance",
             "invis_sword",
             "black_king_bar",
             "silver_edge",
+            "aghanims_shard",
           ],
           late_game: ["greater_crit", "satanic", "butterfly"],
           situational: [
@@ -18724,24 +18742,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: [
             "power_treads",
+            "mask_of_madness",
             "dragon_lance",
             "black_king_bar",
             "silver_edge",
             "aghanims_shard",
-            "greater_crit",
-            "satanic",
-            "butterfly",
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
-            "unstable_wand",
+            "arcane_ring",
+            "lance_of_pursuit",
             "grove_bow",
             "specialists_array",
             //"dagger_of_ristul", Removed in 7.33
             "ring_of_aquila",
-            "vambrace",
-            "paladin_sword",
+            "titan_sliver",
             "elven_tunic",
+            "mind_breaker",
             "ninja_gear",
             "desolator_2",
             "pirate_hat",
@@ -19493,7 +19510,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Slark: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -19523,7 +19540,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "slark_shadow_dance", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_slark_7", // 20
+          "special_bonus_unique_slark_5", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -19535,51 +19552,50 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
-            "branches",
-            //"circlet",  replaced two items with one branches, as total costs were 870
-            //"magic_stick",
-            "orb_of_venom",
+            "magic_stick",
+            "circlet"
           ],
-          early_game: ["boots", "magic_wand", "wraith_band", "power_treads"],
+          early_game: ["power_treads", "magic_wand", "echo_sabre"],
           mid_game: [
-            "falcon_blade",
             "diffusal_blade",
+            "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
-            "invis_sword",
-            "basher",
           ],
-          late_game: ["silver_edge", "skadi", "abyssal_blade", "satanic"],
+          late_game: ["silver_edge", "skadi", "abyssal_blade", "satanic", "harpoon", "butterfly"],
           situational: [
             "orb_of_corrosion",
             "hand_of_midas",
             "sange_and_yasha",
-            "ultimate_scepter",
             "sphere",
             "blink",
             "monkey_king_bar",
             "nullifier",
+            "manta"
           ],
           core: [
             "power_treads",
+            "echo_sabre",
             "diffusal_blade",
+            "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
-            "invis_sword",
-            "basher",
-            "skadi",
           ],
           neutral: [
             "lance_of_pursuit",
-            "arcane_ring",
+            "occult_bracelet",
             //"possessed_mask", Removed in 7.33
             //"dagger_of_ristul", Removed in 7.33
             //"misericorde",
-            "mind_breaker",
+            "ring_of_aquila",
+            "orb_of_destruction",
             "elven_tunic",
+            "titan_sliver",
+            "mind_breaker",
             "penta_edged_sword",
             "pirate_hat",
             "apex",
+            "mirror_shield"
           ],
         },
       },
@@ -20176,7 +20192,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Spectre: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
