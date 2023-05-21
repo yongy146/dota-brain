@@ -9926,7 +9926,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `travel_boots`,
             "aghanims_shard",
             "blink",
-            "aghanims_scepter",
+            "ultimate_scepter",
           ],
           late_game: ["black_king_bar", "sheepstick", `refresher`, "octarine_core"],
           situational: [
@@ -9937,7 +9937,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aeon_disk",
             "wind_waker"
           ],
-          core: ["travel_boots", "aether_lens", `aghanims_shard`, "aghanims_scepter"],
+          core: ["travel_boots", "aether_lens", `aghanims_shard`, "ultimate_scepter"],
           neutral: [
             "arcane_ring",
             `mysterious_hat`,
@@ -9967,7 +9967,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           sphere: "Against powerful single target disables or debuffs.",
           aether_lens: "Very strong early/mid game timing that will allow you to disable targets frequently from long range.",
           aghanims_shard: "Very strong mid game timing that will increase your spell damage.",
-          aghanims_scepter: "Another one of linas strongest timings that will increase mobility and damage output by a ton. "
+          ultimate_scepter: "Another one of linas strongest timings that will increase mobility and damage output by a ton. "
         },
       },
       {
@@ -10025,7 +10025,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
           ],
           late_game: [
-            "aghanims_scepter",
+            "ultimate_scepter",
             `blink`,
             `ethereal_blade`,
             "aeon_disk",
@@ -10494,23 +10494,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "luna_lunar_blessing", // 1   "luna_moon_glaive" equals to `moon glaives`
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
-          "luna_lucent_beam", // 4
-          "luna_moon_glaive", // 5
-          "luna_lunar_blessing", // 6
+          "luna_moon_glaive", // 4
+          "luna_lunar_blessing", // 5
+          "luna_moon_glaive", // 6
           "luna_lunar_blessing", // 7
           "luna_moon_glaive", // 8
           "luna_moon_glaive", // 9
-          "luna_moon_glaive", // 10
+          "luna_lucent_beam", // 10
           "luna_lucent_beam", // 11
           "luna_eclipse", // 12
-          "luna_eclipse", // 13
-          "luna_lucent_beam", // 14
-          "special_bonus_unique_luna_4", // 15
+          "luna_lucent_beam", // 13
+          "luna_eclipse", // 14
+          "special_bonus_unique_luna_7", // 15
           "special_bonus_unique_luna_2", // 16
           "special_bonus_attributes", // 17
           "luna_eclipse", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_luna_1", // 20
+          "special_bonus_unique_luna_8", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -10518,13 +10518,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_luna_3", // 25
         ],
         items: {
-          starting: ["tango", "branches", "slippers", "branches", "circlet"],
-          early_game: ["power_treads", "mask_of_madness", "magic_wand"],
+          starting: ["tango", "branches", "branches", "branches", "circlet", "magic_stick"],
+          early_game: ["power_treads", "wraith_band", "mask_of_madness", "magic_wand"],
           mid_game: [
             "dragon_lance",
             "manta",
             "black_king_bar",
-            "aghanims_shard",
             "lesser_crit",
           ],
           late_game: ["greater_crit", "skadi", "satanic", "butterfly"],
@@ -10533,6 +10532,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "silver_edge",
             "ultimate_scepter",
             "monkey_king_bar",
+            "aghanims_shard",
+            "sphere",
+            "sange_and_yasha",
+            "blood_grenade"
           ],
           core: [
             "power_treads",
@@ -10546,14 +10549,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             //"possessed_mask", Removed in 7.33
             "unstable_wand",
+            "duelist_gloves",
             "grove_bow",
-            "specialists_array",
+            "ring_of_aquila",
             //"dagger_of_ristul", Removed in 7.33
             "titan_sliver",
             "elven_tunic",
             "ninja_gear",
-            "ex_machina",
-            "desolator_2",
+            "mind_breaker",
+            "mirror_shield",
+            "pirate_hat",
           ],
         },
       },
@@ -10638,7 +10643,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lycan: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
