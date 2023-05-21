@@ -10678,15 +10678,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_lycan_5", // 25
+          "special_bonus_unique_lycan_2", // 25
         ],
         items: {
           starting: [
             "tango",
             "quelling_blade",
             "branches",
-            "branches",
-            "branches",
+            "ring_of_protection",
             "sobi_mask",
           ],
           early_game: [
@@ -10696,45 +10695,42 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "boots",
           ],
           mid_game: [
+            "echo_saber",
             "helm_of_the_overlord",
             "ancient_janggo",
             "assault",
-            "boots_of_bearing",
             "aghanims_shard",
           ],
           late_game: [
             "ultimate_scepter",
-            "satanic",
-            "assault",
             "sheepstick",
             "black_king_bar",
             "bloodthorn",
             "abyssal_blade",
           ],
           situational: [
-            "aghanims_shard",
             "orchid",
             "black_king_bar",
             "heavens_halberd",
             "nullifier",
             "sheepstick",
-            "wraith_pact",
           ],
           core: [
-            "helm_of_the_dominator",
             "helm_of_the_overlord",
             "ancient_janggo",
             "boots_of_bearing",
             "assault",
             "ultimate_scepter",
+            "aghanims_shard"
           ],
           neutral: [
             "broom_handle",
-            "arcane_ring",
+            "occult_bracelet",
             //"misericorde",
             "dragon_scale",
-            "mind_breaker",
+            "ring_of_aquila",
             "quickening_charm",
+            "titan_sliver",
             "spell_prism",
             "penta_edged_sword",
             "demonicon",
@@ -10773,12 +10769,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_lycan_5", // 25
+          "special_bonus_unique_lycan_2", // 25
         ],
         items: {
           starting: [
             "tango",
-            "quelling_blade",
+            "circlet",
             "branches",
             "ring_of_protection",
           ],
@@ -13353,7 +13349,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "monkey_king_bar",
             "hurricane_pike",
             "nullifier",
-            "wraith_pact",
             "silver_edge",
             "gungir",
             "hand_of_midas",
