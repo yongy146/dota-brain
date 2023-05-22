@@ -25514,7 +25514,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Weaver: {
-    gameplay_version: `7.32e`,
+    gameplay_version: `7.33c`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -25526,15 +25526,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "weaver_shukuchi", // 1
-          "weaver_the_swarm", // 2
+          "weaver_geminate_attack", // 2
           `weaver_shukuchi`, // 3
-          `weaver_geminate_attack`, // 4
+          `weaver_the_swarm`, // 4
           "weaver_shukuchi", // 5
           "weaver_time_lapse", // 6
           "weaver_shukuchi", // 7
           "weaver_the_swarm", // 8
           "weaver_the_swarm", // 9
-          `special_bonus_unique_weaver_1`, // 10
+          `special_bonus_strength_9`, // 10
           `weaver_the_swarm`, // 11
           "weaver_time_lapse", // 12
           "weaver_geminate_attack", // 13
@@ -25554,21 +25554,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "circlet",
-            "sobi_mask",
-            "flask",
-            `faerie_fire`,
+            "blight_stone",
+            "blood_grenade",
+            "branches",
+            `ward_sentry`,
             "ward_observer",
           ],
           early_game: [
             `ward_sentry`,
             "urn_of_shadows",
             "magic_wand",
-            `infused_raindrop`,
+            `medallion_of_courage`,
           ],
-          mid_game: [`rod_of_atos`, `ultimate_scepter`, `blink`],
+          mid_game: [`solar_crest`, `ultimate_scepter`],
           late_game: [
-            `gungir`,
             "aeon_disk",
             `black_king_bar`,
             `bloodthorn`,
@@ -25577,25 +25576,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `orchid`,
             `spirit_vessel`,
-            `solar_crest`,
             `heavens_halberd`,
             `cyclone`,
             `ghost`,
             `force_staff`,
             "lotus_orb",
-            `wraith_pact`,
             `ethereal_blade`,
             `wind_waker`,
             `octarine_core`,
             `aghanims_shard`,
             `travel_boots`,
+            "sphere"
           ],
           core: [
             "urn_of_shadows",
-            `rod_of_atos`,
+            `solar_crest`,
             "ultimate_scepter",
-            `blink`,
-            `gungir`,
+            `sheepstick`,
           ],
           neutral: [
             "arcane_ring",
@@ -25649,7 +25646,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "weaver_geminate_attack", // 8
           "weaver_geminate_attack", // 9
           "weaver_geminate_attack", // 10
-          `special_bonus_unique_weaver_1`, // 11
+          `special_bonus_strength_9`, // 11
           "weaver_time_lapse", // 12
           "weaver_the_swarm", // 13
           "weaver_the_swarm", // 14
@@ -25675,21 +25672,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `faerie_fire`,
           ],
           early_game: [
-            `falcon_blade`,
             `wraith_band`,
             `magic_wand`,
             `maelstrom`,
             "power_treads",
           ],
-          mid_game: ["dragon_lance", `lesser_crit`, `skadi`],
+          mid_game: ["mjollnir", `black_king_bar`, `skadi`],
           late_game: [
             "greater_crit",
             "satanic",
             `aghanims_shard`,
-            `black_king_bar`,
-            `monkey_king_bar`,
+            "butterfly",
+            
           ],
           situational: [
+            `monkey_king_bar`,
             `ring_of_basilius`,
             `gungir`,
             `mjollnir`,
@@ -25714,14 +25711,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           neutral: [
             //"possessed_mask", Removed in 7.33
             `lance_of_pursuit`,
-            `vambrace`,
+            "occult_bracelet",
+            `ring_of_aquila`,
             "grove_bow",
-            "mind_breaker",
+            "elven_tunic",
             "titan_sliver",
+            "mind_breaker",
+            "ninja_gear",
             //`heavy_blade`,
             //`flicker`,
+            "mirror_shield",
             "desolator_2",
-            "apex",
+            "pirate_hat",
           ],
         },
         item_tooltips: {
@@ -25813,7 +25814,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Windranger: {
-    gameplay_version: "7.32e",
+    gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -25825,25 +25826,25 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
           "windrunner_windrun", // 1
-          "windrunner_shackleshot", // 2
+          "windrunner_powershot", // 2
           "windrunner_powershot", // 3
-          "windrunner_powershot", // 4
+          "windrunner_shackleshot", // 4
           "windrunner_powershot", // 5
           "windrunner_focusfire", // 6
           "windrunner_powershot", // 7
-          "windrunner_shackleshot", // 8
-          "windrunner_shackleshot", // 9
-          "windrunner_shackleshot", // 10
+          "windrunner_windrun", // 8
+          "windrunner_windrun", // 9
+          "windrunner_windrun", // 10
           "special_bonus_unique_windranger_9", // 11
           "windrunner_focusfire", // 12
-          "windrunner_windrun", // 13
-          "windrunner_windrun", // 14
+          "windrunner_shackleshot", // 13
+          "windrunner_shackleshot", // 14
           "special_bonus_unique_windranger_4", // 15
-          "windrunner_windrun", // 16
+          "windrunner_shackleshot", // 16
           "special_bonus_attributes", // 17
           "windrunner_focusfire", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_windranger_8", // 20
+          "special_bonus_unique_windranger_6", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -25854,14 +25855,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "tango",
-            "faerie_fire",
+            "blood_grenade",
             "ward_sentry",
+            "ward_observer",
             "branches",
             "branches",
             "circlet",
           ],
-          early_game: ["magic_stick", "boots", "arcane_boots"],
-          mid_game: ["aghanims_shard", "blink", "force_staff"],
+          early_game: ["bracer", "magic_stick", "boots"],
+          mid_game: ["maelstrom", "blink", "aghanims_shard"],
           late_game: [
             "black_king_bar",
             "octarine_core",
@@ -25881,12 +25883,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "meteor_hammer",
             "tranquil_boots",
             "arcane_boots",
-            "maelstrom",
+            "pavise"
           ],
 
-          core: ["boots", "magic_stick", "blink", "aghanims_shard"],
+          core: ["boots", "magic_stick", "maelstrom", "blink", "aghanims_shard"],
           neutral: [
             "arcane_ring",
+            "lance_of_pursuit",
             "philosophers_stone",
             "grove_bow",
             "quickening_charm",
@@ -25950,7 +25953,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_windranger_windrun_undispellable", // 25
+          "special_bonus_unique_windranger_2", // 25
         ],
         items: {
           starting: [
@@ -25961,40 +25964,44 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "ward_observer",
           ],
-          early_game: ["bottle", "power_treads", "magic_wand", "maelstrom"],
+          early_game: ["bottle", "power_treads", "bracer", "magic_wand", "maelstrom"],
           mid_game: [
+            "gungir",
             "black_king_bar",
             "lesser_crit",
             "blink",
-            "travel_boots",
-            "monkey_king_bar",
           ],
           late_game: [
             "ultimate_scepter",
-            "sheepstick",
-            "mjollnir",
-            "sphere",
-            "bloodthorn",
             "greater_crit",
           ],
           situational: [
+            "monkey_king_bar",
+            "sheepstick",
+            "sphere",
+            "bloodthorn",
+            "mjollnir",
             "infused_raindrop",
             "silver_edge",
             "aghanims_shard",
             "nullifier",
+            "diffusal_blade",
+            "hurricane_pike"
           ],
-          core: ["maelstrom", "black_king_bar", "blink", "greater_crit"],
+          core: ["maelstrom", "black_king_bar", "blink", "greater_crit", "ultimate_scepter"],
           neutral: [
             "lance_of_pursuit",
             "unstable_wand",
             "grove_bow",
             //"misericorde",
-            "mind_breaker",
             "specialists_array",
+            "orb_of_destruction",
             "enchanted_quiver",
+            "titan_sliver",
             "mind_breaker",
             "spell_prism",
             //"heavy_blade",
+            "mirror_shield",
             "desolator_2",
             "mirror_shield",
           ],
@@ -26066,25 +26073,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         items: {
           starting: [
             "tango",
-            "faerie_fire",
+            "branches",
             "branches",
             "branches",
             "circlet",
-            "mantle",
+            "circlet",
           ],
-          early_game: ["boots", "maelstrom", "magic_wand"],
+          early_game: ["wraith_band", "bracer", "power_treads", "magic_wand"],
           mid_game: [
+            "maelstrom",
+            "gungir",
             "black_king_bar",
             "blink",
-            "aghanims_shard",
-            "lesser_crit",
           ],
           late_game: [
             "greater_crit",
             "sheepstick",
             "travel_boots",
-            "gungir",
-            "octarine_core",
+            "ultimate_scepter",
           ],
           situational: [
             "infused_raindrop",
@@ -26094,25 +26100,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "nullifier",
             "bloodthorn",
             "refresher",
-            "null_talisman",
-            "power_treads",
-            "bottle",
           ],
           core: [
-            "maelstrom",
+            "gungir",
             "black_king_bar",
             "blink",
-            "travel_boots",
+            "black_king_bar",
             "aghanims_shard",
           ],
           neutral: [
             "arcane_ring",
             "unstable_wand",
             "grove_bow",
+            "orb_of_destruction",
+            "specialists_array",
             //"misericorde",
-            "mind_breaker",
             "enchanted_quiver",
             "spell_prism",
+            "mind_breaker",
             //"heavy_blade",
             "desolator_2",
             "mirror_shield",
@@ -26620,17 +26625,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_wand",
             "bracer",
           ],
-          mid_game: ["desolator", "blink", "black_king_bar", "basher"],
+          mid_game: ["desolator", "blink", "black_king_bar", "assault"],
           late_game: [
-            "assault",
             "overwhelming_blink",
             "abyssal_blade",
             "bloodthorn",
-            "silver_edge",
-            "skadi",
           ],
           situational: [
             "silver_edge",
+            "skadi",
             "aghanims_shard",
             "monkey_king_bar",
             "nullifier",
@@ -26639,7 +26642,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "swift_blink",
             "hand_of_midas",
             "manta",
-            "soul_ring",
+            "ultimate_scepter"
           ],
           core: [
             "armlet",
@@ -26647,6 +26650,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "blink",
             "black_king_bar",
             "assault",
+            "basher",
             "aghanims_shard",
           ],
           neutral: [
@@ -26654,11 +26658,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "lance_of_pursuit",
             //"dagger_of_ristul", Removed in 7.33
             //"misericorde",
+            "vambrace",
+            "orb_of_destruction",
             "elven_tunic",
-            "mind_breaker",
             "titan_sliver",
             "paladin_sword",
-            "havoc_hammer",
+            "mind_breaker",
             "penta_edged_sword",
             "desolator_2",
             "pirate_hat",
