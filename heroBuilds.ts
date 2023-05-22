@@ -8742,17 +8742,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958059",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "keeper_of_the_light_illuminate", // 1  "keeper_of_the_light_radiant_bind" equals to `solar bind`
-          "keeper_of_the_light_chakra_magic", // 2
-          "keeper_of_the_light_illuminate", // 3
+          `keeper_of_the_light_blinding_light`, // 1  "keeper_of_the_light_radiant_bind" equals to `solar bind`
+          `keeper_of_the_light_illuminate`, // 2
+          `keeper_of_the_light_chakra_magic`, // 3
           "keeper_of_the_light_chakra_magic", // 4
           `keeper_of_the_light_illuminate`, // 5
           "keeper_of_the_light_spirit_form", // 6
-          `keeper_of_the_light_illuminate`, // 7
-          `keeper_of_the_light_blinding_light`, // 8
-          "keeper_of_the_light_chakra_magic", // 9
-          `special_bonus_unique_keeper_of_the_light_illuminate_cooldown`, // 10
-          `keeper_of_the_light_chakra_magic`, // 11
+          `keeper_of_the_light_chakra_magic`, // 7
+          `keeper_of_the_light_chakra_magic`, // 8
+          `keeper_of_the_light_illuminate`, // 9
+          `keeper_of_the_light_illuminate`, // 10
+          `special_bonus_unique_keeper_of_the_light_illuminate_cooldown`, // 11
           "keeper_of_the_light_spirit_form", // 12
           `keeper_of_the_light_blinding_light`, // 13
           `keeper_of_the_light_blinding_light`, // 14
@@ -8789,14 +8789,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           mid_game: [
             `force_staff`,
             `glimmer_cape`,
+            `pavise`,
             `ultimate_scepter`,
-            `aghanims_shard`,
           ],
           late_game: [`ethereal_blade`, `dagon_5`, "aeon_disk", `sheepstick`],
           situational: [
             `spirit_vessel`,
             `veil_of_discord`,
-            `pavise`,
+            `aghanims_shard`,
             `solar_crest`,
             `octarine_core`,
             "lotus_orb",
@@ -8809,8 +8809,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `tranquil_boots`,
             `force_staff`,
             `glimmer_cape`,
+            `pavise`,
             `ultimate_scepter`,
-            `aghanims_shard`,
             `ethereal_blade`,
           ],
           neutral: [
