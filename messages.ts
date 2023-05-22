@@ -7337,9 +7337,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Lina",
     audioFile: "ownHero/Lina_6_UpkeepFierySoul",
     messageTime: [7 * 60, 17 * 60, 27 * 60],
-    textMessage: `Use Light Strike Array on creep waves to maintain Fiery Soul Stacks as it is cheaper and of shorter cooldown.`,
+    textMessage: `Use Dragon Slave on creep waves to maintain Fiery Soul Stacks as you can hit more creeps consistently with it.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "lina_light_strike_array" },
+    image: { type: "ability", name: "lina_dragon_slave" },
   },
   {
     category: "OwnHero",
@@ -7354,12 +7354,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Lina",
-    audioFile: "ownHero/Lina_8_Physical",
+    audioFile: "ownHero/Lina_6_UpkeepFierySoul",
     messageTime: 25 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: `In late game fights, use active spells on enemies to activate Fiery Soul as most of your damage will be physical.`,
+    textMessage: `Keep fiery soul stacks up in fights to ensure that your shard is giving maximum bonus damage to your spells.`,
     audience: [Audience.ROLE_CORE],
-    image: { type: "ability", name: "lina_fiery_soul" },
+    image: { type: "item", name: "aghanims_shard" },
   },
 
   {
