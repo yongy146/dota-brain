@@ -5678,7 +5678,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_3_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Quas Exort: You can use Sun Strike here and there to secure ranged creep lasthit.",
+      `Quas Exort: You can use Sunstrike here and there to secure ranged creep last hit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "invoker_sun_strike" },
   },
@@ -5738,7 +5738,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, you can easily splitpush with summons or by dumping spells from the fog.",
+      `When not much is happening, you can easily split push with summons or by dumping spells from the fog.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "invoker_chaos_meteor" },
   },
@@ -15557,7 +15557,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tiny_3_SecureLasthits",
     messageTime: 45,
     textMessage:
-      "Use Avalanche or Tree Toss to secure lasthits and harass opponents here and there.",
+      `Use Avalanche or Tree Toss to secure last hits and harass opponents here and there.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "tiny_avalanche" },
   },
@@ -15623,6 +15623,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "When not much is happening, push out the sidelines with your spells.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "tiny_avalanche" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Tiny`,
+    audioFile: `ownHero/Tiny_11_TreeVolleyUsage`,
+    messageTime: 21 * 60 + 45,
+    textMessage:
+      `Once you have Aghanims Scepter, you can play in tree lines and start fights with Tree Volley instead of the Ava-Toss combo.`,
+    audience: [Audience.ROLE_MID],
+    image: { type: `item`, name: `ultimate_scepter` },
   },
 
   {
@@ -17118,6 +17128,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Aghanim's Scepter is a game changer as it adds another utility in the form of silence among other things.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Void Spirit`,
+    audioFile: `ownHero/VoidSpirit_7_AggressionWithItems`,
+    messageTime: 18 * 60 + 45,
+    textMessage:
+      `Once you have both Echo Sabre and Desolator, look to play aggressively as you can solo kill pretty much any hero on the map.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `desolator` },
   },
 
   {

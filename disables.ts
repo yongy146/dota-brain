@@ -402,6 +402,11 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	{
+      skill: `invoker_tornado`,
+      affects: AbilityAffects.AREA,
+      disables: [`stun`],
+    },
     // Cold Snap is a hero stun.
   ],
   Jakiro: [
@@ -975,7 +980,7 @@ export const disables: IDisables = {
     },
     // Aether Remnant is a hero stun. It has an area of effect but only stuns one hero.
     // Aghanim's Scepter upgrades Resonant Pulse to area silence. It gives two charges of it as well.
-    // Level 25 talent "Dissimilate Stuns for 2.5s" makes Dissimilate an area stun.
+    // Level 25 talent "Dissimilate Roots for 2s" makes Dissimilate an area root.
   ],
   Warlock: [
     {
