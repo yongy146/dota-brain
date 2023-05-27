@@ -701,10 +701,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Alchemist",
+    audioFile: "ownHero/Alchemist_unstable_concoction_1",
+    messageTime: 0,
+    textMessage:
+      "Use unstable concoction to secure last hits on range creeps and harras the opponent in the early stages of the lane.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: "OwnHero",
+    hero: "Alchemist",
     audioFile: "ownHero/Alchemist_2_GreevilsGreed1",
     messageTime: 4 * 60,
     textMessage:
-      "Understand when you are no longer able to lane and move to the jungle. Alchemist farms insanely fast and you don't want die and lose Greevil's Greed stacks.",
+      "Understand when you are no longer able to lane and move to the jungle. Alchemist farms insanely fast and you don't want to die and lose Greevil's Greed stacks.",
     audience: [Audience.ROLE_CORE],
   },
   {
@@ -897,7 +906,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Anti-Mage",
     audioFile: "ownHero/AntiMage_1_Laning",
     messageTime: 10,
-    textMessage: "Rush Ring of Health on tough lanes.",
+    textMessage: "You can rush vanguard on tough lanes. Otherwise try to get away with cornucopia.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "ring_of_health" },
   },
@@ -907,7 +916,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/AntiMage_2_BurnMana",
     messageTime: 20,
     textMessage:
-      "Hit opponents and burn their mana whenever you can, for example when they go for lasthit.",
+      "Hit opponents and burn their mana whenever you can, for example when they go for a last hit.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "antimage_mana_break" },
   },
@@ -946,7 +955,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/AntiMage_6_PushLane",
     messageTime: [10 * 60 + 15, 13 * 60 + 45],
     textMessage:
-      "Keep a lane pushed out to apply some pressure on the map. If you expect to be gank, Blink into trees and teleport out.",
+      "Keep a lane pushed out to apply some pressure on the map. If you expect to be ganked, Blink into trees and teleport to the opposite side of the map.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "antimage_blink" },
   },
@@ -1006,9 +1015,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/AntiMage_4_Jungling",
     messageTime: 10 * 60 + 30,
     textMessage:
-      "Look to disrupt Anti-Mange's jungling by placing deep wards and smoking on him. Anti-Mage is weak until he gets Manta Style",
+      "Look to disrupt Anti-Mage's jungling by placing deep wards and smoking on him. Anti-Mage is weak until he gets Manta Style",
     chatMessage:
-      "Disrupt Anti-Mange's jungling by placing deep wards and smoking on him. He is weak until he gets Manta Style",
+      "Disrupt Anti-Mage's jungling by placing deep wards and smoking on him. He is weak until he gets Manta Style",
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_observer" },
   },
@@ -1771,10 +1780,20 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Bloodseeker",
+    audioFile: "ownHero/Bloodseeker_2_bloodseeker_bloodrage",
+    messageTime: [6 * 60],
+    textMessage:
+      "Max out your bloodrage by around level 7 as this is your main tool for farming and will synergize very nicely with maelstrom.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "bloodseeker_bloodrage" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Bloodseeker",
     audioFile: "ownHero/Bloodseeker_3_TeleportOut",
     messageTime: [6 * 60, 9 * 60],
     textMessage:
-      "The opponents will often attempt to teleport out when you Rupture them. Call for an ally to help you out if you don't have a way of securing kill yourself.",
+      "The opponents will often attempt to teleport out when you Rupture them. Call for an ally to help you out if you don't have a way of securing the kill yourself.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "bloodseeker_rupture" },
   },
@@ -2405,6 +2424,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Chaos Knight",
+    audioFile: "ownHero/ChaosKnight_1_chaos_strike",
+    messageTime: 5 * 60,
+    textMessage:
+      "Try to have chaos strike maxed by level 7 as it is your main tool for farming and will help with burst early.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: "OwnHero",
+    hero: "Chaos Knight",
     audioFile: "ownHero/ChaosKnight_2_PhantasmFarm",
     messageTime: [6 * 60 + 45, 10 * 60 + 45, 14 * 60 + 45],
     textMessage:
@@ -2617,12 +2645,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Clinkz",
-    audioFile: "ownHero/Clinkz_1_SearingArrows",
+    audioFile: "ownHero/Clinkz_1_tar_bomb",
     messageTime: 15,
     textMessage:
-      "Searing Arrows is one of most efficient 'mana to damage' spells in the game and it doesn't pull aggro.",
+      "Tar bomb is your main tool for harrasing in the lane try to use it when you can get alot of hits on the enemy.",
     audience: [Audience.ALL],
-    image: { type: "ability", name: "clinkz_searing_arrows" },
+    image: { type: "ability", name: "clinkz_tar_bomb" },
   },
   {
     category: "OwnHero",
@@ -2630,7 +2658,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Clinkz_2_CheckInventory",
     messageTime: 90,
     repeatTime: 10 * 60,
-    textMessage: "Check frequently opponents' inventory for detection.",
+    textMessage: "Check opponent's inventory frequently for detection.",
     audience: [Audience.ALL],
     image: { type: "item", name: "SentryDustGem" },
   },
@@ -2640,19 +2668,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Clinkz_3_DeathPact",
     messageTime: [6 * 60, 20 * 60],
     textMessage:
-      "Death Pact the high hp, undamaged creeps or archer statues. Avoid fighting without Death Pact.",
+      "Only fight when death pact is up in the laning stage and fights.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_death_pact" },
   },
   {
     category: "OwnHero",
     hero: "Clinkz",
-    audioFile: "ownHero/Clinkz_4_ClearStacks",
-    messageTime: 8 * 60 + 30,
+    audioFile: "ownHero/Clinkz_4_solar_crest_timing",
+    messageTime: 8 * 60,
     textMessage:
-      "With Maelstrom and Burning Barrage maxed out, you can clear stacks of creeps without a problem.",
-    audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "maelstrom" },
+      "Once you have solar crest you can look for kills and get involved in fights.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "solar_crest" },
   },
   {
     category: "OwnHero",
@@ -2671,7 +2699,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 10,
     repeatTime: 10 * 60,
     textMessage:
-      "In the fights, look for opportunities when opponents are lined up to Burning Barrage them.",
+      "In fights try to focus targets that you can burst such as supports or squishy heros without escapes.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_strafe" },
   },
@@ -2690,18 +2718,18 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Clinkz_2_Squishy",
     messageTime: -50,
     textMessage:
-      "Clinkz is very squishy until he has Dark Pact buff active. Pressure him early on.",
+      "Try to go on clinkz when his death pact expires or if he is too far forward.",
     audience: [Audience.IN_LANE],
   },
 
   {
     category: "EnemyHero",
     hero: "Clinkz",
-    audioFile: "enemyHero/Clinkz_6_ContestFarm",
+    audioFile: "enemyHero/Clinkz_6_detection",
     messageTime: 10 * 60 + 10,
     textMessage:
-      "Clinkz farms fast with Burning Barrage. Smoke on him, place deep wards and block off camps with sentries.",
-    audience: [Audience.ALL],
+      "Make sure to always carry dust vs clinkz and use sentrys on the popular fighting/farming spots.",
+    audience: [Audience.ROLE_SUPPORT],
   },
 
   {
@@ -3483,6 +3511,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/DeathProphet_1_SecureRanged",
     messageTime: 15 * 60,
     textMessage: "Secure range creep lasthits with Crypt Swarm and possibly hit opponents as well.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "death_prophet_carrion_swarm" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Death Prophet",
+    audioFile: "ownHero/DeathProphet_1_SecureLasthits",
+    messageTime: 15 * 60,
+    textMessage: "Try to throw an auto attack and use crypt swarm at the same time to secure last hits.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "death_prophet_carrion_swarm" },
   },
@@ -4509,11 +4546,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Ember Spirit",
+    audioFile: "ownHero/EmberSpirit_2_Orb_of_corrosion",
+    messageTime: 5 * 60,
+    textMessage:
+      "Once you have orb of corrosion you should start spamming sleight of fist on the enemy mid laner.",
+    audience: [Audience.ROLE_MID],
+    image: { type: "ability", name: "ember_spirit_sleight_of_first" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Ember Spirit",
     audioFile: "ownHero/EmberSpirit_3_ControlRunes",
     messageTime: 5 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Active rune control is important for Ember Spirit's game. Keep checking for those throughout the game.",
+      "Active rune control is important for Ember Spirit's game. You can place a remnant at one rune and run to the other one to secure them.",
     audience: [Audience.ALL],
     image: { type: "rune", name: "arcane" },
   },
@@ -4570,6 +4617,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Ember Spirit",
+    audioFile: "ownHero/EmberSpirit_12_Backline",
+    messageTime: [20 * 60, 25 * 60],
+    textMessage:
+      "If you are struggling to reach the backline aghanims scepter is great at closing the gap and increasing embers mobility.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "ultimate_scepter" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Ember Spirit",
     audioFile: "ownHero/EmberSpirit_9_Splitpush",
     messageTime: [12 * 60 + 15, 20 * 60 + 15],
     textMessage:
@@ -4601,7 +4658,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Ember Spirit",
     audioFile: "enemyHero/EmberSpirit_3_ClumpUp",
     messageTime: [12 * 60, 22 * 60, 32 * 60],
-    textMessage: "Avoid clumping up against Sleight of Fist spam and triple Fire Remnant threat.",
+    textMessage: "Avoid clumping up against Sleight of Fist spam.",
     audience: [Audience.ALL],
   },
   {
@@ -5999,6 +6056,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Juggernaut",
+    audioFile: "ownHero/Juggernaut_10_Level3_timing",
+    messageTime: 45,
+    textMessage: "Try to align your level 3 timing and boots, you have a high chance of killing with level 2 blade fury and boots.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "juggernaut_blade_fury" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Juggernaut",
     audioFile: "ownHero/Juggernaut_3_SpinClick",
     messageTime: 30,
     textMessage:
@@ -6124,9 +6190,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Juggernaut_6_SpellImmunity",
     messageTime: [10 * 60 + 30, 25 * 60 + 30, 45 * 60 + 30],
     textMessage:
-      "Items and spells that disable through spell immunity are good against Juggernaut as Blade Fury grants him spell immunity",
+      "Control items like sheepstick and abyssal blade are good at controlling juggernaut.",
     chatMessage:
-      "Items and spells that disable through spell immunity are good against Juggernaut and his Blade Fury",
+      "Control items like sheepstick and abyssal blade are good at controlling juggernaut.",
     audience: [Audience.ALL],
   },
   {
@@ -6146,7 +6212,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Juggernaut_8_Omnislash3",
     messageTime: [21 * 60 + 30, 31 * 60 + 30],
     textMessage:
-      "Juggernaut's Omnislash cooldown is long with 140 seconds, which allows you to pressure him while it's down",
+      "Juggernaut's Omnislash cooldown is long with 120 seconds, which allows you to pressure him while it's down",
     audience: [Audience.ALL],
   },
 
@@ -6343,7 +6409,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Kunkka",
     audioFile: "ownHero/Kunkka_3_XMarkTP",
     messageTime: [4 * 60, 11 * 60, 18 * 60],
-    textMessage: "You can do X Marks the Spot into teleport combo to replenish yourself or allies.",
+    textMessage: "You can do X Marks the Spot into teleport to fountain to replenish yourself or allies.",
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
@@ -6353,7 +6419,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Kunkka_4_Stacks",
     messageTime: [4 * 60 + 30, 9 * 60 + 30],
     textMessage:
-      "Ask you allies to stack for you as you can easily clear those with level 4 Tidebringer.",
+      "Ask your allies to stack for you as you can easily clear those with level 4 Tidebringer.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "kunkka_tidebringer" },
   },
@@ -6620,7 +6686,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Leshrac_1_SplitEarthRanged",
     messageTime: 15,
     textMessage:
-      "You can use Split Earth or Lightning Storm to secure a ranged creep here and there.",
+      "You can use Split Earth or Lightning Storm to secure ranged creeps during the laning stage.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "leshrac_split_earth" },
   },
@@ -6928,11 +6994,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Lifestealer",
-    audioFile: "ownHero/Lifestealer_2_HelmOfIronWill",
+    audioFile: "ownHero/Lifestealer_2_OrbOfCorrosion",
     messageTime: 30,
-    textMessage: "Rush Helm of Iron will on tough lanes.",
+    textMessage: "Orb of corrosion is great at harrassing enemies in the laning stage and works well with lifestealers spells.",
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "helm_of_iron_will" },
+    image: { type: "item", name: "orb_of_corrosion" },
   },
   {
     category: "OwnHero",
@@ -6950,7 +7016,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lifestealer_4_RageTP",
     messageTime: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
     textMessage:
-      "If the enemy lineup has no disable through magic immunity you can be more aggresive on sides lanes and rage TP out.",
+      "If the enemy has no way to cancel rage TP, be more aggresive on sides lanes and rage TP out.",
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
@@ -7475,6 +7541,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Luna",
+    audioFile: "ownHero/Luna_10_moon_glaive",
+    messageTime: 3 * 60,
+    textMessage:
+      "You should get some early points in moon glaives and max them after lunar blessing as this will result in a very fast farming speed.",
+    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+    image: { type: "ability", name: "luna_moon_glaive" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Luna",
     audioFile: "ownHero/Luna_4_Stacks",
     messageTime: [4 * 60, 8 * 60],
     textMessage:
@@ -7528,7 +7604,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_8_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around the 20 minute mark to improve dps and provide vision in the beamed area.",
+      "Pick up Aghanim's Shard around the 20-30 minute mark to improve dps.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8963,6 +9039,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Your main powerspike is eye of skadi, in cases where manta isn't required you can go skadi after yasha.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "skadi" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Morphling",
+    audioFile: "ownHero/Morphling_11_Aghanims_shard",
+    messageTime: 15 * 60,
+    textMessage:
+      "Aghanim's Shard is really good when you are playing against excessive disable and long stuns.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "aghanims_shard" },
   },
   {
     category: "OwnHero",

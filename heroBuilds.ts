@@ -10365,8 +10365,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "lone_druid_spirit_link", // 9
           "lone_druid_savage_roar", // 10
           "lone_druid_savage_roar", // 11
-          "lone_druid_true_form", // 12
-          "lone_druid_savage_roar", // 13
+          "lone_druid_savage_roar", // 12
+          "lone_druid_true_form", // 13
           "special_bonus_hp_200", // 14
           "special_bonus_unique_lone_druid_4", // 15
           "lone_druid_savage_roar", // 16
@@ -10416,11 +10416,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             "lance_of_pursuit",
             //"misericorde",
-            "dragon_scale",
-            "mind_breaker",
-            "elven_tunic",
+            "orb_of_destruction",
+            "vampire_fangs",
+            "titan_sliver",
             "paladin_sword",
             "penta_edged_sword",
+            "mind_breaker",
             "desolator_2",
             "pirate_hat",
           ],
