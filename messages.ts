@@ -9485,11 +9485,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Nature's Prophet",
+    audioFile: "ownHero/Furion_12_TPWisdomRune",
+    messageTime: 60,
+    textMessage:
+      "Wisdom runes spawn at minute 7, look to steal enemy runes with teleport as it gives you alot and denies alot from the enemy.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "furion_teleportation" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Nature's Prophet",
     audioFile: "ownHero/Furion_4_LookAround",
     messageTime: 75,
     repeatTime: 10 * 60,
     textMessage:
-      "Look around the map for opportunities to gank, snipe couriers, pick up runes or place deep wards.",
+      "Look around the map for opportunities to gank, take towers, snipe couriers, pick up runes or place deep wards.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_wrath_of_nature" },
   },
@@ -9785,7 +9795,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_1_RunDownMid",
     messageTime: -90,
     textMessage:
-      "Run down mid as you load into the game and scout for opponents' midlaner placing observer ward.",
+      "Run to mid as you load into the game and scout for opponents' midlaner placing observer ward.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_observer" },
   },
@@ -9803,7 +9813,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_3_SurviveDay",
     messageTime: 10,
     textMessage:
-      "Look to survive through the first 5 minutes of the game and ideally have the boots as the night hits.",
+      "Look to survive through the first 5 minutes of the game and ideally have phase boots as the night hits.",
     audience: [Audience.ALL],
   },
   {
@@ -9814,6 +9824,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Use Void to secure ranged creep lasthits.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_void" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Night Stalker",
+    audioFile: "ownHero/NightStalker_4_creeps",
+    messageTime: 35,
+    textMessage: "Try to manipulate creep lane equilibrium to get it closer to your tower during the day time.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "night_stalker_hunter_in_the_night" },
   },
   {
     category: "OwnHero",
@@ -10668,9 +10687,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Phantom Assassin",
     audioFile: "ownHero/PhantomAssassin_2_RingOfHealth",
     messageTime: 30,
-    textMessage: "Rush Ring of Health on a tough lane and put a point in Blur on level 2.",
+    textMessage: "Try to get to cornucopia in tough lanes and put a point in Blur on level 2. Otherwise you will need extra regen.",
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "ring_of_health" },
+    image: { type: "item", name: "cornucopia" },
   },
   {
     category: "OwnHero",
@@ -10703,6 +10722,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Phantom Assassin",
+    audioFile: "ownHero/PhantomAssassin_9_PhantomStrikeFarm",
+    messageTime: [5 * 60],
+    textMessage: "Make sure to max phantom_strike after stifling dagger for faster farming speed.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "phantom_assassin_phantom_strike" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Phantom Assassin",
     audioFile: "ownHero/PhantomAssassin_6_FightFocus",
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
@@ -10727,7 +10755,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PhantomAssassin_8_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around minute 20 for extra burst, especially if the break effect is needed.",
+      "Pick up aghanims shard if you need the break vs heroes like timbersaw/bristleback etc..",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -10894,6 +10922,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Use AOE nuke to weaken Phantom Lancer's illusions to figure out which one is the real hero",
     audience: [Audience.ALL],
+  },
+  {
+    category: "EnemyHero",
+    hero: "Phantom Lancer",
+    audioFile: "enemyHero/PhantomLancer_8_HeartTiming",
+    messageTime: 25 * 60 + 15,
+    textMessage:
+      "You strongest item timing is heart of tarrasque, Try not to die before this timing and get there as fast as possible after diffusal and manta.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "heart" },
   },
   {
     category: "EnemyHero",
@@ -11387,6 +11425,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Pudge",
+    audioFile: "ownHero/Pudge_9_HighDamage",
+    messageTime: 20,
+    textMessage:
+      "Pudge has very high base damage and you can buy a quelling blade to get last hits and deny alot of creeps.",
+    audience: [Audience.ROLE_CORE],
+  },
+  {
+    category: "OwnHero",
+    hero: "Pudge",
     audioFile: "ownHero/Pudge_3_Hook1",
     messageTime: 45,
     textMessage:
@@ -11697,6 +11744,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Pick up Aghanim's Shard around minute 15 as it provides silence and extra damage.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Queen of Pain",
+    audioFile: "ownHero/QueenOfPain_7_AghanimsScepter",
+    messageTime: 18 * 60,
+    textMessage:
+      "Aghanims scepter is very strong in teamfights, Try to get it at an early timing after kaya and sange.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "ultimate_scepter" },
   },
 
   {
@@ -12499,7 +12556,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowFiend_3_StackSmallCamp",
     messageTime: [2 * 60 + 40, 4 * 60 + 40],
     textMessage:
-      "Stack a small camp next to the midlane and raze it after addressing the next creepwave.",
+      "Try to stack camps close to mid after you push in the wave.",
     audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "nevermore_shadowraze3" },
   },
@@ -12524,11 +12581,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Shadow Fiend",
-    audioFile: "ownHero/ShadowFiend_6_FarmEuls",
+    audioFile: "ownHero/ShadowFiend_6_FarmMaskOfMadness",
     messageTime: [5 * 60 + 45, 7 * 60 + 45],
-    textMessage: "Focus on farming Eul's Scepter and don't rotate unnecessarily.",
+    textMessage: "Focus on farming with mask of madness and don't over rotate without runes.",
     audience: [Audience.ROLE_MID],
-    image: { type: "item", name: "cyclone" },
+    image: { type: "item", name: "mask_of_madness" },
   },
   {
     category: "OwnHero",
@@ -12536,9 +12593,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowFiend_7_PickOff",
     messageTime: [9 * 60 + 45, 15 * 60 + 45],
     textMessage:
-      "Make pick-off plays with Eul's Scepter, Requiem of Souls and Shadowraze combination.",
+      "Once you have bkb you can start to fight as shadow fiend is very susceptible to disables.",
     audience: [Audience.ROLE_MID],
-    image: { type: "item", name: "cyclone" },
+    image: { type: "item", name: "black_king_bar" },
   },
   {
     category: "OwnHero",
@@ -12587,9 +12644,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ShadowFiend_4_ItemBuild",
     messageTime: 10 * 60 + 30,
     textMessage:
-      "Shadow Fiend's first big item is either Eul's Scepter or Shadow Blade. Both items are good at picking off heroes, so keep an eye on his item build",
+      "Shadow Fiend's first big item is generally Shadow Blade or Manta. Shadow blade is good at picking off heroes, so keep an eye on his item build",
     chatMessage:
-      "Shadow Fiend's first big item is either Eul's Scepter or Shadow Blade. Both are good at killing heroes",
+      "Shadow Fiend's first big item is either Manta or Shadow Blade. Shadow blade is good at killing heroes, keep tabs on his inventory.",
     audience: [Audience.ALL],
   },
   {
@@ -13167,6 +13224,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "slark_dark_pact" },
   },
+  {
+    category: "OwnHero",
+    hero: "Slark",
+    audioFile: "ownHero/Slark_9_AghanimsShard",
+    messageTime: 15 * 60,
+    textMessage:
+      "Slarks aghanims shard is very good for man fighting and saving allies, consider purchasing after your 3 main items.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "aghanims_shard" },
+  },
 
   {
     category: "EnemyHero",
@@ -13205,6 +13272,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Force Staff allows you to break away from Slark's Pounce",
     audience: [Audience.ALL],
   },
+  
   {
     category: "EnemyHero",
     hero: "Slark",
@@ -13571,6 +13639,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Check opponents for break effects. Adapt your playstyle and itemization accordingly.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "black_king_bar" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Spectre",
+    audioFile: "ownHero/Spectre_7_aghanims_shard",
+    messageTime: 15 * 60,
+    textMessage:
+      "Consider aghanims shard versus heroes that do alot of burst damage.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "item", name: "aghanims_shard" },
   },
   {
     category: "OwnHero",
@@ -13988,6 +14066,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Sven",
+    audioFile: "ownHero/Sven_4_MaxCleave",
+    messageTime: 1 * 60,
+    textMessage: "You should hold your skill points in lane and try to have great cleave maxed by lvl 7 when you start jungling.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "ability", name: "sven_great_cleave" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Sven",
     audioFile: "ownHero/Sven_3_DontOverlane",
     messageTime: 7 * 60 + 15,
     textMessage:
@@ -14325,6 +14412,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Templar Assassin",
+    audioFile: "ownHero/TemplarAssassin_0_ShareTraps",
+    messageTime: -60,
+    textMessage: "Before the game starts make sure to share your units with your team so they can use your traps.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "templar_assassin_psionic_trap" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Templar Assassin",
     audioFile: "ownHero/TemplarAssassin_1_MeldMelee",
     messageTime: -30,
     textMessage: "Consider skilling Meld on level 1 against melee match-ups.",
@@ -14534,6 +14630,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 20,
     textMessage:
       "Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves, Try to harras your opponent and deny they're creeps.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "ability", name: "terrorblade_metamorphosis" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Terrorblade",
+    audioFile: "ownHero/Terrorblade_0_Metamorphosis",
+    messageTime: 1 * 60,
+    textMessage:
+      "Make sure you have 2 levels in metamorphosis before your second use of it in lane.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "terrorblade_metamorphosis" },
   },
@@ -15552,6 +15658,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
+  {
+    category: "OwnHero",
+    hero: "Troll Warlord",
+    audioFile: "ownHero/TrollWarlord_5_Antikiting",
+    messageTime: [20 * 60,],
+    textMessage:
+      "Consider aghanims shard around 20-30 minute mark to make your team stronger.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "aghanims_shard" },
+  },
 
   {
     category: "EnemyHero",
@@ -16093,9 +16209,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Ursa",
     audioFile: "ownHero/Ursa_6_SecondRoshan",
-    messageTime: [19 * 60 + 45, 23 * 60 + 45],
+    messageTime: [15 * 60],
     textMessage:
-      "Second Roshan is very important for Ursa as it drops Aghanim's Shard, which adds to tankiness.",
+      "Consider buying aghanims shard after your 3 core items to help with tankiness.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Ursa",
+    audioFile: "ownHero/Ursa_6_SecondRoshan",
+    messageTime: [20 * 60, 30 * 60],
+    textMessage:
+      "Make sure to take tormentors with your team to secure the aghanims shards.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -17117,6 +17243,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "aghanims_shard" },
   },
+  {
+    category: "OwnHero",
+    hero: "Windranger",
+    audioFile: "ownHero/Windranger_0_gungir",
+    messageTime: 20 * 60,
+    textMessage:
+      "Consider turning your maelstrom into gleipnir to help lockdown enemy heroes and setup shackleshot.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "item", name: "gungir" },
+  },
 
   {
     category: "EnemyHero",
@@ -17507,6 +17643,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [5 * 60, 11 * 60],
     textMessage:
       "When neutral camp is at 30% of total health, move to the next camp to show your skeletons the way.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "skeleton_king_vampiric_aura" },
+  },
+  {
+    category: "OwnHero",
+    hero: "Wraith King",
+    audioFile: "ownHero/WraithKing_0_VampiricAuraFarming",
+    messageTime: [3 * 60],
+    textMessage:
+      "You should have vampiric spirit maxed out around level 7 to increase farming speed.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "skeleton_king_vampiric_aura" },
   },
