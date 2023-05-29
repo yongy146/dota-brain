@@ -634,6 +634,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item that you should try to finish before minute 12. If it is an early timing you can defend/fight for objectives with it.",
           blink:
             "A core item that allows you to channel Unstable Concoction, blink on the target and release the fully channeled stun.",
+          black_king_bar:
+            "A core item that allows you to deliver the damage while being in the middle of the fight.",
+          aghanims_shard: 
+            "For extra dispel and buff.",
+          ultimate_scepter:
+            "To gift it to your teammates while at same time your receive a stacking buff for each Aghanim`s Scepter given away.",
+          mjollnir: 
+            "Great against illusion-based heroes.",
+          overwhelming_blink:
+            "Against illusion-based heroes and to tank yourself up.",
+          monkey_king_bar: 
+            "Against evasion and miss-chance.",
+          silver_edge: 
+            "For burst, to reposition and break effect.",
         },
       },
       {
@@ -10359,15 +10373,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "lone_druid_spirit_bear", // 3
           "lone_druid_spirit_link", // 4
           "lone_druid_spirit_bear", // 5
-          "lone_druid_true_form", // 6
+          "lone_druid_spirit_link", // 6
           "lone_druid_spirit_bear", // 7
           "lone_druid_spirit_link", // 8
-          "lone_druid_spirit_link", // 9
+          "lone_druid_true_form", // 9
           "lone_druid_savage_roar", // 10
           "lone_druid_savage_roar", // 11
-          "lone_druid_savage_roar", // 12
-          "lone_druid_true_form", // 13
-          "special_bonus_hp_200", // 14
+          "lone_druid_true_form", // 12
+          "special_bonus_hp_200", // 13
+          "lone_druid_savage_roar", // 14
           "special_bonus_unique_lone_druid_4", // 15
           "lone_druid_savage_roar", // 16
           "special_bonus_attributes", // 17
@@ -10381,9 +10395,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_unique_lone_druid_10", // 25
         ],
         items: {
-          starting_bear: ["blight_stone", "branches", "branches", "branches"],
-          starting: ["tango", "ward_observer"],
+          starting_bear: [],
+          starting: ["tango", "circlet", "circlet", "branches", "branches", "branches"],
           core_bear: [
+            "orb_of_corrosion",
             "phase_boots",
             "mask_of_madness",
             "desolator",
@@ -10459,7 +10474,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       mask_of_madness:
         "A core item that allows you to farm quicker with Bear but also allows you to burst heroes and buildings.",
       desolator:
-        "A core item that allows Bear to burst heroes, buildings and Roshan.",
+        "A core item that allows you take objectives, If you are behind you should opt for a farming item like maelstrom.",
       basher:
         "A core item for extra control. Can be upgraded to Abyssal Blade but it is not a priority.",
       maelstrom:
@@ -18642,12 +18657,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   "Shadow Fiend": {
     gameplay_version: "7.33c",
     creator: ContentCreator.eidandota,
-    damage_type: DamageType.magical,
+    damage_type: DamageType.physical,
     builds: [
       {
-        // Shadow Fiend magical damage build on midlane.
-        roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        type: "Magical",
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        type: "Physical",
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485",
@@ -18659,89 +18673,95 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "nevermore_necromastery", // 4
           "nevermore_shadowraze1", // 5
           "nevermore_necromastery", // 6
-          "nevermore_shadowraze1", // 7
-          "nevermore_necromastery", // 8
+          "nevermore_necromastery", // 7
+          "nevermore_dark_lord", // 8
           "nevermore_requiem", // 9
-          "special_bonus_unique_nevermore_7", // 10
-          "nevermore_dark_lord", // 11
+          "special_bonus_attack_speed_25", // 10
+          "nevermore_shadowraze1", // 11
           "nevermore_requiem", // 12
           "nevermore_dark_lord", // 13
           "nevermore_dark_lord", // 14
-          "special_bonus_unique_nevermore_2", // 15
+          "special_bonus_unique_nevermore_3", // 15
           "nevermore_dark_lord", // 16
           "special_bonus_attributes", // 17
           "nevermore_requiem", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_nevermore_6", // 20
+          "special_bonus_unique_nevermore_1", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_nevermore_shadowraze_cooldown", // 25
+          "special_bonus_unique_nevermore_raze_procsattacks", // 25
         ],
         items: {
           starting: [
-            "enchanted_mango",
-            "enchanted_mango",
+            "magic_stick",
+            "circlet",
             "tango",
             "branches",
-            "ward_observer",
+            "branches",
+            "branches",
           ],
-          early_game: ["bottle", "boots", "cyclone", "magic_wand"],
-          mid_game: ["blink", "travel_boots", "black_king_bar"],
+          early_game: ["wraith_band", "power_treads", "magic_wand", "mask_of_madness"],
+          mid_game: ["dragon_lance", "invis_sword", "black_king_bar", "aghanims_shard"],
           late_game: [
-            "ethereal_blade",
-            "sheepstick",
-            "refresher",
-            "ultimate_scepter",
-          ],
-          situational: ["sphere", "aeon_disk", "kaya_and_sange"],
-          core: [
-            "travel_boots",
-            "bottle",
-            "cyclone",
-            "blink",
             "black_king_bar",
-            "arcane_blink",
-            "sheepstick",
-            "refresher",
+            "butterfly",
+            "satanic",
+            "monkey_king_bar",
+            "hurricane_pike",
+            "silver_edge",
+          ],
+          situational: ["sphere", "greater_crit", "sange_and_yasha", "assault", "desolator", "manta"],
+          core: [
+            "power_treads",
+            "mask_of_madness",
+            "dragon_lance",
+            "silver_edge",
+            "black_king_bar",
           ],
           neutral: [
             "pogo_stick",
             "occult_bracelet",
-            "mysterious_hat",
-            //"nether_shawl",
-            "vambrace",
-            "psychic_headband",
-            "timeless_relic",
-            "spell_prism",
-            "ex_machina",
-            "fallen_sky",
+            "ring_of_aquila",
+            "grove_bow",
+            "elven_tunic",
+            "titan_sliver",
+            "mind_breaker",
+            "ninja_gear",
+            "desolator_2",
+            "mirror_shield",
+            "force_boots"
           ],
         },
         item_tooltips: {
-          magic_stick:
-            "Start with it if you expect high frequency of spells being used on the lane.",
-          bottle:
-            "A core item that provides you with sustain and allows you to gank with stored rune.",
-          infused_raindrop: "Against magical burst.",
-          cyclone: "A core item that allows you to setup Requiem of Souls.",
-          blink:
-            "A core item that allows you to jump an opponent and do Cyclone into Requiem of Souls combo.",
-          travel_boots: "A core item that allows you to cover the map better.",
-          black_king_bar:
-            "A core item that allows you to channel Requiem of Souls fully and get other spells and items off.",
-          sphere: "Against powerful single target disables and debuffs.",
-          arcane_blink:
-            "A core item that, when used, reduces the cast point of Requiem of Souls thus you don`t need to use Eul`s to setup kills. It also allows you to use spells and items more often.",
-          sheepstick:
-            "A core item that allows you to instantly disable an opponent.",
-          refresher:
-            "A core item that allows you to do twice as much damage and control in the figts.",
+        power_treads:
+          "A core boots upgrade that allows you to farm faster due to attack speed increase.",
+        infused_raindrop: 
+          "Against magical burst.",
+        magic_stick:
+          "Start with it if you expect high frequency of spells being used on the lane.",
+        dragon_lance:
+          "A core item that provides you with useful stats and allows you to right-click from a bigger distance.",
+        black_king_bar:
+          "A core item that allows you to stand your ground and right-click as well as cast your Requiem of Souls without interruption.",
+        hurricane_pike:
+          "Situational item against heroes like Slark and Troll that you can`t fight back against effectively when they are on top of you under spell-immunity.",
+        sphere: 
+          "Against powerful single target disables and debuffs.",
+        silver_edge:
+          "A core item that provides you with burst and ability to reposition. You can even surprise an opponent by channeling Requiem of Souls underneath them.",
+        skadi:
+          "A good item versus tanky immobile heroes. Especially good against ranged heroes since it slows them by 50%.",
+        monkey_king_bar: "Against evasion and miss chance",
+        satanic:
+          "A core item that tanks you up and allows you to stand your ground and right-click.",
+        butterfly:
+          "A core item that provides you with mix of offensive and defensive stats.",
+        blink: "For gap-close and to position yourself well.",
         },
       },
       {
-        // Shadow Fiend physical damage build on midlane.
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "Physical",
 
@@ -18830,6 +18850,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "ninja_gear",
             "desolator_2",
             "pirate_hat",
+            "mirror_shield",
+            "force_boots",
           ],
         },
         ability_tooltips: {},
