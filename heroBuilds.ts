@@ -638,6 +638,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core item that allows you to deliver the damage while being in the middle of the fight.",
           aghanims_shard: 
             "For extra dispel and buff.",
+          basher:
+            "A core item for extra lockdown when going for pickoffs/fighting.",
           ultimate_scepter:
             "To gift it to your teammates while at same time your receive a stacking buff for each Aghanim`s Scepter given away.",
           mjollnir: 
@@ -749,6 +751,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Situational. Get it if you need status resistance. eg. (Earthshaker)",
       blink:
         "A core item that allows you to channel Unstable Concoction, blink on the target and release the fully channeled stun.",
+      basher:
+        "A core item for extra lockdown when going for pickoffs/fighting.",
       black_king_bar:
         "A core item that allows you to deliver the damage while being in the middle of the fight.",
       aghanims_shard: "For extra dispel and buff.",
@@ -985,11 +989,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "antimage_blink",
           "antimage_mana_break",
           "antimage_counterspell",
-          "antimage_mana_break",
+          "antimage_blink",
           "antimage_mana_void",
           "antimage_blink",
           "antimage_blink",
-          "antimage_blink",
+          "antimage_mana_break",
           "special_bonus_unique_antimage",
           "antimage_mana_break",
           "antimage_mana_void",
@@ -1072,6 +1076,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       orb_of_corrosion: "If you can pressure on the lane.",
       bfury:
         "A core items that solves sustain issues and allows you to farm insanely fast.",
+      butterfly:
+        "",
       manta: "Allows you to burn the jumped target`s mana quickly.",
       skadi:
         "A core item that tanks you up and disallows opponents to run away. It reduces target`s healing significantly and especially good versus ranged heroes as it slows them by 50%.",
@@ -3395,9 +3401,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "armlet",
             "echo_sabre",
             "black_king_bar",
-            "mage_slayer",
             "blink",
-            "orchid",
+            "harpoon",
             "aghanims_shard",
           ],
           late_game: [
@@ -3416,9 +3421,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sange_and_yasha",
             "silver_edge",
             "manta",
-            "soul_ring",
+            "mage_slayer"
           ],
-          core: ["power_treads", "armlet", "black_king_bar"],
+          core: ["power_treads", "armlet", "echo_sabre", "blink", "black_king_bar"],
           neutral: [
             "unstable_wand",
             "broom_handle",
@@ -3440,15 +3445,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         item_tooltips: {
           magic_stick:
             "If you are laning against a hero that spams alot of spells in the lane (eg. Bristleback/Batrider) then you should start with a stick.",
-          bracer: "Don`t get more than two bracers",
-          soul_ring:
-            "Get this instead of bracers or with 1 bracer if you need the mana.",
+          bracer: 
+            "Don`t get more than two bracers",
           echo_sabre:
-            "You should disassemble this item and use the ogre axe to make bkb. Turn the oblivion staff into mage-slayer and later bloodthorn.",
+            "You should turn this into harpoon after your other core items.",
           orchid:
             "Build this into a bloodthorn with your mage-slayer after blink.",
-          hand_of_midas: "If you can get it early it can be good.",
-          blink: "Generally after bkb.",
+          hand_of_midas: 
+            "If you can get it early it can be good.",
+          blink: 
+            "Generally after bkb.",
           bloodthorn:
             "This item is really great with your illusions and fits your build up perfectly. After you have blink, bkb, mageslayer you can turn your mageslayer into bloodthorn.",
           /*flicker:

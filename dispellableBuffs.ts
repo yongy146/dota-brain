@@ -10,7 +10,7 @@
 
 export const dispellableBuffs: Record<string, string[]> = {
   Abaddon: ["abaddon_aphotic_shield", "abaddon_frostmourne"],
-  Alchemist: [],
+  Alchemist: ["alchemist_corrosive_weaponry", "alchemist_chemical_rage"],
   "Ancient Apparition": [],
   "Anti-Mage": [],
   "Arc Warden": [],
