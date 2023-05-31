@@ -608,6 +608,7 @@ export const disables: IDisables = {
     },
   ],
   "Nature's Prophet": [],
+    // Level 20 root talent
   Necrophos: [
     {
       skill: "necrolyte_reapers_scythe",
