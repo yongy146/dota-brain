@@ -5075,7 +5075,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `pipe`,
             `sphere`,
             "heart",
-            
+
           ],
           core: ["guardian_greaves", "kaya_and_sange", `aghanims_shard`],
           neutral: [
@@ -6402,6 +6402,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "travel_boots",
             "cyclone",
             "skadi",
+            "blade_mail",
+            "radiance"
           ],
           core: [
             "maelstrom",
@@ -7007,6 +7009,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "blink",
             "sphere",
             "monkey_king_bar",
+            "radiance",
+            "nullifier"
           ],
           core: ["power_treads", "hand_of_midas", "mjollnir", "black_king_bar"],
           neutral: [
