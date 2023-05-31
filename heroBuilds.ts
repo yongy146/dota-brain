@@ -603,6 +603,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "mjollnir",
             "monkey_king_bar",
             "aghanims_shard",
+            "sphere",
+            "swift_blink"
           ],
           core: [
             "power_treads",
@@ -705,6 +707,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "monkey_king_bar",
             "silver_edge",
             "nullifier",
+            "swift_blink",
+            "sphere"
           ],
           core: [
             "bottle",
@@ -1023,6 +1027,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "satanic",
             "butterfly",
             "ultimate_scepter",
+
           ],
           situational: [
             "vanguard",
@@ -1032,6 +1037,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sphere",
             "aghanims_shard",
             "assault",
+            "radiance",
+            "diffusal_blade",
+            "blood_grenade",
+            "heart",
+            "orb_of_corrosion"
+
           ],
           core: ["power_treads", "bfury", "manta", "abyssal_blade"],
           neutral: [
@@ -3417,6 +3428,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "silver_edge",
             "manta",
             "soul_ring",
+            "diffusal_blade",
+            "sphere"
           ],
           core: ["power_treads", "armlet", "black_king_bar"],
           neutral: [
@@ -5061,6 +5074,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `assault`,
             `pipe`,
             `sphere`,
+            "heart",
+            
           ],
           core: ["guardian_greaves", "kaya_and_sange", `aghanims_shard`],
           neutral: [
