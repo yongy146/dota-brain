@@ -5750,13 +5750,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "blink",
             "sphere",
             "mjollnir",
+            "aghanims_shard",
           ],
           core: [
             "power_treads",
             "hurricane_pike",
             "manta",
             "black_king_bar",
-            "aghanims_shard",
           ],
           neutral: [
             "lance_of_pursuit",
@@ -8983,7 +8983,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "bottle",
-            "bracer",
             "bracer",
             "magic_wand",
             "phase_boots",

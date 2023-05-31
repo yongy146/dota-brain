@@ -44,7 +44,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   "Ember Spirit": ["ember_spirit_flame_guard"],
   Enchantress: [],
   Enigma: [],
-  "Faceless Void": [],
+  "Faceless Void": ["faceless_void_time_dilation"],
   Grimstroke: ["grimstroke_spirit_walk"],
   Gyrocopter: ["gyrocopter_rocket_barrage"],
   Hoodwink: ["hoodwink_scurry"],
