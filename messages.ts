@@ -2667,8 +2667,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Clinkz",
     audioFile: "ownHero/Clinkz_3_DeathPact",
     messageTime: [6 * 60, 20 * 60],
-    textMessage:
-      "Only fight when death pact is up in the laning stage and fights.",
+    textMessage: "Only fight when death pact is up in the laning stage and fights.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_death_pact" },
   },
@@ -2677,8 +2676,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Clinkz",
     audioFile: "ownHero/Clinkz_4_solar_crest_timing",
     messageTime: 8 * 60,
-    textMessage:
-      "Once you have solar crest you can look for kills and get involved in fights.",
+    textMessage: "Once you have solar crest you can look for kills and get involved in fights.",
     audience: [Audience.ALL],
     image: { type: "item", name: "solar_crest" },
   },
@@ -2717,8 +2715,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Clinkz",
     audioFile: "enemyHero/Clinkz_2_Squishy",
     messageTime: -50,
-    textMessage:
-      "Try to go on clinkz when his death pact expires or if he is too far forward.",
+    textMessage: "Try to go on clinkz when his death pact expires or if he is too far forward.",
     audience: [Audience.IN_LANE],
   },
 
@@ -3519,7 +3516,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Death Prophet",
     audioFile: "ownHero/DeathProphet_1_SecureLasthits",
     messageTime: 15 * 60,
-    textMessage: "Try to throw an auto attack and use crypt swarm at the same time to secure last hits.",
+    textMessage:
+      "Try to throw an auto attack and use crypt swarm at the same time to secure last hits.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "death_prophet_carrion_swarm" },
   },
@@ -6058,7 +6056,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Juggernaut",
     audioFile: "ownHero/Juggernaut_10_Level3_timing",
     messageTime: 45,
-    textMessage: "Try to align your level 3 timing and boots, you have a high chance of killing with level 2 blade fury and boots.",
+    textMessage:
+      "Try to align your level 3 timing and boots, you have a high chance of killing with level 2 blade fury and boots.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "juggernaut_blade_fury" },
   },
@@ -6409,7 +6408,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Kunkka",
     audioFile: "ownHero/Kunkka_3_XMarkTP",
     messageTime: [4 * 60, 11 * 60, 18 * 60],
-    textMessage: "You can do X Marks the Spot into teleport to fountain to replenish yourself or allies.",
+    textMessage:
+      "You can do X Marks the Spot into teleport to fountain to replenish yourself or allies.",
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
@@ -6996,7 +6996,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Lifestealer",
     audioFile: "ownHero/Lifestealer_2_OrbOfCorrosion",
     messageTime: 30,
-    textMessage: "Orb of corrosion is great at harrassing enemies in the laning stage and works well with lifestealers spells.",
+    textMessage:
+      "Orb of corrosion is great at harrassing enemies in the laning stage and works well with lifestealers spells.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "orb_of_corrosion" },
   },
@@ -7603,8 +7604,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Luna",
     audioFile: "ownHero/Luna_8_AghanimsShard",
     messageTime: 19 * 60,
-    textMessage:
-      "Pick up Aghanim's Shard around the 20-30 minute mark to improve dps.",
+    textMessage: "Pick up Aghanim's Shard around the 20-30 minute mark to improve dps.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -9830,7 +9830,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Night Stalker",
     audioFile: "ownHero/NightStalker_4_creeps",
     messageTime: 35,
-    textMessage: "Try to manipulate creep lane equilibrium to get it closer to your tower during the day time.",
+    textMessage:
+      "Try to manipulate creep lane equilibrium to get it closer to your tower during the day time.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_hunter_in_the_night" },
   },
@@ -10687,7 +10688,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Phantom Assassin",
     audioFile: "ownHero/PhantomAssassin_2_RingOfHealth",
     messageTime: 30,
-    textMessage: "Try to get to cornucopia in tough lanes and put a point in Blur on level 2. Otherwise you will need extra regen.",
+    textMessage:
+      "Try to get to cornucopia in tough lanes and put a point in Blur on level 2. Otherwise you will need extra regen.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "cornucopia" },
   },
@@ -12555,8 +12557,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Shadow Fiend",
     audioFile: "ownHero/ShadowFiend_3_StackSmallCamp",
     messageTime: [2 * 60 + 40, 4 * 60 + 40],
-    textMessage:
-      "Try to stack camps close to mid after you push in the wave.",
+    textMessage: "Try to stack camps close to mid after you push in the wave.",
     audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "nevermore_shadowraze3" },
   },
@@ -13272,7 +13273,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Force Staff allows you to break away from Slark's Pounce",
     audience: [Audience.ALL],
   },
-  
+
   {
     category: "EnemyHero",
     hero: "Slark",
@@ -13645,8 +13646,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Spectre",
     audioFile: "ownHero/Spectre_7_aghanims_shard",
     messageTime: 15 * 60,
-    textMessage:
-      "Consider aghanims shard versus heroes that do alot of burst damage.",
+    textMessage: "Consider aghanims shard versus heroes that do alot of burst damage.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -14068,7 +14068,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Sven",
     audioFile: "ownHero/Sven_4_MaxCleave",
     messageTime: 1 * 60,
-    textMessage: "You should hold your skill points in lane and try to have great cleave maxed by lvl 7 when you start jungling.",
+    textMessage:
+      "You should hold your skill points in lane and try to have great cleave maxed by lvl 7 when you start jungling.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_great_cleave" },
   },
@@ -14414,7 +14415,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Templar Assassin",
     audioFile: "ownHero/TemplarAssassin_0_ShareTraps",
     messageTime: -60,
-    textMessage: "Before the game starts make sure to share your units with your team so they can use your traps.",
+    textMessage:
+      "Before the game starts make sure to share your units with your team so they can use your traps.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "templar_assassin_psionic_trap" },
   },
@@ -15662,9 +15664,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Troll Warlord",
     audioFile: "ownHero/TrollWarlord_5_Antikiting",
-    messageTime: [20 * 60,],
-    textMessage:
-      "Consider aghanims shard around 20-30 minute mark to make your team stronger.",
+    messageTime: [20 * 60],
+    textMessage: "Consider aghanims shard around 20-30 minute mark to make your team stronger.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16210,18 +16211,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Ursa",
     audioFile: "ownHero/Ursa_6_SecondRoshan",
     messageTime: [15 * 60],
-    textMessage:
-      "Consider buying aghanims shard after your 3 core items to help with tankiness.",
+    textMessage: "Consider buying aghanims shard after your 3 core items to help with tankiness.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
   {
     category: "OwnHero",
     hero: "Ursa",
-    audioFile: "ownHero/Ursa_6_SecondRoshan",
+    audioFile: "ownHero/Ursa_7_Tormentors",
     messageTime: [20 * 60, 30 * 60],
-    textMessage:
-      "Make sure to take tormentors with your team to secure the aghanims shards.",
+    textMessage: "Make sure to take tormentors with your team to secure the aghanims shards.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
