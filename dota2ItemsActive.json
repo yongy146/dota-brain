@@ -793,7 +793,7 @@
 		"is_neutral": false,
 		"is_roshan": false,
 		"is_purchasable": true,
-		"health_regen_": 4.75
+		"health_regen_": 4.5
 	},
 	"item_void_stone": {
 		"id": 57,
@@ -2128,7 +2128,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"health_": 250,
-		"health_regen_": 4.75,
+		"health_regen_": 4.5,
 		"requirements": [
 			"item_ring_of_health",
 			"item_vitality_booster"
@@ -2216,7 +2216,7 @@
 	},
 	"item_recipe_eternal_shroud": {
 		"id": 691,
-		"cost": 800,
+		"cost": 600,
 		"is_recipe": true,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -2224,7 +2224,7 @@
 	},
 	"item_eternal_shroud": {
 		"id": 692,
-		"cost": 3300,
+		"cost": 3100,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -2976,10 +2976,10 @@
 		"is_purchasable": true,
 		"health_": 625,
 		"mana_": 625,
-		"health_regen_": 7.5,
-		"mana_regen_": 3.25,
+		"mana_regen_": 5,
 		"requirements": [
-			"item_pers",
+			"item_void_stone",
+			"item_void_stone",
 			"item_soul_booster",
 			"item_recipe_octarine_core"
 		]
@@ -4032,6 +4032,7 @@
 	"item_stormcrafter": {
 		"id": 585,
 		"cost": 0,
+		"cooldown": 3,
 		"is_recipe": false,
 		"is_neutral": true,
 		"neutral_level": 4,
