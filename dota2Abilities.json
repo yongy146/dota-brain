@@ -2005,7 +2005,7 @@
 				0
 			],
 			"name": "Necromastery",
-			"description": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases 40% of them from bondage.",
+			"description": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases %soul_release_tooltip%%% of them from bondage.",
 			"lore": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -2536,8 +2536,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_lance_damage} Spirit Lance Damage"
 		},
-		"special_bonus_unique_phantom_lancer_2": {
-			"id": 6400,
+		"special_bonus_strength_8": {
+			"id": 5982,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -2547,10 +2547,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_agility_duration}s Phantom Rush Bonus Agi Duration"
+			"description": "+8 Strength"
 		},
-		"special_bonus_strength_15": {
-			"id": 6145,
+		"special_bonus_unique_phantom_lancer_2": {
+			"id": 6400,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -2560,7 +2560,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+15 Strength"
+			"description": "+{s:bonus_agility_duration}s Phantom Rush Bonus Agility Duration"
 		},
 		"special_bonus_unique_phantom_lancer_5": {
 			"id": 563,
@@ -3085,9 +3085,6 @@
 				10
 			],
 			"mana_cost": [
-				125,
-				125,
-				125,
 				125
 			],
 			"name": "Plasma Field",
@@ -3178,8 +3175,8 @@
 			"talent_level": 1,
 			"description": "+{s:bonus_damage_min} Plasma Field Damage"
 		},
-		"special_bonus_agility_12": {
-			"id": 7386,
+		"special_bonus_agility_14": {
+			"id": 6170,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -3189,7 +3186,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+12 Agility"
+			"description": "+14 Agility"
 		},
 		"special_bonus_unique_razor": {
 			"id": 6028,
@@ -3875,9 +3872,9 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				26,
-				22,
-				18,
+				23,
+				20,
+				17,
 				14
 			],
 			"mana_cost": [
@@ -4518,7 +4515,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "-16% Focus Fire Damage Reduction"
+			"description": "-12% Focus Fire Damage Reduction"
 		},
 		"special_bonus_unique_windranger_windrun_undispellable": {
 			"id": 1071,
@@ -5065,10 +5062,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				12,
 				11,
 				10,
-				9
+				9,
+				8
 			],
 			"mana_cost": [
 				100,
@@ -8164,10 +8161,7 @@
 				6
 			],
 			"mana_cost": [
-				60,
-				60,
-				60,
-				60
+				65
 			],
 			"name": "Blink",
 			"description": "Short distance teleportation that allows Queen of Pain to move in and out of combat.",
@@ -8220,8 +8214,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_damage_20": {
-			"id": 5960,
+		"special_bonus_attack_damage_15": {
+			"id": 5938,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -8231,10 +8225,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Damage"
+			"description": "+15 Damage"
 		},
-		"special_bonus_strength_11": {
-			"id": 437,
+		"special_bonus_strength_8": {
+			"id": 5982,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -8244,7 +8238,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+11 Strength"
+			"description": "+8 Strength"
 		},
 		"special_bonus_unique_queen_of_pain_4": {
 			"id": 629,
@@ -10939,7 +10933,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				22
+				22,
+				21,
+				20,
+				19
 			],
 			"mana_cost": [
 				95,
@@ -11186,10 +11183,13 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				37
+				37,
+				35,
+				33,
+				31
 			],
 			"mana_cost": [
-				150
+				120
 			],
 			"name": "Nature's Call",
 			"description": "Converts an area of trees into Treants under the command of Nature's Prophet.",
@@ -11849,10 +11849,10 @@
 				4
 			],
 			"mana_cost": [
-				40,
 				45,
 				50,
-				55
+				55,
+				60
 			],
 			"name": "Tar Bomb",
 			"description": "Clinkz throws a projectile filled with tar at the target enemy, dealing Magic damage on impact. After impact, the tar spills onto the ground and stays there for %ground_duration% seconds. Any enemy that walks across it gets slowed, and attacks from Clinkz or his Burning Army Skeleton Archers will deal bonus physical damage.<br><br> When the Tar Bomb hits, any Burning Army skeletons within attack range will attack the target.",
@@ -14528,7 +14528,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+10% Scorched Earth Movement Speed"
+			"description": "+7% Scorched Earth Movement Speed"
 		},
 		"special_bonus_unique_doom_2": {
 			"id": 6314,
@@ -15023,10 +15023,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				17,
+				21,
+				18,
 				15,
-				13,
-				11
+				12
 			],
 			"mana_cost": [
 				100
@@ -15174,7 +15174,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "-4s Bulldoze Cooldown"
+			"description": "-3s Bulldoze Cooldown"
 		},
 		"special_bonus_attack_damage_40": {
 			"id": 5940,
@@ -16582,9 +16582,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				125,
 				110,
-				95
+				100,
+				90
 			],
 			"mana_cost": [
 				100
@@ -19654,7 +19654,7 @@
 				175
 			],
 			"name": "Spirit Form",
-			"description": "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, grants the Blinding Light ability, and allows Illuminate to be channeled by a separate spirit and heal allies.",
+			"description": "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, grants the Solar Bind ability, and allows Illuminate to be channeled by a separate spirit and heal allies.",
 			"lore": "In a flash of light, Ezalor reveals his true nature.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -20622,7 +20622,7 @@
 				0
 			],
 			"name": "Mana Shield",
-			"description": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity.",
+			"description": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Illusions absorb less damage per point of mana. Provides bonus mana capacity.",
 			"lore": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
 			"is_ultimate": false,
 			"is_passive": "yes",
@@ -21648,8 +21648,8 @@
 			"talent_level": 1,
 			"description": "+1.5 Mana Regen"
 		},
-		"special_bonus_spell_amplify_8": {
-			"id": 5949,
+		"special_bonus_spell_amplify_7": {
+			"id": 522,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -21659,7 +21659,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+8% Spell Amplification"
+			"description": "+7% Spell Amplification"
 		},
 		"special_bonus_unique_timbersaw_2": {
 			"id": 6948,
@@ -22459,10 +22459,10 @@
 				6
 			],
 			"mana_cost": [
-				85,
-				100,
-				115,
-				130
+				95,
+				110,
+				125,
+				140
 			],
 			"name": "Aphotic Shield",
 			"description": "Summons dark energies around an ally unit, creating an all damage barrier that absorbs a set amount of damage before expiring. When the barrier is destroyed it will burst and deal damage equal to the amount it could absorb to an area around it. Removes certain types of negative buffs and stuns on cast.\n\nDISPEL TYPE: Strong Dispel",
@@ -22532,8 +22532,8 @@
 			"talent_level": 1,
 			"description": "-{s:bonus_curse_slow}% Curse of Avernus Movement Slow"
 		},
-		"special_bonus_strength_8": {
-			"id": 5982,
+		"special_bonus_strength_7": {
+			"id": 6115,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -22543,10 +22543,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+8 Strength"
+			"description": "+7 Strength"
 		},
-		"special_bonus_attack_damage_65": {
-			"id": 6142,
+		"special_bonus_attack_damage_55": {
+			"id": 6396,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -22556,7 +22556,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+65 Damage"
+			"description": "+55 Damage"
 		},
 		"special_bonus_unique_abaddon_2": {
 			"id": 6601,
@@ -22950,7 +22950,7 @@
 				75
 			],
 			"name": "Duel",
-			"description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
+			"description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities, with the exception of Legion Commander being able to cast Overwhelming Odds. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
 			"lore": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -24352,7 +24352,7 @@
 				0
 			],
 			"name": "Minefield Sign",
-			"description": "Plant a warning sign, causing mines within it's radius to be invulnerable. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
+			"description": "Plant a warning sign, causing mines within its radius to be invulnerable. Only one sign can exist at a time. Lasts %lifetime% seconds. ",
 			"lore": "Watch your step!",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24767,9 +24767,9 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				56,
-				48,
-				40
+				70,
+				60,
+				50
 			],
 			"mana_cost": [
 				0
@@ -24978,7 +24978,7 @@
 				200
 			],
 			"name": "Fiend's Gate",
-			"description": "Opens 2 portals, one next to Underlord and one in the target location. Heroes can channel a portal for %warp_channel_duration% seconds to teleport to the other side. Allies that pass through the portal temporarily gain Damage Reduction and Movement Speed. Portals have to be at least %minimum_distance% away from each other.",
+			"description": "Opens 2 portals, one next to Underlord and one in the target location. Heroes can channel a portal for %warp_channel_duration% seconds to teleport to the other side. Allies that pass through the portal temporarily gain Damage Reduction and Movement Speed. Portals have to be at least %minimum_distance% away from each other.<br><br>Double-click to teleport to your team's base, in front of your fountain.",
 			"lore": "They come without warning, leaving fire and blood where kingdoms once flourished.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -25315,7 +25315,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+130 Jingu Mastery Damage"
+			"description": "+110 Jingu Mastery Damage"
 		},
 		"special_bonus_unique_monkey_king_8": {
 			"id": 747,
@@ -25582,7 +25582,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+25 Swashbuckle Damage"
+			"description": "+20 Swashbuckle Damage"
 		},
 		"special_bonus_unique_pangolier_shield_crash_herostacks": {
 			"id": 1053,
@@ -25608,7 +25608,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "--3s Swashbuckle Cooldown"
+			"description": "--2.5s Swashbuckle Cooldown"
 		},
 		"special_bonus_unique_pangolier_5": {
 			"id": 9062,
@@ -25621,7 +25621,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-18.0s Rolling Thunder Cooldown"
+			"description": "-16.0s Rolling Thunder Cooldown"
 		}
 	},
 	"npc_dota_hero_dark_willow": {
@@ -26328,9 +26328,6 @@
 				11
 			],
 			"mana_cost": [
-				100,
-				110,
-				120,
 				130
 			],
 			"name": "Dissimilate",
@@ -26355,7 +26352,7 @@
 				130
 			],
 			"name": "Resonant Pulse",
-			"description": "Void Spirit wraps himself in a physical damage barrier and emits a single damaging pulse around him. The barrier gains increased damage absorption for each enemy hero the pulse hits.",
+			"description": "Void Spirit wraps himself in a physical attack damage barrier and emits a single damaging pulse around him. The barrier gains increased damage absorption for each enemy hero the pulse hits. The barrier only protects against attacks.",
 			"lore": "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -26420,8 +26417,8 @@
 			"talent_level": 2,
 			"description": "Remnant Provides 475 True Sight"
 		},
-		"special_bonus_unique_void_spirit_dissimilate_outerring": {
-			"id": 1070,
+		"special_bonus_unique_void_spirit_4": {
+			"id": 7709,
 			"sequence": "Ability13",
 			"is_talent": true,
 			"cooldown": [
@@ -26431,10 +26428,10 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "Outer Dissimilate Ring"
+			"description": "+70 Resonant Pulse Damage"
 		},
-		"special_bonus_unique_void_spirit_4": {
-			"id": 7709,
+		"special_bonus_unique_void_spirit_dissimilate_outerring": {
+			"id": 1070,
 			"sequence": "Ability14",
 			"is_talent": true,
 			"cooldown": [
@@ -26444,7 +26441,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+120 Resonant Pulse Damage"
+			"description": "Outer Dissimilate Ring"
 		},
 		"special_bonus_unique_void_spirit_1": {
 			"id": 7706,
@@ -27352,8 +27349,8 @@
 			"talent_level": 1,
 			"description": "+100 Rebound Cast/Jump Range"
 		},
-		"special_bonus_unique_marci_grapple_damage": {
-			"id": 8246,
+		"special_bonus_unique_marci_guardian_lifesteal": {
+			"id": 8242,
 			"sequence": "Ability11",
 			"is_talent": true,
 			"cooldown": [
@@ -27363,10 +27360,10 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+{s:bonus_impact_damage} Dispose Damage"
+			"description": "+10% Sidekick Lifesteal"
 		},
-		"special_bonus_unique_marci_guardian_lifesteal": {
-			"id": 8242,
+		"special_bonus_unique_marci_grapple_damage": {
+			"id": 8246,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -27376,7 +27373,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+15% Sidekick Lifesteal"
+			"description": "+{s:bonus_impact_damage} Dispose Damage"
 		},
 		"special_bonus_unique_marci_lunge_cooldown": {
 			"id": 8245,
@@ -27526,7 +27523,7 @@
 				85
 			],
 			"name": "Rock Throw",
-			"description": "Primal Beast throws a rock at the target location that stuns and damages enemies. The rock cannot be thrown within a minimum range of Primal Beast. After landing, the throck splits into 3 additional fragments that land behind the initial target location.",
+			"description": "Primal Beast throws a rock at the target location that stuns and damages enemies. The rock cannot be thrown within a minimum range of Primal Beast. After landing, the rock splits into 3 additional fragments that land behind the initial target location.",
 			"lore": "AGAIN WITH THE ROCKS!",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -27565,7 +27562,7 @@
 				100
 			],
 			"name": "Pulverize",
-			"description": "CHANNELED - Primal Beast channels his rage, grabbing the target enemy and slamming them into the ground repeatedly, damaging and mini-stunning any enemies caught in the AoE. Lasts %channel_time% seconds.",
+			"description": "CHANNELED - Primal Beast channels his rage, grabbing the target enemy and slamming them into the ground repeatedly, damaging and mini-stunning any enemies caught in the AoE. Each consecutive hit deals bonus damage. Lasts %channel_time% seconds.",
 			"lore": "Though none are certain whether his utterances have true meaning, most concede the Beast's powerful grip and tendency to smash his enemies into naught but pulp and pieces communicates his intent well enough.",
 			"is_ultimate": true,
 			"is_passive": "no",
