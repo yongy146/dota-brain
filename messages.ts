@@ -211,12 +211,15 @@ export interface DotaCoachMessage {
     | "DayTime"
     | "EnemyHero"
     | "OwnHero";
+  // Title used in cutomized message timings
+  title?: string;
   // Localized hero name, only needed for categories 'EnemyHero' and 'OwnHero'
   hero?: string; // Localized name
   // Folder and name of audio file (the app adds '.mp3' to the file name)
   audioFile: string;
   // Time when message is played in seconds (time is based on game time) ; -90 means that the message is played at hero selection
-  messageTime: number | number[];
+  // For messages only played in Turbo: set messagetime to undefined
+  messageTime?: number | number[];
   turboTime?: number | number[];
   // Array of times when message is played
   //messageTimes?: number[];
@@ -245,13 +248,23 @@ export interface DotaCoachMessage {
 }
 
 export const dotaCoachMessages: DotaCoachMessage[] = [
-  // BountyRunes
+  // BountyRunes & HealingLotus
   {
+    title: "BountyRunesAndHealingLotus",
     category: "BountyRunes",
     audioFile: "general/BountyRunes2",
     messageTime: 3 * 60 - 30,
     repeatTime: bountyRuneRepeatTime,
     textMessage: "Bounty runes and healing lotus will appear soon",
+    audience: [Audience.ALL],
+  },
+  {
+    title: "HealingLotus",
+    category: "BountyRunes",
+    audioFile: "general/BountyRunes3",
+    turboTime: 1 * 60 + 30 - 30,
+    repeatTime: bountyRuneRepeatTime,
+    textMessage: "Healing lotus will appear soon",
     audience: [Audience.ALL],
   },
 
@@ -290,6 +303,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // WisdomRune - Added in patch 7.33
   {
+    title: "WisdomRunes",
     category: "WisdomRunes",
     audioFile: "general/WisdomRune", // Named #2 to avoid caching issues
     messageTime: 7 * 60 - 10,
@@ -316,6 +330,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   // Stacking (from minute 2 to 30)
   {
+    title: "Stacking",
     category: "Stacking",
     audioFile: "general/Stacking",
     messageTime: [2 * 60 - 15],
@@ -340,6 +355,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   // Pulling
   {
     // Pulling timing for radiant safelane & dire offlane
+    title: "PullingBottomLane",
     category: "Pulling",
     audioFile: "general/Pulling",
     messageTime: [1 * 60 + 8],
@@ -363,6 +379,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     // Pulling timing for radiant offlane
+    title: "PullingTopLaneRadiant",
     category: "Pulling",
     audioFile: "general/Pulling",
     messageTime: [1 * 60 + 9],
@@ -384,6 +401,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     // Pulling timing for dire safelane
+    title: "PullingTopLaneDire",
     category: "Pulling",
     audioFile: "general/Pulling",
     messageTime: [1 * 60 + 5],
@@ -479,7 +497,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "AghanimsShard",
     audioFile: "general/AghanimsShard",
     messageTime: 15 * 60 - 2,
-    turboTime: 9 * 60 + 45 - 2,
+    turboTime: 7 * 60 + 30 - 2,
     textMessage: "Aghanim's Shard is available in the shop",
     audience: [Audience.ALL],
   },
