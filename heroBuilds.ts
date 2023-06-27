@@ -26288,13 +26288,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bloodthorn",
             "refresher",
           ],
-          core: [
-            "gungir",
-            "black_king_bar",
-            "blink",
-            "black_king_bar",
-            "aghanims_shard",
-          ],
+          core: ["gungir", "blink", "black_king_bar", "aghanims_shard"],
           neutral: [
             "arcane_ring",
             "unstable_wand",
