@@ -1163,38 +1163,22 @@
 				"11": {
 					"SlotIndex": "11",
 					"SlotName": "head_persona_1",
-					"SlotText": "#LoadoutSlot_Head_Crystal_Maiden_Persona",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Head_Crystal_Maiden_Persona"
 				},
 				"12": {
 					"SlotIndex": "12",
 					"SlotName": "tail_persona_1",
-					"SlotText": "#LoadoutSlot_Tail_Crystal_Maiden_Persona",
-					"TextureWidth": "512",
-					"TextureHeight": "512",
-					"MaxPolygonsLOD0": "3000",
-					"MaxPolygonsLOD1": "1200"
+					"SlotText": "#LoadoutSlot_Tail_Crystal_Maiden_Persona"
 				},
 				"13": {
 					"SlotIndex": "13",
 					"SlotName": "armor_persona_1",
-					"SlotText": "#LoadoutSlot_Armor_Crystal_Maiden_Persona",
-					"TextureWidth": "512",
-					"TextureHeight": "512",
-					"MaxPolygonsLOD0": "2500",
-					"MaxPolygonsLOD1": "1000"
+					"SlotText": "#LoadoutSlot_Armor_Crystal_Maiden_Persona"
 				},
 				"14": {
 					"SlotIndex": "14",
 					"SlotName": "misc_persona_1",
-					"SlotText": "#LoadoutSlot_Misc_Crystal_Maiden_Persona",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1500",
-					"MaxPolygonsLOD1": "600"
+					"SlotText": "#LoadoutSlot_Misc_Crystal_Maiden_Persona"
 				},
 				"15": {
 					"SlotIndex": "15",
@@ -2145,47 +2129,27 @@
 				"8": {
 					"SlotIndex": "8",
 					"SlotName": "weapon_persona_1",
-					"SlotText": "#LoadoutSlot_Weapon",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "800",
-					"MaxPolygonsLOD1": "600"
+					"SlotText": "#LoadoutSlot_Weapon"
 				},
 				"9": {
 					"SlotIndex": "9",
 					"SlotName": "head_persona_1",
-					"SlotText": "#LoadoutSlot_Head",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Head"
 				},
 				"10": {
 					"SlotIndex": "10",
 					"SlotName": "armor_persona_1",
-					"SlotText": "#LoadoutSlot_Armor",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "650",
-					"MaxPolygonsLOD1": "650"
+					"SlotText": "#LoadoutSlot_Armor"
 				},
 				"11": {
 					"SlotIndex": "11",
 					"SlotName": "back_persona_1",
-					"SlotText": "#LoadoutSlot_Back",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "2500",
-					"MaxPolygonsLOD1": "1000"
+					"SlotText": "#LoadoutSlot_Back"
 				},
 				"12": {
 					"SlotIndex": "12",
 					"SlotName": "mount_persona_1",
-					"SlotText": "#LoadoutSlot_Mount",
-					"TextureWidth": "512",
-					"TextureHeight": "512",
-					"MaxPolygonsLOD0": "6000",
-					"MaxPolygonsLOD1": "2400"
+					"SlotText": "#LoadoutSlot_Mount"
 				},
 				"13": {
 					"SlotIndex": "13",
@@ -9257,38 +9221,22 @@
 				"8": {
 					"SlotIndex": "8",
 					"SlotName": "head_persona_1",
-					"SlotText": "#LoadoutSlot_Head_Phantom_Assassin_Persona",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Head_Phantom_Assassin_Persona"
 				},
 				"9": {
 					"SlotIndex": "9",
 					"SlotName": "armor_persona_1",
-					"SlotText": "#LoadoutSlot_Armor_Phantom_Assassin_Persona",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Armor_Phantom_Assassin_Persona"
 				},
 				"10": {
 					"SlotIndex": "10",
 					"SlotName": "legs_persona_1",
-					"SlotText": "#LoadoutSlot_Legs_Phantom_Assassin_Persona",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Legs_Phantom_Assassin_Persona"
 				},
 				"11": {
 					"SlotIndex": "11",
 					"SlotName": "weapon_persona_1",
-					"SlotText": "#LoadoutSlot_Weapon_Phantom_Assassin_Persona",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Weapon_Phantom_Assassin_Persona"
 				},
 				"12": {
 					"SlotIndex": "12",
@@ -10405,39 +10353,23 @@
 				"8": {
 					"SlotIndex": "8",
 					"SlotName": "head_persona_1",
-					"SlotText": "#LoadoutSlot_Head",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1000",
-					"MaxPolygonsLOD1": "500"
+					"SlotText": "#LoadoutSlot_Head"
 				},
 				"9": {
 					"SlotIndex": "9",
 					"SlotName": "armor_persona_1",
-					"SlotText": "#LoadoutSlot_Armor",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "650",
-					"MaxPolygonsLOD1": "650"
+					"SlotText": "#LoadoutSlot_Armor"
 				},
 				"10": {
 					"SlotIndex": "10",
 					"SlotName": "weapon_persona_1",
-					"SlotText": "#LoadoutSlot_Weapon",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "800",
-					"MaxPolygonsLOD1": "600"
+					"SlotText": "#LoadoutSlot_Weapon"
 				},
 				"11": {
 					"SlotIndex": "11",
 					"SlotName": "shapeshift_persona_1",
 					"SlotText": "#LoadoutSlot_Persona_Elder_Dragon",
 					"no_import": "1",
-					"TextureWidth": "512",
-					"TextureHeight": "512",
-					"MaxPolygonsLOD0": "6000",
-					"MaxPolygonsLOD1": "4000",
 					"LoadoutPreviewMode": "transformation"
 				},
 				"12": {
@@ -16487,7 +16419,7 @@
 			"Ability1": "undying_decay",
 			"Ability2": "undying_soul_rip",
 			"Ability3": "undying_tombstone",
-			"Ability4": "undying_tombstone_grab",
+			"Ability4": "generic_hidden",
 			"Ability5": "generic_hidden",
 			"Ability6": "undying_flesh_golem",
 			"Ability10": "special_bonus_unique_undying_8",
@@ -16513,6 +16445,7 @@
 			"AttributeAgilityGain": "1.200000",
 			"AttributeBaseIntelligence": "27",
 			"AttributeIntelligenceGain": "2.800000",
+			"StatusHealthRegen": "-0.25",
 			"StatusManaRegen": "0.25",
 			"MovementSpeed": "300",
 			"particle_folder": "particles/units/heroes/hero_undying",
@@ -17859,8 +17792,8 @@
 			"AttributePrimary": "DOTA_ATTRIBUTE_AGILITY",
 			"AttributeBaseStrength": "0",
 			"AttributeStrengthGain": "0",
-			"AttributeBaseIntelligence": "27",
-			"AttributeIntelligenceGain": "3.7000",
+			"AttributeBaseIntelligence": "25",
+			"AttributeIntelligenceGain": "3.4000",
 			"AttributeBaseAgility": "22",
 			"AttributeAgilityGain": "3.400000",
 			"StatusHealthRegen": "0.25",
@@ -18509,7 +18442,7 @@
 			"AttributeBaseIntelligence": "23",
 			"AttributeIntelligenceGain": "2.700000",
 			"StatusManaRegen": "0.5",
-			"MovementSpeed": "290",
+			"MovementSpeed": "285",
 			"particle_folder": "particles/units/heroes/hero_shredder",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_shredder.vsndevts",
@@ -20626,10 +20559,10 @@
 				"Ability3": "techies_suicide",
 				"Ability4": "techies_land_mines"
 			},
-			"ArmorPhysical": "3",
+			"ArmorPhysical": "2",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
-			"AttackDamageMin": "6",
-			"AttackDamageMax": "8",
+			"AttackDamageMin": "3",
+			"AttackDamageMax": "5",
 			"BaseAttackSpeed": "90",
 			"AttackDamageType": "DAMAGE_TYPE_ArmorPhysical",
 			"AttackRate": "1.700000",

@@ -255,7 +255,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
 export const heroBuilds: { [key: string]: HeroContent } = {
   // YoonA plays hero
   Abaddon: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -536,7 +536,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Alchemist: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -814,7 +814,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Ancient Apparition": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -975,7 +975,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Anti-Mage": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -1158,7 +1158,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Arc Warden": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -1355,7 +1355,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Axe: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -1531,7 +1531,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Bane: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -1700,7 +1700,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Batrider: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -1996,7 +1996,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Beastmaster: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -2178,7 +2178,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Bloodseeker: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -2439,7 +2439,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Bounty Hunter": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -2625,7 +2625,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Brewmaster: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -2802,7 +2802,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero (eidendota would play him as well, but YoonA had him already in the past)
   Bristleback: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -2987,7 +2987,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Broodmother: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -3182,7 +3182,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Centaur Warrunner": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -3344,7 +3344,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Chaos Knight": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3624,7 +3624,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Chen: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -3748,7 +3748,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clinkz: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3892,7 +3892,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Clockwerk: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4054,7 +4054,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Crystal Maiden": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4223,7 +4223,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dark Seer": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4383,7 +4383,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Dark Willow": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4562,7 +4562,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Dawnbreaker: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -4845,7 +4845,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Dazzle: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -5009,7 +5009,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Death Prophet": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -5188,7 +5188,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Disruptor: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5342,7 +5342,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Doom: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5512,7 +5512,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Dragon Knight": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5686,7 +5686,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Drow Ranger": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5860,7 +5860,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Earth Spirit": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -6023,7 +6023,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Earthshaker: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -6160,7 +6160,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Elder Titan": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -6331,7 +6331,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Ember Spirit": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -6523,7 +6523,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Enchantress: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -6687,7 +6687,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Enigma: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -6948,7 +6948,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Faceless Void": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -7118,7 +7118,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Grimstroke: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -7286,7 +7286,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Gyrocopter: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -7579,7 +7579,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Hoodwink: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -7780,7 +7780,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Huskar: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -7968,7 +7968,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Invoker: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -8285,7 +8285,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Io: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8435,7 +8435,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Jakiro: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8591,7 +8591,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Juggernaut: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -8761,7 +8761,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Keeper of the Light": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8945,7 +8945,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Kunkka: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9199,7 +9199,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Legion Commander": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -9389,7 +9389,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Leshrac: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -9566,7 +9566,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Lich: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -9745,7 +9745,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Lifestealer: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9924,7 +9924,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Lina: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -10211,7 +10211,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lion: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -10367,7 +10367,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Lone Druid": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10554,7 +10554,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Luna: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -10724,7 +10724,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Lycan: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10960,7 +10960,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Magnus: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -11392,7 +11392,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Marci: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -11713,7 +11713,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Mars: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -11921,7 +11921,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Medusa: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -12088,7 +12088,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Meepo: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -12228,7 +12228,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Mirana: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -12403,7 +12403,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Monkey King": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -12700,7 +12700,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Morphling: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -12873,7 +12873,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Muerta: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -13182,7 +13182,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Naga Siren": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -13374,7 +13374,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Nature's Prophet": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -13748,7 +13748,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Necrophos: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14081,7 +14081,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Night Stalker": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -14267,7 +14267,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Nyx Assassin": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14418,7 +14418,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Ogre Magi": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14588,7 +14588,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Omniknight: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -14792,7 +14792,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Oracle: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14954,7 +14954,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   "Outworld Devourer": {
     // not `Outworld Destroyer`
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -15208,7 +15208,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Pangolier: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -15603,7 +15603,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Phantom Assassin": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -15779,7 +15779,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Phantom Lancer": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -15948,7 +15948,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Phoenix: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -16120,7 +16120,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Primal Beast": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -16416,7 +16416,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Puck: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -16605,7 +16605,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Pudge: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -16895,7 +16895,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Pugna: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -17198,7 +17198,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Queen of Pain": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -17472,7 +17472,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Razor: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -17871,7 +17871,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Riki: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -18148,7 +18148,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Rubick: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -18296,7 +18296,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Sand King": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -18496,7 +18496,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Demon": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -18672,7 +18672,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Shadow Fiend": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -18976,7 +18976,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Shaman": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -19137,7 +19137,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Silencer: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -19305,7 +19305,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Skywrath Mage": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -19475,7 +19475,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Slardar: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -19632,7 +19632,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Slark: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -19819,7 +19819,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Snapfire: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -20005,7 +20005,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Sniper: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -20321,7 +20321,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Spectre: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -20477,7 +20477,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Spirit Breaker": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -20780,7 +20780,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Storm Spirit": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -20954,7 +20954,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Sven: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -21126,7 +21126,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Techies: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -21431,7 +21431,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Templar Assassin": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -21735,7 +21735,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Terrorblade: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -21938,7 +21938,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tidehunter: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -22122,7 +22122,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Timbersaw: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -22322,7 +22322,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tinker: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -22536,7 +22536,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tiny: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -22948,7 +22948,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Treant Protector": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -23128,7 +23128,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Troll Warlord": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -23313,7 +23313,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Tusk: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -23580,7 +23580,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Underlord: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -23774,7 +23774,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Undying: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -24037,7 +24037,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Ursa: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -24227,7 +24227,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Vengeful Spirit": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -24381,7 +24381,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Venomancer: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -24707,7 +24707,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Viper: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -24989,7 +24989,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Visage: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -25243,7 +25243,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Void Spirit": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -25537,7 +25537,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Warlock: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -25702,7 +25702,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Weaver: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -25996,7 +25996,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Windranger: {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -26402,7 +26402,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Winter Wyvern": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -26580,7 +26580,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Witch Doctor": {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -26753,7 +26753,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Wraith King": {
-    gameplay_version: "7.33d",
+    gameplay_version: "7.33e",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -26930,7 +26930,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Zeus: {
-    gameplay_version: `7.33d`,
+    gameplay_version: `7.33e`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [

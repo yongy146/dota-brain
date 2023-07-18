@@ -2190,6 +2190,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				16,
+				14,
+				12,
 				10
 			],
 			"mana_cost": [
@@ -2212,6 +2215,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
+				16,
+				14,
+				12,
 				10
 			],
 			"mana_cost": [
@@ -9408,9 +9414,9 @@
 				5
 			],
 			"mana_cost": [
-				85,
-				105,
-				125,
+				100,
+				115,
+				130,
 				145
 			],
 			"name": "Nether Blast",
@@ -10739,7 +10745,7 @@
 				90
 			],
 			"name": "Overclocking",
-			"description": "Supercharges Clockwerks abilities: Battery Assault affects all enemies in it's range; Clockwerk's attack speed in Power Cogs is increased; Rocket Flares have a reduced cooldown and fire additional rockets to either side of the target; Hookshot stun radius and duration is increased. Clockwerk becomes stunned after the duration runs out.",
+			"description": "Supercharges Clockwerks abilities: Battery Assault affects all enemies in its range; Clockwerk's attack speed in Power Cogs is increased; Rocket Flares have a reduced cooldown and fire additional rockets to either side of the target; Hookshot stun radius and duration is increased. Clockwerk becomes stunned after the duration runs out.",
 			"lore": "Rattletrap understands the limitations of his armor. Just as he understands the risks of pushing past them in times of need.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -12902,15 +12908,12 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				45,
 				40,
 				35,
-				30,
-				25
+				30
 			],
 			"mana_cost": [
-				50,
-				60,
-				70,
 				80
 			],
 			"name": "Insatiable Hunger",
@@ -14397,7 +14400,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				60
+				65
 			],
 			"mana_cost": [
 				40,
@@ -16743,7 +16746,7 @@
 				80
 			],
 			"name": "Cinder Brew",
-			"description": "Drenches himself and an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by %extra_duration% seconds when enemies are ignited. While Brewmaster is Brewed Up, His Drunken Brawler Stances are stronger.",
+			"description": "Drenches himself and an area in alcohol, causing enemy units to move slower and ignite once they take any spell damage. Duration is increased by %extra_duration% seconds when enemies are ignited. While Brewmaster is Brewed Up, His Drunken Brawler Stances are stronger.",
 			"lore": "The Order of the Oyo's solution to all problems - another round!",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -18381,25 +18384,6 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"undying_tombstone_grab": {
-			"id": 1108,
-			"sequence": "Ability4",
-			"is_talent": false,
-			"cooldown": [
-				10
-			],
-			"mana_cost": [
-				0
-			],
-			"name": "Grab Ally",
-			"description": "Load an ally into the nearest available tombstone.",
-			"lore": "n/a",
-			"is_ultimate": false,
-			"is_passive": "no",
-			"affects": "unit",
-			"is_debuff": false,
-			"is_buff": false
-		},
 		"undying_flesh_golem": {
 			"id": 5447,
 			"sequence": "Ability6",
@@ -18445,7 +18429,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-15s Tombstone Cooldown"
+			"description": "-{s:bonus_AbilityCooldown}s Tombstone Cooldown"
 		},
 		"special_bonus_unique_undying": {
 			"id": 6155,
@@ -24267,10 +24251,10 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				12,
-				10,
-				8,
-				6
+				13,
+				11,
+				9,
+				7
 			],
 			"mana_cost": [
 				100,
