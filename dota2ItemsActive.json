@@ -2474,6 +2474,7 @@
 		"is_roshan": false,
 		"is_purchasable": true,
 		"attack_speed_": 25,
+		"slow_resist_active": 35,
 		"health_regen_": 5,
 		"damage_": 15,
 		"damage_active": 35,
@@ -4068,6 +4069,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"status_resistance": 40,
+		"slow_resist": 40,
 		"health_": 250,
 		"health_regen_": 20,
 		"duration": 5
@@ -4274,6 +4276,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_speed_": 35,
+		"bonus_slow": 20,
 		"damage_": 30,
 		"armor_": 20
 	},
