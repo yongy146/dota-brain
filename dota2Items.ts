@@ -231,8 +231,8 @@ export class DotaItem implements IDotaItem {
   movement_speed_percent_active?: number; // Additional speed when activated
 
   // Slow resistance
-  slow_resistance?: number;
-  slow_resistance_active?: number;
+  slow_resist?: number;
+  slow_resist_active?: number;
 
   // Duration of item when activated
   duration?: number;
@@ -611,8 +611,7 @@ export class DotaItem implements IDotaItem {
   // Movement resistance
   get hasSlowResistance(): boolean {
     return (
-      this.slow_resistance !== undefined ||
-      this.slow_resistance_active !== undefined
+      this.slow_resist !== undefined || this.slow_resist_active !== undefined
     );
   }
 
