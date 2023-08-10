@@ -36,6 +36,7 @@ export enum ItemFilter {
   StatusResistance = "StatusResistance",
   HealthRegenReduction = "HealthRegenReduction",
   MovementSpeed = "MovementSpeed",
+  SlowResistance = "SlowResistance",
   Invisibility = "dota.Invisibility",
   TrueSight = "TrueSight",
   PassiveBreak = "PassiveBreak",
@@ -228,6 +229,10 @@ export class DotaItem implements IDotaItem {
   movement_speed_aura?: number;
   movement_speed_percent?: number;
   movement_speed_percent_active?: number; // Additional speed when activated
+
+  // Slow resistance
+  slow_resistance?: number;
+  slow_resistance_active?: number;
 
   // Duration of item when activated
   duration?: number;
@@ -603,6 +608,14 @@ export class DotaItem implements IDotaItem {
     return ts ? ts : undefined;
   }
 
+  // Movement resistance
+  get hasSlowResistance(): boolean {
+    return (
+      this.slow_resistance !== undefined ||
+      this.slow_resistance_active !== undefined
+    );
+  }
+
   /**
    * Calcualted the speed with actication
    *
@@ -776,6 +789,9 @@ export class DotaItem implements IDotaItem {
       }
       case ItemFilter.MovementSpeed: {
         return this.hasMovementSpeed;
+      }
+      case ItemFilter.SlowResistance: {
+        return this.hasSlowResistance;
       }
       case ItemFilter.Invisibility: {
         return this.grantsInvisibility;
