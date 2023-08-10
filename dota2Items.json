@@ -4640,7 +4640,7 @@
 		"is_roshan": false,
 		"is_purchasable": false,
 		"attack_speed_": 35,
-		"bonus_slow": 20,
+		"slow_resist": 20,
 		"damage_": 30,
 		"armor_": 20
 	},
