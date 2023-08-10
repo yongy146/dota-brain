@@ -363,7 +363,15 @@ export class DotaItem implements IDotaItem {
   // Magic resistance
   get hasMagicResistance(): boolean {
     return (
-      this.magic_resist !== undefined || this.magic_resist_aura !== undefined
+      !!this.magic_resist || !!this.magic_resist_aura || !!this.intelligence
+    );
+  }
+
+  get magicResistance(): number | undefined {
+    return (
+      (this.magic_resist || 0) +
+      (this.magic_resist_aura || 0) +
+      (this.intelligence || 0) * attributeFactors.int.magic_resistance
     );
   }
 
@@ -1036,8 +1044,8 @@ export class DotaItem implements IDotaItem {
       case ItemFilter.MagicResistance: {
         if (this.hasMagicResistance === false) return undefined;
         return {
-          value: this.magic_resist || 0,
-          efficiency: this.getEfficiency(this.magic_resist || 0),
+          value: this.magicResistance || 0,
+          efficiency: this.getEfficiency(this.magicResistance || 0),
           isPercent: true,
         };
       }
