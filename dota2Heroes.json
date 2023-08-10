@@ -48,14 +48,14 @@
 			"antimage_blink",
 			"antimage_counterspell",
 			"antimage_mana_overload",
-			"generic_hidden",
+			"antimage_counterspell_ally",
 			"antimage_mana_void"
 		],
 		"talents": [
 			"special_bonus_strength_9",
-			"special_bonus_unique_antimage",
-			"special_bonus_unique_antimage_7",
 			"special_bonus_unique_antimage_manavoid_aoe",
+			"special_bonus_unique_antimage_7",
+			"special_bonus_unique_antimage",
 			"special_bonus_unique_antimage_6",
 			"special_bonus_unique_antimage_3",
 			"special_bonus_unique_antimage_4",
@@ -97,7 +97,7 @@
 		"intelligence_base": 18,
 		"intelligence_gain": 1.6,
 		"agility_base": 20,
-		"agility_gain": 2,
+		"agility_gain": 1.7,
 		"health_status_regen": 2.5,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/axe.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/axe.png",
@@ -303,7 +303,7 @@
 			"crystal_maiden_crystal_nova",
 			"crystal_maiden_frostbite",
 			"crystal_maiden_brilliance_aura",
-			"generic_hidden",
+			"crystal_maiden_crystal_clone",
 			"generic_hidden",
 			"crystal_maiden_freezing_field",
 			"crystal_maiden_freezing_field_stop"
@@ -500,9 +500,9 @@
 			"special_bonus_all_stats_5",
 			"special_bonus_unique_juggernaut",
 			"special_bonus_unique_juggernaut_5",
-			"special_bonus_unique_juggernaut_4",
-			"special_bonus_unique_juggernaut_blade_dance_lifesteal",
 			"special_bonus_unique_juggernaut_3",
+			"special_bonus_unique_juggernaut_blade_dance_lifesteal",
+			"special_bonus_unique_juggernaut_blade_fury_cooldown",
 			"special_bonus_unique_juggernaut_omnislash_duration",
 			"special_bonus_unique_juggernaut_2"
 		]
@@ -590,7 +590,7 @@
 			"Nuker"
 		],
 		"complexity": 2,
-		"attack_range": 500,
+		"attack_range": 525,
 		"attack_type": "Ranged",
 		"primary_attr": "Agility",
 		"movement_speed": 305,
@@ -951,7 +951,7 @@
 			"special_bonus_agility_14",
 			"special_bonus_unique_razor",
 			"special_bonus_strength_14",
-			"special_bonus_unique_razor_5",
+			"special_bonus_unique_razor_storm_surge_damage_and_slow",
 			"special_bonus_unique_razor_2",
 			"special_bonus_unique_razor_plasmafield_second_ring",
 			"special_bonus_unique_razor_static_link_aspd"
@@ -1246,7 +1246,7 @@
 		"primary_attr": "Universal",
 		"movement_speed": 295,
 		"armor": 0,
-		"attack_speed": 100,
+		"attack_speed": 110,
 		"attack_rate": 1.7,
 		"attack_damage_min": 9,
 		"attack_damage_max": 15,
@@ -1660,10 +1660,10 @@
 		"talents": [
 			"special_bonus_unique_lion_6",
 			"special_bonus_unique_lion_3",
-			"special_bonus_unique_lion_10",
+			"special_bonus_unique_lion_5",
 			"special_bonus_unique_lion_11",
 			"special_bonus_unique_lion_8",
-			"special_bonus_unique_lion_5",
+			"special_bonus_unique_lion_10",
 			"special_bonus_unique_lion_manadrain_damage",
 			"special_bonus_unique_lion_4"
 		]
@@ -1846,7 +1846,7 @@
 			"tidehunter_gush",
 			"tidehunter_kraken_shell",
 			"tidehunter_anchor_smash",
-			"tidehunter_arm_of_the_deep",
+			"tidehunter_dead_in_the_water",
 			"generic_hidden",
 			"tidehunter_ravage"
 		],
@@ -1892,7 +1892,7 @@
 		"attack_animation_point": 0.4,
 		"attack_acquisition_range": 800,
 		"strength_base": 18,
-		"strength_gain": 2.3,
+		"strength_gain": 2.1,
 		"intelligence_base": 22,
 		"intelligence_gain": 3.3,
 		"agility_base": 13,
@@ -1946,19 +1946,19 @@
 		"attack_type": "Melee",
 		"primary_attr": "Agility",
 		"movement_speed": 315,
-		"armor": 2,
+		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
-		"attack_damage_min": 41,
-		"attack_damage_max": 45,
+		"attack_damage_min": 27,
+		"attack_damage_max": 31,
 		"attack_animation_point": 0.3,
 		"attack_acquisition_range": 600,
 		"strength_base": 18,
-		"strength_gain": 2.6,
+		"strength_gain": 2,
 		"intelligence_base": 14,
 		"intelligence_gain": 1.3,
-		"agility_base": 18,
-		"agility_gain": 1.4,
+		"agility_base": 30,
+		"agility_gain": 2.4,
 		"health_status_regen": 2.5,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/riki.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/riki.png",
@@ -2080,7 +2080,7 @@
 		"attack_animation_point": 0.35,
 		"attack_acquisition_range": 800,
 		"strength_base": 19,
-		"strength_gain": 2.5,
+		"strength_gain": 2.3,
 		"intelligence_base": 30,
 		"intelligence_gain": 3.3,
 		"agility_base": 17,
@@ -2351,8 +2351,7 @@
 			"beastmaster_call_of_the_wild_hawk",
 			"beastmaster_inner_beast",
 			"beastmaster_drums_of_slom",
-			"beastmaster_primal_roar",
-			"beastmaster_drums_of_slom_stop"
+			"beastmaster_primal_roar"
 		],
 		"talents": [
 			"special_bonus_attack_damage_30",
@@ -2551,10 +2550,10 @@
 		"talents": [
 			"special_bonus_unique_faceless_void_6",
 			"special_bonus_unique_faceless_void_7",
-			"special_bonus_unique_faceless_void_5",
+			"special_bonus_unique_faceless_void_3",
 			"special_bonus_unique_faceless_void_8",
 			"special_bonus_unique_faceless_void",
-			"special_bonus_unique_faceless_void_3",
+			"special_bonus_unique_faceless_void_5",
 			"special_bonus_unique_faceless_void_4",
 			"special_bonus_unique_faceless_void_2"
 		]
@@ -2650,7 +2649,7 @@
 		"attack_range": 600,
 		"attack_type": "Ranged",
 		"primary_attr": "Intelligence",
-		"movement_speed": 285,
+		"movement_speed": 290,
 		"armor": 1,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
@@ -2685,7 +2684,7 @@
 			"special_bonus_magic_resistance_12",
 			"special_bonus_hp_300",
 			"special_bonus_unique_death_prophet_2",
-			"special_bonus_unique_death_prophet_4",
+			"special_bonus_unique_death_prophet_crypt_swarm_slow",
 			"special_bonus_unique_death_prophet_3",
 			"special_bonus_unique_death_prophet_5",
 			"special_bonus_unique_death_prophet"
@@ -3124,10 +3123,10 @@
 			"dazzle_bad_juju"
 		],
 		"talents": [
-			"special_bonus_attack_speed_35",
+			"special_bonus_unique_dazzle_poison_touch_attack_range_bonus",
 			"special_bonus_mp_regen_175",
 			"special_bonus_unique_dazzle_2",
-			"special_bonus_unique_dazzle_poison_touch_attack_range_bonus",
+			"special_bonus_attack_speed_60",
 			"special_bonus_unique_dazzle_5",
 			"special_bonus_unique_dazzle_3",
 			"special_bonus_unique_dazzle_1",
@@ -3257,7 +3256,7 @@
 			"special_bonus_unique_leshrac_7",
 			"special_bonus_unique_leshrac_4",
 			"special_bonus_unique_leshrac_3",
-			"special_bonus_unique_leshrac_2",
+			"special_bonus_unique_leshrac_pulse_nova_lightning",
 			"special_bonus_unique_leshrac_1"
 		]
 	},
@@ -3384,8 +3383,8 @@
 		"talents": [
 			"special_bonus_unique_lifestealer_infest_damage",
 			"special_bonus_unique_lifestealer_2",
-			"special_bonus_hp_325",
-			"special_bonus_attack_damage_25",
+			"special_bonus_hp_350",
+			"special_bonus_attack_damage_30",
 			"special_bonus_unique_lifestealer_infest_target_bonus",
 			"special_bonus_unique_lifestealer_6",
 			"special_bonus_unique_lifestealer_3",
@@ -3569,11 +3568,11 @@
 			"omniknight_guardian_angel"
 		],
 		"talents": [
-			"special_bonus_unique_omniknight_5",
-			"special_bonus_attack_base_damage_50",
 			"special_bonus_unique_omniknight_6",
-			"special_bonus_unique_omniknight_7",
+			"special_bonus_attack_base_damage_50",
 			"special_bonus_unique_omniknight_2",
+			"special_bonus_unique_omniknight_7",
+			"special_bonus_unique_omniknight_5",
 			"special_bonus_unique_omniknight_3",
 			"special_bonus_unique_omniknight_1",
 			"special_bonus_unique_omniknight_4"
@@ -3605,8 +3604,8 @@
 		"armor": 1,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
-		"attack_damage_min": 23,
-		"attack_damage_max": 33,
+		"attack_damage_min": 21,
+		"attack_damage_max": 31,
 		"attack_animation_point": 0.3,
 		"attack_acquisition_range": 800,
 		"strength_base": 17,
@@ -3793,19 +3792,19 @@
 		"attack_type": "Melee",
 		"primary_attr": "Universal",
 		"movement_speed": 285,
-		"armor": 0,
+		"armor": -1,
 		"attack_speed": 125,
 		"attack_rate": 1.7,
 		"attack_damage_min": 9,
 		"attack_damage_max": 15,
 		"attack_animation_point": 0.4,
 		"attack_acquisition_range": 600,
-		"strength_base": 18,
+		"strength_base": 19,
 		"strength_gain": 2.3,
 		"intelligence_base": 18,
 		"intelligence_gain": 1.4,
 		"agility_base": 18,
-		"agility_gain": 2.4,
+		"agility_gain": 2.6,
 		"health_status_regen": 0.25,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/broodmother.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/broodmother.png",
@@ -3880,7 +3879,7 @@
 			"bounty_hunter_shuriken_toss",
 			"bounty_hunter_jinada",
 			"bounty_hunter_wind_walk",
-			"generic_hidden",
+			"bounty_hunter_wind_walk_ally",
 			"generic_hidden",
 			"bounty_hunter_track"
 		],
@@ -4174,7 +4173,7 @@
 		"attack_damage_max": 27,
 		"attack_animation_point": 0.3,
 		"attack_acquisition_range": 600,
-		"strength_base": 23,
+		"strength_base": 21,
 		"strength_gain": 2.5,
 		"intelligence_base": 16,
 		"intelligence_gain": 1.7,
@@ -4193,8 +4192,8 @@
 			"spectre_desolate",
 			"spectre_dispersion",
 			"spectre_reality",
-			"spectre_haunt_single",
-			"spectre_haunt"
+			"spectre_haunt",
+			"spectre_haunt_single"
 		],
 		"talents": [
 			"special_bonus_unique_spectre",
@@ -4267,8 +4266,8 @@
 			"special_bonus_unique_doom_6",
 			"special_bonus_unique_doom_2",
 			"special_bonus_unique_doom_9",
-			"special_bonus_unique_doom_10",
 			"special_bonus_unique_doom_1",
+			"special_bonus_unique_doom_10",
 			"special_bonus_unique_doom_11"
 		]
 	},
@@ -4330,7 +4329,7 @@
 			"special_bonus_unique_ancient_apparition_8",
 			"special_bonus_unique_ancient_apparition_3",
 			"special_bonus_unique_ancient_apparition_1",
-			"special_bonus_unique_ancient_apparition_4",
+			"special_bonus_unique_ancient_apparition_ice_vortex_duration",
 			"special_bonus_unique_ancient_apparition_2",
 			"special_bonus_unique_ancient_apparition_6",
 			"special_bonus_unique_ancient_apparition_5"
@@ -4370,7 +4369,7 @@
 		"intelligence_base": 16,
 		"intelligence_gain": 1.5,
 		"agility_base": 18,
-		"agility_gain": 2.6,
+		"agility_gain": 2.8,
 		"health_status_regen": 0.5,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/ursa.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/ursa.png",
@@ -4394,7 +4393,7 @@
 			"special_bonus_unique_ursa_8",
 			"special_bonus_unique_ursa_2",
 			"special_bonus_unique_ursa",
-			"special_bonus_unique_ursa_enrage_radius",
+			"special_bonus_unique_ursa_3",
 			"special_bonus_unique_ursa_7"
 		]
 	},
@@ -4458,9 +4457,9 @@
 			"special_bonus_armor_4",
 			"special_bonus_unique_spirit_breaker_2",
 			"special_bonus_attack_damage_40",
-			"special_bonus_unique_spirit_breaker_1",
-			"special_bonus_unique_spirit_breaker_4",
 			"special_bonus_unique_spirit_breaker_3",
+			"special_bonus_unique_spirit_breaker_4",
+			"special_bonus_unique_spirit_breaker_1",
 			"special_bonus_unique_spirit_breaker_shield"
 		]
 	},
@@ -4616,22 +4615,22 @@
 		"complexity": 3,
 		"attack_range": 600,
 		"attack_type": "Ranged",
-		"primary_attr": "Intelligence",
+		"primary_attr": "Universal",
 		"movement_speed": 285,
 		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
-		"attack_damage_min": 29,
-		"attack_damage_max": 35,
+		"attack_damage_min": 2,
+		"attack_damage_max": 10,
 		"attack_animation_point": 0.4,
 		"attack_acquisition_range": 800,
 		"strength_base": 19,
 		"strength_gain": 2.4,
-		"intelligence_base": 15,
-		"intelligence_gain": 4.6,
+		"intelligence_base": 19,
+		"intelligence_gain": 4,
 		"agility_base": 14,
-		"agility_gain": 1.9,
-		"health_status_regen": 0.25,
+		"agility_gain": 1.8,
+		"health_status_regen": 1.5,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/invoker.png",
 		"img_body": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/invoker.png",
@@ -4727,9 +4726,9 @@
 			"special_bonus_attack_speed_20",
 			"special_bonus_unique_silencer_7",
 			"special_bonus_unique_silencer_4",
-			"special_bonus_unique_silencer_3",
-			"special_bonus_unique_silencer_arcane_curse_undispellable",
 			"special_bonus_unique_silencer_glaives_bounces",
+			"special_bonus_unique_silencer_arcane_curse_undispellable",
+			"special_bonus_unique_silencer_3",
 			"special_bonus_unique_silencer_2"
 		]
 	},
@@ -4851,7 +4850,7 @@
 			"lycan_shapeshift"
 		],
 		"talents": [
-			"special_bonus_unique_lycan_6",
+			"special_bonus_unique_lycan_howl_armor",
 			"special_bonus_unique_lycan_3",
 			"special_bonus_unique_lycan_7",
 			"special_bonus_unique_lycan_8",
@@ -4886,7 +4885,7 @@
 		"attack_type": "Melee",
 		"primary_attr": "Universal",
 		"movement_speed": 310,
-		"armor": -1,
+		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
 		"attack_damage_min": 9,
@@ -5154,11 +5153,11 @@
 		"attack_animation_point": 0.38,
 		"attack_acquisition_range": 600,
 		"strength_base": 24,
-		"strength_gain": 2.5,
-		"intelligence_base": 20,
+		"strength_gain": 2.2,
+		"intelligence_base": 18,
 		"intelligence_gain": 1.9,
 		"agility_base": 17,
-		"agility_gain": 2.2,
+		"agility_gain": 2.1,
 		"health_status_regen": 0.25,
 		"img": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/meepo.png",
 		"img_face": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/meepo.png",
@@ -5177,11 +5176,11 @@
 			"meepo_megameepo_fling"
 		],
 		"talents": [
-			"special_bonus_strength_6",
+			"special_bonus_strength_7",
 			"special_bonus_unique_meepo_2",
 			"special_bonus_evasion_15",
-			"special_bonus_unique_meepo_4",
 			"special_bonus_unique_meepo_3",
+			"special_bonus_unique_meepo_4",
 			"special_bonus_unique_meepo_6",
 			"special_bonus_unique_meepo_7",
 			"special_bonus_unique_meepo_5"
@@ -5303,8 +5302,8 @@
 			"ogre_magi_bloodlust",
 			"ogre_magi_unrefined_fireblast",
 			"ogre_magi_smash",
-			"ogre_magi_multicast",
-			"ogre_magi_dumb_luck"
+			"ogre_magi_dumb_luck",
+			"ogre_magi_multicast"
 		],
 		"talents": [
 			"special_bonus_unique_ogre_magi_4",
@@ -5344,8 +5343,8 @@
 		"armor": 1,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
-		"attack_damage_min": 35,
-		"attack_damage_max": 43,
+		"attack_damage_min": 31,
+		"attack_damage_max": 39,
 		"attack_animation_point": 0.3,
 		"attack_acquisition_range": 600,
 		"strength_base": 22,
@@ -5505,7 +5504,7 @@
 		],
 		"talents": [
 			"special_bonus_unique_disruptor_2",
-			"special_bonus_unique_disruptor_3",
+			"special_bonus_unique_disruptor_consecutive_strike_damage",
 			"special_bonus_unique_disruptor_9",
 			"special_bonus_unique_disruptor_7",
 			"special_bonus_unique_disruptor_5",
@@ -5605,7 +5604,7 @@
 		"attack_type": "Melee",
 		"primary_attr": "Agility",
 		"movement_speed": 330,
-		"armor": 2,
+		"armor": 1,
 		"attack_speed": 110,
 		"attack_rate": 1.7,
 		"attack_damage_min": 23,
@@ -5838,10 +5837,10 @@
 		"talents": [
 			"special_bonus_unique_visage_8",
 			"special_bonus_unique_visage_7",
-			"special_bonus_unique_visage_1",
+			"special_bonus_unique_visage_grave_chill_duration",
 			"special_bonus_unique_visage_3",
 			"special_bonus_unique_visage_4",
-			"special_bonus_unique_visage_2",
+			"special_bonus_unique_visage_1",
 			"special_bonus_unique_visage_5",
 			"special_bonus_unique_visage_6"
 		]
@@ -6025,7 +6024,7 @@
 			"troll_warlord_whirling_axes_ranged",
 			"troll_warlord_whirling_axes_melee",
 			"troll_warlord_fervor",
-			"troll_warlord_rampage",
+			"generic_hidden",
 			"troll_warlord_battle_trance"
 		],
 		"talents": [
@@ -6090,7 +6089,7 @@
 			"centaur_double_edge",
 			"centaur_return",
 			"centaur_mount",
-			"generic_hidden",
+			"centaur_work_horse",
 			"centaur_stampede"
 		],
 		"talents": [
@@ -6199,8 +6198,8 @@
 		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
-		"attack_damage_min": 7,
-		"attack_damage_max": 11,
+		"attack_damage_min": 4,
+		"attack_damage_max": 8,
 		"attack_animation_point": 0.36,
 		"attack_acquisition_range": 600,
 		"strength_base": 25,
@@ -6230,7 +6229,7 @@
 		"talents": [
 			"special_bonus_hp_200",
 			"special_bonus_mp_regen_150",
-			"special_bonus_spell_amplify_7",
+			"special_bonus_unique_timbersaw_5",
 			"special_bonus_unique_timbersaw_2",
 			"special_bonus_magic_resistance_20",
 			"special_bonus_unique_timbersaw_4",
@@ -6293,11 +6292,11 @@
 			"bristleback_warpath"
 		],
 		"talents": [
-			"special_bonus_attack_damage_15",
+			"special_bonus_attack_damage_20",
 			"special_bonus_mp_regen_150",
 			"special_bonus_unique_bristleback_5",
 			"special_bonus_unique_bristleback_6",
-			"special_bonus_hp_regen_20",
+			"special_bonus_hp_regen_25",
 			"special_bonus_unique_bristleback_2",
 			"special_bonus_spell_lifesteal_12",
 			"special_bonus_unique_bristleback_3"
@@ -6424,7 +6423,7 @@
 			"special_bonus_hp_200",
 			"special_bonus_intelligence_8",
 			"special_bonus_unique_skywrath",
-			"special_bonus_unique_skywrath_2",
+			"special_bonus_unique_skywrath_arcane_bolt_lifesteal",
 			"special_bonus_unique_skywrath_4",
 			"special_bonus_unique_skywrath_3",
 			"special_bonus_unique_skywrath_6",
@@ -6588,7 +6587,7 @@
 		"attack_range": 150,
 		"attack_type": "Melee",
 		"primary_attr": "Strength",
-		"movement_speed": 330,
+		"movement_speed": 325,
 		"armor": 0,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
@@ -6596,7 +6595,7 @@
 		"attack_damage_max": 37,
 		"attack_animation_point": 0.46,
 		"attack_acquisition_range": 600,
-		"strength_base": 25,
+		"strength_base": 23,
 		"strength_gain": 3.1,
 		"intelligence_base": 20,
 		"intelligence_gain": 2.2,
@@ -6752,7 +6751,7 @@
 		],
 		"talents": [
 			"special_bonus_unique_earth_spirit_4",
-			"special_bonus_spell_amplify_8",
+			"special_bonus_spell_amplify_10",
 			"special_bonus_unique_earth_spirit_8",
 			"special_bonus_unique_earth_spirit",
 			"special_bonus_unique_earth_spirit_6",
@@ -7003,7 +7002,7 @@
 			"techies_sticky_bomb",
 			"techies_reactive_tazer",
 			"techies_suicide",
-			"generic_hidden",
+			"techies_reactive_tazer_stop",
 			"techies_minefield_sign",
 			"techies_land_mines"
 		],
@@ -7134,7 +7133,7 @@
 		],
 		"talents": [
 			"special_bonus_unique_arc_warden_5",
-			"special_bonus_hp_200",
+			"special_bonus_hp_250",
 			"special_bonus_unique_arc_warden_4",
 			"special_bonus_unique_arc_warden_3",
 			"special_bonus_unique_arc_warden",
@@ -7459,7 +7458,7 @@
 			"grimstroke_ink_creature",
 			"grimstroke_spirit_walk",
 			"grimstroke_dark_portrait",
-			"generic_hidden",
+			"grimstroke_return",
 			"grimstroke_soul_chain"
 		],
 		"talents": [
@@ -7663,9 +7662,9 @@
 			"special_bonus_unique_snapfire_5",
 			"special_bonus_unique_snapfire_2",
 			"special_bonus_unique_snapfire_3",
-			"special_bonus_unique_snapfire_6",
-			"special_bonus_unique_snapfire_mortimer_kisses_impact_damage",
 			"special_bonus_unique_snapfire_8",
+			"special_bonus_unique_snapfire_mortimer_kisses_impact_damage",
+			"special_bonus_unique_snapfire_6",
 			"special_bonus_unique_snapfire_1"
 		]
 	},
@@ -7728,7 +7727,7 @@
 			"special_bonus_unique_hoodwink_bushwhack_cooldown",
 			"special_bonus_unique_hoodwink_bushwhack_damage",
 			"special_bonus_unique_hoodwink_acorn_shot_bounces",
-			"special_bonus_unique_hoodwink_sharpshooter_speed",
+			"special_bonus_unique_hoodwink_sharpshooter_damage",
 			"special_bonus_corruption_4",
 			"special_bonus_unique_hoodwink_acorn_shot_charges",
 			"special_bonus_unique_hoodwink_bushwhack_radius"
@@ -7754,7 +7753,7 @@
 		"attack_type": "Melee",
 		"primary_attr": "Strength",
 		"movement_speed": 310,
-		"armor": 1,
+		"armor": 2,
 		"attack_speed": 100,
 		"attack_rate": 1.7,
 		"attack_damage_min": 29,
@@ -7851,11 +7850,11 @@
 			"special_bonus_unique_marci_lunge_range",
 			"special_bonus_unique_marci_guardian_lifesteal",
 			"special_bonus_unique_marci_grapple_damage",
-			"special_bonus_unique_marci_lunge_cooldown",
+			"special_bonus_unique_marci_lunge_movespeed",
 			"special_bonus_unique_marci_grapple_stun_duration",
 			"special_bonus_unique_marci_unleash_speed",
 			"special_bonus_unique_marci_dispose_range",
-			"special_bonus_unique_marci_guardian_magic_immune"
+			"special_bonus_unique_marci_guardian_damage"
 		]
 	},
 	"npc_dota_hero_primal_beast": {
