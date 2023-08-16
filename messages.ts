@@ -4756,6 +4756,26 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "silver_edge" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Enchantress`,
+    audioFile: `ownHero/Enchantress_6_AghsShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage:
+      `Pick up Aghanims Shard at the 15 minute mark to massively improve your damage and wave clear ability.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `aghanims_shard` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Enchantress`,
+    audioFile: `ownHero/Enchantress_7_AghsScepter`,
+    messageTime: 22 * 60,
+    textMessage:
+      `Look to build your Aghanims Scepter as early as you can for added lock down on enemy heroes.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `ultimate_scepter` },
+  },
 
   {
     category: "EnemyHero",
