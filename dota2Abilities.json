@@ -977,7 +977,7 @@
 				50
 			],
 			"name": "Crystal Clone",
-			"description": "Slides backward, creating a crystal clone of herself in her place. If the clone takes enough damage or times out, it shatters, Frostbiting enemies in a %frostbite_radius% AoE around its place.",
+			"description": "Slides backward, creating a crystal clone of herself in her place and disjointing incoming projectiles. If the clone takes enough damage or times out, it shatters, Frostbiting enemies in a %frostbite_radius% AoE around its place.",
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -1926,8 +1926,8 @@
 			"talent_level": 3,
 			"description": "-20s Moonlight Shadow Cooldown"
 		},
-		"special_bonus_attack_damage_35": {
-			"id": 6164,
+		"special_bonus_attack_damage_45": {
+			"id": 6253,
 			"sequence": "Ability15",
 			"is_talent": true,
 			"cooldown": [
@@ -1937,7 +1937,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+35 Damage"
+			"description": "+45 Damage"
 		},
 		"special_bonus_unique_mirana_2": {
 			"id": 6242,
@@ -2229,6 +2229,9 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
+				16,
+				14,
+				12,
 				10
 			],
 			"mana_cost": [
@@ -2251,6 +2254,9 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
+				16,
+				14,
+				12,
 				10
 			],
 			"mana_cost": [
@@ -3439,7 +3445,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+{s:bonus_sand_storm_radius} Sand Storm Radius"
+			"description": "+{s:bonus_sand_storm_move_speed} Sand Storm Movement Speed"
 		},
 		"special_bonus_unique_sand_king_8": {
 			"id": 890,
@@ -5211,8 +5217,8 @@
 			"is_debuff": false,
 			"is_buff": false
 		},
-		"special_bonus_attack_damage_20": {
-			"id": 5960,
+		"special_bonus_attack_damage_25": {
+			"id": 6009,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -5222,7 +5228,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+20 Damage"
+			"description": "+25 Damage"
 		},
 		"special_bonus_unique_lina_1": {
 			"id": 6212,
@@ -5237,8 +5243,8 @@
 			"talent_level": 1,
 			"description": "-{s:bonus_AbilityCooldown}s Dragon Slave Cooldown"
 		},
-		"special_bonus_hp_275": {
-			"id": 6311,
+		"special_bonus_hp_325": {
+			"id": 6423,
 			"sequence": "Ability12",
 			"is_talent": true,
 			"cooldown": [
@@ -5248,7 +5254,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+275 Health"
+			"description": "+325 Health"
 		},
 		"special_bonus_unique_lina_3": {
 			"id": 6388,
@@ -6072,7 +6078,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "-3s Guardian Sprint Cooldown"
+			"description": "-2s Guardian Sprint Cooldown"
 		},
 		"special_bonus_unique_slardar_slithereen_crush_stun": {
 			"id": 1085,
@@ -6493,6 +6499,8 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
+				100,
+				80,
 				60
 			],
 			"mana_cost": [
@@ -6571,7 +6579,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+100 Death Ward Attack Range"
+			"description": "+75 Death Ward Attack Range"
 		},
 		"special_bonus_unique_witch_doctor_7": {
 			"id": 555,
@@ -6610,7 +6618,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+60 Death Ward Damage"
+			"description": "+45 Death Ward Damage"
 		}
 	},
 	"npc_dota_hero_riki": {
@@ -6770,7 +6778,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+0.4 Backstab Multiplier"
+			"description": "+0.3 Backstab Multiplier"
 		},
 		"special_bonus_unique_riki_9": {
 			"id": 795,
@@ -6796,7 +6804,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "-4 Tricks of the Trade Cooldown"
+			"description": "-{s:bonus_abilitycooldown} Tricks of the Trade Cooldown"
 		},
 		"special_bonus_unique_riki_5": {
 			"id": 6867,
@@ -6854,12 +6862,12 @@
 				36
 			],
 			"mana_cost": [
-				140,
-				150,
-				160,
-				170
+				75,
+				100,
+				125,
+				150
 			],
-			"name": "Demonic Conversion",
+			"name": "Demonic Summoning",
 			"description": "Summons three fragments of Enigma himself at the cost of health. These eidolons are all under Enigma's control, and repeated successful attacks cause them to multiply.  When this happens, the eidolons have their health restored.",
 			"lore": "Enigma is capable of drawing aspects of himself from other dimensions - the result is a trio of dark eidolons that hunt the corporeal plane.",
 			"is_ultimate": false,
@@ -7020,7 +7028,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+{s:bonus_spawn_count} Demonic Conversion Eidolons"
+			"description": "+{s:bonus_spawn_count} Demonic Summoning Eidolons"
 		}
 	},
 	"npc_dota_hero_tinker": {
@@ -9084,7 +9092,7 @@
 				400
 			],
 			"name": "Exorcism",
-			"description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. Spirits need to return back to Death Prophet in order to attack again. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts %abilityduration% seconds.<br/> Passively grants Movement Speed.",
+			"description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. Spirits need to return back to Death Prophet in order to attack again. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts %abilityduration% seconds.<br/>Passively grants Movement Speed.",
 			"lore": "Over time, the banshee remnants of her previous lives return to haunt the present.",
 			"is_ultimate": true,
 			"is_passive": "no",
@@ -9397,7 +9405,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+7% Coup de Grace chance"
+			"description": "+{s:bonus_crit_chance}% Coup de Grace chance"
 		},
 		"special_bonus_unique_phantom_assassin": {
 			"id": 6192,
@@ -9422,9 +9430,9 @@
 				5
 			],
 			"mana_cost": [
-				85,
-				105,
-				125,
+				100,
+				115,
+				130,
 				145
 			],
 			"name": "Nether Blast",
@@ -10123,9 +10131,7 @@
 			"sequence": "Ability6",
 			"is_talent": false,
 			"cooldown": [
-				140,
-				130,
-				120
+				110
 			],
 			"mana_cost": [
 				150,
@@ -11581,7 +11587,7 @@
 				0
 			],
 			"talent_level": 4,
-			"description": "+1.2% Feast Lifesteal and Damage"
+			"description": "+{s:bonus_hp_damage_percent}% Feast Lifesteal and Damage"
 		},
 		"special_bonus_unique_lifestealer": {
 			"id": 6173,
@@ -11844,10 +11850,10 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"is_dispellable": "no",
+			"is_dispellable": "basic",
 			"is_debuff": true,
 			"is_buff": false,
-			"is_debuff_dispellable": "no"
+			"is_debuff_dispellable": "basic"
 		},
 		"clinkz_tar_bomb": {
 			"id": 1119,
@@ -12095,9 +12101,9 @@
 			"is_talent": false,
 			"cooldown": [
 				60,
-				55,
-				50,
-				45
+				52,
+				44,
+				36
 			],
 			"mana_cost": [
 				95,
@@ -12915,15 +12921,12 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
+				45,
 				40,
 				35,
-				30,
-				25
+				30
 			],
 			"mana_cost": [
-				50,
-				60,
-				70,
 				80
 			],
 			"name": "Insatiable Hunger",
@@ -13450,7 +13453,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+50 Shukuchi Damage"
+			"description": "+{s:bonus_damage} Shukuchi Damage"
 		},
 		"special_bonus_strength_9": {
 			"id": 6250,
@@ -13664,8 +13667,8 @@
 			"is_buff": false,
 			"is_debuff_dispellable": "basic"
 		},
-		"special_bonus_attack_range_275": {
-			"id": 481,
+		"special_bonus_attack_range_250": {
+			"id": 6040,
 			"sequence": "Ability10",
 			"is_talent": true,
 			"cooldown": [
@@ -13675,7 +13678,7 @@
 				0
 			],
 			"talent_level": 1,
-			"description": "+275 Attack Range"
+			"description": "+250 Attack Range"
 		},
 		"special_bonus_unique_jakiro_dualbreath_slow": {
 			"id": 1040,
@@ -14429,7 +14432,7 @@
 			"sequence": "Ability1",
 			"is_talent": false,
 			"cooldown": [
-				60
+				65
 			],
 			"mana_cost": [
 				40,
@@ -14996,7 +14999,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+10% Enrage Status Resistance"
+			"description": "+{s:bonus_status_resistance}% Enrage Status Resistance"
 		},
 		"special_bonus_unique_ursa_2": {
 			"id": 6973,
@@ -18783,7 +18786,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+0.4s Telekinesis Lift Duration"
+			"description": "+{s:bonus_lift_duration}s Telekinesis Lift/Stun Duration"
 		},
 		"special_bonus_unique_rubick_3": {
 			"id": 6863,
@@ -19604,7 +19607,7 @@
 				0
 			],
 			"name": "Chakra Magic",
-			"description": "Restores mana to the target unit and reduces cooldowns of all abilities currently on cooldown by a fixed amount. Is %self_bonus%%% more effective when used on himself.",
+			"description": "Restores mana to the target unit and reduces cooldowns of all basic abilities currently on cooldown by a fixed amount. Is %self_bonus%%% more effective when used on himself.",
 			"lore": "In the same vein, Ezalor bestows his harmony among others.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -22055,24 +22058,6 @@
 			"is_buff": false,
 			"is_debuff_dispellable": "basic"
 		},
-		"tusk_frozen_sigil": {
-			"id": 5567,
-			"sequence": "Ability5",
-			"is_talent": false,
-			"cooldown": [
-				30
-			],
-			"mana_cost": [
-				70
-			],
-			"name": "Frozen Sigil",
-			"description": "Summons a flying Sigil that slows movement speed by -40% for enemies within 650 radius. Lasts 25 seconds. Cooldown: 30",
-			"lore": "The chill of home!",
-			"is_ultimate": false,
-			"is_passive": "no",
-			"is_debuff": false,
-			"is_buff": false
-		},
 		"tusk_walrus_punch": {
 			"id": 5568,
 			"sequence": "Ability6",
@@ -23628,7 +23613,7 @@
 			"lore": "n/a",
 			"is_ultimate": false,
 			"is_passive": "no",
-			"is_dispellable": "basic",
+			"is_dispellable": "no",
 			"is_debuff": false,
 			"is_buff": false
 		},
@@ -24555,13 +24540,13 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				7
+				6
 			],
 			"mana_cost": [
 				105,
-				120,
-				135,
-				150
+				115,
+				125,
+				135
 			],
 			"name": "Splinter Blast",
 			"description": "Launches a ball of brittle ice toward an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a %split_radius% base radius. Enemies struck by these splinters are slowed by %movespeed_slow_tooltip%%%.",
@@ -24665,7 +24650,7 @@
 				0
 			],
 			"talent_level": 2,
-			"description": "+2s Arctic Burn Debuff Duration"
+			"description": "+3s Arctic Burn Debuff Duration"
 		},
 		"special_bonus_unique_winter_wyvern_2": {
 			"id": 6297,
@@ -24691,7 +24676,7 @@
 				0
 			],
 			"talent_level": 3,
-			"description": "+12% Arctic Burn Slow"
+			"description": "+17% Arctic Burn Slow"
 		},
 		"special_bonus_unique_winter_wyvern_7": {
 			"id": 719,
@@ -24745,7 +24730,7 @@
 				75
 			],
 			"name": "Flux",
-			"description": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time. The damage is not applied if another enemy unit is near the target. <br><br> <h2>Arc Warden:</h2> Slows the target's movement speed. <br><br><h2>Tempest Double:</h2> Movement speed slow is decreased, but damage is increased.",
+			"description": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time. The damage is not applied if another enemy unit is near the target. <br><br><h2>Arc Warden:</h2> Slows the target's movement speed. <br><br><h2>Tempest Double:</h2> Movement speed slow is decreased, but damage is increased.",
 			"lore": "An infinitesimal fraction of the power which imprisoned the Ancients.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24760,7 +24745,10 @@
 			"sequence": "Ability2",
 			"is_talent": false,
 			"cooldown": [
-				20
+				20,
+				19,
+				18,
+				17
 			],
 			"mana_cost": [
 				50,
@@ -24769,7 +24757,7 @@
 				110
 			],
 			"name": "Magnetic Field",
-			"description": "<h2>Arc Warden:</h2> Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field. <br><br> <h2>Tempest Double:</h2> Allies gain bonus attack range and deal bonus damage with their attacks. Duration is increased.",
+			"description": "<h2>Arc Warden:</h2> Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field. <br><br><h2>Tempest Double:</h2> Allies gain bonus attack range and deal bonus damage with their attacks. Duration is increased.",
 			"lore": "Time and space are of little consequence to one as old as Zet.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -24791,7 +24779,7 @@
 				80
 			],
 			"name": "Spark Wraith",
-			"description": "<h2>Arc Warden:</h2> Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.<br><br> <h2>Tempest Double:</h2> Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
+			"description": "<h2>Arc Warden:</h2> Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.<br><br><h2>Tempest Double:</h2> Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
 			"lore": "Lesser fragments of Zet's original self.",
 			"is_ultimate": false,
 			"is_passive": "no",
@@ -25184,10 +25172,10 @@
 			"sequence": "Ability3",
 			"is_talent": false,
 			"cooldown": [
-				20,
 				18,
 				16,
-				14
+				14,
+				12
 			],
 			"mana_cost": [
 				100
@@ -25441,13 +25429,13 @@
 				12
 			],
 			"mana_cost": [
+				60,
 				70,
 				80,
-				90,
-				100
+				90
 			],
 			"name": "Shield Crash",
-			"description": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains an all damage for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
+			"description": "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging and slowing all enemies in a radius. For each enemy hero hit, he gains an all damage shield for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
 			"lore": "Only in the midst of his enemies does the Pangolier truly thrive.",
 			"is_ultimate": false,
 			"is_passive": "no",
