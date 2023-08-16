@@ -5860,7 +5860,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Earth Spirit": {
-    gameplay_version: `7.34`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5907,7 +5907,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             `ward_sentry`,
-			`urn_of_shadows`,
+            `urn_of_shadows`,
             "tranquil_boots",
             "magic_wand",
             `infused_raindrop`,
@@ -5920,22 +5920,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           late_game: [
             `octarine_core`,
-			`blink`,
-			`ultimate_scepter`,
+            `blink`,
+            `ultimate_scepter`,
             `ethereal_blade`,
           ],
           situational: [
             "spirit_vessel",
             `veil_of_discord`,
             `pavise`,
-			`ghost`,
-			`force_staff`,
+            `ghost`,
+            `force_staff`,
             `kaya_and_sange`,
             "lotus_orb",
             "heavens_halberd",
             `pipe`,
             `solar_crest`,
-			`aeon_disk`,
+            `aeon_disk`,
             `overwhelming_blink`,
             `wind_waker`,
             `travel_boots`,
@@ -5946,7 +5946,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `black_king_bar`,
             `aghanims_shard`,
             `blink`,
-			`ultimate_scepter`,
+            `ultimate_scepter`,
           ],
           neutral: [
             `faded_broach`,
@@ -5964,8 +5964,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-		earth_spirit_geomagnetic_grip: `You can put a point in Geomagnetic Grip at level 4 if the silence is important to kill an enemy hero.`,
-	},
+      earth_spirit_geomagnetic_grip: `You can put a point in Geomagnetic Grip at level 4 if the silence is important to kill an enemy hero.`,
+    },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
       orb_of_venom: `Works well in staying on top of enemy heroes along with the Boulder Smash slow.`,
@@ -8765,7 +8765,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Keeper of the Light": {
-    gameplay_version: `7.34`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8822,7 +8822,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             `pavise`,
-			`force_staff`,
+            `force_staff`,
             `glimmer_cape`,
             `ultimate_scepter`,
             `aghanims_shard`,
@@ -8832,7 +8832,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `spirit_vessel`,
             `veil_of_discord`,
             `solar_crest`,
-			`ghost`,
+            `ghost`,
             `octarine_core`,
             "lotus_orb",
             "blink",
@@ -8866,8 +8866,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ability_tooltips: {
       /* special_bonus_unique_keeper_of_the_light_illuminate_cooldown:
         "Skill this level 10 talent on level 16 and the suggested level 15 talent on level 15. The dota client disallows me to present that order in graphics above.", */
-	  special_bonus_unique_keeper_of_the_light:
-        `You can skill this talent over recommended one if you are against mega creeps.`,
+      special_bonus_unique_keeper_of_the_light: `You can skill this talent over recommended one if you are against mega creeps.`,
     },
     item_tooltips: {
       ward_sentry: `To unblock the pull camp in case they block it.`,
@@ -11399,7 +11398,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Marci: {
-    gameplay_version: `7.34`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -11454,7 +11453,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [`solar_crest`, `black_king_bar`, `ultimate_scepter`, `aghanims_shard`],
+          mid_game: [
+            `solar_crest`,
+            `black_king_bar`,
+            `ultimate_scepter`,
+            `aghanims_shard`,
+          ],
           late_game: [
             `blink`,
             `abyssal_blade`,
@@ -11481,7 +11485,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ultimate_scepter`,
             `aghanims_shard`,
             `abyssal_blade`,
-			`greater_crit`,
+            `greater_crit`,
           ],
           neutral: [
             `unstable_wand`,
@@ -11574,11 +11578,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `vanguard`,
-			`spirit_vessel`,
+            `spirit_vessel`,
             `armlet`,
             `orb_of_corrosion`,
             `power_treads`,
-			`heavens_halberd`,
+            `heavens_halberd`,
             `diffusal_blade`,
             `silver_edge`,
             `monkey_king_bar`,
@@ -11590,7 +11594,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: [
             `phase_boots`,
             `ultimate_scepter`,
-			`black_king_bar`,
+            `black_king_bar`,
             `basher`,
             `blink`,
             `greater_crit`,
@@ -14428,7 +14432,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Ogre Magi": {
-    gameplay_version: `7.34`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14492,14 +14496,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           late_game: [
             `aghanims_shard`,
-			`heart`,
+            `heart`,
             `sheepstick`,
             `ultimate_scepter`,
             `octarine_core`,
           ],
           situational: [
             `orb_of_venom`,
-			`ring_of_basilius`,
+            `ring_of_basilius`,
             `veil_of_discord`,
             `spirit_vessel`,
             `pavise`,
@@ -14508,18 +14512,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `heavens_halberd`,
             "blink",
             `solar_crest`,
-			`phylactery`,
+            `phylactery`,
             `ghost`,
             `guardian_greaves`,
             `travel_boots`,
           ],
           core: [
             `arcane_boots`,
-			`hand_of_midas`,
+            `hand_of_midas`,
             `aether_lens`,
             `glimmer_cape`,
             `force_staff`,
-			`aghanims_shard`,
+            `aghanims_shard`,
             `heart`,
           ],
           neutral: [
@@ -14546,8 +14550,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       orb_of_venom: `Helps you stick on top of enemy heroes in the lane to attack them more often.`,
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane`,
       infused_raindrop: "Against magical burst.",
-      hand_of_midas:
-        `A core item that lets you scale into the mid and late game with double charge and Multicast.`,
+      hand_of_midas: `A core item that lets you scale into the mid and late game with double charge and Multicast.`,
       arcane_boots:
         "A core item that helps with mana sustain. Can be disassembled down the road.",
       veil_of_discord: `A situational item that amplifies your teams spell damage (all types). Extremely potent with the level 10 Ignite talent.`,
@@ -16904,7 +16907,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Pugna: {
-    gameplay_version: `7.34`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -16965,7 +16968,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           late_game: [
             `dagon_5`,
-			`blink`,
+            `blink`,
             `ultimate_scepter`,
             `octarine_core`,
             `sheepstick`,
@@ -16980,7 +16983,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sphere",
             `shivas_guard`,
             `overwhelming_blink`,
-			`arcane_blink`,
+            `arcane_blink`,
             `aghanims_shard`,
             `travel_boots_2`,
           ],
@@ -16989,8 +16992,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `arcane_boots`,
             `kaya_and_sange`,
             `aether_lens`,
-			`travel_boots`,
-			`dagon_5`,
+            `travel_boots`,
+            `dagon_5`,
             "blink",
             `ultimate_scepter`,
           ],
@@ -17010,8 +17013,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         item_tooltips: {
           bottle:
             "A core item that provides you with sustain and allows you to gank with stored rune.",
-          arcane_boots:
-            `A core item that helps with mana sustain. It will be disassembled and Energy Booster used for Aether Lens. Boots should be used for Boots of Travel.`,
+          arcane_boots: `A core item that helps with mana sustain. It will be disassembled and Energy Booster used for Aether Lens. Boots should be used for Boots of Travel.`,
           travel_boots: "A core item that allows you to cover the map better.",
           black_king_bar:
             "Agaist a lot of disables, silences and magical damage.",
