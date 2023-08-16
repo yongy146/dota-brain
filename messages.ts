@@ -6334,6 +6334,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Keeper of the Light`,
+    audioFile: `ownHero/KeeperOfTheLight_10_AghanimsScepter`,
+    messageTime: 1 * 60,
+    textMessage:
+      `Use Blinding Light to push opponents under your tower or closer to your core if you can get a favourable trade.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `keeper_of_the_light_blinding_light` },
+  },
 
   {
     category: "EnemyHero",
@@ -8125,6 +8135,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60,
     textMessage: `Look to play with one of your cores with Sidekick to get kills on the map.`,
     audience: [Audience.ROLE_SUPPORT],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Marci`,
+    audioFile: `ownHero/Marci_9_Sidekick2`,
+    messageTime: 2 * 60 + 15,
+    textMessage: `Use Sidekick on your laning partner as soon as you have it to keep a damage and sustain advantage.`,
+    audience: [Audience.ALL],
   },
 
   {
@@ -11590,7 +11608,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Pugna_4_ChipTowers",
     messageTime: [3 * 60, 7 * 60],
     textMessage:
-      "Chip opponents' towers gradually with Nether Blast whenever you can and current mana allows it.",
+      `Chip opponents' towers gradually with Nether Blast whenever you can if current mana allows it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pugna_nether_blast" },
   },
