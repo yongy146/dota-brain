@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 /**
- * This library is used to access all manual dota 2 data of Dota Coach (on items and abilities)
+ * This library is used to access static Dota 2 data on Heroes, Items and Abilities.
  *
- * The only separated information sources in this folder are openDotaAPI.ts and startzAPI.ts
+ * Dynamic data such as data from Open Dota are not covered by this module.
  *
- * Copyright Dota Coach, 2022. All rights reserved
+ * (C) Dota Coach, 2023
  */
-
 import * as HeroBuilds from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json"; //assert { type: "json" };

@@ -8,8 +8,8 @@ This repository contains the core knowledge of Dota Coach, which is used by the 
 
 The key files in the repository are:
 
-- heroBuilds.ts: Ability and items builds, combos, and counter itmes
-- messages.ts: Notifications and coaching tips for own as well as enemy heroes
+- heroBuilds.ts: Ability and items builds, combos, and counter items
+- messages.ts: Notifications and coaching tips for own and against enemy heroes
 - disables.ts: Disables of all heroes
 - dispellableBuffs.ts: Dispellalbe buffs of all heroes
 - screenSizes.ts: Positioning of the Dota Coach app within the game
@@ -44,8 +44,8 @@ The best way to contribute is to provide input to this GitHub repository. You ca
 
 # Can I also use the command line tool git?
 
-Yes, absolutely. More advance users will defintly use git (https://git-scm.com/docs/git). Alternatively you can also work with GitHub Desktop and most IDEs (e.g. Visual Studio Code) directly integrate with GitHub.
+Yes, absolutely. More advance users will definitely use git (https://git-scm.com/docs/git). Alternatively, you can also work with GitHub Desktop and most IDEs (e.g. Visual Studio Code) directly integrate with GitHub.
 
 # Contact
 
-You can contact us via e-mail (info@dotacoach.gg) or join our Discord server (https://discord.gg/CvTUQKg2nt).
+You can contact us via e-mail (info@dotacoach.gg) or join our Discord server (https://discord.gg/zgrYW8p3kV).
