@@ -6337,10 +6337,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: `OwnHero`,
     hero: `Keeper of the Light`,
-    audioFile: `ownHero/KeeperOfTheLight_10_AghanimsScepter`,
+    audioFile: `ownHero/KeeperOfTheLight_11_BlindingLight`,
     messageTime: 1 * 60,
-    textMessage:
-      `Use Blinding Light to push opponents under your tower or closer to your core if you can get a favourable trade.`,
+    textMessage: `Use Blinding Light to push opponents under your tower or closer to your core if you can get a favourable trade.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `keeper_of_the_light_blinding_light` },
   },
@@ -11607,8 +11606,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Pugna",
     audioFile: "ownHero/Pugna_4_ChipTowers",
     messageTime: [3 * 60, 7 * 60],
-    textMessage:
-      `Chip opponents' towers gradually with Nether Blast whenever you can if current mana allows it.`,
+    textMessage: `Chip opponents' towers gradually with Nether Blast whenever you can if current mana allows it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pugna_nether_blast" },
   },
