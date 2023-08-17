@@ -2975,7 +2975,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CrystalMaiden_7_DontUlt",
     messageTime: 16 * 60 + 15,
     repeatTime: 8 * 60,
-    textMessage: `Dont rush with using Freezing Field in fights unless you can support it with Aghanims Shard and Glimmer Cape.`,
+    textMessage: `Dont rush with using Freezing Field in fights unless you can support it with Glimmer Cape.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_freezing_field" },
   },
@@ -2988,7 +2988,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: `ability`, name: `crystal_maiden_frostbite` },
   },
-  {
+  /* {
     category: `OwnHero`,
     hero: `Crystal Maiden`,
     audioFile: `ownHero/CrystalMaiden_9_AghsShardUltimate`,
@@ -2996,6 +2996,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Remember to use Boots of Bearing to gain movespeed during Freezing Field with Aghamins Shard.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `boots_of_bearing` },
+  }, */
+  {
+    category: `OwnHero`,
+    hero: `Crystal Maiden`,
+    audioFile: `ownHero/CrystalMaiden_10_AghsShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage: `Get Aghanims Shard at the 15 minute mark as it gives you more mobility, lockdown and wave clear.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `aghanims_shard` },
   },
 
   {
@@ -5079,7 +5088,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Grimstroke",
     audioFile: "ownHero/Grimstroke_1_SecureRanged",
     messageTime: 15,
-    textMessage: `Use Stroke of Faith to secure range creep lasthits and hit opponents at the same time.`,
+    textMessage: `Use Stroke of Faith to secure range creep last hits and hit opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "grimstroke_dark_artistry" },
   },
@@ -6961,7 +6970,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_7_PushSidelanes",
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
-    textMessage: "When not much is happening, push out sidelanes with Frost Shield and Blast.",
+    textMessage: `When not much is happening, push out side lanes with Frost Shield and Blast.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_frost_shield" },
   },

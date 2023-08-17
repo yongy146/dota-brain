@@ -4054,7 +4054,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   "Crystal Maiden": {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -4124,12 +4124,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             "ring_of_basilius",
             `lotus_orb`,
-            "ethereal_blade",
+            `ghost`,
             "octarine_core",
             `shivas_guard`,
             `pavise`,
             `sheepstick`,
-            `wind_waker`,
+            `cyclone`,
             "travel_boots",
           ],
           core: [
@@ -4147,7 +4147,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             "psychic_headband",
-            `ceremonial_robe`,
+            `ogre_seal_totem`,
             "spy_gadget",
             `timeless_relic`,
             "seer_stone",
@@ -4173,7 +4173,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       black_king_bar: `Allows you to channel Freezing Field longer. Couples well with Blink Dagger to be able to position your ultimate nicely.`,
       blink: "Goes well with the build centered around your ultimate.",
       aghanims_shard:
-        "Allows you to cast and move slowly while channeling the Freezing Field.",
+        `A core item that gives you more mobility and lockdown in fights, as well as helping you clear waves without having to stay and last hit.`,
       lotus_orb: "For reflect, dispel and armor.",
       ultimate_scepter: `An incredible late game pick up that goes will with Blink Dagger, Black King Bar and Aghanims Shard.`,
       pavise: `A situational item to gain some mana regen and buff yourself and your cores against physical damage.`,
@@ -4208,7 +4208,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         core: [],
       },
       mid_game: {
-        all: [],
+        all: [
+		  {
+            item: `cloak`,
+            info: `Crystal Maiden does a lot of magical damage and Cloak offsets 20% of it`,
+          },
+		],
         support: [{ item: "force_staff" }, { item: "glimmer_cape" }],
         core: [
           /* { item: "hood_of_defiance" }, */
@@ -5190,7 +5195,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Disruptor: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5201,8 +5206,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "disruptor_thunder_strike", // 1
-          `disruptor_glimpse`, // 2
+          `disruptor_glimpse`, // 1
+          `disruptor_thunder_strike`, // 2
           `disruptor_glimpse`, // 3
           `disruptor_kinetic_field`, // 4
           "disruptor_glimpse", // 5
@@ -5250,18 +5255,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `pavise`,
             `glimmer_cape`,
             `ultimate_scepter`,
-            `boots_of_bearing`,
+            `force_staff`,
           ],
-          late_game: [`force_staff`, `blink`, `refresher`, `octarine_core`],
+          late_game: [`blink`, `aeon_disk`, `refresher`, `octarine_core`],
           situational: [
             `ring_of_basilius`,
             `guardian_greaves`,
             `aether_lens`,
             `lotus_orb`,
             `aghanims_shard`,
-            `ethereal_blade`,
-            `wind_waker`,
-            `octarine_core`,
+			`boots_of_bearing`,
+            `ghost`,
+            `cyclone`,
             `travel_boots`,
           ],
           core: [
@@ -5269,11 +5274,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `pavise`,
             `glimmer_cape`,
             `ultimate_scepter`,
-            `boots_of_bearing`,
             `force_staff`,
+            `blink`,
+			`refresher`,
           ],
           neutral: [
-            `faded_broach`,
+            `trusty_shovel`,
             `pogo_stick`,
             "philosophers_stone",
             `eye_of_the_vizier`,
@@ -5318,7 +5324,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           },
           {
             item: "cloak",
-            info: `Disruptor is heavy on magical damage and Cloak negates 15% of it`,
+            info: `Disruptor is heavy on magical damage and Cloak negates 20% of it`,
           },
         ],
         support: [],
@@ -7127,7 +7133,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Grimstroke: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -7145,13 +7151,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "grimstroke_spirit_walk", // 5
           `grimstroke_soul_chain`, // 6
           "grimstroke_spirit_walk", // 7
-          "grimstroke_dark_artistry", // 8
-          `grimstroke_dark_artistry`, // 9
+          `grimstroke_ink_creature`, // 8
+          `grimstroke_ink_creature`, // 9
           `special_bonus_unique_grimstroke_7`, // 10
           `grimstroke_dark_artistry`, // 11
           "grimstroke_soul_chain", // 12
-          `grimstroke_ink_creature`, // 13
-          `grimstroke_ink_creature`, // 14
+          `grimstroke_dark_artistry`, // 13
+          `grimstroke_dark_artistry`, // 14
           `special_bonus_unique_grimstroke_6`, // 15
           "grimstroke_ink_creature", // 16
           "special_bonus_attributes", // 17
@@ -7188,18 +7194,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `tranquil_boots`,
             "aghanims_shard",
             `force_staff`,
+			`glimmer_cape`,
           ],
           late_game: [
             "ultimate_scepter",
-            "aeon_disk",
-            "ethereal_blade",
             `sheepstick`,
             `octarine_core`,
+            `ethereal_blade`,
           ],
           situational: [
-            `guardian_greaves`,
-            `glimmer_cape`,
-            `wind_waker`,
+            `ring_of_basilius`,
+			`guardian_greaves`,
+            `aeon_disk`,
+			`boots_of_bearing`,
+            `cyclone`,
+			`ghost`,
             `dagon_5`,
             `phylactery`,
             "lotus_orb",
@@ -7210,10 +7219,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aether_lens",
             `tranquil_boots`,
             `aghanims_shard`,
+			`force_staff`,
+			`glimmer_cape`,
             `ultimate_scepter`,
+			`sheepstick`,
           ],
           neutral: [
-            `faded_broach`,
+            `trusty_shovel`,
             `arcane_ring`,
             `philosophers_stone`,
             `eye_of_the_vizier`,
@@ -7276,7 +7288,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         core: [],
       },
       mid_game: {
-        all: [{ item: "cyclone" }, { item: "lotus_orb" }],
+        all: [
+		  { item: `cyclone` },
+		  { item: `lotus_orb` },
+		  {
+            item: `cloak`,
+            info: `Grimstroke does a lot of magical damage and Cloak offsets 20% of it`,
+          },
+		],
         support: [{ item: "glimmer_cape" }, { item: "force_staff" }],
         core: [
           /* { item: "hood_of_defiance" }, */
@@ -9584,7 +9603,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Lich: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -9614,7 +9633,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "lich_chain_frost", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_lich_4`, // 20
+          `special_bonus_unique_lich_7`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -9648,22 +9667,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `boots_of_bearing`,
           ],
           late_game: [
-            "aeon_disk",
+            `aether_lens`,
+			`aeon_disk`,
             `ultimate_scepter`,
-            "octarine_core",
-            `ethereal_blade`,
-            `sheepstick`,
+            `octarine_core`,
           ],
           situational: [
             `ring_of_basilius`,
             `ghost`,
             `phylactery`,
-            `aether_lens`,
+            `sheepstick`,
             "lotus_orb",
             `solar_crest`,
             `refresher`,
             "blink",
-            `wind_waker`,
+            `cyclone`,
             `travel_boots`,
           ],
           core: [
@@ -9673,10 +9691,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aghanims_shard`,
             `force_staff`,
             `boots_of_bearing`,
+			`ultimate_scepter`,
             `octarine_core`,
           ],
           neutral: [
-            `faded_broach`,
+            `seeds_of_serenity`,
             `arcane_ring`,
             "philosophers_stone",
             `eye_of_the_vizier`,
@@ -9685,7 +9704,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "spy_gadget",
             `spell_prism`,
             "seer_stone",
-            `force_field`,
+            `book_of_shadows`,
           ],
         },
       },
@@ -9699,7 +9718,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       tranquil_boots: `A core boots upgrade that helps with mobility and HP sustain. Can be combined with Drums to make Boots of Bearing.`,
       aether_lens: `Lets you cast spells from a greater range and especially improving your Sinister Gaze.`,
       solar_crest: `An item to buff one of your right-clicking cores or to debuff an opponent or Roshan to kill it faster.`,
-      aghanims_shard: `A core item fir extra control and potential to burst a secluded enemy hero with Chain Frost.`,
+      aghanims_shard: `A core item for extra control and potential to burst a secluded enemy hero with Chain Frost.`,
       lotus_orb: "For reflect, dispel and armor.",
       blink:
         "Goes well with Aghanim`s Shard to burst a single hero. Good for canceling channeling spells(Fiend`s Grip, Shackles).",
@@ -9736,7 +9755,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "infused_raindrop" },
           {
             item: "cloak",
-            info: "Lich is heavy on magical damage and Cloak will negate 15% of it",
+            info: `Lich is heavy on magical damage and Cloak will negate 20% of it`,
           },
         ],
         support: [],
@@ -18531,7 +18550,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Shadow Demon": {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -18542,8 +18561,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          "shadow_demon_shadow_poison", // 1
-          "shadow_demon_disruption", // 2
+          `shadow_demon_disruption`, // 1
+          `shadow_demon_shadow_poison`, // 2
           "shadow_demon_shadow_poison", // 3
           `shadow_demon_disruption`, // 4
           "shadow_demon_shadow_poison", // 5
@@ -18551,12 +18570,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "shadow_demon_shadow_poison", // 7
           "shadow_demon_disruption", // 8
           "shadow_demon_disruption", // 9
-          `special_bonus_unique_shadow_demon_4`, // 10
+          `special_bonus_strength_12`, // 10
           `shadow_demon_disseminate`, // 11
           "shadow_demon_demonic_purge", // 12
           `shadow_demon_disseminate`, // 13
           `shadow_demon_disseminate`, // 14
-          `special_bonus_movement_speed_25`, // 15
+          `special_bonus_unique_shadow_demon_3`, // 15
           `shadow_demon_disseminate`, // 16
           "special_bonus_attributes", // 17
           "shadow_demon_demonic_purge", // 18
@@ -18590,6 +18609,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           mid_game: [
             "aether_lens",
             `tranquil_boots`,
+			`glimmer_cape`,
             `force_staff`,
             `aghanims_shard`,
           ],
@@ -18598,30 +18618,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ultimate_scepter`,
             `refresher`,
             "octarine_core",
-            `aeon_disk`,
+            `sheepstick`,
           ],
           situational: [
             `ring_of_basilius`,
             `urn_of_shadows`,
-            `sheepstick`,
-            `glimmer_cape`,
+            `aeon_disk`,
             `boots_of_bearing`,
             `guardian_greaves`,
             "lotus_orb",
             `ghost`,
-            `wind_waker`,
+            `cyclone`,
             `travel_boots`,
           ],
           core: [
             "arcane_boots",
             "aether_lens",
             `tranquil_boots`,
+			`glimmer_cape`,
             `force_staff`,
             `aghanims_shard`,
-            "ultimate_scepter",
+            `ultimate_scepter`,
+			`refresher`,
           ],
           neutral: [
-            `faded_broach`,
+            `arcane_ring`,
             `pogo_stick`,
             "philosophers_stone",
             `eye_of_the_vizier`,
@@ -18671,7 +18692,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "ring_of_regen", info: "For sustain on the lane" },
           {
             item: "cloak",
-            info: "Shadow Demon is heavy on magical damage and Cloak will reduce 15% of it",
+            info: `Shadow Demon is heavy on magical damage and Cloak will reduce 20% of it`,
           },
         ],
         support: [
