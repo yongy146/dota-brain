@@ -337,6 +337,7 @@ export const disables: IDisables = {
   ],
   Enchantress: [
     // Enchanted neutral creeps can stun(Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
+	// The Aghanims Scepter on Enchantress gives her a Hero Root with Little Friends.
   ],
   Enigma: [
     {
@@ -536,6 +537,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
+	// The Aghanims Shard gives Marci an Area silence with Unleash.
   ],
   Mars: [
     {
