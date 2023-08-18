@@ -195,6 +195,7 @@ export const disables: IDisables = {
       disables: ["root"],
     },
     // Aghanim's Scepter allows Freezing Field to apply Frostbite.
+	// The Aghanims Shard on Crystal Maiden gives her another Area Root with Crystal Clone.
   ],
   "Dark Seer": [
     // Vacuum acts as area stun(forced movement by dota2.gamepedia.com).
@@ -371,7 +372,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Phantom's Embrace is a hero silence that can be cast on additional hero through the Soulbind.
-    // Ink Swell is an area stun. It is cast on allied unit and it stuns around it after 3s.
+    // Ink Swell is an area stun. It is cast on allied unit and it stuns around it upon triggering Ink Swell again.
     // Soulbind is a AbilityAffects.HERO root(leash by dota2.gamepedia.com). It only roots if it latched to another hero. Otherwise it does nothing.
   ],
   Gyrocopter: [
