@@ -536,7 +536,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Alchemist: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -576,14 +576,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "quelling_blade",
-            "circlet",
+            "gauntlets",
             "gauntlets",
             "branches",
             "branches",
           ],
           early_game: [
-            "ring_of_basilius",
-            "bracer",
+            "soul_ring",
             "power_treads",
             "magic_wand",
             "radiance",
@@ -605,6 +604,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "sphere",
             "swift_blink",
+            "manta",
+            "heart"
           ],
           core: [
             "power_treads",
@@ -616,9 +617,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           neutral: [
             "broom_handle",
-            //"misericorde",
             "duelist_gloves",
-            //"dagger_of_ristul", Removed in 7.33
             "orb_of_destruction",
             "ring_of_aquila",
             "ogre_seal_totem",
@@ -688,6 +687,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "branches",
+            "branches",
             "faerie_fire",
             "ward_observer",
           ],
@@ -707,6 +707,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "nullifier",
             "swift_blink",
             "sphere",
+            "soul_ring"
           ],
           core: [
             "bottle",
@@ -975,7 +976,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Anti-Mage": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -994,13 +995,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "antimage_blink",
           "antimage_blink",
           "antimage_mana_break",
-          "special_bonus_unique_antimage",
+          "special_bonus_strength_9",
           "antimage_mana_break",
           "antimage_mana_void",
           "antimage_counterspell",
           "antimage_counterspell",
           "antimage_counterspell",
-          "special_bonus_unique_antimage_7",
+          "special_bonus_unique_antimage",
           "special_bonus_attributes",
           "antimage_mana_void",
           "special_bonus_attributes",
@@ -1015,22 +1016,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "quelling_blade",
             "tango",
-            "magic_stick",
             "circlet",
+            "slippers",
             "branches",
+            "branches"
           ],
-          early_game: ["cornucopia", "power_treads", "magic_wand"],
+          early_game: ["wraith_band", "cornucopia", "power_treads", "magic_wand"],
           mid_game: ["bfury", "manta", "basher"],
           late_game: [
             "skadi",
             "abyssal_blade",
             "satanic",
             "butterfly",
-            "ultimate_scepter",
           ],
           situational: [
             "vanguard",
-            "wraith_band",
             "black_king_bar",
             "monkey_king_bar",
             "sphere",
@@ -1040,6 +1040,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "diffusal_blade",
             "blood_grenade",
             "heart",
+            "ultimate_scepter",
             "orb_of_corrosion",
           ],
           core: ["power_treads", "bfury", "manta", "abyssal_blade"],
@@ -2178,7 +2179,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Bloodseeker: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -3344,7 +3345,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Chaos Knight": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -3363,7 +3364,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "chaos_knight_chaos_strike", // 7
           "chaos_knight_reality_rift", // 8
           "chaos_knight_reality_rift", // 9
-          "special_bonus_unique_chaos_knight_2", // 10
+          "special_bonus_unique_chaos_knight_6", // 10
           "chaos_knight_reality_rift", // 11
           "chaos_knight_phantasm", // 12
           "chaos_knight_chaos_bolt", // 13
@@ -3399,7 +3400,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_wand",
             "power_treads",
             "bracer",
-            "helm_of_iron_will",
+            "hand_of_midas",
           ],
           mid_game: [
             "armlet",
@@ -3421,7 +3422,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             "ultimate_scepter",
             "infused_raindrop",
-            "hand_of_midas",
             "sange_and_yasha",
             "silver_edge",
             "manta",
@@ -3522,6 +3522,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "silver_edge",
             "manta",
             "sange_and_yasha",
+            "hand_of_midas"
           ],
           core: [
             "power_treads",
@@ -5016,7 +5017,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Death Prophet": {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
