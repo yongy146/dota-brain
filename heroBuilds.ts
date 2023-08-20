@@ -88,7 +88,7 @@ export interface IContentCreatorLink {
 }
 
 export enum DamageType {
-  neutral = "neutral", // Combination of physcal, magical and pure
+  neutral = "neutral", // Combination of physical, magical and pure
   physical = "physical",
   magical = "magical",
   pure = "pure",
@@ -1355,8 +1355,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Axe: {
-    gameplay_version: `7.33e`,
-    creator: ContentCreator.YoonA,
+    gameplay_version: `7.34b`,
+    creator: ContentCreator.TNTCNz,
     damage_type: DamageType.pure,
     builds: [
       {
