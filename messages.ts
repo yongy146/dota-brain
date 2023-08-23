@@ -3346,6 +3346,33 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "dawnbreaker_solar_guardian" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Dawnbreaker`,
+    audioFile: `ownHero/Dawnbreaker_5_MapAggression`,
+    messageTime: 18 * 60 + 15,
+    textMessage: `Once you Echo Sabre and Desolator, play as aggressively as you can with your teammates to get kills across the map.`,
+    audience: [Audience.OFFLANE],
+    image: { type: `item`, name: `desolator` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Dawnbreaker`,
+    audioFile: `ownHero/Dawnbreaker_6_AghanimShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage: `Pick up Aghanims Shard at the 15 minute mark as it gives you spell immunity and better control with Starbreaker.`,
+    audience: [Audience.OFFLANE],
+    image: { type: `item`, name: `aghanims_shard` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Dawnbreaker`,
+    audioFile: `ownHero/Dawnbreaker_7_AghanimScepter`,
+    messageTime: 28 * 60 + 30,
+    textMessage: `With the Aghanims Scepter, think about how long you should heal an ally and land quickly if the stun is necessary.`,
+    audience: [Audience.SUPPORT],
+    image: { type: `item`, name: `ultimate_scepter` },
+  },
 
   {
     category: "EnemyHero",
@@ -16388,7 +16415,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Vengeful Spirit`,
     audioFile: `ownHero/VengefulSpirit_6_AghsShard`,
     messageTime: 14 * 60 + 55,
-    textMessage: `Pick up Aghanims Shard at the 15 minute mark as it massively improves your impact in teamfights.`,
+    textMessage: `Pick up Aghanims Shard at the 15 minute mark to stun multiple heroes in teamfights.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `aghanims_shard` },
   },
@@ -17591,7 +17618,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_paralyzing_cask" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Witch Doctor",
     audioFile: "ownHero/WitchDoctor_9_DeathWardFallsOff",
@@ -17601,7 +17628,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Death Ward's damage output falls off significantly due to opponents' increasing armor, so focus on landing other spells.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_death_ward" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Witch Doctor",
