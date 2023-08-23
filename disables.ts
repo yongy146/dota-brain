@@ -796,6 +796,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
+	// The Aghanims Shard on Silencer gives him another Hero Silence with Glaives of Wisdom. Can silence more than one hero with Glaive bounce talent.
   ],
   "Skywrath Mage": [
     {
@@ -963,6 +964,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	// The Aghanims Shard on Vengeful Spirit lets her Stun two Heroes with every Magic Missile cast.
   ],
   Venomancer: [
 	//The Aghanim Shard on Venomancer provides a Hero stun with Latent Toxicity if it is dispelled.
