@@ -118,7 +118,7 @@ export const dispellableBuffs: Record<string, string[]> = {
     "shredder_whirling_death",
     "shredder_reactive_armor" /* Only the active barrier from Aghanims Scepter */,
   ],
-  Tinker: [],
+  Tinker: [`tinker_defense_matrix`],
   Tiny: [],
   "Treant Protector": ["treant_living_armor"],
   "Troll Warlord": [],

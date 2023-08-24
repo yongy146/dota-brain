@@ -487,6 +487,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // It is area although it acts as a targetable spell (can be countered by Linken's Spehere or Lotus Orb).
+	// The level 20 talent increases the Stun AoE on Impale.
     {
       skill: "lion_voodoo",
       affects: AbilityAffects.HERO,
@@ -569,6 +570,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	// The level 25 talent on Mirana lets her Stun multiple Heroes with each cast of Sacred Arrow.
   ],
   "Monkey King": [
     {
@@ -901,7 +903,7 @@ export const disables: IDisables = {
   ],
   Timbersaw: [],
   Tinker: [
-    // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes(2, or 4 with Aghanim's Scepter upgrade) and is not targetable.
+    // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes (2, or 3 with level 15 talent) and is not targetable.
   ],
   Tiny: [
     {
