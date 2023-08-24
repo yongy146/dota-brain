@@ -2157,6 +2157,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Bristleback`,
+    audioFile: `ownHero/Bristleback_7_Bloodstone`,
+    messageTime: 22 * 60,
+    textMessage:
+      `Use the Bloodstone active together with Bristleback active with Aghanims Scepter to do a massive burst of damage while healing yourself.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `bloodstone` },
+  },
 
   {
     category: "EnemyHero",
@@ -7422,6 +7432,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 20 * 60,
     textMessage: "Aghanim's Shard is good at countering illusion-based heroes.",
     audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Lion`,
+    audioFile: `ownHero/Lion_9_AllyManaRestore`,
+    messageTime: 13 * 60 + 30,
+    textMessage: `Keep an eye on the mana pool of allies around you and top them up with Mana Drain if they are low on mana.`,
+    audience: [Audience.ALL],
+	image: { type: `ability`, name: `lion_mana_drain` },
   },
 
   {
@@ -15239,7 +15258,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tinker_10_AvoidTinkerWards",
     messageTime: 14 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage: "Avoid blinking to Tinker Ward spots at the edges of the map too often.",
+    textMessage: `Avoid trapping yourself in tree lines where the enemy team might have an observer ward on a cliff.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_observer" },
   },
@@ -15294,7 +15313,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Look to gank midlane Tinker early on as he doesn't have an escape.",
     audience: [Audience.ALL],
   },
-  /* {category: "EnemyHero", hero: "Tinker", audioFile: "enemyHero/Tinker_3_Contest farm", messageTime: (5*60+30), textMessage: "Tinker tends to make a lot of stacks in the jungle. Contest them or sentry off camps.", audience: [Audience.ALL]}, */
+  {
+	category: `EnemyHero`,
+	hero: `Tinker`,
+	audioFile: `enemyHero/Tinker_11_Contest farm`,
+	messageTime: 5 * 60 + 30,
+	textMessage: `Tinker tends to make a lot of stacks in the jungle. Contest them or sentry off camps.`,
+	audience: [Audience.ALL]
+  },
 
   {
     category: "EnemyHero",
@@ -15365,7 +15391,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Tinker_10_TinkerWards",
     messageTime: [15 * 60 + 10, 25 * 60, 35 * 60],
     textMessage:
-      "Place Tinker wards at the edges of the map. Consider camping those spots under the ward.",
+      `Place Tinker wards at the outer jungles of the map. Consider camping those spots under the ward.`,
     audience: [Audience.ALL],
   },
   {
@@ -16656,7 +16682,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "viper_nethertoxin" },
   },
-  /*   {
+  {
     category: "OwnHero",
     hero: "Viper",
     audioFile: "ownHero/Viper_6_NotTanky",
@@ -16664,7 +16690,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Although you are very tanky in early stages, you aren't nearly as tanky around the 20 minute mark.",
     audience: [Audience.ROLE_CORE],
-  }, */
+  },
   {
     category: "OwnHero",
     hero: "Viper",
@@ -16674,7 +16700,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
-  {
+  /* {
     category: `OwnHero`,
     hero: `Viper`,
     audioFile: `ownHero/Viper_8_Bloodstone`,
@@ -16682,8 +16708,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Once you have Aghanims Scepter and Bloodstone, look to take fights and objectives around the map.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `travel_boots` },
-  },
-  {
+  }, */
+  /* {
     category: `OwnHero`,
     hero: `Viper`,
     audioFile: `ownHero/Viper_9_Aggression`,
@@ -16691,7 +16717,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Start running at enemy heroes with your Aghanims Scepter, Bloodstone and Cloak.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `bloodstone` },
-  },
+  }, */
 
   {
     category: "EnemyHero",
