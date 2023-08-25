@@ -195,6 +195,7 @@ export const disables: IDisables = {
       disables: ["root"],
     },
     // Aghanim's Scepter allows Freezing Field to apply Frostbite.
+	// The Aghanims Shard on Crystal Maiden gives her another Area Root with Crystal Clone.
   ],
   "Dark Seer": [
     // Vacuum acts as area stun(forced movement by dota2.gamepedia.com).
@@ -371,7 +372,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Phantom's Embrace is a hero silence that can be cast on additional hero through the Soulbind.
-    // Ink Swell is an area stun. It is cast on allied unit and it stuns around it after 3s.
+    // Ink Swell is an area stun. It is cast on allied unit and it stuns around it upon triggering Ink Swell again.
     // Soulbind is a AbilityAffects.HERO root(leash by dota2.gamepedia.com). It only roots if it latched to another hero. Otherwise it does nothing.
   ],
   Gyrocopter: [
@@ -486,6 +487,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // It is area although it acts as a targetable spell (can be countered by Linken's Spehere or Lotus Orb).
+	// The level 20 talent increases the Stun AoE on Impale.
     {
       skill: "lion_voodoo",
       affects: AbilityAffects.HERO,
@@ -568,6 +570,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	// The level 25 talent on Mirana lets her Stun multiple Heroes with each cast of Sacred Arrow.
   ],
   "Monkey King": [
     {
@@ -795,6 +798,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
+	// The Aghanims Shard on Silencer gives him another Hero Silence with Glaives of Wisdom. Can silence more than one hero with Glaive bounce talent.
   ],
   "Skywrath Mage": [
     {
@@ -899,7 +903,7 @@ export const disables: IDisables = {
   ],
   Timbersaw: [],
   Tinker: [
-    // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes(2, or 4 with Aghanim's Scepter upgrade) and is not targetable.
+    // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes (2, or 3 with level 15 talent) and is not targetable.
   ],
   Tiny: [
     {
@@ -962,6 +966,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	// The Aghanims Shard on Vengeful Spirit lets her Stun two Heroes with every Magic Missile cast.
   ],
   Venomancer: [
 	//The Aghanim Shard on Venomancer provides a Hero stun with Latent Toxicity if it is dispelled.
