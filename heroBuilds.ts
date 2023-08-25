@@ -5389,12 +5389,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "doom_bringer_doom", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_doom_10", // 20
+          "special_bonus_unique_doom_1", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_doom_1", // 25
+          "special_bonus_unique_doom_10", // 25
         ],
         items: {
           starting: [
@@ -6998,7 +6998,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "faceless_void_time_dilation", // 13
           "faceless_void_time_dilation", // 14
           "special_bonus_unique_faceless_void_7", // 15
-          "special_bonus_unique_faceless_void_5", // 16
+          "special_bonus_unique_faceless_void_8", // 16
           "special_bonus_attributes", // 17
           "faceless_void_chronosphere", // 18
           "special_bonus_attributes", // 19
@@ -7016,7 +7016,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "slippers",
             "circlet",
-            "magic_stick",
+            //"magic_stick", Dota Coach Removed (25.8.2023), as starting items were too expensive (735 gold)
           ],
           early_game: ["power_treads", "magic_wand", "wraith_band"],
           mid_game: ["hand_of_midas", "maelstrom", "manta", "black_king_bar"],
@@ -7646,7 +7646,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "hoodwink_sharpshooter", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_hoodwink_sharpshooter_speed", // 20
+          "special_bonus_unique_hoodwink_sharpshooter_damage", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -8656,12 +8656,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "juggernaut_omni_slash",
           `juggernaut_blade_dance`,
           `juggernaut_blade_dance`,
-          `special_bonus_unique_juggernaut_4`,
+          `special_bonus_unique_juggernaut_5`,
           `juggernaut_blade_dance`,
           "special_bonus_attributes",
           "juggernaut_omni_slash",
           "special_bonus_attributes",
-          "special_bonus_unique_juggernaut_3",
+          "special_bonus_unique_juggernaut_blade_dance_lifesteal",
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
@@ -9816,7 +9816,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "life_stealer_infest", // 12
           "life_stealer_rage", // 13
           "special_bonus_unique_lifestealer_2", // 14
-          "special_bonus_attack_damage_25", // 15
+          "special_bonus_attack_damage_30", // 15
           "life_stealer_rage", // 16
           "special_bonus_attributes", // 17
           "life_stealer_infest", // 18
@@ -12170,7 +12170,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `meepo_ransack`, // 12
           "meepo_earthbind", // 13
           `meepo_earthbind`, // 14
-          `special_bonus_unique_meepo_4`, // 15
+          `special_bonus_unique_meepo_3`, // 15
           `meepo_earthbind`, // 16
           "special_bonus_attributes", // 17
           "meepo_divided_we_stand", // 18
@@ -14678,7 +14678,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "omniknight_martyr", // 7
           "omniknight_purification", // 8
           "omniknight_purification", // 9
-          `special_bonus_unique_omniknight_5`, // 10
+          `special_bonus_attack_base_damage_50`, // 10
           `omniknight_purification`, // 11
           "omniknight_guardian_angel", // 12
           "omniknight_hammer_of_purity", // 13
@@ -14688,7 +14688,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 17
           "omniknight_guardian_angel", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_omniknight_2", // 20
+          "special_bonus_unique_omniknight_3", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -22237,7 +22237,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "shredder_chakram", // 12
           `special_bonus_mp_regen_150`, // 13
           `shredder_reactive_armor`, // 14
-          "special_bonus_spell_amplify_7", // 15
+          "special_bonus_unique_timbersaw_5", // 15
           `shredder_reactive_armor`, // 16
           "special_bonus_attributes", // 17
           "shredder_chakram", // 18
