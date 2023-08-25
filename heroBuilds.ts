@@ -54,23 +54,23 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
     link_text: "Click here to be coached by him.",
   },*/
     eidandota: {
-      image: "https://i.imgur.com/BLWOWSp.jpg",
-      text: "This guide was written by 8k MMR player and coach eidandota.",
-      link_http: "https://www.fiverr.com/share/ywVQ5V",
-      link_text: "Click here to book a coaching session with eidandota.",
+      //image: "https://i.imgur.com/BLWOWSp.jpg",
+      text: "This guide was written by 8k MMR player and coach eidandota:",
+      link_http: "https://skelly.gg/g/Eidan",
+      //link_text: "Click here to book a coaching session with eidandota.",
     },
     TNTCNz: {
-      image: "https://i.imgur.com/MvM6s5B.jpeg",
-      text: "This guide was written by 8k MMR player TNTCN.",
+      //image: "https://i.imgur.com/MvM6s5B.jpeg",
+      text: "This guide was written by 8k MMR player TNTCN:",
       link_http: "https://www.gamersensei.com/senseis/tntcn",
-      link_text: "Click here to book a coaching session with him.",
+      //link_text: "Click here to book a coaching session with him.",
     },
     YoonA: {
-      image: "https://i.imgur.com/TZpRwOK.jpeg",
-      text: "This guide was written by Hammad.",
+      //image: "https://i.imgur.com/TZpRwOK.jpeg",
+      text: "This guide was written by Hammad:",
       //link_http: "https://www.fiverr.com/share/k0bmRk",
-      link_http: "https://skelly.gg/g/12747",
-      link_text: "Click here to book a coaching session with him.",
+      link_http: "https://skelly.gg/g/YoonA",
+      //link_text: "Click here to book a coaching session with him.",
     },
     /*ZoGraF: {
     image: "https://i.imgur.com/QZzNRhz.png",
@@ -81,10 +81,10 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
   };
 
 export interface IContentCreatorLink {
-  image: string;
+  //image: string;
   text: string;
   link_http: string;
-  link_text: string;
+  //link_text: string;
 }
 
 export enum DamageType {
@@ -4890,7 +4890,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "enchanted_mango",
             `circlet`,
             `branches`,
-			`branches`,
+            `branches`,
             `ward_observer`,
             `ward_sentry`,
           ],
@@ -4915,7 +4915,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `ring_of_basilius`,
             `spirit_vessel`,
-			`hand_of_midas`,
+            `hand_of_midas`,
             `ghost`,
             `solar_crest`,
             `holy_locket`,
@@ -4930,10 +4930,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           core: [
             `arcane_boots`,
             `solar_crest`,
-			`glimmer_cape`,
+            `glimmer_cape`,
             `aghanims_shard`,
             `force_staff`,
-			`aether_lens`,
+            `aether_lens`,
             `ultimate_scepter`,
           ],
           neutral: [
@@ -5904,8 +5904,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             `faerie_fire`,
             `blood_grenade`,
-			`branches`,
-			`branches`,
+            `branches`,
+            `branches`,
             "orb_of_venom",
             `ward_observer`,
           ],
@@ -6600,13 +6600,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           situational: [
             `tranquil_boots`,
             `spirit_vessel`,
-			`witch_blade`,
+            `witch_blade`,
             `pavise`,
             `holy_locket`,
             `cyclone`,
             `ghost`,
             `pipe`,
-			`boots_of_bearing`,
+            `boots_of_bearing`,
             `lotus_orb`,
             `shivas_guard`,
             `aeon_disk`,
@@ -6647,7 +6647,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       boots_of_bearing: `A potent mid game item that boosts your tankiness and damage output.`,
       holy_locket: `A situational item to boost your healing output.`,
       aghanims_shard: `A core item that greatly improves your damage output and wave clear ability with multiple Impetus shots.`,
-	  ultimate_scepter: `A core item that gives you the ability to lock down an enemy hero and hit them freely with Impetus. Also lets you enchant a 2nd creep.`,
+      ultimate_scepter: `A core item that gives you the ability to lock down an enemy hero and hit them freely with Impetus. Also lets you enchant a 2nd creep.`,
       lotus_orb: "For reflect, dispel and armor.",
     },
     combo: [
@@ -8500,17 +8500,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "wind_lace",
             "infused_raindrop",
           ],
-          mid_game: [`glimmer_cape`, `force_staff`, `ultimate_scepter`, `aghanims_shard`],
-          late_game: [
-            `cyclone`,
-            `octarine_core`,
-            `aeon_disk`,
-            `refresher`,
+          mid_game: [
+            `glimmer_cape`,
+            `force_staff`,
+            `ultimate_scepter`,
+            `aghanims_shard`,
           ],
+          late_game: [`cyclone`, `octarine_core`, `aeon_disk`, `refresher`],
           situational: [
             `ring_of_basilius`,
-			`veil_of_discord`,
-			`pavise`,
+            `veil_of_discord`,
+            `pavise`,
             "pipe",
             `ghost`,
             `lotus_orb`,
@@ -8527,7 +8527,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ultimate_scepter`,
             `aghanims_shard`,
             `cyclone`,
-			`octarine_core`,
+            `octarine_core`,
           ],
           neutral: [
             `trusty_shovel`,
@@ -8552,7 +8552,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       infused_raindrop: "Against magical burst.",
       cyclone: `A core item that lets you set up on enemy heroes and follow up with Ice Path and Macropyre.`,
       pavise: `A situational item to gain some mana regen and buff yourself and your cores against physical damage.`,
-	  ultimate_scepter: `A core item that massively improves your damage output and control in teamfights with Macropyre.`,
+      ultimate_scepter: `A core item that massively improves your damage output and control in teamfights with Macropyre.`,
       aghanims_shard:
         "A core item that adds to control and damage output. Works on buildings as well. Goes well with level 10 talent.",
       lotus_orb: "For reflect, dispel and armor.",
@@ -8921,7 +8921,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             item: "urn_of_shadows",
             info: "For Spirit Vessel to offset healing during from Spirit Form`s Illuminate during daytime",
           },
-		  {
+          {
             item: `cloak`,
             info: `Keeper of the Light is heavy on magical damage and Cloak negates 20% of it`,
           },
@@ -14347,21 +14347,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [`dagon_5`, `aghanims_shard`, `ethereal_blade`, `ultimate_scepter`],
-          late_game: [
-            `blink`,
-            `octarine_core`,
-            "aeon_disk",
-            `wind_waker`,
+          mid_game: [
+            `dagon_5`,
+            `aghanims_shard`,
+            `ethereal_blade`,
+            `ultimate_scepter`,
           ],
+          late_game: [`blink`, `octarine_core`, "aeon_disk", `wind_waker`],
           situational: [
             `spirit_vessel`,
             `aether_lens`,
             `meteor_hammer`,
-			`cyclone`,
-			`ghost`,
+            `cyclone`,
+            `ghost`,
             `force_staff`,
-			`phylactery`,
+            `phylactery`,
             `lotus_orb`,
             `guardian_greaves`,
             `sheepstick`,
@@ -14373,7 +14373,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aghanims_shard`,
             `ethereal_blade`,
             `ultimate_scepter`,
-			`octarine_core`,
+            `octarine_core`,
           ],
           neutral: [
             `arcane_ring`,
@@ -14392,8 +14392,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       /*nyx_assassin_mana_burn: `You can skill this spell on level 4 if you are playing against a high intelligence enemy hero in lane. Use it off cd in that case.`,*/
-	  special_bonus_spell_amplify_6:
-        `On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
+      special_bonus_spell_amplify_6: `On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
     },
     item_tooltips: {
       ward_sentry: "To block or unblock the pull camp.",
@@ -14425,7 +14424,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             info: "To upkeep the mana against Mana Burn",
           },
           { item: "infused_raindrop" },
-		  {
+          {
             item: "cloak",
             info: `Ogre Magi does a lot of magical damage and Cloak will offset 20% of it`,
           },
@@ -17085,7 +17084,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `branches`,
             `branches`,
             `ward_observer`,
-			`ward_sentry`,
+            `ward_sentry`,
           ],
           early_game: [
             `arcane_boots`,
@@ -19049,11 +19048,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `special_bonus_unique_shadow_shaman_4`, // 25
         ],
         items: {
-          starting: [
-            `tango`,
-            `boots`,
-            `ward_observer`,
-          ],
+          starting: [`tango`, `boots`, `ward_observer`],
           early_game: [
             "arcane_boots",
             "magic_wand",
@@ -19065,7 +19060,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `tranquil_boots`,
             `blink`,
             `aghanims_shard`,
-			`force_staff`,
+            `force_staff`,
           ],
           late_game: [
             `ultimate_scepter`,
@@ -19087,9 +19082,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `tranquil_boots`,
             "blink",
             `aghanims_shard`,
-			`force_staff`,
-			`ultimate_scepter`,
-			`refresher`,
+            `force_staff`,
+            `ultimate_scepter`,
+            `refresher`,
           ],
           neutral: [
             `trusty_shovel`,
