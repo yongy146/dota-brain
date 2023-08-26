@@ -4975,7 +4975,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
 
   // 35. Enigma
-  {
+  /* {
     category: "OwnHero",
     hero: "Enigma",
     audioFile: "ownHero/Enigma_1_BlockCamps",
@@ -4984,8 +4984,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Keep opponents' pull camps blocked as the lane will be pushing your way due to Demonic Conversion.",
     audience: [Audience.ROLE_OFFLANE, Audience.ROLE_SUPPORT],
     image: { type: "item", name: "ward_dispenser" },
-  },
-  {
+  }, */
+  /* {
     category: "OwnHero",
     hero: "Enigma",
     audioFile: "ownHero/Enigma_2_SacrificeRanged",
@@ -4993,7 +4993,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Ideally, use Demonic Conversion on your ranged creeps or catapults out of opponents' experience range.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enigma_demonic_conversion" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Enigma",
@@ -5018,7 +5018,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Enigma",
     audioFile: "ownHero/Enigma_5_BlinkDagger",
-    messageTime: 10 * 60 + 15,
+    messageTime: 16 * 60 + 15,
     textMessage:
       "Once you get Blink Dagger, make use of it immediately before opponents can see it in your inventory.",
     audience: [Audience.ALL],
@@ -5042,9 +5042,29 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, use eidolons to push out sidelanes safely.",
+      `When not much is happening, use eidolons to push out sidelanes safely or farm jungle camps.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enigma_demonic_conversion" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Enigma`,
+    audioFile: `ownHero/Enigma_8_DemonicSummoning`,
+    messageTime: 30,
+    textMessage:
+      `Look to use Demonic Summoning frequently to harass and zone the enemy support, and blocking the pull camp.`,
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: `ability`, name: `enigma_demonic_conversion` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Enigma`,
+    audioFile: `ownHero/Enigma_9_SolarCrestAbuse`,
+    messageTime: 11 * 60,
+    textMessage:
+      `As soon as you have your Solar Crest, look to pressure enemy heroes and towers with your eidolons.`,
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: `item`, name: `solar_crest` },
   },
 
   {
@@ -10949,7 +10969,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Pangolier_7_Roshan1",
     messageTime: [15 * 60 + 30, 18 * 60 + 30],
     textMessage:
-      "Pangolier is great at enabling an early Roshan kill due to Lucky Shot armor reduction and disarm chance.",
+      `Pangolier is great at enabling an early Roshan kill due to Lucky Shot armor reduction and attack speed slow chance.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pangolier_lucky_shot" },
   },
@@ -10997,7 +11017,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Pangolier_4_SpellImmunity",
     messageTime: 12 * 60,
     textMessage:
-      "Spell immunity items are great against Pangolier's disables and disarms.",
+      `Spell immunity items are great against Pangolier's disables and attack speed slow.`,
     audience: [Audience.ALL],
   },
   {
@@ -16027,6 +16047,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Treant Protector`,
+    audioFile: `ownHero/TreantProtector_10_ConnectTreeLines`,
+    messageTime: 20 * 60,
+    textMessage:
+      `With your Aghanims Shard, you can use Natures Grasp to connect Tree Lines and stay invisible.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `treant_natures_grasp` },
+  },
 
   {
     category: "EnemyHero",
@@ -16078,7 +16108,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/TreantProtector_6_ObserverSentry",
     messageTime: [12 * 60 + 10, 20 * 60 + 20, 28 * 60 + 10],
     textMessage:
-      "Observers and sentries at the edges of the map are great at stopping Treant from splitpushing.",
+      `Observers and sentries at the outer jungles of the map are great at stopping Treant from splitpushing.`,
     audience: [Audience.ALL],
   },
   {

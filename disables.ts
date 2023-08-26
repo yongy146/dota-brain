@@ -923,7 +923,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["root"],
     },
-	// The Aghanims Shard on Treant Protector is a hero stun with Natures Guise.
+	// The Aghanims Shard on Treant Protector gives him a Hero Root with Natures Guise.
   ],
   "Troll Warlord": [
     {
