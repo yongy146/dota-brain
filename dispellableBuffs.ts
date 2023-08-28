@@ -27,7 +27,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   "Chaos Knight": [],
   Chen: ["chen_divine_favor"],
   Clinkz: [],
-  Clockwerk: [],
+  Clockwerk: [`rattletrap_jetpack`],
   "Crystal Maiden": [],
   "Dark Seer": ["dark_seer_ion_shell", "dark_seer_surge"],
   "Dark Willow": [],
