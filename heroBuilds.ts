@@ -5708,7 +5708,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Drow Ranger": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -5758,32 +5758,29 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "power_treads",
             "wraith_band",
             "magic_wand",
-            "ring_of_basilius",
-            "dragon_lance",
+            "dragon_lance"
           ],
           mid_game: [
-            "yasha",
-            "manta",
+            "ultimate_scepter",
             "hurricane_pike",
-            "black_king_bar",
+            "manta",
             "aghanims_shard",
           ],
           late_game: [
+            "butterfly",
             "silver_edge",
             "skadi",
-            "butterfly",
             "satanic",
-            "swift_blink",
           ],
           situational: [
-            "greater_crit",
             "infused_raindrop",
-            "ultimate_scepter",
-            "sange_and_yasha",
+            "greater_crit",
             "blink",
             "sphere",
             "mjollnir",
-            "aghanims_shard",
+            "hand_of_midas",
+            "black_king_bar",
+            ""
           ],
           core: ["power_treads", "hurricane_pike", "manta", "black_king_bar"],
           neutral: [
@@ -5826,14 +5823,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       black_king_bar:
         "Try to get bkb as late as possible but keep in mind that many games you will need to get it quite early if you want to take engagements.",
       blink: "To reposition. Can be upgraded to Swift Blink down the road.",
-      aghanims_shard: "To offset healing and for extra bit of damage.",
+      aghanims_shard: "Good for defensive purposes once you have your core items.",
       silver_edge: "For break effect and to be able to reposition.",
       sphere:
         "Against powerful single target disables/debuffs and gap-closing spells and items (eg.Doom/Batrider).",
       mjollnir:
         "Against illusion-based heroes. It is better than Aghanim`s Scepter.",
       ultimate_scepter:
-        "This paired with mjollnir can be really good against illusion-based heroes.",
+        "To offset healing and to increase single target damage output.",
     },
     combo: [],
     counter_items: {
@@ -6358,7 +6355,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Ember Spirit": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -6369,8 +6366,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "ember_spirit_flame_guard", // 1
-          "ember_spirit_sleight_of_fist", // 2
+          "ember_spirit_sleight_of_fist", // 1
+          "ember_spirit_searing_chains", // 2
           "ember_spirit_sleight_of_fist", // 3
           "ember_spirit_searing_chains", // 4
           "ember_spirit_sleight_of_fist", // 5
@@ -6378,11 +6375,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "ember_spirit_sleight_of_fist", // 7
           "ember_spirit_searing_chains", // 8
           "ember_spirit_searing_chains", // 9
-          "ember_spirit_searing_chains", // 10
+          "ember_spirit_flame_guard", // 10
           "ember_spirit_flame_guard", // 11
           "ember_spirit_flame_guard", // 12
           "ember_spirit_flame_guard", // 13
-          "special_bonus_unique_ember_spirit_1", // 14
+          "special_bonus_attack_damage_12", // 14
           "special_bonus_unique_ember_spirit_3", // 15
           "ember_spirit_fire_remnant", // 16
           "special_bonus_attributes", // 17
@@ -6400,6 +6397,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "quelling_blade",
             "branches",
             "branches",
+            "branches",
             "faerie_fire",
             "tango",
             "ward_observer",
@@ -6407,34 +6405,35 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           early_game: [
             "bottle",
             "orb_of_corrosion",
-            "magic_wand",
             "phase_boots",
+            "magic_wand",
           ],
           mid_game: [
             "maelstrom",
-            "black_king_bar",
             "kaya_and_sange",
-            "aghanims_shard",
             "ultimate_scepter",
+            "aghanims_shard",
           ],
-          late_game: ["gungir", "refresher", "shivas_guard", "octarine_core"],
+          late_game: ["travel_boots", "gungir", "refresher", "shivas_guard", "octarine_core"],
           situational: [
             "infused_raindrop",
+            "mjollnir",
             "sphere",
             "desolator",
             "radiance",
-            "travel_boots",
-            "cyclone",
-            "skadi",
             "blade_mail",
             "radiance",
+            "black_king_bar",
+            "manta"
+            
           ],
           core: [
+            "travel_boots",
             "maelstrom",
+            "kaya_and_sange",
             "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
-            "kaya_and_sange",
           ],
           neutral: [
             "arcane_ring",
@@ -6455,11 +6454,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       ember_spirit_searing_chains:
-        "You can get more levels in this earlier than suggested if you feel your team lacks disable and want more kill threat. In that case you would want to max sleight and chains.",
+        "You want to use this spell to setup ganks and control the enemy in fights. Is perfect for setting up follow up stuns as you can sleight chains from a long distance.",
       ember_spirit_sleight_of_fist:
         "You can max this over flameguard in matchup`s where you want to dodge projectiles or harrass low armour ranged heroes. Works really well with orb of corrosion and phase boots in the early game.",
       ember_spirit_flame_guard:
-        "This spell is your most useful farming tool while also being good for kills and defensive purposes. Try to be as efficient and possible and make sure you don't use this to farm if a fight is going to happen soon.",
+        "This spell is your most useful farming tool while also being good for kills and defensive purposes, You can get more levels in this earlier on if you feel you need the damage or extra farming capabilities.",
       ember_spirit_fire_remnant:
         "You should try to farm more dangerous lanes when your team can't by placing remnants far away and using them to escape. Also when you get 6 in the laning stage place a remnant on one side and go to the opposite in order to secure power runes.",
     },
@@ -6998,7 +6997,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Faceless Void": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -7010,9 +7009,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "faceless_void_time_walk", // 1
-          "faceless_void_time_lock", // 2
+          "faceless_void_time_dilation", // 2
           "faceless_void_time_walk", // 3
-          "faceless_void_time_dilation", // 4
+          "faceless_void_time_lock", // 4
           "faceless_void_time_walk", // 5
           "faceless_void_chronosphere", // 6
           "faceless_void_time_walk", // 7
@@ -7022,9 +7021,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "faceless_void_time_dilation", // 11
           "faceless_void_chronosphere", // 12
           "faceless_void_time_dilation", // 13
-          "faceless_void_time_dilation", // 14
-          "special_bonus_unique_faceless_void_7", // 15
-          "special_bonus_unique_faceless_void_8", // 16
+          "special_bonus_unique_faceless_void_7", // 14
+          "special_bonus_unique_faceless_void_3", // 15
+          "faceless_void_time_dilation", // 16
           "special_bonus_attributes", // 17
           "faceless_void_chronosphere", // 18
           "special_bonus_attributes", // 19
@@ -7040,26 +7039,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",
             "slippers",
             "circlet",
-            //"magic_stick", Dota Coach Removed (25.8.2023), as starting items were too expensive (735 gold)
           ],
-          early_game: ["power_treads", "magic_wand", "wraith_band"],
-          mid_game: ["hand_of_midas", "maelstrom", "manta", "black_king_bar"],
-          late_game: ["mjollnir", "skadi", "satanic", "butterfly", "refresher"],
+          early_game: ["wraith_band", "power_treads", "magic_wand", "hand_of_midas" ],
+          mid_game: ["maelstrom", "manta", "black_king_bar"],
+          late_game: ["mjollnir", "aghanims_shard", "skadi", "satanic", "butterfly", "refresher"],
           situational: [
             "sange_and_yasha",
             "infused_raindrop",
-            "hand_of_midas",
-            "black_king_bar",
-            "aghanims_shard",
-            "blink",
+            "mask_of_madness",
             "sphere",
             "monkey_king_bar",
-            "radiance",
             "nullifier",
+            "greater_crit"
           ],
-          core: ["power_treads", "hand_of_midas", "mjollnir", "black_king_bar"],
+          core: ["power_treads", "hand_of_midas",  "mjollnir", "manta", "black_king_bar", "aghanims_shard"],
           neutral: [
             //"possessed_mask", Removed in 7.33
             "lance_of_pursuit",
@@ -7080,9 +7076,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     ],
     ability_tooltips: {
       faceless_void_time_walk:
-        "The tougher the lane the more point you can put into this spell.",
+        "Most lanes you should max time walk unless it's complete free farm.",
       faceless_void_time_dilation:
-        "Dont have to put more than 1 point in this spell as it scales very badly. You should level your stats and talents first.",
+        "Dont have to put more than 1 point in this spell as it scales very badly.",
+      faceless_void_time_lock:
+      "If you don't need the extra escape and survivability you can put more levels into bash in the laning stage.",
       special_bonus_unique_faceless_void_7:
         "Consider skipping the first talent until you skill your spells and stats.",
     },
@@ -7092,17 +7090,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       infused_raindrop: "Against magical burst.",
       power_treads:
         "A core item that provides attack speed boost and some mana savings through toggling. Keep it on strength if you feel like you might be in trouble.",
-      hand_of_midas: "If you can get it early and get away with it.",
+      hand_of_midas: "A core item that accelerates your farm.",
       mask_of_madness:
-        "A core item that accelerates your farm but also allows you to burst a hero inside Chronosphere.",
+        "If you feel you need more kill potential earlier on in the game, go for mask of madness instead of hand of midas.",
       maelstrom:
         "A core item that boosts your farming speed but also does some AoE damage in the fights. Can be upgraded to Mjollnir later on. Void likes attack speed for frequent bash procs.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       aghanims_shard:
-        "For extra mobility. Often times you`ll get it from Roshan.",
-      blink:
-        "To be able to seize the moment and get good Chronosphere out. Swift Blink is an option later on as well.",
+        "For extra mobility. Occasionally you can get it from tormentor.",
       sphere: "Against powerful single-target disables and debuffs.",
       skadi:
         "Against ranged heroes. Also gives you good mana pool that lets you use Refresher.",
@@ -8657,7 +8653,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Juggernaut: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -8698,31 +8694,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             `branches`,
+            "branches",
             "quelling_blade",
-            `magic_stick`,
+            `slippers`,
             `circlet`,
           ],
           early_game: [`power_treads`, "wraith_band", "magic_wand"],
-          mid_game: ["bfury", `manta`, `aghanims_shard`, `skadi`, `basher`],
+          mid_game: ["bfury", `manta`, `skadi`, `basher`],
           late_game: [
+            `butterfly`,
             `ultimate_scepter`,
-            `satanic`,
-            `abyssal_blade`,
-            `mjollnir`,
+            `abyssal_blade`,     
             `swift_blink`,
+            `travel_boots`,
           ],
           situational: [
+            `mjollnir`,
             `diffusal_blade`,
             `sange_and_yasha`,
             `blink`,
             `black_king_bar`,
-            `silver_edge`,
             `monkey_king_bar`,
             `nullifier`,
-            `butterfly`,
-            `travel_boots`,
+            "aghanims_shard"
           ],
-          core: [`power_treads`, `bfury`, `manta`, `aghanims_shard`, `basher`],
+          core: [`power_treads`, `bfury`, `manta`, `butterfly`, "ultimate_scepter"],
           neutral: [
             //"possessed_mask", Removed in 7.33
             "broom_handle",
@@ -8741,29 +8737,30 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
+      juggernaut_blade_fury:
+      "This gives you the most kill potential in the laning stage, particularly once you have boots and 2 points in it.",
       juggernaut_healing_ward:
-        "You can skill Healing Ward at level two if you are being pressured.",
-      juggernaut_blade_dance: `Some players prefer taking stats over leveling Blade Dance past level one. It slows your farm a bit but makes you tankier.`,
-      special_bonus_unique_juggernaut_4: `You can take the other level 15 talent if the enemy team has long range nukers like Tinker who find it difficult to destroy your Healing Ward.`,
+        "Make sure to micro your healing ward to keep it alive.",
+      juggernaut_blade_dance: `This spell scales as your damage increases, should be maxed after healing ward as it increases omnislash damage.`,
     },
     item_tooltips: {
-      magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
+      magic_stick: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
-      power_treads: `You can get Power Treads instead of Phase Boots if you decide to get Battlefury over Maelstrom.`,
+      power_treads: `Try to maximise efficiency by tread switching based on your action.`,
       maelstrom:
-        "A prefered farming item. Great against illusion-based heroes. The Mjollnir upgrade is fantastic increase of Omnislash damage output.",
+        "An alternative to battlefury. Great against illusion-based heroes. The Mjollnir upgrade is fantastic increase of Omnislash damage output.",
       bfury:
-        "An alternative to Maelstrom, good against NP`s Sprout and summon based heroes.",
+        "A core item that dramatically increases the speed at which you farm.",
       manta:
         "A core item that allows you to farm even faster, provides a defensive dispel and moderate damage increase.",
       sange_and_yasha: `An alternative to Manta Style when there are no silences or roots to debuff.`,
       diffusal_blade:
-        "Goes well with Manta Style against heroes like Medusa low mana pool heroes.",
+        "Goes well with Manta Style against heroes like Medusa or low mana pool heroes.",
       ultimate_scepter: "A core item for gap-closing and burst damage.",
       aghanims_shard:
         "A core upgrade that allows Blade Fury to scale with your damage. Especially good against lineups heavy on magic damage and disables. You will dish out a lot of damage during Blade Fury if you pick up talents for it as well.",
       mjollnir: `A late game item that increases the damage of your Omnislash and Swiftslash significantly.`,
-      basher: "A core item to lock the target you are focusing.",
+      basher: "A great item to lockdown the target you are focusing.",
       blink: "To close the gap.",
       monkey_king_bar: "Against evasion and miss chance.",
       nullifier: "To dispel defensive spells and items that counter Omnislash.",
@@ -9017,12 +9014,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Kunkka: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958147",
@@ -9035,15 +9032,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "kunkka_tidebringer", // 5
           "kunkka_ghostship", // 6
           "kunkka_tidebringer", // 7
-          "kunkka_torrent", // 8
-          "kunkka_torrent", // 9
-          `special_bonus_unique_kunkka_6`, // 10
+          "kunkka_x_marks_the_spot", // 8
+          "kunkka_x_marks_the_spot", // 9
+          `kunkka_x_marks_the_spot`, // 10
           "kunkka_torrent", // 11
           "kunkka_ghostship", // 12
-          "kunkka_x_marks_the_spot", // 13
-          "kunkka_x_marks_the_spot", // 14
+          "kunkka_torrent", // 13
+          "special_bonus_unique_kunkka_tidebringer_slow", // 14
           `special_bonus_attack_damage_45`, // 15
-          "kunkka_x_marks_the_spot", // 16
+          "kunkka_torrent", // 16
           "special_bonus_attributes", // 17
           "kunkka_ghostship", // 18
           "special_bonus_attributes", // 19
@@ -9058,19 +9055,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             `gauntlets`,
             `quelling_blade`,
-            `gauntlets`,
             `branches`,
             `branches`,
+            `branches`,
+            "tango",
             `ward_observer`,
           ],
           early_game: ["bottle", "bracer", "magic_wand", "phase_boots"],
-          mid_game: [`armlet`, `black_king_bar`, `lesser_crit`, "silver_edge"],
+          mid_game: [`armlet`, "silver_edge", `black_king_bar`],
           late_game: [
             "assault",
             "satanic",
             `bloodthorn`,
-            `overwhelming_blink`,
-            `rapier`,
+            "sheepstick",
+            "travel_boots"
           ],
           situational: [
             "orchid",
@@ -9080,7 +9078,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `aghanims_shard`,
             `greater_crit`,
             `sheepstick`,
-            `travel_boots`,
+            "rapier",
           ],
           core: [`armlet`, `phase_boots`, "black_king_bar", `silver_edge`],
           neutral: [
@@ -9103,7 +9101,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ward_observer:
             "If you are playing midlane Kunkka. You can bring it to sidelane as well.",
           bottle:
-            "If you are playing midlane Kunkka. You can do X Marks the spot refills.",
+            "If you have a bottle. You can do X Marks the spot refills.",
           orchid: `Lets you snowball in the early game with your immense kill threat on the map.`,
           lesser_crit:
             "A core item that can proc on Tidebring hits. Can be upgraded to Silver Edge or Daedalus.",
@@ -9127,7 +9125,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "kunkka_x_marks_the_spot", // 8
           "kunkka_x_marks_the_spot", // 9
           "kunkka_x_marks_the_spot", // 10
-          `special_bonus_unique_kunkka_6`, // 11
+          `special_bonus_unique_kunkka_tidebringer_slow`, // 11
           "kunkka_ghostship", // 12
           "kunkka_torrent", // 13
           "kunkka_torrent", // 14
@@ -9148,39 +9146,39 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `tango`,
             "quelling_blade",
             `gauntlets`,
-            `branches`,
+            `gauntlets`,
             `branches`,
             "branches",
           ],
-          early_game: ["vanguard", "phase_boots", `magic_wand`, "soul_ring"],
+          early_game: ["bracer", "phase_boots", "vanguard", `magic_wand`, ],
           mid_game: [
-            "pipe",
+            "blade_mail",
             "crimson_guard",
-            "black_king_bar",
-            "ultimate_scepter",
             `aghanims_shard`,
-            `blink`,
           ],
           late_game: [
+            "black_king_bar",
+            "ultimate_scepter",
             `assault`,
             `refresher`,
             `overwhelming_blink`,
             `sheepstick`,
+            "heart"
           ],
           situational: [
-            "guardian_greaves",
-            `armlet`,
             `heavens_halberd`,
-            `solar_crest`,
+            "pipe",
+            `armlet`,
             `silver_edge`,
             `bloodthorn`,
             `shivas_guard`,
             `travel_boots`,
+            "lotus_orb"
           ],
           core: [
-            `vanguard`,
-            `bracer`,
-            `phase_boots`,
+            "phase_boots",
+            `blade_mail`,
+            `crimson_guard`,
             "black_king_bar",
             "ultimate_scepter",
             "aghanims_shard",

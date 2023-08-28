@@ -4231,6 +4231,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "drow_ranger_marksmanship" },
   },
+  {
+    category: "OwnHero",
+    hero: "Drow Ranger",
+    audioFile: "ownHero/DrowRanger_8_scepter",
+    messageTime: [16 * 60],
+    textMessage:
+      "When you get your aghanims scepter online you're single target damage increases dramatically. ",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "ultimate_scepter" },
+  },
 
   {
     category: "EnemyHero",
@@ -5180,6 +5190,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "You can tank up and get mobility items if your teammates can provide plenty of damage in Chronosphere.",
     audience: [Audience.ALL],
+  },
+  {
+    category: "OwnHero",
+    hero: "Faceless Void",
+    audioFile: "ownHero/Faceless_7_ItemizationTip",
+    messageTime: [9 * 60],
+    textMessage:
+      "If your team is behind or not off to a good start consider going for mask of madness over midas as it can help with earlier engagements.",
+    audience: [Audience.ALL],
+    image: { type: "item", name: "mask_of_madness" },
   },
 
   {
