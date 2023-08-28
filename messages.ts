@@ -4629,7 +4629,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "When opponents clump up, cast Astral Spirit and channel Echo Stomp followed by Earthsplitter.",
+      `When opponents clump up, cast Astral Spirit and channel Echo Stomp followed by Earth Splitter.`,
     audience: [Audience.ALL],
   },
   {
@@ -10807,7 +10807,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/OutworldDestroyer_1_MeteorHammer",
     messageTime: -90,
     textMessage: `Rush Meteor Hammer as it provides sustain, solo kill potential, wave clear and tower damage.`,
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "meteor_hammer" },
   },
   {
@@ -10816,7 +10816,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/OutworldDestroyer_2_ArcaneOrbHarass",
     messageTime: 15,
     textMessage:
-      "Use Arcane Orb on opponents preferably during laning stage as it does tons of damage.",
+      `Use Arcane Orb on opponents off cooldown during laning stage as it does tons of damage.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "obsidian_destroyer_arcane_orb" },
   },
@@ -13759,7 +13759,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Snapfire",
     audioFile: "ownHero/Snapfire_1_SecureRanged",
     messageTime: 15,
-    textMessage: `Secure ranged creep last hits with Scatteblast and damage the opponents at the same time.`,
+    textMessage: `Secure ranged creep last hits with Scatterblast and damage the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "snapfire_scatterblast" },
   },
