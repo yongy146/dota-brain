@@ -99,7 +99,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   Riki: [],
   Rubick: [],
   "Sand King": [],
-  "Shadow Demon": [],
+  `Shadow Demon`: [`shadow_demon_disseminate`],
   "Shadow Fiend": [],
   "Shadow Shaman": [],
   Silencer: [],
