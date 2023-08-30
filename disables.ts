@@ -899,7 +899,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
-	// The Aghanims Shard gives Tidehunter another Area stun with Tendrils of the Deep.
+	// The Aghanims Shard gives Tidehunter another Hero Leash with Dead in the Water.
   ],
   Timbersaw: [],
   Tinker: [

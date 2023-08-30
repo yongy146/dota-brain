@@ -8776,7 +8776,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "medusa_split_shot" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Medusa",
     audioFile: "ownHero/Medusa_11_SnakeBigManaPool",
@@ -8786,7 +8786,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Prioritize using Mystic Snake on high mana pool heroes in fights.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "medusa_mystic_snake" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Medusa",
@@ -9591,6 +9591,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Use Ethereal Blade in combination with Pierce the Veil for massive magical burst damage.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `ethereal_blade` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Muerta`,
+    audioFile: `ownHero/Muerta_13_MaskofMadness`,
+    messageTime: 4 * 60,
+    textMessage: `Get Mask of Madness in the early game to flash farm the map and scale better in the mid game.`,
+    audience: [Audience.ROLE_CORE],
+    image: { type: `item`, name: `mask_of_madness` },
   },
 
   {
@@ -12320,7 +12329,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "razor_plasma_field" },
   },
-  {
+  /* {
     category: `OwnHero`,
     hero: `Razor`,
     audioFile: `ownHero/Razor_9_Aggression`,
@@ -12328,7 +12337,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `Once you have bloodstone and Aghanim shard, play aggressively on the map and take fights and objectives.`,
     audience: [Audience.ROLE_OFFLANE],
     image: { type: `item`, name: `aghanims_shard` },
-  },
+  }, */
   {
     category: `OwnHero`,
     hero: `Razor`,
@@ -12337,6 +12346,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `When you have your BKB, target the enemy carry in fights and run at them with all your spells.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `black_king_bar` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Razor`,
+    audioFile: `ownHero/Razor_11_AghanimShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage: `Pick up the Aghanims Shard around the 15 minute mark as it lets you stick on top of heroes with Static Link.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `aghanims_shard` },
   },
 
   {
@@ -12798,6 +12816,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     textMessage:
       "Spell immunity and magic resistance items are great against Sand King's magical damage.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Sand King`,
+    audioFile: `enemyHero/SandKing_8_AghanimScepter`,
+    messageTime: 25 * 60,
+    textMessage:
+      `Once Sand King has Aghanims Scepter, be careful about standing in Sand Storm as you can get perma stunned.`,
     audience: [Audience.ALL],
   },
 
@@ -14689,16 +14716,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_suicide" },
   },
-  /*{
+  {
     category: "OwnHero",
     hero: "Techies",
-    audioFile: "ownHero/Techies_3_MineTreelines",
-    messageTime: 75,
-    textMessage: "Plant Proximity Mines in treelines next to the lane.",
+    audioFile: `ownHero/Techies_3_MinePortals`,
+    messageTime: [12 * 60, 22 * 60, 32 * 60, 42 * 60],
+    textMessage: `Look to place a couple of Proximity Mines around portals for a surprise burst on enemies using them.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_land_mines" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Techies",
     audioFile: "ownHero/Techies_4_SitOnMines",
@@ -14706,7 +14733,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "You can make it harder for opponents to destroy mines by sitting on top of them.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_land_mines" },
-  },*/
+  }, */
   {
     category: "OwnHero",
     hero: "Techies",
