@@ -2668,7 +2668,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Chen`,
     audioFile: `ownHero/Chen_7_Farming`,
     messageTime: 7 * 60,
-    textMessage: `Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Mekansm lets you snowball the game.`,
+    textMessage: `Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Solar Crest into Mekansm lets you snowball the game.`,
     audience: [Audience.ALL],
   },
 
@@ -8905,9 +8905,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Meepo",
     audioFile: "ownHero/Meepo_4_GankItems",
     messageTime: 10 * 60 + 15,
-    textMessage: `Once you have Blink Dagger and dragon lance, look for pick-offs.`,
+    textMessage: `Once you have Diffusal Blade and dragon lance, look for pick-offs.`,
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "blink" },
+    image: { type: `item`, name: `diffusal_blade` },
   },
   {
     category: "OwnHero",
@@ -10781,6 +10781,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     repeatTime: 10 * 60,
     textMessage:
       "You can spam Purifying Flames on one of your allies prior to a fight to provide some extra healing going into the fight.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    hero: `Oracle`,
+    audioFile: `ownHero/Oracle_11_HighGround`,
+    messageTime: [30 * 60, 40 * 60, 50 * 60],
+    textMessage:
+      `When breaching or defending high ground, put Fates Edict on your front line ally along with a couple of Purifying Flames to protect them.`,
     audience: [Audience.ALL],
   },
 
@@ -17550,7 +17559,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Warlock",
     audioFile: "ownHero/Warlock_6_AghanimsShard",
     messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanim's Shard around minute 15 as it improves your waveclear and healing significantly.`,
+    textMessage: `Pick up Aghanim's Shard around minute 15 as it improves your waveclear and damage significantly.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -17559,7 +17568,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Warlock`,
     audioFile: `ownHero/Warlock_7_Farming`,
     messageTime: 16 * 60,
-    textMessage: `Once you have Aghanim Shard, you can use Upheavel to farm creep waves from a distance.`,
+    textMessage: `Once you have Aghanim Shard, you can use Upheavel to farm creep waves and jungle camps from a distance.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `warlock_upheaval` },
   },
