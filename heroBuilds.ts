@@ -9557,7 +9557,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Leshrac: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -9568,8 +9568,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958372",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
-          "leshrac_split_earth", // 1
-          "leshrac_lightning_storm", // 2
+          "leshrac_lightning_storm", // 1
+          "leshrac_split_earth", // 2
           "leshrac_lightning_storm", // 3
           "leshrac_split_earth", // 4
           "leshrac_lightning_storm", // 5
@@ -9581,13 +9581,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "leshrac_diabolic_edict", // 11
           "leshrac_pulse_nova", // 12
           "leshrac_split_earth", // 13
-          "leshrac_split_earth", // 14
-          "special_bonus_unique_leshrac_5", // 15
-          "special_bonus_unique_leshrac_6", // 16
+          "special_bonus_unique_leshrac_5", // 14
+          "special_bonus_unique_leshrac_6", // 15
+          "leshrac_split_earth", // 16
           "special_bonus_attributes", // 17
           "leshrac_pulse_nova", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_leshrac_4", // 20
+          "special_bonus_unique_leshrac_3", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -9606,32 +9606,32 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           early_game: ["bottle", "arcane_boots", "magic_wand"],
           mid_game: [
             "bloodstone",
-            "travel_boots",
-            "black_king_bar",
+            "cyclone",
             "kaya",
-            "aghanims_shard",
+            "travel_boots",
+            "blink",
           ],
           late_game: [
-            "blink",
             "kaya_and_sange",
+            "black_king_bar",
+            "aghanims_shard",
             "shivas_guard",
             "sheepstick",
             "ethereal_blade",
             "overwhelming_blink",
+            "wind_waker",
           ],
           situational: [
-            "cyclone",
             "ultimate_scepter",
             "sphere",
             "ghost",
             "aeon_disk",
-            "wind_waker",
           ],
           core: [
             "travel_boots",
             "bloodstone",
+            "cyclone",
             "kaya_and_sange",
-            "aghanims_shard",
             "black_king_bar",
             "blink",
           ],
@@ -9666,8 +9666,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       infused_raindrop: "Against magical burst.",
       arcane_boots:
         "A core boots upgrade that helps with mana sustain. Can be disassembled and components used for assembling Boots of Travel and Bloodstone.",
-      eternal_shroud:
-        "Gives you great survivability against a line up with a lot of magic damage as well as spell lifesteal for your skill set.",
       cyclone:
         "A core item that can be used to setup Split Earth. It can also be used defensive. Activated Diabolic Edict and Pulse Nova will deal damage while you are cycloned. The item can be upgraded later.",
       black_king_bar:
@@ -9913,7 +9911,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Lifestealer: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9928,10 +9926,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "life_stealer_ghoul_frenzy", // 2
           "life_stealer_ghoul_frenzy", // 3
           "life_stealer_rage", // 4
-          "life_stealer_feast", // 5
+          "life_stealer_ghoul_frenzy", // 5
           "life_stealer_infest", // 6
           "life_stealer_ghoul_frenzy", // 7
-          "life_stealer_ghoul_frenzy", // 8
+          "life_stealer_feast", // 8
           "life_stealer_feast", // 9
           "life_stealer_feast", // 10
           "life_stealer_rage", // 11
@@ -9959,25 +9957,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "branches",
           ],
-          early_game: ["bracer", "phase_boots", "magic_wand", "armlet"],
-          mid_game: ["desolator", "basher", "sange"],
+          early_game: ["bracer", "phase_boots", "magic_wand", "hand_of_midas"],
+          mid_game: ["armlet", "desolator", "basher"],
           late_game: ["skadi", "assault", "satanic", "abyssal_blade"],
           situational: [
             "radiance",
             "heavens_halberd",
             "sange_and_yasha",
+            "manta",
             "aghanims_shard",
-            "silver_edge",
             "monkey_king_bar",
             "nullifier",
             "black_king_bar",
             "bloodthorn",
             "mjollnir",
             "ultimate_scepter",
-            "hand_of_midas",
             "greater_crit",
             "orb_of_corrosion",
-            "blink",
           ],
           core: ["armlet", "desolator", "basher", "assault", "skadi"],
           neutral: [
@@ -9985,9 +9981,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "broom_handle",
             //"dagger_of_ristul", Removed in 7.33
             //"misericorde",
-            "mind_breaker",
+            "orb_of_destruction",
+            "vambrace",
             "paladin_sword",
             "titan_sliver",
+            "mind_breaker",
             "penta_edged_sword",
             "havoc_hammer",
             "desolator_2",
@@ -10007,8 +10005,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Will save you alot in alot of games towards the end of the laning stage. Make sure to pick a mobile teammate to infest that can iniate for you. If you don't need the spell at level 6 rather level up ghoul frenzy for farming speed.",
     },
     item_tooltips: {
-      orb_of_venom:
-        "If you can pressure on the lane. Can upgrade to orb of corrosion if you choose to go this route.",
+      orb_of_corrosion:
+        "If you can pressure on the lane.",
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane (eg. batrider/bristleback).",
       helm_of_iron_will:
@@ -10025,9 +10023,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Must have against some physical damage heroes (eg. templar assassin/Ursa).",
       basher: "A core item that allows you to lock down the target.",
       aghanims_shard:
-        "Not a particularly great upgrade. You will most of the time get it from Roshan.",
+        "Not a particularly great upgrade. You will get it from a tormentor most of the time.",
       monkey_king_bar: "Against evasion.",
-      silver_edge: "For break effect and to reposition quickly.",
       nullifier: "To dispel defensive spells and items.",
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel. Use it after Rage.",
@@ -10725,7 +10722,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Luna: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -10745,13 +10742,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "luna_lunar_blessing", // 7
           "luna_moon_glaive", // 8
           "luna_moon_glaive", // 9
-          "luna_lucent_beam", // 10
+          "special_bonus_unique_luna_7", // 10
           "luna_lucent_beam", // 11
-          "luna_eclipse", // 12
+          "luna_lucent_beam", // 12
           "luna_lucent_beam", // 13
           "luna_eclipse", // 14
-          "special_bonus_unique_luna_7", // 15
-          "special_bonus_unique_luna_2", // 16
+          "special_bonus_unique_luna_2", // 15
+          "luna_eclipse", // 16
           "special_bonus_attributes", // 17
           "luna_eclipse", // 18
           "special_bonus_attributes", // 19
@@ -10772,31 +10769,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_stick",
           ],
           early_game: [
-            "power_treads",
             "wraith_band",
-            "mask_of_madness",
+            "power_treads",
             "magic_wand",
+            "mask_of_madness", 
           ],
-          mid_game: ["dragon_lance", "manta", "black_king_bar", "lesser_crit"],
-          late_game: ["greater_crit", "skadi", "satanic", "butterfly"],
+          mid_game: ["dragon_lance", "manta", "lesser_crit", "black_king_bar", "aghanims_shard",],
+          late_game: [ "silver_edge", "satanic", "butterfly", "hurricane_pike"],
           situational: [
-            "hurricane_pike",
-            "silver_edge",
+            "skadi",
+            "greater_crit",
             "ultimate_scepter",
             "monkey_king_bar",
-            "aghanims_shard",
             "sphere",
             "sange_and_yasha",
-            "blood_grenade",
           ],
           core: [
-            "power_treads",
-            "mask_of_madness",
-            "manta",
             "dragon_lance",
+            "manta",
             "black_king_bar",
-            "aghanims_shard",
-            "greater_crit",
+            "silver_edge",
+            "butterfly",
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
@@ -10837,15 +10830,15 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       skadi:
         "Great against immobile tanky heroes as it reduces their movespeed,healing and lifesteal. Exceptionally good versus ranged heroes as it slows them by 50%.",
       aghanims_shard:
-        "A core item that adds to your damage output. Provides vision in area you beamed.",
+        "A good item for defensive purposes if you feel like you need to tank up more.",
       greater_crit:
-        "A core damaging item of choice. Works well with Aghanim`s Shard.",
+        "An alternative to silver edge for raw damage output.",
       hurricane_pike: "To disengage from heroes like Slark, Ursa and Troll.",
       silver_edge: "For break, burst and to reposition quickly.",
       ultimate_scepter:
         "Great at bursting backliners. However this is not your core item and should be taken from Roshan if you ever have the chance.",
       monkey_king_bar:
-        "Consider replacing Daedalus with it against a lot of  evasion and miss chance.",
+        "Consider replacing Daedalus/Silver edge with it against a lot of  evasion and miss chance.",
     },
     combo: [],
     counter_items: {
@@ -12603,12 +12596,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Monkey King": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030",
@@ -12648,42 +12641,43 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "circlet",
             "slippers",
-            "ward_observer",
           ],
           early_game: [
-            "orb_of_corrosion",
+            "wraith_band",
             "power_treads",
             "magic_wand",
-            "wraith_band",
+            "orb_of_corrosion",
           ],
-          mid_game: ["echo_sabre", "diffusal_blade", "black_king_bar"],
+          mid_game: ["maelstrom", "echo_sabre", "black_king_bar", "harpoon"],
           late_game: [
+            "manta",
+            "mjollnir",
             "skadi",
             "abyssal_blade",
-            "greater_crit",
             "satanic",
             "ultimate_scepter",
-            "aghanims_shard",
           ],
           situational: [
+            "hand_of_midas",
+            "bfury",
             "infused_raindrop",
+            "greater_crit",
+            "aghanims_shard",
             "silver_edge",
             "monkey_king_bar",
             "nullifier",
-            "mjollnir",
-            "manta",
-            "bfury",
             "butterfly",
             "radiance",
             "sange_and_yasha",
             "sphere",
           ],
           core: [
-            "power_treads",
+            "maelstrom",
             "harpoon",
             "black_king_bar",
+            "ultimate_scepter",
             "skadi",
-            "basher",
+            "abyssal_blade",
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
@@ -12710,10 +12704,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "You can consider taking this talent over the suggested one if you feel like you are getting splitpushed or having trouble catching a hero.",
         },
         item_tooltips: {
-          orb_of_venom:
-            "Start with it if you can get Jingu stacks easily against double melee on the sidelane e.g Pudge and Underlord or e.g Against Kunkka mid.",
+          orb_of_corrosion:
+            "If you're lane is stronger and you have kill potential, orb of venom into upgrade can be really strong.",
           echo_sabre:
             "A core item that helps with mana sustain and allows you to build up Jingu stacks quikly. Can be disassembled.",
+          maelstrom:
+            "An item that will help with farming speed and increase damgage overall.",
+          hand_of_midas:
+            "Another good option for farming that can be used as an alternative or alongside maelstrom",
+          bfury:
+            "An alternative to maelstrom which is a bit greedier but very effective for farming",
           black_king_bar:
             "A core item that allows you to stand your ground and fight. Wukong`s command makes you resistant against physical damage and Black King Bar sorts out most of the other sources of damage.",
           skadi:
@@ -12722,7 +12722,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "Boundless Strike and Wukongs Command synergize very well with this item. Especially good against low armor heroes.",
           basher:
             "A core item that allows you to lock down the opponent you are focusing.",
-          blink: "Allows you to find a nice spot to unleash Wukong`s Command.",
           silver_edge: "For break effect and to reposition.",
           monkey_king_bar: "Against evasion and miss chance.",
           nullifier:
@@ -12766,26 +12765,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             "orb_of_venom",
-            "blood_grenade",
             "branches",
             "branches",
-            "faerie_fire",
+            "branches",
+            "ward_sentry",
           ],
           early_game: ["orb_of_corrosion", "power_treads", "magic_wand"],
-          mid_game: ["diffusal_blade", "echo_sabre", "black_king_bar"],
+          mid_game: ["solar_crest", "echo_sabre", "black_king_bar"],
           late_game: ["harpoon", "skadi", "basher", "sheepstick"],
           situational: [
+            "gungir",
             "spirit_vessel",
-            "ancient_janggo",
-            "meteor_hammer",
-            "black_king_bar",
-            "mage_slayer",
+            "halberd",
+            "cyclone",
+            "hand_of_midas",
+            "diffusal_blade",
+            "force_staff",
+            "heavens_halberd",
+            "boots_of_bearing",
+            "orchid"
           ],
           core: [
-            "power_treads",
             "orb_of_corrosion",
             "echo_sabre",
-            "diffusal_blade",
+            "solar_crest",
+            "black_king_bar"
           ],
           neutral: [
             "broom_handle",
@@ -12900,7 +12904,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Morphling: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -12912,20 +12916,20 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         abilities: [
           "morphling_morph_agi", // 1
-          "morphling_waveform", // 2
+          "morphling_adaptive_strike_agi", // 2
           "morphling_adaptive_strike_agi", // 3
           "morphling_waveform", // 4
-          "morphling_waveform", // 5
+          "morphling_adaptive_strike_agi", // 5
           "morphling_morph_agi", // 6
-          "morphling_waveform", // 7
-          "morphling_adaptive_strike_agi", // 8
-          "morphling_adaptive_strike_agi", // 9
-          "morphling_adaptive_strike_agi", // 10
+          "morphling_adaptive_strike_agi", // 7
+          "morphling_waveform", // 8
+          "morphling_waveform", // 9
+          "morphling_waveform", // 10
           "special_bonus_unique_morphling_1", // 11
           "morphling_morph_agi", // 12
           "morphling_replicate", // 13
           "morphling_morph_agi", // 14
-          "special_bonus_unique_morphling_8", // 15
+          "special_bonus_agility_15", // 15
           "morphling_replicate", // 16
           "special_bonus_attributes", // 17
           "morphling_replicate", // 18
@@ -12946,30 +12950,29 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "circlet",
             "magic_stick",
           ],
-          early_game: ["power_treads", "magic_wand", "falcon_blade", "yasha"],
-          mid_game: ["manta", "skadi", "ultimate_scepter"],
+          early_game: ["power_treads", "lifesteal", "magic_wand", "falcon_blade", "yasha"],
+          mid_game: ["manta", "skadi", "black_king_bar"],
           late_game: [
-            "black_king_bar",
-            "skadi",
-            "satanic",
+            "silver_edge",
             "butterfly",
-            "greater_crit",
+            "satanic",
+            "boots_of_travel",
           ],
           situational: [
             "bottle",
-            "silver_edge",
+            "hand_of_midas",
+            "greater_crit",
             "sphere",
-            "blink",
-            "aghanims_shard",
             "hurricane_pike",
-            "diffusal_blade",
             "sange_and_yasha",
+            "ultimate_scepter",
+            "monkey_king_bar",
           ],
           core: [
-            "power_treads",
             "manta",
             "skadi",
-            "ultimate_scepter",
+            "butterfly",
+            "satanic",
             "black_king_bar",
           ],
           neutral: [
@@ -13002,7 +13005,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       magic_stick:
         "Start with it if you expect high frequency of spells being used on the lane.",
       bottle: "If you are playing midlane Morphling.",
-      lifesteal: "A core item that provides you with hp sustain.",
+      lifesteal: "You should get this after treads to help with lane sustain and jungling.",
       infused_raindrop:
         "Especially useful if they have magical burst since you can get caught off-guard on low HP.",
       power_treads:
@@ -13013,9 +13016,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       black_king_bar:
         "A core item that allows you to deliver the damage in the fights.",
       ultimate_scepter:
-        "A situational item that helps you gain Status Resistance, Movement speed or Spell Amplification when used on an enemy hero.",
-      blink:
-        "To gap-close quickly and can be upgraded to Swift Blink down the road.",
+        "A situational item that replicates a strong illusion of the enemy.",
     },
     combo: [],
     counter_items: {
@@ -13396,7 +13397,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Naga Siren": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -13443,26 +13444,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "circlet",
           ],
           early_game: ["power_treads", "wraith_band", "yasha"],
-          mid_game: ["manta", "orchid", "heart"],
+          mid_game: ["manta", "orchid", "heart", "aghanims_shard",],
           late_game: [
             "butterfly",
             "skadi",
             "bloodthorn",
             "sheepstick",
-            "swift_blink",
+            "boots_of_travel"
           ],
           situational: [
             "infused_raindrop",
+            "hand_of_midas",
             "diffusal_blade",
             "black_king_bar",
             "silver_edge",
-            "blink",
-            "aghanims_shard",
             "nullifier",
             "ultimate_scepter",
             "abyssal_blade",
-            "swift_blink",
-            "monkey_king_bar",
             "sphere",
           ],
           core: ["manta", "orchid", "heart", "butterfly"],
@@ -13504,7 +13502,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that provides you with a mix of stats. Rip Tide works on Manta illusions as well.",
       diffusal_blade:
         "Really good against Medusa and WK but also other heroes with small mana pool. Mana burn works on illusions as well.",
-      skadi: "A core item that provides you with bunch of attribute stats.",
+      skadi: "An item that provides you with bunch of attribute stats and slow.",
       orchid:
         "Allows you to pick-off heroes. Illusion benefit from attack speed as well. It should be upgraded to Bloodthorn down the road.",
       ultimate_scepter:
@@ -13513,14 +13511,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Against a lot of disables, magical damage and as a dispel.",
       silver_edge:
         "For break effect, burst and mobility. Illusions crit as well.",
-      blink:
-        "To gap-close quickly. Can be upgraded to swift-blink, great item on naga.",
       aghanims_shard:
-        "Allows you not to just reset the fight with Song of the Siren but also heal allies for a decent amount. You will acquire this buff from Roshan most of the time.",
+        "Allows you not to just reset the fight with Song of the Siren but also heal allies for a decent amount. You should try buy this before mid game main fights.",
       nullifier:
         "To dispel defensive spells and items that prevent you from right-clicking the opponents.",
-      monkey_king_bar:
-        "If you can't reliably use bloodthorn on a target with evasion get this.",
       butterfly:
         "Great item on naga for damage and for tanking up against physical damage heroes.",
       heart: "For tanking up naga and her illusions.",
@@ -14295,7 +14289,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Night Stalker": {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34b`,
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -14315,8 +14309,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "night_stalker_void", // 7
           "night_stalker_crippling_fear", // 8
           "night_stalker_hunter_in_the_night", // 9
-          `night_stalker_hunter_in_the_night`, // 10
-          `special_bonus_unique_night_stalker_7`, // 11
+          `special_bonus_unique_night_stalker_7`, // 10
+          `night_stalker_hunter_in_the_night`, // 11
           "night_stalker_darkness", // 12
           "night_stalker_crippling_fear", // 13
           "night_stalker_crippling_fear", // 14
@@ -14341,36 +14335,34 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `branches`,
             `branches`,
           ],
-          early_game: ["vanguard", "phase_boots", "magic_wand", "bracer"],
+          early_game: ["bracer", "phase_boots", "magic_wand", "hand_of_midas"],
           mid_game: [
             "echo_sabre",
-            "black_king_bar",
             "blink",
-            `basher`,
             `aghanims_shard`,
+            "black_king_bar",
+            `basher`,
           ],
           late_game: [
             "abyssal_blade",
             "nullifier",
-            "greater_crit",
+            "harpoon",
             "assault",
             "overwhelming_blink",
+            `travel_boots`,
           ],
           situational: [
-            `hand_of_midas`,
-            `sange_and_yasha`,
             `heavens_halberd`,
             `silver_edge`,
             `sphere`,
             `ultimate_scepter`,
-            `travel_boots`,
           ],
           core: [
-            "phase_boots",
             "echo_sabre",
             "black_king_bar",
             "blink",
             "basher",
+            "aghanims_shard"
           ],
           neutral: [
             "broom_handle",
@@ -14395,8 +14387,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     },
     item_tooltips: {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
-      vanguard:
-        "The early you get it the better. Will make you alot tankier in lane and allow you to lane vs most heroes",
       phase_boots:
         "A core boots upgrade that allows you to gap-close even quicker.",
       echo_sabre:
@@ -14418,8 +14408,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
     combo: [
       `night_stalker_darkness`,
       `night_stalker_crippling_fear`,
-      `black_king_bar`,
       `blink`,
+      `black_king_bar`,
       `night_stalker_void`,
     ],
     counter_items: {
@@ -15861,7 +15851,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Phantom Assassin": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -15908,27 +15898,26 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "circlet",
           ],
           early_game: [
-            "power_treads",
-            "cornucopia",
-            "magic_wand",
             "wraith_band",
+            "orb_of_corrosion",
+            "power_treads",
+            "magic_wand",
+            "cornucopia",
           ],
-          mid_game: ["bfury", "desolator", "black_king_bar", "basher"],
-          late_game: ["satanic", "abyssal_blade", "ultimate_scepter"],
+          mid_game: ["bfury", "desolator", "black_king_bar", "aghanims_shard", "basher"],
+          late_game: ["ultimate_scepter", "satanic", "abyssal_blade", "nullifier"],
           situational: [
             "manta",
-            "ultimate_scepter",
             "sphere",
             "monkey_king_bar",
-            "nullifier",
-            "aghanims_shard",
+            "rapier"
           ],
           core: [
-            "power_treads",
             "bfury",
             "desolator",
             "black_king_bar",
             "aghanims_shard",
+            "ultimate_scepter",
             "basher",
             "satanic",
           ],
@@ -15958,15 +15947,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "You can take this level 20 talent over the suggested one if the opponents still don`t have item counters to evasion.",
     },
     item_tooltips: {
-      blight_stone:
-        "If you can pressure the opponents early into the laning stage.",
-      orb_of_venom:
-        "If you can pressure the opponents early into the laning stage.",
       magic_stick:
         "If you expect high frequency of spells being used on the lane.",
       orb_of_corrosion:
         "If you can pressure the opponents early into the laning stage.",
-      ring_of_health:
+      cornucopia:
         "Helps with the hp sustain on the lane and incorporates into Battle Fury.",
       power_treads:
         "A core boots upgrade that improves your farming speed through attack speed increase and mana savings.",
@@ -16037,7 +16022,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Phantom Lancer": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -16055,24 +16040,24 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "phantom_lancer_phantom_edge", // 5
           "phantom_lancer_juxtapose", // 6
           "phantom_lancer_phantom_edge", // 7
-          "phantom_lancer_doppelwalk", // 8
-          "phantom_lancer_doppelwalk", // 9
-          "special_bonus_unique_phantom_lancer_lance_damage", // 10
-          "phantom_lancer_doppelwalk", // 11
+          "phantom_lancer_spirit_lance", // 8
+          "phantom_lancer_spirit_lance", // 9
+          "phantom_lancer_spirit_lance", // 10
+          "special_bonus_unique_phantom_lancer_lance_damage", // 11
           "phantom_lancer_juxtapose", // 12
-          "phantom_lancer_spirit_lance", // 13
-          "phantom_lancer_spirit_lance", // 14
-          "phantom_lancer_spirit_lance", // 15
-          "special_bonus_unique_phantom_lancer_5", // 16
+          "phantom_lancer_doppelwalk", // 13
+          "phantom_lancer_doppelwalk", // 14
+          "special_bonus_unique_phantom_lancer_5", // 15
+          "phantom_lancer_doppelwalk", // 16
           "special_bonus_attributes", // 17
           "phantom_lancer_juxtapose", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_phantom_lancer", // 20
+          "special_bonus_unique_phantom_lancer_6", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_phantom_lancer_4", // 25
+          "special_bonus_24_crit_2", // 25
         ],
         items: {
           starting: [
@@ -16083,27 +16068,23 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "slippers",
             "circlet",
           ],
-          early_game: ["power_treads", "magic_wand", "wraith_band"],
-          mid_game: ["diffusal_blade", "manta", "heart", "aghanims_shard"],
+          early_game: [ "wraith_band", "power_treads", "magic_wand",],
+          mid_game: ["ultimate_scepter", "diffusal_blade", "manta", "heart", "aghanims_shard"],
           late_game: [
             "skadi",
             "butterfly",
-            "abyssal_blade",
             "bloodthorn",
             "disperser",
           ],
           situational: [
+            "abyssal_blade",
             "monkey_king_bar",
             "sphere",
-            "silver_edge",
-            "swift_blink",
             "octarine_core",
             "sange_and_yasha",
-            "ultimate_scepter",
-            "mage_slayer",
           ],
           core: [
-            "power_treads",
+            "ultimate_scepter",
             "diffusal_blade",
             "manta",
             "heart",
@@ -16140,7 +16121,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       infused_raindrop: "Against magical burst.",
       power_treads:
         "A core boots upgrade that allows you to farm faster due to attack speed increase. It also provides the stat attributes which all the illusion based heroes adore.",
-      hood_of_defiance: "Against a lot of magical damage in early to midgame.",
       diffusal_blade:
         "A cheap core item that provides you a lot of useful stat attributes but also the mana burn works with your illusions.",
       manta:
@@ -16150,9 +16130,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       skadi:
         "A core item that is usually used against tanky immobile heroes with a lot of regen and against ranged heroes since it immensely slows their attack speed and movespeed. Is an alternative to Heart.",
       aghanims_shard:
-        "A core item that is really good at poking the opponents from the distance and provides a lot of value in longer fights. Creates additional chaos in the fights. Works well with Octarine.",
+        "A core item to give you a powerful escape from tough situations.",
       octarine_core:
-        "A core item that reduces the cooldown of all of your active spell and items. Goes well with Aghanim`s Shard and your 15th Talent (Spirit Lance cooldown -2).",
+        "A core item that reduces the cooldown of all of your active spell and items. Goes well with Aghanim`s Scepter and your 15th Talent (Spirit Lance cooldown -1.5).",
       butterfly:
         "A core item after you`ve tanked up. Good against physical damage heroes. Provides you with very good stats and evasion. Your illusion benefit from it very well.",
       monkey_king_bar: "Against evasion and miss chance.",
@@ -16871,7 +16851,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Pudge: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -16995,7 +16975,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "pudge_flesh_heap", // 8
           "pudge_flesh_heap", // 9
           "pudge_flesh_heap", // 10
-          "special_bonus_armor_4", // 11
+          "special_bonus_unique_pudge_4", // 11
           "pudge_dismember", // 12
           "pudge_meat_hook", // 13
           "pudge_meat_hook", // 14
@@ -17016,12 +16996,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "gauntlets",
             "ring_of_protection",
-            "blood_grenade",
+            "branches",
             "branches",
             "branches",
           ],
           early_game: ["vanguard", "phase_boots", "magic_wand", "soul_ring"],
           mid_game: [
+            "blade_mail",
             "blink",
             "black_king_bar",
             "ultimate_scepter",
@@ -17040,15 +17021,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "aghanims_shard",
             "cyclone",
             "force_staff",
-            "blade_mail",
             "assault",
             "sheepstick",
             "aether_lens",
             "spirit_vessel",
           ],
           core: [
-            "phase_boots",
             "vanguard",
+            "blade_mail",
             "ultimate_scepter",
             "black_king_bar",
             "blink",
@@ -17074,12 +17054,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "A core boots upgrade that provides you with much needed armor and movement speed boost.",
           vanguard:
             "A core item that tanks you up and allows you to cut-waves, clear stacks and dive towers. You can also disassemble it.",
-          hood_of_defiance:
-            "A core item that tanks you up by reducing damage you take from magical sources including Rot.",
-          eternal_shroud:
-            "An upgrade to Hood of Defiance. Provides you with spell lifesteal that goes well with your skill set.",
           aether_lens:
-            "Increases the range of your Hook and Dismember while providing you good stats. Goes into Octarine Core down the road.",
+            "Increases the range of your Hook and Dismember while providing you good stats.",
           aghanims_shard:
             "Allows you to use Dismember on an allied hero, potentially saving them from death and healing them in the process.",
           crimson_guard:
@@ -17466,12 +17442,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Queen of Pain": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952",
@@ -17491,7 +17467,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "queenofpain_sonic_wave", // 12
           "queenofpain_blink", // 13
           "queenofpain_blink", // 14
-          "special_bonus_unique_queen_of_pain_4", // 15
+          "special_bonus_attack_speed_30", // 15
           "queenofpain_shadow_strike", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
@@ -17514,7 +17490,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "bottle",
-            "null_talisman",
+            "falcon_blade",
             "magic_stick",
             "power_treads",
             "kaya",
@@ -17529,11 +17505,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "shivas_guard",
             "octarine_core",
             "sheepstick",
-            "ethereal_blade",
           ],
           situational: [
+            "hand_of_midas",
             "infused_raindrop",
             "sphere",
+            "orchid",
             "witch_blade",
             "refresher",
             "bloodthorn",
@@ -17544,6 +17521,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "black_king_bar",
             "aghanims_shard",
             "shivas_guard",
+            "octarine_core"
           ],
           neutral: [
             "arcane_ring",
@@ -18941,7 +18919,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   "Shadow Fiend": {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -18996,12 +18974,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             "dragon_lance",
+            "manta",
             "invis_sword",
             "black_king_bar",
             "aghanims_shard",
           ],
           late_game: [
-            "black_king_bar",
             "butterfly",
             "satanic",
             "monkey_king_bar",
@@ -19009,17 +18987,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "silver_edge",
           ],
           situational: [
+            "falcon_blade",
             "sphere",
             "greater_crit",
             "sange_and_yasha",
             "assault",
-            "desolator",
-            "manta",
           ],
           core: [
-            "power_treads",
             "mask_of_madness",
             "dragon_lance",
+            "manta",
             "silver_edge",
             "black_king_bar",
           ],
@@ -19111,18 +19088,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "boots",
             "power_treads",
             "magic_wand",
-            "mask_of_madness",
+            "dragon_lance",
           ],
           mid_game: [
-            "dragon_lance",
+            "manta",
             "invis_sword",
             "black_king_bar",
-            "silver_edge",
             "aghanims_shard",
           ],
-          late_game: ["greater_crit", "satanic", "butterfly"],
+          late_game: ["silver_edge", "satanic", "butterfly"],
           situational: [
-            "manta",
+            "mask_of_madness",
             "blink",
             "skadi",
             "hurricane_pike",
@@ -19130,11 +19106,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "sphere",
           ],
           core: [
-            "power_treads",
-            "mask_of_madness",
             "dragon_lance",
+            "manta",
             "black_king_bar",
             "silver_edge",
+            "butterfly",
             "aghanims_shard",
           ],
           neutral: [
@@ -19909,7 +19885,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Slark: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -19954,9 +19930,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_stick",
             "circlet",
           ],
-          early_game: ["power_treads", "magic_wand", "echo_sabre"],
+          early_game: ["power_treads", "wraith_band", "magic_wand", "diffusal_blade"],
           mid_game: [
-            "diffusal_blade",
+            "echo_sabre",
             "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
@@ -19965,8 +19941,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "silver_edge",
             "skadi",
             "abyssal_blade",
-            "satanic",
             "harpoon",
+            "bloodthorn",
             "butterfly",
           ],
           situational: [
@@ -19977,12 +19953,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "blink",
             "monkey_king_bar",
             "nullifier",
-            "manta",
+            "mage_slayer"
           ],
           core: [
-            "power_treads",
-            "echo_sabre",
             "diffusal_blade",
+            "echo_sabre",
             "ultimate_scepter",
             "black_king_bar",
             "aghanims_shard",
@@ -20597,7 +20572,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Spectre: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -20639,8 +20614,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
+            "branches",            
             "circlet",
-            "magic_stick",
+            "slippers",
           ],
           early_game: [
             "wraith_band",
@@ -20648,13 +20624,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "magic_wand",
             "blade_mail",
           ],
-          mid_game: ["radiance", "manta", "ultimate_scepter", "aghanims_shard"],
-          late_game: ["skadi", "abyssal_blade", "butterfly", "moon_shard"],
+          mid_game: ["radiance", "manta", "aghanims_shard"],
+          late_game: ["ultimate_scepter", "skadi", "abyssal_blade", "butterfly", "bloodthorn"],
           situational: [
+            "falcon_blade",
             "echo_sabre",
             "diffusal_blade",
             "hand_of_midas",
-            "bloodthorn",
+            "moonshard",
             "black_king_bar",
             "nullifier",
             "sheepstick",
@@ -20707,7 +20684,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "Great against heroes like Medusa and Wraith King but also other heroes with small mana pools. Goes well with Manta.",
       radiance: "Against illusion, clone and summon-based heroes.",
       ultimate_scepter:
-        "A core item that allows you to play actively and be part of every pick-off and teamfight.",
+        "Gives you haunt ability, very strong for teamfights.",
       manta:
         "A core item that provides you with useful stats but mainly adds to your burst damage. Desolate works on illusions. Spectre becomes decent at taking Roshan with this item.",
       skadi:
@@ -21230,7 +21207,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Sven: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -21243,17 +21220,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         abilities: [
           "sven_storm_bolt", // 1
           "sven_warcry", // 2
-          "sven_storm_bolt", // 3
+          "sven_great_cleave", // 3
           "sven_great_cleave", // 4
           "sven_great_cleave", // 5
           "sven_gods_strength", // 6
           "sven_great_cleave", // 7
-          "sven_great_cleave", // 8
+          "sven_warcry", // 8
           "sven_warcry", // 9
           "special_bonus_attack_speed_15", // 10
           "sven_warcry", // 11
           "sven_gods_strength", // 12
-          "sven_warcry", // 13
+          "sven_storm_bolt", // 13
           "sven_storm_bolt", // 14
           "special_bonus_unique_sven_3", // 15
           "sven_storm_bolt", // 16
@@ -21275,12 +21252,11 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "branches",
             "magic_stick",
           ],
-          early_game: ["power_treads", "magic_wand", "mask_of_madness"],
+          early_game: ["power_treads", "bracer", "magic_wand", "mask_of_madness"],
           mid_game: ["echo_sabre", "blink", "black_king_bar", "lesser_crit"],
-          late_game: ["harpoon", "greater_crit", "assault", "satanic"],
+          late_game: ["harpoon", "greater_crit", "assault", "satanic", "swift_blink"],
           situational: [
-            "overwhelming_blink",
-            "swift_blink",
+            "butterfly",
             "aghanims_shard",
             "silver_edge",
             "heavens_halberd",
@@ -21291,7 +21267,6 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "bloodthorn",
           ],
           core: [
-            "power_treads",
             "mask_of_madness",
             "echo_sabre",
             "blink",
@@ -22021,7 +21996,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // eidendota plays hero
   Terrorblade: {
-    gameplay_version: "7.33e",
+    gameplay_version: "7.34b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -22070,13 +22045,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           early_game: ["power_treads", "magic_wand", "wraith_band", "yasha"],
           mid_game: ["dragon_lance", "manta", "skadi", "black_king_bar"],
           late_game: [
+            "butterfly",
             "satanic",
             "greater_crit",
-            "butterfly",
             "hurricane_pike",
             "swift_blink",
           ],
           situational: [
+            "aghanims_shard",
             "infused_raindrop",
             "refresher",
             "blink",
@@ -22087,7 +22063,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "silver_edge",
             "diffusal_blade",
           ],
-          core: ["manta", "skadi", "black_king_bar", "greater_crit"],
+          core: ["manta", "skadi", "black_king_bar", "butterfly", "satanic"],
           neutral: [
             //"possessed_mask", Removed in 7.33
             "unstable_wand",
