@@ -6974,7 +6974,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Leshrac_1_SplitEarthRanged",
     messageTime: 15,
     textMessage:
-      "You can use Split Earth or Lightning Storm to secure ranged creeps during the laning stage.",
+      "You should use Split Earth or Lightning Storm to secure ranged creeps during the laning stage.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "leshrac_split_earth" },
   },
@@ -7072,9 +7072,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Leshrac",
     audioFile: "ownHero/Leshrac_11_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: [19 * 60, 25 * 60],
     textMessage:
-      "Pick up Aghanims Shard at minute 20 for extra disable. It helps with siege or defense of the buildings.",
+      "Pick up Aghanims Shard if you need to defend high ground or siege.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -7854,7 +7854,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_3_BeamPoints",
     messageTime: 2 * 60,
     textMessage:
-      "If you have a strong lane, you can invest more points in Lucent Beam, otherwise up to two is more than enough.",
+      "Generally one point in lucent beam is enough to max your other spells for farming speed.",
     audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
     image: { type: "ability", name: "luna_lucent_beam" },
   },
@@ -7864,7 +7864,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_10_moon_glaive",
     messageTime: 3 * 60,
     textMessage:
-      "You should get some early points in moon glaives and max them after lunar blessing as this will result in a very fast farming speed.",
+      "Maxing lunar blessing to dominate the lane and then investing points in moon glaives for when you go to the jungle will result in a high farming speed.",
     audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
     image: { type: "ability", name: "luna_moon_glaive" },
   },
@@ -7902,17 +7902,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Luna",
     audioFile: "ownHero/Luna_7_MantaFarm",
-    messageTime: [15 * 60, 21 * 60],
-    textMessage:
-      "Make use of the Manta illusions to farm extra creepwaves you otherwise wouldn't be able to with your hero.",
-    audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "manta" },
-  },
-  {
-    category: "OwnHero",
-    hero: "Luna",
-    audioFile: "ownHero/Luna_7_MantaFarm",
-    messageTime: [14 * 60 + 15, 19 * 60 + 15],
+    messageTime: [14 * 60 + 15, 15 * 60, 19 * 60 + 15, 21 * 60],
     textMessage:
       "Make use of the Manta illusions to farm extra creepwaves you otherwise wouldn't be able to with your hero.",
     audience: [Audience.ROLE_CORE],
@@ -7924,7 +7914,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_8_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around the 20-30 minute mark to improve dps.",
+      "Pick up Aghanim's Shard if you feel you need to tank up in fights.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -9423,7 +9413,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Morphling_10_Aghanims",
     messageTime: 18 * 60 + 30,
     textMessage:
-      "Aghanim's Scepter is really good if you have allies like Earthshaker, Dark Willow, Spirit Breaker.",
+      "Aghanim's Scepter is good vs strong illusion heroes.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -9443,7 +9433,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Morphling_2_PressureEarly",
     messageTime: -50,
     textMessage:
-      "Morphling is very weak until level 3 when he gets second point in Attribute Shift. Pressure him early on.",
+      "Morphling is weaker in his earlier levels, Pressure him early on.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -10251,7 +10241,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_7_TPCancel",
     messageTime: [5 * 60, 15 * 60],
     textMessage:
-      "When going to kill, be careful with Voiding right away as the opponent might just teleport out.",
+      "When going for a kill, be careful with Voiding right away as the opponent might just teleport out.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_void" },
   },
@@ -13078,7 +13068,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [9 * 60 + 45, 15 * 60 + 45],
     textMessage:
       "Once you have bkb you can start to fight as shadow fiend is very susceptible to disables.",
-    audience: [Audience.ROLE_MID],
+    audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
   {
