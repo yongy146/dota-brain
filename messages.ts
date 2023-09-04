@@ -7356,6 +7356,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
+  {
+    category: `OwnHero`,
+    hero: `Lina`,
+    audioFile: `ownHero/Lina_9_AghsFreeTerrain`,
+    messageTime: 22 * 60,
+    textMessage: `With your Aghanims Scepter pick up, you can fly over treelines and cliffs to find better initiation angles or escape.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `ultimate_scepter` },
+  },
 
   {
     category: "EnemyHero",
@@ -7798,7 +7807,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_1_HelmOfIronWill",
     messageTime: -90,
     textMessage: "Rush Helm of Iron Will to solve your health sustain issues.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_iron_will" },
   },
   {
@@ -7818,7 +7827,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 15,
     textMessage:
       "Focus on securing lasthits and denying as you have extra damage from the wolves and Feral Impulse.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ALL],
     image: { type: "ability", name: "lycan_summon_wolves" },
   },
   {
@@ -7838,7 +7847,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 4 * 60 + 45,
     textMessage:
       "Lycan's laning power spike is Helm of Dominator and level 6. Try to get a kill or force the enemy out of the lane and you can take the tower fast.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -7848,7 +7857,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60,
     textMessage:
       "Delay death of the 5 minute catapult wave to meet Helm of the Dominator and level 6 power spike.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ROLE_OFFLANE],
   },
   {
     category: "OwnHero",
@@ -7857,7 +7866,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60,
     textMessage:
       "Overtake a neutral creep with a stun or root with the Helm of the Dominator so the opponents can't teleport out.",
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -7867,7 +7876,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [7 * 60 + 15, 14 * 60 + 15],
     textMessage:
       "When dominated creep is about to die, you can overtake another one and deny gold and experience to opponents.",
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -7920,6 +7929,35 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "In tough late game scenarios resort to ratting, Aghanim's Shard will keep your lanes pushed in and make it easier to rat.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Lycan`,
+    audioFile: `ownHero/Lycan_14_Boots`,
+    messageTime: 4 * 60,
+    textMessage:
+      `With Power Treads, you are less reliant on your Shapeshift when trying to stay on top of enemy heroes and right click them.`,
+    audience: [Audience.ROLE_MID],
+    image: { type: `item`, name: `power_treads` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Lycan`,
+    audioFile: `ownHero/Lycan_15_PowerSpikes`,
+    messageTime: 9 * 60,
+    textMessage:
+      `Use your burst damage to make maximum use of item spikes by looking for kills and objectives on the map.`,
+    audience: [Audience.ROLE_MID],
+    image: { type: `item`, name: `echo_sabre` },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Lycan`,
+    audioFile: `ownHero/Lycan_16_Teamfight`,
+    messageTime: 13 * 60,
+    textMessage:
+      `Look to isolate and kill enemy supports quickly in fights as they will find it hard to kite you without items.`,
+    audience: [Audience.ALL],
   },
 
   {
@@ -9601,7 +9639,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Nature's Prophet",
     audioFile: "ownHero/Furion_1_TreantsJob",
-    messageTime: -75,
+    messageTime: 18 * 60 + 45,
     textMessage:
       "Treants are not only good for lasthitting or harassing but also to scout, block off camps and deny runes.",
     audience: [Audience.ALL],
@@ -9611,7 +9649,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Nature's Prophet",
     audioFile: "ownHero/Furion_2_Bodyblock",
-    messageTime: [-15, 6 * 60 + 45, 12 * 60 + 45],
+    messageTime: [12 * 60 + 45, 24 * 60 + 45, 36 * 60 + 45],
     textMessage:
       "Consider bodyblocking opponents with treants when going for a kill or trying to escape.",
     audience: [Audience.ALL],
@@ -9631,7 +9669,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Nature's Prophet",
     audioFile: "ownHero/Furion_12_TPWisdomRune",
-    messageTime: 60,
+    messageTime: 6 * 60 + 45,
     textMessage:
       "Wisdom runes spawn at minute 7, look to steal enemy runes with teleport as it gives you alot and denies alot from the enemy.",
     audience: [Audience.ALL],
@@ -9648,7 +9686,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_wrath_of_nature" },
   },
-  {
+  /* {
     category: "OwnHero",
     hero: "Nature's Prophet",
     audioFile: "ownHero/Furion_5_TangoSprout",
@@ -9656,7 +9694,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Using Tango on a Sprout tree provides more health regeneration.",
     audience: [Audience.ALL],
     image: { type: "item", name: "tango" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Nature's Prophet",
@@ -9673,7 +9711,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_7_SproutVision2",
     messageTime: [7 * 60 + 45, 17 * 60 + 45, 27 * 60 + 45],
     textMessage:
-      "Save yourself or an ally by placing Sprout strategically. It is great for kitting spell-immune opponents.",
+      `Save yourself or an ally by placing Sprout strategically. It is great for kiting spell-immune opponents.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_sprout" },
   },
@@ -9701,9 +9739,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Nature's Prophet",
     audioFile: "ownHero/Furion_10_PushSidelanes",
     messageTime: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
-    textMessage: "When not much is happening, push out the sidelines with your hero and summons.",
+    textMessage: `When not much is happening, push out the sidelines with your sprout and summons.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "furion_force_of_nature" },
+    image: { type: "ability", name: `furion_sprout` },
   },
   {
     category: "OwnHero",
@@ -9714,6 +9752,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Nature's Prophet excels at ratting, so resort to it if the game slows down or you fall behind.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_force_of_nature" },
+  },
+  {
+    category: `OwnHero`,
+    hero: `Nature's Prophet`,
+    audioFile: `ownHero/Furion_13_DangerousFarming`,
+    messageTime: [6 * 60 + 15, 16 * 60 + 15, 26 * 60 + 15, 36 * 60 + 15, 46 * 60 + 15],
+    textMessage:
+      `Use Sprout to safely clear creep waves in dangerous areas of the map where you might die.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `furion_sprout` },
   },
 
   {
@@ -9738,7 +9786,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Nature's Prophet",
     audioFile: "enemyHero/Furion_3_TangoSprout",
     messageTime: 40,
-    textMessage: "Using Tango on Sprout tree gives you twice as much regeneration.",
+    textMessage: `Using Tango on Sprout tree is a waste as it gives you no regeneration.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -9746,7 +9794,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Nature's Prophet",
     audioFile: "enemyHero/Furion_4_WrathOfNature",
     messageTime: 8 * 60,
-    textMessage: "Wrath of Nature can hit you with up to 400 damage at level6.",
+    textMessage: `Wrath of Nature can hit you with up to 400 damage at level 6.`,
     audience: [Audience.ALL],
   },
   {
@@ -17417,9 +17465,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     hero: "Windranger",
     audioFile: "ownHero/Windranger_9_AghanimsShard",
-    messageTime: 19 * 60,
+    messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Ahanim's Shard around minute 15 as it adds another control spell to your arsenal.",
+      `Pick up Aghanims Shard around minute 15 as it adds another control spell to your arsenal.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "aghanims_shard" },
   },
