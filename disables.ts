@@ -613,7 +613,7 @@ export const disables: IDisables = {
     },
   ],
   "Nature's Prophet": [],
-    // Level 20 root talent
+    // The Level 20 talent on Natures Prophet gives him an Area Leash with Sprout.
   Necrophos: [
     {
       skill: "necrolyte_reapers_scythe",
