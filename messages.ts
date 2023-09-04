@@ -11893,7 +11893,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/QueenOfPain_7_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around minute 15 as it provides silence and extra damage.",
+      "Pick up Aghanim's Shard after Kaya&Sange and Scepter as it provides silence and extra damage.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -14798,7 +14798,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Terrorblade_2_MetamorphosisFarming",
     messageTime: 20,
     textMessage:
-      "Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves, Try to harras your opponent and deny they're creeps.",
+      "Feel free to pop Metamorphosis to give yourself an easier time lasthitting at the start of the lane, Try to harras your opponent and deny they're creeps.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "terrorblade_metamorphosis" },
   },
@@ -14808,7 +14808,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Terrorblade_0_Metamorphosis",
     messageTime: 1 * 60,
     textMessage:
-      "Make sure you have 2 levels in metamorphosis before your second use of it in lane.",
+      "Try to have 2 levels in metamorphosis before your second use of it in lane.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "terrorblade_metamorphosis" },
   },
@@ -15846,7 +15846,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Troll Warlord",
     audioFile: "ownHero/TrollWarlord_5_Antikiting",
     messageTime: [20 * 60],
-    textMessage: "Consider aghanims shard around 20-30 minute mark to make your team stronger.",
+    textMessage: "Aghanims shard can help with AOE damage but is generally picked up from a tormentor.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16365,7 +16365,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Ursa_3_EarthshockJump2",
     messageTime: [6 * 60 + 45, 14 * 60 + 45, 22 * 60 + 45],
     textMessage:
-      "Ursa typically farms very slowly so you need to play actively and look for kills to gain networth.",
+      "You're main timing on ursa is once you have blink, basher and bkb, you can look for engagements often once reached.",
     audience: [Audience.ROLE_CORE],
   },
   {
@@ -16373,7 +16373,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Ursa",
     audioFile: "ownHero/Ursa_4_Roshan",
     messageTime: [9 * 60 + 45, 13 * 60 + 45],
-    textMessage: "Ursa can take Roshan on his own fairly early due to Fury Swipes stacking.",
+    textMessage: "Ursa can take Roshan early with Fury Swipes and lifesteal or with an ally to tank.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -17181,7 +17181,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Weaver_1_QuickWarding",
     messageTime: -90,
     textMessage:
-      "Consider placing an observer for midlaner quickly with Shukuchi as you load into the game.",
+      "You can use you're sukuchi to get to the runes asap and scout in the pre game.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_observer" },
   },
@@ -17259,7 +17259,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Weaver",
     audioFile: "ownHero/Weaver_9_AghanimsShard",
     messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanims Shard once you have your damage items in the late game to further improve your dps.`,
+    textMessage: `You'll generally get aghanims shard from tormentors but if you have your core items you can buy it.`,
     audience: [Audience.ROLE_CARRY],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -17288,7 +17288,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Weaver_2_TheSwarm",
     messageTime: 60 + 30,
     textMessage:
-      "Remove The Swarm from yourself and from teammates or you will loose a lot of armor.",
+      "Remove The Swarm from yourself and from teammates or you will lose a lot of armor.",
     audience: [Audience.ALL],
   },
   {
@@ -17313,7 +17313,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Weaver_5_Invisible",
     messageTime: 12 * 60,
     textMessage:
-      "Becoming invisible removes The Swarm unless you are being detected or Weaver has Shard upgrade.",
+      "Becoming invisible removes The Swarm unless you are being detected.",
     audience: [Audience.ALL],
   },
   {
@@ -17861,7 +17861,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/WraithKing_7_ManaBurn",
     messageTime: 14 * 60,
     textMessage:
-      "Mana burn is a big problem for the Wraith King. Consider aghanims shard when playing against heroes that have mana burn or buy diffusal.",
+      "Mana burn is a big problem for the Wraith King. Consider aghanims shard when playing against heroes that have mana burn or diffusal blade.",
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
