@@ -1230,7 +1230,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_2_CounterHelix",
     messageTime: -15,
     textMessage:
-      "It is good to fight the opponents while you are surrounded by their creeps as Counter Helix will proc more often.",
+      `It is good to fight the opponents while you are surrounded by enemy creeps to proc Counter Helix with more attacks.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "axe_counter_helix" },
   },
@@ -1638,10 +1638,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     hero: "Beastmaster",
-    audioFile: "ownHero/Beastmaster_4_ScoutSupport",
-    messageTime: 20,
-    textMessage: "Keep the hawk out to scout opponents' support whereabouts.",
-    audience: [Audience.ROLE_OFFLANE, Audience.ROLE_CARRY, Audience.ROLE_SUPPORT],
+    audioFile: `ownHero/Beastmaster_4_HawkRoot`,
+    messageTime: 1 * 60 + 15,
+    textMessage: `Keep the hawk out to always have a form of lockdown on enemy heroes close to you.`,
+    audience: [Audience.ALL],
     image: { type: "ability", name: "beastmaster_call_of_the_wild_hawk" },
   },
   {
@@ -1677,7 +1677,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Beastmaster_8_FarmAggressively",
     messageTime: [9 * 60, 11 * 60],
     textMessage:
-      "You can farm aggressively since you have hawk's vision to protect you and summons to farm those camps safely.",
+      `You can farm aggressively since you have hawk's root to protect you and summons to farm those camps safely.`,
     audience: [Audience.ALL],
   },
   {
@@ -1709,7 +1709,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.IN_LANE],
     image: { type: "ability", name: "beastmaster_call_of_the_wild_boar" },
   },
-  {
+  /* {
     category: "EnemyHero",
     hero: "Beastmaster",
     audioFile: "enemyHero/Beastmaster_2_HawkSentry",
@@ -1717,7 +1717,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Bring a sentry to the lane to spot and kill Beastmaster's hawks.",
     audience: [Audience.IN_LANE],
     image: { type: "item", name: "ward_sentry" },
-  },
+  }, */
   // {category: "EnemyHero", hero: "Beastmaster", audioFile: "enemyHero/Beastmaster_3_Powerspike", messageTime: (8*60), textMessage: "Be aware of Beastmaster's level 6 and Necrobook level 1's deadly powerspike.", audience: [Audience.IN_LANE]}, |patch 7.29| MESSAGE CHANGED
   {
     category: "EnemyHero",
@@ -1743,7 +1743,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Beastmaster_5_Gank",
     messageTime: 10 * 60 + 10,
     textMessage:
-      "Gank Beastmaster with smoke as he might have hawks around. You get double bounty as you kill his summons too.",
+      `Gank Beastmaster with smoke as you get more gold if you kill his summons too.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "smoke_of_deceit" },
   },
@@ -1771,6 +1771,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
       "Beastmaster lineups are good at taking early Roshan. Ward around Roshpit and check.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Beastmaster`,
+    audioFile: `enemyHero/Beastmaster_9_HawkIsolation`,
+    messageTime: [9 * 60 + 10, 18 * 60 + 10, 27 * 60 + 10, 36 * 60 + 10],
+    textMessage:
+      `Avoid walking up to Beastmaster on your own as you might get rooted by hawks and then roared to your death.`,
     audience: [Audience.ALL],
   },
 
@@ -3899,6 +3908,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: `ability`, name: `doom_bringer_devour` },
   },
+  
   {
     category: "EnemyHero",
     hero: "Doom",
@@ -3931,6 +3941,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [15 * 60 + 10, 25 * 60 + 10, 35 * 60 + 10],
     textMessage:
       "Acquiring Aegis for your core is a good way of dealing with The Doom spell. Look to kill Roshan.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Doom`,
+    audioFile: `enemyHero/Doom_5_EscapeItems`,
+    messageTime: [8 * 60 + 10, 16 * 60 + 10, 24 * 60 + 10, 32 * 60 + 10],
+    textMessage:
+      `Until Dooms level 25 mute talent, you can still use your own items to kite or escape while Doomed.`,
     audience: [Audience.ALL],
   },
 
@@ -8054,7 +8073,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Magnus_3_WinLastHits",
     messageTime: 15,
     textMessage: `Magnus has huge base damage that is further amplified by Empower. Use to win the lane last hit wise.`,
-    audience: [Audience.ROLE_MID],
+    audience: [Audience.ALL],
     image: { type: "ability", name: "magnataur_empower" },
   },
   {
@@ -12221,7 +12240,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     textMessage:
       "Take your time to farm the Diffusal Blade which will significantly improve your pick-off potential.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "diffusal_blade" },
   },
   {
@@ -12234,14 +12253,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     image: { type: "item", name: "aghanims_shard" },
   },
 
-  {
+  /* {
     category: "EnemyHero",
     hero: "Riki",
     audioFile: "enemyHero/Riki_1_DustOfAppearance",
     messageTime: 8 * 60,
     textMessage: `Dust of Appearance does not stick on Riki while he is using Tricks of the Trade.`,
     audience: [Audience.ALL],
-  },
+  }, */
   {
     category: "EnemyHero",
     hero: "Riki",
@@ -16111,7 +16130,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Underlord_2_AccelerateFarm",
     messageTime: 5 * 60,
     textMessage:
-      "Once you have 3 points in Firestorm, consider Firestorming creepwaves and farming neutrals afterwards.",
+      `Once you have 3 points in Firestorm, consider Firestorming creep waves and farming neutrals afterwards.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "abyssal_underlord_firestorm" },
   },
