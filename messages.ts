@@ -1555,7 +1555,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Batrider",
     audioFile: "ownHero/Batrider_6_FlyingVision",
     messageTime: [6 * 60 + 30, 16 * 60 + 30, 26 * 60 + 30],
-    textMessage: "Sticky Napalm and Firefly provide flying vision.",
+    textMessage: `Sticky Napalm provides flying vision in its area of effect.`,
     audience: [Audience.ALL],
   },
   {
@@ -9906,7 +9906,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: `ownHero/Necrophos_8_Cloak`,
     messageTime: [3 * 60 + 15, 6 * 60 + 15],
     textMessage: `Ghost Shroud makes you vulnerable to magical damage so you typically need an early Cloak.`,
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ALL],
     image: { type: `item`, name: `cloak` },
   },
   {
@@ -10404,7 +10404,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Omniknight",
     audioFile: "ownHero/Omniknight_1_Dispel",
     messageTime: -90,
-    textMessage: "Consider swapping lanes if there's a need for dispel.",
+    textMessage: `Consider swapping lanes if theres a need for sustain and spell immunity.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "omniknight_repel" },
   },
@@ -10453,9 +10453,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Dispels are a big problem for Omniknight. Be mindful when using Heavenly Grace and Guardian Angel.",
+      `Dispels are a big problem for Omniknight. Be mindful when using Guardian Angel.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "omniknight_repel" },
+    image: { type: `ability`, name: `omniknight_guardian_angel` },
   },
 
   {
@@ -10472,7 +10472,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Omniknight_2_HeavenlyGrace",
     messageTime: -50,
     textMessage:
-      "Omniknight's Heavenly Grace applies strong dispel. Use your disables after it expires.",
+      `Omniknights Repel applies debuff immunity. Use your disables after it expires.`,
     audience: [Audience.ALL],
   },
   {
@@ -10489,7 +10489,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Omniknight_4_GuardianAngelDispel",
     messageTime: 12 * 60,
     textMessage:
-      "Spell and items that dispel are great again Omniknight's Guardian Angel and Heavenly Grace.",
+      `Spell and items that dispel are great against Omniknights Guardian Angel.`,
     audience: [Audience.ALL],
   },
   {
@@ -11434,6 +11434,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: `ability`, name: `primal_beast_trample` },
   },
+  {
+    category: `OwnHero`,
+    hero: `Primal Beast`,
+    audioFile: `ownHero/PrimalBeast_9_TrampleFirstWave`,
+    messageTime: -45,
+    textMessage: `Against a tough lane, you can Trample and kill the first wave behind the enemy tier 2 tower.`,
+    audience: [Audience.ROLE_OFFLANE],
+    image: { type: `ability`, name: `primal_beast_trample` },
+  },
 
   {
     category: "EnemyHero",
@@ -11462,6 +11471,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Spell immunity counters all of the Primal Beasts abilities but Uproar.",
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
+  },
+  {
+    category: `EnemyHero`,
+    hero: `Primal Beast`,
+    audioFile: `enemyHero/PrimalBeast_4_InterruptPulverize`,
+    messageTime: [12 * 60, 22 * 60, 32 * 60, 42 * 60],
+    textMessage: `You can always interrupt Pulverize before completion if you are in range with a stun or silence.`,
+    audience: [Audience.ALL],
   },
 
   // 78. Puck
@@ -11613,14 +11630,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Puck is great at split-pushing. Consider getting Boots of Travel on a Core.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "EnemyHero",
     hero: "Puck",
     audioFile: "enemyHero/Puck_8_AghanimsScepter",
     messageTime: 25 * 60 + 10,
     textMessage: `Once Puck gets Aghanim's Scepter, you might want to break the Dream Coil to not take additional right click damage.`,
     audience: [Audience.ALL],
-  },
+  }, */
 
   // 79. Pudge
   {
