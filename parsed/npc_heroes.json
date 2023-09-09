@@ -12,7 +12,33 @@
 			"HeroUnlockOrder": "1",
 			"CMEnabled": "0",
 			"new_player_enable": "0",
-			"Legs": "2",
+			"Adjectives": {
+				"Wings": "0",
+				"Horns": "0",
+				"Legs": "2",
+				"Steed": "0",
+				"Nose": "1",
+				"Fuzzy": "0",
+				"Bearded": "0",
+				"Female": "0",
+				"BadTeeth": "0",
+				"Cape": "0",
+				"NicePecs": "0",
+				"Potbelly": "0",
+				"Parent": "0",
+				"Arachnophobic": "0",
+				"Undead": "0",
+				"Aquatic": "0",
+				"Demon": "0",
+				"Spirit": "0",
+				"Flying": "0",
+				"Cute": "0",
+				"Fiery": "0",
+				"Icy": "0",
+				"Blue": "0",
+				"Red": "0",
+				"Green": "0"
+			},
 			"Ability1": "",
 			"Ability2": "",
 			"Ability3": "",
@@ -102,21 +128,27 @@
 			"Complexity": "1",
 			"Team": "Good",
 			"ModelScale": "0.900000",
-			"VersusScale": "0.89",
+			"VersusScale": "0.9",
 			"HeroGlowColor": "120 64 148",
 			"PickSound": "antimage_anti_spawn_01",
 			"BanSound": "antimage_anti_anger_04",
 			"CMEnabled": "1",
-			"NameAliases": "am",
+			"NameAliases": "am;wei",
 			"workshop_guide_name": "Anti-Mage",
 			"LastHitChallengeRival": "npc_dota_hero_bounty_hunter",
 			"HeroSelectSoundEffect": "Hero_Antimage.Pick",
 			"GibType": "default",
 			"new_player_enable": "1",
 			"SimilarHeroes": "109,12,94",
+			"Adjectives": {
+				"NicePecs": "1",
+				"Parent": "1"
+			},
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_antimage_persona1",
+					"token": "#npc_dota_hero_antimage_persona1",
+					"token_english": "#npc_dota_hero_antimage_persona1__en",
 					"Model": "models/heroes/antimage_female/antimage_female.vmdl",
 					"ModelScale": "1.05"
 				}
@@ -323,7 +355,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_antimage.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_antimage.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_antimage.vpcf"
 		},
 		"npc_dota_hero_axe": {
 			"Model": "models/heroes/axe/axe.vmdl",
@@ -342,14 +379,19 @@
 			"HeroOrderID": "2",
 			"BotImplemented": "1",
 			"ModelScale": "1.000000",
-			"VersusScale": "0.890000",
-			"LoadoutScale": "0.950000",
+			"VersusScale": "1",
+			"LoadoutScale": "1",
 			"SpectatorLoadoutScale": "0.85",
 			"HeroGlowColor": "222 60 36",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Axe",
 			"new_player_enable": "1",
 			"SimilarHeroes": "96,16,104",
+			"Adjectives": {
+				"Bearded": "1",
+				"NicePecs": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_juggernaut",
 			"HeroSelectSoundEffect": "Hero_Axe.Pick",
 			"GibType": "default",
@@ -556,7 +598,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_axe.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_axe.vpcf"
 		},
 		"npc_dota_hero_bane": {
 			"Model": "models/heroes/bane/bane.vmdl",
@@ -573,11 +619,10 @@
 			"Team": "Bad",
 			"HeroID": "3",
 			"HeroOrderID": "70",
-			"Legs": "4",
 			"BotImplemented": "1",
 			"ModelScale": "0.930000",
-			"LoadoutScale": "0.830000",
-			"VersusScale": "0.720000",
+			"LoadoutScale": "0.930000",
+			"VersusScale": "0.93",
 			"SpectatorLoadoutScale": "0.8",
 			"HeroGlowColor": "207 106 125",
 			"CMEnabled": "1",
@@ -589,6 +634,12 @@
 			"GibTintColor": "92 44 167 255",
 			"new_player_enable": "1",
 			"SimilarHeroes": "87,5,20",
+			"Adjectives": {
+				"Legs": "4",
+				"Nose": "0",
+				"BadTeeth": "1",
+				"Flying": "1"
+			},
 			"HealthBarOffset": "230",
 			"Ability1": "bane_enfeeble",
 			"Ability2": "bane_brain_sap",
@@ -608,8 +659,8 @@
 			"AbilityDraftIgnoreCount": "7",
 			"ArmorPhysical": "1",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
-			"AttackDamageMin": "-3",
-			"AttackDamageMax": "3",
+			"AttackDamageMin": "-1",
+			"AttackDamageMax": "5",
 			"AttackRate": "1.700000",
 			"AttackAnimationPoint": "0.300000",
 			"AttackAcquisitionRange": "800",
@@ -748,7 +799,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bane.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bane.vpcf"
 		},
 		"npc_dota_hero_bloodseeker": {
 			"Model": "models/heroes/blood_seeker/blood_seeker.vmdl",
@@ -766,8 +821,8 @@
 			"HeroID": "4",
 			"HeroOrderID": "47",
 			"ModelScale": "0.880000",
-			"VersusScale": "1.000000",
-			"LoadoutScale": "1.100000",
+			"VersusScale": "0.88",
+			"LoadoutScale": "0.88",
 			"SpectatorLoadoutScale": "1.05",
 			"HeroGlowColor": "247 60 12",
 			"CMEnabled": "1",
@@ -778,6 +833,11 @@
 			"GibType": "default",
 			"new_player_enable": "1",
 			"SimilarHeroes": "54,93,63",
+			"Adjectives": {
+				"BadTeeth": "1",
+				"Cape": "1",
+				"Red": "1"
+			},
 			"Ability1": "bloodseeker_bloodrage",
 			"Ability2": "bloodseeker_blood_bath",
 			"Ability3": "bloodseeker_thirst",
@@ -978,7 +1038,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bloodseeker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bloodseeker.vpcf"
 		},
 		"npc_dota_hero_crystal_maiden": {
 			"Model": "models/heroes/crystal_maiden/crystal_maiden.vmdl",
@@ -998,17 +1062,24 @@
 			"HeroOrderID": "3",
 			"BotImplemented": "1",
 			"ModelScale": "0.810000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.930000",
+			"VersusScale": "0.81",
+			"LoadoutScale": "0.81",
 			"HeroGlowColor": "82 236 255",
 			"CMEnabled": "1",
-			"NameAliases": "cm;rylai",
+			"NameAliases": "cm;rylai;wolf",
 			"workshop_guide_name": "Crystal Maiden",
 			"LastHitChallengeRival": "npc_dota_hero_lina",
 			"HeroSelectSoundEffect": "Hero_CrystalMaiden.Pick",
 			"GibType": "ice",
 			"new_player_enable": "1",
 			"SimilarHeroes": "87,3,31",
+			"Adjectives": {
+				"Female": "1",
+				"Cape": "1",
+				"Cute": "1",
+				"Icy": "1",
+				"Blue": "1"
+			},
 			"AbilityDraftIgnoreCount": "7",
 			"Ability1": "crystal_maiden_crystal_nova",
 			"Ability2": "crystal_maiden_frostbite",
@@ -1025,7 +1096,7 @@
 			"Ability15": "special_bonus_unique_crystal_maiden_3",
 			"Ability16": "special_bonus_unique_crystal_maiden_1",
 			"Ability17": "special_bonus_unique_crystal_maiden_2",
-			"ArmorPhysical": "-1",
+			"ArmorPhysical": "0",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
 			"AttackDamageMin": "30",
 			"AttackDamageMax": "36",
@@ -1039,7 +1110,7 @@
 			"AttributePrimary": "DOTA_ATTRIBUTE_INTELLECT",
 			"AttributeBaseStrength": "17",
 			"AttributeStrengthGain": "2.200000",
-			"AttributeBaseIntelligence": "16",
+			"AttributeBaseIntelligence": "18",
 			"AttributeIntelligenceGain": "3.300000",
 			"AttributeBaseAgility": "16",
 			"AttributeAgilityGain": "1.600000",
@@ -1076,6 +1147,8 @@
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_crystal_maiden_persona1",
+					"token": "#npc_dota_hero_crystal_maiden_persona1",
+					"token_english": "#npc_dota_hero_crystal_maiden_persona1__en",
 					"Model": "models/heroes/crystal_maiden_persona/crystal_maiden_persona.vmdl"
 				}
 			},
@@ -1264,7 +1337,12 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_crystal_maiden_persona_1.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_crystal_maiden.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_crystal_maiden_persona_1.vpcf"
 		},
 		"npc_dota_hero_drow_ranger": {
 			"Model": "models/heroes/drow/drow_base.vmdl",
@@ -1284,8 +1362,8 @@
 			"HeroID": "6",
 			"HeroOrderID": "5",
 			"ModelScale": "0.970000",
-			"LoadoutScale": "1.100000",
-			"VersusScale": "1",
+			"LoadoutScale": "0.97",
+			"VersusScale": "0.97",
 			"HeroGlowColor": "1 60 246",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Drow Ranger",
@@ -1294,6 +1372,11 @@
 			"GibType": "default",
 			"new_player_enable": "1",
 			"SimilarHeroes": "48,109,63",
+			"Adjectives": {
+				"Female": "1",
+				"Cape": "1",
+				"Icy": "1"
+			},
 			"Ability1": "drow_ranger_frost_arrows",
 			"Ability2": "drow_ranger_wave_of_silence",
 			"Ability3": "drow_ranger_multishot",
@@ -1518,7 +1601,11 @@
 					"SlotText": "drow_ranger_frost_arrows",
 					"DisplayInLoadout": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_drow_ranger.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_drow_ranger.vpcf"
 		},
 		"npc_dota_hero_earthshaker": {
 			"Model": "models/heroes/earthshaker/earthshaker.vmdl",
@@ -1537,7 +1624,7 @@
 			"HeroOrderID": "6",
 			"NameAliases": "es",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.770000",
+			"VersusScale": "0.93",
 			"HeroGlowColor": "255 160 0",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Earthshaker",
@@ -1547,18 +1634,21 @@
 			"GibType": "default",
 			"new_player_enable": "1",
 			"SimilarHeroes": "29,16,97",
+			"Adjectives": {
+				"Fuzzy": "1"
+			},
 			"Ability1": "earthshaker_fissure",
 			"Ability2": "earthshaker_enchant_totem",
 			"Ability3": "earthshaker_aftershock",
 			"Ability4": "generic_hidden",
 			"Ability5": "generic_hidden",
 			"Ability6": "earthshaker_echo_slam",
-			"Ability10": "special_bonus_attack_base_damage_40",
+			"Ability10": "special_bonus_attack_base_damage_30",
 			"Ability11": "special_bonus_unique_earthshaker_4",
-			"Ability12": "special_bonus_unique_earthshaker_totem_damage",
+			"Ability12": "special_bonus_unique_earthshaker_3",
 			"Ability13": "special_bonus_unique_earthshaker_6",
 			"Ability14": "special_bonus_unique_earthshaker_2",
-			"Ability15": "special_bonus_unique_earthshaker_3",
+			"Ability15": "special_bonus_unique_earthshaker_totem_damage",
 			"Ability16": "special_bonus_unique_earthshaker_5",
 			"Ability17": "special_bonus_unique_earthshaker",
 			"ArmorPhysical": "2",
@@ -1733,7 +1823,11 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_STUN_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_earthshaker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_earthshaker.vpcf"
 		},
 		"npc_dota_hero_juggernaut": {
 			"Model": "models/heroes/juggernaut/juggernaut.vmdl",
@@ -1754,13 +1848,19 @@
 			"Press": "1",
 			"ModelScale": "0.850000",
 			"VersusScale": "0.850000",
-			"LoadoutScale": "1",
+			"LoadoutScale": "0.85",
 			"SpectatorLoadoutScale": "1",
 			"HeroGlowColor": "222 120 36",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Juggernaut",
 			"new_player_enable": "1",
 			"SimilarHeroes": "18,41,44",
+			"Adjectives": {
+				"Nose": "0",
+				"Bearded": "1",
+				"BadTeeth": "1",
+				"NicePecs": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_Juggernaut.Pick",
 			"GibType": "default",
@@ -1809,9 +1909,6 @@
 			},
 			"HasAggressiveStance": "1",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/juggernaut/jugg_healing_ward.vmdl"
-			},
 			"ItemSlots": {
 				"0": {
 					"SlotIndex": "0",
@@ -1982,7 +2079,12 @@
 					"RequiresSetup": "2"
 				},
 				"HeroType": "DOTA_BOT_GANKER | DOTA_BOT_SEMI_CARRY"
-			}
+			},
+			"precache": {
+				"model": "models/heroes/juggernaut/jugg_healing_ward.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_juggernaut.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_juggernaut.vpcf"
 		},
 		"npc_dota_hero_mirana": {
 			"Model": "models/heroes/mirana/mirana.vmdl",
@@ -1999,10 +2101,11 @@
 			"HeroID": "9",
 			"HeroOrderID": "10",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.850000",
+			"VersusScale": "0.790000",
 			"SpectatorLoadoutScale": "0.9",
 			"HeroGlowColor": "220 194 248",
 			"CMEnabled": "1",
+			"NameAliases": "dragon's blood",
 			"workshop_guide_name": "Mirana",
 			"LastHitChallengeRival": "npc_dota_hero_luna",
 			"HeroSelectSoundEffect": "Hero_Mirana.Pick",
@@ -2010,6 +2113,10 @@
 			"ArmorPhysical": "-2",
 			"new_player_enable": "1",
 			"SimilarHeroes": "21,14,123",
+			"Adjectives": {
+				"Steed": "1",
+				"Female": "1"
+			},
 			"Ability1": "mirana_starfall",
 			"Ability2": "mirana_arrow",
 			"Ability3": "mirana_leap",
@@ -2252,6 +2359,8 @@
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_mirana_persona1",
+					"token": "#npc_dota_hero_mirana_persona1",
+					"token_english": "#npc_dota_hero_mirana_persona1__en",
 					"Model": "models/heroes/mirana_persona/mirana_persona_base.vmdl"
 				}
 			},
@@ -2266,7 +2375,12 @@
 				"ACT_DOTA_IDLE": {
 					"regular": "0.8"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_mirana_persona_1.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_mirana.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_mirana_persona_1.vpcf"
 		},
 		"npc_dota_hero_nevermore": {
 			"Model": "models/heroes/shadow_fiend/shadow_fiend.vmdl",
@@ -2284,10 +2398,9 @@
 			"Team": "Bad",
 			"HeroID": "11",
 			"HeroOrderID": "39",
-			"Legs": "0",
 			"ModelScale": "0.980000",
-			"VersusScale": "0.720000",
-			"LoadoutScale": "0.820000",
+			"VersusScale": "0.980000",
+			"LoadoutScale": "0.98",
 			"SpectatorLoadoutScale": "0.8",
 			"HeroGlowColor": "240 34 18",
 			"CMEnabled": "1",
@@ -2300,6 +2413,13 @@
 			"GibTintColor": "78 27 27 255",
 			"new_player_enable": "1",
 			"SimilarHeroes": "25,21,46",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Demon": "1",
+				"Flying": "1",
+				"Red": "1"
+			},
 			"Ability1": "nevermore_shadowraze1",
 			"Ability2": "nevermore_shadowraze2",
 			"Ability3": "nevermore_shadowraze3",
@@ -2488,7 +2608,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_nevermore.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_nevermore.vpcf"
 		},
 		"npc_dota_hero_morphling": {
 			"Model": "models/heroes/morphling/morphling.vmdl",
@@ -2505,19 +2629,24 @@
 			"HeroID": "10",
 			"HeroOrderID": "11",
 			"ModelScale": "0.880000",
-			"VersusScale": "1.00000",
-			"LoadoutScale": "1",
+			"VersusScale": "0.88",
+			"LoadoutScale": "0.88",
 			"SpectatorLoadoutScale": "1",
 			"HeroGlowColor": "33 255 255",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Morphling",
-			"Legs": "0",
 			"NoCombine": "1",
 			"LastHitChallengeRival": "npc_dota_hero_necrolyte",
 			"HeroSelectSoundEffect": "Hero_Morphling.Pick",
 			"GibType": "ethereal",
 			"GibTintColor": "99 255 255 255",
 			"SimilarHeroes": "113,109,94",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Aquatic": "1",
+				"Blue": "1"
+			},
 			"Ability1": "morphling_waveform",
 			"Ability2": "morphling_adaptive_strike_agi",
 			"Ability3": "morphling_adaptive_strike_str",
@@ -2651,7 +2780,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_morphling.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_morphling.vpcf"
 		},
 		"npc_dota_hero_phantom_lancer": {
 			"Model": "models/heroes/phantom_lancer/phantom_lancer.vmdl",
@@ -2669,14 +2802,18 @@
 			"BanSound": "phantom_lancer_plance_anger_06",
 			"CMEnabled": "1",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.880000",
-			"LoadoutScale": "0.970000",
+			"VersusScale": "0.840000",
+			"LoadoutScale": "0.840000",
 			"workshop_guide_name": "Phantom Lancer",
 			"LastHitChallengeRival": "npc_dota_hero_juggernaut",
 			"HeroSelectSoundEffect": "Hero_PhantomLancer.Pick",
 			"GibType": "default",
 			"new_player_enable": "1",
 			"SimilarHeroes": "109,67,89",
+			"Adjectives": {
+				"Bearded": "1",
+				"Blue": "1"
+			},
 			"Ability1": "phantom_lancer_spirit_lance",
 			"Ability2": "phantom_lancer_doppelwalk",
 			"Ability3": "phantom_lancer_phantom_edge",
@@ -2811,7 +2948,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phantom_lancer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phantom_lancer.vpcf"
 		},
 		"npc_dota_hero_puck": {
 			"Model": "models/heroes/puck/puck.vmdl",
@@ -2829,18 +2970,24 @@
 			"HeroID": "13",
 			"HeroOrderID": "13",
 			"ModelScale": "0.860000",
-			"VersusScale": "0.750000",
+			"VersusScale": "0.80000",
 			"SpectatorLoadoutScale": "0.92",
 			"HeroGlowColor": "117 240 255",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Puck",
-			"Legs": "2",
 			"LastHitChallengeRival": "npc_dota_hero_jakiro",
 			"HeroSelectSoundEffect": "Hero_Puck.Pick",
 			"GibType": "default",
 			"ArmorPhysical": "-3",
 			"new_player_enable": "1",
 			"SimilarHeroes": "45,34,101",
+			"Adjectives": {
+				"Wings": "1",
+				"Nose": "0",
+				"Flying": "1",
+				"Cute": "1",
+				"Blue": "1"
+			},
 			"Ability1": "puck_illusory_orb",
 			"Ability2": "puck_waning_rift",
 			"Ability3": "puck_phase_shift",
@@ -2957,7 +3104,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_puck.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_puck.vpcf"
 		},
 		"npc_dota_hero_pudge": {
 			"Model": "models/heroes/pudge/pudge.vmdl",
@@ -2972,6 +3123,8 @@
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_pudge_persona1",
+					"token": "#npc_dota_hero_pudge_persona1",
+					"token_english": "#npc_dota_hero_pudge_persona1__en",
 					"Model": "models/heroes/pudge_cute/pudge_cute.vmdl"
 				}
 			},
@@ -2984,13 +3137,21 @@
 			"HeroOrderID": "14",
 			"BotImplemented": "1",
 			"ModelScale": "0.980000",
-			"VersusScale": "0.900000",
-			"LoadoutScale": "0.920000",
+			"VersusScale": "0.980000",
+			"LoadoutScale": "0.980000",
 			"HeroGlowColor": "178 128 114",
 			"CMEnabled": "1",
+			"NameAliases": "Toy Butcher",
 			"workshop_guide_name": "Pudge",
 			"new_player_enable": "1",
 			"SimilarHeroes": "9,21,51",
+			"Adjectives": {
+				"BadTeeth": "1",
+				"NicePecs": "1",
+				"Potbelly": "1",
+				"Undead": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_Pudge.Pick",
 			"GibType": "default",
@@ -3282,7 +3443,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pudge_persona_1.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pudge.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pudge_persona_1.vpcf"
 		},
 		"npc_dota_hero_razor": {
 			"Model": "models/heroes/razor/razor.vmdl",
@@ -3301,14 +3467,19 @@
 			"HeroOrderID": "15",
 			"BotImplemented": "1",
 			"ModelScale": "0.860000",
-			"VersusScale": "0.9",
+			"VersusScale": "0.86",
 			"SpectatorLoadoutScale": "0.8",
 			"HeroGlowColor": "182 242 255",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Razor",
-			"Legs": "0",
 			"new_player_enable": "1",
 			"SimilarHeroes": "47,59,43",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Flying": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_zuus",
 			"HeroSelectSoundEffect": "Hero_Razor.Pick",
 			"GibType": "electric",
@@ -3521,7 +3692,11 @@
 					"RequiresSetup": "1"
 				},
 				"HeroType": "DOTA_BOT_HARD_CARRY"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_razor.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_razor.vpcf"
 		},
 		"npc_dota_hero_sand_king": {
 			"Model": "models/heroes/sand_king/sand_king.vmdl",
@@ -3538,15 +3713,18 @@
 			"HeroID": "16",
 			"HeroOrderID": "16",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.780000",
+			"VersusScale": "0.840000",
 			"SpectatorLoadoutScale": "0.94",
 			"HeroGlowColor": "216 174 46",
 			"CMEnabled": "1",
 			"NameAliases": "sk",
-			"Legs": "6",
 			"workshop_guide_name": "Sand King",
 			"new_player_enable": "1",
 			"SimilarHeroes": "7,2,96",
+			"Adjectives": {
+				"Legs": "6",
+				"Nose": "0"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_Sandking.Pick",
 			"GibType": "default",
@@ -3564,7 +3742,7 @@
 			"Ability15": "special_bonus_unique_sand_king_5",
 			"Ability16": "special_bonus_unique_sand_king",
 			"Ability17": "special_bonus_unique_sand_king_4",
-			"ArmorPhysical": "0",
+			"ArmorPhysical": "1",
 			"AttackCapabilities": "DOTA_UNIT_CAP_MELEE_ATTACK",
 			"AttackDamageMin": "1",
 			"AttackDamageMax": "9",
@@ -3720,7 +3898,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_sand_king.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_sand_king.vpcf"
 		},
 		"npc_dota_hero_storm_spirit": {
 			"Model": "models/heroes/storm_spirit/storm_spirit.vmdl",
@@ -3741,6 +3923,11 @@
 			"HeroGlowColor": "0 250 227",
 			"CMEnabled": "1",
 			"SimilarHeroes": "106,126,107",
+			"Adjectives": {
+				"Bearded": "1",
+				"Spirit": "1",
+				"Blue": "1"
+			},
 			"NameAliases": "ss;raijin",
 			"workshop_guide_name": "Storm Spirit",
 			"LastHitChallengeRival": "npc_dota_hero_kunkka",
@@ -3860,7 +4047,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_storm_spirit.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_storm_spirit.vpcf"
 		},
 		"npc_dota_hero_sven": {
 			"Model": "models/heroes/sven/sven.vmdl",
@@ -3877,14 +4068,17 @@
 			"HeroOrderID": "19",
 			"BotImplemented": "1",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.880000",
-			"LoadoutScale": "0.900000",
+			"VersusScale": "0.840000",
+			"LoadoutScale": "0.840000",
 			"SpectatorLoadoutScale": "0.92",
 			"HeroGlowColor": "0 50 247",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Sven",
 			"new_player_enable": "1",
 			"SimilarHeroes": "42,81,23",
+			"Adjectives": {
+				"NicePecs": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_omniknight",
 			"HeroSelectSoundEffect": "Hero_Sven.Pick",
 			"GibType": "default",
@@ -4085,7 +4279,11 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_TANK | DOTA_BOT_SEMI_CARRY | DOTA_BOT_STUN_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_sven.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_sven.vpcf"
 		},
 		"npc_dota_hero_tiny": {
 			"Model": "models/heroes/tiny/tiny_01/tiny_01.vmdl",
@@ -4105,8 +4303,8 @@
 			"HeroOrderID": "28",
 			"BotImplemented": "1",
 			"ModelScale": "0.930000",
-			"VersusScale": "1.20000",
-			"LoadoutScale": "1",
+			"VersusScale": "0.93",
+			"LoadoutScale": "0.93",
 			"HeroGlowColor": "254 242 200",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Tiny",
@@ -4115,6 +4313,9 @@
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"HeroSelectSoundEffect": "Hero_Tiny.Pick",
 			"SimilarHeroes": "23,97,18",
+			"Adjectives": {
+				"Nose": "0"
+			},
 			"GibType": "stone",
 			"Ability1": "tiny_avalanche",
 			"Ability2": "tiny_toss",
@@ -4314,7 +4515,11 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_GANKER | DOTA_BOT_TANK | DOTA_BOT_STUN_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tiny.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tiny.vpcf"
 		},
 		"npc_dota_hero_vengefulspirit": {
 			"Model": "models/heroes/vengeful/vengeful.vmdl",
@@ -4342,6 +4547,12 @@
 			"NoCombine": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "79,111,3",
+			"Adjectives": {
+				"Female": "1",
+				"Spirit": "1",
+				"Undead": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_death_prophet",
 			"HeroSelectSoundEffect": "Hero_VengefulSpirit.Pick",
 			"GibType": "ethereal",
@@ -4512,7 +4723,11 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_GANKER | DOTA_BOT_STUN_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_vengefulspirit.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_vengefulspirit.vpcf"
 		},
 		"npc_dota_hero_windrunner": {
 			"Model": "models/heroes/windrunner/windrunner.vmdl",
@@ -4532,7 +4747,7 @@
 			"HeroOrderID": "22",
 			"BotImplemented": "1",
 			"ModelScale": "0.980000",
-			"LoadoutScale": "1.100000",
+			"LoadoutScale": "0.980000",
 			"SpectatorLoadoutScale": "1.1",
 			"HeroGlowColor": "185 220 20",
 			"CMEnabled": "1",
@@ -4540,6 +4755,12 @@
 			"workshop_guide_name": "Windranger",
 			"new_player_enable": "1",
 			"SimilarHeroes": "128,123,9",
+			"Adjectives": {
+				"Female": "1",
+				"Cape": "1",
+				"Cute": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_drow_ranger",
 			"HeroSelectSoundEffect": "Hero_Windrunner.Pick",
 			"GibType": "default",
@@ -4575,9 +4796,9 @@
 			"AttributePrimary": "DOTA_ATTRIBUTE_ALL",
 			"AttributeBaseStrength": "18",
 			"AttributeStrengthGain": "2.0",
-			"AttributeBaseIntelligence": "18",
+			"AttributeBaseIntelligence": "21",
 			"AttributeIntelligenceGain": "2.400000",
-			"AttributeBaseAgility": "17",
+			"AttributeBaseAgility": "19",
 			"AttributeAgilityGain": "1.400000",
 			"StatusManaRegen": "0.25",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
@@ -4728,12 +4949,16 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_GANKER | DOTA_BOT_STUN_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_windrunner.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_windrunner.vpcf"
 		},
 		"npc_dota_hero_zuus": {
 			"Model": "models/heroes/zeus/zeus.vmdl",
 			"ModelScale": "1.0",
-			"VersusScale": "0.85",
+			"VersusScale": "1",
 			"IdleExpression": "scenes/zuus/zuus_exp_idle_01.vcd",
 			"SoundSet": "Hero_zuus",
 			"PickSound": "zuus_zuus_spawn_01",
@@ -4756,6 +4981,12 @@
 			"workshop_guide_name": "Zeus",
 			"new_player_enable": "1",
 			"SimilarHeroes": "52,45,25",
+			"Adjectives": {
+				"Bearded": "1",
+				"NicePecs": "1",
+				"Parent": "1",
+				"Blue": "1"
+			},
 			"NoCombine": "1",
 			"LastHitChallengeRival": "npc_dota_hero_razor",
 			"HeroSelectSoundEffect": "Hero_Zuus.Pick",
@@ -4942,7 +5173,11 @@
 					"RequiresSetup": "1"
 				},
 				"HeroType": "DOTA_BOT_GANKER | DOTA_BOT_NUKER"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_zuus.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_zuus.vpcf"
 		},
 		"npc_dota_hero_kunkka": {
 			"Model": "models/heroes/kunkka/kunkka.vmdl",
@@ -4960,14 +5195,19 @@
 			"HeroID": "23",
 			"HeroOrderID": "49",
 			"ModelScale": "0.840000",
-			"LoadoutScale": "0.930000",
-			"VersusScale": "0.900000",
+			"LoadoutScale": "0.840000",
+			"VersusScale": "0.840000",
 			"SpectatorLoadoutScale": "0.94",
 			"HeroGlowColor": "50 150 165",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Kunkka",
 			"new_player_enable": "1",
 			"SimilarHeroes": "19,129,18",
+			"Adjectives": {
+				"Bearded": "1",
+				"Aquatic": "1",
+				"Undead": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_tidehunter",
 			"HeroSelectSoundEffect": "Hero_Kunkka.Pick",
 			"GibType": "default",
@@ -5182,7 +5422,11 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_TANK | DOTA_BOT_SEMI_CARRY | DOTA_BOT_PUSH_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_kunkka.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_kunkka.vpcf"
 		},
 		"npc_dota_hero_lina": {
 			"Model": "models/heroes/lina/lina.vmdl",
@@ -5202,12 +5446,18 @@
 			"HeroID": "25",
 			"HeroOrderID": "8",
 			"ModelScale": "0.810000",
-			"VersusScale": "0.780000",
+			"VersusScale": "0.810000",
 			"HeroGlowColor": "254 90 5",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Lina",
 			"new_player_enable": "1",
 			"SimilarHeroes": "39,43,11",
+			"Adjectives": {
+				"Female": "1",
+				"Flying": "1",
+				"Fiery": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_crystal_maiden",
 			"HeroSelectSoundEffect": "Hero_Lina.Pick",
 			"GibType": "fire",
@@ -5378,7 +5628,11 @@
 					"RequiresSetup": "2"
 				},
 				"HeroType": "DOTA_BOT_GANKER | DOTA_BOT_NUKER"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lina.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lina.vpcf"
 		},
 		"npc_dota_hero_lich": {
 			"Model": "models/heroes/lich/lich.vmdl",
@@ -5396,7 +5650,7 @@
 			"HeroID": "31",
 			"HeroOrderID": "7",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.720000",
+			"VersusScale": "0.790000",
 			"SpectatorLoadoutScale": "0.84",
 			"HeroGlowColor": "40 160 255",
 			"PickSound": "lich_lich_spawn_01",
@@ -5405,12 +5659,15 @@
 			"workshop_guide_name": "Lich",
 			"new_player_enable": "1",
 			"SimilarHeroes": "5,30,121",
+			"Adjectives": {
+				"Undead": "1",
+				"Flying": "1",
+				"Icy": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_crystal_maiden",
 			"HeroSelectSoundEffect": "Hero_Lich.Pick",
 			"HealthBarOffset": "255",
-			"precache": {
-				"model": "models/heroes/lich/ice_spire.vmdl"
-			},
 			"GibType": "ice",
 			"Ability1": "lich_frost_nova",
 			"Ability2": "lich_frost_shield",
@@ -5597,7 +5854,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/lich/ice_spire.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lich.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lich.vpcf"
 		},
 		"npc_dota_hero_lion": {
 			"Model": "models/heroes/lion/lion.vmdl",
@@ -5615,8 +5877,8 @@
 			"HeroID": "26",
 			"HeroOrderID": "9",
 			"ModelScale": "0.700000",
-			"LoadoutScale": "0.820000",
-			"VersusScale": "0.750000",
+			"LoadoutScale": "0.700000",
+			"VersusScale": "0.70000",
 			"SpectatorLoadoutScale": "0.8",
 			"HeroGlowColor": "110 50 165",
 			"PickSound": "lion_lion_spawn_01",
@@ -5625,6 +5887,10 @@
 			"workshop_guide_name": "Lion",
 			"new_player_enable": "1",
 			"SimilarHeroes": "27,79,31",
+			"Adjectives": {
+				"Cape": "1",
+				"Demon": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_witch_doctor",
 			"HeroSelectSoundEffect": "Hero_Lion.Pick",
 			"GibType": "default",
@@ -5663,9 +5929,6 @@
 			"AttributeAgilityGain": "1.500000",
 			"MovementSpeed": "290",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/props_gameplay/frog.vmdl"
-			},
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_lion.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_lion",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts",
@@ -5821,7 +6084,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/props_gameplay/frog.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lion.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lion.vpcf"
 		},
 		"npc_dota_hero_shadow_shaman": {
 			"Model": "models/heroes/shadowshaman/shadowshaman.vmdl",
@@ -5836,13 +6104,16 @@
 			"HeroID": "27",
 			"HeroOrderID": "17",
 			"ModelScale": "0.910000",
-			"VersusScale": "0.920000",
+			"VersusScale": "0.910000",
 			"HeroGlowColor": "255 167 38",
 			"PickSound": "shadowshaman_shad_spawn_01",
 			"BanSound": "shadowshaman_shad_anger_01",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "26,79,87",
+			"Adjectives": {
+				"BadTeeth": "1"
+			},
 			"NameAliases": "ss",
 			"workshop_guide_name": "Shadow Shaman",
 			"LastHitChallengeRival": "npc_dota_hero_witch_doctor",
@@ -5883,9 +6154,6 @@
 			"AttributeAgilityGain": "1.600000",
 			"MovementSpeed": "285",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/shadowshaman/shadowshaman_totem.vmdl"
-			},
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_shadowshaman.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_shadowshaman",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts",
@@ -6041,7 +6309,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/shadowshaman/shadowshaman_totem.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_shadow_shaman.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_shadow_shaman.vpcf"
 		},
 		"npc_dota_hero_slardar": {
 			"Model": "models/heroes/slardar/slardar.vmdl",
@@ -6056,16 +6329,19 @@
 			"Team": "Bad",
 			"HeroOrderID": "25",
 			"ModelScale": "0.880000",
-			"VersusScale": "0.85	0000",
+			"VersusScale": "0.88",
 			"SpectatorLoadoutScale": "0.94",
 			"HeroGlowColor": "78 127 208",
 			"PickSound": "slardar_slar_spawn_01",
 			"BanSound": "slardar_slar_anger_04",
 			"CMEnabled": "1",
-			"Legs": "0",
 			"workshop_guide_name": "Slardar",
 			"new_player_enable": "1",
 			"SimilarHeroes": "114,95,93",
+			"Adjectives": {
+				"Legs": "0",
+				"Aquatic": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_tidehunter",
 			"HeroSelectSoundEffect": "Hero_Slardar.Pick",
 			"GibType": "default",
@@ -6199,7 +6475,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_slardar.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_slardar.vpcf"
 		},
 		"npc_dota_hero_tidehunter": {
 			"Model": "models/heroes/tidehunter/tidehunter.vmdl",
@@ -6219,14 +6499,21 @@
 			"HeroOrderID": "20",
 			"BotImplemented": "1",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.670000",
-			"LoadoutScale": "0.780000",
+			"VersusScale": "0.84",
+			"LoadoutScale": "0.840000",
 			"SpectatorLoadoutScale": "0.92",
 			"HeroGlowColor": "54 181 81",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Tidehunter",
 			"new_player_enable": "1",
 			"SimilarHeroes": "16,98,108",
+			"Adjectives": {
+				"Nose": "0",
+				"BadTeeth": "1",
+				"Potbelly": "1",
+				"Aquatic": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_kunkka",
 			"HeroSelectSoundEffect": "Hero_Tidehunter.Pick",
 			"GibType": "default",
@@ -6417,7 +6704,11 @@
 					"RequiresSetup": "0"
 				},
 				"HeroType": "DOTA_BOT_TANK | DOTA_BOT_STUN_SUPPORT"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tidehunter.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tidehunter.vpcf"
 		},
 		"npc_dota_hero_witch_doctor": {
 			"Model": "models/heroes/witchdoctor/witchdoctor.vmdl",
@@ -6435,7 +6726,7 @@
 			"HeroID": "30",
 			"HeroOrderID": "23",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.750000",
+			"VersusScale": "0.840000",
 			"SpectatorLoadoutScale": "0.81",
 			"HeroGlowColor": "218 116 252",
 			"PickSound": "witchdoctor_wdoc_spawn_02",
@@ -6445,6 +6736,10 @@
 			"workshop_guide_name": "Witch Doctor",
 			"new_player_enable": "1",
 			"SimilarHeroes": "31,112,110",
+			"Adjectives": {
+				"BadTeeth": "1",
+				"Potbelly": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_necrolyte",
 			"HeroSelectSoundEffect": "Hero_Witchdoctor.Pick",
 			"GibType": "default",
@@ -6481,9 +6776,6 @@
 			"AttributeAgilityGain": "1.400000",
 			"MovementSpeed": "300",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/witchdoctor/witchdoctor_ward.vmdl"
-			},
 			"RenderablePortrait": {
 				"Particles": {
 					"particles/units/heroes/hero_witchdoctor/witchdoctor_loadout.vpcf": "loadout"
@@ -6647,7 +6939,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/witchdoctor/witchdoctor_ward.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_witch_doctor.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_witch_doctor.vpcf"
 		},
 		"npc_dota_hero_riki": {
 			"Model": "models/heroes/rikimaru/rikimaru.vmdl",
@@ -6663,12 +6960,17 @@
 			"HeroOrderID": "48",
 			"BotImplemented": "0",
 			"ModelScale": "0.870000",
-			"VersusScale": "1.100000",
-			"LoadoutScale": "1.100000",
+			"VersusScale": "0.87",
+			"LoadoutScale": "0.87",
 			"HeroGlowColor": "170 112 194",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "62,44,63",
+			"Adjectives": {
+				"Horns": "1",
+				"Bearded": "1",
+				"Blue": "1"
+			},
 			"PickSound": "riki_riki_spawn_01",
 			"BanSound": "riki_riki_anger_04",
 			"workshop_guide_name": "Riki",
@@ -6872,7 +7174,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_riki.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_riki.vpcf"
 		},
 		"npc_dota_hero_enigma": {
 			"Model": "models/heroes/enigma/enigma.vmdl",
@@ -6889,16 +7195,22 @@
 			"HeroID": "33",
 			"HeroOrderID": "26",
 			"ModelScale": "0.810000",
-			"VersusScale": "0.680000",
-			"LoadoutScale": "1",
+			"VersusScale": "0.81",
+			"LoadoutScale": "0.81",
 			"SpectatorLoadoutScale": "0.75",
 			"HeroGlowColor": "64 0 255",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Enigma",
-			"Legs": "0",
 			"NoCombine": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "78,38,37",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"NicePecs": "1",
+				"Flying": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_bane",
 			"HeroSelectSoundEffect": "Hero_Enigma.Pick",
 			"GibType": "ethereal",
@@ -6939,9 +7251,6 @@
 			"MovementSpeed": "290",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
 			"RingRadius": "90",
-			"precache": {
-				"model": "models/heroes/enigma/eidelon.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_enigma",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_enigma.vsndevts",
@@ -7026,7 +7335,12 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/enigma/eidelon.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_enigma.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_enigma.vpcf"
 		},
 		"npc_dota_hero_tinker": {
 			"Model": "models/heroes/tinker/tinker.vmdl",
@@ -7040,7 +7354,7 @@
 			"HeroID": "34",
 			"HeroOrderID": "40",
 			"ModelScale": "0.800000",
-			"VersusScale": "0.770000",
+			"VersusScale": "0.80",
 			"SpectatorLoadoutScale": "0.9",
 			"HeroGlowColor": "220 194 8",
 			"CMEnabled": "1",
@@ -7049,6 +7363,9 @@
 			"workshop_guide_name": "Tinker",
 			"new_player_enable": "1",
 			"SimilarHeroes": "39,13,74",
+			"Adjectives": {
+				"Bearded": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lina",
 			"HeroSelectSoundEffect": "Hero_Tinker.Pick",
 			"GibType": "motor",
@@ -7192,7 +7509,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tinker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tinker.vpcf"
 		},
 		"npc_dota_hero_sniper": {
 			"Model": "models/heroes/sniper/sniper.vmdl",
@@ -7210,7 +7531,7 @@
 			"HeroOrderID": "34",
 			"BotImplemented": "1",
 			"ModelScale": "0.840000",
-			"LoadoutScale": "1",
+			"LoadoutScale": "0.84",
 			"HeroGlowColor": "237 154 15",
 			"PickSound": "sniper_snip_spawn_01",
 			"BanSound": "sniper_snip_anger_01",
@@ -7218,6 +7539,11 @@
 			"workshop_guide_name": "Sniper",
 			"new_player_enable": "1",
 			"SimilarHeroes": "113,6,56",
+			"Adjectives": {
+				"Bearded": "1",
+				"Cape": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_drow_ranger",
 			"HeroSelectSoundEffect": "Hero_Sniper.Pick",
 			"GibType": "default",
@@ -7421,7 +7747,11 @@
 					"RequiresSetup": "1"
 				},
 				"HeroType": "DOTA_BOT_HARD_CARRY"
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_sniper.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_sniper.vpcf"
 		},
 		"npc_dota_hero_necrolyte": {
 			"Model": "models/heroes/necrolyte/necrolyte.vmdl",
@@ -7438,7 +7768,7 @@
 			"HeroID": "36",
 			"HeroOrderID": "12",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.840000",
+			"VersusScale": "0.79",
 			"HeroGlowColor": "146 255 145",
 			"PickSound": "necrolyte_necr_spawn_01",
 			"BanSound": "necrolyte_necr_anger_01",
@@ -7446,6 +7776,11 @@
 			"workshop_guide_name": "Necrophos",
 			"new_player_enable": "1",
 			"SimilarHeroes": "102,43,76",
+			"Adjectives": {
+				"Bearded": "1",
+				"Undead": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lich",
 			"HeroSelectSoundEffect": "Hero_Necrolyte.Pick",
 			"GibType": "ethereal",
@@ -7464,7 +7799,7 @@
 			"Ability15": "special_bonus_unique_necrophos_5",
 			"Ability16": "special_bonus_unique_necrophos_2",
 			"Ability17": "special_bonus_unique_necrophos",
-			"ArmorPhysical": "1",
+			"ArmorPhysical": "2",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
 			"AttackDamageMin": "26",
 			"AttackDamageMax": "30",
@@ -7649,7 +7984,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_necrolyte.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_necrolyte.vpcf"
 		},
 		"npc_dota_hero_warlock": {
 			"Model": "models/heroes/warlock/warlock.vmdl",
@@ -7666,9 +8005,9 @@
 			"HeroID": "37",
 			"HeroOrderID": "59",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.980000",
+			"VersusScale": "0.93",
 			"SpectatorLoadoutScale": "1.1",
-			"LoadoutScale": "0.870000",
+			"LoadoutScale": "0.93",
 			"HeroGlowColor": "249 54 47",
 			"PickSound": "warlock_warl_spawn_01",
 			"BanSound": "warlock_warl_anger_04",
@@ -7676,6 +8015,11 @@
 			"workshop_guide_name": "Warlock",
 			"new_player_enable": "1",
 			"SimilarHeroes": "50,33,57",
+			"Adjectives": {
+				"Bearded": "1",
+				"Cape": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lion",
 			"HeroSelectSoundEffect": "Hero_Warlock.Pick",
 			"GibType": "default",
@@ -7706,7 +8050,7 @@
 			"ProjectileSpeed": "1200",
 			"AttributePrimary": "DOTA_ATTRIBUTE_INTELLECT",
 			"AttributeBaseStrength": "24",
-			"AttributeStrengthGain": "3.000000",
+			"AttributeStrengthGain": "2.800000",
 			"AttributeBaseIntelligence": "25",
 			"AttributeIntelligenceGain": "3.100000",
 			"AttributeBaseAgility": "10",
@@ -7714,9 +8058,6 @@
 			"MovementSpeed": "300",
 			"HasAggressiveStance": "1",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/warlock/warlock_demon.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_warlock",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_warlock.vsndevts",
@@ -7890,7 +8231,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/warlock/warlock_demon.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_warlock.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_warlock.vpcf"
 		},
 		"npc_dota_hero_beastmaster": {
 			"Model": "models/heroes/beastmaster/beastmaster.vmdl",
@@ -7905,7 +8251,7 @@
 			"HeroID": "38",
 			"HeroOrderID": "36",
 			"ModelScale": "0.770000",
-			"VersusScale": "0.70000",
+			"VersusScale": "0.77",
 			"HeroGlowColor": "215 174 81",
 			"PickSound": "beastmaster_beas_spawn_01",
 			"BanSound": "beastmaster_beas_anger_01",
@@ -7914,6 +8260,12 @@
 			"workshop_guide_name": "Beastmaster",
 			"new_player_enable": "1",
 			"SimilarHeroes": "77,92,61",
+			"Adjectives": {
+				"Horns": "1",
+				"Bearded": "1",
+				"NicePecs": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_Beastmaster.Pick",
 			"GibType": "default",
@@ -7958,9 +8310,6 @@
 			"AttributeAgilityGain": "1.400000",
 			"MovementSpeed": "305",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/beastmaster/beastmaster_beast.vmdl"
-			},
 			"ItemSlots": {
 				"0": {
 					"SlotIndex": "0",
@@ -8070,7 +8419,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/beastmaster/beastmaster_beast.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_beastmaster.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_beastmaster.vpcf"
 		},
 		"npc_dota_hero_queenofpain": {
 			"Model": "models/heroes/queenofpain/queenofpain.vmdl",
@@ -8084,8 +8438,8 @@
 			"HeroID": "39",
 			"HeroOrderID": "51",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.90000",
-			"LoadoutScale": "0.920000",
+			"VersusScale": "0.84",
+			"LoadoutScale": "0.84",
 			"SpectatorLoadoutScale": "0.91",
 			"HeroGlowColor": "175 41 128",
 			"CMEnabled": "1",
@@ -8095,6 +8449,12 @@
 			"workshop_guide_name": "Queen of Pain",
 			"new_player_enable": "1",
 			"SimilarHeroes": "25,21,13",
+			"Adjectives": {
+				"Wings": "1",
+				"Horns": "1",
+				"Female": "1",
+				"Demon": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_vengefulspirit",
 			"HeroSelectSoundEffect": "Hero_QueenOfPain.Pick",
 			"GibType": "default",
@@ -8146,6 +8506,7 @@
 			"AttributeBaseAgility": "22",
 			"AttributeAgilityGain": "2.5",
 			"MovementSpeed": "290",
+			"HasAggressiveStance": "1",
 			"particle_folder": "particles/units/heroes/hero_queenofpain",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_queenofpain.vsndevts",
@@ -8241,7 +8602,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_queenofpain.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_queenofpain.vpcf"
 		},
 		"npc_dota_hero_venomancer": {
 			"Model": "models/heroes/venomancer/venomancer.vmdl",
@@ -8257,15 +8622,19 @@
 			"HeroID": "40",
 			"HeroOrderID": "30",
 			"ModelScale": "0.700000",
-			"VersusScale": "0.800000",
+			"VersusScale": "0.70",
 			"HeroGlowColor": "252 172 18",
 			"PickSound": "venomancer_venm_spawn_01",
 			"BanSound": "venomancer_venm_anger_01",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Venomancer",
-			"Legs": "0",
 			"new_player_enable": "1",
 			"SimilarHeroes": "47,64,15",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_viper",
 			"HeroSelectSoundEffect": "Hero_Venomancer.Pick",
 			"GibType": "goo",
@@ -8303,9 +8672,6 @@
 			"AttributeBaseAgility": "24",
 			"AttributeAgilityGain": "2.0",
 			"MovementSpeed": "280",
-			"precache": {
-				"model": "models/heroes/venomancer/venomancer_ward.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_venomancer",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts",
@@ -8398,6 +8764,12 @@
 					"SlotName": "ability_effects_4",
 					"SlotText": "venomancer_poison_nova",
 					"DisplayInLoadout": "0"
+				},
+				"11": {
+					"SlotIndex": "11",
+					"SlotName": "ability_effects_5",
+					"SlotText": "venomancer_poison_nova",
+					"DisplayInLoadout": "0"
 				}
 			},
 			"Bot": {
@@ -8411,7 +8783,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/venomancer/venomancer_ward.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_venomancer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_venomancer.vpcf"
 		},
 		"npc_dota_hero_faceless_void": {
 			"Model": "models/heroes/faceless_void/faceless_void.vmdl",
@@ -8426,9 +8803,9 @@
 			"HeroID": "41",
 			"HeroOrderID": "27",
 			"ModelScale": "0.900000",
-			"VersusScale": "0.85",
+			"VersusScale": "0.90",
 			"SpectatorLoadoutScale": "0.95",
-			"LoadoutScale": "0.950000",
+			"LoadoutScale": "0.900000",
 			"HeroGlowColor": "217 160 255",
 			"PickSound": "faceless_void_face_spawn_01",
 			"BanSound": "faceless_void_face_anger_02",
@@ -8437,6 +8814,10 @@
 			"workshop_guide_name": "Faceless Void",
 			"new_player_enable": "1",
 			"SimilarHeroes": "1,44,8",
+			"Adjectives": {
+				"Nose": "0",
+				"NicePecs": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_bounty_hunter",
 			"HeroSelectSoundEffect": "Hero_FacelessVoid.Pick",
 			"GibType": "default",
@@ -8568,7 +8949,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_faceless_void.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_faceless_void.vpcf"
 		},
 		"npc_dota_hero_skeleton_king": {
 			"Model": "models/heroes/wraith_king/wraith_king.vmdl",
@@ -8585,8 +8970,8 @@
 			"HeroID": "42",
 			"HeroOrderID": "52",
 			"ModelScale": "0.940000",
-			"VersusScale": "0.90000",
-			"LoadoutScale": "0.920000",
+			"VersusScale": "0.94",
+			"LoadoutScale": "0.940000",
 			"HeroGlowColor": "226 224 36",
 			"CMEnabled": "1",
 			"BotImplemented": "1",
@@ -8596,6 +8981,11 @@
 			"workshop_guide_name": "Wraith King",
 			"new_player_enable": "1",
 			"SimilarHeroes": "8,54,18",
+			"Adjectives": {
+				"Bearded": "1",
+				"Undead": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_sand_king",
 			"HeroSelectSoundEffect": "Hero_SkeletonKing.Pick",
 			"GibType": "ethereal",
@@ -8822,7 +9212,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_skeleton_king.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_skeleton_king.vpcf"
 		},
 		"npc_dota_hero_death_prophet": {
 			"Model": "models/heroes/death_prophet/death_prophet.vmdl",
@@ -8838,7 +9232,7 @@
 			"HeroID": "43",
 			"HeroOrderID": "62",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.850000",
+			"VersusScale": "0.93",
 			"HeroGlowColor": "15 241 28",
 			"CMEnabled": "1",
 			"NameAliases": "dp",
@@ -8847,6 +9241,12 @@
 			"workshop_guide_name": "Death Prophet",
 			"new_player_enable": "1",
 			"SimilarHeroes": "36,15,45",
+			"Adjectives": {
+				"Female": "1",
+				"Arachnophobic": "1",
+				"Undead": "1",
+				"Flying": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_dazzle",
 			"HeroSelectSoundEffect": "Hero_DeathProphet.Pick",
 			"GibType": "ethereal",
@@ -8887,9 +9287,6 @@
 			"MovementSpeed": "290",
 			"MovementTurnRate": "0.800000",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/death_prophet/death_prophet_ghost.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_death_prophet",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_death_prophet.vsndevts",
@@ -9061,7 +9458,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/death_prophet/death_prophet_ghost.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_death_prophet.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_death_prophet.vpcf"
 		},
 		"npc_dota_hero_phantom_assassin": {
 			"Model": "models/heroes/phantom_assassin/phantom_assassin.vmdl",
@@ -9079,8 +9481,8 @@
 			"HeroID": "44",
 			"HeroOrderID": "80",
 			"ModelScale": "0.860000",
-			"VersusScale": "0.930000",
-			"LoadoutScale": "0.930000",
+			"VersusScale": "0.86",
+			"LoadoutScale": "0.86",
 			"SpectatorLoadoutScale": "0.95",
 			"HeroGlowColor": "154 97 133",
 			"PickSound": "phantom_assassin_phass_spawn_01",
@@ -9090,6 +9492,10 @@
 			"workshop_guide_name": "Phantom Assassin",
 			"new_player_enable": "1",
 			"SimilarHeroes": "41,114,93",
+			"Adjectives": {
+				"Female": "1",
+				"Cape": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_bounty_hunter",
 			"HeroSelectSoundEffect": "Hero_PhantomAssassin.Pick",
 			"GibType": "default",
@@ -9139,6 +9545,8 @@
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_phantom_assassin_persona1",
+					"token": "#npc_dota_hero_phantom_assassin_persona1",
+					"token_english": "#npc_dota_hero_phantom_assassin_persona1__en",
 					"Model": "models/heroes/phantom_assassin_persona/phantom_assassin_persona.vmdl"
 				}
 			},
@@ -9335,7 +9743,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phantom_assassin_persona_1.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phantom_assassin.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phantom_assassin_persona_1.vpcf"
 		},
 		"npc_dota_hero_pugna": {
 			"Model": "models/heroes/pugna/pugna.vmdl",
@@ -9350,8 +9763,8 @@
 			"HeroID": "45",
 			"HeroOrderID": "35",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.860000",
-			"LoadoutScale": "0.850000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"HeroGlowColor": "194 80 163",
 			"PickSound": "pugna_pugna_spawn_01",
 			"BanSound": "pugna_pugna_anger_01",
@@ -9359,6 +9772,12 @@
 			"workshop_guide_name": "Pugna",
 			"new_player_enable": "1",
 			"SimilarHeroes": "76,13,53",
+			"Adjectives": {
+				"Horns": "1",
+				"Cape": "1",
+				"Undead": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_viper",
 			"HeroSelectSoundEffect": "Hero_Pugna.Pick",
 			"GibType": "default",
@@ -9391,7 +9810,7 @@
 			"AttributeStrengthGain": "2.00000",
 			"AttributeBaseAgility": "24",
 			"AttributeAgilityGain": "1.300000",
-			"AttributeBaseIntelligence": "24",
+			"AttributeBaseIntelligence": "26",
 			"AttributeIntelligenceGain": "5.20000",
 			"StatusManaRegen": "0.5",
 			"MovementSpeed": "330",
@@ -9488,9 +9907,6 @@
 					"DisplayInLoadout": "0"
 				}
 			},
-			"precache": {
-				"model": "models/heroes/pugna/pugna_ward.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_pugna",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_pugna.vsndevts",
@@ -9510,7 +9926,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/pugna/pugna_ward.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pugna.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pugna.vpcf"
 		},
 		"npc_dota_hero_templar_assassin": {
 			"Model": "models/heroes/lanaya/lanaya.vmdl",
@@ -9526,8 +9947,8 @@
 			"HeroID": "46",
 			"HeroOrderID": "86",
 			"ModelScale": "0.880000",
-			"VersusScale": "0.90000",
-			"LoadoutScale": "0.920000",
+			"VersusScale": "0.88",
+			"LoadoutScale": "0.88",
 			"HeroGlowColor": "242 200 198",
 			"PickSound": "templar_assassin_temp_spawn_02",
 			"BanSound": "templar_assassin_temp_anger_03",
@@ -9535,6 +9956,9 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "44,32,93",
+			"Adjectives": {
+				"Female": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_omniknight",
 			"HeroSelectSoundEffect": "Hero_TemplarAssassin.Pick",
 			"GibType": "default",
@@ -9580,9 +10004,6 @@
 			"MovementSpeed": "310",
 			"MovementTurnRate": "0.700000",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/witchdoctor/witchdoctor_ward.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_templar_assassin",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_templar_assassin.vsndevts",
@@ -9675,7 +10096,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_templar_assassin.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_templar_assassin.vpcf"
 		},
 		"npc_dota_hero_viper": {
 			"Model": "models/heroes/viper/viper.vmdl",
@@ -9693,16 +10118,22 @@
 			"HeroID": "47",
 			"HeroOrderID": "29",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.570000",
+			"VersusScale": "0.74",
 			"SpectatorLoadoutScale": "0.65",
 			"HeroGlowColor": "160 229 81",
 			"PickSound": "viper_vipe_spawn_01",
 			"BanSound": "viper_vipe_anger_06",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Viper",
-			"Legs": "0",
 			"new_player_enable": "1",
 			"SimilarHeroes": "15,59,40",
+			"Adjectives": {
+				"Wings": "1",
+				"Legs": "0",
+				"Arachnophobic": "1",
+				"Flying": "1",
+				"Green": "1"
+			},
 			"NoCombine": "1",
 			"LastHitChallengeRival": "npc_dota_hero_jakiro",
 			"HeroSelectSoundEffect": "Hero_Viper.Pick",
@@ -9885,7 +10316,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_viper.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_viper.vpcf"
 		},
 		"npc_dota_hero_luna": {
 			"Model": "models/heroes/luna/luna.vmdl",
@@ -9901,7 +10336,7 @@
 			"HeroID": "48",
 			"HeroOrderID": "82",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.750000",
+			"VersusScale": "0.74",
 			"SpectatorLoadoutScale": "0.82",
 			"PickSound": "luna_luna_spawn_01",
 			"BanSound": "luna_luna_anger_02",
@@ -9910,6 +10345,11 @@
 			"NoCombine": "0",
 			"new_player_enable": "1",
 			"SimilarHeroes": "94,72,109",
+			"Adjectives": {
+				"Steed": "1",
+				"Female": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lina",
 			"HeroSelectSoundEffect": "Hero_Luna.Pick",
 			"GibType": "default",
@@ -10109,7 +10549,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_luna.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_luna.vpcf"
 		},
 		"npc_dota_hero_dragon_knight": {
 			"Model": "models/heroes/dragon_knight/dragon_knight.vmdl",
@@ -10126,20 +10570,26 @@
 			"HeroID": "49",
 			"HeroOrderID": "58",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.790000",
+			"VersusScale": "0.84",
 			"TransformedLoadoutScale": "1.00",
 			"HeroGlowColor": "209 143 71",
 			"PickSound": "dragon_knight_drag_spawn_01",
 			"BanSound": "dragon_knight_drag_anger_06",
 			"CMEnabled": "1",
 			"BotImplemented": "1",
-			"NameAliases": "dk,davion",
+			"NameAliases": "dk,davion,dragon's blood",
 			"workshop_guide_name": "Dragon Knight",
 			"new_player_enable": "1",
 			"SimilarHeroes": "18,109,42",
+			"Adjectives": {
+				"Fiery": "1",
+				"Red": "1"
+			},
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_dragon_knight_persona1",
+					"token": "#npc_dota_hero_dragon_knight_persona1",
+					"token_english": "#npc_dota_hero_dragon_knight_persona1__en",
 					"Model": "models/heroes/dragon_knight_persona/dk_persona_base.vmdl"
 				}
 			},
@@ -10200,10 +10650,6 @@
 			"MovementSpeed": "315",
 			"HasAggressiveStance": "1",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/dragon_knight/dragon_knight_dragon.vmdl",
-				"particle": "particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_frost.vpcf"
-			},
 			"particle_folder": "particles/units/heroes/hero_dragon_knight",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_dragon_knight.vsndevts",
@@ -10390,7 +10836,13 @@
 					"SlotName": "persona_selector",
 					"SlotText": "#LoadoutSlot_Persona_Selector"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/dragon_knight/dragon_knight_dragon.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dragon_knight_persona1.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dragon_knight.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dragon_knight_persona1.vpcf"
 		},
 		"npc_dota_hero_dazzle": {
 			"Model": "models/heroes/dazzle/dazzle.vmdl",
@@ -10407,7 +10859,7 @@
 			"HeroOrderID": "4",
 			"ModelScale": "0.790000",
 			"VersusScale": "0.790000",
-			"LoadoutScale": "0.850000",
+			"LoadoutScale": "0.79",
 			"HeroGlowColor": "222 60 236",
 			"PickSound": "dazzle_dazz_spawn_01",
 			"BanSound": "dazzle_dazz_anger_05",
@@ -10415,6 +10867,8 @@
 			"workshop_guide_name": "Dazzle",
 			"new_player_enable": "1",
 			"SimilarHeroes": "57,37,111",
+			"Adjectives": {
+			},
 			"LastHitChallengeRival": "npc_dota_hero_witch_doctor",
 			"HeroSelectSoundEffect": "Hero_Dazzle.Pick",
 			"GibType": "default",
@@ -10427,7 +10881,7 @@
 			"Ability10": "special_bonus_unique_dazzle_poison_touch_attack_range_bonus",
 			"Ability11": "special_bonus_mp_regen_175",
 			"Ability12": "special_bonus_unique_dazzle_2",
-			"Ability13": "special_bonus_attack_speed_60",
+			"Ability13": "special_bonus_attack_speed_80",
 			"Ability14": "special_bonus_unique_dazzle_5",
 			"Ability15": "special_bonus_unique_dazzle_3",
 			"Ability16": "special_bonus_unique_dazzle_1",
@@ -10453,7 +10907,7 @@
 			"AttributeBaseStrength": "18",
 			"AttributeStrengthGain": "2.0",
 			"AttributeBaseIntelligence": "25",
-			"AttributeIntelligenceGain": "2.5",
+			"AttributeIntelligenceGain": "2.8",
 			"AttributeBaseAgility": "20",
 			"AttributeAgilityGain": "1.4",
 			"MovementSpeed": "305",
@@ -10601,7 +11055,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dazzle.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dazzle.vpcf"
 		},
 		"npc_dota_hero_rattletrap": {
 			"Model": "models/heroes/rattletrap/rattletrap.vmdl",
@@ -10615,9 +11073,9 @@
 			"HeroID": "51",
 			"HeroOrderID": "31",
 			"ModelScale": "0.880000",
-			"VersusScale": "1.030000",
+			"VersusScale": "0.88",
 			"SpectatorLoadoutScale": "1",
-			"LoadoutScale": "1.100000",
+			"LoadoutScale": "0.88",
 			"HeroGlowColor": "252 220 64",
 			"PickSound": "rattletrap_ratt_spawn_05",
 			"BanSound": "rattletrap_ratt_anger_06",
@@ -10625,6 +11083,10 @@
 			"workshop_guide_name": "Clockwerk",
 			"new_player_enable": "1",
 			"SimilarHeroes": "17,71,100",
+			"Adjectives": {
+				"Arachnophobic": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_sand_king",
 			"HeroSelectSoundEffect": "Hero_Rattletrap.Pick",
 			"GibType": "motor",
@@ -10661,9 +11123,6 @@
 			"AttributeIntelligenceGain": "1.7",
 			"MovementSpeed": "310",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/rattletrap/rattletrap_cog.vmdl"
-			},
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_rattletrap.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_rattletrap",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_rattletrap.vsndevts",
@@ -10756,7 +11215,12 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/rattletrap/rattletrap_cog.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_rattletrap.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_rattletrap.vpcf"
 		},
 		"npc_dota_hero_leshrac": {
 			"Model": "models/heroes/leshrac/leshrac.vmdl",
@@ -10770,8 +11234,8 @@
 			"HeroID": "52",
 			"HeroOrderID": "38",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.700000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.84",
+			"LoadoutScale": "0.84",
 			"SpectatorLoadoutScale": "0.78",
 			"HeroGlowColor": "12 157 179",
 			"PickSound": "leshrac_lesh_spawn_01",
@@ -10781,6 +11245,11 @@
 			"workshop_guide_name": "Leshrac",
 			"new_player_enable": "1",
 			"SimilarHeroes": "74,25,45",
+			"Adjectives": {
+				"Legs": "4",
+				"Horns": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lion",
 			"HeroSelectSoundEffect": "Hero_Leshrac.Pick",
 			"Ability1": "leshrac_split_earth",
@@ -10906,7 +11375,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_leshrac.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_leshrac.vpcf"
 		},
 		"npc_dota_hero_furion": {
 			"Model": "models/heroes/furion/furion.vmdl",
@@ -10921,8 +11394,8 @@
 			"HeroID": "53",
 			"HeroOrderID": "32",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.79",
+			"LoadoutScale": "0.79",
 			"HeroGlowColor": "216 255 100",
 			"PickSound": "furion_furi_spawn_01",
 			"BanSound": "furion_furi_anger_02",
@@ -10931,6 +11404,12 @@
 			"workshop_guide_name": "Nature's Prophet",
 			"new_player_enable": "1",
 			"SimilarHeroes": "34,58,66",
+			"Adjectives": {
+				"Bearded": "1",
+				"Cape": "1",
+				"Arachnophobic": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"HeroSelectSoundEffect": "Hero_Furion.Pick",
 			"GibType": "wood",
@@ -10965,13 +11444,10 @@
 			"AttributeStrengthGain": "2.600000",
 			"AttributeBaseIntelligence": "22",
 			"AttributeIntelligenceGain": "3.500000",
-			"AttributeBaseAgility": "20",
+			"AttributeBaseAgility": "14",
 			"AttributeAgilityGain": "3.400000",
 			"MovementSpeed": "295",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/furion/treant.vmdl"
-			},
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_furion.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_furion",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts",
@@ -11077,7 +11553,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/furion/treant.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_furion.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_furion.vpcf"
 		},
 		"npc_dota_hero_life_stealer": {
 			"Model": "models/heroes/life_stealer/life_stealer.vmdl",
@@ -11092,7 +11573,7 @@
 			"HeroID": "54",
 			"HeroOrderID": "61",
 			"ModelScale": "0.810000",
-			"VersusScale": "0.900000",
+			"VersusScale": "0.81",
 			"SpectatorLoadoutScale": "0.87",
 			"HeroGlowColor": "209 4 1",
 			"CMEnabled": "1",
@@ -11102,6 +11583,10 @@
 			"workshop_guide_name": "Lifestealer",
 			"new_player_enable": "1",
 			"SimilarHeroes": "104,28,93",
+			"Adjectives": {
+				"BadTeeth": "1",
+				"Undead": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_LifeStealer.Pick",
 			"GibType": "default",
@@ -11244,7 +11729,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_life_stealer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_life_stealer.vpcf"
 		},
 		"npc_dota_hero_dark_seer": {
 			"Model": "models/heroes/dark_seer/dark_seer.vmdl",
@@ -11259,8 +11748,8 @@
 			"HeroID": "55",
 			"HeroOrderID": "33",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.880000",
-			"LoadoutScale": "0.850000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"HeroGlowColor": "203 86 255",
 			"PickSound": "dark_seer_dkseer_spawn_01",
 			"BanSound": "dark_seer_dkseer_anger_01",
@@ -11269,6 +11758,10 @@
 			"workshop_guide_name": "Dark Seer",
 			"new_player_enable": "1",
 			"SimilarHeroes": "2,98,108",
+			"Adjectives": {
+				"Bearded": "1",
+				"Parent": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"HeroSelectSoundEffect": "Hero_DarkSeer.Pick",
 			"GibType": "default",
@@ -11399,7 +11892,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dark_seer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dark_seer.vpcf"
 		},
 		"npc_dota_hero_clinkz": {
 			"Model": "models/heroes/clinkz/clinkz.vmdl",
@@ -11415,8 +11912,8 @@
 			"HeroID": "56",
 			"HeroOrderID": "68",
 			"ModelScale": "0.650000",
-			"VersusScale": "0.790000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.65",
+			"LoadoutScale": "0.65",
 			"HeroGlowColor": "205 58 0",
 			"CMEnabled": "1",
 			"PickSound": "clinkz_clinkz_spawn_01",
@@ -11424,6 +11921,11 @@
 			"workshop_guide_name": "Clinkz",
 			"new_player_enable": "1",
 			"SimilarHeroes": "32,44,46",
+			"Adjectives": {
+				"Horns": "1",
+				"Undead": "1",
+				"Fiery": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_windrunner",
 			"HeroSelectSoundEffect": "Hero_Clinkz.Pick",
 			"GibType": "default",
@@ -11571,7 +12073,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_clinkz.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_clinkz.vpcf"
 		},
 		"npc_dota_hero_omniknight": {
 			"Model": "models/heroes/omniknight/omniknight.vmdl",
@@ -11587,8 +12093,8 @@
 			"HeroID": "57",
 			"HeroOrderID": "57",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.80000",
-			"LoadoutScale": "0.810000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"SpectatorLoadoutScale": "0.8",
 			"HeroGlowColor": "120 205 255",
 			"CMEnabled": "1",
@@ -11597,6 +12103,10 @@
 			"workshop_guide_name": "Omniknight",
 			"new_player_enable": "1",
 			"SimilarHeroes": "102,111,50",
+			"Adjectives": {
+				"Bearded": "1",
+				"Cape": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_dragon_knight",
 			"HeroSelectSoundEffect": "Hero_Omniknight.Pick",
 			"GibType": "default",
@@ -11792,7 +12302,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_omniknight.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_omniknight.vpcf"
 		},
 		"npc_dota_hero_enchantress": {
 			"Model": "models/heroes/enchantress/enchantress.vmdl",
@@ -11807,16 +12321,24 @@
 			"HeroID": "58",
 			"HeroOrderID": "37",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.760000",
-			"LoadoutScale": "0.780000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"HeroGlowColor": "216 114 11",
 			"PickSound": "enchantress_ench_spawn_01",
 			"BanSound": "enchantress_ench_anger_03",
 			"CMEnabled": "1",
-			"Legs": "4",
 			"workshop_guide_name": "Enchantress",
 			"new_player_enable": "1",
 			"SimilarHeroes": "66,53,33",
+			"Adjectives": {
+				"Horns": "1",
+				"Legs": "4",
+				"Fuzzy": "1",
+				"Female": "1",
+				"Arachnophobic": "1",
+				"Cute": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_drow_ranger",
 			"HeroSelectSoundEffect": "Hero_Enchantress.Pick",
 			"GibType": "default",
@@ -11948,7 +12470,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_enchantress.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_enchantress.vpcf"
 		},
 		"npc_dota_hero_huskar": {
 			"Model": "models/heroes/huskar/huskar.vmdl",
@@ -11963,8 +12489,8 @@
 			"HeroID": "59",
 			"HeroOrderID": "54",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.890000",
-			"LoadoutScale": "0.870000",
+			"VersusScale": "0.79",
+			"LoadoutScale": "0.79",
 			"HeroGlowColor": "73 155 153",
 			"CMEnabled": "1",
 			"PickSound": "huskar_husk_spawn_01",
@@ -11972,6 +12498,11 @@
 			"workshop_guide_name": "Huskar",
 			"new_player_enable": "1",
 			"SimilarHeroes": "47,15,43",
+			"Adjectives": {
+				"NicePecs": "1",
+				"Fiery": "1",
+				"Undead": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_dazzle",
 			"HeroSelectSoundEffect": "Hero_Huskar.Pick",
 			"GibType": "default",
@@ -12134,7 +12665,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_huskar.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_huskar.vpcf"
 		},
 		"npc_dota_hero_night_stalker": {
 			"Model": "models/heroes/nightstalker/nightstalker.vmdl",
@@ -12149,7 +12684,7 @@
 			"HeroID": "60",
 			"HeroOrderID": "42",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.80000",
+			"VersusScale": "0.84",
 			"LoadoutScale": "0.840000",
 			"SpectatorLoadoutScale": "0.83",
 			"HeroGlowColor": "70 105 255",
@@ -12160,6 +12695,13 @@
 			"workshop_guide_name": "Night Stalker",
 			"new_player_enable": "1",
 			"SimilarHeroes": "104,59,4",
+			"Adjectives": {
+				"Wings": "1",
+				"Nose": "0",
+				"NicePecs": "1",
+				"Flying": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_juggernaut",
 			"HeroSelectSoundEffect": "Hero_NightStalker.Pick",
 			"GibType": "default",
@@ -12198,9 +12740,6 @@
 			"VisionDaytimeRange": "800",
 			"VisionNighttimeRange": "1800",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/nightstalker/nightstalker_night.vmdl"
-			},
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_night_stalker.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_night_stalker",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts",
@@ -12294,7 +12833,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/nightstalker/nightstalker_night.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_night_stalker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_night_stalker.vpcf"
 		},
 		"npc_dota_hero_broodmother": {
 			"Model": "models/heroes/broodmother/broodmother.vmdl",
@@ -12309,17 +12853,23 @@
 			"HeroID": "61",
 			"HeroOrderID": "53",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.840000",
+			"VersusScale": "0.93",
 			"SpectatorLoadoutScale": "0.89",
 			"HeroGlowColor": "74 76 217",
 			"CMEnabled": "1",
 			"PickSound": "broodmother_broo_spawn_01",
 			"BanSound": "broodmother_broo_anger_01",
 			"NameAliases": "bm",
-			"Legs": "8",
 			"workshop_guide_name": "Broodmother",
 			"new_player_enable": "1",
 			"SimilarHeroes": "92,38,82",
+			"Adjectives": {
+				"Legs": "8",
+				"Nose": "0",
+				"Female": "1",
+				"Parent": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"HeroSelectSoundEffect": "Hero_Broodmother.Pick",
 			"GibType": "goo",
@@ -12357,9 +12907,6 @@
 			"MovementSpeed": "285",
 			"VisionDaytimeRange": "1800",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
-			"precache": {
-				"model": "models/heroes/broodmother/spiderling.vmdl"
-			},
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_broodmother",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts",
@@ -12447,7 +12994,12 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/broodmother/spiderling.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_broodmother.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_broodmother.vpcf"
 		},
 		"npc_dota_hero_bounty_hunter": {
 			"Model": "models/heroes/bounty_hunter/bounty_hunter.vmdl",
@@ -12464,8 +13016,8 @@
 			"HeroOrderID": "64",
 			"HeroGlowColor": "221 201 63",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.950000",
-			"LoadoutScale": "1",
+			"VersusScale": "0.84",
+			"LoadoutScale": "0.84",
 			"CMEnabled": "1",
 			"NameAliases": "bh",
 			"PickSound": "bounty_hunter_bount_spawn_01",
@@ -12473,6 +13025,9 @@
 			"workshop_guide_name": "Bounty Hunter",
 			"new_player_enable": "1",
 			"SimilarHeroes": "28,88,32",
+			"Adjectives": {
+				"BadTeeth": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_BountyHunter.Pick",
 			"GibType": "default",
@@ -12671,7 +13226,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bounty_hunter.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bounty_hunter.vpcf"
 		},
 		"npc_dota_hero_weaver": {
 			"Model": "models/heroes/weaver/weaver.vmdl",
@@ -12686,16 +13245,19 @@
 			"HeroOrderID": "41",
 			"NewHero": "1",
 			"ModelScale": "0.740000",
-			"VersusScale": "1",
+			"VersusScale": "0.74",
 			"SpectatorLoadoutScale": "0.9",
-			"LoadoutScale": "0.900000",
+			"LoadoutScale": "0.74",
 			"PickSound": "weaver_weav_spawn_01",
 			"BanSound": "weaver_weav_anger_01",
 			"CMEnabled": "1",
-			"Legs": "4",
 			"workshop_guide_name": "Weaver",
 			"new_player_enable": "1",
 			"SimilarHeroes": "62,32,44",
+			"Adjectives": {
+				"Legs": "4",
+				"Nose": "0"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_viper",
 			"HeroSelectSoundEffect": "Hero_Weaver.Pick",
 			"GibType": "goo",
@@ -12735,9 +13297,6 @@
 			"StatusHealthRegen": "1.25",
 			"StatusManaRegen": "0.5",
 			"MovementSpeed": "275",
-			"precache": {
-				"model": "models/heroes/weaver/weaver_bug.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_weaver",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_weaver.vsndevts",
@@ -12824,7 +13383,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/weaver/weaver_bug.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_weaver.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_weaver.vpcf"
 		},
 		"npc_dota_hero_jakiro": {
 			"Model": "models/heroes/jakiro/jakiro.vmdl",
@@ -12843,14 +13407,22 @@
 			"HeroOrderID": "55",
 			"NewHero": "1",
 			"ModelScale": "0.970000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.97",
+			"LoadoutScale": "0.97",
 			"HeroGlowColor": "107 74 53",
 			"CMEnabled": "1",
 			"PickSound": "jakiro_jak_spawn_01",
 			"BanSound": "jakiro_jak_anger_04",
 			"new_player_enable": "1",
 			"SimilarHeroes": "5,31,90",
+			"Adjectives": {
+				"Wings": "1",
+				"Flying": "1",
+				"Fiery": "1",
+				"Icy": "1",
+				"Blue": "1",
+				"Red": "1"
+			},
 			"workshop_guide_name": "Jakiro",
 			"NoCombine": "1",
 			"LastHitChallengeRival": "npc_dota_hero_crystal_maiden",
@@ -13025,7 +13597,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_jakiro.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_jakiro.vpcf"
 		},
 		"npc_dota_hero_batrider": {
 			"Model": "models/heroes/batrider/batrider.vmdl",
@@ -13040,7 +13616,7 @@
 			"HeroID": "65",
 			"HeroOrderID": "56",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.60000",
+			"VersusScale": "0.74",
 			"SpectatorLoadoutScale": "0.74",
 			"HeroGlowColor": "107 74 53",
 			"CMEnabled": "1",
@@ -13050,6 +13626,14 @@
 			"workshop_guide_name": "Batrider",
 			"new_player_enable": "1",
 			"SimilarHeroes": "20,19,123",
+			"Adjectives": {
+				"Steed": "1",
+				"Cape": "1",
+				"Arachnophobic": "1",
+				"Flying": "1",
+				"Fiery": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lina",
 			"HeroSelectSoundEffect": "Hero_Batrider.Pick",
 			"GibType": "default",
@@ -13162,7 +13746,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_batrider.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_batrider.vpcf"
 		},
 		"npc_dota_hero_chen": {
 			"Model": "models/heroes/chen/chen.vmdl",
@@ -13176,13 +13764,17 @@
 			"HeroID": "66",
 			"HeroOrderID": "50",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.850000",
-			"LoadoutScale": "0.820000",
+			"VersusScale": "0.93",
+			"LoadoutScale": "0.93",
 			"HeroGlowColor": "107 74 53",
 			"PickSound": "chen_chen_spawn_01",
 			"BanSound": "chen_chen_anger_04",
 			"CMEnabled": "1",
 			"SimilarHeroes": "58,53,33",
+			"Adjectives": {
+				"Steed": "1",
+				"Arachnophobic": "1"
+			},
 			"workshop_guide_name": "Chen",
 			"LastHitChallengeRival": "npc_dota_hero_sven",
 			"HeroSelectSoundEffect": "Hero_Chen.Pick",
@@ -13308,7 +13900,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_chen.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_chen.vpcf"
 		},
 		"npc_dota_hero_spectre": {
 			"Model": "models/heroes/spectre/spectre.vmdl",
@@ -13324,17 +13920,22 @@
 			"HeroID": "67",
 			"HeroOrderID": "44",
 			"ModelScale": "0.670000",
-			"VersusScale": "0.720000",
+			"VersusScale": "0.67",
 			"SpectatorLoadoutScale": "0.8",
-			"LoadoutScale": "0.750000",
+			"LoadoutScale": "0.67",
 			"HeroGlowColor": "107 74 53",
 			"PickSound": "spectre_spec_spawn_01",
 			"BanSound": "spectre_spec_anger_02",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Spectre",
-			"Legs": "0",
 			"new_player_enable": "1",
 			"SimilarHeroes": "12,89,109",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Female": "1",
+				"Undead": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_bounty_hunter",
 			"HeroSelectSoundEffect": "Hero_Spectre.Pick",
 			"GibType": "ethereal",
@@ -13466,7 +14067,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_spectre.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_spectre.vpcf"
 		},
 		"npc_dota_hero_doom_bringer": {
 			"Model": "models/heroes/doom/doom.vmdl",
@@ -13481,8 +14086,8 @@
 			"HeroID": "69",
 			"HeroOrderID": "45",
 			"ModelScale": "0.860000",
-			"VersusScale": "0.660000",
-			"LoadoutScale": "0.700000",
+			"VersusScale": "0.86",
+			"LoadoutScale": "0.86",
 			"SpectatorLoadoutScale": "0.73",
 			"HeroGlowColor": "107 74 53",
 			"PickSound": "doom_bringer_doom_spawn_01",
@@ -13492,6 +14097,15 @@
 			"workshop_guide_name": "Doom",
 			"new_player_enable": "1",
 			"SimilarHeroes": "73,4,15",
+			"Adjectives": {
+				"Wings": "1",
+				"Horns": "1",
+				"Nose": "0",
+				"Arachnophobic": "1",
+				"Demon": "1",
+				"Fiery": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lich",
 			"HeroSelectSoundEffect": "Hero_DoomBringer.Pick",
 			"GibType": "default",
@@ -13632,7 +14246,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_doom_bringer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_doom_bringer.vpcf"
 		},
 		"npc_dota_hero_ancient_apparition": {
 			"Model": "models/heroes/ancient_apparition/ancient_apparition.vmdl",
@@ -13648,17 +14266,23 @@
 			"BanSound": "ancient_apparition_appa_anger_03",
 			"CMEnabled": "1",
 			"NameAliases": "aa",
-			"Legs": "0",
 			"workshop_guide_name": "Ancient Apparition",
 			"NoCombine": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "87,128,5",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Flying": "1",
+				"Icy": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_lich",
 			"HeroID": "68",
 			"HeroOrderID": "43",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.84",
+			"LoadoutScale": "0.84",
 			"SpectatorLoadoutScale": "0.77",
 			"HeroGlowColor": "53 74 107",
 			"HeroSelectSoundEffect": "Hero_Ancient_Apparition.Pick",
@@ -13790,7 +14414,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ancient_apparition.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ancient_apparition.vpcf"
 		},
 		"npc_dota_hero_ursa": {
 			"Model": "models/heroes/ursa/ursa.vmdl",
@@ -13805,8 +14433,8 @@
 			"HeroID": "70",
 			"HeroOrderID": "63",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.850000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"HeroGlowColor": "107 74 53",
 			"CMEnabled": "1",
 			"PickSound": "ursa_ursa_spawn_01",
@@ -13814,6 +14442,10 @@
 			"workshop_guide_name": "Ursa",
 			"new_player_enable": "1",
 			"SimilarHeroes": "95,44,114",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Parent": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_tiny",
 			"HeroSelectSoundEffect": "Hero_Ursa.Pick",
 			"GibType": "default",
@@ -13931,7 +14563,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ursa.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ursa.vpcf"
 		},
 		"npc_dota_hero_spirit_breaker": {
 			"Model": "models/heroes/spirit_breaker/spirit_breaker.vmdl",
@@ -13948,13 +14584,18 @@
 			"workshop_guide_name": "Spirit Breaker",
 			"new_player_enable": "1",
 			"SimilarHeroes": "106,126,107",
+			"Adjectives": {
+				"Horns": "1",
+				"Bearded": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"PickSound": "spirit_breaker_spir_spawn_01",
 			"BanSound": "spirit_breaker_spir_anger_05",
 			"HeroID": "71",
 			"HeroOrderID": "66",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.8",
+			"VersusScale": "0.74",
 			"HeroGlowColor": "53 74 107",
 			"HeroSelectSoundEffect": "Hero_SpiritBreaker.Pick",
 			"GibType": "ethereal",
@@ -13968,7 +14609,7 @@
 			"Ability10": "special_bonus_night_vision_500",
 			"Ability11": "special_bonus_armor_4",
 			"Ability12": "special_bonus_unique_spirit_breaker_2",
-			"Ability13": "special_bonus_attack_damage_40",
+			"Ability13": "special_bonus_attack_damage_45",
 			"Ability14": "special_bonus_unique_spirit_breaker_3",
 			"Ability15": "special_bonus_unique_spirit_breaker_4",
 			"Ability16": "special_bonus_unique_spirit_breaker_1",
@@ -14089,7 +14730,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_spirit_breaker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_spirit_breaker.vpcf"
 		},
 		"npc_dota_hero_gyrocopter": {
 			"Model": "models/heroes/gyro/gyro.vmdl",
@@ -14104,7 +14749,7 @@
 			"HeroID": "72",
 			"HeroOrderID": "78",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.650000",
+			"VersusScale": "0.84",
 			"SpectatorLoadoutScale": "0.82",
 			"PickSound": "gyrocopter_gyro_spawn_01",
 			"BanSound": "gyrocopter_gyro_anger_08",
@@ -14112,6 +14757,10 @@
 			"workshop_guide_name": "Gyrocopter",
 			"new_player_enable": "1",
 			"SimilarHeroes": "94,109,6",
+			"Adjectives": {
+				"Steed": "1",
+				"Flying": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_sniper",
 			"HeroSelectSoundEffect": "Hero_Gyrocopter.Pick",
 			"GibType": "motor",
@@ -14122,10 +14771,10 @@
 			"Ability5": "generic_hidden",
 			"Ability6": "gyrocopter_call_down",
 			"Ability10": "special_bonus_unique_gyrocopter_4",
-			"Ability11": "special_bonus_hp_200",
+			"Ability11": "special_bonus_hp_175",
 			"Ability12": "special_bonus_unique_gyrocopter_6",
-			"Ability13": "special_bonus_unique_gyrocopter_2",
-			"Ability14": "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage",
+			"Ability13": "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage",
+			"Ability14": "special_bonus_unique_gyrocopter_2",
 			"Ability15": "special_bonus_unique_gyrocopter_3",
 			"Ability16": "special_bonus_unique_gyrocopter_1",
 			"Ability17": "special_bonus_unique_gyrocopter_5",
@@ -14150,14 +14799,11 @@
 			"AttributeBaseStrength": "22",
 			"AttributeStrengthGain": "2.500000",
 			"AttributeBaseAgility": "26",
-			"AttributeAgilityGain": "3.300000",
+			"AttributeAgilityGain": "3.100000",
 			"AttributeBaseIntelligence": "21",
 			"AttributeIntelligenceGain": "2.400000",
 			"MovementSpeed": "320",
 			"HasAggressiveStance": "1",
-			"precache": {
-				"model": "models/heroes/gyro/gyro_missile.vmdl"
-			},
 			"particle_folder": "particles/units/heroes/hero_gyrocopter",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_gyrocopter.vsndevts",
@@ -14269,7 +14915,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/gyro/gyro_missile.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_gyrocopter.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_gyrocopter.vpcf"
 		},
 		"npc_dota_hero_alchemist": {
 			"Model": "models/heroes/alchemist/alchemist.vmdl",
@@ -14284,8 +14935,8 @@
 			"HeroID": "73",
 			"HeroOrderID": "60",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.800000",
-			"LoadoutScale": "0.820000",
+			"VersusScale": "0.93",
+			"LoadoutScale": "0.93",
 			"SpectatorLoadoutScale": "0.85",
 			"CMEnabled": "1",
 			"PickSound": "alchemist_alch_spawn_01",
@@ -14293,6 +14944,11 @@
 			"workshop_guide_name": "Alchemist",
 			"new_player_enable": "1",
 			"SimilarHeroes": "89,94,69",
+			"Adjectives": {
+				"Steed": "1",
+				"Bearded": "1",
+				"Potbelly": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"HeroSelectSoundEffect": "Hero_Alchemist.Pick",
 			"GibType": "default",
@@ -14428,6 +15084,18 @@
 					"SlotName": "ability_effects_3",
 					"SlotText": "alchemist_goblins_greed",
 					"DisplayInLoadout": "0"
+				},
+				"12": {
+					"SlotIndex": "11",
+					"SlotName": "ability_effects_5",
+					"SlotText": "alchemist_goblins_greed",
+					"DisplayInLoadout": "0"
+				},
+				"13": {
+					"SlotIndex": "11",
+					"SlotName": "ability_effects_2",
+					"SlotText": "alchemist_unstable_concoction",
+					"DisplayInLoadout": "0"
 				}
 			},
 			"Bot": {
@@ -14441,7 +15109,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_alchemist.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_alchemist.vpcf"
 		},
 		"npc_dota_hero_invoker": {
 			"Model": "models/heroes/invoker/invoker.vmdl",
@@ -14449,6 +15121,8 @@
 			"Persona": {
 				"1": {
 					"name": "npc_dota_hero_invoker_persona1",
+					"token": "#npc_dota_hero_invoker_persona1",
+					"token_english": "#npc_dota_hero_invoker_persona1__en",
 					"Model": "models/heroes/invoker_kid/invoker_kid.vmdl"
 				}
 			},
@@ -14463,9 +15137,16 @@
 			"HeroID": "74",
 			"HeroOrderID": "67",
 			"ModelScale": "0.740000",
-			"LoadoutScale": "0.800000",
+			"LoadoutScale": "0.74",
 			"CMEnabled": "1",
+			"NameAliases": "kid",
 			"SimilarHeroes": "34,22,45",
+			"Adjectives": {
+				"Cape": "1",
+				"Parent": "1",
+				"Fiery": "1",
+				"Icy": "1"
+			},
 			"PickSound": "invoker_invo_spawn_02",
 			"BanSound": "invoker_invo_anger_04",
 			"workshop_guide_name": "Invoker",
@@ -14514,7 +15195,7 @@
 			"Ability24": "special_bonus_unique_invoker_13",
 			"AbilityDraftDisabled": "0",
 			"ArmorPhysical": "-1",
-			"StatusHealthRegen": "1.5",
+			"StatusHealthRegen": "1.0",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
 			"AttackDamageMin": "2",
 			"AttackDamageMax": "10",
@@ -14535,9 +15216,6 @@
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_invoker.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_invoker",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts",
-			"precache": {
-				"model": "models/heroes/invoker/forge_spirit.vmdl"
-			},
 			"RenderablePortrait": {
 				"Particles": {
 					"particles/units/heroes/hero_invoker_kid/invoker_kid_loadout.vpcf": "loadout"
@@ -14757,7 +15435,13 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/invoker/forge_spirit.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_invoker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_invoker.vpcf",
+			"party_hat_effect_persona": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_invoker_persona_1.vpcf"
 		},
 		"npc_dota_hero_silencer": {
 			"Model": "models/heroes/silencer/silencer.vmdl",
@@ -14772,14 +15456,16 @@
 			"HeroID": "75",
 			"HeroOrderID": "65",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.800000",
-			"LoadoutScale": "0.800000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"PickSound": "silencer_silen_spawn_01",
 			"BanSound": "silencer_silen_anger_07",
 			"workshop_guide_name": "Silencer",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "87,37,11",
+			"Adjectives": {
+			},
 			"LastHitChallengeRival": "npc_dota_hero_zuus",
 			"HeroSelectSoundEffect": "Hero_Silencer.Pick",
 			"GibType": "default",
@@ -14914,7 +15600,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_silencer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_silencer.vpcf"
 		},
 		"npc_dota_hero_obsidian_destroyer": {
 			"Model": "models/heroes/obsidian_destroyer/obsidian_destroyer.vmdl",
@@ -14930,15 +15620,22 @@
 			"HeroID": "76",
 			"HeroOrderID": "69",
 			"ModelScale": "0.700000",
-			"VersusScale": "0.650000",
+			"VersusScale": "0.70",
 			"CMEnabled": "1",
 			"NameAliases": "od",
-			"Legs": "4",
 			"PickSound": "outworld_destroyer_odest_spawn_02",
 			"BanSound": "outworld_destroyer_odest_anger_02",
 			"workshop_guide_name": "Outworld Devourer",
 			"new_player_enable": "1",
 			"SimilarHeroes": "79,36,43",
+			"Adjectives": {
+				"Wings": "1",
+				"Legs": "4",
+				"Nose": "0",
+				"Arachnophobic": "1",
+				"Flying": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_death_prophet",
 			"HeroSelectSoundEffect": "Hero_OD.Pick",
 			"GibType": "ethereal",
@@ -15063,7 +15760,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_obsidian_destroyer.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_obsidian_destroyer.vpcf"
 		},
 		"npc_dota_hero_lycan": {
 			"Model": "models/heroes/lycan/lycan.vmdl",
@@ -15078,7 +15779,7 @@
 			"HeroID": "77",
 			"HeroOrderID": "72",
 			"ModelScale": "0.850000",
-			"VersusScale": "0.800000",
+			"VersusScale": "0.85",
 			"HeroGlowColor": "139 1 1",
 			"CMEnabled": "1",
 			"PickSound": "lycan_lycan_spawn_01",
@@ -15086,6 +15787,11 @@
 			"workshop_guide_name": "Lycan",
 			"new_player_enable": "1",
 			"SimilarHeroes": "38,78,81",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Bearded": "1",
+				"Arachnophobic": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_skeleton_king",
 			"HeroSelectSoundEffect": "Hero_Lycan.Pick",
 			"GibType": "default",
@@ -15138,9 +15844,6 @@
 				"Particles": {
 					"particles/units/heroes/hero_lycan/lycan_loadout.vpcf": "loadout"
 				}
-			},
-			"precache": {
-				"model": "models/heroes/lycan/lycan_wolf.vmdl"
 			},
 			"ItemSlots": {
 				"0": {
@@ -15241,7 +15944,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/lycan/lycan_wolf.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lycan_wolf.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lycan.vpcf"
 		},
 		"npc_dota_hero_brewmaster": {
 			"Model": "models/heroes/brewmaster/brewmaster.vmdl",
@@ -15256,12 +15964,18 @@
 			"HeroID": "78",
 			"HeroOrderID": "74",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.800000",
-			"LoadoutScale": "0.850000",
+			"VersusScale": "0.79",
+			"LoadoutScale": "0.79",
 			"HeroGlowColor": "139 1 1",
 			"NameAliases": "bm",
 			"CMEnabled": "1",
 			"SimilarHeroes": "113,33,38",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Potbelly": "1",
+				"Fiery": "1",
+				"Red": "1"
+			},
 			"PickSound": "brewmaster_brew_spawn_01",
 			"BanSound": "brewmaster_brew_anger_01",
 			"workshop_guide_name": "Brewmaster",
@@ -15367,6 +16081,12 @@
 					"SlotIndex": "6",
 					"SlotName": "taunt",
 					"SlotText": "#LoadoutSlot_Taunt"
+				},
+				"7": {
+					"SlotIndex": "7",
+					"SlotName": "ability_effects_1",
+					"SlotText": "brewmaster_thunder_clap",
+					"DisplayInLoadout": "0"
 				}
 			},
 			"Bot": {
@@ -15380,7 +16100,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_brewmaster.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_brewmaster.vpcf"
 		},
 		"npc_dota_hero_shadow_demon": {
 			"Model": "models/heroes/shadow_demon/shadow_demon.vmdl",
@@ -15395,14 +16119,20 @@
 			"HeroID": "79",
 			"HeroOrderID": "71",
 			"ModelScale": "0.840000",
-			"LoadoutScale": "0.770000",
-			"VersusScale": "0.720000",
+			"LoadoutScale": "0.84",
+			"VersusScale": "0.84",
 			"SpectatorLoadoutScale": "0.76",
 			"HeroGlowColor": "242 200 198",
 			"NameAliases": "sd",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "27,26,86",
+			"Adjectives": {
+				"Cape": "1",
+				"NicePecs": "1",
+				"Demon": "1",
+				"Red": "1"
+			},
 			"PickSound": "shadow_demon_shadow_demon_spawn_01",
 			"BanSound": "shadow_demon_shadow_demon_anger_03",
 			"workshop_guide_name": "Shadow Demon",
@@ -15529,7 +16259,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_shadow_demon.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_shadow_demon.vpcf"
 		},
 		"npc_dota_hero_lone_druid": {
 			"Model": "models/heroes/lone_druid/lone_druid.vmdl",
@@ -15544,12 +16278,17 @@
 			"HeroID": "80",
 			"HeroOrderID": "73",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.860000",
-			"LoadoutScale": "0.870000",
+			"VersusScale": "0.79",
+			"LoadoutScale": "0.79",
 			"AlternateLoadoutScale": "0.770000",
 			"NameAliases": "ld",
 			"CMEnabled": "1",
 			"SimilarHeroes": "92,77,38",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Bearded": "1",
+				"Arachnophobic": "1"
+			},
 			"PickSound": "lone_druid_lone_druid_spawn_01",
 			"BanSound": "lone_druid_lone_druid_anger_10",
 			"workshop_guide_name": "Lone Druid",
@@ -15578,7 +16317,7 @@
 				"Ability3": "lone_druid_savage_roar",
 				"Ability4": "lone_druid_true_form"
 			},
-			"ArmorPhysical": "-2",
+			"ArmorPhysical": "0",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
 			"AttackDamageMin": "1",
 			"AttackDamageMax": "5",
@@ -15604,9 +16343,6 @@
 				"Particles": {
 					"particles/units/heroes/hero_lone_druid/lone_druid_loadout.vpcf": "loadout"
 				}
-			},
-			"precache": {
-				"model": "models/heroes/lone_druid/true_form.vmdl"
 			},
 			"ItemSlots": {
 				"0": {
@@ -15707,7 +16443,12 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/lone_druid/true_form.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lone_druid.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_lone_druid.vpcf"
 		},
 		"npc_dota_hero_chaos_knight": {
 			"Model": "models/heroes/chaos_knight/chaos_knight.vmdl",
@@ -15721,13 +16462,17 @@
 			"HeroID": "81",
 			"HeroOrderID": "79",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.720000",
-			"LoadoutScale": "0.720000",
+			"VersusScale": "0.79",
+			"LoadoutScale": "0.79",
 			"PickSound": "chaos_knight_chaknight_spawn_02",
 			"BanSound": "chaos_knight_chaknight_anger_06",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "54,42,18",
+			"Adjectives": {
+				"Steed": "1",
+				"Red": "1"
+			},
 			"BotImplemented": "1",
 			"workshop_guide_name": "Chaos Knight",
 			"LastHitChallengeRival": "npc_dota_hero_omniknight",
@@ -15912,7 +16657,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_chaos_knight.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_chaos_knight.vpcf"
 		},
 		"npc_dota_hero_meepo": {
 			"Model": "models/heroes/meepo/meepo.vmdl",
@@ -15927,13 +16676,18 @@
 			"HeroID": "82",
 			"HeroOrderID": "91",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.900000",
+			"VersusScale": "0.93",
 			"NameAliases": "geomancer;meepwn",
 			"workshop_guide_name": "Meepo",
 			"PickSound": "meepo_meepo_spawn_01",
 			"BanSound": "meepo_meepo_anger_12",
 			"CMEnabled": "1",
 			"SimilarHeroes": "66,61,81",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Parent": "1",
+				"Cute": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_sand_king",
 			"AbilityDraftDisabled": "0",
 			"ARDMDisabled": "1",
@@ -15978,7 +16732,7 @@
 			"StatusHealthRegen": "0.25",
 			"VisionDaytimeRange": "1800",
 			"MovementSpeed": "330",
-			"MovementTurnRate": "0.70000",
+			"MovementTurnRate": "0.90000",
 			"particle_folder": "particles/units/heroes/hero_meepo",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_meepo.vsndevts",
@@ -16076,7 +16830,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_meepo.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_meepo.vpcf"
 		},
 		"npc_dota_hero_treant": {
 			"Model": "models/heroes/treant_protector/treant_protector.vmdl",
@@ -16089,14 +16847,17 @@
 			"HeroID": "83",
 			"HeroOrderID": "76",
 			"ModelScale": "0.840000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.700000",
+			"VersusScale": "0.84",
+			"LoadoutScale": "0.84",
 			"PickSound": "treant_treant_spawn_02",
 			"BanSound": "treant_treant_anger_11",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Treant Protector",
 			"new_player_enable": "1",
 			"SimilarHeroes": "85,103,105",
+			"Adjectives": {
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_tiny",
 			"HeroSelectSoundEffect": "Hero_Treant.Pick",
 			"GibType": "wood",
@@ -16224,7 +16985,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_treant.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_treant.vpcf"
 		},
 		"npc_dota_hero_ogre_magi": {
 			"Model": "models/heroes/ogre_magi/ogre_magi.vmdl",
@@ -16238,8 +17003,8 @@
 			"HeroID": "84",
 			"HeroOrderID": "77",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.840000",
-			"LoadoutScale": "0.870000",
+			"VersusScale": "0.93",
+			"LoadoutScale": "0.93",
 			"MaxModelScaleMultiplier": "1.22",
 			"SpectatorLoadoutScale": "0.88",
 			"NameAliases": "om",
@@ -16250,6 +17015,11 @@
 			"LastHitChallengeRival": "npc_dota_hero_dragon_knight",
 			"new_player_enable": "1",
 			"SimilarHeroes": "83,85,100",
+			"Adjectives": {
+				"Potbelly": "1",
+				"Fiery": "1",
+				"Blue": "1"
+			},
 			"HeroSelectSoundEffect": "Hero_OgreMagi.Pick",
 			"GibType": "default",
 			"Ability1": "ogre_magi_fireblast",
@@ -16291,7 +17061,7 @@
 			"AttributeAgilityGain": "1.5",
 			"AttributeBaseIntelligence": "0",
 			"AttributeIntelligenceGain": "0",
-			"StatusHealthRegen": "0.75",
+			"StatusHealthRegen": "1.5",
 			"StatusMana": "120",
 			"MovementSpeed": "290",
 			"particle_folder": "particles/units/heroes/hero_ogre_magi",
@@ -16388,7 +17158,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ogre_magi.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ogre_magi.vpcf"
 		},
 		"npc_dota_hero_undying": {
 			"Model": "models/heroes/undying/undying.vmdl",
@@ -16403,8 +17177,8 @@
 			"HeroID": "85",
 			"HeroOrderID": "84",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.820000",
-			"LoadoutScale": "0.870000",
+			"VersusScale": "0.93",
+			"LoadoutScale": "0.93",
 			"SpectatorLoadoutScale": "0.88",
 			"TransformedLoadoutScale": "0.73",
 			"NameAliases": "dirge",
@@ -16414,6 +17188,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "83,102,84",
+			"Adjectives": {
+				"BadTeeth": "1",
+				"Undead": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_sand_king",
 			"HeroSelectSoundEffect": "Hero_Undying.Pick",
 			"GibType": "goo",
@@ -16457,9 +17236,6 @@
 				"Particles": {
 					"particles/units/heroes/hero_undying/undying_loadout.vpcf": "loadout"
 				}
-			},
-			"precache": {
-				"model": "models/heroes/undying/undying_flesh_golem.vmdl"
 			},
 			"ItemSlots": {
 				"0": {
@@ -16552,7 +17328,12 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/undying/undying_flesh_golem.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_undying.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_undying.vpcf"
 		},
 		"npc_dota_hero_rubick": {
 			"Model": "models/heroes/rubick/rubick.vmdl",
@@ -16565,14 +17346,20 @@
 			"HeroID": "86",
 			"HeroOrderID": "81",
 			"ModelScale": "0.700000",
-			"VersusScale": "0.620000",
-			"LoadoutScale": "0.650000",
+			"VersusScale": "0.70",
+			"LoadoutScale": "0.70",
 			"NameAliases": "rubick",
 			"workshop_guide_name": "Rubick",
 			"PickSound": "rubick_rubick_spawn_04",
 			"BanSound": "rubick_rubick_anger_06",
 			"CMEnabled": "1",
 			"SimilarHeroes": "27,26,79",
+			"Adjectives": {
+				"Nose": "0",
+				"Cape": "1",
+				"Arachnophobic": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_warlock",
 			"HeroSelectSoundEffect": "Hero_Rubick.Pick",
 			"GibType": "default",
@@ -16714,7 +17501,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_rubick.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_rubick.vpcf"
 		},
 		"npc_dota_hero_disruptor": {
 			"Model": "models/heroes/disruptor/disruptor.vmdl",
@@ -16727,8 +17518,8 @@
 			"HeroID": "87",
 			"HeroOrderID": "85",
 			"ModelScale": "0.790000",
-			"VersusScale": "0.700000",
-			"LoadoutScale": "0.710000",
+			"VersusScale": "0.79",
+			"LoadoutScale": "0.79",
 			"SpectatorLoadoutScale": "0.74",
 			"NameAliases": "disruptor",
 			"workshop_guide_name": "Disruptor",
@@ -16737,6 +17528,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "68,3,75",
+			"Adjectives": {
+				"Steed": "1",
+				"Bearded": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_warlock",
 			"HeroSelectSoundEffect": "Hero_Disruptor.Pick",
 			"GibType": "default",
@@ -16876,7 +17672,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_disruptor.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_disruptor.vpcf"
 		},
 		"npc_dota_hero_nyx_assassin": {
 			"Model": "models/heroes/nerubian_assassin/nerubian_assassin.vmdl",
@@ -16890,13 +17690,16 @@
 			"HeroID": "88",
 			"HeroOrderID": "88",
 			"ModelScale": "0.980000",
-			"VersusScale": "0.890000",
+			"VersusScale": "0.98",
 			"NameAliases": "na",
 			"workshop_guide_name": "Nyx Assassin",
-			"Legs": "6",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "46,62,32",
+			"Adjectives": {
+				"Legs": "6",
+				"Nose": "0"
+			},
 			"PickSound": "nyx_assassin_nyx_spawn_01",
 			"BanSound": "nyx_assassin_nyx_anger_07",
 			"LastHitChallengeRival": "npc_dota_hero_bounty_hunter",
@@ -16945,9 +17748,6 @@
 			"particle_folder": "particles/units/heroes/hero_nyx_assassin",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_nyx_assassin.vsndevts",
-			"precache": {
-				"model": "models/heroes/nerubian_assassin/mound.vmdl"
-			},
 			"RenderablePortrait": {
 				"Particles": {
 					"particles/units/heroes/hero_nyx_assassin/nyx_loadout.vpcf": "loadout"
@@ -17019,7 +17819,12 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/nerubian_assassin/mound.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_nyx_assassin.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_nyx_assassin.vpcf"
 		},
 		"npc_dota_hero_naga_siren": {
 			"Model": "models/heroes/siren/siren.vmdl",
@@ -17034,16 +17839,21 @@
 			"HeroID": "89",
 			"HeroOrderID": "87",
 			"ModelScale": "0.770000",
-			"VersusScale": "0.800000",
+			"VersusScale": "0.77",
 			"HeroGlowColor": "154 97 133",
 			"NameAliases": "naga",
-			"Legs": "0",
 			"workshop_guide_name": "Naga Siren",
 			"PickSound": "naga_siren_naga_spawn_02",
 			"BanSound": "naga_siren_naga_anger_12",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "12,94,67",
+			"Adjectives": {
+				"Legs": "0",
+				"Female": "1",
+				"Aquatic": "1",
+				"Green": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_kunkka",
 			"HeroSelectSoundEffect": "Hero_NagaSiren.Pick",
 			"GibType": "default",
@@ -17080,7 +17890,7 @@
 			"AttributeBaseIntelligence": "21",
 			"AttributeIntelligenceGain": "2.0000",
 			"MovementSpeed": "330",
-			"StatusHealthRegen": "1.25",
+			"StatusHealthRegen": "1.0",
 			"BoundsHullName": "DOTA_HULL_SIZE_SMALL",
 			"particle_folder": "particles/units/heroes/hero_siren",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts",
@@ -17176,7 +17986,11 @@
 					"SlotText": "naga_siren_song_of_the_siren",
 					"DisplayInLoadout": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_naga_siren.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_naga_siren.vpcf"
 		},
 		"npc_dota_hero_keeper_of_the_light": {
 			"Model": "models/heroes/keeper_of_the_light/keeper_of_the_light.vmdl",
@@ -17190,8 +18004,8 @@
 			"HeroID": "90",
 			"HeroOrderID": "89",
 			"ModelScale": "0.800000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.80",
+			"LoadoutScale": "0.80",
 			"NameAliases": "keeper;ezalor;kotl",
 			"workshop_guide_name": "Keeper of the Light",
 			"PickSound": "keeper_of_the_light_keep_spawn_01",
@@ -17199,6 +18013,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "64,5,31",
+			"Adjectives": {
+				"Steed": "1",
+				"Bearded": "1",
+				"Parent": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_chaos_knight",
 			"HeroSelectSoundEffect": "Hero_KeeperOfTheLight.Pick",
 			"GibType": "default",
@@ -17328,7 +18147,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_keeper_of_the_light.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_keeper_of_the_light.vpcf"
 		},
 		"npc_dota_hero_wisp": {
 			"Model": "models/heroes/wisp/wisp.vmdl",
@@ -17342,15 +18165,20 @@
 			"HeroID": "91",
 			"HeroOrderID": "83",
 			"ModelScale": "0.930000",
-			"VersusScale": "0.770000",
+			"VersusScale": "0.93",
 			"workshop_guide_name": "Io",
 			"PickSound": "wisp_move03",
 			"BanSound": "wisp_shitty_crummy_wizard",
 			"CMEnabled": "1",
 			"SimilarHeroes": "50,57,111",
+			"Adjectives": {
+				"Legs": "0",
+				"Nose": "0",
+				"Flying": "1",
+				"Blue": "1"
+			},
 			"NameAliases": "wisp",
 			"NoCombine": "1",
-			"Legs": "0",
 			"LastHitChallengeRival": "npc_dota_hero_zuus",
 			"AbilityDraftDisabled": "0",
 			"HeroSelectSoundEffect": "Hero_Wisp.Pick",
@@ -17396,9 +18224,6 @@
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_wisp.vsndevts",
 			"RenderablePortrait": {
 			},
-			"precache": {
-				"model": "models/development/invisiblebox.vmdl"
-			},
 			"ItemSlots": {
 				"0": {
 					"SlotIndex": "0",
@@ -17419,6 +18244,24 @@
 					"SlotName": "ambient_effects",
 					"SlotText": "#LoadoutSlot_Ambient_Effects",
 					"DisplayInLoadout": "0"
+				},
+				"3": {
+					"SlotIndex": "3",
+					"SlotName": "ability_effects_1",
+					"SlotText": "wisp_tether",
+					"DisplayInLoadout": "0"
+				},
+				"4": {
+					"SlotIndex": "4",
+					"SlotName": "ability_effects_2",
+					"SlotText": "wisp_spirits",
+					"DisplayInLoadout": "0"
+				},
+				"5": {
+					"SlotIndex": "5",
+					"SlotName": "ability_effects_6",
+					"SlotText": "wisp_relocate",
+					"DisplayInLoadout": "0"
 				}
 			},
 			"Bot": {
@@ -17432,7 +18275,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/development/invisiblebox.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_wisp.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_wisp.vpcf"
 		},
 		"npc_dota_hero_visage": {
 			"Model": "models/heroes/visage/visage.vmdl",
@@ -17447,14 +18295,19 @@
 			"HeroID": "92",
 			"HeroOrderID": "90",
 			"ModelScale": "0.670000",
-			"VersusScale": "0.600000",
-			"LoadoutScale": "0.750000",
+			"VersusScale": "0.67",
+			"LoadoutScale": "0.67",
 			"NameAliases": "visage",
 			"workshop_guide_name": "Visage",
 			"PickSound": "visage_visa_spawn_01",
 			"BanSound": "visage_visa_anger_10",
 			"CMEnabled": "1",
 			"SimilarHeroes": "77,78,38",
+			"Adjectives": {
+				"Wings": "1",
+				"Flying": "1",
+				"Blue": "1"
+			},
 			"NoCombine": "1",
 			"LastHitChallengeRival": "npc_dota_hero_lion",
 			"HeroSelectSoundEffect": "Hero_Visage.Pick",
@@ -17498,9 +18351,6 @@
 			"particle_folder": "particles/units/heroes/hero_visage",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_visage.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_visage.vsndevts",
-			"precache": {
-				"model": "models/heroes/visage/visage_familiar.vmdl"
-			},
 			"RenderablePortrait": {
 				"Particles": {
 					"particles/units/heroes/hero_visage/visage_loadout.vpcf": "loadout"
@@ -17569,7 +18419,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/visage/visage_familiar.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_visage.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_visage.vpcf"
 		},
 		"npc_dota_hero_slark": {
 			"Model": "models/heroes/slark/slark.vmdl",
@@ -17586,7 +18441,7 @@
 			"Team": "Bad",
 			"ModelScale": "0.900000",
 			"VersusScale": "0.900000",
-			"LoadoutScale": "1",
+			"LoadoutScale": "0.9",
 			"NameAliases": "slark",
 			"workshop_guide_name": "Slark",
 			"PickSound": "slark_slark_spawn_01",
@@ -17594,6 +18449,9 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "44,32,63",
+			"Adjectives": {
+				"Aquatic": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_kunkka",
 			"HeroSelectSoundEffect": "Hero_Slark.Pick",
 			"GibType": "default",
@@ -17738,7 +18596,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_slark.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_slark.vpcf"
 		},
 		"npc_dota_hero_medusa": {
 			"Model": "models/heroes/medusa/medusa.vmdl",
@@ -17753,17 +18615,21 @@
 			"Complexity": "1",
 			"Team": "Bad",
 			"ModelScale": "0.850000",
-			"VersusScale": "0.8200000",
+			"VersusScale": "0.85",
 			"NameAliases": "medusa,gorgon",
 			"workshop_guide_name": "Medusa",
 			"PickSound": "medusa_medus_spawn_01",
 			"BanSound": "medusa_medus_anger_13",
 			"NoCombine": "1",
-			"Legs": "0",
 			"LastHitChallengeRival": "npc_dota_hero_zuus",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "1,73,89",
+			"Adjectives": {
+				"Legs": "0",
+				"Female": "1",
+				"Green": "1"
+			},
 			"HeroSelectSoundEffect": "Hero_Medusa.Pick",
 			"GibType": "default",
 			"Ability1": "medusa_split_shot",
@@ -17892,7 +18758,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_medusa.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_medusa.vpcf"
 		},
 		"npc_dota_hero_troll_warlord": {
 			"Model": "models/heroes/troll_warlord/troll_warlord.vmdl",
@@ -17907,7 +18777,7 @@
 			"Complexity": "2",
 			"Team": "Good",
 			"ModelScale": "0.900000",
-			"VersusScale": "0.810000",
+			"VersusScale": "0.90",
 			"NameAliases": "troll,jahrakal",
 			"workshop_guide_name": "Troll Warlord",
 			"PickSound": "troll_warlord_troll_spawn_01",
@@ -17916,6 +18786,9 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "70,114,4",
+			"Adjectives": {
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_windrunner",
 			"HeroSelectSoundEffect": "Hero_TrollWarlord.Pick",
 			"GibType": "default",
@@ -18045,7 +18918,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "2"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_troll_warlord.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_troll_warlord.vpcf"
 		},
 		"npc_dota_hero_centaur": {
 			"Model": "models/heroes/centaur/centaur.vmdl",
@@ -18060,18 +18937,22 @@
 			"Complexity": "1",
 			"Team": "Good",
 			"ModelScale": "0.740000",
-			"VersusScale": "0.610000",
-			"LoadoutScale": "0.630000",
+			"VersusScale": "0.74",
+			"LoadoutScale": "0.74",
 			"SpectatorLoadoutScale": "0.68",
 			"NameAliases": "centaur",
 			"PickSound": "centaur_cent_spawn_03",
 			"BanSound": "centaur_cent_anger_03",
 			"workshop_guide_name": "Centaur Warrunner",
-			"Legs": "4",
 			"LastHitChallengeRival": "npc_dota_hero_chaos_knight",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "2,108,29",
+			"Adjectives": {
+				"Horns": "1",
+				"Legs": "4",
+				"Bearded": "1"
+			},
 			"HeroSelectSoundEffect": "Hero_Centaur.Pick",
 			"GibType": "default",
 			"Ability1": "centaur_hoof_stomp",
@@ -18106,7 +18987,7 @@
 			"AttributeBaseAgility": "15",
 			"AttributeAgilityGain": "1.0000",
 			"VisionDaytimeRange": "1800",
-			"MovementSpeed": "300",
+			"MovementSpeed": "310",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts",
 			"particle_folder": "particles/units/heroes/hero_centaur",
@@ -18229,7 +19110,11 @@
 					"SlotText": "centaur_stampede",
 					"DisplayInLoadout": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_centaur.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_centaur.vpcf"
 		},
 		"npc_dota_hero_magnataur": {
 			"Model": "models/heroes/magnataur/magnataur.vmdl",
@@ -18243,16 +19128,20 @@
 			"Complexity": "2",
 			"Team": "Bad",
 			"ModelScale": "0.920000",
-			"VersusScale": "0.800000",
-			"LoadoutScale": "0.900000",
+			"VersusScale": "0.92",
+			"LoadoutScale": "0.92",
 			"NameAliases": "magnataur, magnus",
 			"workshop_guide_name": "Magnus",
-			"Legs": "4",
 			"PickSound": "magnataur_magn_spawn_06",
 			"BanSound": "magnataur_magn_anger_07",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "23,129,18",
+			"Adjectives": {
+				"Horns": "1",
+				"Legs": "4",
+				"Fuzzy": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_tidehunter",
 			"HeroSelectSoundEffect": "Hero_Magnataur.Pick",
 			"GibType": "default",
@@ -18277,7 +19166,7 @@
 			"AttackRate": "1.800000",
 			"AttackAnimationPoint": "0.500000",
 			"AttackAcquisitionRange": "600",
-			"AttackRange": "150",
+			"AttackRange": "200",
 			"AttributePrimary": "DOTA_ATTRIBUTE_ALL",
 			"AttributeBaseStrength": "25",
 			"AttributeStrengthGain": "3.10000",
@@ -18379,7 +19268,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_magnataur.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_magnataur.vpcf"
 		},
 		"npc_dota_hero_shredder": {
 			"Model": "models/heroes/shredder/shredder.vmdl",
@@ -18394,7 +19287,7 @@
 			"HeroID": "98",
 			"HeroOrderID": "95",
 			"ModelScale": "0.825000",
-			"VersusScale": "0.750000",
+			"VersusScale": "0.825",
 			"NameAliases": "Rizzrack; Shredder; Timbersaw",
 			"workshop_guide_name": "Timbersaw",
 			"PickSound": "shredder_timb_spawn_01",
@@ -18402,6 +19295,10 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "29,108,43",
+			"Adjectives": {
+				"Steed": "1",
+				"BadTeeth": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_tiny",
 			"HeroSelectSoundEffect": "Hero_Shredder.Pick",
 			"GibType": "motor",
@@ -18548,7 +19445,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_shredder.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_shredder.vpcf"
 		},
 		"npc_dota_hero_bristleback": {
 			"Model": "models/heroes/bristleback/bristleback.vmdl",
@@ -18563,8 +19464,8 @@
 			"HeroOrderID": "99",
 			"BotImplemented": "1",
 			"ModelScale": "0.800000",
-			"VersusScale": "0.880000",
-			"LoadoutScale": "0.900000",
+			"VersusScale": "0.80",
+			"LoadoutScale": "0.80",
 			"NameAliases": "Rigwarl;bb",
 			"workshop_guide_name": "Bristleback",
 			"HasAggressiveStance": "1",
@@ -18573,6 +19474,9 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "102,98,129",
+			"Adjectives": {
+				"NicePecs": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_dragon_knight",
 			"HeroSelectSoundEffect": "Hero_Bristleback.Pick",
 			"GibType": "goo",
@@ -18593,8 +19497,8 @@
 			"Ability17": "special_bonus_unique_bristleback_3",
 			"ArmorPhysical": "1.000000",
 			"AttackCapabilities": "DOTA_UNIT_CAP_MELEE_ATTACK",
-			"AttackDamageMin": "30",
-			"AttackDamageMax": "36",
+			"AttackDamageMin": "33",
+			"AttackDamageMax": "39",
 			"AttackRate": "1.800000",
 			"AttackAnimationPoint": "0.300000",
 			"AttackAcquisitionRange": "600",
@@ -18784,7 +19688,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bristleback.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_bristleback.vpcf"
 		},
 		"npc_dota_hero_tusk": {
 			"Model": "models/heroes/tuskarr/tuskarr.vmdl",
@@ -18799,7 +19707,7 @@
 			"HeroOrderID": "98",
 			"ModelScale": "0.900000",
 			"VersusScale": "0.900000",
-			"LoadoutScale": "1",
+			"LoadoutScale": "0.9",
 			"NameAliases": "Tuskarr",
 			"workshop_guide_name": "Tusk",
 			"PickSound": "tusk_tusk_spawn_01",
@@ -18807,6 +19715,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "28,7,51",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Arachnophobic": "1",
+				"Icy": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_earthshaker",
 			"HeroSelectSoundEffect": "Hero_Tusk.Pick",
 			"GibType": "default",
@@ -18962,7 +19875,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tusk.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_tusk.vpcf"
 		},
 		"npc_dota_hero_skywrath_mage": {
 			"Model": "models/heroes/skywrath_mage/skywrath_mage.vmdl",
@@ -18979,8 +19896,8 @@
 			"HeroID": "101",
 			"HeroOrderID": "100",
 			"ModelScale": "0.750000",
-			"VersusScale": "0.620000",
-			"LoadoutScale": "1.000000",
+			"VersusScale": "0.75",
+			"LoadoutScale": "0.75",
 			"SpectatorLoadoutScale": "0.70",
 			"HeroGlowColor": "194 80 163",
 			"BotImplemented": "1",
@@ -18990,6 +19907,10 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "22,86,119",
+			"Adjectives": {
+				"Wings": "1",
+				"Flying": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_vengefulspirit",
 			"HeroSelectSoundEffect": "Hero_SkywrathMage.Pick",
 			"GibType": "default",
@@ -19015,6 +19936,7 @@
 			"AttackAnimationPoint": "0.400000",
 			"AttackAcquisitionRange": "800",
 			"AttackRange": "625",
+			"BaseAttackSpeed": "90",
 			"ProjectileModel": "particles/units/heroes/hero_skywrath_mage/skywrath_mage_base_attack.vpcf",
 			"ProjectileSpeed": "1000",
 			"AttributePrimary": "DOTA_ATTRIBUTE_INTELLECT",
@@ -19187,7 +20109,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_skywrath_mage.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_skywrath_mage.vpcf"
 		},
 		"npc_dota_hero_abaddon": {
 			"Model": "models/heroes/abaddon/abaddon.vmdl",
@@ -19200,8 +20126,8 @@
 			"HeroID": "102",
 			"HeroOrderID": "102",
 			"ModelScale": "0.780000",
-			"VersusScale": "0.680000",
-			"LoadoutScale": "0.730000",
+			"VersusScale": "0.78",
+			"LoadoutScale": "0.78",
 			"SpectatorLoadoutScale": "0.72",
 			"NameAliases": "Abaddon",
 			"workshop_guide_name": "Abaddon",
@@ -19211,6 +20137,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "57,99,104",
+			"Adjectives": {
+				"Steed": "1",
+				"Cape": "1",
+				"Blue": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_chaos_knight",
 			"HeroSelectSoundEffect": "Hero_Abaddon.Pick",
 			"GibType": "ethereal",
@@ -19352,7 +20283,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_abaddon.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_abaddon.vpcf"
 		},
 		"npc_dota_hero_elder_titan": {
 			"Model": "models/heroes/elder_titan/elder_titan.vmdl",
@@ -19366,8 +20301,8 @@
 			"HeroID": "103",
 			"HeroOrderID": "101",
 			"ModelScale": "0.750000",
-			"VersusScale": "0.650000",
-			"LoadoutScale": "0.630000",
+			"VersusScale": "0.75",
+			"LoadoutScale": "0.75",
 			"SpectatorLoadoutScale": "0.70",
 			"NameAliases": "TC,Cairne,et",
 			"workshop_guide_name": "Elder Titan",
@@ -19378,6 +20313,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "55,16,114",
+			"Adjectives": {
+				"Horns": "1",
+				"NicePecs": "1",
+				"Parent": "1"
+			},
 			"HeroSelectSoundEffect": "Hero_ElderTitan.Pick",
 			"GibType": "default",
 			"Ability1": "elder_titan_echo_stomp",
@@ -19509,7 +20449,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_elder_titan.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_elder_titan.vpcf"
 		},
 		"npc_dota_hero_legion_commander": {
 			"Model": "models/heroes/legion_commander/legion_commander.vmdl",
@@ -19524,13 +20468,17 @@
 			"HeroID": "104",
 			"HeroOrderID": "105",
 			"ModelScale": "1.025000",
-			"VersusScale": "1.0000",
+			"VersusScale": "1.025",
 			"NameAliases": "Tresdin,Legion,lc",
 			"PickSound": "legion_commander_legcom_spawn_01",
 			"BanSound": "legion_commander_legcom_anger_07",
 			"workshop_guide_name": "Legion Commander",
 			"new_player_enable": "1",
 			"SimilarHeroes": "2,60,93",
+			"Adjectives": {
+				"Female": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_kunkka",
 			"HeroSelectSoundEffect": "Hero_LegionCommander.Pick",
 			"GibType": "default",
@@ -19670,7 +20618,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_legion_commander.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_legion_commander.vpcf"
 		},
 		"npc_dota_hero_ember_spirit": {
 			"Model": "models/heroes/ember_spirit/ember_spirit.vmdl",
@@ -19684,8 +20636,8 @@
 			"HeroID": "106",
 			"HeroOrderID": "103",
 			"ModelScale": "1.200000",
-			"VersusScale": "1.100000",
-			"LoadoutScale": "1.100000",
+			"VersusScale": "1.200000",
+			"LoadoutScale": "1.2",
 			"NameAliases": "Xin,Ember",
 			"workshop_guide_name": "Ember Spirit",
 			"PickSound": "ember_spirit_embr_spawn_01",
@@ -19694,6 +20646,10 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "126,107,17",
+			"Adjectives": {
+				"Spirit": "1",
+				"Red": "1"
+			},
 			"HeroSelectSoundEffect": "Hero_EmberSpirit.Pick",
 			"GibType": "fire",
 			"AbilityDraftAbilities": {
@@ -19751,7 +20707,7 @@
 					"aggressive": "0.250000"
 				}
 			},
-			"StatusHealthRegen": "1.25",
+			"StatusHealthRegen": "0.5",
 			"VisionDaytimeRange": "1800",
 			"ItemSlots": {
 				"0": {
@@ -19831,7 +20787,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ember_spirit.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_ember_spirit.vpcf"
 		},
 		"npc_dota_hero_earth_spirit": {
 			"Model": "models/heroes/earth_spirit/earth_spirit.vmdl",
@@ -19855,6 +20815,12 @@
 			"HeroSelectSoundEffect": "Hero_EarthSpirit.Pick",
 			"GibType": "stone",
 			"SimilarHeroes": "126,106,17",
+			"Adjectives": {
+				"Nose": "0",
+				"NicePecs": "1",
+				"Spirit": "1",
+				"Green": "1"
+			},
 			"PickSound": "earth_spirit_earthspi_spawn_02",
 			"BanSound": "earth_spirit_earthspi_anger_08",
 			"Ability1": "earth_spirit_boulder_smash",
@@ -19890,7 +20856,7 @@
 			"AttributeStrengthGain": "3.800000",
 			"AttributeBaseAgility": "17",
 			"AttributeAgilityGain": "2.400000",
-			"AttributeBaseIntelligence": "20",
+			"AttributeBaseIntelligence": "18",
 			"AttributeIntelligenceGain": "2.100000",
 			"StatusHealthRegen": "1",
 			"MovementSpeed": "290",
@@ -19994,7 +20960,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_earth_spirit.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_earth_spirit.vpcf"
 		},
 		"npc_dota_hero_terrorblade": {
 			"Model": "models/heroes/terrorblade/terrorblade.vmdl",
@@ -20010,12 +20980,17 @@
 			"Complexity": "2",
 			"Team": "Bad",
 			"ModelScale": "1.100000",
-			"VersusScale": "0.900000",
-			"LoadoutScale": "0.900000",
+			"VersusScale": "1.100000",
+			"LoadoutScale": "1.1",
 			"TransformedLoadoutScale": "1.13",
 			"SpectatorLoadoutScale": "0.92",
 			"NameAliases": "tb",
 			"SimilarHeroes": "12,89,67",
+			"Adjectives": {
+				"Wings": "1",
+				"Horns": "1",
+				"Demon": "1"
+			},
 			"workshop_guide_name": "Terrorblade",
 			"PickSound": "terrorblade_terr_spawn_01",
 			"BanSound": "terrorblade_terr_anger_03",
@@ -20030,7 +21005,7 @@
 			"Ability6": "terrorblade_sunder",
 			"Ability10": "special_bonus_unique_terrorblade_2",
 			"Ability11": "special_bonus_unique_terrorblade_4",
-			"Ability12": "special_bonus_hp_300",
+			"Ability12": "special_bonus_hp_275",
 			"Ability13": "special_bonus_unique_terrorblade_6",
 			"Ability14": "special_bonus_all_stats_10",
 			"Ability15": "special_bonus_unique_terrorblade_5",
@@ -20044,8 +21019,8 @@
 			},
 			"ArmorPhysical": "5",
 			"AttackCapabilities": "DOTA_UNIT_CAP_MELEE_ATTACK",
-			"AttackDamageMin": "30",
-			"AttackDamageMax": "36",
+			"AttackDamageMin": "28",
+			"AttackDamageMax": "34",
 			"AttackRate": "1.500000",
 			"BaseAttackSpeed": "110",
 			"AttackAnimationPoint": "0.300000",
@@ -20067,9 +21042,6 @@
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_terrorblade.vsndevts",
 			"HealthBarOffset": "300",
-			"precache": {
-				"model": "models/heroes/terrorblade/demon.vmdl"
-			},
 			"RenderablePortrait": {
 				"Particles": {
 					"particles/units/heroes/hero_terrorblade/terrorblade_loadout.vpcf": "loadout"
@@ -20152,7 +21124,12 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"model": "models/heroes/terrorblade/demon.vmdl",
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_terrorblade.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_terrorblade.vpcf"
 		},
 		"npc_dota_hero_phoenix": {
 			"Model": "models/heroes/phoenix/phoenix_bird.vmdl",
@@ -20170,11 +21147,17 @@
 			"Complexity": "2",
 			"Team": "Good",
 			"ModelScale": "0.950000",
-			"VersusScale": "0.780000",
+			"VersusScale": "0.950000",
 			"NameAliases": "ph",
 			"workshop_guide_name": "Phoenix",
 			"NoCombine": "1",
 			"SimilarHeroes": "85,83,64",
+			"Adjectives": {
+				"Wings": "1",
+				"Nose": "0",
+				"Flying": "1",
+				"Red": "1"
+			},
 			"PickSound": "phoenix_phoenix_bird_respawn",
 			"BanSound": "phoenix_phoenix_bird_moving01",
 			"HeroSelectSoundEffect": "Hero_Phoenix.Pick",
@@ -20310,7 +21293,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phoenix.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_phoenix.vpcf"
 		},
 		"npc_dota_hero_oracle": {
 			"Model": "models/heroes/oracle/oracle.vmdl",
@@ -20327,11 +21314,16 @@
 			"Team": "Good",
 			"IdleExpression": "scenes/oracle/oracle_exp_idle_01.vcd",
 			"ModelScale": "1.000000",
-			"VersusScale": "0.820000",
+			"VersusScale": "1",
 			"LoadoutScale": "1.000000",
 			"SpectatorLoadoutScale": "0.92",
 			"CMEnabled": "1",
 			"SimilarHeroes": "50,91,57",
+			"Adjectives": {
+				"Cape": "1",
+				"Flying": "1",
+				"Blue": "1"
+			},
 			"NameAliases": "ora",
 			"Legs": "0",
 			"workshop_guide_name": "Oracle",
@@ -20510,13 +21502,17 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_oracle.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_oracle.vpcf"
 		},
 		"npc_dota_hero_techies": {
 			"Model": "models/heroes/techies/techies.vmdl",
 			"IdleExpression": "scenes/techies/techies_exp_idle_01.vcd",
 			"ModelScale": "0.600000",
-			"VersusScale": "0.650000",
+			"VersusScale": "0.600000",
 			"LoadoutScale": "0.600000",
 			"SoundSet": "Hero_Techies",
 			"Enabled": "1",
@@ -20531,8 +21527,13 @@
 			"CMEnabled": "1",
 			"new_player_enable": "0",
 			"SimilarHeroes": "14,83,123",
+			"Adjectives": {
+				"Legs": "6",
+				"Steed": "1",
+				"Potbelly": "1",
+				"Fiery": "1"
+			},
 			"HeroID": "105",
-			"Legs": "6",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_techies.vsndevts",
 			"PickSound": "techies_tech_spawn_01",
 			"BanSound": "techies_tech_anger_23",
@@ -20693,6 +21694,12 @@
 					"SlotName": "ability_effects_4",
 					"SlotText": "techies_land_mines",
 					"DisplayInLoadout": "0"
+				},
+				"11": {
+					"SlotIndex": "11",
+					"SlotName": "ability_effects_1",
+					"SlotText": "techies_sticky_bomb",
+					"DisplayInLoadout": "0"
 				}
 			},
 			"Bot": {
@@ -20706,11 +21713,15 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_techies.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_techies.vpcf"
 		},
 		"npc_dota_hero_target_dummy": {
-			"Model": "models/props_gameplay/dummy/dummy.vmdl",
-			"ModelScale": "2.500000",
+			"Model": "models/props_gameplay/dummy/dummy_large.vmdl",
+			"ModelScale": "1.000000",
 			"LoadoutScale": "1.000000",
 			"Enabled": "0",
 			"BotImplemented": "0",
@@ -20782,6 +21793,13 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "30,64,55",
+			"Adjectives": {
+				"Wings": "1",
+				"Female": "1",
+				"Flying": "1",
+				"Icy": "1",
+				"Blue": "1"
+			},
 			"NoCombine": "0",
 			"HeroID": "112",
 			"VoiceFile": "soundevents/voscripts/game_sounds_vo_winter_wyvern.vsndevts",
@@ -20804,7 +21822,7 @@
 			"Ability15": "special_bonus_unique_winter_wyvern_7",
 			"Ability16": "special_bonus_unique_winter_wyvern_3",
 			"Ability17": "special_bonus_unique_winter_wyvern_4",
-			"ArmorPhysical": "0",
+			"ArmorPhysical": "1",
 			"AttackCapabilities": "DOTA_UNIT_CAP_RANGED_ATTACK",
 			"AttackDamageMin": "-4",
 			"AttackDamageMax": "1",
@@ -20828,6 +21846,7 @@
 			"AttributeBaseAgility": "16",
 			"AttributeAgilityGain": "1.5",
 			"BaseAttackSpeed": "90",
+			"StatusManaRegen": "0.25",
 			"BoundsHullName": "DOTA_HULL_SIZE_HERO",
 			"particle_folder": "particles/units/heroes/hero_winter_wyvern",
 			"RenderablePortrait": {
@@ -20899,7 +21918,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_winter_wyvern.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_winter_wyvern.vpcf"
 		},
 		"npc_dota_hero_arc_warden": {
 			"Model": "models/heroes/arc_warden/arc_warden.vmdl",
@@ -20913,7 +21936,7 @@
 			"Complexity": "3",
 			"Team": "Bad",
 			"ModelScale": "1.0",
-			"VersusScale": "0.950000",
+			"VersusScale": "1",
 			"HeroGlowColor": "120 64 148",
 			"PickSound": "arc_warden_arcwar_spawn_01",
 			"BanSound": "arc_warden_arcwar_anger_10",
@@ -20924,6 +21947,12 @@
 			"GibType": "ethereal",
 			"GibTintColor": "108 209 210 255",
 			"SimilarHeroes": "34,53,80",
+			"Adjectives": {
+				"Nose": "0",
+				"Cape": "1",
+				"Arachnophobic": "1",
+				"Blue": "1"
+			},
 			"Ability1": "arc_warden_flux",
 			"Ability2": "arc_warden_magnetic_field",
 			"Ability3": "arc_warden_spark_wraith",
@@ -21048,7 +22077,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_arc_warden.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_arc_warden.vpcf"
 		},
 		"npc_dota_hero_abyssal_underlord": {
 			"Model": "models/heroes/abyssal_underlord/abyssal_underlord_v2.vmdl",
@@ -21062,6 +22095,13 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "29,98,43",
+			"Adjectives": {
+				"Horns": "1",
+				"Nose": "0",
+				"Potbelly": "1",
+				"Demon": "1",
+				"Green": "1"
+			},
 			"Team": "Bad",
 			"HeroID": "108",
 			"HeroOrderID": "112",
@@ -21069,8 +22109,8 @@
 			"Rolelevels": "1,1,1,1,2",
 			"Complexity": "2",
 			"ModelScale": "0.85",
-			"VersusScale": "0.700000",
-			"LoadoutScale": "0.70",
+			"VersusScale": "0.85",
+			"LoadoutScale": "0.85",
 			"SpectatorLoadoutScale": "0.785",
 			"NameAliases": "PitLord,Azgalor,ul",
 			"workshop_guide_name": "Underlord",
@@ -21199,7 +22239,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_abyssal_underlord.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_abyssal_underlord.vpcf"
 		},
 		"npc_dota_hero_monkey_king": {
 			"Model": "models/heroes/monkey_king/monkey_king.vmdl",
@@ -21221,8 +22265,13 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "95,44,70",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Cape": "1",
+				"Green": "1"
+			},
 			"ModelScale": "0.8100",
-			"VersusScale": "0.7800",
+			"VersusScale": "0.81",
 			"LoadoutScale": "0.8100",
 			"workshop_guide_name": "Monkey King",
 			"AbilityDraftDisabled": "0",
@@ -21351,7 +22400,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_monkey_king.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_monkey_king.vpcf"
 		},
 		"npc_dota_hero_pangolier": {
 			"Model": "models/heroes/pangolier/pangolier.vmdl",
@@ -21373,6 +22426,11 @@
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "108,38,129",
+			"Adjectives": {
+				"Fuzzy": "1",
+				"Parent": "1",
+				"Red": "1"
+			},
 			"workshop_guide_name": "Pangolier",
 			"LastHitChallengeRival": "npc_dota_hero_sand_king",
 			"Ability1": "pangolier_swashbuckle",
@@ -21506,7 +22564,11 @@
 					"ProvidesSetup": "1",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pangolier.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pangolier.vpcf"
 		},
 		"npc_dota_hero_dark_willow": {
 			"Model": "models/heroes/dark_willow/dark_willow.vmdl",
@@ -21521,13 +22583,20 @@
 			"HeroID": "119",
 			"HeroOrderID": "114",
 			"ModelScale": "1",
-			"VersusScale": "0.73",
-			"LoadoutScale": "0.9",
+			"VersusScale": "1",
+			"LoadoutScale": "1",
 			"SpectatorLoadoutScale": "0.8",
 			"HeroGlowColor": "117 240 255",
 			"CMEnabled": "1",
 			"new_player_enable": "1",
 			"SimilarHeroes": "21,128,9",
+			"Adjectives": {
+				"Wings": "1",
+				"Female": "1",
+				"Flying": "1",
+				"Cute": "1",
+				"Green": "1"
+			},
 			"workshop_guide_name": "Dark Willow",
 			"LastHitChallengeRival": "npc_dota_hero_jakiro",
 			"ArmorPhysical": "-1",
@@ -21688,7 +22757,11 @@
 					"SlotText": "dark_willow_terrorize",
 					"DisplayInLoadout": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dark_willow.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dark_willow.vpcf"
 		},
 		"npc_dota_hero_grimstroke": {
 			"Model": "models/heroes/grimstroke/grimstroke.vmdl",
@@ -21703,14 +22776,18 @@
 			"HeroID": "121",
 			"HeroOrderID": "116",
 			"ModelScale": "0.76",
-			"VersusScale": "0.74",
-			"LoadoutScale": "0.75",
+			"VersusScale": "0.76",
+			"LoadoutScale": "0.76",
 			"SpectatorLoadoutScale": "0.75",
 			"HeroGlowColor": "242 200 198",
 			"NameAliases": "gs",
 			"CMEnabled": "1",
-			"Legs": "0",
 			"SimilarHeroes": "26,27,31",
+			"Adjectives": {
+				"Legs": "0",
+				"Flying": "1",
+				"Undead": "1"
+			},
 			"IdleSoundLoop": "Hero_Grimstroke.IdleLoop",
 			"HeroSelectSoundEffect": "Hero_Grimstroke.Pick",
 			"PickSound": "grimstroke_grimstroke_spawn_01_02",
@@ -21846,7 +22923,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_grimstroke.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_grimstroke.vpcf"
 		},
 		"npc_dota_hero_mars": {
 			"Model": "models/heroes/mars/mars.vmdl",
@@ -21860,14 +22941,20 @@
 			"HeroID": "129",
 			"HeroOrderID": "117",
 			"ModelScale": "0.900000",
-			"VersusScale": "0.750000",
-			"LoadoutScale": "0.8",
+			"VersusScale": "0.9",
+			"LoadoutScale": "0.9",
 			"NameAliases": "mars",
 			"workshop_guide_name": "Mars",
 			"PickSound": "mars_pick",
 			"BanSound": "mars_ban",
 			"CMEnabled": "1",
 			"SimilarHeroes": "23,99,97",
+			"Adjectives": {
+				"Bearded": "1",
+				"NicePecs": "1",
+				"Parent": "1",
+				"Red": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_centaur",
 			"HeroSelectSoundEffect": "Hero_Mars.Pick",
 			"GibType": "default",
@@ -21998,7 +23085,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_mars.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_mars.vpcf"
 		},
 		"npc_dota_hero_void_spirit": {
 			"Model": "models/heroes/void_spirit/void_spirit.vmdl",
@@ -22013,7 +23104,7 @@
 			"HeroID": "126",
 			"HeroOrderID": "119",
 			"ModelScale": "0.8500",
-			"LoadoutScale": "0.820000",
+			"LoadoutScale": "0.85",
 			"NameAliases": "Void,VS,Inai",
 			"workshop_guide_name": "Void Spirit",
 			"NoCombine": "0",
@@ -22021,6 +23112,11 @@
 			"GibType": "ethereal",
 			"GibTintColor": "183 85 188 255",
 			"SimilarHeroes": "17,107,106",
+			"Adjectives": {
+				"Bearded": "1",
+				"NicePecs": "1",
+				"Spirit": "1"
+			},
 			"PickSound": "void_spirit_voidspir_spawn_02",
 			"BanSound": "void_spirit_voidspir_anger_03",
 			"Ability1": "void_spirit_aether_remnant",
@@ -22146,7 +23242,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_void_spirit.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_void_spirit.vpcf"
 		},
 		"npc_dota_hero_snapfire": {
 			"Model": "models/heroes/snapfire/snapfire.vmdl",
@@ -22162,8 +23262,8 @@
 			"HeroID": "128",
 			"HeroOrderID": "118",
 			"ModelScale": "0.58",
-			"LoadoutScale": "0.60",
-			"VersusScale": "0.60",
+			"LoadoutScale": "0.58",
+			"VersusScale": "0.58",
 			"SpectatorLoadoutScale": "0.75",
 			"HeroGlowColor": "242 200 198",
 			"NameAliases": "snap,mortimer",
@@ -22173,6 +23273,10 @@
 			"LastHitChallengeRival": "npc_dota_hero_kunkka",
 			"HeroSelectSoundEffect": "Hero_Snapfire.Pick",
 			"GibType": "default",
+			"Adjectives": {
+				"Red": "1",
+				"Steed": "1"
+			},
 			"SimilarHeroes": "68,120,100",
 			"Ability1": "snapfire_scatterblast",
 			"Ability2": "snapfire_firesnap_cookie",
@@ -22302,7 +23406,11 @@
 					"ProvidesSetup": "2",
 					"RequiresSetup": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_snapfire.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_snapfire.vpcf"
 		},
 		"npc_dota_hero_hoodwink": {
 			"Model": "models/heroes/hoodwink/hoodwink.vmdl",
@@ -22320,13 +23428,19 @@
 			"BotImplemented": "0",
 			"new_player_enable": "1",
 			"ModelScale": "0.80",
-			"LoadoutScale": "0.95",
+			"LoadoutScale": "0.80",
 			"SpectatorLoadoutScale": "0.98",
-			"VersusScale": "1.20000",
+			"VersusScale": "0.8",
 			"HeroGlowColor": "170 112 194",
 			"CMEnabled": "1",
-			"Legs": "4",
 			"SimilarHeroes": "21,9,65",
+			"Adjectives": {
+				"Legs": "4",
+				"Fuzzy": "1",
+				"Female": "1",
+				"Cute": "1",
+				"Green": "1"
+			},
 			"PickSound": "hoodwink_hoodwink_attack_10",
 			"BanSound": "hoodwink_hoodwink_net_miss_06",
 			"workshop_guide_name": "Hoodwink",
@@ -22451,7 +23565,11 @@
 					"SlotText": "hoodwink_sharpshooter",
 					"DisplayInLoadout": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_hoodwink.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_hoodwink.vpcf"
 		},
 		"npc_dota_hero_dawnbreaker": {
 			"Model": "models/heroes/dawnbreaker/dawnbreaker.vmdl",
@@ -22468,9 +23586,13 @@
 			"ModelScale": "1",
 			"LoadoutScale": "1",
 			"SpectatorLoadoutScale": "0.85",
-			"VersusScale": "0.870000",
+			"VersusScale": "1",
 			"HealthBarOffset": "280",
 			"NameAliases": "Dawnbreaker, Valora",
+			"Adjectives": {
+				"Female": "1",
+				"Fiery": "1"
+			},
 			"PickSound": "dawnbreaker_pick_shout",
 			"BanSound": "dawnbreaker_ban_shout",
 			"workshop_guide_name": "Dawnbreaker",
@@ -22506,14 +23628,14 @@
 				"attack_long_range": "80"
 			},
 			"AttributePrimary": "DOTA_ATTRIBUTE_STRENGTH",
-			"AttributeBaseStrength": "27",
+			"AttributeBaseStrength": "25",
 			"AttributeStrengthGain": "3.40000",
 			"AttributeBaseAgility": "14",
 			"AttributeAgilityGain": "1.700000",
 			"AttributeBaseIntelligence": "20",
 			"AttributeIntelligenceGain": "2.200000",
 			"HasAggressiveStance": "1",
-			"MovementSpeed": "310",
+			"MovementSpeed": "300",
 			"MovementTurnRate": "0.600000",
 			"MovementSpeedActivityModifiers": {
 				"walk": "0",
@@ -22598,7 +23720,11 @@
 					"ProvidesSetup": "0",
 					"RequiresSetup": "1"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dawnbreaker.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_dawnbreaker.vpcf"
 		},
 		"npc_dota_hero_marci": {
 			"Model": "models/heroes/marci/marci_base.vmdl",
@@ -22617,12 +23743,17 @@
 			"BotImplemented": "0",
 			"ModelScale": "1",
 			"VersusScale": "1",
-			"LoadoutScale": "0.8",
+			"LoadoutScale": "1",
 			"SpectatorLoadoutScale": "1",
 			"HeroGlowColor": "0 50 247",
 			"CMEnabled": "1",
 			"workshop_guide_name": "Marci",
 			"new_player_enable": "1",
+			"Adjectives": {
+				"Female": "1",
+				"Cape": "1",
+				"Cute": "1"
+			},
 			"LastHitChallengeRival": "npc_dota_hero_mirana",
 			"HeroSelectSoundEffect": "Hero_Marci.Pick",
 			"GibType": "default",
@@ -22723,7 +23854,11 @@
 			},
 			"particle_folder": "particles/units/heroes/hero_marci",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_marci.vsndevts",
-			"VoiceFile": "soundevents/voscripts/game_sounds_vo_marci.vsndevts"
+			"VoiceFile": "soundevents/voscripts/game_sounds_vo_marci.vsndevts",
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_marci.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_marci.vpcf"
 		},
 		"npc_dota_hero_primal_beast": {
 			"Model": "models/heroes/primal_beast/primal_beast_base.vmdl",
@@ -22742,9 +23877,13 @@
 			"ModelScale": "0.900000",
 			"MaxModelScaleMultiplier": "1.25",
 			"LoadoutScale": "0.900000",
-			"VersusScale": "0.70000",
+			"VersusScale": "0.9",
 			"SpectatorLoadoutScale": "0.7",
 			"HeroGlowColor": "0 0 255",
+			"Adjectives": {
+				"BadTeeth": "1",
+				"Red": "1"
+			},
 			"PickSound": "0",
 			"BanSound": "0",
 			"HeroSelectSoundEffect": "Hero_PrimalBeast.Pick",
@@ -22864,7 +24003,11 @@
 					"SlotText": "primal_beast_onslaught",
 					"DisplayInLoadout": "0"
 				}
-			}
+			},
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_primal_beast.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_primal_beast.vpcf"
 		},
 		"npc_dota_hero_muerta": {
 			"Model": "models/heroes/muerta/muerta_base.vmdl",
@@ -22882,7 +24025,7 @@
 			"HeroOrderID": "124",
 			"BotImplemented": "0",
 			"ModelScale": "1",
-			"VersusScale": "0.87",
+			"VersusScale": "1",
 			"LoadoutScale": "1",
 			"HeroGlowColor": "237 154 15",
 			"PickSound": "muerta_muerta_intro_06",
@@ -22891,6 +24034,13 @@
 			"workshop_guide_name": "Muerta",
 			"new_player_enable": "0",
 			"LastHitChallengeRival": "npc_dota_hero_drow_ranger",
+			"Adjectives": {
+				"Female": "1",
+				"Cape": "1",
+				"Undead": "1",
+				"Blue": "1",
+				"Green": "1"
+			},
 			"HeroSelectSoundEffect": "Hero_Muerta.Pick",
 			"GibType": "default",
 			"GibTintColor": "95 210 156 255",
@@ -22973,6 +24123,15 @@
 				},
 				"2": {
 					"SlotIndex": "2",
+					"SlotName": "armor",
+					"SlotText": "#LoadoutSlot_Armor",
+					"TextureWidth": "512",
+					"TextureHeight": "512",
+					"MaxPolygonsLOD0": "3000",
+					"MaxPolygonsLOD1": "1200"
+				},
+				"3": {
+					"SlotIndex": "3",
 					"SlotName": "weapon",
 					"SlotText": "#LoadoutSlot_Weapon",
 					"TextureWidth": "256",
@@ -22980,26 +24139,31 @@
 					"MaxPolygonsLOD0": "2500",
 					"MaxPolygonsLOD1": "1000"
 				},
-				"3": {
-					"SlotIndex": "3",
+				"4": {
+					"SlotIndex": "4",
 					"SlotName": "ability_ultimate",
 					"SlotText": "#LoadoutSlot_Misc",
 					"LoadoutPreviewMode": "transformation",
 					"DisplayInLoadout": "1",
-					"TextureWidth": "256",
-					"TextureHeight": "256",
-					"MaxPolygonsLOD0": "1500",
-					"MaxPolygonsLOD1": "600"
+					"TextureWidth": "1024",
+					"TextureHeight": "512",
+					"MaxPolygonsLOD0": "5000",
+					"MaxPolygonsLOD1": "3000",
+					"no_import": "1"
 				},
-				"4": {
-					"SlotIndex": "4",
+				"5": {
+					"SlotIndex": "5",
 					"SlotName": "taunt",
 					"SlotText": "#LoadoutSlot_Taunt"
 				}
 			},
 			"particle_folder": "particles/units/heroes/hero_muerta",
 			"GameSoundsFile": "soundevents/game_sounds_heroes/game_sounds_muerta.vsndevts",
-			"VoiceFile": "soundevents/voscripts/game_sounds_vo_muerta.vsndevts"
+			"VoiceFile": "soundevents/voscripts/game_sounds_vo_muerta.vsndevts",
+			"precache": {
+				"particle": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_muerta.vpcf"
+			},
+			"party_hat_effect": "particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_muerta.vpcf"
 		}
 	}
 }

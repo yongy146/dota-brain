@@ -81,7 +81,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   Morphling: [],
   Muerta: [],
   "Naga Siren": [],
-  `Nature's Prophet`: [`furion_teleportation`],
+  "Nature's Prophet": [`furion_teleportation`],
   Necrophos: ["necrolyte_sadist"],
   "Night Stalker": [],
   "Nyx Assassin": [],

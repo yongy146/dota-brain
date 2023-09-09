@@ -100,9 +100,7 @@ export function getRolesString(heroBuild: HeroBuild) {
  * @param role
  * @returns
  */
-export function getDotaCoachGuideRoleString(
-  role: DOTA_COACH_GUIDE_ROLE
-): string {
+export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
@@ -148,7 +146,7 @@ export function roleToMessageId(role: DOTA_COACH_ROLE): string {
       return "dota.roles.Offlane";
     }
     case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-      return "dota.roles.SoftSupport";
+      return "SoftSupport";
     }
     case DOTA_COACH_ROLE.HARD_SUPPORT: {
       return "dota.roles.HardSupport";
