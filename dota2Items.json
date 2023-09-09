@@ -3240,7 +3240,6 @@
 		"id": 235,
 		"is_active": true,
 		"cost": 4600,
-		"cooldown": 6,
 		"is_recipe": false,
 		"is_neutral": false,
 		"is_roshan": false,
@@ -3997,7 +3996,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"damage_": 18,
+		"damage_": 16,
 		"armor_": 7
 	},
 	"item_broom_handle": {
@@ -4221,7 +4220,7 @@
 		"drop_rate": 14,
 		"is_roshan": false,
 		"is_purchasable": false,
-		"intelligence_": 8,
+		"intelligence_": 7,
 		"armor_": 2
 	},
 	"item_titan_sliver": {
