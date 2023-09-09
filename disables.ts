@@ -121,6 +121,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Primal roar is cast on hero but stuns (forced movement by dota2.gamepedia.com) and damages nearby heroes as well.
+	// The Hawks also provide a Hero Root on units within 500 range.
   ],
   Bloodseeker: [
     {
@@ -136,6 +137,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+	// With Aghanims Shard, any hero made invisible by Bounty Hunter also gets a Hero Stun with their first auto attack.
   ],
   Brewmaster: [
     {
@@ -266,8 +268,9 @@ export const disables: IDisables = {
     {
       skill: "doom_bringer_doom",
       affects: AbilityAffects.HERO,
-      disables: ["silence", "mute"],
+      disables: [`silence`],
     },
+	// The level 25 talent also gives Doom a Hero Mute effect on his ultimate.
     // Devoured neutral creeps can stun (Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
   ],
   "Dragon Knight": [
@@ -613,7 +616,7 @@ export const disables: IDisables = {
     },
   ],
   "Nature's Prophet": [],
-    // Level 20 root talent
+    // The Level 20 talent on Natures Prophet gives him an Area Leash with Sprout.
   Necrophos: [
     {
       skill: "necrolyte_reapers_scythe",
