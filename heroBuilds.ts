@@ -1705,7 +1705,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Batrider: {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -6142,12 +6142,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "earthshaker_echo_slam", // 12
           "earthshaker_enchant_totem", // 13
           "earthshaker_enchant_totem", // 14
-          "special_bonus_unique_earthshaker_6", // 15
+          `special_bonus_unique_earthshaker_3`, // 15
           "earthshaker_enchant_totem", // 16
           "special_bonus_attributes", // 17
           "earthshaker_echo_slam", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_earthshaker_3`, // 20
+          `special_bonus_unique_earthshaker_2`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -7745,7 +7745,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Hoodwink: {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -8459,7 +8459,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
 
   // YoonA plays hero
   Io: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -11934,7 +11934,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Mars: {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -14052,7 +14052,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Necrophos: {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -14904,7 +14904,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Omniknight: {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -16485,7 +16485,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Primal Beast": {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -16793,7 +16793,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Puck: {
-    gameplay_version: `7.34b`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -19865,7 +19865,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Slardar: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -19890,12 +19890,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "slardar_amplify_damage", // 12
           "slardar_slithereen_crush", // 13
           "slardar_slithereen_crush", // 14
-          "special_bonus_unique_slardar_2", // 15
+          `special_bonus_hp_325`, // 15
           "slardar_slithereen_crush", // 16
           "special_bonus_attributes", // 17
           "slardar_amplify_damage", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_slardar_5", // 20
+          `special_bonus_unique_slardar`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -19906,23 +19906,22 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           starting: [
             "tango",
             `quelling_blade`,
-            `slippers`,
+            `gauntlets`,
             `circlet`,
             "branches",
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            `vanguard`,
+            `bracer`,
             `power_treads`,
-            `wraith_band`,
             `magic_wand`,
             `wind_lace`,
           ],
-          mid_game: ["blink", `echo_sabre`, `black_king_bar`, `aghanims_shard`],
+          mid_game: [`mask_of_madness`, `blink`, `echo_sabre`, `black_king_bar`, `aghanims_shard`],
           late_game: [`harpoon`, `ultimate_scepter`, `assault`, `moon_shard`],
           situational: [
-            "mask_of_madness",
+            `vanguard`,
             `orb_of_corrosion`,
             `hand_of_midas`,
             "heavens_halberd",
@@ -19937,9 +19936,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `travel_boots`,
           ],
           core: [
-            `vanguard`,
             `power_treads`,
-            `blink`,
+            `mask_of_madness`,
+			`blink`,
             `echo_sabre`,
             `black_king_bar`,
             `aghanims_shard`,
@@ -19972,7 +19971,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core boots upgrade that provides you with significant increase in attack speed and some mana savings through toggling.",
       hand_of_midas:
         "If you can get it early as replacement to Mask of Madness.",
-      mask_of_madness: `A situational item that provides you with a burst of attack speed which increases the frequency of Bash of the Deep.`,
+      mask_of_madness: `A core item that provides you with a burst of attack speed which increases the frequency of Bash of the Deep.`,
       blink: "A core item that allows you to initiate on desired target.",
       black_king_bar:
         "A core item that allows you to continuously right-click in the middle of the fight.",
@@ -19981,7 +19980,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
       assault:
         "A core item that provides you with even more attack speed and armor reduction.",
-    },
+	  ultimate_scepter: `A core item that boosts your fighting ability with Slithereen Crush.`,
+	},
     combo: [
       `blink`,
       `slardar_slithereen_crush`,
@@ -20398,7 +20398,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Sniper: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.physical,
     builds: [
@@ -20413,18 +20413,18 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `sniper_take_aim`, // 2
           `sniper_headshot`, // 3
           "sniper_take_aim", // 4
-          `sniper_headshot`, // 5
+          `sniper_take_aim`, // 5
           "sniper_assassinate", // 6
           "sniper_shrapnel", // 7
           `sniper_shrapnel`, // 8
           `sniper_shrapnel`, // 9
           `sniper_shrapnel`, // 10
-          `sniper_headshot`, // 11
+          `sniper_take_aim`, // 11
           "sniper_assassinate", // 12
-          `special_bonus_unique_sniper_headshot_damage`, // 13
-          `sniper_take_aim`, // 14
-          "special_bonus_attack_speed_30", // 15
-          `sniper_take_aim`, // 16
+          `sniper_headshot`, // 13
+          `sniper_headshot`, // 14
+          `special_bonus_unique_sniper_headshot_damage`, // 15
+          `special_bonus_attack_speed_30`, // 16
           "special_bonus_attributes", // 17
           "sniper_assassinate", // 18
           "special_bonus_attributes", // 19
@@ -20457,9 +20457,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `dragon_lance`,
             `maelstrom`,
             `hurricane_pike`,
-            `black_king_bar`,
+            `aghanims_shard`,
           ],
-          late_game: [`aghanims_shard`, `greater_crit`, `satanic`, `mjollnir`],
+          late_game: [`black_king_bar`, `greater_crit`, `mjollnir`, `satanic`],
           situational: [
             `hand_of_midas`,
             `desolator`,
@@ -20479,13 +20479,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           core: [
             `wraith_band`,
-            `wraith_band`,
             `power_treads`,
             "dragon_lance",
             "maelstrom",
             `hurricane_pike`,
-            `black_king_bar`,
             `aghanims_shard`,
+            `black_king_bar`,
             `greater_crit`,
             `mjollnir`,
           ],
@@ -20549,7 +20548,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "sniper_assassinate", // 12
           `sniper_headshot`, // 13
           "sniper_headshot", // 14
-          `special_bonus_unique_sniper_4`, // 15
+          `special_bonus_unique_sniper_headshot_damage`, // 15
           `special_bonus_unique_sniper_5`, // 16
           "special_bonus_attributes", // 17
           "sniper_assassinate", // 18
@@ -20570,9 +20569,9 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `branches`,
             `branches`,
             `ward_observer`,
+			`ward_sentry`,
           ],
           early_game: [
-            `ward_sentry`,
             `tranquil_boots`,
             "magic_wand",
             `wraith_band`,
@@ -20599,7 +20598,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `phylactery`,
             `aether_lens`,
             `solar_crest`,
-            `wind_waker`,
+            `cyclone`,
+			`ghost`,
             `sheepstick`,
             `travel_boots`,
           ],
@@ -20610,7 +20610,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `force_staff`,
             `octarine_core`,
             `ethereal_blade`,
-            `boots_of_bearing`,
+            `blink`,
           ],
           neutral: [
             "mysterious_hat",
@@ -20618,7 +20618,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "philosophers_stone",
             "bullwhip",
             "quickening_charm",
-            `ceremonial_robe`,
+            `psychic_headband`,
             `timeless_relic`,
             `spy_gadget`,
             "seer_stone",
@@ -20642,7 +20642,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       },
     ],
     ability_tooltips: {
-      special_bonus_unique_sniper_4: `As the support Sniper, on level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
+      special_bonus_unique_sniper_headshot_damage: `On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
     },
     item_tooltips: {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
@@ -20877,7 +20877,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Spirit Breaker": {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -20912,42 +20912,43 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_spirit_breaker_3", // 25
+          `special_bonus_unique_spirit_breaker_shield`, // 25
         ],
         items: {
           starting: [
             `tango`,
             `blood_grenade`,
-            `enchanted_mango`,
             `wind_lace`,
             `branches`,
             `branches`,
+            `branches`,
             `ward_observer`,
+			`ward_sentry`,
           ],
           early_game: [
-            `ward_sentry`,
-            `urn_of_shadows`,
             `phase_boots`,
             `magic_wand`,
             `wind_lace`,
             `infused_raindrop`,
           ],
           mid_game: [
-            `ancient_janggo`,
             `invis_sword`,
             `ultimate_scepter`,
+            `ancient_janggo`,
             `aghanims_shard`,
           ],
           late_game: [
-            `yasha_and_kaya`,
-            `boots_of_bearing`,
-            `wind_waker`,
             `octarine_core`,
+            `yasha_and_kaya`,
+            `wind_waker`,
+            `assault`,
           ],
           situational: [
             "orb_of_venom",
-            `spirit_vessel`,
+            `hand_of_midas`,
+			`urn_of_shadows`,
             `pavise`,
+			`spirit_vessel`,
             `glimmer_cape`,
             `force_staff`,
             `solar_crest`,
@@ -20956,28 +20957,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `silver_edge`,
             `blade_mail`,
             `black_king_bar`,
-            `assault`,
+            `boots_of_bearing`,
             `aeon_disk`,
             `travel_boots`,
           ],
           core: [
-            `urn_of_shadows`,
             `phase_boots`,
             `wind_lace`,
-            `ancient_janggo`,
-            "invis_sword",
+            `invis_sword`,
             `ultimate_scepter`,
+            `ancient_janggo`,
+            `octarine_core`,
             `yasha_and_kaya`,
-            `boots_of_bearing`,
           ],
           neutral: [
             "broom_handle",
             `faded_broach`,
-            "dragon_scale",
+            `gossamer_cape`,
             `vambrace`,
-            "cloak_of_flames",
+            `ceremonial_robe`,
             `quickening_charm`,
-            `spell_prism`,
+            `timeless_relic`,
             "ninja_gear",
             "force_boots",
             "giants_ring",
@@ -21018,7 +21018,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "spirit_breaker_nether_strike", // 12
           "spirit_breaker_bulldoze", // 13
           "spirit_breaker_bulldoze", // 14
-          `special_bonus_night_vision_500`, // 15
+          `special_bonus_armor_4`, // 15
           "special_bonus_unique_spirit_breaker_2", // 16
           "special_bonus_attributes", // 17
           "spirit_breaker_nether_strike", // 18
@@ -21028,7 +21028,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_spirit_breaker_3", // 25
+          `special_bonus_unique_spirit_breaker_shield`, // 25
         ],
         items: {
           starting: [
@@ -21051,24 +21051,27 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "invis_sword",
             "ultimate_scepter",
             `yasha_and_kaya`,
-            `black_king_bar`,
+            `octarine_core`,
           ],
           late_game: [
-            `harpoon`,
-            `boots_of_bearing`,
+            `black_king_bar`,
             `wind_waker`,
-            `octarine_core`,
+            `harpoon`,
+            `assault`,
           ],
           situational: [
             `hand_of_midas`,
+			`spirit_vessel`,
             `phylactery`,
             `crimson_guard`,
             `pipe`,
+			`cyclone`,
             `heavens_halberd`,
             `solar_crest`,
             `lotus_orb`,
             `aghanims_shard`,
             `sphere`,
+			`boots_of_bearing`,
             `silver_edge`,
             `blade_mail`,
             `heart`,
@@ -21077,15 +21080,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `travel_boots`,
           ],
           core: [
-            `vanguard`,
             `phase_boots`,
             "wind_lace",
             "invis_sword",
             "ultimate_scepter",
             `yasha_and_kaya`,
+            `octarine_core`,
             `black_king_bar`,
-            `harpoon`,
-            `boots_of_bearing`,
+            `wind_waker`,
           ],
           neutral: [
             `broom_handle`,
@@ -21102,16 +21104,16 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         },
         item_tooltips: {
           heavens_halberd: `Especially good against ranged right-clickers.`,
-          harpoon: `A core item to signicantly improve your damage output and add another gap close to your toolkit.`,
+          harpoon: `A core item in the late game to signicantly improve your damage output and add another gap close to your toolkit.`,
         },
       },
     ],
     ability_tooltips: {
       spirit_breaker_bulldoze:
         "Consider maxing this spell out if you're going against a lot of disables.",
-      /* special_bonus_armor_4:
-        "Consider leveling this talent even earlier if you need to tank up against physical damage.", */
-      special_bonus_night_vision_500: `On level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
+      special_bonus_armor_4:
+        `As offlane Spirit Breaker, on level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
+      special_bonus_night_vision_500: `As support Spirit Breaker, on level 15 take the suggested level 15 talent over this level 10 talent. Dota client disallows me to display the order properly in graphics above.`,
     },
     item_tooltips: {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
@@ -21128,11 +21130,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       black_king_bar:
         "A core item that allows you to be in the middle of fight and right-click.",
       aghanims_shard: `A late game luxury item to save your cores from single target burst, such as Lions Finger or Linas Laguna Blade.`,
+	  octarine_core: `A core item that massively boosts your impact on the map by letting you use your spells more often.`,
+	  hand_of_midas: `A greedy pick up that acts as a farming tool for Spirit Breaker and helps scale better in the game.`,
       yasha_and_kaya:
         "A core item that provides you with useful stats but mainly with extra movement speed and spell amplification. Greater Bash is of magical damage.",
     },
     combo: [
       `spirit_breaker_charge_of_darkness`,
+	  `phase_boots`,
       `spirit_breaker_bulldoze`,
       `invis_sword`,
       `spirit_breaker_nether_strike`,
@@ -21180,7 +21185,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   "Storm Spirit": {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -21228,13 +21233,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             "bottle",
-            `power_treads`,
+            `boots`,
             `magic_wand`,
             `falcon_blade`,
-            `null_talisman`,
           ],
           mid_game: [
-            `witch_blade`,
+            `power_treads`,
+			`witch_blade`,
             `kaya_and_sange`,
             `black_king_bar`,
             `aghanims_shard`,
@@ -21246,13 +21251,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `revenants_brooch`,
           ],
           situational: [
-            `sphere`,
+            `null_talisman`,
+			`sphere`,
             `shivas_guard`,
             `cyclone`,
             `orchid`,
             `bloodstone`,
             `refresher`,
-            `revenants_brooch`,
             `travel_boots`,
           ],
           core: [
@@ -21291,7 +21296,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core item that provides you with sustain and allows you to gank with stored rune. Having arcane or regenaration rune stored can easily be a deciding factor in the teamfight.",
       infused_raindrop: "On lane against magical burst.",
       null_talisman:
-        "A core item that gives you stats as well as max mana pool.",
+        `A laning item that gives you stats as well as max mana pool. The double stats help a lot post 25 minutes in the game.`,
       power_treads:
         "A core boots upgrade that provides you with some mana and attack speed.",
       orchid:
@@ -21325,7 +21330,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           { item: "infused_raindrop" },
           {
             item: "cloak",
-            info: "Storm Spirit is heavy on magical damage and Cloak negates 15% of it",
+            info: `Storm Spirit is heavy on magical damage and Cloak negates 20% of it`,
           },
         ],
         support: [{ item: "ward_sentry", info: "To block camps" }],
@@ -22534,7 +22539,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
   },
 
   Timbersaw: {
-    gameplay_version: `7.33e`,
+    gameplay_version: `7.34c`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.pure,
     builds: [
@@ -22557,7 +22562,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `shredder_whirling_death`, // 10
           `shredder_whirling_death`, // 11
           "shredder_chakram", // 12
-          `special_bonus_mp_regen_150`, // 13
+          `special_bonus_hp_200`, // 13
           `shredder_reactive_armor`, // 14
           "special_bonus_unique_timbersaw_5", // 15
           `shredder_reactive_armor`, // 16
@@ -22590,29 +22595,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           mid_game: [
             `kaya_and_sange`,
-            `crimson_guard`,
-            `pipe`,
             `ultimate_scepter`,
+            `lotus_orb`,
+            `blink`,
+			`aghanims_shard`,
           ],
           late_game: [
             `octarine_core`,
-            `aghanims_shard`,
             `sheepstick`,
             `shivas_guard`,
+            `overwhelming_blink`,
           ],
           situational: [
             "orb_of_corrosion",
             `bracer`,
             `cyclone`,
             `bloodstone`,
+			`crimson_guard`,
+			`pipe`,
             `eternal_shroud`,
             `guardian_greaves`,
             `heavens_halberd`,
-            `lotus_orb`,
             `black_king_bar`,
             `sphere`,
             `aeon_disk`,
-            `overwhelming_blink`,
+            `heart`,
             `travel_boots`,
           ],
           core: [
@@ -22620,9 +22627,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `soul_ring`,
             "arcane_boots",
             `kaya_and_sange`,
-            `crimson_guard`,
-            `pipe`,
             `ultimate_scepter`,
+            `blink`,
             `aghanims_shard`,
             `octarine_core`,
           ],
@@ -22666,7 +22672,8 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       overwhelming_blink: `To close the gap quickly and gain some more tankiness. Also helps slowing enemy heroes to land your spells effectively.`,
       black_king_bar: "Against a lot of disables, silences and as a dispel.",
       heavens_halberd: "Especially good against ranged right-clickers.",
-      ultimate_scepter: `A core item to make you extremely tanky for a period of time and survive the getting bursted when outnumbered by the enemy team.`,
+      ultimate_scepter: `A core item to make you extremely tanky for a period of time and survive getting bursted when outnumbered by the enemy team.`,
+	  octarine_core: `A core item that lets you use your spells more frequently and also provides some much needed mana regeneration.`,
     },
     combo: [
       `shredder_chakram`,

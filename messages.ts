@@ -9791,7 +9791,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: "Nature's Prophet",
     audioFile: "enemyHero/Furion_3_TangoSprout",
     messageTime: 40,
-    textMessage: `Using Tango on Sprout tree is a waste as it gives you no regeneration.`,
+    textMessage: `Use a tango to get out of Sprout trees if you do not have a quelling blade.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -14110,7 +14110,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/StormSpirit_2_Stack",
     messageTime: 2 * 60 + 45,
     textMessage:
-      "Stack small camp and clear it after addressing lane creeps. It is very important to hit level 6 as soon as possible to make yourself less gankable.",
+      `Stack the nearest jungle camp and clear it after addressing lane creeps. It is very important to hit level 6 as soon as possible to make yourself less gankable.`,
     audience: [Audience.ROLE_MID],
   },
   {
