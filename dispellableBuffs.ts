@@ -66,6 +66,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   Lion: [],
   "Lone Druid": [
     /* "lone_druid_true_form_battle_cry" no longer available */
+	`lone_druid_savage_roar` /* Only the buff with Aghanim Shard on hero */ ,
   ],
   Luna: [],
   Lycan: ["lycan_howl"],

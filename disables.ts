@@ -407,11 +407,6 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
-	{
-      skill: `invoker_tornado`,
-      affects: AbilityAffects.AREA,
-      disables: [`stun`],
-    },
     // Cold Snap is a hero stun.
   ],
   Jakiro: [
@@ -512,6 +507,7 @@ export const disables: IDisables = {
       disables: ["root"],
     },
     // It affects single unit that the bear attacks so perhaps AbilityAffects.HERO? It is not targetable.
+	// Lone Druid also gains a Hero Root with Entangling Claws when using Spirit Form.
   ],
   Luna: [
     {
