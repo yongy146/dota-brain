@@ -5731,7 +5731,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_6_Rotate",
     messageTime: [5 * 60 + 30, 9 * 60 + 30],
     textMessage:
-      "Quas Wex: Control active runes and look for opportunities to rotate once you have boots and Urn of Shadows.",
+      `Control active runes and look for opportunities to rotate once you have Treads and Spirit Vessel.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "urn_of_shadows" },
   },
@@ -5751,7 +5751,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_8_HandOfMidas",
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Quas Wex: After ganking few times, consider going back for Hand of Midas if the game slows down.",
+      `After ganking few times with Spirit Vessel, consider going back for Hand of Midas if the game slows down.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "hand_of_midas" },
   },
@@ -5761,7 +5761,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_9_Splitpush",
     messageTime: 13 * 60,
     repeatTime: 10 * 60,
-    textMessage: `When not much is happening, you can easily split push with summons or by dumping spells from the fog.`,
+    textMessage: `When not much is happening, you can easily split push with summons or by dumping spells from fog.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "invoker_chaos_meteor" },
   },
@@ -7608,7 +7608,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_7_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Make sure to pick up Aghanim's Shard at the 15 minute mark. It provides drums-like buff and basic dispel.",
+      `Make sure to pick up Aghanims Shard on your hero at the 15 minute mark. It provides drums-like buff and basic dispel.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -7618,7 +7618,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_8_AghanimsScepter",
     messageTime: [25 * 60, 30 * 60],
     textMessage:
-      "In tough late game scenarios, resort to ratting and Aghanim's Scepter makes it easier to execute.",
+      `In tough late game scenarios, resort to ratting and Aghanims Scepter on your Spirit Bear makes it easier to execute.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -16054,7 +16054,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_7_AghanimsScepter",
     messageTime: [24 * 60 + 30, 29 * 60 + 30],
     textMessage:
-      "Pick up Aghanim's Scepter in the late game as it is an amazing repositioning and kiting tool.",
+      `Pick up Aghanims Scepter as it is an amazing repositioning and kiting tool.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -17094,9 +17094,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Void Spirit`,
     audioFile: `ownHero/VoidSpirit_7_AggressionWithItems`,
     messageTime: 18 * 60 + 45,
-    textMessage: `Once you have both Echo Sabre and Desolator, look to play aggressively as you can solo kill pretty much any hero on the map.`,
+    textMessage: `Once you have both Echo Sabre and Spirit Vessel, look to play aggressively as you can solo kill pretty much any hero on the map.`,
     audience: [Audience.ALL],
-    image: { type: `item`, name: `desolator` },
+    image: { type: `item`, name: `echo_sabre` },
   },
 
   {
@@ -18120,7 +18120,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     hero: `Zeus`,
     audioFile: `ownHero/Zeus_13_MantaUsage`,
     messageTime: 22 * 60 + 45,
-    textMessage: `Once you have Manta Style with Aghanim Shard, use the illusions to safely shove lanes into the enemy team.`,
+    textMessage: `Once you have Manta Style with Aghanim Shard, use the illusions to safely shove lanes towards the enemy base.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `manta` },
   },
