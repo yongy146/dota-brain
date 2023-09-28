@@ -24707,17 +24707,17 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         abilities: [
-          `vengefulspirit_magic_missile`, // 1
-          `vengefulspirit_wave_of_terror`, // 2
+          `vengefulspirit_wave_of_terror`, // 1
+          `vengefulspirit_magic_missile`, // 2
           "vengefulspirit_magic_missile", // 3
           "vengefulspirit_wave_of_terror", // 4
           "vengefulspirit_magic_missile", // 5
           "vengefulspirit_nether_swap", // 6
           "vengefulspirit_magic_missile", // 7
-          "vengefulspirit_command_aura", // 8
+          `vengefulspirit_wave_of_terror`, // 8
           "vengefulspirit_wave_of_terror", // 9
           `special_bonus_unique_vengeful_spirit_missile_castrange`, // 10
-          `vengefulspirit_wave_of_terror`, // 11
+          `vengefulspirit_command_aura`, // 11
           "vengefulspirit_nether_swap", // 12
           "vengefulspirit_command_aura", // 13
           "vengefulspirit_command_aura", // 14
@@ -24742,32 +24742,31 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `circlet`,
             `branches`,
             `branches`,
-            `branches`,
-            "ward_observer",
+            `ward_observer`,
+            `ward_sentry`,
           ],
           early_game: [
-            `ward_sentry`,
-            `arcane_boots`,
+            `boots`,
             `magic_wand`,
             `wind_lace`,
             `infused_raindrop`,
           ],
           mid_game: [
-            `aether_lens`,
+            `solar_crest`,
             `aghanims_shard`,
             `ultimate_scepter`,
-            `solar_crest`,
+            `boots_of_bearing`,
           ],
           late_game: [
             `hurricane_pike`,
-            `boots_of_bearing`,
             `octarine_core`,
+            `assault`,
             `vladmir`,
           ],
           situational: [
             `ring_of_basilius`,
             `tranquil_boots`,
-            `solar_crest`,
+            `aether_lens`,
             `spirit_vessel`,
             `cyclone`,
             `glimmer_cape`,
@@ -24782,13 +24781,12 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `travel_boots`,
           ],
           core: [
-            `arcane_boots`,
-            `aether_lens`,
+            `boots`,
+            `solar_crest`,
             `aghanims_shard`,
             `ultimate_scepter`,
-            `solar_crest`,
-            `hurricane_pike`,
             `boots_of_bearing`,
+            `hurricane_pike`,
             `octarine_core`,
           ],
           neutral: [
@@ -26074,13 +26072,13 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `warlock_shadow_word`, // 2
           `warlock_fatal_bonds`, // 3
           `warlock_upheaval`, // 4
-          `warlock_fatal_bonds`, // 5
+          `warlock_upheaval`, // 5
           "warlock_rain_of_chaos", // 6
-          `warlock_fatal_bonds`, // 7
+          `warlock_upheaval`, // 7
           `warlock_upheaval`, // 8
-          `warlock_upheaval`, // 9
-          `warlock_upheaval`, // 10
-          `special_bonus_unique_warlock_upheaval_aoe`, // 11
+          `warlock_fatal_bonds`, // 9
+          `special_bonus_unique_warlock_upheaval_aoe`, // 10
+          `warlock_fatal_bonds`, // 11
           "warlock_rain_of_chaos", // 12
           `warlock_shadow_word`, // 13
           `warlock_shadow_word`, // 14
@@ -26109,7 +26107,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           early_game: [
             `ring_of_basilius`,
-            `arcane_boots`,
+            `boots`,
             "magic_wand",
             `wind_lace`,
             `infused_raindrop`,
@@ -26118,21 +26116,21 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `solar_crest`,
             `aghanims_shard`,
             `glimmer_cape`,
-            `force_staff`,
+            `ultimate_scepter`,
           ],
           late_game: [
-            `ultimate_scepter`,
             `refresher`,
             `octarine_core`,
             `aeon_disk`,
+            `boots_of_bearing`,
           ],
           situational: [
-            `pavise`,
+            `arcane_boots`,
+			`pavise`,
             `hand_of_midas`,
             `holy_locket`,
             `guardian_greaves`,
-            `boots_of_bearing`,
-            `solar_crest`,
+            `force_staff`,
             `ghost`,
             `blink`,
             `lotus_orb`,
@@ -26140,11 +26138,10 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            `boots`,
             `solar_crest`,
             `aghanims_shard`,
             `glimmer_cape`,
-            `force_staff`,
             `ultimate_scepter`,
             `refresher`,
             `octarine_core`,
