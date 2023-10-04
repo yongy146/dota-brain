@@ -6938,7 +6938,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `enigma_malefice`, // 8
           `enigma_malefice`, // 9
           `special_bonus_unique_enigma_6`, // 10
-          `enigma_demonic_conversion`, // 11
+          `enigma_midnight_pulse`, // 11
           `enigma_black_hole`, // 12
           `enigma_midnight_pulse`, // 13
           `enigma_midnight_pulse`, // 14
@@ -17091,7 +17091,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             "overwhelming_blink",
           ],
           situational: [
-            "hood_of_defiance",
+            /*"hood_of_defiance", Item removed from game */
             "spirit_vessel",
             "force_staff",
             "rod_of_atos",
@@ -20773,19 +20773,19 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           "spectre_spectral_dagger", // 3
           "spectre_dispersion", // 4
           "spectre_spectral_dagger", // 5
-          "spectre_haunt", // 6
+          "spectre_haunt_single", // 6
           "spectre_spectral_dagger", // 7
           "spectre_dispersion", // 8
           "spectre_dispersion", // 9
           "special_bonus_all_stats_5", // 10
           "spectre_desolate", // 11
-          "spectre_haunt", // 12
+          "spectre_haunt_single", // 12
           "spectre_desolate", // 13
           "spectre_desolate", // 14
           "special_bonus_unique_spectre_6", // 15
           "spectre_desolate", // 16
           "special_bonus_attributes", // 17
-          "spectre_haunt", // 18
+          "spectre_haunt_single", // 18
           "special_bonus_attributes", // 19
           "special_bonus_hp_350", // 20
           "special_bonus_attributes", // 21
@@ -24745,24 +24745,14 @@ export const heroBuilds: { [key: string]: HeroContent } = {
             `ward_observer`,
             `ward_sentry`,
           ],
-          early_game: [
-            `boots`,
-            `magic_wand`,
-            `wind_lace`,
-            `infused_raindrop`,
-          ],
+          early_game: [`boots`, `magic_wand`, `wind_lace`, `infused_raindrop`],
           mid_game: [
             `solar_crest`,
             `aghanims_shard`,
             `ultimate_scepter`,
             `boots_of_bearing`,
           ],
-          late_game: [
-            `hurricane_pike`,
-            `octarine_core`,
-            `assault`,
-            `vladmir`,
-          ],
+          late_game: [`hurricane_pike`, `octarine_core`, `assault`, `vladmir`],
           situational: [
             `ring_of_basilius`,
             `tranquil_boots`,
@@ -26126,7 +26116,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           ],
           situational: [
             `arcane_boots`,
-			`pavise`,
+            `pavise`,
             `hand_of_midas`,
             `holy_locket`,
             `guardian_greaves`,
@@ -27485,7 +27475,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           `zuus_heavenly_jump`, // 13
           `zuus_heavenly_jump`, // 14
           "special_bonus_unique_zeus_jump_postjump_movespeed", // 15
-          "zuus_lightning_bolt", // 16
+          "special_bonus_attributes", // 16
           "special_bonus_attributes", // 17
           "zuus_thundergods_wrath", // 18
           "special_bonus_attributes", // 19
