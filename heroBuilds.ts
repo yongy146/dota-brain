@@ -125,6 +125,7 @@ export interface HeroBuild {
   type?: string; // Type currently only used for invoker mid (QW & QE)
   steam_guide_link: string; // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
+  dota_fire_id?: number; // Guide number on Dota Fire
   abilities: string[];
   ability_tooltips?: Tooltips;
   items: ItemBuild;
@@ -265,6 +266,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2698376898",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        dota_fire_id: 40437,
         abilities: [
           "abaddon_aphotic_shield",
           "abaddon_frostmourne" /* equals to `curse of avernus` */,
