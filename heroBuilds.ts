@@ -363,6 +363,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2971195954",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        dota_fire_id: 40436,
         abilities: [
           "abaddon_aphotic_shield",
           "abaddon_frostmourne" /* equals to `curse of avernus` */,
@@ -548,6 +549,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        dota_fire_id: 40438,
         abilities: [
           "alchemist_unstable_concoction",
           "alchemist_acid_spray",
@@ -652,6 +654,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730985550",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        dota_fire_id: 40439,
         abilities: [
           "alchemist_unstable_concoction",
           "alchemist_acid_spray",
@@ -822,6 +825,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        dota_fire_id: 40441,
         abilities: [
           "ancient_apparition_chilling_touch",
           "ancient_apparition_cold_feet",
@@ -984,6 +988,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        dota_fire_id: 40442,
         abilities: [
           "antimage_mana_break",
           "antimage_blink",
@@ -1167,6 +1172,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377376",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        dota_fire_id: 40443,
         abilities: [
           "arc_warden_spark_wraith",
           "arc_warden_flux",
@@ -1369,6 +1375,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915204",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        dota_fire_id: 40444,
         abilities: [
           "axe_battle_hunger",
           "axe_counter_helix",
@@ -1546,6 +1553,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        dota_fire_id: 40445,
         abilities: [
           "bane_brain_sap", // 1
           "bane_nightmare", // 2
@@ -1716,6 +1724,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        dota_fire_id: 40446,
         abilities: [
           "batrider_sticky_napalm", // 1
           "batrider_firefly", // 2
@@ -1826,6 +1835,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253341",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        dota_fire_id: 40447,
         abilities: [
           `batrider_flamebreak`, // 1
           "batrider_firefly", // 2
@@ -2024,6 +2034,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "beastmaster_wild_axes",
           `beastmaster_call_of_the_wild_boar`,
@@ -2210,6 +2221,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "bloodseeker_blood_bath",
           "bloodseeker_thirst",
@@ -2296,6 +2308,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2706431682",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "bloodseeker_blood_bath",
           "bloodseeker_thirst",
@@ -2471,6 +2484,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915719",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `bounty_hunter_wind_walk`,
           `bounty_hunter_jinada`,
@@ -2657,6 +2671,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915806",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "brewmaster_thunder_clap",
           "brewmaster_cinder_brew",
@@ -2848,6 +2863,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915905",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "bristleback_quill_spray",
           "bristleback_bristleback",
@@ -3033,6 +3049,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "broodmother_spin_web", // 1
           `broodmother_silken_bola`, // 2
@@ -3246,6 +3263,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916073",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "centaur_hoof_stomp", // 1
           `centaur_double_edge`, // 2
@@ -3409,6 +3427,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916165",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
           "chaos_knight_reality_rift", // 2
@@ -3527,6 +3546,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2708440963",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "chaos_knight_chaos_bolt", // 1
           "chaos_knight_reality_rift", // 2
@@ -3684,6 +3704,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916263",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `chen_penitence`, // 1
           `chen_holy_persuasion`, // 2
@@ -3807,6 +3828,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916348",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "clinkz_tar_bomb", // 1
           "clinkz_death_pact", // 2
@@ -3946,6 +3968,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "rattletrap_battery_assault", // 1
           "rattletrap_power_cogs", // 2
@@ -4116,6 +4139,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916517",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "crystal_maiden_crystal_nova", // 1
           "crystal_maiden_frostbite", // 2
@@ -4289,6 +4313,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916602",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "dark_seer_ion_shell", // 1
           `dark_seer_vacuum`, // 2
@@ -4455,6 +4480,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916714",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "dark_willow_bramble_maze", // 1
           "dark_willow_shadow_realm", // 2
@@ -4643,6 +4669,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917167",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `dawnbreaker_celestial_hammer`, // 1
           `dawnbreaker_fire_wreath`, // 2
@@ -4751,6 +4778,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2715224221",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `dawnbreaker_celestial_hammer`, // 1
           `dawnbreaker_fire_wreath`, // 2   equals to `starbreaker`
@@ -4935,6 +4963,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917255",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "dazzle_poison_touch", // 1
           "dazzle_shadow_wave", // 2
@@ -5101,6 +5130,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "death_prophet_carrion_swarm", // 1
           "death_prophet_spirit_siphon", // 2
@@ -5293,6 +5323,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `disruptor_glimpse`, // 1
           `disruptor_thunder_strike`, // 2
@@ -5448,6 +5479,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561417",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `doom_bringer_scorched_earth`, // 1
           `doom_bringer_devour`, // 2
@@ -5627,6 +5659,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "dragon_knight_dragon_tail", // 1
           "dragon_knight_dragon_blood", // 2
@@ -5801,6 +5834,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561590",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "drow_ranger_frost_arrows", // 1
           "drow_ranger_multishot", // 2
@@ -5967,6 +6001,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561679",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `earth_spirit_boulder_smash`, // 1
           `earth_spirit_rolling_boulder`, // 2
@@ -6135,6 +6170,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561769",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "earthshaker_fissure", // 1
           "earthshaker_enchant_totem", // 2
@@ -6279,6 +6315,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561834",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "elder_titan_ancestral_spirit", // 1
           "elder_titan_natural_order", // 2
@@ -6459,6 +6496,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "ember_spirit_sleight_of_fist", // 1
           "ember_spirit_searing_chains", // 2
@@ -6658,6 +6696,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `enchantress_impetus`, // 1
           `enchantress_enchant`, // 2
@@ -6824,6 +6863,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `enigma_malefice`, // 1
           `enigma_demonic_conversion`, // 2
@@ -6929,6 +6969,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2712384931",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "enigma_demonic_conversion", // 1
           "enigma_malefice", // 2
@@ -7101,6 +7142,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562159",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "faceless_void_time_walk", // 1
           "faceless_void_time_dilation", // 2
@@ -7287,6 +7329,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562245",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "grimstroke_dark_artistry", // 1   equals to `stroke of faith`
           "grimstroke_spirit_walk", // 2   equals to `ink swell`
@@ -7468,6 +7511,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562334",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "gyrocopter_homing_missile", // 1
           `gyrocopter_flak_cannon`, // 2
@@ -7591,6 +7635,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2712385902",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "gyrocopter_homing_missile", // 1
           "gyrocopter_rocket_barrage", // 2
@@ -7763,6 +7808,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562407",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "hoodwink_bushwhack", // 1
           "hoodwink_acorn_shot", // 2
@@ -7976,6 +8022,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562484",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           `huskar_inner_fire`, // 1
           "huskar_berserkers_blood", // 2
@@ -8163,6 +8210,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           `invoker_wex`, // 1
           `invoker_quas`, // 2
@@ -8279,6 +8327,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "invoker_exort", // 1
           "invoker_quas", // 2
@@ -8503,6 +8552,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957619",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "wisp_tether", // 1
           "wisp_overcharge", // 2
@@ -8663,6 +8713,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957843",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "jakiro_dual_breath", // 1
           "jakiro_liquid_fire", // 2
@@ -8822,6 +8873,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957943",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "juggernaut_blade_fury",
           "juggernaut_healing_ward",
@@ -8999,6 +9051,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958059",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `keeper_of_the_light_blinding_light`, // 1  "keeper_of_the_light_radiant_bind" equals to `solar bind`
           `keeper_of_the_light_chakra_magic`, // 2
@@ -9189,6 +9242,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958147",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -9278,6 +9332,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2715010750",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -9439,6 +9494,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2301488685",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "legion_commander_overwhelming_odds", // 1
           "legion_commander_moment_of_courage", // 2
@@ -9631,6 +9687,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958372",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "leshrac_lightning_storm", // 1
           "leshrac_split_earth", // 2
@@ -9795,6 +9852,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958474",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "lich_frost_nova", // 1
           "lich_frost_shield", // 2
@@ -9974,6 +10032,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958609",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "life_stealer_feast", // 1
           "life_stealer_ghoul_frenzy", // 2
@@ -10151,6 +10210,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958714",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "lina_dragon_slave", // 1
           "lina_fiery_soul", // 2
@@ -10261,6 +10321,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2715221904",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "lina_light_strike_array", // 1
           "lina_fiery_soul", // 2
@@ -10448,6 +10509,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958831",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "lion_impale", // 1
           "lion_mana_drain", // 2
@@ -10607,6 +10669,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958939",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "lone_druid_spirit_bear", // 1
           "lone_druid_spirit_link", // 2
@@ -10808,6 +10871,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959031",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "luna_lunar_blessing", // 1   "luna_moon_glaive" equals to `moon glaives`
           "luna_lucent_beam", // 2
@@ -10979,6 +11043,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959154",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "lycan_summon_wolves", // 1
           "lycan_feral_impulse", // 2
@@ -11072,6 +11137,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2716646867",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "lycan_summon_wolves", // 1
           "lycan_feral_impulse", // 2
@@ -11233,6 +11299,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959287",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "magnataur_shockwave", // 1
           `magnataur_skewer`, // 2
@@ -11363,6 +11430,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2716646936",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "magnataur_shockwave", // 1
           `magnataur_skewer`, // 2
@@ -11489,6 +11557,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2716647043",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "magnataur_shockwave", // 1
           "magnataur_skewer", // 2
@@ -11663,6 +11732,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959380",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `marci_grapple`, // 1	equals to rebound
           `marci_guardian`, // 2	 equals to dispose
@@ -11779,6 +11849,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2716647152",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "marci_grapple", // 1	equals to dispose
           `marci_guardian`, // 2	equals to rebound
@@ -11992,6 +12063,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959474",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "mars_gods_rebuke", // 1
           "mars_spear", // 2
@@ -12195,6 +12267,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959648",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "medusa_mystic_snake", // 1
           `medusa_mana_shield`, // 2
@@ -12362,6 +12435,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959764",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           `meepo_ransack`, // 1
           `meepo_poof`, // 2
@@ -12516,6 +12590,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959872",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "mirana_arrow", // 1
           "mirana_leap", // 2
@@ -12698,6 +12773,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "monkey_king_boundless_strike", // 1
           "monkey_king_jingu_mastery", // 2
@@ -12826,6 +12902,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2718158708",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "monkey_king_tree_dance", // 1
           "monkey_king_boundless_strike", // 2
@@ -13006,6 +13083,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960135",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "morphling_morph_agi", // 1
           "morphling_adaptive_strike_agi", // 2
@@ -13172,6 +13250,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2943493038",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "muerta_dead_shot", // 1
           "muerta_the_calling", // 2
@@ -13302,6 +13381,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2943887000",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "muerta_dead_shot", // 1
           "muerta_the_calling", // 2
@@ -13495,6 +13575,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960208",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "naga_siren_mirror_image", // 1
           "naga_siren_rip_tide", // 2
@@ -13681,6 +13762,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `furion_sprout`, // 1
           "furion_teleportation", // 2
@@ -13797,6 +13879,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666197",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           `furion_sprout`, // 1
           "furion_teleportation", // 2
@@ -13916,6 +13999,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666233",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `furion_sprout`, // 1
           "furion_teleportation", // 2
@@ -14105,6 +14189,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
@@ -14214,6 +14299,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666066",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
@@ -14446,6 +14532,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960635",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "night_stalker_void", // 1
           "night_stalker_hunter_in_the_night", // 2
@@ -14628,6 +14715,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960726",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "nyx_assassin_impale", // 1
           "nyx_assassin_spiked_carapace", // 2
@@ -14787,6 +14875,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960831",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "ogre_magi_ignite", // 1
           "ogre_magi_fireblast", // 2
@@ -14955,6 +15044,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "omniknight_hammer_of_purity", // 1
           `omniknight_purification`, // 2
@@ -15164,6 +15254,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960994",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "oracle_fortunes_end", // 1
           "oracle_purifying_flames", // 2
@@ -15337,6 +15428,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `obsidian_destroyer_astral_imprisonment`, // 1
           `obsidian_destroyer_arcane_orb`, // 2
@@ -15433,6 +15525,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253915",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           `obsidian_destroyer_astral_imprisonment`, // 1
           `obsidian_destroyer_arcane_orb`, // 2
@@ -15607,6 +15700,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "pangolier_shield_crash", // 1
           "pangolier_swashbuckle", // 2
@@ -15718,6 +15812,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2719254096",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "pangolier_shield_crash", // 1
           "pangolier_swashbuckle", // 2
@@ -15820,6 +15915,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2719254316",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "pangolier_shield_crash", // 1
           "pangolier_swashbuckle", // 2
@@ -16013,6 +16109,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "phantom_assassin_stifling_dagger", // 1
           "phantom_assassin_phantom_strike", // 2
@@ -16190,6 +16287,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961424",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "phantom_lancer_spirit_lance", // 1
           "phantom_lancer_phantom_edge", // 2
@@ -16355,6 +16453,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961589",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "phoenix_fire_spirits", // 1
           "phoenix_icarus_dive", // 2
@@ -16535,6 +16634,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2763260196",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `primal_beast_trample`, // 1
           `primal_beast_onslaught`, // 2
@@ -16647,6 +16747,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2765463290",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `primal_beast_trample`, // 1
           `primal_beast_onslaught`, // 2
@@ -16846,6 +16947,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "puck_illusory_orb", // 1
           "puck_phase_shift", // 2
@@ -17036,6 +17138,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
@@ -17139,6 +17242,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2713377028",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
@@ -17322,6 +17426,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "pugna_nether_blast", // 1
           "pugna_decrepify", // 2
@@ -17432,6 +17537,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2721136673",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "pugna_nether_blast", // 1
           `pugna_nether_ward`, // 2
@@ -17627,6 +17733,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "queenofpain_scream_of_pain", // 1
           "queenofpain_shadow_strike", // 2
@@ -17723,6 +17830,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2721136803",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "queenofpain_shadow_strike", // 1
           "queenofpain_blink", // 2
@@ -17899,6 +18007,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "razor_static_link", // 1
           "razor_plasma_field", // 2
@@ -18001,6 +18110,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2722413092",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `razor_plasma_field`, // 1
           `razor_static_link`, // 2
@@ -18112,6 +18222,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2722413152",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           `razor_plasma_field`, // 1
           `razor_static_link`, // 2
@@ -18295,6 +18406,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "riki_blink_strike", // 1
           "riki_tricks_of_the_trade", // 2
@@ -18409,6 +18521,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2722413235",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "riki_blink_strike", // 1
           "riki_tricks_of_the_trade", // 2
@@ -18582,6 +18695,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962219",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "rubick_fade_bolt", // 1
           "rubick_telekinesis", // 2
@@ -18732,6 +18846,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "sandking_burrowstrike", // 1
           "sandking_caustic_finale", // 2
@@ -18932,6 +19047,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `shadow_demon_disruption`, // 1
           `shadow_demon_shadow_poison`, // 2
@@ -19111,6 +19227,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "nevermore_shadowraze1", // 1
           "nevermore_necromastery", // 2
@@ -19227,6 +19344,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2724416695",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "nevermore_shadowraze1", // 1
           "nevermore_necromastery", // 2
@@ -19412,6 +19530,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "shadow_shaman_ether_shock", // 1
           "shadow_shaman_shackles", // 2
@@ -19565,6 +19684,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "silencer_glaives_of_wisdom", // 1
           "silencer_curse_of_the_silent", // 2
@@ -19744,6 +19864,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962794",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "skywrath_mage_concussive_shot", // 1
           "skywrath_mage_arcane_bolt", // 2
@@ -19919,6 +20040,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962869",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "slardar_slithereen_crush", // 1
           "slardar_bash", // 2
@@ -20077,6 +20199,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962959",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "slark_essence_shift", // 1
           "slark_pounce", // 2
@@ -20268,6 +20391,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963037",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "snapfire_scatterblast", // 1
           "snapfire_firesnap_cookie", // 2
@@ -20453,6 +20577,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "sniper_headshot", // 1
           `sniper_take_aim`, // 2
@@ -20578,6 +20703,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        dota_fire_id: 39830,
         abilities: [
           "sniper_headshot", // 1
           "sniper_shrapnel", // 2
@@ -20769,6 +20895,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963243",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "spectre_spectral_dagger", // 1
           "spectre_dispersion", // 2
@@ -20932,6 +21059,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -21048,6 +21176,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2726400030",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -21234,6 +21363,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963425",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "storm_spirit_static_remnant", // 1
           "storm_spirit_overload", // 2
@@ -21402,6 +21532,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963505",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "sven_storm_bolt", // 1
           "sven_warcry", // 2
@@ -21583,6 +21714,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699933135",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "techies_sticky_bomb", // 1
           "techies_suicide", // 2
@@ -21685,6 +21817,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2776661467",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "techies_sticky_bomb", // 1
           "techies_suicide", // 2
@@ -21898,6 +22031,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "templar_assassin_meld", // 1
           "templar_assassin_psi_blades", // 2
@@ -21997,6 +22131,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2726399928",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "templar_assassin_psi_blades", // 1
           "templar_assassin_refraction", // 2
@@ -22193,6 +22328,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963755",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "terrorblade_reflection", // 1
           "terrorblade_metamorphosis", // 2
@@ -22395,6 +22531,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963852",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `tidehunter_gush`, // 1
           `tidehunter_anchor_smash`, // 2
@@ -22582,6 +22719,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963963",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "shredder_whirling_death", // 1
           "shredder_reactive_armor", // 2
@@ -22784,6 +22922,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964058",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "tinker_laser", // 1
           "tinker_heat_seeking_missile", // 2
@@ -23001,6 +23140,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `tiny_tree_grab`, // 1
           "tiny_avalanche", // 2
@@ -23119,6 +23259,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2729200744",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "tiny_tree_grab", // 1
           "tiny_avalanche", // 2
@@ -23243,6 +23384,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2729201017",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "tiny_tree_grab", // 1
           "tiny_avalanche", // 2
@@ -23424,6 +23566,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699934294",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `treant_leech_seed`, // 1
           `treant_natures_grasp`, // 2
@@ -23606,6 +23749,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964271",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "troll_warlord_whirling_axes_ranged", // 1
           "troll_warlord_berserkers_rage", // 2
@@ -23786,6 +23930,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964354",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `tusk_ice_shards`, // 1
           `tusk_tag_team`, // 2
@@ -23881,6 +24026,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2776954201",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `tusk_ice_shards`, // 1
           `tusk_tag_team`, // 2
@@ -24061,6 +24207,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964445",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `abyssal_underlord_firestorm`, // 1
           `abyssal_underlord_atrophy_aura`, // 2
@@ -24258,6 +24405,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
@@ -24356,6 +24504,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2971195922",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
@@ -24519,6 +24668,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964646",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "ursa_fury_swipes", // 1
           "ursa_earthshock", // 2
@@ -24708,6 +24858,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `vengefulspirit_wave_of_terror`, // 1
           `vengefulspirit_magic_missile`, // 2
@@ -24862,6 +25013,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
@@ -24995,6 +25147,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2729605047",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
@@ -25198,6 +25351,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "viper_poison_attack", // 1
           "viper_corrosive_skin", // 2
@@ -25304,6 +25458,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2729605437",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "viper_poison_attack", // 1
           "viper_corrosive_skin", // 2
@@ -25490,6 +25645,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "visage_soul_assumption", // 1
           "visage_grave_chill", // 2
@@ -25587,6 +25743,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2729605654",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "visage_grave_chill", // 1
           "visage_gravekeepers_cloak", // 2
@@ -25756,6 +25913,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965099",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "void_spirit_resonant_pulse", // 1
           "void_spirit_aether_remnant", // 2
@@ -25858,6 +26016,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2778135054",
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        //dota_fire_id: ,
         abilities: [
           "void_spirit_resonant_pulse", // 1
           "void_spirit_aether_remnant", // 2
@@ -26059,6 +26218,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965199",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           `warlock_fatal_bonds`, // 1
           `warlock_shadow_word`, // 2
@@ -26228,6 +26388,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965288",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
@@ -26330,6 +26491,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730987049",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
@@ -26506,6 +26668,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "windrunner_windrun", // 1
           `windrunner_shackleshot`, // 2
@@ -26616,6 +26779,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986384",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "windrunner_powershot", // 1
           "windrunner_windrun", // 2
@@ -26733,6 +26897,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986473",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "windrunner_powershot", // 1
           "windrunner_windrun", // 2
@@ -26930,6 +27095,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965518",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "winter_wyvern_arctic_burn", // 1
           "winter_wyvern_splinter_blast", // 2
@@ -27111,6 +27277,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957031",
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
+        //dota_fire_id: ,
         abilities: [
           "witch_doctor_paralyzing_cask", // 1
           "witch_doctor_maledict", // 2
@@ -27297,6 +27464,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699919868",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "skeleton_king_hellfire_blast", // 1
           "skeleton_king_vampiric_aura", // 2
@@ -27461,6 +27629,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699919737",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
         abilities: [
           "zuus_arc_lightning", // 1
           "zuus_heavenly_jump", // 2
