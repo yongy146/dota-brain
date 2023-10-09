@@ -4881,7 +4881,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
           desolator: `A core item that gives you massive burst potential with Starbreaker. Choose between this item and Echo Sabre based on whether you need more damage or some tankiness.`,
           bloodthorn: `Allows you to land solo kills while disabling enemies with a silence.`,
           vanguard: `A Situational item that gives you tankiness and sustain in the early game. You should rush this in the lane and play aggressively once you have it.`,
-          heavens_halberd: "Especially good against ranged right-clikers.",
+          heavens_halberd: "Especially good against ranged right-clickers.",
           aghanims_shard:
             "A core item that grants allows you to become spell-immune during Starbreaker.",
           blink:
@@ -10131,7 +10131,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
       skadi:
         "Really good stats and lockdown against enemy heroes, I highly recommend this 3rd/4th item.",
       heavens_halberd:
-        "Must have against some physical damage heroes (eg. templar assassin/Ursa).",
+        "Must have against some physical damage heroes (e.g., Templar Assassin/Ursa).",
       basher: "A core item that allows you to lock down the target.",
       aghanims_shard:
         "Not a particularly great upgrade. You will get it from a tormentor most of the time.",
