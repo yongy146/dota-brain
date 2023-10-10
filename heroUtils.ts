@@ -10,7 +10,7 @@ import {
   HeroContent,
   heroBuilds,
 } from "./heroBuilds";
-import { DOTA_COACH_GUIDE_ROLE } from "./playerRoles";
+import { DOTA_COACH_GUIDE_ROLE, DOTA_COACH_ROLE } from "./playerRoles";
 
 export interface IHeroesWithItem {
   localizedHeroName: string;
@@ -208,7 +208,7 @@ export function mostRecommendedItems(role?: DOTA_COACH_GUIDE_ROLE): {
  *
  *
  */
-export function mostCounteringItems(): {
+export function mostCounteringItems(role?: DOTA_COACH_GUIDE_ROLE): {
   item: string;
   pct: number;
 }[] {
@@ -217,7 +217,7 @@ export function mostCounteringItems(): {
 
   // Count the number of items in the relevant guides
   const counter: Record<string, number> = {};
-  for (const item of counterItemIterator()) {
+  for (const item of counterItemIterator(role)) {
     // Only add
     counter[item] = (counter[item] || 0) + 1;
   }
