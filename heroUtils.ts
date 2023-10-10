@@ -69,7 +69,11 @@ function* itemIterator(role?: DOTA_COACH_GUIDE_ROLE): Generator<string, void> {
       for (const [category, items] of Object.entries(heroBuild.items)) {
         // Remove duplicates (e.g. branches)
         // Remove "core", "core_bear" and "situational" (as it is a repetition)
-        if (category.includes("core") || category.includes("situational")) {
+        if (
+          category.includes("core") ||
+          category.includes("situational") ||
+          category.includes("neutral")
+        ) {
           // These are duplicated items, remove
         } else {
           //console.log(`items: `, items);
@@ -85,14 +89,43 @@ function* itemIterator(role?: DOTA_COACH_GUIDE_ROLE): Generator<string, void> {
   }
 }
 
-function* counterItemIterator(): Generator<{ item: string }, void> {
-  for (const heroBuild of heroBuildIterator()) {
-    for (const phase of Object.values(heroBuilds.counter_items)) {
-      for (const counterItems of Object.values(phase as CounterItems)) {
-        for (const counterItem of counterItems) {
-          yield { item: (counterItem as CounterItem).item };
+/**
+ * Counter items mentioned for two roles, are only reported once.
+ *
+ * Supported roles: undefined (all), support, mid/carry/offlane (all seen as core)
+ */
+function* counterItemIterator(
+  role?: DOTA_COACH_GUIDE_ROLE
+): Generator<string, void> {
+  for (const [localizedHeroName, heroContent] of Object.entries(heroBuilds)) {
+    let counterItems_: CounterItem[] = [];
+    for (const phase of Object.values(heroContent.counter_items)) {
+      for (const [rolePlayer, counterItems] of Object.entries(
+        phase as CounterItems
+      )) {
+        if (
+          rolePlayer === "all" ||
+          !role ||
+          (rolePlayer === "support" &&
+            role === DOTA_COACH_GUIDE_ROLE.SUPPORT) ||
+          (rolePlayer === "core" && role !== DOTA_COACH_GUIDE_ROLE.SUPPORT)
+        ) {
+          console.log(`rolePlayer: `, rolePlayer);
+          console.log(`counterItems: `, counterItems);
+          console.log(`typeof counterItems: `, typeof counterItems);
+          for (const counterItem of counterItems) {
+            counterItems_.push(counterItem);
+          }
         }
       }
+    }
+    // Remove duplicates
+    counterItems_ = counterItems_.filter(
+      (item, i) => counterItems_.findIndex((i) => i.item === item.item) === i
+    );
+
+    for (const counterItem of counterItems_) {
+      yield (counterItem as CounterItem).item;
     }
   }
 }
@@ -150,6 +183,42 @@ export function mostRecommendedItems(role?: DOTA_COACH_GUIDE_ROLE): {
   // Count the number of items in the relevant guides
   const counter: Record<string, number> = {};
   for (const item of itemIterator(role)) {
+    // Only add
+    counter[item] = (counter[item] || 0) + 1;
+  }
+
+  // Prepare and sort the results
+  const preResult = Object.entries(counter)
+    .map(([key, value]) => ({
+      item: key,
+      count: value,
+    }))
+    .sort((a, b) => b.count - a.count);
+
+  // Return results in the proper format
+  return preResult.map((counter) => ({
+    item: counter.item,
+    pct: counter.count / total,
+  }));
+}
+
+/**
+ * Return items countering most heroes.
+ *
+ *
+ *
+ */
+export function mostCounteringItems(): {
+  item: string;
+  pct: number;
+}[] {
+  // Count the number of relevant heroes
+  let total = Object.entries(heroBuilds).length;
+
+  // Count the number of items in the relevant guides
+  const counter: Record<string, number> = {};
+  for (const item of counterItemIterator()) {
+    // Only add
     counter[item] = (counter[item] || 0) + 1;
   }
 
