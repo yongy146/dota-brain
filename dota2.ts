@@ -14,9 +14,14 @@ import dota2Heroes from "./dota2Heroes.json"; //assert { type: "json" };
 // disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
-import { IUIItem, IUIAbility } from "../dotaReact/src/dota/Types";
+import { IUIItem, IUIAbility } from "@dotaReact/src/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 import i18nDota from "./i18n/en/dota.json";
+import {
+  NPCSortNameToId,
+  idToLocalizedName,
+  localizedNameToNPCName,
+} from "@gameData/out/dota2HeroNames";
 import * as DotaLogger from "../../submodules/utilities/log";
 
 // Version node.js
@@ -734,7 +739,7 @@ export namespace hero_attributes {
    * @returns Strength, Intelligence or Agility if hero is known. If hero is not known it returns null
    */
   export function getAttribute(heroName: string): string | undefined {
-    const npcName = hero_names.localizedNameToNPCName(heroName);
+    const npcName = localizedNameToNPCName(heroName);
     if (npcName === undefined) return undefined;
     const h = hero.getHero(npcName);
     if (h === undefined) {
@@ -1160,7 +1165,7 @@ export namespace hero_images {
   export function idToImgName(heroId: number): string {
     //DotaLogger.log(`dota2.idToImgName(${heroId}): Called`);
 
-    let localizedName = hero_names.idToLocalizedName(heroId);
+    let localizedName = idToLocalizedName(heroId);
     //DotaLogger.log(`dota2.idToImgName(): Localized name: ${localizedName}`);
 
     if (localizedName == "#not found#") {
@@ -1179,7 +1184,7 @@ export namespace hero_images {
     return result;
   }
   export function NPCShortNameToImgName(NPCShortName: string): string {
-    return idToImgName(hero_names.NPCSortNameToId(NPCShortName));
+    return idToImgName(NPCSortNameToId(NPCShortName));
   }
 
   export function idToMinimapImgName(heroId: number): string {
