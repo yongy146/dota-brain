@@ -14,10 +14,7 @@ import dota2Heroes from "./dota2Heroes.json"; //assert { type: "json" };
 // disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
-import {
-  IUIItem,
-  IUIAbility,
-} from "../../submodules/utilities/react/dota/Types";
+import { IUIItem, IUIAbility } from "../dotaReact/src/dota/Types";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 import i18nDota from "./i18n/en/dota.json";
 import * as DotaLogger from "../../submodules/utilities/log";

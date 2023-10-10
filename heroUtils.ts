@@ -63,11 +63,23 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
  * Iterates through all the items an the hero guides.
  *
  */
-function* itemIterator(): Generator<string, void> {
+function* itemIterator(role?: DOTA_COACH_GUIDE_ROLE): Generator<string, void> {
   for (const { heroBuild } of heroBuildIterator()) {
-    for (const items of Object.values(heroBuild.items)) {
-      for (const item of items) {
-        yield item;
+    if (!role || heroBuild.roles.includes(role)) {
+      for (const [category, items] of Object.entries(heroBuild.items)) {
+        // Remove duplicates (e.g. branches)
+        // Remove "core", "core_bear" and "situational" (as it is a repetition)
+        if (category.includes("core") || category.includes("situational")) {
+          // These are duplicated items, remove
+        } else {
+          //console.log(`items: `, items);
+          const releventItems = (items as string[]).filter(
+            (item: string, i) => (items as string[]).indexOf(item) === i
+          );
+          for (const item of releventItems) {
+            yield item;
+          }
+        }
       }
     }
   }
@@ -115,15 +127,33 @@ function getTooltip(
  * Return the most recommended items for all heroes in the hero guides.
  *
  */
-export function mostRecommendedItems(): {
+export function mostRecommendedItems(role?: DOTA_COACH_GUIDE_ROLE): {
   item: string;
   pct: number;
 }[] {
+  // Count the number of relevant guides
+  let total = 0;
+  for (const heroBuild of heroBuildIterator()) {
+    if (role) {
+      /*console.log(
+        `role: ${role}; heroBuild.heroBuild.roles: ${JSON.stringify(
+          heroBuild.heroBuild.roles
+        )}`
+      );*/
+      if (heroBuild.heroBuild.roles.includes(role)) total++;
+    } else {
+      total++;
+    }
+  }
+  console.log(`heroBuilds: `, total);
+
+  // Count the number of items in the relevant guides
   const counter: Record<string, number> = {};
-  for (const item of itemIterator()) {
+  for (const item of itemIterator(role)) {
     counter[item] = (counter[item] || 0) + 1;
   }
 
+  // Prepare and sort the results
   const preResult = Object.entries(counter)
     .map(([key, value]) => ({
       item: key,
@@ -131,10 +161,9 @@ export function mostRecommendedItems(): {
     }))
     .sort((a, b) => b.count - a.count);
 
-  const max = preResult.reduce((prev, item) => Math.max(prev, item.count), 0);
-
+  // Return results in the proper format
   return preResult.map((counter) => ({
     item: counter.item,
-    pct: counter.count / max,
+    pct: counter.count / total,
   }));
 }
