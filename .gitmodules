@@ -1,0 +1,3 @@
+[submodule "submodules/gameData"]
+	path = submodules/gameData
+	url = https://github.com/dota-coach/gameData.git
