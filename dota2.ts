@@ -18,6 +18,11 @@ import * as PlayerRoles from "./playerRoles";
 import { IUIItem, IUIAbility } from "@dotaReact/src/dota/Types";
 import * as DotaCoachUI from "@utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 import i18nDota from "./i18n/en/dota.json";
+import {
+  NPCSortNameToId,
+  idToLocalizedName,
+  localizedNameToNPCName,
+} from "@gameData/out/dota2HeroNames";
 
 // Version node.js
 /*import * as HeroBuilds from "./heroBuilds.js";
@@ -31,6 +36,93 @@ import * as PlayerRoles from "./playerRoles.js";
 import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI.js";
 import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI.js";
 */
+
+/**
+ *
+ * @param hero
+ * @param disables
+ * @returns All abilities of a given hero for given disables. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ */
+export function getAbilitiesWithDisables(
+  hero: string,
+  disablesToScreen: string[]
+): any[] {
+  //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(hero: '" + hero + "', disables: '" + JSON.stringify(disablesToScreen) + "'): Called")
+
+  const heroDisables = disables[hero];
+  if (heroDisables == null) {
+    /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
+    return [];
+  }
+
+  const result: any[] = [];
+
+  // Iterate through all skills
+  for (let i = 0; i < heroDisables.length; i++) {
+    // Check if skill is a teleport interrupt
+    let isDisabling = false;
+
+    const skillDisables = heroDisables[i].disables;
+    //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(): skillDisables = '" + JSON.stringify(skillDisables) + "'")
+
+    // Iterate through all disables of a given skil to see if it is a disable that interrupts TPs
+    for (let j = 0; j < skillDisables.length; j++) {
+      //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(): disables = '" + JSON.stringify(disablesToScreen) + "', skillDisables[j] = '" + skillDisables[j] + "'")
+
+      if (disablesToScreen.includes(skillDisables[j])) {
+        isDisabling = true;
+        break;
+      }
+    }
+
+    if (isDisabling) {
+      result.push(heroDisables[i]);
+    }
+  }
+
+  //DotaLogger.log("getAbilitiesWithDisables(): Result = '" + JSON.stringify(result) + "'")
+
+  return result;
+}
+
+export function getDispellableBuffs(hero: string): string[] {
+  if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
+  if (dispellableBuffs[hero as keyof typeof dispellableBuffs] == null) {
+    /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
+    return [];
+  }
+
+  const result = dispellableBuffs[hero as keyof typeof dispellableBuffs];
+
+  /* return copy of array, otherwise recipient can change content of dispellableBuffs */
+  return [...result];
+}
+/**
+ *
+ * @param hero
+ * @returns All abilities that interrupt channeling. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ * TASK MICHEL: CHECK IF WE CAN CHANGE FUNCTION TO ONLY RETURN ARRAY OF STRINGS WITH ABILITIES
+ */
+export function getChannelingInterrupts(hero: string): any[] {
+  return getAbilitiesWithDisables(hero, channeling_interrupts);
+}
+/**
+ *
+ * @param hero
+ * @returns All abilities that slience. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ */
+export function getSilences(hero: string): any[] {
+  return getAbilitiesWithDisables(hero, silence);
+}
+
+/**
+ *
+ * @param hero
+ * @returns All abilities that root.  Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ */
+export function getRoots(hero: string): any[] {
+  return getAbilitiesWithDisables(hero, root);
+}
 
 // Colors for radiant & dire
 export const colorRadiant = "#67dd98"; //'#47661f'
@@ -92,44 +184,6 @@ export interface Hero {
   abilities: string[]; // e.g., ["terrorblade_reflection", ...]
   talents: string[]; // e.g., ["special_bonus_unique_terrorblade_2", etc.]
 }
-
-export class Talent {
-  talentLevel: number;
-  skillLevel: number;
-  cooldownReduction: number; /* -30 equals to -30% */
-
-  constructor(talentLevel: number, cooldownReduction: number) {
-    this.talentLevel = talentLevel;
-    this.skillLevel = 5 + talentLevel * 5;
-    this.cooldownReduction = cooldownReduction;
-  }
-}
-
-export interface Ability {
-  id: number;
-  key?: string; // e.g. 'antimage_mana_overload'; added by dota2 library for convenience
-  npcName?: string; // e.g. 'npc_dota_hero_sven'; added by dota2 library for convenience
-  sequence: string; // e.g. Ability2
-  is_talent: boolean;
-  talent_level?: number; // 1, 2, 3 or 4
-  cooldown: number[];
-  mana_cost: number[];
-  name: string;
-  description: string;
-  lore?: string; // talents do not have lores
-  is_ultimate: boolean;
-  is_passive: string; // "yes", "partial", "no"
-  is_breakable?: boolean;
-  affects?: string; // "unit", "unit_area", "area"
-  is_dispellable?: string; // "no", "basic", "strong" (general information provided by valve)
-  is_buff?: boolean;
-  is_buff_dispellable?: string; // "no", "basic", "strong"
-  is_debuff?: boolean;
-  is_debuff_dispellable?: string; // "no", "basic", "strong"
-  disable: string[]; // e.g. "stun", ""
-}
-
-export type AbilityAffects = "area" | "unit_area" | "unit";
 
 export interface UIHeroItemBuild {
   starting?: IUIItem[]; // CHANGE FROM NULL TO UNDEIFNED FOR ALL ITEMS... CHECK IF IT STILL WORKS IN THE APP!!!
@@ -220,7 +274,8 @@ export namespace hero {
    * @returns Hero based on Dota static data; null if there is no such hero
    */
   export function getHero(heroName: string): Hero | undefined {
-    if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName)) return undefined;
+    if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
+      return undefined;
 
     return dota2Heroes[heroName as keyof typeof dota2Heroes];
   }
@@ -231,9 +286,12 @@ export namespace hero {
    * @param heroName Localized hero name
    * @return null if there is no such hero
    */
-  export function getHeroContent(heroName: string): HeroBuilds.HeroContent | null {
+  export function getHeroContent(
+    heroName: string
+  ): HeroBuilds.HeroContent | null {
     //DotaLogger.log(`Dota2.getHeroContent(${heroName}): Called`);
-    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)) return null;
+    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
+      return null;
 
     return HeroBuilds.heroBuilds[heroName];
   }
@@ -245,7 +303,8 @@ export namespace hero {
    * @returns null in case of error
    */
   export function getHeroGuideLinks(heroName: string): string[] {
-    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)) return [];
+    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
+      return [];
 
     const result: string[] = [];
     for (const build of HeroBuilds.heroBuilds[heroName].builds) {
@@ -302,174 +361,6 @@ export namespace hero {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export namespace hero_names {
-  //
-  // The following names exist:
-  //    - NPC name:       npc_dota_hero_antimage
-  //    - NPC sort name:  antimage (NPCName w/o 'npc_dota_hero'; used by Overwolf)
-  //    - localized name: Anti-Mage or Legion Commander
-  //
-
-  /**
-   *
-   * @param name NPC short name, e.g., antimage (i.e. w/o 'npc_dota_hero_')
-   * @returns localited name, e.g., Anti-Mage
-   */
-  export function NPCShortNameToLocalizedName(name: string): string {
-    //npc_dota_hero_bane
-
-    if (name === "zeus") name = "zuus";
-
-    for (const hero of Object.values(dota2Heroes)) {
-      //for (var index in jsonOpenDotaAPI) {
-      /*console.log("****** ------: OpenDotaAPIHero = " + OpenDotaAPIHero)
-              console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(OpenDotaAPIHero))
-              console.log("****** ------: OpenDotaAPIHero = " + JSON.stringify(jsonOpenDotaAPI[OpenDotaAPIHero]))*/
-      if (hero.name == "npc_dota_hero_" + name) {
-        return hero.localized_name;
-      }
-    }
-    return "#not found#";
-  }
-
-  /**
-   *
-   * @param name e.g. npc_dota_hero_antimage
-   * @returns localized name, e.g. Anti-Mage
-   */
-  export function NPCNameToLocalizedName(heroNPCName: string): string {
-    for (const hero of Object.values(dota2Heroes)) {
-      if (hero.name == heroNPCName) {
-        return hero.localized_name;
-      }
-    }
-    return "#not found#";
-  }
-
-  export function idToLocalizedName(heroId: number): string {
-    DotaLogger.log(`dota2.idToLocalizedName(heroId: ${heroId}): Called`);
-    for (const hero of Object.values(dota2Heroes)) {
-      //DotaLogger.log(`dota2.idToLocalizedName(heroId: ${heroId}): hero.id=${hero.id}`);
-      if (hero.id === heroId) {
-        return hero.localized_name;
-      }
-    }
-    return "#not found#";
-  }
-
-  export function idToName(heroId: number): string {
-    for (const hero of Object.values(dota2Heroes)) {
-      //for (var index in jsonHeroes) {
-      if (hero.id == heroId) {
-        return hero.localized_name;
-      }
-    }
-    return "#not found#";
-  }
-
-  export function idToNPCName(heroId: number): string {
-    for (const hero of Object.values(dota2Heroes)) {
-      //for (var index in jsonHeroes) {
-      if (hero.id == heroId) {
-        return hero.name;
-      }
-    }
-    return "#not found#";
-  }
-
-  /**
-   *
-   * @param heroId
-   * @returns e.g. antimage or dark_willow
-   */
-  export function idToNPCShortName(heroId: number): string {
-    return idToNPCName(heroId).replace("npc_dota_hero_", "");
-  }
-
-  export function idToIntlName(heroId: number): string {
-    return "dota.heroes." + idToNPCName(heroId);
-  }
-
-  /**
-   *
-   * @param localized_name
-   * @returns undefined if hero is not found
-   */
-  export function localizedNameToId(localized_name: string): number | undefined {
-    //DotaLogger.log("dota2.localizedNameToId(" + localized_name + "): Called")
-    for (const hero of Object.values(dota2Heroes)) {
-      if (hero.localized_name === localized_name) {
-        //DotaLogger.log("dota2.localizedNameToId(): Returned id = '" + Heroes[i].id + "'")
-        return hero.id;
-      }
-    }
-    return undefined; // equals to not found
-  }
-
-  export function NPCNameToHeropediaName(heroNPCName: string): string {
-    return localizedNameToHeropediaName(NPCNameToLocalizedName(heroNPCName));
-  }
-
-  export function idToHeropediaName(heroId: number): string {
-    return localizedNameToHeropediaName(idToLocalizedName(heroId));
-  }
-
-  export function localizedNameToHeropediaName(localized_name: string): string {
-    return localized_name.replace(/[ ']/g, "");
-  }
-
-  /**
-   *
-   * @param heropediaName Function works with capital and minor letters
-   * @returns npc dota name, e.g. npc_dota_hero_antimage
-   */
-  export function heropediaNameToNPCName(heropediaName: string): string {
-    if (heropediaName === "Furion") heropediaName = "NaturesProphet";
-    if (heropediaName === "OutworldDestroyer") heropediaName = "OutworldDevourer";
-    for (const hero of Object.values(dota2Heroes)) {
-      if (NPCNameToHeropediaName(hero.name).toLowerCase() === heropediaName.toLowerCase()) {
-        return hero.name;
-      }
-    }
-    return "";
-  }
-
-  /**
-   *
-   * @param heroName localized name, e.g. Anti-Mage
-   * @returns NPC name, e.g. npc_dota_hero_antimage
-   */
-  export function localizedNameToNPCName(heroName: string): string | undefined {
-    //DotaLogger.log("dota2.localizedNameToNPCName(" + heroName + "): Called")
-    const id = localizedNameToId(heroName);
-    return id === undefined ? undefined : idToNPCName(id);
-  }
-
-  export function localizedNameToNPCShortName(heroName: string): string | undefined {
-    const npcShortName = localizedNameToNPCName(heroName);
-    return npcShortName === undefined ? undefined : npcShortName.replace("npc_dota_hero_", "");
-  }
-
-  /* Returns -1 if hero not found
-   */
-  export function NPCSortNameToId(name: string): number {
-    if (name === "zeus") name = "zuus";
-
-    //npc_dota_hero_bane
-    for (const hero of Object.values(dota2Heroes)) {
-      //for (var index in jsonHeroes) {
-      if (hero.name == "npc_dota_hero_" + name) {
-        return hero.id;
-      }
-    }
-    return -1;
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 export namespace hero_roles {
   //    export function convertDotaCoachGuideRoleToDotaCoachRole(playerRole: PlayerRoles.DOTA_COACH_ROLE): PlayerRoles.DOTA_COACH_GUIDE_ROLE {
   export function convertDotaCoachRoleToDotaCoachGuidRole(
@@ -504,7 +395,10 @@ export namespace hero_builds {
    * @returns
    */
   export function hasDefaultHeroBuild(heroName: string): boolean {
-    return Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName);
+    return Object.prototype.hasOwnProperty.call(
+      HeroBuilds.heroBuilds,
+      heroName
+    );
   }
 
   /**
@@ -516,7 +410,8 @@ export namespace hero_builds {
     playerRole: PlayerRoles.DOTA_COACH_ROLE
   ): HeroBuilds.HeroBuild | null {
     //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)) return null;
+    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
+      return null;
 
     const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
       hero_roles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -564,7 +459,9 @@ export namespace hero_builds {
     for (const role_ of guide_rules[r]) {
       //DotaLogger.log(`dota2.getClosestHeroBuild(): roleOfRules = ${role_}`);
       if (Object.prototype.hasOwnProperty.call(guides, role_)) {
-        DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
+        DotaLogger.log(
+          `dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`
+        );
         return guides[role_];
       }
     }
@@ -579,8 +476,11 @@ export namespace hero_builds {
    * @param playerRole
    * @return null if there is no such build
    */
-  export function getDefaultHeroBuild(heroName: string): HeroBuilds.HeroBuild | null {
-    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)) return null;
+  export function getDefaultHeroBuild(
+    heroName: string
+  ): HeroBuilds.HeroBuild | null {
+    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
+      return null;
 
     // Find hero build with right role
     return HeroBuilds.heroBuilds[heroName].builds[0];
@@ -610,8 +510,11 @@ export namespace hero_builds {
    * @param heroName Localized hero name
    * @return null if there is no such build
    */
-  export function getHeroBuildArray(heroName: string): HeroBuilds.HeroBuild[] | null {
-    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)) return null;
+  export function getHeroBuildArray(
+    heroName: string
+  ): HeroBuilds.HeroBuild[] | null {
+    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
+      return null;
 
     return HeroBuilds.heroBuilds[heroName].builds;
   }
@@ -626,7 +529,8 @@ export namespace hero_builds {
     heroName: string,
     playerRole: PlayerRoles.DOTA_COACH_ROLE
   ): HeroBuilds.HeroBuild | null {
-    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName)) return null;
+    if (!Object.prototype.hasOwnProperty.call(HeroBuilds.heroBuilds, heroName))
+      return null;
 
     const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
       hero_roles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -647,7 +551,9 @@ export namespace hero_builds {
    */
   export function getItemNames(): string[] {
     const result: any = {};
-    for (const [heroName, heroContent] of Object.entries(HeroBuilds.heroBuilds)) {
+    for (const [heroName, heroContent] of Object.entries(
+      HeroBuilds.heroBuilds
+    )) {
       for (const build of heroContent.builds) {
         for (const itemBuild of Object.values(build.items)) {
           for (const item of itemBuild) {
@@ -658,7 +564,9 @@ export namespace hero_builds {
         }
       }
       for (const phaseValues of Object.values(heroContent.counter_items)) {
-        for (const roleValues of Object.values(phaseValues) as HeroBuilds.CounterItem[][]) {
+        for (const roleValues of Object.values(
+          phaseValues
+        ) as HeroBuilds.CounterItem[][]) {
           for (const item of roleValues) {
             result[item.item] = true;
           }
@@ -672,7 +580,9 @@ export namespace hero_builds {
    */
   export function getAbilityNames(): string[] {
     const result: any = {};
-    for (const [heroName, heroContent] of Object.entries(HeroBuilds.heroBuilds)) {
+    for (const [heroName, heroContent] of Object.entries(
+      HeroBuilds.heroBuilds
+    )) {
       for (const build of heroContent.builds) {
         for (const ability of build.abilities) {
           if (result[ability] === undefined) {
@@ -779,7 +689,10 @@ export namespace hero_damage_types {
 
 export namespace hero_attributes {
   // Takes localized hero name
-  export function getAttributeColor(heroName: string, isTransparent: boolean): string {
+  export function getAttributeColor(
+    heroName: string,
+    isTransparent: boolean
+  ): string {
     const h = hero.getHero(heroName);
     if (h == null) {
       console.error(
@@ -795,7 +708,9 @@ export namespace hero_attributes {
           return isTransparent ? colorAgilityTransparent : colorAgility;
         }
         case "int": {
-          return isTransparent ? colorIntelligenceTransparent : colorIntelligence;
+          return isTransparent
+            ? colorIntelligenceTransparent
+            : colorIntelligence;
         }
         case "str": {
           return isTransparent ? colorStrengthTransparent : colorStrength;
@@ -824,7 +739,7 @@ export namespace hero_attributes {
    * @returns Strength, Intelligence or Agility if hero is known. If hero is not known it returns null
    */
   export function getAttribute(heroName: string): string | undefined {
-    const npcName = hero_names.localizedNameToNPCName(heroName);
+    const npcName = localizedNameToNPCName(heroName);
     if (npcName === undefined) return undefined;
     const h = hero.getHero(npcName);
     if (h === undefined) {
@@ -895,7 +810,11 @@ export namespace hero_item_builds {
     const result: any = [];
     for (const s of standard) {
       const r: { name: string; info?: string; isCore?: boolean } = { name: s };
-      const tooltip = HeroBuilds.getItemTooltip(heroBuilds, heroBuilds.builds[0], s);
+      const tooltip = HeroBuilds.getItemTooltip(
+        heroBuilds,
+        heroBuilds.builds[0],
+        s
+      );
       if (tooltip) {
         r["info"] = tooltip;
       }
@@ -991,16 +910,23 @@ export namespace hero_item_builds {
     }
 
     return {
-      starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
+      starting: build.items.starting.map((x) =>
+        transformItem(x, build.items.core)
+      ),
       starting_bear:
         build.items.starting_bear != undefined
           ? build.items.starting_bear.map((x) =>
-              transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+              transformItem(
+                x,
+                build.items.core_bear == undefined ? [] : build.items.core_bear
+              )
             )
           : undefined,
       early_game:
         build.items.early_game != undefined
-          ? build.items.early_game.map((x) => transformItem(x, build.items.core))
+          ? build.items.early_game.map((x) =>
+              transformItem(x, build.items.core)
+            )
           : undefined,
       mid_game:
         build.items.mid_game != undefined
@@ -1010,18 +936,28 @@ export namespace hero_item_builds {
         build.items.late_game != undefined
           ? build.items.late_game.map((x) => transformItem(x, build.items.core))
           : undefined,
-      situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
+      situational: build.items.situational.map((x) =>
+        transformItem(x, build.items.core)
+      ),
       situational_bear:
         build.items.situational_bear != undefined
           ? build.items.situational_bear.map((x) =>
-              transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+              transformItem(
+                x,
+                build.items.core_bear == undefined ? [] : build.items.core_bear
+              )
             )
           : undefined,
-      neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
+      neutral: build.items.neutral.map((x) =>
+        transformItem(x, build.items.core)
+      ),
       neutral_bear:
         build.items.neutral_bear != undefined
           ? build.items.neutral_bear.map((x) =>
-              transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+              transformItem(
+                x,
+                build.items.core_bear == undefined ? [] : build.items.core_bear
+              )
             )
           : undefined,
 
@@ -1041,7 +977,10 @@ export namespace hero_counter_items {
    * @param isSupport The role of the player
    * @returns Array of item objects, i.e. { item: "...", info: "..."}
    */
-  export function getCounterItemsLaning(heroName: string, isSupport: boolean): IUIItem[] {
+  export function getCounterItemsLaning(
+    heroName: string,
+    isSupport: boolean
+  ): IUIItem[] {
     //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
     if (heroName == "Outworld Destroyer") heroName = "Outworld Devourer";
 
@@ -1057,7 +996,9 @@ export namespace hero_counter_items {
       }
 
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-      return DotaCoachUI.counterItemsToUIItems([...allItems].concat([...roleItems]));
+      return DotaCoachUI.counterItemsToUIItems(
+        [...allItems].concat([...roleItems])
+      );
     } else {
       return [];
     }
@@ -1069,7 +1010,10 @@ export namespace hero_counter_items {
    * @param isSupport
    * @returns
    */
-  export function getCounterItemsMidGame(heroName: string, isSupport: boolean): IUIItem[] {
+  export function getCounterItemsMidGame(
+    heroName: string,
+    isSupport: boolean
+  ): IUIItem[] {
     //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
     if (heroName == "Outworld Destroyer") heroName = "Outworld Devourer";
 
@@ -1085,13 +1029,18 @@ export namespace hero_counter_items {
       }
 
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-      return DotaCoachUI.counterItemsToUIItems([...allItems].concat([...roleItems]));
+      return DotaCoachUI.counterItemsToUIItems(
+        [...allItems].concat([...roleItems])
+      );
     } else {
       return [];
     }
   }
 
-  export function getCounterItemsLateGame(heroName: string, isSupport: boolean): IUIItem[] {
+  export function getCounterItemsLateGame(
+    heroName: string,
+    isSupport: boolean
+  ): IUIItem[] {
     //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
     if (heroName == "Outworld Destroyer") heroName = "Outworld Devourer";
 
@@ -1107,7 +1056,9 @@ export namespace hero_counter_items {
       }
 
       /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-      return DotaCoachUI.counterItemsToUIItems([...allItems].concat([...roleItems]));
+      return DotaCoachUI.counterItemsToUIItems(
+        [...allItems].concat([...roleItems])
+      );
     } else {
       return [];
     }
@@ -1153,7 +1104,9 @@ export namespace hero_ability_builds {
     }
 
     if (heroBuild == null) {
-      DotaLogger.error(`Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`);
+      DotaLogger.error(
+        `Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`
+      );
       return [];
     }
 
@@ -1165,7 +1118,11 @@ export namespace hero_ability_builds {
         name: ability,
       };
       if (heroBuilds && heroBuild) {
-        const info = HeroBuilds.getAbilityTooltip(heroBuilds, heroBuild, ability);
+        const info = HeroBuilds.getAbilityTooltip(
+          heroBuilds,
+          heroBuild,
+          ability
+        );
         if (info) {
           result["info"] = info;
         }
@@ -1208,7 +1165,7 @@ export namespace hero_images {
   export function idToImgName(heroId: number): string {
     //DotaLogger.log(`dota2.idToImgName(${heroId}): Called`);
 
-    let localizedName = hero_names.idToLocalizedName(heroId);
+    let localizedName = idToLocalizedName(heroId);
     //DotaLogger.log(`dota2.idToImgName(): Localized name: ${localizedName}`);
 
     if (localizedName == "#not found#") {
@@ -1220,11 +1177,14 @@ export namespace hero_images {
         break;
       }
     }
-    const result = `${process.env.IMGPATH}/heroes/${localizedName.replace(/ /gi, "_")}.png`;
+    const result = `${process.env.IMGPATH}/heroes/${localizedName.replace(
+      / /gi,
+      "_"
+    )}.png`;
     return result;
   }
   export function NPCShortNameToImgName(NPCShortName: string): string {
-    return idToImgName(hero_names.NPCSortNameToId(NPCShortName));
+    return idToImgName(NPCSortNameToId(NPCShortName));
   }
 
   export function idToMinimapImgName(heroId: number): string {
@@ -1233,13 +1193,18 @@ export namespace hero_images {
   }
   export function NPCShortNameToMinimapImgName(NPCShortName: string): string {
     //DotaLogger.log(`dota2.idToMinimapImgName(${heroId}): Called`);
-    return NPCShortNameToImgName(NPCShortName).replace(".png", "_minimap_icon.png");
+    return NPCShortNameToImgName(NPCShortName).replace(
+      ".png",
+      "_minimap_icon.png"
+    );
   }
   export function localizedNameToImgName(heroName: string): string {
     //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
     switch (heroName) {
       case "Nature's Prophet": {
-        DotaLogger.log(`dota2.localizedNameToImgName(): Found 'Nature's Prophet'`);
+        DotaLogger.log(
+          `dota2.localizedNameToImgName(): Found 'Nature's Prophet'`
+        );
         heroName = "Furion";
         break;
       }
@@ -1251,7 +1216,10 @@ export namespace hero_images {
 
   export function localizedNameToMinimapImgName(heroName: string): string {
     //DotaLogger.log(`dota2.localizedNameToMinimapImgName(${heroName}): Called`)
-    return localizedNameToImgName(heroName).replace(".png", "_minimap_icon.png");
+    return localizedNameToImgName(heroName).replace(
+      ".png",
+      "_minimap_icon.png"
+    );
 
     /*        switch (heroName) {
               case "Nature's Prophet": {
@@ -1268,834 +1236,3 @@ export namespace hero_images {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export namespace hero_abilities {
-  /**
-   *
-   * @param ability Long ability name, e.g. centaur_hoof_stomp
-   * @return Localized name of hero, "Unknown hero" in case of error
-   */
-  export function getHeroName(ability: string) {
-    //DotaLogger.log(`dota2.hero.getHeroName(${ability}): Called`);
-
-    // This ability is not shown in dota2 Heroes and therefore needs to be treated manually
-    if (ability == "lone_druid_entangling_claws") return "Lone Druid";
-    if (ability == "brewmaster_earth_hurl_boulder") return "Brewmaster";
-    if (ability == "brewmaster_storm_cyclone") return "Brewmaster";
-
-    for (const hero of Object.keys(dota2Heroes)) {
-      //DotaLogger.log(`dota2.hero.getHeroName(): Hero=${hero}`);
-      /*DotaLogger.log(
-        `dota2.hero.getHeroName(): Hero=${JSON.stringify(
-          dota2Heroes[hero].abilities
-        )}`
-      );*/
-      if (dota2Heroes[hero as keyof typeof dota2Heroes].abilities.includes(ability)) {
-        return dota2Heroes[hero as keyof typeof dota2Heroes].localized_name;
-      }
-    }
-    const errorMessage = `dota2.hero_abilities.getHeroName(): Hero of ${ability} not found`;
-    DotaLogger.error(errorMessage);
-    errorHandler({
-      source: "dota2.hero_abilities.getHeroName",
-      message: errorMessage,
-    });
-    return "Unknown hero";
-  }
-
-  /**
-   *
-   * Attention: function is buggy for talents, as differnt heroes can have the same latent. Use getTalent instead.
-   *
-   * @param ability name, e.g. "bane_brain_sap" (Bane)
-   * @returns Object describing the ability (e.g. id, sequence, is_talent, etc. For further details see 'dota2Abilities.json')
-   */
-  export function getAbility(ability: string): Ability | null {
-    //DotaLogger.log(`dota2.getAbility(ability: ${ability}): Called`);
-
-    for (const hero of Object.keys(dota2Abilities)) {
-      for (const a of Object.keys(dota2Abilities[hero as keyof typeof dota2Abilities])) {
-        if (a == ability) {
-          const heroAbilities = dota2Abilities[hero as keyof typeof dota2Abilities];
-          return heroAbilities[a as keyof typeof heroAbilities];
-        }
-      }
-    }
-    return null;
-  }
-
-  /**
-   *
-   * @param npcHeroName E.g. npc_dota_hero_dragon_knight
-   * @param talent name, e.g. "bane_brain_sap" (Bane)
-   * @returns Ability object, null it there is no such ability/talent
-   */
-  export function getTalent(npcHeroName: string, talent: string): Ability | null {
-    //DotaLogger.log(`dota2.getTalent(npcHeroName: ${npcHeroName}, talent: ${talent}): Called`);
-
-    if (Object.prototype.hasOwnProperty.call(dota2Abilities, npcHeroName)) {
-      for (const a of Object.keys(dota2Abilities[npcHeroName as keyof typeof dota2Abilities])) {
-        if (a == talent) {
-          const heroAbilities = dota2Abilities[npcHeroName as keyof typeof dota2Abilities];
-          return heroAbilities[a as keyof typeof heroAbilities];
-        }
-      }
-    }
-    return null;
-  }
-
-  export function getTalentDescription(npcHeroName: string, talent: string): string | null {
-    /*DotaLogger.log(
-      `dota2.getTalentName(npcHeroName: ${npcHeroName}, talent: ${talent})`
-    );*/
-
-    const ability = getTalent(npcHeroName, talent);
-    /*DotaLogger.log(
-      `dota2.getTalentName(): talent = ${JSON.stringify(ability)}`
-    );*/
-    if (ability == null) return null;
-    return ability.description;
-  }
-
-  /**
-   *
-   * @param ability name, e.g. "brain_sap" (Bane)
-   * @returns English name of ability or null if name is not found
-   */
-  export function getIntlName(ability: string): string {
-    return "dota.abilities." + ability;
-  }
-
-  /**
-   *
-   * @param ability name, e.g. "brain_sap" (Bane)
-   * @returns English name of ability or null if name is not found
-   */
-  export function getAbilityName(ability: string): string | undefined {
-    //DotaLogger.log(`dota2.getAbilityName(ability: ${ability}): Called`);
-
-    if (ability == "attack") {
-      return "Attack";
-    }
-
-    if (ability == "special_bonus_attributes") {
-      return "Attribute Bonus";
-    }
-
-    const a = getAbility(ability);
-
-    //DotaLogger.log(`dota2.getAbility(): a=${JSON.stringify(a)}`);
-
-    if (a != null) {
-      if (Object.prototype.hasOwnProperty.call(a, "name")) {
-        //DotaLogger.log(`dota2.getAbilityName(): ${a.name}`);
-        return a.name;
-      } else {
-        //DotaLogger.log(`dota2.getAbilityName(): null`);
-        return undefined;
-      }
-    }
-
-    //DotaLogger.log(`dota2.getAbilityName(): null`);
-    return undefined;
-  }
-
-  /**
-   * Returns the affect type of an ability
-   *
-   * @param ability  Name of skill/ability, e.g. ancient_apparition_cold_feet
-   * @returns null, if ability is not a disable
-   */
-  export function getAffects(ability: string): AbilityAffects | null {
-    const abilityObj = getAbility(ability);
-    if (abilityObj === null) return null;
-    if (abilityObj.affects === undefined) return null;
-    return abilityObj.affects as AbilityAffects;
-  }
-
-  export interface AnalyzedHeroAbilities {
-    buffsBasicDispel: Ability[];
-    debuffsDisablesBasicDispel: Ability[];
-    debuffsDisablesStrongDispel: Ability[];
-    spellsNonDispellable: Ability[];
-    passivesBreakable: Ability[];
-    passivesNonBreakable: Ability[];
-  }
-
-  export function analyzeHeroAbilities(heroIds: number[]): AnalyzedHeroAbilities {
-    const result: AnalyzedHeroAbilities = {
-      buffsBasicDispel: [],
-      debuffsDisablesBasicDispel: [],
-      debuffsDisablesStrongDispel: [],
-      spellsNonDispellable: [],
-      passivesBreakable: [],
-      passivesNonBreakable: [],
-    };
-    /*
-    DotaLogger.log(
-      `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(heroIds)}): Called`
-    );
-    */
-    for (const heroId of heroIds) {
-      const npcName = hero_names.idToNPCName(heroId);
-      const abilities = dota2Abilities[npcName as keyof typeof dota2Abilities];
-      for (const [name, ability_] of Object.entries(abilities)) {
-        const ability = ability_ as Ability;
-
-        if (ability.is_talent === true) continue;
-
-        ability.key = name;
-        ability.npcName = npcName;
-        // Buffs
-        if (ability.is_buff === true) {
-          switch (ability.is_buff_dispellable) {
-            case "strong": {
-              // This should not exist
-              console.error(
-                `Dota2.analyzeHeroAbilities(): Found buff with strong dispel  (${ability.name})`
-              );
-              break;
-            }
-            case "basic": {
-              result.buffsBasicDispel.push(ability);
-              break;
-            }
-            case "no": {
-              result.spellsNonDispellable.push(ability);
-              break;
-            }
-            default: {
-              console.error(
-                `Dota2.analyzeHeroAbilities(): Unknow is_buff_dispellable value (${ability.is_buff_dispellable})`
-              );
-            }
-          }
-        }
-        // Debuffs
-        if (ability.is_debuff === true) {
-          switch (ability.is_debuff_dispellable) {
-            case "strong": {
-              result.debuffsDisablesStrongDispel.push(ability);
-              break;
-            }
-            case "basic": {
-              result.debuffsDisablesBasicDispel.push(ability);
-              break;
-            }
-            case "no": {
-              result.spellsNonDispellable.push(ability);
-              break;
-            }
-            default: {
-              console.error(
-                `Dota2.analyzeHeroAbilities(): Unknow is_debuff_dispellable value (${ability.is_buff_dispellable})`
-              );
-            }
-          }
-        }
-        // Disables
-        if (Array.isArray(ability.disable)) {
-          // Translate disables into dispellability
-          if (
-            ability.disable.includes("cyclone") ||
-            ability.disable.includes("stop") ||
-            ability.disable.includes("leash") ||
-            ability.disable.includes("taunt")
-          ) {
-            result.spellsNonDispellable.push(ability);
-          } else if (
-            ability.disable.includes("stun") ||
-            ability.disable.includes("hex") ||
-            ability.disable.includes("mute")
-          ) {
-            result.debuffsDisablesStrongDispel.push(ability);
-          } else if (
-            ability.disable.includes("sleep") ||
-            ability.disable.includes("silence") ||
-            ability.disable.includes("fear") ||
-            ability.disable.includes("root")
-          ) {
-            result.debuffsDisablesBasicDispel.push(ability);
-          } else {
-            // Error
-            console.error(
-              `Dota2.analyzeHeroAbilities(): Disable not processd: ${JSON.stringify(
-                ability.disable
-              )}`
-            );
-          }
-        }
-        // Remove duplicates
-        result.debuffsDisablesBasicDispel = result.debuffsDisablesBasicDispel.filter(
-          (item, pos) => {
-            return result.debuffsDisablesBasicDispel.indexOf(item) === pos;
-          }
-        );
-        result.debuffsDisablesStrongDispel = result.debuffsDisablesStrongDispel.filter(
-          (item, pos) => {
-            return result.debuffsDisablesStrongDispel.indexOf(item) === pos;
-          }
-        );
-        result.spellsNonDispellable = result.spellsNonDispellable.filter((item, pos) => {
-          return result.spellsNonDispellable.indexOf(item) === pos;
-        });
-
-        // Passives
-        if (ability.is_passive !== "no") {
-          if (ability.is_breakable === true) {
-            result.passivesBreakable.push(ability);
-          } else {
-            result.passivesNonBreakable.push(ability);
-          }
-        }
-      }
-    }
-    /*
-    DotaLogger.log(
-      `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(
-        heroIds
-      )}): Result: ${JSON.stringify(result)}`
-    );
-    */
-    return result;
-  }
-
-  /**
-   *
-   * @param hero localized hero name
-   * @returns arrray of breakable passives
-   */
-  export function getBreakablePassives(heroName: string): string[] {
-    //DotaLogger.log(`dota.getBreakablePassives(heroName: ${heroName}): Called`)
-    const abilities =
-      dota2Abilities[hero_names.localizedNameToNPCName(heroName) as keyof typeof dota2Abilities];
-    const result: any = [];
-    for (const [key, value] of Object.entries(abilities)) {
-      if (Object.prototype.hasOwnProperty.call(value, "is_passive")) {
-        switch ((value as { is_passive: string }).is_passive) {
-          case "yes":
-          case "partial": {
-            result.push(key);
-            break;
-          }
-          default: {
-            break;
-          }
-        }
-      }
-    }
-    //DotaLogger.log(`dota.getBreakablePassives(heroName: ${heroName}): Returned ${heroName}`)
-    return result;
-
-    /*if (breakablePassives[hero] == null) {
-            /* Check is used for the case Dota 2 adds heroes and the app is not updated yet //
-            return []
-        }
-
-        var result = breakablePassives[hero]
-
-        /* return copy of array, otherwise recipient can change content of this.laningItemTips //
-        return  [...result] */
-  }
-
-  export function getDispellableBuffs(hero: string): string[] {
-    if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
-    if (dispellableBuffs[hero as keyof typeof dispellableBuffs] == null) {
-      /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-      return [];
-    }
-
-    const result = dispellableBuffs[hero as keyof typeof dispellableBuffs];
-
-    /* return copy of array, otherwise recipient can change content of dispellableBuffs */
-    return [...result];
-  }
-
-  /**
-   *
-   * @param hero
-   * @returns All abilities that interrupt channeling. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
-   * TASK MICHEL: CHECK IF WE CAN CHANGE FUNCTION TO ONLY RETURN ARRAY OF STRINGS WITH ABILITIES
-   */
-  export function getChannelingInterrupts(hero: string): any[] {
-    return getAbilitiesWithDisables(hero, channeling_interrupts);
-  }
-  /**
-   *
-   * @param hero
-   * @returns All abilities that slience. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
-   */
-  export function getSilences(hero: string): any[] {
-    return getAbilitiesWithDisables(hero, silence);
-  }
-  /**
-   *
-   * @param hero
-   * @returns All abilities that root.  Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
-   */
-  export function getRoots(hero: string): any[] {
-    return getAbilitiesWithDisables(hero, root);
-  }
-
-  /**
-   * Function searches for cooldown redution talents
-   *
-   * @param heroName Localized hero name (e.g. 'Anti-Mage' or 'Legion Commander')
-   * @returns Talent object or null if there is not cooldown reduction talent
-   */
-  export function getCooldownReductionTalent(heroName: string): Talent | undefined {
-    //DotaLogger.log("Dota2.hero.ability.getCooldownReductionTalent(heroName='" + heroName + "'): Called" )
-    const heroNameNPC = hero_names.localizedNameToNPCName(heroName);
-    const abilities = dota2Abilities[heroNameNPC as keyof typeof dota2Abilities];
-
-    let result: Talent | undefined = undefined;
-
-    for (const ability of Object.keys(abilities)) {
-      if (ability.startsWith("special_bonus_cooldown_reduction_")) {
-        const cooldownReduction = parseInt(
-          ability.replace("special_bonus_cooldown_reduction_", "")
-        );
-        const a = abilities[ability as keyof typeof abilities];
-        if (Object.prototype.hasOwnProperty.call(a, "talent_level")) {
-          const talentLevel = (a as { talent_level: number }).talent_level;
-          result = new Talent(talentLevel, cooldownReduction);
-        }
-        break;
-      }
-    }
-    //DotaLogger.log(`Dota2.hero.ability.getCooldownReductionTalent(): Returns '${JSON.stringify(result)}'`)
-    return result;
-  }
-
-  /**
-   * Function returns the abilities of a hero
-   *
-   * @param heroName Localized name
-   * @returns array with ability names, e.g. ["antimage_mana_break", ... ] first 6 skills
-   */
-  export function getAbilities(heroName: string): string[] {
-    /*DotaLogger.log(
-      "Dota2.hero.ability.getAbilities(heroName='" + heroName + "'): Called"
-    );*/
-    const heroNameNPC = hero_names.localizedNameToNPCName(heroName);
-
-    if (dota2Heroes[heroNameNPC as keyof typeof dota2Heroes])
-      return dota2Heroes[heroNameNPC as keyof typeof dota2Heroes].abilities;
-
-    return [];
-  }
-
-  /**
-   *
-   * @param heroName
-   * @returns Hero ultimate as a string
-   */
-  export function getUltimate(heroName: string): string | undefined {
-    //DotaLogger.log("Dota2.hero.ability.getUltimate(heroName='" + heroName + "'): Called" )
-    if (heroName) {
-      if (heroName === "Outworld Devourer") heroName = "Outworld Destroyer";
-      const abilities = getAbilities(heroName);
-      if (Array.isArray(abilities) && abilities.length > 5) return abilities[5];
-    }
-    return undefined;
-  }
-
-  /**
-   *
-   * @param heroName Localized hero name
-   * @return Array of cooldown values, first number is cooldown of first level of ultimate
-   */
-  export function getUltimateCooldown(heroName: string): number[] {
-    const ultimate = getUltimate(heroName);
-    if (ultimate) return getCooldown(ultimate);
-
-    // Maybe report an error to Google Analytics?
-    return [];
-  }
-
-  /**
-   *
-   * @param heroName Localized hero name
-   * @returns true if hero has ultimate. If hero is not found, it returns false
-   */
-  export function hasUltimateTimer(heroName: string): boolean {
-    const cd = getUltimateCooldown(heroName);
-
-    if (!cd) return false;
-
-    const result = !(
-      cd.length == 0 ||
-      (cd.length == 1 && cd[0] == 0) ||
-      (cd.length == 4 && cd[0] == 0 && cd[1] == 0 && cd[2] == 0 && cd[3] == 0) ||
-      heroName == "Broodmother" ||
-      heroName == "Timbersaw" ||
-      heroName == "Leshrac" ||
-      heroName == "Pugna" ||
-      heroName == "Slardar" ||
-      heroName == "Techies" ||
-      heroName == "Axe" ||
-      heroName == "Bounty Hunter" ||
-      heroName == "Ember Spirit" ||
-      heroName == "Phantom Lancer" ||
-      heroName == "Templar Assassin" ||
-      heroName == "Void Spirit" ||
-      heroName == "Invoker" ||
-      heroName == "Tinker"
-    );
-    DotaLogger.log(
-      `dota2.hasUltimateTimer(heroName: ${heroName}): Completed (result: ${result}, cd: ${JSON.stringify(
-        cd
-      )})`,
-      DotaLogger.LogLevel.prod
-    );
-    return result;
-  }
-
-  /**
-   *
-   */
-  export function getManaConsumption(heroAbility: string): string | null {
-    /*DotaLogger.log(
-      "Dota2.hero_abilities.getManaConsumption(heroAbility='" +
-        heroAbility +
-        "'): Called"
-    );*/
-
-    const a = hero_abilities.getAbility(heroAbility);
-
-    if (a == null || !Object.prototype.hasOwnProperty.call(a, "mana_cost")) return null;
-
-    const manaCost = a.mana_cost;
-    //DotaLogger.log("Dota2.hero.ability.getManaConsumption: mc='" + JSON.stringify(mc) + "'")
-    // Format of data: "mc":["80","90","100","110"]
-
-    return manaCost.join(" / ");
-  }
-
-  /**
-   *
-   * @param heroAbility
-   * @returns returns empty array if ability has no cooldown
-   */
-  export function getCooldown(heroAbility: string): number[] {
-    //DotaLogger.log("Dota2.hero.ability.getCooldown(heroAbility='" + heroAbility + "'): Called")
-
-    const a = hero_abilities.getAbility(heroAbility);
-    if (a != null && Object.prototype.hasOwnProperty.call(a, "cooldown")) {
-      // if there is no 'cd' property, the function returns an empty array
-      return a.cooldown;
-    }
-
-    //DotaLogger.log(`Dota2.hero.ability.getCooldown(): Result = '${JSON.stringify(result)}'`)
-    return [];
-  }
-
-  /**
-   *
-   * @param heroAbility
-   * @returns null if there is no cooldown on ability
-   */
-  export function getCooldownAsString(heroAbility: string): string | null {
-    //DotaLogger.log("Dota2.hero.ability.getCooldown(heroAbility='" + heroAbility + "'): Called")
-
-    const a = hero_abilities.getAbility(heroAbility);
-    if (a == null || !Object.prototype.hasOwnProperty.call(a, "cooldown")) return null;
-
-    const cd = a.cooldown;
-
-    // cooldown can not exist as a field, can be a number or an array
-
-    //DotaLogger.log("Dota2.hero.ability.getCooldown(): cd='" + cd + "')")
-
-    return Array.isArray(cd) ? cd.join(" / ") : cd;
-  } /*
-
-  // Returns the ability type
-  // Possible value: 'Unit target', '...
-  /*function getSkillAbilityType(heroAbility: string): string {
-        if (!Abilities[heroAbility].hasOwnProperty("behavior")) {
-            return null
-        }
-
-        const values = ['Unit Target', 'Point Target', 'Unit or Point Target', 'No Target', 'Aura', 'Passive', 'Channeled', 'Toggle', 'Auto-Cast']
-        
-        const behavior = Abilities[heroAbility].behavior
-
-        for (var i=0; i<values.length; i++) {
-            if (behavior.includes(values[i])) {
-                return values[i]
-            }
-        }
-
-        return null
-    }*/
-
-  /**
-   *
-   * @param hero
-   * @param disables
-   * @returns All abilities of a given hero for given disables. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
-   */
-  export function getAbilitiesWithDisables(hero: string, disablesToScreen: string[]): any[] {
-    //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(hero: '" + hero + "', disables: '" + JSON.stringify(disablesToScreen) + "'): Called")
-
-    const heroDisables = disables[hero];
-    if (heroDisables == null) {
-      /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-      return [];
-    }
-
-    const result: any[] = [];
-
-    // Iterate through all skills
-    for (let i = 0; i < heroDisables.length; i++) {
-      // Check if skill is a teleport interrupt
-      let isDisabling = false;
-
-      const skillDisables = heroDisables[i].disables;
-      //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(): skillDisables = '" + JSON.stringify(skillDisables) + "'")
-
-      // Iterate through all disables of a given skil to see if it is a disable that interrupts TPs
-      for (let j = 0; j < skillDisables.length; j++) {
-        //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(): disables = '" + JSON.stringify(disablesToScreen) + "', skillDisables[j] = '" + skillDisables[j] + "'")
-
-        if (disablesToScreen.includes(skillDisables[j])) {
-          isDisabling = true;
-          break;
-        }
-      }
-
-      if (isDisabling) {
-        result.push(heroDisables[i]);
-      }
-    }
-
-    //DotaLogger.log("getAbilitiesWithDisables(): Result = '" + JSON.stringify(result) + "'")
-
-    return result;
-  }
-
-  /**
-   * Returns all abilities and talents from all heroes
-   */
-  export function getAbilityNames(): string[] {
-    const result: any = {};
-    for (const abilities of Object.values(dota2Abilities)) {
-      for (const ability of Object.keys(abilities)) {
-        result[ability] = true;
-      }
-    }
-    return Object.keys(result).sort();
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export namespace items {
-  /**
-   *
-   * @param item
-   * @returns true if it is an item, false otherwise
-   */
-  export function isItem(item: string): boolean {
-    return (
-      Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`) ||
-      Object.prototype.hasOwnProperty.call(dota2Items, item) // To cover customized items such as armor, DamageItems, SentryDustGem, etc.
-    );
-  }
-
-  /**
-   *
-   * @param item name of item e.g. 'blink' or overwhelming_blink'
-   * @returns Cooldown of item if it is an real Dota 2 item (otherwise 0, e.g. in case of armor or other selfmade items)
-   */
-  export function getItemCooldown(item: string): number {
-    //DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Called`);
-
-    if (Object.prototype.hasOwnProperty.call(dota2Items, `item_${item}`)) {
-      // It is a standard Dota 2 item
-      const item_ = dota2Items[`item_${item}` as keyof typeof dota2Items];
-      if (Object.prototype.hasOwnProperty.call(item_, "cooldown")) {
-        const result = (item_ as { cooldown: number }).cooldown;
-        //DotaLogger.log(`Dota2.items.getItemCooldown(${item}): Result=${result}`);
-        return result; //dota2Items[`item_${item} `].cooldown;
-      }
-    }
-    return 0;
-  }
-
-  /**
-   *
-   * @param item Item number
-   * @returns Item name, e.g. 'blink' for blink., or null if item is not found
-   */
-  export function getItemName_(itemId: number): string | undefined {
-    for (const [key, value] of Object.entries(dota2Items)) {
-      if (Object.prototype.hasOwnProperty.call(value, "id")) {
-        if ((value as any).id == itemId) {
-          return key.replace("item_", "");
-        }
-      }
-    }
-    return undefined;
-  }
-
-  /**
-   *
-   * @param itemCode e.g. item_blink
-   * @returns
-   */
-  export function getIntlName(itemCode: string): string | undefined {
-    return "dota.items." + (itemCode.startsWith("item_") ? itemCode : "item_" + itemCode);
-  }
-
-  /**
-   *
-   * @param item e.g. item_blink or armor (Dota Coach item)
-   * @returns Item name, e.g. 'blink' for blink., or null if item is not found
-   */
-  export function getItemNameFromItemCode(itemCode: string): string | undefined {
-    //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): Called`)
-
-    switch (itemCode) {
-      case "armor":
-      case "magicResistance":
-      case "statusResistance":
-      case "DamageItems":
-      case "SentryDustGem":
-      case "SentryGem":
-      case "SentryDust":
-      case "AttackSpeed": {
-        // Don't change
-        break;
-      }
-      default: {
-        itemCode = `item_${itemCode}`;
-      }
-    }
-    if (Object.prototype.hasOwnProperty.call(dota2Items, itemCode)) {
-      if (Object.prototype.hasOwnProperty.call((dota2Items as any)[itemCode], "name")) {
-        //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): ${dota2Items[itemCode].name} `)
-        return (dota2Items as any)[itemCode].name;
-      }
-    }
-    //DotaLogger.log(`dota2.getItemNameFromItemCode(itemCode: ${itemCode}): null`)
-    return undefined;
-  }
-
-  /**
-   * Get the file name of an item.
-   *
-   * @param item Item number
-   * @returns String with path and file name. Null if item is not found
-   */
-  export function getItemImage_(itemId: number): string | undefined {
-    const name = getItemName_(itemId);
-    if (name) return getItemImageFromName_(name);
-    return undefined;
-    /*if (name) return `${process.env.IMGPATH}/items/${name}.png`;
-    return null;*/
-  }
-
-  /**
-   *
-   * @param name
-   * @returns
-   */
-  export function getItemImageFromName_(name: string): string | undefined {
-    return `${process.env.IMGPATH}/items/${name}.png`;
-  }
-
-  /**
-   * Function returns items tracked by the performance tracker
-   *
-   * The list of items has been reviewed with ZoGraF in Q4 2021
-   *
-   * @returns { tracked: { item_code : all_data }, notTracked: { item_code : all_data }}
-   */
-  export function getTrackedItems() {
-    const result: any = {
-      tracked: {},
-      notTracked: {},
-    };
-
-    for (const [key, value] of Object.entries(dota2Items)) {
-      let isTracked = false;
-      //if (!value.is_neutral) {
-      switch (key) {
-        case "item_soul_booster":
-        case "item_ultimate_orb":
-        case "item_demon_edge":
-        case "item_eagle":
-        case "item_reaver":
-        case "item_relic":
-        case "item_mystic_staff":
-        case "item_grandmasters_glaive":
-        case "item_ultimate_scepter_2":
-        case "item_ultimate_scepter_roshan":
-        case "item_fallen_sky": {
-          isTracked = false;
-          break;
-        }
-        case "item_mekansm":
-        case "item_hood_of_defiance":
-        case "item_lesser_crit":
-        case "item_dragon_lance":
-        case "item_mask_of_madness":
-        case "item_ancient_janggo":
-        case "item_veil_of_discord":
-        case "item_glimmer_cape":
-        case "item_vanguard":
-        case "item_ghost":
-        case "item_aghanims_shard": {
-          isTracked = true;
-          break;
-        }
-        default: {
-          // Neutrals don't have a cost, so they are not being tracked by default
-          isTracked = (value as any).cost > 2000;
-          break;
-        }
-      }
-
-      if (isTracked) {
-        result.tracked[key] = value;
-      } else {
-        result.notTracked[key] = value;
-      }
-    }
-
-    return result;
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export namespace other {
-  /**
-   * Returns readable name of ability or item
-   *
-   * @param abilityOrItem e.g. legion_commander_moment_of_courage for Legion Commander's Moment of Courage or revenants_brooch for Revenants Brooch
-   * @returns error if the ability or item does not exist
-   */
-  export function getAbilityOrItemName(abilityOrItem: string): string {
-    if (abilityOrItem === "attack") {
-      return "Attack"; // Create imgur file for attack
-      //    } else if (Object.prototype.hasOwnProperty.call(dota2Items, itemName)) {
-    } else if (Object.prototype.hasOwnProperty.call(dota2Items, `item_${abilityOrItem}`)) {
-      // It is an item
-      /*return (
-        dota2Items[`item_${abilityOrItem}` as keyof typeof dota2Items] as any
-      ).name;*/
-      return (i18nDota as Record<string, string>)[`dota.items.item_${abilityOrItem}`];
-    } else {
-      // It must be an ability
-      const a = hero_abilities.getAbility(abilityOrItem);
-      return a ? a.name : "error (dota2.getAbilityOrItemName)";
-    }
-  }
-}

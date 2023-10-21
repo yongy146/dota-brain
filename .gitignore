@@ -27,3 +27,4 @@ monitorSizes/*.png
 !timerMessages.ts
 !dota2Items.ts
 !attributes.ts
+!heroUtils.ts
