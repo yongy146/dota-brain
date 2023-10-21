@@ -28,3 +28,5 @@ monitorSizes/*.png
 !dota2Items.ts
 !attributes.ts
 !heroUtils.ts
+!submodules
+!submodules/**
