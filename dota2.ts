@@ -11,12 +11,12 @@ import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json"; //assert { type: "json" };
 import dota2Items from "./dota2Items.json"; //assert { type: "json" };
 import dota2Heroes from "./dota2Heroes.json"; //assert { type: "json" };
-import * as DotaLogger from "../../submodules/utilities/log";
+import * as DotaLogger from "@utilities/log";
 // disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
-import { IUIItem, IUIAbility } from "../../submodules/utilities/react/dota/Types";
-import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
+import { IUIItem, IUIAbility } from "@dotaReact/src/dota/Types";
+import * as DotaCoachUI from "@utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 import i18nDota from "./i18n/en/dota.json";
 
 // Version node.js
