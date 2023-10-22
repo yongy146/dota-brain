@@ -17,4 +17,4 @@ monitorSizes/*.png
 !playerRoles.ts
 !README.md
 !timerMessages.ts
-
+!tsconfig.json
