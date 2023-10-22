@@ -1,3 +1,9 @@
 [submodule "submodules/gameData"]
 	path = submodules/gameData
 	url = https://github.com/dota-coach/gameData.git
+[submodule "submodules/utilities"]
+	path = submodules/utilities
+	url = https://github.com/dota-coach/utilities.git
+[submodule "submodules/dotaReact"]
+	path = submodules/dotaReact
+	url = https://github.com/dota-coach/dotaReact.git
