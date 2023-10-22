@@ -1,9 +1,11 @@
 /**
- * Library to manage player roles
+ * Library to manage player roles.
  */
 import { HeroBuild } from "./heroBuilds";
 
-// Steam Guide Roles
+/**
+ * Official roles used in Steam Guides
+ */
 export enum STEAM_GUIDE_ROLE { // <None> is treated by not providing any role
   CORE = "#DOTA_HeroGuide_Role_Core",
   OFFLANE = "#DOTA_HeroGuide_Role_OffLane",
@@ -13,7 +15,10 @@ export enum STEAM_GUIDE_ROLE { // <None> is treated by not providing any role
   ROAMER = "#DOTA_HeroGuide_Role_Roamer",
 }
 
-// Roles used for the Dota Coach guides
+/**
+ * Roles used for the Dota Coach guides built by Content Creators.
+ * Dota Coach App does not differentiate between hard and soft support in its guides.
+ */
 export enum DOTA_COACH_GUIDE_ROLE {
   CARRY = "carry",
   MID = "mid",
@@ -21,7 +26,9 @@ export enum DOTA_COACH_GUIDE_ROLE {
   SUPPORT = "support",
 }
 
-// Roles as used by the Dota Coach app
+/**
+ * Roles used in the Dota Coach app for the user
+ */
 export enum DOTA_COACH_ROLE {
   CARRY = "carry",
   MID = "mid",
@@ -42,48 +49,7 @@ export function getDotaCoachRole(role: DOTA_COACH_GUIDE_ROLE): DOTA_COACH_ROLE {
   return DOTA_COACH_ROLE.HARD_SUPPORT;
 }
 
-// Roles stored in localSotrage / isPlayerSupport
-/*export const HARD_SUPPORT = 'Hard Support'
-export const SOFT_SUPPORT = 'Soft Support'
-export const SAFE_LANE = 'Safe lane'
-export const OFFLANE = 'Offlane'
-export const MID_LANE = 'Mid Lane'*/
-
-/*export const ROLES = [
-    'safeLane', 'midLane', 'offlane', 'softSupport', 'hardSupport'] // used for HTML IDs and to reference files*/
-/*export const ROLE_NAMES = {
-    'safeLane': "Safe Lane",
-    'midLane': "Mid Lane",
-    'offlane': "Offlane",
-    'softSupport': "Soft Support",
-    'hardSupport': "Hard Support"
-}*/
-
-//export const IMG_PATH = '/img/roles/'
-
-/*export function getRoleFullName(role: string) {
-    switch (role) {
-        case 'safeLane': {
-            return SAFE_LANE
-        }
-        case 'midLane': {
-            return MID_LANE
-        }
-        case 'offlane': {
-            return OFFLANE
-        }
-        case 'softSupport': {
-            return SOFT_SUPPORT
-        }
-        case 'hardSupport': {
-            return HARD_SUPPORT
-        }
-        default: {
-            return "Error"
-        }
-    }
-}*/
-
+// Transform to react-intl?!
 export function getRolesString(heroBuild: HeroBuild) {
   let roles = "";
   for (let i = 0; i < heroBuild.roles.length; i++) {
@@ -97,10 +63,13 @@ export function getRolesString(heroBuild: HeroBuild) {
 
 /**
  * Function used to display role in title of steam guide
+ *
  * @param role
  * @returns
  */
-export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
+export function getDotaCoachGuideRoleString(
+  role: DOTA_COACH_GUIDE_ROLE
+): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
@@ -146,6 +115,7 @@ export function roleToMessageId(role: DOTA_COACH_ROLE): string {
       return "dota.roles.Offlane";
     }
     case DOTA_COACH_ROLE.SOFT_SUPPORT: {
+      // Dota 2 localization has no translation of Soft Support
       return "SoftSupport";
     }
     case DOTA_COACH_ROLE.HARD_SUPPORT: {
@@ -190,6 +160,10 @@ export function getRoleImage(role: DOTA_COACH_ROLE): string {
     }
   }
 }
+
+//
+// Utility functions for the player's role in the game
+//
 
 export function isSupport(role: DOTA_COACH_ROLE) {
   return isHardSupport(role) || isSoftSupport(role);
