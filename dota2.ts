@@ -8,16 +8,13 @@
  */
 import * as HeroBuilds from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
-import dota2Abilities from "./dota2Abilities.json"; //assert { type: "json" };
-import dota2Items from "./dota2Items.json"; //assert { type: "json" };
-import dota2Heroes from "./dota2Heroes.json"; //assert { type: "json" };
+import dota2Heroes from "@gameData/out/dota2Heroes.json"; //assert { type: "json" };
 import * as DotaLogger from "@utilities/log";
 // disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
 import { IUIItem, IUIAbility } from "@dotaReact/src/dota/Types";
 import * as DotaCoachUI from "@utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
-import i18nDota from "./i18n/en/dota.json";
 import {
   NPCSortNameToId,
   idToLocalizedName,
@@ -277,7 +274,9 @@ export namespace hero {
     if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
       return undefined;
 
-    return dota2Heroes[heroName as keyof typeof dota2Heroes];
+    return dota2Heroes[heroName as keyof typeof dota2Heroes] as
+      | Hero
+      | undefined;
   }
 
   /**
