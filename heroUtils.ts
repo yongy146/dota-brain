@@ -110,9 +110,9 @@ function* counterItemIterator(
             role === DOTA_COACH_GUIDE_ROLE.SUPPORT) ||
           (rolePlayer === "core" && role !== DOTA_COACH_GUIDE_ROLE.SUPPORT)
         ) {
-          console.log(`rolePlayer: `, rolePlayer);
-          console.log(`counterItems: `, counterItems);
-          console.log(`typeof counterItems: `, typeof counterItems);
+          //console.log(`rolePlayer: `, rolePlayer);
+          //console.log(`counterItems: `, counterItems);
+          //console.log(`typeof counterItems: `, typeof counterItems);
           for (const counterItem of counterItems) {
             counterItems_.push(counterItem);
           }
