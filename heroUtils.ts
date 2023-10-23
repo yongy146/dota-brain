@@ -178,7 +178,7 @@ export function mostRecommendedItems(role?: DOTA_COACH_GUIDE_ROLE): {
       total++;
     }
   }
-  console.log(`heroBuilds: `, total);
+  //console.log(`heroBuilds: `, total);
 
   // Count the number of items in the relevant guides
   const counter: Record<string, number> = {};
