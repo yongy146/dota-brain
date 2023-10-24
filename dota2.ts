@@ -329,6 +329,18 @@ export namespace hero {
    *
    * @returns Array of localized hero names, e.g. Anti-Mage
    */
+  export function getAllHeroURLNames(): string[] {
+    const result: string[] = [];
+    for (const key of Object.keys(dota2Heroes)) {
+      result.push(dota2Heroes[key as keyof typeof dota2Heroes].url_name);
+    }
+    return result;
+  }
+
+  /**
+   *
+   * @returns Array of localized hero names, e.g. Anti-Mage
+   */
   export function getHeroNPCNames(): string[] {
     return Object.keys(dota2Heroes);
   }
@@ -339,7 +351,7 @@ export namespace hero {
   export function isHeroMelee(heroName: string): boolean {
     //console.log("isHeroMelee(" + hero + ") called")
 
-    for (const hero of Object.values(dota2Heroes)) {
+    for (const hero of Object.values<any /*IDota2Hero*/>(dota2Heroes)) {
       //        for (var index in jsonOpenDotaAPI) {
       if (hero.localized_name == heroName) {
         return hero.attack_type == "Melee";
