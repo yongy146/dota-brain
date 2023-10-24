@@ -8,19 +8,12 @@
  */
 import * as HeroBuilds from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
-import dota2Heroes from "@gameData/out/dota2Heroes.json"; //assert { type: "json" };
 import * as DotaLogger from "@utilities/log";
 // disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import { channeling_interrupts, silence, root, disables } from "./disables";
 import * as PlayerRoles from "./playerRoles";
 import { IUIItem, IUIAbility } from "@dotaReact/src/dota/Types";
 import * as DotaCoachUI from "@utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
-import {
-  NPCSortNameToId,
-  idToLocalizedName,
-  localizedNameToNPCName,
-} from "@gameData/out/dota2HeroNames";
-import { IDota2Hero } from "@gameData/out/dota2Heroes";
 
 // Version node.js
 /*import * as HeroBuilds from "./heroBuilds.js";
@@ -122,18 +115,6 @@ export function getRoots(hero: string): any[] {
   return getAbilitiesWithDisables(hero, root);
 }
 
-// Colors for radiant & dire
-export const colorRadiant = "#67dd98"; //'#47661f'
-export const colorDire = "#ea3009"; //'#58251c'
-
-// Colors for strength, intelligence and agility
-export const colorStrength = "#900000";
-export const colorStrengthTransparent = "rgba(255, 0, 0, 0.35)";
-export const colorIntelligence = "#000090";
-export const colorIntelligenceTransparent = "rgba(0, 0, 255, 0.35)";
-export const colorAgility = "#009000";
-export const colorAgilityTransparent = "rgba(0, 255, 0, 0.35)";
-
 type ErrorHandler = (error?: { source?: string; message?: string }) => void;
 let errorHandler: ErrorHandler = () => undefined;
 
@@ -142,45 +123,6 @@ let errorHandler: ErrorHandler = () => undefined;
  */
 export function setErrorHandler(handler: ErrorHandler) {
   errorHandler = handler;
-}
-
-/**
- * Hero type based on information extracted by Dota Coach form Dota 2
- */
-export interface Hero {
-  name: string; // NPC name, e.g. 'npc_dota_hero_antimage'
-  id: number; // e.g., 1
-  localized_name: string; // e.g., 'Anti-Mage'
-  aliases: string[]; // alternative names, e.g., 'am'
-  similar_heroes: number[]; // Hero ids of similar heroes
-  projectile_speed: number; // e.g. 0 for melee heroes like anti-mage
-  roles: string[]; // e.g. ["Carry", "Escape", "Nuker"]
-  complexity: number; // e.g., 1
-  attack_range: number; // e.g., 150
-  attack_type: string; // e.g., "Melee"
-  primary_attr: string; // e.g., "Agility"
-  movement_speed: number; // e.g., 310
-  armor: number; // e.g., 0
-  attack_speed: number; // e.g., 100
-  attack_rate: number; // e.g., 1
-  attack_damage_min: number; // e.g., 29
-  attack_damage_max: number; // e.g., 33
-  attack_animation_point: number; // e.g., 0
-  attack_acquisition_range: number; // e.g., 600
-  strength_base: number; // e.g., 23
-  strength_gain: number; // e.g., 1
-  intelligence_base: number; // e.g.,  12
-  intelligence_gain: number; // e.g., 1
-  agility_base: number; // e.g., 24
-  agility_gain: number; // e.g., 2
-  health_status_regen: number; // e.g., 0
-  img: string; // e.g., "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/antimage.png",
-  img_face: string; // e.g., "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png",
-  img_body: string; // e.g., "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/antimage.png",
-  video: string; // e.g., "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/antimage.webm",
-  steam_guide: string[]; // e.g., ["https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261"]
-  abilities: string[]; // e.g., ["terrorblade_reflection", ...]
-  talents: string[]; // e.g., ["special_bonus_unique_terrorblade_2", etc.]
 }
 
 export interface UIHeroItemBuild {
@@ -197,25 +139,6 @@ export interface UIHeroItemBuild {
   roles?: string;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export namespace lobby {
-  export function lobbyTypeToString(s: string): string {
-    let result = s.replace("DOTA_lobby_type_name_", "");
-    if (result.length > 0) {
-      // Convert first character to capital letter
-      result = result.charAt(0).toUpperCase() + result.slice(1);
-    }
-    return result;
-    /*switch (s) {
-            case 'DOTA_lobby_type_name_ranked':
-                return 'Ranked'
-
-        }*/
-  }
-}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -267,20 +190,6 @@ export namespace time {
 
 export namespace hero {
   /**
-   *
-   * @param heroName NPC hero name
-   * @returns Hero based on Dota static data; null if there is no such hero
-   */
-  export function getHero(heroName: string): Hero | undefined {
-    if (!Object.prototype.hasOwnProperty.call(dota2Heroes, heroName))
-      return undefined;
-
-    return dota2Heroes[heroName as keyof typeof dota2Heroes] as
-      | Hero
-      | undefined;
-  }
-
-  /**
    * Returns HeroContent provided by content creators for the hero.
    *
    * @param heroName Localized hero name
@@ -312,62 +221,6 @@ export namespace hero {
     }
 
     return result;
-  }
-
-  /**
-   *
-   * @returns Array of localized hero names, e.g. Anti-Mage
-   */
-  export function getAllHeroNames(): string[] {
-    const result: string[] = [];
-    for (const key of Object.keys(dota2Heroes)) {
-      result.push(dota2Heroes[key as keyof typeof dota2Heroes].localized_name);
-    }
-    return result;
-  }
-
-  /**
-   *
-   * @returns Array of localized hero names, e.g. Anti-Mage
-   */
-  export function getAllHeroURLNames(): string[] {
-    const result: string[] = [];
-    for (const key of Object.keys(dota2Heroes)) {
-      result.push(dota2Heroes[key as keyof typeof dota2Heroes].url_name);
-    }
-    return result;
-  }
-
-  /**
-   *
-   * @returns Array of localized hero names, e.g. Anti-Mage
-   */
-  export function getHeroNPCNames(): string[] {
-    return Object.keys(dota2Heroes);
-  }
-
-  /**
-   * @heroName: Localized name
-   */
-  export function isHeroMelee(heroName: string): boolean {
-    //console.log("isHeroMelee(" + hero + ") called")
-
-    for (const hero of Object.values<IDota2Hero>(
-      dota2Heroes as Record<symbol, IDota2Hero>
-    )) {
-      //        for (var index in jsonOpenDotaAPI) {
-      if (hero.localized_name == heroName) {
-        return hero.attack_type == "Melee";
-      }
-    }
-
-    /*for (var OpenDotaAPIHero of jsonOpenDotaAPI) {
-          if (OpenDotaAPIHero.localized_name == hero) {
-              return OpenDotaAPIHero.attack_type == "Melee"
-          }
-      }*/
-    console.log("Internal error: isHeroMelee(hero: " + hero + ")");
-    return false; // should never get here though
   }
 }
 
@@ -696,97 +549,6 @@ export namespace hero_damage_types {
     }
     return "#7f8284";
   }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export namespace hero_attributes {
-  // Takes localized hero name
-  export function getAttributeColor(
-    heroName: string,
-    isTransparent: boolean
-  ): string {
-    const h = hero.getHero(heroName);
-    if (h == null) {
-      console.error(
-        "Dota2.hero_attributes.getAttributeColor(heroName: " +
-          heroName +
-          ", isTransparent: " +
-          isTransparent +
-          "): Hero not found."
-      );
-    } else {
-      switch (h.primary_attr) {
-        case "agi": {
-          return isTransparent ? colorAgilityTransparent : colorAgility;
-        }
-        case "int": {
-          return isTransparent
-            ? colorIntelligenceTransparent
-            : colorIntelligence;
-        }
-        case "str": {
-          return isTransparent ? colorStrengthTransparent : colorStrength;
-        }
-        default: {
-          console.error(
-            "Dota2.hero_attributes.getAttributeColor(heroName: " +
-              heroName +
-              ", isTransparent: " +
-              isTransparent +
-              "): Unknown primary attribute (" +
-              h.primary_attr +
-              ")"
-          );
-          break;
-        }
-      }
-    }
-    return "#505050"; // problem occured, so we return white
-  }
-
-  /**
-   * Returns attribute of a given hero
-   *
-   * @param heroName Localized hero name
-   * @returns Strength, Intelligence or Agility if hero is known. If hero is not known it returns null
-   */
-  export function getAttribute(heroName: string): string | undefined {
-    const npcName = localizedNameToNPCName(heroName);
-    if (npcName === undefined) return undefined;
-    const h = hero.getHero(npcName);
-    if (h === undefined) {
-      DotaLogger.log(
-        `dota2.getAttribute(heroName: ${heroName}): could not find hero's primary attribute.`
-      );
-      return undefined;
-    }
-
-    return h.primary_attr;
-  }
-
-  // Takes localized hero name
-  export function getAttributeImg(heroName: string): string {
-    //DotaLogger.log(`Dota2.getAttributeImg(heroName: ${heroName}): Called`);
-    return `${process.env.IMGPATH}/attributes/${getAttribute(heroName)}.png`;
-  }
-
-  // Takes localized hero name
-  /*export function getAttributeName(heroName: string): string {
-          switch (getAttribute(heroName)) {
-              case 'agi' : {
-                  return 'Agility'
-              }
-              case 'int': {
-                  return 'Intelligence'
-              }
-              case 'str': {
-                  return 'Strength'
-              }
-          }
-          return "Error"
-      }*/
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1170,82 +932,6 @@ export namespace hero_ability_builds {
       return result;
     });
   }*/
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export namespace hero_images {
-  export function idToImgName(heroId: number): string {
-    //DotaLogger.log(`dota2.idToImgName(${heroId}): Called`);
-
-    let localizedName = idToLocalizedName(heroId);
-    //DotaLogger.log(`dota2.idToImgName(): Localized name: ${localizedName}`);
-
-    if (localizedName == "#not found#") {
-      return localizedName;
-    }
-    switch (localizedName) {
-      case "Nature's Prophet": {
-        localizedName = "Furion";
-        break;
-      }
-    }
-    const result = `${process.env.IMGPATH}/heroes/${localizedName.replace(
-      / /gi,
-      "_"
-    )}.png`;
-    return result;
-  }
-  export function NPCShortNameToImgName(NPCShortName: string): string {
-    return idToImgName(NPCSortNameToId(NPCShortName));
-  }
-
-  export function idToMinimapImgName(heroId: number): string {
-    //DotaLogger.log(`dota2.idToMinimapImgName(${heroId}): Called`);
-    return idToImgName(heroId).replace(".png", "_minimap_icon.png");
-  }
-  export function NPCShortNameToMinimapImgName(NPCShortName: string): string {
-    //DotaLogger.log(`dota2.idToMinimapImgName(${heroId}): Called`);
-    return NPCShortNameToImgName(NPCShortName).replace(
-      ".png",
-      "_minimap_icon.png"
-    );
-  }
-  export function localizedNameToImgName(heroName: string): string {
-    //DotaLogger.log(`dota2.localizedNameToImgName(${heroName}): Called`)
-    switch (heroName) {
-      case "Nature's Prophet": {
-        DotaLogger.log(
-          `dota2.localizedNameToImgName(): Found 'Nature's Prophet'`
-        );
-        heroName = "Furion";
-        break;
-      }
-    }
-    //return "../img/heroes/" + heroName.replace(/ /gi, "_") + ".png";
-    return `${process.env.IMGPATH}/heroes/${heroName.replace(/ /gi, "_")}.png`;
-    //SHOULD BE CHANGED TO LATER ON: https://dotacoach.gg/img/dota/heroes/...png
-  }
-
-  export function localizedNameToMinimapImgName(heroName: string): string {
-    //DotaLogger.log(`dota2.localizedNameToMinimapImgName(${heroName}): Called`)
-    return localizedNameToImgName(heroName).replace(
-      ".png",
-      "_minimap_icon.png"
-    );
-
-    /*        switch (heroName) {
-              case "Nature's Prophet": {
-                  DotaLogger.log(`dota2.localizedNameToMinimapImgName(): Found 'Nature's Prophet'`)
-                  heroName = "Furion"
-                  break
-              }
-          }
-          //return '../img/heroes/' + heroName.replace(/ /gi, "_") + '.png'
-          return '../img/heroes/' + heroName.replace(/ /gi, "_") + '_minimap_icon.png';*/
-  }
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
