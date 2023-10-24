@@ -20,6 +20,7 @@ import {
   idToLocalizedName,
   localizedNameToNPCName,
 } from "@gameData/out/dota2HeroNames";
+import { IDota2Hero } from "@gameData/out/dota2Heroes";
 
 // Version node.js
 /*import * as HeroBuilds from "./heroBuilds.js";
@@ -351,7 +352,9 @@ export namespace hero {
   export function isHeroMelee(heroName: string): boolean {
     //console.log("isHeroMelee(" + hero + ") called")
 
-    for (const hero of Object.values<any /*IDota2Hero*/>(dota2Heroes)) {
+    for (const hero of Object.values<IDota2Hero>(
+      dota2Heroes as Record<symbol, IDota2Hero>
+    )) {
       //        for (var index in jsonOpenDotaAPI) {
       if (hero.localized_name == heroName) {
         return hero.attack_type == "Melee";
