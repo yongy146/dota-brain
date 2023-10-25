@@ -25,7 +25,7 @@ import {
   DOTA_COACH_GUIDE_ROLE,
   STEAM_GUIDE_ROLE,
   getRolesString,
-} from "./playerRoles";
+} from "../utilities/playerRoles";
 
 export enum ContentCreator {
   //TBD = "TBD",
@@ -101,11 +101,11 @@ export enum DamageType {
  *
  *
  */
-export interface HeroContent {
+export interface IHeroContent {
   creator: ContentCreator; // Owner of the guide (e.g. AlexDota)
   gameplay_version: string; // E.g. 7.30e or 7.31. This should only be updated once the guide is ready to be published
   damage_type: DamageType;
-  builds: HeroBuild[]; // The first build is seen as the "standard build" by the app
+  builds: IHeroBuild[]; // The first build is seen as the "standard build" by the app
   ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
   item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
   combo: string[]; // Main spell, item and "attack" combo for the hero ; this combo is shown in the app (infoboxes) and in the dota guides ; use the same keywords as for ability builds and item buids - on top of that you can also use the word "attack" for right-clicking
@@ -120,7 +120,7 @@ export interface HeroContent {
  * Data structure for each hero build
  *
  */
-export interface HeroBuild {
+export interface IHeroBuild {
   roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
   type?: string; // Type currently only used for invoker mid (QW & QE)
   steam_guide_link: string; // Link to web buids
@@ -138,7 +138,7 @@ export interface HeroBuild {
  * @param heroBuild
  * @returns Returns name of role (e.g. "Mid QW" for Invoker)
  */
-export function getRoleName(heroBuild: HeroBuild): string {
+export function getRoleName(heroBuild: IHeroBuild): string {
   return `${getRolesString(heroBuild)}${
     Object.prototype.hasOwnProperty.call(heroBuild, "type")
       ? " " + heroBuild.type
@@ -179,8 +179,14 @@ export interface CounterItems {
 }
 
 export interface CounterItem {
-  item: string; // Name of item, as in dota2Items.json, but without prefix `item_`. Special names added by Dota Coach are: "armor", "magicResistance" and "statusResistance"
-  info?: string; // Optional info to be displayed on webpage and in the app
+  /**
+   * Name of item, as in dota2Items.json, but without prefix `item_`. Special names added by Dota Coach are: "armor", "magicResistance" and "statusResistance"
+   */
+  item: string;
+  /**
+   * Optional info to be displayed on webpage and in the app
+   */
+  info?: string;
 }
 
 /**
@@ -192,8 +198,8 @@ export interface CounterItem {
  * @return Tooltip string or null, if there is no tooltip
  */
 export function getItemTooltip(
-  heroContent: HeroContent,
-  heroBuild: HeroBuild,
+  heroContent: IHeroContent,
+  heroBuild: IHeroBuild,
   item: string
 ): string | null {
   if (
@@ -220,8 +226,8 @@ export function getItemTooltip(
  * @return Tooltip string or null, if there is no tooltip
  */
 export function getAbilityTooltip(
-  heroContent: HeroContent,
-  heroBuild: HeroBuild,
+  heroContent: IHeroContent,
+  heroBuild: IHeroBuild,
   ability: string
 ): string | null {
   if (
@@ -246,7 +252,7 @@ export function getAbilityTooltip(
  * @param heroBuild
  * @param item
  */
-export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
+export function isCoreItem(heroBuild: IHeroBuild, item: string): boolean {
   for (const coreItem of heroBuild.items.core) {
     if (coreItem == item) return true;
   }
@@ -254,7 +260,7 @@ export function isCoreItem(heroBuild: HeroBuild, item: string): boolean {
   // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
-export const heroBuilds: { [key: string]: HeroContent } = {
+export const heroBuilds: { [key: string]: IHeroContent } = {
   // YoonA plays hero
   Abaddon: {
     gameplay_version: `7.34c`,

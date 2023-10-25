@@ -18,3 +18,9 @@ monitorSizes/*.png
 !README.md
 !timerMessages.ts
 !tsconfig.json
+!content
+!content/**
+!access
+!access/**
+!utilities
+!utilities/**

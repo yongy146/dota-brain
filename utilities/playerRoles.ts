@@ -1,7 +1,8 @@
 /**
- * Library to manage player roles.
+ * Module to manage player roles.
+ *
  */
-import { HeroBuild } from "./heroBuilds";
+import { IHeroBuild } from "../content/heroBuilds";
 
 /**
  * Official roles used in Steam Guides
@@ -50,7 +51,7 @@ export function getDotaCoachRole(role: DOTA_COACH_GUIDE_ROLE): DOTA_COACH_ROLE {
 }
 
 // Transform to react-intl?!
-export function getRolesString(heroBuild: HeroBuild) {
+export function getRolesString(heroBuild: IHeroBuild) {
   let roles = "";
   for (let i = 0; i < heroBuild.roles.length; i++) {
     roles += getDotaCoachGuideRoleString(heroBuild.roles[i]);
@@ -191,4 +192,24 @@ export function isMid(role: DOTA_COACH_ROLE) {
 
 export function isOfflane(role: DOTA_COACH_ROLE) {
   return role === DOTA_COACH_ROLE.OFFLANE;
+}
+
+export function convertDotaCoachRoleToDotaCoachGuidRole(
+  playerRole: DOTA_COACH_ROLE
+): DOTA_COACH_GUIDE_ROLE {
+  switch (playerRole) {
+    case DOTA_COACH_ROLE.CARRY: {
+      return DOTA_COACH_GUIDE_ROLE.CARRY;
+    }
+    case DOTA_COACH_ROLE.MID: {
+      return DOTA_COACH_GUIDE_ROLE.MID;
+    }
+    case DOTA_COACH_ROLE.OFFLANE: {
+      return DOTA_COACH_GUIDE_ROLE.OFFLANE;
+    }
+    case DOTA_COACH_ROLE.SOFT_SUPPORT:
+    case DOTA_COACH_ROLE.HARD_SUPPORT: {
+      return DOTA_COACH_GUIDE_ROLE.SUPPORT;
+    }
+  }
 }
