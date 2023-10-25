@@ -13178,7 +13178,7 @@ export const heroBuilds: { [key: string]: HeroContent } = {
         "A core boots upgrade that speeds up your farm due to attack speed increase and mana savings through toggling.",
       manta:
         "A core item that provides you with mix of stats. Manta applies dispel on cast so it is good against Spirit Vessel - a common Morph counter. Using Manta illusions frequently will boost your farming speed.",
-      sphere: "Great agaist powerful single-target disables and debuffs.",
+      sphere: "Great aganist powerful single-target disables and debuffs.",
       black_king_bar:
         "A core item that allows you to deliver the damage in the fights.",
       ultimate_scepter:
