@@ -183,19 +183,6 @@ export interface Hero {
   talents: string[]; // e.g., ["special_bonus_unique_terrorblade_2", etc.]
 }
 
-export interface UIHeroItemBuild {
-  starting?: IUIItem[]; // CHANGE FROM NULL TO UNDEIFNED FOR ALL ITEMS... CHECK IF IT STILL WORKS IN THE APP!!!
-  starting_bear?: IUIItem[];
-  laning?: IUIItem[]; // Only used for counter items (starting & early_game is used for own hero)
-  early_game?: IUIItem[];
-  mid_game?: IUIItem[];
-  late_game?: IUIItem[];
-  situational?: IUIItem[];
-  situational_bear?: IUIItem[];
-  neutral?: IUIItem[] | null;
-  neutral_bear?: IUIItem[];
-  roles?: string;
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
