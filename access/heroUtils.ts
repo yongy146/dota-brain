@@ -6,11 +6,11 @@
 import {
   CounterItem,
   CounterItems,
-  HeroBuild,
-  HeroContent,
+  IHeroBuild,
+  IHeroContent,
   heroBuilds,
-} from "./heroBuilds";
-import { DOTA_COACH_GUIDE_ROLE, DOTA_COACH_ROLE } from "./playerRoles";
+} from "../content/heroBuilds";
+import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 
 export interface IHeroesWithItem {
   localizedHeroName: string;
@@ -131,7 +131,7 @@ function* counterItemIterator(
 }
 
 function* heroBuildIterator(): Generator<
-  { localizedHeroName: string; heroBuild: HeroBuild },
+  { localizedHeroName: string; heroBuild: IHeroBuild },
   void
 > {
   for (const [localizedHeroName, heroContent] of Object.entries(heroBuilds)) {
@@ -141,7 +141,7 @@ function* heroBuildIterator(): Generator<
   }
 }
 
-function buildContainsItem(build: HeroBuild, item: string): boolean {
+function buildContainsItem(build: IHeroBuild, item: string): boolean {
   for (const items of Object.values(build.items)) {
     if (items.includes(item)) return true;
   }
@@ -149,8 +149,8 @@ function buildContainsItem(build: HeroBuild, item: string): boolean {
 }
 
 function getTooltip(
-  content: HeroContent,
-  build: HeroBuild,
+  content: IHeroContent,
+  build: IHeroBuild,
   item: string
 ): string | undefined {
   return build.item_tooltips?.[item] || content?.item_tooltips?.[item];
