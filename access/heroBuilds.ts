@@ -308,10 +308,7 @@ export function getItemBuildForRole(
  * @param heroBuild
  * @returns Object with UIItems and the associated roles.
  */
-export function getItemBuild(
-  heroContent: IHeroContent,
-  heroBuild: IHeroBuild
-): IItemBuild {
+export function getItemBuild(heroContent: IHeroContent, heroBuild: IHeroBuild): IItemBuild {
   const item_tooltips = {
     ...(heroContent.item_tooltips || {}),
     ...(heroBuild.item_tooltips || {}),
@@ -328,16 +325,11 @@ export function getItemBuild(
 
   return {
     roles: PlayerRoles.rolesToString(heroBuild.roles),
-    starting: build.items.starting.map((x) =>
-      transformItem(x, build.items.core)
-    ),
+    starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
     starting_bear:
       build.items.starting_bear !== undefined
         ? build.items.starting_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear === undefined ? [] : build.items.core_bear
-            )
+            transformItem(x, build.items.core_bear === undefined ? [] : build.items.core_bear)
           )
         : undefined,
     early_game:
@@ -352,26 +344,18 @@ export function getItemBuild(
       build.items.late_game !== undefined
         ? build.items.late_game.map((x) => transformItem(x, build.items.core))
         : undefined,
-    situational: build.items.situational.map((x) =>
-      transformItem(x, build.items.core)
-    ),
+    situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
     situational_bear:
       build.items.situational_bear !== undefined
         ? build.items.situational_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear == undefined ? [] : build.items.core_bear
-            )
+            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
           )
         : undefined,
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
     neutral_bear:
       build.items.neutral_bear !== undefined
         ? build.items.neutral_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear == undefined ? [] : build.items.core_bear
-            )
+            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
           )
         : undefined,
   };
@@ -381,61 +365,59 @@ export function getItemBuild(
 // Ability builds
 //
 
-export namespace hero_ability_builds {
-  /**
-   *
-   * @param heroBuild
-   * @returns
-   */
-  export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
-    //const h_ = hero.name.localizedNameToNPCName(h)
+//export namespace hero_ability_builds {
+/**
+ *
+ * @param heroBuild
+ * @returns
+ */
+export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
+  //const h_ = hero.name.localizedNameToNPCName(h)
 
-    const abilityBuild = heroBuild.abilities;
+  const abilityBuild = heroBuild.abilities;
 
-    /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-    return [...abilityBuild];
-  }
-
-  /**
-   *
-   * @param hero localized hero name
-   * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
-   * @returns Array of abilites
-   */
-  export function getUIAbilityBuild(
-    h: string,
-    playerRole?: PlayerRoles.DOTA_COACH_ROLE
-  ): IAbilityElement[] {
-    const heroBuilds = getHeroContent(h);
-    let heroBuild: IHeroBuild | null;
-
-    if (playerRole === undefined) {
-      heroBuild = getDefaultHeroBuild(h);
-    } else {
-      heroBuild = getClosestHeroBuild(h, playerRole);
-    }
-
-    if (heroBuild === null) {
-      DotaLogger.error(
-        `Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`
-      );
-      return [];
-    }
-
-    return heroBuild.abilities.map((ability) => {
-      const result: IAbilityElement = {
-        name: ability,
-      };
-      if (heroBuilds && heroBuild) {
-        const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
-        if (info) {
-          result["info"] = info;
-        }
-      }
-      return result;
-    });
-  }
+  /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+  return [...abilityBuild];
 }
+
+/**
+ *
+ * @param hero localized hero name
+ * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
+ * @returns Array of abilites
+ */
+export function getUIAbilityBuild(
+  h: string,
+  playerRole?: PlayerRoles.DOTA_COACH_ROLE
+): IAbilityElement[] {
+  const heroBuilds = getHeroContent(h);
+  let heroBuild: IHeroBuild | null;
+
+  if (playerRole === undefined) {
+    heroBuild = getDefaultHeroBuild(h);
+  } else {
+    heroBuild = getClosestHeroBuild(h, playerRole);
+  }
+
+  if (heroBuild === null) {
+    DotaLogger.error(`Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`);
+    return [];
+  }
+
+  return heroBuild.abilities.map((ability) => {
+    const result: IAbilityElement = {
+      name: ability,
+    };
+    if (heroBuilds && heroBuild) {
+      const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
+      if (info) {
+        result["info"] = info;
+      }
+    }
+    return result;
+  });
+}
+//}
 
 /**
  * Returns an array with all http links to all guides for a given hero.
