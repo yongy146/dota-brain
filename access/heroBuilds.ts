@@ -229,7 +229,7 @@ export function getAbilityNames(): string[] {
  * OLD_returns String of items
  * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
  */
-export function getStandardItemBuild(h: string): IItemBuild[] {
+export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
   //DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
   if (!hasDefaultHeroBuild(h)) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
@@ -251,7 +251,7 @@ export function getStandardItemBuild(h: string): IItemBuild[] {
   //const standard = mid_game.concat(late_game);
   const standard = heroBuild.items.core;
 
-  const result: any = [];
+  const result: IPhaseItemBuild[] = [];
   for (const s of standard) {
     const r: { name: string; info?: string; isCore?: boolean } = { name: s };
     const tooltip = getItemTooltip(heroContent, heroBuild, s);
