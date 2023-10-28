@@ -28,7 +28,9 @@ export enum DOTA_COACH_GUIDE_ROLE {
 }
 
 /**
- * Roles used in the Dota Coach app for the user
+ * Roles used in the Dota Coach app for the user.
+ *
+ * Possible values: CARRY, MID, OFFLANE, SOFT_SUPPORT and HARD_SUPPORT
  */
 export enum DOTA_COACH_ROLE {
   CARRY = "carry",
