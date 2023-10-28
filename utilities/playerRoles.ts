@@ -70,9 +70,7 @@ export function getRolesString(heroBuild: IHeroBuild) {
  * @param role
  * @returns
  */
-export function getDotaCoachGuideRoleString(
-  role: DOTA_COACH_GUIDE_ROLE
-): string {
+export function getDotaCoachGuideRoleString(role: DOTA_COACH_GUIDE_ROLE): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
@@ -147,19 +145,19 @@ export function getGuideRoleImage(role: DOTA_COACH_GUIDE_ROLE): string {
 export function getRoleImage(role: DOTA_COACH_ROLE): string {
   switch (role) {
     case DOTA_COACH_ROLE.CARRY: {
-      return "/img/roles/safeLane.png";
+      return "https://download.dotacoach.gg/images/roles/safeLane.png";
     }
     case DOTA_COACH_ROLE.MID: {
-      return "/img/roles/midLane.png";
+      return "https://download.dotacoach.gg/images/roles/midLane.png";
     }
     case DOTA_COACH_ROLE.OFFLANE: {
-      return "/img/roles/offlane.png";
+      return "https://download.dotacoach.gg/images/roles/offlane.png";
     }
     case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-      return "/img/roles/softSupport.png";
+      return "https://download.dotacoach.gg/images/roles/softSupport.png";
     }
     case DOTA_COACH_ROLE.HARD_SUPPORT: {
-      return "/img/roles/hardSupport.png";
+      return "https://download.dotacoach.gg/images/roles/hardSupport.png";
     }
   }
 }
