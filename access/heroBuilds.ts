@@ -278,9 +278,9 @@ export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
 //export function getItemBuild(h: string): any {
 export function getItemBuildForRole(
   h: string,
-  playerRole: PlayerRoles.DOTA_COACH_ROLE
+  playerRole: PlayerRoles.DOTA_COACH_ROLE | null | undefined
 ): IItemBuild | null {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, h)) {
+  if (!heroBuilds[h]) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return null;
   }
@@ -308,7 +308,10 @@ export function getItemBuildForRole(
  * @param heroBuild
  * @returns Object with UIItems and the associated roles.
  */
-export function getItemBuild(heroContent: IHeroContent, heroBuild: IHeroBuild): IItemBuild {
+export function getItemBuild(
+  heroContent: IHeroContent,
+  heroBuild: IHeroBuild
+): IItemBuild {
   const item_tooltips = {
     ...(heroContent.item_tooltips || {}),
     ...(heroBuild.item_tooltips || {}),
@@ -325,11 +328,16 @@ export function getItemBuild(heroContent: IHeroContent, heroBuild: IHeroBuild): 
 
   return {
     roles: PlayerRoles.rolesToString(heroBuild.roles),
-    starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
+    starting: build.items.starting.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     starting_bear:
       build.items.starting_bear !== undefined
         ? build.items.starting_bear.map((x) =>
-            transformItem(x, build.items.core_bear === undefined ? [] : build.items.core_bear)
+            transformItem(
+              x,
+              build.items.core_bear === undefined ? [] : build.items.core_bear
+            )
           )
         : undefined,
     early_game:
@@ -344,18 +352,26 @@ export function getItemBuild(heroContent: IHeroContent, heroBuild: IHeroBuild): 
       build.items.late_game !== undefined
         ? build.items.late_game.map((x) => transformItem(x, build.items.core))
         : undefined,
-    situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
+    situational: build.items.situational.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     situational_bear:
       build.items.situational_bear !== undefined
         ? build.items.situational_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            transformItem(
+              x,
+              build.items.core_bear == undefined ? [] : build.items.core_bear
+            )
           )
         : undefined,
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
     neutral_bear:
       build.items.neutral_bear !== undefined
         ? build.items.neutral_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            transformItem(
+              x,
+              build.items.core_bear == undefined ? [] : build.items.core_bear
+            )
           )
         : undefined,
   };
@@ -400,7 +416,9 @@ export function getUIAbilityBuild(
   }
 
   if (heroBuild === null) {
-    DotaLogger.error(`Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`);
+    DotaLogger.error(
+      `Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`
+    );
     return [];
   }
 
