@@ -96,7 +96,7 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
       let hasItem = false;
       for (const itemBuild of Object.values(build.items)) {
         for (const item of itemBuild) {
-          if (result[item] === undefined) {
+          if (item === itemKey) {
             hasItem = true;
             break;
           }
@@ -104,6 +104,7 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
         if (hasItem) break;
       }
       if (hasItem) {
+        //console.log(`hasItem: `, itemKey);
         oneResult.localizedName = localizedName;
 
         // Add build-specific tooltips
@@ -115,6 +116,7 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
             roles: build.roles,
             type: build.type,
           });
+        //console.log(`oneResult: `, JSON.stringify(oneResult));
       }
     }
 
