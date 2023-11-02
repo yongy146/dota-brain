@@ -205,6 +205,7 @@ export function getItemNames(): string[] {
   }
   return Object.keys(result).sort();
 }
+
 /**
  * Returns all abilities and talents used in the hero guides.
  */

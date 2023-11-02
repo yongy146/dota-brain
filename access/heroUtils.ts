@@ -59,6 +59,70 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
   return result;
 }
 
+export interface ICoreHero {
+  localizedName: string;
+  tooltips?: {
+    tooltip: string;
+    roles?: DOTA_COACH_GUIDE_ROLE[];
+    type?: string; // For Invoker, QW & QE
+  }[];
+}
+
+/**
+ * Returns all heroes for which item is core.
+ *
+ * It also returns all the assocaited tooltips.
+ *
+ * @params itemKey, e.g. "margic_wand"
+ */
+export function getCoreHeroes(itemKey: string): ICoreHero[] {
+  const result: ICoreHero[] = [];
+
+  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
+    const oneResult: ICoreHero = {
+      localizedName: "",
+    };
+
+    // Add global tooltips
+    const tooltip = heroContent.item_tooltips?.[itemKey];
+    if (tooltip) {
+      oneResult.tooltips = [];
+      oneResult.tooltips.push({
+        tooltip,
+      });
+    }
+
+    for (const build of heroContent.builds) {
+      let hasItem = false;
+      for (const itemBuild of Object.values(build.items)) {
+        for (const item of itemBuild) {
+          if (result[item] === undefined) {
+            hasItem = true;
+            break;
+          }
+        }
+        if (hasItem) break;
+      }
+      if (hasItem) {
+        oneResult.localizedName = localizedName;
+
+        // Add build-specific tooltips
+        if (!oneResult.tooltips) oneResult.tooltips = [];
+        const tooltip = build.item_tooltips?.[itemKey];
+        if (tooltip)
+          oneResult.tooltips.push({
+            tooltip,
+            roles: build.roles,
+            type: build.type,
+          });
+      }
+    }
+
+    if (oneResult.localizedName) result.push(oneResult);
+  }
+  return result;
+}
+
 /**
  * Iterates through all the items an the hero guides.
  *
