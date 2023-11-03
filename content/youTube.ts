@@ -31,7 +31,7 @@ export const youTubeVideos: Record<string, IYouTubeVideo | IYouTubeVideo[]> = {
       // Searched: 26.10.2023
 
       // When to buy desolator
-      title: "armor_effect",
+      title: "when_to_buy",
       code: "_HBcbAxlcdY",
     },
     {
