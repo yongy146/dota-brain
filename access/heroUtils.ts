@@ -10,7 +10,10 @@ import {
   IHeroContent,
   heroBuilds,
 } from "../content/heroBuilds";
-import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
+import {
+  DOTA_COACH_GUIDE_ROLE,
+  DOTA_COACH_ROLE,
+} from "../utilities/playerRoles";
 
 export interface IHeroesWithItem {
   localizedHeroName: string;
@@ -251,6 +254,9 @@ function* counterItemIterator(
   }
 }
 
+/**
+ * Function provides iterator through all hero builds.
+ */
 function* heroBuildIterator(): Generator<
   { localizedHeroName: string; heroBuild: IHeroBuild },
   void
@@ -356,4 +362,58 @@ export function mostCounteringItems(role?: DOTA_COACH_GUIDE_ROLE): {
     item: counter.item,
     pct: counter.count / total,
   }));
+}
+
+export interface IItemCoreRecommendedStats {
+  core: number;
+  recommended: number;
+  total: number;
+}
+
+/**
+ * Function returns stats per role (% or heroes, % core item for heroes) for an item.
+ *
+ */
+export function getItemHeroRoleStats(
+  itemKey: string
+): Record<DOTA_COACH_GUIDE_ROLE, IItemCoreRecommendedStats> {
+  const result = {} as Record<DOTA_COACH_GUIDE_ROLE, IItemCoreRecommendedStats>;
+
+  for (const { heroBuild } of heroBuildIterator()) {
+    const itemBuild = heroBuild.items;
+    let hasItem = false;
+    let isCore = false;
+
+    // Iterate through all items
+    // Can return as soon as core is found
+    for (const [phase, items] of Object.entries(itemBuild)) {
+      if (phase.includes("core")) {
+        if (items.include("itemKey")) {
+          hasItem = true;
+          isCore = true;
+          break;
+        }
+      } else {
+        if (items.includes("itemKey")) {
+          hasItem = true;
+        }
+      }
+    }
+
+    for (const role of heroBuild.roles) {
+      if (!result[role]) {
+        result[role] = {
+          core: 0,
+          recommended: 0,
+          total: 0,
+        };
+      }
+
+      result[role].total++;
+      if (hasItem) result[role].recommended++;
+      if (isCore) result[role].core++;
+    }
+  }
+
+  return result;
 }
