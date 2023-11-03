@@ -69,7 +69,7 @@ export interface ICoreHero {
 }
 
 /**
- * Returns all heroes for which item is core.
+ * Returns all heroes for which the given item is core.
  *
  * It also returns all the assocaited tooltips.
  *
@@ -94,29 +94,84 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
 
     for (const build of heroContent.builds) {
       let hasItem = false;
-      for (const itemBuild of Object.values(build.items)) {
-        for (const item of itemBuild) {
-          if (item === itemKey) {
-            hasItem = true;
-            break;
+      for (const [phase, itemBuild] of Object.entries(build.items)) {
+        if (phase.includes("core")) {
+          for (const item of itemBuild) {
+            if (item === itemKey) {
+              hasItem = true;
+              break;
+            }
           }
+          if (hasItem) break;
         }
-        if (hasItem) break;
       }
       if (hasItem) {
         //console.log(`hasItem: `, itemKey);
         oneResult.localizedName = localizedName;
 
         // Add build-specific tooltips
-        if (!oneResult.tooltips) oneResult.tooltips = [];
         const tooltip = build.item_tooltips?.[itemKey];
-        if (tooltip)
+        if (tooltip) {
+          if (!oneResult.tooltips) oneResult.tooltips = [];
           oneResult.tooltips.push({
             tooltip,
             roles: build.roles,
             type: build.type,
           });
+        }
         //console.log(`oneResult: `, JSON.stringify(oneResult));
+      }
+    }
+
+    if (oneResult.localizedName) result.push(oneResult);
+  }
+  return result;
+}
+
+/**
+ * Returns all heroes that are countered by the given item.
+ *
+ * It also returns all the assocaited tooltips.
+ *
+ * @params itemKey, e.g. "margic_wand"
+ */
+export function getHeroesCounteredBy(itemKey: string): ICoreHero[] {
+  const result: ICoreHero[] = [];
+
+  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
+    const oneResult: ICoreHero = {
+      localizedName: "",
+    };
+
+    let hasItem: boolean | string = false;
+    for (const [phase, counterItems] of Object.entries(
+      heroContent.counter_items
+    )) {
+      for (const [role, counterItem] of Object.entries<CounterItem[]>(
+        counterItems as any
+      )) {
+        const item = counterItem.find((item) => item.item === itemKey);
+        if (item) {
+          if (item.info) {
+            hasItem = item.info;
+          } else {
+            hasItem = true;
+          }
+          break;
+        }
+        if (hasItem) break;
+      }
+    }
+
+    if (hasItem) {
+      //console.log(`hasItem: `, itemKey);
+      oneResult.localizedName = localizedName;
+      if (typeof hasItem === "string") {
+        oneResult.tooltips = [
+          {
+            tooltip: hasItem,
+          },
+        ];
       }
     }
 
