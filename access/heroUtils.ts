@@ -10,10 +10,7 @@ import {
   IHeroContent,
   heroBuilds,
 } from "../content/heroBuilds";
-import {
-  DOTA_COACH_GUIDE_ROLE,
-  DOTA_COACH_ROLE,
-} from "../utilities/playerRoles";
+import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 
 export interface IHeroesWithItem {
   localizedHeroName: string;
@@ -366,7 +363,8 @@ export function mostCounteringItems(role?: DOTA_COACH_GUIDE_ROLE): {
 
 export interface IItemCoreRecommendedStats {
   core: number;
-  recommended: number;
+  situational: number;
+  not: number;
   total: number;
 }
 
@@ -388,13 +386,13 @@ export function getItemHeroRoleStats(
     // Can return as soon as core is found
     for (const [phase, items] of Object.entries(itemBuild)) {
       if (phase.includes("core")) {
-        if (items.include("itemKey")) {
+        if (items.includes(itemKey)) {
           hasItem = true;
           isCore = true;
           break;
         }
       } else {
-        if (items.includes("itemKey")) {
+        if (items.includes(itemKey)) {
           hasItem = true;
         }
       }
@@ -404,14 +402,20 @@ export function getItemHeroRoleStats(
       if (!result[role]) {
         result[role] = {
           core: 0,
-          recommended: 0,
+          situational: 0,
+          not: 0,
           total: 0,
         };
       }
 
+      if (isCore) {
+        result[role].core++;
+      } else if (hasItem) {
+        result[role].situational++;
+      } else {
+        result[role].not++;
+      }
       result[role].total++;
-      if (hasItem) result[role].recommended++;
-      if (isCore) result[role].core++;
     }
   }
 
