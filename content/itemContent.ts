@@ -1,7 +1,7 @@
 /**
  * Additional data on items.
  *
- * Localized content is provided throug the i18n file (...) and contains the following
+ * Localized content is provided through the i18n file (...) and contains the following
  *    - Summary:
  *    - Ability notes: item_<item key>_<item ability>_notes, e.g. item_desolator_corruption_notes
  *    - Itemization stragey: ...
@@ -28,11 +28,13 @@ export interface IItem {
 export interface IYouTubeVideo {
   code: string;
   /**
-   * React-intl tag
+   * A react-intl tag.
    *
-   * It is prefixed-with the keys, e.g. 'item_desolator_' for desolator.
-   * The key i18n file can be found in the dota-coach-i18n repository
-   * under /generic/en/items.json
+   * The tag is prefixed with the item key to get the reac-intl id,
+   * e.g. 'item_desolator_' for desolator.
+   *
+   * The react-inlt id is then used in the dota-coach-i18n repository
+   * in the file /generic/en/items.json
    *
    */
   title?: string;
