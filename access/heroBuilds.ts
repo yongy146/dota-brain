@@ -205,6 +205,7 @@ export function getItemNames(): string[] {
   }
   return Object.keys(result).sort();
 }
+
 /**
  * Returns all abilities and talents used in the hero guides.
  */
@@ -229,7 +230,7 @@ export function getAbilityNames(): string[] {
  * OLD_returns String of items
  * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
  */
-export function getStandardItemBuild(h: string): IItemBuild[] {
+export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
   //DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
   if (!hasDefaultHeroBuild(h)) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
@@ -251,7 +252,7 @@ export function getStandardItemBuild(h: string): IItemBuild[] {
   //const standard = mid_game.concat(late_game);
   const standard = heroBuild.items.core;
 
-  const result: any = [];
+  const result: IPhaseItemBuild[] = [];
   for (const s of standard) {
     const r: { name: string; info?: string; isCore?: boolean } = { name: s };
     const tooltip = getItemTooltip(heroContent, heroBuild, s);
@@ -278,9 +279,9 @@ export function getStandardItemBuild(h: string): IItemBuild[] {
 //export function getItemBuild(h: string): any {
 export function getItemBuildForRole(
   h: string,
-  playerRole: PlayerRoles.DOTA_COACH_ROLE
+  playerRole: PlayerRoles.DOTA_COACH_ROLE | null | undefined
 ): IItemBuild | null {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, h)) {
+  if (!heroBuilds[h]) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return null;
   }
@@ -381,61 +382,61 @@ export function getItemBuild(
 // Ability builds
 //
 
-export namespace hero_ability_builds {
-  /**
-   *
-   * @param heroBuild
-   * @returns
-   */
-  export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
-    //const h_ = hero.name.localizedNameToNPCName(h)
+//export namespace hero_ability_builds {
+/**
+ *
+ * @param heroBuild
+ * @returns
+ */
+export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
+  //const h_ = hero.name.localizedNameToNPCName(h)
 
-    const abilityBuild = heroBuild.abilities;
+  const abilityBuild = heroBuild.abilities;
 
-    /* return copy of array, otherwise recipient can change content of this.laningItemTips */
-    return [...abilityBuild];
-  }
-
-  /**
-   *
-   * @param hero localized hero name
-   * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
-   * @returns Array of abilites
-   */
-  export function getUIAbilityBuild(
-    h: string,
-    playerRole?: PlayerRoles.DOTA_COACH_ROLE
-  ): IAbilityElement[] {
-    const heroBuilds = getHeroContent(h);
-    let heroBuild: IHeroBuild | null;
-
-    if (playerRole === undefined) {
-      heroBuild = getDefaultHeroBuild(h);
-    } else {
-      heroBuild = getClosestHeroBuild(h, playerRole);
-    }
-
-    if (heroBuild === null) {
-      DotaLogger.error(
-        `Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`
-      );
-      return [];
-    }
-
-    return heroBuild.abilities.map((ability) => {
-      const result: IAbilityElement = {
-        name: ability,
-      };
-      if (heroBuilds && heroBuild) {
-        const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
-        if (info) {
-          result["info"] = info;
-        }
-      }
-      return result;
-    });
-  }
+  /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+  return [...abilityBuild];
 }
+
+/**
+ *
+ * @param hero localized hero name
+ * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
+ * @returns Array of abilites
+ */
+export function getUIAbilityBuild(
+  h: string,
+  playerRole?: PlayerRoles.DOTA_COACH_ROLE
+): IAbilityElement[] {
+  const heroBuilds = getHeroContent(h);
+  let heroBuild: IHeroBuild | null;
+
+  if (playerRole === undefined) {
+    heroBuild = getDefaultHeroBuild(h);
+  } else {
+    heroBuild = getClosestHeroBuild(h, playerRole);
+  }
+
+  if (heroBuild === null) {
+    DotaLogger.error(
+      `Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`
+    );
+    return [];
+  }
+
+  return heroBuild.abilities.map((ability) => {
+    const result: IAbilityElement = {
+      name: ability,
+    };
+    if (heroBuilds && heroBuild) {
+      const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
+      if (info) {
+        result["info"] = info;
+      }
+    }
+    return result;
+  });
+}
+//}
 
 /**
  * Returns an array with all http links to all guides for a given hero.

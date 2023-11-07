@@ -59,6 +59,127 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
   return result;
 }
 
+export interface ICoreHero {
+  localizedName: string;
+  tooltips?: {
+    tooltip: string;
+    roles?: DOTA_COACH_GUIDE_ROLE[];
+    type?: string; // For Invoker, QW & QE
+  }[];
+}
+
+/**
+ * Returns all heroes for which the given item is core.
+ *
+ * It also returns all the assocaited tooltips.
+ *
+ * @params itemKey, e.g. "margic_wand"
+ */
+export function getCoreHeroes(itemKey: string): ICoreHero[] {
+  const result: ICoreHero[] = [];
+
+  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
+    const oneResult: ICoreHero = {
+      localizedName: "",
+    };
+
+    // Add global tooltips
+    const tooltip = heroContent.item_tooltips?.[itemKey];
+    if (tooltip) {
+      oneResult.tooltips = [];
+      oneResult.tooltips.push({
+        tooltip,
+      });
+    }
+
+    for (const build of heroContent.builds) {
+      let hasItem = false;
+      for (const [phase, itemBuild] of Object.entries(build.items)) {
+        if (phase.includes("core")) {
+          for (const item of itemBuild) {
+            if (item === itemKey) {
+              hasItem = true;
+              break;
+            }
+          }
+          if (hasItem) break;
+        }
+      }
+      if (hasItem) {
+        //console.log(`hasItem: `, itemKey);
+        oneResult.localizedName = localizedName;
+
+        // Add build-specific tooltips
+        const tooltip = build.item_tooltips?.[itemKey];
+        if (tooltip) {
+          if (!oneResult.tooltips) oneResult.tooltips = [];
+          oneResult.tooltips.push({
+            tooltip,
+            roles: build.roles,
+            type: build.type,
+          });
+        }
+        //console.log(`oneResult: `, JSON.stringify(oneResult));
+      }
+    }
+
+    if (oneResult.localizedName) result.push(oneResult);
+  }
+  return result;
+}
+
+/**
+ * Returns all heroes that are countered by the given item.
+ *
+ * It also returns all the assocaited tooltips.
+ *
+ * @params itemKey, e.g. "margic_wand"
+ */
+export function getHeroesCounteredBy(itemKey: string): ICoreHero[] {
+  const result: ICoreHero[] = [];
+
+  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
+    const oneResult: ICoreHero = {
+      localizedName: "",
+    };
+
+    let hasItem: boolean | string = false;
+    for (const [phase, counterItems] of Object.entries(
+      heroContent.counter_items
+    )) {
+      for (const [role, counterItem] of Object.entries<CounterItem[]>(
+        counterItems as any
+      )) {
+        const item = counterItem.find((item) => item.item === itemKey);
+        if (item) {
+          if (item.info) {
+            hasItem = item.info;
+          } else {
+            hasItem = true;
+          }
+          break;
+        }
+        if (hasItem) break;
+      }
+    }
+
+    if (hasItem) {
+      //console.log(`hasItem: `, itemKey);
+      oneResult.localizedName = localizedName;
+      if (typeof hasItem === "string") {
+        oneResult.tooltips = [
+          {
+            tooltip: hasItem,
+          },
+        ];
+      }
+    }
+
+    if (oneResult.localizedName) result.push(oneResult);
+  }
+  return result;
+}
+
 /**
  * Iterates through all the items an the hero guides.
  *
@@ -130,6 +251,9 @@ function* counterItemIterator(
   }
 }
 
+/**
+ * Function provides iterator through all hero builds.
+ */
 function* heroBuildIterator(): Generator<
   { localizedHeroName: string; heroBuild: IHeroBuild },
   void
@@ -235,4 +359,65 @@ export function mostCounteringItems(role?: DOTA_COACH_GUIDE_ROLE): {
     item: counter.item,
     pct: counter.count / total,
   }));
+}
+
+export interface IItemCoreRecommendedStats {
+  core: number;
+  situational: number;
+  not: number;
+  total: number;
+}
+
+/**
+ * Function returns stats per role (% or heroes, % core item for heroes) for an item.
+ *
+ */
+export function getItemHeroRoleStats(
+  itemKey: string
+): Record<DOTA_COACH_GUIDE_ROLE, IItemCoreRecommendedStats> {
+  const result = {} as Record<DOTA_COACH_GUIDE_ROLE, IItemCoreRecommendedStats>;
+
+  for (const { heroBuild } of heroBuildIterator()) {
+    const itemBuild = heroBuild.items;
+    let hasItem = false;
+    let isCore = false;
+
+    // Iterate through all items
+    // Can return as soon as core is found
+    for (const [phase, items] of Object.entries(itemBuild)) {
+      if (phase.includes("core")) {
+        if (items.includes(itemKey)) {
+          hasItem = true;
+          isCore = true;
+          break;
+        }
+      } else {
+        if (items.includes(itemKey)) {
+          hasItem = true;
+        }
+      }
+    }
+
+    for (const role of heroBuild.roles) {
+      if (!result[role]) {
+        result[role] = {
+          core: 0,
+          situational: 0,
+          not: 0,
+          total: 0,
+        };
+      }
+
+      if (isCore) {
+        result[role].core++;
+      } else if (hasItem) {
+        result[role].situational++;
+      } else {
+        result[role].not++;
+      }
+      result[role].total++;
+    }
+  }
+
+  return result;
 }

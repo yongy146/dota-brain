@@ -15,7 +15,6 @@
 
 /*export const teleport_interrupt =			["stun", "cyclone", "hex", "sleep", "mute", "fear", "taunt", "stop", "hide", "leash", "root"]
 export const channeling_skills_interrupt =	["stun", "cyclone", "hex", "sleep", "mute", "fear", "taunt", "stop", "hide", "leash", "silence"]*/
-//import * as Dota2 from "../../submodules/dota-brain/dota2";
 
 export const channeling_interrupts = [
   "stun",
@@ -121,7 +120,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Primal roar is cast on hero but stuns (forced movement by dota2.gamepedia.com) and damages nearby heroes as well.
-	// The Hawks also provide a Hero Root on units within 500 range.
+    // The Hawks also provide a Hero Root on units within 500 range.
   ],
   Bloodseeker: [
     {
@@ -137,7 +136,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
-	// With Aghanims Shard, any hero made invisible by Bounty Hunter also gets a Hero Stun with their first auto attack.
+    // With Aghanims Shard, any hero made invisible by Bounty Hunter also gets a Hero Stun with their first auto attack.
   ],
   Brewmaster: [
     {
@@ -150,7 +149,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["cyclone"],
     },
-	// The Level 25 talent gives a Fear effect on Cinder Brew.
+    // The Level 25 talent gives a Fear effect on Cinder Brew.
   ],
   Bristleback: [],
   Broodmother: [],
@@ -197,11 +196,11 @@ export const disables: IDisables = {
       disables: ["root"],
     },
     // Aghanim's Scepter allows Freezing Field to apply Frostbite.
-	// The Aghanims Shard on Crystal Maiden gives her another Area Root with Crystal Clone.
+    // The Aghanims Shard on Crystal Maiden gives her another Area Root with Crystal Clone.
   ],
   "Dark Seer": [
     // Vacuum acts as area stun(forced movement by dota2.gamepedia.com).
-	// The Aghanims Scepter gives a Hero stun with the Normal Punch ability.
+    // The Aghanims Scepter gives a Hero stun with the Normal Punch ability.
   ],
   "Dark Willow": [
     {
@@ -270,7 +269,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: [`silence`],
     },
-	// The level 25 talent also gives Doom a Hero Mute effect on his ultimate.
+    // The level 25 talent also gives Doom a Hero Mute effect on his ultimate.
     // Devoured neutral creeps can stun (Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
   ],
   "Dragon Knight": [
@@ -341,7 +340,7 @@ export const disables: IDisables = {
   ],
   Enchantress: [
     // Enchanted neutral creeps can stun(Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
-	// The Aghanims Scepter on Enchantress gives her a Hero Root with Little Friends.
+    // The Aghanims Scepter on Enchantress gives her a Hero Root with Little Friends.
   ],
   Enigma: [
     {
@@ -485,7 +484,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // It is area although it acts as a targetable spell (can be countered by Linken's Spehere or Lotus Orb).
-	// The level 20 talent increases the Stun AoE on Impale.
+    // The level 20 talent increases the Stun AoE on Impale.
     {
       skill: "lion_voodoo",
       affects: AbilityAffects.HERO,
@@ -507,7 +506,7 @@ export const disables: IDisables = {
       disables: ["root"],
     },
     // It affects single unit that the bear attacks so perhaps AbilityAffects.HERO? It is not targetable.
-	// Lone Druid also gains a Hero Root with Entangling Claws when using Spirit Form.
+    // Lone Druid also gains a Hero Root with Entangling Claws when using Spirit Form.
   ],
   Luna: [
     {
@@ -530,7 +529,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
-	// The Aghanims Scepter gives Magnus another Area stun with Horn Toss.
+    // The Aghanims Scepter gives Magnus another Area stun with Horn Toss.
   ],
   Marci: [
     {
@@ -538,7 +537,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
-	// The Aghanims Shard gives Marci an Area silence with Unleash.
+    // The Aghanims Shard gives Marci an Area silence with Unleash.
   ],
   Mars: [
     {
@@ -569,7 +568,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
-	// The level 25 talent on Mirana lets her Stun multiple Heroes with each cast of Sacred Arrow.
+    // The level 25 talent on Mirana lets her Stun multiple Heroes with each cast of Sacred Arrow.
   ],
   "Monkey King": [
     {
@@ -612,7 +611,7 @@ export const disables: IDisables = {
     },
   ],
   "Nature's Prophet": [],
-    // The Level 20 talent on Natures Prophet gives him an Area Leash with Sprout.
+  // The Level 20 talent on Natures Prophet gives him an Area Leash with Sprout.
   Necrophos: [
     {
       skill: "necrolyte_reapers_scythe",
@@ -700,7 +699,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
-	// The Aghanim Shard on Primal Beast gives another Area stun with Rock Throw.
+    // The Aghanim Shard on Primal Beast gives another Area stun with Rock Throw.
   ],
   Puck: [
     {
@@ -754,7 +753,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // It is area although it acts as a targetable spells (can be countered by Linken's Spehere or Lotus Orb).
-	// The Aghanims Scepter on Sand King gives an added Area stun with Sand Storm.
+    // The Aghanims Scepter on Sand King gives an added Area stun with Sand Storm.
   ],
   "Shadow Demon": [
     {
@@ -797,7 +796,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
-	// The Aghanims Shard on Silencer gives him another Hero Silence with Glaives of Wisdom. Can silence more than one hero with Glaive bounce talent.
+    // The Aghanims Shard on Silencer gives him another Hero Silence with Glaives of Wisdom. Can silence more than one hero with Glaive bounce talent.
   ],
   "Skywrath Mage": [
     {
@@ -836,7 +835,7 @@ export const disables: IDisables = {
     // Firesnap Cookie is an area stun.
   ],
   Sniper: [
-	{
+    {
       skill: `sniper_assassinate`,
       affects: AbilityAffects.HERO,
       disables: [`stun`],
@@ -898,7 +897,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
-	// The Aghanims Shard gives Tidehunter another Hero Leash with Dead in the Water.
+    // The Aghanims Shard gives Tidehunter another Hero Leash with Dead in the Water.
   ],
   Timbersaw: [],
   Tinker: [
@@ -922,7 +921,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["root"],
     },
-	// The Aghanims Shard on Treant Protector gives him a Hero Root with Natures Guise.
+    // The Aghanims Shard on Treant Protector gives him a Hero Root with Natures Guise.
   ],
   "Troll Warlord": [
     {
@@ -965,10 +964,10 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
-	// The Aghanims Shard on Vengeful Spirit lets her Stun two Heroes with every Magic Missile cast.
+    // The Aghanims Shard on Vengeful Spirit lets her Stun two Heroes with every Magic Missile cast.
   ],
   Venomancer: [
-	//The Aghanim Shard on Venomancer provides a Hero stun with Latent Toxicity if it is dispelled.
+    //The Aghanim Shard on Venomancer provides a Hero stun with Latent Toxicity if it is dispelled.
   ],
   Viper: [],
   Visage: [

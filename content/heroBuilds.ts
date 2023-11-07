@@ -129,7 +129,7 @@ export interface IHeroBuild {
   abilities: string[];
   ability_tooltips?: Tooltips;
   items: ItemBuild;
-  item_tooltips?: Tooltips; // Item tooltips specifc to this hero build
+  item_tooltips?: Tooltips; // Item tooltips specific to this hero build
   combo?: string[]; // Combo specific to this hero build
 }
 
