@@ -24,7 +24,7 @@ export interface IBuildsWithItem {
 
 /**
  * Function returns all heroes that have the item in
- * their build. It also returns the and also tooltips
+ * their build. It also returns the role and possible tooltips.
  *
  * @item item name, e.g. quelling_blade
  */
@@ -191,13 +191,13 @@ export const phase2ItemBuild: Record<string, string> = {
 };
 
 /**
- * Iterates through all the items in the hero guides.
+ * Iterates through all items in the hero guides.
  *
  * Skips core for all heroes except Lone Druid (as the
  * items are repeated) and neutral items for all heroes.
  *
  */
-function* itemIterator(
+export function* itemIterator(
   role?: DOTA_COACH_GUIDE_ROLE,
   phase?: string
 ): Generator<{
@@ -257,7 +257,7 @@ export const phase2CounterItemBuild: Record<string, string> = {
  *
  * Supported roles: undefined (all), support, mid/carry/offlane (all seen as core)
  */
-function* counterItemIterator(
+export function* counterItemIterator(
   role?: DOTA_COACH_GUIDE_ROLE,
   phase?: string
 ): Generator<{
@@ -288,7 +288,7 @@ function* counterItemIterator(
               yield {
                 localizedName,
                 item: (counterItem as CounterItem).item,
-                phase: "phase",
+                phase: phase,
               };
             }
           }
@@ -312,7 +312,7 @@ function* counterItemIterator(
 /**
  * Function provides iterator through all hero builds.
  */
-function* heroBuildIterator(): Generator<{
+export function* heroBuildIterator(): Generator<{
   localizedHeroName: string;
   heroBuild: IHeroBuild;
 }> {
@@ -347,10 +347,14 @@ export function mostRecommendedItems(
   phase?: string
 ): {
   item: string;
-  pct: number;
+  //pct: number;
+  // Percent numbers per phase
+  laning_phase: number;
+  mid_game: number;
+  late_game: number;
+  // Number of relevant guides
+  guides: number;
 }[] {
-  const conversion = {};
-
   // Count the number of relevant guides
   let total = 0;
   for (const heroBuild of heroBuildIterator()) {
@@ -373,27 +377,50 @@ export function mostRecommendedItems(
   //console.log(`heroBuilds: `, total);
 
   // Count the number of items in the relevant guides
-  const counter: Record<string, number> = {};
-  for (const item of itemIterator(role, phase)) {
-    if (phase) {
-      // Only add the ones relevant for the phase
+  const counter: Record<
+    string,
+    {
+      laning_phase: number;
+      mid_game: number;
+      late_game: number;
+      guides: number;
     }
-    // Only add
-    counter[item] = (counter[item] || 0) + 1;
+  > = {};
+  for (const item of itemIterator(role, phase)) {
+    if (!counter[item.item]) {
+      counter[item.item] = {
+        laning_phase: 0,
+        mid_game: 0,
+        late_game: 0,
+        guides: total,
+      };
+    }
+    (counter as any)[item.item][item.phase]++;
   }
 
   // Prepare and sort the results
   const preResult = Object.entries(counter)
     .map(([key, value]) => ({
       item: key,
-      count: value,
+      ...value,
     }))
-    .sort((a, b) => b.count - a.count);
+    .sort(
+      (a, b) =>
+        b.laning_phase +
+        b.mid_game +
+        b.late_game -
+        a.laning_phase -
+        a.mid_game -
+        a.late_game
+    );
 
   // Return results in the proper format
   return preResult.map((counter) => ({
     item: counter.item,
-    pct: counter.count / total,
+    laning_phase: counter.laning_phase,
+    mid_game: counter.mid_game,
+    late_game: counter.late_game,
+    guides: counter.guides,
   }));
 }
 

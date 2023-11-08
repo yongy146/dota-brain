@@ -10213,7 +10213,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958714",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,

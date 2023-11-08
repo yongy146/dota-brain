@@ -24,3 +24,7 @@ monitorSizes/*.png
 !access/**
 !utilities
 !utilities/**
+!package.json
+!babel.config.js
+!jest.config.ts
+!package-lock.json
