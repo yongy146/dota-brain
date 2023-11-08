@@ -347,9 +347,9 @@ export function mostRecommendedItems(
   phase?: string
 ): {
   item: string;
-  //pct: number;
-  // Percent numbers per phase
-  laning_phase: number;
+  // Guides per phase
+  starting: number;
+  early_game: number;
   mid_game: number;
   late_game: number;
   // Number of relevant guides
@@ -380,7 +380,8 @@ export function mostRecommendedItems(
   const counter: Record<
     string,
     {
-      laning_phase: number;
+      starting: number;
+      early_game: number;
       mid_game: number;
       late_game: number;
       guides: number;
@@ -389,12 +390,14 @@ export function mostRecommendedItems(
   for (const item of itemIterator(role, phase)) {
     if (!counter[item.item]) {
       counter[item.item] = {
-        laning_phase: 0,
+        starting: 0,
+        early_game: 0,
         mid_game: 0,
         late_game: 0,
         guides: total,
       };
     }
+    // Incement counter for applicable phase
     (counter as any)[item.item][item.phase]++;
   }
 
@@ -406,22 +409,29 @@ export function mostRecommendedItems(
     }))
     .sort(
       (a, b) =>
-        b.laning_phase +
+        b.starting +
+        b.early_game +
         b.mid_game +
         b.late_game -
-        a.laning_phase -
+        a.starting -
+        a.early_game -
         a.mid_game -
         a.late_game
     );
 
   // Return results in the proper format
-  return preResult.map((counter) => ({
-    item: counter.item,
-    laning_phase: counter.laning_phase,
-    mid_game: counter.mid_game,
-    late_game: counter.late_game,
-    guides: counter.guides,
-  }));
+  return (
+    preResult
+      /*.map((counter) => ({
+      item: counter.item,
+      starting: counter.starting,
+      early_game: counter.early_game,
+      mid_game: counter.mid_game,
+      late_game: counter.late_game,
+      guides: counter.guides,
+    }))*/
+      .filter((c) => c.starting + c.early_game + c.mid_game + c.late_game > 0)
+  );
 }
 
 /**
@@ -435,35 +445,59 @@ export function mostCounteringItems(
   phase?: string
 ): {
   item: string;
-  //pct: number;
-  // Percent numbers per phase
+  // Guides per phase
   laning_phase: number;
   mid_game: number;
   late_game: number;
+  // Number of relevant guides
+  guides: number;
 }[] {
   // Count the number of relevant heroes
   let total = Object.entries(heroBuilds).length;
 
   // Count the number of items in the relevant guides
-  const counter: Record<string, number> = {};
+  const counter: Record<
+    string,
+    {
+      item: string;
+      laning_phase: number;
+      mid_game: number;
+      late_game: number;
+      guides: number;
+    }
+  > = {};
   for (const item of counterItemIterator(role, phase)) {
-    // Only add
-    counter[item] = (counter[item] || 0) + 1;
+    if (!counter[item.item]) {
+      counter[item.item] = {
+        item: item.item,
+        laning_phase: 0,
+        mid_game: 0,
+        late_game: 0,
+        guides: total,
+      };
+    }
+    // Incement counter for applicable phase
+    (counter as any)[item.item][item.phase]++;
   }
 
   // Prepare and sort the results
   const preResult = Object.entries(counter)
     .map(([key, value]) => ({
-      item: key,
-      count: value,
+      //item: key,
+      ...value,
     }))
-    .sort((a, b) => b.count - a.count);
+    .sort(
+      (a, b) =>
+        b.laning_phase +
+        b.mid_game +
+        b.late_game -
+        a.laning_phase -
+        a.mid_game -
+        a.late_game
+    );
 
   // Return results in the proper format
-  return preResult.map((counter) => ({
-    item: counter.item,
-    pct: counter.count / total,
-  }));
+  return preResult.filter((c) => c.laning_phase + c.mid_game + c.late_game > 0);
 }
 
 export interface IItemCoreRecommendedStats {
