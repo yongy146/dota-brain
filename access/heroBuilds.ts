@@ -9,7 +9,7 @@ import {
   isCoreItem,
 } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
-import * as DotaLogger from "@utilities/log";
+import * as DotaLogger from "@utilities/log/log";
 
 export interface IItemBuild {
   roles?: string;

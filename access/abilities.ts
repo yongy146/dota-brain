@@ -7,7 +7,7 @@
  * (C) Dota Coach, 2023
  */
 import { dispellableBuffs } from "../content/dispellableBuffs";
-//import * as DotaLogger from "@utilities/log";
+//import * as DotaLogger from "@utilities/log/log";
 // disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import {
   channeling_interrupts,
