@@ -8205,7 +8205,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   Invoker: {
-    gameplay_version: `7.34c`,
+    gameplay_version: `7.34d`,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -8257,51 +8257,55 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             `bracer`,
             `bracer`,
-            `power_treads`,
+            `boots`,
             `magic_wand`,
             `urn_of_shadows`,
           ],
           mid_game: [
             `spirit_vessel`,
             `hand_of_midas`,
-            `hurricane_pike`,
-            `manta`,
+			`travel_boots`,
+            `octarine_core`,
             `aghanims_shard`,
           ],
           late_game: [
-            `sheepstick`,
             `blink`,
+            `sheepstick`,
             `ultimate_scepter`,
-            `greater_crit`,
+            `refresher`,
           ],
           situational: [
-            `falcon_blade`,
+            `blood_grenade`,
+			`falcon_blade`,
             `orchid`,
             `ancient_janggo`,
             `solar_crest`,
+			`hurricane_pike`,
             `witch_blade`,
             `cyclone`,
             `revenants_brooch`,
             `black_king_bar`,
             `ethereal_blade`,
-            `octarine_core`,
+            `manta`,
             `shivas_guard`,
             `sphere`,
             `aeon_disk`,
             `skadi`,
             `mjollnir`,
+			`greater_crit`,
             `swift_blink`,
             `overwhelming_blink`,
             `travel_boots`,
           ],
           core: [
             `bracer`,
-            `power_treads`,
+            `boots`,
             `spirit_vessel`,
             `hand_of_midas`,
-            `hurricane_pike`,
-            `manta`,
+            `travel_boots`,
+            `octarine_core`,
             `aghanims_shard`,
+			`blink`,
             `sheepstick`,
           ],
           neutral: [
@@ -8319,8 +8323,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
         item_tooltips: {
           urn_of_shadows: "A core item to proc Cold Snap ticks.",
-          witch_blade: `A core item to improve your damage output through right clicks and proc more Cold Snap ticks.`,
-          // spirit_vessel: `A core item against a heavy healing lineup that also makes you tankier and provides damage.`,
+          blood_grenade: `A core item for support Invoker. You should get one at the start in place of one of the branches.`,
+		  witch_blade: `A situational item to improve your damage output through right clicks and proc more Cold Snap ticks.`,
+          spirit_vessel: `A core item against a heavy healing lineup that also makes you tankier and provides damage.`,
           solar_crest: `An item for support invoker that massively boosts your right click damage on enemy heroes. Also helps you potentially take an early Roshan.`,
           ancient_janggo: `A situational item that improves your team in fights with auras and also gives you more DPS with right clicks.`,
           blink: "To close the gap and land your spell combo.",
@@ -8340,11 +8345,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "invoker_exort", // 3
           "invoker_quas", // 4
           "invoker_exort", // 5
-          "invoker_quas", // 6
+          `invoker_wex`, // 6
           "invoker_exort", // 7
           `invoker_quas`, // 8
           "invoker_exort", // 9
-          `invoker_wex`, // 10
+          `invoker_quas`, // 10
           "invoker_exort", // 11
           "invoker_wex", // 12
           "invoker_exort", // 13
@@ -8374,50 +8379,51 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             `bracer`,
             `bracer`,
-            `power_treads`,
+            `boots`,
             `magic_wand`,
-            `urn_of_shadows`,
+            `hand_of_midas`,
           ],
           mid_game: [
-            `spirit_vessel`,
-            `hand_of_midas`,
-            `hurricane_pike`,
-            `manta`,
-            `aghanims_shard`,
+            `travel_boots`,
+            `ultimate_scepter`,
+            `blink`,
+            `octarine_core`,
+			`aghanims_shard`,
           ],
           late_game: [
+            `black_king_bar`,
             `sheepstick`,
-            `blink`,
-            `ultimate_scepter`,
-            `greater_crit`,
+            `refresher`,
+            `shivas_guard`,
           ],
           situational: [
             `wraith_band`,
+			`power_treads`,
             `falcon_blade`,
             `orchid`,
-            `witch_blade`,
+            `spirit_vessel`,
+			`hurricane_pike`,
+			`manta`,
             `cyclone`,
             `revenants_brooch`,
-            `black_king_bar`,
             `ethereal_blade`,
-            `octarine_core`,
-            `shivas_guard`,
             `sphere`,
             `aeon_disk`,
             `skadi`,
             `mjollnir`,
+			`greater_crit`,
             `swift_blink`,
             `overwhelming_blink`,
-            `travel_boots`,
+            `travel_boots_2`,
           ],
           core: [
             `bracer`,
-            `power_treads`,
-            `spirit_vessel`,
+            `boots`,
             `hand_of_midas`,
-            `hurricane_pike`,
-            `manta`,
-            `aghanims_shard`,
+			`travel_boots`,
+            `blink`,
+            `octarine_core`,
+            `black_king_bar`,
             `sheepstick`,
           ],
           neutral: [
