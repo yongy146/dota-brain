@@ -148,17 +148,17 @@ export function getRoleName(heroBuild: IHeroBuild): string {
 
 export interface ItemBuild {
   // Total costs for starting & starting_bear should be below 600. If the are below 550, then there needs to be a good reason why not all gold is used
-  starting: string[];
-  starting_bear?: string[];
-  early_game?: string[]; // provided for all heroes, except for Lone Druid
-  mid_game?: string[]; // provided for all heroes, except for Lone Druid
-  late_game?: string[]; // provided for all heroes, except for Lone Druid
-  situational: string[];
-  situational_bear?: string[];
-  core: string[]; // selected items from starting, early_game, mid_game, late_game and situational ; except for Lone Druid
-  core_bear?: string[];
-  neutral: string[];
-  neutral_bear?: string[];
+  starting: string[]; // For all heroes
+  starting_bear?: string[]; // Only for Lone Druid's Bear
+  early_game?: string[]; // For all heroes, except for Lone Druid
+  mid_game?: string[]; // For all heroes, except for Lone Druid
+  late_game?: string[]; // For all heroes, except for Lone Druid
+  situational: string[]; // For all heroes
+  situational_bear?: string[]; // Only for Lone Druid's Bear
+  core: string[]; // Selected items from starting, early_game, mid_game, late_game and situational; note: Lone Druid has no early, mid and late game items, oncl starting, core and neutral
+  core_bear?: string[]; // Only for Lone Druid's Bear
+  neutral: string[]; // For all heroes
+  neutral_bear?: string[]; // Only for Lone Druid's Bear
 }
 
 /**
@@ -8264,23 +8264,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: [
             `spirit_vessel`,
             `hand_of_midas`,
-			`travel_boots`,
+            `travel_boots`,
             `octarine_core`,
             `aghanims_shard`,
           ],
-          late_game: [
-            `blink`,
-            `sheepstick`,
-            `ultimate_scepter`,
-            `refresher`,
-          ],
+          late_game: [`blink`, `sheepstick`, `ultimate_scepter`, `refresher`],
           situational: [
             `blood_grenade`,
-			`falcon_blade`,
+            `falcon_blade`,
             `orchid`,
             `ancient_janggo`,
             `solar_crest`,
-			`hurricane_pike`,
+            `hurricane_pike`,
             `witch_blade`,
             `cyclone`,
             `revenants_brooch`,
@@ -8292,7 +8287,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aeon_disk`,
             `skadi`,
             `mjollnir`,
-			`greater_crit`,
+            `greater_crit`,
             `swift_blink`,
             `overwhelming_blink`,
             `travel_boots`,
@@ -8305,7 +8300,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
             `octarine_core`,
             `aghanims_shard`,
-			`blink`,
+            `blink`,
             `sheepstick`,
           ],
           neutral: [
@@ -8324,7 +8319,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         item_tooltips: {
           urn_of_shadows: "A core item to proc Cold Snap ticks.",
           blood_grenade: `A core item for support Invoker. You should get one at the start in place of one of the branches.`,
-		  witch_blade: `A situational item to improve your damage output through right clicks and proc more Cold Snap ticks.`,
+          witch_blade: `A situational item to improve your damage output through right clicks and proc more Cold Snap ticks.`,
           spirit_vessel: `A core item against a heavy healing lineup that also makes you tankier and provides damage.`,
           solar_crest: `An item for support invoker that massively boosts your right click damage on enemy heroes. Also helps you potentially take an early Roshan.`,
           ancient_janggo: `A situational item that improves your team in fights with auras and also gives you more DPS with right clicks.`,
@@ -8388,7 +8383,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
             `blink`,
             `octarine_core`,
-			`aghanims_shard`,
+            `aghanims_shard`,
           ],
           late_game: [
             `black_king_bar`,
@@ -8398,12 +8393,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           situational: [
             `wraith_band`,
-			`power_treads`,
+            `power_treads`,
             `falcon_blade`,
             `orchid`,
             `spirit_vessel`,
-			`hurricane_pike`,
-			`manta`,
+            `hurricane_pike`,
+            `manta`,
             `cyclone`,
             `revenants_brooch`,
             `ethereal_blade`,
@@ -8411,7 +8406,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aeon_disk`,
             `skadi`,
             `mjollnir`,
-			`greater_crit`,
+            `greater_crit`,
             `swift_blink`,
             `overwhelming_blink`,
             `travel_boots_2`,
@@ -8420,7 +8415,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bracer`,
             `boots`,
             `hand_of_midas`,
-			`travel_boots`,
+            `travel_boots`,
             `blink`,
             `octarine_core`,
             `black_king_bar`,
