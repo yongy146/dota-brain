@@ -5,6 +5,7 @@ import {
   getHeroesWithItem,
   heroBuildIterator,
   itemIterator,
+  mostCounteringItems,
   mostRecommendedItems,
 } from "./heroUtils";
 
@@ -197,4 +198,20 @@ test("mostRecommendedItems-carry_late_game", () => {
   //console.log(`heroesWithItem: `, JSON.stringify(heroesWithItem));
 
   expect(1).toBe(1);
+});
+
+test("mostRecommendedItems-carry_late_game", () => {
+  const counteringItems = mostCounteringItems(
+    undefined, //DOTA_COACH_GUIDE_ROLE.CARRY,
+    undefined //"DOTA_Item_Build_Late_Items"
+  );
+  //const heroes = heroesWithItem.map((i) => i.localizedName);
+  //console.log(`counteringItems: `, JSON.stringify(counteringItems));
+
+  for (const item of counteringItems) {
+    expect(item.total).toBeLessThanOrEqual(item.guides);
+    expect(
+      item.laning_phase + item.mid_game + item.late_game
+    ).toBeGreaterThanOrEqual(item.total);
+  }
 });

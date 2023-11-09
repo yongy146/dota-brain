@@ -449,6 +449,7 @@ export function mostCounteringItems(
   laning_phase: number;
   mid_game: number;
   late_game: number;
+  total: number; // Can be different, as one item can be in two phases
   // Number of relevant guides
   guides: number;
 }[] {
@@ -463,21 +464,41 @@ export function mostCounteringItems(
       laning_phase: number;
       mid_game: number;
       late_game: number;
+      total: number;
       guides: number;
     }
   > = {};
+  let hero = undefined;
+  const counterItems = new Set<string>();
   for (const item of counterItemIterator(role, phase)) {
+    // A hero can have the sam ecounter item twice,
+    // e.g. a BKB for cores in mid game and BKB for supports in late game
+    // This needs to be corrected
+
+    // Clear control set, if hero changed
+    if (hero !== item.localizedName) {
+      hero = item.localizedName;
+      counterItems.clear();
+    }
+
     if (!counter[item.item]) {
       counter[item.item] = {
         item: item.item,
         laning_phase: 0,
         mid_game: 0,
         late_game: 0,
+        total: 0,
         guides: total,
       };
     }
-    // Incement counter for applicable phase
+    // Increment counter for applicable phase
     (counter as any)[item.item][item.phase]++;
+
+    // Add item, if it was not yet added
+    if (!counterItems.has(item.item)) {
+      counterItems.add(item.item);
+      (counter as any)[item.item].total++;
+    }
   }
 
   // Prepare and sort the results
