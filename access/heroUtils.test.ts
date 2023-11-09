@@ -1,3 +1,8 @@
+/**
+ * npx jest heroUtils.test.ts
+ *
+ */
+
 import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 import {
   counterItemIterator,
@@ -8,6 +13,7 @@ import {
   mostCounteringItems,
   mostRecommendedItems,
 } from "./heroUtils";
+import dota2ItemsActive from "../submodules/gameData/out/dota2ItemsActive.json";
 
 test("heroBuildIterator", () => {
   const it = heroBuildIterator();
@@ -214,4 +220,25 @@ test("mostRecommendedItems-carry_late_game", () => {
       item.laning_phase + item.mid_game + item.late_game
     ).toBeGreaterThanOrEqual(item.total);
   }
+});
+
+//
+// Validate that all core items have a tooltip
+//
+test("Core items have tooltips", () => {
+  const missing: Record<string /* localized name */, string[] /* items */> = {};
+
+  for (const item of Object.keys(dota2ItemsActive)) {
+    const heroes = getCoreHeroes(item.replace("item_", ""));
+    for (const hero of heroes) {
+      if (!hero.tooltips) {
+        if (!missing[hero.localizedName]) missing[hero.localizedName] = [];
+        missing[hero.localizedName].push(item);
+      }
+    }
+  }
+
+  console.log(`missing: `, missing);
+
+  expect(missing).toEqual({});
 });
