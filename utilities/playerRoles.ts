@@ -130,16 +130,16 @@ export function roleToMessageId(role: DOTA_COACH_ROLE): string {
 export function getGuideRoleImage(role: DOTA_COACH_GUIDE_ROLE): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
-      return "/img/roles/safeLane.png";
+      return "https://download.dotacoach.gg/app/images/roles/safeLane.png";
     }
     case DOTA_COACH_GUIDE_ROLE.MID: {
-      return "/img/roles/midLane.png";
+      return "https://download.dotacoach.gg/app/images/roles/midLane.png";
     }
     case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
-      return "/img/roles/offlane.png";
+      return "https://download.dotacoach.gg/app/images/roles/offlane.png";
     }
     case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
-      return "/img/roles/support.png";
+      return "https://download.dotacoach.gg/app/images/roles/support.png";
     }
   }
 }
