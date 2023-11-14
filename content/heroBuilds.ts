@@ -475,6 +475,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       ward_sentry: "To block or unblock a pull camp.",
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       orb_of_venom: "Helps you chase enemy heroes to apply Curse of Avernus.",
+      phase_boots: `A core Boots upgrade for offlane Abaddon to boost damage and tankiness while allowing you to maintain Curse of Avernus procs with the movement speed active.`,
+	    hand_of_midas: `A core item to boost your farming speed and scale beyond the mid game as Abaddon does not have any farming ability.`,
+	    bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    force_staff: `A mobility item that helps you push yourself or one of your allies away from trouble. Also helps you get closer to an ally to apply Aphotic Shield.`,
+	    sphere: `A core defensive item for offlane Abaddon for protection against single target abilities such as Doom. Also boosts your right click damage through stats.`,
+	    glimmer_cape: `A core defensive item that lets you or a teammate become invisible and get out of trouble. Works well in combination with Aphotic Shield to build a massive magic damage barrier.`,
       guardian_greaves: `An incredible aura item to buff your team and provide even more sustain. Buy Arcane Boots instead of Tranquil Boots if you plan to get Greaves.`,
       holy_locket: `A situational item to further increase your healing output. It provides a burst of healing and mana on cast as well.`,
       tranquil_boots: `A core boots upgrade to give you some much needed HP regen and movement speed.`,
@@ -1665,6 +1672,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       arcane_boots:
         "A core boots upgrade for mana sustain. It can be disassembled and Energy Booster used for Aether Lens. You should upgrade the leftover boots to Tranquil Boots.",
       wind_lace: "For extra mobility as Bane is great at setting up kills.",
+      blink: `A core item on Bane for extra mobility and get a better positioning to channel Fiends Grip.`,
+      ultimate_scepter: `A core item that lets you cancel Fiends Grip channeling with your hero and use your other spells. Also makes it much more difficult for enemy team to cancel your Fiends Grip channeling.`,
+      tranquil_boots: `A boots upgrade for extra movement speed once you have disassembled Arcane Boots for Aether Lens.`,
+      force_staff: `A core item for extra mobility and set up kills with gap close.`,
       aether_lens:
         "A core item that allows you to get your spells off from further away.",
       glimmer_cape:
@@ -1958,6 +1969,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that provides very good mobility and map coverage while ganking and farming.",
       black_king_bar:
         "A core item that allows you to get Flaming Lasso off on a specific target.",
+      witch_blade: `A core item that adds to your damage output through right clicks. Works well with Sticky Napalm as it increases the damage of Witch Blade instances.`,
+	    bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    force_staff: `A mobility item that lets you quickly drag enemy heroes with Flaming Lasso. Also helps you push yourself or one of your allies away from trouble.`,
+	    refresher: `A late game luxury item that helps you lockdown more enemy heroes with a second Lasso. Also works well with the Flamebreak charges talent on level 20.`,
       aghanims_shard: `A core item that adds to your damage output through right clicks.`,
       sphere:
         "Against single target disables. e.g Sand King, Legion Commander.",
@@ -2149,6 +2164,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "Solves your HP sustain issues and builds into Helm of the Dominator. Get it as early as possible.", */
       helm_of_the_dominator:
         "A core item that synergizes well with the Inner Beast and allows you to push and pick-off heroes. Look to upgrade it to Helm of the Overlord.",
+      vladmir: `A core aura item that boosts the damage and tankiness of your team as well as army of summons. Builds into Helm of the Overlord later in the game.`,
+	    helm_of_the_overlord: `A core item to dominate an ancient creep to add to your army. Improves the potential of fighting and split pushing on the map.`,
+	    assault: `A late game aura item that boosts your team against physical damage and improves the potential of running at towers as well as Roshan with your team and army of summons.`,
       arcane_boots: `A core item that gives you mana sustain to spam Axes, Boars, and Hawks.`,
       aghanims_shard: `A core item that improves lockdown around your hero with more Hawks.`,
       ultimate_scepter: `A core item that improves your damage and sustain in fights.`,
@@ -2604,6 +2622,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       infused_raindrop: "Against magical burst.",
       urn_of_shadows: `A situational item that allows you to snowball off of first kill. It provides useful stats, good mana regeneration. You can unstealth yourself by using it when you get dusted to move faster.`,
       spirit_vessel: "Against heavy-healing lineup.",
+      sheepstick: `A core late game item to have an added form of lockdown on top of Shadow Walk. Also provides mana regen to spam Shuriken Toss.`,
       solar_crest: `A core item that massively boosts your single target damage on an enemy hero and lets you stay on top of them for more right clicks. Also helps you with mana sustain.`,
       boots_of_bearing: `An core upgrade to Tranquil Boots that significantly improves your teamfight impact with the attack and movement speed aura.`,
       wind_waker: `A core item that allows you to dispel yourself as well as move to a safer spot through cyclone.`,
@@ -3173,6 +3192,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "If you are playing midlane but also on offlane for extra vision aroud the lane.",
       infused_raindrop: "Against magical burst.",
       soul_ring: "A core item necessary for mana sustain.",
+      wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    power_treads: `A core Boots upgrade that increases your damage output through stats and attack speed.`,
       orchid: `A situational item that allows you to pick-off heroes.`,
       arcane_boots: `A situational item that allows you to spam Spawn Spiderlings to increase farming speed and damage in fights.`,
       black_king_bar:
@@ -3370,6 +3391,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       pipe: "To protect your team against magical damage.",
       aghanims_shard: "For extra damage and tankiness.",
       lotus_orb: "For reflect, dispel(e.g. Spirit Vessel debuff) and armor.",
+      overwhelming_blink: `A late game pick up to have more impact in teamfights and add even more damage to Double Edge.`,
+	    phase_boots: `A core boots upgrade for Centaur to make up for his low armor. Also helps close the gap on enemy heroes with the movement speed active.`,
+	    heart: `An incredible item in the mid game for Centaur to improve his tankiness and damage output with Double Edge.`,
       ultimate_scepter: `A late game pick up for an added save or initiation for yourself and one of your teammates.`,
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
@@ -3806,6 +3830,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       //infused_raindrop: "Against magical burst.",
       mekansm:
         "A core item that allows you to group up early and pressure buildings.",
+      boots: `A core item that boosts your mobility and builds into Guardian Greaves later in the game.`,
+	    guardian_greaves: `A core aura item that improves your impact in teamfights by buffing your whole team and army of creeps with armor and sustain.`,
+	    pipe: `A core item that buffs your team against magical damage and improves the potential of running at towers with your team and army of creeps.`,
+	    force_staff: `A mobility item that helps you push yourself or one of your allies away from trouble. Also lets you push yourself over cliffs and impassable terrain.`,
+	    assault: `A late game aura item that boosts your team against physical damage and improves the potential of running at towers as well as Roshan with your team and army of creeps.`,
       solar_crest: `A core item that buffs one of your right-clicking cores and allows you to take Roshan earlier.`,
       holy_locket: `Improves the healing ability of your ultimate.`,
       aghanims_shard: `Allows you to take ancient creeps with Holy Persuasion. The ancients are much more powerful than normal creeps.`,
@@ -3920,6 +3949,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that allows you to shoot from far away and it also increases the reach of Burning Barrage.",
       skadi:
         "A core item that tanks you up and keeps the opponents in Burning Barrage for longer.",
+      orchid: `A core item to disallow an enemy hero from using spells and burst them down in the duration of the effect. Especially useful against elusive heroes like Puck.`,
+	    aghanims_shard: `A core item to gain the Burning Barrage ability to clear creep waves in an instant and do massive damage in an area.`,
+	    solar_crest: `A core item to have massive burst potential on an enemy hero by lowering their armor. Also helps bring down Roshan much faster.`,
       black_king_bar:
         "Against a lot of disables, magical damage and as a dispel.",
       monkey_king_bar: "Against evasion.",
@@ -4590,6 +4622,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       infused_raindrop: "Against magical burst.",
       tranquil_boots:
         "A core boots upgrade that solves your hp sustain issues but also allows you to move around quickly.",
+      blink: `A core item that lets you close the gap on enemy heroes with Bedlam for solo kill potential. Also provides the potential to blink out during Shadow Realm if you are not taking damage over time.`,
+	    urn_of_shadows: `An early game pick up that helps with mana sustain and lets you snowball from the lane with kills.`,
+	    force_staff: `A core item for extra mobility to get away from enemy heroes or close the gap. Also lets you go over cliffs.`,
+  	  octarine_core: `A late game pick up that decreases the cooldown on your items and spells. Especially useful to have close to no down time on Shadow Realm and spam it with Aghanims Scepter.`,
       cyclone:
         "A core item that combines well with Cursed Crown and Bramble Maze.",
       spirit_vessel: "Against heavy healing lineup.",
@@ -4771,6 +4807,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           orb_of_venom: `Lets you pressure the lane by staying on enemy heroes.`,
           holy_locket:
             "A core item that boosts the healing coming for Solar Guardian and other sources.",
+          arcane_boots: `A core Boots upgrade to spam your spells to fight and farm. Can be upgraded to Guardian Greaves later in the game.`,
           guardian_greaves: `A core item that provides sustain and auras for your team.`,
           ultimate_scepter:
             "A core item that provides even more healing but also evasion to allies under effect of Solar Guardian.",
@@ -4884,6 +4921,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           phase_boots: "A core item that allows you to gap-close faster.",
           soul_ring: "A core item that helps with mana sustain.",
           echo_sabre: `A core item that boosts your damage output and tankiness. Choose between this item and Desolator based on whether you need more tankiness or damage. Builds into Harpoon in the late game.`,
+          harpoon: `A core upgrade for Echo Sabre to close the gap on enemy heroes and quickly burst them down with Starbreaker.`,
           desolator: `A core item that gives you massive burst potential with Starbreaker. Choose between this item and Echo Sabre based on whether you need more damage or some tankiness.`,
           bloodthorn: `Allows you to land solo kills while disabling enemies with a silence.`,
           vanguard: `A Situational item that gives you tankiness and sustain in the early game. You should rush this in the lane and play aggressively once you have it.`,
@@ -4899,6 +4937,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ability_tooltips: {},
     item_tooltips: {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
+      pipe: `A core item that buffs your team against magical damage and improves the potential of running at towers with your team.`,
+	    assault: `A late game aura item that boosts your team against physical damage and improves the potential of running at towers as well as Roshan with your team.`,
+	    black_king_bar: `A core item that gives you more freedom in fights to burst down enemy heroes as you become difficult to lock down and take a lot less magical damage.`,
+	    solar_crest: `An item to buff one of your right-clicking cores or burst down enemies with Starbreaker. Also allows you to take Roshan earlier.`,
     },
     combo: [
       `dawnbreaker_solar_guardian`,
@@ -5585,6 +5627,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     item_tooltips: {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
       phase_boots: `A situational boots upgrade that provides you an extra movement speed burst. Useful against high physical damage lineups.`,
+      vanguard: `A core item in the laning stage to make you significantly more tanky against physical damage. As a low armor hero, you should rush this item in the lane.`,
+	    boots: `A core item that boosts your mobility and stay on top of enemy heroes with Doom and Scorched Earth. Builds into Arcane Boots later in the game.`,
+	    arcane_boots: `A Boots upgrade to improve your mana sustain. Gets disassembled later on to use the Energy Booster for Octarine Core while the Boots can be upgraded to Boots of Travel.`,
+	    octarine_core: `A core item that maintains your kill threat on the map more often by reducing the cooldown of Doom.`,
       hand_of_midas:
         "A core item that allows you to level up faster and acquire a bit of extra gold.",
       black_king_bar:
@@ -6611,6 +6657,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       magic_stick:
         "If you are laning against spell spammers start with this (eg. Batirder/Zeus).",
       infused_raindrop: "Against magical burst.",
+      travel_boots: `A late game Boots upgrade for better map presence and movement speed to have kill threat anywhere on the map at all times. You should sell Phase Boots once you have Boots of Travel.`,
       orb_of_corrosion:
         "A core item that works well with Sleight of Fist. Rush this item and max sleight of fist in the lane.",
       phase_boots:
@@ -7076,6 +7123,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       arcane_boots: "A core item for mana sustain.",
       blink: "A core item that allows you to land a multi-hero Black Hole.",
       black_king_bar: "A core item that allows you to channel Black Hole.",
+      boots: `A core item that boosts your mobility and builds into Guardian Greaves or Boots of Travel later in the game.`,
+	    bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    refresher: `A core item that can win you the teamfight and the game with double Black Hole.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of Black Hole.`,
+	    guardian_greaves: `A core aura item that improves your impact in teamfights by buffing your whole team and army of Eidolons with armor and sustain.`,
       aghanims_shard: `Lets you have more eidolons when you cast Malefice to do more damage.`,
       solar_crest: `A core item that lets your eidolons do massive damage to an enemy hero by reducing their armor, movement speed, and attack speed.`,
       sphere:
@@ -7442,6 +7494,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       aether_lens:
         "A core item that allows you to get spells off from further away.",
       aghanims_shard: "A core item that upgrades Ink Swell.",
+      sheepstick: `A late game pick up to disable multiple heroes in combination with Soulbind.`,
+	    force_staff: `A mobility item that helps you push yourself or one of your allies away from trouble. Also lets you push yourself over cliffs and impassable terrain.`,
+	    ultimate_scepter: `A core item to get a powerful illusion of an enemy hero with high right click damage. Can get multiple illusions in combination with Soulbind.`,
+	    tranquil_boots: `A core Boots upgrade to boost your movement speed once you have disassembled Arcane Boots. Can be upgraded to Boots of Bearing later in the game.`,
+	    glimmer_cape: `A core defensive item that lets you or a teammate become invisible and get out of trouble. Also helps defend against magical damage with the barrier.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of all your spells and items.`,
       ethereal_blade: `An incredible item to combo with Soul Bind and Phantoms Embrace.`,
       lotus_orb: "For reflect, dispel and armor.",
     },
@@ -8130,6 +8188,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
       ultimate_scepter:
         "A core item that provides you with extra reach and a 3s disable upon Life Break landing.",
+      boots: `A core item that boosts your mobility and builds into Power Treads or Boots of Travel later in the game.`,
+	    travel_boots: `A mid game Boots upgrade for better map presence and movement speed to constantly keep fighting with BKB and Aghanims Scepter.`,
+  	  satanic: `A core item that gives you HP sustain through lifesteal and lets you turn the fight from low health.`,
       aghanims_shard: `A late game pick up to improve your survivability with Inner Fire.`,
       blink:
         "Allows you to instantly gap close and focus-fire an enemy hero. Can be upgraded to Overwhelming Blink down the road.",
@@ -8453,6 +8514,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "Against a lot of disables, magical damage and as a dispel.",
       ultimate_scepter:
         "A core item that provides spell-immunity piercring pure damage burst.",
+      boots: `A core item that boosts your mobility and builds into Power Treads or Boots of Travel later in the game.`,
+	    bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    octarine_core: `A core item that reduces the cooldown on all your spells and items to have better farming ability and kill threat.`,
       aghanims_shard: `A core item that controls enemy heroes in an area and makes it hard for them to avoid getting their mana burnt.`,
       sphere: "Against powerful single-target disables and debuffs.",
       aeon_disk: `Grants you a second chance to survive and get your spells and items off.`,
@@ -9614,6 +9678,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that solves your hp sustain issues on the lane. It can be upgraded to Armlet but you can also get Blink Dagger before the upgrade.", */
       armlet: `A situational item that gives you all the needed stats to win duels. Usually better than Blade Mail.`,
       blink: "A core item that allows you to get Duel off.",
+      phase_boots: `A core Boots upgrade to boost damage and tankiness while allowing you to close the gap on enemy heroes for a Duel using the movement speed active.`,
+	    assault: `A late game aura item that boosts your team against physical damage and improves the potential of running at towers as well as Roshan.`,
       blade_mail: `A core item to get you kills with Duel and snowball in the game with the extra damage.`,
       black_king_bar:
         "A core item that allows you not to be disabled or killed during Duel as often .",
@@ -10430,6 +10496,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           aether_lens:
             "A core item that allows you to cast spells and items from further away.",
           cyclone: "A core item that allows you to setup Light Strike Array.",
+          tranquil_boots: `A core Boots upgrade to boost your movement speed once you have disassembled Arcane Boots. Can be upgraded to Boots of Bearing later in the game.`,
           ultimate_scepter: `Another one of Linas strongest timings that will increase mobility and magical damage output by a ton.`,
           aghanims_shard: `Very strong mid game timing that will increase your spell damage. If the stun lock isnt necessary at the beginning, look to initiate with Laguna Blade to have maximum spell amplification on your other spells.`,
           lotus_orb: "Against powerful single-target disables and debuffs.",
@@ -10442,6 +10509,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       magic_wand: `Start with Magic Stick if you expect a high frequency of spells being used in the lane.`,
       blink: `To be able to reposition quickly.`,
       refresher: `A late game pick up that lets you instantly delete any hero on the map with your level 25 talent and double Laguna Blade.`,
+      sheepstick: `A core item to have a reliable disable in combination with Light Strike Array. Also provides some much needed mana regen to spam your spells.`,
     },
     combo: [
       `cyclone`,
@@ -10800,6 +10868,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
       orb_of_corrosion: `A situational item that allows Bear to dish out more damage and stay on top of enemy heroes.`,
       // phase_boots: "A core boots upgrade that allows Bear to gap-close faster.",
+      boots: `A core item for both the bear and your hero that boosts their mobility. The Boots on your bear get upgraded to Power Treads while Lone Druid can get Tranquil Boots later in the game.`,
+	    blight_stone: `A core item you can keep on your bear or hero to improve right click damage by reducing the armor of enemy heroes. Can be upgraded to Orb of Corrosion.`,
+	    abyssal_blade: `A core upgrade for Basher to have reliable lockdown on your bear against elusive heroes.`,
       power_treads: `A core boots upgrade for your bear to do more damage with stats and attack speed.`,
       mask_of_madness: `A situational item that allows you to farm quicker with Bear but also allows you to burst heroes and buildings.`,
       desolator: `A situational item that allows you take objectives, If you are behind you should opt for a farming item like maelstrom.`,
@@ -11256,6 +11327,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       heavens_halberd: "Especially good against ranged right-clickers.",
       assault:
         "A core item that improves the dps of you, your summons and teammates. Adds some armor in the mix as well.",
+      wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    vladmir: `A core aura item that boosts the damage and tankiness of your team as well as your Wolves. Builds into Helm of the Overlord later in the game.`,
+	    helm_of_the_overlord: `A core item to dominate an ancient creep to add to your army. Improves the potential of fighting and split pushing on the map.`,
+	    abyssal_blade: `A core upgrade for Basher to have reliable lockdown against elusive heroes.`,
       ultimate_scepter: `A core item to buff up one of your other right click cores.`,
       power_treads: `A core right click item that lets you stay on top of enemy heroes while your Shapeshift is down.`,
       echo_sabre: `A core right click item that massively boosts your damage while giving you some much needed mana regen and tankiness.`,
@@ -11544,6 +11619,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         item_tooltips: {
           power_treads:
             "A core boots upgrade that improves your farming speed by increasing attack speed and saving you some mana through toggling.",
+          bottle: `A core item for some HP and mana sustain in the mid lane. Also allows the potential to make plays with power runes past the 6 minute mark.`,
           harpoon: `A core item for mid Magnus that acts as another gap close on enemy heroes. Boosts your right click damage while also making you more tanky.`,
           black_king_bar:
             "A core item that allows you to deliver the damage while being in the middle of the fight.",
@@ -11668,6 +11744,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
     item_tooltips: {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
+      wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    echo_sabre: `A core item that Significantly improves your damage output and farming speed. Allows you to burst down heroes on your own during the Reverse Polarity stun.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of Reverse Polarity.`,
       blink:
         "A core item that allows you to get Reverse Polarity off and to Skewer an enemy.",
     },
@@ -12172,6 +12251,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "You can rush this item for sustain on the lane. Upgrading it to Armlet is fine but usually you should make your way to Blink Dagger first. You can opt not to upgrade it at all.", */
       phase_boots: `A core boots upgrade when armor and movement speed have great value against the enemy team.`,
       soul_ring: `A core item that helps with mana sustain. You should make it if you get Phase Boots instead of Arcane Boots.`,
+      blink: `A core item that lets you set up kills with Arena of Blood and Spear of Mars.`,
+      bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
       cyclone:
         "It can be a particularly good purchase against elusive heroes to setup the Arena of Blood into Spear of Mars combo.",
       black_king_bar:
@@ -12376,6 +12457,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that improves your effective hp significantly, deals with kiting and reduces healing from opponents.",
       aghanims_shard:
         "Goes well with Aghanim`s Scepter and Mysic Snake talents.",
+      sheepstick: `A core item to disable an enemy hero and hit them freely. Also boosts your mana regen and mana pool, effectively making you more tanky with Mana Shield.`,
+	    butterfly: `A core item to have more DPS with attack speed and damage while also boosting your tankiness with evasion and armor.`,
+	    greater_crit: `A core item to boost your right click damage and burst down enemy heroes. Can crit multiple units with the level 25 Split Shot modifier talent.`,
       hurricane_pike: `Provides some much needed mobility to enter fights or get away from enemy heroes.`,
       phylactery: `An early game pick up that makes you more tanky with the HP and mana pool. Also gives you another instance of damage when you cast Mystic Snake.`,
       black_king_bar:
@@ -12536,6 +12620,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       dragon_lance:
         "A core item that provides a lot of attributes that Meepo wants for fair price.",
       blink: `A core item for gap-close followed by the burst from Poofs.`,
+      wraith_band: `An early game pick up that helps you get through the laning stage and share stats with your clones. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
       ward_observer: `Only when you are going mid lane. You dont need it on the safe lane.`,
       skadi: "A core item that provides Meepo with a lot of useful stats.",
       sheepstick: "A core item that allows you to solo most of the heroes.",
@@ -12697,6 +12782,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     item_tooltips: {
       ward_sentry:
         "Get two sentries with the bounty rune gold to block or unblock the pull camp.",
+      boots: `A core item that boosts your mobility and builds into Guardian Greaves or Power Treads later in the game.`,
+	    sheepstick: `A late game pick up that gives you instant and reliable disable on enemy heroes.`,
+	    gungir: `A luxury upgrade for Rod of Atos to have more AoE lockdown while boosting right click damage and wave clear.`,
+	    solar_crest: `A mid game pick up for Mirana that boosts your single target damage on enemy heroes or buff one of your cores. Also gives you potential to take a faster Roshan.`,
+	    guardian_greaves: `A core aura item that improves your impact in teamfights by buffing your whole team with armor and sustain.`,
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
       urn_of_shadows:
@@ -14129,6 +14219,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
       aghanims_shard: `A core item for some extra damage and primarily for vision on enemy heroes caught in the AoE.`,
+      sheepstick: `A core item to have instant disable against an enemy hero and burst them down with Sprout and right clicks.`,
+	    refresher: `A core item that lets you do massive damage all over the map with double Wrath of Nature.`,
+	    gungir: `An upgrade for Maelstrom to have more AoE lockdown and catch enemy heroes to follow up with Sprout.`,
     },
     combo: [
       `furion_wrath_of_nature`,
@@ -14423,6 +14516,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       /* holy_locket:
         "If you feel your team doesnt need more damage but rather needs sustain. Amplifies all healing. Goes very well with your Death Pulse and its talent.", */
       eternal_shroud: `A situational item that is an alternate to Pipe for magic resistance.`,
+      bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    null_talisman: `An early game pick up that helps you get through the laning stage with more stats. Also provides more mana regen after the 25 minute mark when the stats are doubled.`,
+	    heart: `A core item that makes you significantly more tanky and makes use of your Aghanims Scepter to do more AoE damage.`,
       kaya_and_sange:
         "A core item that provides you with mix of offensive and defensive stats. Self healing amplification from Sange goes well with Ghost Shroud.",
       aghanims_shard: `A core item to save an ally, heal and amplify the magical damage on target. Also helps close the gap on a target.`,
@@ -16031,6 +16127,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       orb_of_corrosion: `A situational item that gets applied by Swashbuckle.`,
       infused_raindrop: "Against magical burst.",
       arcane_boots: `A situational boots upgrade that builds into Guardian Greaves.`,
+      bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    pipe: `A core item that buffs your team against magical damage and improves the potential of running at towers with your team.`,
+	    manta: `A core item that gives you mobility and damage through stats. Also gives you a dispel and the ability to split push lanes with illusions.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of all your spells.`,
+	    guardian_greaves: `A core aura item that improves your impact in teamfights by buffing your whole team with armor and sustain.`,
       blink:
         "A core item that allows you to jump on the opponents while Rolling Thunder is active.",
       aghanims_shard:
@@ -17066,6 +17168,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that increases your damage output or alternatively used to save you from physical damage.",
       kaya_and_sange:
         "A core item that provides you with a mix of defensive and offensive stats.",
+      power_treads: `A Boots upgrade to improve your stats and increase your DPS once you eventually have Witch Blade.`,
+	    octarine_core: `An incredible item for Puck that makes you elusive and hard to catch with lower cooldowns on Illusory Orb, Phase Shift, Blink Dagger, and Boots of Travel.`,
+	    overwhelming_blink: `A late game pick up to have even more damage and control in teamfights while providing some much needed tankiness.`,
       aghanims_shard: `A core item that provides another source of damage and also helps clear waves faster.`,
       ultimate_scepter: `A late game luxury item to add some more damage through Dream Coil. Makes use of damage boosting items like Daedlus, Mjolnir, Divine Rapier, and Moonshard.`,
       sphere: "Aghainst powerful single-target disables or debuffs.",
@@ -17359,8 +17464,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         " Consider taking this talent if you are close or already have Aghanims Scepter.",
     },
     item_tooltips: {
-      magic_stick:
-        "Start with it if you expect high frequency of spells being used on the lane.",
+      magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
+	    aether_lens: `A core item that increases the cast range of Meat Hook and Dismember. Especially useful at grabbing an ally in trouble from a longer range with the Aghanims Shard upgrade for Dismember.`,
+	    blade_mail: `A core item that makes use of your high HP pool with Flesh Heap stacks to reflect damage back to enemy heroes.`,
       blink:
         "A core item that allows you to land Hook easier or to save an ally. Goes well with Aghanim`s Shard.",
       aghanims_shard:
@@ -18346,6 +18452,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       refresher: `A late game pick up that allows you to have two Eye of the Storm, Static Link and Black King Bar in the fight among the other things it refreshes.`,
       blink: `Allows you to gap-close and get Static Link off on desired hero. You can get it even before Black King Bar against ranged cores like Sniper.`,
       manta: `A core item in the mid game that covers for all your weaknesses like mobility, armor, and attack speed. Also provides you a dispel and the ability to split push lanes with Storm Surge.`,
+      swift_blink: `A late game pick up on Core Razor that lets you stay on top of enemy heroes with Static Link and improve your DPS through right clicks.`,
+	    hand_of_midas: `A scaling item in the early game that boosts your farming speed as Razor does not have flash farm potential. Also helps improve your damage output with the added attack speed.`,
+	    aghanims_shard: `A core item that lets you stay on top of enemy heroes with Static Link without relying on your slow from Plasma Field.`,
       butterfly: `A core item that makes you tankier with armor and gives you attack speed to hit more frequently while you use Static Link.`,
       sphere: "Against powerful single-target disables and debuffs.",
       assault:
@@ -18806,6 +18915,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that allows you to cast spells and items from further away.",
       blink:
         "A core item that allows you to instantly initiate or save an ally.",
+      sheepstick: `A late game pick up to have an added form of lockdown on top of Telekinesis.`,
+	    ultimate_scepter: `A core item to reduce the cooldown of Spell Steal and have two stolen spells at the same time. Also gives you the Aghanims Scepter upgrades on stolen spells.`,
+	    tranquil_boots: `A core Boots upgrade to boost your movement speed once you have disassembled Arcane Boots. Can be upgraded to Boots of Bearing later in the game.`,
       aghanims_shard: `To reposition yourself or an ally in trouble and to get Aghanims Shard upgrades on stolen spells.`,
       lotus_orb: "To reflect, dispel and armor.",
       force_staff: `An extremely effective repositioning item for rubick. Has a very high cast range due to his passive.`,
@@ -18956,6 +19068,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       blink: "A core item that allows you to channel Epicenter and jump in.",
       cyclone: `A situational item mainly to dispel yourself and buy time to get back items and spells that are on cooldown.`,
       ultimate_scepter: `A core item to give you a chance to stun enemy heroes over and over by keeping them in your Sand Storm through the initial Burrowstrike stun and Epicenter slow.`,
+      pipe: `A core item that buffs your team against magical damage and improves the potential of running at towers with your team and army of creeps.`,
+	    vanguard: `A core item that makes you tanky and allows you to initiate with Burrowstrike without the fear of dying.`,
+	    arcane_boots: `A core Boots upgrade to gain some mana regen to spam Sand Storm and Burrowstrike.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of Epicenter. Also helps to split push lanes with Blink and Boots of Travel.`,
       travel_boots:
         "A core item that allows you to cover the map better. Sand King is really good at pushing sidelanes in quickly and without much of a risk.",
       heavens_halberd: "Especially good against ranged right-clickers.",
@@ -19795,6 +19911,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       ring_of_basilius: `Provides early mana regen and builds into Veil of Discord.`,
       tranquil_boots:
         "A core boots upgrade that helps with hp sustain and fixes hero`s movement speed issues.",
+      sheepstick: `A late game pick up to lock down an enemy hero and burst them down with the added damage to Glaives of Wisdom.`,
+	    force_staff: `A mobility item that helps you push yourself or one of your allies away from trouble. Also lets you push yourself over cliffs and impassable terrain.`,
+	    aghanims_shard: `A core item to have another form of silence and do more damage in teamfights using Glaives of Wisdom.`,
+	    arcane_boots: `A core Boots upgrade to have some much needed mana sustain as your impact is highly reliant on your current mana pool.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of all your spells. Also provides mana regen to spam Glaives of Wisdom.`,
+	    glimmer_cape: `A core defensive item that lets you or a teammate become invisible and get out of trouble. Also helps defend against magical damage with the barrier.`,
       veil_of_discord: `A core item that amplifies your teams spell damage output.`,
       lotus_orb: "To reflect, dispel and armor.",
       ultimate_scepter: `A late game pick up that goes well with Last Word level 25 talent.`,
@@ -20809,6 +20931,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           tranquil_boots:
             "A core boots upgrade that provides you with significant movement speed and hp sustain.",
           spirit_vessel: "Against heavy-healing lineup.",
+          ethereal_blade: `A late game item on support Sniper for better burst potential with Assassinate and Shrapnel. Can also be used defensively to save yourself or an ally against physical damage.`,
           veil_of_discord: `A situational item that increases spell damage output of your team.`,
           ultimate_scepter:
             "A core item that upgrades Assassinate. Adds to control.",
@@ -20823,6 +20946,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
     item_tooltips: {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
+      wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    force_staff: `A mobility item that helps you push yourself or one of your allies away from trouble. Builds into Hurricane Pike later in the game.`,
+	    greater_crit: `A core damage item to burst down enemy heroes with right clicks using your massive attack range.`,
+	    mjollnir: `A core item to improve your attack speed for more Headshot procs. Also lets you split push safely by using the Static Charge active on creeps.`,
       blink: "For extra mobility.",
     },
     combo: [
@@ -21466,6 +21593,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core item that provides you with sustain and allows you to gank with stored rune. Having arcane or regenaration rune stored can easily be a deciding factor in the teamfight.",
       infused_raindrop: "On lane against magical burst.",
       null_talisman: `A laning item that gives you stats as well as max mana pool. The double stats help a lot post 25 minutes in the game.`,
+      witch_blade: `A core item that provides mana pool and improves the potential of bursting down enemy heroes without relying entirely on your mana.`,
+	    sheepstick: `A late game pick up that gives you instant lockdown while providing some much needed mana pool and mana regen.`,
+	    falcon_blade: `A core item that boosts your mana regen and damage in the early game and allows you to farm much faster with Static Remnant.`,
       power_treads:
         "A core boots upgrade that provides you with some mana and attack speed.",
       orchid:
@@ -21938,6 +22068,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "Against magical burst. It doesn`t offset Blast Off! damage.",
       force_staff:
         "A saving tool for you and your teammates. Can be used to push an opponent into Proximity Mines.",
+      bottle: `A core item for some HP and mana sustain in the mid lane. Also allows the potential to make plays with power runes past the 6 minute mark.`,
+	    arcane_boots: `A core Boots upgrade for some much needed mana sustain. Can be disassembled later to use the Energy Booster for Aether Lens or Octarine Core.`,
+	    guardian_greaves: `A core aura item on support Techies that improves your impact in teamfights by buffing your whole team with armor and sustain.`,
+	    glimmer_cape: `A core defensive item that lets you or a teammate become invisible and get out of trouble. Can be cast on yourself before using Blast Off! to reduce the self damage taken.`,
       veil_of_discord: `A situational item that provides you and your teammates with mana regen. Get ring of basilius in place of null talisman when you plan on purchasing this item.`,
       kaya: "A core item that provides you with spell amplification as well as mana regen amplification. Should be upgraded into an Ethereal Blade later on.",
       ethereal_blade: `A core item that increases the damage output of your hero. Can be used on a hero to disarm them so that they cant kill the Proximity Mine you place under them or defensively on yourself.`,
@@ -22837,6 +22971,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "A core boots upgrade that provides mana sustain. Can be disassembled into Lotus Orb down the road.",
       /* hood_of_defiance:
         "A core defensive item. Reactive armor protects against physical damage and Hood covers the magical damage.", */
+      vanguard: `A core item that makes you extremely tanky against physical damage and makes you less reliant on Reactive Armor stacks.`,
+	    blink: `An incredible pick up for Timbersaw to land spells more reliably and get on top of enemy heroes in an instant.`,
       cyclone: `A situational item that provides dispel on cast which is especially useful against Spirit Vessel. It also serves as a kill setup. You can disengage by Timber Chaining and cycloning immediately.`,
       pipe: "Against heavy magical damage lineup.",
       kaya_and_sange:
@@ -23249,6 +23385,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           blink:
             "A core item that allows you to initiate and burst an opponent with your combo, or save an ally by tossing him away.",
           cyclone: `A core item that allows you to setup kills and control an opponent.`,
+          sheepstick: `A late game pick up to have another form of instant disable on top of Avalanche and Toss.`,
           solar_crest: `A mid game pick up mainly to buff one of your cores to do more damage. Also helps take down Roshan quickly.`,
           force_staff:
             "A core item that adds to mobility and serves as another save for an ally in trouble.",
@@ -23492,6 +23629,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           black_king_bar:
             "A core item that allows you to deliver the damage while in the middle of the fight. The Grow ability provides you with a lot of physical resistance through armor and Black King Bar covers most of the spell damage and disables.",
           moon_shard: "A core item that provides tons of attack speed.",
+          satanic: `A core item that gives you HP sustain through lifesteal and lets you turn the fight from low health with your massive right click damage.`,
           hand_of_midas: `A core item that boosts your attack speed and improves your scaling in the game with more gold.`,
           greater_crit: `A core damage item that lets you burst down enemy heroes with right clicks. Works well with the Tree Grab cleave.`,
           harpoon: `A core item in the late game to get you closer to an enemy hero and burst them down with spells and right clicks.`,
@@ -24958,6 +25096,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       ring_of_basilius: "If your laning partner also uses a lot of mana early.",
       infused_raindrop: "Against magical burst.",
+      boots: `A core item that boosts your mobility and builds into Boots of Bearing or Guardian Greaves later in the game.`,
+	    hurricane_pike: `A mid to late game pick up for extra mobility with the Force Staff and make use of stats and attack range to do more damage with your illusion.`,
+	    octarine_core: `A core item that reduces the cooldown on all your spells and items to let you spam your skills even with your illusion.`,
       boots_of_bearing: `A late game aura item to boost yourself and your team. Make sure to use a charge before dying as you cannot use it with the aghs illusion.`,
       solar_crest: `A buffing item for one of your right-clicking cores. It can be used offensively to take down an opponent or Roshan faster.`,
       aghanims_shard: `A core item that lets Magic Missile bounce and hit a second target. Works incredibly well with all the Magic Missile talents.`,
@@ -25273,6 +25414,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     item_tooltips: {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
       infused_raindrop: "Against magical burst.",
+      bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    refresher: `A late game pick up primarily for double Noxious Plague to quickly burst down multiple enemy heroes.`,
+	    arcane_boots: `A core Boots upgrade to get some much needed mana sustain and spam your Plague Wards. Can be upgraded to Guardian Greaves or disassembled for Octarine Core with the Energy Booster.`,
+	    octarine_core: `A core item that maintains your kill potential on the map more often by reducing the cooldown of your spells.`,
+	    boots_of_bearing: `A core aura item to buff yourself and your team with attack speed and run at enemy heroes with a massive movement speed advantage.`,
+	    tranquil_boots: `A core Boots upgrade to boost your movement speed and gain some much needed HP sustain. Can be upgraded to Boots of Bearing later in the game.`,
       veil_of_discord: `A situational item for spell damage amplification.`,
       blink: `A situational item that allows you to blink in the middle of the opponents team and release Poison Nova.`,
       aghanims_shard: `A situational item to stun enemy heroes with Lotus Orb or BKB.`,
@@ -25574,6 +25722,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     item_tooltips: {
       magic_wand: `Start with magic stick if you expect high frequency of spells being used on the lane.`,
       power_treads: `A core boots upgrade that provides significant attack speed increase and mana savings through toggling.`,
+      wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
       wind_lace: `An early game movement speed boost for a slow hero like Viper.`,
       // dragon_lance: `A core item that improves attack range and tankiness.`,
       black_king_bar:
@@ -25846,6 +25995,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "Against magical burst. It can save you a layer of Gravekeeper`s Cloak.",
       ultimate_scepter:
         "A core item that allows you to sneak up to an opponent and provides damage increase upon exiting invisibility.",
+      boots: `A core item that boosts your mobility and builds into Boots of Bearing later in the game.`,
+	    bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+  	  pipe: `A core item that buffs your team and Familiars against magical damage and improves the potential of running at towers.`,
+	    assault: `A late game aura item that boosts your team and Familiars against physical damage and improves the potential of running at towers as well as Roshan.`,
+	    solar_crest: `A core item that boosts your single target damage on enemy heroes. Works incredibly well with Familiars hitting low armor heroes with their high attack speed.`,
+	    tranquil_boots: `A Boots upgrade that boosts your mobility and HP regen. Builds into Boots of Bearing later in the game.`,
       aghanims_shard: `A defensive upgrade that makes you immune for 6s, heal for significant amount and also stun around you upon cast.`,
       black_king_bar: "Against disables, magical damage and as a dispel.",
       sheepstick:
@@ -26138,6 +26294,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       sphere: "Against powerful single-target disables and debuffs.",
       black_king_bar:
         "Against disables, debuffs, magical damage and as another dispel.",
+      bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    wraith_band: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    greater_crit: `A core item in the late game to burst down heroes with Astral Steps using your massive right click damage.`,
       kaya_and_sange: `A situational item that provides mix of defensve and offensive stats, namely spell amplification.`,
       aghanims_shard: `A situational upgrade to Aether Remnant for lane shove and more reliability with the disable.`,
       ethereal_blade: `A situational item for additonal burst. Can be used defensively to save yourself or an ally in trouble. Usually paired with a Dagon.`,
@@ -26330,6 +26489,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       infused_raindrop: "Against magical burst.",
       arcane_boots:
         "A core boots upgrade for mana sustain. Can be disassembled and Energy Booster used for Holy Locket. You can assemble Tranquil Boots afterwards or Arcane Boots again.",
+      boots: `A core item that boosts your mobility to get in position to cast Chaotic Offering and Upheaval.`,
+	    glimmer_cape: `A core defensive item that lets you or a teammate become invisible and get out of trouble. Can also be cast on yourself while channeling Upheaval to become untargetable without detection.`,
+	    ultimate_scepter: `A core item that significantly increases your damage output in teamfights with two golems when you cast Chaotic Offering.`,
+	    octarine_core: `A core item that maintains your teamfight prowess on the map more often by reducing the cooldown of Chaotic Offering.`,
+	    refresher: `A core item that makes you extremely potent in teamfights with double Chaotic Offering. Be careful about your mana pool when you are looking to cast your ultimate twice with Refresher.`,
       holy_locket: `A situational item that improves healing coming from Shadow Word and its active provides burst of healing and mana.`,
       tranquil_boots: `You can upgrade Brown Boots to Tranquils once you have the Holy Locket.`,
       solar_crest: `A core item to buff one of your right-clicking cores or Golem. You can use it offensively to kill-off an opponent or Roshan faster.`,
@@ -27020,6 +27184,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ability_tooltips: {},
     item_tooltips: {
       magic_wand: `Start with Magic Stick if you expect high frequency of spells being used on the lane.`,
+      boots: `A core item that boosts your mobility and builds into Power Treads of Boots of Travel later in the game.`,
+	    bracer: `An early game pick up that helps you get through the laning stage with more stats. Also makes you much more tanky after the 25 minute mark when the stats are doubled.`,
+	    manta: `A core item that gives you mobility and damage through stats. Also gives you a dispel and the ability to split push lanes with illusions.`,
+	    gungir: `A late game upgrade for Maelstrom to have more AoE lockdown and catch enemy heroes to follow up with Shackleshot.`,
       infused_raindrop: "Against magical burst.",
       blink: "A core item that allows you to land Shackleshot reliably.",
     },
@@ -27738,6 +27906,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       aether_lens: `A situational item that improves cast range and provides mana regen.`,
       travel_boots:
         "A core boots upgrade that allows you to cover the map better and get in position to cast spells faster.",
+      phylactery: `A core item that gives you another instance of damage and slow when you cast Arc Lightning or Lightning Bolt.`,
+	    yasha_and_kaya: `A core item that significantly boosts your magic damage. Can be disassembled later on to make Manta from Yasha.`,
       ethereal_blade: `A late game pick up that increases your damage output greatly and can potentially be used defensively.`,
       ultimate_scepter:
         "A core upgrade that adds another global spell to your arsenal. It is especially good for canceling teleports and channeling spells but also for scouting and waveclearing. Dont take it versus an illusion based line up.",
