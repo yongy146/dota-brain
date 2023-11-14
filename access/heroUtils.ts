@@ -523,13 +523,18 @@ export function mostCounteringItems(
 
 export interface IItemCoreRecommendedStats {
   core: number;
-  situational: number;
-  not: number;
+  nonCore: number;
+  without: number;
   total: number;
 }
 
 /**
- * Function returns stats per role (% or heroes, % core item for heroes) for an item.
+ * Function returns stats per role for an item.
+ *
+ * The number of items is spit into:
+ *    - # of heroes with item core
+ *    - # or heroes with item non-core
+ *    - # of heroes without item
  *
  */
 export function getItemHeroRoleStats(
@@ -562,8 +567,8 @@ export function getItemHeroRoleStats(
       if (!result[role]) {
         result[role] = {
           core: 0,
-          situational: 0,
-          not: 0,
+          nonCore: 0,
+          without: 0,
           total: 0,
         };
       }
@@ -571,9 +576,9 @@ export function getItemHeroRoleStats(
       if (isCore) {
         result[role].core++;
       } else if (hasItem) {
-        result[role].situational++;
+        result[role].nonCore++;
       } else {
-        result[role].not++;
+        result[role].without++;
       }
       result[role].total++;
     }
