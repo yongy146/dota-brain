@@ -1,3 +1,5 @@
+// This can be deleted, as migratoin is completed.... (14.11.2023)
+
 /**
  * Script dumps the tooltips for all items.
  *
