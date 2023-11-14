@@ -3,8 +3,8 @@ import {
   CounterItem,
   IHeroBuild,
   IHeroContent,
-  getAbilityTooltip,
-  getItemTooltip,
+  //getAbilityTooltip,
+  //getItemTooltip,
   heroBuilds,
   isCoreItem,
 } from "../content/heroBuilds";
@@ -255,10 +255,10 @@ export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
   const result: IPhaseItemBuild[] = [];
   for (const s of standard) {
     const r: { name: string; info?: string; isCore?: boolean } = { name: s };
-    const tooltip = getItemTooltip(heroContent, heroBuild, s);
+    /*const tooltip = getItemTooltip(heroContent, heroBuild, s);
     if (tooltip) {
       r["info"] = tooltip;
-    }
+    }*/
     const isCore = isCoreItem(heroBuild, s);
     if (isCore) {
       r["isCore"] = true;
@@ -314,15 +314,15 @@ export function getItemBuild(
   heroBuild: IHeroBuild
 ): IItemBuild {
   const item_tooltips = {
-    ...(heroContent.item_tooltips || {}),
-    ...(heroBuild.item_tooltips || {}),
+    //...(heroContent.item_tooltips || {}),
+    //...(heroBuild.item_tooltips || {}),
   };
 
   const build = heroBuild;
 
   function transformItem(item: string, core_items: string[]): IPhaseItemBuild {
     const result: IPhaseItemBuild = { name: item };
-    if (item_tooltips[item]) result["info"] = item_tooltips[item];
+    //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
     return result;
   }
@@ -428,10 +428,10 @@ export function getUIAbilityBuild(
       name: ability,
     };
     if (heroBuilds && heroBuild) {
-      const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
+      /*const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
       if (info) {
         result["info"] = info;
-      }
+      }*/
     }
     return result;
   });

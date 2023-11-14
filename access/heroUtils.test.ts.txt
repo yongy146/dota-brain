@@ -151,7 +151,7 @@ test("counterItemIterator-mid-mid_game", () => {
   expect(phases.size).toEqual(1);
 });
 
-test("getHeroesWithItem-desolator", () => {
+/*test("getHeroesWithItem-desolator", () => {
   const heroesWithItem = getHeroesWithItem("desolator");
   const heroes = heroesWithItem.map((i) => i.localizedHeroName);
 
@@ -176,9 +176,9 @@ test("getHeroesWithItem-desolator", () => {
     "Void Spirit",
     "Wraith King",
   ]);
-});
+});*/
 
-test("getCoreHeroes-desolator", () => {
+/*test("getCoreHeroes-desolator", () => {
   const heroesWithItem = getCoreHeroes("desolator");
   const heroes = heroesWithItem.map((i) => i.localizedName);
   //console.log(`heroes: `, heroes);
@@ -191,7 +191,7 @@ test("getCoreHeroes-desolator", () => {
     "Tusk",
     "Wraith King",
   ]);
-});
+});*/
 
 // Note yet tested: getHeroesCounteredBy
 

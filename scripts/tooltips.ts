@@ -10,15 +10,15 @@
  */
 
 import { activeItemIterator } from "@gameData/out/dota2ItemUtils";
-import { IHeroesWithItem, getHeroesWithItem } from "access/heroUtils";
+import { IHeroesWithItem /*getHeroesWithItem*/ } from "access/heroUtils";
 
 function dumpTooltips() {
   const result: Record<string, IHeroesWithItem[]> = {};
-  for (const { key, item } of activeItemIterator()) {
+  /*for (const { key, item } of activeItemIterator()) {
     const k = key.replace("item_", "");
     const heroesWithItem = getHeroesWithItem(k);
     result[k] = heroesWithItem;
-  }
+  }*/
 
   //
   // Dump result

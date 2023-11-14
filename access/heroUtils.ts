@@ -28,7 +28,7 @@ export interface IBuildsWithItem {
  *
  * @item item name, e.g. quelling_blade
  */
-export function getHeroesWithItem(item: string): IHeroesWithItem[] {
+/*export function getHeroesWithItem(item: string): IHeroesWithItem[] {
   //console.log(`heroUtils.getHeroesWithItem(item: ${item}): Called`);
 
   const result: IHeroesWithItem[] = [];
@@ -57,7 +57,7 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
   }
 
   return result;
-}
+}*/
 
 export interface ICoreHero {
   localizedName: string;
@@ -84,13 +84,13 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
     };
 
     // Add global tooltips
-    const tooltip = heroContent.item_tooltips?.[itemKey];
+    /*const tooltip = heroContent.item_tooltips?.[itemKey];
     if (tooltip) {
       oneResult.tooltips = [];
       oneResult.tooltips.push({
         tooltip,
       });
-    }
+    }*/
 
     for (const build of heroContent.builds) {
       let hasItem = false;
@@ -110,7 +110,8 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
         oneResult.localizedName = localizedName;
 
         // Add build-specific tooltips
-        const tooltip = build.item_tooltips?.[itemKey];
+        // CHECK WHY REMOVED
+        /*const tooltip = build.item_tooltips?.[itemKey];
         if (tooltip) {
           if (!oneResult.tooltips) oneResult.tooltips = [];
           oneResult.tooltips.push({
@@ -118,7 +119,7 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
             roles: build.roles,
             type: build.type,
           });
-        }
+        }*/
         //console.log(`oneResult: `, JSON.stringify(oneResult));
       }
     }
@@ -330,13 +331,13 @@ function buildContainsItem(build: IHeroBuild, item: string): boolean {
   return false;
 }
 
-function getTooltip(
+/*function getTooltip(
   content: IHeroContent,
   build: IHeroBuild,
   item: string
 ): string | undefined {
   return build.item_tooltips?.[item] || content?.item_tooltips?.[item];
-}
+}*/
 
 /**
  * Return the most recommended items for all heroes in the hero guides.
