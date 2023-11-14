@@ -29,7 +29,7 @@ export interface IBuildsWithItem {
  * @item item name, e.g. quelling_blade
  */
 export function getHeroesWithItem(item: string): IHeroesWithItem[] {
-  console.log(`heroUtils.getHeroesWithItem(item: ${item}): Called`);
+  //console.log(`heroUtils.getHeroesWithItem(item: ${item}): Called`);
 
   const result: IHeroesWithItem[] = [];
 
@@ -71,7 +71,7 @@ export interface ICoreHero {
 /**
  * Returns all heroes for which the given item is core.
  *
- * It also returns all the assocaited tooltips.
+ * It also returns all the associated tooltips.
  *
  * @params itemKey, e.g. "margic_wand"
  */
