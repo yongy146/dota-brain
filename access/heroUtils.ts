@@ -3,37 +3,30 @@
  *
  */
 
-import {
-  CounterItem,
-  CounterItems,
-  IHeroBuild,
-  IHeroContent,
-  heroBuilds,
-} from "../content/heroBuilds";
+import { IHeroBuild, heroBuilds } from "../content/heroBuilds";
 import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 
 export interface IHeroesWithItem {
-  localizedHeroName: string;
+  shortNPCName: string;
   builds: IBuildsWithItem[];
 }
 
 export interface IBuildsWithItem {
   roles: DOTA_COACH_GUIDE_ROLE[];
-  tooltip?: string;
 }
 
 /**
  * Function returns all heroes that have the item in
- * their build. It also returns the role and possible tooltips.
+ * their build. It also returns the role.
  *
  * @item item name, e.g. quelling_blade
  */
-/*export function getHeroesWithItem(item: string): IHeroesWithItem[] {
+export function getHeroesWithItem(item: string): IHeroesWithItem[] {
   //console.log(`heroUtils.getHeroesWithItem(item: ${item}): Called`);
 
   const result: IHeroesWithItem[] = [];
 
-  for (const [localizedHeroName, heroContent] of Object.entries(heroBuilds)) {
+  for (const [shortNPCName, heroContent] of Object.entries(heroBuilds)) {
     const buildsWithItem: IBuildsWithItem[] = [];
     for (const build of heroContent.builds) {
       const containsItem = buildContainsItem(build, item);
@@ -41,59 +34,33 @@ export interface IBuildsWithItem {
         const heroWithItem: IBuildsWithItem = {
           roles: build.roles,
         };
-        const tooltip = getTooltip(heroContent, build, item);
-        if (tooltip) {
-          heroWithItem.tooltip = tooltip;
-        }
         buildsWithItem.push(heroWithItem);
       }
     }
     if (buildsWithItem.length) {
       result.push({
-        localizedHeroName,
+        shortNPCName,
         builds: buildsWithItem,
       });
     }
   }
 
   return result;
-}*/
-
-export interface ICoreHero {
-  localizedName: string;
-  tooltips?: {
-    tooltip: string;
-    roles?: DOTA_COACH_GUIDE_ROLE[];
-    type?: string; // For Invoker, QW & QE
-  }[];
 }
 
 /**
  * Returns all heroes for which the given item is core.
  *
- * It also returns all the associated tooltips.
- *
- * @params itemKey, e.g. "margic_wand"
+ * @params itemKey, e.g. "magic_wand"
  */
-export function getCoreHeroes(itemKey: string): ICoreHero[] {
-  const result: ICoreHero[] = [];
+export function getCoreHeroes(itemKey: string): string[] {
+  const result: string[] = [];
 
-  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
-    const oneResult: ICoreHero = {
-      localizedName: "",
-    };
+  for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
+    let hasItem = false;
 
-    // Add global tooltips
-    /*const tooltip = heroContent.item_tooltips?.[itemKey];
-    if (tooltip) {
-      oneResult.tooltips = [];
-      oneResult.tooltips.push({
-        tooltip,
-      });
-    }*/
-
+    // Check if item is core in one of the builds
     for (const build of heroContent.builds) {
-      let hasItem = false;
       for (const [phase, itemBuild] of Object.entries(build.items)) {
         if (phase.includes("core")) {
           for (const item of itemBuild) {
@@ -105,79 +72,49 @@ export function getCoreHeroes(itemKey: string): ICoreHero[] {
           if (hasItem) break;
         }
       }
-      if (hasItem) {
-        //console.log(`hasItem: `, itemKey);
-        oneResult.localizedName = localizedName;
-
-        // Add build-specific tooltips
-        // CHECK WHY REMOVED
-        /*const tooltip = build.item_tooltips?.[itemKey];
-        if (tooltip) {
-          if (!oneResult.tooltips) oneResult.tooltips = [];
-          oneResult.tooltips.push({
-            tooltip,
-            roles: build.roles,
-            type: build.type,
-          });
-        }*/
-        //console.log(`oneResult: `, JSON.stringify(oneResult));
-      }
-    }
-
-    if (oneResult.localizedName) result.push(oneResult);
-  }
-  return result;
-}
-
-/**
- * Returns all heroes that are countered by the given item.
- *
- * It also returns all the assocaited tooltips.
- *
- * @params itemKey, e.g. "margic_wand"
- */
-export function getHeroesCounteredBy(itemKey: string): ICoreHero[] {
-  const result: ICoreHero[] = [];
-
-  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
-    const oneResult: ICoreHero = {
-      localizedName: "",
-    };
-
-    let hasItem: boolean | string = false;
-    for (const [phase, counterItems] of Object.entries(
-      heroContent.counter_items
-    )) {
-      for (const [role, counterItem] of Object.entries<CounterItem[]>(
-        counterItems as any
-      )) {
-        const item = counterItem.find((item) => item.item === itemKey);
-        if (item) {
-          if (item.info) {
-            hasItem = item.info;
-          } else {
-            hasItem = true;
-          }
-          break;
-        }
-        if (hasItem) break;
-      }
+      if (hasItem) break;
     }
 
     if (hasItem) {
       //console.log(`hasItem: `, itemKey);
-      oneResult.localizedName = localizedName;
-      if (typeof hasItem === "string") {
-        oneResult.tooltips = [
-          {
-            tooltip: hasItem,
-          },
-        ];
+      result.push(npcShortName);
+    }
+  }
+
+  return result;
+}
+
+/**
+ * Returns all heroes that are countered by a given item.
+ *
+ * @params itemKey, e.g. "magic_wand"
+ * @returns npc short names of heroes, e.g. ["antimage", "legion_commander", etc.]
+ */
+export function getHeroesCounteredBy(itemKey: string): string[] {
+  const result: string[] = [];
+
+  for (const [name, heroContent] of Object.entries(heroBuilds)) {
+    let hasItem: boolean | string = false;
+    for (const [phase, counterItems] of Object.entries(
+      heroContent.counter_items
+    )) {
+      for (const [role, counterItem] of Object.entries<string[]>(
+        counterItems as any
+      )) {
+        const item = counterItem.find((item) => item === itemKey);
+        if (item) {
+          hasItem = true;
+          break;
+        }
       }
+      if (hasItem) break;
     }
 
-    if (oneResult.localizedName) result.push(oneResult);
+    if (hasItem) {
+      result.push(name);
+    }
   }
+
   return result;
 }
 
@@ -192,10 +129,10 @@ export const phase2ItemBuild: Record<string, string> = {
 };
 
 /**
- * Iterates through all items in the hero guides.
+ * Iterator that goes through all items in the hero guides.
  *
- * Skips core for all heroes except Lone Druid (as the
- * items are repeated) and neutral items for all heroes.
+ * Skips core for all heroes (as the items are repeated)
+ * except Lone Druid and neutral items for all heroes.
  *
  */
 export function* itemIterator(
@@ -203,7 +140,7 @@ export function* itemIterator(
   phase?: string
 ): Generator<{
   item: string;
-  localizedName: string;
+  npcShortName: string;
   phase: string;
 }> {
   const phaseItemBuild = phase ? phase2ItemBuild[phase] : undefined;
@@ -211,7 +148,7 @@ export function* itemIterator(
   //console.log(`phase: `, phase);
   //console.log(`phaseItemBuild: `, phaseItemBuild);
 
-  for (const { localizedHeroName, heroBuild } of heroBuildIterator()) {
+  for (const { npcShortName, heroBuild } of heroBuildIterator()) {
     if (!role || heroBuild.roles.includes(role)) {
       for (const [category, items] of Object.entries(heroBuild.items)) {
         // Remove "core" (if not lone druid; as it is a repetition) and "neutral"
@@ -231,7 +168,7 @@ export function* itemIterator(
             for (const item of releventItems) {
               yield {
                 item,
-                localizedName: localizedHeroName,
+                npcShortName,
                 phase: category,
               };
             }
@@ -263,16 +200,16 @@ export function* counterItemIterator(
   phase?: string
 ): Generator<{
   item: string;
-  localizedName: string;
+  npcShortName: string;
   phase: string;
 }> {
   const phaseItemBuild = phase ? phase2CounterItemBuild[phase] : undefined;
 
-  for (const [localizedName, heroContent] of Object.entries(heroBuilds)) {
+  for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
     for (const [phase, items] of Object.entries(heroContent.counter_items)) {
       if (!phaseItemBuild || phaseItemBuild === phase) {
-        for (const [rolePlayer, counterItems] of Object.entries(
-          items as CounterItems
+        for (const [rolePlayer, counterItems] of Object.entries<string[]>(
+          items as any as Record<string, string[]>
         )) {
           if (
             rolePlayer === "all" ||
@@ -287,8 +224,8 @@ export function* counterItemIterator(
             for (const counterItem of counterItems) {
               //counterItems_.push(counterItem);
               yield {
-                localizedName,
-                item: (counterItem as CounterItem).item,
+                npcShortName,
+                item: counterItem,
                 phase: phase,
               };
             }
@@ -314,12 +251,12 @@ export function* counterItemIterator(
  * Function provides iterator through all hero builds.
  */
 export function* heroBuildIterator(): Generator<{
-  localizedHeroName: string;
+  npcShortName: string;
   heroBuild: IHeroBuild;
 }> {
-  for (const [localizedHeroName, heroContent] of Object.entries(heroBuilds)) {
+  for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
     for (const heroBuild of heroContent.builds) {
-      yield { localizedHeroName, heroBuild };
+      yield { npcShortName, heroBuild };
     }
   }
 }
@@ -330,14 +267,6 @@ function buildContainsItem(build: IHeroBuild, item: string): boolean {
   }
   return false;
 }
-
-/*function getTooltip(
-  content: IHeroContent,
-  build: IHeroBuild,
-  item: string
-): string | undefined {
-  return build.item_tooltips?.[item] || content?.item_tooltips?.[item];
-}*/
 
 /**
  * Return the most recommended items for all heroes in the hero guides.
@@ -477,8 +406,8 @@ export function mostCounteringItems(
     // This needs to be corrected
 
     // Clear control set, if hero changed
-    if (hero !== item.localizedName) {
-      hero = item.localizedName;
+    if (hero !== item.npcShortName) {
+      hero = item.npcShortName;
       counterItems.clear();
     }
 
