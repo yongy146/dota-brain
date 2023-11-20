@@ -109,9 +109,7 @@ export function getAbilitiesWithDisables(
  */
 export function getDispellableBuffs(npcShortName: string): string[] {
   //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
-  if (
-    dispellableBuffs[npcShortName as keyof typeof dispellableBuffs] === null
-  ) {
+  if (!dispellableBuffs[npcShortName as keyof typeof dispellableBuffs]) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return [];
   }
