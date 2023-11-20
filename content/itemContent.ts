@@ -21,11 +21,11 @@ export interface IItem {
       sound?: string | string[];
     }
   >;
-  youTube?: IYouTubeVideo | IYouTubeVideo[];
+  youTube?: string[];
   sound?: []; // Add text, description?!
 }
 
-export interface IYouTubeVideo {
+/*export interface IYouTubeVideo {
   code: string;
   /**
    * A react-intl tag.
@@ -37,28 +37,24 @@ export interface IYouTubeVideo {
    * in the file /generic/en/items.json
    *
    */
-  title?: string;
+/*title?: string;
   // aspectRatio?: string; always 16:9?! To be checked
-}
+}*/
 
 export const itemContent: Record<string, IItem> = {
   desolator: {
     youTube: [
-      {
-        // Date: 1.3.2023
-        // Searched: 26.10.2023
-
-        // When to buy desolator
-        title: "when_to_buy",
-        code: "_HBcbAxlcdY",
-      },
-      {
-        // Date: 1.3.2023
-        // Searched: 26.10.2023
-        // Visual effect
-        title: "visual_effect",
-        code: "8H57_0l5H5I",
-      },
+      // Date: 1.3.2023
+      // Searched: 26.10.2023
+      // When to buy desolator
+      "_HBcbAxlcdY",
+      // Date: 1.3.2023
+      // Searched: 26.10.2023
+      // Visual effect
+      "8H57_0l5H5I",
     ],
+  },
+  soul_ring: {
+    youTube: ["1NYevLUyg8E"],
   },
 };
