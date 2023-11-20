@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-namespace */
 /**
  * This library is used to access static Dota 2 data on Heroes, Items and Abilities.
  *
@@ -7,28 +6,59 @@
  * (C) Dota Coach, 2023
  */
 import { dispellableBuffs } from "../content/dispellableBuffs";
-// disables should be removed once the second screen is redesigned and moved to react. Currently only used by the second screen
 import {
   channeling_interrupts,
   silence,
   root,
   disables,
+  IDisable,
 } from "../content/disables";
-import { idToNPCName } from "@gameData/out/dota2HeroNames";
-import dota2Abilities from "@gameData/out/dota2Abilities.json";
 import { IAbility } from "@gameData/out/dota2Abilities";
-//import * as DotaLogger from "@utilities/log/log";
+
+//
+// Abilities with disables
+//
+
+/**
+ * Returns all abilities that interrupt channeling.
+ *
+ * @param npcShortHero E.g., 'antimage'
+ */
+export function getChannelingInterrupts(npcShortName: string): IDisable[] {
+  return getAbilitiesWithDisables(npcShortName, channeling_interrupts);
+}
 
 /**
  *
+ * @param npcShortName, e.g. 'antimage'
+ * @returns All abilities that slience. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ */
+export function getSilences(npcShortName: string): IDisable[] {
+  return getAbilitiesWithDisables(npcShortName, silence);
+}
+
+/**
+ *
+ * @param npcShortHero
+ * @returns All abilities that root.  Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ */
+export function getRoots(npcShortName: string): IDisable[] {
+  return getAbilitiesWithDisables(npcShortName, root);
+}
+
+/**
+ * Fetches the abilities of a given hero for a set of given disables.
+ *
+ * Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ *
  * @param hero
  * @param disables
- * @returns All abilities of a given hero for given disables. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
+ *
  */
 export function getAbilitiesWithDisables(
   npcShortHero: string,
   disablesToScreen: string[]
-): any[] {
+): IDisable[] {
   //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(hero: '" + hero + "', disables: '" + JSON.stringify(disablesToScreen) + "'): Called")
 
   const heroDisables = disables[npcShortHero];
@@ -37,7 +67,7 @@ export function getAbilitiesWithDisables(
     return [];
   }
 
-  const result: any[] = [];
+  const result: IDisable[] = [];
 
   // Iterate through all skills
   for (let i = 0; i < heroDisables.length; i++) {
@@ -67,44 +97,35 @@ export function getAbilitiesWithDisables(
   return result;
 }
 
-export function getDispellableBuffs(hero: string): string[] {
-  if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
-  if (dispellableBuffs[hero as keyof typeof dispellableBuffs] == null) {
+//
+// Dispellable buffs
+//
+
+/**
+ * Returns the abilities that have dispellable buffs.
+ *
+ * @param npcShortName e.g. "legion_commander"
+ *
+ */
+export function getDispellableBuffs(npcShortName: string): string[] {
+  //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
+  if (
+    dispellableBuffs[npcShortName as keyof typeof dispellableBuffs] === null
+  ) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return [];
   }
 
-  const result = dispellableBuffs[hero as keyof typeof dispellableBuffs];
+  const result =
+    dispellableBuffs[npcShortName as keyof typeof dispellableBuffs];
 
   /* return copy of array, otherwise recipient can change content of dispellableBuffs */
   return [...result];
 }
-/**
- *
- * @param npcShortHero
- * @returns All abilities that interrupt channeling. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
- * TASK MICHEL: CHECK IF WE CAN CHANGE FUNCTION TO ONLY RETURN ARRAY OF STRINGS WITH ABILITIES
- */
-export function getChannelingInterrupts(npcShortHero: string): any[] {
-  return getAbilitiesWithDisables(npcShortHero, channeling_interrupts);
-}
-/**
- *
- * @param npcShortHero
- * @returns All abilities that slience. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
- */
-export function getSilences(npcShortHero: string): any[] {
-  return getAbilitiesWithDisables(npcShortHero, silence);
-}
 
-/**
- *
- * @param npcShortHero
- * @returns All abilities that root.  Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
- */
-export function getRoots(npcShortHero: string): any[] {
-  return getAbilitiesWithDisables(npcShortHero, root);
-}
+//
+// Hero Abilities Analytics
+//
 
 export interface AnalyzedHeroAbilities {
   buffsBasicDispel: IAbility[];

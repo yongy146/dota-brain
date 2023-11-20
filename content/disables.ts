@@ -46,9 +46,9 @@ export enum AbilityAffects {
 }
 
 export interface IDisable {
-  skill: string;
+  skill: string; // full name of ability
   affects: AbilityAffects;
-  disables: string[];
+  disables: string[]; // e.g. silcence
 }
 
 export const disables: IDisables = {
