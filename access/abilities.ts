@@ -36,12 +36,12 @@ import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI.js";
  * @returns All abilities of a given hero for given disables. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
  */
 export function getAbilitiesWithDisables(
-  hero: string,
+  npcShortHero: string,
   disablesToScreen: string[]
 ): any[] {
   //DotaLogger.log("Dota2.hero.ability.getAbilitiesWithDisables(hero: '" + hero + "', disables: '" + JSON.stringify(disablesToScreen) + "'): Called")
 
-  const heroDisables = disables[hero];
+  const heroDisables = disables[npcShortHero];
   if (heroDisables == null) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return [];
@@ -91,29 +91,29 @@ export function getDispellableBuffs(hero: string): string[] {
 }
 /**
  *
- * @param hero
+ * @param npcShortHero
  * @returns All abilities that interrupt channeling. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
  * TASK MICHEL: CHECK IF WE CAN CHANGE FUNCTION TO ONLY RETURN ARRAY OF STRINGS WITH ABILITIES
  */
-export function getChannelingInterrupts(hero: string): any[] {
-  return getAbilitiesWithDisables(hero, channeling_interrupts);
+export function getChannelingInterrupts(npcShortHero: string): any[] {
+  return getAbilitiesWithDisables(npcShortHero, channeling_interrupts);
 }
 /**
  *
- * @param hero
+ * @param npcShortHero
  * @returns All abilities that slience. Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
  */
-export function getSilences(hero: string): any[] {
-  return getAbilitiesWithDisables(hero, silence);
+export function getSilences(npcShortHero: string): any[] {
+  return getAbilitiesWithDisables(npcShortHero, silence);
 }
 
 /**
  *
- * @param hero
+ * @param npcShortHero
  * @returns All abilities that root.  Format: {skill: "<name of skill>", affects: <"hero", "hero_area", "area">, disables: [<"stun", "leash", etc.>] }
  */
-export function getRoots(hero: string): any[] {
-  return getAbilitiesWithDisables(hero, root);
+export function getRoots(npcShortHero: string): any[] {
+  return getAbilitiesWithDisables(npcShortHero, root);
 }
 
 export interface AnalyzedHeroAbilities {

@@ -52,14 +52,14 @@ export interface IDisable {
 }
 
 export const disables: IDisables = {
-  Abaddon: [
+  abaddon: [
     {
       skill: "abaddon_frostmourne",
       affects: AbilityAffects.HERO,
       disables: ["slow_move", "silence"],
     },
   ],
-  Alchemist: [
+  alchemist: [
     {
       skill: "alchemist_unstable_concoction",
       affects: AbilityAffects.HERO_AREA,
@@ -67,7 +67,7 @@ export const disables: IDisables = {
     },
     // Unstable Concoction is cast on a hero but stuns and damages nearby heroes as well.
   ],
-  "Ancient Apparition": [
+  ancient_apparition: [
     {
       skill: "ancient_apparition_cold_feet",
       affects: AbilityAffects.HERO,
@@ -76,7 +76,7 @@ export const disables: IDisables = {
     // Level 25 talent makes Cold Feet be AoE and is cast in "area".
     // The Aghanim's Shard on Ancient Apparition gives an Area stun on Ice Blast.
   ],
-  "Anti-Mage": [
+  antimage: [
     {
       skill: "antimage_mana_void",
       affects: AbilityAffects.HERO,
@@ -84,8 +84,8 @@ export const disables: IDisables = {
     },
     // The damage of Mana Void affects "area" but only ministuns the AbilityAffects.HERO cast on.
   ],
-  "Arc Warden": [],
-  Axe: [
+  arc_warden: [],
+  axe: [
     {
       skill: "axe_berserkers_call",
       affects: AbilityAffects.AREA,
@@ -93,7 +93,7 @@ export const disables: IDisables = {
     },
     // Berserker's Call would be considered as a taunt by dota2.gamepedia.com.
   ],
-  Bane: [
+  bane: [
     {
       skill: "bane_nightmare",
       affects: AbilityAffects.HERO,
@@ -105,7 +105,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Batrider: [
+  batrider: [
     {
       skill: "batrider_flaming_lasso",
       affects: AbilityAffects.HERO,
@@ -113,7 +113,7 @@ export const disables: IDisables = {
     },
     // Flaming Lasso affects AbilityAffects.HERO and acts as a stun (shackle by dota2.gamepedia.com). With Aghanim's Scepter uppgrade it also affects the closest ally of the target within the range of 550.
   ],
-  Beastmaster: [
+  beastmaster: [
     {
       skill: "beastmaster_primal_roar",
       affects: AbilityAffects.HERO_AREA,
@@ -122,7 +122,7 @@ export const disables: IDisables = {
     // Primal roar is cast on hero but stuns (forced movement by dota2.gamepedia.com) and damages nearby heroes as well.
     // The Hawks also provide a Hero Root on units within 500 range.
   ],
-  Bloodseeker: [
+  bloodseeker: [
     {
       skill: "bloodseeker_blood_bath",
       affects: AbilityAffects.AREA,
@@ -130,7 +130,7 @@ export const disables: IDisables = {
     },
     // Blood Rite silences and thus stops the channeling spells but not teleports.
   ],
-  "Bounty Hunter": [
+  bounty_hunter: [
     {
       skill: `bounty_hunter_wind_walk`,
       affects: AbilityAffects.HERO,
@@ -138,7 +138,7 @@ export const disables: IDisables = {
     },
     // With Aghanims Shard, any hero made invisible by Bounty Hunter also gets a Hero Stun with their first auto attack.
   ],
-  Brewmaster: [
+  brewmaster: [
     {
       skill: "brewmaster_earth_hurl_boulder",
       affects: AbilityAffects.HERO,
@@ -151,27 +151,28 @@ export const disables: IDisables = {
     },
     // The Level 25 talent gives a Fear effect on Cinder Brew.
   ],
-  Bristleback: [],
-  Broodmother: [],
-  "Centaur Warrunner": [
+  bristleback: [],
+  broodmother: [],
+  centaur: [
     {
       skill: "centaur_hoof_stomp",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
   ],
-  "Chaos Knight": [
+  chaos_knight: [
     {
       skill: "chaos_knight_chaos_bolt",
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
   ],
-  Chen: [
+  chen: [
     // Neutral creeps can stun(Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
   ],
-  Clinkz: [],
-  Clockwerk: [
+  clinkz: [],
+  // Clockwerk
+  rattletrap: [
     {
       skill: "rattletrap_battery_assault",
       affects: AbilityAffects.AREA,
@@ -189,7 +190,7 @@ export const disables: IDisables = {
     },
     // Power Cogs also stun in close area around them.
   ],
-  "Crystal Maiden": [
+  crystal_maiden: [
     {
       skill: "crystal_maiden_frostbite",
       affects: AbilityAffects.HERO,
@@ -198,11 +199,11 @@ export const disables: IDisables = {
     // Aghanim's Scepter allows Freezing Field to apply Frostbite.
     // The Aghanims Shard on Crystal Maiden gives her another Area Root with Crystal Clone.
   ],
-  "Dark Seer": [
+  dark_seer: [
     // Vacuum acts as area stun(forced movement by dota2.gamepedia.com).
     // The Aghanims Scepter gives a Hero stun with the Normal Punch ability.
   ],
-  "Dark Willow": [
+  dark_willow: [
     {
       skill: "dark_willow_bramble_maze",
       affects: AbilityAffects.AREA,
@@ -222,7 +223,7 @@ export const disables: IDisables = {
     // Cursed Crown is cast on hero but also stuns nearby enemy units.
     // Terrorize is an area "fear" effect.
   ],
-  Dawnbreaker: [
+  dawnbreaker: [
     {
       skill: "dawnbreaker_fire_wreath",
       affects: AbilityAffects.AREA,
@@ -234,17 +235,17 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Dazzle: [
+  dazzle: [
     // Dazzle Aghanim's Shard gives him a Hero targeted Hex on Poison Touch.
   ],
-  "Death Prophet": [
+  death_prophet: [
     {
       skill: "death_prophet_silence",
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
   ],
-  Disruptor: [
+  disruptor: [
     {
       skill: "disruptor_static_storm",
       affects: AbilityAffects.AREA,
@@ -258,7 +259,7 @@ export const disables: IDisables = {
     // Static Storm applies mute with Aghanim's upgrade.
     // Glimpse affects AbilityAffects.HERO and stops teleports and channeled spells or items. Not sure how to classify it, perhaps as cyclone?
   ],
-  Doom: [
+  doom_bringer: [
     {
       skill: "doom_bringer_infernal_blade",
       affects: AbilityAffects.HERO,
@@ -272,21 +273,21 @@ export const disables: IDisables = {
     // The level 25 talent also gives Doom a Hero Mute effect on his ultimate.
     // Devoured neutral creeps can stun (Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
   ],
-  "Dragon Knight": [
+  dragon_knight: [
     {
       skill: "dragon_knight_dragon_tail",
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
   ],
-  "Drow Ranger": [
+  drow_ranger: [
     {
       skill: "drow_ranger_wave_of_silence",
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
   ],
-  "Earth Spirit": [
+  earth_spirit: [
     {
       skill: "earth_spirit_rolling_boulder",
       affects: AbilityAffects.HERO,
@@ -301,7 +302,7 @@ export const disables: IDisables = {
     // Geomagnetic Grip's silence can be spread to other heroes with Magnetize.
     // Aghanim's Scepter upgrade add a new spell Enchant Remnant that acts as a hero stun.
   ],
-  Earthshaker: [
+  earthshaker: [
     {
       skill: "earthshaker_fissure",
       affects: AbilityAffects.AREA,
@@ -319,7 +320,7 @@ export const disables: IDisables = {
     },
     // Enchant Totem and Echo Slam stun nearby heroes because of Aftershock.
   ],
-  "Elder Titan": [
+  elder_titan: [
     {
       skill: "elder_titan_earth_splitter",
       affects: AbilityAffects.AREA,
@@ -331,18 +332,18 @@ export const disables: IDisables = {
       disables: ["sleep"],
     },
   ],
-  "Ember Spirit": [
+  ember_spirit: [
     {
       skill: "ember_spirit_searing_chains",
       affects: AbilityAffects.AREA,
       disables: ["root"],
     },
   ],
-  Enchantress: [
+  enchantress: [
     // Enchanted neutral creeps can stun(Centaur Conqueror, Mud Golem, Shard Golem) or root(Dark Troll Summoner).
     // The Aghanims Scepter on Enchantress gives her a Hero Root with Little Friends.
   ],
-  Enigma: [
+  enigma: [
     {
       skill: "enigma_malefice",
       affects: AbilityAffects.HERO,
@@ -354,7 +355,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  "Faceless Void": [
+  faceless_void: [
     {
       skill: "faceless_void_time_lock",
       affects: AbilityAffects.HERO,
@@ -367,7 +368,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Grimstroke: [
+  grimstroke: [
     {
       skill: "grimstroke_spirit_walk",
       affects: AbilityAffects.AREA,
@@ -377,14 +378,14 @@ export const disables: IDisables = {
     // Ink Swell is an area stun. It is cast on allied unit and it stuns around it upon triggering Ink Swell again.
     // Soulbind is a AbilityAffects.HERO root(leash by dota2.gamepedia.com). It only roots if it latched to another hero. Otherwise it does nothing.
   ],
-  Gyrocopter: [
+  gyrocopter: [
     {
       skill: "gyrocopter_homing_missile",
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
   ],
-  Hoodwink: [
+  hoodwink: [
     {
       skill: "hoodwink_bushwhack",
       affects: AbilityAffects.AREA,
@@ -392,10 +393,10 @@ export const disables: IDisables = {
     },
     // Enemy heroes need to be close to a tree or to other heroes
   ],
-  Huskar: [
+  huskar: [
     // Aghanim's Scepter upgrade makes Life Break be a hero stun(taunt by dota2.gamepedia.com).
   ],
-  Invoker: [
+  invoker: [
     {
       skill: "invoker_tornado",
       affects: AbilityAffects.AREA,
@@ -408,18 +409,19 @@ export const disables: IDisables = {
     },
     // Cold Snap is a hero stun.
   ],
-  Jakiro: [
+  jakiro: [
     {
       skill: "jakiro_ice_path",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
   ],
-  Io: [
+  //Io
+  wisp: [
     // Io Aghanim's Shard gives it an area stun on Tether.
   ],
-  Juggernaut: [],
-  "Keeper of the Light": [
+  juggernaut: [],
+  keeper_of_the_light: [
     {
       skill: "keeper_of_the_light_will_o_wisp",
       affects: AbilityAffects.AREA,
@@ -427,7 +429,7 @@ export const disables: IDisables = {
     },
     // Will-O-Wisp is an area stun.
   ],
-  Kunkka: [
+  kunkka: [
     {
       skill: "kunkka_torrent",
       affects: AbilityAffects.AREA,
@@ -446,7 +448,7 @@ export const disables: IDisables = {
     // X Marks The Spot is a hero stun? It cancels teleports and channeled spells and items.
     // Aghanim's Scepter adds additional spell Torrent Storm which is an area stun.
   ],
-  "Legion Commander": [
+  legion_commander: [
     {
       skill: "legion_commander_duel",
       affects: AbilityAffects.HERO,
@@ -454,14 +456,14 @@ export const disables: IDisables = {
     },
     // You can just say it stuns as stun incorporates all the other mentioned disables (i.e. silence & mute).
   ],
-  Leshrac: [
+  leshrac: [
     {
       skill: "leshrac_split_earth",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
   ],
-  Lich: [
+  lich: [
     {
       skill: "lich_sinister_gaze",
       affects: AbilityAffects.HERO,
@@ -469,15 +471,15 @@ export const disables: IDisables = {
     },
     // Sinister Gaze is a hero stun. With Aghanim's Scepter upgrade it becomes area stun.
   ],
-  Lifestealer: [],
-  Lina: [
+  life_stealer: [],
+  lina: [
     {
       skill: "lina_light_strike_array",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
   ],
-  Lion: [
+  lion: [
     {
       skill: "lion_impale",
       affects: AbilityAffects.AREA,
@@ -493,7 +495,7 @@ export const disables: IDisables = {
     // You can just say it hexes as hex incorporates all the other mentioned disables (i.e. silence and mute).
     // Level 25 talent "+250 AoE Hex" makes it an area hex.
   ],
-  "Lone Druid": [
+  lone_druid: [
     {
       skill: "lone_druid_savage_roar",
       affects: AbilityAffects.AREA,
@@ -508,7 +510,7 @@ export const disables: IDisables = {
     // It affects single unit that the bear attacks so perhaps AbilityAffects.HERO? It is not targetable.
     // Lone Druid also gains a Hero Root with Entangling Claws when using Spirit Form.
   ],
-  Luna: [
+  luna: [
     {
       skill: "luna_lucent_beam",
       affects: AbilityAffects.HERO,
@@ -516,8 +518,9 @@ export const disables: IDisables = {
     },
     // Level 25 talent "+0.2s Eclipse Lucent Ministun" makes Eclipse be area stun.
   ],
-  Lycan: [],
-  Magnus: [
+  lycan: [],
+  // Magnus
+  magnataur: [
     {
       skill: "magnataur_skewer",
       affects: AbilityAffects.AREA,
@@ -531,7 +534,7 @@ export const disables: IDisables = {
     },
     // The Aghanims Scepter gives Magnus another Area stun with Horn Toss.
   ],
-  Marci: [
+  marci: [
     {
       skill: `marci_companion_run`,
       affects: AbilityAffects.AREA,
@@ -539,7 +542,7 @@ export const disables: IDisables = {
     },
     // The Aghanims Shard gives Marci an Area silence with Unleash.
   ],
-  Mars: [
+  mars: [
     {
       skill: "mars_spear",
       affects: AbilityAffects.AREA,
@@ -547,7 +550,7 @@ export const disables: IDisables = {
     },
     // Spear of Mars is an area stun(forced movement by dota2.gamepedia.com). If there was another hero hit by spear before the hero that was teleporting out or channeling spell/item, the teleport or channeling spell/item won't be canceled.
   ],
-  Medusa: [
+  medusa: [
     {
       skill: "medusa_stone_gaze",
       affects: AbilityAffects.AREA,
@@ -555,14 +558,14 @@ export const disables: IDisables = {
     },
     // Aghanim's Scepter upgrade makes Mystic Snake be a hero stun. It also stuns the other heroes it bounces to for even longer.
   ],
-  Meepo: [
+  meepo: [
     {
       skill: "meepo_earthbind",
       affects: AbilityAffects.AREA,
       disables: ["root"],
     },
   ],
-  Mirana: [
+  mirana: [
     {
       skill: "mirana_arrow",
       affects: AbilityAffects.HERO,
@@ -570,14 +573,14 @@ export const disables: IDisables = {
     },
     // The level 25 talent on Mirana lets her Stun multiple Heroes with each cast of Sacred Arrow.
   ],
-  "Monkey King": [
+  monkey_king: [
     {
       skill: "monkey_king_boundless_strike",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
   ],
-  Morphling: [
+  morphling: [
     {
       skill: "morphling_adaptive_strike_str",
       affects: AbilityAffects.HERO,
@@ -586,7 +589,7 @@ export const disables: IDisables = {
     // typo skill: "morphling_adaptive_strike_agi" should be strength and not agility.
     // With level 25 talent "+3 Multishot Adaptive Strike" it also affects two other heroes besides the one targeted with it. Maybe "area" then?
   ],
-  Muerta: [
+  muerta: [
     {
       skill: "muerta_dead_shot",
       affects: AbilityAffects.HERO,
@@ -598,7 +601,7 @@ export const disables: IDisables = {
       disables: ["slow_move", "slow_attack", "silence"],
     },
   ],
-  "Naga Siren": [
+  naga_siren: [
     {
       skill: "naga_siren_song_of_the_siren",
       affects: AbilityAffects.AREA,
@@ -610,16 +613,18 @@ export const disables: IDisables = {
       disables: ["root"],
     },
   ],
-  "Nature's Prophet": [],
+  // "Nature's Prophet"
+  furion: [],
   // The Level 20 talent on Natures Prophet gives him an Area Leash with Sprout.
-  Necrophos: [
+  // Necrophos
+  necrolyte: [
     {
       skill: "necrolyte_reapers_scythe",
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
   ],
-  "Night Stalker": [
+  night_stalker: [
     {
       skill: "night_stalker_void",
       affects: AbilityAffects.HERO,
@@ -632,7 +637,7 @@ export const disables: IDisables = {
       disables: ["silence"],
     },
   ],
-  "Nyx Assassin": [
+  nyx_assassin: [
     {
       skill: "nyx_assassin_impale",
       affects: AbilityAffects.AREA,
@@ -645,7 +650,7 @@ export const disables: IDisables = {
     },
     // With Aghanim's Scepter additional spell "Burrow" it also becomes an area stun in addition to previous functionality.
   ],
-  "Ogre Magi": [
+  ogre_magi: [
     {
       skill: "ogre_magi_fireblast",
       affects: AbilityAffects.HERO,
@@ -653,8 +658,8 @@ export const disables: IDisables = {
     },
     // Aghanim's Scepter adds additional spell "Unrefined Fireblast" which is also a hero stun.
   ],
-  Omniknight: [],
-  Oracle: [
+  omniknight: [],
+  oracle: [
     {
       skill: "oracle_fortunes_end",
       affects: AbilityAffects.HERO_AREA,
@@ -662,8 +667,9 @@ export const disables: IDisables = {
     },
     // Fortune's End is cast on a unit but roots and damages nearby units as well.
   ],
-  //	"Outworld Devourer": [
-  "Outworld Destroyer": [
+  // Outworld Devourer
+  // Outworld Destroyer
+  obsidian_destroyer: [
     {
       skill: "obsidian_destroyer_astral_imprisonment",
       affects: AbilityAffects.HERO,
@@ -671,7 +677,7 @@ export const disables: IDisables = {
     },
     // Astral Imprisonment is a hero cyclone (hide by https://dota2.gamepedia.com/)? Aghanim's Scepter adds another charge of it.
   ],
-  Pangolier: [
+  pangolier: [
     {
       skill: "pangolier_gyroshell",
       affects: AbilityAffects.AREA,
@@ -679,16 +685,16 @@ export const disables: IDisables = {
     },
     // Rolling Thunder is an area stun.
   ],
-  "Phantom Assassin": [],
-  "Phantom Lancer": [],
-  Phoenix: [
+  phantom_assassin: [],
+  phantom_lancer: [],
+  phoenix: [
     {
       skill: "phoenix_supernova",
       affects: AbilityAffects.AREA,
       disables: ["stun"],
     },
   ],
-  "Primal Beast": [
+  primal_beast: [
     {
       skill: "primal_beast_onslaught",
       affects: AbilityAffects.AREA,
@@ -701,7 +707,7 @@ export const disables: IDisables = {
     },
     // The Aghanim Shard on Primal Beast gives another Area stun with Rock Throw.
   ],
-  Puck: [
+  puck: [
     {
       skill: "puck_dream_coil",
       affects: AbilityAffects.AREA,
@@ -713,7 +719,7 @@ export const disables: IDisables = {
       disables: ["silence"],
     },
   ],
-  Pudge: [
+  pudge: [
     {
       skill: "pudge_meat_hook",
       affects: AbilityAffects.HERO,
@@ -726,19 +732,19 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Pugna: [],
-  "Queen of Pain": [
+  pugna: [],
+  queenofpain: [
     // Level 25 talent "Scream of Pain 1.2 Fear" is an area fear.
   ],
-  Razor: [],
-  Riki: [
+  razor: [],
+  riki: [
     {
       skill: "riki_smoke_screen",
       affects: AbilityAffects.AREA,
       disables: ["silence"],
     },
   ],
-  Rubick: [
+  rubick: [
     {
       skill: "rubick_telekinesis",
       affects: AbilityAffects.HERO_AREA,
@@ -746,7 +752,7 @@ export const disables: IDisables = {
     },
     // It is also an area stun in the fall area of the lifed unit.
   ],
-  "Sand King": [
+  sand_king: [
     {
       skill: "sandking_burrowstrike",
       affects: AbilityAffects.AREA,
@@ -755,7 +761,7 @@ export const disables: IDisables = {
     // It is area although it acts as a targetable spells (can be countered by Linken's Spehere or Lotus Orb).
     // The Aghanims Scepter on Sand King gives an added Area stun with Sand Storm.
   ],
-  "Shadow Demon": [
+  shadow_demon: [
     {
       skill: "shadow_demon_disruption",
       affects: AbilityAffects.HERO,
@@ -763,7 +769,8 @@ export const disables: IDisables = {
     },
     // Disruption is a hero cyclone (hide by https://dota2.gamepedia.com/)? Gets two charges of it with level 25 talent.
   ],
-  "Shadow Fiend": [
+  // Shadow Fiend
+  nevermore: [
     {
       skill: "nevermore_requiem",
       affects: AbilityAffects.AREA,
@@ -771,7 +778,7 @@ export const disables: IDisables = {
     },
     // Requiem of Souls is an area fear.
   ],
-  "Shadow Shaman": [
+  shadow_shaman: [
     {
       skill: "shadow_shaman_shackles",
       affects: AbilityAffects.HERO,
@@ -784,7 +791,7 @@ export const disables: IDisables = {
     },
     // You can just say it hexes as hex incorporates all the other mentioned disables (i.e. mute and slience).
   ],
-  Silencer: [
+  silencer: [
     {
       skill: "silencer_last_word",
       affects: AbilityAffects.HERO,
@@ -798,7 +805,7 @@ export const disables: IDisables = {
     },
     // The Aghanims Shard on Silencer gives him another Hero Silence with Glaives of Wisdom. Can silence more than one hero with Glaive bounce talent.
   ],
-  "Skywrath Mage": [
+  skywrath_mage: [
     {
       skill: "skywrath_mage_ancient_seal",
       affects: AbilityAffects.HERO,
@@ -806,7 +813,7 @@ export const disables: IDisables = {
     },
     // Aghanim's Scepter makes Anceint Seal affect another hero in 700 range.
   ],
-  Slardar: [
+  slardar: [
     {
       skill: "slardar_bash",
       affects: AbilityAffects.HERO,
@@ -818,7 +825,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  Slark: [
+  slark: [
     {
       skill: "slark_pounce",
       affects: AbilityAffects.HERO,
@@ -826,7 +833,7 @@ export const disables: IDisables = {
     },
     // Punce is a hero root (leash by https://dota2.gamepedia.com/). It is not targetable and affects only one hero. Aghanim's Scepter adds another charge and increases Pounce range.
   ],
-  Snapfire: [
+  snapfire: [
     {
       skill: "snapfire_firesnap_cookie",
       affects: AbilityAffects.AREA,
@@ -834,16 +841,15 @@ export const disables: IDisables = {
     },
     // Firesnap Cookie is an area stun.
   ],
-  Sniper: [
+  sniper: [
     {
       skill: `sniper_assassinate`,
       affects: AbilityAffects.HERO,
       disables: [`stun`],
     },
   ],
-
-  Spectre: [],
-  "Spirit Breaker": [
+  spectre: [],
+  spirit_breaker: [
     {
       skill: "spirit_breaker_greater_bash",
       affects: AbilityAffects.HERO,
@@ -857,7 +863,7 @@ export const disables: IDisables = {
     // During Charge of Darkness Greater Bash is an area stun.
     // Nether Strike also stuns but only because it applies Greater Bash.
   ],
-  "Storm Spirit": [
+  storm_spirit: [
     {
       skill: "storm_spirit_electric_vortex",
       affects: AbilityAffects.HERO,
@@ -865,7 +871,7 @@ export const disables: IDisables = {
     },
     // Electric Vortex is a hero stun. With Aghanim's Scepter upgrade it becomes an area stun.
   ],
-  Sven: [
+  sven: [
     {
       skill: "sven_storm_bolt",
       affects: AbilityAffects.HERO_AREA,
@@ -873,7 +879,7 @@ export const disables: IDisables = {
     },
     // Storm Hammer is cast on a unit but stuns and damages nearby units as well.
   ],
-  Techies: [
+  techies: [
     {
       skill: "techies_suicide",
       affects: AbilityAffects.AREA,
@@ -885,13 +891,13 @@ export const disables: IDisables = {
       disables: ["root"],
     },*/
   ],
-  "Templar Assassin": [
+  templar_assassin: [
     // Level 25 talent "1s Meld Hit Bash" is a hero stun.
   ],
-  Terrorblade: [
+  terrorblade: [
     // Aghanim's Scepter adds Terror Wave which is an area fear.
   ],
-  Tidehunter: [
+  tidehunter: [
     {
       skill: "tidehunter_ravage",
       affects: AbilityAffects.AREA,
@@ -899,11 +905,10 @@ export const disables: IDisables = {
     },
     // The Aghanims Shard gives Tidehunter another Hero Leash with Dead in the Water.
   ],
-  Timbersaw: [],
-  Tinker: [
+  tinker: [
     // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes (2, or 3 with level 15 talent) and is not targetable.
   ],
-  Tiny: [
+  tiny: [
     {
       skill: "tiny_avalanche",
       affects: AbilityAffects.AREA,
@@ -915,7 +920,10 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
   ],
-  "Treant Protector": [
+  // Timbersaw
+  shredder: [],
+  // Treant Protector
+  treant: [
     {
       skill: "treant_overgrowth",
       affects: AbilityAffects.AREA,
@@ -923,14 +931,14 @@ export const disables: IDisables = {
     },
     // The Aghanims Shard on Treant Protector gives him a Hero Root with Natures Guise.
   ],
-  "Troll Warlord": [
+  troll_warlord: [
     {
       skill: "troll_warlord_berserkers_rage",
       affects: AbilityAffects.HERO,
       disables: ["root"],
     },
   ],
-  Tusk: [
+  tusk: [
     {
       skill: "tusk_snowball",
       affects: AbilityAffects.AREA,
@@ -944,16 +952,17 @@ export const disables: IDisables = {
     },
     // Aghanim's Scepter adds Walrus Kick which is a hero stun.
   ],
-  Underlord: [
+  // Underlord
+  abyssal_underlord: [
     {
       skill: "abyssal_underlord_pit_of_malice",
       affects: AbilityAffects.AREA,
       disables: ["root"],
     },
   ],
-  Undying: [],
-  Ursa: [],
-  "Vengeful Spirit": [
+  undying: [],
+  ursa: [],
+  vengefulspirit: [
     {
       skill: "vengefulspirit_magic_missile",
       affects: AbilityAffects.HERO,
@@ -966,11 +975,11 @@ export const disables: IDisables = {
     },
     // The Aghanims Shard on Vengeful Spirit lets her Stun two Heroes with every Magic Missile cast.
   ],
-  Venomancer: [
+  venomancer: [
     //The Aghanim Shard on Venomancer provides a Hero stun with Latent Toxicity if it is dispelled.
   ],
-  Viper: [],
-  Visage: [
+  viper: [],
+  visage: [
     {
       skill: "visage_summon_familiars",
       affects: AbilityAffects.AREA,
@@ -978,7 +987,7 @@ export const disables: IDisables = {
     },
     // The Aghanim's Shard on Visage gives him another Area stun with self Stone Form.
   ],
-  "Void Spirit": [
+  void_spirit: [
     {
       skill: "void_spirit_aether_remnant",
       affects: AbilityAffects.HERO,
@@ -988,7 +997,7 @@ export const disables: IDisables = {
     // Aghanim's Scepter upgrades Resonant Pulse to area silence. It gives two charges of it as well.
     // Level 25 talent "Dissimilate Roots for 2s" makes Dissimilate an area root.
   ],
-  Warlock: [
+  warlock: [
     {
       skill: "warlock_rain_of_chaos",
       affects: AbilityAffects.AREA,
@@ -997,8 +1006,9 @@ export const disables: IDisables = {
     // Chaotic Offering is an area stun.
     // Level 20 talent "Summons a Golem on Death" is also an area stun.
   ],
-  Weaver: [],
-  Windranger: [
+  weaver: [],
+  // Windranger
+  windrunner: [
     {
       skill: "windrunner_shackleshot",
       affects: AbilityAffects.AREA,
@@ -1006,7 +1016,7 @@ export const disables: IDisables = {
     },
     // It can be seen as a hero stun and area stun.
   ],
-  "Winter Wyvern": [
+  winter_wyvern: [
     {
       skill: "winter_wyvern_cold_embrace",
       affects: AbilityAffects.HERO,
@@ -1020,7 +1030,7 @@ export const disables: IDisables = {
     // Winter's Curse is also an area stun as it affects the ones attacking the cursed unit.
     // Level 25 talent "Splinter Blast 1.5s Stun" makes Splinter Blast be an area stun.
   ],
-  "Witch Doctor": [
+  witch_doctor: [
     {
       skill: "witch_doctor_paralyzing_cask",
       affects: AbilityAffects.HERO_AREA,
@@ -1028,7 +1038,8 @@ export const disables: IDisables = {
     },
     // Can also be seen as an area stun.
   ],
-  "Wraith King": [
+  // Wraith King
+  skeleton_king: [
     {
       skill: "skeleton_king_hellfire_blast",
       affects: AbilityAffects.HERO,
@@ -1036,7 +1047,8 @@ export const disables: IDisables = {
     },
     // Level 25 talent "Reincarnation Casts Wraithfire Blast" is an area stun.
   ],
-  Zeus: [
+  // Zeus
+  zuus: [
     {
       skill: "zuus_lightning_bolt",
       affects: AbilityAffects.HERO,

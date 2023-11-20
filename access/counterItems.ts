@@ -1,4 +1,3 @@
-import { CounterItem } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 
 /**
@@ -12,7 +11,7 @@ export function getCounterItems(
   heroName: string,
   phase: "laning_phase" | "mid_game" | "late_game",
   isSupport: boolean
-): CounterItem[] {
+): string[] {
   //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
   if (heroName == "Outworld Destroyer") heroName = "Outworld Devourer";
 

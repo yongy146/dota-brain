@@ -13,7 +13,7 @@
 
 //import { activeItemIterator } from "@gameData/out/dota2ItemUtils";
 //import { IHeroesWithItem, getHeroesWithItem } from "access/heroUtils";
-import { heroBuilds } from "content/heroBuilds";
+import { heroBuilds } from "../content/heroBuilds";
 import _ from "lodash";
 
 function dumpTooltips() {

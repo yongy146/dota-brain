@@ -9,8 +9,8 @@
  *
  */
 
-import { activeItemIterator } from "@gameData/out/dota2ItemUtils";
-import { IHeroesWithItem /*getHeroesWithItem*/ } from "access/heroUtils";
+//import { activeItemIterator } from "@gameData/out/dota2ItemUtils";
+import { IHeroesWithItem /*getHeroesWithItem*/ } from "../access/heroUtils";
 
 function dumpTooltips() {
   const result: Record<string, IHeroesWithItem[]> = {};
@@ -34,11 +34,11 @@ function dumpTooltips() {
     }[] = [];
     for (const heroesWithItem of value) {
       for (const build of heroesWithItem.builds) {
-        if (build.tooltip)
+        /*if (build.tooltip)
           tooltips.push({
             name: heroesWithItem.localizedHeroName,
             tooltip: build.tooltip,
-          });
+          });*/
       }
     }
     for (const tooltip of tooltips) {

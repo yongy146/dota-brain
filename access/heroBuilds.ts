@@ -1,6 +1,5 @@
 import * as PlayerRoles from "../utilities/playerRoles";
 import {
-  CounterItem,
   IHeroBuild,
   IHeroContent,
   //getAbilityTooltip,
@@ -196,9 +195,9 @@ export function getItemNames(): string[] {
       }
     }
     for (const phaseValues of Object.values(heroContent.counter_items)) {
-      for (const roleValues of Object.values(phaseValues) as CounterItem[][]) {
+      for (const roleValues of Object.values(phaseValues) as string[][]) {
         for (const item of roleValues) {
-          result[item.item] = true;
+          result[item] = true;
         }
       }
     }
