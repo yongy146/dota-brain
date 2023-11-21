@@ -54,7 +54,7 @@ export function getOwnHeroMessages(npcHeroName: string): any[] {
   //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
   return dotaCoachMessages.filter(
     (message) =>
-      message.npcHeroName == npcHeroName && message.category == "OwnHero"
+      message.npcHeroName === npcHeroName && message.category === "OwnHero"
   );
 }
 
