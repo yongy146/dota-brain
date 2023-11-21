@@ -191,6 +191,7 @@ export const phase2CounterItemBuild: Record<string, string> = {
 export const phase2i18n: Record<string, string> = {
   starting: "Starting",
   early_game: "DOTA_Item_Build_Early_Game",
+  laning: "LaningPhaseCap",
   mid_game: "DOTA_Item_Build_Mid_Items",
   late_game: "DOTA_Item_Build_Late_Items",
   situational: "Situational",

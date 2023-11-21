@@ -13,7 +13,7 @@ export function getCounterItems(
   npcShortName: string,
   phase: "laning_phase" | "mid_game" | "late_game",
   isSupport: boolean,
-  intl?: IntlShape
+  messages?: Record<string, any>
 ): IPhaseItemBuild[] {
   const heroBuilds = getHeroContent(npcShortName);
 
@@ -26,10 +26,10 @@ export function getCounterItems(
       const result: IPhaseItemBuild = {
         name: item,
       };
-      if (intl) {
+      if (messages) {
         const id = `hero.${npcShortName}.counter_items.${phase}.${role}.${item}`;
-        console.log(`id: `, id);
-        if (intl.messages[id]) result.info = intl.formatMessage({ id });
+        //console.log(`id: `, id);
+        if (messages[id]) result.info = messages[id];
       }
       return result;
     });
