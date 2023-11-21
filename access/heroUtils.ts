@@ -188,7 +188,13 @@ export const phase2CounterItemBuild: Record<string, string> = {
   DOTA_Item_Build_Late_Items: "late_game",
 };
 
-/**
+export const phase2i18n: Record<string, string> = {
+  starting: "DOTA_Start",
+  early_game: "DOTA_Item_Build_Early_Game",
+  mid_game: "DOTA_Item_Build_Mid_Items",
+  late_game: "DOTA_Item_Build_Late_Items",
+  situations: "Situational",
+};
 
 /**
  * Counter items mentioned for two roles, are only reported once.
