@@ -3,12 +3,13 @@ import { IHeroContent, heroBuilds } from "../content/heroBuilds";
 /**
  * Returns HeroContent provided by content creators for the hero.
  *
- * @param heroName Localized hero name
+ * @param npcShortName e.g. 'legion_commander'
  * @return null if there is no such hero
  */
-export function getHeroContent(heroName: string): IHeroContent | null {
+export function getHeroContent(npcShortName: string): IHeroContent | null {
   //DotaLogger.log(`Dota2.getHeroContent(${heroName}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
+  if (!Object.prototype.hasOwnProperty.call(heroBuilds, npcShortName))
+    return null;
 
-  return heroBuilds[heroName];
+  return heroBuilds[npcShortName];
 }
