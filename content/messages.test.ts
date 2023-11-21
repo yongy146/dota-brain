@@ -13,14 +13,14 @@ import dota2Heroes from "@gameData/out/dota2Heroes.json";
 test("messages-getOwnHeroMessages", () => {
   // Checks that all heroes have own messages
   for (const npcName of Object.keys(dota2Heroes)) {
-    const msgs = getOwnHeroMessages(npcName.replace("npc_dota_hero_", ""));
+    const msgs = getOwnHeroMessages(npcName);
     expect(msgs.length > 0 || npcName).toBe(true);
   }
 });
 
 test("messages-getOwnHeroMessagesForRoles", () => {
   // Checks that all heroes have own messages
-  const msgs = getOwnHeroMessagesForRoles("npc_dota_hero_rubick", [
+  const msgs = getOwnHeroMessagesForRoles("rubick", [
     DOTA_COACH_GUIDE_ROLE.SUPPORT,
   ]);
   console.log(`msgs: `, msgs);

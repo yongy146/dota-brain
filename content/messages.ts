@@ -51,8 +51,7 @@ export function _findCategory(
  * @returns Array of message objects
  */
 export function getOwnHeroMessages(npcHeroName: string): any[] {
-  if (!npcHeroName.startsWith("npc_dota_hero_"))
-    npcHeroName = "npc_dota_hero_" + npcHeroName;
+  npcHeroName = npcHeroName.replace("npc_dota_hero_", "");
 
   //if (hero == "Outworld Devourer") hero = "Outworld Destroyer";
   return dotaCoachMessages.filter(
@@ -65,8 +64,7 @@ export function getOwnHeroMessagesForRoles(
   npcHeroName: string,
   roles: DOTA_COACH_GUIDE_ROLE[]
 ): DotaCoachMessage[] {
-  if (!npcHeroName.startsWith("npc_dota_hero_"))
-    npcHeroName = "npc_dota_hero_" + npcHeroName;
+  npcHeroName = npcHeroName.replace("npc_dota_hero_", "");
 
   return dotaCoachMessages.filter((message) => {
     if (message.npcHeroName !== npcHeroName) return false;
@@ -118,8 +116,7 @@ export const wisdomRuneRepeatTime = 7 * 60;
  * @returns Array of message objects
  */
 export function getEnemyHeroMessages(npcHeroName: string): any[] {
-  if (!npcHeroName.startsWith("npc_dota_hero_"))
-    npcHeroName = "npc_dota_hero_" + npcHeroName;
+  npcHeroName = npcHeroName.replace("npc_dota_hero_", "");
 
   return dotaCoachMessages.filter(
     (message) =>
