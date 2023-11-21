@@ -9,6 +9,7 @@ import {
 } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import * as DotaLogger from "@utilities/log/log";
+import { IntlShape } from "react-intl";
 
 export interface IItemBuild {
   roles?: string;
@@ -20,7 +21,7 @@ export interface IItemBuild {
   late_game?: IPhaseItemBuild[];
   situational?: IPhaseItemBuild[];
   situational_bear?: IPhaseItemBuild[];
-  neutral?: IPhaseItemBuild[] | null;
+  neutral?: IPhaseItemBuild[];
   neutral_bear?: IPhaseItemBuild[];
 }
 
@@ -271,6 +272,7 @@ export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
 
 /**
  *
+ *
  * @param hero The name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
  * @param playerRole if null, then the fucntion takes the fist build
  * @returns object with the following attributes: starting, early_game, mid_game, later_game, situational, roles: string. Each has an array of the following element: { item, info?, isCore?, purchaseTime? }
@@ -303,19 +305,26 @@ export function getItemBuildForRole(
 }
 
 /**
- * Returns item build in format to be use to display using DotaCoachUI
+ * Returns item build.
+ *
+ * Build includes tooltips if react-intl element is passed.
  *
  * @param heroBuild
  * @returns Object with UIItems and the associated roles.
  */
 export function getItemBuild(
-  heroContent: IHeroContent,
-  heroBuild: IHeroBuild
+  npcHeroName: string,
+  buildIndex: number,
+  //heroContent: IHeroContent,
+  //heroBuild: IHeroBuild,
+  intl?: IntlShape
 ): IItemBuild {
-  const item_tooltips = {
+  /*const item_tooltips = {
     //...(heroContent.item_tooltips || {}),
     //...(heroBuild.item_tooltips || {}),
-  };
+  };*/
+  const heroContent = heroBuilds[npcHeroName];
+  const heroBuild = heroContent.builds[buildIndex];
 
   const build = heroBuild;
 
@@ -323,6 +332,8 @@ export function getItemBuild(
     const result: IPhaseItemBuild = { name: item };
     //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
+    const tooltip = intl && getTooltip(npcHeroName, buildIndex, item, intl);
+    if (tooltip) result["info"] = tooltip;
     return result;
   }
 
@@ -375,6 +386,34 @@ export function getItemBuild(
           )
         : undefined,
   };
+}
+
+/**
+ * Returns the react-intl tooltip for a given hero, hero build and item.
+ *
+ * @param npcHeroName Short npc name, e.g. "antimage"
+ * @param buildIndex index of hero build
+ * @param item Item short name, e.g. "blink"
+ */
+export function getTooltip(
+  npcHeroName: string,
+  buildIndex: number,
+  item: string,
+  intl: IntlShape
+): string | undefined {
+  // Check build tooltip
+  let id = `hero.${npcHeroName}.builds.${buildIndex}.item_tooltips.${item}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  // Check hero tooltip
+  id = `hero.${npcHeroName}.item_tooltips.${item}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  // Check item tooltip
+  id = `hero.base.item_tooltips.${item}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  return undefined;
 }
 
 //

@@ -21,6 +21,8 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "axios": "^1.6.2",
+    "lodash": "^4.17.21",
+    "react-intl": "^6.5.5"
   }
 }
