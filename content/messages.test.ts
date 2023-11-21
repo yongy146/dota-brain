@@ -2,17 +2,25 @@
  * npx jest messages.test.ts
  *
  */
-
-import { heroBuilds } from "./heroBuilds";
+import { dotaCoachMessages, getOwnHeroMessages } from "./messages";
 import dota2Heroes from "../submodules/gameData/out/dota2Heroes.json";
-import { getOwnHeroMessages } from "./messages";
 
 test("messages-getOwnHeroMessages", () => {
-  const npcName = "npc_dota_hero_nevermore";
-  const msgs = getOwnHeroMessages(npcName);
-
-  console.log(`msgs: `, msgs);
-  expect(!!msgs).toBe(true);
+  // Checks that all heroes has own messages
+  for (const npcName of Object.keys(dota2Heroes)) {
+    const msgs = getOwnHeroMessages(npcName.replace("npc_dota_hero_", ""));
+    expect(msgs.length > 0 || npcName).toBe(true);
+  }
 });
 
-// Test all heroes have messages...
+test("messages-messages", () => {
+  // Checks that all heroes in messages.ts exists
+  for (const message of dotaCoachMessages) {
+    if (message.npcHeroName) {
+      expect(
+        !!(dota2Heroes as any)["npc_dota_hero_" + message.npcHeroName] ||
+          message.npcHeroName
+      ).toBe(true);
+    }
+  }
+});

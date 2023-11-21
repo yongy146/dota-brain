@@ -47,7 +47,7 @@ export function _findCategory(
 
 /**
  *
- * @param hero Hero name, e.g. "Anti-Mage"
+ * @param npcHeroName Short form of npc hero name, e.g. "antimage"
  * @returns Array of message objects
  */
 export function getOwnHeroMessages(npcHeroName: string): any[] {
@@ -16727,7 +16727,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   // 109. Underlord
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_1_Outlasthit",
     messageTime: 15,
     textMessage:
@@ -16737,7 +16737,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_2_AccelerateFarm",
     messageTime: 5 * 60,
     textMessage:
@@ -16747,7 +16747,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_3_ReplenishRift",
     messageTime: 7 * 60,
     textMessage:
@@ -16757,7 +16757,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_4_DefendTowers",
     messageTime: [8 * 60, 14 * 60],
     textMessage:
@@ -16767,7 +16767,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_5_Combo",
     messageTime: [10 * 60, 16 * 60],
     textMessage:
@@ -16777,7 +16777,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_6_FirestormCarefully",
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
@@ -16788,7 +16788,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_7_RiftImmediately",
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
@@ -16799,7 +16799,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_8_ObjectiveDamage",
     messageTime: [11 * 60, 18 * 60],
     textMessage:
@@ -16809,7 +16809,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_9_ObjectiveRift",
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
@@ -16820,7 +16820,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_10_Splitpush1",
     messageTime: 11 * 60 + 30,
     repeatTime: 10 * 60,
@@ -16831,7 +16831,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_11_Splitpush2",
     messageTime: 14 * 60 + 50,
     textMessage:
@@ -16841,7 +16841,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "OwnHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "ownHero/Underlord_12_FirestormScaling",
     messageTime: 25 * 60,
     textMessage:
@@ -16852,7 +16852,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
 
   {
     category: "EnemyHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "enemyHero/Underlord_1_PressureEarly",
     messageTime: -60,
     textMessage: "Pressure Underlord early on as he is slow and has no escape.",
@@ -16860,7 +16860,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "EnemyHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "enemyHero/Underlord_2_ExtraConsumables",
     messageTime: 30,
     textMessage:
@@ -16869,7 +16869,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "EnemyHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "enemyHero/Underlord_3_DenyRangedCreeps",
     messageTime: 40,
     textMessage: "Denying range creeps is easy against Firestorm.",
@@ -16877,7 +16877,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "EnemyHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "enemyHero/Underlord_4_TowerSiege",
     messageTime: 5 * 60 + 30,
     textMessage:
@@ -16886,7 +16886,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   },
   {
     category: "EnemyHero",
-    npcHeroName: "underlord",
+    npcHeroName: "abyssal_underlord",
     audioFile: "enemyHero/Underlord_5_ClumpUp",
     messageTime: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
