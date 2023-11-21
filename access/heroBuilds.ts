@@ -313,13 +313,18 @@ export function getItemBuildForRole(
  * @returns Object with UIItems and the associated roles.
  */
 export function getItemBuild(
-  heroContent: IHeroContent,
-  heroBuild: IHeroBuild
+  npcHeroName: string,
+  buildIndex: number,
+  //heroContent: IHeroContent,
+  //heroBuild: IHeroBuild,
+  intl?: IntlShape
 ): IItemBuild {
-  const item_tooltips = {
+  /*const item_tooltips = {
     //...(heroContent.item_tooltips || {}),
     //...(heroBuild.item_tooltips || {}),
-  };
+  };*/
+  const heroContent = heroBuilds[npcHeroName];
+  const heroBuild = heroContent.builds[buildIndex];
 
   const build = heroBuild;
 
@@ -327,6 +332,8 @@ export function getItemBuild(
     const result: IPhaseItemBuild = { name: item };
     //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
+    const tooltip = intl && getTooltip(npcHeroName, buildIndex, item, intl);
+    if (tooltip) result["info"] = tooltip;
     return result;
   }
 
