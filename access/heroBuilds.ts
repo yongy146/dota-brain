@@ -52,9 +52,9 @@ export function hasDefaultHeroBuild(heroName: string): boolean {
 export function getClosestHeroBuild(
   heroName: string,
   playerRole: PlayerRoles.DOTA_COACH_ROLE
-): IHeroBuild | null {
+): IHeroBuild | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
+  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return undefined;
 
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -108,22 +108,22 @@ export function getClosestHeroBuild(
   }
 
   //DotaLogger.log(`Dota2.getClosestHeroBuild(): nothing found`);
-  return null;
+  return undefined;
 }
 
 /**
  * Returns the default hero build, which is the first build in heroBuild.ts
- * @param heroName Localized hero name
+ * @param npcShortName Localized hero name
  * @param playerRole
  * @return null if there is no such build
  */
 export function getDefaultHeroBuild(
-  heroName: string
-): { buildIndex: number; heroBuild: IHeroBuild } | null {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
+  npcShortName: string
+): { buildIndex: number; heroBuild: IHeroBuild } | undefined {
+  if (!heroBuilds[npcShortName]) return undefined;
 
   const buildIndex = 0;
-  const heroBuild = heroBuilds[heroName].builds[0];
+  const heroBuild = heroBuilds[npcShortName].builds[0];
 
   // Find hero build with right role
   return { buildIndex, heroBuild };
@@ -161,28 +161,29 @@ export function getHeroBuildArray(heroName: string): IHeroBuild[] | null {
 
 /**
  *
- * @param heroName Localized hero name
+ * @param npcShortName npc short name, e.g. "legion_commander"
  * @param playerRole
  * @return null if there is no such build
  */
 export function getHeroBuild(
-  heroName: string,
+  npcShortName: string,
   playerRole: PlayerRoles.DOTA_COACH_ROLE
-): IHeroBuild | null {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
+): { buildIndex: number; heroBuild: IHeroBuild } | undefined {
+  if (!heroBuilds[npcShortName]) return undefined;
 
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
 
   // Find hero build with right role
-  for (const heroBuild of heroBuilds[heroName].builds) {
-    if (heroBuild.roles.indexOf(r) != -1) {
-      return heroBuild;
+  for (const heroBuild of heroBuilds[npcShortName].builds) {
+    const buildIndex = heroBuild.roles.indexOf(r);
+    if (buildIndex !== -1) {
+      return { heroBuild, buildIndex };
     }
   }
 
   // No relevant guide found
-  return null;
+  return undefined;
 }
 
 /**
@@ -287,26 +288,27 @@ export function getItemBuildForRole(
   npcShortName: string,
   playerRole: PlayerRoles.DOTA_COACH_ROLE | null | undefined,
   intl?: IntlShape
-): IItemBuild | null {
+): IItemBuild | undefined {
   if (!heroBuilds[npcShortName]) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-    return null;
+    return undefined;
   }
 
-  let heroBuild: IHeroBuild | null = null;
+  let heroBuild: IHeroBuild | undefined = undefined;
+  let buildIndex: number | undefined = undefined;
 
   if (playerRole === undefined || playerRole === null) {
-    heroBuild = getDefaultHeroBuild(npcShortName);
+    ({ heroBuild, buildIndex } = getDefaultHeroBuild(npcShortName) || {});
   } else {
-    heroBuild = getHeroBuild(npcShortName, playerRole);
-    if (heroBuild == null) heroBuild = getDefaultHeroBuild(npcShortName);
+    ({ heroBuild, buildIndex } = getHeroBuild(npcShortName, playerRole) || {});
+    if (heroBuild === undefined) heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
   }
 
   const heroContent = getHeroContent(npcShortName);
-  if (heroContent !== null && heroBuild !== null) {
-    return getItemBuild(npcShortName, heroContentIndex, intl);
+  if (heroContent !== undefined && buildIndex !== undefined) {
+    return getItemBuild(npcShortName, buildIndex, intl);
   } else {
-    return null;
+    return undefined;
   }
 }
 
@@ -319,7 +321,7 @@ export function getItemBuildForRole(
  * @returns Object with UIItems and the associated roles.
  */
 export function getItemBuild(
-  npcHeroName: string,
+  npcShortName: string,
   buildIndex: number,
   //heroContent: IHeroContent,
   //heroBuild: IHeroBuild,
@@ -329,7 +331,7 @@ export function getItemBuild(
     //...(heroContent.item_tooltips || {}),
     //...(heroBuild.item_tooltips || {}),
   };*/
-  const heroContent = heroBuilds[npcHeroName];
+  const heroContent = heroBuilds[npcShortName];
   const heroBuild = heroContent.builds[buildIndex];
 
   const build = heroBuild;
@@ -338,7 +340,7 @@ export function getItemBuild(
     const result: IPhaseItemBuild = { name: item };
     //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
-    const tooltip = intl && getTooltip(npcHeroName, buildIndex, item, intl);
+    const tooltip = intl && getTooltip(npcShortName, buildIndex, item, intl);
     if (tooltip) result["info"] = tooltip;
     return result;
   }
@@ -430,25 +432,27 @@ export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
 
 /**
  *
- * @param hero localized hero name
+ * @param npcShortName npc short name, e.g. "legion_commander"
  * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
  * @returns Array of abilites
  */
 export function getUIAbilityBuild(
-  h: string,
+  npcShortName: string,
   playerRole?: PlayerRoles.DOTA_COACH_ROLE
 ): IAbilityElement[] {
-  const heroBuilds = getHeroContent(h);
-  let heroBuild: IHeroBuild | null;
+  const heroBuilds = getHeroContent(npcShortName);
+  let heroBuild: IHeroBuild | undefined;
 
   if (playerRole === undefined) {
-    heroBuild = getDefaultHeroBuild(h);
+    heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
   } else {
-    heroBuild = getClosestHeroBuild(h, playerRole);
+    heroBuild = getClosestHeroBuild(npcShortName, playerRole);
   }
 
-  if (heroBuild === null) {
-    DotaLogger.error(`Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`);
+  if (heroBuild === undefined) {
+    DotaLogger.error(
+      `Dota2.getUIAbilityBuild(): No hero builds found for ${npcShortName} as ${playerRole}`
+    );
     return [];
   }
 
