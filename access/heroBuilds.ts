@@ -8,8 +8,8 @@ import {
   isCoreItem,
 } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
-import * as DotaLogger from "@utilities/log/log";
 import { IntlShape } from "react-intl";
+import * as DotaLogger from "@utilities/log/log";
 
 export interface IItemBuild {
   roles?: string;
@@ -54,7 +54,8 @@ export function getClosestHeroBuild(
   playerRole: PlayerRoles.DOTA_COACH_ROLE
 ): IHeroBuild | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return undefined;
+  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName))
+    return undefined;
 
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -301,7 +302,8 @@ export function getItemBuildForRole(
     ({ heroBuild, buildIndex } = getDefaultHeroBuild(npcShortName) || {});
   } else {
     ({ heroBuild, buildIndex } = getHeroBuild(npcShortName, playerRole) || {});
-    if (heroBuild === undefined) heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
+    if (heroBuild === undefined)
+      heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
   }
 
   const heroContent = getHeroContent(npcShortName);
@@ -347,11 +349,16 @@ export function getItemBuild(
 
   return {
     roles: PlayerRoles.rolesToString(heroBuild.roles),
-    starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
+    starting: build.items.starting.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     starting_bear:
       build.items.starting_bear !== undefined
         ? build.items.starting_bear.map((x) =>
-            transformItem(x, build.items.core_bear === undefined ? [] : build.items.core_bear)
+            transformItem(
+              x,
+              build.items.core_bear === undefined ? [] : build.items.core_bear
+            )
           )
         : undefined,
     early_game:
@@ -366,18 +373,26 @@ export function getItemBuild(
       build.items.late_game !== undefined
         ? build.items.late_game.map((x) => transformItem(x, build.items.core))
         : undefined,
-    situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
+    situational: build.items.situational.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     situational_bear:
       build.items.situational_bear !== undefined
         ? build.items.situational_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            transformItem(
+              x,
+              build.items.core_bear == undefined ? [] : build.items.core_bear
+            )
           )
         : undefined,
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
     neutral_bear:
       build.items.neutral_bear !== undefined
         ? build.items.neutral_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+            transformItem(
+              x,
+              build.items.core_bear == undefined ? [] : build.items.core_bear
+            )
           )
         : undefined,
   };
