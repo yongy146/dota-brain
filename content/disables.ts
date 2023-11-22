@@ -1062,3 +1062,11 @@ export const disables: IDisables = {
     // It is an area stun but only affects one hero at the time.
   ],
 };
+
+export const disablesBySkill: Record<string, IDisable> = {};
+
+for (const heroDisables of Object.values(disables)) {
+  for (const disable of heroDisables) {
+    disablesBySkill[disable.skill] = disable;
+  }
+}
