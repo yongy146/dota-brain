@@ -3,13 +3,13 @@ import { getHeroContent } from "./heroContent";
 /**
  * Returns the damage type of a hero as a string.
  *
- * @param heroName Localized hero name
+ * @param npcShortName npc short name, e.g. "legion_commander"
  * @returns The damage type, e.g. 'MagicalDamage' (ID for react-intl)
  */
-export function getDamageType(heroName: string): string {
+export function getDamageType(npcShortName: string): string {
   //DotaLogger.log("Dota2.hero_damage_types.getDamageType: localized_name='"+ localized_name + "', damageType[localized_name]='" + damageType[localized_name] + "'")
 
-  const heroContent = getHeroContent(heroName);
+  const heroContent = getHeroContent(npcShortName);
   if (heroContent != null) {
     switch (heroContent.damage_type) {
       case "magical": {
@@ -58,12 +58,12 @@ export function getDamageTypeImg(heroName: string): string {
 
 /**
  *
- * @param heroName Localized hero name
+ * @param npcShortName npc short name, e.g. 'legion_commander'
  * @returns HTML color code, e.g. #578cc7
  */
-export function getDamageTypeColor(heroName: string): string {
+export function getDamageTypeColor(npcShortName: string): string {
   //DotaLogger.log(`Dota2.hero_damage_types.getDamageColor(): heroName='${heroName}', damageType[localized_name]='${damageType[heroName]}'`)
-  const heroContent = getHeroContent(heroName);
+  const heroContent = getHeroContent(npcShortName);
   if (heroContent != null) {
     switch (heroContent.damage_type) {
       case "magical": {
