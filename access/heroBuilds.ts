@@ -117,26 +117,31 @@ export function getClosestHeroBuild(
  * @param playerRole
  * @return null if there is no such build
  */
-export function getDefaultHeroBuild(heroName: string): IHeroBuild | null {
+export function getDefaultHeroBuild(
+  heroName: string
+): { buildIndex: number; heroBuild: IHeroBuild } | null {
   if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
 
+  const buildIndex = 0;
+  const heroBuild = heroBuilds[heroName].builds[0];
+
   // Find hero build with right role
-  return heroBuilds[heroName].builds[0];
+  return { buildIndex, heroBuild };
 }
 
 /**
  *
- * @param hero localized hero name
+ * @param npcShortName e.g. "legion_commander" or "lone_druid"
  * @returns Array of abilites
  */
-export function getStandardAbilityBuild(h: string): string[] {
+export function getStandardAbilityBuild(npcShortName: string): string[] {
   //const h_ = hero.name.localizedNameToNPCName(h)
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, h)) {
+  if (!heroBuilds[npcShortName]) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return [];
   }
 
-  const abilityBuild = heroBuilds[h].builds[0].abilities;
+  const abilityBuild = heroBuilds[npcShortName].builds[0].abilities;
 
   /* return copy of array, otherwise recipient can change content of this.laningItemTips */
   return [...abilityBuild];
@@ -273,16 +278,17 @@ export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
 /**
  *
  *
- * @param hero The name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
+ * @param npcShortName The name of the hero, e.g. 'abaddon' or 'legion_commander'
  * @param playerRole if null, then the fucntion takes the fist build
  * @returns object with the following attributes: starting, early_game, mid_game, later_game, situational, roles: string. Each has an array of the following element: { item, info?, isCore?, purchaseTime? }
  */
 //export function getItemBuild(h: string): any {
 export function getItemBuildForRole(
-  h: string,
-  playerRole: PlayerRoles.DOTA_COACH_ROLE | null | undefined
+  npcShortName: string,
+  playerRole: PlayerRoles.DOTA_COACH_ROLE | null | undefined,
+  intl?: IntlShape
 ): IItemBuild | null {
-  if (!heroBuilds[h]) {
+  if (!heroBuilds[npcShortName]) {
     /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
     return null;
   }
@@ -290,15 +296,15 @@ export function getItemBuildForRole(
   let heroBuild: IHeroBuild | null = null;
 
   if (playerRole === undefined || playerRole === null) {
-    heroBuild = getDefaultHeroBuild(h);
+    heroBuild = getDefaultHeroBuild(npcShortName);
   } else {
-    heroBuild = getHeroBuild(h, playerRole);
-    if (heroBuild == null) heroBuild = getDefaultHeroBuild(h);
+    heroBuild = getHeroBuild(npcShortName, playerRole);
+    if (heroBuild == null) heroBuild = getDefaultHeroBuild(npcShortName);
   }
 
-  const heroContent = getHeroContent(h);
+  const heroContent = getHeroContent(npcShortName);
   if (heroContent !== null && heroBuild !== null) {
-    return getItemBuild(heroContent, heroBuild);
+    return getItemBuild(npcShortName, heroContentIndex, intl);
   } else {
     return null;
   }
@@ -339,16 +345,11 @@ export function getItemBuild(
 
   return {
     roles: PlayerRoles.rolesToString(heroBuild.roles),
-    starting: build.items.starting.map((x) =>
-      transformItem(x, build.items.core)
-    ),
+    starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
     starting_bear:
       build.items.starting_bear !== undefined
         ? build.items.starting_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear === undefined ? [] : build.items.core_bear
-            )
+            transformItem(x, build.items.core_bear === undefined ? [] : build.items.core_bear)
           )
         : undefined,
     early_game:
@@ -363,26 +364,18 @@ export function getItemBuild(
       build.items.late_game !== undefined
         ? build.items.late_game.map((x) => transformItem(x, build.items.core))
         : undefined,
-    situational: build.items.situational.map((x) =>
-      transformItem(x, build.items.core)
-    ),
+    situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
     situational_bear:
       build.items.situational_bear !== undefined
         ? build.items.situational_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear == undefined ? [] : build.items.core_bear
-            )
+            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
           )
         : undefined,
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
     neutral_bear:
       build.items.neutral_bear !== undefined
         ? build.items.neutral_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear == undefined ? [] : build.items.core_bear
-            )
+            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
           )
         : undefined,
   };
@@ -455,9 +448,7 @@ export function getUIAbilityBuild(
   }
 
   if (heroBuild === null) {
-    DotaLogger.error(
-      `Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`
-    );
+    DotaLogger.error(`Dota2.getUIAbilityBuild(): No hero builds found for ${h} as ${playerRole}`);
     return [];
   }
 
