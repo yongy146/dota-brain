@@ -2,33 +2,13 @@
  * npx jest access/heroBuilds.test.ts
  *
  */
-import { IntlShape, createIntl } from "react-intl";
+import { IntlShape } from "react-intl";
 import { getItemBuild, getTooltip } from "./heroBuilds";
-import { flattenStrings } from "@utilities/i18n/flattenStrings";
-import { heroBuilds } from "../content/heroBuilds";
-import axios from "axios";
+import { i18nLoader } from "@utilities/i18n/i18nLoader";
 
 let intl: IntlShape;
-
 beforeAll(async () => {
-  const response = await axios.get(
-    "https://i18n.dotacoach.gg/storybook/en.json"
-  );
-
-  const locale = "en";
-  const messages = flattenStrings(response.data as Record<string, string>);
-
-  //console.log(`messages:`, messages);
-  /*console.log(
-    `messages:`,
-    Object.keys(messages).filter((k) => k.startsWith("hero.sniper"))
-  );*/
-
-  if (response.data) {
-    intl = createIntl({ locale, messages });
-  }
-
-  //console.log(`intl:`, intl);
+  await i18nLoader();
 });
 
 test("heroBuilds-getTooltip", () => {
