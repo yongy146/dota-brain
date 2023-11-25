@@ -406,17 +406,17 @@ export function getItemBuild(
  * @param item Item short name, e.g. "blink"
  */
 export function getTooltip(
-  npcHeroName: string,
+  npcShortName: string,
   buildIndex: number,
   item: string,
   intl: IntlShape
 ): string | undefined {
   // Check build tooltip
-  let id = `hero.${npcHeroName}.builds.${buildIndex}.item_tooltips.${item}`;
+  let id = `hero.${npcShortName}.builds.${buildIndex}.item_tooltips.${item}`;
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check hero tooltip
-  id = `hero.${npcHeroName}.item_tooltips.${item}`;
+  id = `hero.${npcShortName}.item_tooltips.${item}`;
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check item tooltip
