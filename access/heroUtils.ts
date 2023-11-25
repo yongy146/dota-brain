@@ -48,36 +48,53 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
   return result;
 }
 
+export type TCoreHeroes = {
+  npcShortName: string;
+  buildIndex: number;
+};
+
 /**
  * Returns all heroes for which the given item is core.
  *
  * @params itemKey, e.g. "magic_wand"
  */
-export function getCoreHeroes(itemKey: string): string[] {
-  const result: string[] = [];
+export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
+  const result: TCoreHeroes[] = [];
 
   for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
     let hasItem = false;
 
     // Check if item is core in one of the builds
-    for (const build of heroContent.builds) {
-      for (const [phase, itemBuild] of Object.entries(build.items)) {
-        if (phase.includes("core")) {
-          for (const item of itemBuild) {
-            if (item === itemKey) {
-              hasItem = true;
-              break;
-            }
-          }
-          if (hasItem) break;
-        }
-      }
-      if (hasItem) break;
-    }
+    for (
+      let buildIndex = 0;
+      buildIndex < heroContent.builds.length;
+      buildIndex++
+    ) {
+      const heroBuild = heroContent.builds[buildIndex];
+      const coreItems = [
+        ...heroBuild.items.core,
+        ...(heroBuild.items.core_bear || []),
+      ];
 
-    if (hasItem) {
+      //for (const [phase, itemBuild] of Object.entries(build.items)) {
+      //if (phase.includes("core")) {
+      for (const coreItem of coreItems) {
+        if (coreItem === itemKey) {
+          result.push({
+            npcShortName,
+            buildIndex,
+          });
+          break;
+        }
+        //}
+        //if (hasItem) break;
+        //}
+      }
+
+      /*    if (hasItem) {
       //console.log(`hasItem: `, itemKey);
       result.push(npcShortName);
+    }*/
     }
   }
 

@@ -180,14 +180,37 @@ test("getHeroesWithItem-desolator", () => {
 
 test("getCoreHeroes-desolator", () => {
   const heroes = getCoreHeroes("desolator");
+  //console.log(`heroes: `, JSON.stringify(heroes));
 
   expect(heroes).toEqual([
-    "dawnbreaker",
-    "life_stealer",
-    "phantom_assassin",
-    "templar_assassin",
-    "tusk",
-    "skeleton_king",
+    {
+      npcShortName: "dawnbreaker",
+      buildIndex: 1,
+    },
+    {
+      npcShortName: "life_stealer",
+      buildIndex: 0,
+    },
+    {
+      npcShortName: "phantom_assassin",
+      buildIndex: 0,
+    },
+    {
+      npcShortName: "templar_assassin",
+      buildIndex: 0,
+    },
+    {
+      npcShortName: "templar_assassin",
+      buildIndex: 1,
+    },
+    {
+      npcShortName: "tusk",
+      buildIndex: 1,
+    },
+    {
+      npcShortName: "skeleton_king",
+      buildIndex: 0,
+    },
   ]);
 });
 
