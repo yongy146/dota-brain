@@ -6,9 +6,9 @@ import { IntlShape } from "react-intl";
 import { getItemBuild, getTooltip } from "./heroBuilds";
 import { i18nLoader } from "@utilities/i18n/i18nLoader";
 
-let intl: IntlShape;
+let intl: IntlShape | undefined;
 beforeAll(async () => {
-  await i18nLoader();
+  intl = await i18nLoader();
 });
 
 test("heroBuilds-getTooltip", () => {

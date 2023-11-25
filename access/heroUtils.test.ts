@@ -13,7 +13,14 @@ import {
   mostCounteringItems,
   mostRecommendedItems,
 } from "./heroUtils";
-import dota2ItemsActive from "../submodules/gameData/out/dota2ItemsActive.json";
+import { getTooltip } from "./heroBuilds";
+import { IntlShape } from "react-intl";
+import { i18nLoader } from "@utilities/i18n/i18nLoader";
+
+let intl: IntlShape | undefined;
+beforeAll(async () => {
+  intl = await i18nLoader();
+});
 
 test("heroBuildIterator", () => {
   const it = heroBuildIterator();
@@ -212,6 +219,18 @@ test("getCoreHeroes-desolator", () => {
       buildIndex: 0,
     },
   ]);
+
+  const withTooltips = heroes.map((hero) => {
+    const tooltip = getTooltip(
+      hero.npcShortName,
+      hero.buildIndex,
+      "desolator",
+      intl!
+    );
+    return { npcShortName: hero.npcShortName, tooltip };
+  });
+
+  console.log(`withTooltips: `, JSON.stringify(withTooltips, null, 2));
 });
 
 // Note yet tested: getHeroesCounteredBy
