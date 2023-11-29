@@ -13,7 +13,14 @@ import {
   mostCounteringItems,
   mostRecommendedItems,
 } from "./heroUtils";
-import dota2ItemsActive from "../submodules/gameData/out/dota2ItemsActive.json";
+import { getTooltip } from "./heroBuilds";
+import { IntlShape } from "react-intl";
+import { i18nLoader } from "@utilities/i18n/i18nLoader";
+
+let intl: IntlShape | undefined;
+beforeAll(async () => {
+  intl = await i18nLoader();
+});
 
 test("heroBuildIterator", () => {
   const it = heroBuildIterator();
@@ -180,15 +187,50 @@ test("getHeroesWithItem-desolator", () => {
 
 test("getCoreHeroes-desolator", () => {
   const heroes = getCoreHeroes("desolator");
+  //console.log(`heroes: `, JSON.stringify(heroes));
 
   expect(heroes).toEqual([
-    "dawnbreaker",
-    "life_stealer",
-    "phantom_assassin",
-    "templar_assassin",
-    "tusk",
-    "skeleton_king",
+    {
+      npcShortName: "dawnbreaker",
+      buildIndex: 1,
+    },
+    {
+      npcShortName: "life_stealer",
+      buildIndex: 0,
+    },
+    {
+      npcShortName: "phantom_assassin",
+      buildIndex: 0,
+    },
+    {
+      npcShortName: "templar_assassin",
+      buildIndex: 0,
+    },
+    {
+      npcShortName: "templar_assassin",
+      buildIndex: 1,
+    },
+    {
+      npcShortName: "tusk",
+      buildIndex: 1,
+    },
+    {
+      npcShortName: "skeleton_king",
+      buildIndex: 0,
+    },
   ]);
+
+  const withTooltips = heroes.map((hero) => {
+    const tooltip = getTooltip(
+      hero.npcShortName,
+      hero.buildIndex,
+      "desolator",
+      intl!
+    );
+    return { npcShortName: hero.npcShortName, tooltip };
+  });
+
+  console.log(`withTooltips: `, JSON.stringify(withTooltips, null, 2));
 });
 
 // Note yet tested: getHeroesCounteredBy

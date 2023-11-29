@@ -12,8 +12,11 @@ import {
   root,
   disables,
   IDisable,
+  disablesBySkill,
 } from "../content/disables";
-import { IAbility } from "@gameData/out/dota2Abilities";
+import { IAbility, getAbility } from "@gameData/out/dota2Abilities";
+import { idToNPCName } from "@gameData/out/dota2HeroNames";
+import { getHeroAbilities } from "@gameData/out/dota2HeroAbilities";
 
 //
 // Abilities with disables
@@ -139,6 +142,7 @@ export interface AnalyzedHeroAbilities {
  *
  * This function is currently used by the Team Infobox in the in-game app.
  *
+ * It returns strings of abilities.
  */
 export function analyzeHeroAbilities(heroIds: number[]): AnalyzedHeroAbilities {
   const result: AnalyzedHeroAbilities = {
@@ -149,97 +153,98 @@ export function analyzeHeroAbilities(heroIds: number[]): AnalyzedHeroAbilities {
     passivesBreakable: [],
     passivesNonBreakable: [],
   };
-  throw "ReviewImplementation";
-  /*
-      DotaLogger.log(
-        `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(heroIds)}): Called`
-      );
-      */
-  /*for (const heroId of heroIds) {
+  console.log(
+    `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(
+      heroIds
+    )}): Called`
+  );
+  for (const heroId of heroIds) {
     const npcName = idToNPCName(heroId);
-    const abilities = dota2Abilities[npcName as keyof typeof dota2Abilities];
-    for (const [name, ability_] of Object.entries(abilities)) {
-      const ability = ability_ as IAbility;
+    const abilities = getHeroAbilities(npcName);
 
-      if (ability.is_talent === true) continue;
+    for (const ability of abilities) {
+      const ability_ = getAbility(ability);
 
-      ability.key = name;
-      ability.npcName = npcName;
+      if (!ability_) continue;
+
+      //ability.key = name;
+      //ability.npcName = npcName;
       // Buffs
-      if (ability.is_buff === true) {
-        switch (ability.is_buff_dispellable) {
+      if (ability_.is_buff === true) {
+        switch (ability_.is_buff_dispellable) {
           case "strong": {
             // This should not exist
             console.error(
-              `Dota2.analyzeHeroAbilities(): Found buff with strong dispel  (${ability.name})`
+              `Dota2.analyzeHeroAbilities(): Found buff with strong dispel  (${ability})`
             );
             break;
           }
           case "basic": {
-            result.buffsBasicDispel.push(ability);
+            result.buffsBasicDispel.push(ability_);
             break;
           }
           case "no": {
-            result.spellsNonDispellable.push(ability);
+            result.spellsNonDispellable.push(ability_);
             break;
           }
           default: {
             console.error(
-              `Dota2.analyzeHeroAbilities(): Unknow is_buff_dispellable value (${ability.is_buff_dispellable})`
+              `Dota2.analyzeHeroAbilities(): Unknow is_buff_dispellable value (${ability_.is_buff_dispellable})`
             );
           }
         }
       }
       // Debuffs
-      if (ability.is_debuff === true) {
-        switch (ability.is_debuff_dispellable) {
+      if (ability_.is_debuff === true) {
+        switch (ability_.is_debuff_dispellable) {
           case "strong": {
-            result.debuffsDisablesStrongDispel.push(ability);
+            result.debuffsDisablesStrongDispel.push(ability_);
             break;
           }
           case "basic": {
-            result.debuffsDisablesBasicDispel.push(ability);
+            result.debuffsDisablesBasicDispel.push(ability_);
             break;
           }
           case "no": {
-            result.spellsNonDispellable.push(ability);
+            result.spellsNonDispellable.push(ability_);
             break;
           }
           default: {
             console.error(
-              `Dota2.analyzeHeroAbilities(): Unknow is_debuff_dispellable value (${ability.is_buff_dispellable})`
+              `Dota2.analyzeHeroAbilities(): ability\.disableUnknow is_debuff_dispellable value (${ability_.is_buff_dispellable})`
             );
           }
         }
       }
       // Disables
-      if (Array.isArray(ability.disable)) {
+      const disable = disablesBySkill[ability];
+      if (disable) {
         // Translate disables into dispellability
         if (
-          ability.disable.includes("cyclone") ||
-          ability.disable.includes("stop") ||
-          ability.disable.includes("leash") ||
-          ability.disable.includes("taunt")
+          disable.disables.includes("cyclone") ||
+          disable.disables.includes("stop") ||
+          disable.disables.includes("leash") ||
+          disable.disables.includes("taunt")
         ) {
-          result.spellsNonDispellable.push(ability);
+          result.spellsNonDispellable.push(ability_);
         } else if (
-          ability.disable.includes("stun") ||
-          ability.disable.includes("hex") ||
-          ability.disable.includes("mute")
+          disable.disables.includes("stun") ||
+          disable.disables.includes("hex") ||
+          disable.disables.includes("mute")
         ) {
-          result.debuffsDisablesStrongDispel.push(ability);
+          result.debuffsDisablesStrongDispel.push(ability_);
         } else if (
-          ability.disable.includes("sleep") ||
-          ability.disable.includes("silence") ||
-          ability.disable.includes("fear") ||
-          ability.disable.includes("root")
+          disable.disables.includes("sleep") ||
+          disable.disables.includes("silence") ||
+          disable.disables.includes("fear") ||
+          disable.disables.includes("root")
         ) {
-          result.debuffsDisablesBasicDispel.push(ability);
+          result.debuffsDisablesBasicDispel.push(ability_);
         } else {
           // Error
           console.error(
             `Dota2.analyzeHeroAbilities(): Disable not processd: ${JSON.stringify(
-              ability.disable
+              disable
             )}`
           );
         }
@@ -260,15 +265,15 @@ export function analyzeHeroAbilities(heroIds: number[]): AnalyzedHeroAbilities {
       );
 
       // Passives
-      if (ability.is_passive !== "no") {
-        if (ability.is_breakable === true) {
-          result.passivesBreakable.push(ability);
+      if (ability_.is_passive !== "no") {
+        if (ability_.is_breakable === true) {
+          result.passivesBreakable.push(ability_);
         } else {
-          result.passivesNonBreakable.push(ability);
+          result.passivesNonBreakable.push(ability_);
         }
       }
     }
-  }*/
+  }
   /*
       DotaLogger.log(
         `Dota2.hero_abilities.analyzeHeroAbilities(heroIds: ${JSON.stringify(
