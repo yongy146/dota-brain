@@ -63,8 +63,6 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
   const result: TCoreHeroes[] = [];
 
   for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
-    let hasItem = false;
-
     // Check if item is core in one of the builds
     for (
       let buildIndex = 0;
@@ -77,8 +75,6 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
         ...(heroBuild.items.core_bear || []),
       ];
 
-      //for (const [phase, itemBuild] of Object.entries(build.items)) {
-      //if (phase.includes("core")) {
       for (const coreItem of coreItems) {
         if (coreItem === itemKey) {
           result.push({
@@ -88,15 +84,7 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
           });
           break;
         }
-        //}
-        //if (hasItem) break;
-        //}
       }
-
-      /*    if (hasItem) {
-      //console.log(`hasItem: `, itemKey);
-      result.push(npcShortName);
-    }*/
     }
   }
 

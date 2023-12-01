@@ -21,6 +21,7 @@
  *
  * Copyright (C) Dota Coach, 2023. All rights reserved.
  */
+import { IntlShape } from "react-intl";
 import {
   DOTA_COACH_GUIDE_ROLE,
   STEAM_GUIDE_ROLE,
@@ -134,12 +135,19 @@ export interface IHeroBuild {
 }
 
 /**
+ * Returns a localized string of the roles & type of the build.
  *
- * @param heroBuild
- * @returns Returns name of role (e.g. "Mid QW" for Invoker)
+ * Sample return of values:
+ *   - Carry
+ *   - Mid
+ *   - Offlane
+ *   - Support
+ *   - Mid QE (Invoker)
+ *   - Mid QW (Invoker)
+ *
  */
-export function getRoleName(heroBuild: IHeroBuild): string {
-  return `${getRolesString(heroBuild)}${
+export function getRoleName(heroBuild: IHeroBuild, intl: IntlShape): string {
+  return `${getRolesString(heroBuild.roles, intl)}${
     Object.prototype.hasOwnProperty.call(heroBuild, "type")
       ? " " + heroBuild.type
       : ""
@@ -14848,7 +14856,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        type: "Physical",
+        //type: "Physical", 1.
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485",
@@ -14941,7 +14949,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        type: "Physical",
+        //type: "Physical",
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2724416695",

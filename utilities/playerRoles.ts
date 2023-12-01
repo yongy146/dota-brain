@@ -2,6 +2,7 @@
  * Module to manage player roles.
  *
  */
+import { IntlShape } from "react-intl";
 import { IHeroBuild } from "../content/heroBuilds";
 
 /**
@@ -26,6 +27,13 @@ export enum DOTA_COACH_GUIDE_ROLE {
   OFFLANE = "offlane",
   SUPPORT = "support",
 }
+
+const i18nDotaCoachGuideRoles: Record<DOTA_COACH_GUIDE_ROLE, string> = {
+  [DOTA_COACH_GUIDE_ROLE.CARRY]: "dota.roles.Carry",
+  [DOTA_COACH_GUIDE_ROLE.MID]: "dota.roles.Mid",
+  [DOTA_COACH_GUIDE_ROLE.OFFLANE]: "dota.roles.Offlane",
+  [DOTA_COACH_GUIDE_ROLE.SUPPORT]: "dota.roles.Support",
+};
 
 /**
  * Roles used in the Dota Coach app for the user.
@@ -53,15 +61,24 @@ export function getDotaCoachRole(role: DOTA_COACH_GUIDE_ROLE): DOTA_COACH_ROLE {
 }
 
 // Transform to react-intl?!
-export function getRolesString(heroBuild: IHeroBuild) {
-  let roles = "";
+/**
+ * Returns a localized string of the roles of a hero build.
+ *
+ */
+export function getRolesString(
+  roles: DOTA_COACH_GUIDE_ROLE[],
+  intl: IntlShape
+): string {
+  /*let roles = "";
   for (let i = 0; i < heroBuild.roles.length; i++) {
-    roles += getDotaCoachGuideRoleString(heroBuild.roles[i]);
+    roles += getDotaCoachGuideRoleString(heroBuild.roles[i], intl);
     if (i < heroBuild.roles.length - 1) {
       roles += " & ";
     }
-  }
-  return roles;
+  }*/
+  return roles
+    .map((role) => getDotaCoachGuideRoleString(role, intl))
+    .join(" & ");
 }
 
 /**
@@ -71,8 +88,11 @@ export function getRolesString(heroBuild: IHeroBuild) {
  * @returns
  */
 export function getDotaCoachGuideRoleString(
-  role: DOTA_COACH_GUIDE_ROLE
+  role: DOTA_COACH_GUIDE_ROLE,
+  intl: IntlShape
 ): string {
+  return intl.formatMessage({ id: i18nDotaCoachGuideRoles[role] });
+  /*
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
@@ -86,13 +106,16 @@ export function getDotaCoachGuideRoleString(
     case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
       return "Support";
     }
-  }
+  }*/
 }
 
-export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
+export function rolesToString(
+  roles: DOTA_COACH_GUIDE_ROLE[],
+  intl: IntlShape
+): string {
   let result = "";
   for (let i = 0; i < roles.length; i++) {
-    result += getDotaCoachGuideRoleString(roles[i]);
+    result += getDotaCoachGuideRoleString(roles[i], intl);
     if (i < roles.length - 1) {
       result += " & ";
     }
