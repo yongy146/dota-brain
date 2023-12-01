@@ -51,6 +51,7 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
 export type TCoreHeroes = {
   npcShortName: string;
   buildIndex: number;
+  roles: DOTA_COACH_GUIDE_ROLE[];
 };
 
 /**
@@ -83,6 +84,7 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
           result.push({
             npcShortName,
             buildIndex,
+            roles: heroBuild.roles,
           });
           break;
         }
