@@ -57,9 +57,11 @@ export type TCoreHeroes = {
 /**
  * Returns all heroes for which the given item is core.
  *
- * @params itemKey, e.g. "magic_wand"
+ * @params itemKey, e.g. "magic_wand" or "item_magic_wand"
  */
 export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
+  itemKey = itemKey.replace("item_", "");
+
   const result: TCoreHeroes[] = [];
 
   for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
@@ -94,10 +96,12 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
 /**
  * Returns all heroes that are countered by a given item.
  *
- * @params itemKey, e.g. "magic_wand"
+ * @params itemKey, e.g. "magic_wand" or "item_magic_wand"
  * @returns npc short names of heroes, e.g. ["antimage", "legion_commander", etc.]
  */
 export function getHeroesCounteredBy(itemKey: string): string[] {
+  itemKey = itemKey.replace("item_", "");
+
   const result: string[] = [];
 
   for (const [name, heroContent] of Object.entries(heroBuilds)) {
