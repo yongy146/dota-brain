@@ -9,7 +9,7 @@ import {
   IMonitorReuse,
   measurements,
 } from "./measurements";
-import * as Logger from "../../../submodules/utilities/log";
+import * as Logger from "@utilities/log/log";
 
 /**
  * The function information on Dota 2 screens. This information can be used to position elements in the game.
@@ -19,7 +19,10 @@ import * as Logger from "../../../submodules/utilities/log";
  * @param screenSize Screen size, e.g. 1920x1080
  * @returns
  */
-export function getMonitorMeasurements(width: number, height: number): IMonitorMeasurements {
+export function getMonitorMeasurements(
+  width: number,
+  height: number
+): IMonitorMeasurements {
   let result: Partial<IMonitorMeasurements> = {
     width,
     height,
@@ -49,7 +52,8 @@ export function getMonitorMeasurements(width: number, height: number): IMonitorM
     fontSizeSmall: fontSize * 0.8,
     inGame: {
       heroesWidth: result.overwolf.inGame.heroesWidth / window.devicePixelRatio,
-      heroesHeight: result.overwolf.inGame.heroesHeight / window.devicePixelRatio,
+      heroesHeight:
+        result.overwolf.inGame.heroesHeight / window.devicePixelRatio,
     },
   };
 

@@ -1,7 +1,9 @@
 /**
- * Library to manage player roles.
+ * Module to manage player roles.
+ *
  */
-import { HeroBuild } from "./heroBuilds";
+import { IntlShape } from "react-intl";
+import { IHeroBuild } from "../content/heroBuilds";
 
 /**
  * Official roles used in Steam Guides
@@ -26,8 +28,17 @@ export enum DOTA_COACH_GUIDE_ROLE {
   SUPPORT = "support",
 }
 
+const i18nDotaCoachGuideRoles: Record<DOTA_COACH_GUIDE_ROLE, string> = {
+  [DOTA_COACH_GUIDE_ROLE.CARRY]: "dota.roles.Carry",
+  [DOTA_COACH_GUIDE_ROLE.MID]: "dota.roles.Mid",
+  [DOTA_COACH_GUIDE_ROLE.OFFLANE]: "dota.roles.Offlane",
+  [DOTA_COACH_GUIDE_ROLE.SUPPORT]: "dota.roles.Support",
+};
+
 /**
- * Roles used in the Dota Coach app for the user
+ * Roles used in the Dota Coach app for the user.
+ *
+ * Possible values: CARRY, MID, OFFLANE, SOFT_SUPPORT and HARD_SUPPORT
  */
 export enum DOTA_COACH_ROLE {
   CARRY = "carry",
@@ -50,15 +61,24 @@ export function getDotaCoachRole(role: DOTA_COACH_GUIDE_ROLE): DOTA_COACH_ROLE {
 }
 
 // Transform to react-intl?!
-export function getRolesString(heroBuild: HeroBuild) {
-  let roles = "";
+/**
+ * Returns a localized string of the roles of a hero build.
+ *
+ */
+export function getRolesString(
+  roles: DOTA_COACH_GUIDE_ROLE[],
+  intl: IntlShape
+): string {
+  /*let roles = "";
   for (let i = 0; i < heroBuild.roles.length; i++) {
-    roles += getDotaCoachGuideRoleString(heroBuild.roles[i]);
+    roles += getDotaCoachGuideRoleString(heroBuild.roles[i], intl);
     if (i < heroBuild.roles.length - 1) {
       roles += " & ";
     }
-  }
-  return roles;
+  }*/
+  return roles
+    .map((role) => getDotaCoachGuideRoleString(role, intl))
+    .join(" & ");
 }
 
 /**
@@ -68,8 +88,11 @@ export function getRolesString(heroBuild: HeroBuild) {
  * @returns
  */
 export function getDotaCoachGuideRoleString(
-  role: DOTA_COACH_GUIDE_ROLE
+  role: DOTA_COACH_GUIDE_ROLE,
+  intl: IntlShape
 ): string {
+  return intl.formatMessage({ id: i18nDotaCoachGuideRoles[role] });
+  /*
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
       return "Carry";
@@ -83,13 +106,16 @@ export function getDotaCoachGuideRoleString(
     case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
       return "Support";
     }
-  }
+  }*/
 }
 
-export function rolesToString(roles: DOTA_COACH_GUIDE_ROLE[]): string {
+export function rolesToString(
+  roles: DOTA_COACH_GUIDE_ROLE[],
+  intl: IntlShape
+): string {
   let result = "";
   for (let i = 0; i < roles.length; i++) {
-    result += getDotaCoachGuideRoleString(roles[i]);
+    result += getDotaCoachGuideRoleString(roles[i], intl);
     if (i < roles.length - 1) {
       result += " & ";
     }
@@ -127,16 +153,16 @@ export function roleToMessageId(role: DOTA_COACH_ROLE): string {
 export function getGuideRoleImage(role: DOTA_COACH_GUIDE_ROLE): string {
   switch (role) {
     case DOTA_COACH_GUIDE_ROLE.CARRY: {
-      return "/img/roles/safeLane.png";
+      return "https://download.dotacoach.gg/app/images/roles/safeLane.png";
     }
     case DOTA_COACH_GUIDE_ROLE.MID: {
-      return "/img/roles/midLane.png";
+      return "https://download.dotacoach.gg/app/images/roles/midLane.png";
     }
     case DOTA_COACH_GUIDE_ROLE.OFFLANE: {
-      return "/img/roles/offlane.png";
+      return "https://download.dotacoach.gg/app/images/roles/offlane.png";
     }
     case DOTA_COACH_GUIDE_ROLE.SUPPORT: {
-      return "/img/roles/support.png";
+      return "https://download.dotacoach.gg/app/images/roles/support.png";
     }
   }
 }
@@ -144,19 +170,19 @@ export function getGuideRoleImage(role: DOTA_COACH_GUIDE_ROLE): string {
 export function getRoleImage(role: DOTA_COACH_ROLE): string {
   switch (role) {
     case DOTA_COACH_ROLE.CARRY: {
-      return "/img/roles/safeLane.png";
+      return "https://download.dotacoach.gg/app/images/roles/safeLane.png";
     }
     case DOTA_COACH_ROLE.MID: {
-      return "/img/roles/midLane.png";
+      return "https://download.dotacoach.gg/app/images/roles/midLane.png";
     }
     case DOTA_COACH_ROLE.OFFLANE: {
-      return "/img/roles/offlane.png";
+      return "https://download.dotacoach.gg/app/images/roles/offlane.png";
     }
     case DOTA_COACH_ROLE.SOFT_SUPPORT: {
-      return "/img/roles/softSupport.png";
+      return "https://download.dotacoach.gg/app/images/roles/softSupport.png";
     }
     case DOTA_COACH_ROLE.HARD_SUPPORT: {
-      return "/img/roles/hardSupport.png";
+      return "https://download.dotacoach.gg/app/images/roles/hardSupport.png";
     }
   }
 }
@@ -191,4 +217,24 @@ export function isMid(role: DOTA_COACH_ROLE) {
 
 export function isOfflane(role: DOTA_COACH_ROLE) {
   return role === DOTA_COACH_ROLE.OFFLANE;
+}
+
+export function convertDotaCoachRoleToDotaCoachGuidRole(
+  playerRole: DOTA_COACH_ROLE
+): DOTA_COACH_GUIDE_ROLE {
+  switch (playerRole) {
+    case DOTA_COACH_ROLE.CARRY: {
+      return DOTA_COACH_GUIDE_ROLE.CARRY;
+    }
+    case DOTA_COACH_ROLE.MID: {
+      return DOTA_COACH_GUIDE_ROLE.MID;
+    }
+    case DOTA_COACH_ROLE.OFFLANE: {
+      return DOTA_COACH_GUIDE_ROLE.OFFLANE;
+    }
+    case DOTA_COACH_ROLE.SOFT_SUPPORT:
+    case DOTA_COACH_ROLE.HARD_SUPPORT: {
+      return DOTA_COACH_GUIDE_ROLE.SUPPORT;
+    }
+  }
 }
