@@ -16,16 +16,16 @@ import { IUIItem, IUIAbility } from "@dotaReact/src/dota/Types";
 import * as DotaCoachUI from "@utilities/dotaCoachUI"; // This should be replaced as well, TO BE DONE
 
 // Version node.js
-/*import * as HeroBuilds from "./heroBuilds.js";
-import { dispellableBuffs } from "./dispellableBuffs.js";
+/*import * as HeroBuilds from "./heroBuilds";
+import { dispellableBuffs } from "./dispellableBuffs";
 import dota2Abilities from "./dota2Abilities.json" assert { type: "json" };
 import dota2Items from "./dota2Items.json" assert { type: "json" };
 import dota2Heroes from "./dota2Heroes.json" assert { type: "json" };
-import * as DotaLogger from "../../submodules/utilities/log.js";
-import { channeling_interrupts, silence, root, disables } from "./disables.js";
-import * as PlayerRoles from "./playerRoles.js";
-import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI.js";
-import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI.js";
+import * as DotaLogger from "../../submodules/utilities/log";
+import { channeling_interrupts, silence, root, disables } from "./disables";
+import * as PlayerRoles from "./playerRoles";
+import { UIItem, UIAbility } from "../../submodules/utilities/dotaCoachUI";
+import * as DotaCoachUI from "../../submodules/utilities/dotaCoachUI";
 */
 
 /**
