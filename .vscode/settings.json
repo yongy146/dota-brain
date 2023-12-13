@@ -16,9 +16,10 @@
       "git.confirmSync": false,
       "eslint.format.enable": true,
       "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
       },
       "editor.formatOnSave": true,
       "editor.wordWrap": "on",
       "typescript.updateImportsOnFileMove.enabled": "always",
+      "jest.autoRun": "false"
   }
