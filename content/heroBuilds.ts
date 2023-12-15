@@ -6301,7 +6301,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   invoker: {
-    gameplay_version: `7.34d`,
+    gameplay_version: "7.34e",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
