@@ -209,7 +209,7 @@ test("getCoreHeroes-desolator", () => {
     return { npcShortName: hero.npcShortName, tooltip };
   });
 
-  console.log(`withTooltips: `, JSON.stringify(withTooltips, null, 2));
+  //console.log(`withTooltips: `, JSON.stringify(withTooltips, null, 2));
 });
 
 // Note yet tested: getHeroesCounteredBy

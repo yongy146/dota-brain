@@ -169,7 +169,7 @@ const config: Config = {
   // testPathIgnorePatterns: [
   //   "\\\\node_modules\\\\"
   // ],
-  testPathIgnorePatterns: ["submodules"],
+  testPathIgnorePatterns: ["submodules", "dist"],
   //   "\\\\node_modules\\\\"
   // ],
 

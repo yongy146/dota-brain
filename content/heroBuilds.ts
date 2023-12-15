@@ -282,31 +282,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40437,
         abilities: [
-          "abaddon_aphotic_shield",
-          "abaddon_frostmourne" /* equals to `curse of avernus` */,
-          `abaddon_aphotic_shield`,
-          `abaddon_death_coil`,
-          "abaddon_aphotic_shield",
-          "abaddon_borrowed_time",
-          "abaddon_aphotic_shield",
-          "abaddon_death_coil",
-          "abaddon_death_coil",
-          `abaddon_death_coil`,
-          `special_bonus_strength_7`,
-          "abaddon_borrowed_time",
-          "abaddon_frostmourne",
-          "abaddon_frostmourne",
-          "special_bonus_unique_abaddon_2",
-          "abaddon_frostmourne",
-          "special_bonus_attributes",
-          "abaddon_borrowed_time",
-          "special_bonus_attributes",
-          "special_bonus_unique_abaddon",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_abaddon_4",
+          "abaddon_aphotic_shield", // 1
+          "abaddon_frostmourne", // 2, equals to `curse of avernus`
+          `abaddon_aphotic_shield`, // 3
+          `abaddon_death_coil`, // 4
+          "abaddon_aphotic_shield", // 5
+          "abaddon_borrowed_time", // 6
+          "abaddon_aphotic_shield", // 7
+          "abaddon_death_coil", // 8
+          "abaddon_death_coil", // 9
+          `abaddon_death_coil`, // 10
+          `special_bonus_unique_abaddon_7`, // 11
+          "abaddon_borrowed_time", // 12
+          "abaddon_frostmourne", // 13
+          "abaddon_frostmourne", // 14
+          "special_bonus_unique_abaddon_2", // 15
+          "abaddon_frostmourne", // 16
+          "special_bonus_attributes", // 17
+          "abaddon_borrowed_time", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_abaddon", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_abaddon_4", // 25
           //25 levels, no need for more than that as they are automatic afterwards
         ],
         items: {
@@ -364,7 +364,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `philosophers_stone`,
             `ogre_seal_totem`,
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
             `martyrs_plate`,
             "force_field",
@@ -379,31 +379,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40436,
         abilities: [
-          "abaddon_aphotic_shield",
-          "abaddon_frostmourne" /* equals to `curse of avernus` */,
-          `abaddon_aphotic_shield`,
-          `abaddon_death_coil`,
-          "abaddon_aphotic_shield",
-          "abaddon_borrowed_time",
-          "abaddon_aphotic_shield",
-          `abaddon_death_coil`,
-          `abaddon_death_coil`,
-          `abaddon_death_coil`,
-          `special_bonus_strength_7`,
-          "abaddon_borrowed_time",
-          `abaddon_frostmourne`,
-          `abaddon_frostmourne`,
-          `special_bonus_attack_damage_55`,
-          `abaddon_frostmourne`,
-          "special_bonus_attributes",
-          "abaddon_borrowed_time",
-          "special_bonus_attributes",
-          `special_bonus_unique_abaddon_immolation`,
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          `special_bonus_unique_abaddon_3`,
+          "abaddon_aphotic_shield", // 1
+          "abaddon_frostmourne", // 2, equals to `curse of avernus`
+          `abaddon_aphotic_shield`, // 3
+          `abaddon_death_coil`, // 4
+          "abaddon_aphotic_shield", // 5
+          "abaddon_borrowed_time", // 6
+          "abaddon_aphotic_shield", // 7
+          `abaddon_death_coil`, // 8
+          `abaddon_death_coil`, // 9
+          `abaddon_death_coil`, // 10
+          `special_bonus_unique_abaddon_7`, // 11
+          "abaddon_borrowed_time", // 12
+          `abaddon_frostmourne`, // 13
+          `abaddon_frostmourne`, // 14
+          `special_bonus_unique_abaddon_2`, // 15
+          `abaddon_frostmourne`, // 16
+          "special_bonus_attributes", // 17
+          "abaddon_borrowed_time", // 18
+          "special_bonus_attributes", // 19
+          `special_bonus_unique_abaddon_immolation`, // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          `special_bonus_unique_abaddon_3`, // 25
           //25 levels, no need for more than that as they are automatic afterwards
         ],
         items: {
@@ -466,7 +466,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ogre_seal_totem`,
             `cloak_of_flames`,
             `mind_breaker`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `apex`,
             `giants_ring`,
           ],
@@ -588,10 +588,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "duelist_gloves",
             "orb_of_destruction",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "ogre_seal_totem",
-            "titan_sliver",
-            "penta_edged_sword",
+            //"titan_sliver",
+            //"penta_edged_sword",
             "ninja_gear",
             "pirate_hat",
             "desolator_2",
@@ -672,10 +672,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "lance_of_pursuit",
             "duelist_gloves",
             "orb_of_corrosion",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "ogre_seal_totem",
-            "titan_sliver",
-            "penta_edged_sword",
+            //"titan_sliver",
+            //"penta_edged_sword",
             "ninja_gear",
             "pirate_hat",
             "desolator_2",
@@ -809,7 +809,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             `spy_gadget`,
             `timeless_relic`,
             "seer_stone",
@@ -918,14 +918,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "broom_handle",
             "lance_of_pursuit",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "pupils_gift",
             "vambrace",
-            "titan_sliver",
+            //"titan_sliver",
             "elven_tunic",
             "ninja_gear",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "mirror_shield",
             "pirate_hat",
             "apex",
@@ -1203,7 +1203,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `havoc_hammer`,
             `martyrs_plate`,
             "giants_ring",
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -1334,7 +1334,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
@@ -1342,7 +1342,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "spy_gadget",
             `ninja_gear`,
             "seer_stone",
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -1467,14 +1467,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `mysterious_hat`,
-            "pogo_stick",
+            //"pogo_stick",
             `pupils_gift`,
             `vambrace`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ceremonial_robe`,
-            `spell_prism`,
+            //`spell_prism`,
             `timeless_relic`,
-            "fallen_sky",
+            //`fallen_sky`,
             `force_boots`,
           ],
         },
@@ -1565,14 +1565,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `mysterious_hat`,
-            `pogo_stick`,
+            //`pogo_stick`,
             `pupils_gift`,
             `vambrace`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ceremonial_robe`,
-            `spell_prism`,
+            //`spell_prism`,
             `timeless_relic`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `force_boots`,
           ],
         },
@@ -1712,10 +1712,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `dragon_scale`,
             `cloak_of_flames`,
-            `quickening_charm`,
-            "spell_prism",
+            //`quickening_charm`,
+            //"spell_prism",
             `timeless_relic`,
-            "fallen_sky",
+            //`fallen_sky`,
             "demonicon",
           ],
         },
@@ -1830,15 +1830,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "broom_handle",
             "lance_of_pursuit",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "pupils_gift",
             "orb_of_destruction",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "paladin_sword",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "mind_breaker",
-            "spell_prism",
+            //"spell_prism",
             "ninja_gear",
             "mirror_shield",
             "pirate_hat",
@@ -1907,18 +1907,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "broom_handle",
             "unstable_wand",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "pupils_gift",
             "ogre_seal_totem",
-            "quickening_charm",
+            //`quickening_charm`,
             "paladin_sword",
             "mind_breaker",
-            "penta_edged_sword",
-            "spell_prism",
+            //"penta_edged_sword",
+            //"spell_prism",
             "mirror_shield",
             "pirate_hat",
-            "fallen_sky",
-            "ex_machina",
+            //`fallen_sky`,
+            //`ex_machina`,
           ],
         },
       },
@@ -1970,7 +1970,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "bounty_hunter_track",
           `bounty_hunter_shuriken_toss`,
           `bounty_hunter_shuriken_toss`,
-          `special_bonus_unique_bounty_hunter_6`,
+          `special_bonus_unique_bounty_hunter_3`,
           `bounty_hunter_shuriken_toss`,
           "special_bonus_attributes",
           "bounty_hunter_track",
@@ -1980,7 +1980,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes",
           "special_bonus_attributes",
           "special_bonus_attributes",
-          `special_bonus_unique_bounty_hunter_3`,
+          `special_bonus_unique_bounty_hunter_7`,
         ],
         items: {
           starting: [
@@ -2041,12 +2041,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `faded_broach`,
             `philosophers_stone`,
             "bullwhip",
-            `quickening_charm`,
+            //`quickening_charm`,
             `ceremonial_robe`,
-            `spell_prism`,
+            //`spell_prism`,
             `ascetic_cap`,
             `desolator_2`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -2172,12 +2172,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
-            "quickening_charm",
+            //`quickening_charm`,
             `cloak_of_flames`,
-            "spell_prism",
+            //"spell_prism",
             `havoc_hammer`,
             `giants_ring`,
-            "fallen_sky",
+            //`fallen_sky`,
           ],
         },
       },
@@ -2306,7 +2306,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `havoc_hammer`,
             `trickster_cloak`,
             `giants_ring`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -2335,7 +2335,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: [
           "spirit_vessel",
-          "medallion_of_courage",
+          /*"medallion_of_courage",*/
           "solar_crest",
           "mekansm",
         ],
@@ -2455,10 +2455,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "arcane_ring",
             `unstable_wand`,
             `pupils_gift`,
-            `ring_of_aquila`,
+            //"ring_of_aquila",
             `elven_tunic`,
             `cloak_of_flames`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `mind_breaker`,
             "desolator_2",
             `apex`,
@@ -2717,13 +2717,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "lance_of_pursuit",
             "vambrace",
             "pupils_gift",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "elven_tunic",
             "paladin_sword",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            "spell_prism",
-            "penta_edged_sword",
+            //"spell_prism",
+            //"penta_edged_sword",
             "desolator_2",
             "pirate_hat",
             "apex",
@@ -2802,7 +2802,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "pupils_gift",
             "elven_tunic",
             "paladin_sword",
-            "spell_prism",
+            //"spell_prism",
             "mind_breaker",
             "ninja_gear",
             "pirate_hat",
@@ -2819,7 +2819,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest", "lotus_orb"],
+        all: [/*"medallion_of_courage",*/ "solar_crest", "lotus_orb"],
         support: ["glimmer_cape", "ghost", "force_staff"],
         core: [
           "crimson_guard",
@@ -2924,10 +2924,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `seeds_of_serenity`,
             "philosophers_stone",
             `pupils_gift`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ceremonial_robe`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             `force_field`,
             `demonicon`,
           ],
@@ -2998,7 +2998,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             "falcon_blade",
             "power_treads",
-            "medallion_of_courage",
+            /*"medallion_of_courage",*/
             "magic_wand",
           ],
           mid_game: ["solar_crest", "orchid", "desolator", "aghanims_shard"],
@@ -3019,13 +3019,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "lance_of_pursuit",
             "faded_broach",
             "grove_bow",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "enchanted_quiver",
             "elven_tunic",
             "mind_breaker",
-            "spell_prism",
+            //"spell_prism",
             "desolator_2",
-            "ex_machina",
+            //`ex_machina`,
             "apex",
           ],
         },
@@ -3152,7 +3152,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `trickster_cloak`,
             `havoc_hammer`,
             `giants_ring`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -3279,7 +3279,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `faded_broach`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             "bullwhip",
             "psychic_headband",
@@ -3287,7 +3287,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "spy_gadget",
             `timeless_relic`,
             "seer_stone",
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -3406,11 +3406,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
-            "quickening_charm",
+            //`quickening_charm`,
             `cloak_of_flames`,
-            `spell_prism`,
+            //`spell_prism`,
             "trickster_cloak",
-            `fallen_sky`,
+            //`fallen_sky`,
             `force_field`,
           ],
         },
@@ -3544,12 +3544,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           neutral: [
-            `pogo_stick`,
+            //`pogo_stick`,
             `arcane_ring`,
             "philosophers_stone",
             `pupils_gift`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
             `timeless_relic`,
             "seer_stone",
@@ -3690,11 +3690,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `trusty_shovel`,
             `bullwhip`,
             `philosophers_stone`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ogre_seal_totem`,
             `havoc_hammer`,
             `ascetic_cap`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `giants_ring`,
           ],
         },
@@ -3792,8 +3792,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "cloak_of_flames",
             `paladin_sword`,
             `havoc_hammer`,
-            `penta_edged_sword`,
-            `fallen_sky`,
+            //`penta_edged_sword`,
+            //`fallen_sky`,
             `giants_ring`,
           ],
         },
@@ -3815,7 +3815,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: [
           "spirit_vessel",
-          "medallion_of_courage",
+          /*"medallion_of_courage",*/
           "solar_crest",
           "mekansm",
           "vladmir",
@@ -3931,9 +3931,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             `seer_stone`,
             `book_of_shadows`,
           ],
@@ -4060,12 +4060,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bullwhip`,
             `dragon_scale`,
             "eye_of_the_vizier",
-            "quickening_charm",
+            //`quickening_charm`,
             `defiant_shell`,
-            `spell_prism`,
+            //`spell_prism`,
             `mirror_shield`,
             `force_boots`,
-            "ex_machina",
+            //`ex_machina`,
           ],
         },
       },
@@ -4097,7 +4097,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ["glimmer_cape", "force_staff"],
         core: [
           "mage_slayer",
-          "hood_of_defiance",
+          //"hood_of_defiance",
           "pipe",
           "eternal_shroud",
           "blade_mail",
@@ -4201,13 +4201,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `trusty_shovel`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             "seer_stone",
             `force_field`,
           ],
@@ -4335,15 +4335,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             `vambrace`,
             `bullwhip`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `cloak_of_flames`,
             "timeless_relic",
-            `spell_prism`,
+            //`spell_prism`,
             "giants_ring",
-            "fallen_sky",
+            //`fallen_sky`,
           ],
         },
       },
@@ -4463,11 +4463,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "vambrace",
             "gossamer_cape",
-            "titan_sliver",
+            //"titan_sliver",
             "ogre_seal_totem",
             "ninja_gear",
-            "spell_prism",
-            "fallen_sky",
+            //"spell_prism",
+            //`fallen_sky`,
             "giants_ring",
           ],
         },
@@ -4569,8 +4569,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "lance_of_pursuit",
             "unstable_wand",
             "grove_bow",
-            "ring_of_aquila",
-            "titan_sliver",
+            //"ring_of_aquila",
+            //"titan_sliver",
             "elven_tunic",
             "ninja_gear",
             "mind_breaker",
@@ -4589,7 +4589,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["ring_of_health"],
       },
       mid_game: {
-        all: ["blink", "medallion_of_courage", "solar_crest"],
+        all: ["blink", /*"medallion_of_courage",*/ "solar_crest"],
         support: ["glimmer_cape", "force_staff", "ghost"],
         core: ["heavens_halberd", "invis_sword", "manta"],
       },
@@ -4697,12 +4697,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `dragon_scale`,
             `bullwhip`,
-            "quickening_charm",
+            //`quickening_charm`,
             `ceremonial_robe`,
             "timeless_relic",
             `havoc_hammer`,
             `giants_ring`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -4821,15 +4821,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             `arcane_ring`,
             "philosophers_stone",
             "bullwhip",
-            "quickening_charm",
+            //`quickening_charm`,
             `ceremonial_robe`,
             "timeless_relic",
-            "spell_prism",
-            "fallen_sky",
+            //"spell_prism",
+            //`fallen_sky`,
             "giants_ring",
           ],
         },
@@ -4968,7 +4968,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "bullwhip",
             `philosophers_stone`,
             `ogre_seal_totem`,
@@ -4994,7 +4994,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["orb_of_corrosion"],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["force_staff", "glimmer_cape"],
         core: [
           /* "hood_of_defiance", */
@@ -5102,16 +5102,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "arcane_ring",
             "unstable_wand",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "orb_of_destruction",
-            "quickening_charm",
+            //`quickening_charm`,
             "cloak_of_flames",
             "mind_breaker",
-            "spell_prism",
-            "penta_edged_sword",
+            //"spell_prism",
+            //"penta_edged_sword",
             "desolator_2",
             "mirror_shield",
-            "ex_machina",
+            //`ex_machina`,
           ],
         },
       },
@@ -5133,7 +5133,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ["glimmer_cape", "force_staff"],
         core: [
           "mage_slayer",
-          "hood_of_defiance",
+          //"hood_of_defiance",
           "pipe",
           "eternal_shroud",
           "orchid",
@@ -5171,7 +5171,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `enchantress_impetus`, // 7
           `enchantress_impetus`, // 8
           `enchantress_untouchable`, // 9
-          `special_bonus_magic_resistance_8`, // 10
+          `special_bonus_unique_enchantress_6`, // 10
           `enchantress_natures_attendants`, // 11
           "enchantress_untouchable", // 12
           `enchantress_natures_attendants`, // 13
@@ -5375,16 +5375,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             `arcane_ring`,
             "philosophers_stone",
             `bullwhip`,
             `psychic_headband`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ninja_gear`,
-            `spell_prism`,
+            //`spell_prism`,
             `seer_stone`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -5470,16 +5470,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           neutral: [
-            `pogo_stick`,
+            //`pogo_stick`,
             `arcane_ring`,
             `philosophers_stone`,
             `bullwhip`,
             `psychic_headband`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ninja_gear`,
-            `spell_prism`,
+            //`spell_prism`,
             `seer_stone`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -5603,10 +5603,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             //"misericorde",
             //"dagger_of_ristul", Removed in 7.33
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "vambrace",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
             "ninja_gear",
             "pirate_hat",
@@ -5733,7 +5733,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `philosophers_stone`,
             `eye_of_the_vizier`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `psychic_headband`,
             `timeless_relic`,
             `spy_gadget`,
@@ -5965,10 +5965,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `faded_broach`,
             "philosophers_stone",
             `eye_of_the_vizier`,
-            "quickening_charm",
+            //`quickening_charm`,
             `ceremonial_robe`,
             "timeless_relic",
-            `spell_prism`,
+            //`spell_prism`,
             `force_field`,
             `seer_stone`,
           ],
@@ -6107,10 +6107,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `mysterious_hat`,
             "philosophers_stone",
             `eye_of_the_vizier`,
-            `quickening_charm`,
+            //`quickening_charm`,
             "psychic_headband",
             `timeless_relic`,
-            "spell_prism",
+            //"spell_prism",
             "seer_stone",
             "book_of_shadows",
           ],
@@ -6254,7 +6254,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             `vambrace`,
             "paladin_sword",
-            "titan_sliver",
+            //"titan_sliver",
             "trickster_cloak",
             `mind_breaker`,
             "giants_ring",
@@ -6405,10 +6405,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             `pupils_gift`,
             `enchanted_quiver`,
-            "quickening_charm",
+            //`quickening_charm`,
             `timeless_relic`,
             `ninja_gear`,
-            "ex_machina",
+            //`ex_machina`,
             `apex`,
           ],
         },
@@ -6514,10 +6514,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `grove_bow`,
             `pupils_gift`,
             `enchanted_quiver`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `timeless_relic`,
             `ninja_gear`,
-            `ex_machina`,
+            //`ex_machina`,
             `apex`,
           ],
         },
@@ -6706,7 +6706,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "jakiro_ice_path", // 8
           "jakiro_ice_path", // 9
           `jakiro_ice_path`, // 10
-          `special_bonus_attack_range_250`, // 11
+          `special_bonus_attack_range_200`, // 11
           "jakiro_macropyre", // 12
           "jakiro_liquid_fire", // 13
           "jakiro_liquid_fire", // 14
@@ -6772,7 +6772,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `trusty_shovel`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             "bullwhip",
             "psychic_headband",
@@ -6834,31 +6834,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "juggernaut_blade_fury",
-          "juggernaut_healing_ward",
-          "juggernaut_blade_fury",
-          "juggernaut_blade_dance",
-          "juggernaut_blade_fury",
-          "juggernaut_omni_slash",
-          "juggernaut_blade_fury",
-          `juggernaut_healing_ward`,
-          `juggernaut_healing_ward`,
-          `special_bonus_all_stats_5`,
-          `juggernaut_healing_ward`,
-          "juggernaut_omni_slash",
-          `juggernaut_blade_dance`,
-          `juggernaut_blade_dance`,
-          `special_bonus_unique_juggernaut_5`,
-          `juggernaut_blade_dance`,
-          "special_bonus_attributes",
-          "juggernaut_omni_slash",
-          "special_bonus_attributes",
-          "special_bonus_unique_juggernaut_blade_dance_lifesteal",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          `special_bonus_unique_juggernaut_omnislash_duration`,
+          "juggernaut_blade_fury", // 1
+          "juggernaut_healing_ward", // 2
+          "juggernaut_blade_fury", // 3
+          "juggernaut_blade_dance", // 4
+          "juggernaut_blade_fury", // 5
+          "juggernaut_omni_slash", // 6
+          "juggernaut_blade_fury", // 7
+          `juggernaut_healing_ward`, // 8
+          `juggernaut_healing_ward`, // 9
+          `special_bonus_unique_juggernaut_3`, // 10
+          `juggernaut_healing_ward`, // 11
+          "juggernaut_omni_slash", // 12
+          `juggernaut_blade_dance`, // 13
+          `juggernaut_blade_dance`, // 14
+          `special_bonus_unique_juggernaut_5`, // 15
+          `juggernaut_blade_dance`, // 16
+          "special_bonus_attributes", // 17
+          "juggernaut_omni_slash", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_juggernaut_blade_dance_lifesteal", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          `special_bonus_unique_juggernaut_omnislash_duration`, // 25
         ],
         items: {
           starting: [
@@ -6900,11 +6900,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "duelist_gloves",
             `orb_of_destruction`,
-            `ring_of_aquila`,
+            //"ring_of_aquila",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             //`flicker`,
             "pirate_hat",
             `apex`,
@@ -6974,7 +6974,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_keeper_of_the_light_10`, // 25
+          `special_bonus_unique_keeper_of_the_light`, // 25
         ],
         items: {
           starting: [
@@ -7160,13 +7160,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "vambrace",
             "orb_of_destruction",
             //`dagger_of_ristul`,
-            "titan_sliver",
+            //"titan_sliver",
             `paladin_sword`,
             //`heavy_blade`,
             "mind_breaker",
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             "desolator_2",
-            `ex_machina`,
+            //`ex_machina`,
             "pirate_hat",
           ],
         },
@@ -7198,7 +7198,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "kunkka_ghostship", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_kunkka", // 20
+          "special_bonus_unique_kunkka_4", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -7249,13 +7249,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             "orb_of_destruction",
             //`dagger_of_ristul`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `defiant_shell`,
             //`heavy_blade`,
             `havoc_hammer`,
-            "spell_prism",
+            //"spell_prism",
             `giants_ring`,
-            `ex_machina`,
+            //`ex_machina`,
           ],
         },
       },
@@ -7276,7 +7276,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: ["cyclone", "spirit_vessel"],
         support: ["glimmer_cape", "force_staff"],
-        core: ["hood_of_defiance", "pipe", "eternal_shroud", "black_king_bar"],
+        core: [
+          // "hood_of_defiance",
+          "pipe",
+          "eternal_shroud",
+          "black_king_bar",
+        ],
       },
       late_game: {
         all: [],
@@ -7308,7 +7313,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `legion_commander_overwhelming_odds`, // 7
           `legion_commander_moment_of_courage`, // 8
           "legion_commander_moment_of_courage", // 9
-          "special_bonus_unique_legion_commander", // 10
+          "special_bonus_unique_legion_commander_pta_movespeed", // 10
           "legion_commander_moment_of_courage", // 11
           "legion_commander_duel", // 12
           `legion_commander_press_the_attack`, // 13
@@ -7390,10 +7395,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `dragon_scale`,
             `orb_of_destruction`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `elven_tunic`,
             `ninja_gear`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `giants_ring`,
             "desolator_2",
           ],
@@ -7500,19 +7505,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "mysterious_hat",
             "occult_bracelet",
-            "pogo_stick",
+            //"pogo_stick",
             "vambrace",
             "vampire_fangs",
             "gossamer_cape",
             //"black_powder_bag",
             "ceremonial_robe",
             "dandelion_amulet",
-            "spell_prism",
+            //"spell_prism",
             "timeless_relic",
             "stormcrafter",
             "force_field",
-            "ex_machina",
-            "fallen_sky",
+            //`ex_machina`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -7532,7 +7537,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ["glimmer_cape", "force_staff", "spirit_vessel"],
         core: [
           "mage_slayer",
-          "hood_of_defiance",
+          //"hood_of_defiance",
           "pipe",
           "eternal_shroud",
           "black_king_bar",
@@ -7649,7 +7654,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "psychic_headband",
             `ceremonial_robe`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             "seer_stone",
             `book_of_shadows`,
           ],
@@ -7771,9 +7776,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "orb_of_destruction",
             "vambrace",
             "paladin_sword",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "havoc_hammer",
             "desolator_2",
             "pirate_hat",
@@ -7902,9 +7907,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bullwhip`,
             "psychic_headband",
             `ceremonial_robe`,
-            `spell_prism`,
+            //`spell_prism`,
             `timeless_relic`,
-            "ex_machina",
+            //`ex_machina`,
             "seer_stone",
           ],
         },
@@ -7999,7 +8004,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sheepstick`,
           ],
           neutral: [
-            `pogo_stick`,
+            //`pogo_stick`,
             `mysterious_hat`,
             "philosophers_stone",
             `bullwhip`,
@@ -8008,7 +8013,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `spy_gadget`,
             `timeless_relic`,
             "seer_stone",
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -8135,7 +8140,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             `mysterious_hat`,
             "philosophers_stone",
             `grove_bow`,
@@ -8144,7 +8149,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "timeless_relic",
             "spy_gadget",
             "seer_stone",
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -8295,7 +8300,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "orb_of_destruction",
             `defiant_shell`,
             "paladin_sword",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "mind_breaker",
             "desolator_2",
             `apex`,
@@ -8303,7 +8308,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "unstable_wand",
             "trusty_shovel",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "philosophers_stone",
             `defiant_shell`,
             `ogre_seal_totem`,
@@ -8420,9 +8425,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "unstable_wand",
             "duelist_gloves",
             "grove_bow",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             //"dagger_of_ristul", Removed in 7.33
-            "titan_sliver",
+            //"titan_sliver",
             "elven_tunic",
             "ninja_gear",
             "mind_breaker",
@@ -8445,7 +8450,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ["glimmer_cape", "force_staff"],
         core: [
           "mage_slayer",
-          "hood_of_defiance",
+          //"hood_of_defiance",
           "pipe",
           "eternal_shroud",
           "blade_mail",
@@ -8550,11 +8555,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "occult_bracelet",
             `pupils_gift`,
-            "ring_of_aquila",
+            //"ring_of_aquila",
             `elven_tunic`,
-            "titan_sliver",
+            //"titan_sliver",
             `mind_breaker`,
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "demonicon",
             "desolator_2",
           ],
@@ -8646,9 +8651,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             "orb_of_destruction",
             `elven_tunic`,
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             `apex`,
             `desolator_2`,
           ],
@@ -8781,8 +8786,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `vambrace`,
             `paladin_sword`,
-            `quickening_charm`,
-            "spell_prism",
+            //`quickening_charm`,
+            //"spell_prism",
             `ninja_gear`,
             `giants_ring`,
             `apex`,
@@ -8892,8 +8897,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `vambrace`,
             `paladin_sword`,
-            `quickening_charm`,
-            `spell_prism`,
+            //`quickening_charm`,
+            //`spell_prism`,
             `ninja_gear`,
             `giants_ring`,
             `apex`,
@@ -8983,15 +8988,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `refresher`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             "arcane_ring",
             `philosophers_stone`,
             "bullwhip",
             "psychic_headband",
-            `quickening_charm`,
-            `spell_prism`,
+            //`quickening_charm`,
+            //`spell_prism`,
             `ninja_gear`,
-            "fallen_sky",
+            //`fallen_sky`,
             `giants_ring`,
           ],
         },
@@ -9125,7 +9130,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `cloak_of_flames`,
             `paladin_sword`,
             `mind_breaker`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `apex`,
             `desolator_2`,
           ],
@@ -9226,7 +9231,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `paladin_sword`,
             `cloak_of_flames`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `mind_breaker`,
             `desolator_2`,
             `apex`,
@@ -9384,14 +9389,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `refresher`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             `arcane_ring`,
             `bullwhip`,
             `dragon_scale`,
-            `titan_sliver`,
+            //`titan_sliver`,
             "cloak_of_flames",
             `havoc_hammer`,
-            `spell_prism`,
+            //`spell_prism`,
             `desolator_2`,
             `giants_ring`,
           ],
@@ -9654,7 +9659,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "ninja_gear",
             `havoc_hammer`,
             "apex",
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -9781,7 +9786,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `vambrace`,
             `pupils_gift`,
-            "quickening_charm",
+            //`quickening_charm`,
             `ceremonial_robe`,
             `timeless_relic`,
             `ninja_gear`,
@@ -9916,15 +9921,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "lance_of_pursuit",
             //"misericorde",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "orb_of_destruction",
-            "titan_sliver",
+            //"titan_sliver",
             "elven_tunic",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "desolator_2",
             "apex",
-            "ex_machina",
+            //`ex_machina`,
           ],
         },
       },
@@ -9996,12 +10001,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "duelist_gloves",
             "orb_of_destruction",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             //"black_powder_bag",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             //"heavy_blade",
             "desolator_2",
             "pirate_hat",
@@ -10122,8 +10127,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "specialists_array",
             //"dagger_of_ristul", Removed in 7.33
             "grove_bow",
-            "ring_of_aquila",
-            "titan_sliver",
+            //"ring_of_aquila",
+            //"titan_sliver",
             "paladin_sword",
             "elven_tunic",
             "ninja_gear",
@@ -10365,7 +10370,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `faded_broach`,
             `bullwhip`,
             `grove_bow`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `ceremonial_robe`,
             `spy_gadget`,
             `timeless_relic`,
@@ -10482,15 +10487,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "occult_bracelet",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "pupils_gift",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
             "ninja_gear",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "apex",
-            "fallen_sky",
+            //`fallen_sky`,
             "mirror_shield",
           ],
         },
@@ -10781,7 +10786,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_sentry`,
           ],
           early_game: [
-            `medallion_of_courage`,
+            //`medallion_of_courage`,
             `magic_wand`,
             `boots`,
             `wind_lace`,
@@ -10971,11 +10976,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `pupils_gift`,
             `cloak_of_flames`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `trickster_cloak`,
-            `spell_prism`,
-            `fallen_sky`,
-            `ex_machina`,
+            //`spell_prism`,
+            //`fallen_sky`,
+            //`ex_machina`,
           ],
         },
         // item_tooltips:
@@ -11077,11 +11082,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `pupils_gift`,
             `cloak_of_flames`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `trickster_cloak`,
-            `spell_prism`,
-            `fallen_sky`,
-            `ex_machina`,
+            //`spell_prism`,
+            //`fallen_sky`,
+            //`ex_machina`,
           ],
         },
       },
@@ -11214,10 +11219,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //`dagger_of_ristul`,
             `vambrace`,
             "orb_of_destruction",
-            `titan_sliver`,
+            //`titan_sliver`,
             "ogre_seal_totem",
             `mind_breaker`,
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "desolator_2",
             `giants_ring`,
             "pirate_hat",
@@ -11278,7 +11283,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "nyx_assassin_vendetta", // 12
           `nyx_assassin_spiked_carapace`, // 13
           `nyx_assassin_spiked_carapace`, // 14
-          `special_bonus_spell_amplify_6`, // 15
+          `special_bonus_unique_nyx_4`, // 15
           `special_bonus_unique_nyx_5`, // 16
           "special_bonus_attributes", // 17
           "nyx_assassin_vendetta", // 18
@@ -11337,15 +11342,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             `grove_bow`,
             `bullwhip`,
             `enchanted_quiver`,
             `ceremonial_robe`,
             `timeless_relic`,
-            `spell_prism`,
+            //`spell_prism`,
             `seer_stone`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -11411,7 +11416,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "ogre_magi_multicast", // 12
           "ogre_magi_bloodlust", // 13
           "ogre_magi_bloodlust", // 14
-          `special_bonus_hp_250`, // 15
+          `special_bonus_unique_ogre_magi_dumb_luck_mana`, // 15
           `ogre_magi_bloodlust`, // 16
           "special_bonus_attributes", // 17
           "ogre_magi_multicast", // 18
@@ -11482,7 +11487,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             "bullwhip",
             "psychic_headband",
@@ -11623,10 +11628,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `faded_broach`,
             `bullwhip`,
             "philosophers_stone",
-            `quickening_charm`,
+            //`quickening_charm`,
             "psychic_headband",
             "spy_gadget",
-            "spell_prism",
+            //"spell_prism",
             "seer_stone",
             "force_field",
           ],
@@ -11767,7 +11772,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
             `trickster_cloak`,
             "seer_stone",
@@ -11842,7 +11847,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_strength_20`, // 20
+          `special_bonus_unique_outworld_devourer_4`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -11893,7 +11898,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `faded_broach`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "grove_bow",
             "vambrace",
             "psychic_headband",
@@ -11932,7 +11937,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_strength_20`, // 20
+          `special_bonus_unique_outworld_devourer_4`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -11992,7 +11997,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `faded_broach`,
-            `pogo_stick`,
+            //`pogo_stick`,
             `grove_bow`,
             `vambrace`,
             `ceremonial_robe`,
@@ -12058,12 +12063,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `pangolier_swashbuckle`, // 7
           `pangolier_shield_crash`, // 8
           `pangolier_shield_crash`, // 9
-          `special_bonus_unique_pangolier`, // 10
+          `special_bonus_unique_pangolier_luckyshot_armor`, // 10
           `pangolier_lucky_shot`, // 11
           "pangolier_gyroshell", // 12
           "pangolier_lucky_shot", // 13
           "pangolier_lucky_shot", // 14
-          `special_bonus_unique_pangolier_2`, // 15
+          `special_bonus_unique_pangolier_shield_crash_herostacks`, // 15
           "pangolier_lucky_shot", // 16
           "special_bonus_attributes", // 17
           "pangolier_gyroshell", // 18
@@ -12137,10 +12142,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             `pupils_gift`,
             `orb_of_destruction`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `cloak_of_flames`,
             `ninja_gear`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `desolator_2`,
             `apex`,
           ],
@@ -12239,7 +12244,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ceremonial_robe`,
             `havoc_hammer`,
             `timeless_relic`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `force_field`,
           ],
         },
@@ -12266,7 +12271,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "pangolier_gyroshell", // 12
           "pangolier_lucky_shot", // 13
           "pangolier_lucky_shot", // 14
-          "special_bonus_unique_pangolier_2", // 15
+          "special_bonus_unique_pangolier_shield_crash_herostacks", // 15
           "pangolier_lucky_shot", // 16
           "special_bonus_attributes", // 17
           "pangolier_gyroshell", // 18
@@ -12333,9 +12338,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             `pupils_gift`,
             `orb_of_destruction`,
-            `titan_sliver`,
-            `quickening_charm`,
-            `penta_edged_sword`,
+            //`titan_sliver`,
+            //`quickening_charm`,
+            //`penta_edged_sword`,
             `ninja_gear`,
             `desolator_2`,
             `apex`,
@@ -12465,15 +12470,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "lance_of_pursuit",
             //"misericorde",
             //"dagger_of_ristul", Removed in 7.33
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "orb_of_destruction",
             "paladin_sword",
-            "titan_sliver",
-            "penta_edged_sword",
+            //"titan_sliver",
+            //"penta_edged_sword",
             "mind_breaker",
             "desolator_2",
             "apex",
-            "ex_machina",
+            //`ex_machina`,
           ],
         },
       },
@@ -12579,11 +12584,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //"possessed_mask", Removed in 7.33
             "broom_handle",
             "lance_of_pursuit",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             //"dagger_of_ristul", Removed in 7.33
             "pupils_gift",
             "orb_of_destruction",
-            "titan_sliver",
+            //"titan_sliver",
             "elven_tunic",
             "mind_breaker",
             "ninja_gear",
@@ -12649,7 +12654,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "phoenix_sun_ray", // 8
           "phoenix_sun_ray", // 9
           "phoenix_sun_ray", // 10
-          "phoenix_icarus_dive", // 11
+          "special_bonus_unique_phoenix_6", // 11
           "phoenix_supernova", // 12
           "phoenix_icarus_dive", // 13
           "phoenix_icarus_dive", // 14
@@ -12726,9 +12731,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `mysterious_hat`,
             "philosophers_stone",
             `pupils_gift`,
-            "quickening_charm",
+            //`quickening_charm`,
             `ceremonial_robe`,
-            "spell_prism",
+            //"spell_prism",
             "timeless_relic",
             "book_of_shadows",
             "force_field",
@@ -12867,11 +12872,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bullwhip`,
             "vambrace",
             `cloak_of_flames`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `havoc_hammer`,
             `timeless_relic`,
             "giants_ring",
-            "fallen_sky",
+            //`fallen_sky`,
           ],
         },
         // item_tooltips:
@@ -12974,11 +12979,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bullwhip`,
             `vambrace`,
             `cloak_of_flames`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `havoc_hammer`,
             `timeless_relic`,
             `giants_ring`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -13118,12 +13123,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "arcane_ring",
             `vambrace`,
             "grove_bow",
-            `quickening_charm`,
+            //`quickening_charm`,
             `ceremonial_robe`,
-            `spell_prism`,
+            //`spell_prism`,
             "timeless_relic",
             `mirror_shield`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -13190,7 +13195,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "pudge_flesh_heap", // 8
           "pudge_flesh_heap", // 9
           "pudge_flesh_heap", // 10
-          "special_bonus_armor_4", // 11
+          "special_bonus_unique_pudge_4", // 11
           "pudge_dismember", // 12
           "pudge_meat_hook", // 13
           "pudge_meat_hook", // 14
@@ -13256,7 +13261,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             "seeds_of_serenity",
-            "pogo_stick",
+            //"pogo_stick",
             "philosophers_stone",
             "eye_of_the_vizier",
             "bullwhip",
@@ -13489,7 +13494,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "psychic_headband",
             `ceremonial_robe`,
             "timeless_relic",
-            "spell_prism",
+            //"spell_prism",
             "seer_stone",
             `mirror_shield`,
           ],
@@ -13584,7 +13589,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "psychic_headband",
             `ceremonial_robe`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             "seer_stone",
             `force_field`,
           ],
@@ -13659,7 +13664,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "queenofpain_scream_of_pain", // 7
           "queenofpain_scream_of_pain", // 8
           "queenofpain_scream_of_pain", // 9
-          "special_bonus_strength_8", // 10
+          "special_bonus_unique_queen_of_pain_strike_heal", // 10
           "queenofpain_blink", // 11
           "queenofpain_sonic_wave", // 12
           "queenofpain_blink", // 13
@@ -13723,10 +13728,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "vampire_fangs",
             "psychic_headband",
             "dandelion_amulet",
-            "quickening_charm",
-            "spell_prism",
+            //`quickening_charm`,
+            //"spell_prism",
             "timeless_relic",
-            "ex_machina",
+            //`ex_machina`,
             "mirror_shield",
           ],
         },
@@ -13748,7 +13753,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "queenofpain_scream_of_pain", // 7
           "queenofpain_scream_of_pain", // 8
           "queenofpain_scream_of_pain", // 9
-          "special_bonus_strength_8", // 10
+          "special_bonus_unique_queen_of_pain_strike_heal", // 10
           "queenofpain_blink", // 11
           "queenofpain_sonic_wave", // 12
           "queenofpain_blink", // 13
@@ -13808,11 +13813,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "mysterious_hat",
             "grove_bow",
             "vampire_fangs",
-            "quickening_charm",
+            //`quickening_charm`,
             "psychic_headband",
-            "spell_prism",
+            //"spell_prism",
             "timeless_relic",
-            "ex_machina",
+            //`ex_machina`,
             "mirror_shield",
           ],
         },
@@ -13876,12 +13881,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "razor_plasma_field", // 7
           `razor_unstable_current`, // 8
           `razor_unstable_current`, // 9
-          `special_bonus_agility_14`, // 10
+          `special_bonus_spell_lifesteal_10`, // 10
           `razor_unstable_current`, // 11
           "razor_eye_of_the_storm", // 12
           `razor_static_link`, // 13
           "razor_unstable_current", // 14
-          `special_bonus_strength_14`, // 15
+          `special_bonus_unique_razor_3`, // 15
           `razor_static_link`, // 16
           "special_bonus_attributes", // 17
           "razor_eye_of_the_storm", // 18
@@ -13951,7 +13956,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             `grove_bow`,
             `elven_tunic`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `mind_breaker`,
             `ninja_gear`,
             `desolator_2`,
@@ -13976,12 +13981,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "razor_plasma_field", // 7
           "razor_unstable_current", // 8
           `razor_unstable_current`, // 9
-          `special_bonus_agility_14`, // 10
+          `special_bonus_spell_lifesteal_10`, // 10
           `razor_unstable_current`, // 11
           "razor_eye_of_the_storm", // 12
           `razor_static_link`, // 13
           `razor_unstable_current`, // 14
-          `special_bonus_strength_14`, // 15
+          `special_bonus_unique_razor_3`, // 15
           `razor_static_link`, // 16
           "special_bonus_attributes", // 17
           "razor_eye_of_the_storm", // 18
@@ -14056,7 +14061,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             `grove_bow`,
             `elven_tunic`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `mind_breaker`,
             `trickster_cloak`,
             `desolator_2`,
@@ -14086,12 +14091,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "razor_plasma_field", // 7
           `razor_unstable_current`, // 8
           `razor_unstable_current`, // 9
-          `special_bonus_agility_14`, // 10
+          `special_bonus_spell_lifesteal_10`, // 10
           `razor_unstable_current`, // 11
           "razor_eye_of_the_storm", // 12
           `razor_static_link`, // 13
           "razor_unstable_current", // 14
-          `special_bonus_strength_14`, // 15
+          `special_bonus_unique_razor_3`, // 15
           `razor_static_link`, // 16
           "special_bonus_attributes", // 17
           "razor_eye_of_the_storm", // 18
@@ -14164,7 +14169,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             `grove_bow`,
             `elven_tunic`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `mind_breaker`,
             `ninja_gear`,
             `desolator_2`,
@@ -14295,9 +14300,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             "vambrace",
             `elven_tunic`,
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             "apex",
             "desolator_2",
           ],
@@ -14394,8 +14399,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `orb_of_destruction`,
             `elven_tunic`,
-            `quickening_charm`,
-            `penta_edged_sword`,
+            //`quickening_charm`,
+            //`penta_edged_sword`,
             `mind_breaker`,
             `apex`,
             `desolator_2`,
@@ -14467,12 +14472,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "rubick_spell_steal", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_rubick`, // 20
+          `special_bonus_unique_rubick_4`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_rubick_4`, // 25
+          `special_bonus_unique_rubick`, // 25
         ],
         items: {
           starting: [
@@ -14524,14 +14529,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sheepstick`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             `arcane_ring`,
             "philosophers_stone",
             `eye_of_the_vizier`,
             `ceremonial_robe`,
             "psychic_headband",
             "spy_gadget",
-            "spell_prism",
+            //"spell_prism",
             "seer_stone",
             "book_of_shadows",
           ],
@@ -14652,16 +14657,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           neutral: [
-            `pogo_stick`,
+            //`pogo_stick`,
             "arcane_ring",
             `bullwhip`,
             "vambrace",
-            `quickening_charm`,
+            //`quickening_charm`,
             `cloak_of_flames`,
-            `spell_prism`,
+            //`spell_prism`,
             `timeless_relic`,
             "giants_ring",
-            "fallen_sky",
+            //`fallen_sky`,
           ],
         },
       },
@@ -14800,13 +14805,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             "seer_stone",
             "book_of_shadows",
           ],
@@ -14933,12 +14938,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "black_king_bar",
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             "occult_bracelet",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "grove_bow",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
             "ninja_gear",
             "desolator_2",
@@ -15029,8 +15034,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             "specialists_array",
             //"dagger_of_ristul", Removed in 7.33
-            "ring_of_aquila",
-            "titan_sliver",
+            //"ring_of_aquila",
+            //"titan_sliver",
             "elven_tunic",
             "mind_breaker",
             "ninja_gear",
@@ -15057,11 +15062,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["ring_of_health", "DamageItems"],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest", "mekansm"],
+        all: [/*"medallion_of_courage",*/ "solar_crest", "mekansm"],
         support: ["glimmer_cape", "force_staff"],
         core: [
           "mage_slayer",
-          "hood_of_defiance",
+          //"hood_of_defiance",
           "pipe",
           "eternal_shroud",
           "black_king_bar",
@@ -15099,7 +15104,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `shadow_shaman_voodoo`, // 8
           `shadow_shaman_shackles`, // 9
           `shadow_shaman_shackles`, // 10
-          `special_bonus_unique_shadow_shaman_5`, // 11
+          `special_bonus_unique_shadow_shaman_hex_damage_amp`, // 11
           "shadow_shaman_mass_serpent_ward", // 12
           `shadow_shaman_ether_shock`, // 13
           `shadow_shaman_ether_shock`, // 14
@@ -15156,13 +15161,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `trusty_shovel`,
-            "pogo_stick",
+            //"pogo_stick",
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
-            `spell_prism`,
+            //`spell_prism`,
             "seer_stone",
             `force_boots`,
           ],
@@ -15296,8 +15301,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "philosophers_stone",
             "bullwhip",
             "psychic_headband",
-            "quickening_charm",
-            "spell_prism",
+            //`quickening_charm`,
+            //"spell_prism",
             `spy_gadget`,
             `pirate_hat`,
             "book_of_shadows",
@@ -15581,7 +15586,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `cloak_of_flames`,
             `elven_tunic`,
             `mind_breaker`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             "desolator_2",
             "pirate_hat",
           ],
@@ -15602,7 +15607,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb", "medallion_of_courage", "solar_crest"],
+        all: ["lotus_orb", /*"medallion_of_courage",*/ "solar_crest"],
         support: ["force_staff", "ghost"],
         core: ["manta", "hurricane_pike", "manta"],
       },
@@ -15705,12 +15710,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //"possessed_mask", Removed in 7.33
             //"dagger_of_ristul", Removed in 7.33
             //"misericorde",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "orb_of_destruction",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "pirate_hat",
             "apex",
             "mirror_shield",
@@ -15831,12 +15836,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             "philosophers_stone",
             `pupils_gift`,
-            "quickening_charm",
+            //`quickening_charm`,
             `ogre_seal_totem`,
             "timeless_relic",
-            "spell_prism",
+            //"spell_prism",
             `apex`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -16076,7 +16081,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `faded_broach`,
             "philosophers_stone",
             "bullwhip",
-            "quickening_charm",
+            //`quickening_charm`,
             `psychic_headband`,
             `timeless_relic`,
             `spy_gadget`,
@@ -16143,7 +16148,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "spectre_spectral_dagger", // 7
           "spectre_dispersion", // 8
           "spectre_dispersion", // 9
-          "special_bonus_all_stats_5", // 10
+          "special_bonus_unique_spectre_desolate_radius", // 10
           "spectre_desolate", // 11
           "spectre_haunt_single", // 12
           "spectre_desolate", // 13
@@ -16209,9 +16214,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "vambrace",
             //"dagger_of_ristul", Removed in 7.33
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "pupils_gift",
-            "titan_sliver",
+            //"titan_sliver",
             "elven_tunic",
             "mind_breaker",
             "ninja_gear",
@@ -16269,12 +16274,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "spirit_breaker_nether_strike", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_spirit_breaker_4", // 20
+          "special_bonus_unique_spirit_breaker_shield", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_spirit_breaker_shield`, // 25
+          `special_bonus_unique_spirit_breaker_4`, // 25
         ],
         items: {
           starting: [
@@ -16338,7 +16343,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `gossamer_cape`,
             `vambrace`,
             `ceremonial_robe`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `timeless_relic`,
             "ninja_gear",
             "force_boots",
@@ -16378,12 +16383,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "spirit_breaker_nether_strike", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_spirit_breaker_4", // 20
+          "special_bonus_unique_spirit_breaker_shield", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_spirit_breaker_shield`, // 25
+          `special_bonus_unique_spirit_breaker_4`, // 25
         ],
         items: {
           starting: [
@@ -16445,7 +16450,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `dragon_scale`,
             `vambrace`,
             `cloak_of_flames`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `timeless_relic`,
             `ninja_gear`,
             `force_boots`,
@@ -16569,10 +16574,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             "ceremonial_robe",
             "psychic_headband",
-            "spell_prism",
+            //"spell_prism",
             "timeless_relic",
             `apex`,
-            "ex_machina",
+            //`ex_machina`,
           ],
         },
       },
@@ -16700,9 +16705,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "orb_of_destruction",
             "vambrace",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "pirate_hat",
             "mirror_shield",
             "giants_ring",
@@ -16851,7 +16856,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "ceremonial_robe",
             `spy_gadget`,
             "timeless_relic",
-            `fallen_sky`,
+            //`fallen_sky`,
             `seer_stone`,
           ],
         },
@@ -16956,7 +16961,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ceremonial_robe`,
             `trickster_cloak`,
             `timeless_relic`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `seer_stone`,
           ],
         },
@@ -17087,7 +17092,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "broom_handle",
             "occult_bracelet",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "grove_bow",
             "specialists_array",
             "elven_tunic",
@@ -17189,7 +17194,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["ward_dispenser", "SentryDust", "ghost", "glimmer_cape"],
         core: ["hurricane_pike", "witch_blade", "heavens_halberd", "javelin"],
       },
@@ -17229,7 +17234,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "terrorblade_sunder", // 12
           "terrorblade_reflection", // 13
           "terrorblade_reflection", // 14
-          "special_bonus_hp_275", // 15
+          "special_bonus_unique_terrorblade_6", // 15
           "terrorblade_reflection", // 16
           "special_bonus_attributes", // 17
           "terrorblade_sunder", // 18
@@ -17276,8 +17281,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "broom_handle",
             "grove_bow",
             "pupils_gift",
-            "ring_of_aquila",
-            "titan_sliver",
+            //"ring_of_aquila",
+            //"titan_sliver",
             "elven_tunic",
             "mind_breaker",
             "ninja_gear",
@@ -17297,7 +17302,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       mid_game: {
         all: [
-          "medallion_of_courage",
+          //"medallion_of_courage",
           "solar_crest",
           "lotus_orb",
           "sphere",
@@ -17422,15 +17427,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `shivas_guard`,
           ],
           neutral: [
-            `pogo_stick`,
+            //`pogo_stick`,
             `arcane_ring`,
             `bullwhip`,
             `dragon_scale`,
             "cloak_of_flames",
-            `quickening_charm`,
+            //`quickening_charm`,
             `timeless_relic`,
-            `spell_prism`,
-            "fallen_sky",
+            //`spell_prism`,
+            //`fallen_sky`,
             `giants_ring`,
           ],
         },
@@ -17502,7 +17507,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `shredder_whirling_death`, // 10
           `shredder_whirling_death`, // 11
           "shredder_chakram", // 12
-          `special_bonus_hp_200`, // 13
+          `special_bonus_unique_timbersaw_reactive_armor_regen_per_stack`, // 13
           `shredder_reactive_armor`, // 14
           "special_bonus_unique_timbersaw_5", // 15
           `shredder_reactive_armor`, // 16
@@ -17579,10 +17584,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             "ceremonial_robe",
             "cloak_of_flames",
-            `spell_prism`,
+            //`spell_prism`,
             `timeless_relic`,
             `apex`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -17706,7 +17711,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             "mysterious_hat",
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             `vambrace`,
             "psychic_headband",
@@ -17854,16 +17859,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sheepstick`,
           ],
           neutral: [
-            "pogo_stick",
+            //"pogo_stick",
             `faded_broach`,
             "philosophers_stone",
             `bullwhip`,
-            `quickening_charm`,
+            //`quickening_charm`,
             "ogre_seal_totem",
             `timeless_relic`,
-            "spell_prism",
+            //"spell_prism",
             `giants_ring`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -17955,9 +17960,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `elven_tunic`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `timeless_relic`,
             `pirate_hat`,
             `desolator_2`,
@@ -18051,7 +18056,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `elven_tunic`,
             `paladin_sword`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `mind_breaker`,
             `pirate_hat`,
             `desolator_2`,
@@ -18067,7 +18072,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["orb_of_corrosion"],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["glimmer_cape"],
         core: [
           "mage_slayer",
@@ -18177,15 +18182,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `trusty_shovel`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             "bullwhip",
-            `quickening_charm`,
+            //`quickening_charm`,
             "ceremonial_robe",
             `timeless_relic`,
-            `spell_prism`,
+            //`spell_prism`,
             `demonicon`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -18309,13 +18314,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "broom_handle",
             "occult_bracelet",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "orb_of_destruction",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "paladin_sword",
             "ninja_gear",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "apex",
             "mirror_shield",
             "pirate_hat",
@@ -18331,7 +18336,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["ring_of_health", "vanguard"],
       },
       mid_game: {
-        all: ["cyclone", "medallion_of_courage", "solar_crest"],
+        all: ["cyclone", /*"medallion_of_courage",*/ "solar_crest"],
         support: ["force_staff", "ghost"],
         core: ["heavens_halberd", "hurricane_pike", "witch_blade"],
       },
@@ -18436,8 +18441,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "bullwhip",
             `philosophers_stone`,
             `ceremonial_robe`,
-            `quickening_charm`,
-            `spell_prism`,
+            //`quickening_charm`,
+            //`spell_prism`,
             "trickster_cloak",
             `giants_ring`,
             "force_field",
@@ -18538,9 +18543,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             `dragon_scale`,
             `cloak_of_flames`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `mind_breaker`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `giants_ring`,
             `desolator_2`,
           ],
@@ -18561,7 +18566,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["force_staff", "glimmer_cape", "ghost"],
         core: ["blink", "hurricane_pike"],
       },
@@ -18672,7 +18677,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `havoc_hammer`,
             `trickster_cloak`,
             `giants_ring`,
-            `fallen_sky`,
+            //`fallen_sky`,
           ],
         },
       },
@@ -18703,9 +18708,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       mid_game: {
         all: [
-          "medallion_of_courage",
+          /*"medallion_of_courage",*/
           "spirit_vessel",
-          "medallion_of_courage",
           "solar_crest",
         ],
         support: ["glimmer_cape", "force_staff"],
@@ -18822,9 +18826,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `philosophers_stone`,
             "bullwhip",
             `ogre_seal_totem`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `trickster_cloak`,
-            `spell_prism`,
+            //`spell_prism`,
             "force_field",
             `giants_ring`,
           ],
@@ -18925,7 +18929,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `cloak_of_flames`,
             `havoc_hammer`,
             `trickster_cloak`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `giants_ring`,
           ],
         },
@@ -19052,11 +19056,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "broom_handle",
             "lance_of_pursuit",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             "vambrace",
             "elven_tunic",
-            "titan_sliver",
-            "penta_edged_sword",
+            //"titan_sliver",
+            //"penta_edged_sword",
             "mind_breaker",
             "desolator_2",
             "force_boots",
@@ -19080,7 +19084,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["cyclone", "medallion_of_courage", "solar_crest"],
+        all: ["cyclone", /*"medallion_of_courage",*/ "solar_crest"],
         support: ["force_staff", "glimmer_cape", "ghost"],
         core: ["hurricane_pike", "heavens_halberd"],
       },
@@ -19124,7 +19128,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "vengefulspirit_nether_swap", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_vengeful_spirit_9`, // 20
+          `special_bonus_unique_vengeful_spirit_wave_of_terror_steal`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -19205,7 +19209,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["glimmer_cape", "force_staff", "ghost"],
         core: ["heavens_halberd"],
       },
@@ -19326,10 +19330,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             `pupils_gift`,
             "ceremonial_robe",
-            `quickening_charm`,
+            //`quickening_charm`,
             "timeless_relic",
-            "spell_prism",
-            `fallen_sky`,
+            //"spell_prism",
+            //`fallen_sky`,
             `apex`,
           ],
         },
@@ -19432,9 +19436,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `philosophers_stone`,
             `bullwhip`,
             `ceremonial_robe`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `timeless_relic`,
-            `spell_prism`,
+            //`spell_prism`,
             `force_field`,
             "seer_stone",
           ],
@@ -19583,10 +19587,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             `vambrace`,
             "enchanted_quiver",
-            `titan_sliver`,
+            //`titan_sliver`,
             `trickster_cloak`,
             `mind_breaker`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `apex`,
           ],
         },
@@ -19687,10 +19691,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `grove_bow`,
             `vambrace`,
             `enchanted_quiver`,
-            `titan_sliver`,
+            //`titan_sliver`,
             `trickster_cloak`,
             `mind_breaker`,
-            `fallen_sky`,
+            //`fallen_sky`,
             `apex`,
           ],
         },
@@ -19831,7 +19835,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `mind_breaker`,
             `trickster_cloak`,
             `desolator_2`,
-            `ex_machina`,
+            //`ex_machina`,
           ],
         },
       },
@@ -19925,7 +19929,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `mind_breaker`,
             `trickster_cloak`,
             `desolator_2`,
-            `ex_machina`,
+            //`ex_machina`,
           ],
         },
       },
@@ -19948,7 +19952,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         all: [
           "spirit_vessel",
           "lotus_orb",
-          "medallion_of_courage",
+          /*"medallion_of_courage",*/
           "solar_crest",
           `cloak`,
         ],
@@ -20072,7 +20076,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             `paladin_sword`,
             `enchanted_quiver`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `mind_breaker`,
             `apex`,
             `desolator_2`,
@@ -20175,7 +20179,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `orb_of_destruction`,
             `paladin_sword`,
             `enchanted_quiver`,
-            `penta_edged_sword`,
+            //`penta_edged_sword`,
             `mind_breaker`,
             `apex`,
             `desolator_2`,
@@ -20331,10 +20335,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `trusty_shovel`,
             "philosophers_stone",
             "bullwhip",
-            "quickening_charm",
+            //`quickening_charm`,
             `psychic_headband`,
             "spy_gadget",
-            "spell_prism",
+            //"spell_prism",
             `force_field`,
             "seer_stone",
           ],
@@ -20395,7 +20399,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "weaver_shukuchi", // 7
           "weaver_the_swarm", // 8
           "weaver_the_swarm", // 9
-          `special_bonus_strength_9`, // 10
+          `special_bonus_strength_8`, // 10
           `weaver_the_swarm`, // 11
           "weaver_time_lapse", // 12
           "weaver_geminate_attack", // 13
@@ -20449,7 +20453,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             "arcane_ring",
             "trusty_shovel",
-            "ring_of_aquila",
+            //"ring_of_aquila",
             `bullwhip`,
             "enchanted_quiver",
             "ogre_seal_totem",
@@ -20478,7 +20482,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "weaver_geminate_attack", // 8
           "weaver_geminate_attack", // 9
           "weaver_geminate_attack", // 10
-          `special_bonus_strength_9`, // 11
+          `special_bonus_strength_8`, // 11
           "weaver_time_lapse", // 12
           "weaver_the_swarm", // 13
           "weaver_the_swarm", // 14
@@ -20532,10 +20536,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `lance_of_pursuit`,
             "occult_bracelet",
-            `ring_of_aquila`,
+            //"ring_of_aquila",
             "grove_bow",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "mind_breaker",
             "ninja_gear",
             "mirror_shield",
@@ -20560,7 +20564,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["ring_of_health"],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["SentryDustGem", "glimmer_cape", "ghost"],
         core: ["orchid", "heavens_halberd"],
       },
@@ -20662,9 +20666,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `unstable_wand`,
             `pupils_gift`,
             "grove_bow",
-            "quickening_charm",
+            //`quickening_charm`,
             `enchanted_quiver`,
-            `spell_prism`,
+            //`spell_prism`,
             "spy_gadget",
             `desolator_2`,
             `apex`,
@@ -20997,11 +21001,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `arcane_ring`,
-            `pogo_stick`,
+            //`pogo_stick`,
             "philosophers_stone",
             `eye_of_the_vizier`,
             "psychic_headband",
-            `quickening_charm`,
+            //`quickening_charm`,
             "spy_gadget",
             `ninja_gear`,
             "seer_stone",
@@ -21150,7 +21154,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "philosophers_stone",
             `pupils_gift`,
             `psychic_headband`,
-            `quickening_charm`,
+            //`quickening_charm`,
             `timeless_relic`,
             `spy_gadget`,
             "seer_stone",
@@ -21180,7 +21184,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["ring_of_health"],
       },
       mid_game: {
-        all: ["lotus_orb" /* "medallion_of_courage", */ /* "solar_crest" */],
+        all: ["lotus_orb" /*"medallion_of_courage", "solar_crest" */],
         support: ["glimmer_cape", "force_staff", "ghost"],
         core: [
           /* "hood_of_defiance", */
@@ -21227,7 +21231,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "skeleton_king_reincarnation", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_cleave_25", // 20
+          "special_bonus_cleave_35", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -21269,10 +21273,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "vambrace",
             "orb_of_destruction",
             "elven_tunic",
-            "titan_sliver",
+            //"titan_sliver",
             "paladin_sword",
             "mind_breaker",
-            "penta_edged_sword",
+            //"penta_edged_sword",
             "desolator_2",
             "pirate_hat",
             "mirror_shield",
@@ -21288,7 +21292,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["orb_of_corrosion"],
       },
       mid_game: {
-        all: ["medallion_of_courage", "solar_crest"],
+        all: [/*"medallion_of_courage",*/ "solar_crest"],
         support: ["ward_dispenser", "glimmer_cape", "ghost", "force_staff"],
         core: ["hurricane_pike", "diffusal_blade"],
       },
@@ -21405,7 +21409,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ceremonial_robe`,
             "psychic_headband",
             "timeless_relic",
-            "spell_prism",
+            //"spell_prism",
             "seer_stone",
             "force_boots",
           ],
