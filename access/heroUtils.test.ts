@@ -190,34 +190,13 @@ test("getCoreHeroes-desolator", () => {
   //console.log(`heroes: `, JSON.stringify(heroes));
 
   expect(heroes).toEqual([
-    {
-      npcShortName: "dawnbreaker",
-      buildIndex: 1,
-    },
-    {
-      npcShortName: "life_stealer",
-      buildIndex: 0,
-    },
-    {
-      npcShortName: "phantom_assassin",
-      buildIndex: 0,
-    },
-    {
-      npcShortName: "templar_assassin",
-      buildIndex: 0,
-    },
-    {
-      npcShortName: "templar_assassin",
-      buildIndex: 1,
-    },
-    {
-      npcShortName: "tusk",
-      buildIndex: 1,
-    },
-    {
-      npcShortName: "skeleton_king",
-      buildIndex: 0,
-    },
+    { npcShortName: "dawnbreaker", buildIndex: 1, roles: ["offlane"] },
+    { npcShortName: "life_stealer", buildIndex: 0, roles: ["carry"] },
+    { npcShortName: "phantom_assassin", buildIndex: 0, roles: ["carry"] },
+    { npcShortName: "templar_assassin", buildIndex: 0, roles: ["carry"] },
+    { npcShortName: "templar_assassin", buildIndex: 1, roles: ["mid"] },
+    { npcShortName: "tusk", buildIndex: 1, roles: ["offlane"] },
+    { npcShortName: "skeleton_king", buildIndex: 0, roles: ["carry"] },
   ]);
 
   const withTooltips = heroes.map((hero) => {
@@ -230,7 +209,7 @@ test("getCoreHeroes-desolator", () => {
     return { npcShortName: hero.npcShortName, tooltip };
   });
 
-  console.log(`withTooltips: `, JSON.stringify(withTooltips, null, 2));
+  //console.log(`withTooltips: `, JSON.stringify(withTooltips, null, 2));
 });
 
 // Note yet tested: getHeroesCounteredBy

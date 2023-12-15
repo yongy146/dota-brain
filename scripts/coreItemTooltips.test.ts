@@ -11,13 +11,20 @@ import { heroBuilds } from "../content/heroBuilds";
 
 let intl: IntlShape | undefined;
 beforeAll(async () => {
+  console.log(`coreItemTooltips(): loading intl`);
   intl = await i18nLoader();
+  console.log(
+    `coreItemTooltips(): intl: ${
+      Object.keys(intl?.messages || {}).length
+    } object loaded`
+  );
   //console.log(`intl: `, intl?.messages);
 });
 
 test("coreItemTooltips", () => {
   if (!intl) {
     console.error(`Could not load intl.`);
+    expect(true).toBe(false);
     return;
   }
 
@@ -43,8 +50,8 @@ test("coreItemTooltips", () => {
     }
   }
 
-  console.log(`Found tooltips:\n`, JSON.stringify(foundTooltips, null, 2));
-  console.log(`Missing tooltips:\n`, JSON.stringify(missingTooltips, null, 2));
+  //console.log(`Found tooltips:\n`, JSON.stringify(foundTooltips, null, 2));
+  //console.log(`Missing tooltips:\n`, JSON.stringify(missingTooltips, null, 2));
 
   expect(true).toBe(true);
 });

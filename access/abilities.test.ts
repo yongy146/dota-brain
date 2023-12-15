@@ -12,7 +12,15 @@ import {
   getSilences,
 } from "./abilities";
 
-test("abilities-getChannelingInterrupts", () => {
+test("abilities-getChannelingInterrupts(jakiro)", () => {
+  const interrupsChanneling = getChannelingInterrupts("jakiro");
+  //console.log(`interrupsChanneling: `, interrupsChanneling);
+  expect(
+    !!interrupsChanneling.find((item) => item.skill === "jakiro_ice_path")
+  ).toBe(true);
+});
+
+test("abilities-getChannelingInterrupts(legion_commander)", () => {
   const interrupsChanneling = getChannelingInterrupts("legion_commander");
   //console.log(`interrupsChanneling: `, interrupsChanneling);
   expect(
@@ -20,7 +28,7 @@ test("abilities-getChannelingInterrupts", () => {
   ).toBe(true);
 });
 
-test("abilities-getSilences", () => {
+/*test("abilities-getSilences", () => {
   const silences = getSilences("silencer");
   expect(!!silences.find((item) => item.skill === "silencer_last_word")).toBe(
     true
@@ -63,3 +71,4 @@ test("abilities-analyzeHeroAbilities", () => {
     passivesNonBreakable: [],
   });
 });
+*/

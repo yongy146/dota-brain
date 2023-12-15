@@ -23,7 +23,7 @@ test("messages-getOwnHeroMessagesForRoles", () => {
   const msgs = getOwnHeroMessagesForRoles("rubick", [
     DOTA_COACH_GUIDE_ROLE.SUPPORT,
   ]);
-  console.log(`msgs: `, msgs);
+  //console.log(`msgs: `, msgs);
   expect(msgs.length > 0).toBe(true);
 });
 

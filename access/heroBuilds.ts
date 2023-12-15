@@ -348,7 +348,7 @@ export function getItemBuild(
   }
 
   return {
-    roles: PlayerRoles.rolesToString(heroBuild.roles),
+    roles: intl && PlayerRoles.rolesToString(heroBuild.roles, intl),
     starting: build.items.starting.map((x) =>
       transformItem(x, build.items.core)
     ),

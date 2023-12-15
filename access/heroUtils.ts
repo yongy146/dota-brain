@@ -51,19 +51,20 @@ export function getHeroesWithItem(item: string): IHeroesWithItem[] {
 export type TCoreHeroes = {
   npcShortName: string;
   buildIndex: number;
+  roles: DOTA_COACH_GUIDE_ROLE[];
 };
 
 /**
  * Returns all heroes for which the given item is core.
  *
- * @params itemKey, e.g. "magic_wand"
+ * @params itemKey, e.g. "magic_wand" or "item_magic_wand"
  */
 export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
+  itemKey = itemKey.replace("item_", "");
+
   const result: TCoreHeroes[] = [];
 
   for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
-    let hasItem = false;
-
     // Check if item is core in one of the builds
     for (
       let buildIndex = 0;
@@ -76,25 +77,16 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
         ...(heroBuild.items.core_bear || []),
       ];
 
-      //for (const [phase, itemBuild] of Object.entries(build.items)) {
-      //if (phase.includes("core")) {
       for (const coreItem of coreItems) {
         if (coreItem === itemKey) {
           result.push({
             npcShortName,
             buildIndex,
+            roles: heroBuild.roles,
           });
           break;
         }
-        //}
-        //if (hasItem) break;
-        //}
       }
-
-      /*    if (hasItem) {
-      //console.log(`hasItem: `, itemKey);
-      result.push(npcShortName);
-    }*/
     }
   }
 
@@ -104,10 +96,12 @@ export function getCoreHeroes(itemKey: string): TCoreHeroes[] {
 /**
  * Returns all heroes that are countered by a given item.
  *
- * @params itemKey, e.g. "magic_wand"
+ * @params itemKey, e.g. "magic_wand" or "item_magic_wand"
  * @returns npc short names of heroes, e.g. ["antimage", "legion_commander", etc.]
  */
 export function getHeroesCounteredBy(itemKey: string): string[] {
+  itemKey = itemKey.replace("item_", "");
+
   const result: string[] = [];
 
   for (const [name, heroContent] of Object.entries(heroBuilds)) {
@@ -207,12 +201,15 @@ export const phase2CounterItemBuild: Record<string, string> = {
 
 export const phase2i18n: Record<string, string> = {
   starting: "Starting",
+  starting_bear: "StartingBaer",
   early_game: "DOTA_Item_Build_Early_Game",
   laning: "LaningPhaseCap",
   mid_game: "DOTA_Item_Build_Mid_Items",
   late_game: "DOTA_Item_Build_Late_Items",
   situational: "Situational",
+  situational_bear: "SituationalBaer",
   neutral: "Neutral",
+  neutral_bear: "NeutralBaer",
 };
 
 /**
