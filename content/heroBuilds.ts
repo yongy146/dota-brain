@@ -31,7 +31,7 @@ export enum ContentCreator {
   TNTCNz = "TNTCNz",
   YoonA = "YoonA",
   eidandota = "eidandota",
-  //yongy146 = "yongy146",
+  yongy146 = "yongy146",
 }
 
 // Links provided by content creators to promote their own brand and activites
@@ -68,6 +68,11 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> = 
     //link_http: "https://www.fiverr.com/share/k0bmRk",
     link_http: "https://skelly.gg/g/YoonA",
     //link_text: "Click here to book a coaching session with him.",
+  },
+  yongy146: {
+    image: "https://i.imgur.com/TZpRwOK.jpeg",
+    text: "This guide was written by BaLLooN, a 7.8k DotA 2 player based in SEA with 17 years of experience:",
+    link_http: "https://www.fiverr.com/yongy146",
   },
   /*ZoGraF: {
     image: "https://i.imgur.com/QZzNRhz.png",
@@ -7414,7 +7419,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   // eidendota plays hero
   luna: {
     gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -7424,10 +7429,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "luna_lunar_blessing", // 1   "luna_moon_glaive" equals to `moon glaives`
+          "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
-          "luna_moon_glaive", // 4
+          "luna_moon_glaive", // 4      "luna_moon_glaive" equals to `moon glaives`
           "luna_lunar_blessing", // 5
           "luna_moon_glaive", // 6
           "luna_lunar_blessing", // 7
