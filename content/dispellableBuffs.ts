@@ -5,7 +5,7 @@
  *
  * Unfortunately file can't be replaced with static data from Dota 2 (24.2.2022)
  *
- * Copyright (C) Dota Coach, 2023. All rights reserved.
+ * (C) Dota Coach, 2023. All rights reserved.
  */
 
 export const dispellableBuffs: Record<string, string[]> = {
@@ -55,10 +55,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   juggernaut: [],
   keeper_of_the_light: ["keeper_of_the_light_chakra_magic"],
   kunkka: [],
-  legion_commander: [
-    "legion_commander_overwhelming_odds",
-    "legion_commander_press_the_attack",
-  ],
+  legion_commander: ["legion_commander_overwhelming_odds", "legion_commander_press_the_attack"],
   leshrac: [],
   lich: ["lich_frost_shield"],
   life_stealer: [],
@@ -71,9 +68,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   luna: [],
   lycan: ["lycan_howl"],
   magnataur: ["magnataur_empower"],
-  marci: [
-    `marci_companion_run` /* rebound */ /* "marci_guardian" */ /* Sidekick */,
-  ],
+  marci: [`marci_companion_run` /* rebound */ /* "marci_guardian" */ /* Sidekick */],
   mars: [],
   medusa: [],
   meepo: [],
