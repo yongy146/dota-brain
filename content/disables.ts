@@ -516,6 +516,11 @@ export const disables: IDisables = {
       affects: AbilityAffects.HERO,
       disables: ["stun"],
     },
+    {
+      skill: "luna_skill_whatever",
+      affects: AbilityAffects.AREA,
+      disables: ["hex"],
+    },
     // Level 25 talent "+0.2s Eclipse Lucent Ministun" makes Eclipse be area stun.
   ],
   lycan: [],
