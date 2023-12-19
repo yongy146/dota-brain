@@ -57,8 +57,8 @@ test("heroBuilds-getAbilityBuild()", () => {
   const abilityBuild = getAbilityBuild("antimage", undefined, intl!);
   console.log(`abilityBuild:\n`, abilityBuild);
 
-  expect(abilityBuild).toBe(
-    "An early to mid game item to defend against bursts of magical damage. Also provides some useful mana regeneration."
+  expect(abilityBuild[0].info).toBe(
+    "Try to hit the enemy as much as possible as early as possible in order to burn they're mana."
   );
 });
 
