@@ -39,7 +39,7 @@ export interface IAbilityElement {
 /**
  * Function validates if a default hero build exists
  *
- * @param heroName NPC short name, e.g. 'antimage'
+ * @param heroName NPC short name, e.g., 'antimage'
  * @returns
  */
 export function hasDefaultHeroBuild(npcShortName: string): boolean {
@@ -47,15 +47,20 @@ export function hasDefaultHeroBuild(npcShortName: string): boolean {
 }
 
 /**
- * @param heroName Localized hero name
- * @returns Hero build, or null if none is found
+ * Returns the closest hero build for a given hero and Dota Coach role.
+ *
+ * This function is used by the App to display a build when the user
+ * selected his role in the game.
+ *
+ * @param npcShortName NPC short name, e.g., 'antimage'
+ * @returns Hero build, or undefined if none is found
  */
 export function getClosestHeroBuild(
-  heroName: string,
+  npcShortName: string,
   playerRole: PlayerRoles.DOTA_COACH_ROLE
 ): IHeroBuild | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName))
+  if (!Object.prototype.hasOwnProperty.call(heroBuilds, npcShortName))
     return undefined;
 
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
@@ -65,7 +70,7 @@ export function getClosestHeroBuild(
 
   // Get all roles of guides
   const guides: any = {};
-  for (const heroBuild of heroBuilds[heroName].builds) {
+  for (const heroBuild of heroBuilds[npcShortName].builds) {
     for (const role of heroBuild.roles) {
       guides[role] = heroBuild;
     }
@@ -137,35 +142,31 @@ export function getDefaultHeroBuild(
  * @returns Array of abilites
  */
 export function getStandardAbilityBuild(npcShortName: string): string[] {
-  //const h_ = hero.name.localizedNameToNPCName(h)
-  if (!heroBuilds[npcShortName]) {
-    /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-    return [];
-  }
+  // We add the '[]' at the end for the case an new
+  // hero was added by Dota 2 and the app does not yet have a build for it
+  const abilityBuild = heroBuilds[npcShortName]?.builds[0].abilities || [];
 
-  const abilityBuild = heroBuilds[npcShortName].builds[0].abilities;
-
-  /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+  // Return copy of array to prevent changes to array to impact source data
   return [...abilityBuild];
 }
 
 /**
  *  Returns array with hero builds for a given hero
  *
- * @param heroName Localized hero name
- * @return null if there is no such build
+ * @param npcShortName e.g. "legion_commander" or "lone_druid"
+ * @return undefined if there is no such build
  */
-export function getHeroBuildArray(heroName: string): IHeroBuild[] | null {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
-
-  return heroBuilds[heroName].builds;
+export function getHeroBuildArray(
+  npcShortName: string
+): IHeroBuild[] | undefined {
+  return heroBuilds[npcShortName]?.builds;
 }
 
 /**
  *
  * @param npcShortName npc short name, e.g. "legion_commander"
  * @param playerRole
- * @return null if there is no such build
+ * @return undefined if there is no such build for the hero
  */
 export function getHeroBuild(
   npcShortName: string,
@@ -176,7 +177,7 @@ export function getHeroBuild(
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
 
-  // Find hero build with right role
+  // Find hero build with the right role
   for (const heroBuild of heroBuilds[npcShortName].builds) {
     const buildIndex = heroBuild.roles.indexOf(r);
     if (buildIndex !== -1) {
@@ -189,11 +190,12 @@ export function getHeroBuild(
 }
 
 /**
- * Returns all items used in hero builds, e.g.
+ * Returns all items used across all hero builds.
+ *
  */
 export function getItemNames(): string[] {
   const result: any = {};
-  for (const [heroName, heroContent] of Object.entries(heroBuilds)) {
+  for (const heroContent of Object.values(heroBuilds)) {
     for (const build of heroContent.builds) {
       for (const itemBuild of Object.values(build.items)) {
         for (const item of itemBuild) {
@@ -215,11 +217,12 @@ export function getItemNames(): string[] {
 }
 
 /**
- * Returns all abilities and talents used in the hero guides.
+ * Returns all abilities and talents used across all hero guides.
+ *
  */
 export function getAbilityNames(): string[] {
   const result: any = {};
-  for (const [heroName, heroContent] of Object.entries(heroBuilds)) {
+  for (const heroContent of Object.values(heroBuilds)) {
     for (const build of heroContent.builds) {
       for (const ability of build.abilities) {
         if (result[ability] === undefined) {
