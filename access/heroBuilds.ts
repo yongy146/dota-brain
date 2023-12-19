@@ -235,14 +235,16 @@ export function getAbilityNames(): string[] {
 }
 
 /**
- * Function returns the standard item build for a given hero. The standard item build is the first build in the heroGuides.ts file.
+ * Function returns the standard item build for a given hero.
+ * The standard item build is the first build in the heroGuides.ts file.
  *
- * @param npcShortName string,
- The name of the hero, e.g. 'abaddon' or 'legion_commander'
- * OLD_returns String of items
- * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
+ * @param npcShortName npc short name, e.g. "legion_commander"
+ * @returns Array of { item: string (e.g. sheepstick), isCore?: boolean, info?: string }
  */
-export function getStandardItemBuild(npcShortName: string): IPhaseItemBuild[] {
+export function getStandardItemBuild(
+  npcShortName: string,
+  intl?: IntlShape
+): IPhaseItemBuild[] {
   //DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
   if (!hasDefaultHeroBuild(npcShortName)) {
     // Check is used for the case Dota 2 adds a new hero and the app is not yet updated
@@ -347,7 +349,8 @@ export function getItemBuild(
     const result: IPhaseItemBuild = { name: item };
     //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
-    const tooltip = intl && getTooltip(npcShortName, buildIndex, item, intl);
+    const tooltip =
+      intl && getItemTooltip(npcShortName, buildIndex, item, intl);
     if (tooltip) result["info"] = tooltip;
     return result;
   }
@@ -357,9 +360,14 @@ export function getItemBuild(
     starting: build.items.starting.map((x) =>
       transformItem(x, build.items.core)
     ),
-    starting_bear: build.items.starting_bear?.map((name) => ({ name })),
-    core: build.items.core?.map((name) => ({ name, isCore: true })),
-    core_bear: build.items.core_bear?.map((name) => ({ name, isCore: true })),
+    starting_bear: build.items.starting_bear?.map((x) => transformItem(x, [])),
+    // Only add core items for Lone Druid & Baer
+    core: build.items.core_bear
+      ? build.items.core.map((x) => transformItem(x, build.items.core))
+      : undefined,
+    core_bear: build.items.core_bear?.map((x) =>
+      transformItem(x, build.items.core_bear!)
+    ),
     early_game: build.items.early_game?.map((x) =>
       transformItem(x, build.items.core)
     ),
@@ -395,7 +403,7 @@ export function getItemBuild(
  * @param buildIndex index of hero build
  * @param item Item short name, e.g. "blink"
  */
-export function getTooltip(
+export function getItemTooltip(
   npcShortName: string,
   buildIndex: number,
   item: string,
@@ -411,6 +419,34 @@ export function getTooltip(
 
   // Check item tooltip
   id = `hero.base.item_tooltips.${item}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  return undefined;
+}
+
+/**
+ * Returns the react-intl tooltip for a given hero, hero build and item.
+ *
+ * @param npcHeroName Short npc name, e.g. "antimage"
+ * @param buildIndex index of hero build
+ * @param item Item short name, e.g. "blink"
+ */
+export function getAbilityTooltip(
+  npcShortName: string,
+  buildIndex: number,
+  item: string,
+  intl: IntlShape
+): string | undefined {
+  // Check build tooltip
+  let id = `hero.${npcShortName}.builds.${buildIndex}.ability_tooltips.${item}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  // Check hero tooltip
+  id = `hero.${npcShortName}.ability_tooltips.${item}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  // Check item tooltip
+  id = `hero.base.ability_tooltips.${item}`;
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   return undefined;
