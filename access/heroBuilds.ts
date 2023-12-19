@@ -432,19 +432,19 @@ export function getItemTooltip(
 export function getAbilityTooltip(
   npcShortName: string,
   buildIndex: number,
-  item: string,
+  ability: string,
   intl: IntlShape
 ): string | undefined {
   // Check build tooltip
-  let id = `hero.${npcShortName}.builds.${buildIndex}.ability_tooltips.${item}`;
+  let id = `hero.${npcShortName}.builds.${buildIndex}.ability_tooltips.${ability}`;
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check hero tooltip
-  id = `hero.${npcShortName}.ability_tooltips.${item}`;
+  id = `hero.${npcShortName}.ability_tooltips.${ability}`;
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check item tooltip
-  id = `hero.base.ability_tooltips.${item}`;
+  id = `hero.base.ability_tooltips.${ability}`;
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   return undefined;
