@@ -1,3 +1,8 @@
+/**
+ * This module provides utility functions to process hero guides.
+ *
+ * (C) Dota Coach, 2023
+ */
 import { IHeroBuild, heroBuilds, isCoreItem } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import { IntlShape } from "react-intl";
@@ -22,22 +27,23 @@ export interface IItemBuild {
 
 export interface IPhaseItemBuild {
   name: string;
-  info?: string;
+  info?: string; // Info to be shown on the item ('tooltip')
   isCore?: boolean;
 }
 
 export interface IAbilityElement {
   name: string;
-  info?: string;
+  info?: string; // Info to be shown on the item ('tooltip')
 }
 
 /**
  * Function validates if a default hero build exists
- * @param heroName Localized name
+ *
+ * @param heroName NPC short name, e.g. 'antimage'
  * @returns
  */
-export function hasDefaultHeroBuild(heroName: string): boolean {
-  return Object.prototype.hasOwnProperty.call(heroBuilds, heroName);
+export function hasDefaultHeroBuild(npcShortName: string): boolean {
+  return Object.prototype.hasOwnProperty.call(heroBuilds, npcShortName);
 }
 
 /**

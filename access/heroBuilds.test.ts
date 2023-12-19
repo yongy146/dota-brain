@@ -3,7 +3,7 @@
  *
  */
 import { IntlShape } from "react-intl";
-import { getItemBuild, getTooltip } from "./heroBuilds";
+import { getTooltip, hasDefaultHeroBuild } from "./heroBuilds";
 import { i18nLoader } from "@utilities/i18n/i18nLoader";
 
 let intl: IntlShape | undefined;
@@ -11,17 +11,24 @@ beforeAll(async () => {
   intl = await i18nLoader();
 });
 
+test("heroBuilds-hasDefaultHeroBuild()", () => {
+  let hasDefaultBuild = hasDefaultHeroBuild("sniper");
+  expect(hasDefaultBuild).toBe(true);
+  hasDefaultBuild = hasDefaultHeroBuild("sniper_");
+  expect(hasDefaultBuild).toBe(false);
+});
+
 test("heroBuilds-getTooltip(sniper, power_treads)", () => {
-  const tooltip = getTooltip("sniper", 0, "power_treads", intl);
+  const tooltip = getTooltip("sniper", 0, "power_treads", intl!);
   //console.log(`tooltip:\n`, tooltip);
 
   expect(tooltip).toBe(
-    "A core boots upgrade that provides you with significant attack speed increase and mana savings through toggling."
+    "A core Boots upgrade to improve your mobility and damage output with attack speed and stats. Helps in both farming and lane control. The attack speed gain lets you get off more Headshots during Take Aim."
   );
 });
 
 test("heroBuilds-getTooltip(dummy, infused_raindrop)", () => {
-  const tooltip = getTooltip("dummy", 0, "infused_raindrop", intl);
+  const tooltip = getTooltip("dummy", 0, "infused_raindrop", intl!);
   //console.log(`tooltip:\n`, tooltip);
 
   expect(tooltip).toBe(

@@ -1,7 +1,7 @@
 import { IHeroContent, heroBuilds } from "../content/heroBuilds";
 
 /**
- * Returns HeroContent provided by content creators for a given hero.
+ * Returns the HeroContent provided by content creators for a given hero.
  *
  * @param npcShortName e.g. 'legion_commander'
  * @return undefined if there is no such hero

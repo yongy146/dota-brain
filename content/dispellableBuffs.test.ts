@@ -4,7 +4,6 @@
  */
 
 import { dota2HeroesIterator, getDota2Heroes } from "@gameData/out/dota2Heroes";
-import { heroBuilds } from "./heroBuilds";
 import { dispellableBuffs } from "./dispellableBuffs";
 import { getDota2Abilities } from "@gameData/out/dota2Abilities";
 //import dota2Heroes from "../submodules/gameData/out/dota2Heroes.json";
