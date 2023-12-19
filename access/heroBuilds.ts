@@ -58,55 +58,59 @@ export function hasDefaultHeroBuild(npcShortName: string): boolean {
 export function getClosestHeroBuild(
   npcShortName: string,
   playerRole: PlayerRoles.DOTA_COACH_ROLE
-): IHeroBuild | undefined {
+): { buildIndex: number; heroBuild: IHeroBuild } | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, npcShortName))
-    return undefined;
+  if (!heroBuilds[npcShortName]) return undefined;
 
-  const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
+  const role: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
 
   //DotaLogger.log(`Dota2.getClosestHeroBuild(): ${playerRole} => ${r}`);
 
   // Get all roles of guides
-  const guides: any = {};
-  for (const heroBuild of heroBuilds[npcShortName].builds) {
+  const guides: Record<string, { buildIndex: number; heroBuild: IHeroBuild }> =
+    {};
+  for (let i = 0; i < heroBuilds[npcShortName].builds.length; i++) {
+    const heroBuild = heroBuilds[npcShortName].builds[i];
     for (const role of heroBuild.roles) {
-      guides[role] = heroBuild;
+      guides[role] = {
+        heroBuild: heroBuild,
+        buildIndex: i,
+      };
     }
   }
-
   /*DotaLogger.log(
       `Dota2.getClosestHeroBuild(): guides=${JSON.stringify(guides)}`
     );*/
 
-  const guide_rules: any = {};
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-  ];
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-  ];
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-  ];
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-  ];
+  const guide_rules = {
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+    ],
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+    ],
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+    ],
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+    ],
+  };
 
-  for (const role_ of guide_rules[r]) {
+  for (const role_ of guide_rules[role]) {
     //DotaLogger.log(`dota2.getClosestHeroBuild(): roleOfRules = ${role_}`);
     if (Object.prototype.hasOwnProperty.call(guides, role_)) {
       DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
@@ -332,14 +336,8 @@ export function getItemBuildForRole(
 export function getItemBuild(
   npcShortName: string,
   buildIndex: number,
-  //heroContent: IHeroContent,
-  //heroBuild: IHeroBuild,
   intl?: IntlShape
 ): IItemBuild {
-  /*const item_tooltips = {
-    //...(heroContent.item_tooltips || {}),
-    //...(heroBuild.item_tooltips || {}),
-  };*/
   const heroContent = heroBuilds[npcShortName];
   const heroBuild = heroContent.builds[buildIndex];
 
@@ -462,12 +460,12 @@ export function getAbilityTooltip(
  * @param heroBuild
  * @returns
  */
-export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
+export function getAbilities(heroBuild: IHeroBuild): string[] {
   //const h_ = hero.name.localizedNameToNPCName(h)
 
   const abilityBuild = heroBuild.abilities;
 
-  /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+  // Return copy of array, otherwise recipient can change content of this.laningItemTips
   return [...abilityBuild];
 }
 
@@ -477,17 +475,23 @@ export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
  * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
  * @returns Array of abilites
  */
-export function getUIAbilityBuild(
+export function getAbilityBuild(
   npcShortName: string,
-  playerRole?: PlayerRoles.DOTA_COACH_ROLE
+  playerRole?: PlayerRoles.DOTA_COACH_ROLE,
+  intl?: IntlShape
 ): IAbilityElement[] {
   const heroBuilds = getHeroContent(npcShortName);
   let heroBuild: IHeroBuild | undefined;
+  let buildIndex: number | undefined;
 
   if (playerRole === undefined) {
-    heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
+    const build = getDefaultHeroBuild(npcShortName);
+    heroBuild = build?.heroBuild;
+    buildIndex = build?.buildIndex;
   } else {
-    heroBuild = getClosestHeroBuild(npcShortName, playerRole);
+    const build = getClosestHeroBuild(npcShortName, playerRole);
+    heroBuild = build?.heroBuild;
+    buildIndex = build?.buildIndex;
   }
 
   if (heroBuild === undefined) {
@@ -501,11 +505,12 @@ export function getUIAbilityBuild(
     const result: IAbilityElement = {
       name: ability,
     };
-    if (heroBuilds && heroBuild) {
-      /*const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
-      if (info) {
-        result["info"] = info;
-      }*/
+    const info =
+      buildIndex !== undefined &&
+      intl &&
+      getAbilityTooltip(npcShortName, buildIndex, ability, intl);
+    if (info) {
+      result["info"] = info;
     }
     return result;
   });
@@ -513,18 +518,15 @@ export function getUIAbilityBuild(
 //}
 
 /**
- * Returns an array with all http links to all guides for a given hero.
+ * Returns an array with all HTTPS links to all guides for a given hero.
  *
- * @param heroName Localized hero name
- * @returns null in case of error
+ * @param npcShortName npc short name, e.g. "legion_commander"
+ * @returns Returns empty array in case of error, i.e., hero is not found
  */
-export function getHeroGuideLinks(heroName: string): string[] {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return [];
-
-  const result: string[] = [];
-  for (const build of heroBuilds[heroName].builds) {
-    result.push(build.steam_guide_link);
-  }
-
-  return result;
+export function getHeroGuideLinks(npcShortName: string): string[] {
+  return (
+    heroBuilds[npcShortName]?.builds.map(
+      (heroBuild) => heroBuild.steam_guide_link
+    ) || []
+  );
 }

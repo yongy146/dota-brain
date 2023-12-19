@@ -4,8 +4,9 @@
  */
 import { IntlShape } from "react-intl";
 import {
+  getAbilityBuild,
   getClosestHeroBuild,
-  getTooltip,
+  getItemTooltip,
   hasDefaultHeroBuild,
 } from "./heroBuilds";
 import { i18nLoader } from "@utilities/i18n/i18nLoader";
@@ -29,13 +30,13 @@ test("heroBuilds-getClosestHeroBuild()", () => {
     PlayerRoles.DOTA_COACH_ROLE.HARD_SUPPORT
   );
   console.log(`heroBuilds: `, heroBuild);
-  expect(heroBuild?.steam_guide_link).toBe(
+  expect(heroBuild?.heroBuild?.steam_guide_link).toBe(
     "https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187"
   );
 });
 
 test("heroBuilds-getTooltip(sniper, power_treads)", () => {
-  const tooltip = getTooltip("sniper", 0, "power_treads", intl!);
+  const tooltip = getItemTooltip("sniper", 0, "power_treads", intl!);
   //console.log(`tooltip:\n`, tooltip);
 
   expect(tooltip).toBe(
@@ -44,10 +45,19 @@ test("heroBuilds-getTooltip(sniper, power_treads)", () => {
 });
 
 test("heroBuilds-getTooltip(dummy, infused_raindrop)", () => {
-  const tooltip = getTooltip("dummy", 0, "infused_raindrop", intl!);
+  const tooltip = getItemTooltip("dummy", 0, "infused_raindrop", intl!);
   //console.log(`tooltip:\n`, tooltip);
 
   expect(tooltip).toBe(
+    "An early to mid game item to defend against bursts of magical damage. Also provides some useful mana regeneration."
+  );
+});
+
+test("heroBuilds-getAbilityBuild()", () => {
+  const abilityBuild = getAbilityBuild("antimage", undefined, intl!);
+  console.log(`abilityBuild:\n`, abilityBuild);
+
+  expect(abilityBuild).toBe(
     "An early to mid game item to defend against bursts of magical damage. Also provides some useful mana regeneration."
   );
 });
