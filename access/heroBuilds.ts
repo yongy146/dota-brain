@@ -8,6 +8,8 @@ export interface IItemBuild {
   roles?: string;
   starting?: IPhaseItemBuild[];
   starting_bear?: IPhaseItemBuild[];
+  core?: IPhaseItemBuild[]; // Only used for lone druid
+  core_bear?: IPhaseItemBuild[];
   laning?: IPhaseItemBuild[]; // Only used for counter items (starting & early_game is used for own hero)
   early_game?: IPhaseItemBuild[];
   mid_game?: IPhaseItemBuild[];
@@ -47,7 +49,8 @@ export function getClosestHeroBuild(
   playerRole: PlayerRoles.DOTA_COACH_ROLE
 ): IHeroBuild | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return undefined;
+  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName))
+    return undefined;
 
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
@@ -295,7 +298,8 @@ export function getItemBuildForRole(
     ({ heroBuild, buildIndex } = getDefaultHeroBuild(npcShortName) || {});
   } else {
     ({ heroBuild, buildIndex } = getHeroBuild(npcShortName, playerRole) || {});
-    if (heroBuild === undefined) heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
+    if (heroBuild === undefined)
+      heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
   }
 
   const heroContent = getHeroContent(npcShortName);
@@ -341,39 +345,37 @@ export function getItemBuild(
 
   return {
     roles: intl && PlayerRoles.rolesToString(heroBuild.roles, intl),
-    starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
-    starting_bear:
-      build.items.starting_bear !== undefined
-        ? build.items.starting_bear.map((x) =>
-            transformItem(x, build.items.core_bear === undefined ? [] : build.items.core_bear)
-          )
-        : undefined,
-    early_game:
-      build.items.early_game !== undefined
-        ? build.items.early_game.map((x) => transformItem(x, build.items.core))
-        : undefined,
-    mid_game:
-      build.items.mid_game !== undefined
-        ? build.items.mid_game.map((x) => transformItem(x, build.items.core))
-        : undefined,
-    late_game:
-      build.items.late_game !== undefined
-        ? build.items.late_game.map((x) => transformItem(x, build.items.core))
-        : undefined,
-    situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
-    situational_bear:
-      build.items.situational_bear !== undefined
-        ? build.items.situational_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
-          )
-        : undefined,
+    starting: build.items.starting.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    starting_bear: build.items.starting_bear?.map((name) => ({ name })),
+    core: build.items.core?.map((name) => ({ name, isCore: true })),
+    core_bear: build.items.core_bear?.map((name) => ({ name, isCore: true })),
+    early_game: build.items.early_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    mid_game: build.items.mid_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    late_game: build.items.late_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    situational: build.items.situational.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    situational_bear: build.items.situational_bear?.map((x) =>
+      transformItem(
+        x,
+        build.items.core_bear == undefined ? [] : build.items.core_bear
+      )
+    ),
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
-    neutral_bear:
-      build.items.neutral_bear !== undefined
-        ? build.items.neutral_bear.map((x) =>
-            transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
-          )
-        : undefined,
+    neutral_bear: build.items.neutral_bear?.map((x) =>
+      transformItem(
+        x,
+        build.items.core_bear == undefined ? [] : build.items.core_bear
+      )
+    ),
   };
 }
 
