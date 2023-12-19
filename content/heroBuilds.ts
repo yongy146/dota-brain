@@ -254,18 +254,15 @@ export interface CounterItems {
 }*/
 
 /**
- * Function returns if item is core for this build
+ * Function returns 'true' if item is a core item in the build.
  *
- * @param heroName
  * @param heroBuild
- * @param item
+ * @param item e.g., 'nullifier'
  */
 export function isCoreItem(heroBuild: IHeroBuild, item: string): boolean {
-  for (const coreItem of heroBuild.items.core) {
-    if (coreItem == item) return true;
-  }
+  if (heroBuild.items.core.includes(item)) return true;
+  if (heroBuild.items.core_bear?.includes(item)) return true;
   return false;
-  // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
 export const heroBuilds: { [key: string]: IHeroContent } = {

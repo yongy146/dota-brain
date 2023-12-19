@@ -1,14 +1,7 @@
-import * as PlayerRoles from "../utilities/playerRoles";
-import {
-  IHeroBuild,
-  IHeroContent,
-  //getAbilityTooltip,
-  //getItemTooltip,
-  heroBuilds,
-  isCoreItem,
-} from "../content/heroBuilds";
+import { IHeroBuild, heroBuilds, isCoreItem } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import { IntlShape } from "react-intl";
+import * as PlayerRoles from "../utilities/playerRoles";
 import * as DotaLogger from "@utilities/log/log";
 
 export interface IItemBuild {
