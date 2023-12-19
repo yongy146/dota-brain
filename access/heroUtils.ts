@@ -2,7 +2,6 @@
  * Utility function to access information on heroes.
  *
  */
-
 import { IHeroBuild, heroBuilds } from "../content/heroBuilds";
 import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 
@@ -201,15 +200,17 @@ export const phase2CounterItemBuild: Record<string, string> = {
 
 export const phase2i18n: Record<string, string> = {
   starting: "Starting",
-  starting_bear: "StartingBaer",
+  starting_bear: "StartingBaer", // Only for Lone Duid's Baer
+  core: "Core", // Only for Lone Duid
+  core_bear: "CoreBaer", // Only for Lone Duid's Baer
   early_game: "DOTA_Item_Build_Early_Game",
   laning: "LaningPhaseCap",
   mid_game: "DOTA_Item_Build_Mid_Items",
   late_game: "DOTA_Item_Build_Late_Items",
   situational: "Situational",
-  situational_bear: "SituationalBaer",
+  situational_bear: "SituationalBaer", // Only for Lone Duid's Baer
   neutral: "Neutral",
-  neutral_bear: "NeutralBaer",
+  neutral_bear: "NeutralBaer", // Only for Lone Duid's Baer
 };
 
 /**
