@@ -1,7 +1,8 @@
 /**
- * Module provides all information about Dota 2 monitor sizes for the app to properly position windows.
+ * Module provides all information about Dota 2 monitor
+ * sizes for the app to properly position in-game windows.
  *
- * (C) Dota Coach, 2021
+ * (C) Dota Coach, 2023
  */
 
 export interface IMonitorMeasurements {
@@ -14,20 +15,8 @@ export interface IMonitorMeasurements {
 }
 
 /**
- * Only adding fields that are needed to render HTML content
- */
-export interface IMonitorMeasurementsHTML {
-  fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
-  fontSizeSmall: number; // Added by script
-
-  inGame: {
-    heroesWidth: number;
-    heroesHeight: number;
-  };
-}
-
-/**
- * All fields needed to position and size overwolf frames.
+ * All fields needed to position and size overwolf windows.
+ *
  */
 export interface IMonitorMeasurementsOverwolf {
   fontSize: number; // Used for tracker and subtitle (take KDA font size and add ~20%)
@@ -68,6 +57,9 @@ export interface IMonitorMeasurementsOverwolf {
         yPos: number; // Currently we take the bottom of the window (i.e. the height of the window)
         xPos: number; // xPos of HUD element where TP ends
         width: number; // width to HUD element where gold starts
+        minimapRight?: {
+          xPos: number;
+        };
       };
     };
 
@@ -83,13 +75,34 @@ export interface IMonitorMeasurementsOverwolf {
       xPos: number;
       yPos: number;
       size: number; // Roshan glyph window has same width and height; about 2.585x size of Scan and Glyph sign
+      extraLargeMinimap?: {
+        xPos: number;
+        yPos: number;
+      };
     };
 
     appButton: {
       xPos: number;
       yPos: number;
       size: number; // Hight between Dota 2's size of settings cogs or hambuger menu
+      extraLargeMinimap?: {
+        yPos: number;
+      };
     };
+  };
+}
+
+/**
+ * All fields needed to render HTML content.
+ *
+ */
+export interface IMonitorMeasurementsHTML {
+  fontSize: number; // used for tracker and subtitle (take KDA font size and add 20%)
+  fontSizeSmall: number; // Added by script
+
+  inGame: {
+    heroesWidth: number;
+    heroesHeight: number;
   };
 }
 
@@ -97,6 +110,11 @@ export interface IMonitorReuse {
   reuse: string /* e.g. '1920x1080' */;
 }
 
+/**
+ * 'measurements' constant contains all values used to position
+ * windows properly and render the HTML content.
+ *
+ */
 export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> | IMonitorReuse> = {
   "1024x768": {
     fontSize: 9,
@@ -616,8 +634,11 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         },
         items: {
           yPos: 1080,
-          xPos: 1439,
+          xPos: 1439 - 20,
           width: 219,
+          minimapRight: {
+            xPos: 1920 - 1439 - 219 + 40,
+          },
         },
       },
 
@@ -631,11 +652,18 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         xPos: 250,
         yPos: 841,
         size: 106,
+        extraLargeMinimap: {
+          xPos: 286,
+          yPos: 810,
+        },
       },
       appButton: {
         xPos: 9,
         yPos: 800, // 805 adjacent
         size: 25,
+        extraLargeMinimap: {
+          yPos: 765,
+        },
       },
     },
   },
