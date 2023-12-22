@@ -13,9 +13,9 @@ import {
   mostCounteringItems,
   mostRecommendedItems,
 } from "./heroUtils";
-import { getTooltip } from "./heroBuilds";
 import { IntlShape } from "react-intl";
 import { i18nLoader } from "@utilities/i18n/i18nLoader";
+import { getItemTooltip } from "./heroBuilds";
 
 let intl: IntlShape | undefined;
 beforeAll(async () => {
@@ -200,7 +200,7 @@ test("getCoreHeroes-desolator", () => {
   ]);
 
   const withTooltips = heroes.map((hero) => {
-    const tooltip = getTooltip(
+    const tooltip = getItemTooltip(
       hero.npcShortName,
       hero.buildIndex,
       "desolator",

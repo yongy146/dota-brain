@@ -136,7 +136,7 @@ for (const { npcShortName, heroBuild } of heroBuildIterator()) {
       ?.talents;
   for (let i = 0; i < heroBuild.abilities.length; i++) {
     const ability = heroBuild.abilities[i];
-    console.log(`+++ heroBuilds-ability: ${ability}`);
+    //console.log(`+++ heroBuilds-ability: ${ability}`);
     const abilityObj = (dota2Abilities as any)[
       ability as keyof typeof dota2Abilities
     ];

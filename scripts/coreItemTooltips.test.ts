@@ -6,8 +6,8 @@
  */
 import { IntlShape } from "react-intl";
 import { i18nLoader } from "@utilities/i18n/i18nLoader";
-import { getTooltip } from "../access/heroBuilds";
 import { heroBuilds } from "../content/heroBuilds";
+import { getItemTooltip } from "../access/heroBuilds";
 
 let intl: IntlShape | undefined;
 beforeAll(async () => {
@@ -38,7 +38,7 @@ test("coreItemTooltips", () => {
         ...(heroBuild.items.core_bear || []),
       ];
       for (const coreItem of coreItems) {
-        const tooltip = getTooltip(npcShortName, i, coreItem, intl!);
+        const tooltip = getItemTooltip(npcShortName, i, coreItem, intl!);
         if (!tooltip) {
           missingTooltips.push(
             `${npcShortName}, build ${i}, item: ${coreItem}`
