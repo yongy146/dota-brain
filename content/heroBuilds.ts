@@ -8346,7 +8346,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "refresher",
           ],
           core: [
-            "black_king_bar"
+            "black_king_bar",
             "manta",
             "hurricane_pike",
             "angels_demise",
