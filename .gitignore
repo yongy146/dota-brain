@@ -3,8 +3,9 @@
 !.vscode
 !.vscode/**
 !monitorSizes
-!monitorSizes/**
-monitorSizes/*.png
+!monitorSizes/measurements.ts
+!monitorSizes/monitorMeasurements.ts
+!monitorSizes/Monitor size implementation.xlsx
 !scripts
 !scripts/**
 !content

@@ -117,42 +117,47 @@ export interface IMonitorReuse {
  *
  */
 export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> | IMonitorReuse> = {
+  // Width: 1024
+  //"1024x600": { reuse: "1024x768" },
   "1024x768": {
     fontSize: 9,
     preGame: {
-      heroesRadiantTopLeftXPos: 58,
-      heroesDireTopLeftXPos: 614,
+      appButton: {
+        xPos: 5,
+        yPos: 29,
+        size: 15,
+      },
+      heroesRadiantTopLeftXPos: 59,
+      heroesDireTopLeftXPos: 613,
       heroesWidth: 352,
       subtitles: {
-        //xPos: 212,
         yPos: 67,
         width: 600,
         height: 60,
       },
-      appButton: {
-        xPos: 6,
-        yPos: 28,
-        size: 17,
-      },
     },
     inGame: {
-      heroesRadiantBottomLeftXPos: 221, //292,//221,
-      heroesDireBottomLeftXPos: 594, //540, //584,
+      appButton: {
+        xPos: 5,
+        yPos: 524,
+        size: 17,
+      },
+      heroesRadiantBottomLeftXPos: 221,
+      heroesDireBottomLeftXPos: 584,
       heroesHeight: 29,
-      heroesWidth: 220, //192, //220,
+      heroesWidth: 220,
       perfTracker: {
-        xPos: 111,
-        yPos: 43,
+        xPos: 7,
+        yPos: 113,
       },
       itemTracker: {
-        xPos: 0,
-        yPos: 594,
-        //width: 117 + 20,
+        xPos: 5,
+        yPos: 593,
       },
       subtitles: {
-        xPos: 739,
+        xPos: 812,
         yPos: 3,
-        width: 168,
+        width: 180,
         height: 140,
       },
       roshanGlyph: {
@@ -160,15 +165,10 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 594,
         size: 80,
       },
-      appButton: {
-        xPos: 5,
-        yPos: 575,
-        size: 20,
-      },
     },
   },
-  "1024x600": { reuse: "1024x768" },
 
+  // Width: 1280
   "1280x720": {
     fontSize: 9,
     preGame: {
@@ -282,13 +282,12 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-
   "1280x800": {
     fontSize: 9,
     preGame: {
       appButton: {
-        xPos: 54 - 47,
-        yPos: 8 + 23 + 1,
+        xPos: 7,
+        yPos: 32,
         size: 17,
       },
       heroesRadiantTopLeftXPos: 61,
@@ -341,110 +340,122 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-
   "1280x960": {
     fontSize: 11,
     preGame: {
+      appButton: {
+        xPos: 8,
+        yPos: 38,
+        size: 19,
+      },
       heroesRadiantTopLeftXPos: 73,
-      heroesDireTopLeftXPos: 767,
-      heroesWidth: 440,
-
+      heroesDireTopLeftXPos: 765,
+      heroesWidth: 441,
       subtitles: {
-        //xPos: 240,
         yPos: 84,
         width: 800,
         height: 60,
       },
-      appButton: {
-        xPos: 8,
-        yPos: 42,
-        size: 20,
-      },
     },
     inGame: {
+      appButton: {
+        xPos: 5,
+        yPos: 713,
+        size: 23,
+        extraLargeMinimap: {
+          yPos: 682,
+        },
+      },
       heroesRadiantBottomLeftXPos: 274,
       heroesDireBottomLeftXPos: 732,
       heroesHeight: 35,
       heroesWidth: 274,
       perfTracker: {
-        xPos: 122,
-        yPos: 53,
+        xPos: 9,
+        yPos: 138,
       },
       itemTracker: {
-        xPos: 1133 /* 1280 - 147 */,
-        yPos: 871,
-        //width: 147,
+        xPos: 1057,
+        yPos: 870,
       },
       subtitles: {
         xPos: 1013,
         yPos: 2,
-        width: 112,
-        height: 280,
+        width: 236,
+        height: 140,
       },
       roshanGlyph: {
         xPos: 225,
         yPos: 743,
         size: 86,
-      },
-      appButton: {
-        xPos: 5,
-        yPos: 768,
-        size: 25,
+        extraLargeMinimap: {
+          xPos: 256,
+          yPos: 717,
+        },
       },
     },
   },
-
   "1280x1024": {
     fontSize: 12,
     preGame: {
+      appButton: {
+        xPos: 8,
+        yPos: 37,
+        size: 18,
+      },
       heroesRadiantTopLeftXPos: 73,
-      heroesDireTopLeftXPos: 767,
-      heroesWidth: 440,
+      heroesDireTopLeftXPos: 765,
+      heroesWidth: 442,
       subtitles: {
-        //xPos: 290,
         yPos: 86,
         width: 700,
         height: 60,
       },
-      appButton: {
-        xPos: 8,
-        yPos: 42,
-        size: 20,
-      },
     },
     inGame: {
+      appButton: {
+        xPos: 5,
+        yPos: 699,
+        size: 25,
+        extraLargeMinimap: {
+          yPos: 665,
+        },
+      },
       heroesRadiantBottomLeftXPos: 274,
       heroesDireBottomLeftXPos: 731,
       heroesHeight: 37,
       heroesWidth: 276,
       perfTracker: {
-        xPos: 157,
-        yPos: 57,
+        xPos: 9,
+        yPos: 151,
       },
       itemTracker: {
-        xPos: 0,
-        yPos: 793,
-        //width: 190,
+        xPos: 5,
+        yPos: 792,
+        extraLargeMinimap: {
+          yPos: 758,
+        },
       },
       subtitles: {
-        xPos: 925,
+        xPos: 1015,
         yPos: 3,
-        width: 192,
-        height: 140,
+        width: 234,
+        height: 120,
       },
       roshanGlyph: {
         xPos: 223,
-        yPos: 792,
+        yPos: 793,
         size: 93,
-      },
-      appButton: {
-        xPos: 5,
-        yPos: 768,
-        size: 25,
+        extraLargeMinimap: {
+          xPos: 255,
+          yPos: 763,
+        },
       },
     },
   },
 
+  // Width: 1360 & 1366
+  "1360x768": { reuse: "1366x768" },
   "1366x768": {
     fontSize: 10,
     preGame: {
@@ -493,8 +504,10 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-  "1360x768": { reuse: "1366x768" },
 
+  // Width: 1400
+
+  // Width: 1440
   "1440x900": {
     fontSize: 11,
     preGame: {
@@ -553,8 +566,9 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-  "1440x1050": { reuse: "1440x900" },
+  //"1440x1050": { reuse: "1440x900" },
 
+  // Width: 1600
   "1600x900": {
     fontSize: 12,
     preGame: {
@@ -562,7 +576,6 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       heroesDireTopLeftXPos: 941,
       heroesWidth: 505,
       subtitles: {
-        //xPos: 351,
         yPos: 80,
         width: 898,
         height: 60,
@@ -574,18 +587,17 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
     inGame: {
-      heroesRadiantBottomLeftXPos: 459 - 4,
-      heroesDireBottomLeftXPos: 884 + 2,
+      heroesRadiantBottomLeftXPos: 455,
+      heroesDireBottomLeftXPos: 886,
       heroesHeight: 33,
       heroesWidth: 258,
       perfTracker: {
         xPos: 137,
-        yPos: 50 + 1,
+        yPos: 51,
       },
       itemTracker: {
-        xPos: 1199 - 24,
+        xPos: 1175,
         yPos: 900,
-        //width: 182,
       },
       subtitles: {
         xPos: 1150,
@@ -612,8 +624,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-  "1600x1024": { reuse: "1600x900" },
-
+  //"1600x1024": { reuse: "1600x900" },
   "1600x1200": {
     fontSize: 14,
     preGame: {
@@ -655,8 +666,8 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 937,
         size: 110,
         extraLargeMinimap: {
-          xPos: 279 + 39 + 1,
-          yPos: 937 - 38,
+          xPos: 319,
+          yPos: 899,
         },
       },
       appButton: {
@@ -670,6 +681,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     },
   },
 
+  // Width 1680
   "1680x1050": {
     fontSize: 13,
     preGame: {
@@ -682,7 +694,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       heroesDireTopLeftXPos: 1005,
       heroesWidth: 588,
       subtitles: {
-        yPos: 95 + 5,
+        yPos: 100,
         width: 882,
         height: 60,
       },
@@ -690,10 +702,10 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     inGame: {
       appButton: {
         xPos: 5,
-        yPos: 788 - 80 + 7,
+        yPos: 715,
         size: 25,
         extraLargeMinimap: {
-          yPos: 788 - 80 + 7 - 35,
+          yPos: 680,
         },
       },
       heroesRadiantBottomLeftXPos: 442,
@@ -701,35 +713,39 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       heroesHeight: 39,
       heroesWidth: 298,
       perfTracker: {
-        xPos: 159 - 149,
-        yPos: 58 + 100,
+        xPos: 10,
+        yPos: 158,
       },
       itemTracker: {
         xPos: 5,
-        yPos: 813 - 1,
+        yPos: 812,
         extraLargeMinimap: {
-          yPos: 813 - 1 - 35,
+          yPos: 777,
         },
       },
       subtitles: {
         xPos: 1245,
         yPos: 3,
-        width: 264 + 80,
+        width: 344,
         height: 140,
       },
       roshanGlyph: {
         xPos: 244,
         yPos: 813,
-        size: 106 - 6,
+        size: 100,
         extraLargeMinimap: {
-          xPos: 244 + 36,
-          yPos: 813 - 29,
+          xPos: 280,
+          yPos: 784,
         },
       },
     },
   },
-  "1728x1080": { reuse: "1600x900" },
 
+  // Width 1728
+  //"1728x1080": { reuse: "1600x900" },
+
+  // Width 1760 & 1768
+  // "1760x990"
   "1768x992": {
     fontSize: 13,
     preGame: {
@@ -781,6 +797,8 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     },
   },
 
+  // Width 1920
+  //"1920x900"
   "1920x1080": {
     fontSize: 13.5,
     preGame: {
@@ -844,7 +862,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     },
   },
   "1920x1079": { reuse: "1920x1080" },
-
+  "1920x1081": { reuse: "1920x1080" },
   "1920x1200": {
     fontSize: 15,
     preGame: {
@@ -903,8 +921,6 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       },
     },
   },
-  "2048x1152": { reuse: "1920x1200" },
-
   "1920x1440": {
     fontSize: 16,
     preGame: {
@@ -949,7 +965,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       subtitles: {
         xPos: 1519,
         yPos: 3,
-        width: 294 + 50,
+        width: 344,
         height: 140,
       },
       roshanGlyph: {
@@ -964,6 +980,10 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     },
   },
 
+  // Width 2048
+  //"2048x1152": { reuse: "1920x1200" },
+
+  // Width 2560
   "2560x1080": {
     fontSize: 14,
     preGame: {
@@ -987,7 +1007,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 804,
         size: 26,
         extraLargeMinimap: {
-          yPos: 804 - 31 - 5,
+          yPos: 768,
         },
       },
       heroesRadiantBottomLeftXPos: 869,
@@ -999,7 +1019,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 60,
       },
       itemTracker: {
-        xPos: 2279 - 219 - 75 - 20,
+        xPos: 1965,
         yPos: 1080,
       },
       subtitles: {
@@ -1013,13 +1033,12 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 836,
         size: 104,
         extraLargeMinimap: {
-          xPos: 253 + 34 + 1,
-          yPos: 836 - 27,
+          xPos: 288,
+          yPos: 809,
         },
       },
     },
   },
-
   "2560x1440": {
     fontSize: 17,
     preGame: {
@@ -1043,7 +1062,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 1078,
         size: 31,
         extraLargeMinimap: {
-          yPos: 1078 - 41 - 7,
+          yPos: 1030,
         },
       },
       heroesRadiantBottomLeftXPos: 734,
@@ -1055,7 +1074,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 80,
       },
       itemTracker: {
-        xPos: 1949 - 61,
+        xPos: 1888,
         yPos: 1440,
       },
       subtitles: {
@@ -1069,15 +1088,12 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 1115,
         size: 134,
         extraLargeMinimap: {
-          xPos: 335 + 48,
-          yPos: 1115 - 38,
+          xPos: 383,
+          yPos: 1077,
         },
       },
     },
   },
-
-  "2715x1527": { reuse: "2560x1440" },
-
   "2560x1600": {
     // Added 19.1.2023
     fontSize: 19,
@@ -1130,6 +1146,10 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     },
   },
 
+  // Width 2715
+  //"2715x1527": { reuse: "2560x1440" },
+
+  // Width 3440
   "3440x1440": {
     fontSize: 17,
     preGame: {
@@ -1181,6 +1201,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
     },
   },
 
+  // Width 3840
   "3840x1080": {
     fontSize: 13,
     preGame: {
@@ -1193,7 +1214,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       heroesDireTopLeftXPos: 2065,
       heroesWidth: 607,
       subtitles: {
-        yPos: 98 + 6,
+        yPos: 104,
         width: 894,
         height: 60,
       },
@@ -1204,7 +1225,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 803,
         size: 26,
         extraLargeMinimap: {
-          yPos: 803 - 30 - 5,
+          yPos: 768,
         },
       },
       heroesRadiantBottomLeftXPos: 1508,
@@ -1230,32 +1251,35 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 836,
         size: 106,
         extraLargeMinimap: {
-          xPos: 910 + 38,
-          yPos: 836 - 29,
+          xPos: 948,
+          yPos: 807,
         },
       },
     },
   },
-
   "3840x2160": {
     fontSize: 26, /// CHECK ON 4K MONITOR!!!!!
     preGame: {
-      heroesRadiantTopLeftXPos: 416,
-      heroesDireTopLeftXPos: 2210,
-      heroesWidth: 1214,
-      subtitles: {
-        //xPos: 1740,
-        yPos: 208,
-        width: 894,
-        height: 60,
-      },
       appButton: {
         xPos: 225,
         yPos: 32,
         size: 50,
       },
+      heroesRadiantTopLeftXPos: 416,
+      heroesDireTopLeftXPos: 2210,
+      heroesWidth: 1214,
+      subtitles: {
+        yPos: 208,
+        width: 1800,
+        height: 60,
+      },
     },
     inGame: {
+      appButton: {
+        xPos: 5,
+        yPos: 1623,
+        size: 45,
+      },
       heroesRadiantBottomLeftXPos: 1101,
       heroesDireBottomLeftXPos: 2122,
       heroesHeight: 80,
@@ -1267,7 +1291,6 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
       itemTracker: {
         xPos: 2876,
         yPos: 2160,
-        //width: 441,
       },
       subtitles: {
         xPos: 2762,
@@ -1280,14 +1303,9 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         yPos: 1672,
         size: 212,
       },
-      appButton: {
-        xPos: 5,
-        yPos: 1623,
-        size: 45,
-      },
     },
   },
-  "4096x2160": { reuse: "3840x2160" },
+  //"4096x2160": { reuse: "3840x2160" },
 
   "5120x1440": {
     fontSize: 17,
@@ -1334,7 +1352,7 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
         height: 40,
       },
       roshanGlyph: {
-        xPos: 336 + 880,
+        xPos: 1216,
         yPos: 1115,
         size: 140,
         extraLargeMinimap: {
