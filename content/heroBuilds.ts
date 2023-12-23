@@ -134,6 +134,16 @@ export interface IHeroBuild {
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
 }
+/**
+ * Illustration of talent orders in dota2Heroes.json:
+ *
+ *                   Left  |  Right
+ * Talent level 4     #7   |    #6 <=== Index in array "talents"
+ * Talent level 3     #5   |    #4
+ * Talent level 2     #3   |    #2
+ * Talent level 1     #1   |    #0
+ *
+ */
 
 /**
  * Returns a localized string of the roles & type of the build.
