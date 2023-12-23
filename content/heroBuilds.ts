@@ -137,11 +137,11 @@ export interface IHeroBuild {
 /**
  * Illustration of talent orders in dota2Heroes.json:
  *
- *                   Left  |  Right
- * Talent level 4     #7   |    #6 <=== Index in array "talents"
- * Talent level 3     #5   |    #4
- * Talent level 2     #3   |    #2
- * Talent level 1     #1   |    #0
+ *                    Left  |  Right
+ * Talent level 25     #7   |    #6  <=== Index in array "talents" (dota2Heroes.json)
+ * Talent level 20     #5   |    #4
+ * Talent level 15     #3   |    #2
+ * Talent level 10     #1   |    #0
  *
  */
 
