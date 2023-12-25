@@ -8290,31 +8290,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "luna_lunar_blessing", // 1  
+          "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
           "luna_lucent_beam", // 4
           "luna_moon_glaive", // 5
           "luna_moon_glaive", // 6
           "luna_lunar_blessing", // 7
-          "luna_lunar_blessing", // 8      
+          "luna_lunar_blessing", // 8
           "luna_moon_glaive", // 9
           "luna_moon_glaive", // 10
-          "special_bonus_unique_luna_????", // 11    Which talent do the numbers refer to?
+          "special_bonus_unique_luna_7", // 11    Which talent do the numbers refer to?
           "luna_eclipse", // 12
           "luna_eclipse", // 13
           "luna_lucent_beam", // 14
-          "special_bonus_unique_luna_????", // 15
+          "special_bonus_unique_luna_2", // 15
           "luna_lucent_beam", // 16
           "special_bonus_attributes", // 17
           "luna_eclipse", // 18
           "luna_lucent_beam", // 19
-          "special_bonus_unique_luna_????", // 20
+          "special_bonus_unique_luna_8", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_luna_????", // 25
+          "special_bonus_unique_luna_5", // 25
         ],
         items: {
           starting: [
@@ -8329,7 +8329,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "wraith_band", //send extra tango and Wraith Band as first 2 items after laning begins
             "power_treads",
             "magic_wand", // can consider if spell-casting lane, otherwise skip
-            "mask_of_madness", 
+            "mask_of_madness",
           ],
           mid_game: [
             "lesser_crit",
@@ -8370,19 +8370,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //"dagger_of_ristul", Removed in 7.33
             //"titan_sliver",
             //"possessed_mask", Removed in 7.33
-            
+
             // tier 1
-            "unstable_wand", 
-            "safety_bubble", 
-            "occult_bracelet", 
-            "duelist_gloves", 
-            
+            "unstable_wand",
+            "safety_bubble",
+            "occult_bracelet",
+            "duelist_gloves",
+
             // tier 2
-            "grove_bow", 
-            "pupils_gift", 
-            "vambrace", 
-            "specialists_array", 
-            
+            "grove_bow",
+            "pupils_gift",
+            "vambrace",
+            "specialists_array",
+
             // tier 3
             "paladin_sword",
             "enchanted_quiver",
@@ -8404,13 +8404,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     ],
 
-    combo: [
-      `black_king_bar`,
-      `eclipse`,
-      `blink`,
-      `manta`,
-      `lucent_beam`,
-    ],
+    combo: [`black_king_bar`, `eclipse`, `blink`, `manta`, `lucent_beam`],
 
     counter_items: {
       laning_phase: {
@@ -8419,7 +8413,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "heavens_halberd", "force_staff", "pipe", "black_king_bar", "blade_mail"],
+        all: [
+          "spirit_vessel",
+          "heavens_halberd",
+          "force_staff",
+          "pipe",
+          "black_king_bar",
+          "blade_mail",
+        ],
         support: ["glimmer_cape"],
         core: [],
       },
