@@ -8278,7 +8278,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   luna: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -8290,111 +8290,142 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "luna_lunar_blessing", // 1
+          "luna_lunar_blessing", // 1  
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
-          "luna_moon_glaive", // 4      "luna_moon_glaive" equals to `moon glaives`
-          "luna_lunar_blessing", // 5
+          "luna_lucent_beam", // 4
+          "luna_moon_glaive", // 5
           "luna_moon_glaive", // 6
           "luna_lunar_blessing", // 7
-          "luna_moon_glaive", // 8
+          "luna_lunar_blessing", // 8      
           "luna_moon_glaive", // 9
-          "special_bonus_unique_luna_7", // 10
-          "luna_lucent_beam", // 11
-          "luna_lucent_beam", // 12
-          "luna_lucent_beam", // 13
-          "luna_eclipse", // 14
-          "special_bonus_unique_luna_2", // 15
-          "luna_eclipse", // 16
+          "luna_moon_glaive", // 10
+          "special_bonus_unique_luna_????", // 11    Which talent do the numbers refer to?
+          "luna_eclipse", // 12
+          "luna_eclipse", // 13
+          "luna_lucent_beam", // 14
+          "special_bonus_unique_luna_????", // 15
+          "luna_lucent_beam", // 16
           "special_bonus_attributes", // 17
           "luna_eclipse", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_luna_8", // 20
+          "luna_lucent_beam", // 19
+          "special_bonus_unique_luna_????", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_luna_3", // 25
+          "special_bonus_unique_luna_????", // 25
         ],
         items: {
           starting: [
-            "tango",
-            "branches",
-            "branches",
-            "branches",
+            "quelling_blade",
+            "slippers",
             "circlet",
-            "magic_stick",
+            "branches",
+            "tango",
           ],
           early_game: [
-            "wraith_band",
+            "tango", // send another tango and Wraith Band as first 2 items after laning begins
+            "wraith_band", //send extra tango and Wraith Band as first 2 items after laning begins
             "power_treads",
-            "magic_wand",
-            "mask_of_madness",
+            "magic_wand", // can consider if spell-casting lane, otherwise skip
+            "mask_of_madness", 
           ],
           mid_game: [
-            "dragon_lance",
-            "manta",
             "lesser_crit",
+            "dragon_lance",
             "black_king_bar",
+            "manta",
+            "hurricane_pike",
             "aghanims_shard",
           ],
-          late_game: ["silver_edge", "satanic", "butterfly", "hurricane_pike"],
-          situational: [
+          late_game: [
+            "angels_demise",
+            "blink",
             "skadi",
-            "greater_crit",
+            "swift_blink",
+            "satanic",
+            "butterfly",
+          ],
+          situational: [
+            "silver_edge",
             "ultimate_scepter",
             "monkey_king_bar",
             "sphere",
-            "sange_and_yasha",
+            "greater_crit",
+            "refresher",
           ],
           core: [
-            "dragon_lance",
-            "manta",
             "black_king_bar",
-            "silver_edge",
+            "manta",
+            "hurricane_pike",
+            "angels_demise",
+            "skadi",
             "butterfly",
+            "satanic",
+            "greater_crit",
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
-            "unstable_wand",
-            "duelist_gloves",
-            "grove_bow",
             //"ring_of_aquila",
             //"dagger_of_ristul", Removed in 7.33
             //"titan_sliver",
+            //"possessed_mask", Removed in 7.33
+            
+            // tier 1
+            "unstable_wand", 
+            "safety_bubble", 
+            "occult_bracelet", 
+            "duelist_gloves", 
+            
+            // tier 2
+            "grove_bow", 
+            "pupils_gift", 
+            "vambrace", 
+            "specialists_array", 
+            
+            // tier 3
+            "paladin_sword",
+            "enchanted_quiver",
             "elven_tunic",
+
+            // tier 4
+            "avianas_feather",
             "ninja_gear",
             "mind_breaker",
+
+            // tier 5
+            "force_boots",
+            "desolator_2",
             "mirror_shield",
+            "apex",
             "pirate_hat",
           ],
         },
       },
     ],
 
-    combo: [],
+    combo: [
+      `black_king_bar`,
+      `eclipse`,
+      `blink`,
+      `manta`,
+      `lucent_beam`,
+    ],
+
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "infused_raindrop", "ring_of_regen", "cloak"],
+        all: ["armor", "boots", "magic_stick", "infused_raindrop"],
         support: ["ward_sentry"],
         core: [],
       },
       mid_game: {
-        all: [],
-        support: ["glimmer_cape", "force_staff"],
-        core: [
-          "mage_slayer",
-          //"hood_of_defiance",
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
-          "heavens_halberd",
-        ],
+        all: ["spirit_vessel", "heavens_halberd", "force_staff", "pipe", "black_king_bar", "blade_mail"],
+        support: ["glimmer_cape"],
+        core: [],
       },
       late_game: {
         all: ["sheepstick"],
-        support: ["black_king_bar"],
+        support: [],
         core: ["assault", "abyssal_blade", "skadi", "butterfly"],
       },
     },
