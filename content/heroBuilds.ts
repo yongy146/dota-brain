@@ -8288,7 +8288,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959031",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40534,
         abilities: [
           "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
