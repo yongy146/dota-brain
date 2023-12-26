@@ -11737,131 +11737,40 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // Outworld Devourer
-  obsidian_destroyer: {
-    // not `Outworld Destroyer`
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+  // Outworld Destroyer
+  obsidian_destroyer:{
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
-      {
-        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071",
-        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
-        abilities: [
-          `obsidian_destroyer_astral_imprisonment`, // 1
-          `obsidian_destroyer_arcane_orb`, // 2
-          `obsidian_destroyer_equilibrium`, // 3
-          "obsidian_destroyer_astral_imprisonment", // 4
-          "obsidian_destroyer_astral_imprisonment", // 5
-          "obsidian_destroyer_sanity_eclipse", // 6
-          `obsidian_destroyer_astral_imprisonment`, // 7
-          "obsidian_destroyer_arcane_orb", // 8
-          "obsidian_destroyer_arcane_orb", // 9
-          `obsidian_destroyer_arcane_orb`, // 10
-          `special_bonus_attack_speed_20`, // 11
-          "obsidian_destroyer_sanity_eclipse", // 12
-          "obsidian_destroyer_equilibrium", // 13
-          "obsidian_destroyer_equilibrium", // 14
-          `special_bonus_movement_speed_30`, // 15
-          "obsidian_destroyer_equilibrium", // 16
-          "special_bonus_attributes", // 17
-          "obsidian_destroyer_sanity_eclipse", // 18
-          "special_bonus_attributes", // 19
-          `special_bonus_unique_outworld_devourer_4`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          `special_bonus_unique_outworld_devourer`, // 25
-        ],
-        items: {
-          starting: [`tango`, `crown`, `branches`, `ward_observer`],
-          early_game: [
-            `meteor_hammer`,
-            `power_treads`,
-            `magic_wand`,
-            `wind_lace`,
-          ],
-          mid_game: [
-            `black_king_bar`,
-            `blink`,
-            `hurricane_pike`,
-            `aghanims_shard`,
-          ],
-          late_game: [
-            `sheepstick`,
-            `ultimate_scepter`,
-            `moon_shard`,
-            `revenants_brooch`,
-          ],
-          situational: [
-            `hand_of_midas`,
-            `witch_blade`,
-            `aether_lens`,
-            `sphere`,
-            `lotus_orb`,
-            `aeon_disk`,
-            `shivas_guard`,
-            `refresher`,
-            `swift_blink`,
-            `travel_boots`,
-          ],
-          core: [
-            "meteor_hammer",
-            `power_treads`,
-            `black_king_bar`,
-            `blink`,
-            `hurricane_pike`,
-            `aghanims_shard`,
-            `sheepstick`,
-            `ultimate_scepter`,
-          ],
-          neutral: [
-            `faded_broach`,
-            //`pogo_stick`,
-            "grove_bow",
-            "vambrace",
-            "psychic_headband",
-            `enchanted_quiver`,
-            "timeless_relic",
-            `trickster_cloak`,
-            `pirate_hat`,
-            `mirror_shield`,
-          ],
-        },
-      },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253915",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          `obsidian_destroyer_astral_imprisonment`, // 1
-          `obsidian_destroyer_arcane_orb`, // 2
-          `obsidian_destroyer_equilibrium`, // 3
+          "obsidian_destroyer_astral_imprisonment", // 1
+          "obsidian_destroyer_arcane_orb", // 2
+          "obsidian_destroyer_equilibrium", // 3
           "obsidian_destroyer_astral_imprisonment", // 4
           "obsidian_destroyer_astral_imprisonment", // 5
           "obsidian_destroyer_sanity_eclipse", // 6
-          "obsidian_destroyer_astral_imprisonment", // 7
+          "obsidian_destroyer_arcane_orb", // 7
           "obsidian_destroyer_arcane_orb", // 8
           "obsidian_destroyer_arcane_orb", // 9
-          "obsidian_destroyer_arcane_orb", // 10
-          "special_bonus_attack_speed_20", // 11
+          "special_bonus_attack_speed_20", // 10
+          "obsidian_destroyer_equilibrium", // 11
           "obsidian_destroyer_sanity_eclipse", // 12
           "obsidian_destroyer_equilibrium", // 13
           "obsidian_destroyer_equilibrium", // 14
-          `special_bonus_movement_speed_30`, // 15
-          "obsidian_destroyer_equilibrium", // 16
+          "special_bonus_movement_speed_30", // 15
+          "obsidian_destroyer_astral_imprisonment", // 16
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_outworld_devourer_4`, // 20
+          "special_bonus_unique_outworld_devourer_4", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -11870,100 +11779,98 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            `tango`,
-            `faerie_fire`,
-            `mantle`,
+            `mantle`, 
             `circlet`,
             `branches`,
             `branches`,
+            `branches`,
             `ward_observer`,
+            `tango`,
           ],
           early_game: [
-            `null_talisman`,
-            `hand_of_midas`,
-            `power_treads`,
+            `null_talisman',
             `magic_wand`,
-            `wind_lace`,
+            `power_treads`,
+            `witch_blade`,           
           ],
           mid_game: [
-            `witch_blade`,
-            `hurricane_pike`,
+            `ultimate_scepter`,
             `black_king_bar`,
             `blink`,
+            `devastator`,    
           ],
           late_game: [
-            `sheepstick`,
-            `ultimate_scepter`,
             `moon_shard`,
-            `revenants_brooch`,
+            `hurricane_pike`,
+            'sheepstick`,
+    
           ],
           situational: [
+            `hand_of_midas`,
             `meteor_hammer`,
-            `aether_lens`,
-            `aghanims_shard`,
-            `octarine_core`,
-            `refresher`,
-            `kaya_and_sange`,
             `sphere`,
-            `shivas_guard`,
+            `refresher`,
             `swift_blink`,
             `travel_boots`,
+            `aghanims_shard`,
           ],
           core: [
-            `hand_of_midas`,
-            "power_treads",
-            `witch_blade`,
-            `hurricane_pike`,
+            `power_treads`,
             `black_king_bar`,
             `blink`,
-            `sheepstick`,
+            `hurricane_pike`,
+            `devastator`,
             `ultimate_scepter`,
+            `sheepstick`,
           ],
           neutral: [
+            //tier 1
+            `arcane_ring`,
+            `mysterious_hat`,
             `faded_broach`,
-            //`pogo_stick`,
-            `grove_bow`,
+
+            //tier 2
+            `pupils_gift`,
             `vambrace`,
-            `ceremonial_robe`,
+            `grove_bow`,
+
+            //tier 3
+            `elven_tunic`,
+            `psychic_headband`,
             `enchanted_quiver`,
+
+            //tier 4
             `timeless_relic`,
-            `trickster_cloak`,
-            `pirate_hat`,
+            `avianas_feather`,
+            `mind_breaker`,
+
+            //tier 5
             `mirror_shield`,
+            `pirate_hat`,
+            `apex`,
           ],
         },
-      },
-    ],
-    combo: [
-      `obsidian_destroyer_astral_imprisonment`,
-      `black_king_bar`,
-      `meteor_hammer`,
-      `obsidian_destroyer_sanity_eclipse`,
-      `obsidian_destroyer_arcane_orb`,
-    ],
+      }, 
+      ]
+    combo: [],
     counter_items: {
       laning_phase: {
-        all: [
-          "magic_stick",
-          "ring_of_regen",
-          "infused_raindrop",
-          /* "urn_of_shadows", */
-        ],
+        all: ["magic_stick", "infused_raindrop"],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["black_king_bar", "blink"],
-        support: ["force_staff"],
-        core: ["orchid", "heavens_halberd"],
+        all: ["black_king_bar", "blink", "ghost", "blade_mail"],
+        support: ["force_staff", "glimmer_cape"],
+        core: ["orchid", "heavens_halberd", "silver_edge"],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["skadi", "sheepstick", "abyssal_blade"],
+        core: ["skadi", "sheepstick", "abyssal_blade"].
       },
     },
-  },
+},
 
   pangolier: {
     gameplay_version: "7.35",
