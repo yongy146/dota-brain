@@ -3903,8 +3903,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   death_prophet: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -3912,7 +3912,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40474,
         abilities: [
           "death_prophet_carrion_swarm", // 1
@@ -4323,7 +4323,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         abilities: [
           "dragon_knight_dragon_tail", // 1
@@ -20734,7 +20734,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986473",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
           "windrunner_powershot", // 1
