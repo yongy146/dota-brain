@@ -134,6 +134,16 @@ export interface IHeroBuild {
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
 }
+/**
+ * Illustration of talent orders in dota2Heroes.json:
+ *
+ *                    Left  |  Right
+ * Talent level 25     #7   |    #6  <=== Index in array "talents" (dota2Heroes.json)
+ * Talent level 20     #5   |    #4
+ * Talent level 15     #3   |    #2
+ * Talent level 10     #1   |    #0
+ *
+ */
 
 /**
  * Returns a localized string of the roles & type of the build.
@@ -3893,8 +3903,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   death_prophet: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -3902,7 +3912,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40474,
         abilities: [
           "death_prophet_carrion_swarm", // 1
@@ -4313,7 +4323,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         abilities: [
           "dragon_knight_dragon_tail", // 1
@@ -8278,16 +8288,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959031",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40534,
         abilities: [
-          "luna_lunar_blessing", // 1  
+          "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
           "luna_lucent_beam", // 4
           "luna_moon_glaive", // 5
           "luna_moon_glaive", // 6
           "luna_lunar_blessing", // 7
-          "luna_lunar_blessing", // 8      
+          "luna_lunar_blessing", // 8
           "luna_moon_glaive", // 9
           "luna_moon_glaive", // 10
           "special_bonus_unique_luna_7", // 11    
@@ -8319,7 +8329,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "wraith_band", //send extra tango and Wraith Band as first 2 items after laning begins
             "power_treads",
             "magic_wand", // can consider if spell-casting lane, otherwise skip
-            "mask_of_madness", 
+            "mask_of_madness",
           ],
           mid_game: [
             "lesser_crit",
@@ -8360,19 +8370,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //"dagger_of_ristul", Removed in 7.33
             //"titan_sliver",
             //"possessed_mask", Removed in 7.33
-            
+
             // tier 1
-            "unstable_wand", 
-            "safety_bubble", 
-            "occult_bracelet", 
-            "duelist_gloves", 
-            
+            "unstable_wand",
+            "safety_bubble",
+            "occult_bracelet",
+            "duelist_gloves",
+
             // tier 2
-            "grove_bow", 
-            "pupils_gift", 
-            "vambrace", 
-            "specialists_array", 
-            
+            "grove_bow",
+            "pupils_gift",
+            "vambrace",
+            "specialists_array",
+
             // tier 3
             "paladin_sword",
             "enchanted_quiver",
@@ -8394,13 +8404,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     ],
 
-    combo: [
-      `black_king_bar`,
-      `eclipse`,
-      `blink`,
-      `manta`,
-      `lucent_beam`,
-    ],
+    combo: [`black_king_bar`, `eclipse`, `blink`, `manta`, `lucent_beam`],
 
     counter_items: {
       laning_phase: {
@@ -8409,7 +8413,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "heavens_halberd", "force_staff", "pipe", "black_king_bar", "blade_mail"],
+        all: [
+          "spirit_vessel",
+          "heavens_halberd",
+          "force_staff",
+          "pipe",
+          "black_king_bar",
+          "blade_mail",
+        ],
         support: ["glimmer_cape"],
         core: [],
       },
@@ -20723,7 +20734,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986473",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
           "windrunner_powershot", // 1
