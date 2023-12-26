@@ -3,7 +3,7 @@
  *
  */
 import { IntlShape, createIntl } from "react-intl";
-import { getItemBuild, getTooltip } from "./heroBuilds";
+import { getItemBuild } from "./heroBuilds";
 import { flattenStrings } from "@utilities/i18n/flattenStrings";
 import { heroBuilds } from "../content/heroBuilds";
 import axios from "axios";
@@ -12,9 +12,7 @@ import { getCounterItems } from "./counterItems";
 let intl: IntlShape;
 
 beforeAll(async () => {
-  const response = await axios.get(
-    "https://i18n.dotacoach.gg/storybook/en.json"
-  );
+  const response = await axios.get("https://i18n.dotacoach.gg/storybook/en.json");
 
   const locale = "en";
   const messages = flattenStrings(response.data as Record<string, string>);

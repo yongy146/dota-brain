@@ -8,11 +8,12 @@ This repository contains the core knowledge of Dota Coach, which is used by the 
 
 The key files in the repository are:
 
-- heroBuilds.ts: Ability and items builds, combos, and counter items
-- messages.ts: Notifications and coaching tips for own and against enemy heroes
-- disables.ts: Disables of all heroes
-- dispellableBuffs.ts: Dispellable buffs of all heroes
-- screenSizes.ts: Positioning of the Dota Coach app within the game
+- content/heroBuilds.ts: Ability and items builds, combos, and counter items
+- content/messages.ts: Notifications and coaching tips for own and against enemy heroes
+- content/disables.ts: Disables of all heroes
+- content/dispellableBuffs.ts: Dispellable buffs of all heroes
+- content/itemContent.ts: YouTube videos on Dota 2 items
+- monitorSizes/measurements.ts: Positioning of the Dota Coach app within the game
 
 # Can I contribute?
 

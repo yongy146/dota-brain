@@ -19,7 +19,7 @@
  *   - C:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
  *   - D:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
  *
- * Copyright (C) Dota Coach, 2023. All rights reserved.
+ * (C) Dota Coach, 2023. All rights reserved.
  */
 import { IntlShape } from "react-intl";
 import {
@@ -35,7 +35,14 @@ export enum ContentCreator {
   TNTCNz = "TNTCNz",
   YoonA = "YoonA",
   eidandota = "eidandota",
-  //yongy146 = "yongy146",
+  yongy146 = "yongy146",
+}
+
+export interface IContentCreatorLink {
+  image: string; // Image is used in Dota Coach app, but no long in guides, as Dota 2 banned images
+  text: string;
+  link_http: string;
+  //link_text: string;
 }
 
 // Links provided by content creators to promote their own brand and activites
@@ -74,6 +81,11 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
       link_http: "https://skelly.gg/g/YoonA",
       //link_text: "Click here to book a coaching session with him.",
     },
+    yongy146: {
+      image: "https://i.imgur.com/TZpRwOK.jpeg",
+      text: "This guide was written by BaLLooN, a 7.8k DotA 2 player based in SEA with 17 years of experience:",
+      link_http: "https://www.fiverr.com/yongy146",
+    },
     /*ZoGraF: {
     image: "https://i.imgur.com/QZzNRhz.png",
     text: "This guide was written by 9k Professional Coach ZoGraF.",
@@ -81,13 +93,6 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
     link_text: "Click here to be coached by him.",
   },*/
   };
-
-export interface IContentCreatorLink {
-  image: string; // Image is used in Dota Coach app, but no long in guides, as Dota 2 banned images
-  text: string;
-  link_http: string;
-  //link_text: string;
-}
 
 export enum DamageType {
   neutral = "neutral", // Combination of physical, magical and pure
@@ -103,12 +108,10 @@ export enum DamageType {
  *
  */
 export interface IHeroContent {
-  creator: ContentCreator; // Owner of the guide (e.g. AlexDota)
+  creator: ContentCreator; // Owner of the guide (e.g. ContentCreator.YoonA)
   gameplay_version: string; // E.g. 7.30e or 7.31. This should only be updated once the guide is ready to be published
   damage_type: DamageType;
   builds: IHeroBuild[]; // The first build is seen as the "standard build" by the app
-  //ability_tooltips?: Tooltips; // Ability tooltips valid for all builds of the hero
-  //item_tooltips?: Tooltips; // Item tooltips valid for all builds of the hero
   combo: string[]; // Main spell, item and "attack" combo for the hero ; this combo is shown in the app (infoboxes) and in the dota guides ; use the same keywords as for ability builds and item buids - on top of that you can also use the word "attack" for right-clicking
   counter_items: {
     laning_phase: CounterItems;
@@ -123,16 +126,24 @@ export interface IHeroContent {
  */
 export interface IHeroBuild {
   roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
-  type?: string; // Type currently only used for invoker mid (QW & QE)
+  type?: string; // Type currently only used for Invoker mid (types: 'QW' & 'QE')
   steam_guide_link: string; // Link to web buids
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   dota_fire_id?: number; // Guide number on Dota Fire
   abilities: string[];
-  //ability_tooltips?: Tooltips;
   items: ItemBuild;
-  //item_tooltips?: Tooltips; // Item tooltips specific to this hero build
   combo?: string[]; // Combo specific to this hero build
 }
+/**
+ * Illustration of talent orders in dota2Heroes.json:
+ *
+ *                    Left  |  Right
+ * Talent level 25     #7   |    #6  <=== Index in array "talents" (dota2Heroes.json)
+ * Talent level 20     #5   |    #4
+ * Talent level 15     #3   |    #2
+ * Talent level 10     #1   |    #0
+ *
+ */
 
 /**
  * Returns a localized string of the roles & type of the build.
@@ -170,102 +181,25 @@ export interface ItemBuild {
 }
 
 /**
- * Tooltip for abilities and items
- *
- */
-export interface Tooltips {
-  [key: string]: string;
-}
-
-/**
+ * Counter items for a given hero.
  *
  */
 export interface CounterItems {
-  all: string[]; // Items relevant for all players
-  support: string[]; // Items only relevant for support players
-  core: string[]; // Items only relevant for core players
+  all: string[]; // Items for all players (i.e., support and core players)
+  support: string[]; // Items for support players only
+  core: string[]; // Items for core players only
 }
 
-/*export interface CounterItem {
-  /**
-   * Name of item, as in dota2Items.json, but without prefix `item_`. Special names added by Dota Coach are: "armor", "magicResistance" and "statusResistance"
-   */
-/*item: string;
-  /**
-   * Optional info to be displayed on webpage and in the app
-   */
-/*info?: string;
-}*/
-
 /**
- * Function returns the tooltip for an item (it checks the hero build as well as the hero)
+ * Function returns 'true' if an item is core in the given build.
  *
- * @param heroContent
  * @param heroBuild
- * @param item
- * @return Tooltip string or null, if there is no tooltip
- */
-/*export function getItemTooltip(
-  heroContent: IHeroContent,
-  heroBuild: IHeroBuild,
-  item: string
-): string | null {
-  if (
-    heroBuild.item_tooltips != undefined &&
-    heroBuild.item_tooltips.item != undefined
-  ) {
-    return heroBuild.item_tooltips[item];
-  }
-  if (
-    heroContent.item_tooltips != undefined &&
-    heroContent.item_tooltips.item != undefined
-  ) {
-    return heroContent.item_tooltips[item];
-  }
-  return null; // There is no tooltip for the item
-}*/
-
-/**
- * Function returns the tooltip for an ability (it checks the hero build as well as the hero)
- *
- * @param heroBuilds
- * @param heroBuild
- * @param item
- * @return Tooltip string or null, if there is no tooltip
- */
-/*export function getAbilityTooltip(
-  heroContent: IHeroContent,
-  heroBuild: IHeroBuild,
-  ability: string
-): string | null {
-  if (
-    heroBuild.ability_tooltips != undefined &&
-    heroBuild.ability_tooltips.ability != undefined
-  ) {
-    return heroBuild.ability_tooltips[ability];
-  }
-  if (
-    heroContent.ability_tooltips != undefined &&
-    heroContent.ability_tooltips.ability != undefined
-  ) {
-    return heroContent.ability_tooltips[ability];
-  }
-  return null; // There is no tooltip for the item
-}*/
-
-/**
- * Function returns if item is core for this build
- *
- * @param heroName
- * @param heroBuild
- * @param item
+ * @param item e.g., 'nullifier'
  */
 export function isCoreItem(heroBuild: IHeroBuild, item: string): boolean {
-  for (const coreItem of heroBuild.items.core) {
-    if (coreItem == item) return true;
-  }
+  if (heroBuild.items.core.includes(item)) return true;
+  if (heroBuild.items.core_bear?.includes(item)) return true;
   return false;
-  // HOW TO TREAT CASE OF BEAR  / LONE DRUID, TO BE IMPLEMENTED
 }
 
 export const heroBuilds: { [key: string]: IHeroContent } = {
@@ -8344,8 +8278,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   luna: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -8356,111 +8290,143 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "luna_lunar_blessing", // 1   "luna_moon_glaive" equals to `moon glaives`
+          "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
           "luna_lunar_blessing", // 3
-          "luna_moon_glaive", // 4
-          "luna_lunar_blessing", // 5
+          "luna_lucent_beam", // 4
+          "luna_moon_glaive", // 5
           "luna_moon_glaive", // 6
           "luna_lunar_blessing", // 7
-          "luna_moon_glaive", // 8
+          "luna_lunar_blessing", // 8
           "luna_moon_glaive", // 9
-          "special_bonus_unique_luna_7", // 10
-          "luna_lucent_beam", // 11
-          "luna_lucent_beam", // 12
-          "luna_lucent_beam", // 13
-          "luna_eclipse", // 14
+          "luna_moon_glaive", // 10
+          "special_bonus_unique_luna_7", // 11    Which talent do the numbers refer to?
+          "luna_eclipse", // 12
+          "luna_eclipse", // 13
+          "luna_lucent_beam", // 14
           "special_bonus_unique_luna_2", // 15
-          "luna_eclipse", // 16
+          "luna_lucent_beam", // 16
           "special_bonus_attributes", // 17
           "luna_eclipse", // 18
-          "special_bonus_attributes", // 19
+          "luna_lucent_beam", // 19
           "special_bonus_unique_luna_8", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_luna_3", // 25
+          "special_bonus_unique_luna_5", // 25
         ],
         items: {
           starting: [
-            "tango",
-            "branches",
-            "branches",
-            "branches",
+            "quelling_blade",
+            "slippers",
             "circlet",
-            "magic_stick",
+            "branches",
+            "tango",
           ],
           early_game: [
-            "wraith_band",
+            "tango", // send another tango and Wraith Band as first 2 items after laning begins
+            "wraith_band", //send extra tango and Wraith Band as first 2 items after laning begins
             "power_treads",
-            "magic_wand",
+            "magic_wand", // can consider if spell-casting lane, otherwise skip
             "mask_of_madness",
           ],
           mid_game: [
-            "dragon_lance",
-            "manta",
             "lesser_crit",
+            "dragon_lance",
             "black_king_bar",
+            "manta",
+            "hurricane_pike",
             "aghanims_shard",
           ],
-          late_game: ["silver_edge", "satanic", "butterfly", "hurricane_pike"],
-          situational: [
+          late_game: [
+            "angels_demise",
+            "blink",
             "skadi",
-            "greater_crit",
+            "swift_blink",
+            "satanic",
+            "butterfly",
+          ],
+          situational: [
+            "silver_edge",
             "ultimate_scepter",
             "monkey_king_bar",
             "sphere",
-            "sange_and_yasha",
+            "greater_crit",
+            "refresher",
           ],
           core: [
-            "dragon_lance",
-            "manta",
             "black_king_bar",
-            "silver_edge",
+            "manta",
+            "hurricane_pike",
+            "angels_demise",
+            "skadi",
             "butterfly",
+            "satanic",
+            "greater_crit",
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
-            "unstable_wand",
-            "duelist_gloves",
-            "grove_bow",
             //"ring_of_aquila",
             //"dagger_of_ristul", Removed in 7.33
             //"titan_sliver",
+            //"possessed_mask", Removed in 7.33
+
+            // tier 1
+            "unstable_wand",
+            "safety_bubble",
+            "occult_bracelet",
+            "duelist_gloves",
+
+            // tier 2
+            "grove_bow",
+            "pupils_gift",
+            "vambrace",
+            "specialists_array",
+
+            // tier 3
+            "paladin_sword",
+            "enchanted_quiver",
             "elven_tunic",
+
+            // tier 4
+            "avianas_feather",
             "ninja_gear",
             "mind_breaker",
+
+            // tier 5
+            "force_boots",
+            "desolator_2",
             "mirror_shield",
+            "apex",
             "pirate_hat",
           ],
         },
       },
     ],
 
-    combo: [],
+    combo: [`black_king_bar`, `eclipse`, `blink`, `manta`, `lucent_beam`],
+
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "infused_raindrop", "ring_of_regen", "cloak"],
+        all: ["armor", "boots", "magic_stick", "infused_raindrop"],
         support: ["ward_sentry"],
         core: [],
       },
       mid_game: {
-        all: [],
-        support: ["glimmer_cape", "force_staff"],
-        core: [
-          "mage_slayer",
-          //"hood_of_defiance",
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+        all: [
+          "spirit_vessel",
           "heavens_halberd",
+          "force_staff",
+          "pipe",
+          "black_king_bar",
+          "blade_mail",
         ],
+        support: ["glimmer_cape"],
+        core: [],
       },
       late_game: {
         all: ["sheepstick"],
-        support: ["black_king_bar"],
+        support: [],
         core: ["assault", "abyssal_blade", "skadi", "butterfly"],
       },
     },

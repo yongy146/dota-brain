@@ -30,7 +30,7 @@ export interface IItem {
   /**
    * A react-intl tag.
    *
-   * The tag is prefixed with the item key to get the reac-intl id,
+   * The tag is prefixed with the item key to get the react-intl id,
    * e.g. 'item_desolator_' for desolator.
    *
    * The react-inlt id is then used in the dota-coach-i18n repository

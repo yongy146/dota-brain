@@ -1,5 +1,6 @@
 /**
- * This module provides information on the screens in Dota 2 for the app to be able to properly position windows
+ * This module provides information on the screens in Dota 2 for
+ * the app to be able to properly position windows
  *
  * (C) Dota Coach, 2023
  */
@@ -12,17 +13,17 @@ import {
 import * as Logger from "@utilities/log/log";
 
 /**
- * The function information on Dota 2 screens. This information can be used to position elements in the game.
+ * The function returns monitor measurements for a given Dota 2 display size.
  *
- * If there is not details availalbe for proivded screenSize, the it returns information for the default screen size, which is 1920x1080
+ * These measurements are used to position in-game windows and render their HTML content.
  *
- * @param screenSize Screen size, e.g. 1920x1080
- * @returns
+ * If there is not details available for provided display size, then the
+ * function returns information for the default screen size, which is 1920x1080.
+ *
+ * @param width Width of Dota 2 display size
+ * @param height Height of Dota 2 display size
  */
-export function getMonitorMeasurements(
-  width: number,
-  height: number
-): IMonitorMeasurements {
+export function getMonitorMeasurements(width: number, height: number): IMonitorMeasurements {
   let result: Partial<IMonitorMeasurements> = {
     width,
     height,
@@ -52,8 +53,7 @@ export function getMonitorMeasurements(
     fontSizeSmall: fontSize * 0.8,
     inGame: {
       heroesWidth: result.overwolf.inGame.heroesWidth / window.devicePixelRatio,
-      heroesHeight:
-        result.overwolf.inGame.heroesHeight / window.devicePixelRatio,
+      heroesHeight: result.overwolf.inGame.heroesHeight / window.devicePixelRatio,
     },
   };
 

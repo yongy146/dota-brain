@@ -1,20 +1,20 @@
-import * as PlayerRoles from "../utilities/playerRoles";
-import {
-  IHeroBuild,
-  IHeroContent,
-  //getAbilityTooltip,
-  //getItemTooltip,
-  heroBuilds,
-  isCoreItem,
-} from "../content/heroBuilds";
+/**
+ * This module provides utility functions to process hero guides.
+ *
+ * (C) Dota Coach, 2023
+ */
+import { IHeroBuild, heroBuilds, isCoreItem } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import { IntlShape } from "react-intl";
+import * as PlayerRoles from "../utilities/playerRoles";
 import * as DotaLogger from "@utilities/log/log";
 
 export interface IItemBuild {
   roles?: string;
   starting?: IPhaseItemBuild[];
   starting_bear?: IPhaseItemBuild[];
+  core?: IPhaseItemBuild[]; // Only used for lone druid
+  core_bear?: IPhaseItemBuild[];
   laning?: IPhaseItemBuild[]; // Only used for counter items (starting & early_game is used for own hero)
   early_game?: IPhaseItemBuild[];
   mid_game?: IPhaseItemBuild[];
@@ -27,80 +27,90 @@ export interface IItemBuild {
 
 export interface IPhaseItemBuild {
   name: string;
-  info?: string;
+  info?: string; // Info to be shown on the item ('tooltip')
   isCore?: boolean;
 }
 
 export interface IAbilityElement {
   name: string;
-  info?: string;
+  info?: string; // Info to be shown on the item ('tooltip')
 }
 
 /**
  * Function validates if a default hero build exists
- * @param heroName Localized name
+ *
+ * @param heroName NPC short name, e.g., 'antimage'
  * @returns
  */
-export function hasDefaultHeroBuild(heroName: string): boolean {
-  return Object.prototype.hasOwnProperty.call(heroBuilds, heroName);
+export function hasDefaultHeroBuild(npcShortName: string): boolean {
+  return Object.prototype.hasOwnProperty.call(heroBuilds, npcShortName);
 }
 
 /**
- * @param heroName Localized hero name
- * @returns Hero build, or null if none is found
+ * Returns the closest hero build for a given hero and Dota Coach role.
+ *
+ * This function is used by the App to display a build when the user
+ * selected his role in the game.
+ *
+ * @param npcShortName NPC short name, e.g., 'antimage'
+ * @returns Hero build, or undefined if none is found
  */
 export function getClosestHeroBuild(
-  heroName: string,
+  npcShortName: string,
   playerRole: PlayerRoles.DOTA_COACH_ROLE
-): IHeroBuild | undefined {
+): { buildIndex: number; heroBuild: IHeroBuild } | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName))
-    return undefined;
+  if (!heroBuilds[npcShortName]) return undefined;
 
-  const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
+  const role: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
 
   //DotaLogger.log(`Dota2.getClosestHeroBuild(): ${playerRole} => ${r}`);
 
   // Get all roles of guides
-  const guides: any = {};
-  for (const heroBuild of heroBuilds[heroName].builds) {
+  const guides: Record<string, { buildIndex: number; heroBuild: IHeroBuild }> =
+    {};
+  for (let i = 0; i < heroBuilds[npcShortName].builds.length; i++) {
+    const heroBuild = heroBuilds[npcShortName].builds[i];
     for (const role of heroBuild.roles) {
-      guides[role] = heroBuild;
+      guides[role] = {
+        heroBuild: heroBuild,
+        buildIndex: i,
+      };
     }
   }
-
   /*DotaLogger.log(
       `Dota2.getClosestHeroBuild(): guides=${JSON.stringify(guides)}`
     );*/
 
-  const guide_rules: any = {};
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-  ];
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-  ];
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-  ];
-  guide_rules[PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT] = [
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
-    PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
-  ];
+  const guide_rules = {
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+    ],
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+    ],
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+    ],
+    [PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT]: [
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.SUPPORT,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.OFFLANE,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.MID,
+      PlayerRoles.DOTA_COACH_GUIDE_ROLE.CARRY,
+    ],
+  };
 
-  for (const role_ of guide_rules[r]) {
+  for (const role_ of guide_rules[role]) {
     //DotaLogger.log(`dota2.getClosestHeroBuild(): roleOfRules = ${role_}`);
     if (Object.prototype.hasOwnProperty.call(guides, role_)) {
       DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
@@ -136,35 +146,31 @@ export function getDefaultHeroBuild(
  * @returns Array of abilites
  */
 export function getStandardAbilityBuild(npcShortName: string): string[] {
-  //const h_ = hero.name.localizedNameToNPCName(h)
-  if (!heroBuilds[npcShortName]) {
-    /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
-    return [];
-  }
+  // We add the '[]' at the end for the case an new
+  // hero was added by Dota 2 and the app does not yet have a build for it
+  const abilityBuild = heroBuilds[npcShortName]?.builds[0].abilities || [];
 
-  const abilityBuild = heroBuilds[npcShortName].builds[0].abilities;
-
-  /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+  // Return copy of array to prevent changes to array to impact source data
   return [...abilityBuild];
 }
 
 /**
  *  Returns array with hero builds for a given hero
  *
- * @param heroName Localized hero name
- * @return null if there is no such build
+ * @param npcShortName e.g. "legion_commander" or "lone_druid"
+ * @return undefined if there is no such build
  */
-export function getHeroBuildArray(heroName: string): IHeroBuild[] | null {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return null;
-
-  return heroBuilds[heroName].builds;
+export function getHeroBuildArray(
+  npcShortName: string
+): IHeroBuild[] | undefined {
+  return heroBuilds[npcShortName]?.builds;
 }
 
 /**
  *
  * @param npcShortName npc short name, e.g. "legion_commander"
  * @param playerRole
- * @return null if there is no such build
+ * @return undefined if there is no such build for the hero
  */
 export function getHeroBuild(
   npcShortName: string,
@@ -175,7 +181,7 @@ export function getHeroBuild(
   const r: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
     PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
 
-  // Find hero build with right role
+  // Find hero build with the right role
   for (const heroBuild of heroBuilds[npcShortName].builds) {
     const buildIndex = heroBuild.roles.indexOf(r);
     if (buildIndex !== -1) {
@@ -188,11 +194,12 @@ export function getHeroBuild(
 }
 
 /**
- * Returns all items used in hero builds, e.g.
+ * Returns all items used across all hero builds.
+ *
  */
 export function getItemNames(): string[] {
   const result: any = {};
-  for (const [heroName, heroContent] of Object.entries(heroBuilds)) {
+  for (const heroContent of Object.values(heroBuilds)) {
     for (const build of heroContent.builds) {
       for (const itemBuild of Object.values(build.items)) {
         for (const item of itemBuild) {
@@ -214,11 +221,12 @@ export function getItemNames(): string[] {
 }
 
 /**
- * Returns all abilities and talents used in the hero guides.
+ * Returns all abilities and talents used across all hero guides.
+ *
  */
 export function getAbilityNames(): string[] {
   const result: any = {};
-  for (const [heroName, heroContent] of Object.entries(heroBuilds)) {
+  for (const heroContent of Object.values(heroBuilds)) {
     for (const build of heroContent.builds) {
       for (const ability of build.abilities) {
         if (result[ability] === undefined) {
@@ -231,20 +239,23 @@ export function getAbilityNames(): string[] {
 }
 
 /**
- * Function returns the standard item build for a given hero. The standard item build is the first build in the heroGuides.ts file.
+ * Function returns the standard item build for a given hero.
+ * The standard item build is the first build in the heroGuides.ts file.
  *
- * @param hero Localized hero name of the hero, e.g. 'Abaddon' or 'Anti-Mage'
- * OLD_returns String of items
- * @returns Array of { item: string (e.g. sheepstick), isCore?: true, info?: ... }}
+ * @param npcShortName npc short name, e.g. "legion_commander"
+ * @returns Array of { item: string (e.g. sheepstick), isCore?: boolean, info?: string }
  */
-export function getStandardItemBuild(h: string): IPhaseItemBuild[] {
+export function getStandardItemBuild(
+  npcShortName: string,
+  intl?: IntlShape
+): IPhaseItemBuild[] {
   //DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
-  if (!hasDefaultHeroBuild(h)) {
-    /* Check is used for the case Dota 2 adds heroes and the app is not updated yet */
+  if (!hasDefaultHeroBuild(npcShortName)) {
+    // Check is used for the case Dota 2 adds a new hero and the app is not yet updated
     return [];
   }
 
-  const heroContent = heroBuilds[h];
+  const heroContent = heroBuilds[npcShortName];
   const heroBuild = heroContent.builds[0];
 
   //const mid_game = heroBuilds.builds[0].items.mid_game;
@@ -325,14 +336,8 @@ export function getItemBuildForRole(
 export function getItemBuild(
   npcShortName: string,
   buildIndex: number,
-  //heroContent: IHeroContent,
-  //heroBuild: IHeroBuild,
   intl?: IntlShape
 ): IItemBuild {
-  /*const item_tooltips = {
-    //...(heroContent.item_tooltips || {}),
-    //...(heroBuild.item_tooltips || {}),
-  };*/
   const heroContent = heroBuilds[npcShortName];
   const heroBuild = heroContent.builds[buildIndex];
 
@@ -342,7 +347,8 @@ export function getItemBuild(
     const result: IPhaseItemBuild = { name: item };
     //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
-    const tooltip = intl && getTooltip(npcShortName, buildIndex, item, intl);
+    const tooltip =
+      intl && getItemTooltip(npcShortName, buildIndex, item, intl);
     if (tooltip) result["info"] = tooltip;
     return result;
   }
@@ -352,49 +358,39 @@ export function getItemBuild(
     starting: build.items.starting.map((x) =>
       transformItem(x, build.items.core)
     ),
-    starting_bear:
-      build.items.starting_bear !== undefined
-        ? build.items.starting_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear === undefined ? [] : build.items.core_bear
-            )
-          )
-        : undefined,
-    early_game:
-      build.items.early_game !== undefined
-        ? build.items.early_game.map((x) => transformItem(x, build.items.core))
-        : undefined,
-    mid_game:
-      build.items.mid_game !== undefined
-        ? build.items.mid_game.map((x) => transformItem(x, build.items.core))
-        : undefined,
-    late_game:
-      build.items.late_game !== undefined
-        ? build.items.late_game.map((x) => transformItem(x, build.items.core))
-        : undefined,
+    starting_bear: build.items.starting_bear?.map((x) => transformItem(x, [])),
+    // Only add core items for Lone Druid & Baer
+    core: build.items.core_bear
+      ? build.items.core.map((x) => transformItem(x, build.items.core))
+      : undefined,
+    core_bear: build.items.core_bear?.map((x) =>
+      transformItem(x, build.items.core_bear!)
+    ),
+    early_game: build.items.early_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    mid_game: build.items.mid_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    late_game: build.items.late_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     situational: build.items.situational.map((x) =>
       transformItem(x, build.items.core)
     ),
-    situational_bear:
-      build.items.situational_bear !== undefined
-        ? build.items.situational_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear == undefined ? [] : build.items.core_bear
-            )
-          )
-        : undefined,
+    situational_bear: build.items.situational_bear?.map((x) =>
+      transformItem(
+        x,
+        build.items.core_bear == undefined ? [] : build.items.core_bear
+      )
+    ),
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
-    neutral_bear:
-      build.items.neutral_bear !== undefined
-        ? build.items.neutral_bear.map((x) =>
-            transformItem(
-              x,
-              build.items.core_bear == undefined ? [] : build.items.core_bear
-            )
-          )
-        : undefined,
+    neutral_bear: build.items.neutral_bear?.map((x) =>
+      transformItem(
+        x,
+        build.items.core_bear == undefined ? [] : build.items.core_bear
+      )
+    ),
   };
 }
 
@@ -405,7 +401,7 @@ export function getItemBuild(
  * @param buildIndex index of hero build
  * @param item Item short name, e.g. "blink"
  */
-export function getTooltip(
+export function getItemTooltip(
   npcShortName: string,
   buildIndex: number,
   item: string,
@@ -426,6 +422,34 @@ export function getTooltip(
   return undefined;
 }
 
+/**
+ * Returns the react-intl tooltip for a given hero, hero build and item.
+ *
+ * @param npcHeroName Short npc name, e.g. "antimage"
+ * @param buildIndex index of hero build
+ * @param item Item short name, e.g. "blink"
+ */
+export function getAbilityTooltip(
+  npcShortName: string,
+  buildIndex: number,
+  ability: string,
+  intl: IntlShape
+): string | undefined {
+  // Check build tooltip
+  let id = `hero.${npcShortName}.builds.${buildIndex}.ability_tooltips.${ability}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  // Check hero tooltip
+  id = `hero.${npcShortName}.ability_tooltips.${ability}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  // Check item tooltip
+  id = `hero.base.ability_tooltips.${ability}`;
+  if (intl.messages[id]) return intl.formatMessage({ id });
+
+  return undefined;
+}
+
 //
 // Ability builds
 //
@@ -436,12 +460,12 @@ export function getTooltip(
  * @param heroBuild
  * @returns
  */
-export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
+export function getAbilities(heroBuild: IHeroBuild): string[] {
   //const h_ = hero.name.localizedNameToNPCName(h)
 
   const abilityBuild = heroBuild.abilities;
 
-  /* return copy of array, otherwise recipient can change content of this.laningItemTips */
+  // Return copy of array, otherwise recipient can change content of this.laningItemTips
   return [...abilityBuild];
 }
 
@@ -451,17 +475,23 @@ export function getAbilityBuild(heroBuild: IHeroBuild): string[] {
  * @param role optional, if not profivded, the function thakes that standard bility build (i.e. the first one)
  * @returns Array of abilites
  */
-export function getUIAbilityBuild(
+export function getAbilityBuild(
   npcShortName: string,
-  playerRole?: PlayerRoles.DOTA_COACH_ROLE
+  playerRole?: PlayerRoles.DOTA_COACH_ROLE,
+  intl?: IntlShape
 ): IAbilityElement[] {
   const heroBuilds = getHeroContent(npcShortName);
   let heroBuild: IHeroBuild | undefined;
+  let buildIndex: number | undefined;
 
   if (playerRole === undefined) {
-    heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
+    const build = getDefaultHeroBuild(npcShortName);
+    heroBuild = build?.heroBuild;
+    buildIndex = build?.buildIndex;
   } else {
-    heroBuild = getClosestHeroBuild(npcShortName, playerRole);
+    const build = getClosestHeroBuild(npcShortName, playerRole);
+    heroBuild = build?.heroBuild;
+    buildIndex = build?.buildIndex;
   }
 
   if (heroBuild === undefined) {
@@ -475,11 +505,12 @@ export function getUIAbilityBuild(
     const result: IAbilityElement = {
       name: ability,
     };
-    if (heroBuilds && heroBuild) {
-      /*const info = getAbilityTooltip(heroBuilds, heroBuild, ability);
-      if (info) {
-        result["info"] = info;
-      }*/
+    const info =
+      buildIndex !== undefined &&
+      intl &&
+      getAbilityTooltip(npcShortName, buildIndex, ability, intl);
+    if (info) {
+      result["info"] = info;
     }
     return result;
   });
@@ -487,18 +518,15 @@ export function getUIAbilityBuild(
 //}
 
 /**
- * Returns an array with all http links to all guides for a given hero.
+ * Returns an array with all HTTPS links to all guides for a given hero.
  *
- * @param heroName Localized hero name
- * @returns null in case of error
+ * @param npcShortName npc short name, e.g. "legion_commander"
+ * @returns Returns empty array in case of error, i.e., hero is not found
  */
-export function getHeroGuideLinks(heroName: string): string[] {
-  if (!Object.prototype.hasOwnProperty.call(heroBuilds, heroName)) return [];
-
-  const result: string[] = [];
-  for (const build of heroBuilds[heroName].builds) {
-    result.push(build.steam_guide_link);
-  }
-
-  return result;
+export function getHeroGuideLinks(npcShortName: string): string[] {
+  return (
+    heroBuilds[npcShortName]?.builds.map(
+      (heroBuild) => heroBuild.steam_guide_link
+    ) || []
+  );
 }

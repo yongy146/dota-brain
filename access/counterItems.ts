@@ -17,11 +17,7 @@ export function getCounterItems(
 ): IPhaseItemBuild[] {
   const heroBuilds = getHeroContent(npcShortName);
 
-  const transformItems = (
-    items: string[],
-    phase: string,
-    role: string
-  ): IPhaseItemBuild[] => {
+  const transformItems = (items: string[], phase: string, role: string): IPhaseItemBuild[] => {
     return items.map((item) => {
       const result: IPhaseItemBuild = {
         name: item,
@@ -36,24 +32,12 @@ export function getCounterItems(
   };
 
   if (heroBuilds) {
-    const allItems = transformItems(
-      heroBuilds.counter_items[phase].all,
-      phase,
-      "all"
-    );
+    const allItems = transformItems(heroBuilds.counter_items[phase].all, phase, "all");
     let roleItems;
     if (isSupport) {
-      roleItems = transformItems(
-        heroBuilds.counter_items[phase].support,
-        phase,
-        "support"
-      );
+      roleItems = transformItems(heroBuilds.counter_items[phase].support, phase, "support");
     } else {
-      roleItems = transformItems(
-        heroBuilds.counter_items[phase].core,
-        phase,
-        "core"
-      );
+      roleItems = transformItems(heroBuilds.counter_items[phase].core, phase, "core");
     }
 
     /* return copy of array, otherwise recipient can change content of this.laningItemTips */
