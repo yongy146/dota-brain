@@ -3623,7 +3623,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "death_prophet",
     audioFile: "ownHero/DeathProphet_1_SecureRanged",
-    messageTime: 15 * 60,
+    messageTime: 90,
     textMessage: "Secure range creep lasthits with Crypt Swarm and possibly hit opponents as well.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "death_prophet_carrion_swarm" },
@@ -3632,7 +3632,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "death_prophet",
     audioFile: "ownHero/DeathProphet_1_SecureLasthits",
-    messageTime: 15 * 60,
+    messageTime: 105,
     textMessage:
       "Try to throw an auto attack and use crypt swarm at the same time to secure last hits.",
     audience: [Audience.ALL],
@@ -3642,7 +3642,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "death_prophet",
     audioFile: "ownHero/DeathProphet_2_SurvivabilitySiphons",
-    messageTime: 60,
+    messageTime: 2 * 60,
     repeatTime: 10 * 60,
     textMessage:
       "Death Prophet's survivability is related to Spirit Siphon usage. Siphon as many units as possible for decent duration.",
@@ -7771,7 +7771,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_2_BlessAlly",
     messageTime: 30,
-    textMessage: "Stay close enough to your ally so he benefits from Lunar Blessing.",
+    textMessage: "Lunar Blessing allows you and your ally to trade stronger and last hit better against the enemy heroes.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "luna_lunar_blessing" },
   },
@@ -7781,8 +7781,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_3_BeamPoints",
     messageTime: 2 * 60,
     textMessage:
-      "Generally one point in lucent beam is enough to max your other spells for farming speed.",
-    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+      "Generally two points in Lucent Beam is enough for you to secure last hits in lane and win trades with a decent nuke spell.",
+    audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "luna_lucent_beam" },
   },
   {
@@ -7791,8 +7791,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_10_moon_glaive",
     messageTime: 3 * 60,
     textMessage:
-      "Maxing lunar blessing to dominate the lane and then investing points in moon glaives for when you go to the jungle will result in a high farming speed.",
-    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+      "Max Lunar Blessing if you are still able to dominate the lane past level 5. Otherwise, keep Lunar Blessing at two levels and max Moon Glaives first for maximizing farm speed.",
+    audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "luna_moon_glaive" },
   },
   {
@@ -7818,20 +7818,20 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "luna",
-    audioFile: "ownHero/Luna_6_NightTime",
-    messageTime: [5 * 60, 15 * 60],
+    audioFile: "ownHero/Luna_6_MaskofMadness",
+    messageTime: [6 * 60, 8 * 60, 10 * 60],
     textMessage:
-      "You can play more aggressively during the night due to Lunar Blessing vision distance increase.",
-    audience: [Audience.ALL],
-    image: { type: "ability", name: "luna_lunar_blessing" },
+      "Prioritize farming Ancient camps once you have Mask of Madness instead of normal camps unless given free lane and tower pressure.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "item", name: "mask_of_madness" },
   },
   {
     category: "OwnHero",
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_7_MantaFarm",
-    messageTime: [14 * 60 + 15, 15 * 60, 19 * 60 + 15, 21 * 60],
+    messageTime: [20 * 60 + 15, 22 * 60 + 15, 24 * 60 + 15, 26 * 60 + 15],
     textMessage:
-      "Make use of the Manta illusions to farm extra creepwaves you otherwise wouldn't be able to with your hero.",
+      "Make use of Manta illusions to push out lanes and farm extra creep waves that you are not able to with your hero.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "manta" },
   },
@@ -7839,20 +7839,20 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_8_AghanimsShard",
-    messageTime: 19 * 60,
-    textMessage: "Pick up Aghanim's Shard if you feel you need to tank up in fights.",
+    messageTime: 20 * 60,
+    textMessage: "Start fights with Aghanim's Shard activated for extra tankiness and damage over time.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
   {
     category: "OwnHero",
     npcHeroName: "luna",
-    audioFile: "ownHero/Luna_9_Backliners",
+    audioFile: "ownHero/Luna_9_Blink",
     messageTime: [20 * 60 + 15, 25 * 60 + 15],
     textMessage:
-      "Luna has trouble dealing with backliners but you can consider buying Aghanim's Scepter for it.",
-    audience: [Audience.ALL],
-    image: { type: "item", name: "ultimate_scepter" },
+      "Try to eliminate squishy heroes by jumping on top of them with Blink and bursting them.", 
+    audience: [Audience.CORE],
+    image: { type: "item", name: "blink" },
   },
 
   {
@@ -7861,7 +7861,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Luna_1_EarlyHarass",
     messageTime: -60,
     textMessage:
-      "Luna has short attack range and is susceptible to early harass, especially to magical damage.",
+      "Luna has short attack range and is susceptible to early harass. Make sure to pressure her everytime she is left alone by her support in lane.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -7869,7 +7869,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "enemyHero/Luna_2_LunarBlessing",
     messageTime: -50,
-    textMessage: "Be mindful about Luna's increased night vision from Night Blessing.",
+    textMessage: "Be mindful about trading with Luna when her support is present as they have high right click damage from Lunar Blessing aura.",
     audience: [Audience.ALL],
   },
   {
@@ -7896,7 +7896,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Luna_5_ClumpUp",
     messageTime: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
-      "Avoid clumping up in teamfights as the Moon Glaives will bounce between you and your allies.",
+      "Avoid clumping up in teamfights as Moon Glaives will bounce between you and your allies.",
     audience: [Audience.ALL],
   },
 
