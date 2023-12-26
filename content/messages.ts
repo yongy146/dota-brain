@@ -57,6 +57,13 @@ export function getOwnHeroMessages(npcHeroName: string): any[] {
   );
 }
 
+/**
+ * Returns the Dota Brain messages for a given hero and roles.
+ * 
+ * @param npcHeroName NPC short or lang name
+ * @param roles Message for roles the hero is playing
+ * @returns 
+ */
 export function getOwnHeroMessagesForRoles(
   npcHeroName: string,
   roles: DOTA_COACH_GUIDE_ROLE[]
