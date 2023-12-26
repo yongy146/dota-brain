@@ -8323,7 +8323,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "luna_lunar_blessing", // 8
           "luna_moon_glaive", // 9
           "luna_moon_glaive", // 10
-          "special_bonus_unique_luna_7", // 11    Which talent do the numbers refer to?
+          "special_bonus_unique_luna_7", // 11    
           "luna_eclipse", // 12
           "luna_eclipse", // 13
           "luna_lucent_beam", // 14
