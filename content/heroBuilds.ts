@@ -3908,29 +3908,29 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     damage_type: DamageType.neutral,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
-        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40474,
         abilities: [
           "death_prophet_carrion_swarm", // 1
           "death_prophet_spirit_siphon", // 2
-          "death_prophet_spirit_siphon", // 3
-          "death_prophet_carrion_swarm", // 4
-          `death_prophet_spirit_siphon`, // 5
+          "death_prophet_carrion_swarm", // 3 can pick spirit siphon if high kill potential at level 3
+          "death_prophet_spirit_siphon", // 4
+          "death_prophet_carrion_swarm", // 5
           "death_prophet_exorcism", // 6
-          `death_prophet_spirit_siphon`, // 7
-          "death_prophet_silence", // 8
-          `death_prophet_carrion_swarm`, // 9
-          `death_prophet_carrion_swarm`, // 10
-          `special_bonus_magic_resistance_12`, // 11 Talent
+          "death_prophet_spirit_siphon", // 7
+          "death_prophet_carrion_swarm", // 8
+          "death_prophet_silence", // 9 can level silence earlier if required to silence enemy hero
+          "death_prophet_spirit_siphon", // 10
+          "special_bonus_attack_damage_30", // 11 Talent
           "death_prophet_exorcism", // 12
           "death_prophet_silence", // 13
-          `death_prophet_silence`, // 14
-          "special_bonus_hp_300", // 15 Talent
-          `death_prophet_silence`, // 16
+          "death_prophet_silence", // 14
+          "special_bonus_unique_death_prophet_2", // 15 talent
+          "death_prophet_silence", // 16
           "special_bonus_attributes", // 17
           "death_prophet_exorcism", // 18
           "special_bonus_attributes", // 19
@@ -3939,104 +3939,127 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_death_prophet`, // 25
+          "special_bonus_unique_death_prophet", // 25
         ],
         items: {
           starting: [
             "tango",
+            "ward_observer",
             "branches",
-            `branches`,
-            `branches`,
-            "circlet",
-            "magic_stick",
+            "branches",
+            "branches",
           ],
           early_game: [
-            `wraith_band`,
-            `arcane_boots`,
-            `magic_wand`,
-            `infused_raindrop`,
-            "mekansm",
+            "bottle",
+            "magic_wand", // can consider if enemy midlaner spams spells in lane
+            "infused_raindrop", // can consider if enemy has magic bursts
+            "arcane_boots",
+            "falcon_blade",
+            "veil_of_discord",
           ],
-          mid_game: [
-            "guardian_greaves",
-            "cyclone",
-            "kaya_and_sange",
-            "black_king_bar",
-          ],
+          mid_game: ["black_king_bar", "shivas_guard"],
           late_game: [
-            `shivas_guard`,
-            `octarine_core`,
-            `refresher`,
-            `aeon_disk`,
-            `sheepstick`,
+            "octarine_core",
+            "aghanims_shard",
+            "blink",
+            "wind_waker",
+            "travel_boots",
           ],
           situational: [
-            `blink`,
-            `ghost`,
-            `heavens_halberd`,
-            `assault`,
-            `pipe`,
-            `sphere`,
-            "heart",
-            "lotus_orb",
-            "ultimate_scepter",
+            "guardian_greaves",
+            "force_staff",
+            "refresher",
+            "sheepstick",
+            "overwhelming_blink",
+            "sphere",
+            "ghost",
           ],
           core: [
-            "guardian_greaves",
-            "cyclone",
-            "kaya_and_sange",
             "black_king_bar",
-            `aghanims_shard`,
+            "shivas_guard",
+            "octarine_core",
+            "wind_waker",
+            "blink",
+            "aghanims_shard",
           ],
           neutral: [
-            "arcane_ring",
-            `faded_broach`,
-            `bullwhip`,
-            `dragon_scale`,
-            "eye_of_the_vizier",
             //`quickening_charm`,
-            `defiant_shell`,
             //`spell_prism`,
-            `mirror_shield`,
-            `force_boots`,
             //`ex_machina`,
+            //tier 1
+            "arcane_ring",
+            "mysterious_hat",
+            "unstable_wand",
+            "safety_bubble",
+            "occult_bracelet",
+            "faded_broach",
+
+            //tier 2
+            "dragon_scale",
+            "pupils_gift",
+            "vambrace",
+            "bullwhip",
+            "eye_of_the_vizier",
+
+            //tier 3
+            "dandelion_amulet",
+            "elven_tunic",
+            "cloak_of_flames",
+            "ceremonial_robe",
+            "psychic_headband",
+            "ogre_seal_totem",
+
+            //tier 4
+            "timeless_relic",
+            "ascetic_cap",
+            "avianas_feather",
+            "stormcrafter",
+            "havoc_hammer",
+            "rattlecage",
+
+            //tier 5
+            "force_boots",
+            "seer_stone",
+            "mirror_shield",
+            "demonicon",
+            "giants_ring",
+            "panic_button",
           ],
         },
       },
     ],
-    // ability_tooltips:
-    /* special_bonus_unique_death_prophet_5:
-        "You can take this talent at level 25 over the suggested one. Usually, having 5 Spirit Siphons per fight due to Aghanim`s Shard should be more than enough thus I prefer the Exorcism talent. Also, if you have Refresher Orb or Shard in late game, the Siphon talent is redundant.", */
+
     combo: [
-      `death_prophet_exorcism`,
+      "death_prophet_exorcism",
+      "black_king_bar",
+      "shivas_guard",
+      "blink",
       `death_prophet_silence`,
       `death_prophet_spirit_siphon`,
       `death_prophet_carrion_swarm`,
     ],
     counter_items: {
       laning_phase: {
-        all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "cloak",
-          "armor",
-        ],
+        all: ["magic_stick", "boots", "wind_lace", "infused_raindrop", "cloak"],
         support: [],
-        core: ["ring_of_health"],
+        core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff"],
+        all: [
+          "lotus_orb",
+          "spirit_vessel",
+          "force_staff",
+          "pipe",
+          "blade_mail",
+        ],
+        support: ["glimmer_cape"],
         core: [
+          "black_king_bar",
           "mage_slayer",
           //"hood_of_defiance",
-          "pipe",
           "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
           "manta",
+          "invis_sword",
         ],
       },
       late_game: {
