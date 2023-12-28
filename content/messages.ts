@@ -59,10 +59,10 @@ export function getOwnHeroMessages(npcHeroName: string): any[] {
 
 /**
  * Returns the Dota Brain messages for a given hero and roles.
- * 
+ *
  * @param npcHeroName NPC short or lang name
  * @param roles Message for roles the hero is playing
- * @returns 
+ * @returns
  */
 export function getOwnHeroMessagesForRoles(
   npcHeroName: string,
@@ -7771,7 +7771,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_2_BlessAlly",
     messageTime: 30,
-    textMessage: "Lunar Blessing allows you and your ally to trade stronger and last hit better against the enemy heroes.",
+    textMessage:
+      "Lunar Blessing allows you and your ally to trade stronger and last hit better against the enemy heroes.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "luna_lunar_blessing" },
   },
@@ -7840,7 +7841,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_8_AghanimsShard",
     messageTime: 20 * 60,
-    textMessage: "Start fights with Aghanim's Shard activated for extra tankiness and damage over time.",
+    textMessage:
+      "Start fights with Aghanim's Shard activated for extra tankiness and damage over time.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -7850,8 +7852,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_9_Blink",
     messageTime: [20 * 60 + 15, 25 * 60 + 15],
     textMessage:
-      "Try to eliminate squishy heroes by jumping on top of them with Blink and bursting them.", 
-    audience: [Audience.CORE],
+      "Try to eliminate squishy heroes by jumping on top of them with Blink and bursting them.",
+    audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "blink" },
   },
 
@@ -7869,7 +7871,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "enemyHero/Luna_2_LunarBlessing",
     messageTime: -50,
-    textMessage: "Be mindful about trading with Luna when her support is present as they have high right click damage from Lunar Blessing aura.",
+    textMessage:
+      "Be mindful about trading with Luna when her support is present as they have high right click damage from Lunar Blessing aura.",
     audience: [Audience.ALL],
   },
   {
