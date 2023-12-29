@@ -57,6 +57,13 @@ export function getOwnHeroMessages(npcHeroName: string): any[] {
   );
 }
 
+/**
+ * Returns the Dota Brain messages for a given hero and roles.
+ *
+ * @param npcHeroName NPC short or lang name
+ * @param roles Message for roles the hero is playing
+ * @returns
+ */
 export function getOwnHeroMessagesForRoles(
   npcHeroName: string,
   roles: DOTA_COACH_GUIDE_ROLE[]
@@ -572,7 +579,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Abaddon_1_AphoticShield",
     messageTime: 10,
     textMessage:
-      "Apply Aphotic Shield pre emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.",
+      `Apply Aphotic Shield pre-emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
@@ -582,7 +589,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "abaddon",
     audioFile: "ownHero/Abaddon_2_Support",
     messageTime: 30,
-    textMessage: "Play ahead of the Core you are supporting to absorb attention.",
+    textMessage: `Play ahead of the Core you are supporting to absorb damage and trade regen.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   // Alex: What do you mean by 'absorb attention'?
@@ -613,7 +620,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 8 * 60,
     repeatTime: 8 * 60,
     textMessage:
-      "If you got disabled along with your teammate you can pop Borrowed Time to unstun yourself and then apply Aphotic Shield on a stunned ally to free him as well.",
+      `If you got disabled along with your teammate you can pop Borrowed Time to remove stun off yourself and then apply Aphotic Shield on a stunned ally to free him as well.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
@@ -1896,7 +1903,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/BountyHunter_1_SnipeCouriers",
     messageTime: -90,
     textMessage:
-      "Place a non-obvious courier sniping Observer Ward. Killing couriers grants gold but also disallows detection to be delivered.",
+      `Place a non-obvious courier sniping Observer Ward. Killing couriers not only grants gold but also disallows detection to be delivered.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "courier" },
   },
@@ -3616,7 +3623,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "death_prophet",
     audioFile: "ownHero/DeathProphet_1_SecureRanged",
-    messageTime: 15 * 60,
+    messageTime: 90,
     textMessage: "Secure range creep lasthits with Crypt Swarm and possibly hit opponents as well.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "death_prophet_carrion_swarm" },
@@ -3625,7 +3632,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "death_prophet",
     audioFile: "ownHero/DeathProphet_1_SecureLasthits",
-    messageTime: 15 * 60,
+    messageTime: 105,
     textMessage:
       "Try to throw an auto attack and use crypt swarm at the same time to secure last hits.",
     audience: [Audience.ALL],
@@ -3635,7 +3642,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "death_prophet",
     audioFile: "ownHero/DeathProphet_2_SurvivabilitySiphons",
-    messageTime: 60,
+    messageTime: 2 * 60,
     repeatTime: 10 * 60,
     textMessage:
       "Death Prophet's survivability is related to Spirit Siphon usage. Siphon as many units as possible for decent duration.",
@@ -7394,7 +7401,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lina_3_StunStationary",
     messageTime: 20,
     textMessage:
-      "Lightstrike Array when opponents are somewhat stationary, e.g. when they are going for lasthit or deny.",
+      `Light Strike Array when opponents are somewhat stationary, e.g. when they are going for a last hit or deny.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_light_strike_array" },
   },
@@ -7404,7 +7411,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lina_4_SecureRanged",
     messageTime: 30,
     textMessage:
-      "Dragon Slave is great for securing ranged creep lasthits and harassing opponents at the same time.",
+      `Dragon Slave is great for securing ranged creep last hits and harassing opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_dragon_slave" },
   },
@@ -7444,7 +7451,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 25 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Keep fiery soul stacks up in fights to ensure that your shard is giving maximum bonus damage to your spells.",
+      `Keep fiery soul stacks up in fights to ensure you dish out your maximum DPS with right clicks and spells.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -7764,7 +7771,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_2_BlessAlly",
     messageTime: 30,
-    textMessage: "Stay close enough to your ally so he benefits from Lunar Blessing.",
+    textMessage:
+      "Lunar Blessing allows you and your ally to trade stronger and last hit better against the enemy heroes.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "luna_lunar_blessing" },
   },
@@ -7774,8 +7782,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_3_BeamPoints",
     messageTime: 2 * 60,
     textMessage:
-      "Generally one point in lucent beam is enough to max your other spells for farming speed.",
-    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+      "Generally two points in Lucent Beam is enough for you to secure last hits in lane and win trades with a decent nuke spell.",
+    audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "luna_lucent_beam" },
   },
   {
@@ -7784,8 +7792,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_10_moon_glaive",
     messageTime: 3 * 60,
     textMessage:
-      "Maxing lunar blessing to dominate the lane and then investing points in moon glaives for when you go to the jungle will result in a high farming speed.",
-    audience: [Audience.ROLE_CARRY, Audience.ROLE_MID],
+      "Max Lunar Blessing if you are still able to dominate the lane past level 5. Otherwise, keep Lunar Blessing at two levels and max Moon Glaives first for maximizing farm speed.",
+    audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "luna_moon_glaive" },
   },
   {
@@ -7811,20 +7819,20 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "luna",
-    audioFile: "ownHero/Luna_6_NightTime",
-    messageTime: [5 * 60, 15 * 60],
+    audioFile: "ownHero/Luna_6_MaskofMadness",
+    messageTime: [6 * 60, 8 * 60, 10 * 60],
     textMessage:
-      "You can play more aggressively during the night due to Lunar Blessing vision distance increase.",
-    audience: [Audience.ALL],
-    image: { type: "ability", name: "luna_lunar_blessing" },
+      "Prioritize farming Ancient camps once you have Mask of Madness instead of normal camps unless given free lane and tower pressure.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "item", name: "mask_of_madness" },
   },
   {
     category: "OwnHero",
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_7_MantaFarm",
-    messageTime: [14 * 60 + 15, 15 * 60, 19 * 60 + 15, 21 * 60],
+    messageTime: [20 * 60 + 15, 22 * 60 + 15, 24 * 60 + 15, 26 * 60 + 15],
     textMessage:
-      "Make use of the Manta illusions to farm extra creepwaves you otherwise wouldn't be able to with your hero.",
+      "Make use of Manta illusions to push out lanes and farm extra creep waves that you are not able to with your hero.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "manta" },
   },
@@ -7832,20 +7840,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "luna",
     audioFile: "ownHero/Luna_8_AghanimsShard",
-    messageTime: 19 * 60,
-    textMessage: "Pick up Aghanim's Shard if you feel you need to tank up in fights.",
+    messageTime: 20 * 60,
+    textMessage:
+      "Start fights with Aghanim's Shard activated for extra tankiness and damage over time.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
   {
     category: "OwnHero",
     npcHeroName: "luna",
-    audioFile: "ownHero/Luna_9_Backliners",
+    audioFile: "ownHero/Luna_9_Blink",
     messageTime: [20 * 60 + 15, 25 * 60 + 15],
     textMessage:
-      "Luna has trouble dealing with backliners but you can consider buying Aghanim's Scepter for it.",
-    audience: [Audience.ALL],
-    image: { type: "item", name: "ultimate_scepter" },
+      "Try to eliminate squishy heroes by jumping on top of them with Blink and bursting them.",
+    audience: [Audience.ROLE_CORE],
+    image: { type: "item", name: "blink" },
   },
 
   {
@@ -7854,7 +7863,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Luna_1_EarlyHarass",
     messageTime: -60,
     textMessage:
-      "Luna has short attack range and is susceptible to early harass, especially to magical damage.",
+      "Luna has short attack range and is susceptible to early harass. Make sure to pressure her everytime she is left alone by her support in lane.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -7862,7 +7871,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "luna",
     audioFile: "enemyHero/Luna_2_LunarBlessing",
     messageTime: -50,
-    textMessage: "Be mindful about Luna's increased night vision from Night Blessing.",
+    textMessage:
+      "Be mindful about trading with Luna when her support is present as they have high right click damage from Lunar Blessing aura.",
     audience: [Audience.ALL],
   },
   {
@@ -7889,7 +7899,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Luna_5_ClumpUp",
     messageTime: [12 * 60, 22 * 60, 32 * 60],
     textMessage:
-      "Avoid clumping up in teamfights as the Moon Glaives will bounce between you and your allies.",
+      "Avoid clumping up in teamfights as Moon Glaives will bounce between you and your allies.",
     audience: [Audience.ALL],
   },
 
@@ -8350,7 +8360,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Marci_6_Blink",
     messageTime: 16 * 60,
     textMessage:
-      "Blink Dagger is a huge powerspike as it allows you to lock on or switch targets, initiate fights or save allies.",
+      `Blink Dagger is a huge power spike as it allows you to lock on or switch targets, initiate fights or save allies.`,
     audience: [Audience.ALL],
   },
   {
@@ -8448,7 +8458,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Mars_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use God's Rebuke to secure ranged creep lasthits and harass the opponents at the same time.",
+      `Use Gods Rebuke to secure ranged creep last hits and harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "mars_gods_rebuke" },
   },
@@ -8684,7 +8694,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Don't rush Stone Gazing in the fights. Make sure opponents are committed to the fight before you pop it.",
+      `You need not rush Stone Gaze usage in the fights. Make sure opponents are committed to the fight before you pop it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "medusa_stone_gaze" },
   },
@@ -8716,7 +8726,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Medusa_12_ManaBurn",
     messageTime: 14 * 60,
     textMessage:
-      "Mana burns are a big problem for Medusa. You can itemize against them or adapt the playstyle.",
+      `Mana burn is a big problem for Medusa. You can itemize against it or adapt the playstyle.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -11616,7 +11626,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Puck_2_SecureLasthits",
     messageTime: 15,
     textMessage:
-      "Use Illusory Orb and Waning Rift to secure creep lasthits and damage opponents' heroes at the same time.",
+      `Use Illusory Orb and Waning Rift to secure creep last hits and damage enemy heroes at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "puck_illusory_orb" },
   },
@@ -11646,7 +11656,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Puck_5_OrbScouting",
     messageTime: [2 * 60, 10 * 60, 18 * 60],
     textMessage:
-      "Illusory Orb provides vision on its path so you can check for pillar wards and scout Roshpit.",
+      `Illusory Orb provides vision on its path so you can check for pillar wards and scout Rosh pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "puck_illusory_orb" },
   },
@@ -11897,7 +11907,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Pugna_1_NetherBlastRanged",
     messageTime: 15,
     textMessage:
-      "Use Nether Blast to secure ranged creep lasthits and to damage opponents at the same time.",
+      `Use Nether Blast to secure ranged creep last hits and to damage opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pugna_nether_blast" },
   },
@@ -15791,7 +15801,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tiny_11_TreeVolleyUsage",
     messageTime: 21 * 60 + 45,
     textMessage:
-      "Once you have Aghanims Scepter, you can play in tree lines and start fights with Tree Volley instead of the Ava-Toss combo.",
+      `Once you have Aghanims Scepter, you can play in tree lines and start fights with Tree Volley instead of the Avalanche-Toss combo.`,
     audience: [Audience.ROLE_MID],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -16705,7 +16715,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VengefulSpirit_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Wave of Terror to secure ranged creep and harass the opponents at the same time.",
+      `Use Wave of Terror to secure ranged creeps and harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "vengefulspirit_wave_of_terror" },
   },
@@ -16745,7 +16755,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VengefulSpirit_5_Roshan",
     messageTime: [14 * 60 + 45, 18 * 60 + 45],
     textMessage:
-      "Vengeful Spirit enables early Roshan kill due to Wave of Terror, Vengeance Aura and posibly minus armor items.",
+      `Vengeful Spirit enables early Roshan kill due to Wave of Terror, Vengeance Aura and possibly minus armor items.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
   },
@@ -16986,9 +16996,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Viper_4_NethertoxinUsage_v2",
     messageTime: [8 * 60 + 45],
     textMessage:
-      "You can kill tanky heroes around the map with the break effect from your Nethertoxin.",
+      `You can kill tanky heroes around the map with the break effect from your Viper Strike.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "viper_nethertoxin" },
+    image: { type: `ability`, name: `viper_viper_strike` },
   },
   {
     category: "OwnHero",
@@ -16997,7 +17007,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "Push out the sidelines when not much is happening on the map. You can do it from fog with Nethertoxin.",
+      `Push out the side lanes when not much is happening on the map. You can do it from fog with Nethertoxin.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "viper_nethertoxin" },
   },
@@ -17016,7 +17026,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Viper_7_AghanimsShard_v2",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanims Shard later on to further increase your dps and building damage.",
+      `Pick up Aghanims Shard later on to further increase your DPS and building damage.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -17051,9 +17061,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     npcHeroName: "viper",
     audioFile: "enemyHero/Viper_2_Nethertoxin",
-    messageTime: 30,
+    messageTime: 7 * 60 + 10,
     textMessage:
-      "Viper's Nethertoxin breaks passives. Stay away from it until you have a Black King Bar.",
+      `Viper Strike breaks passives. Stay away from it until you have a Black King Bar.`,
     audience: [Audience.ALL],
   },
   {

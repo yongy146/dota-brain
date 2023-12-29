@@ -57,8 +57,17 @@ export interface IMonitorMeasurementsOverwolf {
     heroesHeight: number; // Height of heroes display by Dota 2 (incl. color banner)
 
     perfTracker: {
-      xPos: number; // xPos of end of 'Current' of last zero (white area) with Dota Plus | w/o Dota Plus a little more right than last 0 (such that the spacing would be similar to the Dota icons; including last line)
-      yPos: number; // yPos of upper end of Dota 2 tracker (same for Dota Plus subscribers and non-subscribers)
+      /**
+       * Free-to-play: A little more right than last 0 (such that the spacing would be similar to the Dota icons; including last line)
+       * Dota Plus:    xPos of end of 'Current' of last zero (white area)
+       *
+       */
+      xPos: number;
+      /**
+       * yPos of upper end of Dota 2 tracker (same for Dota Plus subscribers and non-subscribers)
+       *
+       */
+      yPos: number;
     };
     itemTracker: {
       // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
@@ -1148,6 +1157,57 @@ export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> 
 
   // Width 2715
   //"2715x1527": { reuse: "2560x1440" },
+
+  // Width 2954
+  "2954x1662": {
+    // Added 26.12.2023
+    fontSize: 16,
+    preGame: {
+      heroesRadiantTopLeftXPos: 131, // TBD
+      heroesDireTopLeftXPos: 1535, // TBD
+      heroesWidth: 893, // TBD
+      subtitles: {
+        yPos: 180, // TBD
+        width: 1370, // TBD
+        height: 80, // TBD
+      },
+      appButton: {
+        xPos: 14, // TBD
+        yPos: 66, // TBD
+        size: 33, // TBD
+      },
+    },
+    inGame: {
+      heroesRadiantBottomLeftXPos: 843, // Done
+      heroesDireBottomLeftXPos: 1634, // Done
+      heroesHeight: 61, // Done
+      heroesWidth: 478, // Done
+      perfTracker: {
+        xPos: 375, // Done (guess)
+        yPos: 92, // Done (guess?!)
+      },
+      itemTracker: {
+        yPos: 1662, // Done
+        xPos: 2120, // Done
+      },
+      subtitles: {
+        xPos: 2125, // Done
+        yPos: 5, // Done
+        width: 555, // Done
+        height: 140, // Done
+      },
+      roshanGlyph: {
+        xPos: 383, // Done
+        yPos: 1295, // Done
+        size: 160, // TBD
+      },
+      appButton: {
+        xPos: 11, // Done
+        yPos: 1287 - 11, // Done
+        size: 33, // Done (guess)
+      },
+    },
+  },
 
   // Width 3440
   "3440x1440": {
