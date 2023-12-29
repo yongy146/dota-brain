@@ -11874,7 +11874,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // Outworld Destroyer or Outworld Devourer
+  // Outworld Destroyer
+  // Outworld Devourer
   obsidian_destroyer: {
     gameplay_version: "7.35b",
     creator: ContentCreator.yongy146,
