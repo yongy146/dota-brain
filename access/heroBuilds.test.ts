@@ -29,7 +29,7 @@ test("heroBuilds-getClosestHeroBuild()", () => {
     "sniper",
     PlayerRoles.DOTA_COACH_ROLE.HARD_SUPPORT
   );
-  console.log(`heroBuilds: `, heroBuild);
+  //console.log(`heroBuilds: `, heroBuild);
   expect(heroBuild?.heroBuild?.steam_guide_link).toBe(
     "https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187"
   );
@@ -55,7 +55,7 @@ test("heroBuilds-getTooltip(dummy, infused_raindrop)", () => {
 
 test("heroBuilds-getAbilityBuild()", () => {
   const abilityBuild = getAbilityBuild("antimage", undefined, intl!);
-  console.log(`abilityBuild:\n`, abilityBuild);
+  //console.log(`abilityBuild:\n`, abilityBuild);
 
   expect(abilityBuild[0].info).toBe(
     "Try to hit the enemy as much as possible as early as possible in order to burn they're mana."

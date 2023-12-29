@@ -95,7 +95,7 @@ test("itemIterator-mid", () => {
 
   //console.log(`phases: `, phases);
 
-  expect(heroes.size).toEqual(35); // Note: Invoker has two mid guides
+  expect(heroes.size).toEqual(36); // Note: Invoker has two mid guides
   expect(phases.size).toEqual(9);
 });
 
@@ -124,7 +124,7 @@ test("itemIterator-mid-early_game", () => {
 
   //console.log(`phases: `, phases);
 
-  expect(heroes.size).toEqual(34); // Note: Invoker has two mid guides, Lone Druid drops out, as he has no mid game items
+  expect(heroes.size).toEqual(35); // Note: Invoker has two mid guides, Lone Druid drops out, as he has no mid game items
   expect(phases.size).toEqual(1);
 });
 

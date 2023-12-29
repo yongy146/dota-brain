@@ -113,7 +113,7 @@ export function getClosestHeroBuild(
   for (const role_ of guide_rules[role]) {
     //DotaLogger.log(`dota2.getClosestHeroBuild(): roleOfRules = ${role_}`);
     if (Object.prototype.hasOwnProperty.call(guides, role_)) {
-      DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
+      //DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
       return guides[role_];
     }
   }
@@ -409,7 +409,7 @@ export function getItemTooltip(
 ): string | undefined {
   // Check build tooltip
   let id = `hero.${npcShortName}.builds.${buildIndex}.item_tooltips.${item}`;
-  console.log(`getItemTooltip(): id: `, id);
+  //console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check hero tooltip
