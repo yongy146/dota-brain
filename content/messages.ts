@@ -579,7 +579,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Abaddon_1_AphoticShield",
     messageTime: 10,
     textMessage:
-      "Apply Aphotic Shield pre emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.",
+      `Apply Aphotic Shield pre-emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
@@ -589,7 +589,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "abaddon",
     audioFile: "ownHero/Abaddon_2_Support",
     messageTime: 30,
-    textMessage: "Play ahead of the Core you are supporting to absorb attention.",
+    textMessage: `Play ahead of the Core you are supporting to absorb damage and trade regen.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   // Alex: What do you mean by 'absorb attention'?
@@ -620,7 +620,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 8 * 60,
     repeatTime: 8 * 60,
     textMessage:
-      "If you got disabled along with your teammate you can pop Borrowed Time to unstun yourself and then apply Aphotic Shield on a stunned ally to free him as well.",
+      `If you got disabled along with your teammate you can pop Borrowed Time to remove stun off yourself and then apply Aphotic Shield on a stunned ally to free him as well.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
@@ -1903,7 +1903,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/BountyHunter_1_SnipeCouriers",
     messageTime: -90,
     textMessage:
-      "Place a non-obvious courier sniping Observer Ward. Killing couriers grants gold but also disallows detection to be delivered.",
+      `Place a non-obvious courier sniping Observer Ward. Killing couriers not only grants gold but also disallows detection to be delivered.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "courier" },
   },
@@ -7401,7 +7401,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lina_3_StunStationary",
     messageTime: 20,
     textMessage:
-      "Lightstrike Array when opponents are somewhat stationary, e.g. when they are going for lasthit or deny.",
+      `Light Strike Array when opponents are somewhat stationary, e.g. when they are going for a last hit or deny.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_light_strike_array" },
   },
@@ -7411,7 +7411,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lina_4_SecureRanged",
     messageTime: 30,
     textMessage:
-      "Dragon Slave is great for securing ranged creep lasthits and harassing opponents at the same time.",
+      `Dragon Slave is great for securing ranged creep last hits and harassing opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_dragon_slave" },
   },
@@ -7451,7 +7451,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 25 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Keep fiery soul stacks up in fights to ensure that your shard is giving maximum bonus damage to your spells.",
+      `Keep fiery soul stacks up in fights to ensure you dish out your maximum DPS with right clicks and spells.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -8360,7 +8360,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Marci_6_Blink",
     messageTime: 16 * 60,
     textMessage:
-      "Blink Dagger is a huge powerspike as it allows you to lock on or switch targets, initiate fights or save allies.",
+      `Blink Dagger is a huge power spike as it allows you to lock on or switch targets, initiate fights or save allies.`,
     audience: [Audience.ALL],
   },
   {
@@ -8458,7 +8458,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Mars_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use God's Rebuke to secure ranged creep lasthits and harass the opponents at the same time.",
+      `Use Gods Rebuke to secure ranged creep last hits and harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "mars_gods_rebuke" },
   },
@@ -8694,7 +8694,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Don't rush Stone Gazing in the fights. Make sure opponents are committed to the fight before you pop it.",
+      `You need not rush Stone Gaze usage in the fights. Make sure opponents are committed to the fight before you pop it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "medusa_stone_gaze" },
   },
@@ -8726,7 +8726,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Medusa_12_ManaBurn",
     messageTime: 14 * 60,
     textMessage:
-      "Mana burns are a big problem for Medusa. You can itemize against them or adapt the playstyle.",
+      `Mana burn is a big problem for Medusa. You can itemize against it or adapt the playstyle.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -11626,7 +11626,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Puck_2_SecureLasthits",
     messageTime: 15,
     textMessage:
-      "Use Illusory Orb and Waning Rift to secure creep lasthits and damage opponents' heroes at the same time.",
+      `Use Illusory Orb and Waning Rift to secure creep last hits and damage enemy heroes at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "puck_illusory_orb" },
   },
@@ -11656,7 +11656,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Puck_5_OrbScouting",
     messageTime: [2 * 60, 10 * 60, 18 * 60],
     textMessage:
-      "Illusory Orb provides vision on its path so you can check for pillar wards and scout Roshpit.",
+      `Illusory Orb provides vision on its path so you can check for pillar wards and scout Rosh pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "puck_illusory_orb" },
   },
@@ -11907,7 +11907,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Pugna_1_NetherBlastRanged",
     messageTime: 15,
     textMessage:
-      "Use Nether Blast to secure ranged creep lasthits and to damage opponents at the same time.",
+      `Use Nether Blast to secure ranged creep last hits and to damage opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "pugna_nether_blast" },
   },
@@ -15801,7 +15801,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tiny_11_TreeVolleyUsage",
     messageTime: 21 * 60 + 45,
     textMessage:
-      "Once you have Aghanims Scepter, you can play in tree lines and start fights with Tree Volley instead of the Ava-Toss combo.",
+      `Once you have Aghanims Scepter, you can play in tree lines and start fights with Tree Volley instead of the Avalanche-Toss combo.`,
     audience: [Audience.ROLE_MID],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -16715,7 +16715,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VengefulSpirit_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Wave of Terror to secure ranged creep and harass the opponents at the same time.",
+      `Use Wave of Terror to secure ranged creeps and harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "vengefulspirit_wave_of_terror" },
   },
@@ -16755,7 +16755,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VengefulSpirit_5_Roshan",
     messageTime: [14 * 60 + 45, 18 * 60 + 45],
     textMessage:
-      "Vengeful Spirit enables early Roshan kill due to Wave of Terror, Vengeance Aura and posibly minus armor items.",
+      `Vengeful Spirit enables early Roshan kill due to Wave of Terror, Vengeance Aura and possibly minus armor items.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
   },
@@ -16996,9 +16996,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Viper_4_NethertoxinUsage_v2",
     messageTime: [8 * 60 + 45],
     textMessage:
-      "You can kill tanky heroes around the map with the break effect from your Nethertoxin.",
+      `You can kill tanky heroes around the map with the break effect from your Viper Strike.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "viper_nethertoxin" },
+    image: { type: `ability`, name: `viper_viper_strike` },
   },
   {
     category: "OwnHero",
@@ -17007,7 +17007,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "Push out the sidelines when not much is happening on the map. You can do it from fog with Nethertoxin.",
+      `Push out the side lanes when not much is happening on the map. You can do it from fog with Nethertoxin.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "viper_nethertoxin" },
   },
@@ -17026,7 +17026,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Viper_7_AghanimsShard_v2",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanims Shard later on to further increase your dps and building damage.",
+      `Pick up Aghanims Shard later on to further increase your DPS and building damage.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -17061,9 +17061,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     npcHeroName: "viper",
     audioFile: "enemyHero/Viper_2_Nethertoxin",
-    messageTime: 30,
+    messageTime: 7 * 60 + 10,
     textMessage:
-      "Viper's Nethertoxin breaks passives. Stay away from it until you have a Black King Bar.",
+      `Viper Strike breaks passives. Stay away from it until you have a Black King Bar.`,
     audience: [Audience.ALL],
   },
   {
