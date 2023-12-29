@@ -10761,12 +10761,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "obsidian_destroyer",
-    audioFile: "ownHero/OutworldDestroyer_1_MeteorHammer",
+    audioFile: "ownHero/OutworldDestroyer_1_AstralHarass",
     messageTime: -90,
     textMessage:
-      "Rush Meteor Hammer as it provides sustain, solo kill potential, wave clear and tower damage.",
-    audience: [Audience.ROLE_OFFLANE],
-    image: { type: "item", name: "meteor_hammer" },
+      "Use Astral Imprisonment on the enemy hero to prevent them from last hitting or denying creeps, especially the ranged creep.",
+    audience: [Audience.ALL],
+    image: { type: "ability", name: "obsidian_destroyer_astral_imprisonment" },
   },
   {
     category: "OwnHero",
@@ -10774,7 +10774,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/OutworldDestroyer_2_ArcaneOrbHarass",
     messageTime: 15,
     textMessage:
-      "Use Arcane Orb on opponents off cooldown during laning stage as it does tons of damage.",
+      "Use Arcane Orb on opponents off cooldown during laning stage as it does tons of damage. You can also secure last hits with it for more damage.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "obsidian_destroyer_arcane_orb" },
   },
@@ -10790,22 +10790,23 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "obsidian_destroyer",
-    audioFile: "ownHero/OutworldDestroyer_4_AvoidHammering",
-    messageTime: [10 * 60 + 15, 18 * 60 + 15],
+    audioFile: "ownHero/OutworldDestroyer_4_BlackKingBar",
+    messageTime: [20 * 60 + 15, 25 * 60 + 15],
     textMessage:
-      "Don't focus on channeling Meteor Hammer in bigger teamfights, at least not at the start.",
+      "Remember to activate Black King Bar in fights, especially before enemies are able to disable you at the start of fights.",
     audience: [Audience.ALL],
-    image: { type: "item", name: "meteor_hammer" },
+    image: { type: "item", name: "black_king_bar" },
   },
   {
     category: "OwnHero",
     npcHeroName: "obsidian_destroyer",
-    audioFile: "ownHero/OutworldDestroyer_5_TopTarget",
+    audioFile: "ownHero/OutworldDestroyer_5_ArcaneOrbAncients",
     messageTime: 10 * 60 + 30,
-    repeatTime: 10 * 60,
+    repeatTime: 5 * 60,
     textMessage:
-      "You will typically be a top priority target for opponents as you can save others. So be mindful of your positioning.",
+      "Arcane Orb works on Ancients. So choose to farm Ancients instead of normal camps whenever possible for more farm.",
     audience: [Audience.ALL],
+    image: { type: "ability", name: "obsidian_destroyer_arcane_orb" },
   },
   {
     category: "OwnHero",
@@ -10821,10 +10822,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     npcHeroName: "obsidian_destroyer",
-    audioFile: "enemyHero/OutworldDestroyer_1_MeteorHammer",
+    audioFile: "enemyHero/OutworldDestroyer_1_SanityEclipseBurst",
     messageTime: 6 * 60,
     textMessage:
-      "Look for Outworld Destroyer's Meteor Hammer timing. He's able to solo kill most of the heroes with it.",
+      "Look out for the amount of mana lost from multiple Astral Imprisonment usages. Outworld Destroyer can nuke you with his ultimate if there is a big mana pool difference.",
     audience: [Audience.ALL],
   },
   {
