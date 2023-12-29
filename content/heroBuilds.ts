@@ -3903,12 +3903,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   death_prophet: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
@@ -3917,20 +3917,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           "death_prophet_carrion_swarm", // 1
           "death_prophet_spirit_siphon", // 2
-          "death_prophet_spirit_siphon", // 3
-          "death_prophet_carrion_swarm", // 4
-          `death_prophet_spirit_siphon`, // 5
+          "death_prophet_carrion_swarm", // 3 can pick spirit siphon if high kill potential at level 3
+          "death_prophet_spirit_siphon", // 4
+          "death_prophet_carrion_swarm", // 5
           "death_prophet_exorcism", // 6
-          `death_prophet_spirit_siphon`, // 7
-          "death_prophet_silence", // 8
-          `death_prophet_carrion_swarm`, // 9
-          `death_prophet_carrion_swarm`, // 10
-          `special_bonus_magic_resistance_12`, // 11 Talent
+          "death_prophet_spirit_siphon", // 7
+          "death_prophet_carrion_swarm", // 8
+          "death_prophet_silence", // 9 can level silence earlier if required to silence enemy hero
+          "death_prophet_spirit_siphon", // 10
+          "special_bonus_attack_damage_30", // 11 Talent
           "death_prophet_exorcism", // 12
           "death_prophet_silence", // 13
-          `death_prophet_silence`, // 14
-          "special_bonus_hp_300", // 15 Talent
-          `death_prophet_silence`, // 16
+          "death_prophet_silence", // 14
+          "special_bonus_unique_death_prophet_2", // 15 talent
+          "death_prophet_silence", // 16
           "special_bonus_attributes", // 17
           "death_prophet_exorcism", // 18
           "special_bonus_attributes", // 19
@@ -3939,104 +3939,127 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_death_prophet`, // 25
+          "special_bonus_unique_death_prophet", // 25
         ],
         items: {
           starting: [
             "tango",
+            "ward_observer",
             "branches",
-            `branches`,
-            `branches`,
-            "circlet",
-            "magic_stick",
+            "branches",
+            "branches",
           ],
           early_game: [
-            `wraith_band`,
-            `arcane_boots`,
-            `magic_wand`,
-            `infused_raindrop`,
-            "mekansm",
+            "bottle",
+            "magic_wand", // can consider if enemy midlaner spams spells in lane
+            "infused_raindrop", // can consider if enemy has magic bursts
+            "arcane_boots",
+            "falcon_blade",
+            "veil_of_discord",
           ],
-          mid_game: [
-            "guardian_greaves",
-            "cyclone",
-            "kaya_and_sange",
-            "black_king_bar",
-          ],
+          mid_game: ["black_king_bar", "shivas_guard"],
           late_game: [
-            `shivas_guard`,
-            `octarine_core`,
-            `refresher`,
-            `aeon_disk`,
-            `sheepstick`,
+            "octarine_core",
+            "aghanims_shard",
+            "blink",
+            "wind_waker",
+            "travel_boots",
           ],
           situational: [
-            `blink`,
-            `ghost`,
-            `heavens_halberd`,
-            `assault`,
-            `pipe`,
-            `sphere`,
-            "heart",
-            "lotus_orb",
-            "ultimate_scepter",
+            "guardian_greaves",
+            "force_staff",
+            "refresher",
+            "sheepstick",
+            "overwhelming_blink",
+            "sphere",
+            "ghost",
           ],
           core: [
-            "guardian_greaves",
-            "cyclone",
-            "kaya_and_sange",
             "black_king_bar",
-            `aghanims_shard`,
+            "shivas_guard",
+            "octarine_core",
+            "wind_waker",
+            "blink",
+            "aghanims_shard",
           ],
           neutral: [
-            "arcane_ring",
-            `faded_broach`,
-            `bullwhip`,
-            `dragon_scale`,
-            "eye_of_the_vizier",
             //`quickening_charm`,
-            `defiant_shell`,
             //`spell_prism`,
-            `mirror_shield`,
-            `force_boots`,
             //`ex_machina`,
+            //tier 1
+            "arcane_ring",
+            "mysterious_hat",
+            "unstable_wand",
+            "safety_bubble",
+            "occult_bracelet",
+            "faded_broach",
+
+            //tier 2
+            "dragon_scale",
+            "pupils_gift",
+            "vambrace",
+            "bullwhip",
+            "eye_of_the_vizier",
+
+            //tier 3
+            "dandelion_amulet",
+            "elven_tunic",
+            "cloak_of_flames",
+            "ceremonial_robe",
+            "psychic_headband",
+            "ogre_seal_totem",
+
+            //tier 4
+            "timeless_relic",
+            "ascetic_cap",
+            "avianas_feather",
+            "stormcrafter",
+            "havoc_hammer",
+            "rattlecage",
+
+            //tier 5
+            "force_boots",
+            "seer_stone",
+            "mirror_shield",
+            "demonicon",
+            "giants_ring",
+            "panic_button",
           ],
         },
       },
     ],
-    // ability_tooltips:
-    /* special_bonus_unique_death_prophet_5:
-        "You can take this talent at level 25 over the suggested one. Usually, having 5 Spirit Siphons per fight due to Aghanim`s Shard should be more than enough thus I prefer the Exorcism talent. Also, if you have Refresher Orb or Shard in late game, the Siphon talent is redundant.", */
+
     combo: [
-      `death_prophet_exorcism`,
+      "death_prophet_exorcism",
+      "black_king_bar",
+      "shivas_guard",
+      "blink",
       `death_prophet_silence`,
       `death_prophet_spirit_siphon`,
       `death_prophet_carrion_swarm`,
     ],
     counter_items: {
       laning_phase: {
-        all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "cloak",
-          "armor",
-        ],
+        all: ["magic_stick", "boots", "wind_lace", "infused_raindrop", "cloak"],
         support: [],
-        core: ["ring_of_health"],
+        core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff"],
+        all: [
+          "lotus_orb",
+          "spirit_vessel",
+          "force_staff",
+          "pipe",
+          "blade_mail",
+        ],
+        support: ["glimmer_cape"],
         core: [
+          "black_king_bar",
           "mage_slayer",
           //"hood_of_defiance",
-          "pipe",
           "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
           "manta",
+          "invis_sword",
         ],
       },
       late_game: {
@@ -4323,7 +4346,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         abilities: [
           "dragon_knight_dragon_tail", // 1
@@ -8288,7 +8311,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959031",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40534,
         abilities: [
           "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
@@ -8300,7 +8323,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "luna_lunar_blessing", // 8
           "luna_moon_glaive", // 9
           "luna_moon_glaive", // 10
-          "special_bonus_unique_luna_7", // 11    Which talent do the numbers refer to?
+          "special_bonus_unique_luna_7", // 11
           "luna_eclipse", // 12
           "luna_eclipse", // 13
           "luna_lucent_beam", // 14
@@ -11779,131 +11802,40 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // Outworld Devourer
+  // Outworld Destroyer
   obsidian_destroyer: {
-    // not `Outworld Destroyer`
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
-      {
-        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071",
-        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
-        abilities: [
-          `obsidian_destroyer_astral_imprisonment`, // 1
-          `obsidian_destroyer_arcane_orb`, // 2
-          `obsidian_destroyer_equilibrium`, // 3
-          "obsidian_destroyer_astral_imprisonment", // 4
-          "obsidian_destroyer_astral_imprisonment", // 5
-          "obsidian_destroyer_sanity_eclipse", // 6
-          `obsidian_destroyer_astral_imprisonment`, // 7
-          "obsidian_destroyer_arcane_orb", // 8
-          "obsidian_destroyer_arcane_orb", // 9
-          `obsidian_destroyer_arcane_orb`, // 10
-          `special_bonus_attack_speed_20`, // 11
-          "obsidian_destroyer_sanity_eclipse", // 12
-          "obsidian_destroyer_equilibrium", // 13
-          "obsidian_destroyer_equilibrium", // 14
-          `special_bonus_movement_speed_30`, // 15
-          "obsidian_destroyer_equilibrium", // 16
-          "special_bonus_attributes", // 17
-          "obsidian_destroyer_sanity_eclipse", // 18
-          "special_bonus_attributes", // 19
-          `special_bonus_unique_outworld_devourer_4`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          `special_bonus_unique_outworld_devourer`, // 25
-        ],
-        items: {
-          starting: [`tango`, `crown`, `branches`, `ward_observer`],
-          early_game: [
-            `meteor_hammer`,
-            `power_treads`,
-            `magic_wand`,
-            `wind_lace`,
-          ],
-          mid_game: [
-            `black_king_bar`,
-            `blink`,
-            `hurricane_pike`,
-            `aghanims_shard`,
-          ],
-          late_game: [
-            `sheepstick`,
-            `ultimate_scepter`,
-            `moon_shard`,
-            `revenants_brooch`,
-          ],
-          situational: [
-            `hand_of_midas`,
-            `witch_blade`,
-            `aether_lens`,
-            `sphere`,
-            `lotus_orb`,
-            `aeon_disk`,
-            `shivas_guard`,
-            `refresher`,
-            `swift_blink`,
-            `travel_boots`,
-          ],
-          core: [
-            "meteor_hammer",
-            `power_treads`,
-            `black_king_bar`,
-            `blink`,
-            `hurricane_pike`,
-            `aghanims_shard`,
-            `sheepstick`,
-            `ultimate_scepter`,
-          ],
-          neutral: [
-            `faded_broach`,
-            //`pogo_stick`,
-            "grove_bow",
-            "vambrace",
-            "psychic_headband",
-            `enchanted_quiver`,
-            "timeless_relic",
-            `trickster_cloak`,
-            `pirate_hat`,
-            `mirror_shield`,
-          ],
-        },
-      },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
         steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253915",
+          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071",
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          `obsidian_destroyer_astral_imprisonment`, // 1
-          `obsidian_destroyer_arcane_orb`, // 2
-          `obsidian_destroyer_equilibrium`, // 3
+          "obsidian_destroyer_astral_imprisonment", // 1
+          "obsidian_destroyer_arcane_orb", // 2
+          "obsidian_destroyer_equilibrium", // 3
           "obsidian_destroyer_astral_imprisonment", // 4
           "obsidian_destroyer_astral_imprisonment", // 5
           "obsidian_destroyer_sanity_eclipse", // 6
-          "obsidian_destroyer_astral_imprisonment", // 7
+          "obsidian_destroyer_arcane_orb", // 7
           "obsidian_destroyer_arcane_orb", // 8
           "obsidian_destroyer_arcane_orb", // 9
-          "obsidian_destroyer_arcane_orb", // 10
-          "special_bonus_attack_speed_20", // 11
+          "special_bonus_attack_speed_20", // 10
+          "obsidian_destroyer_equilibrium", // 11
           "obsidian_destroyer_sanity_eclipse", // 12
           "obsidian_destroyer_equilibrium", // 13
           "obsidian_destroyer_equilibrium", // 14
-          `special_bonus_movement_speed_30`, // 15
-          "obsidian_destroyer_equilibrium", // 16
+          "special_bonus_movement_speed_30", // 15
+          "obsidian_destroyer_astral_imprisonment", // 16
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_outworld_devourer_4`, // 20
+          "special_bonus_unique_outworld_devourer_4", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -11912,92 +11844,85 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            `tango`,
-            `faerie_fire`,
             `mantle`,
             `circlet`,
             `branches`,
             `branches`,
+            `branches`,
             `ward_observer`,
+            `tango`,
           ],
           early_game: [
-            `null_talisman`,
-            `hand_of_midas`,
-            `power_treads`,
-            `magic_wand`,
-            `wind_lace`,
+            "null_talisman",
+            "magic_wand",
+            "power_treads",
+            "witch_blade",
           ],
           mid_game: [
-            `witch_blade`,
-            `hurricane_pike`,
+            `ultimate_scepter`,
             `black_king_bar`,
             `blink`,
+            `devastator`,
           ],
-          late_game: [
-            `sheepstick`,
-            `ultimate_scepter`,
-            `moon_shard`,
-            `revenants_brooch`,
-          ],
+          late_game: [`moon_shard`, `hurricane_pike`, "sheepstick"],
           situational: [
+            `hand_of_midas`,
             `meteor_hammer`,
-            `aether_lens`,
-            `aghanims_shard`,
-            `octarine_core`,
-            `refresher`,
-            `kaya_and_sange`,
             `sphere`,
-            `shivas_guard`,
+            `refresher`,
             `swift_blink`,
             `travel_boots`,
+            `aghanims_shard`,
           ],
           core: [
-            `hand_of_midas`,
-            "power_treads",
-            `witch_blade`,
-            `hurricane_pike`,
+            `power_treads`,
             `black_king_bar`,
             `blink`,
-            `sheepstick`,
+            `hurricane_pike`,
+            `devastator`,
             `ultimate_scepter`,
+            `sheepstick`,
           ],
           neutral: [
+            //tier 1
+            `arcane_ring`,
+            `mysterious_hat`,
             `faded_broach`,
-            //`pogo_stick`,
-            `grove_bow`,
+
+            //tier 2
+            `pupils_gift`,
             `vambrace`,
-            `ceremonial_robe`,
+            `grove_bow`,
+
+            //tier 3
+            `elven_tunic`,
+            `psychic_headband`,
             `enchanted_quiver`,
+
+            //tier 4
             `timeless_relic`,
-            `trickster_cloak`,
-            `pirate_hat`,
+            `avianas_feather`,
+            `mind_breaker`,
+
+            //tier 5
             `mirror_shield`,
+            `pirate_hat`,
+            `apex`,
           ],
         },
       },
     ],
-    combo: [
-      `obsidian_destroyer_astral_imprisonment`,
-      `black_king_bar`,
-      `meteor_hammer`,
-      `obsidian_destroyer_sanity_eclipse`,
-      `obsidian_destroyer_arcane_orb`,
-    ],
+    combo: [],
     counter_items: {
       laning_phase: {
-        all: [
-          "magic_stick",
-          "ring_of_regen",
-          "infused_raindrop",
-          /* "urn_of_shadows", */
-        ],
+        all: ["magic_stick", "infused_raindrop"],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["black_king_bar", "blink"],
-        support: ["force_staff"],
-        core: ["orchid", "heavens_halberd"],
+        all: ["black_king_bar", "blink", "ghost", "blade_mail"],
+        support: ["force_staff", "glimmer_cape"],
+        core: ["orchid", "heavens_halberd", "silver_edge"],
       },
       late_game: {
         all: [],
@@ -20734,7 +20659,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link:
           "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986473",
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
           "windrunner_powershot", // 1
