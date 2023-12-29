@@ -30,9 +30,7 @@ test("heroBuilds-getClosestHeroBuild()", () => {
     PlayerRoles.DOTA_COACH_ROLE.HARD_SUPPORT
   );
   //console.log(`heroBuilds: `, heroBuild);
-  expect(heroBuild?.heroBuild?.steam_guide_link).toBe(
-    "https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187"
-  );
+  expect(heroBuild?.heroBuild?.steam_guide_link_id).toBe(2725332187);
 });
 
 test("heroBuilds-getTooltip(sniper, power_treads)", () => {

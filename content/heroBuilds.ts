@@ -127,13 +127,18 @@ export interface IHeroContent {
 export interface IHeroBuild {
   roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
   type?: string; // Type currently only used for Invoker mid (types: 'QW' & 'QE')
-  steam_guide_link: string; // Link to web buids
+  steam_guide_link_id: number; // Link to steam web buids, e.g., "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   dota_fire_id?: number; // Guide number on Dota Fire
   abilities: string[];
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
 }
+
+export function getSteamGuideLink(id: number) {
+  return `https://steamcommunity.com/sharedfiles/filedetails/?id=${id}`;
+}
+
 /**
  * Illustration of talent orders in dota2Heroes.json:
  *
@@ -211,8 +216,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698376898",
+        steam_guide_link_id: 2698376898,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40437,
         abilities: [
@@ -318,8 +322,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2971195954",
+        steam_guide_link_id: 2971195954,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40436,
         abilities: [
@@ -465,8 +468,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377018",
+        steam_guide_link_id: 2698377018,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40438,
         abilities: [
@@ -550,8 +552,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2730985550",
+        steam_guide_link_id: 2730985550,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40439,
         abilities: [
@@ -674,8 +675,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377158",
+        steam_guide_link_id: 2698377158,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40441,
         abilities: [
@@ -802,8 +802,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377261",
+        steam_guide_link_id: 2698377261,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40442,
         abilities: [
@@ -924,8 +923,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2698377376",
+        steam_guide_link_id: 2698377376,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40443,
         abilities: [
@@ -1063,8 +1061,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915204",
+        steam_guide_link_id: 2699915204,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40444,
         abilities: [
@@ -1200,8 +1197,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915293",
+        steam_guide_link_id: 2699915293,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40445,
         abilities: [
@@ -1331,8 +1327,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915391",
+        steam_guide_link_id: 2699915391,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40446,
         abilities: [
@@ -1431,8 +1426,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253341",
+        steam_guide_link_id: 2719253341,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40447,
         abilities: [
@@ -1570,8 +1564,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915480",
+        steam_guide_link_id: 2699915480,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40448,
         abilities: [
@@ -1711,8 +1704,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915618",
+        steam_guide_link_id: 2699915618,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40449,
         abilities: [
@@ -1798,8 +1790,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2706431682",
+        steam_guide_link_id: 2706431682,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40450,
         abilities: [
@@ -1901,8 +1892,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915719",
+        steam_guide_link_id: 2699915719,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40451,
         abilities: [
@@ -2036,8 +2026,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915806",
+        steam_guide_link_id: 2699915806,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40452,
         abilities: [
@@ -2171,8 +2160,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915905",
+        steam_guide_link_id: 2699915905,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40453,
         abilities: [
@@ -2309,8 +2297,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
+        steam_guide_link_id: 2699915996,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40454,
         abilities: [
@@ -2463,8 +2450,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916073",
+        steam_guide_link_id: 2699916073,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40455,
         abilities: [
@@ -2587,8 +2573,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916165",
+        steam_guide_link_id: 2699916165,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40456,
         abilities: [
@@ -2688,8 +2673,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2708440963",
+        steam_guide_link_id: 2708440963,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40457,
         abilities: [
@@ -2796,8 +2780,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916263",
+        steam_guide_link_id: 2699916263,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -2907,8 +2890,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916348",
+        steam_guide_link_id: 2699916348,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -3011,8 +2993,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916434",
+        steam_guide_link_id: 2699916434,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40467,
         abilities: [
@@ -3147,8 +3128,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916517",
+        steam_guide_link_id: 2699916517,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40468,
         abilities: [
@@ -3278,8 +3258,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916602",
+        steam_guide_link_id: 2699916602,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40469,
         abilities: [
@@ -3412,8 +3391,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699916714",
+        steam_guide_link_id: 2699916714,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40470,
         abilities: [
@@ -3555,8 +3533,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917167",
+        steam_guide_link_id: 2699917167,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40471,
         abilities: [
@@ -3654,8 +3631,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2715224221",
+        steam_guide_link_id: 2715224221,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40472,
         abilities: [
@@ -3792,8 +3768,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917255",
+        steam_guide_link_id: 2699917255,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40473,
         abilities: [
@@ -3928,8 +3903,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699917391",
+        steam_guide_link_id: 2699917391,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40474,
         abilities: [
@@ -4097,8 +4071,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561304",
+        steam_guide_link_id: 2700561304,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40475,
         abilities: [
@@ -4228,8 +4201,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561417",
+        steam_guide_link_id: 2700561417,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40476,
         abilities: [
@@ -4362,8 +4334,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561505",
+        steam_guide_link_id: 2700561505,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         abilities: [
@@ -4477,8 +4448,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561590",
+        steam_guide_link_id: 2700561590,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40478,
         abilities: [
@@ -4584,8 +4554,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561679",
+        steam_guide_link_id: 2700561679,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -4722,8 +4691,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561769",
+        steam_guide_link_id: 2700561769,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -4853,8 +4821,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561834",
+        steam_guide_link_id: 2700561834,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -4995,8 +4962,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561902",
+        steam_guide_link_id: 2700561902,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -5132,8 +5098,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700561968",
+        steam_guide_link_id: 2700561968,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -5263,8 +5228,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562081",
+        steam_guide_link_id: 2700562081,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -5366,8 +5330,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2712384931",
+        steam_guide_link_id: 2712384931,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -5500,8 +5463,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562159",
+        steam_guide_link_id: 2700562159,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -5618,8 +5580,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562245",
+        steam_guide_link_id: 2700562245,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -5765,8 +5726,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562334",
+        steam_guide_link_id: 2700562334,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -5861,8 +5821,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2712385902",
+        steam_guide_link_id: 2712385902,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -5988,8 +5947,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562407",
+        steam_guide_link_id: 2700562407,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -6150,8 +6108,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           DOTA_COACH_GUIDE_ROLE.OFFLANE,
         ],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562484",
+        steam_guide_link_id: 2700562484,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -6284,8 +6241,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "QW",
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2700562552",
+        steam_guide_link_id: 2700562552,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -6392,8 +6348,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Midlane Quas Exort Invoker build
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "QE",
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2711948373",
+        steam_guide_link_id: 2711948373,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -6544,8 +6499,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957619",
+        steam_guide_link_id: 2699957619,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -6666,8 +6620,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957843",
+        steam_guide_link_id: 2699957843,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -6804,8 +6757,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957943",
+        steam_guide_link_id: 2699957943,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -6920,8 +6872,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958059",
+        steam_guide_link_id: 2699958059,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -7068,8 +7019,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958147",
+        steam_guide_link_id: 2699958147,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -7149,8 +7099,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2715010750",
+        steam_guide_link_id: 2715010750,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -7274,8 +7223,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2301488685",
+        steam_guide_link_id: 2301488685,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -7416,8 +7364,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958372",
+        steam_guide_link_id: 2699958372,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -7536,8 +7483,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958474",
+        steam_guide_link_id: 2699958474,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -7684,8 +7630,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958609",
+        steam_guide_link_id: 2699958609,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -7797,8 +7742,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958714",
+        steam_guide_link_id: 2699958714,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -7903,8 +7847,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2715221904",
+        steam_guide_link_id: 2715221904,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -8051,8 +7994,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958831",
+        steam_guide_link_id: 2699958831,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -8191,8 +8133,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699958939",
+        steam_guide_link_id: 2699958939,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -8338,8 +8279,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959031",
+        steam_guide_link_id: 2699959031,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40534,
         abilities: [
@@ -8493,8 +8433,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959154",
+        steam_guide_link_id: 2699959154,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -8587,8 +8526,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2716646867",
+        steam_guide_link_id: 2716646867,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -8708,8 +8646,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959287",
+        steam_guide_link_id: 2699959287,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -8820,8 +8757,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2716646936",
+        steam_guide_link_id: 2716646936,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -8933,8 +8869,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2716647043",
+        steam_guide_link_id: 2716647043,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -9069,8 +9004,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959380",
+        steam_guide_link_id: 2699959380,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -9177,8 +9111,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2716647152",
+        steam_guide_link_id: 2716647152,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -9350,8 +9283,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959474",
+        steam_guide_link_id: 2699959474,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -9501,8 +9433,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959648",
+        steam_guide_link_id: 2699959648,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -9633,8 +9564,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959764",
+        steam_guide_link_id: 2699959764,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -9760,8 +9690,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699959872",
+        steam_guide_link_id: 2699959872,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -9900,8 +9829,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960030",
+        steam_guide_link_id: 2699960030,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -9997,8 +9925,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2718158708",
+        steam_guide_link_id: 2718158708,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -10121,8 +10048,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960135",
+        steam_guide_link_id: 2699960135,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -10237,8 +10163,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2943493038",
+        steam_guide_link_id: 2943493038,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -10344,8 +10269,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2943887000",
+        steam_guide_link_id: 2943887000,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -10483,8 +10407,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960208",
+        steam_guide_link_id: 2699960208,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -10609,8 +10532,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960338",
+        steam_guide_link_id: 2699960338,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -10707,8 +10629,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666197",
+        steam_guide_link_id: 2718666197,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -10805,8 +10726,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666233",
+        steam_guide_link_id: 2718666233,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -10946,8 +10866,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960447",
+        steam_guide_link_id: 2699960447,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -11051,8 +10970,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2718666066",
+        steam_guide_link_id: 2718666066,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -11205,8 +11123,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960635",
+        steam_guide_link_id: 2699960635,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -11325,8 +11242,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960726",
+        steam_guide_link_id: 2699960726,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -11458,8 +11374,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960831",
+        steam_guide_link_id: 2699960831,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -11595,8 +11510,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699955472",
+        steam_guide_link_id: 2699955472,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -11739,8 +11653,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699960994",
+        steam_guide_link_id: 2699960994,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -11884,8 +11797,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961071",
+        steam_guide_link_id: 2699961071,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -11986,8 +11898,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2719253915",
+        steam_guide_link_id: 2719253915,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -12121,8 +12032,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961166",
+        steam_guide_link_id: 2699961166,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -12226,8 +12136,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2719254096",
+        steam_guide_link_id: 2719254096,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -12324,8 +12233,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2719254316",
+        steam_guide_link_id: 2719254316,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -12466,8 +12374,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961303",
+        steam_guide_link_id: 2699961303,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -12589,8 +12496,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961424",
+        steam_guide_link_id: 2699961424,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -12711,8 +12617,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961589",
+        steam_guide_link_id: 2699961589,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -12855,8 +12760,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // To be updated
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2763260196",
+        steam_guide_link_id: 2763260196,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -12959,8 +12863,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT], // Update steam_guide_id and steam_guide_link for support guide
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2765463290",
+        steam_guide_link_id: 2765463290,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -13109,8 +13012,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961683",
+        steam_guide_link_id: 2699961683,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -13257,8 +13159,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961775",
+        steam_guide_link_id: 2699961775,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -13354,8 +13255,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2713377028",
+        steam_guide_link_id: 2713377028,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -13479,8 +13379,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961859",
+        steam_guide_link_id: 2699961859,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -13581,8 +13480,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2721136673",
+        steam_guide_link_id: 2721136673,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -13735,8 +13633,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699961952",
+        steam_guide_link_id: 2699961952,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -13824,8 +13721,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2721136803",
+        steam_guide_link_id: 2721136803,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -13952,8 +13848,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962040",
+        steam_guide_link_id: 2699962040,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -14052,8 +13947,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2722413092",
+        steam_guide_link_id: 2722413092,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -14162,8 +14056,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2722413152",
+        steam_guide_link_id: 2722413152,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -14297,8 +14190,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962133",
+        steam_guide_link_id: 2699962133,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -14396,8 +14288,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2722413235",
+        steam_guide_link_id: 2722413235,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -14533,8 +14424,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962219",
+        steam_guide_link_id: 2699962219,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -14656,8 +14546,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962310",
+        steam_guide_link_id: 2699962310,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -14803,8 +14692,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962404",
+        steam_guide_link_id: 2699962404,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -14948,8 +14836,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         //type: "Physical", 1.
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962485",
+        steam_guide_link_id: 2699962485,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -15041,8 +14928,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         //type: "Physical",
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2724416695",
+        steam_guide_link_id: 2724416695,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -15174,8 +15060,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962568",
+        steam_guide_link_id: 2699962568,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -15294,8 +15179,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962648",
+        steam_guide_link_id: 2699962648,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -15437,8 +15321,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962794",
+        steam_guide_link_id: 2699962794,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -15588,8 +15471,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962869",
+        steam_guide_link_id: 2699962869,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -15713,8 +15595,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699962959",
+        steam_guide_link_id: 2699962959,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -15836,8 +15717,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963037",
+        steam_guide_link_id: 2699963037,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -15977,8 +15857,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963139",
+        steam_guide_link_id: 2699963139,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -16086,8 +15965,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187",
+        steam_guide_link_id: 2725332187,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 39830,
         abilities: [
@@ -16230,8 +16108,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963243",
+        steam_guide_link_id: 2699963243,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -16346,8 +16223,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963328",
+        steam_guide_link_id: 2699963328,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -16455,8 +16331,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2726400030",
+        steam_guide_link_id: 2726400030,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -16589,8 +16464,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963425",
+        steam_guide_link_id: 2699963425,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -16722,8 +16596,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963505",
+        steam_guide_link_id: 2699963505,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -16858,8 +16731,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699933135",
+        steam_guide_link_id: 2699933135,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -16961,8 +16833,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // INPUT MICHEL: GUIDE TO BE UPDATED BY BANE, NOW IT IS JUST A COPY OF THE OTHER GUIDE
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2776661467",
+        steam_guide_link_id: 2776661467,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -17114,8 +16985,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963659",
+        steam_guide_link_id: 2699963659,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -17204,8 +17074,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2726399928",
+        steam_guide_link_id: 2726399928,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -17311,8 +17180,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963755",
+        steam_guide_link_id: 2699963755,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -17440,8 +17308,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963852",
+        steam_guide_link_id: 2699963852,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -17586,8 +17453,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699963963",
+        steam_guide_link_id: 2699963963,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -17733,8 +17599,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964058",
+        steam_guide_link_id: 2699964058,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -17874,8 +17739,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964139",
+        steam_guide_link_id: 2699964139,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -17971,8 +17835,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2729200744",
+        steam_guide_link_id: 2729200744,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -18075,8 +17938,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2729201017",
+        steam_guide_link_id: 2729201017,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -18207,8 +18069,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699934294",
+        steam_guide_link_id: 2699934294,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -18350,8 +18211,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964271",
+        steam_guide_link_id: 2699964271,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -18462,8 +18322,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964354",
+        steam_guide_link_id: 2699964354,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -18558,8 +18417,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // NEW GUIDE
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2776954201",
+        steam_guide_link_id: 2776954201,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -18688,8 +18546,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964445",
+        steam_guide_link_id: 2699964445,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -18843,8 +18700,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964521",
+        steam_guide_link_id: 2699964521,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -18942,8 +18798,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2971195922",
+        steam_guide_link_id: 2971195922,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -19085,8 +18940,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964646",
+        steam_guide_link_id: 2699964646,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -19210,8 +19064,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964761",
+        steam_guide_link_id: 2699964761,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -19350,8 +19203,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964844",
+        steam_guide_link_id: 2699964844,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -19464,8 +19316,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2729605047",
+        steam_guide_link_id: 2729605047,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -19616,8 +19467,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699964923",
+        steam_guide_link_id: 2699964923,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -19725,8 +19575,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2729605437",
+        steam_guide_link_id: 2729605437,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -19874,8 +19723,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965007",
+        steam_guide_link_id: 2699965007,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -19971,8 +19819,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2729605654",
+        steam_guide_link_id: 2729605654,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -20112,8 +19959,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965099",
+        steam_guide_link_id: 2699965099,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -20215,8 +20061,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2778135054",
+        steam_guide_link_id: 2778135054,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -20376,8 +20221,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965199",
+        steam_guide_link_id: 2699965199,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -20514,8 +20358,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965288",
+        steam_guide_link_id: 2699965288,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -20596,8 +20439,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2730987049",
+        steam_guide_link_id: 2730987049,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -20714,8 +20556,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965445",
+        steam_guide_link_id: 2699965445,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -20807,8 +20648,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986384",
+        steam_guide_link_id: 2730986384,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -20895,8 +20735,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2730986473",
+        steam_guide_link_id: 2730986473,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -21043,8 +20882,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699965518",
+        steam_guide_link_id: 2699965518,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -21195,8 +21033,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699957031",
+        steam_guide_link_id: 2699957031,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -21336,8 +21173,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699919868",
+        steam_guide_link_id: 2699919868,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
@@ -21449,8 +21285,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link:
-          "https://steamcommunity.com/sharedfiles/filedetails/?id=2699919737",
+        steam_guide_link_id: 2699919737,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [

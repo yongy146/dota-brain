@@ -3,7 +3,12 @@
  *
  * (C) Dota Coach, 2023
  */
-import { IHeroBuild, heroBuilds, isCoreItem } from "../content/heroBuilds";
+import {
+  IHeroBuild,
+  getSteamGuideLink,
+  heroBuilds,
+  isCoreItem,
+} from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import { IntlShape } from "react-intl";
 import * as PlayerRoles from "../utilities/playerRoles";
@@ -526,8 +531,8 @@ export function getAbilityBuild(
  */
 export function getHeroGuideLinks(npcShortName: string): string[] {
   return (
-    heroBuilds[npcShortName]?.builds.map(
-      (heroBuild) => heroBuild.steam_guide_link
+    heroBuilds[npcShortName]?.builds.map((heroBuild) =>
+      getSteamGuideLink(heroBuild.steam_guide_link_id)
     ) || []
   );
 }

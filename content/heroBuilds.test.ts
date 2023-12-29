@@ -3,9 +3,9 @@
  *
  */
 import { heroBuildIterator } from "../access/heroUtils";
-import dota2Heroes from "../submodules/gameData/out/dota2Heroes.json";
-import dota2Abilities from "../submodules/gameData/out/dota2Abilities.json";
-import dota2ItemsActive from "../submodules/gameData/out/dota2ItemsActive.json";
+import dota2Heroes from "@gameData/out/dota2Heroes.json";
+import dota2Abilities from "@gameData/out/dota2Abilities.json";
+import dota2ItemsActive from "@gameData/out/dota2ItemsActive.json";
 import { heroBuilds } from "./heroBuilds";
 import { getEnemyHeroMessages, getOwnHeroMessages } from "./messages";
 import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
@@ -168,8 +168,8 @@ for (const { npcShortName, heroBuild } of heroBuildIterator()) {
 // Check that each steam guid link is unique
 const steamGuideLinks: Record<string, number> = {}; // Counter of all steam guide IDs
 for (const { npcShortName, heroBuild } of heroBuildIterator()) {
-  steamGuideLinks[heroBuild.steam_guide_link] =
-    (steamGuideLinks[heroBuild.steam_guide_link] || 0) + 1;
+  steamGuideLinks[heroBuild.steam_guide_link_id] =
+    (steamGuideLinks[heroBuild.steam_guide_link_id] || 0) + 1;
 }
 for (const [guideLink, counter] of Object.entries(steamGuideLinks)) {
   test(`heroBuilds-Unique steam guide links (${guideLink})`, () => {
