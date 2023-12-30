@@ -7744,7 +7744,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_link_id: 2699958714,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40542,
         abilities: [
           "lina_dragon_slave", // 1
           "lina_fiery_soul", // 2
@@ -8648,7 +8648,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link_id: 2699959287,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40535,
         abilities: [
           "magnataur_shockwave", // 1
           `magnataur_skewer`, // 2
@@ -8759,7 +8759,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
         steam_guide_link_id: 2716646936,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40536,
         abilities: [
           "magnataur_shockwave", // 1
           `magnataur_skewer`, // 2
@@ -8868,10 +8868,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2716647043,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40537,
         abilities: [
           "magnataur_shockwave", // 1
           "magnataur_skewer", // 2
