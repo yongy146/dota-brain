@@ -9002,10 +9002,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699959380,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40538,
         abilities: [
           `marci_grapple`, // 1	equals to rebound
           `marci_companion_run`, // 2	 equals to dispose
@@ -9109,10 +9108,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2716647152,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40539,
         abilities: [
           "marci_grapple", // 1	equals to dispose
           `marci_companion_run`, // 2	equals to rebound
