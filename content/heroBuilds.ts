@@ -16578,8 +16578,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   sven: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -16593,79 +16593,95 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "sven_warcry", // 2
           "sven_great_cleave", // 3
           "sven_great_cleave", // 4
-          "sven_great_cleave", // 5
-          "sven_gods_strength", // 6
-          "sven_great_cleave", // 7
-          "sven_warcry", // 8
-          "sven_warcry", // 9
-          "special_bonus_attack_speed_15", // 10
-          "sven_warcry", // 11
-          "sven_gods_strength", // 12
-          "sven_storm_bolt", // 13
-          "sven_storm_bolt", // 14
-          "special_bonus_unique_sven_3", // 15
-          "sven_storm_bolt", // 16
+			    "sven_great_cleave", // 5
+			    "sven_gods_strength", // 6
+		      "sven_great_cleave", // 7
+		      "sven_warcry", // 8
+	        "sven_warcry", // 9
+	        "special_bonus_attack_speed_15", // 10
+		    	"sven_warcry", // 11
+		    	"sven_gods_strength", // 12
+		    	"sven_storm_bolt", // 13
+			    "sven_storm_bolt", // 14
+		    	"special_bonus_unique_sven_3", // 15
+				  "sven_storm_bolt", // 16
           "special_bonus_attributes", // 17
-          "sven_gods_strength", // 18
+				  "sven_gods_strength", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_sven_7", // 20
+					"special_bonus_unique_sven_7", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_sven_2", // 25
+				  "special_bonus_unique_sven_2", // 25
         ],
         items: {
           starting: [
-            "tango",
             "quelling_blade",
-            "gauntlets",
+            "tango",
             "branches",
-            "magic_stick",
+            "circlet",
+            "slippers",
           ],
           early_game: [
-            "power_treads",
-            "bracer",
+            "tango",
+            "wraith_band",
+            "boots",
             "magic_wand",
+            "phase_boots",
             "mask_of_madness",
+            "gloves",
+            "echo_sabre",
           ],
-          mid_game: ["echo_sabre", "blink", "black_king_bar", "lesser_crit"],
-          late_game: [
+          mid_game: [
+            "black_king_bar",
             "harpoon",
+            "lesser_crit",
+            "blink",                   
+          ],
+          late_game: [
             "greater_crit",
             "assault",
             "satanic",
             "swift_blink",
+            "moon_shard",
           ],
           situational: [
-            "butterfly",
             "aghanims_shard",
             "silver_edge",
-            "heavens_halberd",
-            "satanic",
             "sphere",
             "monkey_king_bar",
             "ultimate_scepter",
-            "bloodthorn",
           ],
           core: [
             "mask_of_madness",
-            "echo_sabre",
+            "harpoon",
             "blink",
             "black_king_bar",
             "greater_crit",
           ],
           neutral: [
+            //tier 1
+            "unstable_wand",
             "broom_handle",
-            "lance_of_pursuit",
-            //"dagger_of_ristul", Removed in 7.33
-            //"misericorde",
-            "orb_of_destruction",
+            "occult_bracelet",
+
+            //tier 2
             "vambrace",
+            "orb_of_destruction",
+            "dragon_scale",
+
+            //tier 3
+            "paladin_sword",
             "elven_tunic",
-            //"titan_sliver",
+            "vindicators_axe",
+
+            //tier 4
             "mind_breaker",
-            //"penta_edged_sword",
+            "havoc_hammer",
+            "ninja_gear",
+
+            //tier 5
             "pirate_hat",
             "mirror_shield",
             "giants_ring",
@@ -16675,9 +16691,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     combo: [
       `sven_gods_strength`,
-      `blink`,
+      `sven_warcry`,
       `black_king_bar`,
+      `blink`,
       `sven_storm_bolt`,
+      `mask_of_madness`,
       `attack`,
     ],
     counter_items: {
@@ -16687,15 +16705,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["solar_crest", "blink", "lotus_orb"],
+        all: ["lotus_orb", "blade_mail"],
         support: [
-          "ward_dispenser",
           "glimmer_cape",
           "ghost",
           "force_staff",
           "cyclone",
         ],
-        core: ["hurricane_pike", "heavens_halberd"],
+        core: ["hurricane_pike", "heavens_halberd", "invis_sword"],
       },
       late_game: {
         all: ["sheepstick", "ethereal_blade", "aeon_disk"],
@@ -16704,9 +16721,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "abyssal_blade",
           "assault",
           "shivas_guard",
-          "bloodthorn",
           "butterfly",
-          "nullifier",
+          "skadi",
         ],
       },
     },
