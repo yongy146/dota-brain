@@ -14469,7 +14469,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_4_MaxCleave",
     messageTime: 1 * 60,
     textMessage:
-      "You should hold your skill points in lane and try to have great cleave maxed by lvl 7 when you start jungling.",
+      "You should hold your skill points in lane and only put them into great cleave once you are ready to leave the lane at level 5 or 6 unless you need the strength gain from great cleave to sustain in lane.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_great_cleave" },
   },
@@ -14479,15 +14479,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_3_DontOverlane",
     messageTime: 7 * 60 + 15,
     textMessage:
-      "Don't overlane. Consider moving out of the lane as laning opponents are getting closer to level 6.",
-    audience: [Audience.ROLE_CARRY, Audience.ROLE_OFFLANE],
+      "Prepare to leave the lane once your opponents in lane are getting close to level 6. Start jungling and only go towards open lanes that are not dangerous to farm near the tower and return to jungle repeatedly.",
+    audience: [Audience.ROLE_CORE],
   },
   {
     category: "OwnHero",
     npcHeroName: "sven",
-    audioFile: "ownHero/Sven_4_UltiStacks",
+    audioFile: "ownHero/Sven_4_UltiFarm",
     messageTime: 8 * 60,
-    textMessage: "Feel free to pop ulty to farm big stacks.",
+    textMessage: "Use your ultimate to farm everytime it is off cooldown to speed up farm.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_gods_strength" },
   },
@@ -14517,7 +14517,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_7_Antikiting",
     messageTime: [11 * 60 + 45, 21 * 60 + 45],
     textMessage:
-      "Itemize against kitting by purchasing Black King Bar, Blink Dagger, Shadow Blade, Aghanim's Scepter or Shard.",
+      "Itemize against kitting by purchasing Black King Bar, Harpoon, Blink Dagger, Aghanim's Scepter or Shard.",
     audience: [Audience.ROLE_CORE],
   },
 
@@ -14536,7 +14536,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Sven_2_ContestFarm",
     messageTime: 10 * 60 + 10,
     textMessage:
-      "Sven farms quickly with Great Cleave. Smoke him, place deep wards and sentry off camps.",
+      "Sven farms quickly with Great Cleave. Smoke onto him, place deep wards and sentry off camps.",
     audience: [Audience.ALL],
   },
   {
@@ -14566,9 +14566,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     npcHeroName: "sven",
-    audioFile: "enemyHero/Sven_6_AghanimsScepter",
+    audioFile: "enemyHero/Sven_6_BlinkInitiation",
     messageTime: 15 * 60,
-    textMessage: "Be aware of Sven's Aghanim's Scepter timing. He becomes much more dangerous.",
+    textMessage: "Be aware of Sven's blink stun initiation. If you don't see him on the map, avoid showing yourself when pushing lanes.",
     audience: [Audience.ALL],
   },
 
