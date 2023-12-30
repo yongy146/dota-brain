@@ -3526,7 +3526,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "dazzle",
     audioFile: "ownHero/Dazzle_5_ActivatableItems",
@@ -3535,7 +3535,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_bad_juju" },
-  },
+  }, */
   {
     category: "OwnHero",
     npcHeroName: "dazzle",
@@ -3565,7 +3565,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Purchase Aghanim's Shard at 15 minute mark as it provides extra control and kills off basic illusions.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "dazzle",
     audioFile: "ownHero/Dazzle_9_HandofMidas",
@@ -3573,6 +3573,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Use Hand of Midas as often as you can with the active of Bad Juju.",
     audience: [Audience.ALL],
     image: { type: "item", name: "hand_of_midas" },
+  }, */
+  {
+    category: `OwnHero`,
+    npcHeroName: `dazzle`,
+    audioFile: `ownHero/Dazzle_10_ChainShallowGrave`,
+    messageTime: 27 * 60 + 15,
+    textMessage: `Use Bad Juju twice to reset the cooldown of Shallow Grave every time post level 12.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `dazzle_bad_juju` },
   },
 
   {
@@ -4845,7 +4854,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Enchantress_3_Tanky",
     messageTime: 8 * 60,
     textMessage:
-      "Enchantress is tanky in early to midgame due to Untouchable and Nature's Attendants. Play aggressively.",
+      `Enchantress is tanky in early to mid game due to Untouchable and Natures Attendants. Play aggressively.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enchantress_untouchable" },
   },
@@ -6480,7 +6489,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "keeper_of_the_light",
     audioFile: "ownHero/KeeperOfTheLight_6_DefendBuildings",
     messageTime: [8 * 60 + 15, 16 * 60 + 15, 24 * 60 + 15],
-    textMessage: "Keeper is amazing at defending buildings while your cores can splitpush.",
+    textMessage: `Keeper is amazing at defending buildings while your cores can split push.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "keeper_of_the_light_illuminate" },
   },
@@ -10281,7 +10290,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NyxAssassin_3_ImpaleRanged",
     messageTime: 15,
     textMessage:
-      "Use Impale to secure ranged creep and stun opponents at the same time if possible.",
+      `Use Impale to secure the ranged creep and stun opponents at the same time if possible.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_impale" },
   },
@@ -10410,7 +10419,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "ogre_magi",
     audioFile: "ownHero/OgreMagi_1_Tankiness",
     messageTime: 30,
-    textMessage: "Play in front of your Core to to make use of your tankiness.",
+    textMessage: `Play in front of your core to make use of your tankiness.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -10455,7 +10464,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/OgreMagi_6_Bloodlust",
     messageTime: 17 * 60,
     repeatTime: 20 * 60,
-    textMessage: "Bloodlust your right-click Cores prior and during a fight.",
+    textMessage: `Bloodlust your right click cores prior and during a fight.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "ogre_magi_bloodlust" },
   },
