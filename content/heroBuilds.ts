@@ -15105,7 +15105,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `special_bonus_unique_shadow_shaman_4`, // 25
         ],
         items: {
-          starting: [`tango`, `blood_grenade`, `enchanted_mango`, `wind_lace`, `branches`, `branches`, `ward_observer`, `ward_sentry`],
+          starting: [`tango`, `blood_grenade`, `enchanted_mango`, `wind_lace`, `branches`, /*`branches` removed, as total costs were 605 */`ward_observer`, `ward_sentry`],
           early_game: [
             `boots`,
             "magic_wand",
