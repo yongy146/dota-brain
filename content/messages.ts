@@ -2988,7 +2988,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CrystalMaiden_3_FrostbiteCreeps",
     messageTime: [2 * 60, 8 * 60],
     textMessage:
-      "Frostbite lasts longer on the creeps. Use it to farm big neutral creeps or opponents' summons.",
+      `Frostbite lasts longer on the creeps. Use it to farm big neutral creeps or enemy summons.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_frostbite" },
   },
@@ -2999,7 +2999,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Crystal Nova provides vision so you can use it to scout pillars for wards and Roshpit for example.",
+      `Crystal Nova provides vision so you can use it to scout pillars for wards and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_crystal_nova" },
   },
@@ -5305,6 +5305,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "grimstroke_spirit_walk" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `grimstroke`,
+    audioFile: `ownHero/Grimstroke_8_InkSwellDispel`,
+    messageTime: [18 * 60 + 30, 28 * 60 + 30, 38 * 60 + 30, 48 * 60 + 30],
+    textMessage: `With Aghanims Shard, you can apply and pop Ink Swell instantly on an ally to dispel off stuns and silences.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `grimstroke_spirit_walk` },
+  },
 
   {
     category: "EnemyHero",
@@ -6134,7 +6143,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_3_IcePathScout",
     messageTime: [3 * 60, 9 * 60, 15 * 60],
     textMessage:
-      "Ice Path provides vision so you can use it to scout pillars for wards and Roshpit.",
+      `Ice Path provides vision so you can use it to scout pillars for wards and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_ice_path" },
   },
@@ -7086,7 +7095,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lich",
     audioFile: "ownHero/Lich_1_FrostBlastRightClick",
     messageTime: 15,
-    textMessage: "Make use of the slowing part of the Frost Blast to chain couple of right-clicks.",
+    textMessage: `Make use of the slowing part of the Frost Blast to chain couple of right clicks.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7096,7 +7105,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_2_SecureRanged",
     messageTime: 30,
     textMessage:
-      "Secure ranged creep last hit with right-click or Frost Blast when your core cant.",
+      `Secure ranged creep last hit with right click or Frost Blast when your core cant.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7157,7 +7166,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_8_Jungling",
     messageTime: 5 * 60,
     repeatTime: 9 * 60,
-    textMessage: "You can quickly farm the big creep in jungle camps using Sinister Gaze.",
+    textMessage: `You can quickly farm enemy summons or the big creep in jungle camps using Sinister Gaze.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_sinister_gaze" },
   },
