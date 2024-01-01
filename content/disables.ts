@@ -428,6 +428,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Will-O-Wisp is an area stun.
+	// The level 20 talent for Solar Bind also provides a Hero stun when the hero is fully slowed.
   ],
   kunkka: [
     {

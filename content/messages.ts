@@ -2988,7 +2988,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CrystalMaiden_3_FrostbiteCreeps",
     messageTime: [2 * 60, 8 * 60],
     textMessage:
-      "Frostbite lasts longer on the creeps. Use it to farm big neutral creeps or opponents' summons.",
+      `Frostbite lasts longer on the creeps. Use it to farm big neutral creeps or enemy summons.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_frostbite" },
   },
@@ -2999,7 +2999,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Crystal Nova provides vision so you can use it to scout pillars for wards and Roshpit for example.",
+      `Crystal Nova provides vision so you can use it to scout pillars for wards and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_crystal_nova" },
   },
@@ -3526,7 +3526,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "tpscroll" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "dazzle",
     audioFile: "ownHero/Dazzle_5_ActivatableItems",
@@ -3535,7 +3535,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Prioritize purchasing and using activatable items and neutral items to take advantage of Bad Juju.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "dazzle_bad_juju" },
-  },
+  }, */
   {
     category: "OwnHero",
     npcHeroName: "dazzle",
@@ -3565,7 +3565,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Purchase Aghanim's Shard at 15 minute mark as it provides extra control and kills off basic illusions.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "dazzle",
     audioFile: "ownHero/Dazzle_9_HandofMidas",
@@ -3573,6 +3573,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Use Hand of Midas as often as you can with the active of Bad Juju.",
     audience: [Audience.ALL],
     image: { type: "item", name: "hand_of_midas" },
+  }, */
+  {
+    category: `OwnHero`,
+    npcHeroName: `dazzle`,
+    audioFile: `ownHero/Dazzle_10_ChainShallowGrave`,
+    messageTime: 27 * 60 + 15,
+    textMessage: `Use Bad Juju twice to reset the cooldown of Shallow Grave every time post level 12.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `dazzle_bad_juju` },
   },
 
   {
@@ -4845,7 +4854,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Enchantress_3_Tanky",
     messageTime: 8 * 60,
     textMessage:
-      "Enchantress is tanky in early to midgame due to Untouchable and Nature's Attendants. Play aggressively.",
+      `Enchantress is tanky in early to mid game due to Untouchable and Natures Attendants. Play aggressively.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enchantress_untouchable" },
   },
@@ -5295,6 +5304,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Use portals to roam around the map and set up kills with your control spells.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "grimstroke_spirit_walk" },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `grimstroke`,
+    audioFile: `ownHero/Grimstroke_8_InkSwellDispel`,
+    messageTime: [18 * 60 + 30, 28 * 60 + 30, 38 * 60 + 30, 48 * 60 + 30],
+    textMessage: `With Aghanims Shard, you can apply and pop Ink Swell instantly on an ally to dispel off stuns and silences.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `grimstroke_spirit_walk` },
   },
 
   {
@@ -6125,7 +6143,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_3_IcePathScout",
     messageTime: [3 * 60, 9 * 60, 15 * 60],
     textMessage:
-      "Ice Path provides vision so you can use it to scout pillars for wards and Roshpit.",
+      `Ice Path provides vision so you can use it to scout pillars for wards and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_ice_path" },
   },
@@ -6480,7 +6498,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "keeper_of_the_light",
     audioFile: "ownHero/KeeperOfTheLight_6_DefendBuildings",
     messageTime: [8 * 60 + 15, 16 * 60 + 15, 24 * 60 + 15],
-    textMessage: "Keeper is amazing at defending buildings while your cores can splitpush.",
+    textMessage: `Keeper is amazing at defending buildings while your cores can split push.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "keeper_of_the_light_illuminate" },
   },
@@ -7077,7 +7095,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lich",
     audioFile: "ownHero/Lich_1_FrostBlastRightClick",
     messageTime: 15,
-    textMessage: "Make use of the slowing part of the Frost Blast to chain couple of right-clicks.",
+    textMessage: `Make use of the slowing part of the Frost Blast to chain couple of right clicks.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7087,7 +7105,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_2_SecureRanged",
     messageTime: 30,
     textMessage:
-      "Secure ranged creep last hit with right-click or Frost Blast when your core cant.",
+      `Secure ranged creep last hit with right click or Frost Blast when your core cant.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7148,7 +7166,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_8_Jungling",
     messageTime: 5 * 60,
     repeatTime: 9 * 60,
-    textMessage: "You can quickly farm the big creep in jungle camps using Sinister Gaze.",
+    textMessage: `You can quickly farm enemy summons or the big creep in jungle camps using Sinister Gaze.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_sinister_gaze" },
   },
@@ -10281,7 +10299,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NyxAssassin_3_ImpaleRanged",
     messageTime: 15,
     textMessage:
-      "Use Impale to secure ranged creep and stun opponents at the same time if possible.",
+      `Use Impale to secure the ranged creep and stun opponents at the same time if possible.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "nyx_assassin_impale" },
   },
@@ -10410,7 +10428,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "ogre_magi",
     audioFile: "ownHero/OgreMagi_1_Tankiness",
     messageTime: 30,
-    textMessage: "Play in front of your Core to to make use of your tankiness.",
+    textMessage: `Play in front of your core to make use of your tankiness.`,
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -10455,7 +10473,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/OgreMagi_6_Bloodlust",
     messageTime: 17 * 60,
     repeatTime: 20 * 60,
-    textMessage: "Bloodlust your right-click Cores prior and during a fight.",
+    textMessage: `Bloodlust your right click cores prior and during a fight.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "ogre_magi_bloodlust" },
   },
