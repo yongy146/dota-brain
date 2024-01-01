@@ -14486,8 +14486,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sven",
     audioFile: "ownHero/Sven_4_MaxCleave",
     messageTime: 1 * 60,
-    textMessage:
-      "You should hold your skill points in lane and try to have great cleave maxed by lvl 7 when you start jungling.",
+    textMessage: "Only put points into Great Cleave once you are ready to leave the lane, or keep it at one point for the Strength Bonus to sustain in lane until you are ready to leave.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_great_cleave" },
   },
@@ -14497,7 +14496,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_3_DontOverlane",
     messageTime: 7 * 60 + 15,
     textMessage:
-      "Don't overlane. Consider moving out of the lane as laning opponents are getting closer to level 6.",
+      "Don't overstay in lane. Consider moving out of the lane as laning opponents are getting closer to level 6.",
     audience: [Audience.ROLE_CARRY, Audience.ROLE_OFFLANE],
   },
   {
@@ -14505,7 +14504,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sven",
     audioFile: "ownHero/Sven_4_UltiStacks",
     messageTime: 8 * 60,
-    textMessage: "Feel free to pop ulty to farm big stacks.",
+    textMessage: "Feel free to pop God's Strength off cooldown to farm after laning phase.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_gods_strength" },
   },
@@ -14535,7 +14534,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_7_Antikiting",
     messageTime: [11 * 60 + 45, 21 * 60 + 45],
     textMessage:
-      "Itemize against kitting by purchasing Black King Bar, Blink Dagger, Shadow Blade, Aghanim's Scepter or Shard.",
+      "Itemize against kiting by purchasing Black King Bar, Blink Dagger, Shadow Blade, Aghanim's Scepter or Shard.",
     audience: [Audience.ROLE_CORE],
   },
 
