@@ -17017,8 +17017,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   templar_assassin: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -17028,100 +17028,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "templar_assassin_meld", // 1
-          "templar_assassin_psi_blades", // 2
-          "templar_assassin_refraction", // 3
-          "templar_assassin_refraction", // 4
-          "templar_assassin_refraction", // 5
-          "templar_assassin_psionic_trap", // 6
-          "templar_assassin_refraction", // 7
-          "templar_assassin_psi_blades", // 8
-          "templar_assassin_meld", // 9
-          "templar_assassin_meld", // 10
-          "templar_assassin_meld", // 11
-          "templar_assassin_psionic_trap", // 12
-          "templar_assassin_psi_blades", // 13
-          "special_bonus_unique_templar_assassin_refraction_damage", // 14
-          "special_bonus_unique_templar_assassin_8", // 15
-          "templar_assassin_psi_blades", // 16
-          "special_bonus_attributes", // 17
-          "templar_assassin_psionic_trap", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_templar_assassin_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_templar_assassin", // 25
-        ],
-        items: {
-          starting: [
-            "tango",
-            "branches",
-            "quelling_blade",
-            "circlet",
-            "magic_stick",
-          ],
-          early_game: [
-            "wraith_band",
-            "power_treads",
-            "magic_stick",
-            "dragon_lance",
-          ],
-          mid_game: ["desolator", "blink", "lesser_crit", "black_king_bar"],
-          late_game: [
-            "greater_crit",
-            "butterfly",
-            "swift_blink",
-            "travel_boots",
-          ],
-          situational: [
-            "ultimate_scepter",
-            "aghanims_shard",
-            "monkey_king_bar",
-            "nullifier",
-            "sphere",
-            "sheepstick",
-            "hurricane_pike",
-            "silver_edge",
-            "bloodthorn",
-            "infused_raindrop",
-          ],
-          core: [
-            "dragon_lance",
-            "desolator",
-            "blink",
-            "black_king_bar",
-            "greater_crit",
-          ],
-          neutral: [
-            "broom_handle",
-            "occult_bracelet",
-            //"ring_of_aquila",
-            "grove_bow",
-            "specialists_array",
-            "elven_tunic",
-            "enchanted_quiver",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "desolator_2",
-            "apex",
-          ],
-        },
-      },
-      {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
-        steam_guide_link_id: 2726399928,
-        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
-        abilities: [
           "templar_assassin_psi_blades", // 1
-          "templar_assassin_refraction", // 2
+			    "templar_assassin_refraction", // 2
           "templar_assassin_refraction", // 3
           "templar_assassin_psi_blades", // 4
-          "templar_assassin_refraction", // 5
+	        "templar_assassin_refraction", // 5
           "templar_assassin_psionic_trap", // 6
           "templar_assassin_refraction", // 7
           "templar_assassin_meld", // 8
@@ -17145,66 +17056,200 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "branches",
-            "branches",
-            "ward_observer",
+            "quelling_blade",
+            "slippers",
+				    "circlet",
+				    "branches",
+			    	"tango",            
           ],
-          early_game: ["bottle", "power_treads", "magic_wand", "dragon_lance"],
-          mid_game: ["desolator", "blink", "black_king_bar", "lesser_crit"],
-          late_game: ["greater_crit", "swift_blink", "butterfly"],
-          situational: [
-            "aghanims_shard",
+          early_game: [
+            "wraith_band",
+            "blight_stone",
+            "power_treads",
+          ],
+          mid_game: [
+            "desolator", 
+            "black_king_bar"
+            "blink", 
+            "dragon_lance",
+          ],
+          late_game: [
             "ultimate_scepter",
-            "monkey_king_bar",
-            "nullifier",
-            "sphere",
-            "sheepstick",
             "hurricane_pike",
-            "travel_boots",
+            "greater_crit",
+            "swift_blink",
+            "satanic",
+          ],
+          situational: [
+            "sheepstick",
+            "sphere",
+            "nullifier",
+            "monkey_king_bar",
+            "aghanims_shard",
             "silver_edge",
-            "bloodthorn",
           ],
           core: [
-            "dragon_lance",
+            "power_treads",
             "desolator",
-            "blink",
             "black_king_bar",
-            "greater_crit",
+            "blink",
+            "dragon_lance",
+            "ultimate_scepter",
           ],
           neutral: [
-            "broom_handle",
+            // tier 1
+            "unstable_wand",
             "occult_bracelet",
+            "lance_of_pursuit",
+
+            // tier 2
             "grove_bow",
             "specialists_array",
+            "orb_of_destruction",
+
+            // tier 3
             "elven_tunic",
             "enchanted_quiver",
+            "paladin_sword",
+
+            // tier 4
             "ninja_gear",
             "mind_breaker",
-            "desolator_2",
+            "avianas_feather",
+
+            // tier 5
             "pirate_hat",
-            "mirror_shield",
+            "desolator_2",
+            "apex",
+          ],
+        },
+      },
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+
+        steam_guide_link_id: 2726399928,
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        //dota_fire_id: ,
+        abilities: [
+          "templar_assassin_psi_blades", // 1
+			    "templar_assassin_refraction", // 2
+          "templar_assassin_refraction", // 3
+          "templar_assassin_psi_blades", // 4
+	        "templar_assassin_refraction", // 5
+          "templar_assassin_psionic_trap", // 6
+          "templar_assassin_refraction", // 7
+          "templar_assassin_meld", // 8
+          "templar_assassin_meld", // 9
+          "templar_assassin_meld", // 10
+          "templar_assassin_meld", // 11
+          "templar_assassin_psionic_trap", // 12
+          "templar_assassin_psi_blades", // 13
+          "special_bonus_unique_templar_assassin_refraction_damage", // 14
+          "special_bonus_unique_templar_assassin_8", // 15
+          "templar_assassin_psi_blades", // 16
+          "special_bonus_attributes", // 17
+          "templar_assassin_psionic_trap", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_templar_assassin_4", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_templar_assassin", // 25
+        ],
+        items: {
+          starting: [
+            "branches",
+            "branches",
+            "tango",
+            "faerie_fire",
+            "ward_observer",
+          ],
+          early_game: [
+            "bottle",
+            "magic_wand",
+            "blight_stone",
+            "power_treads",
+          ],
+          mid_game: [
+            "desolator", 
+            "black_king_bar"
+            "blink", 
+            "dragon_lance",
+          ],
+          late_game: [
+            "ultimate_scepter",
+            "hurricane_pike",
+            "greater_crit",
+            "swift_blink",
+            "satanic",
+          ],
+          situational: [
+            "sheepstick",
+            "sphere",
+            "nullifier",
+            "monkey_king_bar",
+            "aghanims_shard",
+            "silver_edge",
+          ],
+          core: [
+            "power_treads",
+            "desolator",
+            "black_king_bar",
+            "blink",
+            "dragon_lance",
+            "ultimate_scepter",
+          ],
+          neutral: [
+            // tier 1
+            "unstable_wand",
+            "occult_bracelet",
+            "lance_of_pursuit",
+
+            // tier 2
+            "grove_bow",
+            "specialists_array",
+            "orb_of_destruction",
+
+            // tier 3
+            "elven_tunic",
+            "enchanted_quiver",
+            "paladin_sword",
+
+            // tier 4
+            "ninja_gear",
+            "mind_breaker",
+            "avianas_feather",
+
+            // tier 5
+            "pirate_hat",
+            "desolator_2",
+            "apex",
           ],
         },
       },
     ],
-    combo: [],
+    combo: [
+      "templar_assassin_refraction",
+      "black_king_bar",
+      "blink",
+      "templar_assassin_meld",
+      "attack",
+    ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "urn_of_shadows", "armor"],
-        support: ["ward_sentry"],
+        all: ["ward_sentry", "wind_lace", "boots", "urn_of_shadows", "armor"],
+        support: [],
         core: [],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest"],
-        support: ["ward_dispenser", "SentryDust", "ghost", "glimmer_cape"],
+        all: ["spirit_vessel", "ward_sentry", "dust"],
+        support: ["ghost", "glimmer_cape"],
         core: ["hurricane_pike", "witch_blade", "heavens_halberd", "javelin"],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk"],
-        support: ["SentryDustGem"],
+        all: ["gem", "sheepstick", "ethereal_blade", "aeon_disk"],
+        support: [],
         core: ["abyssal_blade", "assault", "butterfly", "radiance"],
       },
     },
