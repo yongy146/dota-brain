@@ -848,7 +848,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/AncientAppartion_1_RightClick",
     messageTime: -30,
     textMessage:
-      "Make maximal use of Ancient Apparition's long attack range and Chilling Touch to harass on the lane without aggroing lane creeps.",
+      `Make maximum use of your high attack range and Chilling Touch to harass in the lane without aggroing lane creeps.`,
     audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: "ability", name: "ancient_apparition_chilling_touch" },
   },
@@ -858,7 +858,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/AncientAppartion_2_ColdFeet",
     messageTime: -15,
     textMessage:
-      "Use Cold Feet when it is likely to stun, for example, after your laning partner applies a disable or slow, or just before the opponent wants to lasthit a creep.",
+      `Use Cold Feet when it is likely to stun, for example, after your laning partner applies a disable or slow, or just before the opponent wants to last hit a creep.`,
     audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: "ability", name: "ancient_apparition_cold_feet" },
   },
@@ -867,7 +867,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "ancient_apparition",
     audioFile: "ownHero/AncientAppartion_3_IceVortex",
     messageTime: [4 * 60 + 10, 14 * 60 + 10, 24 * 60 + 10],
-    textMessage: "Ice Vortex can be used to provide vision on top of pillars or in Roshpit.",
+    textMessage: `Ice Vortex can be used to provide vision on top of pillars or in Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "ancient_apparition_ice_vortex" },
   },
@@ -7604,6 +7604,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "lion_mana_drain" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `lion`,
+    audioFile: `ownHero/Lion_10_ManaDrainDamage`,
+    messageTime: 2 * 60 + 15,
+    textMessage:
+      `Position yourself to get an uninterrupted Mana Drain as a follow up on Earth Spike to harass enemy heroes from a distance.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `lion_mana_drain` },
+  },
 
   {
     category: "EnemyHero",
@@ -11352,7 +11362,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "phoenix",
     audioFile: "ownHero/Phoenix_3_IcarusDiveHit",
     messageTime: [60, 8 * 60, 15 * 60],
-    textMessage: "You can attack once during an Icarus Dive.",
+    textMessage: `You can attack once during Icarus Dive.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "phoenix_icarus_dive" },
   },
@@ -11362,7 +11372,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Phoenix_4_FireSpiritsVision",
     messageTime: [3 * 60, 9 * 60 + 30, 16 * 60],
     textMessage:
-      "Fire Spirits provide short-lasting vision so you can scout pillars for wards or Roshpit.",
+      `Fire Spirits provide short lasting vision so you can scout pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "phoenix_fire_spirits" },
   },
@@ -11430,11 +11440,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "phoenix",
     audioFile: "ownHero/Phoenix_11_AghanimsShard",
-    messageTime: 20 * 60 + 15,
+    messageTime: 15 * 60 + 30,
     textMessage:
       "With Aghanim's Shard, use Sun Ray before Supernova as it will persist and will be refreshed upon explosion.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `phoenix`,
+    audioFile: `ownHero/Phoenix_12_SunRayMissChance`,
+    messageTime: [18 * 60 + 10, 28 * 60 + 10, 38 * 60 + 10, 48 * 60 + 10],
+    textMessage:
+      `With Aghanims Shard, use Sun Ray during Supernova on enemy heroes hitting your egg to have more chances of survival with the miss chance.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `phoenix_sun_ray` },
   },
 
   {
@@ -11442,7 +11462,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "phoenix",
     audioFile: "enemyHero/Phoenix_1_IcarusDive",
     messageTime: -60,
-    textMessage: "Look to go on Phoenix when Icarus dive was used. It has long cd.",
+    textMessage: `Look to go on Phoenix when Icarus dive was used. It has long cooldown.`,
     audience: [Audience.IN_LANE],
   },
   {
