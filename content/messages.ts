@@ -5038,7 +5038,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "enigma_demonic_conversion" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "enigma",
     audioFile: "ownHero/Enigma_9_SolarCrestAbuse",
@@ -5047,7 +5047,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "As soon as you have your Solar Crest, look to pressure enemy heroes and towers with your eidolons.",
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "solar_crest" },
-  },
+  }, */
 
   {
     category: "EnemyHero",
@@ -10963,7 +10963,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "pangolier",
     audioFile: "ownHero/Pangolier_8_Roshan2",
     messageTime: 14 * 60 + 50,
-    textMessage: "Pick up Aghanims Shard at minute 15 as it gives you another survivability tool.",
+    textMessage: `Pick up Aghanims Shard at minute 15 as it gives you another survivability tool and reliably channel Rolling Thunder.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -15506,7 +15506,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tinker_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Secure ranged creep lasthits with Laser and potentially harass the opponent at the same time.",
+      `Secure ranged creep last hits with Laser and potentially harass the opponent at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "tinker_laser" },
   },
@@ -15971,7 +15971,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 13 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Treant is amazing at splitpushing without even showing himself. Go ham on it when not much is happening.",
+      `Treant is amazing at split pushing without even showing himself. Go ham on it when not much is happening.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "treant_natures_grasp" },
   },
@@ -15981,7 +15981,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/TreantProtector_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 15 as it adds even more utility and disables the hero.",
+      `Pick up Aghanims Shard around minute 15 to become invisible near trees and lockdown enemy heroes and creeps on attack.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -16000,7 +16000,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/TreantProtector_10_ConnectTreeLines",
     messageTime: 20 * 60,
     textMessage:
-      "With your Aghanims Shard, you can use Natures Grasp to connect Tree Lines and stay invisible.",
+      `With your Aghanims Shard, you can use Natures Grasp to connect between Tree Lines and stay invisible.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "treant_natures_grasp" },
   },
@@ -17158,7 +17158,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "visage_summon_familiars" },
   },
-  /*   {
+  {
     category: "OwnHero",
     npcHeroName: "visage",
     audioFile: "ownHero/Visage_4_DontOverrotate",
@@ -17167,7 +17167,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Don't over-rotate. Work your way to Orchid as it allows you to solo kill most of the heroes.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "orchid" },
-  }, */
+  },
   {
     category: "OwnHero",
     npcHeroName: "visage",

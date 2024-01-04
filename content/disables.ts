@@ -908,6 +908,7 @@ export const disables: IDisables = {
   ],
   tinker: [
     // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes (2, or 3 with level 15 talent) and is not targetable.
+	// The Aghanims Shard gives Tinker a Hero Root with Warp Flare.
   ],
   tiny: [
     {
