@@ -2,7 +2,7 @@
  * This module provides information on the screens in Dota 2 for
  * the app to be able to properly position windows
  *
- * (C) Dota Coach, 2023
+ * (C) Dota Coach, 2024. All rights reserved.
  */
 import {
   IMonitorMeasurements,
@@ -23,7 +23,10 @@ import * as Logger from "@utilities/log/log";
  * @param width Width of Dota 2 display size
  * @param height Height of Dota 2 display size
  */
-export function getMonitorMeasurements(width: number, height: number): IMonitorMeasurements {
+export function getMonitorMeasurements(
+  width: number,
+  height: number
+): IMonitorMeasurements {
   let result: Partial<IMonitorMeasurements> = {
     width,
     height,
@@ -53,7 +56,8 @@ export function getMonitorMeasurements(width: number, height: number): IMonitorM
     fontSizeSmall: fontSize * 0.8,
     inGame: {
       heroesWidth: result.overwolf.inGame.heroesWidth / window.devicePixelRatio,
-      heroesHeight: result.overwolf.inGame.heroesHeight / window.devicePixelRatio,
+      heroesHeight:
+        result.overwolf.inGame.heroesHeight / window.devicePixelRatio,
     },
   };
 

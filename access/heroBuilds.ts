@@ -1,9 +1,14 @@
 /**
  * This module provides utility functions to process hero guides.
  *
- * (C) Dota Coach, 2023
+ * (C) Dota Coach, 2024. All rights reserved.
  */
-import { IHeroBuild, getSteamGuideLink, heroBuilds, isCoreItem } from "../content/heroBuilds";
+import {
+  IHeroBuild,
+  getSteamGuideLink,
+  heroBuilds,
+  isCoreItem,
+} from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import { IntlShape } from "react-intl";
 import * as PlayerRoles from "../utilities/playerRoles";
@@ -72,7 +77,8 @@ export function getClosestHeroBuild(
   //DotaLogger.log(`heroBuilds.getClosestHeroBuild(): ${playerRole} => ${role}`);
 
   // Get all roles of guides
-  const guides: Record<string, { buildIndex: number; heroBuild: IHeroBuild }> = {};
+  const guides: Record<string, { buildIndex: number; heroBuild: IHeroBuild }> =
+    {};
   for (let i = 0; i < heroBuilds[npcShortName].builds.length; i++) {
     const heroBuild = heroBuilds[npcShortName].builds[i];
     for (const role of heroBuild.roles) {
@@ -163,7 +169,9 @@ export function getStandardAbilityBuild(npcShortName: string): string[] {
  * @param npcShortName e.g. "legion_commander" or "lone_druid"
  * @return undefined if there is no such build
  */
-export function getHeroBuildArray(npcShortName: string): IHeroBuild[] | undefined {
+export function getHeroBuildArray(
+  npcShortName: string
+): IHeroBuild[] | undefined {
   return heroBuilds[npcShortName]?.builds;
 }
 
@@ -246,7 +254,10 @@ export function getAbilityNames(): string[] {
  * @param npcShortName npc short name, e.g. "legion_commander"
  * @returns Array of { item: string (e.g. sheepstick), isCore?: boolean, info?: string }
  */
-export function getStandardItemBuild(npcShortName: string, intl?: IntlShape): IPhaseItemBuild[] {
+export function getStandardItemBuild(
+  npcShortName: string,
+  intl?: IntlShape
+): IPhaseItemBuild[] {
   //DotaLogger.log(`dota2.getStandardItemBuild(${h}): Called`);
   if (!hasDefaultHeroBuild(npcShortName)) {
     // Check is used for the case Dota 2 adds a new hero and the app is not yet updated
@@ -311,7 +322,8 @@ export function getItemBuildForRole(
     ({ heroBuild, buildIndex } = getDefaultHeroBuild(npcShortName) || {});
   } else {
     ({ heroBuild, buildIndex } = getHeroBuild(npcShortName, playerRole) || {});
-    if (heroBuild === undefined) heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
+    if (heroBuild === undefined)
+      heroBuild = getDefaultHeroBuild(npcShortName)?.heroBuild;
   }
 
   const heroContent = getHeroContent(npcShortName);
@@ -344,30 +356,49 @@ export function getItemBuild(
     const result: IPhaseItemBuild = { name: item };
     //if (item_tooltips[item]) result["info"] = item_tooltips[item];
     if (core_items.indexOf(item) !== -1) result["isCore"] = true;
-    const tooltip = intl && getItemTooltip(npcShortName, buildIndex, item, intl);
+    const tooltip =
+      intl && getItemTooltip(npcShortName, buildIndex, item, intl);
     if (tooltip) result["info"] = tooltip;
     return result;
   }
 
   return {
     roles: intl && PlayerRoles.rolesToString(heroBuild.roles, intl),
-    starting: build.items.starting.map((x) => transformItem(x, build.items.core)),
+    starting: build.items.starting.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     starting_bear: build.items.starting_bear?.map((x) => transformItem(x, [])),
     // Only add core items for Lone Druid & Baer
     core: build.items.core_bear
       ? build.items.core.map((x) => transformItem(x, build.items.core))
       : undefined,
-    core_bear: build.items.core_bear?.map((x) => transformItem(x, build.items.core_bear!)),
-    early_game: build.items.early_game?.map((x) => transformItem(x, build.items.core)),
-    mid_game: build.items.mid_game?.map((x) => transformItem(x, build.items.core)),
-    late_game: build.items.late_game?.map((x) => transformItem(x, build.items.core)),
-    situational: build.items.situational.map((x) => transformItem(x, build.items.core)),
+    core_bear: build.items.core_bear?.map((x) =>
+      transformItem(x, build.items.core_bear!)
+    ),
+    early_game: build.items.early_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    mid_game: build.items.mid_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    late_game: build.items.late_game?.map((x) =>
+      transformItem(x, build.items.core)
+    ),
+    situational: build.items.situational.map((x) =>
+      transformItem(x, build.items.core)
+    ),
     situational_bear: build.items.situational_bear?.map((x) =>
-      transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+      transformItem(
+        x,
+        build.items.core_bear == undefined ? [] : build.items.core_bear
+      )
     ),
     neutral: build.items.neutral.map((x) => transformItem(x, build.items.core)),
     neutral_bear: build.items.neutral_bear?.map((x) =>
-      transformItem(x, build.items.core_bear == undefined ? [] : build.items.core_bear)
+      transformItem(
+        x,
+        build.items.core_bear == undefined ? [] : build.items.core_bear
+      )
     ),
   };
 }

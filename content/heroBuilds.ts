@@ -19,7 +19,7 @@
  *   - C:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
  *   - D:\Program Files (x86)\Steam\userdata\361606936\570\remote\guides
  *
- * (C) Dota Coach, 2023. All rights reserved.
+ * (C) Dota Coach, 2024. All rights reserved.
  */
 import { IntlShape } from "react-intl";
 import {
