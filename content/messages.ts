@@ -1257,7 +1257,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_2_CounterHelix",
     messageTime: -15,
     textMessage:
-      "It is good to fight the opponents while you are surrounded by enemy creeps to proc Counter Helix with more attacks.",
+      "It is good to fight the opponents while you are surrounded by enemy creeps to proc Counter Helix with more attacks. If needed, toggle creep aggro to force Counter Helix when fighting",
     audience: [Audience.ALL],
     image: { type: "ability", name: "axe_counter_helix" },
   },
@@ -1305,7 +1305,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_7_BlinkDagger",
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Once you acquire Blink Dagger, try to make use of it immediately and avoid showing yourself on the map too often.",
+      "Once you acquire Blink Dagger, try to make use of it immediately and avoid showing yourself on the map too often. Comboing it with Blademail usually results in easy kills.",
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
   },
