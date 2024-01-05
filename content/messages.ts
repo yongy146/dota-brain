@@ -11207,6 +11207,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "When not much is happening or Rolling Thunder is on cooldown, push out sidelines.",
     audience: [Audience.ALL],
+    image: { type: "ability", name: "pangolier_gyroshell" },
   },
   {
     category: "OwnHero",
@@ -11237,6 +11238,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Pangolier has a low HP pool and is squishy. Pressure him early on, especially when Swashbuckle is on cooldown.",
     chatMessage: "Pangolier is squishy. Pressure him early on.",
     audience: [Audience.IN_LANE],
+    image: { type: "item", name: "vitality_booster" },
   },
   {
     category: "EnemyHero",
@@ -11246,6 +11248,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Pangolier's Rolling Thunder can be dodged by making sharp turns prior to impact.",
     audience: [Audience.ALL],
+    image: { type: "ability", name: "pangolier_gyroshell" },
   },
   {
     category: "EnemyHero",
@@ -11255,6 +11258,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Avoid fighting in choke spots and clumping up against Rolling Thunder.",
     audience: [Audience.ALL],
+    image: { type: "ability", name: "pangolier_gyroshell" },
   },
   {
     category: "EnemyHero",
@@ -11264,6 +11268,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Spell immunity items are great against Pangolier's disables and attack speed slow.",
     audience: [Audience.ALL],
+    image: { type: "item", name: "black_king_bar" },
   },
   {
     category: "EnemyHero",
@@ -11273,6 +11278,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Spells and items that provide roots or leash, stop Pangolier from using Swashbuckle and Rolling Thunder.",
     audience: [Audience.ALL],
+    image: { type: "ability", name: "treant_overgrowth" },
   },
   {
     category: "EnemyHero",
@@ -11282,6 +11288,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Spell immunity piercing stuns are great at dealing with Pangolier's Rolling Thunder.",
     audience: [Audience.ALL],
+    image: { type: "item", name: "abyssal_blade" },
   },
 
   {
@@ -11292,6 +11299,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "Items and spells that can dispel enemies are great at removing Shield Crash buff from Pangolier.",
     audience: [Audience.ALL],
+    image: { type: "item", name: "nullifier" },
   },
   {
     category: "EnemyHero",
@@ -11301,6 +11309,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "When Pangolier is about to hit you with Rolling Thunder, stand right at the edge of a high ground or low ground to avoid getting chain stunned.",
     audience: [Audience.ALL],
+    image: { type: "ability", name: "pangolier_gyroshell" },
   },
 
   // 74. Phantom Assassin
