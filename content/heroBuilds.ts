@@ -928,9 +928,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   arc_warden: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
-    damage_type: DamageType.physical,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
@@ -938,76 +938,67 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40443,
         abilities: [
-          "arc_warden_spark_wraith",
-          "arc_warden_flux",
-          `arc_warden_spark_wraith`,
-          `arc_warden_flux`,
-          `arc_warden_spark_wraith`,
-          "arc_warden_tempest_double",
-          `arc_warden_spark_wraith`,
-          `arc_warden_flux`,
-          `arc_warden_flux`,
-          `special_bonus_unique_arc_warden_5`,
-          `arc_warden_magnetic_field`,
-          "arc_warden_tempest_double",
-          "arc_warden_magnetic_field",
-          "arc_warden_magnetic_field",
-          `special_bonus_unique_arc_warden_3`,
-          `arc_warden_magnetic_field`,
-          "special_bonus_attributes",
-          "arc_warden_tempest_double",
-          "special_bonus_attributes",
-          `special_bonus_unique_arc_warden_9`,
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          `special_bonus_unique_arc_warden_6`,
+          "arc_warden_spark_wraith", // 1
+          "arc_warden_flux", // 2
+          "arc_warden_flux", // 3
+          "arc_warden_spark_wraith", // 4
+          "arc_warden_flux", // 5
+          "arc_warden_tempest_double", // 6
+          "arc_warden_flux", // 7
+          "arc_warden_spark_wraith", // 8
+          "arc_warden_spark_wraith", // 9
+          "special_bonus_unique_arc_warden_5", // 10
+          "arc_warden_magnetic_field", // 11
+          "arc_warden_tempest_double", // 12
+          "arc_warden_magnetic_field", // 13
+          "arc_warden_magnetic_field", // 14
+          "special_bonus_unique_arc_warden_4", // 15
+          "arc_warden_magnetic_field", // 16
+          "special_bonus_attributes", // 17
+          "arc_warden_tempest_double", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_arc_warden", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_arc_warden_8", // 25
         ],
         items: {
           starting: [
-            "tango",
-            "circlet",
-            `slippers`,
-            `branches`,
-            `branches`,
-            `faerie_fire`,
             "ward_observer",
+            "slippers",
+            "branches",
+            "branches",
+            "tango",
           ],
-          early_game: [`wraith_band`, `hand_of_midas`, `boots`, `magic_wand`],
-          mid_game: ["maelstrom", "travel_boots", `gungir`, `manta`],
+          early_game: ["bottle", "magic_wand", `hand_of_midas`, "boots"],
+          mid_game: ["travel_boots", "maelstrom", `gungir`, `black_king_bar`, "blink"],
           late_game: [
-            `hurricane_pike`,
-            `silver_edge`,
-            `aghanims_shard`,
-            `sheepstick`,
+            "blink",
+            "ultimate_scepter",
+            "sheepstick",
+            "octarine_core",
+            "aghanims_shard",
+            "swift_blink",
           ],
           situational: [
             "monkey_king_bar",
             `skadi`,
             `greater_crit`,
-            `mjollnir`,
             `nullifier`,
-            `black_king_bar`,
-            `butterfly`,
-            `bloodthorn`,
-            `moon_shard`,
-            `swift_blink`,
-            `dagon`,
-            `ethereal_blade`,
-            `overwhelming_blink`,
-            `ultimate_scepter`,
-            `octarine_core`,
             `travel_boots_2`,
+            "manta",
+            "silver_edge",
+            "hurricane_pike",
           ],
           core: [
             "hand_of_midas",
             "maelstrom",
             "travel_boots",
             `gungir`,
-            `manta`,
-            `hurricane_pike`,
-            `silver_edge`,
+            `black_king_bar`,
+            "blink",
           ],
           neutral: [
             `lance_of_pursuit`,
@@ -1035,7 +1026,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots"],
+        all: ["magic_stick", "wind_lace", "boots", "infused_raindrop"],
         support: ["ward_sentry"],
         core: [],
       },
@@ -1052,7 +1043,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       late_game: {
         all: ["sheepstick", "aeon_disk"],
-        support: ["travel_boots"],
+        support: [],
         core: [
           "abyssal_blade",
           "monkey_king_bar",
@@ -1066,8 +1057,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   axe: {
     // Comment to be deleted
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.pure,
     builds: [
       {
@@ -1075,32 +1066,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_link_id: 2699915204,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40444,
-        abilities: [
-          "axe_battle_hunger",
-          "axe_counter_helix",
-          "axe_counter_helix",
-          "axe_berserkers_call",
-          "axe_counter_helix",
-          "axe_culling_blade",
-          "axe_counter_helix",
-          "axe_berserkers_call",
-          "axe_berserkers_call",
-          "axe_berserkers_call",
-          `axe_battle_hunger`,
-          "axe_culling_blade",
-          "axe_battle_hunger",
-          "axe_battle_hunger",
-          `special_bonus_unique_axe_8`,
-          `special_bonus_unique_axe_4`,
-          "special_bonus_attributes",
-          "axe_culling_blade",
-          "special_bonus_attributes",
-          `special_bonus_unique_axe_5`,
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          `special_bonus_unique_axe_2`,
+        abilities: [      
+          "axe_battle_hunger", // 1
+          "axe_counter_helix", // 2
+          "axe_counter_helix", // 3
+          "axe_berserkers_call", // 4
+          "axe_counter_helix", // 5
+          "axe_culling_blade", // 6
+          "axe_counter_helix", // 7
+          "axe_berserkers_call", // 8
+          "axe_berserkers_call", // 9
+          "axe_berserkers_call", // 10
+          `axe_battle_hunger`, // 11
+          "axe_culling_blade", // 12
+          "axe_battle_hunger", // 13
+          "axe_battle_hunger", // 14
+          `special_bonus_unique_axe_8`, // 15
+          `special_bonus_unique_axe_4`, // 16
+          "special_bonus_attributes", // 17
+          "axe_culling_blade", // 18
+          "special_bonus_attributes", // 19
+          `special_bonus_unique_axe_5`, // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22 
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          `special_bonus_unique_axe_2`, // 25
         ],
         items: {
           starting: [
@@ -1120,24 +1111,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [`blink`, `blade_mail`, `travel_boots`, `aghanims_shard`],
+          mid_game: [`blink`, `blade_mail`, "black_king_bar, `aghanims_shard`, "travel_boots"],
           late_game: [
-            `black_king_bar`,
-            `octarine_core`,
-            `heart`,
+            "octarine_core",
             `overwhelming_blink`,
+            "heart",
+            "refresher",
           ],
           situational: [
-            `phase_boots`,
             `pipe`,
-            `kaya_and_sange`,
             `assault`,
             `shivas_guard`,
             `sphere`,
             `ultimate_scepter`,
             `crimson_guard`,
             "lotus_orb",
-            "invis_sword",
             `heavens_halberd`,
             `travel_boots_2`,
           ],
@@ -1149,7 +1137,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
             `aghanims_shard`,
             `black_king_bar`,
-            `octarine_core`,
+            "octarine_core",
           ],
           neutral: [
             `faded_broach`,
@@ -1178,9 +1166,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "ring_of_regen", "wind_lace", "boots"],
+        all: ["blight_stone", "wind_lace", "boots"],
         support: [],
-        core: ["orb_of_corrosion", "ring_of_health"],
+        core: ["orb_of_corrosion"],
       },
       mid_game: {
         all: ["cyclone"],
@@ -17220,6 +17208,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           late_game: [
             "ultimate_scepter",
             "hurricane_pike",
+            "aghanims_shard",
             "greater_crit",
             "swift_blink",
             "satanic",
@@ -17229,7 +17218,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "sphere",
             "nullifier",
             "monkey_king_bar",
-            "aghanims_shard",
             "silver_edge",
           ],
           core: [
