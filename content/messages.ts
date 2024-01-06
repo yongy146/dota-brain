@@ -1257,7 +1257,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_2_CounterHelix",
     messageTime: -15,
     textMessage:
-      "It is good to fight the opponents while you are surrounded by enemy creeps to proc Counter Helix with more attacks. If needed, toggle creep aggro to force Counter Helix when fighting",
+      "It is good to fight the opponents while you are surrounded by enemy creeps to proc Counter Helix with more attacks.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "axe_counter_helix" },
   },
@@ -1305,7 +1305,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_7_BlinkDagger",
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Once you acquire Blink Dagger, try to make use of it immediately and avoid showing yourself on the map too often. Comboing it with Blademail usually results in easy kills.",
+      "Once you acquire Blink Dagger, try to make use of it immediately and avoid showing yourself on the map too often.",
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
   },
@@ -1858,7 +1858,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Bloodseeker_2_bloodseeker_bloodrage",
     messageTime: [6 * 60],
     textMessage:
-      "Max out your bloodrage by around level 7 as this is your main tool for farming and will synergize very nicely with maelstrom.",
+      "Start maxing out your bloodrage after the laning phase is over as this is your main tool for farming and will synergize very nicely with maelstrom.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "bloodseeker_bloodrage" },
   },
