@@ -4356,8 +4356,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   dragon_knight: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -4367,22 +4367,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         abilities: [
-          "dragon_knight_dragon_tail", // 1
+          "dragon_knight_breathe_fire", // 1
           "dragon_knight_dragon_blood", // 2
           "dragon_knight_dragon_blood", // 3
           "dragon_knight_breathe_fire", // 4
-          "dragon_knight_dragon_blood", // 5
+          "dragon_knight_dragon_tail", // 5
           "dragon_knight_elder_dragon_form", // 6
           "dragon_knight_breathe_fire", // 7
           "dragon_knight_breathe_fire", // 8
-          "dragon_knight_breathe_fire", // 9
+          "dragon_knight_dragon_blood", // 9
           "special_bonus_attack_damage_15", // 10
-          "dragon_knight_dragon_tail", // 11
+          "dragon_knight_dragon_blood", // 11
           "dragon_knight_elder_dragon_form", // 12
           "dragon_knight_dragon_tail", // 13
           "dragon_knight_dragon_tail", // 14
           "special_bonus_hp_400", // 15
-          "dragon_knight_dragon_blood", // 16
+          "dragon_knight_dragon_tail", // 16
           "special_bonus_attributes", // 17
           "dragon_knight_elder_dragon_form", // 18
           "special_bonus_attributes", // 19
@@ -4398,38 +4398,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
-            "branches",
             "gauntlets",
-            "gauntlets",
+            "circlet",
           ],
           early_game: [
+            "bracer",
             "soul_ring",
             "power_treads",
             "magic_wand",
             "hand_of_midas",
           ],
-          mid_game: ["blink", "aghanims_shard", "manta"],
+          mid_game: ["blink", "aghanims_shard", "black_king_bar"],
           late_game: [
-            "black_king_bar",
             "ultimate_scepter",
             "assault",
             "greater_crit",
+            "overwhelming_blink",
+            "octarine_core",
           ],
           situational: [
-            "meteor_hammer",
             "heavens_halberd",
             "silver_edge",
-            "nullifier",
-            "radiance",
-            "overwhelming_blink",
-            "bloodthorn",
+            "mjollnir",
           ],
           core: [
             "power_treads",
             "soul_ring",
-            "blink",
             "hand_of_midas",
-            "manta",
+            "blink",
+            "aghanims_shard",
             "black_king_bar",
             "ultimate_scepter",
           ],
@@ -4448,10 +4445,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: [],
+    combo: [
+      "soul_ring",
+      "dragon_knight_elder_dragon_form",
+      "blink",
+      "dragon_knight_dragon_tail",
+      "attack",
+      "dragon_knight_breathe_fire"
+    ],
     counter_items: {
       laning_phase: {
-        all: ["urn_of_shadows"],
+        all: ["infused_raindrop"],
         support: [],
         core: [],
       },
@@ -4463,7 +4467,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ["sphere"],
         support: [],
-        core: ["mjollnir", "skadi", "monkey_king_bar", "butterfly"],
+        core: ["mjollnir", "skadi", "monkey_king_bar"],
       },
     },
   },
@@ -15818,9 +15822,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
+
         steam_guide_link_id: 2699963037,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        dota_fire_id: 40601,
+        //dota_fire_id: ,
         abilities: [
           "snapfire_scatterblast", // 1
           "snapfire_firesnap_cookie", // 2
@@ -18836,7 +18841,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_link_id: 2699964521,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        dota_fire_id: 40612,
+        //dota_fire_id: ,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
@@ -18942,7 +18947,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_link_id: 2971195922,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        dota_fire_id: 40611,
+        //dota_fire_id: ,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
