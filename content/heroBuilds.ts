@@ -973,7 +973,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "tango",
           ],
           early_game: ["bottle", "magic_wand", `hand_of_midas`, "boots"],
-          mid_game: ["travel_boots", "maelstrom", `gungir`, `black_king_bar`, "blink"],
+          mid_game: [
+            "travel_boots",
+            "maelstrom",
+            `gungir`,
+            `black_king_bar`,
+            "blink",
+          ],
           late_game: [
             "blink",
             "ultimate_scepter",
@@ -1066,7 +1072,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_link_id: 2699915204,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40444,
-        abilities: [      
+        abilities: [
           "axe_battle_hunger", // 1
           "axe_counter_helix", // 2
           "axe_counter_helix", // 3
@@ -1088,7 +1094,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 19
           `special_bonus_unique_axe_5`, // 20
           "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22 
+          "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
           `special_bonus_unique_axe_2`, // 25
@@ -1111,7 +1117,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [`blink`, `blade_mail`, "black_king_bar, `aghanims_shard`, "travel_boots"],
+          mid_game: [
+            `blink`,
+            `blade_mail`,
+            "black_king_bar",
+            "aghanims_shard",
+            "travel_boots",
+          ],
           late_game: [
             "octarine_core",
             `overwhelming_blink`,
