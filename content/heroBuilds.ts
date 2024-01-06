@@ -15818,10 +15818,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699963037,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40601,
         abilities: [
           "snapfire_scatterblast", // 1
           "snapfire_firesnap_cookie", // 2
@@ -18837,7 +18836,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_link_id: 2699964521,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40612,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
@@ -18943,7 +18942,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_link_id: 2971195922,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40611,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
