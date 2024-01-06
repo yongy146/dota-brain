@@ -2959,19 +2959,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 8 * 60,
     textMessage:
-      `Clockwerk is good at controlling debuff immune heroes as Hookshot stun pierces debuff immunity and Power Cogs act as barrier.`,
+      "Clockwerk is good at controlling spell-immune heroes as Hookshot pierces spell-immunity and Power Cogs act as barrier.",
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
-  },
-  {
-    category: `OwnHero`,
-    npcHeroName: `rattletrap`,
-    audioFile: `ownHero/Clockwerk_8_CogsCreepBlock`,
-    messageTime: -60,
-    textMessage:
-      `As position 4, you can take Power Cogs on level 1 to block your first creep wave inside them to bring the lane creeps closer to your tower.`,
-    audience: [Audience.ALL],
-    image: { type: `ability`, name: `rattletrap_power_cogs` },
   },
 
   {
@@ -3381,16 +3371,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "If the game opens up for you, you can transition into right-clicker with Aghanim's Scepter and attack speed talent.",
     audience: [Audience.ROLE_SUPPORT],
-  },
-  {
-    category: `OwnHero`,
-    npcHeroName: `dark_willow`,
-    audioFile: `ownHero/DarkWillow_7_BedlamAlly`,
-    messageTime: [8 * 60 + 30, 18 * 60 + 30, 28 * 60 + 30],
-    textMessage:
-      `You can use your Bedlam on initiators on your team and do all your damage while staying back in fights.`,
-    audience: [Audience.ROLE_SUPPORT],
-	image: { type: `ability`, name: `dark_willow_bedlam` },
   },
 
   {
@@ -4158,7 +4138,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/DragonKnight_5_Blink",
     messageTime: 10 * 60,
     textMessage:
-      "Once you get Blink Dagger, try to make use of it immediately before opponent see it in your inventory.",
+      "Once you get Blink Dagger, try to make use of it immediately before your opponents see it in your inventory.",
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
   },
@@ -14161,7 +14141,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Snapfire_7_PushSidelanes",
     messageTime: 12 * 60 + 15,
     textMessage:
-      `When there is not much happening, push out the sidelines with Scatterblast and Firesnap Cookie.`,
+      "When there's not much happening, push out the sidelines with Scatterblast and Cookie.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "snapfire_scatterblast" },
   },
