@@ -4801,7 +4801,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/EmberSpirit_1_Dodge",
     messageTime: -15,
     textMessage:
-      "You can dodge many spells and ranged attacks with Slight of Fist or by activating Remnants.",
+      "You can dodge many spells and ranged attacks with Sleight of Fist or by activating Remnants.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "ember_spirit_sleight_of_fist" },
   },
@@ -4811,7 +4811,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/EmberSpirit_2_LaningTips",
     messageTime: 2 * 60 + 30,
     textMessage:
-      "You can push out the lane with Flame Guide or Sleight Of Fist as the river runes are about to spawn.",
+      "You can push out the lane with Flame Guard or Sleight Of Fist as the river runes are about to spawn.",
     audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "ember_spirit_flame_guard" },
   },
@@ -4821,7 +4821,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/EmberSpirit_2_Orb_of_corrosion",
     messageTime: 5 * 60,
     textMessage:
-      "Once you have orb of corrosion you should start spamming sleight of fist on the enemy mid laner.",
+      "Once you have blight stone, you should start spamming sleight of fist on the enemy mid laner.",
     audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "ember_spirit_sleight_of_first" },
   },
@@ -4873,7 +4873,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/EmberSpirit_7_ProcItems",
     messageTime: 9 * 60,
     textMessage:
-      "Items with proc chance are great for Ember Spirit as they proc frequently during Slight of Fist.",
+      "Items with proc chance are great for Ember Spirit as they proc frequently during Sleight of Fist.",
     audience: [Audience.ALL],
     image: { type: "item", name: "maelstrom" },
   },
@@ -12455,7 +12455,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/QueenOfPain_7_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up Aghanim's Shard around minute 15 as it provides silence and extra damage.",
+      "Pick up Aghanim's Shard around minute 15 as it provides silence and extra damage. Using it on creep waves also gives you instant wave clear when paired with Scream of Pain.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -12465,7 +12465,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/QueenOfPain_7_AghanimsScepter",
     messageTime: 18 * 60,
     textMessage:
-      "Aghanims scepter is very strong in teamfights, Try to get it at an early timing after kaya and sange.",
+      "Aghanims scepter is very strong in teamfights. Try to get it at an early timing.",
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -12485,7 +12485,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/QueenOfPain_2_Blink",
     messageTime: 30,
     textMessage:
-      "Look to play aggressively on Queen of Pain once her Blink is on cd. She's very squishy.",
+      "Look to play aggressively on Queen of Pain once her Blink is on cooldown. She's very squishy.",
     audience: [Audience.ALL],
   },
   {
@@ -13347,7 +13347,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowFiend_6_FarmMaskOfMadness",
     messageTime: [5 * 60 + 45, 7 * 60 + 45],
     textMessage:
-      "Focus on farming with mask of madness and don't over rotate without runes.",
+      "Focus on farming with mask of madness, especially at the Ancients and don't over rotate without runes.",
     audience: [Audience.ROLE_MID],
     image: { type: "item", name: "mask_of_madness" },
   },
@@ -13357,7 +13357,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowFiend_7_PickOff",
     messageTime: [9 * 60 + 45, 15 * 60 + 45],
     textMessage:
-      "Once you have bkb you can start to fight as shadow fiend is very susceptible to disables.",
+      "Once you have Black King Bar, you can start to fight because Shadow Fiend is very susceptible to disables.",
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -13377,7 +13377,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ShadowFiend_1_Laning",
     messageTime: 20,
     textMessage:
-      "Shadow Fiend has low starting damage and he relies on gathering souls through last hits. If you do well against him on the first few waves you are likely to win the match up",
+      "Shadow Fiend has low starting damage and he relies on gathering souls through last hits. Try to contest last hits with him when his base damage is low.",
     chatMessage:
       "Shadow Fiend has low starting damage and he relies on gathering souls through last hits",
     audience: [Audience.IN_LANE],
@@ -13388,7 +13388,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ShadowFiend_2_Gank",
     messageTime: 4 * 60 + 10,
     textMessage:
-      "Shadow Fiend doesn't have an escape mechanism, so look to gank him during the laning stage. If left unchallenged, he's one of the best farming heroes",
+      "Shadow Fiend does not have an escape mechanism, so look to gank him during the laning stage. If left unchallenged, he's one of the best farming heroes",
     chatMessage:
       "Shadow Fiend doesn't have an escape mechanism, so look to gank him during the laning stage",
     audience: [Audience.ALL],
@@ -13408,9 +13408,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ShadowFiend_4_ItemBuild",
     messageTime: 10 * 60 + 30,
     textMessage:
-      "Shadow Fiend's first big item is generally Shadow Blade or Manta. Shadow blade is good at picking off heroes, so keep an eye on his item build",
+      "Shadow Fiend's first big item is generally Black King Bar. Keep an eye out on the availability of Black King Bar in his inventory and try to gank him continuously before he gets the item.",
     chatMessage:
-      "Shadow Fiend's first big item is either Manta or Shadow Blade. Shadow blade is good at killing heroes, keep tabs on his inventory.",
+      "Shadow Fiend's first big item is generally Black King Bar. Keep an eye out on the availability of Black King Bar in his inventory and try to gank him continuously before he gets the item.",
     audience: [Audience.ALL],
   },
   {
