@@ -13660,7 +13660,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_link_id: 2699961952,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        dota_fire_id: 40566,
+        dota_fire_id: 40583,
         abilities: [
           "queenofpain_scream_of_pain", // 1
           "queenofpain_shadow_strike", // 2
