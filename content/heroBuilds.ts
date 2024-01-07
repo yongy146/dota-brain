@@ -4362,7 +4362,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2700561505,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
@@ -4476,7 +4475,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2700561590,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40478,
@@ -4998,10 +4996,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2700561902,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40607,
         abilities: [
           "ember_spirit_flame_guard", // 1
           "ember_spirit_sleight_of_fist", // 2
@@ -5512,10 +5509,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2700562159,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40599,
         abilities: [
           "faceless_void_time_walk", // 1
           "faceless_void_time_lock", // 2
@@ -6810,10 +6806,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699957943,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40610,
         abilities: [
           "juggernaut_blade_fury", // 1
           "juggernaut_blade_dance", // 2
@@ -7277,10 +7272,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2301488685,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40609,
         abilities: [
           "legion_commander_overwhelming_odds", // 1
           "legion_commander_moment_of_courage", // 2
@@ -7669,10 +7663,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699958609,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40608,
         abilities: [
           "life_stealer_feast", // 1
           "life_stealer_ghoul_frenzy", // 2
@@ -9609,7 +9602,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_link_id: 2699959764,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40578,
         abilities: [
           `meepo_poof`, // 1
           `meepo_ransack`, // 2
@@ -13757,10 +13750,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2721136803,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40604,
         abilities: [
           "queenofpain_scream_of_pain", // 1
           "queenofpain_shadow_strike", // 2
@@ -14876,10 +14868,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         //type: "Physical", 1.
-
         steam_guide_link_id: 2699962485,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40606,
         abilities: [
           "nevermore_shadowraze1", // 1
           "nevermore_necromastery", // 2
@@ -14971,10 +14962,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         //type: "Physical",
-
         steam_guide_link_id: 2724416695,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40605,
         abilities: [
           "nevermore_shadowraze1", // 1
           "nevermore_necromastery", // 2
