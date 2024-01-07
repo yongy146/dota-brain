@@ -4326,7 +4326,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/DrowRanger_8_scepter",
     messageTime: [16 * 60],
     textMessage:
-      "When you get your aghanims scepter online you're single target damage increases dramatically. ",
+      "When you get your aghanims scepter online, your single target damage increases dramatically. ",
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -4366,7 +4366,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/DrowRanger_4_GapClosing",
     messageTime: 11 * 60 + 20,
     textMessage:
-      "Gap closing items are good against Drow Ranger as she is a glass canon hero. Note that her Marksmanship is disabled when you are within 400 range of her",
+      "Gap closing items are good against Drow Ranger as she is a glass cannon hero. Note that her Marksmanship is disabled when you are within 400 range of her",
     chatMessage:
       "Gap closing items are good against Drow Ranger as she is a glass canon hero",
     audience: [Audience.ALL],
@@ -4396,7 +4396,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "drow_ranger",
     audioFile: "enemyHero/DrowRanger_7_Smoke",
     messageTime: [18 * 60 + 15, 38 * 60 + 15, 58 * 60 + 15],
-    textMessage: "Use Smoke, to wrap around Drow Ranger and kill her",
+    textMessage: "Use Smoke to wrap around Drow Ranger and kill her",
     audience: [Audience.ALL],
   },
 
@@ -4818,10 +4818,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "ember_spirit",
-    audioFile: "ownHero/EmberSpirit_2_Orb_of_corrosion",
+    audioFile: "ownHero/EmberSpirit_2_SleightOfFistCooldown",
     messageTime: 5 * 60,
     textMessage:
-      "Once you have orb of corrosion you should start spamming sleight of fist on the enemy mid laner.",
+      "Spam Sleight of Fist on the enemy mid laner off cooldown for harass unless you need to save it to dodge a spell or secure a creep.",
     audience: [Audience.ROLE_MID],
     image: { type: "ability", name: "ember_spirit_sleight_of_first" },
   },
@@ -4883,19 +4883,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/EmberSpirit_8_Backline",
     messageTime: [10 * 60 + 15, 18 * 60 + 15],
     textMessage:
-      "Ember Spirit is great at penetrating into opponents' backline due to high mobility of Fire Remnants.",
+      "Ember Spirit is great at penetrating into opponents' backline due to the high mobility of Fire Remnants.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "ember_spirit_fire_remnant" },
   },
   {
     category: "OwnHero",
     npcHeroName: "ember_spirit",
-    audioFile: "ownHero/EmberSpirit_12_Backline",
-    messageTime: [20 * 60, 25 * 60],
+    audioFile: "ownHero/EmberSpirit_12_SoftHardCommit",
+    messageTime: [20 * 60, 25 * 60, 30 * 60],
     textMessage:
-      "If you are struggling to reach the backline aghanims scepter is great at closing the gap and increasing embers mobility.",
+      "Make sure to understand when and how to soft commit and hard commit. Avoid hard committing once going into the mid game phase without Black King Bar as you will often get disabled to death.",
     audience: [Audience.ALL],
-    image: { type: "item", name: "ultimate_scepter" },
+    image: { type: "item", name: "black_king_bar"},
   },
   {
     category: "OwnHero",
@@ -5234,7 +5234,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Faceless_1_TimeWalk",
     messageTime: 15,
     textMessage:
-      "Careful about using Time Walk aggressively on early levels as you leave yourself exposed for a while.",
+      "Careful about using Time Walk aggressively on early levels as you will leave yourself exposed for a while.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "faceless_void_time_walk" },
   },
@@ -5254,7 +5254,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Faceless_3_AttackSpeed",
     messageTime: [8 * 60, 14 * 60],
     textMessage:
-      "Faceless Void is attack speed hungry hero as dps is closely related to frequency of Time Lock procs.",
+      "Faceless Void is an attack speed hungry hero as damage output is closely related to the frequency of Time Lock procs.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "faceless_void_time_lock" },
   },
@@ -5264,7 +5264,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Faceless_4_Teamfights",
     messageTime: [10 * 60 + 15, 20 * 60 + 15],
     textMessage:
-      "In teamfights, look to trap as many opponents as possible in Chronosphere while leaving allies outside.",
+      "In teamfights, look to trap as many opponents as possible in Chronosphere while leaving allies outside. However, do not be afraid to use Chronosphere for important single-target kills.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "faceless_void_chronosphere" },
   },
@@ -5274,7 +5274,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Faceless_5_ChronosphereCooldown",
     messageTime: [10 * 60 + 45, 20 * 60 + 45],
     textMessage:
-      "Avoid playing aggressively when Chronosphere is on cooldown and push out lanes.",
+      "Avoid playing aggressively when Chronosphere is on cooldown and push out lanes instead.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "faceless_void_chronosphere" },
   },
@@ -6533,9 +6533,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Juggernaut_1_BladeFury1",
     messageTime: -60,
     textMessage:
-      "Juggernaut is one of the strongest laning carries as Blade Fury does more than 400 AOE damage already on level 1. Consider buying items to increase your movement speed",
+      "Juggernaut is one of the strongest laning carries as Blade Fury does tons of AOE damage right from the start of the lane. Consider buying items to increase your movement speed",
     chatMessage:
-      "Juggernaut's Blade Fury does more than 400 AOE damage. Consider buying items to increase your movement speed",
+      "Juggernaut's Blade Fury does a lot of AOE damage in lane early on. Consider buying items to increase your movement speed",
     audience: [Audience.IN_LANE],
   },
   {
@@ -6564,7 +6564,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Juggernaut_4_BladeFury3",
     messageTime: 6 * 60 + 15,
     textMessage:
-      "When you are ganking Juggernaut, he will look to Blade Fury and teleport out on first sign of trouble. Make sure you surprise disable him before he spins if you do not yet have a spell immunity piercing disable",
+      "When you are ganking Juggernaut, he will look to Blade Fury and teleport out on first sign of trouble. Heroes like Kunkka can still X-mark him through Blade Fury and bring him back after awhile, so be mindful of that.",
     chatMessage:
       "Juggernaut can use Blade Fury and teleport to escape. Surprise disable him before he spins, if you can",
     audience: [Audience.ALL],
@@ -6976,7 +6976,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LegionCommander_3_MomentOfCourage",
     messageTime: 60,
     textMessage:
-      "Aggro creeps on yourself to increase Moment of Courage procs. It can be useful for denying as well.",
+      "Aggro creeps on yourself to increase Moment of Courage procs. It can be useful for denying as well. You can use global aggro to abuse this function as well.",
     audience: [Audience.ROLE_CORE],
   },
   {
@@ -7009,11 +7009,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "legion_commander",
-    audioFile: "ownHero/LegionCommander_7_AghanimsShard",
-    messageTime: 60 * 20,
+    audioFile: "ownHero/LegionCommander_7_BlademailActive",
+    messageTime: 60 * 10,
     textMessage:
-      "Aghanim's Shard is an essential pick-up for a support Legion Commander as it is a great buff and save for your core.",
-    audience: [Audience.ROLE_SUPPORT],
+      "Do not forget to use Blademail before using Duel on enemy heroes for higher kill guarantee during Duel.",
+    audience: [Audience.ALL],
   },
   {
     category: "OwnHero",
@@ -7424,7 +7424,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lifestealer_2_OrbOfCorrosion",
     messageTime: 30,
     textMessage:
-      "Orb of corrosion is great at harrassing enemies in the laning stage and works well with lifestealers spells.",
+      "Orb of corrosion is great at harrassing enemies in the laning stage and works well with Lifestealer's spells.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "orb_of_corrosion" },
   },
@@ -7514,7 +7514,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Lifestealer_1_ChipDamage",
     messageTime: -15,
     textMessage:
-      "Chip damage doesn't work against Lifestealer as he is able to recover with Feast. If you manage to bring him below half HP it will be hard for him to feast as he risks dying",
+      "Chip damage doesn't work against Lifestealer as he is able to recover with Feast. If you manage to bring him below half HP it will be hard for him to regenerate through Feast as he risks dying",
     chatMessage:
       "Chip damage doesn't work against Lifestealer as he can Feast. Bring him below half HP to scare him",
     audience: [Audience.IN_LANE],
@@ -7531,10 +7531,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     npcHeroName: "life_stealer",
-    audioFile: "enemyHero/Lifestealer_3_SpellImmunity",
+    audioFile: "enemyHero/Lifestealer_3_KiteLifestealer",
     messageTime: [8 * 60 + 30, 15 * 60 + 30, 25 * 60 + 30],
     textMessage:
-      "Items and spells that go through spell immunity are effective against Lifestealer",
+      "Lifestealer is easily kited after his Rage is used. Be mindful of keeping distance between yourself and him so that he is kited during fights.",
     audience: [Audience.ALL],
   },
   {
@@ -7562,10 +7562,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     npcHeroName: "life_stealer",
-    audioFile: "enemyHero/Lifestealer_6_Evasion",
-    messageTime: [26 * 60 + 30, 36 * 60 + 30],
+    audioFile: "enemyHero/Lifestealer_6_RightClickDependent",
+    messageTime: [20 * 60 + 30, 30 * 60 + 30],
     textMessage:
-      "Lifestealer tends to have lots of evasion due to his level 20 talent and a Halberd purchase. Look to counter it by getting true strike items",
+      "Lifestealer tends to rely heavily on right click damage. Look to counter this by getting Heaven's Halberd.",
     chatMessage:
       "Lifestealer tends to have evasion due to his level 20 talent and Halberd. Counter it with true strike items",
     audience: [Audience.ALL],
