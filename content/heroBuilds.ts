@@ -10895,9 +10895,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  necrolyte: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+   necrolyte: {
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -10938,54 +10938,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "tango",
             "faerie_fire",
             "branches",
-            "branches",
             "circlet",
-            `circlet`,
+            "mantle",
             `ward_observer`,
           ],
           early_game: [
             `null_talisman`,
             `bracer`,
-            `arcane_boots`,
+            "boots",
             `magic_wand`,
             `wind_lace`,
           ],
           mid_game: [
-            `guardian_greaves`,
-            `pipe`,
-            `aghanims_shard`,
-            `kaya_and_sange`,
+            "radiance",
+            "travel_boots",
+            "aghanims_shard",
           ],
-          late_game: [`heart`, `ultimate_scepter`, `shivas_guard`, `dagon_5`],
+          late_game: [`heart`, `ultimate_scepter`, `octarine_core`, "wind_waker", "overwhelming_blink"],
           situational: [
             `spirit_vessel`,
             `crimson_guard`,
-            `rod_of_atos`,
-            "radiance",
             `heavens_halberd`,
-            `force_staff`,
-            `cyclone`,
-            "aeon_disk",
-            `ethereal_blade`,
+            "shivas_guard",
             `eternal_shroud`,
-            `octarine_core`,
             `black_king_bar`,
             `sphere`,
-            `blade_mail`,
             `lotus_orb`,
             `sheepstick`,
-            `overwhelming_blink`,
-            `travel_boots`,
           ],
           core: [
-            `null_talisman`,
-            `bracer`,
-            `guardian_greaves`,
-            `pipe`,
+            `travel_boots`,
+            `radiance`,
             `aghanims_shard`,
-            `kaya_and_sange`,
             `heart`,
             `ultimate_scepter`,
+            "octarine_core",
           ],
           neutral: [
             `mysterious_hat`,
@@ -10998,6 +10985,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //`spell_prism`,
             //`fallen_sky`,
             //`ex_machina`,
+            "havoc_hammer",
+            "stormcrafter",
+            "mirror_shield",
+            "giants_ring",
           ],
         },
         // item_tooltips:
@@ -11011,16 +11002,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "necrolyte_death_pulse", // 1
+         "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
           "necrolyte_death_pulse", // 3
-          `necrolyte_heartstopper_aura`, // 4
+          "necrolyte_sadist", // 4   equals to `ghost shroud`
           "necrolyte_death_pulse", // 5
           "necrolyte_reapers_scythe", // 6
           "necrolyte_death_pulse", // 7
-          `necrolyte_sadist`, // 8    equals to `ghost shroud`
+          "necrolyte_heartstopper_aura", // 8
           "necrolyte_heartstopper_aura", // 9
-          `necrolyte_heartstopper_aura`, // 10
+          "necrolyte_heartstopper_aura", // 10
           `special_bonus_unique_necrophos_6`, // 11
           "necrolyte_reapers_scythe", // 12
           "necrolyte_sadist", // 13
@@ -11035,62 +11026,48 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_necrophos_2`, // 25
+          "special_bonus_unique_necrophos_2", // 25
         ],
-        items: {
+      items: {
           starting: [
             "tango",
             "faerie_fire",
-            `circlet`,
-            `circlet`,
             "branches",
-            `branches`,
+            "circlet",
+            "mantle",
             `ward_observer`,
           ],
           early_game: [
-            `bracer`,
             `null_talisman`,
-            `boots`,
+            `bracer`,
+            "boots",
             `magic_wand`,
             `wind_lace`,
-            `infused_raindrop`,
           ],
           mid_game: [
-            `travel_boots`,
-            `radiance`,
-            "kaya_and_sange",
-            `aghanims_shard`,
+            "radiance",
+            "travel_boots",
+            "aghanims_shard",
           ],
-          late_game: [`heart`, `ultimate_scepter`, `shivas_guard`, `dagon_5`],
+          late_game: [`heart`, `ultimate_scepter`, `octarine_core`, "wind_waker", "overwhelming_blink"],
           situational: [
-            `power_treads`,
             `spirit_vessel`,
-            `rod_of_atos`,
-            `guardian_greaves`,
             `crimson_guard`,
-            `pipe`,
-            `cyclone`,
-            `ethereal_blade`,
-            `octarine_core`,
+            `heavens_halberd`,
+            "shivas_guard",
             `eternal_shroud`,
             `black_king_bar`,
             `sphere`,
-            "aeon_disk",
-            `heavens_halberd`,
             `lotus_orb`,
             `sheepstick`,
-            `overwhelming_blink`,
-            `travel_boots_2`,
           ],
           core: [
-            `bracer`,
-            `null_talisman`,
             `travel_boots`,
             `radiance`,
-            `kaya_and_sange`,
             `aghanims_shard`,
             `heart`,
             `ultimate_scepter`,
+            "octarine_core",
           ],
           neutral: [
             `mysterious_hat`,
@@ -11103,6 +11080,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             //`spell_prism`,
             //`fallen_sky`,
             //`ex_machina`,
+            "havoc_hammer",
+            "stormcrafter",
+            "mirror_shield",
+            "giants_ring",
           ],
         },
       },
@@ -11115,21 +11096,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [
       `necrolyte_death_seeker`,
       `necrolyte_death_pulse`,
-      `dagon_5`,
+      "necrolyte_sadist",
       `necrolyte_reapers_scythe`,
     ],
     counter_items: {
       laning_phase: {
         all: [
           "magic_stick",
-          "ring_of_regen",
-          "headdress",
           "infused_raindrop",
-          "cloak",
-          "urn_of_shadows",
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: [],
       },
       mid_game: {
         all: ["spirit_vessel"],
@@ -11152,9 +11129,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   // eidendota plays hero
-  night_stalker: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+   night_stalker: {
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -11197,14 +11174,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `gauntlets`,
             `circlet`,
             `branches`,
-            `branches`,
           ],
-          early_game: ["bracer", "phase_boots", "magic_wand", "hand_of_midas"],
+          early_game: ["bracer", "phase_boots", "magic_wand", "echo_sabre"],
           mid_game: [
-            "echo_sabre",
-            "blink",
-            `aghanims_shard`,
+            "aghanims_shard",
             "black_king_bar",
+            `blink`,
             `basher`,
           ],
           late_game: [
@@ -11213,20 +11188,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "harpoon",
             "assault",
             "overwhelming_blink",
-            `travel_boots`,
           ],
           situational: [
             `heavens_halberd`,
             `silver_edge`,
             `sphere`,
             `ultimate_scepter`,
+            "hand_of_midas",
           ],
           core: [
+            "phase_boots",
             "echo_sabre",
-            "black_king_bar",
-            "blink",
-            "basher",
             "aghanims_shard",
+            "black_king_bar",  
+            "blink",
+            "basher",       
           ],
           neutral: [
             "broom_handle",
@@ -11270,6 +11246,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     },
   },
+
 
   nyx_assassin: {
     gameplay_version: `7.35b`,
@@ -13691,9 +13668,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   // eidendota plays hero
-  queenofpain: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+   queenofpain: {
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -13704,20 +13681,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           "queenofpain_scream_of_pain", // 1
           "queenofpain_shadow_strike", // 2
-          "queenofpain_shadow_strike", // 3
+          "queenofpain_scream_of_pain", // 3
           "queenofpain_blink", // 4
           "queenofpain_shadow_strike", // 5
           "queenofpain_sonic_wave", // 6
           "queenofpain_scream_of_pain", // 7
           "queenofpain_scream_of_pain", // 8
-          "queenofpain_scream_of_pain", // 9
-          "special_bonus_unique_queen_of_pain_strike_heal", // 10
+          "queenofpain_blink", // 9
+          "queenofpain_blink", // 10
           "queenofpain_blink", // 11
           "queenofpain_sonic_wave", // 12
-          "queenofpain_blink", // 13
-          "queenofpain_blink", // 14
-          "special_bonus_attack_speed_30", // 15
-          "queenofpain_shadow_strike", // 16
+          "queenofpain_shadow_strike", // 13
+          "queenofpain_shadow_strike", // 14
+          "special_bonus_attack_damage_20", // 15
+          "special_bonus_attack_speed_30", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
           "special_bonus_attributes", // 19
@@ -13739,33 +13716,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             "bottle",
+            "magic_wand",
             "falcon_blade",
-            "magic_stick",
             "power_treads",
             "kaya",
           ],
           mid_game: [
-            "kaya_and_sange",
-            "ultimate_scepter",
             "aghanims_shard",
             "black_king_bar",
+            "ultimate_scepter",
+            "kaya_and_sange",
           ],
-          late_game: ["shivas_guard", "octarine_core", "sheepstick"],
+          late_game: ["aether_lens", "octarine_core", "shivas_guard", "sheepstick"],
           situational: [
-            "hand_of_midas",
-            "infused_raindrop",
             "sphere",
-            "orchid",
-            "witch_blade",
+            "devastator",
             "refresher",
             "bloodthorn",
+            "mjollnir",
+            "orchid"
           ],
           core: [
-            "kaya_and_sange",
-            "ultimate_scepter",
-            "black_king_bar",
+            "power_treads",
             "aghanims_shard",
-            "shivas_guard",
+            "black_king_bar",
+            "ultimate_scepter",
+            "kaya_and_sange",
+            "aether_lens",
             "octarine_core",
           ],
           neutral: [
@@ -13790,22 +13767,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
-          "queenofpain_shadow_strike", // 1
-          "queenofpain_blink", // 2
-          "queenofpain_shadow_strike", // 3
-          "queenofpain_scream_of_pain", // 4
+          "queenofpain_scream_of_pain", // 1
+          "queenofpain_shadow_strike", // 2
+          "queenofpain_scream_of_pain", // 3
+          "queenofpain_blink", // 4
           "queenofpain_shadow_strike", // 5
           "queenofpain_sonic_wave", // 6
           "queenofpain_scream_of_pain", // 7
           "queenofpain_scream_of_pain", // 8
-          "queenofpain_scream_of_pain", // 9
-          "special_bonus_unique_queen_of_pain_strike_heal", // 10
+          "queenofpain_blink", // 9
+          "queenofpain_blink", // 10
           "queenofpain_blink", // 11
           "queenofpain_sonic_wave", // 12
-          "queenofpain_blink", // 13
-          "queenofpain_blink", // 14
-          "special_bonus_unique_queen_of_pain_4", // 15
-          "queenofpain_shadow_strike", // 16
+          "queenofpain_shadow_strike", // 13
+          "queenofpain_shadow_strike", // 14
+          "special_bonus_attack_damage_20", // 15
+          "special_bonus_attack_speed_30", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
           "special_bonus_attributes", // 19
@@ -13820,47 +13797,44 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             "tango",
             "circlet",
-            "blood_grenade",
             "branches",
             "faerie_fire",
             "mantle",
           ],
-          early_game: ["null_talisman", "power_treads", "magic_wand", "kaya"],
+          early_game: ["null_talisman", "magic_wand", "falcon_blade", "power_treads", "kaya"],
           mid_game: [
-            "kaya_and_sange",
-            "ultimate_scepter",
             "aghanims_shard",
             "black_king_bar",
+            "ultimate_scepter",
+            "kaya_and_sange",
           ],
-          late_game: [
-            "octarine_core",
-            "shivas_guard",
-            "sheepstick",
-            "ethereal_blade",
-          ],
+          late_game: ["aether_lens", "octarine_core", "shivas_guard", "sheepstick"],
           situational: [
-            "bloodthorn",
-            "refresher",
+            "witch_blade",
             "sphere",
-            "infused_raindrop",
-            "spirit_vessel",
-            "lotus_orb",
-            "orchid",
+            "devastator",
+            "refresher",
+            "bloodthorn",
+            "mjollnir",
+            "orchid"
           ],
           core: [
-            "kaya_and_sange",
-            "ultimate_scepter",
-            "black_king_bar",
+            "power_treads",
             "aghanims_shard",
-            "shivas_guard",
+            "black_king_bar",
+            "ultimate_scepter",
+            "kaya_and_sange",
+            "aether_lens",
+            "octarine_core",
           ],
           neutral: [
             "arcane_ring",
             "mysterious_hat",
             "grove_bow",
             "vampire_fangs",
-            //`quickening_charm`,
             "psychic_headband",
+            "dandelion_amulet",
+            //`quickening_charm`,
             //"spell_prism",
             "timeless_relic",
             //`ex_machina`,
@@ -13874,16 +13848,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         "You can take this level 25 talent over the suggested one if you are in need for Linken`s sphere effect.",*/
     combo: [
       "queenofpain_blink",
-      "orchid",
-      "queenofpain_shadow_strike",
       "queenofpain_scream_of_pain",
+      "queenofpain_shadow_strike",
+      "attack",
       "queenofpain_sonic_wave",
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "cloak"],
+        all: ["magic_stick"],
         support: ["tranquil_boots"],
-        core: ["ring_of_health"],
+        core: [],
       },
       mid_game: {
         all: ["rod_of_atos", "cyclone"],
@@ -14895,8 +14869,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   nevermore: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.eidandota,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -14917,12 +14891,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "nevermore_dark_lord", // 8
           "nevermore_requiem", // 9
           "special_bonus_attack_speed_25", // 10
-          "nevermore_shadowraze1", // 11
-          "nevermore_requiem", // 12
+          "nevermore_dark_lord", // 11
+          "nevermore_dark_lord", // 12
           "nevermore_dark_lord", // 13
-          "nevermore_dark_lord", // 14
+          "nevermore_shadowraze1", // 14
           "special_bonus_unique_nevermore_3", // 15
-          "nevermore_dark_lord", // 16
+          "nevermore_requiem", // 16
           "special_bonus_attributes", // 17
           "nevermore_requiem", // 18
           "special_bonus_attributes", // 19
@@ -14935,11 +14909,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            "magic_stick",
             "circlet",
             "tango",
-            "branches",
-            "branches",
+            "slippers",
+            "enchanted_mango",
+            "enchanted_mango",
             "branches",
           ],
           early_game: [
@@ -14947,34 +14921,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "power_treads",
             "magic_wand",
             "mask_of_madness",
+            "lesser_crit",
           ],
           mid_game: [
             "dragon_lance",
-            "manta",
-            "invis_sword",
             "black_king_bar",
             "aghanims_shard",
+            "manta",
           ],
           late_game: [
-            "butterfly",
-            "satanic",
-            "monkey_king_bar",
-            "hurricane_pike",
-            "silver_edge",
+            "hurricane_pike",        
+            "blink",
+            "greater_crit",
+            "satanic"
+            "swift_blink"
           ],
           situational: [
-            "falcon_blade",
             "sphere",
-            "greater_crit",
-            "sange_and_yasha",
             "assault",
+            "silver_edge",
+            "skadi",
+            "butterfly"
           ],
           core: [
+            "power_treads",
             "mask_of_madness",
+            "lesser_crit",
             "dragon_lance",
-            "manta",
-            "silver_edge",
             "black_king_bar",
+            "aghanims_shard",
+            "manta",
+            "hurricane_pike"
           ],
           neutral: [
             //"pogo_stick",
@@ -15029,7 +15006,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             "enchanted_mango",
             "enchanted_mango",
-            "enchanted_mango",
             "tango",
             "branches",
             "branches",
@@ -15040,30 +15016,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "boots",
             "power_treads",
             "magic_wand",
+            "wind_lace",
+            "falcon_blade",
             "dragon_lance",
           ],
           mid_game: [
-            "manta",
-            "invis_sword",
             "black_king_bar",
+            "manta",
             "aghanims_shard",
           ],
-          late_game: ["silver_edge", "satanic", "butterfly"],
+          late_game: ["hurricane_pike", "greater_crit", "swift_blink", "satanic", "butterfly"],
           situational: [
             "mask_of_madness",
-            "blink",
             "skadi",
-            "hurricane_pike",
             "monkey_king_bar",
             "sphere",
+            "silver_edge"
           ],
           core: [
+            "falcon_blade",
             "dragon_lance",
-            "manta",
             "black_king_bar",
-            "silver_edge",
-            "butterfly",
+            "manta",
             "aghanims_shard",
+            "hurricane_pike",
+            "greater_crit"
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
@@ -15085,19 +15062,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: [
-      `blink`,
-      `cyclone`,
-      `nevermore_requiem`,
-      `nevermore_shadowraze1`,
-      `nevermore_shadowraze2`,
-      `nevermore_shadowraze3`,
-    ],
+    combo: [],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "infused_raindrop", "cloak"],
+        all: ["magic_stick", "wind_lace", "boots", "infused_raindrop"],
         support: ["ward_sentry"],
-        core: ["ring_of_health", "DamageItems"],
+        core: ["DamageItems"],
       },
       mid_game: {
         all: [/*"medallion_of_courage",*/ "solar_crest", "mekansm"],
