@@ -9601,38 +9601,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  meepo: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+   meepo: {
+    gameplay_version: "7.35b",
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699959764,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          `meepo_ransack`, // 1
-          `meepo_poof`, // 2
+          `meepo_poof`, // 1
+          `meepo_ransack`, // 2
           `meepo_earthbind`, // 3
           "meepo_divided_we_stand", // 4
           "meepo_poof", // 5
           `meepo_poof`, // 6
           "meepo_poof", // 7
-          `meepo_ransack`, // 8
+          `meepo_earthbind`, // 8
           `meepo_ransack`, // 9
           `special_bonus_unique_meepo_2`, // 10
           "meepo_divided_we_stand", // 11
           `meepo_ransack`, // 12
-          "meepo_earthbind", // 13
+          "meepo_ransack", // 13
           `meepo_earthbind`, // 14
           `special_bonus_evasion_15`, // 15
           `meepo_earthbind`, // 16
           "special_bonus_attributes", // 17
           "meepo_divided_we_stand", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_meepo_4`, // 20
+          `special_bonus_unique_meepo_6`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -9653,37 +9652,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wraith_band`,
             `wraith_band`,
             `power_treads`,
-            `dragon_lance`,
+            `ultimate_scepter",
           ],
           mid_game: [
-            `diffusal_blade`,
-            `blink`,
-            `ultimate_scepter`,
-            `skadi`,
+            `blink",
             `aghanims_shard`,
+            "disperser",
           ],
-          late_game: [`sheepstick`, `swift_blink`, `assault`, `heart`],
+          late_game: [`sheepstick`, `swift_blink`, `heart`, "skadi"],
           situational: [
-            `disperser`,
-            `silver_edge`,
-            `manta`,
             `overwhelming_blink`,
-            `ethereal_blade`,
             `bloodthorn`,
-            `butterfly`,
-            `hurricane_pike`,
             `travel_boots`,
+            "nullifier",
           ],
           core: [
             `wraith_band`,
             `power_treads`,
-            "dragon_lance",
-            `diffusal_blade`,
-            `blink`,
             `ultimate_scepter`,
-            `skadi`,
+            `blink`,
             `aghanims_shard`,
-            `sheepstick`,
+            "disperser",
           ],
           neutral: [
             "unstable_wand",
@@ -9701,7 +9690,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     ],
 
-    combo: [`meepo_poof`, `blink`, `meepo_earthbind`, `attack`],
+    combo: ["meepo_poof", `blink`, `meepo_earthbind`, "disperser", `attack`],
     counter_items: {
       laning_phase: {
         all: [],
