@@ -9081,7 +9081,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Meepo_4_GankItems",
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Once you have Diffusal Blade and dragon lance, look for pick-offs.",
+      "Once you have Aghanim's Scepter, look for making plays around the map with confidence as it is very hard for you to die.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "diffusal_blade" },
   },
@@ -9128,7 +9128,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "meepo",
     audioFile: "enemyHero/Meepo_3_Burst",
     messageTime: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
-    textMessage: "Look to burst one of the Meepos and don't split your damage.",
+    textMessage: "Look to burst down one of the Meepos and don't split your damage.",
     audience: [Audience.ALL],
   },
   {
@@ -9145,7 +9145,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Meepo_5_Greedy",
     messageTime: 12 * 60,
     textMessage:
-      "Meepo is snowbally hero and falls off. Don't be greedy with items and allow him to pick you off.",
+      "Meepo is a snowbally hero and falls off. Don't be greedy with items and allow him to pick you off.",
     audience: [Audience.ALL],
   },
   {
@@ -9162,7 +9162,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Meepo_7_Roshan",
     messageTime: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
-      "Meepo is able to solo kill Roshan early on. Ward and check Roshpit.",
+      "Meepo is able to solo kill Roshan early on. Ward and check Roshpit often.",
     audience: [Audience.ALL],
   },
   {
@@ -10244,7 +10244,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_2_Sustain",
     messageTime: -30,
     textMessage:
-      "Necrophos typically wins the lane off of his sustain. Last hitting needs to be on point.",
+      "Necrophos typically wins the lane off his sustain. Last hitting needs to be on point.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "necrolyte_heartstopper_aura" },
   },
@@ -10294,7 +10294,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_8_Cloak",
     messageTime: [3 * 60 + 15, 6 * 60 + 15],
     textMessage:
-      "Ghost Shroud makes you vulnerable to magical damage so you typically need an early Cloak.",
+      "Ghost Shroud makes you vulnerable to magical damage so you typically need an early Cloak if necessary.",
     audience: [Audience.ALL],
     image: { type: "item", name: "cloak" },
   },
@@ -10334,7 +10334,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Necrophos_11_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanims Shard at the 15 minute mark as it provides gap close and farming speed.",
+      "Pick up Aghanims Shard at the 15 minute mark as it provides gap closure and farming speed.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
