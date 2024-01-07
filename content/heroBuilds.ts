@@ -4991,7 +4991,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   ember_spirit: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -5089,9 +5089,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     combo: [
       "ember_spirit_flame_guard",
-      "ember_spirit_sleight_of_fist",
-      "ember_spirit_searing_chains",
       "ember_spirit_fire_remnant",
+      "ember_spirit_searing_chains",
+      "ember_spirit_sleight_of_fist",
     ],
     counter_items: {
       laning_phase: {
