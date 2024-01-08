@@ -15,12 +15,12 @@ import * as PlayerRoles from "../utilities/playerRoles";
 let intl: IntlShape | undefined;
 beforeAll(async () => {
   intl = await i18nLoader();
-  console.log(
+  /*console.log(
     `intl.messages(): `,
     Object.entries(intl?.messages || {}).filter(([key, value]) =>
       key.includes("sniper")
     )
-  );
+  );*/
 });
 
 test("heroBuilds-hasDefaultHeroBuild()", () => {
@@ -49,7 +49,7 @@ test("heroBuilds-getTooltip(sniper, power_treads)", () => {
 });
 
 test("heroBuilds-getTooltip(zuus, bottle)", () => {
-  const tooltip = getItemTooltip("zuuus", 0, "bottle", intl!);
+  const tooltip = getItemTooltip("zuus", 0, "bottle", intl!);
   //console.log(`tooltip:\n`, tooltip);
 
   expect(tooltip).toBe(
