@@ -4734,7 +4734,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "When opponents clump up, cast Astral Spirit and channel Echo Stomp followed by Earthsplitter.",
+      `When opponents clump up, cast Astral Spirit and channel Echo Stomp followed by Earth Splitter.`,
     audience: [Audience.ALL],
   },
   {
@@ -4743,7 +4743,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ElderTitan_8_AghanimsScepter",
     messageTime: 18 * 60 + 45,
     textMessage:
-      "Once you get hold of Aghanim's Scepter, you can enter the fights and right-click more easily.",
+      `Once you get hold of Aghanims Scepter, you can enter the fights and right click more easily with debuff immunity.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -5517,7 +5517,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Gyrocopter_2_CreepEquilibrium",
     messageTime: 30,
     textMessage:
-      "Keep creep equilibrium close to your tower to have longer distance to run opponents down with Rocket Barrage.",
+      `Keep creep equilibrium close to your tower to have more space to run opponents down with Rocket Barrage.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "gyrocopter_rocket_barrage" },
   },
@@ -5557,7 +5557,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Gyrocopter_6_AghanimsScepter",
     messageTime: 11 * 60 + 30,
     textMessage:
-      "Make sure to get Aghanim's Scepter as soon as possible as it improves farming speed and dps in fights.",
+      `Make sure to get Aghanims Scepter as soon as possible as it improves farming speed and DPS in fights.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -12845,7 +12845,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Rubick_2_Strand",
     messageTime: [75, 8 * 60 + 15, 15 * 60 + 15],
     textMessage:
-      "When fighting next to pillars or a cliff, consider using Telekinesis to strand an opponent.",
+      `When fighting next to pillars or a cliff, consider using Telekinesis to leave an enemy hero stranded on top of it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_telekinesis" },
   },
@@ -12855,7 +12855,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Rubick_3_WaveclearSpell",
     messageTime: [9 * 60 + 45, 12 * 60 + 45],
     textMessage:
-      "In the mid game, get hold of the wave-clearing spell when the game slows down to be able to depush.",
+      `In the mid game, get hold of the wave clearing spell when the game slows down to be able to farm and kill creep waves.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_spell_steal" },
   },
@@ -12866,7 +12866,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "When not much is happening, push out sidelanes without even showing yourself.",
+      `When not much is happening, push out side lanes without even showing yourself.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_fade_bolt" },
   },
@@ -12897,7 +12897,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Rubick_7_WaveclearSpell2",
     messageTime: 13 * 60,
     textMessage:
-      "Use your level 4 Fade Bolt on the ranged creep first to one shot it.",
+      `Use your level 4 Fade Bolt on the ranged creep first to one shot it while killing creep waves.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_fade_bolt" },
   },
@@ -15053,7 +15053,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Techies_6_Vision",
     messageTime: [9 * 60, 15 * 60, 21 * 60],
     textMessage:
-      "Sticky Bombs and Proximity Mines provide limited vision so you can scout pillars, runes or Roshpit.",
+      `Sticky Bombs and Proximity Mines provide limited vision so you can scout pillars, runes or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_sticky_bomb" },
   },
@@ -15104,7 +15104,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 14 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "Place a couple of Proximity Mines at the entrance of rosh pit to scout enemy movement.",
+      `Place a couple of Proximity Mines at the entrance of Roshan pit to scout enemy movement.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "techies_land_mines" },
   },
@@ -15657,7 +15657,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tidehunter_3_AntimagicItem",
     messageTime: [4 * 60, 8 * 60],
     textMessage:
-      "Tidehunter is resilient against right-clicks due to Kraken Shell. Typically you need a magical resistance item.",
+      `Tidehunter is resilient against right clicks due to Kraken Shell. Typically you need a magic resistance item such as Mage Slayer, Pipe, or BKB.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "hood_of_defiance" },
   },
@@ -17437,7 +17437,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Venomancer_4_AntimagicItems",
     messageTime: 12 * 60,
     textMessage:
-      "Spell immunity and magical resistance items are great against Venomancer.",
+      `Debuff immunity and magic resistance items are great against Venomancer.`,
     audience: [Audience.ALL],
   },
   {
