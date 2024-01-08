@@ -10059,7 +10059,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   morphling: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
