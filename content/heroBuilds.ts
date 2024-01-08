@@ -17257,6 +17257,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "swift_blink",
             "hurricane_pike",
             "dragon_lance",
+            "refresher",
           ],
           core: ["manta", "skadi", "black_king_bar", "butterfly"],
           neutral: [
