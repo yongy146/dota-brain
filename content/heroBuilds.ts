@@ -6278,7 +6278,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         type: "QW",
         steam_guide_link_id: 2700562552,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40632,
         abilities: [
           `invoker_wex`, // 1
           `invoker_quas`, // 2
@@ -6385,7 +6385,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         type: "QE",
         steam_guide_link_id: 2711948373,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40631,
         abilities: [
           "invoker_exort", // 1
           "invoker_quas", // 2
@@ -6533,10 +6533,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699957619,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40618,
         abilities: [
           "wisp_tether", // 1
           "wisp_overcharge", // 2
@@ -12515,10 +12514,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699961424,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40622,
         abilities: [
           "phantom_lancer_spirit_lance", // 1
           "phantom_lancer_phantom_edge", // 2
@@ -21303,10 +21301,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2699919737,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40636,
         abilities: [
           "zuus_arc_lightning", // 1
           "zuus_heavenly_jump", // 2
