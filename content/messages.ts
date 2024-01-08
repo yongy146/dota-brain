@@ -11338,7 +11338,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "phantom_assassin",
     audioFile: "ownHero/PhantomAssassin_1_DaggerLasthits",
     messageTime: 15,
-    textMessage: "Use Stifling Dagger to secure creep lasthits.",
+    textMessage: "Use Stifling Dagger to secure creep last hits.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "phantom_assassin_stifling_dagger" },
   },
@@ -11387,7 +11387,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PhantomAssassin_9_PhantomStrikeFarm",
     messageTime: [5 * 60],
     textMessage:
-      "Make sure to max phantom_strike after stifling dagger for faster farming speed.",
+      "Make sure to max phantom strike after stifling dagger for faster farming speed.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "phantom_assassin_phantom_strike" },
   },
@@ -11408,7 +11408,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PhantomAssassin_7_CounterItems",
     messageTime: [12 * 60 + 15, 22 * 60 + 15],
     textMessage:
-      "Check opponents' inventories for break effects and evasion-piercing items. Adjust playstyle and itemization.",
+      "Check opponents' inventories for break effects and evasion-piercing items. Adjust playstyle and itemization accordingly.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -11418,7 +11418,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PhantomAssassin_8_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Pick up aghanims shard if you need the break vs heroes like timbersaw/bristleback etc..",
+      "Pick up aghanims shard if you need the passive break versus heroes like timbersaw, bristleback and many others.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -11429,7 +11429,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/PhantomAssassin_1_MagicStick",
     messageTime: -60,
     textMessage:
-      "PA uses Stifling Dagger frequently to obtain lasthits. Buy Magic Stick and Magic Wand to get charges.",
+      "PA uses Stifling Dagger frequently to obtain last hits. Buy Magic Stick and Magic Wand to get charges.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -11447,7 +11447,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/PhantomAssassin_3_ArmorItems",
     messageTime: 5 * 60 + 15,
     textMessage:
-      "Armor items are good against PA as she is all about physical damage and armor reduction",
+      "Armor items are good against Phantom Assassin as she is all about physical damage and armor reduction",
     audience: [Audience.ALL],
   },
   {
@@ -11456,7 +11456,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/PhantomAssassin_4_SurvivalItems",
     messageTime: 6 * 60 + 15,
     textMessage:
-      "Cheap items that allow you to survive PA's Phantom Strike are Ghost Scepter, Glimmer Cape and Eul's Scepter",
+      "Cheap items that allow you to survive from being bursted down by Phantom Assassin are Ghost Scepter, Glimmer Cape and Eul's Scepter",
     audience: [Audience.ALL],
   },
   {
@@ -11465,7 +11465,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/PhantomAssassin_5_BlurAbility",
     messageTime: 8 * 60 + 15,
     textMessage:
-      "Counter PA's Blur ability with items piercing through evasion, breaking passive or causing magical damage",
+      "Counter Phantom Assassin's Blur ability with items piercing through evasion, breaking passive or causing magical damage",
     audience: [Audience.ALL],
   },
   {
@@ -11473,7 +11473,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "phantom_assassin",
     audioFile: "enemyHero/PhantomAssassin_6_BladeMail",
     messageTime: 10 * 60 + 15,
-    textMessage: "PA can be killed by a well timed Blade Mail",
+    textMessage: "Phantom Assassin can be killed by a well timed Blade Mail",
     audience: [Audience.ALL],
   },
   {
@@ -11481,7 +11481,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "phantom_assassin",
     audioFile: "enemyHero/PhantomAssassin_7_PowerRunes",
     messageTime: [11 * 60 + 15, 19 * 60 + 15, 27 * 60 + 15],
-    textMessage: "Control power runes to prevent PA from getting double damage",
+    textMessage: "Control power runes to prevent Phantom Assassin from getting double damage",
     audience: [Audience.ALL],
   },
 
@@ -13819,7 +13819,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slardar_1_BashOfTheDeep",
     messageTime: 10,
     textMessage:
-      "Keep an eye on Bash of the Deep charges and preferably bash the opponents.",
+      "Keep an eye on setting up 3 bash counters for Bash of the Deep charges and preferably bash the opponents.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "slardar_bash" },
   },
@@ -13928,7 +13928,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Slardar_5_Roshan",
     messageTime: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
-      "Slardar lineups are able to take Roshan early on. Ward around Roshpit and check.",
+      "Slardar lineups are able to take Roshan early on. Ward around Roshpit and check often.",
     audience: [Audience.ALL],
   },
 
@@ -13948,7 +13948,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slark_2_DamageDifference",
     messageTime: 15,
     textMessage:
-      "Hit an opponent whenever you can to create a damage difference of 4. It'll help you with lasthiting.",
+      "Hit an opponent whenever you can to create a damage difference of 4. It'll help you with last hitting in lane.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "slark_essence_shift" },
   },
@@ -14019,7 +14019,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slark_9_AghanimsShard",
     messageTime: 15 * 60,
     textMessage:
-      "Slarks aghanims shard is very good for man fighting and saving allies, consider purchasing after your 3 main items.",
+      "Slarks aghanims shard is very good for man fighting and saving allies, consider purchasing it after your 3 main items.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -14030,9 +14030,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Slark_1_OfflaneMelee",
     messageTime: -90,
     textMessage:
-      "Slark tends to do well against offlane melee due to Essence Shift stacks. Check if you can send at least one ranged hero against him",
+      "Slark tends to do well against offlane melee heroes due to Essence Shift stacks. Check if you can send at least one ranged hero against him",
     chatMessage:
-      "Slark tends to do well against offlane melee due to Essence Shift stacks. Send one ranged hero against him",
+      "Slark tends to do well against offlane melee heroes due to Essence Shift stacks. Send one ranged hero against him",
     audience: [Audience.ALL],
   },
   {
@@ -14401,7 +14401,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Spectre_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Spectral Dagger to secure ranged creep lasthits and damage the opponents.",
+      "Use Spectral Dagger to secure ranged creep last hits and damage the opponents.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "spectre_spectral_dagger" },
   },
@@ -14422,7 +14422,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 7 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Look around for Haunt opportunities. Spectre farms slowly so kills are necessary.",
+      "Look around for Shadow Step kill opportunities. Spectre farms slowly so kills are necessary.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "spectre_haunt" },
   },
@@ -14433,7 +14433,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Spectre's Haunt is amazing for killing backliners and supports. Focus on killing those at the start of the fight.",
+      "Spectre's Shadow Step is amazing for killing backliners and supports. Focus on killing those at the start of the fight.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "spectre_haunt" },
   },
@@ -14493,7 +14493,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Spectre_3_Focus",
     messageTime: 40,
     textMessage:
-      "The closer you are to Spectre the more damage you take from Dispersion.",
+      "Try to keep distance with Spectre by kiting her in fights to avoid getting bursted down by her. Dispersion reflects lesser damage the further you are away from her.",
     audience: [Audience.ALL],
   },
   {
@@ -14502,16 +14502,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Spectre_4_ProtectSupports",
     messageTime: [10 * 60 + 10, 20 * 60 + 10, 30 * 60 + 10],
     textMessage:
-      "Protect your supports from being killed during the Spectre's Haunt.",
+      "Protect your supports from being killed during Spectre's Shadow Step and Haunt.",
     audience: [Audience.ALL],
   },
   {
     category: "EnemyHero",
     npcHeroName: "spectre",
-    audioFile: "enemyHero/Spectre_5_HauntCooldown",
+    audioFile: "enemyHero/Spectre_5_ShadowStepCooldown",
     messageTime: [10 * 60 + 20, 20 * 60 + 20, 30 * 60 + 20],
     textMessage:
-      "Spectre's Haunt has a long cooldown. Look to fight after it was used.",
+      "Spectre's Shadow Step has a low cooldown. Be mindful when you are low in health in the open as she can easily burst you down.",
     audience: [Audience.ALL],
   },
   {
@@ -14520,7 +14520,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Spectre_6_Break",
     messageTime: 12 * 60,
     textMessage:
-      "Break effects remove Desolate and Dispersion and make Spectre much weaker.",
+      "Break effects remove Desolate and Dispersion and makes Spectre much weaker.",
     audience: [Audience.ALL],
   },
 
@@ -14715,7 +14715,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 8 * 60,
     repeatTime: 15 * 60,
     textMessage:
-      "Mana management is the key. The more mana you have the more damage you can do. Be full mana if you expect fight to break out.",
+      "Mana management is the key. The more mana you have the more damage you can do. Be full mana if you expect fights to break out.",
     audience: [Audience.ALL],
   },
   {
@@ -14725,7 +14725,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 9 * 60,
     repeatTime: 15 * 60,
     textMessage:
-      "Don't spend all of your mana on initial jump. Preserve some to be able to disengage.",
+      "Don't spend all of your mana on the initial jump. Preserve some mana to be able to disengage.",
     audience: [Audience.ALL],
   },
   {
@@ -16503,7 +16503,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/TrollWarlord_1_SecuredRanged",
     messageTime: 15,
     textMessage:
-      "Use Whirling Axes to secure ranged creep lasthits and harass the opponents at the same time.",
+      "Use Whirling Axes to secure ranged creep last hits and harass the opponents at the same time.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "troll_warlord_whirling_axes_ranged" },
   },
@@ -16525,7 +16525,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Avoid popping Battle Trance too early in fights as you might get kited. Use it later, on disabled unit or defensively.",
+      "Avoid popping Battle Trance too early in fights as you might get kited. Use it later, on disabled units or defensively.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "troll_warlord_battle_trance" },
   },
@@ -16555,9 +16555,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/TrollWarlord_5_Antikiting",
     messageTime: [20 * 60],
     textMessage:
-      "Consider aghanims shard around 20-30 minute mark to make your team stronger.",
+      "Consider getting Aghanim's Scepter in the mid game phase to spam dispel on yourself as you fight.",
     audience: [Audience.ALL],
-    image: { type: "item", name: "aghanims_shard" },
+    image: { type: "item", name: "ultimate_scepter" },
   },
 
   {
@@ -17186,7 +17186,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "ursa",
     audioFile: "enemyHero/Ursa_5_Roshan",
     messageTime: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
-    textMessage: "Ursa is able to take Roshan early on. Ward and check Roshan.",
+    textMessage: "Ursa is able to take Roshan early on. Ward and check Roshan often.",
     audience: [Audience.ALL],
   },
 
@@ -17789,7 +17789,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VoidSpirit_7_AggressionWithItems",
     messageTime: 18 * 60 + 45,
     textMessage:
-      "Once you have both Echo Sabre and Spirit Vessel, look to play aggressively as you can solo kill pretty much any hero on the map.",
+      "Once you have Mage Slayer, look to play aggressively as you can solo kill pretty much any hero on the map.",
     audience: [Audience.ALL],
     image: { type: "item", name: "echo_sabre" },
   },
@@ -18589,7 +18589,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/WraithKing_2_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Wraithfire Blast to secure ranged creep lasthits by either stunning the creep or an opponent.",
+      "Use Wraithfire Blast to secure ranged creep last hits by either stunning the creep or an opponent.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "skeleton_king_hellfire_blast" },
   },
@@ -18714,7 +18714,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/WraithKing_6_Radiance",
     messageTime: 15 * 60 + 10,
     textMessage:
-      "If wraith king seems to be saving gold he is most probably buying radiance, becareful of this timing and try punish this before he has it.",
+      "If wraith king seems to be saving gold, he is most probably buying radiance. Be careful of this timing and try to punish him before he has it.",
     audience: [Audience.ALL],
   },
 
