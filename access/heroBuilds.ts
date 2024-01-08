@@ -418,15 +418,17 @@ export function getItemTooltip(
 ): string | undefined {
   // Check build tooltip
   let id = `hero.${npcShortName}.builds.${buildIndex}.item_tooltips.${item}`;
-  //console.log(`getItemTooltip(): id: `, id);
+  console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check hero tooltip
   id = `hero.${npcShortName}.item_tooltips.${item}`;
+  console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check item tooltip
   id = `hero.base.item_tooltips.${item}`;
+  console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   return undefined;

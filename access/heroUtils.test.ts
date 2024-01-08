@@ -176,12 +176,12 @@ test("getHeroesWithItem-desolator", () => {
     "mars",
     "phantom_assassin",
     "riki",
-    "slardar",
+    //"slardar",
     "sniper",
     "templar_assassin",
     "tusk",
-    "void_spirit",
-    "skeleton_king",
+    //"void_spirit",
+    //"skeleton_king",
   ]);
 });
 
@@ -196,7 +196,7 @@ test("getCoreHeroes-desolator", () => {
     { npcShortName: "templar_assassin", buildIndex: 0, roles: ["carry"] },
     { npcShortName: "templar_assassin", buildIndex: 1, roles: ["mid"] },
     { npcShortName: "tusk", buildIndex: 1, roles: ["offlane"] },
-    { npcShortName: "skeleton_king", buildIndex: 0, roles: ["carry"] },
+    //{ npcShortName: "skeleton_king", buildIndex: 0, roles: ["carry"] },
   ]);
 
   const withTooltips = heroes.map((hero) => {

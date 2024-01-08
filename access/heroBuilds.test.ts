@@ -15,6 +15,12 @@ import * as PlayerRoles from "../utilities/playerRoles";
 let intl: IntlShape | undefined;
 beforeAll(async () => {
   intl = await i18nLoader();
+  console.log(
+    `intl.messages(): `,
+    Object.entries(intl?.messages || {}).filter(([key, value]) =>
+      key.includes("sniper")
+    )
+  );
 });
 
 test("heroBuilds-hasDefaultHeroBuild()", () => {
@@ -39,6 +45,15 @@ test("heroBuilds-getTooltip(sniper, power_treads)", () => {
 
   expect(tooltip).toBe(
     "A core Boots upgrade to improve your mobility and damage output with attack speed and stats. Helps in both farming and lane control. The attack speed gain lets you get off more Headshots during Take Aim."
+  );
+});
+
+test("heroBuilds-getTooltip(zuus, bottle)", () => {
+  const tooltip = getItemTooltip("zuuus", 0, "bottle", intl!);
+  //console.log(`tooltip:\n`, tooltip);
+
+  expect(tooltip).toBe(
+    "A core item to gain some HP and mana sustain. Also allows the potential to make plays with power runes past the 6 minute mark. Regeneration and arcane runes provide you the most value as they let you conserve mana for fighting and farming."
   );
 });
 
