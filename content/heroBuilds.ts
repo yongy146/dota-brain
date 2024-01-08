@@ -17193,7 +17193,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   terrorblade: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -17218,7 +17218,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "terrorblade_sunder", // 12
           "terrorblade_reflection", // 13
           "terrorblade_reflection", // 14
-          "special_bonus_unique_terrorblade_6", // 15
+          "special_bonus_unique_terrorblade_metamorphosis_cooldown", // 15
           "terrorblade_reflection", // 16
           "special_bonus_attributes", // 17
           "terrorblade_sunder", // 18
@@ -17239,13 +17239,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "circlet",
           ],
           early_game: ["wraith_band", "power_treads", "magic_wand", "yasha"],
-          mid_game: ["dragon_lance", "manta", "skadi", "black_king_bar"],
+          mid_game: ["manta", "skadi", "black_king_bar"],
           late_game: [
             "butterfly",
-            "satanic",
             "greater_crit",
-            "hurricane_pike",
-            "refresher",
+            "disperser",
+            "satanic"
           ],
           situational: [
             "hand_of_midas",
@@ -17254,23 +17253,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "monkey_king_bar",
             "sange_and_yasha",
             "sphere",
-            "bloodthorn",
-            "silver_edge",
             "diffusal_blade",
-            "blink",
+            "swift_blink",
+            "hurricane_pike"
           ],
           core: ["manta", "skadi", "black_king_bar", "butterfly"],
           neutral: [
             "unstable_wand",
             "broom_handle",
             "grove_bow",
-            "pupils_gift",
-            //"ring_of_aquila",
-            //"titan_sliver",
+            "vambrace",
             "elven_tunic",
+            "vindicators_axe",
             "mind_breaker",
             "ninja_gear",
-            "apex",
             "pirate_hat",
             "mirror_shield",
           ],
