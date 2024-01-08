@@ -12390,10 +12390,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699961303,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40639,
         abilities: [
           "phantom_assassin_stifling_dagger", // 1
           "phantom_assassin_phantom_strike", // 2
@@ -15496,10 +15495,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2699962869,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40623,
         abilities: [
           "slardar_slithereen_crush", // 1
           "slardar_bash", // 2
@@ -15605,10 +15603,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699962959,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40638,
         abilities: [
           "slark_essence_shift", // 1
           "slark_pounce", // 2
@@ -16121,10 +16118,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699963243,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40637,
         abilities: [
           "spectre_spectral_dagger", // 1
           "spectre_dispersion", // 2
@@ -16475,10 +16471,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2699963425,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40633,
         abilities: [
           "storm_spirit_static_remnant", // 1
           "storm_spirit_overload", // 2
@@ -18248,10 +18243,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699964271,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40634,
         abilities: [
           "troll_warlord_whirling_axes_ranged", // 1
           "troll_warlord_berserkers_rage", // 2
@@ -18998,10 +18992,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699964646,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40635,
         abilities: [
           "ursa_earthshock", // 1
           "ursa_fury_swipes", // 2
@@ -20026,10 +20019,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2699965099,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40619,
         abilities: [
           "void_spirit_resonant_pulse", // 1
           "void_spirit_aether_remnant", // 2
@@ -20109,10 +20101,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2778135054,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40641,
         abilities: [
           "void_spirit_resonant_pulse", // 1
           "void_spirit_aether_remnant", // 2
@@ -21196,10 +21187,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699919868,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40640,
         abilities: [
           "skeleton_king_hellfire_blast", // 1
           "skeleton_king_vampiric_aura", // 2
