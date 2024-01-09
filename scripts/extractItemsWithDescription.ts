@@ -6,8 +6,8 @@
  *
  */
 import { IntlShape } from "react-intl";
-import { i18nLoader } from "../submodules/utilities/i18n/i18nLoader";
-import activeItems from "../submodules/gameData/out/dota2ItemsActive.json";
+import { i18nLoader } from "@utilities/i18n/i18nLoader";
+import activeItems from "@gameData/out/dota2ItemsActive.json";
 
 async function extraction() {
   // Load i18n data
@@ -15,9 +15,7 @@ async function extraction() {
   console.log(`extraction(): loading intl`);
   intl = await i18nLoader();
   console.log(
-    `coreItemTooltips(): intl: ${
-      Object.keys(intl?.messages || {}).length
-    } object loaded`
+    `coreItemTooltips(): intl: ${Object.keys(intl?.messages || {}).length} object loaded`
   );
 
   //console.log(`activeItems: `, activeItems);
