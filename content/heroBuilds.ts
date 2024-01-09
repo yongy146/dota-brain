@@ -9852,7 +9852,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_link_id: 2699960030,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40620,
         abilities: [
           "monkey_king_boundless_strike", // 1
           "monkey_king_jingu_mastery", // 2
@@ -9933,7 +9933,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_link_id: 2718158708,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40626,
         abilities: [
           "monkey_king_tree_dance", // 1
           "monkey_king_boundless_strike", // 2
@@ -10051,7 +10051,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
         steam_guide_link_id: 2699960135,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40643,
         abilities: [
           "morphling_morph_agi", // 1
           "morphling_adaptive_strike_agi", // 2
@@ -10400,7 +10400,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         steam_guide_link_id: 2699960208,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40644,
         abilities: [
           "naga_siren_mirror_image", // 1
           "naga_siren_rip_tide", // 2
@@ -10473,7 +10473,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-
     combo: [],
     counter_items: {
       laning_phase: {
@@ -17193,10 +17192,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2699963755,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40645,
         abilities: [
           "terrorblade_reflection", // 1
           "terrorblade_metamorphosis", // 2
