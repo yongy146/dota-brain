@@ -807,7 +807,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   antimage: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -821,11 +821,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "antimage_blink",
           "antimage_mana_break",
           "antimage_counterspell",
-          "antimage_blink",
+          "antimage_mana_break",
           "antimage_mana_void",
           "antimage_blink",
           "antimage_blink",
-          "antimage_mana_break",
+          "antimage_blink",
           "special_bonus_strength_9",
           "antimage_mana_break",
           "antimage_mana_void",
@@ -848,47 +848,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "quelling_blade",
             "tango",
             "circlet",
-            "slippers",
+            "ring_of_protection",
             "branches",
             "branches",
           ],
           early_game: [
-            "wraith_band",
-            "cornucopia",
             "power_treads",
+            "orb_of_corrosion",
             "magic_wand",
           ],
-          mid_game: ["bfury", "manta", "basher"],
-          late_game: ["skadi", "abyssal_blade", "satanic", "butterfly"],
+          mid_game: ["bfury", "manta", "skadi"],
+          late_game: ["butterfly", "abyssal_blade", "disperser"],
           situational: [
-            "vanguard",
+            "ultimate_scepter",
             "black_king_bar",
             "monkey_king_bar",
             "sphere",
             "aghanims_shard",
             "assault",
-            "radiance",
-            "diffusal_blade",
-            "blood_grenade",
-            "heart",
-            "ultimate_scepter",
-            "orb_of_corrosion",
           ],
           core: ["power_treads", "bfury", "manta", "abyssal_blade"],
           neutral: [
             "broom_handle",
-            "lance_of_pursuit",
+            "occult_bracelet",
             //"ring_of_aquila",
             "pupils_gift",
             "vambrace",
             //"titan_sliver",
             "elven_tunic",
-            "ninja_gear",
+            "vindicators_axe",
             "mind_breaker",
-            //"penta_edged_sword",
+            "ninja_gear",
             "mirror_shield",
             "pirate_hat",
-            "apex",
           ],
         },
       },
@@ -9856,7 +9848,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   monkey_king: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -9879,7 +9871,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "monkey_king_boundless_strike", // 11
           "monkey_king_wukongs_command", // 12
           "monkey_king_boundless_strike", // 13
-          "special_bonus_unique_monkey_king_9", // 14
+          "special_bonus_unique_monkey_king_7", // 14
           "special_bonus_unique_monkey_king_2", // 15
           "monkey_king_jingu_mastery", // 16
           "special_bonus_attributes", // 17
@@ -9897,61 +9889,51 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "tango",
             "quelling_blade",
             "branches",
-            "branches",
             "circlet",
-            "slippers",
+            "magic_stick",
           ],
           early_game: [
-            "wraith_band",
             "power_treads",
+            "wraith_band",
             "magic_wand",
             "orb_of_corrosion",
           ],
-          mid_game: ["maelstrom", "echo_sabre", "black_king_bar", "harpoon"],
+          mid_game: ["bfury", "ultimate_scepter", "black_king_bar"],
           late_game: [
-            "manta",
-            "mjollnir",
+            "disperser",
             "skadi",
-            "abyssal_blade",
-            "satanic",
-            "ultimate_scepter",
+            "greater_crit",
           ],
           situational: [
-            "hand_of_midas",
-            "bfury",
             "infused_raindrop",
-            "greater_crit",
             "aghanims_shard",
-            "silver_edge",
             "monkey_king_bar",
             "nullifier",
             "butterfly",
-            "radiance",
-            "sange_and_yasha",
             "sphere",
+            "abyssal_blade",
+            "echo_sabre",
+            "diffusal_blade",
+            "mjollnir"
           ],
           core: [
-            "maelstrom",
-            "harpoon",
-            "black_king_bar",
+            "power_treads",
+            "bfury",
             "ultimate_scepter",
-            "skadi",
-            "abyssal_blade",
+            "black_king_bar",
+            "skadi"
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
             "broom_handle",
-            "lance_of_pursuit",
-            //"misericorde",
-            //"ring_of_aquila",
+            "occult_bracelet",
             "orb_of_destruction",
-            //"titan_sliver",
+            "vambrace",
             "elven_tunic",
+            "vindicators_axe",
             "mind_breaker",
-            //"penta_edged_sword",
+            "ninja_gear",
             "desolator_2",
-            "apex",
-            //`ex_machina`,
+            "pirate_hat",
           ],
         },
       },
@@ -9991,43 +9973,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             "tango",
             "orb_of_venom",
-            "branches",
+            "blood_grenade",
             "branches",
             "branches",
             "ward_sentry",
           ],
-          early_game: ["orb_of_corrosion", "power_treads", "magic_wand"],
-          mid_game: ["solar_crest", "echo_sabre", "black_king_bar"],
-          late_game: ["harpoon", "skadi", "basher", "sheepstick"],
+          early_game: ["orb_of_corrosion", "boots", "magic_wand", "wraith_band",],
+          mid_game: ["orchid", "power_treads", "mage_slayer"],
+          late_game: ["black_king_bar", "gungir"],
           situational: [
-            "gungir",
+            "sheepstick",
             "spirit_vessel",
             "heavens_halberd",
             "cyclone",
-            "hand_of_midas",
             "diffusal_blade",
+            "rod_of_atos",
             "force_staff",
             "heavens_halberd",
-            "boots_of_bearing",
-            "orchid",
           ],
           core: [
             "orb_of_corrosion",
-            "echo_sabre",
-            "solar_crest",
-            "black_king_bar",
+            "orchid",
+            "mage_slayer",
+            "power_treads",
           ],
           neutral: [
             "broom_handle",
             "duelist_gloves",
             "orb_of_destruction",
-            //"ring_of_aquila",
+            "vambrace",
             "elven_tunic",
-            //"titan_sliver",
-            //"black_powder_bag",
+            "craggy_coat",
             "mind_breaker",
-            //"penta_edged_sword",
-            //"heavy_blade",
+            "ninja_gear",
             "desolator_2",
             "pirate_hat",
             "mirror_shield",
@@ -10073,7 +10051,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   morphling: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
@@ -10123,30 +10101,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "lifesteal",
             "magic_wand",
             "falcon_blade",
-            "yasha",
           ],
-          mid_game: ["manta", "skadi", "black_king_bar"],
-          late_game: ["silver_edge", "butterfly", "satanic", "travel_boots"],
+          mid_game: ["manta", "angels_demise", "black_king_bar"],
+          late_game: ["skadi", "butterfly", "satanic", "travel_boots"],
           situational: [
-            "bottle",
-            "hand_of_midas",
-            "greater_crit",
             "sphere",
+            "aghanims_shard",
             "hurricane_pike",
             "sange_and_yasha",
             "ultimate_scepter",
             "monkey_king_bar",
           ],
-          core: ["manta", "skadi", "butterfly", "satanic", "black_king_bar"],
+          core: ["manta", "angels_demise", "black_king_bar", "skadi"],
           neutral: [
-            //"possessed_mask", Removed in 7.33
             "occult_bracelet",
             "unstable_wand",
             "specialists_array",
-            //"dagger_of_ristul", Removed in 7.33
             "grove_bow",
-            //"ring_of_aquila",
-            //"titan_sliver",
             "paladin_sword",
             "elven_tunic",
             "ninja_gear",
@@ -10429,7 +10400,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   naga_siren: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -10478,7 +10449,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: ["manta", "orchid", "heart", "aghanims_shard"],
           late_game: [
             "butterfly",
-            "skadi",
+            "disperser",
             "bloodthorn",
             "sheepstick",
             "travel_boots",
@@ -10488,27 +10459,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "hand_of_midas",
             "diffusal_blade",
             "black_king_bar",
-            "silver_edge",
-            "nullifier",
             "ultimate_scepter",
             "abyssal_blade",
             "sphere",
           ],
           core: ["manta", "orchid", "heart", "butterfly"],
           neutral: [
-            //"possessed_mask", Removed in 7.33
             "unstable_wand",
             "occult_bracelet",
-            //"ring_of_aquila",
             "pupils_gift",
+            "vambrace",
             "elven_tunic",
-            //"titan_sliver",
+            "vindicators_axe",
+            "avianas_feather",
             "mind_breaker",
             "ninja_gear",
-            //"penta_edged_sword",
             "apex",
-            //`fallen_sky`,
             "mirror_shield",
+            "pirate_hat",
           ],
         },
       },
@@ -17227,7 +17195,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   terrorblade: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -17252,7 +17220,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "terrorblade_sunder", // 12
           "terrorblade_reflection", // 13
           "terrorblade_reflection", // 14
-          "special_bonus_unique_terrorblade_6", // 15
+          "special_bonus_unique_terrorblade_metamorphosis_cooldown", // 15
           "terrorblade_reflection", // 16
           "special_bonus_attributes", // 17
           "terrorblade_sunder", // 18
@@ -17273,13 +17241,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "circlet",
           ],
           early_game: ["wraith_band", "power_treads", "magic_wand", "yasha"],
-          mid_game: ["dragon_lance", "manta", "skadi", "black_king_bar"],
+          mid_game: ["manta", "skadi", "black_king_bar"],
           late_game: [
             "butterfly",
-            "satanic",
             "greater_crit",
-            "hurricane_pike",
-            "refresher",
+            "disperser",
+            "satanic"
           ],
           situational: [
             "hand_of_midas",
@@ -17288,23 +17255,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "monkey_king_bar",
             "sange_and_yasha",
             "sphere",
-            "bloodthorn",
-            "silver_edge",
             "diffusal_blade",
-            "blink",
+            "swift_blink",
+            "hurricane_pike",
+            "dragon_lance",
+            "refresher",
           ],
           core: ["manta", "skadi", "black_king_bar", "butterfly"],
           neutral: [
             "unstable_wand",
             "broom_handle",
             "grove_bow",
-            "pupils_gift",
-            //"ring_of_aquila",
-            //"titan_sliver",
+            "vambrace",
             "elven_tunic",
+            "vindicators_axe",
             "mind_breaker",
             "ninja_gear",
-            "apex",
             "pirate_hat",
             "mirror_shield",
           ],
