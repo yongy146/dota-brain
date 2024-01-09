@@ -850,13 +850,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "circlet",
             "ring_of_protection",
             "branches",
-            "branches",
+            //"branches",  Removed as costs were 620
           ],
-          early_game: [
-            "power_treads",
-            "orb_of_corrosion",
-            "magic_wand",
-          ],
+          early_game: ["power_treads", "orb_of_corrosion", "magic_wand"],
           mid_game: ["bfury", "manta", "skadi"],
           late_game: ["butterfly", "abyssal_blade", "disperser"],
           situational: [
@@ -9871,7 +9867,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "monkey_king_boundless_strike", // 11
           "monkey_king_wukongs_command", // 12
           "monkey_king_boundless_strike", // 13
-          "special_bonus_unique_monkey_king_7", // 14
+          "special_bonus_unique_monkey_king_9", // 14
           "special_bonus_unique_monkey_king_2", // 15
           "monkey_king_jingu_mastery", // 16
           "special_bonus_attributes", // 17
@@ -9899,11 +9895,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "orb_of_corrosion",
           ],
           mid_game: ["bfury", "ultimate_scepter", "black_king_bar"],
-          late_game: [
-            "disperser",
-            "skadi",
-            "greater_crit",
-          ],
+          late_game: ["disperser", "skadi", "greater_crit"],
           situational: [
             "infused_raindrop",
             "aghanims_shard",
@@ -9914,14 +9906,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "abyssal_blade",
             "echo_sabre",
             "diffusal_blade",
-            "mjollnir"
+            "mjollnir",
           ],
           core: [
             "power_treads",
             "bfury",
             "ultimate_scepter",
             "black_king_bar",
-            "skadi"
+            "skadi",
           ],
           neutral: [
             "broom_handle",
@@ -9978,7 +9970,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "branches",
             "ward_sentry",
           ],
-          early_game: ["orb_of_corrosion", "boots", "magic_wand", "wraith_band",],
+          early_game: [
+            "orb_of_corrosion",
+            "boots",
+            "magic_wand",
+            "wraith_band",
+          ],
           mid_game: ["orchid", "power_treads", "mage_slayer"],
           late_game: ["black_king_bar", "gungir"],
           situational: [
@@ -9991,12 +9988,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "force_staff",
             "heavens_halberd",
           ],
-          core: [
-            "orb_of_corrosion",
-            "orchid",
-            "mage_slayer",
-            "power_treads",
-          ],
+          core: ["orb_of_corrosion", "orchid", "mage_slayer", "power_treads"],
           neutral: [
             "broom_handle",
             "duelist_gloves",
@@ -17242,12 +17234,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: ["wraith_band", "power_treads", "magic_wand", "yasha"],
           mid_game: ["manta", "skadi", "black_king_bar"],
-          late_game: [
-            "butterfly",
-            "greater_crit",
-            "disperser",
-            "satanic"
-          ],
+          late_game: ["butterfly", "greater_crit", "disperser", "satanic"],
           situational: [
             "hand_of_midas",
             "aghanims_shard",

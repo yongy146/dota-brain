@@ -1,7 +1,8 @@
 /**
- * Component reports all core items of a build that have not i18n string.
+ * Reports the status of updates on item comments.
  *
- * npx jest coreItemTooltips.test.ts
+ * Run:
+ *  - clear ; ts-node-cwd.cmd .\scripts\extractItemsWithDescription.ts
  *
  */
 import { IntlShape } from "react-intl";
