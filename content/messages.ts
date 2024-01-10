@@ -4631,7 +4631,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Earthshaker_4_Dagger2",
     messageTime: 13 * 60 + 30,
     textMessage:
-      "Once Earthshaker has Dagger or Aghanim's Scepter control him in team fights",
+      `Once Earthshaker has Blink Dagger or Aghanims Scepter, control him in teamfights before he uses all spells`,
     audience: [Audience.ALL],
   },
   {
@@ -9725,7 +9725,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 14 * 60,
     textMessage:
       "You can dodge mid air projectiles like Vengeful Spirit stun with Pierce the Veil.",
-    audience: [Audience.ROLE_CORE],
+    audience: [Audience.ALL],
     image: { type: "ability", name: "muerta_pierce_the_veil" },
   },
   {
@@ -9764,7 +9764,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Muerta_11_ArmorCounter",
     messageTime: 30 * 60 + 30,
     textMessage:
-      "Use Pierce the Veil to burst down high armor heroes with your Pierce the Veil magical burst.",
+      `Use Pierce the Veil to burst down high armor heroes with massive magic damage from your right clicks.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "muerta_pierce_the_veil" },
   },
@@ -9781,12 +9781,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "muerta",
-    audioFile: "ownHero/Muerta_13_MaskofMadness",
+    audioFile: `ownHero/Muerta_13_Maelstrom`,
     messageTime: 4 * 60,
     textMessage:
-      "Get Mask of Madness in the early game to flash farm the map and scale better in the mid game.",
+      `Get Maelstrom in the early game to flash farm the map and scale better in the mid game.`,
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "mask_of_madness" },
+    image: { type: `item`, name: `maelstrom` },
   },
 
   {
@@ -10928,7 +10928,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Oracle_2_DenyCreep",
     messageTime: 30,
     textMessage:
-      "You can deny on your own creep by nuking it with purifying flames and quickly attacking it afterwards.",
+      `You can deny your own creep by nuking it with purifying flames and quickly attacking it afterwards.`,
     audience: [Audience.ALL],
   },
   {
@@ -10937,7 +10937,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Oracle_3_Powerspike",
     messageTime: 2 * 60 + 30,
     textMessage:
-      "Oracle has a huge powerspike at level3 with one point in Fortune's End and two points in Purifying Flames. Combine Purifying Flames followed by Fortune's End and another Purifying Flames before Fortune's End lands on the enemy hero.",
+      `Oracle has a huge powerspike at level 3 with one point in Fortunes End and two points in Purifying Flames. Combine Purifying Flames followed by Fortunes End and another Purifying Flames before Fortunes End lands on the enemy hero.`,
     audience: [Audience.ALL],
   },
   {
@@ -10992,7 +10992,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Oracle_9_UltiItems",
     messageTime: 10 * 60 + 30,
     textMessage:
-      "Items like Aether Lens or Blink Dagger allow you to get your Ulti off well. If you False Promise yourself you can blink out even under attack as you take no damage.",
+      `Items like Aether Lens or Blink Dagger allow you to get a timely False Promise off. If you False Promise yourself you can blink out even under attack as you take no damage.`,
     audience: [Audience.ALL],
   },
   {
@@ -12532,7 +12532,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Razor_1_SapDamage",
     messageTime: 10,
     textMessage:
-      "During the laning stage, prioritize sapping opponents' core's damage and win the lasthit battle off of it.",
+      `During the laning stage, prioritize stealing damage of the enemy core and win the last hit battle off of it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "razor_static_link" },
   },
@@ -12562,7 +12562,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Razor_4_PlasmaFieldVision",
     messageTime: [2 * 60, 14 * 60],
     textMessage:
-      "The Plasma Field provides vision so you can use it to scout treelines, pillars and Roshpit.",
+      `The Plasma Field provides vision so you can use it to scout treelines, pillars and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "razor_plasma_field" },
   },
@@ -12968,7 +12968,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/SandKing_1_Sentry",
     messageTime: -90,
     textMessage:
-      "Make sure pull camps are open for pulling as the you'll be pushing lane non stop.",
+      `Make sure pull camps are open for pulling as the you will be pushing lane non-stop.`,
     audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "ward_sentry" },
   },
