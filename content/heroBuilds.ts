@@ -14074,7 +14074,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // bloodstone: `Try to rush Bloodstone to get it as early as possible before the 15 minute mark. It massively enhances your survivability with its active in the early game.`,
         // aghanims_shard: `Improves your damage output in fights and also improves your tankiness in combination with the Bloodstone active.`,
         // eternal_shroud: `Makes you extremely tanky in the mid game along with Bloodstone and Aghs shard. Once you have the three items, you can play extremely aggressive in fights.`,
-        combo: [],
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
