@@ -601,6 +601,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["slow_move", "slow_attack", "silence"],
     },
+	// The Aghanims Scepter gives Muerta another Hero Stun with Parting Shot.
   ],
   naga_siren: [
     {
