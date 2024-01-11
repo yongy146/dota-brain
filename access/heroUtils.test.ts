@@ -181,7 +181,7 @@ test("getHeroesWithItem-desolator", () => {
     "templar_assassin",
     "tusk",
     //"void_spirit",
-    //"skeleton_king",
+    "skeleton_king",
   ]);
 });
 
