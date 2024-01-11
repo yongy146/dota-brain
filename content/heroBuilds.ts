@@ -969,7 +969,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "blink",
           ],
           late_game: [
-            "blink",
             "ultimate_scepter",
             "sheepstick",
             "octarine_core",
@@ -1745,7 +1744,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "swift_blink",
             "butterfly",
           ],
-          situational: ["silver_edge", "skadi", "monkey_king_bar", "sphere"],
+          situational: ["silver_edge", "skadi", "monkey_king_bar", "sphere", rod_of_atos", "gungir"],
           core: [
             "phase_boots",
             "maelstrom",
@@ -1876,7 +1875,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ["sphere", "sheepstick"],
         support: [],
-        core: ["satanic", "abyssal_blade", "butterfly"],
+        core: ["satanic", "abyssal_blade"],
       },
     },
   },
@@ -4046,7 +4045,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "boots", "wind_lace", "infused_raindrop", "cloak"],
+        all: ["magic_stick", "boots", "wind_lace", "infused_raindrop"],
         support: [],
         core: [],
       },
@@ -4502,8 +4501,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "quelling_blade",
           ],
           early_game: [
-            "power_treads",
             "wraith_band",
+            "power_treads",
             "ring_of_basilius",
             "magic_wand",
             "dragon_lance",
@@ -4522,6 +4521,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "mjollnir",
             "hand_of_midas",
             "manta",
+            "blink",
           ],
           core: [
             "power_treads",
@@ -4560,7 +4560,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ["sheepstick", "aeon_disk"],
         support: [],
-        core: ["assault", "abyssal_blade"],
+        core: ["abyssal_blade"],
       },
     },
   },
@@ -5042,7 +5042,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "mage_slayer",
           ],
           mid_game: [
-            "veil_of_discord",
+            "maelstrom",
             "black_king_bar",
             "shivas_guard",
             "aghanims_shard",
@@ -5062,6 +5062,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             "phase_boots",
             "mage_slayer",
+            "maelstrom",
             "black_king_bar",
             "shivas_guard",
             "aghanims_shard",
@@ -5092,7 +5093,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots"],
+        all: ["wind_lace", "boots", magic_stick],
         support: [],
         core: ["orb_of_corrosion"],
       },
@@ -5102,8 +5103,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [
           "mage_slayer",
           //"hood_of_defiance",
-          "pipe",
-          "eternal_shroud",
           "orchid",
           "black_king_bar",
           "manta",
@@ -5112,7 +5111,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ["sheepstick"],
         support: ["black_king_bar"],
-        core: ["abyssal_blade", "butterfly"],
+        core: ["abyssal_blade"],
       },
     },
   },
@@ -5602,8 +5601,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       mid_game: {
         all: ["blink", "spirit_vessel", "cyclone", "rod_of_atos"],
-        support: ["glimmer_cape", "ghost", "force_staff"],
-        core: ["hurricane_pike", "black_king_bar", "basher", "manta"],
+        support: ["glimmer_cape", "ghost"],
+        core: ["manta"],
       },
       late_game: {
         all: ["sheepstick", "ethereal_blade", "aeon_disk", "wind_waker"],
@@ -6858,9 +6857,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           late_game: [
             `butterfly`,
             `abyssal_blade`,
-            "aghanims_shard",
             "skadi",
             "swift_blink",
+            "aghanims_shard",
           ],
           situational: [
             "maelstrom",
@@ -6870,7 +6869,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `black_king_bar`,
             `monkey_king_bar`,
             `nullifier`,
-            "aghanims_shard",
           ],
           core: [`phase_boots`, `bfury`, `manta`, `blink`, "ultimate_scepter"],
           neutral: [
@@ -6905,12 +6903,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: ["lotus_orb"],
         support: ["glimmer_cape", "ghost"],
-        core: ["crimson_guard", "basher", "invis_sword", "manta"],
+        core: ["crimson_guard", "invis_sword", "manta"],
       },
       late_game: {
         all: ["sheepstick", "ethereal_blade", "aeon_disk", "wind_waker"],
         support: [],
-        core: ["abyssal_blade", "silver_edge", "assault", "butterfly"],
+        core: ["abyssal_blade", "silver_edge", "assault"],
       },
     },
   },
@@ -7340,6 +7338,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `abyssal_blade`,
             `moon_shard`,
             `satanic`,
+            "heavens_halberd",
             `swift_blink`,
             `overwhelming_blink`,
           ],
@@ -7758,7 +7757,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: ["armlet", "life_stealer_rage", "blink", "attack", "phase_boots"],
+    combo: ["phase_boots", "armlet", "life_stealer_rage", "blink", "attack"],
     counter_items: {
       laning_phase: {
         all: ["wind_lace", "boots", "armor"],
@@ -7768,19 +7767,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: [],
         support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["crimson_guard", "orchid", "basher"],
+        core: ["orchid"],
       },
       late_game: {
         all: ["sheepstick", "ethereal_blade"],
         support: [],
         core: [
           "abyssal_blade",
-          "monkey_king_bar",
-          "bloodthorn",
           "skadi",
           "shivas_guard",
-          "assault",
-          "butterfly",
         ],
       },
     },
@@ -9655,10 +9650,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `power_treads`,
             "ultimate_scepter",
           ],
-          mid_game: ["blink", "aghanims_shard", "disperser"],
+          mid_game: ["blink", "aghanims_shard", "diffusal_blade", "disperser"],
           late_game: [`sheepstick`, `swift_blink`, `heart`, "skadi"],
           situational: [
-            `overwhelming_blink`,
             `bloodthorn`,
             `travel_boots`,
             "nullifier",
@@ -9695,18 +9689,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "crimson_guard"],
-        support: ["ward_dispenser", "force_staff"],
-        core: ["crimson_guard", "hurricane_pike", "black_king_bar", "manta"],
+        all: ["spirit_vessel", "crimson_guard", "shivas_guard"],
+        support: ["ward_dispenser"],
+        core: ["black_king_bar", "manta"],
       },
       late_game: {
         all: ["sheepstick", "ethereal_blade", "aeon_disk"],
         support: ["black_king_bar"],
         core: [
           "mjollnir",
-          "abyssal_blade",
           "bloodthorn",
-          "butterfly",
           "assault",
         ],
       },
@@ -10924,6 +10916,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "overwhelming_blink",
           ],
           situational: [
+            "kaya_and_sange",
             `spirit_vessel`,
             `crimson_guard`,
             `heavens_halberd`,
@@ -10933,6 +10926,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sphere`,
             `lotus_orb`,
             `sheepstick`,
+            "cyclone",
           ],
           core: [
             `travel_boots`,
@@ -11090,7 +11084,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ["aeon_disk", "wind_waker", "revenants_brooch"],
         support: ["black_king_bar"],
-        core: ["skadi", "shivas_guard", "nullifier", "bloodthorn"],
+        core: ["skadi", "shivas_guard", "nullifier"],
       },
     },
   },
@@ -11145,9 +11139,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: ["bracer", "phase_boots", "magic_wand", "echo_sabre"],
           mid_game: ["aghanims_shard", "black_king_bar", `blink`, `basher`],
           late_game: [
-            "abyssal_blade",
-            "nullifier",
             "harpoon",
+            "abyssal_blade",
             "assault",
             "overwhelming_blink",
           ],
@@ -11157,6 +11150,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sphere`,
             `ultimate_scepter`,
             "hand_of_midas",
+            "nullifier",
           ],
           core: [
             "phase_boots",
@@ -12495,7 +12489,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ["sheepstick", "ethereal_blade", "aeon_disk", "revenants_brooch"],
         support: [],
-        core: ["bloodthorn", "assault", "butterfly"],
+        core: ["bloodthorn"],
       },
     },
   },
@@ -13834,12 +13828,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       mid_game: {
         all: ["rod_of_atos", "cyclone"],
-        support: ["glimmer_cape", "force_staff"],
+        support: ["glimmer_cape"],
         core: [
           "mage_slayer",
           "black_king_bar",
           "orchid",
-          "hurricane_pike",
           "manta",
         ],
       },
