@@ -7057,7 +7057,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   kunkka: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -7078,16 +7078,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "kunkka_x_marks_the_spot", // 8
           "kunkka_x_marks_the_spot", // 9
           `kunkka_x_marks_the_spot`, // 10
-          "kunkka_torrent", // 11
+          "special_bonus_unique_kunkka_6", // 11
           "kunkka_ghostship", // 12
           "kunkka_torrent", // 13
-          "special_bonus_unique_kunkka_tidebringer_slow", // 14
-          `special_bonus_attack_damage_45`, // 15
+          "kunkka_torrent", // 14
+          `special_bonus_unique_kunkka_7`, // 15
           "kunkka_torrent", // 16
           "special_bonus_attributes", // 17
           "kunkka_ghostship", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_kunkka_4", // 20
+          "special_bonus_unique_kunkka_torrent_cooldown", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -7100,44 +7100,40 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `quelling_blade`,
             `branches`,
             `branches`,
-            `branches`,
+            `faerie_fire`,
             "tango",
             `ward_observer`,
           ],
-          early_game: ["bottle", "bracer", "magic_wand", "phase_boots"],
-          mid_game: [`armlet`, "silver_edge", `black_king_bar`],
+          early_game: ["bottle", "bracer", "phase_boots", "magic_wand"],
+          mid_game: [`blade_mail`, "aghanims_shard", `ultimate_scepter`, "black_king_bar" ],
           late_game: [
-            "assault",
-            "satanic",
-            `bloodthorn`,
-            "sheepstick",
+            "shivas_guard",
+            "refresher",
             "travel_boots",
           ],
           situational: [
+            "infused_raindrop",
+            `bloodstone`,
+            "octarine_core",
+            "sheepstick",
+            "sphere",
+            "radiance",
             "orchid",
             `heavens_halberd`,
             `blink`,
-            `ultimate_scepter`,
-            `aghanims_shard`,
-            `greater_crit`,
-            `sheepstick`,
-            "rapier",
           ],
-          core: [`armlet`, `phase_boots`, "black_king_bar", `silver_edge`],
+          core: [`blade_mail`, `aghanims_shard`, "ultimate_scepter", `black_king_bar`],
           neutral: [
             "broom_handle",
             `unstable_wand`,
             "vambrace",
-            "orb_of_destruction",
-            //`dagger_of_ristul`,
-            //"titan_sliver",
-            `paladin_sword`,
-            //`heavy_blade`,
-            "mind_breaker",
-            //`penta_edged_sword`,
-            "desolator_2",
-            //`ex_machina`,
-            "pirate_hat",
+            "dragon_scale",
+            `craggy_coat`,
+            `ogre_seal_totem`,
+            "timeless_relic",
+            `havoc_hammer`,
+            "force_boots",
+            "giants_ring",
           ],
         },
       },
@@ -7158,16 +7154,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "kunkka_x_marks_the_spot", // 8
           "kunkka_x_marks_the_spot", // 9
           "kunkka_x_marks_the_spot", // 10
-          `special_bonus_unique_kunkka_tidebringer_slow`, // 11
+          `special_bonus_unique_kunkka_6`, // 11
           "kunkka_ghostship", // 12
           "kunkka_torrent", // 13
           "kunkka_torrent", // 14
-          `kunkka_torrent`, // 15
-          `special_bonus_unique_kunkka_7`, // 16
+          `special_bonus_unique_kunkka_7`, // 15
+          `kunkka_torrent`, // 16
           "special_bonus_attributes", // 17
           "kunkka_ghostship", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_kunkka_4", // 20
+          "special_bonus_unique_kunkka_torrent_cooldown", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -7183,48 +7179,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `branches`,
             "branches",
           ],
-          early_game: ["bracer", "phase_boots", "vanguard", `magic_wand`],
-          mid_game: ["blade_mail", "crimson_guard", `aghanims_shard`],
+          early_game: ["bracer", "bracer", "phase_boots", `magic_wand`],
+          mid_game: ["blade_mail", `aghanims_shard`, "ultimate_scepter"],
           late_game: [
             "black_king_bar",
-            "ultimate_scepter",
-            `assault`,
+            "shivas_guard",
             `refresher`,
-            `overwhelming_blink`,
-            `sheepstick`,
-            "heart",
+            `travel_boots`,
           ],
           situational: [
+            `bloodstone`,
+            "octarine_core",
+            `sheepstick`,
             `heavens_halberd`,
             "pipe",
-            `armlet`,
-            `silver_edge`,
             `bloodthorn`,
-            `shivas_guard`,
-            `travel_boots`,
             "lotus_orb",
           ],
           core: [
-            "phase_boots",
             `blade_mail`,
-            `crimson_guard`,
-            "black_king_bar",
+            `aghanims_shard`,
             "ultimate_scepter",
-            "aghanims_shard",
+            "black_king_bar",
+            "shivas_guard",
           ],
           neutral: [
-            `broom_handle`,
+            "broom_handle",
             `unstable_wand`,
-            `vambrace`,
-            "orb_of_destruction",
-            //`dagger_of_ristul`,
-            //`titan_sliver`,
-            `defiant_shell`,
-            //`heavy_blade`,
+            "vambrace",
+            "dragon_scale",
+            `craggy_coat`,
+            `ogre_seal_totem`,
+            "timeless_relic",
             `havoc_hammer`,
-            //"spell_prism",
-            `giants_ring`,
-            //`ex_machina`,
+            "force_boots",
+            "giants_ring",
           ],
         },
       },
