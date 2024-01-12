@@ -7059,7 +7059,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   kunkka: {
     gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
-    damage_type: DamageType.physical,
+    damage_type: DamageType.magical,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
@@ -18511,8 +18511,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   abyssal_underlord: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -18525,14 +18525,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `abyssal_underlord_firestorm`, // 1
           `abyssal_underlord_atrophy_aura`, // 2
           `abyssal_underlord_firestorm`, // 3
-          `abyssal_underlord_atrophy_aura`, // 4
+          `abyssal_underlord_pit_of_malice`, // 4
           "abyssal_underlord_firestorm", // 5
           "abyssal_underlord_dark_portal", // 6
           "abyssal_underlord_firestorm", // 7
           "abyssal_underlord_pit_of_malice", // 8
           "abyssal_underlord_pit_of_malice", // 9
           "abyssal_underlord_pit_of_malice", // 10
-          "abyssal_underlord_pit_of_malice", // 11
+          "abyssal_underlord_atrophy_aura", // 11
           `abyssal_underlord_atrophy_aura`, // 12
           `abyssal_underlord_atrophy_aura`, // 13
           `special_bonus_unique_underlord_8`, // 14
@@ -18556,63 +18556,55 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "gauntlets",
             "branches",
             `branches`,
-            `ward_observer`,
           ],
           early_game: [
-            "vanguard",
+            "helm_of_iron_will",
             `soul_ring`,
             `arcane_boots`,
             `magic_wand`,
-            `wind_lace`,
+            `veil_of_discord`,
           ],
           mid_game: [
-            `bloodstone`,
-            `rod_of_atos`,
+            `shivas_guard`,
+            `aghanims_shard`,
             `guardian_greaves`,
-            `pipe`,
-            `crimson_guard`,
           ],
           late_game: [
-            `aghanims_shard`,
-            `shivas_guard`,
-            `assault`,
+            `ultimate_scepter`,
+            `black_king_bar`,
             `octarine_core`,
           ],
           situational: [
-            `solar_crest`,
+            "pipe",
+            "rod_of_atos",
             `lotus_orb`,
             `sphere`,
-            `ultimate_scepter`,
-            `force_staff`,
             `blade_mail`,
             "radiance",
             `heavens_halberd`,
-            `black_king_bar`,
             `sheepstick`,
             `overwhelming_blink`,
             `travel_boots`,
           ],
           core: [
-            `vanguard`,
+            `shivas_guard`,
             `soul_ring`,
             `arcane_boots`,
-            `bloodstone`,
-            `rod_of_atos`,
             `guardian_greaves`,
-            `pipe`,
             `aghanims_shard`,
           ],
           neutral: [
             `occult_bracelet`,
             `arcane_ring`,
             `vambrace`,
-            `bullwhip`,
+            `dragon_scale`,
             "cloak_of_flames",
             "ogre_seal_totem",
+            "craggy_coat",
             `havoc_hammer`,
             `trickster_cloak`,
             `giants_ring`,
-            //`fallen_sky`,
+            "force_boots",
           ],
         },
       },
@@ -20310,7 +20302,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   weaver: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -20328,15 +20320,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "weaver_shukuchi", // 5
           "weaver_time_lapse", // 6
           "weaver_shukuchi", // 7
-          "weaver_the_swarm", // 8
-          "weaver_the_swarm", // 9
-          `special_bonus_strength_8`, // 10
-          `weaver_the_swarm`, // 11
+          "weaver_geminate_attack", // 8
+          "weaver_geminate_attack", // 9
+          `weaver_geminate_attack`, // 10
+          `special_bonus_strength_8`, // 11
           "weaver_time_lapse", // 12
-          "weaver_geminate_attack", // 13
-          "weaver_geminate_attack", // 14
+          "weaver_the_swarm", // 13
+          "weaver_the_swarm", // 14
           "special_bonus_unique_weaver_4", // 15
-          "weaver_geminate_attack", // 16
+          "weaver_the_swarm", // 16
           "special_bonus_attributes", // 17
           "weaver_time_lapse", // 18
           "special_bonus_attributes", // 19
@@ -20345,52 +20337,45 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_weaver_6", // 25
+          "special_bonus_unique_weaver_5", // 25
         ],
         items: {
           starting: [
             "tango",
-            "circlet",
+            "magic_stick",
             "blood_grenade",
             "branches",
-            "branches",
+            "faerie_fire",
             `ward_sentry`,
+            "ward_sentry",
             "ward_observer",
           ],
-          early_game: [`ward_sentry`, "urn_of_shadows", "magic_wand"],
-          mid_game: ["spirit_vessel", `solar_crest`],
+          early_game: ["urn_of_shadows", "magic_wand"],
+          mid_game: ["spirit_vessel", `rod_of_atos`, "aghanims_shard", "maelstrom"],
           late_game: [
-            "ultimate_scepter",
-            "aeon_disk",
+            "gungir",
             `black_king_bar`,
             `bloodthorn`,
             "sheepstick",
           ],
           situational: [
-            "blink",
             `orchid`,
             `heavens_halberd`,
-            `cyclone`,
-            `ghost`,
-            `force_staff`,
             "lotus_orb",
-            `ethereal_blade`,
-            `wind_waker`,
-            `aghanims_shard`,
             `travel_boots`,
             "sphere",
           ],
-          core: ["spirit_vessel", `solar_crest`, "ultimate_scepter"],
+          core: ["spirit_vessel", `rod_of_atos`, "aghanims_shard", "maelstrom"],
           neutral: [
-            "arcane_ring",
+            "lance_of_pursuit",
             "trusty_shovel",
-            //"ring_of_aquila",
-            `bullwhip`,
+            `grove_bow`,
+            "specialists_array",
             "enchanted_quiver",
             "ogre_seal_totem",
             "ascetic_cap",
             `stormcrafter`,
-            "seer_stone",
+            "desolator_2",
             `mirror_shield`,
           ],
         },
@@ -20404,8 +20389,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
-          "weaver_shukuchi", // 3
-          "weaver_the_swarm", // 4
+          "weaver_the_swarm", // 3
+          "weaver_shukuchi", // 4
           "weaver_shukuchi", // 5
           "weaver_time_lapse", // 6
           "weaver_shukuchi", // 7
@@ -20416,7 +20401,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "weaver_time_lapse", // 12
           "weaver_the_swarm", // 13
           "weaver_the_swarm", // 14
-          "special_bonus_unique_weaver_4", // 15
+          "special_bonus_mana_break_20", // 15
           "weaver_the_swarm", // 16
           "special_bonus_attributes", // 17
           "weaver_time_lapse", // 18
@@ -20438,16 +20423,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `circlet`,
           ],
           early_game: [
-            `wraith_band`,
+            `power-treads`,
             `magic_wand`,
-            `power_treads`,
-            "maelstrom",
+            `wraith_band`,
+            "falcon_blade"
           ],
-          mid_game: ["mjollnir", `black_king_bar`, `lesser_crit`],
+          mid_game: ["dragon_lance", `desolator`, "aghanims_shard", `diffusal_blade`, ],
           late_game: [
+            "disperser",
+            "black_king_bar",
             "greater_crit",
+            "hurricane_pike",
             "satanic",
-            `skadi`,
             "butterfly",
             "travel_boots",
           ],
@@ -20455,23 +20442,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `monkey_king_bar`,
             `gungir`,
             "sphere",
-            "hurricane_pike",
-            `sange_and_yasha`,
             `manta`,
-            `bloodthorn`,
             "nullifier",
-            `moon_shard`,
+            `skadi`,
           ],
-          core: [`maelstrom`, "black_king_bar", "greater_crit", `skadi`],
+          core: [`dragon_lance`, "desolator", "black_king_bar", `aghanims_shard`],
           neutral: [
             `lance_of_pursuit`,
             "occult_bracelet",
-            //"ring_of_aquila",
+            "specialists_array",
             "grove_bow",
             "elven_tunic",
-            //"titan_sliver",
+            "vindicators_axe",
             "mind_breaker",
-            "ninja_gear",
+            "ancient_guardian",
             "mirror_shield",
             "desolator_2",
             "pirate_hat",
