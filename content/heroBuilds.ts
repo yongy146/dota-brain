@@ -10477,8 +10477,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   // eidendota plays hero
   // Nature's Prophet
   furion: {
-    gameplay_version: "7.35",
-    creator: ContentCreator.YoonA,
+    gameplay_version: "7.35b",
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -10516,61 +10516,50 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         items: {
           starting: [
             `tango`,
-            `blight_stone`,
+            `circlet`,
+            "magic_stick",
             "branches",
             "branches",
             "branches",
-            "branches",
-            `ward_observer`,
           ],
           early_game: [
             `power_treads`,
             `magic_wand`,
-            `wind_lace`,
-            `solar_crest`,
+            `orchid`,
           ],
-          mid_game: [`ultimate_scepter`, `orchid`, `aghanims_shard`, `gungir`],
-          late_game: [`black_king_bar`, `sheepstick`, `assault`, `satanic`],
+          mid_game: [`mage_slayer`, `aghanims_shard`, `gungir`],
+          late_game: [`black_king_bar`, `sheepstick`, `assault`, `bloodthorn`],
           situational: [
             "infused_raindrop",
-            `wraith_band`,
-            `spirit_vessel`,
-            `hand_of_midas`,
+            `ultimate_scepter`,
             `maelstrom`,
             `heavens_halberd`,
-            `blade_mail`,
-            `rod_of_atos`,
-            `mjollnir`,
             `witch_blade`,
             `blink`,
-            `silver_edge`,
             `hurricane_pike`,
             `monkey_king_bar`,
             `nullifier`,
-            `bloodthorn`,
             `sphere`,
+            "spirit_vessel"
           ],
           core: [
             "power_treads",
-            `solar_crest`,
-            "ultimate_scepter",
             `orchid`,
-            `aghanims_shard`,
+            "mage_slayer",
+            "aghanims_shard",
             `gungir`,
-            `sheepstick`,
-            `assault`,
           ],
           neutral: [
             `duelist_gloves`,
-            "lance_of_pursuit",
-            `orb_of_destruction`,
-            "grove_bow",
+            `lance_of_pursuit`,
+            `specialists_array`,
+            `grove_bow`,
             `elven_tunic`,
-            "enchanted_quiver",
+            `vindicators_axe`,
             `trickster_cloak`,
-            "mind_breaker",
+            `mind_breaker`,
             `desolator_2`,
-            "pirate_hat",
+            `pirate_hat`,
           ],
         },
         // item_tooltips:
@@ -10584,17 +10573,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          `furion_sprout`, // 1
-          "furion_teleportation", // 2
+          `furion_teleportation`, // 1
+          "furion_sprout", // 2
           `furion_sprout`, // 3
           `furion_teleportation`, // 4
-          `furion_teleportation`, // 5
+          `furion_sprout`, // 5
           "furion_wrath_of_nature", // 6
-          `furion_teleportation`, // 7
-          `furion_force_of_nature`, // 8
-          `furion_sprout`, // 9
-          `furion_sprout`, // 10
-          `special_bonus_unique_furion_5`, // 11
+          `furion_sprout`, // 7
+          `furion_teleportation`, // 8
+          `furion_teleportation`, // 9
+          `special_bonus_unique_furion_5`, // 10
+          `furion_force_of_nature`, // 11
           "furion_wrath_of_nature", // 12
           `furion_force_of_nature`, // 13
           `furion_force_of_nature`, // 14
@@ -10613,60 +10602,51 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         items: {
           starting: [
             `tango`,
-            `blight_stone`,
+            `circlet`,
+            "magic_stick",
             "branches",
             "branches",
             "branches",
-            `branches`,
-            `ward_observer`,
           ],
           early_game: [
-            `magic_wand`,
-            `spirit_vessel`,
             `power_treads`,
-            `wind_lace`,
+            `magic_wand`,
+            "wraith_band",
+            "maelstrom"
           ],
           mid_game: [
-            `maelstrom`,
-            `ultimate_scepter`,
-            `orchid`,
-            `mjollnir`,
+            `mage_slayer`,
             `aghanims_shard`,
+            "witch_blade",
+            `gungir`,
           ],
-          late_game: [`black_king_bar`, `sheepstick`, `assault`, `satanic`],
+          late_game: ["black_king_bar", `devastator`, `satanic`, `butterfly`, `sheepstick`],
           situational: [
             "infused_raindrop",
-            `solar_crest`,
+            `mjollnir`,
             `hand_of_midas`,
-            `blade_mail`,
-            `rod_of_atos`,
-            `gungir`,
-            `witch_blade`,
+            `bloodthorn`,
+            `orchid`,
             `blink`,
-            `silver_edge`,
             `hurricane_pike`,
             `monkey_king_bar`,
-            `nullifier`,
-            `bloodthorn`,
             `sphere`,
+            "ultimate_scepter"
           ],
           core: [
-            `spirit_vessel`,
             `power_treads`,
-            `maelstrom`,
-            `ultimate_scepter`,
-            `orchid`,
+            `gungir`,
+            `mage_slayer`,
             `aghanims_shard`,
-            `sheepstick`,
-            `assault`,
+            "black_king_bar"
           ],
           neutral: [
             `duelist_gloves`,
             `lance_of_pursuit`,
-            `orb_of_destruction`,
+            `specialists_array`,
             `grove_bow`,
             `elven_tunic`,
-            `enchanted_quiver`,
+            `vindicators_axe`,
             `trickster_cloak`,
             `mind_breaker`,
             `desolator_2`,
@@ -10681,8 +10661,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
-          `furion_sprout`, // 1
-          "furion_teleportation", // 2
+          `furion_teleportation`, // 1
+          "furion_sprout", // 2
           `furion_sprout`, // 3
           `furion_teleportation`, // 4
           `furion_sprout`, // 5
@@ -10710,55 +10690,44 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         items: {
           starting: [
             "tango",
-            "blight_stone",
+            "circlet",
             `blood_grenade`,
             `branches`,
-            `branches`,
+            `faerie_fire`,
             `ward_observer`,
             `ward_sentry`,
+            "ward_sentry"
           ],
           early_game: [
-            //`medallion_of_courage`,
+            "blood_grenade",
+            `urn_of_shadows`,
             `magic_wand`,
-            `boots`,
             `wind_lace`,
-            `solar_crest`,
+            `power_treads`,
           ],
           mid_game: [
-            `rod_of_atos`,
+            "spirit_vessel",
             `ultimate_scepter`,
             `aghanims_shard`,
-            `gungir`,
           ],
-          late_game: [`sheepstick`, `bloodthorn`, `refresher`, `assault`],
+          late_game: [`sheepstick`, `bloodthorn`, `assault`, "gungir"],
           situational: [
             "infused_raindrop",
-            `spirit_vessel`,
-            `hand_of_midas`,
-            `ancient_janggo`,
             `glimmer_cape`,
+            "rod_of_atos",
             `force_staff`,
-            `blade_mail`,
-            `boots_of_bearing`,
             `octarine_core`,
             `blink`,
-            `ethereal_blade`,
-            `dagon_5`,
             `heavens_halberd`,
             `pipe`,
             `silver_edge`,
             `monkey_king_bar`,
-            `shivas_guard`,
           ],
           core: [
-            "solar_crest",
-            `rod_of_atos`,
-            "ultimate_scepter",
+            "power_treads",
+            "spirit_vessel",
             `aghanims_shard`,
-            `gungir`,
-            `sheepstick`,
-            `refresher`,
-            `assault`,
+            "ultimate_scepter",
           ],
           neutral: [
             `trusty_shovel`,
