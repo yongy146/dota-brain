@@ -100,7 +100,7 @@ test("itemIterator-mid", () => {
 });
 
 test("itemIterator-mid-early_game", () => {
-  const it = itemIterator(
+  const items = itemIterator(
     DOTA_COACH_GUIDE_ROLE.MID,
     "DOTA_Item_Build_Mid_Items"
   );
@@ -108,11 +108,11 @@ test("itemIterator-mid-early_game", () => {
   const phases = new Set<string>();
   let index = 0;
 
-  for (const i of it) {
+  for (const i of items) {
     if (index === 3) {
       expect(i).toEqual({
-        item: "basher",
-        npcShortName: "alchemist",
+        item: "travel_boots",
+        npcShortName: "arc_warden",
         phase: "mid_game",
       });
     }
@@ -181,6 +181,7 @@ test("getHeroesWithItem-desolator", () => {
     "templar_assassin",
     "tusk",
     //"void_spirit",
+    "weaver",
     "skeleton_king",
   ]);
 });
@@ -196,6 +197,7 @@ test("getCoreHeroes-desolator", () => {
     { npcShortName: "templar_assassin", buildIndex: 0, roles: ["carry"] },
     { npcShortName: "templar_assassin", buildIndex: 1, roles: ["mid"] },
     { npcShortName: "tusk", buildIndex: 1, roles: ["offlane"] },
+    { npcShortName: "weaver", buildIndex: 1, roles: ["carry"] },
     //{ npcShortName: "skeleton_king", buildIndex: 0, roles: ["carry"] },
   ]);
 

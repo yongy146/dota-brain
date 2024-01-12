@@ -141,8 +141,8 @@ export const phase2ItemBuild: Record<string, string> = {
 /**
  * Iterator that goes through all items in the hero guides.
  *
- * Skips core for all heroes (as the items are repeated)
- * except Lone Druid and neutral items for all heroes.
+ * Skips core items for all heroes (as the items are repeated)
+ * except for Lone Druid and skips neutral items for all heroes.
  *
  */
 export function* itemIterator(
