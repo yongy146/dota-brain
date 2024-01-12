@@ -7095,10 +7095,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2699958147,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40658,
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -7419,10 +7418,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2699958372,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40659,
         abilities: [
           "leshrac_split_earth", // 1
           "leshrac_lightning_storm", // 2
@@ -10531,7 +10529,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_link_id: 2699960338,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40660,
         abilities: [
           `furion_sprout`, // 1
           "furion_teleportation", // 2
@@ -10610,10 +10608,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2718666197,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40661,
         abilities: [
           `furion_teleportation`, // 1
           "furion_sprout", // 2
@@ -10699,10 +10696,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2718666233,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40662,
         abilities: [
           `furion_teleportation`, // 1
           "furion_sprout", // 2
@@ -10824,10 +10820,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2699960447,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40654,
         abilities: [
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
@@ -10923,10 +10918,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-
         steam_guide_link_id: 2718666066,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40655,
         abilities: [
           "necrolyte_death_pulse", // 1
           "necrolyte_heartstopper_aura", // 2
@@ -11061,10 +11055,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2699960635,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40656,
         abilities: [
           "night_stalker_void", // 1
           "night_stalker_hunter_in_the_night", // 2
@@ -20201,10 +20194,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699965199,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40657,
         abilities: [
           `warlock_fatal_bonds`, // 1
           `warlock_upheaval`, // 2
