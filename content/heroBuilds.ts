@@ -7375,7 +7375,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   leshrac: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.magical,
     builds: [
@@ -7386,8 +7386,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         //dota_fire_id: ,
         abilities: [
-          "leshrac_lightning_storm", // 1
-          "leshrac_split_earth", // 2
+          "leshrac_split_earth", // 1
+          "leshrac_lightning_storm", // 2
           "leshrac_lightning_storm", // 3
           "leshrac_split_earth", // 4
           "leshrac_lightning_storm", // 5
@@ -7421,43 +7421,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "branches",
             "ward_observer",
           ],
-          early_game: ["bottle", "arcane_boots", "magic_wand"],
-          mid_game: ["bloodstone", "cyclone", "kaya", "travel_boots", "blink"],
+          early_game: ["bottle", "arcane_boots", "magic_wand", "kaya"],
+          mid_game: ["kaya_and_sange", "shivas_guard", "aghanims_shard",],
           late_game: [
-            "kaya_and_sange",
-            "black_king_bar",
-            "aghanims_shard",
-            "shivas_guard",
             "sheepstick",
-            "ethereal_blade",
+            "black_king_bar",
             "overwhelming_blink",
             "wind_waker",
+            "travel_boots"
           ],
-          situational: ["ultimate_scepter", "sphere", "ghost", "aeon_disk"],
+          situational: ["ultimate_scepter", "bloodstone", "ghost", "cyclone", "eternal_shroud", "blink", "arcane_blink"],
           core: [
-            "travel_boots",
-            "bloodstone",
-            "cyclone",
             "kaya_and_sange",
+            "shivas_guard",
             "black_king_bar",
-            "blink",
+            "aghanims_shard",
           ],
           neutral: [
             "mysterious_hat",
             "occult_bracelet",
-            //"pogo_stick",
-            "vambrace",
+            "whisper_of_the_dread",
             "vampire_fangs",
             "gossamer_cape",
-            //"black_powder_bag",
             "ceremonial_robe",
             "dandelion_amulet",
-            //"spell_prism",
             "timeless_relic",
             "stormcrafter",
             "force_field",
-            //`ex_machina`,
-            //`fallen_sky`,
+            "mirror_shield"
           ],
         },
       },
