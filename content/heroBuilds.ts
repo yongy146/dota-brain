@@ -2571,7 +2571,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   chaos_knight: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
@@ -2595,7 +2595,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "chaos_knight_phantasm", // 12
           "chaos_knight_chaos_bolt", // 13
           "chaos_knight_chaos_bolt", // 14
-          "special_bonus_unique_chaos_knight_8", // 15
+          "special_bonus_unique_chaos_knight_7", // 15
           "chaos_knight_chaos_bolt", // 16
           "special_bonus_attributes", // 17
           "chaos_knight_phantasm", // 18
@@ -2616,58 +2616,49 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "branches",
             "branches",
           ],
-          early_game: ["magic_wand", "power_treads", "bracer", "hand_of_midas"],
+          early_game: ["power_treads", "bracer", "magic_stick", "helm_of_iron_will"],
           mid_game: [
             "armlet",
             "echo_sabre",
-            "black_king_bar",
             "blink",
-            "harpoon",
-            "aghanims_shard",
           ],
           late_game: [
             "bloodthorn",
-            "heart",
+            "disperser",
+            "harpoon",
             "assault",
-            "satanic",
-            "skadi",
-            "abyssal_blade",
             "overwhelming_blink",
           ],
           situational: [
-            "ultimate_scepter",
             "infused_raindrop",
-            "sange_and_yasha",
-            "silver_edge",
-            "manta",
-            "soul_ring",
-            "diffusal_blade",
-            "sphere",
+            "aghanims_shard",
+            "black_king_bar",
+            "ultimate_scepter",
             "mage_slayer",
+            "manta",
+            "sphere",
+            "silver_edge",
+            "heart"
           ],
           core: [
             "power_treads",
             "armlet",
             "echo_sabre",
             "blink",
-            "black_king_bar",
           ],
           neutral: [
-            "unstable_wand",
+            "occult_bracelet",
+            "duelist_gloves",
             "broom_handle",
-            "lance_of_pursuit",
             "vambrace",
-            "pupils_gift",
-            //"ring_of_aquila",
+            "orb_of_destruction",
             "elven_tunic",
-            "paladin_sword",
-            //"titan_sliver",
+            "vindicators_axe",
             "mind_breaker",
-            //"spell_prism",
-            //"penta_edged_sword",
-            "desolator_2",
+            "ninja_gear",
             "pirate_hat",
-            "apex",
+            "force_boots",
+            "desolator_2",
           ],
         },
         // item_tooltips:
@@ -2690,8 +2681,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "chaos_knight_chaos_strike", // 7
           "chaos_knight_reality_rift", // 8
           "chaos_knight_reality_rift", // 9
-          "chaos_knight_reality_rift", // 10
-          "special_bonus_unique_chaos_knight_2", // 11
+          "special_bonus_unique_chaos_knight_6", // 10
+          "chaos_knight_reality_rift", // 11
           "chaos_knight_phantasm", // 12
           "chaos_knight_chaos_bolt", // 13
           "chaos_knight_chaos_bolt", // 14
@@ -2700,7 +2691,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "chaos_knight_phantasm", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_chaos_knight", // 20
+          "special_bonus_unique_chaos_knight_3", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -2711,42 +2702,40 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             "tango",
             "quelling_blade",
-            "gauntlets",
+            "circlet",
             "gauntlets",
             "branches",
             "branches",
           ],
-          early_game: ["magic_wand", "power_treads", "bracer", "bracer"],
-          mid_game: ["armlet", "blink", "ultimate_scepter", "aghanims_shard"],
-          late_game: ["assault", "overwhelming_blink", "bloodthorn", "heart"],
+          early_game: ["power_treads", "bracer", "magic_wand", "helm_of_iron_will"],
+          mid_game: ["armlet", "echo_sabre", "blink", "aghanims_shard"],
+          late_game: ["assault", "overwhelming_blink", "bloodthorn", "harpoon"],
           situational: [
             "heavens_halberd",
             "black_king_bar",
-            "silver_edge",
             "manta",
-            "sange_and_yasha",
-            "hand_of_midas",
+            "silver_edge",
+            "abyssal_blade",
+            "heart",
           ],
           core: [
             "power_treads",
             "armlet",
             "blink",
-            "black_king_bar",
-            "ultimate_scepter",
             "aghanims_shard",
           ],
           neutral: [
-            "unstable_wand",
-            "lance_of_pursuit",
+            "duelist_gloves",
+            "broom_handle",
             "vambrace",
-            "pupils_gift",
+            "orb_of_destruction",
             "elven_tunic",
-            "paladin_sword",
+            "vindicators_axe",
             //"spell_prism",
             "mind_breaker",
             "ninja_gear",
             "pirate_hat",
-            "apex",
+            "force_boots",
           ],
         },
       },
