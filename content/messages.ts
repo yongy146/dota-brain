@@ -2424,7 +2424,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CentaurWarrunner_1_Ring",
     messageTime: 15,
     textMessage:
-      "Focus on last hitting to get Ring of Health purchased as soon as possible.",
+      `Focus on last hitting to get Helm of Iron Will purchased as soon as possible.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "ring_of_health" },
   },
@@ -2704,7 +2704,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Chen_7_Farming",
     messageTime: 7 * 60,
     textMessage:
-      "Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Solar Crest into Mekansm lets you snowball the game.",
+      `Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Vladmirs Offering into Solar Crest lets you snowball the game.`,
     audience: [Audience.ALL],
   },
 
