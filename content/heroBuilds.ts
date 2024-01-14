@@ -4270,16 +4270,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_observer`,
           ],
           early_game: [`phase_boots`, `veil_of_discord`, `magic_wand`],
-          mid_game: [
-            `black_king_bar`,
-            `blink`,
-            `shivas_guard`,
-          ],
+          mid_game: [`black_king_bar`, `blink`, `shivas_guard`],
           late_game: [
             `octarine_core`,
             `refresher`,
             `overwhelming_blink`,
-            "travel_boots"
+            "travel_boots",
           ],
           situational: [
             "hand_of_midas",
@@ -12494,7 +12490,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "manta",
             "aghanims_shard",
           ],
-          late_game: ["heart", "disperser", "butterfly", "bloodthorn", "skadi",],
+          late_game: ["heart", "disperser", "butterfly", "bloodthorn", "skadi"],
           situational: [
             "abyssal_blade",
             "monkey_king_bar",
@@ -13150,11 +13146,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "urn_of_shadows",
             "smoke_of_deceit",
           ],
-          mid_game: [
-            "blink",
-            "aether_lens",
-            "aghanims_shard",
-          ],
+          mid_game: ["blink", "aether_lens", "aghanims_shard"],
           late_game: [
             "octarine_core",
             "shivas_guard",
@@ -13240,18 +13232,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "branches",
             "branches",
           ],
-          early_game: ["veil_of_discord", "phase_boots", "magic_wand", "soul_ring"],
+          early_game: [
+            "veil_of_discord",
+            "phase_boots",
+            "magic_wand",
+            "soul_ring",
+          ],
           mid_game: [
             "ultimate_scepter",
             "shivas_guard",
             "blink",
             "black_king_bar",
           ],
-          late_game: [
-            "shivas_guard",
-            "overwhelming_blink",
-            "travel_boots"
-          ],
+          late_game: ["shivas_guard", "overwhelming_blink", "travel_boots"],
           situational: [
             "aghanims_shard",
             "eternal_shroud",
@@ -13263,7 +13256,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "spirit_vessel",
             "octarine_core",
             "heart",
-            "blade_mail"
+            "blade_mail",
           ],
           core: [
             "veil_of_discord",
@@ -16221,22 +16214,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_observer`,
             `ward_sentry`,
           ],
-          early_game: [
-            `phase_boots`,
-            `magic_wand`,
-          ],
-          mid_game: [
-            `invis_sword`,
-            `ancient_janggo`,
-            `aghanims_shard`,
-          ],
+          early_game: [`phase_boots`, `magic_wand`],
+          mid_game: [`invis_sword`, `ancient_janggo`, `aghanims_shard`],
           late_game: [
             "black_king_bar",
             `ultimate_scepter`,
             `octarine_core`,
             `yasha_and_kaya`,
             `wind_waker`,
-            "silver_edge"
+            "silver_edge",
           ],
           situational: [
             `infused_raindrop`,
@@ -16251,12 +16237,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aeon_disk`,
             `travel_boots`,
           ],
-          core: [
-            `phase_boots`,
-            `wind_lace`,
-            `invis_sword`,
-            `black_king_bar`,
-          ],
+          core: [`phase_boots`, `wind_lace`, `invis_sword`, `black_king_bar`],
           neutral: [
             "broom_handle",
             `faded_broach`,
@@ -16313,7 +16294,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             "tango",
             "quelling_blade",
-            `gauntlet`,
+            `gauntlets`,
             `circlet`,
             `branches`,
             `branches`,
@@ -16326,14 +16307,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "magic_wand",
             `wind_lace`,
           ],
-          mid_game: [
-            "octarine_core",
-            "invis_sword",
+          mid_game: ["octarine_core", "invis_sword"],
+          late_game: [
+            `yasha_and_kaya`,
+            `black_king_bar`,
+            `wind_waker`,
+            `silver_edge`,
           ],
-          late_game: [`yasha_and_kaya`, `black_king_bar`, `wind_waker`, `silver_edge`],
           situational: [
             "ultimate_scepter",
-            "aghanims_shard",            
+            "aghanims_shard",
             `pipe`,
             `cyclone`,
             `heavens_halberd`,

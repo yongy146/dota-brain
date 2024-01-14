@@ -93,12 +93,13 @@ for (const { npcShortName, heroBuild } of heroBuildIterator()) {
   }
   test(`heroBuilds-Costs starting items (${npcShortName})`, () => {
     expect(costs).toBeLessThanOrEqual(600);
-    if (costs < 550)
+    /*if (costs < 550)
       console.warn(
         `Costs are below 550 gold (${npcShortName}, ${heroBuild.roles.join(
           ", "
         )})`
       );
+      */
     //expect(costs).toBeGreaterThanOrEqual(550);
   });
 
