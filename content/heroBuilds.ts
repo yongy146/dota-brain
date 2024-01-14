@@ -82,7 +82,7 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
       //link_text: "Click here to book a coaching session with him.",
     },
     yongy146: {
-      image: "https://i.imgur.com/TZpRwOK.jpeg",
+      image: "https://i.imgur.com/pPXOkj8.png",
       text: "This guide was written by BaLLooN, a 7.8k DotA 2 player based in SEA with 17 years of experience:",
       link_http: "https://www.fiverr.com/yongy146",
     },
