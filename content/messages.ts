@@ -1711,9 +1711,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Beastmaster_7_Powerspike",
     messageTime: 6 * 60,
     textMessage:
-      "The biggest early powerspike on Beastmaster is Helm of the Dominator and level 6 timing. Look to score a kill and take tower down.",
+      `The biggest early powerspike on Beastmaster is Veil of Discord and level 6 timing. Look to score a kill and take tower down.`,
     audience: [Audience.ALL],
-    image: { type: "item", name: "helm_of_the_dominator" },
+    image: { type: `item`, name: `veil_of_discord` },
   },
   {
     category: "OwnHero",
@@ -1730,7 +1730,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Beastmaster_9_PushSidelanes",
     messageTime: [13 * 60, 15 * 60],
     textMessage:
-      "Push out sidelanes with summons, especially once you control Helm of the Overlord creep, Black Dragon ideally.",
+      `Push out sidelanes with summons, especially if you control Helm of the Overlord creep, Black Dragon ideally.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_overlord" },
   },
@@ -1768,11 +1768,21 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     npcHeroName: "beastmaster",
     audioFile: "enemyHero/Beastmaster_3_Powerspike",
+    messageTime: 7 * 60 + 10,
+    textMessage:
+      `Be aware of Beastmasters level 6 and Veil of Discord powerspike.`,
+    audience: [Audience.IN_LANE],
+    image: { type: `item`, name: `veil_of_discord` },
+  },
+  {
+    category: `EnemyHero`,
+    npcHeroName: `beastmaster`,
+    audioFile: `enemyHero/Beastmaster_3_Powerspike`,
     messageTime: 8 * 60,
     textMessage:
-      "Be aware of Beastmaster's level 6 and Helm of Dominator powerspike.",
+      `Be aware of Beastmasters level 6 and Helm of the Dominator powerspike if he is not going for Veil of Discord.`,
     audience: [Audience.IN_LANE],
-    image: { type: "item", name: "helm_of_the_dominator" },
+    image: { type: `item`, name: `helm_of_the_dominator` },
   },
   {
     category: "EnemyHero",
@@ -5687,7 +5697,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Hoodwink_1_SecureRanged",
     messageTime: 15,
     textMessage:
-      "Use Acorn Shot to secure range creep last hits and to harass the opponents at the same time.",
+      `Use Acorn Shot to secure range creep last hits and harass the opponents at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_acorn_shot" },
   },
@@ -5706,7 +5716,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "hoodwink",
     audioFile: "ownHero/Hoodwink_3_Trees",
     messageTime: 3 * 60,
-    textMessage: "Play close to the trees when you have a point in Scurry.",
+    textMessage: `Play close to the trees when you have a point in Scurry to gain its passive benefits.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_scurry" },
   },
@@ -8140,7 +8150,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_2_ScoutOpponents",
     messageTime: -75,
     textMessage:
-      "You can scout opponents' whereabouts with wolves before a 0 minute rune and check for the midlane ward.",
+      `You can scout enemy whereabouts with Wolves before the 0 minute runes and check for the mid lane ward.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lycan_summon_wolves" },
   },
@@ -8150,7 +8160,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_3_FocusLastHitting",
     messageTime: 15,
     textMessage:
-      "Focus on securing lasthits and denying as you have extra damage from the wolves and Feral Impulse.",
+      `Focus on securing last hits and denying as you have extra damage from the Wolves and Feral Impulse.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lycan_summon_wolves" },
   },
@@ -8189,7 +8199,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_7_ControlledCreep",
     messageTime: 5 * 60,
     textMessage:
-      "Overtake a neutral creep with a stun or root with the Helm of the Dominator so the opponents can't teleport out.",
+      `Take control of a neutral creep with a stun or root with the Helm of the Dominator so the opponents cant teleport out.`,
     audience: [Audience.ROLE_OFFLANE],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
@@ -8220,7 +8230,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_10_Roshan",
     messageTime: 15 * 60 + 15,
     textMessage:
-      "Lycan is great at killing Roshan due to summons, Howl and auras. Bring him down by the 20min mark.",
+      `Lycan is great at killing Roshan due to summons, Howl and auras. Bring him down by the 20 minute mark.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aegis" },
   },
@@ -18189,7 +18199,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Push out the sidelines when not much is happening around the map.",
+      `Push out the side lanes when not much is happening around the map.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "windrunner_powershot" },
   },
