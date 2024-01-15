@@ -26,7 +26,7 @@ export const dispellableBuffs: Record<string, string[]> = {
   centaur: ["centaur_double_edge"],
   chaos_knight: [],
   chen: ["chen_divine_favor"],
-  clinkz: [],
+  clinkz: [`clinkz_strafe`],
   rattletrap: [`rattletrap_jetpack`], // Clockwerk
   crystal_maiden: [],
   dark_seer: ["dark_seer_ion_shell", "dark_seer_surge"],

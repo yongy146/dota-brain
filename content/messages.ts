@@ -2779,7 +2779,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Clinkz_1_tar_bomb",
     messageTime: 15,
     textMessage:
-      "Tar bomb is your main tool for harrasing in the lane try to use it when you can get alot of hits on the enemy.",
+      `Tar bomb is your main tool for harrasing in the lane try to use it when you can get a lot of hits on the enemy.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_tar_bomb" },
   },
@@ -2807,11 +2807,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "clinkz",
     audioFile: "ownHero/Clinkz_4_solar_crest_timing",
-    messageTime: 8 * 60,
+    messageTime: 10 * 60 + 30,
     textMessage:
-      "Once you have solar crest you can look for kills and get involved in fights.",
+      `Once you have Desolator, you can look for kills and get involved in fights.`,
     audience: [Audience.ALL],
-    image: { type: "item", name: "solar_crest" },
+    image: { type: `item`, name: `desolator` },
   },
   {
     category: "OwnHero",
@@ -2835,12 +2835,32 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_strafe" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `clinkz`,
+    audioFile: `ownHero/Clinkz_7_BloodthornAggression`,
+    messageTime: 21 * 60 + 10,
+    textMessage:
+      `Use the Bloodthorn power spike to put pressure on the map by getting kill after kill on isolated enemy heroes.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `bloodthorn` },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `clinkz`,
+    audioFile: `ownHero/Clinkz_8_AghanimShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage:
+      `Pick up Aghanims Shard later in the game to have AoE damage in teamfights as well as instant waveclear with Burning Barrage.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `aghanims_shard` },
+  },
 
   {
     category: "EnemyHero",
     npcHeroName: "clinkz",
     audioFile: "enemyHero/Clinkz_1_Detection",
-    messageTime: -60,
+    messageTime: 5 * 60,
     textMessage: "Bring a sentry to the lane and dust later on for Clinkz.",
     audience: [Audience.IN_LANE],
   },
@@ -2848,7 +2868,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "EnemyHero",
     npcHeroName: "clinkz",
     audioFile: "enemyHero/Clinkz_2_Squishy",
-    messageTime: -50,
+    messageTime: 2 * 60,
     textMessage:
       "Try to go on clinkz when his death pact expires or if he is too far forward.",
     audience: [Audience.IN_LANE],
@@ -5834,7 +5854,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Huskar_4_LifeBreakDispels",
     messageTime: [5 * 60 + 30, 12 * 60],
     textMessage:
-      "Lifebreak dispels on cast which is particulary useful against heal reductions like Spirit Vessel or Enfeeble.",
+      `Lifebreak dispels on cast which is particulary useful against heal reductions like Spirit Vessel.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "huskar_life_break" },
   },
@@ -5959,7 +5979,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_4_SecureRanged",
     messageTime: 2 * 60,
     textMessage:
-      "Quas Wex: Tornado and EMP to secure a lasthit or deny a creep, and burn opponent's mana at the same time.",
+      `Quas Wex: Use Tornado and EMP to secure a last hit or deny a creep, and burn opponents mana at the same time.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "invoker_tornado" },
   },
@@ -5978,7 +5998,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_6_Rotate",
     messageTime: [5 * 60 + 30, 9 * 60 + 30],
     textMessage:
-      "Control active runes and look for opportunities to rotate once you have Treads and Spirit Vessel.",
+      `Quas Wex: Control active runes and look for opportunities to rotate once you have Treads and Spirit Vessel.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "urn_of_shadows" },
   },
@@ -6051,7 +6071,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Invoker_13_AghanimsScepter",
     messageTime: 18 * 60 + 30,
     textMessage:
-      "Aghanim's Scepter is a huge powerspike, especially if you have a setup within the team.",
+      `Aghanims Scepter is a huge powerspike if you have a setup within the team, such as Chronosphere.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -6103,7 +6123,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Invoker_5_Tornado",
     messageTime: [17 * 60 + 15, 27 * 60 + 15],
     textMessage:
-      "Keep in mind that Invoker's Tornado dispells. Active rune buffs and many spells are countered by it.",
+      `Keep in mind that Invokers Tornado dispels. Active rune buffs and many spells are countered by it.`,
     audience: [Audience.ALL],
   },
   {
@@ -7865,7 +7885,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lone_druid",
     audioFile: "ownHero/LoneDruid_1_RuneControl",
     messageTime: -30,
-    textMessage: "Control runes with hero and bear.",
+    textMessage: `Control runes with hero and Spirit Bear.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lone_druid_spirit_bear" },
   },
@@ -7875,7 +7895,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_2_Entangle",
     messageTime: 15,
     textMessage:
-      "Fish for entangle by poking opponents with a bear here and there. If it procs, you can do follow up damage.",
+      `Fish for entangle by poking opponents with the Spirit Bear here and there. If it procs, you can do follow up damage.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lone_druid_spirit_bear" },
   },
@@ -7885,7 +7905,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_3_Catapults",
     messageTime: [5 * 60, 10 * 60],
     textMessage:
-      "Make use of catapult waves. The bear can tank tower shots for a while.",
+      `Make use of catapult waves. The Spirit Bear can tank tower shots for a while.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lone_druid_spirit_bear" },
   },
@@ -7895,7 +7915,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_4_InTrouble",
     messageTime: [5 * 60 + 15, 15 * 60 + 15],
     textMessage:
-      "When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the bear can help.",
+      `When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the Spirit Bear can help.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lone_druid_savage_roar" },
   },
@@ -7915,7 +7935,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_6_Roshan",
     messageTime: 16 * 60 + 15,
     textMessage:
-      "You can take Roshan fairly early by yourself or with minimal help. Tank with hero as the bear will heal you.",
+      `You can take Roshan fairly early by yourself or with minimal help. Tank with hero as the Spirit Bear will heal you.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -7925,7 +7945,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_7_AghanimsShard",
     messageTime: 19 * 60,
     textMessage:
-      "Make sure to pick up Aghanims Shard on your hero at the 15 minute mark. It provides drums-like buff and basic dispel.",
+      `Make sure to pick up Aghanims Shard on your hero at the 15 minute mark. It provides a drums-like buff and basic dispel with Savage Roar.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -7935,7 +7955,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/LoneDruid_8_AghanimsScepter",
     messageTime: [25 * 60, 30 * 60],
     textMessage:
-      "In tough late game scenarios, resort to ratting and Aghanims Scepter on your Spirit Bear makes it easier to execute.",
+      `In tough late game scenarios, resort to ratting with Aghanims Scepter on your Spirit Bear to let it attack away from your hero.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -10821,7 +10841,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Omniknight_1_Dispel",
     messageTime: -90,
     textMessage:
-      "Consider swapping lanes if theres a need for sustain and spell immunity.",
+      `Consider swapping lanes if there is a need for sustain and spell immunity on the other side lane.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "omniknight_repel" },
   },
@@ -10882,7 +10902,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Omniknight_1_Purification",
     messageTime: -60,
     textMessage:
-      "Omniknight's Purification will damage you if you are in melee range of him.",
+      `Omniknights Purification will damage you if you are in melee range of it.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -16670,7 +16690,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_3_InTrouble2",
     messageTime: [4 * 60, 14 * 60],
     textMessage:
-      "Ice Shards provide vision so you can use them to scout pillars for wards or Roshpit.",
+      `Ice Shards provide vision so you can use them to scout pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "tusk_ice_shards" },
   },
@@ -16690,7 +16710,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_5_BlinkSnowball1",
     messageTime: [4 * 60, 14 * 60],
     textMessage:
-      "Once you get a blink Dagger, you want to use Snowball primarily to save an ally.",
+      `Once you get a Blink Dagger, you want to use Snowball primarily to save an ally.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "blink" },
   },
@@ -18836,7 +18856,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Zeus_11_BlackKingBar",
     messageTime: [16 * 60 + 30, 22 * 60 + 30],
     textMessage:
-      "Black King Bars are problematic for Zeus's damage output. You need to kite those and prolong the fight.",
+      `Black King Bar on enemy heroes is problematic for your damage output. You need to kite those and prolong the fight.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -18847,7 +18867,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 28 * 60 + 45,
     repeatTime: 10 * 60,
     textMessage:
-      "It is fine to use ultimate here and there in late game to scout for opponents.",
+      `It is fine to use your ultimate here and there in late game to scout for opponents.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "zuus_thundergods_wrath" },
   },
