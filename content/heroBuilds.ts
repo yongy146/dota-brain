@@ -32,7 +32,7 @@ export enum ContentCreator {
   //TBD = "TBD",
   //ZoGraF = "ZoGraF",
   //AlexDota = "AlexDota",
-  TNTCNz = "TNTCNz",
+  //TNTCNz = "TNTCNz",
   YoonA = "YoonA",
   eidandota = "eidandota",
   yongy146 = "yongy146",
@@ -67,13 +67,13 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
       link_http: "https://skelly.gg/g/Eidan",
       //link_text: "Click here to book a coaching session with eidandota.",
     },
-    TNTCNz: {
-      image: "https://i.imgur.com/MvM6s5B.jpeg",
-      text: "This guide was written by 8k MMR player TNTCN:",
-      link_http: "https://skelly.gg/g/TNTCN",
-      //link_http: "https://www.gamersensei.com/senseis/tntcn",
-      //link_text: "Click here to book a coaching session with him.",
-    },
+    /*TNTCNz: {
+    image: "https://i.imgur.com/MvM6s5B.jpeg",
+    text: "This guide was written by 8k MMR player TNTCN:",
+    link_http: "https://skelly.gg/g/TNTCN",
+    //link_http: "https://www.gamersensei.com/senseis/tntcn",
+    //link_text: "Click here to book a coaching session with him.",
+  },*/
     YoonA: {
       image: "https://i.imgur.com/TZpRwOK.jpeg",
       text: "This guide was written by Hammad:",
@@ -82,7 +82,7 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
       //link_text: "Click here to book a coaching session with him.",
     },
     yongy146: {
-      image: "https://i.imgur.com/TZpRwOK.jpeg",
+      image: "https://i.imgur.com/pPXOkj8.png",
       text: "This guide was written by BaLLooN, a 7.8k DotA 2 player based in SEA with 17 years of experience:",
       link_http: "https://www.fiverr.com/yongy146",
     },
@@ -4233,7 +4233,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2700561417,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40476,
@@ -13108,10 +13107,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699961775,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40667,
         abilities: [
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
@@ -13201,10 +13199,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_link_id: 2713377028,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40668,
         abilities: [
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
@@ -16188,10 +16185,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699963328,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40666,
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -20298,10 +20294,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_link_id: 2699965288,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40669,
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
@@ -20372,10 +20367,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_link_id: 2730987049,
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
-        //dota_fire_id: ,
+        dota_fire_id: 40670,
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
