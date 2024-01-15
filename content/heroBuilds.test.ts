@@ -7,8 +7,6 @@ import dota2Heroes from "@gameData/out/dota2Heroes.json";
 import dota2Abilities from "@gameData/out/dota2Abilities.json";
 import dota2ItemsActive from "@gameData/out/dota2ItemsActive.json";
 import { heroBuilds } from "./heroBuilds";
-import { getEnemyHeroMessages, getOwnHeroMessages } from "./messages";
-import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 
 const Dota2: any = {};
 const currentPatch = "7.35";
