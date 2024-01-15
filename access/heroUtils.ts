@@ -139,7 +139,7 @@ export const phase2ItemBuild: Record<string, string> = {
 };
 
 /**
- * Iterator that goes through all items in the hero guides.
+ * Iterator through all items in all hero guides.
  *
  * Skips core items for all heroes (as the items are repeated)
  * except for Lone Druid and skips neutral items for all heroes.
@@ -151,6 +151,7 @@ export function* itemIterator(
 ): Generator<{
   item: string;
   npcShortName: string;
+  heroBuildIndex: number;
   phase: string;
 }> {
   const phaseItemBuild = phase ? phase2ItemBuild[phase] : undefined;
@@ -158,7 +159,11 @@ export function* itemIterator(
   //console.log(`phase: `, phase);
   //console.log(`phaseItemBuild: `, phaseItemBuild);
 
-  for (const { npcShortName, heroBuild } of heroBuildIterator()) {
+  for (const {
+    npcShortName,
+    heroBuild,
+    heroBuildIndex,
+  } of heroBuildIterator()) {
     if (!role || heroBuild.roles.includes(role)) {
       for (const [category, items] of Object.entries(heroBuild.items)) {
         // Remove "core" (if not lone druid; as it is a repetition) and "neutral"
@@ -179,6 +184,7 @@ export function* itemIterator(
               yield {
                 item,
                 npcShortName,
+                heroBuildIndex,
                 phase: category,
               };
             }
@@ -216,7 +222,8 @@ export const phase2i18n: Record<string, string> = {
 /**
  * Counter items mentioned for two roles, are only reported once.
  *
- * Supported roles: undefined (all), support, mid/carry/offlane (all seen as core)
+ * Supported roles: undefined (all), support, core (i.e., mid/carry/offlane)
+ *
  */
 export function* counterItemIterator(
   role?: DOTA_COACH_GUIDE_ROLE,
@@ -272,14 +279,20 @@ export function* counterItemIterator(
 
 /**
  * Function provides iterator through all hero builds.
+ *
  */
 export function* heroBuildIterator(): Generator<{
   npcShortName: string;
   heroBuild: IHeroBuild;
+  heroBuildIndex: number;
 }> {
   for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
-    for (const heroBuild of heroContent.builds) {
-      yield { npcShortName, heroBuild };
+    for (let i = 0; i < heroContent.builds.length; i++) {
+      yield {
+        npcShortName,
+        heroBuild: heroContent.builds[i],
+        heroBuildIndex: i,
+      };
     }
   }
 }
@@ -291,6 +304,32 @@ function buildContainsItem(build: IHeroBuild, item: string): boolean {
   return false;
 }
 
+export interface IRecommendedItems {
+  /**
+   * Key of the item, e.g. 'blink'
+   *
+   */
+  item: string;
+  /**
+   * Guides with the item in the given phase
+   *
+   * Format: <npc_short_name>_<heroBuildsIndex>, e.g. 'techies_1'
+   *
+   */
+  starting: Set<string>;
+  early_game: Set<string>;
+  mid_game: Set<string>;
+  late_game: Set<string>;
+  core: Set<string>;
+  situational: Set<string>;
+  all: Set<string>;
+  /**
+   * Number of guides for the given role.
+   *
+   */
+  guides: number;
+}
+
 /**
  * For each item in guides, the function counts the number
  * of guides with the item for each phase of the game.
@@ -299,97 +338,62 @@ function buildContainsItem(build: IHeroBuild, item: string): boolean {
 export function mostRecommendedItems(
   role?: DOTA_COACH_GUIDE_ROLE,
   phase?: string
-): {
-  /**
-   * Key of the item, e.g. 'blink'
-   *
-   */
-  item: string;
-  /**
-   * Number of guides with the item in the given phase
-   *
-   */
-  starting: number;
-  starting_bear: number;
-  early_game: number;
-  mid_game: number;
-  late_game: number;
-  core: number;
-  core_baer: number;
-  situational: number;
-  situational_bear: number;
-  /**
-   * Number of guides for the given role.
-   *
-   */
-  guides: number;
-}[] {
+): IRecommendedItems[] {
   // Count the number of relevant guides for the role
-  let total = 0;
-  for (const heroBuild of heroBuildIterator()) {
-    const roleSatisfied = role
-      ? heroBuild.heroBuild.roles.includes(role)
-      : true;
-    if (roleSatisfied) total++;
+  let numberOfGuides = 0;
+  for (const { heroBuild } of heroBuildIterator()) {
+    const roleSatisfied = role ? heroBuild.roles.includes(role) : true;
+    if (roleSatisfied) numberOfGuides++;
   }
   //console.log(`heroBuilds: `, total);
 
   // Count the number of items in the relevant guides
-  const counter: Record<
-    string,
-    {
-      starting: number;
-      starting_bear: number;
-      early_game: number;
-      mid_game: number;
-      late_game: number;
-      core: number;
-      core_baer: number;
-      situational: number;
-      situational_bear: number;
-      guides: number;
-    }
-  > = {};
-  for (const item of itemIterator(role, phase)) {
+  const counter: Record<string, IRecommendedItems> = {};
+  for (const {
+    item,
+    phase: phase_,
+    npcShortName,
+    heroBuildIndex,
+  } of itemIterator(role, phase)) {
     // Create 'empty' item counter if needed
-    if (!counter[item.item]) {
-      counter[item.item] = {
-        starting: 0,
-        starting_bear: 0,
-        early_game: 0,
-        mid_game: 0,
-        late_game: 0,
-        core: 0,
-        core_baer: 0,
-        situational: 0,
-        situational_bear: 0,
-        guides: total,
+    if (!counter[item]) {
+      counter[item] = {
+        item,
+        starting: new Set(),
+        early_game: new Set(),
+        mid_game: new Set(),
+        late_game: new Set(),
+        core: new Set(),
+        situational: new Set(),
+        all: new Set(),
+        guides: numberOfGuides,
       };
     }
     // Increment counter for applicable phase
-    (counter as any)[item.item][item.phase]++;
+    ((counter[item] as any)[phase_.replace("_bear", "")] as Set<string>).add(
+      `${npcShortName}_${heroBuildIndex}`
+    );
   }
 
+  console.log(`+++ counter: `, JSON.stringify(counter));
+
   // Prepare and sort the results
-  const preResult = Object.entries(counter)
-    .map(([key, value]) => ({
-      item: key,
-      ...value,
-    }))
-    .sort(
-      (a, b) =>
-        b.starting +
-        b.early_game +
-        b.mid_game +
-        b.late_game -
-        a.starting -
-        a.early_game -
-        a.mid_game -
-        a.late_game
-    );
+  const preResult = Object.values(counter).sort(
+    (a, b) => b.all.size - a.all.size
+    /*b.starting +
+      b.early_game +
+      b.mid_game +
+      b.late_game -
+      a.starting -
+      a.early_game -
+      a.mid_game -
+      a.late_game*/
+  );
+
+  console.log(`+++ preResult: `, JSON.stringify(preResult));
 
   // Return results in the proper format
-  return (
+  /*return (
     preResult
       /*.map((counter) => ({
       item: counter.item,
@@ -398,9 +402,21 @@ export function mostRecommendedItems(
       mid_game: counter.mid_game,
       late_game: counter.late_game,
       guides: counter.guides,
-    }))*/
+    }))*/ /*
       .filter((c) => c.starting + c.early_game + c.mid_game + c.late_game > 0)
-  );
+  );*/
+  return preResult;
+}
+
+export interface ICounteringItems {
+  item: string;
+  // Guides per phase
+  laning_phase: Set<string>;
+  mid_game: Set<string>;
+  late_game: Set<string>;
+  all: Set<string>; // Can be different, as one item can be in two phases
+  // Number of relevant guides
+  guides: number;
 }
 
 /**
@@ -413,82 +429,61 @@ export function mostRecommendedItems(
 export function mostCounteringItems(
   role?: DOTA_COACH_GUIDE_ROLE,
   phase?: string
-): {
-  item: string;
-  // Guides per phase
-  laning_phase: number;
-  mid_game: number;
-  late_game: number;
-  total: number; // Can be different, as one item can be in two phases
-  // Number of relevant guides
-  guides: number;
-}[] {
+): ICounteringItems[] {
   // Count the number of relevant heroes
   let total = Object.entries(heroBuilds).length;
 
   // Count the number of items in the relevant guides
-  const counter: Record<
-    string,
-    {
-      item: string;
-      laning_phase: number;
-      mid_game: number;
-      late_game: number;
-      total: number;
-      guides: number;
-    }
-  > = {};
+  const counter: Record<string, ICounteringItems> = {};
   let hero = undefined;
   const counterItems = new Set<string>();
-  for (const item of counterItemIterator(role, phase)) {
+  for (const { item, phase: phase_, npcShortName } of counterItemIterator(
+    role,
+    phase
+  )) {
     // A hero can have the same counter item twice,
     // e.g. a BKB for cores in mid game and BKB for supports in late game
     // this needs to be corrected
 
     // Clear control set, if hero changed
-    if (hero !== item.npcShortName) {
-      hero = item.npcShortName;
+    if (hero !== npcShortName) {
+      hero = npcShortName;
       counterItems.clear();
     }
 
-    if (!counter[item.item]) {
-      counter[item.item] = {
-        item: item.item,
-        laning_phase: 0,
-        mid_game: 0,
-        late_game: 0,
-        total: 0,
+    if (!counter[item]) {
+      counter[item] = {
+        item: item,
+        laning_phase: new Set(),
+        mid_game: new Set(),
+        late_game: new Set(),
+        all: new Set(),
         guides: total,
       };
     }
-    // Increment counter for applicable phase
-    (counter as any)[item.item][item.phase]++;
+    // Add hero to applicable phase
+    (counter as any)[item][phase_].add(npcShortName);
+    counter[item].all.add(npcShortName);
 
     // Add item, if it was not yet added
-    if (!counterItems.has(item.item)) {
-      counterItems.add(item.item);
-      (counter as any)[item.item].total++;
-    }
+    /*if (!counterItems.has(item)) {
+      counterItems.add(item);
+      (counter as any)[item].total++;
+    }*/
   }
 
   // Prepare and sort the results
-  const preResult = Object.entries(counter)
-    .map(([key, value]) => ({
+  const preResult = Object.values(counter)
+    /*.map(([key, value]) => ({
       //item: key,
       ...value,
-    }))
-    .sort(
-      (a, b) =>
-        b.laning_phase +
-        b.mid_game +
-        b.late_game -
-        a.laning_phase -
-        a.mid_game -
-        a.late_game
-    );
+    }))*/
+    .sort((a, b) => b.all.size - a.all.size);
+
+  console.log(`preResult: `, preResult);
 
   // Return results in the proper format
-  return preResult.filter((c) => c.laning_phase + c.mid_game + c.late_game > 0);
+  return preResult.filter((c) => c.all.size > 0);
 }
 
 export interface IItemCoreRecommendedStats {
