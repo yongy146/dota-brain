@@ -292,40 +292,45 @@ function buildContainsItem(build: IHeroBuild, item: string): boolean {
 }
 
 /**
- * Return the most recommended items for all heroes in the hero guides.
+ * For each item in guides, the function counts the number
+ * of guides with the item for each phase of the game.
  *
  */
 export function mostRecommendedItems(
   role?: DOTA_COACH_GUIDE_ROLE,
   phase?: string
 ): {
+  /**
+   * Key of the item, e.g. 'blink'
+   *
+   */
   item: string;
-  // Guides per phase
+  /**
+   * Number of guides with the item in the given phase
+   *
+   */
   starting: number;
+  starting_bear: number;
   early_game: number;
   mid_game: number;
   late_game: number;
-  // Number of relevant guides
+  core: number;
+  core_baer: number;
+  situational: number;
+  situational_bear: number;
+  /**
+   * Number of guides for the given role.
+   *
+   */
   guides: number;
 }[] {
-  // Count the number of relevant guides
+  // Count the number of relevant guides for the role
   let total = 0;
   for (const heroBuild of heroBuildIterator()) {
     const roleSatisfied = role
       ? heroBuild.heroBuild.roles.includes(role)
       : true;
     if (roleSatisfied) total++;
-    /*const phaseSatisfied = role ? heroBuild.heroBuild.items.includes(role) : true;
-    if (role) {
-      /*console.log(
-        `role: ${role}; heroBuild.heroBuild.roles: ${JSON.stringify(
-          heroBuild.heroBuild.roles
-        )}`
-      );*/
-    /*if (heroBuild.heroBuild.roles.includes(role)) total++;
-    } else {
-      total++;
-    }*/
   }
   //console.log(`heroBuilds: `, total);
 
@@ -334,23 +339,34 @@ export function mostRecommendedItems(
     string,
     {
       starting: number;
+      starting_bear: number;
       early_game: number;
       mid_game: number;
       late_game: number;
+      core: number;
+      core_baer: number;
+      situational: number;
+      situational_bear: number;
       guides: number;
     }
   > = {};
   for (const item of itemIterator(role, phase)) {
+    // Create 'empty' item counter if needed
     if (!counter[item.item]) {
       counter[item.item] = {
         starting: 0,
+        starting_bear: 0,
         early_game: 0,
         mid_game: 0,
         late_game: 0,
+        core: 0,
+        core_baer: 0,
+        situational: 0,
+        situational_bear: 0,
         guides: total,
       };
     }
-    // Incement counter for applicable phase
+    // Increment counter for applicable phase
     (counter as any)[item.item][item.phase]++;
   }
 
@@ -388,7 +404,8 @@ export function mostRecommendedItems(
 }
 
 /**
- * Return items countering most heroes.
+ * Return items that counter heroes.
+ *
  *
  *
  *
@@ -424,9 +441,9 @@ export function mostCounteringItems(
   let hero = undefined;
   const counterItems = new Set<string>();
   for (const item of counterItemIterator(role, phase)) {
-    // A hero can have the sam ecounter item twice,
+    // A hero can have the same counter item twice,
     // e.g. a BKB for cores in mid game and BKB for supports in late game
-    // This needs to be corrected
+    // this needs to be corrected
 
     // Clear control set, if hero changed
     if (hero !== item.npcShortName) {

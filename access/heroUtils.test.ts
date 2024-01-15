@@ -1,8 +1,7 @@
 /**
- * npx jest heroUtils.test.ts
+ * clear ; npx jest heroUtils.test.ts
  *
  */
-
 import { DOTA_COACH_GUIDE_ROLE } from "../utilities/playerRoles";
 import {
   counterItemIterator,
@@ -221,7 +220,7 @@ test("mostRecommendedItems-carry_late_game", () => {
     undefined //"DOTA_Item_Build_Late_Items"
   );
   //const heroes = heroesWithItem.map((i) => i.localizedName);
-  //console.log(`heroesWithItem: `, JSON.stringify(heroesWithItem));
+  console.log(`heroesWithItem: `, JSON.stringify(heroesWithItem));
 
   expect(1).toBe(1);
 });
@@ -232,7 +231,8 @@ test("mostRecommendedItems-carry_late_game", () => {
     undefined //"DOTA_Item_Build_Late_Items"
   );
   //const heroes = heroesWithItem.map((i) => i.localizedName);
-  //console.log(`counteringItems: `, JSON.stringify(counteringItems));
+
+  console.log(`counteringItems: `, JSON.stringify(counteringItems));
 
   for (const item of counteringItems) {
     expect(item.total).toBeLessThanOrEqual(item.guides);
