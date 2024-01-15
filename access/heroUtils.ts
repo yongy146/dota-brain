@@ -373,9 +373,10 @@ export function mostRecommendedItems(
     ((counter[item] as any)[phase_.replace("_bear", "")] as Set<string>).add(
       `${npcShortName}_${heroBuildIndex}`
     );
+    counter[item].all.add(`${npcShortName}_${heroBuildIndex}`);
   }
 
-  console.log(`+++ counter: `, JSON.stringify(counter));
+  //console.log(`+++ counter: `, JSON.stringify(counter));
 
   // Prepare and sort the results
   const preResult = Object.values(counter).sort(
@@ -390,7 +391,7 @@ export function mostRecommendedItems(
       a.late_game*/
   );
 
-  console.log(`+++ preResult: `, JSON.stringify(preResult));
+  //console.log(`+++ preResult: `, JSON.stringify(preResult));
 
   // Return results in the proper format
   /*return (
@@ -480,7 +481,7 @@ export function mostCounteringItems(
     }))*/
     .sort((a, b) => b.all.size - a.all.size);
 
-  console.log(`preResult: `, preResult);
+  //console.log(`preResult: `, preResult);
 
   // Return results in the proper format
   return preResult.filter((c) => c.all.size > 0);
