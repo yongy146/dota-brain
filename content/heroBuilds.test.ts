@@ -1,5 +1,5 @@
 /**
- * npx jest content/heroBuilds.test.ts
+ * npx jest content/heroBuilds.test.ts --silent
  *
  */
 import { heroBuildIterator } from "../access/heroUtils";
@@ -9,7 +9,7 @@ import dota2ItemsActive from "@gameData/out/dota2ItemsActive.json";
 import { heroBuilds } from "./heroBuilds";
 
 const Dota2: any = {};
-const currentPatch = "7.35";
+const currentPatch = "7.35b";
 
 /**
  * Check that all heroes have a build.
@@ -55,7 +55,7 @@ const currentPatch = "7.35";
  *    - Talent leveling is appropriate (right choosing of talents at different levels, correct sequenceing)
  *    - No use of character "'"
  *    - Uniqueness of steam guide IDs and steam guide links
- *    - Calculates gold used for starting items (reports error if remaining gold >= 50 or used gold >600)
+ *    - Calculates gold used for starting items (reports error if remaining gold >= 50 or used gold > 600)
  *
  */
 for (const { npcShortName, heroBuild } of heroBuildIterator()) {
@@ -161,6 +161,22 @@ for (const { npcShortName, heroBuild } of heroBuildIterator()) {
       }*/
       talent_level++;
     }
+  }
+}
+
+// Validate items and abilities in guide combos
+for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
+  //console.log(`${npcShortName}: `, heroContent.combo);
+  for (const itemOrAbility of heroContent.combo) {
+    const ability =
+      dota2Abilities[itemOrAbility as keyof typeof dota2Abilities];
+    const item =
+      dota2ItemsActive[
+        ("item_" + itemOrAbility) as keyof typeof dota2ItemsActive
+      ];
+    test(`${npcShortName}-combo-${itemOrAbility}`, () => {
+      expect(!!ability || !!item).toBe(true);
+    });
   }
 }
 
