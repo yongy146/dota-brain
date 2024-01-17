@@ -8489,7 +8489,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     ],
 
-    combo: [`black_king_bar`, `eclipse`, `blink`, `manta`, `lucent_beam`],
+    combo: [
+      `black_king_bar`,
+      `luna_eclipse`,
+      `blink`,
+      `manta`,
+      `luna_lucent_beam`,
+    ],
 
     counter_items: {
       laning_phase: {
