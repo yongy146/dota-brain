@@ -11829,9 +11829,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "primal_beast",
     audioFile: "ownHero/PrimalBeast_4_TakeTime",
-    messageTime: 9 * 60 + 30,
+    messageTime: 19 * 60 + 30,
     textMessage:
-      "Take your time and farm Blink Dagger so you can instantly Pulverize an opponent.",
+      `Take your time and farm Blink Dagger so you can instantly Pulverize an opponent.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
   },
@@ -11842,7 +11842,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Try to Pulverize an opponents standing in the middle of the opponents lineup so you can stun the rest as well.",
+      `Try to Pulverize an enemy hero standing in the middle of the opponents lineup so you can stun the rest as well.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_pulverize" },
   },
