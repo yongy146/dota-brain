@@ -12760,7 +12760,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   primal_beast: {
-    gameplay_version: "7.35",
+    gameplay_version: "7.35b",
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
