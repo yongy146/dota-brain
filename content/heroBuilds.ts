@@ -12772,10 +12772,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // To be updated
-
         steam_guide_link_id: 2763260196,
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40684,
         abilities: [
           `primal_beast_uproar`, // 1
           `primal_beast_trample`, // 2
@@ -12820,17 +12819,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `veil_of_discord`,
             `wind_lace`,
           ],
-          mid_game: [`eternal_shroud`, `shivas_guard`, `ultimate_scepter`, `blink`, `black_king_bar`],
-
-          late_game: [
-            `heart`,
-            `aghanims_shard`,
-            `kaya_and_sange`,
-            `refresher`,
+          mid_game: [
+            `eternal_shroud`,
+            `shivas_guard`,
+            `ultimate_scepter`,
+            `blink`,
+            `black_king_bar`,
           ],
+
+          late_game: [`heart`, `aghanims_shard`, `kaya_and_sange`, `refresher`],
           situational: [
             `bracer`,
-			`vanguard`,
+            `vanguard`,
             `guardian_greaves`,
             `boots_of_bearing`,
             "lotus_orb",
@@ -12851,7 +12851,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `soul_ring`,
             `veil_of_discord`,
             `eternal_shroud`,
-			`ultimate_scepter`,
+            `ultimate_scepter`,
             `blink`,
             `black_king_bar`,
             `heart`,
@@ -12877,10 +12877,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT], // Update steam_guide_id and steam_guide_link for support guide
-
         steam_guide_link_id: 2765463290,
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40685,
         abilities: [
           `primal_beast_trample`, // 1
           `primal_beast_onslaught`, // 2
@@ -12927,7 +12926,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `arcane_boots`,
-			`blink`,
+            `blink`,
             "black_king_bar",
             `aghanims_shard`,
             `force_staff`,
@@ -12940,11 +12939,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           situational: [
             `soul_ring`,
-			`veil_of_discord`,
-			`tranquil_boots`,
-			`phase_boots`,
+            `veil_of_discord`,
+            `tranquil_boots`,
+            `phase_boots`,
             `spirit_vessel`,
-			`blade_mail`,
+            `blade_mail`,
             `guardian_greaves`,
             `pipe`,
             `heavens_halberd`,
@@ -12955,18 +12954,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aeon_disk`,
             `cyclone`,
             `overwhelming_blink`,
-			`refresher`,
+            `refresher`,
             `travel_boots`,
           ],
           core: [
             `arcane_boots`,
-			`blink`,
+            `blink`,
             `black_king_bar`,
             `aghanims_shard`,
             `ultimate_scepter`,
             `boots_of_bearing`,
             `ethereal_blade`,
-			`shivas_guard`,
+            `shivas_guard`,
           ],
           neutral: [
             `occult_bracelet`,
