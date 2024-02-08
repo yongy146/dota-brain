@@ -435,6 +435,31 @@ export function getItemTooltip(
 }
 
 /**
+ * Returns the react-intl tooltip for a counteritem for a given hero.
+ *
+ * @param npcHeroName Short npc name, e.g. "antimage"
+ * @param item Item short name, e.g. "blink"
+ */
+export function getCounterItemTooltip(
+  npcShortName: string,
+  item: string,
+  intl: IntlShape
+): string | undefined {
+  let description: string | undefined;
+  for (const phase of ["laning_phase", "mid_game", "late_game"]) {
+    for (const role of ["all", "support", "core"]) {
+      const strg = `hero.${npcShortName}.counter_items.${phase}.${role}.${item}`;
+      description = intl.messages[strg] as string;
+      //console.log(`strg: ${strg} | description: ${description}`);
+      if (description) break;
+    }
+    if (description) break;
+  }
+
+  return description;
+}
+
+/**
  * Returns the react-intl tooltip for a given hero, hero build and item.
  *
  * @param npcHeroName Short npc name, e.g. "antimage"
