@@ -1,7 +1,7 @@
 /**
- * Component reports all core items of a build that have not a i18n string.
+ * Component reports all counter items w/o i18n string.
  *
- * npx jest coreItemTooltips.test.ts
+ * npx jest counterItemTooltips.test.ts
  *
  */
 import { IntlShape } from "react-intl";
@@ -11,17 +11,17 @@ import { getItemTooltip } from "../access/heroBuilds";
 
 let intl: IntlShape | undefined;
 beforeAll(async () => {
-  console.log(`coreItemTooltips(): loading intl`);
+  console.log(`counterItemTooltips(): loading intl`);
   intl = await i18nLoader();
   console.log(
-    `coreItemTooltips(): intl: ${
+    `counterItemTooltips(): intl: ${
       Object.keys(intl?.messages || {}).length
     } object loaded`
   );
   //console.log(`intl: `, intl?.messages);
 });
 
-test("coreItemTooltips", () => {
+test("counterItemTooltips", () => {
   if (!intl) {
     console.error(`Could not load intl.`);
     expect(true).toBe(false);
@@ -31,13 +31,20 @@ test("coreItemTooltips", () => {
   const foundTooltips = [];
   const missingTooltips = [];
   for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
-    for (let i = 0; i < heroContent.builds.length; i++) {
-      const heroBuild = heroContent.builds[i];
-      const coreItems = [
-        ...heroBuild.items.core,
-        ...(heroBuild.items.core_bear || []),
+      const counterItems = [
+        ...heroContent.counter_items.laning_phase.all,
+        ...heroContent.counter_items.laning_phase.support,
+        ...heroContent.counter_items.laning_phase.core,
+        ...heroContent.counter_items.mid_game.all,
+        ...heroContent.counter_items.mid_game.support,
+        ...heroContent.counter_items.mid_game.core,
+        ...heroContent.counter_items.late_game.all,
+        ...heroContent.counter_items.late_game.support,
+        ...heroContent.counter_items.late_game.core,
       ];
-      for (const coreItem of coreItems) {
+      for (const counterItem of counterItems) {
+        getCounterItemTooltip
+
         const tooltip = getItemTooltip(npcShortName, i, coreItem, intl!);
         if (!tooltip) {
           missingTooltips.push(
