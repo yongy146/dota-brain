@@ -127,7 +127,7 @@ export interface IHeroContent {
 export interface IHeroBuild {
   roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
   type?: string; // Type currently only used for Invoker mid (types: 'QW' & 'QE')
-  steam_guide_link_id: number; // Link to steam web buids, e.g., "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
+  steam_guide_workshop_ids?: Record<string, number>; // Link to steam web buids, e.g., "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
   steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   dota_fire_id?: number; // Guide number on Dota Fire
   abilities: string[];
@@ -216,7 +216,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2698376898,
+        steam_guide_workshop_ids: { en: 2698376898, es: 3160070996 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40437,
         abilities: [
@@ -323,7 +323,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2971195954,
+        steam_guide_workshop_ids: { en: 2971195954, es: 3160071344 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40436,
         abilities: [
@@ -469,7 +469,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2698377018,
+        steam_guide_workshop_ids: { en: 2698377018, es: 3160071434 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40438,
         abilities: [
@@ -548,7 +548,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2730985550,
+        steam_guide_workshop_ids: { en: 2730985550, es: 3160071508 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40439,
         abilities: [
@@ -663,7 +663,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2698377158,
+        steam_guide_workshop_ids: { en: 2698377158, es: 3160071578 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40441,
         abilities: [
@@ -800,7 +800,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2698377261,
+        steam_guide_workshop_ids: { en: 2698377261, es: 3160071948 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40442,
         abilities: [
@@ -909,7 +909,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2698377376,
+        steam_guide_workshop_ids: { en: 2698377376, es: 3160072364 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40443,
         abilities: [
@@ -1043,7 +1043,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699915204,
+        steam_guide_workshop_ids: { en: 2699915204, es: 3160072615 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40444,
         abilities: [
@@ -1182,7 +1182,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699915293,
+        steam_guide_workshop_ids: { en: 2699915293, es: 3160072696 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40445,
         abilities: [
@@ -1316,7 +1316,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699915391,
+        steam_guide_workshop_ids: { en: 2699915391, es: 3160072786 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40446,
         abilities: [
@@ -1409,7 +1409,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2719253341,
+        steam_guide_workshop_ids: { en: 2719253341, es: 3160072841 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40447,
         abilities: [
@@ -1544,7 +1544,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699915480,
+        steam_guide_workshop_ids: { en: 2699915480, es: 3160072900 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40448,
         abilities: [
@@ -1688,7 +1688,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699915618,
+        steam_guide_workshop_ids: { en: 2699915618, es: 3160072964 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40449,
         abilities: [
@@ -1772,7 +1772,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2706431682,
+        steam_guide_workshop_ids: { en: 2706431682, es: 3160073015 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40450,
         abilities: [
@@ -1885,7 +1885,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699915719,
+        steam_guide_workshop_ids: { en: 2699915719, es: 3160073135 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40451,
         abilities: [
@@ -2019,7 +2019,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699915806,
+        steam_guide_workshop_ids: { en: 2699915806, es: 3160073238 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40452,
         abilities: [
@@ -2163,7 +2163,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699915905,
+        steam_guide_workshop_ids: { en: 2699915905, es: 3160073323 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40453,
         abilities: [
@@ -2310,7 +2310,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699915996,
+        steam_guide_workshop_ids: { en: 2699915996, es: 3160073393 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40454,
         abilities: [
@@ -2465,7 +2465,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699916073,
+        steam_guide_workshop_ids: { en: 2699916073, es: 3160073458 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40455,
         abilities: [
@@ -2603,7 +2603,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699916165,
+        steam_guide_workshop_ids: { en: 2699916165, es: 3160073526 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40456,
         abilities: [
@@ -2690,7 +2690,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2708440963,
+        steam_guide_workshop_ids: { en: 2708440963, es: 3160073751 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40457,
         abilities: [
@@ -2795,7 +2795,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699916263,
+        steam_guide_workshop_ids: { en: 2699916263, es: 3160073829 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40577,
         abilities: [
@@ -2912,7 +2912,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699916348,
+        steam_guide_workshop_ids: { en: 2699916348, es: 3160073923 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40581,
         abilities: [
@@ -3049,7 +3049,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699916434,
+        steam_guide_workshop_ids: { en: 2699916434, es: 3160073992 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40467,
         abilities: [
@@ -3188,7 +3188,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699916517,
+        steam_guide_workshop_ids: { en: 2699916517, es: 3160074062 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40468,
         abilities: [
@@ -3321,7 +3321,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699916602,
+        steam_guide_workshop_ids: { en: 2699916602, es: 3160074125 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40469,
         abilities: [
@@ -3463,7 +3463,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699916714,
+        steam_guide_workshop_ids: { en: 2699916714, es: 3160074195 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40470,
         abilities: [
@@ -3605,7 +3605,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699917167,
+        steam_guide_workshop_ids: { en: 2699917167, es: 3160074247 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40471,
         abilities: [
@@ -3701,7 +3701,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2715224221,
+        steam_guide_workshop_ids: { en: 2715224221, es: 3160074296 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40472,
         abilities: [
@@ -3838,7 +3838,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699917255,
+        steam_guide_workshop_ids: { en: 2699917255, es: 3160074371 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40473,
         abilities: [
@@ -3967,7 +3967,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link_id: 2699917391,
+        steam_guide_workshop_ids: { en: 2699917391, es: 3160074440 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40474,
         abilities: [
@@ -4134,7 +4134,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700561304,
+        steam_guide_workshop_ids: { en: 2700561304, es: 3160076056 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40475,
         abilities: [
@@ -4267,7 +4267,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2700561417,
+        steam_guide_workshop_ids: { en: 2700561417, es: 3160076106 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40476,
         abilities: [
@@ -4385,7 +4385,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2700561505,
+        steam_guide_workshop_ids: { en: 2700561505, es: 3160076186 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         abilities: [
@@ -4498,7 +4498,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2700561590,
+        steam_guide_workshop_ids: { en: 2700561590, es: 3160076241 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40478,
         abilities: [
@@ -4608,7 +4608,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700561679,
+        steam_guide_workshop_ids: { en: 2700561679, es: 3160076311 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40561,
         abilities: [
@@ -4749,7 +4749,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700561769,
+        steam_guide_workshop_ids: { en: 2700561769, es: 3160076368 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40586,
         abilities: [
@@ -4890,7 +4890,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700561834,
+        steam_guide_workshop_ids: { en: 2700561834, es: 3160076447 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40595,
         abilities: [
@@ -5031,7 +5031,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2700561902,
+        steam_guide_workshop_ids: { en: 2700561902, es: 3160076515 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40607,
         abilities: [
@@ -5159,7 +5159,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700561968,
+        steam_guide_workshop_ids: { en: 2700561968, es: 3160076582 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40565,
         abilities: [
@@ -5294,7 +5294,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2700562081,
+        steam_guide_workshop_ids: { en: 2700562081, es: 3160076644 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40575,
         abilities: [
@@ -5400,7 +5400,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2712384931,
+        steam_guide_workshop_ids: { en: 2712384931, es: 3160076706 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40576,
         abilities: [
@@ -5543,7 +5543,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2700562159,
+        steam_guide_workshop_ids: { en: 2700562159, es: 3160076795 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40599,
         abilities: [
@@ -5655,7 +5655,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700562245,
+        steam_guide_workshop_ids: { en: 2700562245, es: 3160076873 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40596,
         abilities: [
@@ -5800,7 +5800,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2700562334,
+        steam_guide_workshop_ids: { en: 2700562334, es: 3160076933 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40597,
         abilities: [
@@ -5898,7 +5898,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2712385902,
+        steam_guide_workshop_ids: { en: 2712385902, es: 3160077008 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40598,
         abilities: [
@@ -6035,7 +6035,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2700562407,
+        steam_guide_workshop_ids: { en: 2700562407, es: 3160077075 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40600,
         abilities: [
@@ -6196,7 +6196,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           DOTA_COACH_GUIDE_ROLE.MID,
           DOTA_COACH_GUIDE_ROLE.OFFLANE,
         ],
-        steam_guide_link_id: 2700562484,
+        steam_guide_workshop_ids: { en: 2700562484, es: 3160077143 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40603,
         abilities: [
@@ -6332,7 +6332,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "QW",
-        steam_guide_link_id: 2700562552,
+        steam_guide_workshop_ids: { en: 2700562552, es: 3160077198 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40632,
         abilities: [
@@ -6449,7 +6449,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Midlane Quas Exort Invoker build
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         type: "QE",
-        steam_guide_link_id: 2711948373,
+        steam_guide_workshop_ids: { en: 2711948373, es: 3160077282 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40631,
         abilities: [
@@ -6599,7 +6599,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699957619,
+        steam_guide_workshop_ids: { en: 2699957619, es: 3160077340 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40618,
         abilities: [
@@ -6726,7 +6726,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699957843,
+        steam_guide_workshop_ids: { en: 2699957843, es: 3160077399 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40566,
         abilities: [
@@ -6871,7 +6871,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699957943,
+        steam_guide_workshop_ids: { en: 2699957943, es: 3160077460 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40610,
         abilities: [
@@ -6978,7 +6978,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699958059,
+        steam_guide_workshop_ids: { en: 2699958059, es: 3160077523 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40563,
         abilities: [
@@ -7132,7 +7132,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699958147,
+        steam_guide_workshop_ids: { en: 2699958147, es: 3160077591 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40658,
         abilities: [
@@ -7213,7 +7213,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2715010750,
+        steam_guide_workshop_ids: { en: 2715010750, es: 3160077674 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40665,
         abilities: [
@@ -7329,7 +7329,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2301488685,
+        steam_guide_workshop_ids: { en: 2301488685, es: 3160077746 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40609,
         abilities: [
@@ -7454,7 +7454,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699958372,
+        steam_guide_workshop_ids: { en: 2699958372, es: 3160077816 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40659,
         abilities: [
@@ -7571,7 +7571,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699958474,
+        steam_guide_workshop_ids: { en: 2699958474, es: 3160077898 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40568,
         abilities: [
@@ -7719,7 +7719,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699958609,
+        steam_guide_workshop_ids: { en: 2699958609, es: 3160077964 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40608,
         abilities: [
@@ -7833,7 +7833,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699958714,
+        steam_guide_workshop_ids: { en: 2699958714, es: 3160078017 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40542,
         abilities: [
@@ -7938,7 +7938,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link_id: 2715221904,
+        steam_guide_workshop_ids: { en: 2715221904, es: 3160078116 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -8084,7 +8084,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699958831,
+        steam_guide_workshop_ids: { en: 2699958831, es: 3160078175 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40582,
         abilities: [
@@ -8222,7 +8222,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699958939,
+        steam_guide_workshop_ids: { en: 2699958939, es: 3160078300 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40683,
         abilities: [
@@ -8371,7 +8371,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
 
-        steam_guide_link_id: 2699959031,
+        steam_guide_workshop_ids: { en: 2699959031, es: 3160078396 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40534,
         abilities: [
@@ -8530,7 +8530,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699959154,
+        steam_guide_workshop_ids: { en: 2699959154, es: 3160078487 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40673,
         abilities: [
@@ -8629,7 +8629,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2716646867,
+        steam_guide_workshop_ids: { en: 2716646867, es: 3160078575 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40674,
         abilities: [
@@ -8757,7 +8757,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699959287,
+        steam_guide_workshop_ids: { en: 2699959287, es: 3160078646 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40535,
         abilities: [
@@ -8868,7 +8868,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
 
-        steam_guide_link_id: 2716646936,
+        steam_guide_workshop_ids: { en: 2716646936, es: 3160078726 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40536,
         abilities: [
@@ -8979,7 +8979,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2716647043,
+        steam_guide_workshop_ids: { en: 2716647043, es: 3160079724 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40537,
         abilities: [
@@ -9113,7 +9113,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699959380,
+        steam_guide_workshop_ids: { en: 2699959380, es: 3160079977 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40538,
         abilities: [
@@ -9219,7 +9219,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2716647152,
+        steam_guide_workshop_ids: { en: 2716647152, es: 3160080049 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40539,
         abilities: [
@@ -9390,7 +9390,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699959474,
+        steam_guide_workshop_ids: { en: 2699959474, es: 3160080136 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40540,
         abilities: [
@@ -9539,7 +9539,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699959648,
+        steam_guide_workshop_ids: { en: 2699959648, es: 3160080228 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40541,
         abilities: [
@@ -9666,7 +9666,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699959764,
+        steam_guide_workshop_ids: { en: 2699959764, es: 3160080304 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40578,
         abilities: [
@@ -9766,7 +9766,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699959872,
+        steam_guide_workshop_ids: { en: 2699959872, es: 3160080374 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40591,
         abilities: [
@@ -9908,7 +9908,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699960030,
+        steam_guide_workshop_ids: { en: 2699960030, es: 3160080496 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40620,
         abilities: [
@@ -9989,7 +9989,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2718158708,
+        steam_guide_workshop_ids: { en: 2718158708, es: 3160080582 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40626,
         abilities: [
@@ -10107,7 +10107,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699960135,
+        steam_guide_workshop_ids: { en: 2699960135, es: 3160080663 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40643,
         abilities: [
@@ -10214,7 +10214,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2943493038,
+        steam_guide_workshop_ids: { en: 2943493038, es: 3160080750 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40646,
         abilities: [
@@ -10317,7 +10317,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2943887000,
+        steam_guide_workshop_ids: { en: 2943887000, es: 3160080818 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40647,
         abilities: [
@@ -10461,7 +10461,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699960208,
+        steam_guide_workshop_ids: { en: 2699960208, es: 3160080903 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40644,
         abilities: [
@@ -10581,7 +10581,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699960338,
+        steam_guide_workshop_ids: { en: 2699960338, es: 3160081012 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40660,
         abilities: [
@@ -10662,7 +10662,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID, DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2718666197,
+        steam_guide_workshop_ids: { en: 2718666197, es: 3160081087 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40661,
         abilities: [
@@ -10750,7 +10750,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2718666233,
+        steam_guide_workshop_ids: { en: 2718666233, es: 3160081186 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40662,
         abilities: [
@@ -10874,7 +10874,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699960447,
+        steam_guide_workshop_ids: { en: 2699960447, es: 3160081250 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40654,
         abilities: [
@@ -10972,7 +10972,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2718666066,
+        steam_guide_workshop_ids: { en: 2718666066, es: 3160081324 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40655,
         abilities: [
@@ -11109,7 +11109,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699960635,
+        steam_guide_workshop_ids: { en: 2699960635, es: 3160081415 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40656,
         abilities: [
@@ -11221,7 +11221,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699960726,
+        steam_guide_workshop_ids: { en: 2699960726, es: 3160081493 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40564,
         abilities: [
@@ -11356,7 +11356,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699960831,
+        steam_guide_workshop_ids: { en: 2699960831, es: 3160081572 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40560,
         abilities: [
@@ -11496,7 +11496,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699955472,
+        steam_guide_workshop_ids: { en: 2699955472, es: 3160081639 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40680,
         abilities: [
@@ -11638,7 +11638,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699960994,
+        steam_guide_workshop_ids: { en: 2699960994, es: 3160081766 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40648,
         abilities: [
@@ -11783,7 +11783,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699961071,
+        steam_guide_workshop_ids: { en: 2699961071, es: 3160081831 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40547,
         abilities: [
@@ -11884,7 +11884,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2719253915,
+        steam_guide_workshop_ids: { en: 2719253915, es: 3160081889 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40548,
         abilities: [
@@ -12017,7 +12017,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699961166,
+        steam_guide_workshop_ids: { en: 2699961166, es: 3160081959 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40585,
         abilities: [
@@ -12130,7 +12130,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2719254096,
+        steam_guide_workshop_ids: { en: 2719254096, es: 3160082045 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40584,
         abilities: [
@@ -12233,7 +12233,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2719254316,
+        steam_guide_workshop_ids: { en: 2719254316, es: 3160082122 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40570,
         abilities: [
@@ -12387,7 +12387,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699961303,
+        steam_guide_workshop_ids: { en: 2699961303, es: 3160082187 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40639,
         abilities: [
@@ -12512,7 +12512,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699961424,
+        steam_guide_workshop_ids: { en: 2699961424, es: 3160082270 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40622,
         abilities: [
@@ -12628,7 +12628,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699961589,
+        steam_guide_workshop_ids: { en: 2699961589, es: 3160082651 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40590,
         abilities: [
@@ -12769,7 +12769,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // To be updated
-        steam_guide_link_id: 2763260196,
+        steam_guide_workshop_ids: { en: 2763260196, es: 3160082735 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40684,
         abilities: [
@@ -12874,7 +12874,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT], // Update steam_guide_id and steam_guide_link for support guide
-        steam_guide_link_id: 2765463290,
+        steam_guide_workshop_ids: { en: 2765463290, es: 3160082808 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40685,
         abilities: [
@@ -13027,7 +13027,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699961683,
+        steam_guide_workshop_ids: { en: 2699961683, es: 3160082883 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40549,
         abilities: [
@@ -13173,7 +13173,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699961775,
+        steam_guide_workshop_ids: { en: 2699961775, es: 3160082951 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40667,
         abilities: [
@@ -13265,7 +13265,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2713377028,
+        steam_guide_workshop_ids: { en: 2713377028, es: 3160082999 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40668,
         abilities: [
@@ -13388,7 +13388,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699961859,
+        steam_guide_workshop_ids: { en: 2699961859, es: 3160083091 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40550,
         abilities: [
@@ -13488,7 +13488,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2721136673,
+        steam_guide_workshop_ids: { en: 2721136673, es: 3160083158 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40551,
         abilities: [
@@ -13640,7 +13640,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699961952,
+        steam_guide_workshop_ids: { en: 2699961952, es: 3160083230 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40583,
         abilities: [
@@ -13732,7 +13732,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2721136803,
+        steam_guide_workshop_ids: { en: 2721136803, es: 3160083297 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40604,
         abilities: [
@@ -13854,7 +13854,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699962040,
+        steam_guide_workshop_ids: { en: 2699962040, es: 3160083374 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40651,
         abilities: [
@@ -13902,7 +13902,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `mage_slayer`,
-			`manta`,
+            `manta`,
             `aghanims_shard`,
             `skadi`,
             `black_king_bar`,
@@ -13933,7 +13933,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wraith_band`,
             `power_treads`,
             `falcon_blade`,
-			`mage_slayer`,
+            `mage_slayer`,
             `manta`,
             `aghanims_shard`,
             `skadi`,
@@ -13958,7 +13958,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2722413092,
+        steam_guide_workshop_ids: { en: 2722413092, es: 3160083438 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40649,
         abilities: [
@@ -14070,7 +14070,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2722413152,
+        steam_guide_workshop_ids: { en: 2722413152, es: 3160083491 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40650,
         abilities: [
@@ -14208,7 +14208,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699962133,
+        steam_guide_workshop_ids: { en: 2699962133, es: 3160083546 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40675,
         abilities: [
@@ -14307,7 +14307,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2722413235,
+        steam_guide_workshop_ids: { en: 2722413235, es: 3160083609 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40676,
         abilities: [
@@ -14447,7 +14447,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699962219,
+        steam_guide_workshop_ids: { en: 2699962219, es: 3160083662 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40629,
         abilities: [
@@ -14575,7 +14575,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699962310,
+        steam_guide_workshop_ids: { en: 2699962310, es: 3160083765 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40652,
         abilities: [
@@ -14726,7 +14726,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699962404,
+        steam_guide_workshop_ids: { en: 2699962404, es: 3160083849 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40569,
         abilities: [
@@ -14872,7 +14872,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
         //type: "Physical", 1.
-        steam_guide_link_id: 2699962485,
+        steam_guide_workshop_ids: { en: 2699962485, es: 3160083948 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40606,
         abilities: [
@@ -14966,7 +14966,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
         //type: "Physical",
-        steam_guide_link_id: 2724416695,
+        steam_guide_workshop_ids: { en: 2724416695, es: 3160084014 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40605,
         abilities: [
@@ -15089,7 +15089,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699962568,
+        steam_guide_workshop_ids: { en: 2699962568, es: 3160084126 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40567,
         abilities: [
@@ -15214,7 +15214,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699962648,
+        steam_guide_workshop_ids: { en: 2699962648, es: 3160084222 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40571,
         abilities: [
@@ -15356,7 +15356,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699962794,
+        steam_guide_workshop_ids: { en: 2699962794, es: 3160084286 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40573,
         abilities: [
@@ -15507,7 +15507,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699962869,
+        steam_guide_workshop_ids: { en: 2699962869, es: 3160084352 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40623,
         abilities: [
@@ -15620,7 +15620,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699962959,
+        steam_guide_workshop_ids: { en: 2699962959, es: 3160084427 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40638,
         abilities: [
@@ -15744,7 +15744,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
 
-        steam_guide_link_id: 2699963037,
+        steam_guide_workshop_ids: { en: 2699963037, es: 3160084532 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         //dota_fire_id: ,
         abilities: [
@@ -15887,7 +15887,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY, DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699963139,
+        steam_guide_workshop_ids: { en: 2699963139, es: 3160084609 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40552,
         abilities: [
@@ -15994,7 +15994,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2725332187,
+        steam_guide_workshop_ids: { en: 2725332187, es: 3160084702 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 39830,
         abilities: [
@@ -16136,7 +16136,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699963243,
+        steam_guide_workshop_ids: { en: 2699963243, es: 3160084781 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40637,
         abilities: [
@@ -16250,7 +16250,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699963328,
+        steam_guide_workshop_ids: { en: 2699963328, es: 3160084858 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40666,
         abilities: [
@@ -16337,7 +16337,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
 
-        steam_guide_link_id: 2726400030,
+        steam_guide_workshop_ids: { en: 2726400030, es: 3160084941 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -16460,7 +16460,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699963425,
+        steam_guide_workshop_ids: { en: 2699963425, es: 3160084997 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40633,
         abilities: [
@@ -16586,7 +16586,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699963505,
+        steam_guide_workshop_ids: { en: 2699963505, es: 3160085070 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40587,
         abilities: [
@@ -16726,7 +16726,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699933135,
+        steam_guide_workshop_ids: { en: 2699933135, es: 3160085152 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40625,
         abilities: [
@@ -16829,7 +16829,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2776661467,
+        steam_guide_workshop_ids: { en: 2776661467, es: 3160085277 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40624,
         abilities: [
@@ -16982,7 +16982,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699963659,
+        steam_guide_workshop_ids: { en: 2699963659, es: 3160085348 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40602,
         abilities: [
@@ -17075,7 +17075,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2726399928,
+        steam_guide_workshop_ids: { en: 2726399928, es: 3160085420 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40613,
         abilities: [
@@ -17201,7 +17201,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699963755,
+        steam_guide_workshop_ids: { en: 2699963755, es: 3160085502 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40645,
         abilities: [
@@ -17321,7 +17321,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699963852,
+        steam_guide_workshop_ids: { en: 2699963852, es: 3160085580 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40621,
         abilities: [
@@ -17474,7 +17474,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699963963,
+        steam_guide_workshop_ids: { en: 2699963963, es: 3160085668 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40553,
         abilities: [
@@ -17619,7 +17619,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699964058,
+        steam_guide_workshop_ids: { en: 2699964058, es: 3160085768 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40588,
         abilities: [
@@ -17758,7 +17758,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699964139,
+        steam_guide_workshop_ids: { en: 2699964139, es: 3160085852 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40554,
         abilities: [
@@ -17854,7 +17854,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2729200744,
+        steam_guide_workshop_ids: { en: 2729200744, es: 3160085943 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40555,
         abilities: [
@@ -17956,7 +17956,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2729201017,
+        steam_guide_workshop_ids: { en: 2729201017, es: 3160086074 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40556,
         abilities: [
@@ -18086,7 +18086,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699934294,
+        steam_guide_workshop_ids: { en: 2699934294, es: 3160086154 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40580,
         abilities: [
@@ -18234,7 +18234,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699964271,
+        steam_guide_workshop_ids: { en: 2699964271, es: 3160086778 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40634,
         abilities: [
@@ -18350,7 +18350,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699964354,
+        steam_guide_workshop_ids: { en: 2699964354, es: 3160086904 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40681,
         abilities: [
@@ -18453,7 +18453,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE], // NEW GUIDE
-        steam_guide_link_id: 2776954201,
+        steam_guide_workshop_ids: { en: 2776954201, es: 3160087008 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40682,
         abilities: [
@@ -18587,7 +18587,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699964445,
+        steam_guide_workshop_ids: { en: 2699964445, es: 3160087085 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40663,
         abilities: [
@@ -18725,7 +18725,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699964521,
+        steam_guide_workshop_ids: { en: 2699964521, es: 3160087158 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40664,
         abilities: [
@@ -18831,7 +18831,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2971195922,
+        steam_guide_workshop_ids: { en: 2971195922, es: 3160087233 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         //dota_fire_id: ,
         abilities: [
@@ -18979,7 +18979,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699964646,
+        steam_guide_workshop_ids: { en: 2699964646, es: 3160087322 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40635,
         abilities: [
@@ -19103,7 +19103,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699964761,
+        steam_guide_workshop_ids: { en: 2699964761, es: 3160087397 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40557,
         abilities: [
@@ -19241,7 +19241,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699964844,
+        steam_guide_workshop_ids: { en: 2699964844, es: 3160087483 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40627,
         abilities: [
@@ -19360,7 +19360,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2729605047,
+        steam_guide_workshop_ids: { en: 2729605047, es: 3160087560 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40628,
         abilities: [
@@ -19517,7 +19517,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699964923,
+        steam_guide_workshop_ids: { en: 2699964923, es: 3160087638 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40558,
         abilities: [
@@ -19574,7 +19574,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           late_game: [`skadi`, `black_king_bar`, `sheepstick`, `butterfly`],
           situational: [
             `ring_of_basilius`,
-			`veil_of_discord`,
+            `veil_of_discord`,
             "spirit_vessel",
             `eternal_shroud`,
             `pipe`,
@@ -19589,7 +19589,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sphere`,
             `aeon_disk`,
             `heavens_halberd`,
-			`shivas_guard`,
+            `shivas_guard`,
             `bloodthorn`,
             `assault`,
             `travel_boots`,
@@ -19624,7 +19624,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2729605437,
+        steam_guide_workshop_ids: { en: 2729605437, es: 3160087719 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40559,
         abilities: [
@@ -19673,7 +19673,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `mage_slayer`,
-			`hurricane_pike`,
+            `hurricane_pike`,
             `manta`,
             `ultimate_scepter`,
             `aghanims_shard`,
@@ -19704,7 +19704,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `bottle`,
             `power_treads`,
-			`mage_slayer`,
+            `mage_slayer`,
             `hurricane_pike`,
             `manta`,
             `ultimate_scepter`,
@@ -19771,7 +19771,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2699965007,
+        steam_guide_workshop_ids: { en: 2699965007, es: 3160087777 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40572,
         abilities: [
@@ -19871,7 +19871,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2729605654,
+        steam_guide_workshop_ids: { en: 2729605654, es: 3160087836 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40589,
         abilities: [
@@ -20018,7 +20018,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699965099,
+        steam_guide_workshop_ids: { en: 2699965099, es: 3160087899 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40619,
         abilities: [
@@ -20100,7 +20100,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2778135054,
+        steam_guide_workshop_ids: { en: 2778135054, es: 3160087952 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40641,
         abilities: [
@@ -20232,7 +20232,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699965199,
+        steam_guide_workshop_ids: { en: 2699965199, es: 3160088007 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40657,
         abilities: [
@@ -20372,7 +20372,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699965288,
+        steam_guide_workshop_ids: { en: 2699965288, es: 3160088086 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40669,
         abilities: [
@@ -20445,7 +20445,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2730987049,
+        steam_guide_workshop_ids: { en: 2730987049, es: 3160088165 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40670,
         abilities: [
@@ -20570,7 +20570,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699965445,
+        steam_guide_workshop_ids: { en: 2699965445, es: 3160088239 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40677,
         abilities: [
@@ -20678,7 +20678,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2730986384,
+        steam_guide_workshop_ids: { en: 2730986384, es: 3160091456 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40678,
         abilities: [
@@ -20773,7 +20773,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-        steam_guide_link_id: 2730986473,
+        steam_guide_workshop_ids: { en: 2730986473, es: 3160091707 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40679,
         abilities: [
@@ -20924,7 +20924,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699965518,
+        steam_guide_workshop_ids: { en: 2699965518, es: 3160101184 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40579,
         abilities: [
@@ -21072,7 +21072,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-        steam_guide_link_id: 2699957031,
+        steam_guide_workshop_ids: { en: 2699957031, es: 3160101465 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40574,
         abilities: [
@@ -21214,7 +21214,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-        steam_guide_link_id: 2699919868,
+        steam_guide_workshop_ids: { en: 2699919868, es: 3160101827 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40640,
         abilities: [
@@ -21330,7 +21330,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_link_id: 2699919737,
+        steam_guide_workshop_ids: { en: 2699919737, es: 3161112479 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40636,
         abilities: [
