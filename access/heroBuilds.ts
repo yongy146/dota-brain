@@ -560,10 +560,15 @@ export function getAbilityBuild(
  * @param npcShortName npc short name, e.g. "legion_commander"
  * @returns Returns empty array in case of error, i.e., hero is not found
  */
-export function getHeroGuideLinks(npcShortName: string): string[] {
+export function getHeroGuideLinks(
+  npcShortName: string,
+  language?: "en" | "es"
+): string[] {
+  language = language || "en";
+
   return (
     heroBuilds[npcShortName]?.builds.map((heroBuild) =>
-      getSteamGuideLink(heroBuild.steam_guide_link_id)
+      getSteamGuideLink(heroBuild.steam_guide_workshop_ids[language!])
     ) || []
   );
 }

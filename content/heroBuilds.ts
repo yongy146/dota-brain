@@ -127,9 +127,12 @@ export interface IHeroContent {
 export interface IHeroBuild {
   roles: DOTA_COACH_GUIDE_ROLE[]; // These roles are used in the Dota Coach App and in title of Steam Guide
   type?: string; // Type currently only used for Invoker mid (types: 'QW' & 'QE')
-  steam_guide_workshop_ids?: Record<string, number>; // Link to steam web buids, e.g., "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
-  steam_guide_role?: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
-  dota_fire_id?: number; // Guide number on Dota Fire
+  steam_guide_workshop_ids: {
+    en: number;
+    es: number;
+  }; // Link to steam web buids, e.g., "https://steamcommunity.com/sharedfiles/filedetails/?id=2699915996",
+  steam_guide_role: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
+  dota_fire_id: number; // Guide number on Dota Fire
   abilities: string[];
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
@@ -7937,10 +7940,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_workshop_ids: { en: 2715221904, es: 3160078116 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40737,
         abilities: [
           "lina_light_strike_array", // 1
           "lina_fiery_soul", // 2
@@ -9570,12 +9572,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_unique_medusa_4", // 25
         ],
         items: {
-          starting: [
-            `magic_wand`,
-            `branches`,
-            `branches`,
-            `branches`,
-          ],
+          starting: [`magic_wand`, `branches`, `branches`, `branches`],
           early_game: [
             `power_treads`,
             `ring_of_basilius`,
@@ -13907,7 +13904,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `skadi`,
             `black_king_bar`,
           ],
-          late_game: [`satanic`, `butterfly`, `refresher`, `assault`, `ultimate_scepter`],
+          late_game: [
+            `satanic`,
+            `butterfly`,
+            `refresher`,
+            `assault`,
+            `ultimate_scepter`,
+          ],
           situational: [
             `phase_boots`,
             `hand_of_midas`,
@@ -15743,10 +15746,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
-
         steam_guide_workshop_ids: { en: 2699963037, es: 3160084532 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
-        //dota_fire_id: ,
+        dota_fire_id: 40601,
         abilities: [
           "snapfire_scatterblast", // 1
           "snapfire_firesnap_cookie", // 2
@@ -16336,10 +16338,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
-
         steam_guide_workshop_ids: { en: 2726400030, es: 3160084941 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40736,
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -18833,7 +18834,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
         steam_guide_workshop_ids: { en: 2971195922, es: 3160087233 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
-        //dota_fire_id: ,
+        dota_fire_id: 40611,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2

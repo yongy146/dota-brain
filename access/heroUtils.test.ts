@@ -252,8 +252,8 @@ test("mostRecommendedItems-carry_late_game", () => {
   //const heroes = heroesWithItem.map((i) => i.localizedName);
 
   //console.log(`counteringItems: `, JSON.stringify(counteringItems));
-  console.dir(`counteringItems: `, counteringItems);
-  console.dir(counteringItems);
+  //console.dir(`counteringItems: `, counteringItems);
+  //console.dir(counteringItems);
 
   for (const item of counteringItems) {
     expect(item.all.size).toBeLessThanOrEqual(item.guides);
