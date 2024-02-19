@@ -184,7 +184,7 @@ for (const [npcShortName, heroContent] of Object.entries(heroBuilds)) {
 const steamGuideLinks: Record<string, number> = {}; // Counter of all steam guide IDs
 for (const { npcShortName, heroBuild } of heroBuildIterator()) {
   steamGuideLinks[heroBuild.steam_guide_workshop_ids.en] =
-    (steamGuideLinks[heroBuild.steam_guide_link_id] || 0) + 1;
+    (steamGuideLinks[heroBuild.steam_guide_workshop_ids.en] || 0) + 1;
 }
 for (const [guideLink, counter] of Object.entries(steamGuideLinks)) {
   test(`heroBuilds-Unique steam guide links (${guideLink})`, () => {

@@ -14,7 +14,7 @@ import fs from "fs";
 const ids = [];
 
 for (const heroBuild of heroBuildIterator()) {
-  ids.push(heroBuild.heroBuild.steam_guide_link_id);
+  ids.push(heroBuild.heroBuild.steam_guide_workshop_ids.en);
 }
 
 fs.writeFileSync("./dist/steamGuideIds.json", JSON.stringify(ids.sort()));
