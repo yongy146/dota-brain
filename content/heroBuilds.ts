@@ -21331,7 +21331,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        steam_guide_workshop_ids: { en: 2699919737, es: 3161112479 },
+        steam_guide_workshop_ids: { en: 2699919737, es: 3164075836 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40636,
         abilities: [
