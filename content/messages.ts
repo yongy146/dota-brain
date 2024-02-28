@@ -12875,6 +12875,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "rubick_fade_bolt" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `rubick`,
+    audioFile: `ownHero/Rubick_8_CommunicateSpell`,
+    messageTime: 13 * 60,
+    textMessage: `Look to inform your teammates when you cast abilities like Supernova or Macropyre so they dont get confused or run away from the AoE.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `rubick_spell_steal` },
+  },
 
   {
     category: "EnemyHero",

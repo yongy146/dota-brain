@@ -18247,14 +18247,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "troll_warlord_battle_trance", // 6
           "troll_warlord_whirling_axes_ranged", // 7
           "troll_warlord_fervor", // 8
-          "troll_warlord_fervor", // 9
+          `troll_warlord_berserkers_rage`, // 9
           "troll_warlord_fervor", // 10
           "special_bonus_unique_troll_warlord_2", // 11
           "troll_warlord_battle_trance", // 12
           "troll_warlord_berserkers_rage", // 13
           "troll_warlord_berserkers_rage", // 14
           "special_bonus_unique_troll_warlord_5", // 15 Note Michel: Can't skill level 15 before level 10 in Dota 2 guides
-          "troll_warlord_berserkers_rage", // 16
+          `troll_warlord_fervor`, // 16
           "special_bonus_attributes", // 17
           "troll_warlord_battle_trance", // 18
           "special_bonus_attributes", // 19
@@ -18283,7 +18283,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "swift_blink",
           ],
           situational: [
-            "monkey_king_bar",
+            `power_treads`,
+			`diffusal_blade`,
+			`maelstrom`,
+			`monkey_king_bar`,
+			`mjollnir`,
+			`disperser`,
             "sphere",
             "silver_edge",
             "greater_crit",
