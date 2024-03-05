@@ -62,7 +62,7 @@ export function hasDefaultHeroBuild(npcShortName: string): boolean {
  */
 export function getClosestHeroBuild(
   npcShortName: string,
-  playerRole: PlayerRoles.DOTA_COACH_ROLE
+  playerRole?: PlayerRoles.DOTA_COACH_ROLE
 ): { buildIndex: number; heroBuild: IHeroBuild } | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
   if (!heroBuilds[npcShortName]) return undefined;
