@@ -1,4 +1,4 @@
-import path from 'path';
+import path from "path";
 import {
   Node,
   Project,
@@ -25,11 +25,11 @@ const findHeroBuildsDeclaration = (sourceFile: SourceFile): VariableDeclaration 
 const updateHeroBuildsObject = (
   declaration: VariableDeclaration,
   steamGuideIds: Record<string, any>,
-  language: string,
+  language: string
 ) => {
   const initializer = declaration.getInitializerIfKindOrThrow(SyntaxKind.ObjectLiteralExpression);
   const properties = initializer.getProperties();
-  properties.forEach(property => {
+  properties.forEach((property) => {
     if (Node.isPropertyAssignment(property)) {
       const objectLiteral = property.getInitializerIfKind(SyntaxKind.ObjectLiteralExpression);
       if (objectLiteral) {
@@ -43,24 +43,28 @@ const updateHeroBuildsObject = (
 const updateTranslations = (
   objectLiteral: ObjectLiteralExpression,
   translations: Record<string, any>,
-  language: string,
+  language: string
 ) => {
   const buildsProperty = objectLiteral.getPropertyOrThrow("builds");
 
   if (Node.isPropertyAssignment(buildsProperty)) {
     const buildsArray = buildsProperty.getInitializer();
     if (Node.isArrayLiteralExpression(buildsArray)) {
-      buildsArray.getElements().forEach(element => {
+      buildsArray.getElements().forEach((element) => {
         if (Node.isObjectLiteralExpression(element)) {
           const steamGuideWorkshopIdsProp = element.getProperty("steam_guide_workshop_ids");
           if (steamGuideWorkshopIdsProp && Node.isPropertyAssignment(steamGuideWorkshopIdsProp)) {
-            const currentIds = steamGuideWorkshopIdsProp.getInitializerIfKindOrThrow(SyntaxKind.ObjectLiteralExpression);
+            const currentIds = steamGuideWorkshopIdsProp.getInitializerIfKindOrThrow(
+              SyntaxKind.ObjectLiteralExpression
+            );
 
             // We assume that each object will only have one ID per language.
             const idProp = currentIds.getProperty(language);
 
             if (idProp && Node.isPropertyAssignment(idProp)) {
-              const currentIdValue = (idProp.getInitializer() as any)?.getText(true).replace(/['"]/g, "");
+              const currentIdValue = (idProp.getInitializer() as any)
+                ?.getText(true)
+                .replace(/['"]/g, "");
 
               if (currentIdValue) {
                 const newIdObject = translations[currentIdValue];
@@ -82,7 +86,6 @@ const updateTranslations = (
     }
   }
 };
-
 
 // Save the changes to the file
 const saveChanges = (sourceFile: SourceFile) => {
@@ -118,7 +121,11 @@ const saveChanges = (sourceFile: SourceFile) => {
  * An example call to `updateHeroBuilds` with a sample translations object and 'en' as the target
  * language is provided at the bottom of the script.
  */
-const updateHeroBuilds = (language: string, filePath: string, steamGuideIds: Record<string, any>) => {
+const updateHeroBuilds = (
+  language: string,
+  filePath: string,
+  steamGuideIds: Record<string, any>
+) => {
   try {
     const sourceFile = initializeProject(filePath);
     const declaration = findHeroBuildsDeclaration(sourceFile);
@@ -129,7 +136,7 @@ const updateHeroBuilds = (language: string, filePath: string, steamGuideIds: Rec
       console.log("heroBuilds declaration not found.");
     }
   } catch (error) {
-    console.error("An error occurred:", error.message);
+    console.error("An error occurred:", (error as any).message);
   }
 };
 
