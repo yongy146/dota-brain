@@ -1667,17 +1667,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: ["armor", "blight_stone", "wind_lace", "boots"],
-        support: ["ward_sentry"],
+        support: [],
         core: ["orb_of_corrosion", "vanguard"],
       },
       mid_game: {
         all: [],
-        support: ["ward_sentry", "ghost", "force_staff", "glimmer_cape"],
+        support: [`ghost`, `force_staff`, `glimmer_cape`],
         core: ["crimson_guard", "sange_and_yasha", "kaya_and_sange", "gungir"],
       },
       late_game: {
         all: ["sphere"],
-        support: ["SentryGem"],
+        support: [],
         core: ["assault"],
       },
     },
