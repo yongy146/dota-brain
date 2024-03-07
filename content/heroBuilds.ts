@@ -1295,7 +1295,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "infused_raindrop"],
+        all: [`magic_stick`, `ring_of_regen`],
         support: [],
         core: ["ring_of_health"],
       },
