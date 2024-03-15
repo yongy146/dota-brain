@@ -3,7 +3,7 @@
  *
  * Note: Automatic production of this file based on static data provided by Dota 2 is not possible. Sample issue:  Anti-Mage's mana break ability has a silence_duration in the file, but not in the game.
  *
- * (C) Dota Coach, 2023. All rights reserved.
+ * (C) Dota Coach, 2024. All rights reserved.
  */
 
 // Root and Silence are the disables that make the difference between interrupting teleport and channeling skills

@@ -2,7 +2,7 @@
  * Module provides all information about Dota 2 monitor
  * sizes for the app to properly position in-game windows.
  *
- * (C) Dota Coach, 2023
+ * (C) Dota Coach, 2024
  */
 
 export interface IMonitorMeasurements {
@@ -125,7 +125,10 @@ export interface IMonitorReuse {
  * windows properly and render the HTML content.
  *
  */
-export const measurements: Record<string, Partial<IMonitorMeasurementsOverwolf> | IMonitorReuse> = {
+export const measurements: Record<
+  string,
+  Partial<IMonitorMeasurementsOverwolf> | IMonitorReuse
+> = {
   // Width: 1024
   //"1024x600": { reuse: "1024x768" },
   "1024x768": {

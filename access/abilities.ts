@@ -3,7 +3,7 @@
  *
  * Dynamic data such as data from Open Dota are not covered by this module.
  *
- * (C) Dota Coach, 2023
+ * (C) Dota Coach, 2024
  */
 import { dispellableBuffs } from "../content/dispellableBuffs";
 import {
