@@ -1,7 +1,7 @@
 /**
  * This module provides utility functions to process hero guides.
  *
- * (C) Dota Coach, 2023
+ * (C) Dota Coach, 2024
  */
 import { IHeroBuild, heroBuilds, isCoreItem } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
