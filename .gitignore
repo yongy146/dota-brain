@@ -14,6 +14,8 @@
 !access/**
 !utilities
 !utilities/**
+!utils
+!utils/**
 !submodules
 !submodules/**
 !.gitignore
@@ -33,3 +35,4 @@
 !babel.config.js
 !jest.config.ts
 !package-lock.json
+

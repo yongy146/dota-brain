@@ -1,5 +1,5 @@
 /**
- * Component reports all core items of a build that have not i18n string.
+ * Component reports all core items of a build that have not a i18n string.
  *
  * npx jest coreItemTooltips.test.ts
  *
@@ -51,7 +51,7 @@ test("coreItemTooltips", () => {
   }
 
   //console.log(`Found tooltips:\n`, JSON.stringify(foundTooltips, null, 2));
-  //console.log(`Missing tooltips:\n`, JSON.stringify(missingTooltips, null, 2));
+  console.log(`Missing tooltips:\n`, JSON.stringify(missingTooltips, null, 2));
 
-  expect(true).toBe(true);
+  expect(missingTooltips.length).toBe(0);
 });

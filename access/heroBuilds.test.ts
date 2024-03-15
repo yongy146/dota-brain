@@ -15,6 +15,12 @@ import * as PlayerRoles from "../utilities/playerRoles";
 let intl: IntlShape | undefined;
 beforeAll(async () => {
   intl = await i18nLoader();
+  /*console.log(
+    `intl.messages(): `,
+    Object.entries(intl?.messages || {}).filter(([key, value]) =>
+      key.includes("sniper")
+    )
+  );*/
 });
 
 test("heroBuilds-hasDefaultHeroBuild()", () => {
@@ -29,10 +35,8 @@ test("heroBuilds-getClosestHeroBuild()", () => {
     "sniper",
     PlayerRoles.DOTA_COACH_ROLE.HARD_SUPPORT
   );
-  console.log(`heroBuilds: `, heroBuild);
-  expect(heroBuild?.heroBuild?.steam_guide_link).toBe(
-    "https://steamcommunity.com/sharedfiles/filedetails/?id=2725332187"
-  );
+  //console.log(`heroBuilds: `, heroBuild);
+  expect(heroBuild?.heroBuild?.steam_guide_workshop_ids.en).toBe(2725332187);
 });
 
 test("heroBuilds-getTooltip(sniper, power_treads)", () => {
@@ -41,6 +45,15 @@ test("heroBuilds-getTooltip(sniper, power_treads)", () => {
 
   expect(tooltip).toBe(
     "A core Boots upgrade to improve your mobility and damage output with attack speed and stats. Helps in both farming and lane control. The attack speed gain lets you get off more Headshots during Take Aim."
+  );
+});
+
+test("heroBuilds-getTooltip(zuus, bottle)", () => {
+  const tooltip = getItemTooltip("zuus", 0, "bottle", intl!);
+  //console.log(`tooltip:\n`, tooltip);
+
+  expect(tooltip).toBe(
+    "A core item to gain some HP and mana sustain. Also allows the potential to make plays with power runes past the 6 minute mark. Regeneration and arcane runes provide you the most value as they let you conserve mana for fighting and farming."
   );
 });
 
@@ -55,7 +68,7 @@ test("heroBuilds-getTooltip(dummy, infused_raindrop)", () => {
 
 test("heroBuilds-getAbilityBuild()", () => {
   const abilityBuild = getAbilityBuild("antimage", undefined, intl!);
-  console.log(`abilityBuild:\n`, abilityBuild);
+  //console.log(`abilityBuild:\n`, abilityBuild);
 
   expect(abilityBuild[0].info).toBe(
     "Try to hit the enemy as much as possible as early as possible in order to burn they're mana."
