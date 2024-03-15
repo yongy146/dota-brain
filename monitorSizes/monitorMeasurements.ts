@@ -10,7 +10,7 @@ import {
   IMonitorReuse,
   measurements,
 } from "./measurements";
-import * as Logger from "@utilities/log/log";
+//import * as Logger from "@utilities/log/log";
 
 /**
  * The function returns monitor measurements for a given Dota 2 display size.
