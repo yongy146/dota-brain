@@ -6,7 +6,11 @@ import { IHeroContent, heroBuilds } from "../content/heroBuilds";
  * @param npcShortName e.g. 'legion_commander'
  * @return undefined if there is no such hero
  */
-export function getHeroContent(npcShortName: string): IHeroContent | undefined {
+export function getHeroContent(
+  npcShortName?: string
+): IHeroContent | undefined {
+  if (npcShortName === undefined) return undefined;
+
   //DotaLogger.log(`heroContent.getHeroContent(npcShortName: ${npcShortName}): Called`);
   return heroBuilds[npcShortName];
 }

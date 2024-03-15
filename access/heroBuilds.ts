@@ -1,9 +1,14 @@
 /**
  * This module provides utility functions to process hero guides.
  *
- * (C) Dota Coach, 2024
+ * (C) Dota Coach, 2024. All rights reserved.
  */
-import { IHeroBuild, heroBuilds, isCoreItem } from "../content/heroBuilds";
+import {
+  IHeroBuild,
+  getSteamGuideLink,
+  heroBuilds,
+  isCoreItem,
+} from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
 import { IntlShape } from "react-intl";
 import * as PlayerRoles from "../utilities/playerRoles";
@@ -57,15 +62,19 @@ export function hasDefaultHeroBuild(npcShortName: string): boolean {
  */
 export function getClosestHeroBuild(
   npcShortName: string,
-  playerRole: PlayerRoles.DOTA_COACH_ROLE
+  playerRole?: PlayerRoles.DOTA_COACH_ROLE
 ): { buildIndex: number; heroBuild: IHeroBuild } | undefined {
   //DotaLogger.log(`Dota2.getClosestHeroBuild(${heroName}, ${playerRole}): Called`);
   if (!heroBuilds[npcShortName]) return undefined;
 
+  // Potential optimization: Get role most played by the hero across all games
+  // Get those stats form server.dotacoach.gg
   const role: PlayerRoles.DOTA_COACH_GUIDE_ROLE =
-    PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(playerRole);
+    PlayerRoles.convertDotaCoachRoleToDotaCoachGuidRole(
+      playerRole || PlayerRoles.DOTA_COACH_ROLE.MID
+    );
 
-  //DotaLogger.log(`Dota2.getClosestHeroBuild(): ${playerRole} => ${r}`);
+  //DotaLogger.log(`heroBuilds.getClosestHeroBuild(): ${playerRole} => ${role}`);
 
   // Get all roles of guides
   const guides: Record<string, { buildIndex: number; heroBuild: IHeroBuild }> =
@@ -113,7 +122,7 @@ export function getClosestHeroBuild(
   for (const role_ of guide_rules[role]) {
     //DotaLogger.log(`dota2.getClosestHeroBuild(): roleOfRules = ${role_}`);
     if (Object.prototype.hasOwnProperty.call(guides, role_)) {
-      DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
+      //DotaLogger.log(`dota2.getClosestHeroBuild(): ${playerRole} => ${role_}`);
       return guides[role_];
     }
   }
@@ -409,18 +418,45 @@ export function getItemTooltip(
 ): string | undefined {
   // Check build tooltip
   let id = `hero.${npcShortName}.builds.${buildIndex}.item_tooltips.${item}`;
-  console.log(`getItemTooltip(): id: `, id);
+  //console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check hero tooltip
   id = `hero.${npcShortName}.item_tooltips.${item}`;
+  //console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   // Check item tooltip
   id = `hero.base.item_tooltips.${item}`;
+  //console.log(`getItemTooltip(): id: `, id);
   if (intl.messages[id]) return intl.formatMessage({ id });
 
   return undefined;
+}
+
+/**
+ * Returns the react-intl tooltip for a counteritem for a given hero.
+ *
+ * @param npcHeroName Short npc name, e.g. "antimage"
+ * @param item Item short name, e.g. "blink"
+ */
+export function getCounterItemTooltip(
+  npcShortName: string,
+  item: string,
+  intl: IntlShape
+): string | undefined {
+  let description: string | undefined;
+  for (const phase of ["laning_phase", "mid_game", "late_game"]) {
+    for (const role of ["all", "support", "core"]) {
+      const strg = `hero.${npcShortName}.counter_items.${phase}.${role}.${item}`;
+      description = intl.messages[strg] as string;
+      //console.log(`strg: ${strg} | description: ${description}`);
+      if (description) break;
+    }
+    if (description) break;
+  }
+
+  return description;
 }
 
 /**
@@ -524,10 +560,15 @@ export function getAbilityBuild(
  * @param npcShortName npc short name, e.g. "legion_commander"
  * @returns Returns empty array in case of error, i.e., hero is not found
  */
-export function getHeroGuideLinks(npcShortName: string): string[] {
+export function getHeroGuideLinks(
+  npcShortName: string,
+  language?: "en" | "es"
+): string[] {
+  language = language || "en";
+
   return (
-    heroBuilds[npcShortName]?.builds.map(
-      (heroBuild) => heroBuild.steam_guide_link
+    heroBuilds[npcShortName]?.builds.map((heroBuild) =>
+      getSteamGuideLink(heroBuild.steam_guide_workshop_ids[language!])
     ) || []
   );
 }

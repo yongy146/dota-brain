@@ -428,6 +428,7 @@ export const disables: IDisables = {
       disables: ["stun"],
     },
     // Will-O-Wisp is an area stun.
+    // The level 20 talent for Solar Bind also provides a Hero stun when the hero is fully slowed.
   ],
   kunkka: [
     {
@@ -600,6 +601,7 @@ export const disables: IDisables = {
       affects: AbilityAffects.AREA,
       disables: ["slow_move", "slow_attack", "silence"],
     },
+	// The Aghanims Scepter gives Muerta another Hero Stun with Parting Shot.
   ],
   naga_siren: [
     {
@@ -907,6 +909,7 @@ export const disables: IDisables = {
   ],
   tinker: [
     // Level 25 talent "+0.25s Heat-Seaking Missile Ministun" is a hero stun. It affects multiple heroes (2, or 3 with level 15 talent) and is not targetable.
+	// The Aghanims Shard gives Tinker a Hero Root with Warp Flare.
   ],
   tiny: [
     {

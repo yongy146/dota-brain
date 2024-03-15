@@ -2,7 +2,7 @@
  * Module provides all information about Dota 2 monitor
  * sizes for the app to properly position in-game windows.
  *
- * (C) Dota Coach, 2024
+ * (C) Dota Coach, 2024. All rights reserved.
  */
 
 export interface IMonitorMeasurements {
@@ -58,7 +58,7 @@ export interface IMonitorMeasurementsOverwolf {
 
     perfTracker: {
       /**
-       * Free-to-play: A little more right than last 0 (such that the spacing would be similar to the Dota icons; including last line)
+       * Free-to-play: A little more right than last 0 (such that the spacing would be similar to the space between the three Dota icons; including last line)
        * Dota Plus:    xPos of end of 'Current' of last zero (white area)
        *
        */
@@ -73,6 +73,8 @@ export interface IMonitorMeasurementsOverwolf {
       // Based on KOTL with 6 skills (incl. Aghanim's shard and level 6)
       yPos: number; // Currently we take the bottom of the window (i.e. the height of the window)
       xPos: number; // xPos of HUD element where TP ends
+      // Width: 20.1 x font size
+      // Height: 5.1 x font size
       extraLargeMinimap?: {
         // Optional value, sometimes needed
         yPos: number;
@@ -810,7 +812,6 @@ export const measurements: Record<
   },
 
   // Width 1920
-  //"1920x900"
   "1920x1080": {
     fontSize: 13.5,
     preGame: {
@@ -818,7 +819,6 @@ export const measurements: Record<
       heroesDireTopLeftXPos: 1107,
       heroesWidth: 603,
       subtitles: {
-        //xPos: 560,
         yPos: 115,
         width: 800,
         height: 60,
@@ -830,11 +830,18 @@ export const measurements: Record<
       },
     },
     inGame: {
+      appButton: {
+        xPos: 9,
+        yPos: 800,
+        size: 25,
+        extraLargeMinimap: {
+          yPos: 765,
+        },
+      },
       heroesRadiantBottomLeftXPos: 549,
       heroesDireBottomLeftXPos: 1062,
       heroesHeight: 39,
       heroesWidth: 308,
-
       perfTracker: {
         xPos: 159,
         yPos: 60,
@@ -842,12 +849,10 @@ export const measurements: Record<
       itemTracker: {
         yPos: 1080,
         xPos: 1419,
-        //width: 219,
         minimapRight: {
           xPos: 302,
         },
       },
-
       subtitles: {
         xPos: 1381,
         yPos: 4,
@@ -861,14 +866,6 @@ export const measurements: Record<
         extraLargeMinimap: {
           xPos: 286,
           yPos: 810,
-        },
-      },
-      appButton: {
-        xPos: 9,
-        yPos: 800, // 805 adjacent
-        size: 25,
-        extraLargeMinimap: {
-          yPos: 765,
         },
       },
     },
@@ -1321,7 +1318,7 @@ export const measurements: Record<
     },
   },
   "3840x2160": {
-    fontSize: 26, /// CHECK ON 4K MONITOR!!!!!
+    fontSize: 26,
     preGame: {
       appButton: {
         xPos: 225,
@@ -1332,39 +1329,49 @@ export const measurements: Record<
       heroesDireTopLeftXPos: 2210,
       heroesWidth: 1214,
       subtitles: {
-        yPos: 208,
+        yPos: 240,
         width: 1800,
         height: 60,
       },
     },
     inGame: {
       appButton: {
-        xPos: 5,
-        yPos: 1623,
-        size: 45,
+        xPos: 10,
+        yPos: 1608,
+        size: 50,
+        extraLargeMinimap: {
+          yPos: 1548,
+        },
       },
-      heroesRadiantBottomLeftXPos: 1101,
+      heroesRadiantBottomLeftXPos: 1097,
       heroesDireBottomLeftXPos: 2122,
       heroesHeight: 80,
-      heroesWidth: 624,
+      heroesWidth: 620,
       perfTracker: {
         xPos: 312,
         yPos: 120,
       },
       itemTracker: {
-        xPos: 2876,
+        xPos: 2797,
         yPos: 2160,
+        minimapRight: {
+          xPos: 528,
+        },
       },
       subtitles: {
         xPos: 2762,
-        yPos: 3,
-        width: 880,
-        height: 80,
+        yPos: 6,
+        width: 640,
+        height: 200,
       },
       roshanGlyph: {
         xPos: 501,
         yPos: 1672,
         size: 212,
+        extraLargeMinimap: {
+          xPos: 567,
+          yPos: 1620,
+        },
       },
     },
   },

@@ -2,7 +2,7 @@
  * This module provides information on the screens in Dota 2 for
  * the app to be able to properly position windows
  *
- * (C) Dota Coach, 2024
+ * (C) Dota Coach, 2024. All rights reserved.
  */
 import {
   IMonitorMeasurements,
