@@ -6181,7 +6181,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "blink",
         ],
         support: ["glimmer_cape", "SentryDustGem"],
-        core: ["orchid", "black_king_bar", "witch_blade", "revenants_brooch"],
+        core: [`orchid`, `black_king_bar`, `witch_blade`],
       },
       late_game: {
         all: [],
