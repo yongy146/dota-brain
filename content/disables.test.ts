@@ -2,7 +2,7 @@
  * npx jest disables.test.ts
  *
  */
-import { dota2HeroesIterator, getDota2Heroes } from "@gameData/out/dota2Heroes";
+import { dota2HeroesIterator, getDota2Heroes } from "@gameData/out/dota2Heroes.import";
 import { getDota2Abilities } from "@gameData/out/dota2Abilities";
 import { IDisable, disables } from "./disables";
 
