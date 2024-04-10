@@ -1,5 +1,5 @@
 /**
- * This file descibes the Power Spikes of Dota 2 heroes.
+ * This file describes the Power Spikes of Dota 2 heroes.
  *
  * (C) Dota Coach, 2024. All rights reserved.
  */
