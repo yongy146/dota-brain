@@ -188,11 +188,11 @@ export enum ECagtegories {
   AghanimsShard = 'AghanimsShard',
   //| "TomeOfKnowledge" Removed in patch 7.33
   WisdomRunes = 'WisdomRunes', // Introduced in patch 7.33
-  SiegeCreeps = 'SiegeCreeps',
+  //  SiegeCreeps = 'SiegeCreeps',
   SiegeCreepsNoFlag = 'SiegeCreepsNoFlag',
+  SiegeFlagCreeps = 'SiegeFlagCreeps',
   FlagCreeps = 'FlagCreeps',
   FlagCreepsNoSiege = 'FlagCreepsNoSiege',
-  SiegeFlagCreeps = 'SiegeFlagCreeps',
   DayTime = 'DayTime',
   EnemyHero = 'EnemyHero',
   OwnHero = 'OwnHero',
@@ -516,43 +516,72 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
   },
 
-  // Creeps
-  {
+  /**
+   * Lane creeps.
+   *
+   * Flagbearer creeps are only reported until the 12 minutes mark.
+   *
+   * User can configure 4 variants:
+   *
+   *    Variant     Siege     Flagbearer
+   *    -------     -----     ----------
+   *       1         yes         yes
+   *       2         yes         no
+   *       3         no          yes
+   *       4         no          no
+   *
+   */
+  // Variant 2
+  /*{
     category: 'SiegeCreeps',
     audioFile: 'general/SiegeCreeps',
     messageTime: 5 * 60,
-    repeatTime: 10 * 60,
+    repeatTime: 5 * 60,
     textMessage: 'Siege creeps just spawned',
     audience: [Audience.ALL],
-  },
-  {
-    category: 'SiegeCreepsNoFlag',
-    audioFile: 'general/SiegeCreeps',
-    messageTime: 10 * 60,
-    repeatTime: 10 * 60,
-    textMessage: 'Siege creeps just spawned',
-    audience: [Audience.ALL],
-  },
-  {
-    category: 'FlagCreeps',
-    audioFile: 'general/FlagCreeps', // Flagbearer
-    messageTime: [2 * 60, 4 * 60, 6 * 60, 8 * 60, 12 * 60],
-    textMessage: 'Flagbaerer creeps just spawned',
-    audience: [Audience.ALL],
-  },
-  {
-    category: 'FlagCreepsNoSiege',
-    audioFile: 'general/FlagCreeps', // Flagbearer
-    messageTime: [10 * 60],
-    textMessage: 'Flagbaerer creeps just spawned',
-    audience: [Audience.ALL],
-  },
+  },*/
+  // Variant 1
   {
     category: 'SiegeFlagCreeps',
     audioFile: 'general/SiegeFlagCreeps', // Flagbearer
-    messageTime: 10 * 60,
-    repeatTime: 10 * 60,
+    messageTime: 5 * 60,
+    repeatTime: 5 * 60,
     textMessage: 'Siege and flagbaerer creeps just spawned',
+    audience: [Audience.ALL],
+  },
+  // Variant 2
+  {
+    category: 'SiegeCreepsNoFlag',
+    audioFile: 'general/SiegeCreeps',
+    messageTime: 5 * 60,
+    repeatTime: 5 * 60,
+    textMessage: 'Siege creeps just spawned',
+    audience: [Audience.ALL],
+  },
+  // Variant 3
+  {
+    category: 'FlagCreepsNoSiege',
+    audioFile: 'general/FlagCreeps', // Flagbearer
+    messageTime: [5 * 60, 10 * 60],
+    textMessage: 'Flagbaerer creeps just spawned',
+    audience: [Audience.ALL],
+  },
+  // Variant 1 & 3
+  {
+    category: 'FlagCreeps',
+    audioFile: 'general/FlagCreeps', // Flagbearer
+    messageTime: [
+      2 * 60,
+      3 * 60,
+      4 * 60,
+      6 * 60,
+      7 * 60,
+      8 * 60,
+      9 * 60,
+      11 * 60,
+      12 * 60,
+    ],
+    textMessage: 'Flagbaerer creeps just spawned',
     audience: [Audience.ALL],
   },
 
