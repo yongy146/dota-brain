@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 export type HeroGuide = {
   i18nLabelKey: string;
   url: string;
