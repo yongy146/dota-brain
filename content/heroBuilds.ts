@@ -6921,7 +6921,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "boots",
           "cloak",
         ],
-        support: ["headdress"],
+        support: [],
         core: ["ring_of_health"],
       },
       mid_game: {
@@ -8150,8 +8150,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           /* "hood_of_defiance", */
           "pipe",
           "eternal_shroud",
-          "black_king_bar",
-          "mage_slayer",
+          `black_king_bar`,
         ],
       },
       late_game: {
