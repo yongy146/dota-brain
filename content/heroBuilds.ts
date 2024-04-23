@@ -6407,7 +6407,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2700562552, es: 3160077198 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40632,
-        power_level: [1.7, 1.9, 2.6, 2.8],
+        power_level: [1.8, 2.1, 2.4, 2.8],
         abilities: [
           `invoker_wex`, // 1
           `invoker_quas`, // 2
@@ -13864,7 +13864,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2721136803, es: 3160083297 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40604,
-        power_level: [0, 0, 0, 0], // Data needed
+        power_level: [1.8, 2, 2.4, 2.3], // Data needed
         abilities: [
           "queenofpain_scream_of_pain", // 1
           "queenofpain_shadow_strike", // 2
@@ -20973,7 +20973,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2730986473, es: 3160091707 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40679,
-        power_level: [0, 0, 0, 0], // Input Hammad needed
+        power_level: [1.8, 1.9, 2.3, 2.3],
         abilities: [
           "windrunner_powershot", // 1
           "windrunner_windrun", // 2
