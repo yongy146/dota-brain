@@ -940,17 +940,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "arc_warden_tempest_double", // 12
           "arc_warden_magnetic_field", // 13
           "arc_warden_magnetic_field", // 14
-          "special_bonus_unique_arc_warden_4", // 15
+          `special_bonus_unique_arc_warden_3`, // 15
           "arc_warden_magnetic_field", // 16
           "special_bonus_attributes", // 17
           "arc_warden_tempest_double", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_arc_warden", // 20
+          `special_bonus_unique_arc_warden_9`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_arc_warden_8", // 25
+          `special_bonus_unique_arc_warden_6`, // 25
         ],
         items: {
           starting: [
@@ -962,36 +962,44 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: ["bottle", "magic_wand", `hand_of_midas`, "boots"],
           mid_game: [
-            "travel_boots",
-            "maelstrom",
+            `maelstrom`,
+            `travel_boots`,
             `gungir`,
-            `black_king_bar`,
-            "blink",
+            `orchid`,
+			`blink`,
+            `bloodthorn`,
           ],
           late_game: [
-            "ultimate_scepter",
             "sheepstick",
-            "octarine_core",
-            "aghanims_shard",
+            `aghanims_shard`,
+			`black_king_bar`,
+            `greater_crit`,
             "swift_blink",
           ],
           situational: [
-            "monkey_king_bar",
-            `skadi`,
-            `greater_crit`,
+            `spirit_vessel`,
+			`monkey_king_bar`,
+            `manta`,
+			`dragon_lance`,
+			`hurricane_pike`,
+			`silver_edge`,
+			`skadi`,
             `nullifier`,
-            `travel_boots_2`,
-            "manta",
-            "silver_edge",
-            "hurricane_pike",
+			`octarine_core`,
+			`ultimate_scepter`,
+            `ethereal_blade`,
+			`dagon_5`,
+            "travel_boots_2",
           ],
           core: [
             "hand_of_midas",
             "maelstrom",
             "travel_boots",
             `gungir`,
-            `black_king_bar`,
-            "blink",
+            `bloodthorn`,
+            `blink`,
+			`sheepstick`,
+			`greater_crit`,
           ],
           neutral: [
             `lance_of_pursuit`,
@@ -12617,7 +12625,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk", "revenants_brooch"],
+        all: [`sheepstick`, `ethereal_blade`, `aeon_disk`],
         support: [],
         core: ["bloodthorn"],
       },
