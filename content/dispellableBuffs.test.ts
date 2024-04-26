@@ -2,11 +2,12 @@
  * npx jest dispellableBuffs.test.ts
  *
  */
-
-import { dota2HeroesIterator, getDota2Heroes } from "@gameData/out/dota2Heroes";
+import {
+  dota2HeroesIterator,
+  getDota2Heroes,
+} from "@gameData/out/dota2Heroes.import";
 import { dispellableBuffs } from "./dispellableBuffs";
 import { getDota2Abilities } from "@gameData/out/dota2Abilities";
-//import dota2Heroes from "../submodules/gameData/out/dota2Heroes.json";
 
 test("dispellableBuffs-All heroes included", () => {
   for (const { npcName } of dota2HeroesIterator()) {

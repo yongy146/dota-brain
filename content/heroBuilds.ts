@@ -966,29 +966,29 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
             `gungir`,
             `orchid`,
-			`blink`,
+            `blink`,
             `bloodthorn`,
           ],
           late_game: [
             "sheepstick",
             `aghanims_shard`,
-			`black_king_bar`,
+            `black_king_bar`,
             `greater_crit`,
             "swift_blink",
           ],
           situational: [
             `spirit_vessel`,
-			`monkey_king_bar`,
+            `monkey_king_bar`,
             `manta`,
-			`dragon_lance`,
-			`hurricane_pike`,
-			`silver_edge`,
-			`skadi`,
+            `dragon_lance`,
+            `hurricane_pike`,
+            `silver_edge`,
+            `skadi`,
             `nullifier`,
-			`octarine_core`,
-			`ultimate_scepter`,
+            `octarine_core`,
+            `ultimate_scepter`,
             `ethereal_blade`,
-			`dagon_5`,
+            `dagon_5`,
             "travel_boots_2",
           ],
           core: [
@@ -998,8 +998,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `gungir`,
             `bloodthorn`,
             `blink`,
-			`sheepstick`,
-			`greater_crit`,
+            `sheepstick`,
+            `greater_crit`,
           ],
           neutral: [
             `lance_of_pursuit`,
@@ -2514,7 +2514,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `centaur_double_edge`, // 8
           `centaur_hoof_stomp`, // 9
           `centaur_hoof_stomp`, // 10
-          `special_bonus_hp_regen_5`, // 11
+          `special_bonus_hp_regen_4`, // 11
           "centaur_stampede", // 12
           `centaur_return`, // 13
           `centaur_return`, // 14
@@ -4453,7 +4453,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "dragon_knight_elder_dragon_form", // 12
           "dragon_knight_dragon_tail", // 13
           "dragon_knight_dragon_tail", // 14
-          "special_bonus_hp_400", // 15
+          "special_bonus_hp_300", // 15
           "dragon_knight_dragon_tail", // 16
           "special_bonus_attributes", // 17
           "dragon_knight_elder_dragon_form", // 18
