@@ -18,7 +18,7 @@ jobs:
           ref: feature/heroes-power-level
           token: ${{ secrets.GH_AUTH_TOKEN }}
 
-      - name: Copy package-lock.json to package.json
+      - name: Copy package-local.json to package.json
         run: cp package-local.json package.json
 
       - name: Install dependencies
@@ -50,7 +50,7 @@ jobs:
 
       - name: Upload file to S3
         run: |
-          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out s3://${{ vars.AWS_S3_BUCKET }}/${{ vars.AWS_S3_PATH }}
+          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out s3://${{ vars.AWS_S3_BUCKET }}/${{ vars.AWS_S3_PATH }} --recursive
 
       - name: Invalidate AWS CloudFront download.dotacoach.gg
         run: aws cloudfront create-invalidation --region us-east-1 --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION }} --paths ${{ vars.AWS_S3_PATH }}
