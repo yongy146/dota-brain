@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
         run: |
-          git config --global url."https://${GITHUB_TOKEN}:${GITHUB_TOKEN}/github.com/".insteadOf https://github.com/
+          git config --global url."https://${GITHUB_TOKEN}:${GITHUB_TOKEN}@github.com/".insteadOf https://github.com/
           git submodule sync
           git submodule update --init --recursive
 
