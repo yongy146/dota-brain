@@ -4,6 +4,7 @@ on:
   push:
     #    paths:
     #      - 'content/heroBuilds.ts'
+
     branches:
       - feature/heroes-power-screenshots-git-action
 
