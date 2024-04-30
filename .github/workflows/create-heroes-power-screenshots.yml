@@ -50,7 +50,7 @@ jobs:
 
       - name: Upload file to S3
         run: |
-          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out/* s3://${{ vars.AWS_S3_BUCKET }}/${{ vars.AWS_S3_PATH }}
+          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out s3://${{ vars.AWS_S3_BUCKET }}/${{ vars.AWS_S3_PATH }}
 
       - name: Invalidate AWS CloudFront download.dotacoach.gg
         run: aws cloudfront create-invalidation --region us-east-1 --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION }} --paths ${{ vars.AWS_S3_PATH }}
