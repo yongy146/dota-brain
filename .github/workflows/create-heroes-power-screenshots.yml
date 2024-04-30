@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.GH_AUTH_TOKEN }}
 
       - name: Copy package-lock.json to package.json
-        run: cp package-lock.json package.json
+        run: cp package-local.json package.json
 
       - name: Install dependencies
         run: npm install
