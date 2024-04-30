@@ -42,15 +42,19 @@ jobs:
     runs-on: ubuntu-latest
     needs: checkout_and_install
     steps:
+      - name: Change directory to dota-brain
+        run: cd dota-brain
+
       - name: Run command to create hero power charts screenshots
-        run: |
-          npm run heroes-power-charts-screenshots:create
-          exit 0
+        run: npm run heroes-power-charts-screenshots:create
 
   upload_to_s3:
     runs-on: ubuntu-latest
     needs: generate_screenshots
     steps:
+      - name: Change directory to dota-brain
+        run: cd dota-brain
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
