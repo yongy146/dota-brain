@@ -2,8 +2,8 @@ name: Upload File to S3
 
 on:
   push:
-#    paths:
-#      - 'content/heroBuilds.ts'
+    #    paths:
+    #      - 'content/heroBuilds.ts'
     branches:
       - feature/heroes-power-screenshots-git-action
 
@@ -30,6 +30,8 @@ jobs:
       - name: Update submodules
         env:
           GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
+          GIT_ASKPASS: /bin/sh
+          GIT_TERMINAL_PROMPT: 0
         run: git submodule update --init --recursive
 
       - name: Change directory back to root
