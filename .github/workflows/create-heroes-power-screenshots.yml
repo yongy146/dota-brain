@@ -12,10 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out dota-react
-        uses: actions/checkout@feature/heroes-power-level
+        uses: actions/checkout@v4
         with:
           repository: dota-coach/dotaReact
           token: ${{ secrets.GITHUB_AUTO_TOKEN }}
+
+      - name: Copy package-lock.json to package.json
+        run: git checkout feature/heroes-power-level
 
       - name: Copy package-lock.json to package.json
         run: cp package-lock.json package.json
