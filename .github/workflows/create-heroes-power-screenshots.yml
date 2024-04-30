@@ -41,16 +41,16 @@ jobs:
       - name: Run command to create hero power charts screenshots
         run: npm run heroes-power-charts-screenshots:create
 
-#      - name: Configure AWS credentials
-#        uses: aws-actions/configure-aws-credentials@v4
-#        with:
-#          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#          aws-region: us-east-1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
 
-#      - name: Upload file to S3
-#        run: |
-#          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out s3://${{ vars.AWS_S3_BUCKET }}/${{ vars.AWS_S3_PATH }} --recursive
-#
-#      - name: Invalidate AWS CloudFront download.dotacoach.gg
-#        run: aws cloudfront create-invalidation --region us-east-1 --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION }} --paths ${{ vars.AWS_S3_PATH }}
+      - name: Upload file to S3
+        run: |
+          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out s3://${{ vars.AWS_S3_BUCKET }}${{ vars.AWS_S3_PATH }} --recursive
+
+      - name: Invalidate AWS CloudFront download.dotacoach.gg
+        run: aws cloudfront create-invalidation --region us-east-1 --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION }} --paths ${{ vars.AWS_S3_PATH }}
