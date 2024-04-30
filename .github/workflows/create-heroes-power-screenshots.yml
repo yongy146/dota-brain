@@ -1,0 +1,60 @@
+name: Upload File to S3
+
+on:
+  push:
+#    paths:
+#      - 'content/heroBuilds.ts'
+    branches:
+      - feature/heroes-power-screenshots-git-action
+
+jobs:
+  checkout_and_install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out dota-react
+        uses: actions/checkout@feature/heroes-power-level
+        with:
+          repository: dota-coach/dotaReact
+          token: ${{ secrets.GITHUB_AUTO_TOKEN }}
+
+      - name: Copy package-lock.json to package.json
+        run: cp package-lock.json package.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Change directory to submodules
+        run: cd submodules
+
+      - name: Update submodules
+        run: git submodule update --init --recursive
+
+      - name: Change directory back to root
+        run: cd ..
+
+  generate_screenshots:
+    runs-on: ubuntu-latest
+    needs: checkout_and_install
+    steps:
+      - name: Run command to create hero power charts screenshots
+        run: |
+          npm run heroes-power-charts-screenshots:create
+          exit 0
+
+  upload_to_s3:
+    runs-on: ubuntu-latest
+    needs: generate_screenshots
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Upload file to S3
+        run: |
+          aws s3 cp src/scripts/heroesPowerLevelChartsScreenshots/out s3://${{ vars.AWS_S3_BUCKET }}/${{ vars.AWS_S3_PATH }}
+
+      - name: Invalidate AWS CloudFront download.dotacoach.gg
+        run: aws cloudfront create-invalidation --region us-east-1 --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION }} --paths ${{ vars.AWS_S3_PATH }}

@@ -20,6 +20,8 @@
 !submodules/**
 !.gitignore
 !.gitimodules
+!.github
+!.github/**
 
 !disables.ts
 !dispellableBuffs.ts
