@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: dota-coach/dotaReact
-          token: ${{ secrets.GITHUB_AUTO_TOKEN }}
+#          token: ${{ secrets.GITHUB_AUTO_TOKEN }}
 
       - name: Copy package-lock.json to package.json
         run: git checkout feature/heroes-power-level
