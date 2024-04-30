@@ -28,6 +28,8 @@ jobs:
         run: cd submodules
 
       - name: Update submodules
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
         run: git submodule update --init --recursive
 
       - name: Change directory back to root
