@@ -13,13 +13,11 @@
     },
   
       "git.enableSmartCommit": true,
-      "git.confirmSync": false,
-      "eslint.format.enable": true,
       "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
       },
       "editor.formatOnSave": true,
       "editor.wordWrap": "on",
       "typescript.updateImportsOnFileMove.enabled": "always",
-      "jest.autoRun": "off"
+      "jest.runMode": "on-demand"
   }

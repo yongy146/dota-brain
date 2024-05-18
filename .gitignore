@@ -22,6 +22,9 @@
 !.gitimodules
 !.github
 !.github/**
+!OPERATIONS.md
+!accessCDN
+!accessCDN/**
 
 !disables.ts
 !dispellableBuffs.ts
