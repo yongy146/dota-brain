@@ -13271,7 +13271,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: ["magic_stick", "infused_raindrop", "cloak"],
-        support: ["cloak"],
+        support: [],
         core: ["ring_of_health"],
       },
       mid_game: {
@@ -17771,7 +17771,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "quelling_blade",
         ],
         support: ["tranquil_boots"],
-        core: ["ring_of_health"],
+        core: [],
       },
       mid_game: {
         all: ["spirit_vessel"],
@@ -21094,14 +21094,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ["ring_of_health", "vanguard"],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["glimmer_cape", "ghost"],
+        all: [`cyclone`, `ghost`],
+        support: [`glimmer_cape`],
         core: [
           "blade_mail",
           "orchid",
           "heavens_halberd",
-          "hurricane_pike",
-          "ghost",
+          `hurricane_pike`,
           "black_king_bar",
           "monkey_king_bar",
           "witch_blade",
@@ -21676,8 +21675,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "pipe",
           "eternal_shroud",
           "black_king_bar",
-          "orchid",
-          "mage_slayer",
+          `orchid`,
         ],
       },
       late_game: {
