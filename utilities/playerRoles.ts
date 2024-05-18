@@ -3,7 +3,6 @@
  *
  */
 import { IntlShape } from "react-intl";
-import { IHeroBuild } from "../content/heroBuilds";
 
 /**
  * Official roles used in Steam Guides

@@ -28,7 +28,7 @@ import {
   getRolesString,
 } from "../utilities/playerRoles";
 
-export enum ContentCreator {
+  export enum ContentCreator {
   //TBD = "TBD",
   //ZoGraF = "ZoGraF",
   //AlexDota = "AlexDota",
