@@ -1207,7 +1207,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699915293, es: 3160072696 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40445,
-        power_level: [2.1, 2, 2, 1.9],
+        power_level: [2.1, 2, 2.1, 1.9],
         abilities: [
           "bane_brain_sap", // 1
           "bane_nightmare", // 2
@@ -2051,7 +2051,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699915806, es: 3160073238 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40452,
-        power_level: [1.4, 1.9, 2.4, 2.1],
+        power_level: [1.5, 1.9, 2.4, 2.3],
         abilities: [
           "brewmaster_thunder_clap",
           "brewmaster_cinder_brew",
@@ -2641,7 +2641,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699916165, es: 3160073526 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40456,
-        power_level: [2.3, 2.5, 2.5, 2.1],
+        power_level: [2.2, 2.3, 2.5, 2.2],
         abilities: [
           "chaos_knight_chaos_bolt", // 1
           "chaos_knight_reality_rift", // 2
@@ -3091,7 +3091,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699916434, es: 3160073992 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40467,
-        power_level: [1.9, 2, 2, 1.7],
+        power_level: [1.8, 1.9, 2, 1.8],
         abilities: [
           "rattletrap_battery_assault", // 1
           "rattletrap_power_cogs", // 2
@@ -3231,7 +3231,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699916517, es: 3160074062 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40468,
-        power_level: [1.9, 1.9, 2, 2.1],
+        power_level: [1.8, 1.9, 2, 2.1],
         abilities: [
           "crystal_maiden_crystal_nova", // 1
           "crystal_maiden_frostbite", // 2
@@ -3365,7 +3365,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699916602, es: 3160074125 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40469,
-        power_level: [1.7, 1.8, 2.3, 1.9],
+        power_level: [1.6, 1.8, 2.3, 1.9],
         abilities: [
           "dark_seer_ion_shell", // 1
           `dark_seer_vacuum`, // 2
@@ -4318,7 +4318,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2700561417, es: 3160076106 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40476,
-        power_level: [1, 1.9, 2.4, 2.5],
+        power_level: [1.4, 1.9, 2.4, 2.5],
         abilities: [
           `doom_bringer_scorched_earth`, // 1
           `doom_bringer_devour`, // 2
@@ -4437,7 +4437,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2700561505, es: 3160076186 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
-        power_level: [1.4, 2.3, 2.4, 2.2],
+        power_level: [1.5, 2.3, 2.5, 2.4],
         abilities: [
           "dragon_knight_breathe_fire", // 1
           "dragon_knight_dragon_blood", // 2
@@ -5217,7 +5217,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2700561968, es: 3160076582 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40565,
-        power_level: [2.4, 1.9, 2, 1.9],
+        power_level: [2.3, 2, 2.1, 1.8],
         abilities: [
           `enchantress_impetus`, // 1
           `enchantress_enchant`, // 2
@@ -5353,7 +5353,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2700562081, es: 3160076644 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40575,
-        power_level: [1.1, 1.9, 2.6, 2.8],
+        power_level: [1.5, 1.9, 2.6, 2.8],
         abilities: [
           `enigma_demonic_conversion`, // 1
           `enigma_malefice`, // 2
@@ -5879,7 +5879,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2700562334, es: 3160076933 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40597,
-        power_level: [1.7, 1.9, 2.5, 2.8],
+        power_level: [1.8, 1.9, 2.6, 2.8],
         abilities: [
           "gyrocopter_homing_missile", // 1
           `gyrocopter_flak_cannon`, // 2
@@ -6684,7 +6684,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699957619, es: 3160077340 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40618,
-        power_level: [0.6, 1.3, 1.9, 2.2],
+        power_level: [1.5, 1.9, 2, 2.2],
         abilities: [
           "wisp_tether", // 1
           "wisp_overcharge", // 2
@@ -7221,7 +7221,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699958147, es: 3160077591 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40658,
-        power_level: [2, 2.3, 2.4, 2.2],
+        power_level: [2, 2.4, 2.5, 2.2],
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -7303,7 +7303,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2715010750, es: 3160077674 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40665,
-        power_level: [1.8, 2, 2.4, 2.1],
+        power_level: [1.8, 2.4, 2.5, 2.2],
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -7546,7 +7546,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699958372, es: 3160077816 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40659,
-        power_level: [1.9, 2.3, 2.5, 2.2],
+        power_level: [1.8, 2.3, 2.5, 2.2],
         abilities: [
           "leshrac_split_earth", // 1
           "leshrac_lightning_storm", // 2
@@ -7813,7 +7813,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699958609, es: 3160077964 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40608,
-        power_level: [2.3, 2.5, 2.5, 2.3],
+        power_level: [2.2, 2.3, 2.5, 2.3],
         abilities: [
           "life_stealer_feast", // 1
           "life_stealer_ghoul_frenzy", // 2
@@ -7928,7 +7928,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699958714, es: 3160078017 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40542,
-        power_level: [2.3, 2.3, 2.6, 2.4],
+        power_level: [2.2, 2.3, 2.6, 2.4],
         abilities: [
           "lina_dragon_slave", // 1
           "lina_fiery_soul", // 2
@@ -8468,7 +8468,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699959031, es: 3160078396 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40534,
-        power_level: [1.3, 1.6, 2.6, 2.7],
+        power_level: [1.5, 1.8, 2.6, 2.7],
         abilities: [
           "luna_lunar_blessing", // 1
           "luna_lucent_beam", // 2
@@ -8628,7 +8628,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699959154, es: 3160078487 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40673,
-        power_level: [1.3, 2.2, 2.3, 1.9],
+        power_level: [1.4, 2.2, 2.3, 1.9],
         abilities: [
           "lycan_summon_wolves", // 1
           "lycan_feral_impulse", // 2
@@ -9644,7 +9644,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699959648, es: 3160080228 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40541,
-        power_level: [0.9, 1.6, 2.7, 2.9],
+        power_level: [1.1, 1.7, 2.7, 2.9],
         abilities: [
           "medusa_mystic_snake", // 1
           `medusa_mana_shield`, // 2
@@ -9870,7 +9870,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699959872, es: 3160080374 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40591,
-        power_level: [1.7, 1.8, 1.9, 1.9],
+        power_level: [1.9, 1.9, 2.1, 2],
         abilities: [
           "mirana_arrow", // 1
           "mirana_leap", // 2
@@ -10013,7 +10013,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699960030, es: 3160080496 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40620,
-        power_level: [2.1, 2.1, 2.6, 2.6],
+        power_level: [2, 2.1, 2.6, 2.6],
         abilities: [
           "monkey_king_boundless_strike", // 1
           "monkey_king_jingu_mastery", // 2
@@ -10573,7 +10573,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699960208, es: 3160080903 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40644,
-        power_level: [1.4, 1.8, 2.6, 2.4],
+        power_level: [1.4, 2, 2.5, 2.4],
         abilities: [
           "naga_siren_mirror_image", // 1
           "naga_siren_rip_tide", // 2
@@ -11342,7 +11342,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699960726, es: 3160081493 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40564,
-        power_level: [0.7, 1.9, 2.1, 2],
+        power_level: [0.7, 1.9, 2.2, 2.2],
         abilities: [
           "nyx_assassin_impale", // 1
           "nyx_assassin_spiked_carapace", // 2
@@ -11478,7 +11478,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699960831, es: 3160081572 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40560,
-        power_level: [1.8, 1.7, 1.8, 1.5],
+        power_level: [1.7, 1.8, 1.8, 1.5],
         abilities: [
           "ogre_magi_ignite", // 1
           "ogre_magi_fireblast", // 2
@@ -11908,7 +11908,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699961071, es: 3160081831 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40547,
-        power_level: [2.3, 2.3, 2.6, 2.5],
+        power_level: [2.2, 2.3, 2.6, 2.5],
         abilities: [
           "obsidian_destroyer_astral_imprisonment", // 1
           "obsidian_destroyer_arcane_orb", // 2
@@ -12362,7 +12362,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2719254316, es: 3160082122 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40570,
-        power_level: [1.7, 2.2, 2.5, 2.4],
+        power_level: [1.8, 2.2, 2.5, 2.4],
         abilities: [
           "pangolier_shield_crash", // 1
           "pangolier_swashbuckle", // 2
@@ -12643,7 +12643,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699961424, es: 3160082270 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40622,
-        power_level: [1.3, 1.6, 2.7, 2.9],
+        power_level: [1.2, 1.6, 2.7, 2.9],
         abilities: [
           "phantom_lancer_spirit_lance", // 1
           "phantom_lancer_phantom_edge", // 2
@@ -12760,7 +12760,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699961589, es: 3160082651 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40590,
-        power_level: [1.3, 2, 2.3, 2.3],
+        power_level: [1.4, 2, 2.3, 2.3],
         abilities: [
           "phoenix_fire_spirits", // 1
           "phoenix_icarus_dive", // 2
@@ -12902,7 +12902,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2763260196, es: 3160082735 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40684,
-        power_level: [1.8, 2.2, 2.3, 2.2],
+        power_level: [1.9, 2.3, 2.4, 2.4],
         abilities: [
           `primal_beast_uproar`, // 1
           `primal_beast_trample`, // 2
@@ -13162,7 +13162,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699961683, es: 3160082883 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40549,
-        power_level: [2.2, 2.3, 2.6, 2.7],
+        power_level: [2.1, 2.3, 2.6, 2.7],
         abilities: [
           "puck_illusory_orb", // 1
           "puck_phase_shift", // 2
@@ -13995,7 +13995,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699962040, es: 3160083374 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40651,
-        power_level: [2.2, 2.4, 2.4, 2],
+        power_level: [2.1, 2.3, 2.5, 2.2],
         abilities: [
           "razor_static_link", // 1
           "razor_plasma_field", // 2
@@ -14106,7 +14106,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2722413092, es: 3160083438 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40649,
-        power_level: [2.2, 2.5, 2.4, 2],
+        power_level: [2, 2.4, 2.4, 2.2],
         abilities: [
           `razor_plasma_field`, // 1
           `razor_static_link`, // 2
@@ -14219,7 +14219,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2722413152, es: 3160083491 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40650,
-        power_level: [2.4, 2.5, 2.4, 2],
+        power_level: [2.2, 2.4, 2.4, 2.2],
         abilities: [
           `razor_plasma_field`, // 1
           `razor_static_link`, // 2
@@ -14880,7 +14880,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699962404, es: 3160083849 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40569,
-        power_level: [2.1, 1.9, 2, 2],
+        power_level: [2, 2, 2.2, 2.2],
         abilities: [
           `shadow_demon_disruption`, // 1
           `shadow_demon_shadow_poison`, // 2
@@ -15515,7 +15515,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699962794, es: 3160084286 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40573,
-        power_level: [1.9, 2.3, 2.1, 1.8],
+        power_level: [1.9, 2.2, 2, 1.6],
         abilities: [
           "skywrath_mage_concussive_shot", // 1
           "skywrath_mage_arcane_bolt", // 2
@@ -15667,7 +15667,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699962869, es: 3160084352 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40623,
-        power_level: [1.7, 1.9, 2.5, 2.4],
+        power_level: [1.8, 2.1, 2.5, 2.4],
         abilities: [
           "slardar_slithereen_crush", // 1
           "slardar_bash", // 2
@@ -16417,7 +16417,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699963328, es: 3160084858 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40666,
-        power_level: [1.2, 2.1, 2.2, 2.1],
+        power_level: [1.4, 2.2, 2.3, 2.1],
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -16504,7 +16504,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2726400030, es: 3160084941 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40736,
-        power_level: [1.4, 2.2, 2.3, 2.1],
+        power_level: [1.4, 2.3, 2.4, 2.2],
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -17248,7 +17248,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2726399928, es: 3160085420 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40613,
-        power_level: [1.9, 2.3, 2.7, 2.6],
+        power_level: [1.9, 2.2, 2.7, 2.6],
         abilities: [
           "templar_assassin_psi_blades", // 1
           "templar_assassin_refraction", // 2
@@ -17650,7 +17650,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699963963, es: 3160085668 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40553,
-        power_level: [2.4, 2.6, 2.3, 1.9],
+        power_level: [2.4, 2.6, 2.4, 2.3],
         abilities: [
           "shredder_whirling_death", // 1
           "shredder_reactive_armor", // 2
@@ -18777,7 +18777,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699964445, es: 3160087085 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40663,
-        power_level: [1.9, 2.3, 2.2, 1.9],
+        power_level: [1.9, 2.3, 2.3, 2.1],
         abilities: [
           `abyssal_underlord_firestorm`, // 1
           `abyssal_underlord_atrophy_aura`, // 2
@@ -19297,7 +19297,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699964761, es: 3160087397 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40557,
-        power_level: [2, 2, 2.1, 1.8],
+        power_level: [1.9, 2, 2.1, 2.1],
         abilities: [
           `vengefulspirit_wave_of_terror`, // 1
           `vengefulspirit_magic_missile`, // 2
@@ -19436,7 +19436,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699964844, es: 3160087483 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40627,
-        power_level: [1.7, 2.2, 2.2, 1.8],
+        power_level: [1.7, 2.2, 2.2, 2],
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
@@ -19556,7 +19556,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2729605047, es: 3160087560 },
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40628,
-        power_level: [2, 1.9, 2, 1.8],
+        power_level: [1.9, 2, 2, 1.8],
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
@@ -19714,7 +19714,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699964923, es: 3160087638 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40558,
-        power_level: [2.2, 2.5, 2.3, 2.3],
+        power_level: [2.1, 2.5, 2.3, 2.3],
         abilities: [
           "viper_poison_attack", // 1
           "viper_corrosive_skin", // 2
@@ -19822,7 +19822,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2729605437, es: 3160087719 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40559,
-        power_level: [2.4, 2.5, 2.3, 2.3],
+        power_level: [2.3, 2.5, 2.3, 2.3],
         abilities: [
           "viper_poison_attack", // 1
           "viper_corrosive_skin", // 2
@@ -19970,7 +19970,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699965007, es: 3160087777 },
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40572,
-        power_level: [1.5, 2.4, 2.3, 2.1],
+        power_level: [1.6, 2.4, 2.3, 2.1],
         abilities: [
           "visage_soul_assumption", // 1
           "visage_grave_chill", // 2
@@ -21541,7 +21541,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_workshop_ids: { en: 2699919737, es: 3164075836 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40636,
-        power_level: [2.1, 2.2, 2.6, 2.7],
+        power_level: [2, 2.1, 2.6, 2.7],
         abilities: [
           "zuus_arc_lightning", // 1
           "zuus_heavenly_jump", // 2
