@@ -28,7 +28,7 @@ import {
   getRolesString,
 } from "../utilities/playerRoles";
 
-  export enum ContentCreator {
+export enum ContentCreator {
   //TBD = "TBD",
   //ZoGraF = "ZoGraF",
   //AlexDota = "AlexDota",
@@ -814,31 +814,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         dota_fire_id: 40442,
         power_level: [0.9, 1.6, 2.7, 2.7],
         abilities: [
-          "antimage_mana_break",
-          "antimage_blink",
-          "antimage_mana_break",
-          "antimage_counterspell",
-          "antimage_mana_break",
-          "antimage_mana_void",
-          "antimage_blink",
-          "antimage_blink",
-          "antimage_blink",
-          "special_bonus_strength_9",
-          "antimage_mana_break",
-          "antimage_mana_void",
-          "antimage_counterspell",
-          "antimage_counterspell",
-          "antimage_counterspell",
-          "special_bonus_unique_antimage",
-          "special_bonus_attributes",
-          "antimage_mana_void",
-          "special_bonus_attributes",
-          "special_bonus_unique_antimage_3",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_antimage_2",
+          "antimage_mana_break", // 1
+          "antimage_blink", // 2
+          "antimage_mana_break", // 3
+          "antimage_counterspell", // 4
+          "antimage_mana_break", // 5
+          "antimage_mana_void", // 6
+          "antimage_blink", // 7
+          "antimage_blink", // 8
+          "antimage_blink", // 9
+          "special_bonus_unique_antimage_4", // 10
+          "antimage_mana_break", // 11
+          "antimage_mana_void", // 12
+          "antimage_counterspell", // 13
+          "antimage_counterspell", // 14
+          "antimage_counterspell", // 15
+          "special_bonus_unique_antimage_7", // 16
+          "special_bonus_attributes", // 17
+          "antimage_mana_void", // 18
+          "special_bonus_attributes", // 19
+          "special_bonus_unique_antimage", // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          "special_bonus_unique_antimage_2", // 25
         ],
         items: {
           starting: [
@@ -950,7 +950,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_arc_warden_6`, // 25
+          `special_bonus_unique_arc_warden_7`, // 25
         ],
         items: {
           starting: [
@@ -2657,7 +2657,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "chaos_knight_phantasm", // 12
           "chaos_knight_chaos_bolt", // 13
           "chaos_knight_chaos_bolt", // 14
-          "special_bonus_unique_chaos_knight_7", // 15
+          "special_bonus_strength_12", // 15
           "chaos_knight_chaos_bolt", // 16
           "special_bonus_attributes", // 17
           "chaos_knight_phantasm", // 18
@@ -4028,7 +4028,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "death_prophet_carrion_swarm", // 8
           "death_prophet_silence", // 9 can level silence earlier if required to silence enemy hero
           "death_prophet_spirit_siphon", // 10
-          "special_bonus_attack_damage_30", // 11 Talent
+          "special_bonus_attack_speed_40", // 11 Talent
           "death_prophet_exorcism", // 12
           "death_prophet_silence", // 13
           "death_prophet_silence", // 14
@@ -4830,7 +4830,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_earthshaker_5`, // 25
+          `special_bonus_unique_earthshaker`, // 25
         ],
         items: {
           starting: [
@@ -6142,7 +6142,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_hoodwink_bushwhack_radius`, // 25
+          `special_bonus_unique_hoodwink_sharpshooter_pure_damage`, // 25
         ],
         items: {
           starting: [
@@ -6829,7 +6829,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "jakiro_liquid_fire", // 13
           "jakiro_liquid_fire", // 14
           "jakiro_liquid_fire", // 15
-          "special_bonus_hp_325", // 16
+          "special_bonus_unique_jakiro_4", // 16
           "special_bonus_attributes", // 17
           "jakiro_macropyre", // 18
           "special_bonus_attributes", // 19
@@ -7561,7 +7561,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "leshrac_diabolic_edict", // 11
           "leshrac_pulse_nova", // 12
           "leshrac_split_earth", // 13
-          "special_bonus_unique_leshrac_5", // 14
+          "special_bonus_armor_4", // 14
           "special_bonus_unique_leshrac_6", // 15
           "leshrac_split_earth", // 16
           "special_bonus_attributes", // 17
@@ -7830,7 +7830,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "life_stealer_rage", // 13
           "life_stealer_rage", // 14
           "special_bonus_unique_lifestealer_2", // 15
-          "special_bonus_attack_damage_30", // 16
+          "special_bonus_unique_lifestealer_5", // 16
           "special_bonus_attributes", // 17
           "life_stealer_infest", // 18
           "special_bonus_attributes", // 19
@@ -7944,7 +7944,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "lina_laguna_blade", // 12
           `lina_light_strike_array`, // 13
           `lina_light_strike_array`, // 14
-          `special_bonus_hp_325`, // 15
+          `special_bonus_unique_lina_4`, // 15
           `lina_light_strike_array`, // 16
           "special_bonus_attributes", // 17
           "lina_laguna_blade", // 18
@@ -8054,12 +8054,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "lina_laguna_blade", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_lina_supercharge_stacks`, // 20
+          `special_bonus_unique_lina_2`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_lina_6`, // 25
+          `special_bonus_unique_lina_dragon_slave_crits`, // 25
         ],
         items: {
           starting: [
@@ -8344,7 +8344,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_lone_druid_10", // 25
+          "special_bonus_unique_lone_druid_spirit_link_attack_speed", // 25
         ],
         items: {
           starting_bear: [`quelling_blade`, `branches`, `branches`, `branches`],
@@ -8484,7 +8484,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "luna_eclipse", // 12
           "luna_eclipse", // 13
           "luna_lucent_beam", // 14
-          "special_bonus_unique_luna_2", // 15
+          "special_bonus_unique_luna_6", // 15
           "luna_lucent_beam", // 16
           "special_bonus_attributes", // 17
           "luna_eclipse", // 18
@@ -9659,7 +9659,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `medusa_mana_shield`, // 11
           "medusa_mana_shield", // 12
           "medusa_mana_shield", // 13
-          `special_bonus_unique_medusa_7`, // 14
+          `special_bonus_unique_medusa_snake_damage`, // 14
           `special_bonus_unique_medusa_2`, // 15
           "medusa_stone_gaze", // 16
           "special_bonus_attributes", // 17
@@ -9795,7 +9795,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_unique_meepo_5", // 25
+          "special_bonus_unique_meepo_poof_cast_point", // 25
         ],
         items: {
           starting: [
@@ -10336,21 +10336,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `muerta_gunslinger`, // 8
           `muerta_gunslinger`, // 9
           `muerta_gunslinger`, // 10
-          `special_bonus_strength_8`, // 11
+          `special_bonus_unique_muerta_dead_shot_range`, // 11
           "muerta_pierce_the_veil", // 12
           `muerta_the_calling`, // 13
           `muerta_the_calling`, // 14
-          "special_bonus_attack_damage_35", // 15
+          "special_bonus_unique_muerta_gunslinger_bonus_damage", // 15
           `muerta_the_calling`, // 16
           "special_bonus_attributes", // 17
           "muerta_pierce_the_veil", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 20
+          `special_bonus_unique_muerta_dead_shot_charges`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_magic_resistance_25`, // 25
+          `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 25
         ],
         items: {
           starting: [
@@ -10439,22 +10439,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `muerta_dead_shot`, // 7
           `muerta_the_calling`, // 8
           `muerta_the_calling`, // 9
-          `special_bonus_unique_muerta_dead_shot_damage`, // 10
+          `special_bonus_unique_muerta_dead_shot_range`, // 10
           `muerta_gunslinger`, // 11
           "muerta_pierce_the_veil", // 12
           `muerta_gunslinger`, // 13
           `muerta_gunslinger`, // 14
-          `special_bonus_attack_damage_35`, // 15
+          `special_bonus_unique_muerta_gunslinger_bonus_damage`, // 15
           `muerta_gunslinger`, // 16
           "special_bonus_attributes", // 17
           "muerta_pierce_the_veil", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 20
+          `special_bonus_unique_muerta_dead_shot_charges`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_magic_resistance_25`, // 25
+          `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 25
         ],
         items: {
           starting: [
@@ -10710,7 +10710,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "furion_wrath_of_nature", // 12
           `furion_force_of_nature`, // 13
           `furion_force_of_nature`, // 14
-          "special_bonus_unique_furion_teleportation_max_stacks", // 15
+          "special_bonus_unique_furion_teleportation_barrier", // 15
           `furion_force_of_nature`, // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -10794,7 +10794,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "furion_wrath_of_nature", // 12
           `furion_force_of_nature`, // 13
           `furion_force_of_nature`, // 14
-          "special_bonus_unique_furion_teleportation_max_stacks", // 15
+          "special_bonus_unique_furion_teleportation_barrier", // 15
           `furion_force_of_nature`, // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -10883,7 +10883,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "furion_wrath_of_nature", // 12
           `furion_force_of_nature`, // 13
           `furion_force_of_nature`, // 14
-          "special_bonus_unique_furion_teleportation_max_stacks", // 15
+          "special_bonus_unique_furion_teleportation_barrier", // 15
           `furion_force_of_nature`, // 16
           "special_bonus_attributes", // 17
           "furion_wrath_of_nature", // 18
@@ -11358,7 +11358,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "nyx_assassin_vendetta", // 12
           `nyx_assassin_spiked_carapace`, // 13
           `nyx_assassin_spiked_carapace`, // 14
-          `special_bonus_unique_nyx_5`, // 15
+          `special_bonus_unique_nyx_jolt_cooldown`, // 15
           `nyx_assassin_spiked_carapace`, // 16
           "special_bonus_attributes", // 17
           "nyx_assassin_vendetta", // 18
@@ -11368,7 +11368,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_nyx_3`, // 25
+          `special_bonus_unique_nyx_vendetta_cd_manacost`, // 25
         ],
         items: {
           starting: [
@@ -11919,13 +11919,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "obsidian_destroyer_arcane_orb", // 7
           "obsidian_destroyer_arcane_orb", // 8
           "obsidian_destroyer_arcane_orb", // 9
-          "special_bonus_attack_speed_20", // 10
+          "special_bonus_mp_250", // 10
           "obsidian_destroyer_equilibrium", // 11
           "obsidian_destroyer_sanity_eclipse", // 12
           "obsidian_destroyer_equilibrium", // 13
           "obsidian_destroyer_equilibrium", // 14
           "special_bonus_movement_speed_30", // 15
-          "obsidian_destroyer_astral_imprisonment", // 16
+          "special_bonus_unique_outworld_devourer_astral_castrange", // 16
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
           "special_bonus_attributes", // 19
@@ -12021,12 +12021,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "obsidian_destroyer_arcane_orb", // 7
           "obsidian_destroyer_arcane_orb", // 8
           "obsidian_destroyer_arcane_orb", // 9
-          "special_bonus_attack_speed_20", // 10
+          "special_bonus_mp_250", // 10
           "obsidian_destroyer_equilibrium", // 11
           "obsidian_destroyer_sanity_eclipse", // 12
           "obsidian_destroyer_equilibrium", // 13
           "obsidian_destroyer_equilibrium", // 14
-          "special_bonus_movement_speed_30", // 15
+          "special_bonus_unique_outworld_devourer_astral_castrange", // 15
           "obsidian_destroyer_astral_imprisonment", // 16
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
@@ -13796,7 +13796,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "queenofpain_shadow_strike", // 13
           "queenofpain_shadow_strike", // 14
           "special_bonus_attack_damage_20", // 15
-          "special_bonus_attack_speed_30", // 16
+          "special_bonus_unique_queen_of_pain_4", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
           "special_bonus_attributes", // 19
@@ -13889,7 +13889,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "queenofpain_shadow_strike", // 13
           "queenofpain_shadow_strike", // 14
           "special_bonus_attack_damage_20", // 15
-          "special_bonus_attack_speed_30", // 16
+          "special_bonus_unique_queen_of_pain_4", // 16
           "special_bonus_attributes", // 17
           "queenofpain_sonic_wave", // 18
           "special_bonus_attributes", // 19
@@ -14891,7 +14891,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "shadow_demon_shadow_poison", // 7
           "shadow_demon_disruption", // 8
           "shadow_demon_disruption", // 9
-          `special_bonus_strength_12`, // 10
+          `special_bonus_strength_10`, // 10
           `shadow_demon_disseminate`, // 11
           "shadow_demon_demonic_purge", // 12
           `shadow_demon_disseminate`, // 13
@@ -15038,7 +15038,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "nevermore_necromastery", // 7
           "nevermore_dark_lord", // 8
           "nevermore_requiem", // 9
-          "special_bonus_attack_speed_25", // 10
+          "special_bonus_unique_nevermore_7", // 10
           "nevermore_dark_lord", // 11
           "nevermore_dark_lord", // 12
           "nevermore_dark_lord", // 13
@@ -15133,7 +15133,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "nevermore_shadowraze1", // 7
           "nevermore_necromastery", // 8
           "nevermore_requiem", // 9
-          "special_bonus_attack_speed_25", // 10
+          "special_bonus_unique_nevermore_7", // 10
           "nevermore_dark_lord", // 11
           "nevermore_requiem", // 12
           "nevermore_dark_lord", // 13
@@ -15531,7 +15531,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `skywrath_mage_mystic_flare`, // 12
           `skywrath_mage_arcane_bolt`, // 13
           `skywrath_mage_arcane_bolt`, // 14
-          `special_bonus_hp_200`, // 15
+          `special_bonus_unique_skywrath_2`, // 15
           `special_bonus_unique_skywrath`, // 16
           "special_bonus_attributes", // 17
           "skywrath_mage_mystic_flare", // 18
@@ -16072,12 +16072,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "sniper_assassinate", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_sniper_3", // 20
+          "special_bonus_attack_range_100", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_attack_range_100", // 25
+          "special_bonus_unique_sniper_3", // 25
         ],
         items: {
           starting: [
@@ -16176,11 +16176,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `sniper_take_aim`, // 13
           `sniper_take_aim`, // 14
           `special_bonus_unique_sniper_headshot_damage`, // 15
-          `special_bonus_unique_sniper_5`, // 16
+          `special_bonus_unique_sniper_4`, // 16
           "special_bonus_attributes", // 17
           "sniper_assassinate", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_sniper_1", // 20
+          "special_bonus_attack_range_100", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -17517,7 +17517,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 17
           "tidehunter_ravage", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_tidehunter_4`, // 20
+          `special_bonus_unique_tidehunter_10`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -17948,11 +17948,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "tiny_toss", // 8
           `tiny_toss`, // 9
           `tiny_toss`, // 10
-          `special_bonus_movement_speed_20`, // 11
+          `special_bonus_unique_tiny_4`, // 11
           "tiny_grow", // 12
           "tiny_tree_grab", // 13
           "tiny_tree_grab", // 14
-          "special_bonus_unique_tiny", // 15
+          "special_bonus_unique_tiny_6", // 15
           "tiny_tree_grab", // 16
           "special_bonus_attributes", // 17
           "tiny_grow", // 18
@@ -18045,7 +18045,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "tiny_toss", // 8
           "tiny_toss", // 9
           "tiny_toss", // 10
-          "special_bonus_strength_10", // 11
+          "special_bonus_unique_tiny_4", // 11
           "tiny_grow", // 12
           "tiny_tree_grab", // 13
           "tiny_tree_grab", // 14
@@ -18147,12 +18147,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "tiny_tree_grab", // 7
           "tiny_avalanche", // 8
           "tiny_avalanche", // 9
-          "special_bonus_strength_10", // 10
+          "special_bonus_unique_tiny_4", // 10
           "tiny_avalanche", // 11
           "tiny_grow", // 12
           "tiny_toss", // 13
           "tiny_toss", // 14
-          "special_bonus_status_resistance_10", // 15
+          "special_bonus_unique_tiny_6", // 15
           "tiny_toss", // 16
           "special_bonus_attributes", // 17
           "tiny_grow", // 18
@@ -19313,12 +19313,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "vengefulspirit_nether_swap", // 12
           "vengefulspirit_command_aura", // 13
           "vengefulspirit_command_aura", // 14
-          `special_bonus_unique_vengeful_spirit_4`, // 15
+          `special_bonus_unique_vengeful_spirit_1`, // 15
           `vengefulspirit_command_aura`, // 16
           "special_bonus_attributes", // 17
           "vengefulspirit_nether_swap", // 18
           "special_bonus_attributes", // 19
-          `special_bonus_unique_vengeful_spirit_1`, // 20
+          `special_bonus_unique_vengeful_spirit_wave_of_terror_steal`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
@@ -21292,7 +21292,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "witch_doctor_maledict", // 7
           "witch_doctor_paralyzing_cask", // 8
           "witch_doctor_paralyzing_cask", // 9
-          "special_bonus_unique_witch_doctor_6", // 10
+          "special_bonus_hp_200", // 10
           "witch_doctor_voodoo_restoration", // 11
           "witch_doctor_death_ward", // 12
           "witch_doctor_voodoo_restoration", // 13
@@ -21427,25 +21427,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2.1, 2.6, 2.5],
         abilities: [
           "skeleton_king_hellfire_blast", // 1
-          "skeleton_king_vampiric_aura", // 2
-          "skeleton_king_vampiric_aura", // 3
+          "skeleton_king_vampiric_spirit", // 2
+          "skeleton_king_vampiric_spirit", // 3
           "skeleton_king_mortal_strike", // 4
-          "skeleton_king_vampiric_aura", // 5
+          "skeleton_king_vampiric_spirit", // 5
           "skeleton_king_reincarnation", // 6
-          "skeleton_king_vampiric_aura", // 7
+          "skeleton_king_vampiric_spirit", // 7
           "skeleton_king_mortal_strike", // 8
           "skeleton_king_mortal_strike", // 9
-          "special_bonus_unique_wraith_king_vampiric_skeleton_duration", // 10
+          "special_bonus_unique_wraith_king_2", // 10
           "skeleton_king_mortal_strike", // 11
           "skeleton_king_reincarnation", // 12
           "skeleton_king_hellfire_blast", // 13
           "skeleton_king_hellfire_blast", // 14
-          "special_bonus_unique_wraith_king_6", // 15
+          "special_bonus_hp_400", // 15
           "skeleton_king_hellfire_blast", // 16
           "special_bonus_attributes", // 17
           "skeleton_king_reincarnation", // 18
           "special_bonus_attributes", // 19
-          "special_bonus_unique_wraith_king_5", // 20
+          "special_bonus_attack_speed_70", // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23

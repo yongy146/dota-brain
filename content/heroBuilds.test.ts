@@ -1,5 +1,5 @@
 /**
- * npx jest content/heroBuilds.test.ts --silent
+ * clear ; npx jest content/heroBuilds.test.ts --silent
  *
  */
 import { heroBuildIterator } from "../access/heroUtils";
