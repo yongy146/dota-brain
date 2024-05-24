@@ -7,6 +7,7 @@ import dota2Heroes from "@gameData/out/dota2Heroes.json";
 import dota2Abilities from "@gameData/out/dota2Abilities.json";
 import dota2ItemsActive from "@gameData/out/dota2ItemsActive.json";
 import { heroBuilds } from "./heroBuilds";
+import { getHero } from "@gameData/out/dota2Heroes.import";
 
 const Dota2: any = {};
 const currentPatch = "7.35b";
@@ -59,6 +60,8 @@ const currentPatch = "7.35b";
  *
  */
 for (const { npcShortName, heroBuild } of heroBuildIterator()) {
+  const hero = getHero(npcShortName);
+
   // Test items exists
   for (const items of Object.values(heroBuild.items)) {
     for (const item of items) {
@@ -114,7 +117,9 @@ for (const { npcShortName, heroBuild } of heroBuildIterator()) {
     });
   }
 
-  // Validate skill frequency (a skill can only be updated every second time.)
+  // 1) Validate skill frequency: a skill can only be
+  //    updated at most every second time.
+  // 2) Validate that skill exists
   const skillCounter: Record<string, number> = {};
   for (let i = 0; i < heroBuild.abilities.length; i++) {
     const ability = heroBuild.abilities[i];
@@ -123,6 +128,9 @@ for (const { npcShortName, heroBuild } of heroBuildIterator()) {
     }
 
     const counter = skillCounter[ability]++;
+    test(`heroBuilds-Ability exsits (${npcShortName}, ${ability})`, () => {
+      expect((hero?.abilities || []).includes(ability));
+    });
     test(`heroBuilds-Skilled too rapidly / frequently (${npcShortName}, ${ability})`, () => {
       expect(counter <= Math.ceil((i + 1) / 2)).toBe(true);
     });
