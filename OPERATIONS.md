@@ -1,3 +1,9 @@
+# Usecase
+
+Generation of amazon lex files
+
+Comment: If migrating to Bedrock, we can probably delete these files from cdn...
+
 # Generate cdn files
 
 npx ts-node .\scripts\i18nExtraction.ts
