@@ -17892,6 +17892,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
+    combo: [],
     /*
     // Needs to be reviewed, tinker_heat_seeking_missile doens't exists anymore and rearm items was also removed
     combo: [
@@ -18756,6 +18757,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
+    combo: [],
     // To be reveiwed as 'tusk_tag_team' does no longer exist
     /*combo: [
       `tusk_tag_team`,
