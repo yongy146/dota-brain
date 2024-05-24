@@ -17812,19 +17812,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "tinker_laser", // 3
           "tinker_march_of_the_machines", // 4
           "tinker_laser", // 5
-          "tinker_keen_teleport", // 6   Note Michel: Use 'tinker_keen_teleport' instead of 'tinker_rearm'
+          "tinker_rearm", // 6   Note Michel: Use 'tinker_keen_teleport' instead of 'tinker_rearm'
           "tinker_laser", // 7
           "tinker_march_of_the_machines", // 8
           "tinker_march_of_the_machines", // 9
           `tinker_defense_matrix`, // 10
           `special_bonus_mana_reduction_8`, // 11
-          "tinker_keen_teleport", // 12
+          "tinker_rearm", // 12
           "tinker_defense_matrix", // 13
           "tinker_defense_matrix", // 14
           `tinker_defense_matrix`, // 15
           `special_bonus_unique_tinker_7`, // 16
           "special_bonus_attributes", // 17
-          "tinker_keen_teleport", // 18
+          "tinker_rearm", // 18
           "special_bonus_attributes", // 19
           `special_bonus_unique_tinker_5`, // 20
           "special_bonus_attributes", // 21
@@ -17897,7 +17897,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     // Needs to be reviewed, tinker_heat_seeking_missile doens't exists anymore and rearm items was also removed
     combo: [
       `tinker_defense_matrix`,
-      `tinker_keen_teleport`,
+      `tinker_rearm`,
       `tinker_laser`,
       `shivas_guard`,
       `blink`,
