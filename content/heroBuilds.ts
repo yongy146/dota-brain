@@ -134,6 +134,15 @@ export interface IHeroBuild {
   steam_guide_role: STEAM_GUIDE_ROLE; // Role used to classify steam guides (this role is displayed in yellow in Dota 2). Available values are: Core, Offlane, Support, Jungle, Initiator, Roamer. If there is no value proivded, then it there is no role shown in Dota 2
   dota_fire_id: number; // Guide number on Dota Fire
   power_level: [number, number, number, number];
+  /**
+   * Recommended facet for build.
+   *
+   * Numbering: The first facet shown in the game
+   * (or in dota2Heroes.json) has the number 1,
+   * the next number 2, etc.
+   *
+   */
+  facet?: number;
   abilities: string[];
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
