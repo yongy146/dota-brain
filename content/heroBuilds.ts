@@ -2358,16 +2358,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 2.6, 2.5, 2.1], // Mid
         abilities: [
           "broodmother_spin_web", // 1
-          `broodmother_silken_bola`, // 2
+          `broodmother_incapacitating_bite`, // 2
           `broodmother_insatiable_hunger`, // 3
           `broodmother_spin_web`, // 4
           "broodmother_spin_web", // 5
           "broodmother_spawn_spiderlings", // 6
           `broodmother_spin_web`, // 7
-          `broodmother_silken_bola`, // 8
-          `broodmother_silken_bola`, // 9
+          `broodmother_incapacitating_bite`, // 8
+          `broodmother_incapacitating_bite`, // 9
           `special_bonus_unique_broodmother_6`, // 10
-          `broodmother_silken_bola`, // 11
+          `broodmother_incapacitating_bite`, // 11
           "broodmother_spawn_spiderlings", // 12
           `broodmother_insatiable_hunger`, // 13
           `broodmother_insatiable_hunger`, // 14
@@ -3543,7 +3543,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_attack_speed_100", // 25
+          "special_bonus_unique_dark_willow_bedlam_targets", // 25
         ],
         items: {
           starting: [
@@ -6824,7 +6824,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2, 2.1, 2],
         abilities: [
           "jakiro_dual_breath", // 1
-          "jakiro_liquid_fire", // 2
+          "jakiro_double_trouble", // 2
           "jakiro_dual_breath", // 3
           "jakiro_ice_path", // 4
           "jakiro_dual_breath", // 5
@@ -6835,9 +6835,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `jakiro_ice_path`, // 10
           `special_bonus_attack_range_200`, // 11
           "jakiro_macropyre", // 12
-          "jakiro_liquid_fire", // 13
-          "jakiro_liquid_fire", // 14
-          "jakiro_liquid_fire", // 15
+          "jakiro_double_trouble", // 13
+          "jakiro_double_trouble", // 14
+          "jakiro_double_trouble", // 15
           "special_bonus_unique_jakiro_4", // 16
           "special_bonus_attributes", // 17
           "jakiro_macropyre", // 18
@@ -6926,7 +6926,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       "jakiro_macropyre",
       "jakiro_ice_path",
       "jakiro_dual_breath",
-      "jakiro_liquid_fire",
+      "jakiro_double_trouble",
     ],
     counter_items: {
       laning_phase: {
@@ -9229,13 +9229,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `marci_grapple`, // 1	equals to rebound
           `marci_companion_run`, // 2	 equals to dispose
           "marci_companion_run", // 3
-          `marci_guardian`, // 4  equals to sidekick
+          `marci_special_delivery`, // 4  equals to sidekick
           `marci_companion_run`, // 5
           "marci_unleash", // 6
           `marci_companion_run`, // 7
-          `marci_guardian`, // 8
-          `marci_guardian`, // 9
-          `marci_guardian`, // 10
+          `marci_special_delivery`, // 8
+          `marci_special_delivery`, // 9
+          `marci_special_delivery`, // 10
           `special_bonus_unique_marci_lunge_range`, // 11
           "marci_unleash", // 12
           `marci_grapple`, // 13
@@ -9335,14 +9335,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           "marci_grapple", // 1	equals to dispose
           `marci_companion_run`, // 2	equals to rebound
-          `marci_guardian`, // 3  equals to sidekick
+          `marci_special_delivery`, // 3  equals to sidekick
           `marci_companion_run`, // 4
-          `marci_guardian`, // 5
+          `marci_special_delivery`, // 5
           "marci_unleash", // 6
           `marci_companion_run`, // 7
           `marci_companion_run`, // 8
-          `marci_guardian`, // 9
-          `marci_guardian`, // 10
+          `marci_special_delivery`, // 9
+          `marci_special_delivery`, // 10
           `special_bonus_unique_marci_lunge_range`, // 11
           "marci_unleash", // 12
           "marci_grapple", // 13
@@ -9886,19 +9886,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "mirana_starfall", // 3
           "mirana_starfall", // 4
           "mirana_starfall", // 5
-          "mirana_invis", // 6
+          "mirana_selemenes_faithful", // 6
           "mirana_starfall", // 7
           "mirana_arrow", // 8
           "mirana_arrow", // 9
           "mirana_arrow", // 10
           "special_bonus_unique_mirana_3", // 11
-          "mirana_invis", // 12
+          "mirana_selemenes_faithful", // 12
           "mirana_leap", // 13
           "mirana_leap", // 14
           "special_bonus_unique_mirana_5", // 15
           "mirana_leap", // 16
           "special_bonus_attributes", // 17
-          "mirana_invis", // 18
+          "mirana_selemenes_faithful", // 18
           "special_bonus_attributes", // 19
           "special_bonus_unique_mirana_4", // 20
           "special_bonus_attributes", // 21
@@ -10585,14 +10585,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.4, 2, 2.5, 2.4],
         abilities: [
           "naga_siren_mirror_image", // 1
-          "naga_siren_rip_tide", // 2
+          "naga_siren_eelskin", // 2
           "naga_siren_mirror_image", // 3
           "naga_siren_ensnare", // 4
           "naga_siren_mirror_image", // 5
-          "naga_siren_rip_tide", // 6
+          "naga_siren_eelskin", // 6
           "naga_siren_mirror_image", // 7
-          "naga_siren_rip_tide", // 8
-          "naga_siren_rip_tide", // 9
+          "naga_siren_eelskin", // 8
+          "naga_siren_eelskin", // 9
           "special_bonus_unique_naga_siren_2", // 10
           "naga_siren_song_of_the_siren", // 11
           "naga_siren_ensnare", // 12
@@ -11933,8 +11933,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "obsidian_destroyer_sanity_eclipse", // 12
           "obsidian_destroyer_equilibrium", // 13
           "obsidian_destroyer_equilibrium", // 14
-          "special_bonus_movement_speed_30", // 15
-          "special_bonus_unique_outworld_devourer_astral_castrange", // 16
+          "special_bonus_unique_outworld_devourer_astral_castrange", // 15
+          "special_bonus_attributes", // 16
           "special_bonus_attributes", // 17
           "obsidian_destroyer_sanity_eclipse", // 18
           "special_bonus_attributes", // 19
@@ -12678,7 +12678,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          "special_bonus_24_crit_2", // 25
+          "special_bonus_20_crit_2", // 25
         ],
         items: {
           starting: [
@@ -15407,7 +15407,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "special_bonus_attributes", // 22
           "special_bonus_attributes", // 23
           "special_bonus_attributes", // 24
-          `special_bonus_unique_silencer_2`, // 25
+          `special_bonus_unique_silencer_arcane_curse_charges`, // 25
         ],
         items: {
           starting: [
@@ -17808,14 +17808,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2.2, 2.7, 2.8],
         abilities: [
           "tinker_laser", // 1
-          "tinker_heat_seeking_missile", // 2
+          "tinker_march_of_the_machines", // 2
           "tinker_laser", // 3
-          "tinker_heat_seeking_missile", // 4
+          "tinker_march_of_the_machines", // 4
           "tinker_laser", // 5
           "tinker_keen_teleport", // 6   Note Michel: Use 'tinker_keen_teleport' instead of 'tinker_rearm'
           "tinker_laser", // 7
-          "tinker_heat_seeking_missile", // 8
-          "tinker_heat_seeking_missile", // 9
+          "tinker_march_of_the_machines", // 8
+          "tinker_march_of_the_machines", // 9
           `tinker_defense_matrix`, // 10
           `special_bonus_mana_reduction_8`, // 11
           "tinker_keen_teleport", // 12
@@ -17892,6 +17892,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
+    /*
+    // Needs to be reviewed, tinker_heat_seeking_missile doens't exists anymore and rearm items was also removed
     combo: [
       `tinker_defense_matrix`,
       `tinker_keen_teleport`,
@@ -17900,7 +17902,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       `blink`,
       `tinker_heat_seeking_missile`,
       `tinker_rearm`,
-    ],
+    ],*/
     counter_items: {
       laning_phase: {
         all: ["ring_of_regen", "headdress", "infused_raindrop", "cloak"],
@@ -18549,13 +18551,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         dota_fire_id: 40681,
         power_level: [1.8, 1.8, 2, 2.1],
         abilities: [
-          `tusk_tag_team`, // 1
+          `tusk_bitter_chill`, // 1
           `tusk_ice_shards`, // 2
           "tusk_snowball", // 3
-          "tusk_tag_team", // 4
-          "tusk_tag_team", // 5
+          "tusk_bitter_chill", // 4
+          "tusk_bitter_chill", // 5
           "tusk_walrus_punch", // 6
-          "tusk_tag_team", // 7
+          "tusk_bitter_chill", // 7
           "tusk_snowball", // 8
           "tusk_snowball", // 9
           `tusk_snowball`, // 10
@@ -18654,12 +18656,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 1.9, 2.1, 2.1],
         abilities: [
           `tusk_ice_shards`, // 1
-          `tusk_tag_team`, // 2
-          `tusk_tag_team`, // 3
+          `tusk_bitter_chill`, // 2
+          `tusk_bitter_chill`, // 3
           `tusk_snowball`, // 4
-          `tusk_tag_team`, // 5
+          `tusk_bitter_chill`, // 5
           "tusk_walrus_punch", // 6
-          `tusk_tag_team`, // 7
+          `tusk_bitter_chill`, // 7
           "tusk_snowball", // 8
           "tusk_snowball", // 9
           `tusk_snowball`, // 10
@@ -18754,13 +18756,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: [
+    // To be reveiwed as 'tusk_tag_team' does no longer exist
+    /*combo: [
       `tusk_tag_team`,
       `blink`,
       `tusk_walrus_punch`,
       `tusk_ice_shards`,
       `tusk_snowball`,
-    ],
+    ],*/
     counter_items: {
       laning_phase: {
         all: ["wind_lace", "boots", "armor"],
