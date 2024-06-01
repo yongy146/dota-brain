@@ -612,7 +612,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "abaddon",
     audioFile: "ownHero/Abaddon_1_AphoticShield",
     messageTime: 10,
-    textMessage: `Apply Aphotic Shield pre-emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one explodes to inflict great AoE damage. Pull afterwards.`,
+    textMessage: `Apply Aphotic Shield pre-emptively on yourself as you are coming to lane after rune fight. Apply another as the previous one expires to inflict great AoE damage. Pull afterwards.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
