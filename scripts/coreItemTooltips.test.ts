@@ -1,7 +1,8 @@
 /**
  * Component reports all core items of a build that have not a i18n string.
  *
- * npx jest coreItemTooltips.test.ts
+ * Run:
+ *   - clear ; npx jest coreItemTooltips.test.ts
  *
  */
 import { IntlShape } from "react-intl";

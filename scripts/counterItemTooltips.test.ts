@@ -1,7 +1,8 @@
 /**
  * Component reports all counter items w/o i18n string.
  *
- * npx jest counterItemTooltips.test.ts
+ * Run:
+ *   - clear ; npx jest counterItemTooltips.test.ts
  *
  */
 import { IntlShape } from "react-intl";
