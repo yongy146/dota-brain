@@ -710,7 +710,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "abaddon_aphotic_shield" },
   },
-  {
+  /* {
     category: "EnemyHero",
     npcHeroName: "abaddon",
     audioFile: "enemyHero/Abaddon_2_CurseOfAvernus",
@@ -719,7 +719,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "It takes four attacks from Abaddon's Curse of Avernus to silence and slow you significantly.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "abaddon_frostmourne" },
-  },
+  }, */
   {
     category: "EnemyHero",
     npcHeroName: "abaddon",
@@ -6171,10 +6171,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "wisp",
-    audioFile: "ownHero/Io_4_BoostCarry",
+    audioFile: `ownHero/Io_4_BoostFightingCore`,
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Past laning stage, you typically want to play with your farming core to boost his farm and stack camps.",
+      `Past laning stage, you typically want to play with a core on your team who plays aggressively and utilizes their HP and mana pool while you buff them with Tether and Overcharge.`,
     audience: [Audience.ALL],
   },
   {
@@ -6215,7 +6215,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Io_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 15. It provides a source of disable that opponents are typically unaware of.",
+      `Pick up Aghanims Shard later in the game to gain spell lifesteal and slow resistance through Overcharge for yourself and your Tethered ally.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -6242,6 +6242,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     ],
     textMessage:
       "Grab the healing lotus to have a burst of HP and mana regen for yourself and the tethered ally.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `wisp`,
+    audioFile: `ownHero/Io_11_BoostFarmingCore`,
+    messageTime: 11 * 60 + 15,
+    textMessage:
+      `Past laning stage, if you do not have fighting core hero on your team, look to play with your farming core to boost his farm and stack camps.`,
     audience: [Audience.ALL],
   },
 
@@ -7661,7 +7670,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lina_6_UpkeepFierySoul",
     messageTime: [7 * 60, 17 * 60, 27 * 60],
     textMessage:
-      "Use Dragon Slave on creep waves to maintain Fiery Soul Stacks as you can hit more creeps consistently with it.",
+      `Use Dragon Slave on creep waves to maintain Fiery Soul Stacks and keep your maximum damage potential in fights and for farming.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_dragon_slave" },
   },
@@ -7672,7 +7681,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Lina is great at split-pushing and pick-offs due to high movement speed, great waveclear and damage burst.",
+      `Lina is great at split pushing with her quick wave clear abilities, as well as pick offs due to her high movement speed and massive burst damage.`,
     audience: [Audience.ALL],
   },
   {
@@ -8644,7 +8653,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "marci",
     audioFile: "enemyHero/Marci_1_SpiritVessel",
     messageTime: -60,
-    textMessage: "Someone should buy spirit Vessel against Marci's Sidekick.",
+    textMessage: `Someone should buy spirit Vessel against Marcis Sidekick and Bodyguard.`,
     audience: [Audience.ALL],
   },
   {
@@ -8680,7 +8689,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Marci_5_AntiHealingItems",
     messageTime: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
     textMessage:
-      "Items that reduce healing and regeneration are good against Marci's Sidekick.",
+      `Items that reduce healing and regeneration are good against Marcis Sidekick and Bodyguard.`,
     audience: [Audience.ALL],
   },
   {
@@ -8689,7 +8698,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Marci_6_DispelItems",
     messageTime: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
     textMessage:
-      "Items that can dispel Sidekick or Rebound buff from Marci or her ally are great purchase.",
+      `Items that can dispel the Rebound buff from Marci or her ally are great purchase.`,
     audience: [Audience.ALL],
   },
   {
@@ -12001,7 +12010,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "puck",
     audioFile: "ownHero/Puck_5_OrbScouting",
     messageTime: [2 * 60, 10 * 60, 18 * 60],
-    textMessage: `Illusory Orb provides vision on its path so you can check for pillar wards and scout Rosh pit.`,
+    textMessage: `Illusory Orb provides vision on its path so you can check for pillar wards and scout Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "puck_illusory_orb" },
   },
@@ -13950,7 +13959,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slark_1_ScoutWards",
     messageTime: -90,
     textMessage:
-      "As you load into the game, start running to scout opponents placing wards as you have night vision.",
+      `As you load into the game, start running to scout opponents placing wards as you have high night vision.`,
     audience: [Audience.ALL],
   },
   {
@@ -13959,7 +13968,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slark_2_DamageDifference",
     messageTime: 15,
     textMessage:
-      "Hit an opponent whenever you can to create a damage difference of 4. It'll help you with lasthiting.",
+      `Hit an opponent whenever you can to create a damage difference of 4. It'll help you with last hiting.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "slark_essence_shift" },
   },
@@ -13969,7 +13978,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slark_3_GoPounce",
     messageTime: 75,
     textMessage:
-      "If you are able to build up a few Essence Shift stacks, you can perhaps commit for a kill attempt with Pounce.",
+      `If you are able to build up a few Essence Shift stacks, look to commit for a kill attempt with Pounce.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "slark_pounce" },
   },
@@ -14030,9 +14039,18 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Slark_9_AghanimsShard",
     messageTime: 15 * 60,
     textMessage:
-      "Slarks aghanims shard is very good for man fighting and saving allies, consider purchasing after your 3 main items.",
+      `Slarks Aghanims Shard is very good for man fighting and saving allies, consider purchasing after your 3 main items.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `slark`,
+    audioFile: `ownHero/Slark_10_AghanimsShard`,
+    messageTime: [45, 2 * 60 + 45, 4 * 60 + 45, 6 * 60 + 45],
+    textMessage:
+      `When low on HP, look to get out of enemy vision to gain some HP regen from your Barracuda innate.`,
+    audience: [Audience.ALL],
   },
 
   {
@@ -14041,9 +14059,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Slark_1_OfflaneMelee",
     messageTime: -90,
     textMessage:
-      "Slark tends to do well against offlane melee due to Essence Shift stacks. Check if you can send at least one ranged hero against him",
+      `Slark tends to do well against melee offlane heroes due to Essence Shift stacks. Check if you can send at least one ranged hero against him`,
     chatMessage:
-      "Slark tends to do well against offlane melee due to Essence Shift stacks. Send one ranged hero against him",
+      `Slark tends to do well against melee offlane heroes due to Essence Shift stacks. Send one ranged hero against him`,
     audience: [Audience.ALL],
   },
   {
@@ -14064,14 +14082,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Keep an eye on Slark's Dark Pact usage so that your spells and items don't get dispelled",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "EnemyHero",
     npcHeroName: "slark",
     audioFile: "enemyHero/Slark_4_ForceStaff",
     messageTime: 8 * 60 + 30,
     textMessage: "Force Staff allows you to break away from Slark's Pounce",
     audience: [Audience.ALL],
-  },
+  }, */
 
   {
     category: "EnemyHero",
@@ -14195,6 +14213,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "snapfire_lil_shredder" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `snapfire`,
+    audioFile: `ownHero/Snapfire_10_FullBoreFacet`,
+    messageTime: [-45, 45, 3 * 60 + 45, 8 * 60 + 45, 13 * 60 + 45],
+    textMessage:
+      `With the Full Bore facet, look to keep more than 650 units distance from enemy heroes when hitting them with Scatterblast to do maximum damage.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `snapfire_scatterblast` },
+  },
 
   {
     category: "EnemyHero",
@@ -14202,9 +14230,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Snapfire_1_Scatterblast",
     messageTime: -10,
     textMessage:
-      "Avoid staying too close to Snapfire on the lane as her main harassing spell is Scatterblast which does 50% more damage if you are within 450 range",
+      `If Snapfire has the Ricochet II facet, avoid staying too close to Snapfire on the lane as her main harassing spell is Scatterblast which does 50% more damage if you are within 450 range`,
     chatMessage:
-      "Avoid staying close to Snapfire as her Scatterblast which does 50% more damage if you are within 450 range",
+      `If Snapfire has the Ricochet II facet, avoid staying close to Snapfire as her Scatterblast which does 50% more damage if you are within 450 range`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -15860,7 +15888,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Timbersaw_11_NoToLategame",
     messageTime: [22 * 60, 27 * 60],
     textMessage:
-      "You don't necessarily want to go to late game, so try to close the game down before you fall off.",
+      `You do not necessarily want to go to late game, so try to close out the game before you fall off.`,
     audience: [Audience.ALL],
   },
 
@@ -17582,6 +17610,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Linken's Sphere and a well timed Lotus Orb are great against Viper Strike.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    npcHeroName: `viper`,
+    audioFile: `enemyHero/Viper_6_PoisonBurstFacet`,
+    messageTime: [1 * 60 + 15, 8 * 60 + 15, 19 * 60 + 15],
+    textMessage:
+      `When Viper has the Poison Burst facet, try not to stand next to the target he is attacking with Poison Attack to avoid its AoE burst damage.`,
     audience: [Audience.ALL],
   },
 
