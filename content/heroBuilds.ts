@@ -8045,6 +8045,113 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
         },
       },
+      // NEW LINA GUIDE
+      // TO BE UPDATED BY YOONA
+      {
+        roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
+        steam_guide_workshop_ids: { en: 3260328154, es: 3260329711 },
+        steam_guide_role: STEAM_GUIDE_ROLE.CORE,
+        dota_fire_id: 40805,
+        power_level: [2.2, 2.3, 2.6, 2.4],
+        abilities: [
+          "lina_dragon_slave", // 1
+          "lina_fiery_soul", // 2
+          "lina_dragon_slave", // 3
+          "lina_light_strike_array", // 4
+          "lina_dragon_slave", // 5
+          "lina_laguna_blade", // 6
+          "lina_dragon_slave", // 7
+          `lina_fiery_soul`, // 8
+          `lina_fiery_soul`, // 9
+          `special_bonus_attack_damage_25`, // 10
+          `lina_fiery_soul`, // 11
+          "lina_laguna_blade", // 12
+          `lina_light_strike_array`, // 13
+          `lina_light_strike_array`, // 14
+          `special_bonus_unique_lina_4`, // 15
+          `lina_light_strike_array`, // 16
+          "special_bonus_attributes", // 17
+          "lina_laguna_blade", // 18
+          "special_bonus_attributes", // 19
+          `special_bonus_unique_lina_2`, // 20
+          "special_bonus_attributes", // 21
+          "special_bonus_attributes", // 22
+          "special_bonus_attributes", // 23
+          "special_bonus_attributes", // 24
+          `special_bonus_unique_lina_crit_debuff`, // 25
+        ],
+        items: {
+          starting: [
+            "tango",
+            "faerie_fire",
+            "branches",
+            `branches`,
+            `branches`,
+            "branches",
+            "ward_observer",
+          ],
+          early_game: [
+            `bottle`,
+            `boots`,
+            `magic_wand`,
+            `falcon_blade`,
+            `wind_lace`,
+          ],
+          mid_game: [`maelstrom`, `travel_boots`, `gungir`, `black_king_bar`],
+          late_game: [
+            `hurricane_pike`,
+            `greater_crit`,
+            `satanic`,
+            `swift_blink`,
+          ],
+          situational: [
+            `null_talisman`,
+            `arcane_boots`,
+            `blink`,
+            `aether_lens`,
+            `kaya_and_sange`,
+            `ghost`,
+            `cyclone`,
+            `dagon_5`,
+            `octarine_core`,
+            `ultimate_scepter`,
+            `aghanims_shard`,
+            `sphere`,
+            `aeon_disk`,
+            `silver_edge`,
+            `monkey_king_bar`,
+            `bloodthorn`,
+            `nullifier`,
+            `sheepstick`,
+            `revenants_brooch`,
+            `refresher`,
+            `travel_boots_2`,
+          ],
+          core: [
+            `bottle`,
+            `boots`,
+            `falcon_blade`,
+            `maelstrom`,
+            `travel_boots`,
+            `gungir`,
+            `black_king_bar`,
+            `greater_crit`,
+            `satanic`,
+          ],
+          neutral: [
+            "arcane_ring",
+            `mysterious_hat`,
+            "grove_bow",
+            `specialists_array`,
+            `enchanted_quiver`,
+            `paladin_sword`,
+            `mind_breaker`,
+            `avianas_feather`,
+            `desolator_2`,
+            `pirate_hat`,
+          ],
+        },
+      },
       {
         roles: [DOTA_COACH_GUIDE_ROLE.SUPPORT],
         steam_guide_workshop_ids: { en: 2715221904, es: 3160078116 },
