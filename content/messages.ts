@@ -2019,7 +2019,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/BountyHunter_1_Detection",
     messageTime: -60,
     textMessage:
-      "Use Jinada off cooldown on opponents hero or to secure range creep last hit.",
+      `Bring a Sentry Ward to the lane to not let Bounty Hunter close the gap on you from the invisibility of Shadow Walk.`,
     audience: [Audience.IN_LANE],
     image: { type: "item", name: "ward_sentry" },
   },
@@ -10777,6 +10777,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "ogre_magi_bloodlust" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `ogre_magi`,
+    audioFile: `ownHero/OgreMagi_7_EarlyFacetSpike`,
+    messageTime: 1 * 60 + 15,
+    textMessage: `With the Learning Curve facet, you have a massive power spike at level 2, which you can use to harass and apply pressure on enemy heroes.`,
+    audience: [Audience.ALL],
+  },
 
   {
     category: "EnemyHero",
@@ -14314,7 +14322,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sniper",
     audioFile: "ownHero/Sniper_3_Stack",
     messageTime: 2 * 60 + 45,
-    textMessage: "Stack a small camp whenever you can.",
+    textMessage: `Look to stack the nearby big jungle camp with Shrapnel whenever you can.`,
     audience: [Audience.ROLE_MID],
   },
   {
@@ -17249,7 +17257,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VengefulSpirit_3_Vision",
     messageTime: [3 * 60 + 30, 13 * 60 + 30],
     textMessage:
-      "Wave of Terror provides vision so you can scout pillars for wards and Roshpit.",
+      `Wave of Terror provides vision so you can scout pillars for wards and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "vengefulspirit_wave_of_terror" },
   },
@@ -17282,6 +17290,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Pick up Aghanims Shard at the 15 minute mark to stun multiple heroes in teamfights.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `vengefulspirit`,
+    audioFile: `ownHero/VengefulSpirit_7_SwapBarrier`,
+    messageTime: [10 * 60 + 45, 22 * 60 + 45, 34 * 60 + 45],
+    textMessage:
+      `In fights, you can Swap an ally just to give them and yourself a damage barrier, as long as it does not put them in a bad position.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `vengefulspirit_nether_swap` },
   },
 
   {
