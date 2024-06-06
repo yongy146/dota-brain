@@ -9,7 +9,7 @@ import dota2ItemsActive from "@gameData/out/dota2ItemsActive.json";
 import { heroBuilds } from "./heroBuilds";
 import { getHero } from "@gameData/out/dota2Heroes.import";
 
-const currentPatch = "7.36";
+const currentPatch = "7.36b";
 
 /**
  * Check that all heroes have a build.

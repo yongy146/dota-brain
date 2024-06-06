@@ -2,9 +2,9 @@
 
 Run the following command to validate the data:
 
-- npx jest
+- clear ; npx jest
 
-# Amazon Lex
+# Amazon Lex !!! CURRENTLY NO LONGER NEEDED !!!
 
 Generation of amazon lex files
 
