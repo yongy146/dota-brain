@@ -1277,7 +1277,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Axe_1_BattleHunger",
     messageTime: -30,
     textMessage:
-      "Use Battle Hunger off cooldown on opponents' support usually.",
+      "Use Battle Hunger on the enemy carry just when the lane meets because the creeps are full HP, or use it on the enemy support in order to help your support win the trades..",
     audience: [Audience.IN_LANE, Audience.ALL],
     image: { type: "ability", name: "axe_battle_hunger" },
   },
