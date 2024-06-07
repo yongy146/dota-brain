@@ -1119,11 +1119,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `tango`,
             `quelling_blade`,
             `ring_of_protection`,
-            `gauntlets_of_strength`,  
+            `gauntlets_of_strength`,
             `branches`,
           ],
 
-          early_game: [       
+          early_game: [
             `bracer`,
             `phase_boots`,
             `magic_wand`,
@@ -1163,14 +1163,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aghanims_shard`,
             `bloodstone`,
             `refresher`,
-            
-       
           ],
           neutral: [
             "occult_bracelet",
             `broom_handle`,
             `safety_bubble`,
-            `seeds_of_serenity,
+            `seeds_of_serenity`,
             `vambrace`,
             `dragon_scale`,
             `bullwhip`,
