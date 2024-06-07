@@ -2844,16 +2844,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 10,
     repeatTime: 10 * 60,
     textMessage:
-      "In fights try to focus targets that you can burst such as supports or squishy heros without escapes.",
+      `In fights try to focus targets that you can burst such as supports or squishy heroes without escapes.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_strafe" },
   },
   {
     category: `OwnHero`,
     npcHeroName: `clinkz`,
-    audioFile: `ownHero/Clinkz_7_BloodthornAggression`,
+    audioFile: `ownHero/Clinkz_7_DaedlusAggression`,
     messageTime: 21 * 60 + 10,
-    textMessage: `Use the Bloodthorn power spike to put pressure on the map by getting kill after kill on isolated enemy heroes.`,
+    textMessage: `Use the Daedlus power spike to put pressure on the map by getting kill after kill on isolated enemy heroes.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `bloodthorn` },
   },
@@ -3715,6 +3715,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: `ability`, name: `dazzle_bad_juju` },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `dazzle`,
+    audioFile: `ownHero/Dazzle_11_OverHealFacet`,
+    messageTime: [25 * 60 + 15, 35 * 60 + 15, 45 * 60 + 15],
+    textMessage: `With the Nothl Boon facet, look to over heal your front line core when sieging or defending high ground to give them a damage barrier.`,
+    audience: [Audience.ALL],
+  },
 
   {
     category: "EnemyHero",
@@ -3722,7 +3730,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Dazzle_1_PoisonTouch",
     messageTime: -60,
     textMessage:
-      "Avoid being hit by enemy heroes while under effect of Dazzle's Poison Touch.",
+      `Avoid being hit by Dazzle while under effect of Poison Touch. If he has the Poison Bloom facet, move away from him or hide in treelines before he attacks you four times.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -6684,7 +6692,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/KeeperOfTheLight_4_IlluminateVision",
     messageTime: [4 * 60 + 15, 12 * 60 + 15, 20 * 60 + 15],
     textMessage:
-      "Illuminate provides vision which can be used to check pillars for wards or Roshpit.",
+      `Illuminate provides vision which can be used to check pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "keeper_of_the_light_illuminate" },
   },
@@ -6760,6 +6768,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "keeper_of_the_light_blinding_light" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `keeper_of_the_light`,
+    audioFile: `ownHero/KeeperOfTheLight_12_RecallFacet`,
+    messageTime: [13 * 60 + 20, 23 * 60 + 20, 33 * 60 + 20, 43 * 60 + 20],
+    textMessage:
+      `If you have the Recall facet, look to split push lanes as much as you can to get an enemy hero to defend, and then Recall yourself elsewhere to gank or take a fight.`,
+    audience: [Audience.ALL],
+  },
 
   {
     category: "EnemyHero",
@@ -6824,7 +6841,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/KeeperOfTheLight_6_Recall",
     messageTime: [20 * 60 + 20, 30 * 60 + 20, 40 * 60 + 20],
     textMessage:
-      "Aghanim's Shard on Keeper of the Light grants Recall. He can teleport allied heroes to himself.",
+      `Be aware if Keeper of the Light has the Recall facet. He can bring multiple heroes to ganks or fights and beat you with a numbers advantage.`,
     audience: [Audience.ALL],
   },
 
@@ -10668,6 +10685,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Use portals to roam between lanes and get kills with your Impale and Carapace setup.",
     audience: [Audience.ALL],
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `nyx_assassin`,
+    audioFile: `ownHero/NyxAssassin_11_MindFlareCreepSecure`,
+    messageTime: [3 * 60 + 15, 13 * 60 + 15],
+    textMessage:
+      `When not much is happening in the game, look to use Mind Flare to instantly kill some jungle creeps for some quick farm and experience.`,
+    audience: [Audience.ALL],
+	image: { type: `ability`, name: `nyx_assassin_jolt` },
+  },
 
   {
     category: "EnemyHero",
@@ -10678,14 +10705,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Be careful not to use a major damaging spell when Spiked Carapace is on or Nyx Assassin is about to use it.",
     audience: [Audience.ALL],
   },
-  /*   {
+  {
     category: "EnemyHero",
     npcHeroName: "nyx_assassin",
     audioFile: "enemyHero/NyxAssassin_2_StickManaBoots",
     messageTime: 40,
-    textMessage: "To counter Nyx Assassin's mana burn, get a Magic Stick or Arcane Boots.",
+    textMessage: `To counter Nyx Assassin's mana burn facet, get a Magic Stick or Arcane Boots.`,
     audience: [Audience.ALL],
-  }, */
+  },
   {
     category: "EnemyHero",
     npcHeroName: "nyx_assassin",
@@ -10716,7 +10743,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/NyxAssassin_6_MindFlare",
     messageTime: 12 * 60,
     textMessage:
-      "Avoid buying too many intelligence giving items against Nyx Assassins Mind Flare.",
+      `Avoid buying too many mana pool increasing items against Nyx Assassins Mind Flare.`,
     audience: [Audience.ALL],
   },
 
@@ -11909,7 +11936,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PrimalBeast_7_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard around minute 15 as it provides another disable among other things.",
+      `Pick up Aghanims Shard around later in the game as it provides another disable among other things.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_trample" },
   },
@@ -13005,7 +13032,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sand_king",
     audioFile: "ownHero/SandKing_2_CheckDetection",
     messageTime: [15, 8 * 60 + 15, 16 * 60 + 15],
-    textMessage: "Check opponents' inventories for detection frequently.",
+    textMessage: `Check opponents' inventories for detection frequently if you took the Sandshroud facet.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "SentryDustGem" },
   },
@@ -13015,7 +13042,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/SandKing_3_TagExplode",
     messageTime: [75, 3 * 60 + 15],
     textMessage:
-      "Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike and explode creeps.",
+      `Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike or Stinger to last hit and explode creeps.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "sandking_caustic_finale" },
   },
@@ -13035,7 +13062,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/SandKing_5_DefendTowers",
     messageTime: [8 * 60, 12 * 60],
     textMessage:
-      "Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees.",
+      `Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees with the Sandshroud facet.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "sandking_sand_storm" },
   },
@@ -13077,7 +13104,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sand_king",
     audioFile: "enemyHero/SandKing_1_Sentry",
     messageTime: -60,
-    textMessage: "Bring a sentry to the lane against Sand King's Sand Storm.",
+    textMessage: `Bring a sentry to the lane against Sand Kings Sand Storm if he took the Sandshroud facet.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -13104,7 +13131,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/SandKing_4_Detection",
     messageTime: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage:
-      "Against Sand King you need to carry detection on multiple heroes.",
+      `Against Sand King you need to carry detection on multiple heroes if he took the Sandshroud facet.`,
     audience: [Audience.ALL],
   },
   {
