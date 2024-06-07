@@ -1076,7 +1076,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   axe: {
-    // Comment to be deleted
+    // TNTCN updating this
     gameplay_version: "7.36b",
     creator: ContentCreator.yongy146,
     damage_type: DamageType.pure,
@@ -1098,11 +1098,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "axe_berserkers_call", // 8
           "axe_berserkers_call", // 9
           "axe_berserkers_call", // 10
-          `axe_battle_hunger`, // 11
+          `special_bonus_unique_axe_8`, // 11
           "axe_culling_blade", // 12
           "axe_battle_hunger", // 13
           "axe_battle_hunger", // 14
-          `special_bonus_unique_axe_8`, // 15
+          "axe_battle_hunger", // 15
           `special_bonus_unique_axe_4`, // 16
           "special_bonus_attributes", // 17
           "axe_culling_blade", // 18
@@ -1119,36 +1119,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `tango`,
             `quelling_blade`,
             `ring_of_protection`,
+            `gauntlets_of_strength`,  
             `branches`,
-            `branches`,
-            `branches`,
-            `ward_observer`,
           ],
 
-          early_game: [
-            `vanguard`,
-            `boots`,
+          early_game: [       
+            `bracer`,
+            `phase_boots`,
             `magic_wand`,
-            `wind_lace`,
             `infused_raindrop`,
           ],
           mid_game: [
             `blink`,
             `blade_mail`,
+            `eternal_shroud`,
             "black_king_bar",
             "aghanims_shard",
-            "travel_boots",
           ],
           late_game: [
-            "octarine_core",
+            `travel_boots`,
+            `shivas_guard`,
             `overwhelming_blink`,
-            "heart",
             "refresher",
+            "heart",
           ],
           situational: [
             `pipe`,
-            `assault`,
-            `shivas_guard`,
+            `manta`,
+            `invis_sword`,
             `sphere`,
             `ultimate_scepter`,
             `crimson_guard`,
@@ -1157,23 +1155,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots_2`,
           ],
           core: [
-            "vanguard",
-            "boots",
-            "blink",
-            "blade_mail",
-            `travel_boots`,
-            `aghanims_shard`,
+            `phase_boots`,
+            `blade_mail`,
+            `blink`,
+            `eternal_shroud`,
             `black_king_bar`,
-            "octarine_core",
+            `aghanims_shard`,
+            `bloodstone`,
+            `refresher`,
+            
+       
           ],
           neutral: [
-            `faded_broach`,
             "occult_bracelet",
-            "vambrace",
-            "bullwhip",
+            `broom_handle`,
+            `safety_bubble`,
+            `seeds_of_serenity,
+            `vambrace`,
+            `dragon_scale`,
+            `bullwhip`,
+            `vampire_fangs`,
             `cloak_of_flames`,
-            "ogre_seal_totem",
+            `ogre_seal_totem`,
+            `craggy_coat`,
             `havoc_hammer`,
+            `trickster_cloak`,
             `martyrs_plate`,
             "giants_ring",
             //`fallen_sky`,
