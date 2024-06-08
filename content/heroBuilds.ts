@@ -109,7 +109,12 @@ export enum DamageType {
  */
 export interface IHeroContent {
   creator: ContentCreator; // Owner of the guide (e.g. ContentCreator.YoonA)
-  under_review: boolean; // True if guide is under review, e.g., after major patch release
+  /**
+   * True if guide is under review or needs review, e.g., after major patch release.
+   *
+   * This field is updated by Dota Coach.
+   */
+  under_review: boolean;
   damage_type: DamageType;
   builds: IHeroBuild[]; // The first build is seen as the "standard build" by the app
   combo: string[]; // Main spell, item and "attack" combo for the hero ; this combo is shown in the app (infoboxes) and in the dota guides ; use the same keywords as for ability builds and item buids - on top of that you can also use the word "attack" for right-clicking
