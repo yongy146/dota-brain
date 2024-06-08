@@ -1119,7 +1119,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `tango`,
             `quelling_blade`,
             `ring_of_protection`,
-            `gauntlets_of_strength`,
+            `gauntlets`,
             `branches`,
           ],
 
