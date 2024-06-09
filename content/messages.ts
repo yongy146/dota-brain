@@ -3094,7 +3094,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "crystal_maiden",
     audioFile: "ownHero/CrystalMaiden_3_FrostbiteCreeps",
     messageTime: [2 * 60, 8 * 60],
-    textMessage: `Frostbite lasts longer on the creeps. Use it to farm big neutral creeps or enemy summons.`,
+    textMessage: `Frostbite does more damage to creeps. Use it to farm big neutral creeps or enemy summons.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_frostbite" },
   },
@@ -3108,7 +3108,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_crystal_nova" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "crystal_maiden",
     audioFile: "ownHero/CrystalMaiden_5_SkipUlti",
@@ -3117,7 +3117,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "It is hard to land an impactful Freezing Field and it costs a lot of mana so you might want to delay skilling it.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_freezing_field" },
-  },
+  }, */
   {
     category: "OwnHero",
     npcHeroName: "crystal_maiden",
@@ -3149,15 +3149,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "crystal_maiden_frostbite" },
   },
-  /* {
+  {
     category: "OwnHero",
     npcHeroName: "crystal_maiden",
     audioFile: "ownHero/CrystalMaiden_9_AghsShardUltimate",
-    messageTime: 19 * 60 + 15,
-    textMessage: "Remember to use Boots of Bearing to gain movespeed during Freezing Field with Aghamins Shard.",
+    messageTime: 30 * 60 + 15,
+    textMessage: `Remember to use Boots of Bearing to gain movespeed during Freezing Field with Aghamins Scepter.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "boots_of_bearing" },
-  }, */
+  },
   {
     category: "OwnHero",
     npcHeroName: "crystal_maiden",
@@ -5747,7 +5747,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "hoodwink",
     audioFile: "ownHero/Hoodwink_3_Trees",
     messageTime: 3 * 60,
-    textMessage: `Play close to the trees when you have a point in Scurry to gain its passive benefits.`,
+    textMessage: `Play close to the trees to have a chance to dodge attacks from enemy heroes through your innate passive.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "hoodwink_scurry" },
   },
@@ -5825,7 +5825,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "hoodwink",
     audioFile: "enemyHero/Hoodwink_4_AntievasionItems",
     messageTime: 12 * 60,
-    textMessage: "Evasion piercing items are great against Hoodwink's Scurry.",
+    textMessage: `Items that provide accuracy on right clicks, such as MKB, are great against Hoodwinks innate passive.`,
     audience: [Audience.ALL],
   },
 
@@ -6368,7 +6368,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_5_TowerDamage",
     messageTime: [8 * 60 + 15, 14 * 60 + 15],
     textMessage:
-      "Use Liquid Fire and Frost to apply pressure on enemy buildings.",
+      `Use Liquid Fire to apply pressure on enemy buildings if you have the facet for it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_liquid_fire" },
   },
@@ -6400,7 +6400,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Jakiro_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
     textMessage:
-      "Pick up Aghanim's Shard at minute 15 as it provides additional control and damage boost.",
+      `Pick up Aghanims Shard later in the game to massively boost the damage of Liquid Fire or Liquid Frost on enemy heroes.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -6430,7 +6430,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Jakiro_2_Stacking",
     messageTime: -50,
     textMessage:
-      "Avoid standing beside your laning partner against Dual Breath and Liquid Fire.",
+      `Avoid standing beside your laning partner against Dual Breath and Ice Path.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -7350,7 +7350,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lich_3_PlayAggressively",
     messageTime: 45,
     textMessage:
-      "Play aggressively on the lane, burn your mana and then run a clarity while pulling.",
+      `Play aggressively on the lane, burn your mana by using your spells and utilize the regen items you bought at the start of the game.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7406,6 +7406,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `You can quickly farm enemy summons or the big creep in jungle camps using Sinister Gaze.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lich_sinister_gaze" },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `lich`,
+    audioFile: `ownHero/Lich_9_SpellsDuringGaze`,
+    messageTime: [11 * 60 + 10, 21 * 60 + 10, 31 * 60 + 10, 41 * 60 + 10],
+    textMessage: `You can still cast all your other spells while channeling Sinister Gaze.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `lich_sinister_gaze` },
   },
 
   {
@@ -7718,7 +7727,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 22 * 60,
     textMessage:
       "With your Aghanims Scepter pick up, you can fly over treelines and cliffs to find better initiation angles or escape.",
-    audience: [Audience.ALL],
+    audience: [Audience.ROLE_SUPPORT, Audience.ROLE_MID],
     image: { type: "item", name: "ultimate_scepter" },
   },
 
@@ -13532,7 +13541,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ShadowShaman_4_Ultimate2",
     messageTime: 8 * 60,
     textMessage:
-      "If opponents are farming your Mass Serpent Wards, try to deny individual Serpent Wards with other Serpent Wards.",
+      `If opponents are farming your Mass Serpent Wards, try to deny individual Serpent Wards with other Serpent Wards if you have the Cluster Cluck facet.`,
     audience: [Audience.ALL],
   },
   {
