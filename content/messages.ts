@@ -2950,7 +2950,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "rattletrap_battery_assault" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "rattletrap",
     audioFile: "ownHero/Clockwerk_3_DenyCogs",
@@ -2959,7 +2959,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Don't feed Power Cogs unnecessarily to opponents. Deny cogs as opponents start attacking them.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "rattletrap_power_cogs" },
-  },
+  }, */
   {
     category: "OwnHero",
     npcHeroName: "rattletrap",
@@ -2967,7 +2967,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 100,
     repeatTime: 8 * 60,
     textMessage:
-      "If an opponent can escape or fight you back in Power Cogs, don't trap him in the cogs but rather push him towards your team.",
+      `With the Expanded Armature facet, if an opponent is trying to escape your Power Cogs, look to kick Cogs onto them to push them and do damage.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rattletrap_power_cogs" },
   },
@@ -3008,7 +3008,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `rattletrap`,
     audioFile: `ownHero/Clockwerk_8_CogsCreepBlock`,
     messageTime: -60,
-    textMessage: `As position 4, you can take Power Cogs on level 1 to block your first creep wave inside them to bring the lane creeps closer to your tower.`,
+    textMessage: `With the Hookup facet, as position 4, you can take Power Cogs on level 1 to block your first creep wave inside them to bring the lane creeps closer to your tower.`,
+    audience: [Audience.ALL],
+    image: { type: `ability`, name: `rattletrap_power_cogs` },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `rattletrap`,
+    audioFile: `ownHero/Clockwerk_9_KickingCogs`,
+    messageTime: 50,
+    textMessage: `Even if you do not catch any enemy heroes inside Power Cogs, you can still kick Cogs onto enemy heroes to push them around and do damage.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `rattletrap_power_cogs` },
   },
@@ -3926,7 +3935,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Disruptor_3_FieldVision",
     messageTime: [2 * 60 + 15, 9 * 60 + 15, 16 * 60 + 15],
     textMessage:
-      "Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.",
+      `While you have the Thunderstorm facet, Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "disruptor_kinetic_field" },
   },
