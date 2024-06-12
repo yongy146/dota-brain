@@ -5579,7 +5579,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Gyrocopter_3_Waveclear",
     messageTime: 4 * 60 + 45,
     textMessage:
-      "Gyro has great waveclear early on. Push out waves from level 5 onwards and start farming nearby camps.",
+      `Gyro has great waveclear early on. Push out waves once you have two points in Flak Cannon and start farming nearby camps.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "gyrocopter_flak_cannon" },
   },
@@ -6015,7 +6015,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "invoker",
     audioFile: "ownHero/Invoker_6_Rotate",
     messageTime: [5 * 60 + 30, 9 * 60 + 30],
-    textMessage: `If you play Quas Wex, then control active runes and look for opportunities to rotate once you have Treads and Spirit Vessel.`,
+    textMessage: `If you play Quas Wex, then control active runes and look for opportunities to rotate once you have Boots and Spirit Vessel.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "urn_of_shadows" },
   },
@@ -9766,7 +9766,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Muerta_5_SpellImmunity",
     messageTime: [10 * 60 + 15, 20 * 60 + 15],
     textMessage:
-      "Be careful not to use Pierce the Veil against spell immunity and heavy magic resistance.",
+      `Be careful not to use Pierce the Veil against debuff immunity and heavy magic resistance.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "muerta_pierce_the_veil" },
   },
@@ -9882,7 +9882,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Muerta_4_Bkb",
     messageTime: 12 * 60,
     textMessage:
-      "Get an early BKB against Muerta to reduce her spell damage with Pierce the Veil.",
+      `Get an early BKB against Muerta to reduce her spell damage from Pierce the Veil and Dead Shot.`,
     audience: [Audience.ALL],
   },
   {
@@ -17483,11 +17483,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "venomancer",
     audioFile: "ownHero/Venomancer_10_Aghanims",
-    messageTime: 19 * 60,
+    messageTime: 35 * 60,
     textMessage:
-      "Pick up Aghanims Scepter as the game progresses to significantly improve your teamfighting.",
+      `Pick up Aghanims Scepter in the late game to significantly increase your damage through right clicks and Plague Wards.`,
     audience: [Audience.ALL],
-    image: { type: "item", name: "aghanims_shard" },
+    image: { type: `item`, name: `ultimate_scepter` },
   },
   {
     category: "OwnHero",
@@ -18942,7 +18942,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "zuus_thundergods_wrath" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "zuus",
     audioFile: "ownHero/Zeus_13_MantaUsage",
@@ -18951,6 +18951,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Once you have Manta Style with Aghanim Shard, use the illusions to safely shove lanes towards the enemy base.",
     audience: [Audience.ALL],
     image: { type: "item", name: "manta" },
+  }, */
+  {
+    category: `OwnHero`,
+    npcHeroName: `zuus`,
+    audioFile: `ownHero/Zeus_14_AghanimsShard`,
+    messageTime: 14 * 60 + 50,
+    textMessage:
+      `Pick up Aghanims Shard around the 15 minute mark to significantly increase your damage output and farm speed without expending your mana.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `aghanims_shard` },
   },
 
   {

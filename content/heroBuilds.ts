@@ -5926,41 +5926,42 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40597,
         power_level: [1.8, 1.9, 2.6, 2.8],
+		facet: 2,
         abilities: [
-          "gyrocopter_homing_missile", // 1
-          `gyrocopter_flak_cannon`, // 2
-          `gyrocopter_flak_cannon`, // 3
-          `gyrocopter_rocket_barrage`, // 4
-          "gyrocopter_flak_cannon", // 5
+          `gyrocopter_flak_cannon`, // 1
+          `gyrocopter_rocket_barrage`, // 2
+          `gyrocopter_rocket_barrage`, // 3
+          `gyrocopter_homing_missile`, // 4
+          `gyrocopter_rocket_barrage`, // 5
           "gyrocopter_call_down", // 6
-          "gyrocopter_flak_cannon", // 7
-          `special_bonus_attributes`, // 8
-          `special_bonus_attributes`, // 9
-          "special_bonus_hp_175", // 10
-          `special_bonus_attributes`, // 11
+          `gyrocopter_rocket_barrage`, // 7
+          `gyrocopter_flak_cannon`, // 8
+          `gyrocopter_flak_cannon`, // 9
+          `gyrocopter_flak_cannon`, // 10
+          `special_bonus_hp_175`, // 11
           "gyrocopter_call_down", // 12
-          `special_bonus_attributes`, // 13
-          `special_bonus_attributes`, // 14
+          `gyrocopter_homing_missile`, // 13
+          `gyrocopter_homing_missile`, // 14
           "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage", // 15
           `special_bonus_attributes`, // 16
-          `gyrocopter_homing_missile`, // 17
+          `special_bonus_attributes`, // 17
           "gyrocopter_call_down", // 18
-          `gyrocopter_homing_missile`, // 19
+          `special_bonus_attributes`, // 19
           "special_bonus_unique_gyrocopter_2", // 20
-          `gyrocopter_homing_missile`, // 21
-          `gyrocopter_rocket_barrage`, // 22
-          `gyrocopter_rocket_barrage`, // 23
-          `gyrocopter_rocket_barrage`, // 24
+          `special_bonus_attributes`, // 21
+          `special_bonus_attributes`, // 22
+          `special_bonus_attributes`, // 23
+          `special_bonus_attributes`, // 24
           "special_bonus_unique_gyrocopter_1", // 25
         ],
         items: {
           starting: [
             "tango",
             "quelling_blade",
-            "branches",
-            "branches",
             `slippers`,
-            "circlet",
+            `circlet`,
+            `branches`,
+            `branches`,
           ],
           early_game: [
             `wraith_band`,
@@ -5975,11 +5976,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `satanic`,
             `black_king_bar`,
           ],
-          late_game: [`greater_crit`, `disperser`, `butterfly`, `rapier`],
+          late_game: [`greater_crit`, `butterfly`, `swift_blink`, `rapier`],
           situational: [
             `ring_of_basilius`,
             `mask_of_madness`,
             `maelstrom`,
+			`diffusal_blade`,
             `dragon_lance`,
             `hurricane_pike`,
             `monkey_king_bar`,
@@ -5992,7 +5994,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sphere`,
             `aghanims_shard`,
             `nullifier`,
-            `swift_blink`,
+            `disperser`,
             `travel_boots`,
           ],
           core: [
@@ -6002,7 +6004,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
             `satanic`,
             `greater_crit`,
-            `disperser`,
             `butterfly`,
           ],
           neutral: [
@@ -6013,7 +6014,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "paladin_sword",
             "elven_tunic",
             "mind_breaker",
-            `ninja_gear`,
+            `ancient_guardian`,
             `apex`,
             `pirate_hat`,
           ],
@@ -6025,9 +6026,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40598,
         power_level: [1.8, 2.1, 2.1, 2],
+		facet: [1, 2],
         abilities: [
-          "gyrocopter_homing_missile", // 1
-          "gyrocopter_rocket_barrage", // 2
+          `gyrocopter_rocket_barrage`, // 1
+          `gyrocopter_homing_missile`, // 2
           "gyrocopter_rocket_barrage", // 3
           "gyrocopter_homing_missile", // 4
           "gyrocopter_rocket_barrage", // 5
@@ -6035,7 +6037,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "gyrocopter_rocket_barrage", // 7
           "gyrocopter_homing_missile", // 8
           "gyrocopter_homing_missile", // 9
-          "special_bonus_hp_175", // 10
+          `special_bonus_unique_gyrocopter_homing_missile_damage`, // 10
           `special_bonus_attributes`, // 11
           "gyrocopter_call_down", // 12
           `special_bonus_attributes`, // 13
@@ -6073,22 +6075,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `arcane_boots`,
-            `veil_of_discord`,
+            `mekansm`,
+			`guardian_greaves`,
             `aghanims_shard`,
             `force_staff`,
             `aether_lens`,
           ],
-          late_game: [`ethereal_blade`, `octarine_core`, `blink`, `refresher`],
+          late_game: [`ethereal_blade`, `blink`, `octarine_core`, `refresher`],
           situational: [
             `tranquil_boots`,
             `spirit_vessel`,
+			`veil_of_discord`,
             `pavise`,
             `solar_crest`,
             `glimmer_cape`,
             `cyclone`,
             `ancient_janggo`,
             `vladmir`,
-            `guardian_greaves`,
             `boots_of_bearing`,
             `phylactery`,
             `lotus_orb`,
@@ -6099,13 +6102,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             `arcane_boots`,
-            `veil_of_discord`,
+            `guardian_greaves`,
             `aghanims_shard`,
             `force_staff`,
-            `aether_lens`,
             `ethereal_blade`,
-            `octarine_core`,
             `blink`,
+            `octarine_core`,
           ],
           neutral: [
             `arcane_ring`,
@@ -6467,17 +6469,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40632,
         power_level: [1.8, 2.1, 2.4, 2.8],
+		facet: 2,
         abilities: [
           `invoker_wex`, // 1
           `invoker_quas`, // 2
           `invoker_wex`, // 3
           `invoker_quas`, // 4
           "invoker_wex", // 5
-          "invoker_quas", // 6
+          `invoker_exort`, // 6
           "invoker_wex", // 7
           "invoker_quas", // 8
           "invoker_wex", // 9
-          "invoker_exort", // 10
+          `invoker_quas`, // 10
           `invoker_wex`, // 11
           "invoker_exort", // 12
           `invoker_wex`, // 13
@@ -6487,7 +6490,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `invoker_exort`, // 17
           `invoker_exort`, // 18
           `special_bonus_unique_invoker_3`, // 19
-          `special_bonus_unique_invoker_9`, // 20
+          `special_bonus_unique_invoker_11`, // 20
           `special_bonus_unique_invoker_additional_chaos_meteors`, // 21
           `invoker_quas`, // 22
           "invoker_quas", // 23
@@ -6506,18 +6509,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             `bracer`,
-            `bracer`,
-            `power_treads`,
+            `boots`,
             `magic_wand`,
             `urn_of_shadows`,
+			`wind_lace`,
           ],
           mid_game: [
             `spirit_vessel`,
             `hand_of_midas`,
-            `mage_slayer`,
+            `travel_boots`,
             `hurricane_pike`,
-            `witch_blade`,
-            `devastator`,
+            `black_king_bar`,
           ],
           late_game: [
             `aghanims_shard`,
@@ -6528,8 +6530,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           situational: [
             `blood_grenade`,
+			`power_treads`,
             `veil_of_discord`,
             `falcon_blade`,
+			`mage_slayer`,
+			`witch_blade`,
+            `devastator`,
+			`maelstrom`,
+			`gungir`,
             `orchid`,
             `bloodthorn`,
             `ancient_janggo`,
@@ -6538,7 +6546,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `force_staff`,
             `cyclone`,
             `revenants_brooch`,
-            `black_king_bar`,
             `ethereal_blade`,
             `manta`,
             `shivas_guard`,
@@ -6549,16 +6556,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `greater_crit`,
             `swift_blink`,
             `overwhelming_blink`,
-            `travel_boots`,
+            `travel_boots_2`,
           ],
           core: [
             `bracer`,
-            `power_treads`,
+            `boots`,
             `spirit_vessel`,
             `hand_of_midas`,
-            `mage_slayer`,
-            `hurricane_pike`,
-            `devastator`,
+            `travel_boots`,
+            `black_king_bar`,
             `aghanims_shard`,
             `blink`,
             `sheepstick`,
@@ -6569,9 +6575,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             `pupils_gift`,
             `enchanted_quiver`,
-            `defiant_shell`,
+            `ceremonial_robe`,
             `timeless_relic`,
-            `ninja_gear`,
+            `stormcrafter`,
             `pirate_hat`,
             `apex`,
           ],
@@ -6585,6 +6591,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40631,
         power_level: [1.7, 1.9, 2.6, 2.8],
+		facet: 2,
         abilities: [
           "invoker_exort", // 1
           "invoker_quas", // 2
@@ -6605,7 +6612,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "invoker_wex", // 17
           "invoker_wex", // 18
           `special_bonus_unique_invoker_3`, // 19
-          `special_bonus_unique_invoker_9`, // 20
+          `special_bonus_unique_invoker_11`, // 20
           `special_bonus_unique_invoker_additional_chaos_meteors`, // 21
           `invoker_quas`, // 22
           "invoker_quas", // 23
@@ -6631,10 +6638,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `travel_boots`,
-            `mage_slayer`,
-            `hurricane_pike`,
             `witch_blade`,
-            `devastator`,
+            `hurricane_pike`,
+            `black_king_bar`,
             `aghanims_shard`,
           ],
           late_game: [`blink`, `sheepstick`, `ultimate_scepter`, `refresher`],
@@ -6642,11 +6648,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wraith_band`,
             `power_treads`,
             `falcon_blade`,
+			`mage_slayer`,
+			`devastator`,
             `orchid`,
             `bloodthorn`,
             `spirit_vessel`,
             `manta`,
-            `black_king_bar`,
+            `maelstrom`,
+			`gungir`,
             `cyclone`,
             `revenants_brooch`,
             `ethereal_blade`,
@@ -6665,9 +6674,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `boots`,
             `hand_of_midas`,
             `travel_boots`,
-            `mage_slayer`,
+            `witch_blade`,
             `hurricane_pike`,
-            `devastator`,
+            `black_king_bar`,
             `aghanims_shard`,
             `blink`,
             `sheepstick`,
@@ -6678,9 +6687,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `grove_bow`,
             `pupils_gift`,
             `enchanted_quiver`,
-            `defiant_shell`,
+            `ceremonial_robe`,
             `timeless_relic`,
-            `ninja_gear`,
+            `stormcrafter`,
             `pirate_hat`,
             `apex`,
           ],
@@ -10493,6 +10502,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40646,
         power_level: [1.8, 1.9, 2.6, 2.7],
+		facet: 1,
         abilities: [
           "muerta_dead_shot", // 1
           "muerta_the_calling", // 2
@@ -10524,26 +10534,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             `tango`,
             `quelling_blade`,
-            `circlet`,
+            `mantle`,
             `circlet`,
             `branches`,
             `branches`,
           ],
           early_game: [
-            `power_treads`,
+            `null_talisman`,
+			`power_treads`,
             `magic_wand`,
+			`wind_lace`,
             `maelstrom`,
-            `wind_lace`,
-            `infused_raindrop`,
           ],
           mid_game: [
             `dragon_lance`,
             `mjollnir`,
+			`black_king_bar`,
             `hurricane_pike`,
-            `black_king_bar`,
-            `aghanims_shard`,
+            `greater_crit`,
           ],
-          late_game: [`greater_crit`, `skadi`, `swift_blink`, `refresher`],
+          late_game: [`aghanims_shard`, `moon_shard`, `swift_blink`, `refresher`],
           situational: [
             `hand_of_midas`,
             `falcon_blade`,
@@ -10560,9 +10570,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
             `gungir`,
             `silver_edge`,
+			`skadi`,
             `bloodthorn`,
             `sheepstick`,
-            `moon_shard`,
             `revenants_brooch`,
             `travel_boots`,
           ],
@@ -10571,11 +10581,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `maelstrom`,
             `dragon_lance`,
             `mjollnir`,
+			`black_king_bar`,
             `hurricane_pike`,
-            `black_king_bar`,
             `greater_crit`,
-            `skadi`,
-            `swift_blink`,
           ],
           neutral: [
             `arcane_ring`,
@@ -10586,8 +10594,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `enchanted_quiver`,
             `mind_breaker`,
             `timeless_relic`,
-            `desolator_2`,
             `pirate_hat`,
+            `mirror_shield`,
           ],
         },
       },
@@ -10597,6 +10605,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40647,
         power_level: [1.7, 1.9, 2, 2.2],
+		facet: 1,
         abilities: [
           "muerta_dead_shot", // 1
           "muerta_the_calling", // 2
@@ -10646,15 +10655,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: [
             `arcane_boots`,
             `rod_of_atos`,
-            `aether_lens`,
+            `gungir`,
             `force_staff`,
             `aghanims_shard`,
           ],
-          late_game: [`blink`, `gungir`, `octarine_core`, `ultimate_scepter`],
+          late_game: [`hurricane_pike`, `blink`, `sheepstick`, `black_king_bar`],
           situational: [
             `hand_of_midas`,
             `veil_of_discord`,
             `spirit_vessel`,
+			`aether_lens`,
             `glimmer_cape`,
             `pavise`,
             `solar_crest`,
@@ -10665,22 +10675,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `cyclone`,
             `pipe`,
             `aeon_disk`,
-            `hurricane_pike`,
             `mage_slayer`,
-            `black_king_bar`,
-            `sheepstick`,
+            `octarine_core`,
+            `ultimate_scepter`,
             `bloodthorn`,
             `travel_boots`,
           ],
           core: [
             `arcane_boots`,
             `rod_of_atos`,
-            `aether_lens`,
+            `gungir`,
             `force_staff`,
             `aghanims_shard`,
             `blink`,
-            `gungir`,
-            `octarine_core`,
+            `sheepstick`,
           ],
           neutral: [
             `mysterious_hat`,
@@ -10688,7 +10696,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bullwhip`,
             `grove_bow`,
             `psychic_headband`,
-            `ceremonial_robe`,
+            `enchanted_quiver`,
             `spy_gadget`,
             `timeless_relic`,
             `force_boots`,
@@ -19647,20 +19655,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40627,
         power_level: [1.7, 2.2, 2.2, 2],
+		facet: 1,
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
           "venomancer_poison_sting", // 3
-          `venomancer_venomous_gale`, // 4
+          `venomancer_plague_ward`, // 4
           "venomancer_plague_ward", // 5
           `venomancer_noxious_plague`, // 6
           "venomancer_plague_ward", // 7
           `venomancer_plague_ward`, // 8
-          `venomancer_plague_ward`, // 9
+          `venomancer_poison_sting`, // 9
           `venomancer_poison_sting`, // 10
-          "venomancer_poison_sting", // 11
+          `special_bonus_unique_venomancer_poisonsting_regen_reduction`, // 11
           `venomancer_noxious_plague`, // 12
-          `special_bonus_unique_venomancer_poisonsting_regen_reduction`, // 13
+          `venomancer_venomous_gale`, // 13
           "venomancer_venomous_gale", // 14
           "special_bonus_unique_venomancer_2", // 15
           "venomancer_venomous_gale", // 16
@@ -19687,30 +19696,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             `wraith_band`,
             `bracer`,
-            `power_treads`,
+            `boots`,
             `magic_wand`,
             `urn_of_shadows`,
             `wind_lace`,
           ],
           mid_game: [
-            `veil_of_discord`,
             `spirit_vessel`,
-            `shivas_guard`,
-            `ultimate_scepter`,
+			`travel_boots`,
+            `black_king_bar`,
+			`hurricane_pike`,
             `aghanims_shard`,
           ],
           late_game: [
-            `octarine_core`,
-            `hurricane_pike`,
-            `aether_lens`,
-            `ethereal_blade`,
-            `overwhelming_blink`,
+            `shivas_guard`,
+			`blink`,
+			`sheepstick`,
+			`octarine_core`,
           ],
           situational: [
-            `vanguard`,
+            `power_treads`,
+			`veil_of_discord`,
+			`vanguard`,
             `ring_of_basilius`,
             `arcane_boots`,
             `hand_of_midas`,
+			`aether_lens`,
             `boots_of_bearing`,
             `lotus_orb`,
             `heavens_halberd`,
@@ -19720,29 +19731,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pipe`,
             `crimson_guard`,
             `guardian_greaves`,
-            `black_king_bar`,
             `cyclone`,
-            `sheepstick`,
             `aeon_disk`,
+			`ethereal_blade`,
+			`wind_waker`,
+            `overwhelming_blink`,
             `mage_slayer`,
+			`sange_and_yasha`,
             `manta`,
+			`ultimate_scepter`,
             `sphere`,
             `gungir`,
             `skadi`,
             `butterfly`,
             `refresher`,
-            `travel_boots`,
+            `travel_boots_2`,
           ],
           core: [
-            `wraith_band`,
-            `power_treads`,
-            `veil_of_discord`,
+            `bracer`,
+            `boots`,
             `spirit_vessel`,
-            `shivas_guard`,
-            `ultimate_scepter`,
+			`travel_boots`,
+			`hurricane_pike`,
             `aghanims_shard`,
-            `octarine_core`,
-            `ethereal_blade`,
+            `shivas_guard`,
+			`sheepstick`,
           ],
           neutral: [
             `arcane_ring`,
@@ -19767,11 +19780,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40628,
         power_level: [1.9, 2, 2, 1.8],
+		facet: 1,
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
-          `venomancer_venomous_gale`, // 3
-          `venomancer_poison_sting`, // 4
+          `venomancer_poison_sting`, // 3
+          `venomancer_plague_ward`, // 4
           `venomancer_plague_ward`, // 5
           `venomancer_noxious_plague`, // 6
           `venomancer_plague_ward`, // 7
@@ -19780,7 +19794,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `venomancer_poison_sting`, // 10
           `special_bonus_unique_venomancer_poisonsting_regen_reduction`, // 11
           `venomancer_noxious_plague`, // 12
-          `venomancer_plague_ward`, // 13
+          `venomancer_venomous_gale`, // 13
           "venomancer_venomous_gale", // 14
           "special_bonus_unique_venomancer_2", // 15
           "venomancer_venomous_gale", // 16
@@ -19799,7 +19813,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "tango",
             `tango`,
             `blood_grenade`,
-            `enchanted_mango`,
+            `faerie_fire`,
             `circlet`,
             `branches`,
             `branches`,
@@ -19807,54 +19821,55 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_sentry`,
           ],
           early_game: [
-            `tranquil_boots`,
-            `urn_of_shadows`,
+            `boots`,
             `magic_wand`,
             `ring_of_basilius`,
             `wind_lace`,
             `infused_raindrop`,
           ],
           mid_game: [
-            `pavise`,
+            `arcane_boots`,
+			`pavise`,
             `solar_crest`,
-            `spirit_vessel`,
-            `force_staff`,
-            `ultimate_scepter`,
+            `mekansm`,
+			`guardian_greaves`,
             `aghanims_shard`,
           ],
           late_game: [
-            `boots_of_bearing`,
-            `octarine_core`,
+            `force_staff`,
+			`blink`,
             `sheepstick`,
-            `ethereal_blade`,
+            `wind_waker`,
           ],
           situational: [
-            `arcane_boots`,
+            `tranquil_boots`,
+			`urn_of_shadows`,
+			`spirit_vessel`,
             `glimmer_cape`,
             `veil_of_discord`,
             `lotus_orb`,
             `heavens_halberd`,
             `aether_lens`,
-            `guardian_greaves`,
+            `boots_of_bearing`,
             `pipe`,
             `ghost`,
             `cyclone`,
             `aeon_disk`,
-            `blink`,
+            `octarine_core`,
+			`ultimate_scepter`,
+			`ethereal_blade`,
             `shivas_guard`,
-            `wind_waker`,
+			`refresher`,
             `travel_boots`,
           ],
           core: [
-            `tranquil_boots`,
-            `urn_of_shadows`,
+            `arcane_boots`,
             `solar_crest`,
-            `spirit_vessel`,
-            `force_staff`,
-            `ultimate_scepter`,
+            `guardian_greaves`,
             `aghanims_shard`,
-            `boots_of_bearing`,
-            `octarine_core`,
+            `force_staff`,
+            `blink`,
+            `sheepstick`,
           ],
           neutral: [
             `arcane_ring`,
@@ -20648,11 +20663,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40657,
         power_level: [1.7, 1.8, 2.1, 2.3],
+		facet: 2,
         abilities: [
           `warlock_fatal_bonds`, // 1
           `warlock_upheaval`, // 2
-          `warlock_upheaval`, // 3
-          `warlock_fatal_bonds`, // 4
+          `warlock_fatal_bonds`, // 3
+          `warlock_upheaval`, // 4
           `warlock_upheaval`, // 5
           "warlock_rain_of_chaos", // 6
           `warlock_upheaval`, // 7
@@ -21753,6 +21769,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40636,
         power_level: [2, 2.1, 2.6, 2.7],
+		facet: 1,
         abilities: [
           "zuus_arc_lightning", // 1
           "zuus_heavenly_jump", // 2
@@ -21764,12 +21781,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `zuus_lightning_bolt`, // 8
           `zuus_lightning_bolt`, // 9
           `zuus_lightning_bolt`, // 10
-          `special_bonus_hp_200`, // 11
+          `zuus_heavenly_jump`, // 11
           "zuus_thundergods_wrath", // 12
           `zuus_heavenly_jump`, // 13
           `zuus_heavenly_jump`, // 14
-          "special_bonus_unique_zeus_jump_postjump_movespeed", // 15
-          "special_bonus_attributes", // 16
+          `special_bonus_unique_zeus_jump_cooldown`, // 15
+          `special_bonus_unique_zeus_jump_postjump_movespeed`, // 16
           "special_bonus_attributes", // 17
           "zuus_thundergods_wrath", // 18
           "special_bonus_attributes", // 19
@@ -21801,35 +21818,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_boots`,
             `phylactery`,
             `yasha_and_kaya`,
+            `aether_lens`,
             `aghanims_shard`,
-            `manta`,
           ],
           late_game: [
-            `witch_blade`,
-            `devastator`,
-            `hurricane_pike`,
-            `moon_shard`,
             `ultimate_scepter`,
+            `refresher`,
+            `octarine_core`,
+			`ethereal_blade`,
           ],
           situational: [
             `null_talisman`,
             `power_treads`,
-            `aether_lens`,
-            `ethereal_blade`,
+			`force_staff`,
             `cyclone`,
             `blink`,
             `bloodstone`,
             `kaya_and_sange`,
+			`dagon_5`,
+            `sheepstick`,
             `sphere`,
             `aeon_disk`,
             `black_king_bar`,
             `angels_demise`,
-            `octarine_core`,
-            `refresher`,
+			`wind_waker`,
+            `witch_blade`,
+            `devastator`,
+			`hurricane_pike`,
+            `moon_shard`,
             `assault`,
-            `dagon_5`,
-            `sheepstick`,
-            `swift_blink`,
+            `arcane_blink`,
             `travel_boots`,
           ],
           core: [
@@ -21837,23 +21855,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "arcane_boots",
             `phylactery`,
             `yasha_and_kaya`,
+            `aether_lens`,
             `aghanims_shard`,
-            `manta`,
-            `devastator`,
-            `hurricane_pike`,
-            `moon_shard`,
+            `ultimate_scepter`,
+            `refresher`,
           ],
           neutral: [
             "mysterious_hat",
             "arcane_ring",
-            `grove_bow`,
             `vambrace`,
+            `bullwhip`,
             `ceremonial_robe`,
             "psychic_headband",
             "timeless_relic",
             `stormcrafter`,
             "seer_stone",
-            `pirate_hat`,
+            `force_boots`,
           ],
         },
       },
