@@ -9282,7 +9282,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Mirana_5_SaveAlly",
     messageTime: [8 * 60, 14 * 60],
     textMessage:
-      "Look around the map to save an ally in trouble with Moonlight Shadow.",
+      `With the Moonlight Shadow facet, look around the map to save an ally in trouble with Moonlight Shadow.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "mirana_invis" },
   },
@@ -9349,7 +9349,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Mirana_5_ObserverSentry",
     messageTime: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
     textMessage:
-      "Pair Observer Wards and Sentries on map to see opponents approaching under Moonlight Shadow.",
+      `If Mirana has the Moonlight Shadow facet, pair Observer Wards and Sentries on map to see opponents approaching under invisibility.`,
     audience: [Audience.ALL],
   },
   {
@@ -9357,7 +9357,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "mirana",
     audioFile: "enemyHero/Mirana_6_Detection",
     messageTime: [10 * 60 + 20, 18 * 60 + 20, 26 * 60 + 20],
-    textMessage: "Carry detection on multiple heroes against Moonlight Shadow.",
+    textMessage: `If Mirana has the Moonlight Shadow facet, carry detection on multiple heroes against her invisibility.`,
     audience: [Audience.ALL],
   },
 
@@ -13698,7 +13698,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "silencer",
     audioFile: "ownHero/Silencer_4_Combo",
     messageTime: 90,
-    textMessage: "Combining Arcane Curse with Last Word does a lot of damage.",
+    textMessage: `Combining the Arcane Curse silence with Last Word does a lot of damage.`,
     audience: [Audience.ALL],
   },
   {
@@ -13747,7 +13747,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Silencer_2_ArcaneCurse",
     messageTime: -50,
     textMessage:
-      "Silencer's Arcane Curse gets extended every time you cast a spell while under the effect of it.",
+      `Silencers Arcane Curse silences and does more damage if you cast a spell while under the effect of it.`,
     audience: [Audience.ALL],
   },
   {
@@ -18431,7 +18431,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 20 * 60,
     repeatTime: 30 * 60,
     textMessage:
-      "Use Curse carefully in the middle of fights as you might waste a lot of your ally's damage and cooldowns.",
+      `Use Winters Curse carefully in the middle of fights as you might waste a lot of your ally's damage and cooldowns.`,
     audience: [Audience.ALL],
   },
   {
@@ -18531,7 +18531,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "witch_doctor",
     audioFile: "ownHero/WitchDoctor_2_SecureRanged",
-    messageTime: 15,
+    messageTime: 3 * 60,
     textMessage:
       "Use Paralyzing Cask to secure ranged creep and harass the opponents at the same time.",
     audience: [Audience.ALL],
@@ -18543,7 +18543,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/WitchDoctor_3_ToughLane",
     messageTime: 75,
     textMessage:
-      "Consider investing a point in Voodoo Restoration on tough lanes.",
+      `If you did not take the Voodoo Festeration facet, consider investing a point in Voodoo Restoration on tough lanes.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_voodoo_restoration" },
   },
@@ -18553,9 +18553,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/WitchDoctor_4_Powerspike",
     messageTime: 2 * 60,
     textMessage:
-      "Level 2 Maledict is a big damage powerspike for the Witch Doctor. Communicate with laning partner to go for a kill.",
+      `With the Voodoo Festeration facet, level 2 Voodoo Restoration is a big damage powerspike for the Witch Doctor. Communicate with laning partner to go for a kill.`,
     audience: [Audience.ROLE_SUPPORT],
-    image: { type: "ability", name: "witch_doctor_maledict" },
+    image: { type: `ability`, name: `witch_doctor_voodoo_restoration` },
   },
   {
     category: "OwnHero",
@@ -18629,6 +18629,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "item", name: "ultimate_scepter" },
   },
+  {
+    category: `OwnHero`,
+    npcHeroName: `witch_doctor`,
+    audioFile: `ownHero/WitchDoctor_12_VoodooRestorationFarming`,
+    messageTime: [11 * 60 + 15, 21 * 60 + 15, 31 * 60 + 15],
+    textMessage:
+      `With the Voodoo Festeration facet, when not much is happening in the game, you can quickly farm creep waves and jungle camps with maxed out Voodoo Restoration.`,
+    audience: [Audience.ROLE_SUPPORT],
+    image: { type: `ability`, name: `witch_doctor_voodoo_restoration` },
+  },
 
   {
     category: "EnemyHero",
@@ -18653,7 +18663,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/WitchDoctor_3_StrongLaner",
     messageTime: 2 * 60 + 20,
     textMessage:
-      "Witch Doctor is a strong laner, especially when he gets a second point in Maledict.",
+      `Witch Doctor is a strong laner, especially when he gets a second point in Voodoo Restoration with his Voodoo Festeration facet.`,
     audience: [Audience.ALL],
   },
   {
