@@ -2534,20 +2534,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           "centaur_hoof_stomp", // 1
           `centaur_double_edge`, // 2
-          `centaur_double_edge`, // 3
-          `centaur_hoof_stomp`, // 4
+          `centaur_return`,  // 3
+          `centaur_return`, // 4
           `centaur_return`, // 5
           "centaur_stampede", // 6
-          `centaur_double_edge`, // 7
-          `centaur_double_edge`, // 8
-          `centaur_hoof_stomp`, // 9
-          `centaur_hoof_stomp`, // 10
-          `special_bonus_hp_regen_4`, // 11
+          "centaur_hoof_stomp", // 7
+          "centaur_hoof_stomp", // 8
+          "centaur_hoof_stomp", // 9
+          `special_bonus_hp_regen_4`, // 10
+          `centaur_double_edge`, // 11
           "centaur_stampede", // 12
-          `centaur_return`, // 13
-          `centaur_return`, // 14
+          `centaur_double_edge`, // 13
+          `centaur_double_edge`, // 14
           `special_bonus_unique_centaur_4`, // 15
-          `centaur_return`, // 16
+          `centaur_double_edge`, // 16
           "special_bonus_attributes", // 17
           "centaur_stampede", // 18
           "special_bonus_attributes", // 19
@@ -2561,64 +2561,56 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         items: {
           starting: [
             "tango",
-            `quelling_blade`,
+            `ring_of_protection`,
+            `gauntlets_of_strength`,
+            `circlet`,
             `branches`,
-            `ring_of_protection`,
-            `ring_of_protection`,
-            `ward_observer`,
+            
           ],
           early_game: [
-            `helm_of_iron_will`,
-            `phase_boots`,
-            `veil_of_discord`,
-            `magic_wand`,
-            `infused_raindrop`,
+            `bracer`,
+            `bracer`,
+            `bracer`,
+            
+        
           ],
           mid_game: [
+            `blade_mail`,
             `blink`,
-            `shivas_guard`,
             `eternal_shroud`,
-            `heart`,
             `aghanims_shard`,
           ],
           late_game: [
-            `kaya_and_sange`,
+            `heart`,
             `black_king_bar`,
             `overwhelming_blink`,
-            `octarine_core`,
           ],
           situational: [
-            `bracer`,
-            `vanguard`,
             "heavens_halberd",
+            `shivas_guard`,
             `ultimate_scepter`,
-            `guardian_greaves`,
-            `force_staff`,
             `lotus_orb`,
             `crimson_guard`,
             `pipe`,
-            `blade_mail`,
-            `sphere`,
             `assault`,
             `travel_boots`,
           ],
           core: [
-            `phase_boots`,
-            `veil_of_discord`,
+            `blade_mail`,
             `blink`,
             `shivas_guard`,
             `eternal_shroud`,
             `heart`,
             `aghanims_shard`,
-            `kaya_and_sange`,
-            `overwhelming_blink`,
           ],
           neutral: [
-            `occult_bracelet`,
             `seeds_of_serenity`,
+            `safety_bubble`,
             "dragon_scale",
             "vambrace",
-            "cloak_of_flames",
+            `bullwhip`,
+            `cloak_of_flames`,
+            `craggy_coat`,
             `ogre_seal_totem`,
             `rattlecage`,
             `havoc_hammer`,
