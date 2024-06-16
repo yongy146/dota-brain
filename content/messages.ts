@@ -2450,7 +2450,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "centaur",
     audioFile: "ownHero/CentaurWarrunner_1_Ring",
     messageTime: 15,
-    textMessage: `Focus on last hitting to get Helm of Iron Will purchased as soon as possible.`,
+    textMessage: `Focus on last hitting and farm your Bracers.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "ring_of_health" },
   },
@@ -2460,7 +2460,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CentaurWarrunner_2_Creepskip",
     messageTime: 4 * 60 + 45,
     textMessage:
-      "If you cannot pressure on the lane, consider creep skipping after minute 5 and farming neutral camps nearby.",
+      "If you cannot pressure on the lane or being pressured, consider creep skipping or pulling enemy creeps to your tower after minute 5 as well as farming neutral camps nearby.",
     audience: [Audience.ROLE_OFFLANE],
   },
   {
