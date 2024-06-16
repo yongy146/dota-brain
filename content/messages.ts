@@ -773,15 +773,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "alchemist",
-    audioFile: "ownHero/Alchemist_2_GreevilsGreed1",
-    messageTime: 4 * 60,
-    textMessage:
-      "Understand when you are no longer able to lane and move to the jungle. Alchemist farms insanely fast and you don't want to die and lose Greevil's Greed stacks.",
-    audience: [Audience.ROLE_CORE],
-  },
-  {
-    category: "OwnHero",
-    npcHeroName: "alchemist",
     audioFile: "ownHero/Alchemist_3_Stacks",
     messageTime: 5 * 60,
     textMessage:
